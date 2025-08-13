@@ -38,7 +38,7 @@
   <!-- Additional SEO Meta Tags -->
   <meta name="theme-color" content="#6366f1" />
   <meta name="msapplication-TileColor" content="#6366f1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Cochran Films" />
   <meta name="format-detection" content="telephone=no" />
@@ -1255,10 +1255,21 @@
   </div>
 
   <script>
-    // =========================
-    // Particles Background
-    // =========================
-    (() => {
+          // =========================
+      // EmailJS Initialization
+      // =========================
+      // Initialize EmailJS when the script loads
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init('p4pF3OWvh-DXtae4c');
+        console.log('EmailJS initialized successfully');
+      } else {
+        console.log('EmailJS not loaded yet, will initialize later');
+      }
+
+      // =========================
+      // Particles Background
+      // =========================
+      (() => {
       const canvas = document.getElementById('bg');
       const ctx = canvas.getContext('2d', { alpha: true });
       let w, h, dpr, particles, cellSize, maxDist2, grid;
@@ -1644,13 +1655,18 @@
           if (typeof emailjs === 'undefined') {
             throw new Error('EmailJS not loaded');
           }
+          
+          // Ensure EmailJS is initialized
+          if (!emailjs.isInitialized()) {
+            emailjs.init('p4pF3OWvh-DXtae4c');
+          }
 
           // EmailJS configuration - Replace with your actual IDs
           const serviceID = 'service_t11yvru'; // Replace with your EmailJS service ID
           const templateID = 'template_by61n6o'; // Replace with your EmailJS template ID
           const publicKey = 'p4pF3OWvh-DXtae4c'; // Replace with your EmailJS public key
 
-          // Prepare template parameters
+          // Prepare template parameters - simplified to match EmailJS template
           const templateParams = {
             user_name: name,
             user_email: email,
@@ -1659,13 +1675,14 @@
               month: 'long', 
               day: 'numeric' 
             }),
-            source: 'Cochran Films Launch Notification',
-            unsubscribe_url: 'https://cochranfilms.com/unsubscribe',
-            preferences_url: 'https://cochranfilms.com/preferences'
+            source: 'Cochran Films Launch Notification'
           };
 
           // Send email via EmailJS
+          console.log('Sending EmailJS with params:', { serviceID, templateID, templateParams });
+          
           const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+          console.log('EmailJS response:', response);
           
           if (response.status === 200) {
             // Success - show enhanced success message
@@ -1674,7 +1691,7 @@
             success.classList.add('show');
             confettiBurst();
           } else {
-            throw new Error('EmailJS submission failed');
+            throw new Error(`EmailJS submission failed with status: ${response.status}`);
           }
         } catch (err) {
           console.error('EmailJS error:', err);
