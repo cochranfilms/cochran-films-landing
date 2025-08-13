@@ -161,6 +161,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <style>
     :root {
@@ -711,6 +714,22 @@
       transform: translateY(-2px); 
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
+    
+    /* Loading state styles */
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    
+    .btn-loading {
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .btn-loading.show {
+      display: inline-flex;
+    }
     .btn-ghost {
       background: transparent; 
       color: var(--text-secondary);
@@ -735,13 +754,70 @@
     }
     .success {
       display: none;
-      padding: 12px; border-radius: 12px;
-      border: 1px solid rgba(16,185,129,0.35);
-      background: rgba(16,185,129,0.12);
-      color: #dcfce7;
-      font-weight: 700;
+      padding: 32px 24px;
+      color: var(--text-primary);
+      text-align: center;
     }
-    .success.show { display: block; }
+    .success.show { 
+      display: block; 
+    }
+    .success-content {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .success-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+      animation: bounce 0.6s ease-out;
+    }
+    .success h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--text-primary);
+    }
+    .success p {
+      font-size: 16px;
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .success-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .success-details span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .success-details i {
+      color: var(--brand-gold);
+      width: 16px;
+    }
+    .btn-success {
+      background: linear-gradient(135deg, var(--brand-emerald), #059669);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-success:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
 
     /* Form Styles from Pitch.html */
     .form-row {
@@ -1166,7 +1242,10 @@
           <input class="input" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
           <input class="input" id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
           <div class="row">
-            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Notify Me</button>
+            <button class="btn" type="submit" id="submitBtn">
+              <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Notify Me</span>
+              <span class="btn-loading" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
+            </button>
             <button class="btn btn-ghost" type="button" id="closeNotify"><i class="fa-solid fa-xmark"></i> Close</button>
           </div>
           <div class="fine"><i class="fa-solid fa-lock"></i> Your info is encrypted in transit. Unsubscribe anytime.</div>
@@ -1539,6 +1618,12 @@
       openBtn.addEventListener('click', open);
       closeBtn.addEventListener('click', close);
       modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      
+      // Add event listener for close success button
+      const closeSuccessBtn = document.getElementById('closeSuccess');
+      if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', close);
+      }
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -1546,25 +1631,72 @@
         const email = (document.getElementById('email').value || '').trim();
         if (!email) return;
 
+        // Show loading state
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-flex';
+        submitBtn.disabled = true;
+
         try {
-          if (endpoint) {
-            const res = await fetch(endpoint, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ name, email, source: 'Cochran Coming Soon' })
-            });
-            if (!res.ok) throw new Error('Submission failed');
+          // Initialize EmailJS
+          if (typeof emailjs === 'undefined') {
+            throw new Error('EmailJS not loaded');
+          }
+
+          // EmailJS configuration - Replace with your actual IDs
+          const serviceID = 'service_t11yvru'; // Replace with your EmailJS service ID
+          const templateID = 'template_by61n6o'; // Replace with your EmailJS template ID
+          const publicKey = 'p4pF3OWvh-DXtae4c'; // Replace with your EmailJS public key
+
+          // Prepare template parameters
+          const templateParams = {
+            user_name: name,
+            user_email: email,
+            subscription_date: new Date().toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            }),
+            source: 'Cochran Films Launch Notification',
+            unsubscribe_url: 'https://cochranfilms.com/unsubscribe',
+            preferences_url: 'https://cochranfilms.com/preferences'
+          };
+
+          // Send email via EmailJS
+          const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+          
+          if (response.status === 200) {
+            // Success - show enhanced success message
+            localStorage.setItem(SUB_KEY, '1');
+            form.style.display = 'none';
+            success.classList.add('show');
+            confettiBurst();
           } else {
-            // Fallback to mailto if no endpoint is configured
+            throw new Error('EmailJS submission failed');
+          }
+        } catch (err) {
+          console.error('EmailJS error:', err);
+          
+          // Fallback to mailto if EmailJS fails
+          try {
             const mail = `mailto:hello@cochranfilms.com?subject=${encodeURIComponent('Notify me at launch')}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email)}`;
             window.location.href = mail;
+            
+            // Still show success for fallback
+            localStorage.setItem(SUB_KEY, '1');
+            form.style.display = 'none';
+            success.classList.add('show');
+            confettiBurst();
+          } catch (fallbackErr) {
+            alert('Something went wrong. Please try again later.');
           }
-          localStorage.setItem(SUB_KEY, '1');
-          form.style.display = 'none';
-          success.classList.add('show');
-          confettiBurst();
-        } catch (err) {
-          alert('Something went wrong. Please try again later.');
+        } finally {
+          // Reset button state
+          btnText.style.display = 'inline-flex';
+          btnLoading.style.display = 'none';
+          submitBtn.disabled = false;
         }
       });
 

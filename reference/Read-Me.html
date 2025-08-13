@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cochran Films - Revolutionary Centralized Creator Management Platform. Next-generation architecture with unified data structure eliminating fragmentation issues.">
+    <meta name="keywords" content="creator management, centralized data, production company, contract automation, digital signatures, workflow automation, film production, unified architecture">
+    <meta name="author" content="Cody Cochran, CEO & Founder">
+    <meta property="og:title" content="Cochran Films - Revolutionary Centralized Creator Management Platform">
+    <meta property="og:description" content="Revolutionary centralized architecture eliminating data fragmentation with unified creator management">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://collaborate.cochranfilms.com/read-me">
+    <meta property="og:image" content="https://collaborate.cochranfilms.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cochran Films - Revolutionary Centralized Creator Management Platform">
+    <meta name="twitter:description" content="Revolutionary centralized architecture eliminating data fragmentation with unified creator management">
+    <meta name="twitter:image" content="https://collaborate.cochranfilms.com/og-image.jpg">
+    
+    <title>Cochran Films - Revolutionary Centralized Creator Management Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="apple-touch-icon" href="Favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Chart.js for Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Three.js for 3D Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Particles.js for Background Effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Prism.js for Code Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <!-- Swiper for Carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #FFB200;
+            --secondary-color: #22c55e;
+            --accent-color: #3B82F6;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #1a1a2e;
+            --card-bg: rgba(0,0,0,0.7);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.8);
+            --text-muted: rgba(255,255,255,0.6);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 20px 40px rgba(0,0,0,0.3);
+            --glow: 0 0 30px rgba(255, 178, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 50%, #16213e 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #FF8C00, #16a34a);
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 178, 0, 0.3);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 178, 0, 0.2);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(0,0,0,0.98);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            text-shadow: 0 10px 30px rgba(255, 178, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: var(--text-muted);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ceo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00);
+            color: var(--dark-bg);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            transform: perspective(1000px) rotateY(-15deg);
+            box-shadow: var(--glow);
+            animation: float 3s ease-in-out infinite;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .ceo-badge:hover {
+            transform: perspective(1000px) rotateY(-15deg) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255, 178, 0, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: perspective(1000px) rotateY(-15deg) translateY(0px); }
+            50% { transform: perspective(1000px) rotateY(-15deg) translateY(-15px); }
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 178, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 178, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Feature Highlights */
+        .feature-highlight {
+            background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(34, 197, 94, 0.1));
+            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 178, 0, 0.05) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .feature-highlight h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            padding: 1rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 3rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .feature-list li:hover {
+            background: rgba(255, 178, 0, 0.1);
+            transform: translateX(10px);
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 1rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00);
+            color: var(--dark-bg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary-color), #16a34a);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(34, 197, 94, 0.4);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 178, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        /* Expandable Content */
+        .expandable-content {
+            display: none;
+            margin-top: 2rem;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(255, 178, 0, 0.3);
+        }
+
+        .expandable-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .expandable-content p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .expand-toggle {
+            background: none;
+            border: 1px solid rgba(255, 178, 0, 0.3);
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .expand-toggle:hover {
+            background: rgba(255, 178, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .expand-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-toggle.expanded i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="Favicon.png" alt="Cochran Films Logo">
+                <span>Cochran Films</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#workflow" class="nav-link">Workflow</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+                <i class="fas fa-film"></i> Cochran Films
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Revolutionary Centralized Creator Management Platform
+            </p>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                Revolutionary centralized architecture eliminating data fragmentation with unified creator management. 
+                Single source of truth ensures consistency and reliability across all operations.
+            </p>
+            
+            <!-- Interactive Stats Grid -->
+            <div class="stats-grid" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                <div class="stat-card interactive-card" data-stat="100">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Automated Workflow</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="24">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Real-Time Updates</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="Enterprise">
+                    <div class="stat-number">Enterprise</div>
+                    <div class="stat-label">Security Grade</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="Zero">
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-label">Fragmentation Issues</div>
+                </div>
+            </div>
+            
+            <a href="#features" class="ceo-badge" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                <i class="fas fa-crown"></i> Cody Cochran, CEO & Founder
+            </a>
+            
+            <!-- Feature Highlights -->
+            <div class="feature-highlight" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                <h4><i class="fas fa-rocket"></i> Why Choose Our Revolutionary Platform?</h4>
+                <ul class="feature-list">
+                    <li>Revolutionary centralized data architecture eliminating fragmentation</li>
+                    <li>Complete automation from onboarding to contract execution</li>
+                    <li>Enterprise-grade security with server-side token handling</li>
+                    <li>Real-time dashboard with instant notifications</li>
+                    <li>Professional email system with branded templates</li>
+                    <li>Scalable architecture built for production companies</li>
+                    <li>White-label ready for immediate deployment</li>
+                    <li>Advanced analytics and performance tracking</li>
+                    <li>Mobile-responsive design for any device</li>
+                    <li>Single source of truth for all data operations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-star"></i> Platform Features</h2>
+                <p>Discover the comprehensive suite of tools designed to streamline your creator management workflow</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Admin Dashboard Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Admin Dashboard</h3>
+                    <p>Centralized management interface with real-time updates and comprehensive controls</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('admin-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="admin-details" class="expandable-content">
+                        <h4><i class="fas fa-list"></i> Admin Dashboard Features:</h4>
+                        <ul class="feature-list">
+                            <li>Centralized data management with unified structure</li>
+                            <li>Real-time creator onboarding with dropdown validation</li>
+                            <li>One-click approval system with automated notifications</li>
+                            <li>Comprehensive job management with auto-sync</li>
+                            <li>Integrated contract and performance tracking</li>
+                            <li>Performance analytics and reporting tools</li>
+                            <li>System health monitoring and alerts</li>
+                            <li>Bulk operations for efficient management</li>
+                            <li>Export capabilities for external integrations</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-chart-line"></i> Centralized Analytics</h5>
+                            <p>Track creator performance, contract completion rates, and system efficiency with unified data structure and automated reporting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contract Portal Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Contract Portal</h3>
+                    <p>Secure contract signing with instant PDF generation and email notifications</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('contract-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="contract-details" class="expandable-content">
+                        <h4><i class="fas fa-shield-alt"></i> Contract Portal Features:</h4>
+                        <ul class="feature-list">
+                            <li>Secure creator information collection with validation</li>
+                            <li>Custom password creation with strength requirements</li>
+                            <li>Digital signature capture with legal compliance</li>
+                            <li>Instant PDF generation with professional formatting</li>
+                            <li>Automated email notifications to all parties</li>
+                            <li>Contract status tracking and verification</li>
+                            <li>Mobile-responsive design for any device</li>
+                            <li>Audit trail for legal documentation</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-lock"></i> Enterprise Security</h5>
+                            <p>All contract data is encrypted and stored securely with server-side token handling and no exposed credentials.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creator Portal Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Creator Portal</h3>
+                    <p>Dedicated portal for creators to access their contracts and job information</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('creator-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="creator-details" class="expandable-content">
+                        <h4><i class="fas fa-user-check"></i> Creator Portal Features:</h4>
+                        <ul class="feature-list">
+                            <li>Personalized dashboard with job assignments</li>
+                            <li>Contract status and completion tracking</li>
+                            <li>Document upload and management</li>
+                            <li>Communication hub with admin team</li>
+                            <li>Payment tracking and invoicing</li>
+                            <li>Performance metrics and feedback</li>
+                            <li>Mobile app for on-the-go access</li>
+                            <li>Real-time notifications and updates</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-mobile-alt"></i> Mobile-First Design</h5>
+                            <p>Creators can access their portal from any device with our responsive design and mobile-optimized interface.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Management Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Revolutionary Data Management</h3>
+                    <p>Centralized GitHub-based data storage with unified structure eliminating fragmentation</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('data-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="data-details" class="expandable-content">
+                        <h4><i class="fas fa-github"></i> Revolutionary Centralized Architecture:</h4>
+                        <ul class="feature-list">
+                            <li>Single source of truth in users.json</li>
+                            <li>Eliminated data fragmentation issues</li>
+                            <li>Integrated performance reviews and contracts</li>
+                            <li>Version-controlled data storage</li>
+                            <li>Automatic backup and recovery</li>
+                            <li>Real-time synchronization across devices</li>
+                            <li>Secure API access with token authentication</li>
+                            <li>Data export and import capabilities</li>
+                            <li>Audit trail for all data changes</li>
+                            <li>Multi-environment support</li>
+                            <li>Automated data validation</li>
+                            <li>Enhanced data integrity protection</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-shield-alt"></i> Revolutionary Data Integrity</h5>
+                            <p>All data is centralized and stored securely with enterprise-grade security protocols, eliminating fragmentation issues and ensuring data consistency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email System Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email System</h3>
+                    <p>Professional email notifications for all workflow events</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('email-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="email-details" class="expandable-content">
+                        <h4><i class="fas fa-envelope-open"></i> Email System Features:</h4>
+                        <ul class="feature-list">
+                            <li>Customizable email templates</li>
+                            <li>Automated workflow notifications</li>
+                            <li>Branded email signatures</li>
+                            <li>Multi-language support</li>
+                            <li>Email tracking and analytics</li>
+                            <li>Spam protection and delivery optimization</li>
+                            <li>Bulk email campaigns</li>
+                            <li>Email scheduling and automation</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-chart-bar"></i> Email Analytics</h5>
+                            <p>Track email open rates, click-through rates, and engagement metrics to optimize your communication strategy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Layer Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Layer</h3>
+                    <p>Enterprise-grade security with no exposed credentials</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('security-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="security-details" class="expandable-content">
+                        <h4><i class="fas fa-lock"></i> Security Features:</h4>
+                        <ul class="feature-list">
+                            <li>Server-side token handling</li>
+                            <li>CORS-free design architecture</li>
+                            <li>Environment variable protection</li>
+                            <li>Digital signature verification</li>
+                            <li>SSL/TLS encryption</li>
+                            <li>Regular security audits</li>
+                            <li>GDPR compliance</li>
+                            <li>Data backup and recovery</li>
+                            <li>Centralized data integrity</li>
+                            <li>Fragmentation elimination</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-certificate"></i> Compliance Ready</h5>
+                            <p>Our platform meets industry standards for data protection and privacy, ensuring compliance with regulations like GDPR and CCPA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-sitemap"></i> System Architecture</h2>
+                <p>Explore our sophisticated system design and workflow automation</p>
+            </div>
+
+            <div class="architecture-grid">
+                <div class="architecture-card card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="architecture-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Infrastructure</h3>
+                    <p>Scalable serverless architecture built on Vercel with automatic scaling and global CDN</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vercel Functions</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">GitHub API</span>
+                    </div>
+                </div>
+
+                <div class="architecture-card card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="architecture-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Layer</h3>
+                    <p>Centralized GitHub-based JSON storage with unified data structure and automatic synchronization</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GitHub</span>
+                        <span class="tech-tag">JSON</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Centralized</span>
+                    </div>
+                </div>
+
+                <div class="architecture-card card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="architecture-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                    <p>Modern, responsive web application with advanced animations and real-time updates</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="architecture-card card" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    <div class="architecture-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Communication</h3>
+                    <p>EmailJS integration for professional notifications and automated workflows</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">EmailJS</span>
+                        <span class="tech-tag">SMTP</span>
+                        <span class="tech-tag">Templates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-cogs"></i> Automated Workflow</h2>
+                <p>See how our platform streamlines creator management from start to finish</p>
+            </div>
+
+            <div class="workflow-timeline">
+                <div class="workflow-step" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-user-plus"></i> Creator Onboarding</h3>
+                        <p>Add creators with dropdown options. System auto-generates jobs and sends approval emails.</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Dropdown Validation</span>
+                            <span class="feature-tag">Auto Job Generation</span>
+                            <span class="feature-tag">Email Notifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-file-signature"></i> Contract Signing</h3>
+                        <p>Creators set passwords and sign contracts digitally with instant PDF generation.</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Digital Signatures</span>
+                            <span class="feature-tag">PDF Generation</span>
+                            <span class="feature-tag">Password Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-sync"></i> Real-Time Updates</h3>
+                        <p>All activities update instantly. Admins receive notifications and track progress.</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Live Dashboard</span>
+                            <span class="feature-tag">Instant Notifications</span>
+                            <span class="feature-tag">Progress Tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-step" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-clipboard-check"></i> Job Management</h3>
+                        <p>Create and manage job listings with auto-sync to website and Google Sheets.</p>
+                        <div class="step-features">
+                            <span class="feature-tag">Job Creation</span>
+                            <span class="feature-tag">Auto Sync</span>
+                            <span class="feature-tag">Google Sheets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="technology" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-microchip"></i> Technology Stack</h2>
+                <p>Built with cutting-edge technologies for maximum performance and security</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h4>GitHub API</h4>
+                    <p>Secure file storage and version control with automatic synchronization</p>
+                    <div class="tech-features">
+                        <span>Version Control</span>
+                        <span>Secure Storage</span>
+                        <span>Auto Sync</span>
+                    </div>
+                </div>
+
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <p>Modern frontend and backend development with ES6+ features</p>
+                    <div class="tech-features">
+                        <span>ES6+</span>
+                        <span>Async/Await</span>
+                        <span>Modules</span>
+                    </div>
+                </div>
+
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>Vercel Functions</h4>
+                    <p>Scalable serverless API infrastructure with automatic scaling</p>
+                    <div class="tech-features">
+                        <span>Serverless</span>
+                        <span>Auto Scaling</span>
+                        <span>Global CDN</span>
+                    </div>
+                </div>
+
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>EmailJS</h4>
+                    <p>Professional notification system with customizable templates</p>
+                    <div class="tech-features">
+                        <span>Templates</span>
+                        <span>Automation</span>
+                        <span>Tracking</span>
+                    </div>
+                </div>
+
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>PDF Generation</h4>
+                    <p>Automated contract creation and signing with professional formatting</p>
+                    <div class="tech-features">
+                        <span>Auto Generation</span>
+                        <span>Digital Signatures</span>
+                        <span>Professional Format</span>
+                    </div>
+                </div>
+
+                <div class="tech-item" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>JSON Storage</h4>
+                    <p>Lightweight, fast data management with version control</p>
+                    <div class="tech-features">
+                        <span>Fast Access</span>
+                        <span>Version Control</span>
+                        <span>Lightweight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-play"></i> Live Demo</h2>
+                <p>Experience our platform in action with interactive demonstrations</p>
+            </div>
+
+            <div class="demo-grid">
+                <div class="demo-card card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="demo-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Admin Dashboard</h3>
+                    <p>Explore our comprehensive admin interface with real-time data and controls</p>
+                    <a href="admin-dashboard.html" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> View Demo
+                    </a>
+                </div>
+
+                <div class="demo-card card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="demo-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Contract Portal</h3>
+                    <p>Test our secure contract signing process with digital signatures</p>
+                    <a href="contract.html" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> View Demo
+                    </a>
+                </div>
+
+                <div class="demo-card card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="demo-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Creator Portal</h3>
+                    <p>Experience the creator interface for job management and contracts</p>
+                    <a href="user-portal.html" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> View Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-crown"></i> Ready to Own Your Creator Management Empire?</h2>
+                <p class="cta-subtitle">
+                    Stop managing creators manually. Start scaling your production company with enterprise-grade automation that pays for itself.
+                </p>
+                
+                <div class="cta-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Deploy in 24 hours</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>White-label ready</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Scale infinitely</span>
+                    </div>
+                </div>
+                
+                <div class="cta-benefits">
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-dollar-sign"></i> ROI Guarantee</h4>
+                        <p>Recoup your investment within 30 days through automated efficiency gains</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-users"></i> Creator Network</h4>
+                        <p>Access our proven creator onboarding system that scales with your growth</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-cogs"></i> Zero Maintenance</h4>
+                        <p>Set it and forget it - our platform runs itself while you focus on creativity</p>
+                    </div>
+                </div>
+                
+                <div class="cta-urgency">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Limited Availability:</strong> Only 5 white-label licenses available this quarter</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="https://www.cochranfilms.com/contact" class="btn btn-primary cta-main-btn">
+                        <i class="fas fa-crown"></i> Claim Your White-Label License
+                    </a>
+                    <a href="admin-dashboard.html" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> See Platform in Action
+                    </a>
+                </div>
+                
+                <div class="cta-trust">
+                    <p><i class="fas fa-check-circle"></i> Trusted by production companies worldwide</p>
+                    <p><i class="fas fa-lock"></i> Enterprise-grade security & compliance</p>
+                    <p><i class="fas fa-headset"></i> 24/7 white-label support included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-film"></i> Cochran Films</h3>
+                    <p>Next-generation creator management platform</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/cochranfilmsllc/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/cochran.films" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/cochranfilms" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@cochranfilmsllc" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#workflow">Workflow</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Demo</h4>
+                    <ul>
+                        <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                        <li><a href="contract.html">Contract Portal</a></li>
+                        <li><a href="user-portal.html">Creator Portal</a></li>
+                        <li><a href="backend.html">Backend</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Ready to get started?</p>
+                    <a href="https://www.cochranfilms.com/contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cochran Films. All rights reserved. Secure • Scalable • Sophisticated</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional Styles -->
+    <style>
+        /* Section Padding */
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Architecture Grid */
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .architecture-card {
+            text-align: center;
+        }
+
+        .architecture-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(255, 178, 0, 0.2);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Workflow Timeline */
+        .workflow-timeline {
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .workflow-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .workflow-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            flex: 1;
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 178, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 0 2rem;
+            position: relative;
+        }
+
+        .step-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-features {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .feature-tag {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--secondary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Technology Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .tech-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .tech-features {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .tech-features span {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Demo Grid */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .demo-card {
+            text-align: center;
+        }
+
+        .demo-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .demo-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(34, 197, 94, 0.1));
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 178, 0, 0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .cta-subtitle {
+            font-size: clamp(1.2rem, 3.5vw, 1.6rem) !important;
+            color: var(--text-secondary) !important;
+            margin-bottom: 2rem !important;
+            font-weight: 500;
+        }
+
+        .cta-highlights {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 178, 0, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 178, 0, 0.3);
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .highlight-item i {
+            font-size: 1.2rem;
+        }
+
+        .cta-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: rgba(0,0,0,0.3);
+            border: 2px solid rgba(255, 178, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .benefit-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .cta-urgency {
+            background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(220, 38, 38, 0.1));
+            border: 2px solid rgba(255, 178, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-urgency p {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .cta-main-btn {
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00) !important;
+            color: var(--dark-bg) !important;
+            font-size: 1.2rem !important;
+            padding: 1.5rem 3rem !important;
+            font-weight: 700 !important;
+            box-shadow: 0 10px 30px rgba(255, 178, 0, 0.4) !important;
+            animation: pulse 2s infinite !important;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .cta-trust {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .cta-trust p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .cta-trust i {
+            color: var(--secondary-color);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0,0,0,0.9);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 178, 0, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .workflow-timeline::before {
+                left: 30px;
+            }
+
+            .workflow-step {
+                flex-direction: column !important;
+                align-items: flex-start;
+            }
+
+            .step-content {
+                margin: 1rem 0 0 60px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+
+        // Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#FFB200'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#FFB200',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Animated Counter for Stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        // Intersection Observer for Stats Animation
+        const statCards = document.querySelectorAll('.stat-card');
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const countElement = statNumber.querySelector('[data-count]');
+                    if (countElement && !entry.target.classList.contains('animated')) {
+                        const target = parseInt(countElement.getAttribute('data-count'));
+                        animateCounter(countElement, target);
+                        entry.target.classList.add('animated');
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statCards.forEach(card => {
+            statObserver.observe(card);
+        });
+
+        // Feature Details Toggle
+        function toggleFeatureDetails(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+                button.classList.remove('expanded');
+            } else {
+                content.style.display = 'block';
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+                button.classList.add('expanded');
+            }
+        }
+
+        // Console Welcome Message
+        console.log(`
+%cCochran Films - Creator Management Platform
+%c
+%cWelcome to our next-generation platform!
+%cBuilt with cutting-edge technologies for maximum performance and security.
+%c
+%cFor support or inquiries, contact: ceo@cochranfilms.com
+        `, 
+        'color: #FFB200; font-size: 20px; font-weight: bold;',
+        '',
+        'color: #22c55e; font-size: 14px;',
+        'color: #3B82F6; font-size: 12px;',
+        '',
+        'color: #FFB200; font-size: 12px;'
+        );
+
+        // Initialize all interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure all animations are properly initialized
+            AOS.refresh();
+            
+            // Add any additional initialization code here
+            console.log('Cochran Films platform initialized successfully!');
+        });
+    </script>
+</body>
+</html> 
