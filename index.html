@@ -1411,11 +1411,84 @@
      })();
      
      // =========================
+     // Countdown Timer
+     // =========================
+     (function countdown() {
+       const daysEl = document.getElementById('d');
+       const hoursEl = document.getElementById('h');
+       const minutesEl = document.getElementById('m');
+       const secondsEl = document.getElementById('s');
+       const countInfoEl = document.getElementById('countInfo');
+       
+       if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+       
+       // Get launch date from body data attribute (14 days from now)
+       const launchInDays = parseInt(document.body.getAttribute('data-launch-in-days') || '14');
+       const launchDate = new Date();
+       launchDate.setDate(launchDate.getDate() + launchInDays);
+       
+       function updateCountdown() {
+         const now = new Date().getTime();
+         const distance = launchDate.getTime() - now;
+         
+         if (distance < 0) {
+           // Launch time has passed
+           daysEl.textContent = '0';
+           hoursEl.textContent = '0';
+           minutesEl.textContent = '0';
+           secondsEl.textContent = '0';
+           countInfoEl.textContent = 'Launch time has arrived! 🚀';
+           return;
+         }
+         
+         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+         
+         daysEl.textContent = days.toString().padStart(2, '0');
+         hoursEl.textContent = hours.toString().padStart(2, '0');
+         minutesEl.textContent = minutes.toString().padStart(2, '0');
+         secondsEl.textContent = seconds.toString().padStart(2, '0');
+         
+         // Update countdown info
+         if (days === 0 && hours === 0 && minutes === 0) {
+           countInfoEl.textContent = 'Launching in seconds! 🚀';
+         } else if (days === 0 && hours === 0) {
+           countInfoEl.textContent = 'Launching in minutes! ⏰';
+         } else if (days === 0) {
+           countInfoEl.textContent = 'Launching today! 🎯';
+         } else if (days === 1) {
+           countInfoEl.textContent = 'Launching tomorrow! 📅';
+         } else {
+           countInfoEl.textContent = `${days} days until launch 🚀`;
+         }
+       }
+       
+       // Update immediately and then every second
+       updateCountdown();
+       setInterval(updateCountdown, 1000);
+       
+       // Reset countdown button functionality
+       const resetBtn = document.getElementById('resetCountdown');
+       if (resetBtn) {
+         resetBtn.addEventListener('click', () => {
+           // Reset to 14 days from now
+           launchDate.setDate(new Date().getDate() + 14);
+           updateCountdown();
+         });
+       }
+     })();
+     
+     // =========================
      // Typewriter (rotating stack)
      // =========================
      (function typewriter() {
        const el = document.getElementById('typewrap');
-       if (!el) return;
+       if (!el) {
+         console.log('Typewriter element not found');
+         return;
+       }
        
        const items = [
          'HTML', 'CSS', 'JavaScript', 'JSON',
@@ -1445,19 +1518,22 @@
          setTimeout(tick, 100);
        }
        
+       // Start the typewriter effect
        tick();
+       console.log('Typewriter effect started');
      })();
      
      // =========================
      // Progress Bar Animation
      // =========================
      (function updateProgress() {
-       const progVal = document.getElementById('progressVal');
-       const fill = document.getElementById('progressFill');
+       const progVal = document.getElementById('progVal');
+       const fill = document.getElementById('fill');
        if (!progVal || !fill) return;
        
+       // Get target progress from body data attribute
+       const target = parseInt(document.body.getAttribute('data-progress') || '68');
        let progress = 0;
-       const target = 85;
        
        function animate() {
          if (progress < target) {
@@ -1480,6 +1556,43 @@
          if (pb) pb.setAttribute('aria-valuenow', String(progress));
        }
      })();
+     
+     // =========================
+     // Calendar Integration
+     // =========================
+     (function calendar() {
+       const addCalendarBtn = document.getElementById('addCalendar');
+       if (!addCalendarBtn) return;
+       
+       addCalendarBtn.addEventListener('click', (e) => {
+         e.preventDefault();
+         
+         // Get launch date from countdown
+         const launchInDays = parseInt(document.body.getAttribute('data-launch-in-days') || '14');
+         const launchDate = new Date();
+         launchDate.setDate(launchDate.getDate() + launchInDays);
+         
+         // Format date for calendar
+         const startDate = launchDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+         const endDate = new Date(launchDate.getTime() + (2 * 60 * 60 * 1000)).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+         
+         // Create calendar event
+         const event = {
+           title: 'Cochran Films Launch 🚀',
+           description: 'Cochran Films is launching their new brand and white-label services! High-level storytelling meets full-stack execution.',
+           location: 'Online',
+           startTime: startDate,
+           endTime: endDate
+         };
+         
+         // Generate calendar links
+         const googleCalendar = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}&dates=${startDate}/${endDate}`;
+         
+         // Open calendar (default to Google Calendar)
+         window.open(googleCalendar, '_blank');
+       });
+     })();
+     
      // =========================
      // FAQ Accordion
      // =========================
