@@ -1489,7 +1489,7 @@
     <div class="panel">
       <div class="panel-head">
         <h2 id="notifyTitle"><i class="fa-solid fa-bell"></i> Get your Production Toolkit</h2>
-        <p id="notifyDesc">Instant download + option to reserve a priority intro call.</p>
+        <p id="notifyDesc">Instant download.</p>
       </div>
       <div class="panel-body">
         <div class="success" id="successMsg" role="status" aria-live="polite" aria-atomic="true"><i class="fa-solid fa-circle-check"></i> Toolkit sent! Check your inbox.</div>
@@ -2001,7 +2001,6 @@
         const budget_range = (formData.get('budget_range') || '').toString().trim();
         
         const DOWNLOAD_URL = 'https://cochranfilms.com/toolkit.pdf';
-        const CALENDLY_URL = 'https://calendly.com/cochranfilms/intro';
         const SOURCE = 'Homepage Popup';
         const submitted_at = new Date().toISOString().slice(0,10);
         
@@ -2012,7 +2011,6 @@
           success.insertAdjacentHTML('beforeend', `
             <div class="success-details">
               <span><i class="fa-solid fa-download"></i> <a href="${DOWNLOAD_URL}" target="_blank" rel="noopener">Download Toolkit</a></span>
-              <span><i class="fa-solid fa-calendar-check"></i> <a href="${CALENDLY_URL}" target="_blank" rel="noopener">Schedule Intro Call</a></span>
             </div>
           `);
           return;
@@ -2042,8 +2040,7 @@
               timeline,
               budget_range,
               source: SOURCE,
-              submitted_at,
-              calendly_url: CALENDLY_URL
+              submitted_at
             };
 
             const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
@@ -2074,7 +2071,7 @@
               <div class="success-content">
                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                 <h3>Toolkit sent to ${email}</h3>
-                <p>Download directly below or check your inbox. Ready to talk details? Grab a quick intro call.</p>
+                <p>Download directly below or check your inbox.</p>
                 <div class="success-details">
                   <span><i class="fa-solid fa-user"></i> ${name || 'Friend'}</span>
                   ${service_interest ? `<span><i class=\"fa-solid fa-briefcase\"></i> ${service_interest}</span>` : ''}
@@ -2083,7 +2080,6 @@
                 </div>
                 <div class="row">
                   <a class="btn" href="${DOWNLOAD_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download Toolkit</a>
-                  <a class="btn btn-ghost" href="${CALENDLY_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Schedule Intro Call</a>
                 </div>
               </div>
             `;
