@@ -1274,7 +1274,7 @@
         Built with precision across <span class="typewrap" id="typewrap"></span>
       </p>
       <div class="cta-row">
-        <button class="cta-primary" id="openNotify" aria-haspopup="dialog" aria-controls="notifyModal"><i class="fa-solid fa-bell"></i> Get Notified</button>
+        <button class="cta-primary" id="openNotify" aria-haspopup="dialog" aria-controls="notifyModal"><i class="fa-solid fa-bell"></i> Get the Toolkit</button>
         <a class="cta-ghost" href="#" id="addCalendar"><i class="fa-solid fa-calendar-plus"></i> Add Launch to Calendar</a>
         <a class="cta-ghost" href="https://cochranfilms.com/brand-building" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Visit Current Site</a>
       </div>
@@ -1447,8 +1447,8 @@
           <div class="faq-a" id="faq1-a" role="region" aria-labelledby="faq1-q"><div>Yes. The site remains fully operational while we roll out the new experience.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq2-a"><span id="faq2-q">How do I get notified?</span><i class="fa-solid fa-chevron-down"></i></button>
-          <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2-q"><div>Use "Get Notified" to subscribe. We'll email you right before launch.</div></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq2-a"><span id="faq2-q">How do I get the toolkit?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2-q"><div>Tap "Get the Toolkit" and enter your email. We’ll send the Production Toolkit instantly along with a link to book an intro call.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" aria-controls="faq3-a"><span id="faq3-q">Do you offer white‑label solutions?</span><i class="fa-solid fa-chevron-down"></i></button>
@@ -1488,19 +1488,41 @@
   <div class="modal" id="notifyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="notifyTitle" aria-describedby="notifyDesc">
     <div class="panel">
       <div class="panel-head">
-        <h2 id="notifyTitle"><i class="fa-solid fa-bell"></i> Get notified at launch</h2>
-        <p id="notifyDesc">We'll only reach out for important updates. No spam, promise.</p>
+        <h2 id="notifyTitle"><i class="fa-solid fa-bell"></i> Get your Production Toolkit</h2>
+        <p id="notifyDesc">Instant download + option to reserve a priority intro call.</p>
       </div>
       <div class="panel-body">
-        <div class="success" id="successMsg" role="status" aria-live="polite" aria-atomic="true"><i class="fa-solid fa-circle-check"></i> You're on the list. See you at launch!</div>
+        <div class="success" id="successMsg" role="status" aria-live="polite" aria-atomic="true"><i class="fa-solid fa-circle-check"></i> Toolkit sent! Check your inbox.</div>
         <form class="form" id="notifyForm">
           <label class="sr-only" for="name">Name</label>
           <input class="input" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
           <label class="sr-only" for="email">Email address</label>
           <input class="input" id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+          <div class="form-row">
+            <div class="form-group">
+              <label class="sr-only" for="service_interest">Service Interest</label>
+              <input class="input" id="service_interest" name="service_interest" type="text" placeholder="Service interest (e.g., Brand Video)" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="sr-only" for="city">City</label>
+              <input class="input" id="city" name="city" type="text" placeholder="City" />
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="timeline">Timeline</label>
+              <input class="input" id="timeline" name="timeline" type="text" placeholder="Timeline (e.g., 2–6 weeks)" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="sr-only" for="budget_range">Budget</label>
+              <input class="input" id="budget_range" name="budget_range" type="text" placeholder="Budget (optional)" />
+            </div>
+          </div>
           <div class="row">
             <button class="btn" type="submit" id="submitBtn">
-              <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Notify Me</span>
+              <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Me the Toolkit</span>
               <span class="btn-loading" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
             </button>
             <button class="btn btn-ghost" type="button" id="closeNotify" aria-label="Close dialog"><i class="fa-solid fa-xmark"></i> Close</button>
@@ -1971,44 +1993,116 @@
         e.preventDefault();
         
         const formData = new FormData(form);
-        const name = formData.get('name');
-        const email = formData.get('email');
+        const name = (formData.get('name') || '').toString().trim();
+        const email = (formData.get('email') || '').toString().trim();
+        const service_interest = (formData.get('service_interest') || '').toString().trim();
+        const city = (formData.get('city') || '').toString().trim();
+        const timeline = (formData.get('timeline') || '').toString().trim();
+        const budget_range = (formData.get('budget_range') || '').toString().trim();
+        
+        const DOWNLOAD_URL = 'https://cochranfilms.com/toolkit.pdf';
+        const CALENDLY_URL = 'https://calendly.com/cochranfilms/intro';
+        const SOURCE = 'Homepage Popup';
+        const submitted_at = new Date().toISOString().slice(0,10);
         
         // Check if already submitted
         if (localStorage.getItem(SUB_KEY)) {
-          success.textContent = 'You\'re already on the list!';
+          success.innerHTML = '<i class="fa-solid fa-circle-check"></i> You\'re already set. Grab the toolkit below.';
           success.style.display = 'block';
+          success.insertAdjacentHTML('beforeend', `
+            <div class="success-details">
+              <span><i class="fa-solid fa-download"></i> <a href="${DOWNLOAD_URL}" target="_blank" rel="noopener">Download Toolkit</a></span>
+              <span><i class="fa-solid fa-calendar-check"></i> <a href="${CALENDLY_URL}" target="_blank" rel="noopener">Schedule Intro Call</a></span>
+            </div>
+          `);
           return;
         }
         
         try {
-          if (endpoint) {
+          // UI loading state
+          const submitBtn = document.getElementById('submitBtn');
+          const loadingSpan = submitBtn?.querySelector('.btn-loading');
+          const textSpan = submitBtn?.querySelector('.btn-text');
+          if (submitBtn) submitBtn.disabled = true;
+          if (loadingSpan) loadingSpan.style.display = 'inline-flex';
+          if (textSpan) textSpan.style.display = 'none';
+
+          let sent = false;
+          // Prefer EmailJS when available
+          if (typeof emailjs !== 'undefined' && emailjs && emailjs.send) {
+            const SERVICE_ID = 'service_t11yvru';
+            const TEMPLATE_ID = 'template_aluwel1';
+            const templateParams = {
+              user_name: name || 'Friend',
+              user_email: email,
+              asset_name: 'Production Toolkit',
+              download_url: DOWNLOAD_URL,
+              service_interest,
+              city,
+              timeline,
+              budget_range,
+              source: SOURCE,
+              submitted_at,
+              calendly_url: CALENDLY_URL
+            };
+
+            const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email timeout')), 12000));
+            await Promise.race([sendPromise, timeoutPromise]);
+            sent = true;
+          } else if (endpoint) {
             // Use Formspree or custom endpoint
             const response = await fetch(endpoint, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ name, email })
+              body: JSON.stringify({ name, email, service_interest, city, timeline, budget_range, source: SOURCE, submitted_at })
             });
-            
             if (!response.ok) throw new Error('Submission failed');
+            sent = true;
           } else {
             // Fallback to mailto
-            const mailtoLink = `mailto:?subject=Notify Request&body=Name: ${name}%0D%0AEmail: ${email}`;
+            const mailtoLink = `mailto:?subject=Toolkit Request&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AService: ${encodeURIComponent(service_interest)}%0D%0ACity: ${encodeURIComponent(city)}%0D%0ATimeline: ${encodeURIComponent(timeline)}%0D%0ABudget: ${encodeURIComponent(budget_range)}`;
             window.open(mailtoLink);
+            sent = true;
           }
           
           // Success
-          localStorage.setItem(SUB_KEY, 'true');
-          success.style.display = 'block';
-          form.reset();
-          
-          // Fun: confetti after subscribe
-          confettiBurst();
+          if (sent) {
+            localStorage.setItem(SUB_KEY, 'true');
+            success.style.display = 'block';
+            success.innerHTML = `
+              <div class="success-content">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Toolkit sent to ${email}</h3>
+                <p>Download directly below or check your inbox. Ready to talk details? Grab a quick intro call.</p>
+                <div class="success-details">
+                  <span><i class="fa-solid fa-user"></i> ${name || 'Friend'}</span>
+                  ${service_interest ? `<span><i class=\"fa-solid fa-briefcase\"></i> ${service_interest}</span>` : ''}
+                  ${city ? `<span><i class=\"fa-solid fa-location-dot\"></i> ${city}</span>` : ''}
+                  ${timeline ? `<span><i class=\"fa-solid fa-clock\"></i> ${timeline}</span>` : ''}
+                </div>
+                <div class="row">
+                  <a class="btn" href="${DOWNLOAD_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download Toolkit</a>
+                  <a class="btn btn-ghost" href="${CALENDLY_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Schedule Intro Call</a>
+                </div>
+              </div>
+            `;
+            form.reset();
+            // Fun: confetti after subscribe
+            confettiBurst();
+          }
           
         } catch (error) {
           console.error('Submission error:', error);
           success.textContent = 'Something went wrong. Please try again.';
           success.style.display = 'block';
+        } finally {
+          const submitBtn = document.getElementById('submitBtn');
+          const loadingSpan = submitBtn?.querySelector('.btn-loading');
+          const textSpan = submitBtn?.querySelector('.btn-text');
+          if (submitBtn) submitBtn.disabled = false;
+          if (loadingSpan) loadingSpan.style.display = 'none';
+          if (textSpan) textSpan.style.display = 'inline-flex';
         }
       });
       

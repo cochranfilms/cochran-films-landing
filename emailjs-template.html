@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launch Notification - {{user_name}}</title>
+    <title>Your Production Toolkit + Priority Booking - {{user_name}}</title>
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -179,13 +179,13 @@
         <div class="header">
             <div class="logo">CF</div>
             <h1>🎬 Cochran Films</h1>
-            <p>Something Big Is Coming</p>
+            <p>Your Production Toolkit is ready</p>
         </div>
         
         <div class="content">
             <div class="welcome">
-                <h2>Welcome to the Launch List, {{user_name}}! 🚀</h2>
-                <p>You're now part of an exclusive group that will be the first to experience our new website and services.</p>
+                <h2>You're in, {{user_name}}! 🚀</h2>
+                <p>Here’s your requested resource and a fast-track option to talk timing and scope.</p>
             </div>
             
             <div class="details">
@@ -198,8 +198,20 @@
                     <span class="detail-value">{{user_email}}</span>
                 </div>
                 <div class="detail-row">
-                    <span class="detail-label">Subscription Date:</span>
-                    <span class="detail-value">{{subscription_date}}</span>
+                    <span class="detail-label">Service Interest:</span>
+                    <span class="detail-value">{{service_interest}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">City:</span>
+                    <span class="detail-value">{{city}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Timeline:</span>
+                    <span class="detail-value">{{timeline}}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Budget:</span>
+                    <span class="detail-value">{{budget_range}}</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Source:</span>
@@ -208,17 +220,20 @@
             </div>
             
             <div class="info-box">
-                <h3>📢 What Happens Next?</h3>
-                <p>We'll send you an exclusive notification right before our new website launches. You'll get early access to our white-label services, portfolio updates, and special launch offers.</p>
+                <h3>📦 What You’re Getting</h3>
+                <p>The Production Toolkit includes a creative brief template, shot list, and storyboard pack. Use it to scope your next project quickly.</p>
             </div>
             
             <div class="cta-section">
-                <a href="https://cochranfilms.com" class="cta-button">Visit Current Site</a>
+                <a href="{{download_url}}" class="cta-button">Download {{asset_name}}</a>
+            </div>
+            <div class="cta-section">
+                <a href="{{calendly_url}}" class="cta-button" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">Schedule Intro Call</a>
             </div>
             
             <div class="info-box">
                 <h3>🔒 Your Privacy Matters</h3>
-                <p>Your information is encrypted and secure. We'll only contact you for important updates about our launch. You can unsubscribe anytime with a single click.</p>
+                <p>Your information is encrypted and secure. We only email when it’s useful (resources, booking, or key updates). Unsubscribe anytime with one click.</p>
             </div>
         </div>
         
