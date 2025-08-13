@@ -1656,10 +1656,7 @@
             throw new Error('EmailJS not loaded');
           }
           
-          // Ensure EmailJS is initialized
-          if (!emailjs.isInitialized()) {
-            emailjs.init('p4pF3OWvh-DXtae4c');
-          }
+          // EmailJS is already loaded and initialized
 
           // EmailJS configuration - Replace with your actual IDs
           const serviceID = 'service_t11yvru'; // Replace with your EmailJS service ID
