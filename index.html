@@ -328,11 +328,15 @@
   <!-- Fonts + Icons (CDN) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" imagesrcset="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png 512w" imagesizes="(max-width: 520px) 180px, 320px" fetchpriority="high">
   
   <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
 
   <style>
     :root {
@@ -666,6 +670,9 @@
       border: var(--card-border);
       backdrop-filter: var(--backdrop);
       box-shadow: var(--shadow-md);
+      /* Improve performance by skipping paint until visible */
+      content-visibility: auto;
+      contain-intrinsic-size: 600px;
     }
     .section h3 {
       margin: 0 0 12px; font-size: 18px; letter-spacing: .12em; color: var(--text-muted);
@@ -707,6 +714,8 @@
       background: rgba(2,6,23,0.55);
       overflow: hidden;
       position: relative;
+      content-visibility: auto;
+      contain-intrinsic-size: 80px;
     }
     .marquee::after {
       content: '';
@@ -1099,6 +1108,8 @@
       background: rgba(2,6,23,0.55);
       border: var(--card-border);
       display: grid; gap: 6px;
+      content-visibility: auto;
+      contain-intrinsic-size: 140px;
     }
     .footer::before {
       content: '';
@@ -1148,11 +1159,48 @@
       .title { letter-spacing: -0.01em; }
       .cta-row { flex-direction: column; align-items: stretch; }
       .top { flex-direction: column; align-items: stretch; }
-      .links { justify-content: space-between; }
+      /* Header layout: compact logo and two-column chips */
+      .top .brand .logo {
+        width: 100%;
+        height: 48px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .top .brand .logo .badges { display: none; }
+      .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        justify-content: stretch;
+      }
+      .links .chip { 
+        justify-content: center; 
+        padding: 10px 12px; 
+        font-size: 13px; 
+      }
+      .links .link-btn { 
+        grid-column: 1 / -1; 
+        width: 100%; 
+        justify-content: center; 
+        padding: 12px 14px; 
+      }
+      /* Countdown: 2x2 grid with tighter spacing */
+      .timer { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .timebox { padding: 12px 8px; }
+      .num { font-size: clamp(22px, 11vw, 30px); }
+      .lbl { font-size: 11px; }
+      /* Slightly reduce rotating type width to avoid wrap */
+      .typewrap { width: 12ch; }
+    }
+    @media (max-width: 380px) {
+      .links { grid-template-columns: 1fr; }
+      .links .link-btn { grid-column: auto; }
     }
       /* GPU hints for smoothness */
       .card { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
       .tracks { will-change: transform; transform: translateZ(0); }
+    /* Prefer color-scheme for better paint performance */
+    :root { color-scheme: dark; }
     /* Skip link */
     .skip-link {
       position: absolute;
@@ -1192,12 +1240,12 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <canvas id="bg" aria-hidden="true"></canvas>
 
-  <div class="wrapper">
+  <div class="wrapper" style="contain: layout paint size;">
     <!-- Top bar -->
     <header class="top" role="banner">
       <div class="brand">
         <div class="logo">
-          <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
+          <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" width="320" height="56" decoding="async" fetchpriority="high" />
           <div class="badges" aria-hidden="true">
             <span class="mini-icon py" title="Python"><i class="fa-brands fa-python"></i></span>
             <span class="mini-icon vid" title="Video"><i class="fa-solid fa-video"></i></span>
@@ -1365,7 +1413,7 @@
 
     <!-- Tech marquee -->
     <section class="marquee" aria-label="Tech stack marquee">
-      <div class="tracks" id="tracks">
+      <div class="tracks" id="tracks" aria-hidden="true">
         <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
         <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
         <span class="pill"><i class="fa-brands fa-js"></i> JavaScript</span>
@@ -1418,7 +1466,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="row">
-        <div class="brand" style="gap:10px;"><div class="logo" style="width:34px;height:34px;"><img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" /></div> Cochran Films</div>
+        <div class="brand" style="gap:10px;"><div class="logo" style="width:34px;height:34px;"><img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" width="34" height="34" decoding="async" /></div> Cochran Films</div>
         <div class="social">
           <a href="mailto:info@cochranfilms.com"><i class="fa-solid fa-envelope"></i> Email</a>
           <a id="igLink" href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
@@ -1469,17 +1517,31 @@
         document.querySelectorAll('i').forEach((el) => {
           if (!el.getAttribute('aria-label')) { el.setAttribute('aria-hidden', 'true'); }
         });
+        // Add lazy decoding to all images that don't already specify it
+        document.querySelectorAll('img:not([decoding])').forEach(img => { img.setAttribute('decoding', 'async'); });
+        document.querySelectorAll('img').forEach(img => { if (!img.getAttribute('loading')) img.setAttribute('loading', 'lazy'); });
       });
            // =========================
        // EmailJS Initialization
        // =========================
-       // Initialize EmailJS when the script loads
-       if (typeof emailjs !== 'undefined') {
-         emailjs.init('p4pF3OWvh-DXtae4c');
-         console.log('EmailJS initialized successfully');
-       } else {
-         console.log('EmailJS not loaded yet, will initialize later');
-       }
+       (function initEmailJS() {
+         const KEY = 'p4pF3OWvh-DXtae4c';
+         function tryInit() {
+           if (typeof emailjs !== 'undefined' && emailjs.init) {
+             try { emailjs.init(KEY); console.log('EmailJS initialized'); } catch(_) {}
+             return true;
+           }
+           return false;
+         }
+         if (!tryInit()) {
+           // Retry after page load (deferred script) and a short interval
+           window.addEventListener('load', () => { tryInit(); });
+           let attempts = 0;
+           const id = setInterval(() => {
+             if (tryInit() || ++attempts > 10) clearInterval(id);
+           }, 300);
+         }
+       })();
 
             // =========================
      // Global Motion Preference
@@ -1489,7 +1551,7 @@
      // =========================
      // Particles Background
      // =========================
-     (() => {
+      (() => {
        const canvas = document.getElementById('bg');
        const ctx = canvas.getContext('2d', { alpha: true });
        let w, h, dpr, particles, cellSize, maxDist2, grid;
@@ -1507,13 +1569,15 @@
          return;
        }
 
-       function resize() {
-         dpr = Math.min(window.devicePixelRatio || 1, 1.5); // cap DPR for perf
-         w = canvas.width = Math.floor(innerWidth * dpr);
-         h = canvas.height = Math.floor(innerHeight * dpr);
+        function resize() {
+          // Reduce resolution/work on tiny screens to save battery
+          const isSmall = innerWidth <= 520;
+          dpr = Math.min(window.devicePixelRatio || 1, isSmall ? 1 : 1.5);
+          w = canvas.width = Math.floor(innerWidth * dpr);
+          h = canvas.height = Math.floor(innerHeight * dpr);
          canvas.style.width = innerWidth + 'px';
          canvas.style.height = innerHeight + 'px';
-         maxDist2 = (120 * dpr) ** 2; // slightly shorter link distance
+          maxDist2 = (isSmall ? 90 : 120) ** 2; // shorter link distance on mobile
          cellSize = Math.sqrt(maxDist2);
          init();
        }
@@ -1523,7 +1587,8 @@
          grid = new Map();
          
          // Create particles
-         for (let i = 0; i < 50; i++) {
+          const count = innerWidth <= 520 ? 28 : 50;
+          for (let i = 0; i < count; i++) {
            particles.push({
              x: Math.random() * w,
              y: Math.random() * h,
@@ -1654,56 +1719,52 @@
      // =========================
      // Typewriter (rotating stack)
      // =========================
-     (function typewriter() {
-       // Wait for DOM to be ready
-       if (document.readyState === 'loading') {
-         document.addEventListener('DOMContentLoaded', typewriter);
-         return;
-       }
-       
-       const el = document.getElementById('typewrap');
-       if (!el) {
-         console.log('Typewriter element not found, retrying...');
-         setTimeout(typewriter, 100);
-         return;
-       }
-       
-       console.log('Typewriter element found:', el);
-       
-       const items = [
-         'HTML', 'CSS', 'JavaScript', 'JSON',
-         'Python', 'APIs', 'Wix', 'GitHub Pages'
-       ];
-       let idx = 0, pos = 0, dir = 1;
-       
-       // Check if reduceMotion is defined
-       if (typeof reduceMotion !== 'undefined' && reduceMotion) { 
-         console.log('Reduced motion detected, showing static text');
-         el.textContent = items[0]; 
-         return; 
-       }
- 
-       function tick() {
-         const word = items[idx];
-         pos += dir;
-         el.textContent = word.slice(0, pos);
-         
-         if (pos === word.length) {
-           setTimeout(() => { dir = -1; }, 1000);
-         } else if (pos === 0) {
-           dir = 1;
-           idx = (idx + 1) % items.length;
-           setTimeout(tick, 500);
-           return;
-         }
-         
-         setTimeout(tick, 100);
-       }
-       
-       // Start the typewriter effect
-       tick();
-       console.log('Typewriter effect started with items:', items);
-     })();
+      (function typewriter() {
+        const start = () => {
+          const el = document.getElementById('typewrap');
+          if (!el) { setTimeout(start, 50); return; }
+          const words = ['HTML','CSS','JavaScript','JSON','Python','APIs','Wix','GitHub Pages'];
+          if (typeof reduceMotion !== 'undefined' && reduceMotion) { el.textContent = words[0]; return; }
+          let wordIndex = 0;
+          let charIndex = 0;
+          let deleting = false;
+          let rafId = null;
+          let lastTime = 0;
+          const typeDelay = 80;      // ms
+          const holdDelay = 900;     // ms at full word
+          const eraseDelay = 45;     // ms when deleting
+          const pauseDelay = 300;    // ms between words
+
+          function frame(time) {
+            const delta = time - lastTime;
+            const current = words[wordIndex];
+            const interval = deleting ? eraseDelay : typeDelay;
+            if (delta >= interval) {
+              lastTime = time;
+              if (!deleting) {
+                charIndex = Math.min(charIndex + 1, current.length);
+                el.textContent = current.slice(0, charIndex);
+                if (charIndex === current.length) {
+                  // hold full word
+                  setTimeout(() => { deleting = true; }, holdDelay);
+                }
+              } else {
+                charIndex = Math.max(charIndex - 1, 0);
+                el.textContent = current.slice(0, charIndex);
+                if (charIndex === 0) {
+                  deleting = false;
+                  wordIndex = (wordIndex + 1) % words.length;
+                  lastTime += pauseDelay;
+                }
+              }
+            }
+            rafId = requestAnimationFrame(frame);
+          }
+          cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(frame);
+        };
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+      })();
      
      // =========================
      // Progress Bar Animation
