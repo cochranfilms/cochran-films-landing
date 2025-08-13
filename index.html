@@ -1313,11 +1313,15 @@
          console.log('EmailJS not loaded yet, will initialize later');
        }
 
-       // =========================
-       // Particles Background
-       // =========================
-       (() => {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            // =========================
+     // Global Motion Preference
+     // =========================
+     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+     
+     // =========================
+     // Particles Background
+     // =========================
+     (() => {
        const canvas = document.getElementById('bg');
        const ctx = canvas.getContext('2d', { alpha: true });
        let w, h, dpr, particles, cellSize, maxDist2, grid;
@@ -1422,10 +1426,9 @@
        
        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
        
-       // Get launch date from body data attribute (14 days from now)
-       const launchInDays = parseInt(document.body.getAttribute('data-launch-in-days') || '14');
-       const launchDate = new Date();
-       launchDate.setDate(launchDate.getDate() + launchInDays);
+       // Set fixed launch date: August 27th, 2025 at 10:00 AM
+       const launchDate = new Date('2025-08-27T10:00:00');
+       console.log('Launch date set to:', launchDate.toLocaleString());
        
        function updateCountdown() {
          const now = new Date().getTime();
@@ -1473,8 +1476,8 @@
        const resetBtn = document.getElementById('resetCountdown');
        if (resetBtn) {
          resetBtn.addEventListener('click', () => {
-           // Reset to 14 days from now
-           launchDate.setDate(new Date().getDate() + 14);
+           // Reset to fixed launch date: August 27th, 2025 at 10:00 AM
+           launchDate.setTime(new Date('2025-08-27T10:00:00').getTime());
            updateCountdown();
          });
        }
@@ -1484,11 +1487,20 @@
      // Typewriter (rotating stack)
      // =========================
      (function typewriter() {
-       const el = document.getElementById('typewrap');
-       if (!el) {
-         console.log('Typewriter element not found');
+       // Wait for DOM to be ready
+       if (document.readyState === 'loading') {
+         document.addEventListener('DOMContentLoaded', typewriter);
          return;
        }
+       
+       const el = document.getElementById('typewrap');
+       if (!el) {
+         console.log('Typewriter element not found, retrying...');
+         setTimeout(typewriter, 100);
+         return;
+       }
+       
+       console.log('Typewriter element found:', el);
        
        const items = [
          'HTML', 'CSS', 'JavaScript', 'JSON',
@@ -1496,7 +1508,9 @@
        ];
        let idx = 0, pos = 0, dir = 1;
        
-       if (reduceMotion) { 
+       // Check if reduceMotion is defined
+       if (typeof reduceMotion !== 'undefined' && reduceMotion) { 
+         console.log('Reduced motion detected, showing static text');
          el.textContent = items[0]; 
          return; 
        }
@@ -1520,7 +1534,7 @@
        
        // Start the typewriter effect
        tick();
-       console.log('Typewriter effect started');
+       console.log('Typewriter effect started with items:', items);
      })();
      
      // =========================
@@ -1567,10 +1581,8 @@
        addCalendarBtn.addEventListener('click', (e) => {
          e.preventDefault();
          
-         // Get launch date from countdown
-         const launchInDays = parseInt(document.body.getAttribute('data-launch-in-days') || '14');
-         const launchDate = new Date();
-         launchDate.setDate(launchDate.getDate() + launchInDays);
+         // Use fixed launch date: August 27th, 2025 at 10:00 AM
+         const launchDate = new Date('2025-08-27T10:00:00');
          
          // Format date for calendar
          const startDate = launchDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
