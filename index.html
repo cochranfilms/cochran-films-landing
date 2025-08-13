@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cochran Films — Something Big Is Coming</title>
+  <meta name="description" content="Cochran Films is rebranding and launching white-label services. High-level storytelling meets full stack execution. Be the first to know." />
+
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Brand Palette (from your references) */
+      --brand-indigo: #6366f1; /* admin-dashboard */
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      --brand-gold: #FFB200;   /* backend + blockbuster */
+      --brand-blue:  #0066CC;
+      --brand-red:   #ef4444;
+
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: 1px solid rgba(99,102,241,0.20);
+      --backdrop: blur(12px);
+
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 10px;
+
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --shadow-md: 0 18px 40px rgba(0,0,0,0.35);
+      --shadow-sm: 0 10px 24px rgba(0,0,0,0.25);
+
+      --glow-indigo: 0 0 40px rgba(99,102,241,0.35);
+      --glow-gold:   0 0 40px rgba(255,178,0,0.35);
+
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.15), transparent 60%),
+        radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.12), transparent 60%),
+        linear-gradient(135deg, var(--dark-900) 0%, var(--dark-950) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Canvas background (particles) */
+    #bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Layout wrapper */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    /* Top bar */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      border: var(--card-border);
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-sm);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+    }
+    .brand .logo {
+      display: grid;
+      place-items: center;
+      width: 40px; height: 40px;
+      border-radius: 11px;
+      background: #ffffff;
+      color: #0a0a0a;
+      font-size: 20px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+    .brand .logo img { width: 74%; height: 74%; object-fit: contain; display: block; }
+
+    /* Header-only: make the logo container a wide white rectangle and scale logo up */
+    .top .brand .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: clamp(220px, 34vw, 380px);
+      height: 56px;
+      border-radius: 14px;
+      padding-left: 14px;
+      padding-right: 12px;
+      gap: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    }
+    .top .brand .logo img {
+      width: auto;
+      height: 72%;
+    }
+
+    /* Mini animated icons in header logo container */
+    .top .brand .logo .badges {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .top .brand .logo .mini-icon {
+      display: grid;
+      place-items: center;
+      width: 28px; height: 28px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid rgba(148,163,184,0.35);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      opacity: 0.95;
+      animation: floaty 3.6s ease-in-out infinite;
+    }
+    .top .brand .logo .mini-icon i { font-size: 14px; }
+    .top .brand .logo .mini-icon:nth-child(2) { animation-duration: 3.1s; }
+    .top .brand .logo .mini-icon:nth-child(3) { animation-duration: 4.2s; }
+    .top .brand .logo .mini-icon.py   { color: #3776AB; }
+    .top .brand .logo .mini-icon.vid  { color: #ef4444; }
+    .top .brand .logo .mini-icon.html { color: #e34f26; }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+    .links {
+      display: flex; align-items: center; gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.25);
+      color: #0a0a0a;
+      background: #ffffff;
+      cursor: default;
+      user-select: none;
+      font-weight: 600;
+    }
+    .link-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #0a0a0a;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: var(--transition-fast);
+      border: 1px solid rgba(148,163,184,0.25);
+    }
+    .link-btn:hover { transform: translateY(-1px); filter: brightness(0.98); }
+
+    /* Hero */
+    .hero {
+      margin-top: 44px;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: var(--card-border);
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: -3px;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        radial-gradient(600px 200px at 20% -10%, rgba(99,102,241,0.25), transparent 60%),
+        radial-gradient(600px 200px at 80% 0%, rgba(255,178,0,0.18), transparent 60%);
+      filter: blur(10px);
+      opacity: 0.9;
+    }
+    .super { 
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--text-muted);
+      font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; font-size: 12px;
+    }
+    .title {
+      margin: 12px 0 10px;
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 6px 30px rgba(99,102,241,0.15);
+    }
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(15px, 2.4vw, 18px);
+      max-width: 900px;
+      line-height: 1.7;
+    }
+    .typewrap {
+      display: inline-block;
+      color: var(--brand-gold);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 20px rgba(255,178,0,0.35);
+      border-right: 2px solid rgba(255,178,0,0.75);
+      padding-right: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 14ch; /* fix width to prevent layout bounce during type rotation */
+    }
+
+    .cta-row {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .cta-primary {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a; border: 0;
+      padding: 12px 18px; border-radius: 14px; font-weight: 900;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .cta-primary:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .cta-ghost {
+      background: transparent; color: var(--text-secondary);
+      border: 1px solid rgba(148,163,184,0.22);
+      padding: 12px 16px; border-radius: 14px; font-weight: 800;
+      letter-spacing: .02em; cursor: pointer; transition: var(--transition-fast);
+    }
+    .cta-ghost:hover { border-color: rgba(148,163,184,0.38); color: #e2e8f0; }
+
+    /* Countdown + Progress */
+    .status-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+    }
+    @media (max-width: 900px) {
+      .status-grid { grid-template-columns: 1fr; }
+    }
+
+    .countdown {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(2,6,23,0.55);
+      border: var(--card-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .count-title { color: var(--text-muted); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; }
+    .timer {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      margin-top: 14px;
+    }
+    .timebox {
+      text-align: center; border-radius: 14px; padding: 16px 10px;
+      background: rgba(15,23,42,0.65);
+      border: 1px solid rgba(99,102,241,0.18);
+    }
+    .num { font-size: clamp(24px, 6vw, 34px); font-weight: 900; color: #fff; }
+    /* Prevent timer digit width bounce */
+    .num, .prog-val { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+    .lbl { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
+
+    .progress {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(2,6,23,0.55);
+      border: var(--card-border);
+      box-shadow: var(--shadow-sm);
+      display: grid; gap: 8px;
+    }
+    .prog-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .prog-title { color: var(--text-muted); text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; }
+    .prog-val { font-weight: 800; color: var(--brand-emerald); }
+    .bar {
+      width: 100%; height: 10px; border-radius: 999px;
+      background: rgba(99,102,241,0.18);
+      overflow: hidden;
+    }
+    .fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--brand-indigo), var(--brand-emerald));
+      border-radius: inherit;
+      box-shadow: var(--glow-indigo);
+      transition: width 800ms cubic-bezier(.4,0,.2,1);
+    }
+    .prog-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tag {
+      font-size: 12px; font-weight: 700;
+      padding: 6px 10px; border-radius: 999px;
+      border: 1px solid rgba(99,102,241,0.2);
+      color: var(--text-secondary);
+      background: rgba(15,23,42,0.55);
+    }
+
+    /* Feature Grid */
+    .section {
+      margin-top: 26px;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: var(--card-bg);
+      border: var(--card-border);
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+    }
+    .section h3 {
+      margin: 0 0 12px; font-size: 18px; letter-spacing: .12em; color: var(--text-muted);
+      text-transform: uppercase; font-weight: 800;
+    }
+    .grid {
+      display: grid; gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      position: relative;
+      border-radius: 16px;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      border: 1px solid rgba(99,102,241,0.22);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      transform-style: preserve-3d;
+    }
+    .card:hover { transform: translateY(-4px) scale(1.01); border-color: rgba(99,102,241,0.45); }
+    .card .icon {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      border-radius: 12px; background: rgba(99,102,241,0.18);
+      color: #c7d2fe; box-shadow: var(--glow-indigo);
+      margin-bottom: 12px; font-size: 18px;
+    }
+    .card h4 { margin: 0 0 6px; font-size: 16px; color: #fff; }
+    .card p  { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+
+    /* Tech Marquee */
+    .marquee {
+      margin-top: 16px;
+      border-radius: var(--radius-md);
+      border: var(--card-border);
+      background: rgba(2,6,23,0.55);
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(2,6,23,1) 0%, transparent 10%, transparent 90%, rgba(2,6,23,1) 100%);
+      pointer-events: none;
+    }
+    .tracks {
+      display: flex; gap: 22px; padding: 14px 0;
+      white-space: nowrap; animation: scroll 28s linear infinite;
+    }
+    @keyframes scroll {
+      to { transform: translateX(-50%); }
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 999px;
+      background: rgba(15,23,42,0.65);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: var(--text-secondary);
+      font-weight: 700;
+    }
+
+    /* Notify Modal */
+    .modal {
+      position: fixed !important; 
+      inset: 0 !important; 
+      z-index: 999999 !important; 
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      padding: 16px;
+      /* Prevent body scroll when modal is open */
+      overflow: hidden;
+      /* Ensure modal is independent of parent container */
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      /* Force modal to stay in viewport */
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.show { 
+      display: flex !important; 
+      /* Ensure modal is always visible and centered */
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      /* Force modal to stay in viewport */
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Additional styles for embedded contexts */
+    .modal,
+    .modal.show {
+      /* Force viewport-relative positioning */
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      /* Ensure modal works in iframes and embedded contexts */
+      transform: none !important;
+      /* Override any parent container styles */
+      margin: 0 !important;
+      padding: 16px !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Ensure modal content is always visible */
+    .modal .panel {
+      /* Force panel to be centered regardless of parent */
+      position: relative !important;
+      z-index: 1000000 !important;
+      /* Override any parent transforms */
+      transform: translateY(12px) !important;
+      /* Ensure panel is independent */
+      margin: auto !important;
+    }
+    .panel {
+      width: min(600px, 92vw); 
+      max-height: 90vh;
+      border-radius: 18px; 
+      overflow: visible;
+      background: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.8));
+      border: 1px solid rgba(255,178,0,0.3);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(12px);
+      animation: pop 320ms cubic-bezier(.2,.8,.2,1) forwards;
+      /* Ensure panel stays in viewport and doesn't scroll */
+      position: relative !important;
+      z-index: 1000000 !important;
+      /* Ensure content is always visible */
+      display: flex;
+      flex-direction: column;
+      /* Force panel to be independent of parent */
+      transform-origin: center center;
+    }
+    @keyframes pop { to { transform: translateY(0); } }
+    .panel-head {
+      padding: 24px 24px 0;
+      text-align: center;
+    }
+    .panel-body {
+      padding: 24px;
+      /* Ensure form content is properly contained */
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .panel h3 {
+      margin: 0 0 12px;
+      font-size: 24px; font-weight: 900;
+      background: linear-gradient(135deg, #fff, #FFB200);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
+    }
+    .panel p { 
+      margin: 0 0 20px; 
+      color: var(--text-secondary); 
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .form {
+      display: grid; gap: 16px;
+    }
+    .input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 6px;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,178,0,0.3);
+      color: #fff;
+      outline: none;
+      transition: var(--transition-fast);
+      font-size: 16px;
+      font-weight: 600;
+      backdrop-filter: blur(15px);
+    }
+    .input:focus { 
+      border-color: #FFB200; 
+      box-shadow: 0 0 0 2px rgba(255,178,0,0.2); 
+      background: rgba(0,0,0,0.6);
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 24px; border-radius: 6px; cursor: pointer; font-weight: 800;
+      border: 2px solid #FFB200; color: #000000;
+      background: #FFB200;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: var(--transition-fast);
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      min-width: 140px;
+    }
+    .btn:hover { 
+      filter: brightness(1.05); 
+      transform: translateY(-2px); 
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    .btn-ghost {
+      background: transparent; 
+      color: var(--text-secondary);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+      color: #FFFFFF;
+    }
+    .row { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 16px; 
+      flex-wrap: wrap; 
+      margin-top: 8px;
+    }
+
+    .fine {
+      font-size: 12px; color: var(--text-muted);
+    }
+    .success {
+      display: none;
+      padding: 12px; border-radius: 12px;
+      border: 1px solid rgba(16,185,129,0.35);
+      background: rgba(16,185,129,0.12);
+      color: #dcfce7;
+      font-weight: 700;
+    }
+    .success.show { display: block; }
+
+    /* Form Styles from Pitch.html */
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 16px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 178, 0, 0.3);
+      border-radius: 6px;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      backdrop-filter: blur(15px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-sizing: border-box;
+    }
+
+    .form-group input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 500;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      background: rgba(0, 0, 0, 0.6);
+      border-color: #FFB200;
+      box-shadow: 0 0 0 2px rgba(255, 178, 0, 0.2);
+    }
+
+    .form-group input:valid {
+      border-color: rgba(255, 178, 0, 0.5);
+    }
+
+    /* Mobile responsive form */
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      
+      .form-group input {
+        font-size: 17px;
+        line-height: 22px;
+        padding: 16px 16px;
+        min-height: 50px;
+        border-radius: 12px;
+      }
+      
+      .panel {
+        width: 95vw;
+        margin: 20px;
+      }
+      
+      .panel-head {
+        padding: 20px 20px 0;
+      }
+      
+      .panel-body {
+        padding: 20px;
+      }
+      
+      .btn {
+        padding: 14px 20px;
+        font-size: 14px;
+        min-width: 120px;
+      }
+      
+      .row {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    /* FAQ */
+    .faq { display: grid; gap: 10px; margin-top: 10px; }
+    .faq-item {
+      border-radius: 12px; overflow: hidden;
+      border: 1px solid rgba(99,102,241,0.25);
+      background: rgba(15,23,42,0.55);
+    }
+    .faq-q {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      cursor: pointer;
+      padding: 14px 16px; font-weight: 800;
+      color: #e2e8f0;
+    }
+    .faq-a {
+      display: grid; grid-template-rows: 0fr; transition: var(--transition); overflow: hidden;
+    }
+    .faq-a.open { grid-template-rows: 1fr; }
+    .faq-a > div { overflow: hidden; padding: 0 16px; color: var(--text-secondary); }
+    .faq-a.open > div { padding: 0 16px 14px; }
+
+    /* Footer */
+    .footer {
+      margin-top: 22px;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(2,6,23,0.55);
+      border: var(--card-border);
+      display: grid; gap: 6px;
+    }
+    .footer::before {
+      content: '';
+      display: block;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--brand-indigo), var(--brand-gold));
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+    .social { display: flex; gap: 10px; flex-wrap: wrap; }
+    .social a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.18);
+      color: var(--text-secondary); text-decoration: none;
+      background: rgba(15,23,42,0.55);
+      transition: var(--transition-fast);
+      font-weight: 700;
+    }
+    .social a:hover { border-color: rgba(148,163,184,0.38); color: #e2e8f0; transform: translateY(-1px); }
+    .note { color: var(--text-muted); font-size: 13px; }
+
+    /* Small helper badge */
+    .live-note {
+      position: fixed; bottom: 14px; right: 14px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(15,23,42,0.75);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+      font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #22c55e; box-shadow: 0 0 10px rgba(34,197,94,0.6);
+      animation: pulse 1400ms ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: .7; }
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 520px) {
+      .title { letter-spacing: -0.01em; }
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .top { flex-direction: column; align-items: stretch; }
+      .links { justify-content: space-between; }
+    }
+      /* GPU hints for smoothness */
+      .card { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+      .tracks { will-change: transform; transform: translateZ(0); }
+  </style>
+</head>
+<body data-launch-in-days="14" data-progress="68" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
+  <canvas id="bg"></canvas>
+
+  <div class="wrapper">
+    <!-- Top bar -->
+    <div class="top">
+      <div class="brand">
+        <div class="logo">
+          <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
+          <div class="badges" aria-hidden="true">
+            <span class="mini-icon py" title="Python"><i class="fa-brands fa-python"></i></span>
+            <span class="mini-icon vid" title="Video"><i class="fa-solid fa-video"></i></span>
+            <span class="mini-icon html" title="HTML"><i class="fa-brands fa-html5"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <span class="chip"><i class="fa-solid fa-shield-halved"></i> Enterprise-Ready</span>
+        <span class="chip"><i class="fa-solid fa-bolt"></i> Real-Time Sync</span>
+        <span class="chip"><i class="fa-solid fa-lock"></i> Secure</span>
+        <a class="link-btn" href="https://forms.gle/o7Z8bsame2uvLsUy7" target="_blank" rel="noopener">
+          <i class="fa-solid fa-rocket"></i> Work With Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="super"><i class="fa-solid fa-sparkles"></i> Something big is coming</div>
+      <h1 class="title">High-Level Storytelling meets Full‑Stack Execution</h1>
+      <p class="subtitle">
+        We’re re‑branding Cochran Films and launching premium <strong>white‑label services</strong>.
+        Built with precision across <span class="typewrap" id="typewrap"></span>
+      </p>
+      <div class="cta-row">
+        <button class="cta-primary" id="openNotify"><i class="fa-solid fa-bell"></i> Get Notified</button>
+        <a class="cta-ghost" href="#" id="addCalendar"><i class="fa-solid fa-calendar-plus"></i> Add Launch to Calendar</a>
+        <a class="cta-ghost" href="https://cochranfilms.com/brand-building" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Visit Current Site</a>
+      </div>
+
+      <div class="status-grid">
+        <!-- Countdown -->
+        <div class="countdown">
+          <div class="count-title">Estimated launch</div>
+          <div class="timer">
+            <div class="timebox">
+              <div class="num" id="d">0</div>
+              <div class="lbl">Days</div>
+            </div>
+            <div class="timebox">
+              <div class="num" id="h">0</div>
+              <div class="lbl">Hours</div>
+            </div>
+            <div class="timebox">
+              <div class="num" id="m">0</div>
+              <div class="lbl">Minutes</div>
+            </div>
+            <div class="timebox">
+              <div class="num" id="s">0</div>
+              <div class="lbl">Seconds</div>
+            </div>
+          </div>
+          <div class="count-info" id="countInfo" style="margin-top: 8px; font-size: 11px; color: var(--text-muted); text-align: center;"></div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress">
+          <div class="prog-head">
+            <div class="prog-title">Rebrand progress</div>
+            <div class="prog-val" id="progVal">0%</div>
+          </div>
+          <div class="bar"><div class="fill" id="fill"></div></div>
+          <div class="prog-tags">
+            <span class="tag">UX + Visual</span>
+            <span class="tag">Content</span>
+            <span class="tag">Components</span>
+            <span class="tag">Deployment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story-Driven Production -->
+    <section class="section" id="production">
+      <h3><i class="fa-solid fa-film"></i> Story‑Driven Production</h3>
+      <p class="subtitle" style="margin:0 0 12px; max-width: 950px;">
+        From pitch to pixels, we tie cinematic media production to full‑stack systems so every story moves business outcomes.
+        Atlanta‑built, deployable anywhere.
+      </p>
+      <div class="grid">
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-video"></i></div>
+          <h4>Cinematic Videography</h4>
+          <p>Documentaries, brand films, music videos, interviews — crafted to captivate and convert across platforms.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-camera"></i></div>
+          <h4>Photography</h4>
+          <p>Events, portraits, products and live printing — every frame tells a chapter of your brand story.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-palette"></i></div>
+          <h4>Brand + Web</h4>
+          <p>Logos, design systems and high‑performance websites — from concept to launch in days, not months.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-server"></i></div>
+          <h4>Backend Integration</h4>
+          <p>Centralized data, automation and real‑time sync — the engine behind seamless production workflows.</p>
+        </div>
+      </div>
+
+      <div class="prog-tags" style="margin-top:12px;">
+        <span class="tag">4K Capture</span>
+        <span class="tag">Fast Turnaround</span>
+        <span class="tag">Atlanta Based</span>
+        <span class="tag">Full‑Stack Delivery</span>
+      </div>
+
+      <div class="cta-row" style="margin-top:16px;">
+        <a class="link-btn" href="https://pitch.cochranfilms.com" target="_blank" rel="noopener"><i class="fa-solid fa-clapperboard"></i> View Pitch Deck</a>
+        <a class="cta-ghost" href="https://www.cochranfilms.com/contact" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane"></i> Start Your Story</a>
+      </div>
+    </section>
+
+    <!-- What’s coming -->
+    <section class="section">
+      <h3><i class="fa-solid fa-star"></i> What’s Coming</h3>
+      <div class="grid">
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h4>New Brand Experience</h4>
+          <p>Elegant, cinematic design that reflects our storytelling DNA.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h4>White‑Label Services</h4>
+          <p>Enterprise-ready sites and systems you can deploy under your brand.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-users-gear"></i></div>
+          <h4>Creator Platform</h4>
+          <p>Onboarding, analytics, and streamlined project pipelines.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Centralized Backend</h4>
+          <p>Single source of truth, secure, and synchronized across systems.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h4>Performance Obsessed</h4>
+          <p>Fast, resilient, and delightful on every device and network.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+          <h4>Smart Automation</h4>
+          <p>Seamless orchestration from intake to delivery with minimal friction.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h4>Component Library</h4>
+          <p>Reusable UI blocks that scale across brands and campaigns.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-code-branch"></i></div>
+          <h4>GitHub Deployment</h4>
+          <p>Modern CI/CD and versioned infrastructure for peace of mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech marquee -->
+    <section class="marquee" aria-label="Tech stack marquee">
+      <div class="tracks" id="tracks">
+        <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+        <span class="pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="pill"><i class="fa-solid fa-brackets-curly"></i> JSON</span>
+        <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="pill"><i class="fa-solid fa-server"></i> APIs</span>
+        <span class="pill"><i class="fa-brands fa-git-alt"></i> GitHub</span>
+        <span class="pill"><i class="fa-solid fa-cloud-arrow-up"></i> Deploy</span>
+        <span class="pill"><i class="fa-solid fa-bolt"></i> Performance</span>
+        <span class="pill"><i class="fa-solid fa-lock"></i> Security</span>
+        <!-- Duplicate for seamless scroll -->
+        <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+        <span class="pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="pill"><i class="fa-solid fa-brackets-curly"></i> JSON</span>
+        <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="pill"><i class="fa-solid fa-server"></i> APIs</span>
+        <span class="pill"><i class="fa-brands fa-git-alt"></i> GitHub</span>
+        <span class="pill"><i class="fa-solid fa-cloud-arrow-up"></i> Deploy</span>
+        <span class="pill"><i class="fa-solid fa-bolt"></i> Performance</span>
+        <span class="pill"><i class="fa-solid fa-lock"></i> Security</span>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section">
+      <h3><i class="fa-solid fa-circle-question"></i> FAQs</h3>
+      <div class="faq" id="faq">
+        <div class="faq-item">
+          <div class="faq-q"><span>Will the current site stay live?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-a"><div>Yes. The site remains fully operational while we roll out the new experience.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>How do I get notified?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-a"><div>Use “Get Notified” to subscribe. We’ll email you right before launch.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Do you offer white‑label solutions?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-a"><div>Yes. Enterprise-ready templates and systems designed for fast, brand‑safe deployment.</div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Can we talk now about a project?</span><i class="fa-solid fa-chevron-down"></i></div>
+          <div class="faq-a"><div>Absolutely. Tap “Work With Us” and we’ll follow up promptly.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="brand" style="gap:10px;"><div class="logo" style="width:34px;height:34px;"><img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" /></div> Cochran Films</div>
+        <div class="social">
+          <a href="mailto:info@cochranfilms.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a id="igLink" href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a id="ytLink" href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          <a id="ghLink" href="https://github.com/cochranfilms" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="note">
+        © <span id="year"></span> Cochran Films LLC — All rights reserved.
+        <button id="resetCountdown" style="background: none; border: none; color: var(--text-muted); font-size: 11px; cursor: pointer; text-decoration: underline; margin-left: 8px;">Reset Countdown</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Live badge -->
+  <div class="live-note"><span class="dot"></span> Site remains live during rebrand</div>
+
+  <!-- Notify Modal -->
+  <div class="modal" id="notifyModal" aria-hidden="true" aria-label="Notify me form">
+    <div class="panel">
+      <div class="panel-head">
+        <h3><i class="fa-solid fa-bell"></i> Get notified at launch</h3>
+        <p>We’ll only reach out for important updates. No spam, promise.</p>
+      </div>
+      <div class="panel-body">
+        <div class="success" id="successMsg"><i class="fa-solid fa-circle-check"></i> You’re on the list. See you at launch!</div>
+        <form class="form" id="notifyForm">
+          <input class="input" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+          <input class="input" id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+          <div class="row">
+            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Notify Me</button>
+            <button class="btn btn-ghost" type="button" id="closeNotify"><i class="fa-solid fa-xmark"></i> Close</button>
+          </div>
+          <div class="fine"><i class="fa-solid fa-lock"></i> Your info is encrypted in transit. Unsubscribe anytime.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================
+    // Particles Background
+    // =========================
+    (() => {
+      const canvas = document.getElementById('bg');
+      const ctx = canvas.getContext('2d', { alpha: true });
+      let w, h, dpr, particles, cellSize, maxDist2, grid;
+
+      const COLORS = [
+        'rgba(99,102,241,0.9)',
+        'rgba(255,178,0,0.9)',
+        'rgba(16,185,129,0.9)',
+        'rgba(99,102,241,0.4)',
+        'rgba(255,178,0,0.35)'
+      ];
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 1.5); // cap DPR for perf
+        w = canvas.width = Math.floor(innerWidth * dpr);
+        h = canvas.height = Math.floor(innerHeight * dpr);
+        canvas.style.width = innerWidth + 'px';
+        canvas.style.height = innerHeight + 'px';
+        maxDist2 = (120 * dpr) ** 2; // slightly shorter link distance
+        cellSize = Math.sqrt(maxDist2);
+        init();
+      }
+
+      function init() {
+        const baseDensity = 22000; // higher divisor => fewer particles
+        const count = Math.max(36, Math.floor((w * h) / (baseDensity * dpr)));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.25 * dpr,
+          vy: (Math.random() - 0.5) * 0.25 * dpr,
+          r: Math.random() * (2.2 * dpr) + (0.6 * dpr),
+          c: COLORS[Math.floor(Math.random() * COLORS.length)]
+        }));
+      }
+
+      function buildGrid() {
+        grid = new Map();
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          const cx = (p.x / cellSize) | 0;
+          const cy = (p.y / cellSize) | 0;
+          const key = cx + ',' + cy;
+          const arr = grid.get(key) || [];
+          arr.push(i);
+          grid.set(key, arr);
+        }
+      }
+
+      function step() {
+        if (document.hidden) { requestAnimationFrame(step); return; }
+        ctx.clearRect(0, 0, w, h);
+        buildGrid();
+
+        // draw links using spatial hashing (O(n))
+        for (let i = 0; i < particles.length; i++) {
+          const a = particles[i];
+          const cx = (a.x / cellSize) | 0;
+          const cy = (a.y / cellSize) | 0;
+          let links = 0;
+          for (let gx = cx - 1; gx <= cx + 1; gx++) {
+            for (let gy = cy - 1; gy <= cy + 1; gy++) {
+              const arr = grid.get(gx + ',' + gy);
+              if (!arr) continue;
+              for (const j of arr) {
+                if (j <= i) continue;
+                const b = particles[j];
+                const dx = a.x - b.x, dy = a.y - b.y;
+                const dist2 = dx * dx + dy * dy;
+                if (dist2 < maxDist2) {
+                  const alpha = 1 - (dist2 / maxDist2);
+                  ctx.strokeStyle = 'rgba(148,163,184,' + (0.12 * alpha) + ')';
+                  ctx.lineWidth = 1 * dpr;
+                  ctx.beginPath();
+                  ctx.moveTo(a.x, a.y);
+                  ctx.lineTo(b.x, b.y);
+                  ctx.stroke();
+                  links++;
+                  if (links >= 2) break; // limit connections per particle
+                }
+              }
+              if (links >= 2) break;
+            }
+            if (links >= 2) break;
+          }
+        }
+
+        // move and draw particles
+        for (const p of particles) {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+          ctx.beginPath();
+          ctx.fillStyle = p.c;
+          ctx.shadowColor = p.c;
+          ctx.shadowBlur = 5 * dpr; // slightly lower for perf
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        requestAnimationFrame(step);
+      }
+
+      window.addEventListener('resize', resize, { passive: true });
+      resize(); step();
+    })();
+
+    // =========================
+    // Typewriter (rotating stack)
+    // =========================
+    (function typewriter() {
+      const el = document.getElementById('typewrap');
+      const items = [
+        'HTML', 'CSS', 'JavaScript', 'JSON',
+        'Python', 'APIs', 'Wix', 'GitHub Pages'
+      ];
+      let idx = 0, pos = 0, dir = 1;
+
+      function tick() {
+        const word = items[idx];
+        pos += dir;
+        el.textContent = word.slice(0, pos);
+
+        // blink caret
+        el.style.borderRightColor = (Date.now() % 800) < 400 ? 'transparent' : 'rgba(255,178,0,0.75)';
+
+        if (dir > 0 && pos === word.length) {
+          setTimeout(() => dir = -1, 900);
+        } else if (dir < 0 && pos === 0) {
+          idx = (idx + 1) % items.length;
+          dir = 1;
+        }
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // =========================
+    // Countdown + Progress
+    // =========================
+    (() => {
+      const d = document.getElementById('d');
+      const h = document.getElementById('h');
+      const m = document.getElementById('m');
+      const s = document.getElementById('s');
+      const body = document.body;
+      const attr = body.getAttribute('data-launch-date');
+      const inDays = parseInt(body.getAttribute('data-launch-in-days') || '', 10);
+      
+      // Use localStorage to persist the launch date across refreshes
+      const LAUNCH_DATE_KEY = 'cochran_launch_date';
+      let target;
+      
+      // Check if we already have a stored launch date
+      const storedDate = localStorage.getItem(LAUNCH_DATE_KEY);
+      if (storedDate) {
+        target = new Date(parseInt(storedDate));
+        // If the stored date is in the past, remove it and create a new one
+        if (target <= new Date()) {
+          localStorage.removeItem(LAUNCH_DATE_KEY);
+          target = null;
+        }
+      }
+      
+      // If no valid stored date, create a new one and store it
+      if (!target) {
+        if (!Number.isNaN(inDays)) {
+          target = new Date(Date.now() + inDays * 24 * 3600 * 1000);
+        } else if (attr) {
+          target = new Date(attr);
+        } else {
+          target = new Date(Date.now() + 14 * 24 * 3600 * 1000);
+        }
+        // Store the new launch date
+        localStorage.setItem(LAUNCH_DATE_KEY, target.getTime().toString());
+      }
+      
+      const fill = document.getElementById('fill');
+      const progVal = document.getElementById('progVal');
+      const progress = Math.max(0, Math.min(100, parseInt(body.getAttribute('data-progress') || '60', 10)));
+
+      function updateCountdown() {
+        const now = new Date();
+        let delta = Math.max(0, (target - now) / 1000); // seconds
+        const dd = Math.floor(delta / 86400); delta -= dd * 86400;
+        const hh = Math.floor(delta / 3600); delta -= hh * 3600;
+        const mm = Math.floor(delta / 60);   delta -= mm * 60;
+        const ss = Math.floor(delta);
+
+        d.textContent = dd;
+        h.textContent = String(hh).padStart(2, '0');
+        m.textContent = String(mm).padStart(2, '0');
+        s.textContent = String(ss).padStart(2, '0');
+      }
+
+      function updateProgress() {
+        progVal.textContent = progress + '%';
+        requestAnimationFrame(() => { fill.style.width = progress + '%'; });
+      }
+
+      function updateCountdownInfo() {
+        const countInfo = document.getElementById('countInfo');
+        if (countInfo) {
+          const launchDate = new Date(target);
+          const options = { 
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          };
+          countInfo.textContent = `Launch: ${launchDate.toLocaleDateString('en-US', options)}`;
+        }
+      }
+
+      updateProgress();
+      updateCountdown();
+      updateCountdownInfo();
+      setInterval(updateCountdown, 1000);
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Add reset countdown functionality
+      const resetBtn = document.getElementById('resetCountdown');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (confirm('Reset the countdown to 14 days from now?')) {
+            localStorage.removeItem(LAUNCH_DATE_KEY);
+            location.reload();
+          }
+        });
+      }
+    })();
+
+    // =========================
+    // Tilt effect for cards
+    // =========================
+    (() => {
+      const cards = document.querySelectorAll('.tilt');
+      const maxTilt = 6;
+
+      cards.forEach(card => {
+        let rafId = null;
+        let mx = 0, my = 0, hovering = false;
+
+        function update() {
+          if (!hovering) return;
+          const rect = card.getBoundingClientRect();
+          const rx = ((my / rect.height) - 0.5) * -2 * maxTilt;
+          const ry = ((mx / rect.width) - 0.5) *  2 * maxTilt;
+          card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px) scale(1.015)`;
+          rafId = requestAnimationFrame(update);
+        }
+
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          mx = e.clientX - rect.left;
+          my = e.clientY - rect.top;
+          if (!hovering) { hovering = true; rafId = requestAnimationFrame(update); }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          hovering = false;
+          if (rafId) cancelAnimationFrame(rafId);
+          card.style.transform = '';
+        });
+      });
+    })();
+
+    // =========================
+    // FAQ Accordion
+    // =========================
+    (() => {
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const q = item.querySelector('.faq-q');
+        const a = item.querySelector('.faq-a');
+        // Ensure answers start closed
+        a.classList.remove('open');
+        q.addEventListener('click', () => {
+          a.classList.toggle('open');
+          q.querySelector('i').classList.toggle('fa-rotate-180');
+        });
+      });
+    })();
+
+    // =========================
+    // Notify Modal + Simple submission
+    // - data-form-endpoint="" uses Formspree if set, fallback mailto
+    // - localStorage prevents duplicate submissions
+    // =========================
+    (() => {
+      const openBtn = document.getElementById('openNotify');
+      const closeBtn = document.getElementById('closeNotify');
+      const modal = document.getElementById('notifyModal');
+      const form = document.getElementById('notifyForm');
+      const success = document.getElementById('successMsg');
+      const endpoint = (document.body.getAttribute('data-form-endpoint') || '').trim();
+      const SUB_KEY = 'cochran_notify_v1';
+      // Update social links if provided via data attributes
+      const ig = document.body.getAttribute('data-instagram');
+      const yt = document.body.getAttribute('data-youtube');
+      const gh = document.body.getAttribute('data-github');
+      if (ig) { const el = document.getElementById('igLink'); if (el) el.href = ig; }
+      if (yt) { const el = document.getElementById('ytLink'); if (el) el.href = yt; }
+      if (gh) { const el = document.getElementById('ghLink'); if (el) el.href = gh; }
+
+      function open() { 
+        modal.classList.add('show'); 
+        modal.setAttribute('aria-hidden', 'false');
+        
+        // Force modal positioning for embedded contexts
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.right = '0';
+        modal.style.bottom = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.zIndex = '999999';
+        
+        // Prevent body scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        
+        // Additional fix for embedded contexts
+        if (window.self !== window.top) {
+          // We're in an iframe - ensure modal is visible
+          modal.style.position = 'fixed';
+          modal.style.zIndex = '999999';
+        }
+      }
+      function close() { 
+        modal.classList.remove('show'); 
+        modal.setAttribute('aria-hidden', 'true');
+        
+        // Reset modal positioning
+        modal.style.position = '';
+        modal.style.top = '';
+        modal.style.left = '';
+        modal.style.right = '';
+        modal.style.bottom = '';
+        modal.style.width = '';
+        modal.style.height = '';
+        modal.style.zIndex = '';
+        
+        // Restore body scrolling when modal is closed
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+
+      if (localStorage.getItem(SUB_KEY) === '1') {
+        // Already subscribed; keep modal available but show success instantly
+        form.style.display = 'none';
+        success.classList.add('show');
+      }
+
+      openBtn.addEventListener('click', open);
+      closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = (document.getElementById('name').value || '').trim();
+        const email = (document.getElementById('email').value || '').trim();
+        if (!email) return;
+
+        try {
+          if (endpoint) {
+            const res = await fetch(endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, source: 'Cochran Coming Soon' })
+            });
+            if (!res.ok) throw new Error('Submission failed');
+          } else {
+            // Fallback to mailto if no endpoint is configured
+            const mail = `mailto:hello@cochranfilms.com?subject=${encodeURIComponent('Notify me at launch')}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email)}`;
+            window.location.href = mail;
+          }
+          localStorage.setItem(SUB_KEY, '1');
+          form.style.display = 'none';
+          success.classList.add('show');
+          confettiBurst();
+        } catch (err) {
+          alert('Something went wrong. Please try again later.');
+        }
+      });
+
+      // Fun: confetti after subscribe
+      function confettiBurst() {
+        const n = 60, colors = ['#FFB200', '#ffd166', '#6366f1', '#10b981', '#f59e0b'];
+        for (let i = 0; i < n; i++) {
+          const piece = document.createElement('span');
+          piece.style.position = 'fixed';
+          piece.style.zIndex = 60;
+          piece.style.left = (window.innerWidth / 2) + 'px';
+          piece.style.top = (window.innerHeight / 2) + 'px';
+          piece.style.width = piece.style.height = (Math.random() * 6 + 4) + 'px';
+          piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+          piece.style.borderRadius = '2px';
+          piece.style.pointerEvents = 'none';
+          piece.style.transform = `translate(-50%,-50%)`;
+          document.body.appendChild(piece);
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = Math.random() * 8 + 6;
+          const vx = Math.cos(angle) * velocity;
+          const vy = Math.sin(angle) * velocity - 8;
+          let x = window.innerWidth / 2, y = window.innerHeight / 2;
+          const gravity = 0.35 + Math.random() * 0.2;
+          const decay = 0.96 + Math.random() * 0.02;
+          let life = 60 + Math.random() * 20;
+
+          (function fly() {
+            x += vx; y += vy; vy += gravity;
+            life *= decay;
+            piece.style.left = x + 'px';
+            piece.style.top = y + 'px';
+            piece.style.opacity = Math.max(0, life / 80);
+            if (life > 1 && y < window.innerHeight + 40) {
+              requestAnimationFrame(fly);
+            } else {
+              piece.remove();
+            }
+          })();
+        }
+      }
+    })();
+
+    // =========================
+    // Add to Calendar (ICS)
+    // =========================
+    (() => {
+      const add = document.getElementById('addCalendar');
+      add.addEventListener('click', (e) => {
+        e.preventDefault();
+        const body = document.body;
+        const attr = body.getAttribute('data-launch-date');
+        const inDays = parseInt(body.getAttribute('data-launch-in-days') || '', 10);
+        
+        // Use the same persisted launch date from localStorage
+        const LAUNCH_DATE_KEY = 'cochran_launch_date';
+        let start;
+        
+        const storedDate = localStorage.getItem(LAUNCH_DATE_KEY);
+        if (storedDate) {
+          start = new Date(parseInt(storedDate));
+          // If the stored date is in the past, fall back to calculation
+          if (start <= new Date()) {
+            start = null;
+          }
+        }
+        
+        if (!start) {
+          if (!Number.isNaN(inDays)) {
+            start = new Date(Date.now() + inDays * 24 * 3600 * 1000);
+          } else if (attr) {
+            start = new Date(attr);
+          } else {
+            start = new Date(Date.now() + 14 * 24 * 3600 * 1000);
+          }
+        }
+        
+        const end = new Date(start.getTime() + 60*60*1000);
+        function fmt(dt) {
+          const pad = (n) => String(n).padStart(2,'0');
+          return dt.getUTCFullYear()
+            + pad(dt.getUTCMonth()+1)
+            + pad(dt.getUTCDate()) + 'T'
+            + pad(dt.getUTCHours())
+            + pad(dt.getUTCMinutes())
+            + pad(dt.getUTCSeconds()) + 'Z';
+        }
+        const ics =
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cochran Films//Coming Soon//EN
+BEGIN:VEVENT
+UID:${Date.now()}@cochranfilms.com
+DTSTAMP:${fmt(new Date())}
+DTSTART:${fmt(start)}
+DTEND:${fmt(end)}
+SUMMARY:Cochran Films — Launch Reveal
+DESCRIPTION:Be the first to experience our new brand and services.
+END:VEVENT
+END:VCALENDAR`;
+        const blob = new Blob([ics], { type: 'text/calendar' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'cochran-films-launch.ics';
+        document.body.appendChild(a); a.click(); a.remove();
+        URL.revokeObjectURL(url);
+      });
+    })();
+
+    // =========================
+    // Accessibility nicety: ESC closes modal
+    // =========================
+    (() => {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('notifyModal');
+          modal.classList.remove('show');
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
