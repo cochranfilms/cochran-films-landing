@@ -662,7 +662,7 @@
       flex-direction: column;
       justify-content: center;
     }
-    .panel h3 {
+    .panel h2 {
       margin: 0 0 12px;
       font-size: 24px; font-weight: 900;
       background: linear-gradient(135deg, #fff, #FFB200);
@@ -985,14 +985,48 @@
       /* GPU hints for smoothness */
       .card { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
       .tracks { will-change: transform; transform: translateZ(0); }
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: -999px;
+      background: #000;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      z-index: 1000001;
+    }
+    .skip-link:focus { left: 12px; top: 12px; }
+    /* Visually hidden but screen-reader accessible */
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+    /* Focus visibility */
+    a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+      outline: 3px solid var(--brand-gold);
+      outline-offset: 2px;
+    }
+    /* FAQ button reset */
+    .faq-q { background: none; border: 0; width: 100%; text-align: left; }
+    .faq-q:focus-visible { outline: 3px solid var(--brand-indigo); outline-offset: 2px; }
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .tracks { animation: none !important; }
+    }
   </style>
 </head>
 <body data-launch-in-days="14" data-progress="68" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
-  <canvas id="bg"></canvas>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
   <div class="wrapper">
     <!-- Top bar -->
-    <div class="top">
+    <header class="top" role="banner">
       <div class="brand">
         <div class="logo">
           <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
@@ -1003,26 +1037,28 @@
           </div>
         </div>
       </div>
-      <div class="links">
+      <nav class="links" aria-label="Primary">
         <span class="chip"><i class="fa-solid fa-shield-halved"></i> Enterprise-Ready</span>
         <span class="chip"><i class="fa-solid fa-bolt"></i> Real-Time Sync</span>
         <span class="chip"><i class="fa-solid fa-lock"></i> Secure</span>
         <a class="link-btn" href="https://forms.gle/o7Z8bsame2uvLsUy7" target="_blank" rel="noopener">
           <i class="fa-solid fa-rocket"></i> Work With Us
         </a>
-      </div>
-    </div>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1" role="main">
 
     <!-- Hero -->
     <section class="hero">
       <div class="super"><i class="fa-solid fa-sparkles"></i> Something big is coming</div>
       <h1 class="title">High-Level Storytelling meets Full‑Stack Execution</h1>
       <p class="subtitle">
-        We’re re‑branding Cochran Films and launching premium <strong>white‑label services</strong>.
+        We're re‑branding Cochran Films and launching premium <strong>white‑label services</strong>.
         Built with precision across <span class="typewrap" id="typewrap"></span>
       </p>
       <div class="cta-row">
-        <button class="cta-primary" id="openNotify"><i class="fa-solid fa-bell"></i> Get Notified</button>
+        <button class="cta-primary" id="openNotify" aria-haspopup="dialog" aria-controls="notifyModal"><i class="fa-solid fa-bell"></i> Get Notified</button>
         <a class="cta-ghost" href="#" id="addCalendar"><i class="fa-solid fa-calendar-plus"></i> Add Launch to Calendar</a>
         <a class="cta-ghost" href="https://cochranfilms.com/brand-building" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Visit Current Site</a>
       </div>
@@ -1049,16 +1085,16 @@
               <div class="lbl">Seconds</div>
             </div>
           </div>
-          <div class="count-info" id="countInfo" style="margin-top: 8px; font-size: 11px; color: var(--text-muted); text-align: center;"></div>
+          <div class="count-info" id="countInfo" aria-live="polite" style="margin-top: 8px; font-size: 11px; color: var(--text-muted); text-align: center;"></div>
         </div>
 
         <!-- Progress -->
         <div class="progress">
           <div class="prog-head">
-            <div class="prog-title">Rebrand progress</div>
+            <div class="prog-title" id="progressLabel">Rebrand progress</div>
             <div class="prog-val" id="progVal">0%</div>
           </div>
-          <div class="bar"><div class="fill" id="fill"></div></div>
+          <div class="bar" id="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68" aria-labelledby="progressLabel"><div class="fill" id="fill"></div></div>
           <div class="prog-tags">
             <span class="tag">UX + Visual</span>
             <span class="tag">Content</span>
@@ -1071,7 +1107,7 @@
 
     <!-- Story-Driven Production -->
     <section class="section" id="production">
-      <h3><i class="fa-solid fa-film"></i> Story‑Driven Production</h3>
+      <h2><i class="fa-solid fa-film"></i> Story‑Driven Production</h2>
       <p class="subtitle" style="margin:0 0 12px; max-width: 950px;">
         From pitch to pixels, we tie cinematic media production to full‑stack systems so every story moves business outcomes.
         Atlanta‑built, deployable anywhere.
@@ -1112,9 +1148,9 @@
       </div>
     </section>
 
-    <!-- What’s coming -->
+    <!-- What's coming -->
     <section class="section">
-      <h3><i class="fa-solid fa-star"></i> What’s Coming</h3>
+      <h2><i class="fa-solid fa-star"></i> What's Coming</h2>
       <div class="grid">
         <div class="card tilt">
           <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
@@ -1188,26 +1224,28 @@
 
     <!-- FAQs -->
     <section class="section">
-      <h3><i class="fa-solid fa-circle-question"></i> FAQs</h3>
+      <h2><i class="fa-solid fa-circle-question"></i> FAQs</h2>
       <div class="faq" id="faq">
         <div class="faq-item">
-          <div class="faq-q"><span>Will the current site stay live?</span><i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-a"><div>Yes. The site remains fully operational while we roll out the new experience.</div></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq1-a"><span id="faq1-q">Will the current site stay live?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a" id="faq1-a" role="region" aria-labelledby="faq1-q"><div>Yes. The site remains fully operational while we roll out the new experience.</div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q"><span>How do I get notified?</span><i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-a"><div>Use “Get Notified” to subscribe. We’ll email you right before launch.</div></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq2-a"><span id="faq2-q">How do I get notified?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2-q"><div>Use "Get Notified" to subscribe. We'll email you right before launch.</div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q"><span>Do you offer white‑label solutions?</span><i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-a"><div>Yes. Enterprise-ready templates and systems designed for fast, brand‑safe deployment.</div></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq3-a"><span id="faq3-q">Do you offer white‑label solutions?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a" id="faq3-a" role="region" aria-labelledby="faq3-q"><div>Yes. Enterprise-ready templates and systems designed for fast, brand‑safe deployment.</div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q"><span>Can we talk now about a project?</span><i class="fa-solid fa-chevron-down"></i></div>
-          <div class="faq-a"><div>Absolutely. Tap “Work With Us” and we’ll follow up promptly.</div></div>
+          <button class="faq-q" aria-expanded="false" aria-controls="faq4-a"><span id="faq4-q">Can we talk now about a project?</span><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a" id="faq4-a" role="region" aria-labelledby="faq4-q"><div>Absolutely. Tap "Work With Us" and we'll follow up promptly.</div></div>
         </div>
       </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1228,26 +1266,28 @@
   </div>
 
   <!-- Live badge -->
-  <div class="live-note"><span class="dot"></span> Site remains live during rebrand</div>
+  <div class="live-note"><span class="dot" aria-hidden="true"></span> Site remains live during rebrand</div>
 
   <!-- Notify Modal -->
-  <div class="modal" id="notifyModal" aria-hidden="true" aria-label="Notify me form">
+  <div class="modal" id="notifyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="notifyTitle" aria-describedby="notifyDesc">
     <div class="panel">
       <div class="panel-head">
-        <h3><i class="fa-solid fa-bell"></i> Get notified at launch</h3>
-        <p>We’ll only reach out for important updates. No spam, promise.</p>
+        <h2 id="notifyTitle"><i class="fa-solid fa-bell"></i> Get notified at launch</h2>
+        <p id="notifyDesc">We'll only reach out for important updates. No spam, promise.</p>
       </div>
       <div class="panel-body">
-        <div class="success" id="successMsg"><i class="fa-solid fa-circle-check"></i> You’re on the list. See you at launch!</div>
+        <div class="success" id="successMsg" role="status" aria-live="polite" aria-atomic="true"><i class="fa-solid fa-circle-check"></i> You're on the list. See you at launch!</div>
         <form class="form" id="notifyForm">
+          <label class="sr-only" for="name">Name</label>
           <input class="input" id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+          <label class="sr-only" for="email">Email address</label>
           <input class="input" id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
           <div class="row">
             <button class="btn" type="submit" id="submitBtn">
               <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Notify Me</span>
               <span class="btn-loading" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>
             </button>
-            <button class="btn btn-ghost" type="button" id="closeNotify"><i class="fa-solid fa-xmark"></i> Close</button>
+            <button class="btn btn-ghost" type="button" id="closeNotify" aria-label="Close dialog"><i class="fa-solid fa-xmark"></i> Close</button>
           </div>
           <div class="fine"><i class="fa-solid fa-lock"></i> Your info is encrypted in transit. Unsubscribe anytime.</div>
         </form>
@@ -1256,580 +1296,409 @@
   </div>
 
   <script>
-          // =========================
-      // EmailJS Initialization
-      // =========================
-      // Initialize EmailJS when the script loads
-      if (typeof emailjs !== 'undefined') {
-        emailjs.init('p4pF3OWvh-DXtae4c');
-        console.log('EmailJS initialized successfully');
-      } else {
-        console.log('EmailJS not loaded yet, will initialize later');
-      }
-
-      // =========================
-      // Particles Background
-      // =========================
-      (() => {
-      const canvas = document.getElementById('bg');
-      const ctx = canvas.getContext('2d', { alpha: true });
-      let w, h, dpr, particles, cellSize, maxDist2, grid;
-
-      const COLORS = [
-        'rgba(99,102,241,0.9)',
-        'rgba(255,178,0,0.9)',
-        'rgba(16,185,129,0.9)',
-        'rgba(99,102,241,0.4)',
-        'rgba(255,178,0,0.35)'
-      ];
-
-      function resize() {
-        dpr = Math.min(window.devicePixelRatio || 1, 1.5); // cap DPR for perf
-        w = canvas.width = Math.floor(innerWidth * dpr);
-        h = canvas.height = Math.floor(innerHeight * dpr);
-        canvas.style.width = innerWidth + 'px';
-        canvas.style.height = innerHeight + 'px';
-        maxDist2 = (120 * dpr) ** 2; // slightly shorter link distance
-        cellSize = Math.sqrt(maxDist2);
-        init();
-      }
-
-      function init() {
-        const baseDensity = 22000; // higher divisor => fewer particles
-        const count = Math.max(36, Math.floor((w * h) / (baseDensity * dpr)));
-        particles = Array.from({ length: count }, () => ({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.25 * dpr,
-          vy: (Math.random() - 0.5) * 0.25 * dpr,
-          r: Math.random() * (2.2 * dpr) + (0.6 * dpr),
-          c: COLORS[Math.floor(Math.random() * COLORS.length)]
-        }));
-      }
-
-      function buildGrid() {
-        grid = new Map();
-        for (let i = 0; i < particles.length; i++) {
-          const p = particles[i];
-          const cx = (p.x / cellSize) | 0;
-          const cy = (p.y / cellSize) | 0;
-          const key = cx + ',' + cy;
-          const arr = grid.get(key) || [];
-          arr.push(i);
-          grid.set(key, arr);
-        }
-      }
-
-      function step() {
-        if (document.hidden) { requestAnimationFrame(step); return; }
-        ctx.clearRect(0, 0, w, h);
-        buildGrid();
-
-        // draw links using spatial hashing (O(n))
-        for (let i = 0; i < particles.length; i++) {
-          const a = particles[i];
-          const cx = (a.x / cellSize) | 0;
-          const cy = (a.y / cellSize) | 0;
-          let links = 0;
-          for (let gx = cx - 1; gx <= cx + 1; gx++) {
-            for (let gy = cy - 1; gy <= cy + 1; gy++) {
-              const arr = grid.get(gx + ',' + gy);
-              if (!arr) continue;
-              for (const j of arr) {
-                if (j <= i) continue;
-                const b = particles[j];
-                const dx = a.x - b.x, dy = a.y - b.y;
-                const dist2 = dx * dx + dy * dy;
-                if (dist2 < maxDist2) {
-                  const alpha = 1 - (dist2 / maxDist2);
-                  ctx.strokeStyle = 'rgba(148,163,184,' + (0.12 * alpha) + ')';
-                  ctx.lineWidth = 1 * dpr;
-                  ctx.beginPath();
-                  ctx.moveTo(a.x, a.y);
-                  ctx.lineTo(b.x, b.y);
-                  ctx.stroke();
-                  links++;
-                  if (links >= 2) break; // limit connections per particle
-                }
-              }
-              if (links >= 2) break;
-            }
-            if (links >= 2) break;
-          }
-        }
-
-        // move and draw particles
-        for (const p of particles) {
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > w) p.vx *= -1;
-          if (p.y < 0 || p.y > h) p.vy *= -1;
-          ctx.beginPath();
-          ctx.fillStyle = p.c;
-          ctx.shadowColor = p.c;
-          ctx.shadowBlur = 5 * dpr; // slightly lower for perf
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fill();
-        }
-        requestAnimationFrame(step);
-      }
-
-      window.addEventListener('resize', resize, { passive: true });
-      resize(); step();
-    })();
-
-    // =========================
-    // Typewriter (rotating stack)
-    // =========================
-    (function typewriter() {
-      const el = document.getElementById('typewrap');
-      const items = [
-        'HTML', 'CSS', 'JavaScript', 'JSON',
-        'Python', 'APIs', 'Wix', 'GitHub Pages'
-      ];
-      let idx = 0, pos = 0, dir = 1;
-
-      function tick() {
-        const word = items[idx];
-        pos += dir;
-        el.textContent = word.slice(0, pos);
-
-        // blink caret
-        el.style.borderRightColor = (Date.now() % 800) < 400 ? 'transparent' : 'rgba(255,178,0,0.75)';
-
-        if (dir > 0 && pos === word.length) {
-          setTimeout(() => dir = -1, 900);
-        } else if (dir < 0 && pos === 0) {
-          idx = (idx + 1) % items.length;
-          dir = 1;
-        }
-        requestAnimationFrame(tick);
-      }
-      tick();
-    })();
-
-    // =========================
-    // Countdown + Progress
-    // =========================
-    (() => {
-      const d = document.getElementById('d');
-      const h = document.getElementById('h');
-      const m = document.getElementById('m');
-      const s = document.getElementById('s');
-      const body = document.body;
-      const attr = body.getAttribute('data-launch-date');
-      const inDays = parseInt(body.getAttribute('data-launch-in-days') || '', 10);
-      
-      // Use localStorage to persist the launch date across refreshes
-      const LAUNCH_DATE_KEY = 'cochran_launch_date';
-      let target;
-      
-      // Check if we already have a stored launch date
-      const storedDate = localStorage.getItem(LAUNCH_DATE_KEY);
-      if (storedDate) {
-        target = new Date(parseInt(storedDate));
-        // If the stored date is in the past, remove it and create a new one
-        if (target <= new Date()) {
-          localStorage.removeItem(LAUNCH_DATE_KEY);
-          target = null;
-        }
-      }
-      
-      // If no valid stored date, create a new one and store it
-      if (!target) {
-        if (!Number.isNaN(inDays)) {
-          target = new Date(Date.now() + inDays * 24 * 3600 * 1000);
-        } else if (attr) {
-          target = new Date(attr);
-        } else {
-          target = new Date(Date.now() + 14 * 24 * 3600 * 1000);
-        }
-        // Store the new launch date
-        localStorage.setItem(LAUNCH_DATE_KEY, target.getTime().toString());
-      }
-      
-      const fill = document.getElementById('fill');
-      const progVal = document.getElementById('progVal');
-      const progress = Math.max(0, Math.min(100, parseInt(body.getAttribute('data-progress') || '60', 10)));
-
-      function updateCountdown() {
-        const now = new Date();
-        let delta = Math.max(0, (target - now) / 1000); // seconds
-        const dd = Math.floor(delta / 86400); delta -= dd * 86400;
-        const hh = Math.floor(delta / 3600); delta -= hh * 3600;
-        const mm = Math.floor(delta / 60);   delta -= mm * 60;
-        const ss = Math.floor(delta);
-
-        d.textContent = dd;
-        h.textContent = String(hh).padStart(2, '0');
-        m.textContent = String(mm).padStart(2, '0');
-        s.textContent = String(ss).padStart(2, '0');
-      }
-
-      function updateProgress() {
-        progVal.textContent = progress + '%';
-        requestAnimationFrame(() => { fill.style.width = progress + '%'; });
-      }
-
-      function updateCountdownInfo() {
-        const countInfo = document.getElementById('countInfo');
-        if (countInfo) {
-          const launchDate = new Date(target);
-          const options = { 
-            month: 'short', 
-            day: 'numeric', 
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit'
-          };
-          countInfo.textContent = `Launch: ${launchDate.toLocaleDateString('en-US', options)}`;
-        }
-      }
-
-      updateProgress();
-      updateCountdown();
-      updateCountdownInfo();
-      setInterval(updateCountdown, 1000);
-      document.getElementById('year').textContent = new Date().getFullYear();
-      
-      // Add reset countdown functionality
-      const resetBtn = document.getElementById('resetCountdown');
-      if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-          if (confirm('Reset the countdown to 14 days from now?')) {
-            localStorage.removeItem(LAUNCH_DATE_KEY);
-            location.reload();
-          }
-        });
-      }
-    })();
-
-    // =========================
-    // Tilt effect for cards
-    // =========================
-    (() => {
-      const cards = document.querySelectorAll('.tilt');
-      const maxTilt = 6;
-
-      cards.forEach(card => {
-        let rafId = null;
-        let mx = 0, my = 0, hovering = false;
-
-        function update() {
-          if (!hovering) return;
-          const rect = card.getBoundingClientRect();
-          const rx = ((my / rect.height) - 0.5) * -2 * maxTilt;
-          const ry = ((mx / rect.width) - 0.5) *  2 * maxTilt;
-          card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px) scale(1.015)`;
-          rafId = requestAnimationFrame(update);
-        }
-
-        card.addEventListener('mousemove', (e) => {
-          const rect = card.getBoundingClientRect();
-          mx = e.clientX - rect.left;
-          my = e.clientY - rect.top;
-          if (!hovering) { hovering = true; rafId = requestAnimationFrame(update); }
-        });
-
-        card.addEventListener('mouseleave', () => {
-          hovering = false;
-          if (rafId) cancelAnimationFrame(rafId);
-          card.style.transform = '';
+      // Accessibility: hide decorative icons from screen readers
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('i').forEach((el) => {
+          if (!el.getAttribute('aria-label')) { el.setAttribute('aria-hidden', 'true'); }
         });
       });
-    })();
+           // =========================
+       // EmailJS Initialization
+       // =========================
+       // Initialize EmailJS when the script loads
+       if (typeof emailjs !== 'undefined') {
+         emailjs.init('p4pF3OWvh-DXtae4c');
+         console.log('EmailJS initialized successfully');
+       } else {
+         console.log('EmailJS not loaded yet, will initialize later');
+       }
 
-    // =========================
-    // FAQ Accordion
-    // =========================
-    (() => {
-      document.querySelectorAll('.faq-item').forEach(item => {
-        const q = item.querySelector('.faq-q');
-        const a = item.querySelector('.faq-a');
-        // Ensure answers start closed
-        a.classList.remove('open');
-        q.addEventListener('click', () => {
-          a.classList.toggle('open');
-          q.querySelector('i').classList.toggle('fa-rotate-180');
-        });
-      });
-    })();
+       // =========================
+       // Particles Background
+       // =========================
+       (() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+       const canvas = document.getElementById('bg');
+       const ctx = canvas.getContext('2d', { alpha: true });
+       let w, h, dpr, particles, cellSize, maxDist2, grid;
+ 
+       const COLORS = [
+         'rgba(99,102,241,0.9)',
+         'rgba(255,178,0,0.9)',
+         'rgba(16,185,129,0.9)',
+         'rgba(99,102,241,0.4)',
+         'rgba(255,178,0,0.35)'
+       ];
+ 
+       if (reduceMotion) {
+         canvas.style.display = 'none';
+         return;
+       }
 
-    // =========================
-    // Notify Modal + Simple submission
-    // - data-form-endpoint="" uses Formspree if set, fallback mailto
-    // - localStorage prevents duplicate submissions
-    // =========================
-    (() => {
-      const openBtn = document.getElementById('openNotify');
-      const closeBtn = document.getElementById('closeNotify');
-      const modal = document.getElementById('notifyModal');
-      const form = document.getElementById('notifyForm');
-      const success = document.getElementById('successMsg');
-      const endpoint = (document.body.getAttribute('data-form-endpoint') || '').trim();
-      const SUB_KEY = 'cochran_notify_v1';
-      // Update social links if provided via data attributes
-      const ig = document.body.getAttribute('data-instagram');
-      const yt = document.body.getAttribute('data-youtube');
-      const gh = document.body.getAttribute('data-github');
-      if (ig) { const el = document.getElementById('igLink'); if (el) el.href = ig; }
-      if (yt) { const el = document.getElementById('ytLink'); if (el) el.href = yt; }
-      if (gh) { const el = document.getElementById('ghLink'); if (el) el.href = gh; }
+       function resize() {
+         dpr = Math.min(window.devicePixelRatio || 1, 1.5); // cap DPR for perf
+         w = canvas.width = Math.floor(innerWidth * dpr);
+         h = canvas.height = Math.floor(innerHeight * dpr);
+         canvas.style.width = innerWidth + 'px';
+         canvas.style.height = innerHeight + 'px';
+         maxDist2 = (120 * dpr) ** 2; // slightly shorter link distance
+         cellSize = Math.sqrt(maxDist2);
+         init();
+       }
+       
+       function init() {
+         particles = [];
+         grid = new Map();
+         
+         // Create particles
+         for (let i = 0; i < 50; i++) {
+           particles.push({
+             x: Math.random() * w,
+             y: Math.random() * h,
+             vx: (Math.random() - 0.5) * 0.5,
+             vy: (Math.random() - 0.5) * 0.5,
+             color: COLORS[Math.floor(Math.random() * COLORS.length)]
+           });
+         }
+         
+         animate();
+       }
+       
+       function animate() {
+         ctx.clearRect(0, 0, w, h);
+         
+         // Update and draw particles
+         particles.forEach(particle => {
+           particle.x += particle.vx;
+           particle.y += particle.vy;
+           
+           // Bounce off edges
+           if (particle.x <= 0 || particle.x >= w) particle.vx *= -1;
+           if (particle.y <= 0 || particle.y >= h) particle.vy *= -1;
+           
+           // Draw particle
+           ctx.beginPath();
+           ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+           ctx.fillStyle = particle.color;
+           ctx.fill();
+         });
+         
+         // Draw connections
+         particles.forEach((p1, i) => {
+           particles.slice(i + 1).forEach(p2 => {
+             const dx = p1.x - p2.x;
+             const dy = p1.y - p2.y;
+             const dist2 = dx * dx + dy * dy;
+             
+             if (dist2 < maxDist2) {
+               const alpha = 1 - (dist2 / maxDist2);
+               ctx.beginPath();
+               ctx.moveTo(p1.x, p1.y);
+               ctx.lineTo(p2.x, p2.y);
+               ctx.strokeStyle = `rgba(99,102,241,${alpha * 0.3})`;
+               ctx.lineWidth = 1;
+               ctx.stroke();
+             }
+           });
+         });
+         
+         requestAnimationFrame(animate);
+       }
+       
+       // Initialize
+       resize();
+       window.addEventListener('resize', resize);
+     })();
+     
+     // =========================
+     // Typewriter (rotating stack)
+     // =========================
+     (function typewriter() {
+       const el = document.getElementById('typewrap');
+       if (!el) return;
+       
+       const items = [
+         'HTML', 'CSS', 'JavaScript', 'JSON',
+         'Python', 'APIs', 'Wix', 'GitHub Pages'
+       ];
+       let idx = 0, pos = 0, dir = 1;
+       
+       if (reduceMotion) { 
+         el.textContent = items[0]; 
+         return; 
+       }
+ 
+       function tick() {
+         const word = items[idx];
+         pos += dir;
+         el.textContent = word.slice(0, pos);
+         
+         if (pos === word.length) {
+           setTimeout(() => { dir = -1; }, 1000);
+         } else if (pos === 0) {
+           dir = 1;
+           idx = (idx + 1) % items.length;
+           setTimeout(tick, 500);
+           return;
+         }
+         
+         setTimeout(tick, 100);
+       }
+       
+       tick();
+     })();
+     
+     // =========================
+     // Progress Bar Animation
+     // =========================
+     (function updateProgress() {
+       const progVal = document.getElementById('progressVal');
+       const fill = document.getElementById('progressFill');
+       if (!progVal || !fill) return;
+       
+       let progress = 0;
+       const target = 85;
+       
+       function animate() {
+         if (progress < target) {
+           progress += 1;
+           progVal.textContent = progress + '%';
+           fill.style.width = progress + '%';
+           const pb = document.getElementById('progressbar');
+           if (pb) pb.setAttribute('aria-valuenow', String(progress));
+           requestAnimationFrame(animate);
+         }
+       }
+       
+       if (!reduceMotion) {
+         animate();
+       } else {
+         progress = target;
+         progVal.textContent = progress + '%';
+         fill.style.width = progress + '%';
+         const pb = document.getElementById('progressbar');
+         if (pb) pb.setAttribute('aria-valuenow', String(progress));
+       }
+     })();
+     // =========================
+     // FAQ Accordion
+     // =========================
+     (() => {
+       document.querySelectorAll('.faq-item').forEach(item => {
+         const q = item.querySelector('.faq-q');
+         const a = item.querySelector('.faq-a');
+         a.classList.remove('open');
+         if (q) q.setAttribute('aria-expanded', 'false');
+         q.addEventListener('click', () => {
+           const expanded = q.getAttribute('aria-expanded') === 'true';
+           q.setAttribute('aria-expanded', String(!expanded));
+           a.classList.toggle('open', !expanded);
+           const icon = q.querySelector('i');
+           if (icon) icon.classList.toggle('fa-rotate-180', !expanded);
+         });
+       });
+     })();
+     // =========================
+     // Notify Modal + Simple submission
+     // - data-form-endpoint="" uses Formspree if set, fallback mailto
+     // - localStorage prevents duplicate submissions
+     // =========================
+     (() => {
+       const openBtn = document.getElementById('openNotify');
+       const closeBtn = document.getElementById('closeNotify');
+       const modal = document.getElementById('notifyModal');
+       const form = document.getElementById('notifyForm');
+       const success = document.getElementById('successMsg');
+       const endpoint = (document.body.getAttribute('data-form-endpoint') || '').trim();
+       const SUB_KEY = 'cochran_notify_v1';
+       const focusableSelector = 'a[href], area[href], input:not([disabled]), button:not([disabled]), textarea, select, details, [tabindex]:not([tabindex="-1"])';
+       let previouslyFocusedElement = null;
+       // Update social links if provided via data attributes
+       const ig = document.body.getAttribute('data-instagram');
+       const yt = document.body.getAttribute('data-youtube');
+       const gh = document.body.getAttribute('data-github');
+       if (ig) { const el = document.getElementById('igLink'); if (el) el.href = ig; }
+       if (yt) { const el = document.getElementById('ytLink'); if (el) el.href = yt; }
+       if (gh) { const el = document.getElementById('ghLink'); if (el) el.href = gh; }
+ 
+       function open() { 
+         modal.classList.add('show'); 
+         modal.setAttribute('aria-hidden', 'false');
+         
+         // Force modal positioning for embedded contexts
+         modal.style.position = 'fixed';
+         modal.style.top = '0';
+         modal.style.left = '0';
+         modal.style.right = '0';
+         modal.style.bottom = '0';
+         modal.style.width = '100vw';
+         modal.style.height = '100vh';
+         modal.style.zIndex = '999999';
+         
+         // Prevent body scrolling when modal is open
+         document.body.style.overflow = 'hidden';
+         document.body.style.position = 'fixed';
+         document.body.style.width = '100%';
+         // Inert background content
+         document.querySelector('header.top')?.setAttribute('inert', '');
+         document.querySelector('main')?.setAttribute('inert', '');
+         document.querySelector('footer.footer')?.setAttribute('inert', '');
 
-      function open() { 
-        modal.classList.add('show'); 
-        modal.setAttribute('aria-hidden', 'false');
-        
-        // Force modal positioning for embedded contexts
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.right = '0';
-        modal.style.bottom = '0';
-        modal.style.width = '100vw';
-        modal.style.height = '100vh';
-        modal.style.zIndex = '999999';
-        
-        // Prevent body scrolling when modal is open
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
-        
-        // Additional fix for embedded contexts
-        if (window.self !== window.top) {
-          // We're in an iframe - ensure modal is visible
-          modal.style.position = 'fixed';
-          modal.style.zIndex = '999999';
-        }
-      }
-      function close() { 
-        modal.classList.remove('show'); 
-        modal.setAttribute('aria-hidden', 'true');
-        
-        // Reset modal positioning
-        modal.style.position = '';
-        modal.style.top = '';
-        modal.style.left = '';
-        modal.style.right = '';
-        modal.style.bottom = '';
-        modal.style.width = '';
-        modal.style.height = '';
-        modal.style.zIndex = '';
-        
-        // Restore body scrolling when modal is closed
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
-      }
+         // Focus management
+         previouslyFocusedElement = document.activeElement;
+         const focusables = modal.querySelectorAll(focusableSelector);
+         const firstFocusable = modal.querySelector('#name') || focusables[0];
+         if (firstFocusable && typeof firstFocusable.focus === 'function') {
+           firstFocusable.focus();
+         }
 
-      if (localStorage.getItem(SUB_KEY) === '1') {
-        // Already subscribed; keep modal available but show success instantly
-        form.style.display = 'none';
-        success.classList.add('show');
-      }
+         // Trap focus
+         function trap(e) {
+           if (e.key !== 'Tab') return;
+           const nodes = Array.from(modal.querySelectorAll(focusableSelector)).filter(el => el.offsetParent !== null || el === document.activeElement);
+           if (nodes.length === 0) return;
+           const first = nodes[0];
+           const last = nodes[nodes.length - 1];
+           if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+           else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+         }
+         modal._trapHandler = trap;
+         modal.addEventListener('keydown', trap);
+         
+         // Additional fix for embedded contexts
+         if (window.self !== window.top) {
+           // We're in an iframe - ensure modal is visible
+           modal.style.position = 'fixed';
+           modal.style.zIndex = '999999';
+         }
+       }
+       function close() { 
+         modal.classList.remove('show'); 
+         modal.setAttribute('aria-hidden', 'true');
+         
+         // Reset modal positioning
+         modal.style.position = '';
+         modal.style.top = '';
+         modal.style.left = '';
+         modal.style.right = '';
+         modal.style.bottom = '';
+         modal.style.width = '';
+         modal.style.height = '';
+         modal.style.zIndex = '';
+         
+         // Restore body scrolling when modal is closed
+         document.body.style.overflow = '';
+         document.body.style.position = '';
+         document.body.style.width = '';
+         // Remove inert from background
+         document.querySelector('header.top')?.removeAttribute('inert');
+         document.querySelector('main')?.removeAttribute('inert');
+         document.querySelector('footer.footer')?.removeAttribute('inert');
 
+         // Remove trap
+         if (modal._trapHandler) modal.removeEventListener('keydown', modal._trapHandler);
+         // Restore focus
+         if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
+           previouslyFocusedElement.focus();
+         } else if (openBtn) {
+           openBtn.focus();
+         }
+       }
+
+      // Expose close for global handlers
+      window._closeNotifyModal = close;
+      
+      // Event listeners
       openBtn.addEventListener('click', open);
       closeBtn.addEventListener('click', close);
-      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
       
-      // Add event listener for close success button
-      const closeSuccessBtn = document.getElementById('closeSuccess');
-      if (closeSuccessBtn) {
-        closeSuccessBtn.addEventListener('click', close);
-      }
-
+      // Form submission
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const name = (document.getElementById('name').value || '').trim();
-        const email = (document.getElementById('email').value || '').trim();
-        if (!email) return;
-
-        // Show loading state
-        const submitBtn = document.getElementById('submitBtn');
-        const btnText = submitBtn.querySelector('.btn-text');
-        const btnLoading = submitBtn.querySelector('.btn-loading');
-        btnText.style.display = 'none';
-        btnLoading.style.display = 'inline-flex';
-        submitBtn.disabled = true;
-
+        
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        
+        // Check if already submitted
+        if (localStorage.getItem(SUB_KEY)) {
+          success.textContent = 'You\'re already on the list!';
+          success.style.display = 'block';
+          return;
+        }
+        
         try {
-          // Initialize EmailJS
-          if (typeof emailjs === 'undefined') {
-            throw new Error('EmailJS not loaded');
-          }
-          
-          // EmailJS is already loaded and initialized
-
-          // EmailJS configuration - Replace with your actual IDs
-          const serviceID = 'service_t11yvru'; // Replace with your EmailJS service ID
-          const templateID = 'template_by61n6o'; // Replace with your EmailJS template ID
-          const publicKey = 'p4pF3OWvh-DXtae4c'; // Replace with your EmailJS public key
-
-          // Prepare template parameters - simplified to match EmailJS template
-          const templateParams = {
-            user_name: name,
-            user_email: email,
-            subscription_date: new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            }),
-            source: 'Cochran Films Launch Notification'
-          };
-
-          // Send email via EmailJS
-          console.log('Sending EmailJS with params:', { serviceID, templateID, templateParams });
-          
-          const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
-          console.log('EmailJS response:', response);
-          
-          if (response.status === 200) {
-            // Success - show enhanced success message
-            localStorage.setItem(SUB_KEY, '1');
-            form.style.display = 'none';
-            success.classList.add('show');
-            confettiBurst();
-          } else {
-            throw new Error(`EmailJS submission failed with status: ${response.status}`);
-          }
-        } catch (err) {
-          console.error('EmailJS error:', err);
-          
-          // Fallback to mailto if EmailJS fails
-          try {
-            const mail = `mailto:hello@cochranfilms.com?subject=${encodeURIComponent('Notify me at launch')}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email)}`;
-            window.location.href = mail;
+          if (endpoint) {
+            // Use Formspree or custom endpoint
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email })
+            });
             
-            // Still show success for fallback
-            localStorage.setItem(SUB_KEY, '1');
-            form.style.display = 'none';
-            success.classList.add('show');
-            confettiBurst();
-          } catch (fallbackErr) {
-            alert('Something went wrong. Please try again later.');
+            if (!response.ok) throw new Error('Submission failed');
+          } else {
+            // Fallback to mailto
+            const mailtoLink = `mailto:?subject=Notify Request&body=Name: ${name}%0D%0AEmail: ${email}`;
+            window.open(mailtoLink);
           }
-        } finally {
-          // Reset button state
-          btnText.style.display = 'inline-flex';
-          btnLoading.style.display = 'none';
-          submitBtn.disabled = false;
+          
+          // Success
+          localStorage.setItem(SUB_KEY, 'true');
+          success.style.display = 'block';
+          form.reset();
+          
+          // Fun: confetti after subscribe
+          confettiBurst();
+          
+        } catch (error) {
+          console.error('Submission error:', error);
+          success.textContent = 'Something went wrong. Please try again.';
+          success.style.display = 'block';
         }
       });
-
+      
       // Fun: confetti after subscribe
       function confettiBurst() {
+        if (reduceMotion) return;
+        
         const n = 60, colors = ['#FFB200', '#ffd166', '#6366f1', '#10b981', '#f59e0b'];
         for (let i = 0; i < n; i++) {
           const piece = document.createElement('span');
           piece.style.position = 'fixed';
           piece.style.zIndex = 60;
-          piece.style.left = (window.innerWidth / 2) + 'px';
-          piece.style.top = (window.innerHeight / 2) + 'px';
-          piece.style.width = piece.style.height = (Math.random() * 6 + 4) + 'px';
+          piece.style.left = Math.random() * window.innerWidth + 'px';
+          piece.style.top = Math.random() * window.innerHeight + 'px';
+          piece.style.width = piece.style.height = Math.random() * 10 + 10 + 'px';
           piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-          piece.style.borderRadius = '2px';
-          piece.style.pointerEvents = 'none';
-          piece.style.transform = `translate(-50%,-50%)`;
+          piece.style.borderRadius = '50%';
           document.body.appendChild(piece);
-          const angle = Math.random() * Math.PI * 2;
-          const velocity = Math.random() * 8 + 6;
-          const vx = Math.cos(angle) * velocity;
-          const vy = Math.sin(angle) * velocity - 8;
-          let x = window.innerWidth / 2, y = window.innerHeight / 2;
-          const gravity = 0.35 + Math.random() * 0.2;
-          const decay = 0.96 + Math.random() * 0.02;
-          let life = 60 + Math.random() * 20;
-
-          (function fly() {
-            x += vx; y += vy; vy += gravity;
-            life *= decay;
-            piece.style.left = x + 'px';
-            piece.style.top = y + 'px';
-            piece.style.opacity = Math.max(0, life / 80);
-            if (life > 1 && y < window.innerHeight + 40) {
-              requestAnimationFrame(fly);
-            } else {
-              piece.remove();
-            }
-          })();
+          
+          // Animate and remove
+          setTimeout(() => {
+            piece.style.transform = 'translateY(-100vh)';
+            piece.style.transition = 'transform 2s ease-out';
+            setTimeout(() => piece.remove(), 2000);
+          }, i * 50);
         }
       }
     })();
-
-    // =========================
-    // Add to Calendar (ICS)
-    // =========================
-    (() => {
-      const add = document.getElementById('addCalendar');
-      add.addEventListener('click', (e) => {
-        e.preventDefault();
-        const body = document.body;
-        const attr = body.getAttribute('data-launch-date');
-        const inDays = parseInt(body.getAttribute('data-launch-in-days') || '', 10);
-        
-        // Use the same persisted launch date from localStorage
-        const LAUNCH_DATE_KEY = 'cochran_launch_date';
-        let start;
-        
-        const storedDate = localStorage.getItem(LAUNCH_DATE_KEY);
-        if (storedDate) {
-          start = new Date(parseInt(storedDate));
-          // If the stored date is in the past, fall back to calculation
-          if (start <= new Date()) {
-            start = null;
-          }
-        }
-        
-        if (!start) {
-          if (!Number.isNaN(inDays)) {
-            start = new Date(Date.now() + inDays * 24 * 3600 * 1000);
-          } else if (attr) {
-            start = new Date(attr);
-          } else {
-            start = new Date(Date.now() + 14 * 24 * 3600 * 1000);
-          }
-        }
-        
-        const end = new Date(start.getTime() + 60*60*1000);
-        function fmt(dt) {
-          const pad = (n) => String(n).padStart(2,'0');
-          return dt.getUTCFullYear()
-            + pad(dt.getUTCMonth()+1)
-            + pad(dt.getUTCDate()) + 'T'
-            + pad(dt.getUTCHours())
-            + pad(dt.getUTCMinutes())
-            + pad(dt.getUTCSeconds()) + 'Z';
-        }
-        const ics =
-`BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Cochran Films//Coming Soon//EN
-BEGIN:VEVENT
-UID:${Date.now()}@cochranfilms.com
-DTSTAMP:${fmt(new Date())}
-DTSTART:${fmt(start)}
-DTEND:${fmt(end)}
-SUMMARY:Cochran Films — Launch Reveal
-DESCRIPTION:Be the first to experience our new brand and services.
-END:VEVENT
-END:VCALENDAR`;
-        const blob = new Blob([ics], { type: 'text/calendar' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url; a.download = 'cochran-films-launch.ics';
-        document.body.appendChild(a); a.click(); a.remove();
-        URL.revokeObjectURL(url);
-      });
-    })();
-
+    
     // =========================
     // Accessibility nicety: ESC closes modal
     // =========================
     (() => {
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-          const modal = document.getElementById('notifyModal');
-          modal.classList.remove('show');
-          modal.setAttribute('aria-hidden', 'true');
+          if (typeof window._closeNotifyModal === 'function') {
+            window._closeNotifyModal();
+          } else {
+            const modal = document.getElementById('notifyModal');
+            if (modal) {
+              modal.classList.remove('show');
+              modal.setAttribute('aria-hidden', 'true');
+            }
+          }
         }
       });
     })();
