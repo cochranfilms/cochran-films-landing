@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cochran Films — Production Toolkit (Print‑Ready)</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --indigo: #6366f1;
+      --gold: #FFB200;
+      --ink: #0b1220;
+      --muted: #475569;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
+    .wrap { max-width: 1050px; margin: 0 auto; padding: 28px; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .btn { appearance: none; border: 2px solid var(--gold); background: var(--gold); color: var(--ink); padding: 10px 14px; border-radius: 10px; font-weight: 800; cursor: pointer; }
+    .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,178,0,.5); }
+
+    /* Document (white) */
+    #doc { background: #ffffff; color: var(--ink); border-radius: 14px; border: 1px solid #e5e7eb; padding: 42px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    #doc h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; }
+    #doc .subtitle { margin: 6px 0 18px; color: var(--muted); }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 999px; font-weight: 700; background: #f8fafc; border: 1px solid #e2e8f0; color: var(--ink); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+    .card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; background: #fff; }
+    .card h2 { margin: 0 0 8px; font-size: 16px; letter-spacing: .02em; color: var(--indigo); text-transform: uppercase; }
+    .card ul { margin: 0; padding-left: 18px; }
+    .card li { margin: 6px 0; }
+    .hr { height: 1px; background: #e2e8f0; margin: 22px 0; }
+    .twocol { columns: 2; column-gap: 22px; }
+    .note { font-size: 12px; color: var(--muted); }
+    .table { width: 100%; border-collapse: collapse; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+    .table th, .table td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    .table th { background: #f8fafc; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .kpi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .kpi .k { border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; background: #f8fafc; }
+    .k .t { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .k .v { font-weight: 800; font-size: 18px; }
+    .page-break { break-after: page; page-break-after: always; }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .controls { display: none !important; }
+      .wrap { padding: 0; }
+      #doc { box-shadow: none; border-radius: 0; border: none; }
+    }
+
+    /* CSS Paged Media header/footer (used by paged.js) */
+    @page { size: A4; margin: 24mm 18mm 20mm; }
+    @page { @top-center { content: 'Cochran Films — Production Toolkit'; font-size: 10pt; color: #6b7280; } }
+    @page { @bottom-right { content: 'Page ' counter(page) ' of ' counter(pages); font-size: 10pt; color: #6b7280; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="controls">
+      <button class="btn" id="btnPrint">Download (Print‑quality PDF)</button>
+      <button class="btn ghost" id="btnExport">Export (auto‑download)</button>
+    </div>
+
+    <article id="doc" aria-label="Cochran Films Production Toolkit">
+      <header>
+        <div class="badge">🎬 Cochran Films</div>
+        <h1>Production Toolkit</h1>
+        <p class="subtitle">Scope your next video/brand project in under 30 minutes with producer‑ready templates.</p>
+        <div class="kpi">
+          <div class="k"><div class="t">Version</div><div class="v">1.0</div></div>
+          <div class="k"><div class="t">Last Updated</div><div class="v">${new Date().toISOString().slice(0,10)}</div></div>
+          <div class="k"><div class="t">License</div><div class="v">Personal Use</div></div>
+        </div>
+      </header>
+
+      <div class="hr"></div>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Creative Brief Template</h2>
+          <ul>
+            <li><strong>Goals</strong>: business outcome, story objective</li>
+            <li><strong>Audience</strong>: primary/secondary, insights</li>
+            <li><strong>Message</strong>: core narrative, key proof points</li>
+            <li><strong>Deliverables</strong>: formats, durations, versions</li>
+            <li><strong>Channels</strong>: placements, platform notes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Shot List Blueprint</h2>
+          <ul>
+            <li>Priority shots: hero, product, talent, CTA</li>
+            <li>Coverage: wide / medium / close, cutaways</li>
+            <li>B‑roll: environment, transitions, texture</li>
+            <li>Audio: VO/script, nat sound, room tone</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Storyboard Sheets</h2>
+          <ul>
+            <li>Structure: open → build → payoff → CTA</li>
+            <li>Pacing: beats, transitions, rhythm</li>
+            <li>Sequences: scenes, angles, motion notes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Timeline & Budget</h2>
+          <table class="table">
+            <thead><tr><th>Timeline</th><th>Typical Use</th></tr></thead>
+            <tbody>
+              <tr><td>&lt; 2 weeks</td><td>Edits, social, light production</td></tr>
+              <tr><td>2–6 weeks</td><td>Brand video, multi‑location shoots</td></tr>
+              <tr><td>6+ weeks</td><td>Campaigns, multi‑deliverable packages</td></tr>
+            </tbody>
+          </table>
+          <p class="note" style="margin-top:8px;">Budget brackets align to scope, crew size, locations, licensing.</p>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Production Checklists</h2>
+          <ul>
+            <li><strong>Pre‑pro</strong>: brief, script, schedule, call sheets</li>
+            <li><strong>Shoot day</strong>: gear, batteries, media, backups</li>
+            <li><strong>Post</strong>: ingest, selects, edit, color, sound, export</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Delivery Specs</h2>
+          <ul>
+            <li>File naming: project_client_YYYYMMDD_v01</li>
+            <li>Masters: ProRes; Deliverables: H.264/H.265</li>
+            <li>Aspect ratios: 16:9, 1:1, 9:16 variants</li>
+            <li>Platforms: bitrate, loudness, captions</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
+      <section>
+        <div class="card">
+          <h2>Guided Brief (Fill‑in)</h2>
+          <div class="twocol">
+            <p><strong>Project Title</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Primary Audience</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Business Goal</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Core Message</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Deliverables (Formats/Lengths)</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Channels/Placements</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Timeline</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+            <p><strong>Budget Range</strong><br/><span class="note">…………………………………………………………………………………………………………………</span></p>
+          </div>
+        </div>
+      </section>
+
+      <footer style="margin-top:22px; display:flex; justify-content:space-between; align-items:center;">
+        <span class="note">© <span id="year"></span> Cochran Films — cochranfilms.com</span>
+        <span class="note">This toolkit is a starting point; we tailor production to your brand.</span>
+      </footer>
+    </article>
+  </div>
+
+  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+    document.getElementById('btnExport').addEventListener('click', async () => {
+      const el = document.getElementById('doc');
+      const opt = {
+        margin:       [0.5, 0.5], // inches
+        filename:     'Cochran_Films_Production_Toolkit.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      await html2pdf().set(opt).from(el).save();
+    });
+  </script>
+</body>
+</html>
+
