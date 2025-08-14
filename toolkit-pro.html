@@ -6,6 +6,7 @@
   <title>Cochran Films — Production Toolkit (Print‑Ready)</title>
   <meta name="robots" content="noindex" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/pagedjs/dist/pagedjs.css" rel="stylesheet">
   <style>
     :root {
       --indigo: #6366f1;
@@ -62,10 +63,8 @@
 
     /* Print */
     @media print {
-      body { background: #fff; }
       .controls { display: none !important; }
-      .wrap { padding: 0; }
-      #doc { box-shadow: none; border-radius: 0; border: none; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
 
     /* CSS Paged Media header/footer (used by paged.js) */
@@ -333,8 +332,13 @@
     document.getElementById('covDate').textContent = new Date().toISOString().slice(0,10);
     document.getElementById('kpiDate').textContent = new Date().toISOString().slice(0,10);
     // Ensure paged.js has time to render before export
-    window.Paged && (window.Paged.on('rendered', () => console.log('Paged.js rendered')));
-    document.getElementById('btnPrint').addEventListener('click', () => {
+    window.Paged && (window.Paged.on('rendered', () => {
+      document.body.classList.add('paged-ready');
+      console.log('Paged.js rendered');
+    }));
+    document.getElementById('btnPrint').addEventListener('click', async () => {
+      // Wait a tick to ensure styles applied
+      await new Promise(r => setTimeout(r, 50));
       window.print();
     });
     document.getElementById('btnExport').addEventListener('click', async () => {
@@ -346,6 +350,8 @@
         html2canvas:  { scale: 2, useCORS: true },
         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
+      // slight delay to allow fonts/styles to settle
+      await new Promise(r => setTimeout(r, 100));
       await html2pdf().set(opt).from(el).save();
     });
   </script>
