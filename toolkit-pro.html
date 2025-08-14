@@ -6,7 +6,7 @@
   <title>Cochran Films — Production Toolkit (Print‑Ready)</title>
   <meta name="robots" content="noindex" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/pagedjs/dist/pagedjs.css" rel="stylesheet">
+  
   <style>
     :root {
       --indigo: #6366f1;
@@ -325,17 +325,14 @@
     </article>
   </div>
 
-  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('covDate').textContent = new Date().toISOString().slice(0,10);
     document.getElementById('kpiDate').textContent = new Date().toISOString().slice(0,10);
     // Ensure paged.js has time to render before export
-    window.Paged && (window.Paged.on('rendered', () => {
-      document.body.classList.add('paged-ready');
-      console.log('Paged.js rendered');
-    }));
+    // Remove Paged.js dependency to avoid white screen on some browsers
     document.getElementById('btnPrint').addEventListener('click', async () => {
       // Wait a tick to ensure styles applied
       await new Promise(r => setTimeout(r, 50));
