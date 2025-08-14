@@ -76,9 +76,13 @@
     @media print {
       .controls { display: none !important; }
       * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      #doc { padding: 28px; }
+      #doc { padding: 22px; }
+      .grid { grid-template-columns: 1fr; gap: 12px; }
+      .card { margin: 0 0 10px; }
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-grid .card { break-after: page; page-break-after: always; }
+      .hero-grid .card { break-inside: avoid; page-break-inside: avoid; }
+      .hr { margin: 14px 0; }
+      h2 { margin: 0 0 6px; }
     }
 
     /* CSS Paged Media header/footer (used by paged.js) */
@@ -119,7 +123,7 @@
       <div class="hr"></div>
       <div class="divider" aria-hidden="true"></div>
 
-      <section class="grid hero-grid">
+      <section class="grid hero-grid" style="align-items:start;">
         <div class="card">
           <h2>Creative Brief Template</h2>
           <p class="sub">Use the example to guide the blank template.</p>
@@ -131,7 +135,7 @@
             <li><strong>Channels</strong>: placements, platform notes</li>
           </ul>
           <div class="hr"></div>
-          <div class="grid-3">
+          <div class="grid-3" style="align-items:start;">
             <div>
               <h3 style="margin:0 0 4px">Example</h3>
               <ul>
@@ -166,7 +170,7 @@
 
       <div class="hr page-break"></div>
 
-      <section class="grid hero-grid">
+      <section class="grid hero-grid" style="align-items:start;">
         <div class="card">
           <h2>Shot List Blueprint</h2>
           <p class="sub">Start from an example, then duplicate the blank.</p>
