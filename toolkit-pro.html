@@ -30,7 +30,8 @@
     .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 999px; font-weight: 700; background: #f8fafc; border: 1px solid #e2e8f0; color: var(--ink); }
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
     .card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; background: #fff; }
-    .card { break-inside: avoid; page-break-inside: avoid; }
+    /* Allow natural flow; only specific sheets are kept together */
+    .keep-together { break-inside: avoid; page-break-inside: avoid; }
     .card h2 { margin: 0 0 8px; font-size: 16px; letter-spacing: .02em; color: var(--indigo); text-transform: uppercase; }
     .card ul { margin: 0; padding-left: 18px; }
     .card li { margin: 6px 0; }
@@ -56,6 +57,9 @@
     .shot-table { width: 100%; border-collapse: collapse; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
     .shot-table th, .shot-table td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 12px; }
     .shot-table th { background: #f8fafc; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .table, .shot-table { page-break-inside: auto; }
+    .table thead, .shot-table thead { display: table-header-group; }
+    .table tr, .shot-table tr { break-inside: avoid; page-break-inside: avoid; }
     .sub { margin: 4px 0 10px; color: var(--muted); font-size: 13px; }
     .blank { color: #9ca3af; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -80,7 +84,7 @@
       .grid { grid-template-columns: 1fr; gap: 12px; }
       .card { margin: 0 0 10px; }
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-grid .card { break-inside: avoid; page-break-inside: avoid; }
+      .hero-grid .card { break-inside: auto; page-break-inside: auto; }
       .hr { margin: 14px 0; }
       h2 { margin: 0 0 6px; }
     }
@@ -124,7 +128,7 @@
       <div class="divider" aria-hidden="true"></div>
 
       <section class="grid hero-grid" style="align-items:start;">
-        <div class="card">
+        <div class="card keep-together">
           <h2>Creative Brief Template</h2>
           <p class="sub">Use the example to guide the blank template.</p>
           <ul>
@@ -171,7 +175,7 @@
       <div class="hr page-break"></div>
 
       <section class="grid hero-grid" style="align-items:start;">
-        <div class="card">
+        <div class="card keep-together">
           <h2>Shot List Blueprint</h2>
           <p class="sub">Start from an example, then duplicate the blank.</p>
           <ul>
