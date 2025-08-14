@@ -811,7 +811,7 @@
       width: min(600px, 92vw); 
       max-height: 90vh;
       border-radius: 18px; 
-      overflow: visible;
+      overflow: hidden;
       background: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.8));
       border: 1px solid rgba(255,178,0,0.3);
       box-shadow: var(--shadow-lg);
@@ -838,6 +838,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .panel h2 {
       margin: 0 0 12px;
@@ -856,6 +858,7 @@
     }
     .form {
       display: grid; gap: 16px;
+      min-height: 0;
     }
     .input {
       width: 100%;
@@ -1058,14 +1061,19 @@
       .panel {
         width: 95vw;
         margin: 20px;
+        max-height: 85vh;
       }
       
       .panel-head {
         padding: 20px 20px 0;
+        flex-shrink: 0;
       }
       
       .panel-body {
         padding: 20px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        flex: 1;
       }
       
       .btn {
