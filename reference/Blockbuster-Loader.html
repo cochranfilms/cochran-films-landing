@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockbuster Loader - Cochran Films</title>
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    /* Main Storefront Container - Blockbuster Style */
+    .blockbuster-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #87CEEB 0%, #0066CC 50%, #004499 100%);
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: none;
+      overflow: hidden;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      perspective: 1000px;
+      animation: storeEntrance 2s ease-out forwards;
+    }
+    
+    @keyframes storeEntrance {
+      0% { 
+        transform: scale(1.2) translateY(50px);
+        opacity: 0;
+      }
+      100% { 
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Storefront Building */
+    .storefront {
+      position: relative;
+      width: 800px;
+      height: 500px;
+      background: #0066CC;
+      border-radius: 0;
+      box-shadow: 
+        0 20px 60px rgba(0,0,0,0.4),
+        0 10px 30px rgba(0,0,0,0.3),
+        inset 0 2px 4px rgba(255,255,255,0.1);
+      transform: rotateX(5deg) rotateY(-2deg);
+      margin-bottom: 2rem;
+      animation: storeFloat 6s ease-in-out infinite;
+      position: absolute;
+      left: 35%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotateX(5deg) rotateY(-2deg);
+    }
+    
+    @keyframes storeFloat {
+      0%, 100% { 
+        transform: translate(-50%, -50%) rotateX(5deg) rotateY(-2deg) translateY(0px);
+        box-shadow: 
+          0 20px 60px rgba(0,0,0,0.4),
+          0 10px 30px rgba(0,0,0,0.3),
+          inset 0 2px 4px rgba(255,255,255,0.1);
+      }
+      50% { 
+        transform: translate(-50%, -50%) rotateX(5deg) rotateY(-2deg) translateY(-10px);
+        box-shadow: 
+          0 25px 70px rgba(0,0,0,0.5),
+          0 15px 40px rgba(0,0,0,0.4),
+          inset 0 2px 4px rgba(255,255,255,0.1);
+      }
+    }
+    
+    /* Building Facade */
+    .building-facade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0066CC;
+      border: 4px solid #FFD700;
+      box-sizing: border-box;
+    }
+    
+    /* Main Entrance */
+    .main-entrance {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 220px;
+      background: linear-gradient(90deg, #FFB200 0%, #FFD700 50%, #FFB200 100%);
+      border: 4px solid #FFB200;
+      border-bottom: none;
+      box-shadow: 
+        0 0 30px rgba(255,178,0,0.8),
+        0 0 60px rgba(255,178,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+      z-index: 25;
+      transition: all 0.3s ease;
+    }
+    
+    .main-entrance:hover {
+      box-shadow: 
+        0 0 40px rgba(255,178,0,1),
+        0 0 80px rgba(255,178,0,0.6),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+    }
+    
+    .door-frame {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      background: #0066CC;
+      border: 3px solid #FFB200;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .door-left {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 50%;
+      height: calc(100% - 36px);
+      background: #0066CC;
+      border: 2px solid #FFB200;
+      transform-origin: left;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .door-right {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 50%;
+      height: calc(100% - 36px);
+      background: #0066CC;
+      border: 2px solid #FFB200;
+      transform-origin: right;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .door-glass {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid #FFB200;
+      border-radius: 4px;
+    }
+    
+    .door-handle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 20px;
+      background: #FFD700;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    /* Store Windows */
+    .store-windows {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      right: 50px;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .window-panel {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #FFD700;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    .film-reel {
+      width: 30px;
+      height: 30px;
+      background: #FFD700;
+      border-radius: 50%;
+      border: 3px solid #0066CC;
+      position: relative;
+      animation: reelSpin 3s linear infinite;
+    }
+    
+    .film-reel::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: #0066CC;
+      border-radius: 50%;
+    }
+    
+    @keyframes reelSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Store Sign */
+    .store-sign {
+      position: absolute;
+      left: 35%;
+      top: 20%;
+      transform: translateX(-50%);
+      z-index: 30;
+    }
+    
+    .sign-ticket {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      border: 3px solid #FFB200;
+      border-radius: 8px;
+      padding: 15px 25px;
+      box-shadow: 
+        0 8px 24px rgba(0,0,0,0.3),
+        0 0 20px rgba(255,178,0,0.4);
+      animation: signFloat 4s ease-in-out infinite;
+    }
+    
+    @keyframes signFloat {
+      0%, 100% { transform: translateX(-50%) translateY(0px); }
+      50% { transform: translateX(-50%) translateY(-5px); }
+    }
+    
+    .sign-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .sign-logo {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: #0066CC;
+      text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+      letter-spacing: 1px;
+    }
+    
+    .sign-tm {
+      font-size: 12px;
+      color: #0066CC;
+      font-weight: bold;
+    }
+    
+    /* Floating ENTER Button */
+    .enter-button {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px 40px;
+      background: linear-gradient(45deg, #FFB200, #FFD700);
+      border: 3px solid #FFB200;
+      border-radius: 50px;
+      color: #0066CC;
+      font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      cursor: pointer;
+      box-shadow: 
+        0 10px 30px rgba(0,0,0,0.3),
+        0 0 20px rgba(255,178,0,0.6),
+        0 0 40px rgba(255,178,0,0.4),
+        0 0 60px rgba(255,178,0,0.2),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+      animation: buttonFloat 2s ease-in-out infinite, buttonPulse 3s ease-in-out infinite;
+      transition: all 0.3s ease;
+      z-index: 20;
+      text-shadow: 0 0 10px rgba(255,178,0,0.8);
+    }
+    
+    .enter-button:hover {
+      transform: translateX(-50%) scale(1.1);
+      box-shadow: 
+        0 15px 40px rgba(0,0,0,0.4),
+        0 0 30px rgba(255,178,0,0.8),
+        0 0 60px rgba(255,178,0,0.6),
+        0 0 90px rgba(255,178,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+      background: linear-gradient(45deg, #FFD700, #FFB200);
+      animation: buttonGlitch 0.2s ease-in-out 3;
+    }
+    
+    .enter-button:active {
+      transform: translateX(-50%) scale(0.95);
+      box-shadow: 
+        0 5px 15px rgba(0,0,0,0.4),
+        0 0 15px rgba(255,178,0,0.6),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+    }
+    
+    @keyframes buttonFloat {
+      0%, 100% { transform: translateX(-50%) translateY(0px); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+    
+    @keyframes buttonPulse {
+      0%, 100% { 
+        box-shadow: 
+          0 10px 30px rgba(0,0,0,0.3),
+          0 0 20px rgba(255,178,0,0.6),
+          0 0 40px rgba(255,178,0,0.4),
+          0 0 60px rgba(255,178,0,0.2),
+          inset 0 2px 4px rgba(255,255,255,0.3);
+      }
+      50% { 
+        box-shadow: 
+          0 10px 30px rgba(0,0,0,0.3),
+          0 0 30px rgba(255,178,0,0.8),
+          0 0 60px rgba(255,178,0,0.6),
+          0 0 90px rgba(255,178,0,0.4),
+          inset 0 2px 4px rgba(255,255,255,0.3);
+      }
+    }
+    
+    @keyframes buttonGlitch {
+      0%, 100% { 
+        transform: translateX(-50%) scale(1.1);
+        filter: hue-rotate(0deg);
+      }
+      25% { 
+        transform: translateX(-50%) scale(1.1) translateX(2px);
+        filter: hue-rotate(10deg);
+      }
+      50% { 
+        transform: translateX(-50%) scale(1.1) translateX(-2px);
+        filter: hue-rotate(-10deg);
+      }
+      75% { 
+        transform: translateX(-50%) scale(1.1) translateX(1px);
+        filter: hue-rotate(5deg);
+      }
+    }
+    
+    /* Blockbuster-Style Membership Card with Lanyard */
+    .membership-card {
+      position: absolute;
+      top: 50%;
+      left: 65%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      animation: cardFloat 3s ease-in-out infinite;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    
+    @keyframes cardFloat {
+      0%, 100% { 
+        transform: translateY(-50%) translateX(0);
+      }
+      50% { 
+        transform: translateY(-50%) translateX(5px);
+      }
+    }
+    
+    /* Lanyard Design */
+    .lanyard {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 21;
+    }
+    
+    .lanyard-strap {
+      width: 120px;
+      height: 60px;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      border-radius: 30px 30px 0 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    }
+    
+    .lanyard-text {
+      font-family: 'Arial Black', sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    }
+    
+    .lanyard-clip {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 20px;
+      background: #333;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .lanyard-clip::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 10px;
+      background: #666;
+      border-radius: 0 0 10px 10px;
+    }
+    
+    .card-sleeve {
+      position: relative;
+      width: 280px;
+      height: 180px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 8px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 0 10px rgba(255, 178, 0, 0.1);
+    }
+    
+    /* Punch Hole for Lanyard */
+    .punch-hole {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      background: transparent;
+      border: 2px solid #FFD700;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    
+    .punch-hole::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 4px;
+      height: 4px;
+      background: #000;
+      border-radius: 50%;
+    }
+    
+    .card-sleeve::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .card-body {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0066CC 0%, #004499 50%, #002266 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.2),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+      clip-path: polygon(
+        0% 0%, 
+        100% 0%, 
+        100% 85%, 
+        95% 90%, 
+        100% 95%, 
+        100% 100%, 
+        0% 100%, 
+        0% 95%, 
+        5% 90%, 
+        0% 85%
+      );
+      border: 2px solid;
+      border-image: linear-gradient(45deg, #FFD700, #FFA500) 1;
+    }
+    
+    .card-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .card-title {
+      font-family: 'Arial Black', 'Helvetica Bold', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #FFD700;
+      text-shadow: 
+        2px 2px 0px #000,
+        -1px -1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    
+    .card-subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 0px #000;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .card-trademark {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      font-size: 12px;
+      color: #FFD700;
+      font-weight: bold;
+    }
+    
+    .card-name {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 0px #000;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-top: 8px;
+      min-height: 20px;
+    }
+    
+    /* Interactive Name Input */
+    .name-input-container {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      padding: 15px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 200;
+      min-width: 250px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .membership-card:hover .name-input-container {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    
+    .input-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    
+    .input-box input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #FFD700;
+      border-radius: 4px;
+      padding: 8px 12px;
+      color: #FFFFFF;
+      font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+      font-size: 14px;
+      font-weight: bold;
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 2px rgba(255, 215, 0, 0.5);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .input-box input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-style: italic;
+    }
+    
+    .input-box input:focus {
+      border-color: #FFA500;
+      box-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.3),
+        inset 0 1px 3px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .input-box button {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      color: #000;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+    }
+    
+    .input-box button:hover {
+      background: linear-gradient(45deg, #FFA500, #FFD700);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    
+    .input-instruction {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: #FFD700;
+      text-align: center;
+      text-shadow: 1px 1px 0px #000;
+    }
+    
+    /* Animated Arrow Hint */
+    .arrow-hint {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 25;
+      opacity: 0.8;
+      animation: arrowPulse 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    .arrow-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #FFD700;
+      text-align: center;
+      text-shadow: 1px 1px 0px #000;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .arrow-icon {
+      font-size: 32px;
+      color: #FFD700;
+      text-align: center;
+      text-shadow: 1px 1px 0px #000;
+      animation: arrowBounceUp 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes arrowPulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes arrowBounceUp {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes nameAppear {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    /* Card hover effects */
+    .membership-card:hover .card-sleeve {
+      transform: scale(1.05);
+      box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 178, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .membership-card:hover .card-title {
+      color: #FFA500;
+      text-shadow: 
+        2px 2px 0px #000,
+        -1px -1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    
+    /* Floating film particles */
+    .film-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #FFB200;
+      border-radius: 50%;
+      opacity: 0;
+      animation: particleFloat 3s ease-in-out infinite;
+    }
+    
+    @keyframes particleFloat {
+      0% { transform: translateY(0) scale(0); opacity: 0; }
+      50% { transform: translateY(-20px) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-40px) scale(0); opacity: 0; }
+    }
+    
+    /* Dust motes */
+    .dust-motes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    
+    .dust-mote {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      opacity: 0;
+      animation: dustFloat 6s ease-in-out infinite;
+    }
+    
+    @keyframes dustFloat {
+      0% { transform: translateY(0) scale(0); opacity: 0; }
+      50% { transform: translateY(-30px) scale(1); opacity: 0.6; }
+      100% { transform: translateY(-60px) scale(0); opacity: 0; }
+    }
+    
+    /* Responsive positioning for different screen sizes */
+    @media (max-width: 1200px) {
+      .membership-card {
+        left: 60%;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .membership-card {
+        left: 55%;
+      }
+      .card-sleeve {
+        width: 260px;
+        height: 170px;
+      }
+      .lanyard-strap {
+        width: 110px;
+        height: 55px;
+      }
+      .lanyard-text {
+        font-size: 9px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .membership-card {
+        left: 50%;
+      }
+      .card-sleeve {
+        width: 240px;
+        height: 160px;
+      }
+      .lanyard-strap {
+        width: 100px;
+        height: 50px;
+      }
+      .lanyard-text {
+        font-size: 8px;
+      }
+      .card-title {
+        font-size: 24px;
+      }
+      .card-subtitle {
+        font-size: 12px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .membership-card {
+        left: 45%;
+      }
+      .card-sleeve {
+        width: 220px;
+        height: 150px;
+      }
+      .lanyard-strap {
+        width: 90px;
+        height: 45px;
+      }
+      .lanyard-text {
+        font-size: 7px;
+      }
+      .card-title {
+        font-size: 20px;
+      }
+      .card-subtitle {
+        font-size: 10px;
+      }
+    }
+    
+    @media (max-width: 375px) {
+      .membership-card {
+        left: 40%;
+      }
+      .card-sleeve {
+        width: 200px;
+        height: 140px;
+      }
+      .lanyard-strap {
+        width: 80px;
+        height: 40px;
+      }
+      .lanyard-text {
+        font-size: 6px;
+      }
+      .card-title {
+        font-size: 18px;
+      }
+      .card-subtitle {
+        font-size: 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🏪 BLOCKBUSTER-STYLE STOREFRONT ENTER SCREEN -->
+  <div class="blockbuster-loader">
+    <!-- Blockbuster-style background -->
+    <div class="blockbuster-bg"></div>
+    
+    <!-- Neon Glow Effects -->
+    <div class="neon-glow"></div>
+    
+    <!-- Film Strip Effect -->
+    <div class="film-strip"></div>
+    
+    <!-- Ambient Fog -->
+    <div class="ambient-fog"></div>
+    
+    <!-- CRT Monitor Effect -->
+    <div class="crt-effect"></div>
+    
+    <!-- Store Sign -->
+    <div class="store-sign">
+      <div class="sign-ticket">
+        <div class="sign-content">
+          <div class="sign-logo">COCHRAN FILMS LLC</div>
+          <div class="sign-tm">®</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Storefront Building -->
+    <div class="storefront">
+      <div class="building-facade">
+        <!-- Glass Windows -->
+        <div class="store-windows">
+          <div class="window-panel">
+            <div class="film-reel"></div>
+            <div class="film-reel"></div>
+            <div class="film-reel"></div>
+          </div>
+          <div class="window-panel">
+            <div class="film-reel"></div>
+            <div class="film-reel"></div>
+            <div class="film-reel"></div>
+          </div>
+          <div class="window-panel">
+            <div class="film-reel"></div>
+            <div class="film-reel"></div>
+          </div>
+        </div>
+        
+        <!-- Main Entrance -->
+        <div class="main-entrance">
+          <div class="door-frame">
+            <div class="door-left"></div>
+            <div class="door-right"></div>
+            <div class="door-glass"></div>
+            <div class="door-handle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Floating ENTER Button -->
+    <button class="enter-button" onclick="enterStore()">ENTER</button>
+    
+    <!-- Blockbuster-Style Membership Card with Lanyard -->
+    <div class="membership-card">
+      <!-- Lanyard -->
+      <div class="lanyard">
+        <div class="lanyard-strap">
+          <div class="lanyard-text">COCHRAN FILMS</div>
+        </div>
+        <div class="lanyard-clip"></div>
+      </div>
+      
+      <!-- Card with Punch Hole -->
+      <div class="card-sleeve">
+        <div class="punch-hole"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-title">STORYTELLER</div>
+            <div class="card-subtitle">MEMBERSHIP CARD</div>
+            <div class="card-name" id="cardName"></div>
+          </div>
+          <div class="card-trademark">®</div>
+        </div>
+      </div>
+      
+      <!-- Interactive Name Input -->
+      <div class="name-input-container" id="nameInputContainer">
+        <div class="input-box">
+          <input type="text" id="nameInput" placeholder="Enter your name..." maxlength="20">
+          <button type="button" id="submitName" onclick="submitName()">SUBMIT</button>
+        </div>
+        <div class="input-instruction">Click to personalize your card</div>
+      </div>
+      
+      <!-- Animated Arrow Hint -->
+      <div class="arrow-hint" id="arrowHint">
+        <div class="arrow-text">HOVER TO PERSONALIZE</div>
+        <div class="arrow-icon">↑</div>
+      </div>
+    </div>
+    
+    <!-- Floating film particles -->
+    <div class="film-particles">
+      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+      <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+      <div class="particle" style="left: 40%; animation-delay: 0.5s;"></div>
+      <div class="particle" style="left: 50%; animation-delay: 1.5s;"></div>
+      <div class="particle" style="left: 60%; animation-delay: 2.5s;"></div>
+      <div class="particle" style="left: 70%; animation-delay: 0.8s;"></div>
+      <div class="particle" style="left: 80%; animation-delay: 1.8s;"></div>
+      <div class="particle" style="left: 90%; animation-delay: 2.2s;"></div>
+    </div>
+    
+    <!-- Dust motes -->
+    <div class="dust-motes">
+      <div class="dust-mote" style="left: 5%; animation-delay: 0s;"></div>
+      <div class="dust-mote" style="left: 15%; animation-delay: 2s;"></div>
+      <div class="dust-mote" style="left: 25%; animation-delay: 4s;"></div>
+      <div class="dust-mote" style="left: 35%; animation-delay: 1s;"></div>
+      <div class="dust-mote" style="left: 45%; animation-delay: 3s;"></div>
+      <div class="dust-mote" style="left: 55%; animation-delay: 5s;"></div>
+      <div class="dust-mote" style="left: 65%; animation-delay: 2.5s;"></div>
+      <div class="dust-mote" style="left: 75%; animation-delay: 1.5s;"></div>
+      <div class="dust-mote" style="left: 85%; animation-delay: 3.5s;"></div>
+      <div class="dust-mote" style="left: 95%; animation-delay: 0.5s;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Enhanced name submission function for membership card
+    function submitName() {
+      const nameInput = document.getElementById('nameInput');
+      const cardName = document.getElementById('cardName');
+      const nameInputContainer = document.getElementById('nameInputContainer');
+      const arrowHint = document.getElementById('arrowHint');
+      
+      if (nameInput && cardName && nameInput.value.trim()) {
+        const name = nameInput.value.trim();
+        
+        // Update the card with the user's name
+        cardName.textContent = name.toUpperCase();
+        
+        // Add a subtle animation to the name
+        cardName.style.animation = 'nameAppear 0.5s ease-out';
+        
+        // Hide the input container with smooth transition
+        nameInputContainer.style.transition = 'all 0.3s ease-out';
+        nameInputContainer.style.opacity = '0';
+        nameInputContainer.style.visibility = 'hidden';
+        nameInputContainer.style.transform = 'scale(0.95)';
+        
+        // Hide the "HOVER TO PERSONALIZE" arrow hint
+        if (arrowHint) {
+          arrowHint.style.transition = 'all 0.3s ease-out';
+          arrowHint.style.opacity = '0';
+          arrowHint.style.visibility = 'hidden';
+          arrowHint.style.transform = 'translateY(-10px)';
+        }
+        
+        // Clear the input
+        nameInput.value = '';
+        
+        // Store the name in localStorage for persistence
+        localStorage.setItem('storytellerCardName', name);
+        
+        console.log('✅ Name added to membership card:', name);
+      }
+    }
+    
+    // Load saved name on page load
+    function loadSavedName() {
+      const savedName = localStorage.getItem('storytellerCardName');
+      const cardName = document.getElementById('cardName');
+      
+      if (savedName && cardName) {
+        cardName.textContent = savedName.toUpperCase();
+      }
+    }
+    
+    // Enter Store Function
+    function enterStore() {
+      console.log('🏪 Entering Cochran Films store...');
+      
+      const blockbusterLoader = document.querySelector('.blockbuster-loader');
+      const enterButton = document.querySelector('.enter-button');
+      const mainEntrance = document.querySelector('.main-entrance');
+      const doorLeft = document.querySelector('.door-left');
+      const doorRight = document.querySelector('.door-right');
+      
+      if (blockbusterLoader && enterButton && mainEntrance) {
+        // Disable button to prevent multiple clicks
+        enterButton.disabled = true;
+        enterButton.style.pointerEvents = 'none';
+        
+        // Add VHS glitch effect first
+        blockbusterLoader.style.animation = 'vhsGlitch 0.3s ease-in-out';
+        
+        // Start enhanced door opening animation
+        setTimeout(() => {
+          // Add entrance glow effect
+          mainEntrance.style.boxShadow = `
+            0 0 50px rgba(255,178,0,1),
+            0 0 100px rgba(255,178,0,0.8),
+            0 0 150px rgba(255,178,0,0.6),
+            inset 0 2px 4px rgba(255,255,255,0.3)
+          `;
+          
+          // Enhanced door opening with smooth transitions
+          if (doorLeft && doorRight) {
+            doorLeft.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            doorRight.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            doorLeft.style.transform = 'rotateY(-90deg)';
+            doorRight.style.transform = 'rotateY(90deg)';
+          }
+          
+          // Enhanced entrance glow effect
+          setTimeout(() => {
+            mainEntrance.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            mainEntrance.style.boxShadow = `
+              0 0 100px rgba(255,178,0,1),
+              0 0 200px rgba(255,178,0,0.8),
+              0 0 300px rgba(255,178,0,0.6),
+              inset 0 4px 8px rgba(255,255,255,0.4)
+            `;
+            mainEntrance.style.filter = 'brightness(1.3) contrast(1.1)';
+            
+            // Start fade out sequence
+            setTimeout(() => {
+              // Complete fade out to black
+              blockbusterLoader.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+              blockbusterLoader.style.opacity = '0';
+              blockbusterLoader.style.filter = 'blur(3px) brightness(0.3)';
+              
+              // Add slide transition effect
+              document.body.style.overflow = 'hidden';
+              
+              // Ensure complete fade to black
+              setTimeout(() => {
+                // Force complete opacity to 0 and black filter
+                blockbusterLoader.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                blockbusterLoader.style.opacity = '0';
+                blockbusterLoader.style.filter = 'blur(6px) brightness(0)';
+                
+                // Final removal - ensure it's completely gone
+                setTimeout(() => {
+                  // Force complete removal and hide
+                  blockbusterLoader.style.transition = 'none';
+                  blockbusterLoader.style.display = 'none';
+                  blockbusterLoader.style.visibility = 'hidden';
+                  blockbusterLoader.style.opacity = '0';
+                  blockbusterLoader.style.pointerEvents = 'none';
+                  blockbusterLoader.style.zIndex = '-1';
+                  blockbusterLoader.style.transform = 'scale(1)';
+                  blockbusterLoader.style.filter = 'blur(10px) brightness(0)';
+                  blockbusterLoader.style.background = 'transparent';
+                  
+                  // Add loaded class to show main content
+                  document.body.classList.add('loaded');
+                  document.body.style.overflow = '';
+                  
+                  console.log('✅ Enhanced door entrance complete');
+                  
+                  // For this standalone version, show a success message
+                  setTimeout(() => {
+                    alert('🎬 Blockbuster transition complete! This is the standalone loader version.');
+                  }, 500);
+                }, 200);
+              }, 600);
+            }, 500);
+          }, 400);
+        }, 200);
+      }
+    }
+    
+    // Load saved name on initialization
+    loadSavedName();
+    
+    // Ensure ENTER button is always clickable
+    const enterButton = document.querySelector('.enter-button');
+    if (enterButton) {
+      enterButton.style.pointerEvents = 'auto';
+      enterButton.style.zIndex = '50';
+    }
+    
+    console.log('🎬 Blockbuster loading screen initialized');
+  </script>
+</body>
+</html> 

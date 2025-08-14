@@ -1484,7 +1484,6 @@
       </div>
       <div class="note">
         © <span id="year"></span> Cochran Films LLC — All rights reserved.
-        <button id="resetCountdown" style="background: none; border: none; color: var(--text-muted); font-size: 11px; cursor: pointer; text-decoration: underline; margin-left: 8px;">Reset Countdown</button>
       </div>
     </footer>
   </div>
@@ -1735,15 +1734,7 @@
        updateCountdown();
        setInterval(updateCountdown, 1000);
        
-       // Reset countdown button functionality
-       const resetBtn = document.getElementById('resetCountdown');
-       if (resetBtn) {
-         resetBtn.addEventListener('click', () => {
-           // Reset to fixed launch date: August 27th, 2025 at 10:00 AM
-           launchDate.setTime(new Date('2025-08-27T10:00:00').getTime());
-           updateCountdown();
-         });
-       }
+
      })();
      
      // =========================

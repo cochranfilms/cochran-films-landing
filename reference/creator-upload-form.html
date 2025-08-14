@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit.ai Creator Upload - Submit Your Projects</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 25px 50px rgba(0,0,0,0.4);
+            --glow: 0 0 40px rgba(99, 102, 241, 0.4);
+            --error-color: #ef4444;
+            --success-color: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--darker-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(99, 102, 241, 0.3);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 2rem 4rem;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Form */
+        .upload-form {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            transition: var(--transition);
+        }
+
+        .upload-form:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: var(--error-color);
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* File Upload */
+        .file-upload {
+            border: 3px dashed rgba(99, 102, 241, 0.5);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+
+        .file-upload:hover {
+            border-color: var(--primary-color);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .file-upload.dragover {
+            border-color: var(--primary-color);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .upload-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-hint {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .file-info {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .file-info.show {
+            display: block;
+        }
+
+        .file-info h4 {
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .file-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Success Message */
+        .success-message {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid var(--success-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 3rem;
+            color: var(--success-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .upload-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../creator-platform-landing.html" class="nav-logo">
+                <i class="fas fa-film"></i>
+                <span>Edit.ai Creator Platform</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header" data-aos="fade-up" data-aos-duration="1000">
+            <h1><i class="fas fa-upload"></i> Creator Upload Form</h1>
+            <p>Submit your Premiere Pro projects and join the world's largest editing style database. Earn money while revolutionizing video editing.</p>
+        </div>
+
+        <form class="upload-form" id="creatorForm" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <!-- Project Upload Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-file-video"></i> Project Files</h3>
+                <div class="file-upload" id="fileUpload">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">Drag & drop your Premiere Pro project files here</div>
+                    <div class="upload-hint">or click to browse (.prproj files)</div>
+                    <input type="file" id="projectFiles" accept=".prproj" multiple style="display: none;">
+                </div>
+                <div class="file-info" id="fileInfo">
+                    <h4>Selected Files:</h4>
+                    <div id="fileList"></div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h3><i class="fas fa-user"></i> Contact Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location/City</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Information -->
+            <div class="form-section">
+                <h3><i class="fas fa-briefcase"></i> Professional Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="experience">Years of Experience *</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select experience level</option>
+                            <option value="0-1">0-1 years</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5-10">5-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialty">Primary Specialty *</label>
+                        <select id="specialty" name="specialty" required>
+                            <option value="">Select your specialty</option>
+                            <option value="wedding">Wedding Videos</option>
+                            <option value="music-video">Music Videos</option>
+                            <option value="corporate">Corporate/Commercial</option>
+                            <option value="educational">Educational/How-to</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="social-media">Social Media Content</option>
+                            <option value="cinematic">Cinematic/Film</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="portfolio">Portfolio URL</label>
+                        <input type="url" id="portfolio" name="portfolio" placeholder="https://your-portfolio.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="socialMedia">Social Media (Instagram/YouTube)</label>
+                        <input type="text" id="socialMedia" name="socialMedia" placeholder="@yourusername">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Information -->
+            <div class="form-section">
+                <h3><i class="fas fa-info-circle"></i> Project Information</h3>
+                <div class="form-group">
+                    <label for="projectDescription">Project Description *</label>
+                    <textarea id="projectDescription" name="projectDescription" rows="4" placeholder="Describe your projects, editing style, and what makes your work unique..." required></textarea>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="projectCount">Number of Projects Uploaded</label>
+                        <input type="number" id="projectCount" name="projectCount" min="1" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="estimatedValue">Estimated Project Value ($)</label>
+                        <input type="number" id="estimatedValue" name="estimatedValue" min="50" placeholder="50-200">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="form-section">
+                <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="paymentMethod">Preferred Payment Method *</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Select payment method</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="stripe">Stripe (Credit Card)</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <option value="crypto">Cryptocurrency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="paypalEmail">PayPal Email (if selected)</label>
+                        <input type="email" id="paypalEmail" name="paypalEmail">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-section">
+                <h3><i class="fas fa-shield-alt"></i> Terms & Conditions</h3>
+                <div class="form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" id="termsAccepted" name="termsAccepted" required style="width: auto; margin-top: 0.25rem;">
+                        <span>I agree to the terms and conditions. I understand that my project files will be analyzed for editing patterns and I will receive compensation based on the quality and complexity of my submissions. I retain ownership of my original work while granting Edit.ai rights to use the extracted patterns for AI training.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Submit Creator Application
+            </button>
+        </form>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✅</div>
+            <h3>Application Submitted Successfully!</h3>
+            <p>Thank you for joining the Edit.ai Creator Platform. We'll review your projects and contact you within 24-48 hours with next steps and payment details.</p>
+            <p><strong>What happens next:</strong></p>
+            <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
+                <li>We'll analyze your project files for editing patterns</li>
+                <li>Quality assessment and complexity evaluation</li>
+                <li>Payment processing based on project value</li>
+                <li>Welcome to the creator network!</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+
+        // File Upload Handling
+        const fileUpload = document.getElementById('fileUpload');
+        const projectFiles = document.getElementById('projectFiles');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileList = document.getElementById('fileList');
+
+        fileUpload.addEventListener('click', () => projectFiles.click());
+        fileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUpload.classList.add('dragover');
+        });
+        fileUpload.addEventListener('dragleave', () => {
+            fileUpload.classList.remove('dragover');
+        });
+        fileUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUpload.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        projectFiles.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            if (files.length === 0) return;
+
+            fileList.innerHTML = '';
+            let totalSize = 0;
+
+            Array.from(files).forEach((file, index) => {
+                if (file.name.endsWith('.prproj')) {
+                    const fileItem = document.createElement('div');
+                    fileItem.style.padding = '0.5rem';
+                    fileItem.style.borderBottom = '1px solid rgba(99, 102, 241, 0.2)';
+                    fileItem.innerHTML = `
+                        <strong>${file.name}</strong><br>
+                        <small>Size: ${formatFileSize(file.size)}</small>
+                    `;
+                    fileList.appendChild(fileItem);
+                    totalSize += file.size;
+                }
+            });
+
+            if (fileList.children.length > 0) {
+                fileInfo.classList.add('show');
+                document.getElementById('projectCount').value = fileList.children.length;
+            } else {
+                fileInfo.classList.remove('show');
+            }
+        }
+
+        function formatFileSize(bytes) {
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            if (bytes === 0) return '0 Bytes';
+            const i = Math.floor(Math.log(bytes) / Math.log(1024));
+            return Math.round(bytes / Math.pow(1024, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        // Form Submission
+        const form = document.getElementById('creatorForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressFill = document.getElementById('progressFill');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Validate form
+            if (!validateForm()) {
+                return;
+            }
+
+            // Show progress
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            progressBar.style.display = 'block';
+
+            try {
+                // Simulate upload progress
+                await simulateUpload();
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Add files
+                const files = projectFiles.files;
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('projectFiles', files[i]);
+                }
+
+                // Submit to GitHub API (simulated)
+                await submitToGitHub(formData);
+                
+                // Show success
+                form.style.display = 'none';
+                successMessage.classList.add('show');
+                
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Error submitting form. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Creator Application';
+                progressBar.style.display = 'none';
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            
+            // Check required fields
+            const requiredFields = ['fullName', 'email', 'experience', 'specialty', 'projectDescription', 'paymentMethod'];
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.classList.remove('error');
+                }
+            });
+
+            // Check file upload
+            if (projectFiles.files.length === 0) {
+                alert('Please upload at least one Premiere Pro project file.');
+                isValid = false;
+            }
+
+            // Check terms acceptance
+            if (!document.getElementById('termsAccepted').checked) {
+                alert('Please accept the terms and conditions.');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        async function simulateUpload() {
+            const steps = [20, 40, 60, 80, 100];
+            
+            for (let i = 0; i < steps.length; i++) {
+                progressFill.style.width = steps[i] + '%';
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        }
+
+        async function submitToGitHub(formData) {
+            try {
+                // Submit to Edit.ai API
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        creatorName: formData.get('fullName'),
+                        creatorEmail: formData.get('email'),
+                        projectName: formData.get('projectDescription').substring(0, 50) + '...',
+                        projectDescription: formData.get('projectDescription'),
+                        style: 'cinematic',
+                        mediaFiles: [], // Will be populated with actual file data
+                        outputPath: ''
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (!result.success) {
+                    throw new Error(result.message || 'Upload failed');
+                }
+                
+                console.log('Project uploaded successfully:', result.projectId);
+                
+            } catch (error) {
+                console.error('API submission error:', error);
+                throw error;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit.ai Creator Admin Dashboard</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 25px 50px rgba(0,0,0,0.4);
+            --glow: 0 0 40px rgba(99, 102, 241, 0.4);
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 2rem 4rem;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: var(--text-secondary);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .main-content {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+        }
+
+        .sidebar {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Creator List */
+        .creator-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .creator-item {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .creator-item:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .creator-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .creator-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .creator-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-pending {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning-color);
+        }
+
+        .status-approved {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+        }
+
+        .status-rejected {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error-color);
+        }
+
+        .creator-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            font-size: 0.9rem;
+        }
+
+        .detail-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: var(--text-secondary);
+        }
+
+        .creator-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .btn-approve {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .btn-reject {
+            background: var(--error-color);
+            color: white;
+        }
+
+        .btn-view {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Charts */
+        .chart-container {
+            background: var(--card-bg);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .creator-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-crown"></i>
+                <span>Edit.ai Creator Admin</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-tachometer-alt"></i> Creator Admin Dashboard</h1>
+            <p>Manage creator submissions, review projects, and process payments</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCreators">0</div>
+                <div class="stat-label">Total Creators</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingReviews">0</div>
+                <div class="stat-label">Pending Reviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalEarnings">$0</div>
+                <div class="stat-label">Total Earnings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="approvedCreators">0</div>
+                <div class="stat-label">Approved Creators</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i> Creator Submissions
+                </h2>
+                <div class="creator-list" id="creatorList">
+                    <!-- Creator items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-pie"></i> Analytics
+                </h2>
+                
+                <!-- Specialty Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title">Creator Specialties</h3>
+                    <canvas id="specialtyChart" width="400" height="200"></canvas>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3 class="section-title">
+                        <i class="fas fa-bolt"></i> Quick Actions
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <button class="btn btn-view" onclick="exportData()">
+                            <i class="fas fa-download"></i> Export Data
+                        </button>
+                        <button class="btn btn-view" onclick="refreshData()">
+                            <i class="fas fa-sync"></i> Refresh Data
+                        </button>
+                        <button class="btn btn-view" onclick="viewStats()">
+                            <i class="fas fa-chart-bar"></i> View Statistics
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="chart-container">
+            <h3 class="chart-title">Creator Growth Over Time</h3>
+            <canvas id="growthChart" width="800" height="300"></canvas>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Sample data (in real implementation, this would come from the API)
+        const sampleCreators = [
+            {
+                id: 'creator_1234567890_abc123',
+                contact: {
+                    fullName: 'John Smith',
+                    email: 'john@example.com',
+                    phone: '+1-555-0123',
+                    location: 'Los Angeles, CA'
+                },
+                professional: {
+                    experience: '3-5',
+                    specialty: 'wedding',
+                    portfolio: 'https://johnsmith.com',
+                    socialMedia: '@johnsmithfilms'
+                },
+                projects: {
+                    description: 'Cinematic wedding videos with emotional storytelling',
+                    count: 3,
+                    estimatedValue: 150
+                },
+                status: 'pending',
+                submissionDate: '2024-01-15T10:30:00Z'
+            },
+            {
+                id: 'creator_1234567891_def456',
+                contact: {
+                    fullName: 'Sarah Johnson',
+                    email: 'sarah@example.com',
+                    phone: '+1-555-0456',
+                    location: 'New York, NY'
+                },
+                professional: {
+                    experience: '5-10',
+                    specialty: 'music-video',
+                    portfolio: 'https://sarahjohnson.com',
+                    socialMedia: '@sarahjohnson'
+                },
+                projects: {
+                    description: 'High-energy music videos with dynamic editing',
+                    count: 5,
+                    estimatedValue: 200
+                },
+                status: 'approved',
+                submissionDate: '2024-01-14T15:45:00Z'
+            }
+        ];
+
+        // Initialize dashboard
+        async function initDashboard() {
+            try {
+                // Load stats from API
+                const statsResponse = await fetch('/api/status');
+                const statsData = await statsResponse.json();
+                
+                if (statsData.success) {
+                    updateStatsFromAPI(statsData.stats);
+                } else {
+                    updateStats();
+                }
+                
+                // Load projects from API
+                const projectsResponse = await fetch('/api/upload');
+                const projectsData = await projectsResponse.json();
+                
+                if (projectsData.success) {
+                    updateProjectsFromAPI(projectsData.projects);
+                }
+                
+                // Update UI
+                loadCreators();
+                initCharts();
+                
+            } catch (error) {
+                console.error('Failed to load dashboard data:', error);
+                // Fallback to local data
+                updateStats();
+                loadCreators();
+                initCharts();
+            }
+        }
+        
+        function updateStatsFromAPI(stats) {
+            document.getElementById('totalCreators').textContent = stats.total || 0;
+            document.getElementById('pendingReviews').textContent = stats.queued || 0;
+            document.getElementById('approvedCreators').textContent = stats.completed || 0;
+            document.getElementById('totalEarnings').textContent = `$${stats.total * 100 || 0}`;
+        }
+        
+        function updateProjectsFromAPI(projects) {
+            // Update projects list with real data
+            const projectsList = document.getElementById('recentProjects');
+            if (projectsList && projects.length > 0) {
+                projectsList.innerHTML = projects.slice(0, 5).map(project => `
+                    <div class="project-item">
+                        <div class="project-info">
+                            <h4>${project.projectName}</h4>
+                            <p>${project.creatorName} • ${project.style}</p>
+                        </div>
+                        <span class="project-status ${project.status}">${project.status}</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Update statistics
+        function updateStats() {
+            const totalCreators = sampleCreators.length;
+            const pendingReviews = sampleCreators.filter(c => c.status === 'pending').length;
+            const approvedCreators = sampleCreators.filter(c => c.status === 'approved').length;
+            const totalEarnings = sampleCreators
+                .filter(c => c.status === 'approved')
+                .reduce((sum, c) => sum + c.projects.estimatedValue, 0);
+
+            document.getElementById('totalCreators').textContent = totalCreators;
+            document.getElementById('pendingReviews').textContent = pendingReviews;
+            document.getElementById('totalEarnings').textContent = `$${totalEarnings}`;
+            document.getElementById('approvedCreators').textContent = approvedCreators;
+        }
+
+        // Load creators
+        function loadCreators() {
+            const creatorList = document.getElementById('creatorList');
+            creatorList.innerHTML = '';
+
+            sampleCreators.forEach(creator => {
+                const creatorItem = document.createElement('div');
+                creatorItem.className = 'creator-item';
+                
+                creatorItem.innerHTML = `
+                    <div class="creator-header">
+                        <div class="creator-name">${creator.contact.fullName}</div>
+                        <div class="creator-status status-${creator.status}">${creator.status.toUpperCase()}</div>
+                    </div>
+                    <div class="creator-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Email</div>
+                            <div class="detail-value">${creator.contact.email}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Specialty</div>
+                            <div class="detail-value">${creator.professional.specialty}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Experience</div>
+                            <div class="detail-value">${creator.professional.experience} years</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Projects</div>
+                            <div class="detail-value">${creator.projects.count} files</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Estimated Value</div>
+                            <div class="detail-value">$${creator.projects.estimatedValue}</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Submitted</div>
+                            <div class="detail-value">${new Date(creator.submissionDate).toLocaleDateString()}</div>
+                        </div>
+                    </div>
+                    <div class="creator-actions">
+                        <button class="btn btn-view" onclick="viewCreator('${creator.id}')">
+                            <i class="fas fa-eye"></i> View
+                        </button>
+                        ${creator.status === 'pending' ? `
+                            <button class="btn btn-approve" onclick="approveCreator('${creator.id}')">
+                                <i class="fas fa-check"></i> Approve
+                            </button>
+                            <button class="btn btn-reject" onclick="rejectCreator('${creator.id}')">
+                                <i class="fas fa-times"></i> Reject
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+                
+                creatorList.appendChild(creatorItem);
+            });
+        }
+
+        // Initialize charts
+        function initCharts() {
+            // Specialty Chart
+            const specialtyCtx = document.getElementById('specialtyChart').getContext('2d');
+            const specialtyData = {
+                wedding: sampleCreators.filter(c => c.professional.specialty === 'wedding').length,
+                'music-video': sampleCreators.filter(c => c.professional.specialty === 'music-video').length,
+                corporate: sampleCreators.filter(c => c.professional.specialty === 'corporate').length,
+                educational: sampleCreators.filter(c => c.professional.specialty === 'educational').length
+            };
+
+            new Chart(specialtyCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(specialtyData).map(key => key.replace('-', ' ').toUpperCase()),
+                    datasets: [{
+                        data: Object.values(specialtyData),
+                        backgroundColor: [
+                            '#6366f1',
+                            '#10b981',
+                            '#f59e0b',
+                            '#ef4444'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#cbd5e1'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Growth Chart
+            const growthCtx = document.getElementById('growthChart').getContext('2d');
+            new Chart(growthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Creator Submissions',
+                        data: [0, 2, 5, 8, 12, 15],
+                        borderColor: '#6366f1',
+                        backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#cbd5e1'
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: '#cbd5e1'
+                            },
+                            grid: {
+                                color: 'rgba(203, 213, 225, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#cbd5e1'
+                            },
+                            grid: {
+                                color: 'rgba(203, 213, 225, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Action functions
+        function viewCreator(creatorId) {
+            const creator = sampleCreators.find(c => c.id === creatorId);
+            if (creator) {
+                alert(`Viewing creator: ${creator.contact.fullName}\nEmail: ${creator.contact.email}\nSpecialty: ${creator.professional.specialty}`);
+            }
+        }
+
+        function approveCreator(creatorId) {
+            const creator = sampleCreators.find(c => c.id === creatorId);
+            if (creator) {
+                creator.status = 'approved';
+                loadCreators();
+                updateStats();
+                alert(`Approved creator: ${creator.contact.fullName}`);
+            }
+        }
+
+        function rejectCreator(creatorId) {
+            const creator = sampleCreators.find(c => c.id === creatorId);
+            if (creator) {
+                creator.status = 'rejected';
+                loadCreators();
+                updateStats();
+                alert(`Rejected creator: ${creator.contact.fullName}`);
+            }
+        }
+
+        function exportData() {
+            const data = {
+                creators: sampleCreators,
+                exportDate: new Date().toISOString(),
+                stats: {
+                    totalCreators: sampleCreators.length,
+                    pendingReviews: sampleCreators.filter(c => c.status === 'pending').length,
+                    approvedCreators: sampleCreators.filter(c => c.status === 'approved').length
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `creators-export-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function refreshData() {
+            updateStats();
+            loadCreators();
+            alert('Data refreshed!');
+        }
+
+        function viewStats() {
+            const stats = {
+                totalCreators: sampleCreators.length,
+                pendingReviews: sampleCreators.filter(c => c.status === 'pending').length,
+                approvedCreators: sampleCreators.filter(c => c.status === 'approved').length,
+                totalEarnings: sampleCreators
+                    .filter(c => c.status === 'approved')
+                    .reduce((sum, c) => sum + c.projects.estimatedValue, 0)
+            };
+            
+            alert(`Statistics:\nTotal Creators: ${stats.totalCreators}\nPending Reviews: ${stats.pendingReviews}\nApproved Creators: ${stats.approvedCreators}\nTotal Earnings: $${stats.totalEarnings}`);
+        }
+
+        // Initialize dashboard when page loads
+        document.addEventListener('DOMContentLoaded', initDashboard);
+        
+        // Refresh data every 30 seconds
+        setInterval(() => {
+            loadDashboardData();
+        }, 30000);
+    </script>
+</body>
+</html>

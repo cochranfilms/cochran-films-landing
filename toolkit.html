@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cochran Films — Production Toolkit (PDF)</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0; background: #0f172a; color: #e2e8f0; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
+    .card { background: #0b1220; border: 1px solid rgba(255,178,0,0.25); border-radius: 14px; padding: 22px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .muted { color: #94a3b8; margin: 0 0 18px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0 18px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 10px; border: 2px solid #FFB200; background: #FFB200; color: #0b1220; font-weight: 800; cursor: pointer; text-decoration: none; }
+    .ghost { background: transparent; color: #e2e8f0; border-color: rgba(255,178,0,0.35); }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #0a0f1c; border: 1px solid rgba(99,102,241,0.25); padding: 12px; border-radius: 10px; overflow: auto; font-size: 13px; color: #cbd5e1; }
+    details { border: 1px solid rgba(148,163,184,0.25); border-radius: 10px; padding: 12px 14px; background: #0a0f1c; }
+    summary { font-weight: 800; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>🎬 Cochran Films — Production Toolkit</h1>
+      <p class="muted">Your PDF download will start automatically. If it doesn't, use the buttons below.</p>
+      <div class="row">
+        <button id="download" class="btn">Download PDF</button>
+        <button id="preview" class="btn ghost">Open in New Tab</button>
+      </div>
+      <details>
+        <summary>What’s included</summary>
+        <div class="code" style="margin-top:12px; white-space: pre-wrap;">
+Creative Brief Template — goals, audience, message, deliverables, channels
+Shot List Blueprint — priority shots, coverage, b‑roll, audio notes
+Storyboard Sheets — structure, pacing, sequence beats
+Timeline & Budget Ranges — realistic windows and cost brackets
+Production Checklists — pre‑pro, shoot day, post
+Delivery Specs — file naming, formats, aspect ratios, platform settings
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    (function() {
+      const { jsPDF } = window.jspdf || {};
+      const title = 'Cochran Films — Production Toolkit';
+      const filename = 'Cochran_Films_Production_Toolkit.pdf';
+      const sections = [
+        { h: 'Creative Brief Template', b: [
+          'Goals: business outcome, story objective',
+          'Audience: primary/secondary, insights',
+          'Message: core narrative, key proof points',
+          'Deliverables: formats, durations, versions',
+          'Channels: placements, platform notes'
+        ]},
+        { h: 'Shot List Blueprint', b: [
+          'Priority shots: hero, product, talent, CTA',
+          'Coverage: wide/medium/close, cutaways',
+          'B‑roll: environment, transitions, texture',
+          'Audio: VO/script, nat sound, room tone'
+        ]},
+        { h: 'Storyboard Sheets', b: [
+          'Structure: open → build → payoff → CTA',
+          'Pacing: beats, transitions, rhythm',
+          'Sequences: scenes, angles, motion notes'
+        ]},
+        { h: 'Timeline & Budget Ranges', b: [
+          'Timelines: <2 weeks, 2–6 weeks, 6+ weeks',
+          'Budget: brackets aligned to scope & crew',
+          'Assumptions: locations, permits, licensing'
+        ]},
+        { h: 'Production Checklists', b: [
+          'Pre‑production: brief, script, schedule, call sheets',
+          'Shoot day: gear, batteries, media, backups',
+          'Post: ingest, selects, edit, color, sound, export'
+        ]},
+        { h: 'Delivery Specs', b: [
+          'File naming: project_client_YYYYMMDD_v01',
+          'Formats: ProRes master, H.264/H.265 deliverables',
+          'Aspect ratios: 16:9, 1:1, 9:16 variants',
+          'Platforms: bitrate, loudness, captions'
+        ]}
+      ];
+
+      function makePDF() {
+        if (!jsPDF) return null;
+        const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+        const margin = 48; // pts
+        const lh = 18; // line height
+        let x = margin, y = margin;
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(18);
+        doc.text(title, x, y);
+        y += 28;
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(11.5);
+        const intro = 'Scope your next video/brand project in under 30 minutes with ready‑to‑use docs your team can execute immediately.';
+        const introLines = doc.splitTextToSize(intro, 520);
+        doc.text(introLines, x, y);
+        y += introLines.length * lh + 8;
+
+        sections.forEach((sec, si) => {
+          // Add new page if needed
+          if (y > 760) { doc.addPage(); y = margin; }
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(14);
+          doc.text(`• ${sec.h}`, x, y);
+          y += 22;
+
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(11.5);
+          sec.b.forEach((line) => {
+            const lines = doc.splitTextToSize(`- ${line}`, 520);
+            if (y + lines.length * lh > 800) { doc.addPage(); y = margin; }
+            doc.text(lines, x + 12, y);
+            y += lines.length * lh;
+          });
+          y += 8;
+        });
+
+        // Footer
+        const addFooter = () => {
+          const pages = doc.getNumberOfPages();
+          for (let i = 1; i <= pages; i++) {
+            doc.setPage(i);
+            doc.setFontSize(10);
+            doc.setTextColor(120);
+            doc.text(`© ${new Date().getFullYear()} Cochran Films`, margin, 820);
+            doc.text(`Page ${i} of ${pages}`, 540, 820);
+            doc.setTextColor(0);
+          }
+        };
+        addFooter();
+
+        return doc;
+      }
+
+      function triggerDownload() {
+        const doc = makePDF();
+        if (!doc) return;
+        doc.save(filename);
+      }
+
+      function openInNewTab() {
+        const doc = makePDF();
+        if (!doc) return;
+        const blob = doc.output('blob');
+        const url = URL.createObjectURL(blob);
+        window.open(url, '_blank');
+      }
+
+      document.getElementById('download').addEventListener('click', triggerDownload);
+      document.getElementById('preview').addEventListener('click', openInNewTab);
+
+      // Auto download on load (with short delay to allow fonts)
+      setTimeout(triggerDownload, 400);
+    })();
+  </script>
+</body>
+</html>
+
