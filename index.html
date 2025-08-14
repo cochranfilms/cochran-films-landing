@@ -2040,7 +2040,14 @@
               timeline,
               budget_range,
               source: SOURCE,
-              submitted_at
+              submitted_at,
+              // Common EmailJS defaults for compatibility
+              from_name: name || 'Friend',
+              from_email: email,
+              reply_to: email,
+              to_name: 'Cochran Films',
+              subject: 'Your Production Toolkit',
+              message: 'Production Toolkit request. See download link in template.'
             };
 
             const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
@@ -2089,6 +2096,9 @@
           }
           
         } catch (error) {
+          try {
+            console.error('EmailJS error:', error?.status, error?.text, error);
+          } catch(_) {}
           console.error('Submission error:', error);
           success.textContent = 'Something went wrong. Please try again.';
           success.style.display = 'block';
