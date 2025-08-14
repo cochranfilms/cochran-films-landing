@@ -24,7 +24,7 @@ async function main() {
     path: pdfPath,
     format: 'A4',
     printBackground: true,
-    margin: { top: '12mm', right: '12mm', bottom: '12mm', left: '12mm' }
+    margin: { top: '10mm', right: '8mm', bottom: '10mm', left: '8mm' }
   });
 
   await browser.close();
