@@ -2008,7 +2008,7 @@
         const timeline = (formData.get('timeline') || '').toString().trim();
         const budget_range = (formData.get('budget_range') || '').toString().trim();
         
-        const DOWNLOAD_URL = 'https://landing.cochranfilms.com/assets/Production_Toolkit.pdf';
+        const DOWNLOAD_URL = 'assets/Production_Toolkit .pdf';
         const SOURCE = 'Homepage Popup';
         const submitted_at = new Date().toISOString().slice(0,10);
         
@@ -2021,6 +2021,8 @@
               <span><i class="fa-solid fa-download"></i> <a href="${DOWNLOAD_URL}" target="_blank" rel="noopener">Download Toolkit</a></span>
             </div>
           `);
+          // Hide the form for duplicate submissions too
+          form.style.display = 'none';
           return;
         }
         
@@ -2100,6 +2102,8 @@
               </div>
             `;
             form.reset();
+            // Hide the form completely after successful submission
+            form.style.display = 'none';
             // Fun: confetti after subscribe
             confettiBurst();
           }
