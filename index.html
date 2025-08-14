@@ -2047,7 +2047,8 @@
               reply_to: email,
               to_name: 'Cochran Films',
               subject: 'Your Production Toolkit',
-              message: 'Production Toolkit request. See download link in template.'
+              message: 'Production Toolkit request. See download link in template.',
+              to_email: 'hello@cochranfilms.com'
             };
 
             const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
