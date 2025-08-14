@@ -43,6 +43,17 @@
     .k .t { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
     .k .v { font-weight: 800; font-size: 18px; }
     .page-break { break-after: page; page-break-after: always; }
+    .cover { display: grid; place-items: center; min-height: 1050px; background: linear-gradient(180deg,#ffffff, #fafafa); border: 3px solid var(--gold); border-radius: 12px; padding: 48px; text-align: center; }
+    .cover .brand { display: flex; align-items: center; gap: 14px; justify-content: center; margin-bottom: 18px; }
+    .cover .brand img { width: 86px; height: 86px; border-radius: 12px; border: 1px solid #e5e7eb; object-fit: contain; }
+    .cover h1 { font-size: 36px; margin: 0; }
+    .cover p { color: var(--muted); max-width: 640px; margin: 10px auto 0; }
+    .divider { height: 10px; background: linear-gradient(90deg, var(--indigo), var(--gold)); border-radius: 999px; margin: 18px 0; opacity: .35; }
+    .frames { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .frame { border: 1px dashed #cbd5e1; border-radius: 10px; height: 120px; background: #f8fafc; display: grid; place-items: center; color: #64748b; font-size: 12px; }
+    .shot-table { width: 100%; border-collapse: collapse; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+    .shot-table th, .shot-table td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 12px; }
+    .shot-table th { background: #f8fafc; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 
     /* Print */
     @media print {
@@ -66,6 +77,16 @@
     </div>
 
     <article id="doc" aria-label="Cochran Films Production Toolkit">
+      <!-- Cover Page -->
+      <section class="cover page-break">
+        <div>
+          <div class="brand"><img src="logo.png" alt="Cochran Films logo"/><span class="badge">Cochran Films</span></div>
+          <h1>Production Toolkit</h1>
+          <div class="divider"></div>
+          <p>Guides, checklists, and templates to plan and deliver high‑quality video and brand content. Print‑ready and producer‑approved.</p>
+          <p class="note" style="margin-top:14px;">Version 1.0 • Updated <span id="covDate"></span></p>
+        </div>
+      </section>
       <header>
         <div class="badge">🎬 Cochran Films</div>
         <h1>Production Toolkit</h1>
@@ -78,6 +99,7 @@
       </header>
 
       <div class="hr"></div>
+      <div class="divider" aria-hidden="true"></div>
 
       <section class="grid">
         <div class="card">
@@ -104,6 +126,11 @@
       <section class="grid">
         <div class="card">
           <h2>Storyboard Sheets</h2>
+          <div class="frames" style="margin:8px 0 12px;">
+            <div class="frame">Frame 1</div>
+            <div class="frame">Frame 2</div>
+            <div class="frame">Frame 3</div>
+          </div>
           <ul>
             <li>Structure: open → build → payoff → CTA</li>
             <li>Pacing: beats, transitions, rhythm</li>
@@ -146,6 +173,62 @@
 
       <div class="hr page-break"></div>
 
+      <!-- Shot List Templates -->
+      <section>
+        <div class="card">
+          <h2>Shot List Templates</h2>
+          <p class="note">Duplicate the table that best fits your scenario.</p>
+          <h3 style="margin-top:8px">Interview</h3>
+          <table class="shot-table">
+            <thead><tr><th>#</th><th>Description</th><th>Lens</th><th>Audio</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Primary interview, eye‑line</td><td>50mm</td><td>LAV + Boom</td><td>Quiet room, room tone</td></tr>
+              <tr><td>2</td><td>Cutaway hands/notes</td><td>85mm</td><td>N/A</td><td>Use slider</td></tr>
+              <tr><td>3</td><td>B‑roll workspace</td><td>24mm</td><td>N/A</td><td>Motion shots</td></tr>
+            </tbody>
+          </table>
+          <h3 style="margin-top:12px">Product</h3>
+          <table class="shot-table">
+            <thead><tr><th>#</th><th>Description</th><th>Lens</th><th>Rig</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Hero product on seamless</td><td>100mm macro</td><td>Tripod</td><td>Specular highlights</td></tr>
+              <tr><td>2</td><td>Use in context</td><td>35mm</td><td>Handheld</td><td>Natural light</td></tr>
+              <tr><td>3</td><td>Detail rotations</td><td>85mm</td><td>Turntable</td><td>120fps option</td></tr>
+            </tbody>
+          </table>
+          <h3 style="margin-top:12px">Event</h3>
+          <table class="shot-table">
+            <thead><tr><th>#</th><th>Description</th><th>Lens</th><th>Audio</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Wide establishing</td><td>16‑35mm</td><td>Ambience</td><td>Doors open</td></tr>
+              <tr><td>2</td><td>Key moments</td><td>70‑200mm</td><td>N/A</td><td>Stage/front row</td></tr>
+              <tr><td>3</td><td>Attendee reactions</td><td>50mm</td><td>N/A</td><td>Authentic expressions</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
+      <!-- Legal & Releases -->
+      <section>
+        <div class="card">
+          <h2>Legal / Usage Rights (Summary)</h2>
+          <ul>
+            <li><strong>Ownership</strong>: Final deliverables are licensed upon full payment.</li>
+            <li><strong>Usage</strong>: Web/social/paid usage as agreed in SOW; third‑party music/licensing separate.</li>
+            <li><strong>Model/Location Releases</strong>: Required for on‑camera talent and private locations.</li>
+            <li><strong>Archival</strong>: We store project files for 90 days post‑delivery unless otherwise agreed.</li>
+          </ul>
+          <h3 style="margin-top:10px">Model Release (Template)</h3>
+          <p class="note">I hereby grant Cochran Films the irrevocable right to use my likeness in all media, worldwide, in perpetuity, in connection with the Project titled ______________________. Signature: __________________  Date: __________</p>
+          <h3 style="margin-top:10px">Location Release (Template)</h3>
+          <p class="note">I am the authorized representative of the property located at ______________________ and grant permission to film/photograph on the following dates __________ for the Project titled ______________________. Signature: __________________  Date: __________</p>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
       <section>
         <div class="card">
           <h2>Guided Brief (Fill‑in)</h2>
@@ -173,6 +256,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('covDate').textContent = new Date().toISOString().slice(0,10);
     document.getElementById('btnPrint').addEventListener('click', () => {
       window.print();
     });
