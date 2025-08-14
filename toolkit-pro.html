@@ -60,6 +60,16 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .checklist { columns: 2; column-gap: 22px; }
     .checklist ul { margin: 0 0 10px; padding-left: 18px; }
+    .frames .caption { width: 100%; height: 36px; border-top: 1px dashed #cbd5e1; color: #9ca3af; display: flex; align-items: center; padding: 6px 8px; font-size: 11px; border-radius: 0 0 10px 10px; }
+    .sheet-title { font-size: 18px; font-weight: 800; margin: 0 0 10px; }
+    .sheet-note { color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+    .wide { grid-column: 1 / -1; }
+    .call-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 12px; }
+    .field { border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; }
+    .field .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .field .value { min-height: 20px; color: #9ca3af; }
+    .gear-columns { columns: 3; column-gap: 22px; }
+    .gear-columns ul { margin: 0 0 10px; padding-left: 18px; }
 
     /* Print */
     @media print {
@@ -297,6 +307,107 @@
           <p class="note">I hereby grant Cochran Films the irrevocable right to use my likeness in all media, worldwide, in perpetuity, in connection with the Project titled ______________________. Signature: __________________  Date: __________</p>
           <h3 style="margin-top:10px">Location Release (Template)</h3>
           <p class="note">I am the authorized representative of the property located at ______________________ and grant permission to film/photograph on the following dates __________ for the Project titled ______________________. Signature: __________________  Date: __________</p>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
+      <!-- Printable Storyboard Sheet (Full Page) -->
+      <section>
+        <div class="card">
+          <div class="sheet-title">Storyboard Sheet (Printable)</div>
+          <p class="sheet-note">Six frames with captions. Print duplicates as needed.</p>
+          <div class="frames">
+            <div class="frame">
+              Frame 1
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+            <div class="frame">
+              Frame 2
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+            <div class="frame">
+              Frame 3
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+          </div>
+          <div class="frames" style="margin-top:12px;">
+            <div class="frame">
+              Frame 4
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+            <div class="frame">
+              Frame 5
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+            <div class="frame">
+              Frame 6
+              <div class="caption">Scene / Notes __________________________________________</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
+      <!-- Call Sheet (Blank) -->
+      <section>
+        <div class="card">
+          <div class="sheet-title">Call Sheet (Blank)</div>
+          <p class="sheet-note">Simple day-of reference. Replace with your production template if preferred.</p>
+          <div class="call-grid">
+            <div class="field"><div class="label">Production</div><div class="value">___________________________________</div></div>
+            <div class="field"><div class="label">Director</div><div class="value">_________________</div></div>
+            <div class="field"><div class="label">Date</div><div class="value">__________</div></div>
+            <div class="field"><div class="label">Location</div><div class="value">___________________________________</div></div>
+            <div class="field"><div class="label">Call Time</div><div class="value">__________</div></div>
+            <div class="field"><div class="label">Wrap</div><div class="value">__________</div></div>
+          </div>
+          <div class="hr"></div>
+          <div class="sheet-title" style="font-size:14px;">Crew</div>
+          <div class="gear-columns">
+            <ul>
+              <li>Producer ________________________</li>
+              <li>Director ________________________</li>
+              <li>DP _____________________________</li>
+              <li>1st AC _________________________</li>
+            </ul>
+            <ul>
+              <li>Gaffer __________________________</li>
+              <li>Grip ____________________________</li>
+              <li>Sound ___________________________</li>
+              <li>PA _____________________________</li>
+            </ul>
+            <ul>
+              <li>HMU ____________________________</li>
+              <li>Art ____________________________</li>
+              <li>Wardrobe _______________________</li>
+              <li>Other __________________________</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="hr page-break"></div>
+
+      <!-- Shot List (Blank Full Page) -->
+      <section>
+        <div class="card">
+          <div class="sheet-title">Shot List (Blank, Full Page)</div>
+          <p class="sheet-note">Reprint as needed for large shoots.</p>
+          <table class="shot-table">
+            <thead><tr><th style="width:36px;">#</th><th>Description</th><th style="width:80px;">Lens</th><th style="width:120px;">Rig/Audio</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>2</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>3</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>4</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>5</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>6</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>7</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+              <tr><td>8</td><td>___________________________________________</td><td>__</td><td>________</td><td>_________________________________</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
