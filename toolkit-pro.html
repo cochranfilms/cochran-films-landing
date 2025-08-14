@@ -93,7 +93,7 @@
         <p class="subtitle">Scope your next video/brand project in under 30 minutes with producer‑ready templates.</p>
         <div class="kpi">
           <div class="k"><div class="t">Version</div><div class="v">1.0</div></div>
-          <div class="k"><div class="t">Last Updated</div><div class="v">${new Date().toISOString().slice(0,10)}</div></div>
+          <div class="k"><div class="t">Last Updated</div><div class="v" id="kpiDate"></div></div>
           <div class="k"><div class="t">License</div><div class="v">Personal Use</div></div>
         </div>
       </header>
@@ -257,6 +257,9 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('covDate').textContent = new Date().toISOString().slice(0,10);
+    document.getElementById('kpiDate').textContent = new Date().toISOString().slice(0,10);
+    // Ensure paged.js has time to render before export
+    window.Paged && (window.Paged.on('rendered', () => console.log('Paged.js rendered')));
     document.getElementById('btnPrint').addEventListener('click', () => {
       window.print();
     });
