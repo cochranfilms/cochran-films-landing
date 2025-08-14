@@ -2008,7 +2008,7 @@
         const timeline = (formData.get('timeline') || '').toString().trim();
         const budget_range = (formData.get('budget_range') || '').toString().trim();
         
-        const DOWNLOAD_URL = 'assets/Production_Toolkit .pdf';
+        const DOWNLOAD_URL = 'https://landing.cochranfilms.com/assets/Production_Toolkit%20.pdf';
         const SOURCE = 'Homepage Popup';
         const submitted_at = new Date().toISOString().slice(0,10);
         
@@ -2058,7 +2058,7 @@
               to_name: 'Cochran Films',
               subject: 'Your Production Toolkit',
               message: 'Production Toolkit request. See download link in template.',
-              to_email: 'info@cochranfilms.com'
+              to_email: email
             };
 
             const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
