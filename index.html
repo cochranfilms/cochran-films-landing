@@ -1482,6 +1482,218 @@
       * { animation: none !important; transition: none !important; }
       .tracks { animation: none !important; }
     }
+
+    /* Video Modal Styles */
+    .video-panel {
+      width: min(90vw, 1000px);
+      max-height: 90vh;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.9));
+      border: 1px solid rgba(255,178,0,0.4);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(12px);
+      animation: pop 320ms cubic-bezier(.2,.8,.2,1) forwards;
+      position: relative;
+      z-index: 1000000;
+      display: flex;
+      flex-direction: column;
+      transform-origin: center center;
+    }
+    
+    .video-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 24px 0;
+      border-bottom: 1px solid rgba(255,178,0,0.2);
+      margin-bottom: 20px;
+    }
+    
+    .video-info h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #FFB200);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .video-info h2 i {
+      color: var(--brand-gold);
+      font-size: 18px;
+    }
+    
+    .video-category {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    
+    .video-close {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #ffffff;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 18px;
+    }
+    
+    .video-close:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.3);
+      transform: scale(1.1);
+    }
+    
+    .video-panel-body {
+      padding: 0 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    
+    .video-container video {
+      width: 100%;
+      height: auto;
+      max-height: 60vh;
+      display: block;
+      border-radius: 12px;
+    }
+    
+    .video-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .video-description {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      max-height: 120px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+    
+    .video-description::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .video-description::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+    }
+    
+    .video-description::-webkit-scrollbar-thumb {
+      background: rgba(255,178,0,0.5);
+      border-radius: 3px;
+    }
+    
+    .video-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,178,0,0.2);
+    }
+    
+    .video-date {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    
+    .video-featured {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,178,0,0.2);
+      border: 1px solid rgba(255,178,0,0.3);
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    
+    /* Video Modal Responsive */
+    @media (max-width: 768px) {
+      .video-panel {
+        width: 95vw;
+        margin: 20px;
+        max-height: 85vh;
+      }
+      
+      .video-panel-head {
+        padding: 20px 20px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      
+      .video-info h2 {
+        font-size: 18px;
+      }
+      
+      .video-panel-body {
+        padding: 0 20px 20px;
+        gap: 16px;
+      }
+      
+      .video-container video {
+        max-height: 50vh;
+      }
+      
+      .video-description {
+        font-size: 14px;
+        max-height: 100px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .video-panel {
+        width: 98vw;
+        margin: 10px;
+        max-height: 90vh;
+      }
+      
+      .video-panel-head {
+        padding: 16px 16px 0;
+      }
+      
+      .video-panel-body {
+        padding: 0 16px 16px;
+      }
+      
+      .video-container video {
+        max-height: 40vh;
+      }
+    }
   </style>
 </head>
 <body data-launch-in-days="14" data-progress="68" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
@@ -1612,53 +1824,6 @@
       </div>
     </section>
 
-    <!-- What's coming -->
-    <section class="section">
-      <h2><i class="fa-solid fa-star"></i> What's Coming</h2>
-      <div class="grid">
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h4>New Brand Experience</h4>
-          <p>Elegant, cinematic design that reflects our storytelling DNA.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
-          <h4>White‑Label Services</h4>
-          <p>Enterprise-ready sites and systems you can deploy under your brand.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-users-gear"></i></div>
-          <h4>Creator Platform</h4>
-          <p>Onboarding, analytics, and streamlined project pipelines.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4>Centralized Backend</h4>
-          <p>Single source of truth, secure, and synchronized across systems.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
-          <h4>Performance Obsessed</h4>
-          <p>Fast, resilient, and delightful on every device and network.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-microchip"></i></div>
-          <h4>Smart Automation</h4>
-          <p>Seamless orchestration from intake to delivery with minimal friction.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
-          <h4>Component Library</h4>
-          <p>Reusable UI blocks that scale across brands and campaigns.</p>
-        </div>
-        <div class="card tilt">
-          <div class="icon"><i class="fa-solid fa-code-branch"></i></div>
-          <h4>GitHub Deployment</h4>
-          <p>Modern CI/CD and versioned infrastructure for peace of mind.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Portfolio Showcase -->
     <section class="section" id="portfolio">
       <h2><i class="fa-solid fa-film"></i> Portfolio Showcase</h2>
@@ -1704,6 +1869,53 @@
         <button class="cta-ghost" id="loadMoreBtn" style="display: none;">
           <i class="fa-solid fa-plus"></i> Load More Projects
         </button>
+      </div>
+    </section>
+
+    <!-- What's coming -->
+    <section class="section">
+      <h2><i class="fa-solid fa-star"></i> What's Coming</h2>
+      <div class="grid">
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h4>New Brand Experience</h4>
+          <p>Elegant, cinematic design that reflects our storytelling DNA.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h4>White‑Label Services</h4>
+          <p>Enterprise-ready sites and systems you can deploy under your brand.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-users-gear"></i></div>
+          <h4>Creator Platform</h4>
+          <p>Onboarding, analytics, and streamlined project pipelines.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Centralized Backend</h4>
+          <p>Single source of truth, secure, and synchronized across systems.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h4>Performance Obsessed</h4>
+          <p>Fast, resilient, and delightful on every device and network.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+          <h4>Smart Automation</h4>
+          <p>Seamless orchestration from intake to delivery with minimal friction.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h4>Component Library</h4>
+          <p>Reusable UI blocks that scale across brands and campaigns.</p>
+        </div>
+        <div class="card tilt">
+          <div class="icon"><i class="fa-solid fa-code-branch"></i></div>
+          <h4>GitHub Deployment</h4>
+          <p>Modern CI/CD and versioned infrastructure for peace of mind.</p>
+        </div>
       </div>
     </section>
 
@@ -1824,6 +2036,40 @@
           </div>
           <div class="fine"><i class="fa-solid fa-lock"></i> Your info is encrypted in transit. Unsubscribe anytime.</div>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Player Modal -->
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+    <div class="video-panel">
+      <div class="video-panel-head">
+        <div class="video-info">
+          <h2 id="videoTitle"><i class="fa-solid fa-play"></i> <span id="videoTitleText">Video Title</span></h2>
+          <p id="videoCategory" class="video-category">Category</p>
+        </div>
+        <button class="video-close" id="closeVideo" aria-label="Close video player">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="video-panel-body">
+        <div class="video-container">
+          <video id="videoPlayer" controls preload="metadata" poster="" playsinline>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-details">
+          <div class="video-description" id="videoDescription">
+            Video description will appear here...
+          </div>
+          <div class="video-meta">
+            <span class="video-date" id="videoDate">Date</span>
+            <span class="video-featured" id="videoFeatured" style="display: none;">
+              <i class="fa-solid fa-star"></i> Featured Project
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2873,10 +3119,82 @@
             const title = item.getAttribute('data-title');
             const portfolioItem = portfolioData.find(p => p.Title === title);
             if (portfolioItem && portfolioItem.playbackUrl) {
-              window.open(portfolioItem.playbackUrl, '_blank');
+              openVideoModal(portfolioItem);
             }
           });
         });
+      }
+
+      // Video Modal functionality
+      function openVideoModal(portfolioItem) {
+        const modal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+        const videoTitleText = document.getElementById('videoTitleText');
+        const videoCategory = document.getElementById('videoCategory');
+        const videoDescription = document.getElementById('videoDescription');
+        const videoDate = document.getElementById('videoDate');
+        const videoFeatured = document.getElementById('videoFeatured');
+        
+        if (!modal || !videoPlayer || !videoSource) return;
+
+        // Set video content
+        videoTitleText.textContent = portfolioItem.Title;
+        videoCategory.textContent = portfolioItem.Category;
+        videoDescription.textContent = portfolioItem.Description;
+        
+        // Format date
+        const uploadDate = new Date(portfolioItem['UploadDate']);
+        videoDate.textContent = uploadDate.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+        
+        // Show/hide featured badge
+        const isFeatured = portfolioItem['Is Featured'] === true || portfolioItem['Is Featured'] === 'true';
+        videoFeatured.style.display = isFeatured ? 'inline-flex' : 'none';
+        
+        // Set video source
+        videoSource.src = portfolioItem.playbackUrl;
+        videoPlayer.poster = portfolioItem['Thumbnail Image'];
+        
+        // Load and play video
+        videoPlayer.load();
+        
+        // Show modal
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        
+        // Prevent body scrolling
+        document.body.style.overflow = 'hidden';
+        
+        // Focus management
+        const closeBtn = document.getElementById('closeVideo');
+        if (closeBtn) closeBtn.focus();
+        
+        // Auto-play video (optional - some browsers block this)
+        // videoPlayer.play().catch(e => console.log('Auto-play blocked:', e));
+      }
+
+      function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        
+        if (!modal) return;
+        
+        // Pause and reset video
+        if (videoPlayer) {
+          videoPlayer.pause();
+          videoPlayer.currentTime = 0;
+        }
+        
+        // Hide modal
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        
+        // Restore body scrolling
+        document.body.style.overflow = '';
       }
 
       function filterPortfolio(category) {
@@ -2917,6 +3235,29 @@
         if (loadMoreBtn) {
           loadMoreBtn.addEventListener('click', loadMore);
         }
+
+        // Set up video modal close button
+        const closeVideoBtn = document.getElementById('closeVideo');
+        if (closeVideoBtn) {
+          closeVideoBtn.addEventListener('click', closeVideoModal);
+        }
+
+        // Close video modal on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const videoModal = document.getElementById('videoModal');
+            if (videoModal && videoModal.classList.contains('show')) {
+              closeVideoModal();
+            }
+          }
+        });
+
+        // Close video modal when clicking outside
+        document.getElementById('videoModal')?.addEventListener('click', (e) => {
+          if (e.target.id === 'videoModal') {
+            closeVideoModal();
+          }
+        });
 
         // Initial render
         renderPortfolio();
