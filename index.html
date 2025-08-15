@@ -1555,19 +1555,33 @@
        // =========================
        (function initEmailJS() {
          const KEY = 'p4pF3OWvh-DXtae4c';
+         console.log('Initializing EmailJS with key:', KEY);
          function tryInit() {
            if (typeof emailjs !== 'undefined' && emailjs.init) {
-             try { emailjs.init(KEY); console.log('EmailJS initialized'); } catch(_) {}
-             return true;
+             try { 
+               emailjs.init(KEY); 
+               console.log('✅ EmailJS initialized successfully'); 
+               return true;
+             } catch(error) { 
+               console.error('❌ EmailJS init error:', error);
+               return false;
+             }
            }
+           console.log('⏳ EmailJS not ready yet, retrying...');
            return false;
          }
          if (!tryInit()) {
            // Retry after page load (deferred script) and a short interval
-           window.addEventListener('load', () => { tryInit(); });
+           window.addEventListener('load', () => { 
+             console.log('🔄 Page loaded, retrying EmailJS init...');
+             tryInit(); 
+           });
            let attempts = 0;
            const id = setInterval(() => {
-             if (tryInit() || ++attempts > 10) clearInterval(id);
+             if (tryInit() || ++attempts > 10) {
+               if (attempts > 10) console.log('❌ EmailJS init failed after 10 attempts');
+               clearInterval(id);
+             }
            }, 300);
          }
        })();
@@ -1999,7 +2013,7 @@
         const timeline = (formData.get('timeline') || '').toString().trim();
         const budget_range = (formData.get('budget_range') || '').toString().trim();
         
-        const DOWNLOAD_URL = 'https://cochranfilms.github.io/cochran-films-landing/assets/Production_Toolkit .pdf';
+        const DOWNLOAD_URL = 'https://cochranfilms.github.io/almost-done/assets/Production_Toolkit.pdf';
         const SOURCE = 'Homepage Popup';
         const submitted_at = new Date().toISOString().slice(0,10);
         
@@ -2028,34 +2042,40 @@
 
           let sent = false;
           // Prefer EmailJS when available
+          console.log('Checking EmailJS availability...');
+          console.log('typeof emailjs:', typeof emailjs);
+          console.log('emailjs object:', emailjs);
+          console.log('emailjs.send available:', emailjs && typeof emailjs.send === 'function');
+          
           if (typeof emailjs !== 'undefined' && emailjs && emailjs.send) {
+            console.log('EmailJS is available, attempting to send email...');
             const SERVICE_ID = 'service_t11yvru';
             const TEMPLATE_ID = 'template_by61n6o';
             const templateParams = {
               user_name: name || 'Friend',
               user_email: email,
               asset_name: 'Production Toolkit',
-              download_url: DOWNLOAD_URL,
-              service_interest,
-              city,
-              timeline,
-              budget_range,
+              service_interest: service_interest || 'Not specified',
+              city: city || 'Not specified',
+              timeline: timeline || 'Not specified',
+              budget_range: budget_range || 'Not specified',
               source: SOURCE,
-              submitted_at,
-              // Common EmailJS defaults for compatibility
-              from_name: name || 'Friend',
-              from_email: email,
-              reply_to: email,
-              to_name: 'Cochran Films',
-              subject: 'Your Production Toolkit',
-              message: 'Production Toolkit request. See download link in template.',
-              to_email: email
+              submitted_at
             };
 
-            const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
-            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email timeout')), 12000));
-            await Promise.race([sendPromise, timeoutPromise]);
-            sent = true;
+            console.log('EmailJS template params:', templateParams);
+            console.log('Using Service ID:', SERVICE_ID, 'Template ID:', TEMPLATE_ID);
+
+            try {
+              const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+              const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email timeout')), 12000));
+              await Promise.race([sendPromise, timeoutPromise]);
+              console.log('EmailJS email sent successfully!');
+              sent = true;
+            } catch (emailError) {
+              console.error('EmailJS send error:', emailError);
+              throw emailError;
+            }
           } else if (endpoint) {
             // Use Formspree or custom endpoint
             const response = await fetch(endpoint, {
@@ -2100,11 +2120,28 @@
           }
           
         } catch (error) {
+          console.error('Full submission error:', error);
+          
+          // Try to get more specific error info
+          let errorMessage = 'Something went wrong. Please try again.';
+          
+          if (error?.status) {
+            errorMessage = `EmailJS Error ${error.status}: ${error.text || 'Unknown error'}`;
+          } else if (error?.message) {
+            errorMessage = `Error: ${error.message}`;
+          }
+          
           try {
-            console.error('EmailJS error:', error?.status, error?.text, error);
+            console.error('EmailJS error details:', error?.status, error?.text, error);
           } catch(_) {}
-          console.error('Submission error:', error);
-          success.textContent = 'Something went wrong. Please try again.';
+          
+          success.innerHTML = `
+            <div style="text-align: center; color: #ef4444;">
+              <i class="fa-solid fa-exclamation-triangle" style="font-size: 24px; margin-bottom: 10px;"></i>
+              <p>${errorMessage}</p>
+              <p style="font-size: 14px; margin-top: 10px;">Check browser console for details.</p>
+            </div>
+          `;
           success.style.display = 'block';
         } finally {
           const submitBtn = document.getElementById('submitBtn');
