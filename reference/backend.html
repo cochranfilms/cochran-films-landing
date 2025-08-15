@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cochran Films - Revolutionary Centralized Backend Architecture. Next-generation backend workflow with unified data structure eliminating fragmentation issues.">
+    <meta name="keywords" content="backend architecture, centralized data, production company, workflow automation, unified structure, film production">
+    <meta name="author" content="Cody Cochran, CEO & Founder">
+    <meta property="og:title" content="Cochran Films - Revolutionary Centralized Backend Architecture">
+    <meta property="og:description" content="Revolutionary centralized backend architecture eliminating data fragmentation with unified workflow management">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://collaborate.cochranfilms.com/backend">
+    <meta property="og:image" content="https://collaborate.cochranfilms.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cochran Films - Revolutionary Centralized Backend Architecture">
+    <meta name="twitter:description" content="Revolutionary centralized backend architecture eliminating data fragmentation with unified workflow management">
+    <meta name="twitter:image" content="https://collaborate.cochranfilms.com/og-image.jpg">
+    
+    <title>Cochran Films - Revolutionary Centralized Backend Architecture</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="apple-touch-icon" href="Favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Particles.js for Background Effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        :root {
+            --primary-color: #FFB200;
+            --secondary-color: #22c55e;
+            --accent-color: #3B82F6;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #1a1a2e;
+            --card-bg: rgba(0,0,0,0.7);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.8);
+            --text-muted: rgba(255,255,255,0.6);
+            --border-radius: 15px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 20px 40px rgba(0,0,0,0.3);
+            --glow: 0 0 30px rgba(255, 178, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #FF8C00, #16a34a);
+        }
+
+        /* Fix browser autofill styling */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px var(--dark-bg) inset !important;
+            -webkit-text-fill-color: var(--text-primary) !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 50%, #16213e 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 178, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .ceo-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00);
+            color: var(--dark-bg);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 2rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .ceo-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow);
+        }
+
+        .feature-highlight {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 178, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-highlight h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        .section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255,178,0,0.2);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .workflow-info {
+            background: rgba(255,178,0,0.1);
+            border: 1px solid rgba(255,178,0,0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .workflow-info p {
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .workflow-info ol, .workflow-info ul {
+            margin-left: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .workflow-info li {
+            margin-bottom: 0.5rem;
+        }
+
+        .workflow-info strong {
+            color: #FFB200;
+        }
+
+        .benefits-box {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .benefits-box h3 {
+            color: #22c55e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefits-box ul {
+            margin-left: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .benefits-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .setup-box {
+            background: rgba(255,178,0,0.1);
+            border: 1px solid rgba(255,178,0,0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .setup-box h3 {
+            color: #FFB200;
+            margin-bottom: 1rem;
+        }
+
+        .setup-box ol {
+            margin-left: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+
+        .setup-box li {
+            margin-bottom: 0.8rem;
+        }
+
+        .template-vars {
+            background: rgba(255,178,0,0.1);
+            border: 1px solid rgba(255,178,0,0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .template-vars p {
+            margin: 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+        }
+
+        .api-section {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .api-section h3 {
+            color: #3B82F6;
+            margin-bottom: 1rem;
+        }
+
+        .code-block {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #00ff88;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-active {
+            background: #22c55e;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+
+        .status-inactive {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+        }
+
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 178, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        .feature-card h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .expand-toggle {
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00);
+            color: var(--dark-bg);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .expand-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .expandable-content {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 178, 0, 0.2);
+        }
+
+        .expandable-content.active {
+            display: block;
+        }
+
+        .expandable-content h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .expandable-content .feature-highlight {
+            background: rgba(255, 178, 0, 0.1);
+            border: 1px solid rgba(255, 178, 0, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .expandable-content .feature-highlight h5 {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .expandable-content .feature-highlight p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Quick Links */
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .quick-link {
+            background: linear-gradient(135deg, var(--primary-color), #FF8C00);
+            color: var(--dark-bg);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow);
+        }
+
+        /* Status Section */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .status-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 178, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .status-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-color);
+        }
+
+        .status-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        .status-card h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .status-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-badge.active {
+            background: var(--secondary-color);
+            color: var(--dark-bg);
+        }
+
+        .status-highlight {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 178, 0, 0.3);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .status-highlight h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .status-highlight p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .status-indicators {
+            text-align: center;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-active {
+            background: var(--secondary-color);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        }
+
+        .status-inactive {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .quick-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+                <i class="fas fa-cogs"></i> Revolutionary Backend Architecture
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Centralized Data Structure Eliminating Fragmentation
+            </p>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                Revolutionary backend workflow with unified data structure and single source of truth architecture. 
+                Complete elimination of data fragmentation issues with enterprise-grade automation.
+            </p>
+            
+            <!-- Interactive Stats Grid -->
+            <div class="stats-grid" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                <div class="stat-card interactive-card" data-stat="100">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Centralized Data</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="Zero">
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-label">Fragmentation Issues</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="Enterprise">
+                    <div class="stat-number">Enterprise</div>
+                    <div class="stat-label">Architecture</div>
+                </div>
+                <div class="stat-card interactive-card" data-stat="24">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Real-Time Updates</div>
+                </div>
+            </div>
+            
+            <a href="#features" class="ceo-badge" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                <i class="fas fa-crown"></i> Cody Cochran, CEO & Founder
+            </a>
+            
+            <!-- Feature Highlights -->
+            <div class="feature-highlight" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                <h4><i class="fas fa-rocket"></i> Revolutionary Backend Benefits</h4>
+                <ul class="feature-list">
+                    <li>Single source of truth eliminating data fragmentation</li>
+                    <li>Centralized data structure in users.json</li>
+                    <li>Integrated performance reviews and contracts</li>
+                    <li>Enterprise-grade security with server-side token handling</li>
+                    <li>Real-time synchronization across all systems</li>
+                    <li>Automated data validation and backup systems</li>
+                    <li>Scalable architecture built for production companies</li>
+                    <li>White-label ready for immediate deployment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <div class="quick-links">
+        <a href="admin-dashboard.html" class="quick-link">
+            <i class="fas fa-tachometer-alt"></i> Admin Dashboard
+        </a>
+        <a href="contract.html" class="quick-link">
+            <i class="fas fa-file-contract"></i> Contract Portal
+        </a>
+        <a href="user-portal.html" class="quick-link">
+            <i class="fas fa-users"></i> Creator Portal
+        </a>
+        <a href="read-me.html" class="quick-link">
+            <i class="fas fa-film"></i> Platform Showcase
+        </a>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-star"></i> Revolutionary Backend Features</h2>
+                <p>Discover the revolutionary centralized architecture designed to eliminate data fragmentation</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Centralized Data Architecture Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Centralized Data Architecture</h3>
+                    <p>Revolutionary single source of truth eliminating fragmentation issues</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('centralized-details')">
+                        <i class="fas fa-plus"></i> View Revolutionary Features
+                    </button>
+                    
+                    <div id="centralized-details" class="expandable-content">
+                        <h4><i class="fas fa-rocket"></i> Centralized Architecture Features:</h4>
+                        <ul class="feature-list">
+                            <li>Single source of truth in users.json</li>
+                            <li>Eliminated data fragmentation issues</li>
+                            <li>Integrated performance reviews and contracts</li>
+                            <li>Unified data structure for all operations</li>
+                            <li>Real-time synchronization across systems</li>
+                            <li>Enhanced data integrity protection</li>
+                            <li>Automated validation and backup systems</li>
+                            <li>Simplified maintenance and updates</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-shield-alt"></i> Revolutionary Data Integrity</h5>
+                            <p>Complete elimination of data fragmentation with unified structure ensuring consistency and reliability across all operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creator Management Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Creator Management</h3>
+                    <p>Automated onboarding with centralized data management</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('creator-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="creator-details" class="expandable-content">
+                        <h4><i class="fas fa-user-plus"></i> Creator Management Features:</h4>
+                        <ul class="feature-list">
+                            <li>Centralized data management with unified structure</li>
+                            <li>Real-time creator onboarding with dropdown validation</li>
+                            <li>One-click approval system with automated notifications</li>
+                            <li>Integrated contract and performance tracking</li>
+                            <li>Performance analytics and reporting tools</li>
+                            <li>System health monitoring and alerts</li>
+                            <li>Bulk operations for efficient management</li>
+                            <li>Export capabilities for external integrations</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-chart-line"></i> Centralized Analytics</h5>
+                            <p>Track creator performance, contract completion rates, and system efficiency with unified data structure and automated reporting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Management Feature -->
+                <div class="feature-card card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Job Management</h3>
+                    <p>Centralized job listing management with auto-sync integration</p>
+                    
+                    <button class="expand-toggle" onclick="toggleFeatureDetails('job-details')">
+                        <i class="fas fa-plus"></i> View Detailed Features
+                    </button>
+                    
+                    <div id="job-details" class="expandable-content">
+                        <h4><i class="fas fa-briefcase"></i> Job Management Features:</h4>
+                        <ul class="feature-list">
+                            <li>Centralized job listing management</li>
+                            <li>Automatic JSON export for website updates</li>
+                            <li>Seamless integration with Google Sheets</li>
+                            <li>Real-time status tracking</li>
+                            <li>Managed dropdown options for consistency</li>
+                            <li>Export capabilities for external integrations</li>
+                            <li>Bulk operations for efficient management</li>
+                            <li>System health monitoring and alerts</li>
+                        </ul>
+                        
+                        <div class="feature-highlight">
+                            <h5><i class="fas fa-sync"></i> Auto-Sync Integration</h5>
+                            <p>Seamless integration with Google Sheets for applicant data handling and automatic JSON export for website updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="section-padding" style="text-align: center; background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(34, 197, 94, 0.1));">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+                <h2><i class="fas fa-star"></i> Revolutionary Architecture Status</h2>
+                <p>All systems operational with centralized data structure eliminating fragmentation</p>
+            </div>
+            
+            <div class="status-grid" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Centralized Data</h3>
+                    <p>Single source of truth active</p>
+                    <span class="status-badge active">Active</span>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Data Integrity</h3>
+                    <p>Fragmentation eliminated</p>
+                    <span class="status-badge active">Secure</span>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Real-Time Sync</h3>
+                    <p>Instant updates across systems</p>
+                    <span class="status-badge active">Live</span>
+                </div>
+                
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Enterprise-grade architecture</p>
+                    <span class="status-badge active">Optimal</span>
+                </div>
+            </div>
+            
+            <div class="status-highlight" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                <h3><i class="fas fa-check-circle"></i> Revolutionary Backend Architecture Operational</h3>
+                <p>Complete elimination of data fragmentation with unified structure ensuring consistency and reliability across all operations.</p>
+                <div class="status-indicators">
+                    <span class="status-indicator status-active"></span>
+                    <strong>Last Updated:</strong> <span id="lastUpdated"></span>
+                    <br><br>
+                    <span style="color: var(--secondary-color); font-weight: bold;">✅ Centralized Data Architecture Active</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#FFB200' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#FFB200',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Animate stats
+        function animateStats() {
+            const stats = document.querySelectorAll('[data-count]');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 16);
+            });
+        }
+
+        // Toggle feature details
+        function toggleFeatureDetails(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.className = 'fas fa-plus';
+            } else {
+                content.classList.add('active');
+                icon.className = 'fas fa-minus';
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            const statsGrid = document.querySelector('.stats-grid');
+            if (statsGrid) {
+                observer.observe(statsGrid);
+            }
+
+            // Add smooth scrolling to quick links
+            document.querySelectorAll('.quick-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 200);
+                });
+            });
+
+            // Add hover effects to feature cards
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
