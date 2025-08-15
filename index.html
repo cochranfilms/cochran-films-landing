@@ -2056,7 +2056,7 @@
             console.log('Using Service ID:', SERVICE_ID, 'Template ID:', TEMPLATE_ID);
 
             try {
-              const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, email);
+              const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
               const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email timeout')), 12000));
               await Promise.race([sendPromise, timeoutPromise]);
               console.log('EmailJS email sent successfully!');
