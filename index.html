@@ -706,6 +706,246 @@
     .card h4 { margin: 0 0 6px; font-size: 16px; color: #fff; }
     .card p  { margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
 
+    /* Portfolio Styles */
+    .portfolio-filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      justify-content: center;
+    }
+    
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.55);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: var(--text-secondary);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+    
+    .filter-btn:hover {
+      border-color: rgba(99,102,241,0.45);
+      background: rgba(15,23,42,0.75);
+      color: #e2e8f0;
+      transform: translateY(-1px);
+    }
+    
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--brand-indigo), var(--brand-emerald));
+      border-color: rgba(99,102,241,0.6);
+      color: #ffffff;
+      box-shadow: var(--glow-indigo);
+    }
+    
+    .portfolio-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      margin-top: 20px;
+    }
+    
+    .portfolio-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      border: 1px solid rgba(99,102,241,0.22);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: rgba(99,102,241,0.45);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .portfolio-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(45deg, rgba(99,102,241,0.1), rgba(255,178,0,0.1));
+    }
+    
+    .portfolio-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-thumbnail img {
+      transform: scale(1.05);
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    
+    .portfolio-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,178,0,0.9);
+      border: 3px solid #ffffff;
+      display: grid;
+      place-items: center;
+      color: #000000;
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-play {
+      background: var(--brand-gold);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .portfolio-content {
+      padding: 20px;
+    }
+    
+    .portfolio-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(99,102,241,0.18);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: #c7d2fe;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    
+    .portfolio-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 8px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .portfolio-description {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .portfolio-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+    
+    .portfolio-date {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .portfolio-featured {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(255,178,0,0.2);
+      border: 1px solid rgba(255,178,0,0.3);
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    
+    /* Portfolio Responsive */
+    @media (max-width: 768px) {
+      .portfolio-filters {
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      
+      .filter-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+      }
+      
+      .portfolio-thumbnail {
+        height: 180px;
+      }
+      
+      .portfolio-content {
+        padding: 16px;
+      }
+      
+      .portfolio-title {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .portfolio-filters {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .filter-btn {
+        justify-content: center;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
     /* Tech Marquee */
     .marquee {
       margin-top: 16px;
@@ -1419,6 +1659,54 @@
       </div>
     </section>
 
+    <!-- Portfolio Showcase -->
+    <section class="section" id="portfolio">
+      <h2><i class="fa-solid fa-film"></i> Portfolio Showcase</h2>
+      <p class="subtitle" style="margin:0 0 20px; max-width: 950px;">
+        From corporate storytelling to live events, explore our latest work that demonstrates high-level production value and strategic impact.
+      </p>
+      
+      <!-- Portfolio Filter Tabs -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-category="all">
+          <i class="fa-solid fa-th"></i> All Work
+        </button>
+        <button class="filter-btn" data-category="Commercials">
+          <i class="fa-solid fa-tv"></i> Commercials
+        </button>
+        <button class="filter-btn" data-category="Corporate">
+          <i class="fa-solid fa-building"></i> Corporate
+        </button>
+        <button class="filter-btn" data-category="Live Broadcast">
+          <i class="fa-solid fa-broadcast-tower"></i> Live Events
+        </button>
+        <button class="filter-btn" data-category="Podcasts">
+          <i class="fa-solid fa-podcast"></i> Podcasts
+        </button>
+        <button class="filter-btn" data-category="Education">
+          <i class="fa-solid fa-graduation-cap"></i> Education
+        </button>
+        <button class="filter-btn" data-category="Events">
+          <i class="fa-solid fa-calendar-star"></i> Events
+        </button>
+        <button class="filter-btn" data-category="Shorts">
+          <i class="fa-solid fa-video"></i> Shorts
+        </button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Portfolio items will be dynamically populated here -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+        <button class="cta-ghost" id="loadMoreBtn" style="display: none;">
+          <i class="fa-solid fa-plus"></i> Load More Projects
+        </button>
+      </div>
+    </section>
+
     <!-- Tech marquee -->
     <section class="marquee" aria-label="Tech stack marquee">
       <div class="tracks" id="tracks" aria-hidden="true">
@@ -1456,7 +1744,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" aria-controls="faq2-a"><span id="faq2-q">How do I get the toolkit?</span><i class="fa-solid fa-chevron-down"></i></button>
-          <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2-q"><div>Tap "Get the Toolkit" and enter your email. We’ll send the Production Toolkit instantly along with a link to book an intro call.</div></div>
+          <div class="faq-a" id="faq2-a" role="region" aria-labelledby="faq2-q"><div>Tap "Get the Toolkit" and enter your email. We'll send the Production Toolkit instantly along with a link to book an intro call.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" aria-controls="faq3-a"><span id="faq3-q">Do you offer white‑label solutions?</span><i class="fa-solid fa-chevron-down"></i></button>
@@ -2184,6 +2472,462 @@
           }
         }
       });
+    })();
+
+    // =========================
+    // Portfolio Management
+    // =========================
+    (() => {
+      // Portfolio data from CSV
+      const portfolioData = [
+        {
+          "Title": "Evolve Contracting - National Small Business Week Highlight",
+          "Description": "DP | Gaffer | Editor | Audio\nShot on Sony FX6: 24-70mm f/2.8\nLights: Aputure Amaran COB 60x on a C-Stand w/lantern Diffuser.\n\n\"The Russell Center helps me build my business with programming that is tailor made for me.\" - Channing Baker, Founder & CEO of Evolve Contractors https://evolve-contractors.com/\n\nThroughout the years, National Small Business Week has grown in importance and recognition. It is a time to honor the hard work and dedication of small business owners and entrepreneurs who take risks and pursue their dreams. It is also a time to highlight the impact that small businesses have on local communities and the economy.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_7a5a1e21bcb349369b5cfce51e197341~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_55d75649953a40d4963f44cb2322046f/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Caribbean Currency Live Vibes",
+          "Description": "Experience the vibrant energy of Caribbean Currency's \"Live Vibes\" event, featuring dynamic performances and a celebration of Caribbean culture. This video showcases the spirit of unity, music, and unforgettable moments.",
+          "Category": "Live Broadcast",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de69c46e54aa466cb4d377baeb26aef0~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d62f6ba8ce04461ab71530a5533a80f5/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Maïré Rosa of eComSpaces - National Small Business Week Highlight",
+          "Description": "Meet Maïré Rosa of eComSpaces in this National Small Business Week highlight. Discover her inspiring journey as a leader in e-commerce innovation and how she's empowering small businesses through creativity and collaboration.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a564fa653eee4790a1ea1e66efefe0be~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_159032edd60c4680a7539940fc5374d5/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Andre Dickens Atlanta Mayor Attends Women's Fundraiser During Candidacy",
+          "Description": "This video documents Andre Dickens, then a mayoral candidate, attending a powerful women's fundraiser event in Atlanta. Witness meaningful discussions on community, leadership, and the importance of civic engagement.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0d72d5e5a9fd48c8b90bf7641bcf38a1~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ab550ee6a99f4ed08b62e73b22038cb9/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Southern Gas Corporate Insight",
+          "Description": "Gain exclusive insights into the Southern Gas industry with this video, showcasing strategic discussions and solutions tailored to the corporate landscape.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_1c289bca3e0b47999bce809fce86fe38~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_7881fb57ef814133b8d1282555b62032/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "CCA: 30 Minute Free Training",
+          "Description": "Discover the essentials of content creation in just 30 minutes with this free training from Course Creator Academy. This session offers valuable tips and strategies to help you elevate your skills and take your creative projects to the next level. Perfect for beginners and aspiring creators!",
+          "Category": "Education",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_98af632a0a284e7ca6113b0144cde5db~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e0482cefab6f4115b6611dad8db83c15/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "CCA: Lighting like a Professional",
+          "Description": "This video from the Course Creator Academy dives into professional lighting techniques for creators. Learn how to elevate your production value with expert tips on creating the perfect lighting setup.",
+          "Category": "Education",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_e2eba770ecdf4b358e8ff5703e8d8852~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_6c9fb182b9d7411ead8a16d11e7c0377/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE Reveals New Refrigeration",
+          "Description": "This video highlights the Russell Innovation Center for Entrepreneurs' (RICE) unveiling of cutting-edge refrigeration technology. Discover how innovation and entrepreneurship come together to revolutionize this vital industry.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_d9b1500be39b4ed1a31550fe4401a488~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94d94e9fd17748abad50215fc079d20d/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Scratch Master DJ POPO Presents \"OH MY GOSH POPO\" Vol 1. Episode 1",
+          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro\n\nHuge shoutout to DJ POPO for bringing incredible energy and unmatched talent to every set! His ability to read the crowd and keep the vibe alive is next level. And with his new live DJ event series, he's taking things up a notch, creating unforgettable experiences for music lovers. Keep an eye out—this is one event series you won't want to miss!",
+          "Category": "Live Broadcast",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_e557a622d1b44de2a704308423f9c637~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e574d9226e0c4e09b17cf610c6a3fe88/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "A Bump In The Night Short",
+          "Description": "Directed by Cody Cochran for a Full Sail project, this suspenseful short film, A Bump in the Night, takes viewers on a thrilling ride filled with tension, creativity, and cinematic storytelling.",
+          "Category": "Shorts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_95ef13cb9950461d8f3b8a2ab4bc27fe~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b0fe2a8b8a144008ba2d463f247e7a05/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Mastering My First Pork Butt on the Traeger Grill",
+          "Description": "Join me as I take on the challenge of smoking my very first pork butt on the Traeger! In this behind-the-scenes culinary adventure, I dive into the art of low-and-slow cooking, sharing tips, techniques, and lessons learned along the way.\n\nFrom seasoning and prepping the pork to managing the perfect smoke and temperature, this video captures the full process—complete with sizzling moments and mouth-watering results. Whether you're a BBQ enthusiast or just curious about smoking meats, this is a must-watch for anyone looking to elevate their grilling game!\n\nGet ready to fire up the grill and embark on this flavorful journey with me!",
+          "Category": "Education",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_8a53661e8df043fd87f31b5b37c112b6~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b98afcd61fac4788ba58991052dfa9de/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-29"
+        },
+        {
+          "Title": "ACE Corporate Proposal",
+          "Description": "A polished presentation of the ACE Corporate Proposal, showcasing innovative strategies and solutions designed to meet business goals. This video highlights the professionalism and vision behind the project.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_50fd1992b8c3493f9bb4d9d46b702286~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ae62cb47d3d646b9815a61d6ba70b2eb/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Q Parker Pt. 1 - Storytime with Legendary Jerry",
+          "Description": "This week on Storytime with the Legendary Jerry, we welcome a special guest—one-fourth of the multi-platinum R&B group 112.\n\nHosted by Legendary Jerry, this podcast is a deep dive into the Golden Age of Hip Hop, featuring real stories and exclusive interviews from those who lived it. With firsthand insight from Atlanta, the show celebrates the city's profound impact on the culture.\n\nEach week, Jerry sits down with influential guests to exchange stories that helped shape the Hip Hop industry. Together, they explore the music, the business, the grind, and the culture—offering a raw and unfiltered look at the industry's past, present, and future.\n\nWhat sets this podcast apart is its dedication to showcasing the role Atlanta and the South have played in Hip Hop's evolution. Guests range from Atlanta-based legends to global creatives, providing a well-rounded perspective on the culture's reach and influence.\n\nAtlanta influences everything. Tune in and be part of the conversation!",
+          "Category": "Podcasts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_616e17199ac243098a2b2d99a9f1b980~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_56f73b0771064431b17f5780e37ca778/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-29"
+        },
+        {
+          "Title": "Southern Gas Leadership Forum 2023",
+          "Description": "A comprehensive look at the 2023 Southern Gas Leadership Forum, where industry leaders gathered to discuss innovations, challenges, and the future of energy leadership.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_6dfce90e14c04f6eab6a0f03309cde5d~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2a2475008bb745b99adb3e95060d071f/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "DJ POPO Production - Behind The Scenes",
+          "Description": "Go behind the scenes with Scratch Master DJ POPO as we capture the magic of producing an inspiring feature on music, film, education, and collaboration. In this exclusive look, you'll see how the vision came to life—witnessing the creativity, teamwork, and dedication that goes into every scene.\n\nFrom camera setups to candid moments with DJ POPO, this behind-the-scenes journey offers a glimpse into the dynamic process of storytelling through film. The team discusses how combining music and education creates a platform to inspire future creators and drive meaningful change.\n\nExperience the energy and excitement that happens off-camera and learn how collaboration fuels creative excellence in both music and filmmaking!",
+          "Category": "Live Broadcast",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_79ee4a9e404b4ef98c8400ac3e352aea~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_137b3f277ddd4c3a8ea12891192ebc1c/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-29"
+        },
+        {
+          "Title": "Play Pits - National Small Business Week Highlight",
+          "Description": "Celebrate National Small Business Week with Play Pits, a remarkable brand making waves in the natural deodorant industry. In this feature, we highlight their inspiring journey, from humble beginnings to becoming a trusted name in family-friendly personal care. Learn about their commitment to creating safe, effective products while fostering a community of health-conscious consumers. Discover how Play Pits has become a beacon of entrepreneurial excellence, inspiring others to chase their dreams.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0078d563feca45a78d9282fd19d74dae~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_68efb32b81d2466b9870dd1aa5137aca/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Music is Medicine: Chromatic Black",
+          "Description": "Dive into the transformative power of music with Chromatic Black's \"Music is Medicine.\" This video explores the intersection of creativity, healing, and cultural expression.",
+          "Category": "Events",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_ab0b58336836434cbf2205c1ce72bed1~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_642d934f5aaa40a68a90c0abe0f9965f/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE Stakeholders Kickoff Event",
+          "Description": "Discover the energy and vision of the RICE Stakeholders Kickoff Event, where key leaders and partners came together to drive impactful initiatives and foster community growth.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_5f2b5c57a966455bb2d0f0e4c355d0d1~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e10293e56aaf471a98382c99ea4b2308/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Celebrating Atlanta's Black-Owned Businesses | The Russell Center",
+          "Description": "DP | Editor | Audio Mixer\nShot on Sony FX6: Sony 24-105mm f/4\nSoftware: Final Cut Pro X\n\nJoin us as we shine a spotlight on the thriving Black business community in Atlanta! This two-part commercial series, produced by the Russell Center for Innovation and Entrepreneurship and filmed by Cochran Films, showcases the incredible entrepreneurs shaping the city's future.\n\nFrom innovative startups to beloved local gems, discover the stories behind Atlanta's top Black-owned businesses and the people who make them stand out. Watch both parts for an inspiring journey through entrepreneurship, creativity, and success in Atlanta.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_077a43cf29284001a9453221835fffca~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_c0aa42ded8cc4cd2b1e5a37bba7ce066/2160p/mp4/file.mp4",
+          "UploadDate": "2025-01-04"
+        },
+        {
+          "Title": "Chromatic Black - 2024 & Beyond",
+          "Description": "Step into the future of creativity and culture with Chromatic Black's \"Winter 2024 & Beyond.\" This video captures the vision, artistry, and groundbreaking projects shaping the next chapter of their journey.",
+          "Category": "Events",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_81faae7543dc49fe920bc634b698b769~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_7154768fd056441687b8bed583da9fc3/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE March Madness",
+          "Description": "Experience the excitement of RICE March Madness, an event that blends entrepreneurial energy with the thrill of competition, celebrating innovation and collaboration.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a313661976e748d29cbe2a921bad5c9f~mv2.png",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_cc70bbce41cf437f902f3699966aecd0/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE x ABC Veterans",
+          "Description": "This video showcases RICE's partnership with ABC Veterans, celebrating initiatives that support veteran entrepreneurs and their journey toward building successful businesses.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_2cd9c112ce5e4a2e8e0ebf6aecdbd8e7~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_a301105c12524eed809750b5bc557f96/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Cam Newton Talks Football, Youth Development, and the Future at Pylon 7v7 Tournament",
+          "Description": "DP | Editor | Gaffer\nShot on Sony FX6: Sony 24-105mm f/4\nSoftware: Final Cut Pro X\n\nStep onto the field with NFL legend Cam Newton as he shares his passion for football and youth empowerment during the Pylon 7v7 tournament. In this exclusive interview, Cam discusses his mission to inspire the next generation of athletes, the importance of mentorship, and how events like Pylon 7v7 shape the future of the game.\n\n🎙️ Don't miss this candid conversation with one of football's most dynamic figures!\n\n📍 Filmed at the Pylon 7v7 Tournament\n🎥 Hosted by Cochran Films – 'Stories that tell themselves.'",
+          "Category": "Podcasts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_e1551b79f90b4449916856ecd9cedf99~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_10ae786c5aa14036b38371bff6ecaf29/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "T-Pain Pt. 2 - Storytime with Legendary Jerry",
+          "Description": "Storytime with the Legendary Jerry is a dynamic podcast that brings to life true stories and exclusive interviews from Hip Hop's Golden Age—narrated by someone who witnessed it all from the heart of Atlanta. This show pays tribute to the culture by highlighting the pivotal role Atlanta has played in shaping the industry.\n\nEach week, Legendary Jerry sits down with special guests to share untold stories that helped define Hip Hop. Together, they dive into the music, the business, the hustle, and the culture—offering an insider's perspective on the industry's evolution.\n\nWhat sets this podcast apart is its unwavering focus on Atlanta's influence on Hip Hop, as well as the contributions of the South as a whole. Guests will include both Atlanta-based icons and global creatives, ensuring a rich and diverse narrative that showcases the city's undeniable impact.\n\nAtlanta influences everything—past, present, and future.",
+          "Category": "Podcasts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_365b3ac5fd9e4ca8a9db29d6648e8029~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_72ff9e59d77f4503b517e91b2036fc6c/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-28"
+        },
+        {
+          "Title": "Win Against Procrastination",
+          "Description": "In this 'Severance'-inspired short by Course Creator Academy, in collaboration with JB Flickss and Cochran Films, a simple task spirals into a mental maze of delay and distraction. Through eerie sound design and moody visuals, we explore the quiet tension of procrastination—and how it takes more than time to break the cycle.",
+          "Category": "Shorts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de3bc871d7b349838350b58465236587~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d5f23bd4e72c47a8ba1b47cbe9b047e7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-07-19"
+        },
+        {
+          "Title": "Scratch Master DJ POPO Presents OH MY GOSH POPO Vol 2. Episode 2",
+          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro\n\nScratch Master DJ POPO Presents \"OH MY GOSH POPO\" Vol 2. Episode 2\n\nLocation: @ The Patio Social Club - SMYRNA (@thepatioatl)",
+          "Category": "Live Broadcast",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_481d9b2e49af468583eef4c59957e49a~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94047491c1984aa3a159da4e19ef20e7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "Take Good Care: Season 5 Episode 5 - The Rebrand, Part 3: Same Doctors, New Name",
+          "Description": "Join Drs. Williams, Guthrie, and Greene as they take you behind the scenes of the exciting rebrand from Peachtree City Obstetrics & Gynecology to Rosa Gynecology! In this episode, they reflect on the practice's evolution, sharing insights into past logos, the inspiration behind the new name, and the journey of redefining their brand to better serve patients.\n\nBeyond the rebranding process, the doctors discuss what this transformation means for their mission, patient care, and the future of women's health. They also dive into the importance of creating a welcoming, patient-centered experience and how Rosa Gynecology is committed to empowering women through every stage of life.\n\nTune in for an engaging conversation that highlights the vision, dedication, and passion behind Rosa Gynecology's new chapter!",
+          "Category": "Podcasts",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_d05ec527610f4a528baaf295c28bd043~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_a51c1184de414452893f8df5d3ff706a/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-29"
+        },
+        {
+          "Title": "Course Creator Academy Seminar",
+          "Description": "Explore the highlights of the Course Creator Academy Seminar, where creators and entrepreneurs gathered to enhance their skills in content creation and storytelling. This seminar offered actionable insights and hands-on learning for all participants.",
+          "Category": "Education",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_d4d2b51409134e80b17148d85aeae929~mv2.jpeg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_c2ae5e0c361d4c1e9eaded93be6fa2f6/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE x PayPal Readiness Academy",
+          "Description": "This video highlights the RICE x PayPal Readiness Academy, an initiative empowering entrepreneurs with the tools and knowledge needed to succeed in the ever-evolving digital economy.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0fbea20d90d946dd85c36f0f6aa5f776~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2701be5cf36b416dac1bdcee2af552fe/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh Commercial",
+          "Description": "A lively and engaging commercial showcasing the 7even Kids Fresh skincare line. This video brings the brand's commitment to fun, freshness, and high-quality products to life for young audiences.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de8d250539694fdb8aee32fac7f9206d~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_4cdb075743f44fe6a09f19c7f66ed0e4/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Rich Girls HQ Brunch in Black",
+          "Description": "This video captures the elegance and empowerment of the \"Brunch in Black\" event hosted by Rich Girls HQ. Attendees celebrated community, connection, and success in an inspiring atmosphere filled with style and sophistication.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_9a41e83b5d814cf09c1d5039d5c1e2b0~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b9c6094cc32d49fb91fd4825819ac2fb/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh: Dive into a World of Freshness & Fun",
+          "Description": "Step into the vibrant world of 7even Kids Fresh with this lively video! Showcasing the brand's fun, fresh approach to skincare, it's a celebration of quality products made for young adventurers.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_ab5e95728333493f892b74fefd16b702~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_6049704bb253437282ee6917efa0e67c/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "DCPR Fairy Princess Ball 2025",
+          "Description": "The Annual Fairy Princess Ball, hosted by Douglas County Parks & Recreation, was a night of enchantment and wonder. Daddies and daughters shared a magical evening filled with dance competitions, whimsical face painting, photo booths, prize giveaways, and a delicious buffet.\nUnforgettable moments were captured as they celebrated their special bond in a fairy-tale setting, creating memories to cherish for years.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_3159fc12fc81424eb060c21978bd9eca~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d941b2ffbdb546a7aaf2df53dbde2a02/1080p/mp4/file.mp4",
+          "UploadDate": "2025-02-10"
+        },
+        {
+          "Title": "Revolutionizing Accessibility: Interview with Looie App Founder | CES 2024",
+          "Description": "DP | Editor\nShot on Sony FX6: Sony 24-105mm f/4\nSoftware: Final Cut Pro X\n\nJoin us at CES 2024 as we sit down with the visionary founder of Looie App, the platform transforming restroom accessibility for everyone. Learn how Looie is leveraging technology to address a critical everyday need and empower individuals on the go.\n\nDiscover the inspiration behind the app, its impact, and the exciting future plans shared during this exclusive interview. Don't miss this inside look at one of CES 2024's most innovative projects!",
+          "Category": "Events",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_c2be816c6c824ef98f5a9adcd13a9ead~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_3bb9d917518d4fa8a13ff56de7f6b9bb/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-12"
+        },
+        {
+          "Title": "DCPR Presents: Legacy On Ice",
+          "Description": "DP | Editor | Gaffer\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 24-105mm f/4\nSoftware: Adobe Premiere Pro\n\nLegacy On Ice: A Winter Wonderland for Douglas County!\nWhat an unforgettable event! Legacy On Ice, hosted by Douglas County Parks & Recreation, brought over 7,000 people together to celebrate community, joy, and winter fun. From ice skating to carnival rides, zip lining, rock climbing, face painting, axe throwing, and so much more, this event truly had something for everyone!\n\nThe best part? The entire event was FREE for all to enjoy, with ice skating available for just $10—a true gift to the community.\n\nA huge shoutout to Tammy Cochran of Deer Lick Park and her entire team for their incredible vision and hard work in making this magical event possible. Your dedication brought smiles, laughter, and unforgettable memories to so many.\nThank you to the amazing businesses, volunteers, and participants who came together to make Legacy On Ice a shining success. Until next time, Douglasville!",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_643bcc7db2034398bee27e027782faba~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_551980cf2b734e0f920f65a4d1677890/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "RICE x Hanover Partnership",
+          "Description": "Explore the collaboration between RICE and Hanover in this video, highlighting a partnership that fosters innovation, growth, and opportunities for entrepreneurs in diverse industries.",
+          "Category": "Corporate",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0c3d150db7e8400c95843a68a6374d95~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_be4dd07088834d25a4c2afdb4d24dfe7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh: Face Toner",
+          "Description": "Discover the refreshing benefits of 7even Kids Fresh Face Toner in this promotional video. Designed for young, sensitive skin, this toner provides a gentle yet effective cleansing experience, leaving skin glowing and hydrated.",
+          "Category": "Commercials",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_29c1d96286634e0ba8afe6e8efe8a47f~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e86e1fc17be8432ea11caed24a6a3fe7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        }
+      ];
+
+      let currentFilter = 'all';
+      let displayedItems = 12; // Show first 12 items initially
+      let filteredData = [...portfolioData];
+
+      // Portfolio functionality
+      function createPortfolioItem(item) {
+        const isFeatured = item['Is Featured'] === true || item['Is Featured'] === 'true';
+        const uploadDate = new Date(item['UploadDate']);
+        const formattedDate = uploadDate.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+
+        return `
+          <div class="portfolio-item" data-category="${item.Category}" data-title="${item.Title}">
+            <div class="portfolio-thumbnail">
+              <img src="${item['Thumbnail Image']}" alt="${item.Title}" loading="lazy" />
+              <div class="portfolio-play">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              ${isFeatured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">
+                <i class="fa-solid fa-tag"></i>
+                ${item.Category}
+              </div>
+              <h3 class="portfolio-title">${item.Title}</h3>
+              <p class="portfolio-description">${item.Description}</p>
+              <div class="portfolio-meta">
+                <span class="portfolio-date">${formattedDate}</span>
+                ${isFeatured ? '<span class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderPortfolio() {
+        const grid = document.getElementById('portfolioGrid');
+        if (!grid) return;
+
+        const itemsToShow = filteredData.slice(0, displayedItems);
+        grid.innerHTML = itemsToShow.map(createPortfolioItem).join('');
+
+        // Show/hide load more button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = displayedItems < filteredData.length ? 'inline-flex' : 'none';
+        }
+
+        // Add click handlers for portfolio items
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          item.addEventListener('click', () => {
+            const title = item.getAttribute('data-title');
+            const portfolioItem = portfolioData.find(p => p.Title === title);
+            if (portfolioItem && portfolioItem.playbackUrl) {
+              window.open(portfolioItem.playbackUrl, '_blank');
+            }
+          });
+        });
+      }
+
+      function filterPortfolio(category) {
+        currentFilter = category;
+        displayedItems = 12; // Reset to show first 12 items
+        
+        if (category === 'all') {
+          filteredData = [...portfolioData];
+        } else {
+          filteredData = portfolioData.filter(item => item.Category === category);
+        }
+        
+        renderPortfolio();
+      }
+
+      function loadMore() {
+        displayedItems += 12;
+        renderPortfolio();
+      }
+
+      // Initialize portfolio
+      function initPortfolio() {
+        // Set up filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            e.target.classList.add('active');
+            
+            const category = e.target.getAttribute('data-category');
+            filterPortfolio(category);
+          });
+        });
+
+        // Set up load more button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', loadMore);
+        }
+
+        // Initial render
+        renderPortfolio();
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPortfolio);
+      } else {
+        initPortfolio();
+      }
     })();
   </script>
 </body>
