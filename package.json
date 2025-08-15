@@ -1,25 +1,14 @@
 {
-  "name": "cochran-films-test-server",
+  "name": "cochran-films-toolkit",
+  "private": true,
   "version": "1.0.0",
-  "description": "Test server for Cochran Films email functionality",
-  "main": "test-server.js",
+  "description": "Build script to generate a print-perfect PDF of toolkit-pro.html using Puppeteer",
+  "type": "module",
   "scripts": {
-    "start": "node test-server.js",
-    "dev": "nodemon test-server.js",
-    "test": "echo \"No tests specified\" && exit 1"
+    "generate:pdf": "node scripts/generate-pdf.mjs"
   },
-  "keywords": ["test", "email", "cochran-films"],
-  "author": "Cody Cochran",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+    "puppeteer": "22.13.1"
   }
 }
 

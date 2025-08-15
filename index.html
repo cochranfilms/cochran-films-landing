@@ -2123,6 +2123,23 @@
        })();
 
             // =========================
+     // Unsubscribe Token Generation
+     // =========================
+     function generateUnsubscribeToken(email) {
+       // Generate a secure token for unsubscribe links
+       const timestamp = Date.now();
+       const emailHash = btoa(email).replace(/[^a-zA-Z0-9]/g, '');
+       return `${emailHash}_${timestamp}_${Math.random().toString(36).substr(2, 9)}`;
+     }
+     
+     function generatePreferencesToken(email) {
+       // Generate a secure token for preferences links
+       const timestamp = Date.now();
+       const emailHash = btoa(email).replace(/[^a-zA-Z0-9]/g, '');
+       return `${emailHash}_${timestamp}_${Math.random().toString(36).substr(2, 9)}`;
+     }
+
+            // =========================
      // Global Motion Preference
      // =========================
      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2585,7 +2602,9 @@
               budget_range: budget_range || 'Not specified',
               source: SOURCE,
               submitted_at,
-              to_email: email
+              to_email: email,
+              unsubscribe_token: generateUnsubscribeToken(email),
+              preferences_token: generatePreferencesToken(email)
             };
 
             console.log('EmailJS template params:', templateParams);

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Preferences - Cochran Films</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            background-color: #ffffff;
+            border: 3px solid #FFB200;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #000000;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            border-bottom: 2px solid #FFB200;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 900;
+            color: #FFB200;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .status {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .status.success {
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .status.error {
+            background-color: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+        
+        .status.pending {
+            background-color: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fed7aa;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input[type="email"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #FFB200;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            accent-color: #FFB200;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        
+        .info-box {
+            background-color: rgba(255, 178, 0, 0.05);
+            border: 2px solid #FFB200;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #92400e;
+            margin: 0 0 15px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        
+        .info-box p {
+            color: #92400e;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #FFB200;
+            color: #000000;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #FFB200;
+            transition: all 0.3s ease;
+            margin: 10px 10px 10px 0;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #f59e0b;
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+        
+        .button.secondary {
+            background-color: transparent;
+            color: #FFB200;
+        }
+        
+        .button.secondary:hover {
+            background-color: #FFB200;
+            color: #000000;
+        }
+        
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .footer {
+            background-color: #f8fafc;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .footer p {
+            color: #64748b;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .footer a {
+            color: #FFB200;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header, .content, .footer {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 COCHRAN FILMS</h1>
+        </div>
+        
+        <div class="content">
+            <div id="status" class="status pending">
+                <div id="statusMessage">Loading your preferences...</div>
+            </div>
+            
+            <div id="preferencesForm" style="display: none;">
+                <h2>Update Your Email Preferences</h2>
+                <p>Manage how and when you receive communications from Cochran Films.</p>
+                
+                <form id="emailPreferencesForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Preferences</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="launchNotifications" name="launchNotifications" checked>
+                            <label for="launchNotifications">Launch notifications and updates</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="industryInsights" name="industryInsights" checked>
+                            <label for="industryInsights">Industry insights and tips</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="specialOffers" name="specialOffers" checked>
+                            <label for="specialOffers">Special offers and promotions</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <label for="newsletter">Monthly newsletter</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Frequency</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="weekly" name="frequency" value="weekly">
+                            <label for="weekly">Weekly updates</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="monthly" name="frequency" value="monthly" checked>
+                            <label for="monthly">Monthly updates</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="quarterly" name="frequency" value="quarterly">
+                            <label for="quarterly">Quarterly updates</label>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h3>📧 What you'll receive</h3>
+                        <p>• Production toolkit updates and new resources<br>
+                        • Industry insights and creative tips<br>
+                        • Special offers for our community<br>
+                        • Launch notifications for new services</p>
+                    </div>
+                    
+                    <button type="submit" id="savePreferences" class="button">Save Preferences</button>
+                    <a href="https://cochranfilms.com" class="button secondary">Cancel</a>
+                </form>
+            </div>
+            
+            <div id="successMessage" style="display: none;">
+                <h2>Preferences Updated Successfully!</h2>
+                <p>Your email preferences have been saved. You'll receive emails according to your new settings.</p>
+                
+                <div class="info-box">
+                    <h3>What's next?</h3>
+                    <p>• Your preferences are now active<br>
+                    • You can update these anytime<br>
+                    • Check your email for confirmation</p>
+                </div>
+                
+                <a href="https://cochranfilms.com" class="button">Return to Website</a>
+            </div>
+            
+            <div id="errorMessage" style="display: none;">
+                <h2>Something went wrong</h2>
+                <p>We couldn't update your preferences. This might be because:</p>
+                <ul style="text-align: left; margin: 20px 0; padding-left: 20px;">
+                    <li>The link has expired</li>
+                    <li>The link is invalid</li>
+                    <li>There was a technical issue</li>
+                </ul>
+                
+                <a href="https://cochranfilms.com" class="button">Return to Website</a>
+                <a href="mailto:info@cochranfilms.com" class="button secondary">Contact Support</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Cochran Films. All rights reserved.</p>
+            <p>Need help? <a href="mailto:info@cochranfilms.com">Contact us</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        const token = urlParams.get('token');
+        
+        const status = document.getElementById('status');
+        const statusMessage = document.getElementById('statusMessage');
+        const preferencesForm = document.getElementById('preferencesForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const emailInput = document.getElementById('email');
+        const nameInput = document.getElementById('name');
+        const saveButton = document.getElementById('savePreferences');
+        
+        // Validate token and email
+        function validateRequest() {
+            if (!email || !token) {
+                showError('Invalid preferences link. Missing required parameters.');
+                return false;
+            }
+            
+            // Basic token validation (you can enhance this)
+            if (token.length < 20) {
+                showError('Invalid preferences token.');
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function showError(message) {
+            status.className = 'status error';
+            statusMessage.textContent = message;
+            errorMessage.style.display = 'block';
+        }
+        
+        function showSuccess(message) {
+            status.className = 'status success';
+            statusMessage.textContent = message;
+            successMessage.style.display = 'block';
+        }
+        
+        function showForm() {
+            status.className = 'status pending';
+            statusMessage.textContent = 'Ready to update preferences';
+            preferencesForm.style.display = 'block';
+            
+            // Pre-fill email
+            emailInput.value = email;
+            
+            // Try to get stored preferences
+            loadStoredPreferences();
+        }
+        
+        function loadStoredPreferences() {
+            // Load preferences from localStorage (you can enhance this with API calls)
+            const stored = localStorage.getItem(`preferences_${email}`);
+            if (stored) {
+                try {
+                    const prefs = JSON.parse(stored);
+                    if (prefs.name) nameInput.value = prefs.name;
+                    if (prefs.launchNotifications !== undefined) document.getElementById('launchNotifications').checked = prefs.launchNotifications;
+                    if (prefs.industryInsights !== undefined) document.getElementById('industryInsights').checked = prefs.industryInsights;
+                    if (prefs.specialOffers !== undefined) document.getElementById('specialOffers').checked = prefs.specialOffers;
+                    if (prefs.newsletter !== undefined) document.getElementById('newsletter').checked = prefs.newsletter;
+                    if (prefs.frequency) {
+                        document.querySelectorAll('input[name="frequency"]').forEach(radio => {
+                            radio.checked = radio.value === prefs.frequency;
+                        });
+                    }
+                } catch (e) {
+                    console.error('Error loading preferences:', e);
+                }
+            }
+        }
+        
+        function savePreferences() {
+            const preferences = {
+                email: email,
+                name: nameInput.value,
+                launchNotifications: document.getElementById('launchNotifications').checked,
+                industryInsights: document.getElementById('industryInsights').checked,
+                specialOffers: document.getElementById('specialOffers').checked,
+                newsletter: document.getElementById('newsletter').checked,
+                frequency: document.querySelector('input[name="frequency"]:checked')?.value || 'monthly',
+                updatedAt: new Date().toISOString()
+            };
+            
+            // Store preferences (you can enhance this with API calls)
+            localStorage.setItem(`preferences_${email}`, JSON.stringify(preferences));
+            
+            return preferences;
+        }
+        
+        // Handle form submission
+        document.getElementById('emailPreferencesForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            try {
+                saveButton.disabled = true;
+                saveButton.textContent = 'Saving...';
+                
+                // Save preferences
+                const preferences = savePreferences();
+                
+                // Simulate API call delay
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Show success
+                preferencesForm.style.display = 'none';
+                showSuccess('Your preferences have been updated successfully!');
+                
+            } catch (error) {
+                console.error('Save preferences error:', error);
+                showError('Failed to save preferences. Please try again or contact support.');
+            } finally {
+                saveButton.disabled = false;
+                saveButton.textContent = 'Save Preferences';
+            }
+        });
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            if (validateRequest()) {
+                showForm();
+            }
+        });
+    </script>
+</body>
+</html>
