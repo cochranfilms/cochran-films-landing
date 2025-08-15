@@ -2013,23 +2013,11 @@
         const timeline = (formData.get('timeline') || '').toString().trim();
         const budget_range = (formData.get('budget_range') || '').toString().trim();
         
-        const DOWNLOAD_URL = 'https://cochranfilms.github.io/almost-done/assets/Production_Toolkit.pdf';
+        const DOWNLOAD_URL = 'https://landing.cochranfilms.com/assets/Production_Toolkit.pdf';
         const SOURCE = 'Homepage Popup';
         const submitted_at = new Date().toISOString().slice(0,10);
         
-        // Check if already submitted
-        if (localStorage.getItem(SUB_KEY)) {
-          success.innerHTML = '<i class="fa-solid fa-circle-check"></i> You\'re already set. Grab the toolkit below.';
-          success.style.display = 'block';
-          success.insertAdjacentHTML('beforeend', `
-            <div class="success-details">
-              <span><i class="fa-solid fa-download"></i> <a href="${DOWNLOAD_URL}" target="_blank" rel="noopener">Download Toolkit</a></span>
-            </div>
-          `);
-          // Hide the form for duplicate submissions too
-          form.style.display = 'none';
-          return;
-        }
+        // Allow unlimited submissions - removed duplicate check
         
         try {
           // UI loading state
@@ -2094,7 +2082,6 @@
           
           // Success
           if (sent) {
-            localStorage.setItem(SUB_KEY, 'true');
             success.style.display = 'block';
             success.innerHTML = `
               <div class="success-content">
@@ -2108,7 +2095,7 @@
                   ${timeline ? `<span><i class=\"fa-solid fa-clock\"></i> ${timeline}</span>` : ''}
                 </div>
                 <div class="row">
-                  <a class="btn" href="${DOWNLOAD_URL}" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download Toolkit</a>
+                  <a class="btn" href="${DOWNLOAD_URL}" download="Production_Toolkit.pdf"><i class="fa-solid fa-download"></i> Download Toolkit</a>
                 </div>
               </div>
             `;
