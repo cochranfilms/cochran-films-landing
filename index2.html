@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
+  <meta name="title" content="Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta name="description" content="Cochran Films delivers high-level storytelling with full-stack execution. Professional video production, web development, and white-label services. Atlanta's premier creative agency." />
+  <meta name="keywords" content="creative agency, video production, web development, white-label services, Atlanta, storytelling, full-stack, branding, content creation, film production" />
+  <meta name="author" content="Cody Cochran, CEO & Founder" />
+  
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      --brand-gold: #FFB200;
+      --brand-blue: #0066CC;
+      --brand-red: #ef4444;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: 1px solid rgba(99,102,241,0.20);
+      --backdrop: blur(12px);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 10px;
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --shadow-md: 0 18px 40px rgba(0,0,0,0.35);
+      --shadow-sm: 0 10px 24px rgba(0,0,0,0.25);
+      --glow-indigo: 0 0 40px rgba(99,102,241,0.35);
+      --glow-gold: 0 0 40px rgba(255,178,0,0.35);
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.15), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.12), transparent 60%),
+                  linear-gradient(135deg, var(--dark-900) 0%, var(--dark-950) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Styles */
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: #ffffff;
+      padding: 8px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+      background: rgba(99,102,241,0.1);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .nav-link.active {
+      color: var(--brand-gold);
+      background: rgba(255,178,0,0.1);
+      border-color: rgba(255,178,0,0.3);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+      transition: var(--transition-fast);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* Layout wrapper */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-top: 80px;
+      padding: 60px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 20px;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(18px, 2.4vw, 22px);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .hero-title {
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 30px;
+    }
+
+    .hero-subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(20px, 3vw, 24px);
+      max-width: 900px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 16px 32px;
+      border-radius: 16px;
+      font-weight: 900;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+      transition: var(--transition-fast);
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.05);
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      text-align: center;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(255,178,0,0.2));
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      color: var(--brand-gold);
+    }
+
+    .service-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .service-description {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* About Section Styles */
+    .about-content {
+      margin-top: 40px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .about-card {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .about-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(255,178,0,0.2));
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      color: var(--brand-gold);
+    }
+
+    .about-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .about-card p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Portfolio Section */
+    .portfolio-content {
+      margin-top: 40px;
+    }
+
+    .portfolio-category-section {
+      margin-bottom: 80px;
+    }
+
+    .portfolio-category-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio-category-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgba(99,102,241,0.3);
+    }
+
+    .portfolio-category-title i {
+      color: var(--brand-gold);
+      font-size: 24px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      margin-top: 20px;
+    }
+    
+    .portfolio-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      border: 1px solid rgba(99,102,241,0.22);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: rgba(99,102,241,0.45);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .portfolio-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(45deg, rgba(99,102,241,0.1), rgba(255,178,0,0.1));
+    }
+    
+    .portfolio-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-thumbnail img {
+      transform: scale(1.05);
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    
+    .portfolio-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,178,0,0.9);
+      border: 3px solid #ffffff;
+      display: grid;
+      place-items: center;
+      color: #000000;
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-play {
+      background: var(--brand-gold);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .portfolio-content {
+      padding: 20px;
+    }
+    
+    .portfolio-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(99,102,241,0.18);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: #c7d2fe;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    
+    .portfolio-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 8px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .portfolio-description {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .portfolio-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+    
+    .portfolio-date {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .portfolio-featured {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(255,178,0,0.2);
+      border: 1px solid rgba(255,178,0,0.3);
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Load More Button Styles */
+    .load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.55);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: var(--text-secondary);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    
+    .load-more-btn:hover {
+      border-color: rgba(99,102,241,0.45);
+      background: rgba(15,23,42,0.75);
+      color: #e2e8f0;
+      transform: translateY(-1px);
+    }
+
+    /* Tech Marquee */
+    .marquee {
+      margin-top: 16px;
+      border-radius: var(--radius-md);
+      border: var(--card-border);
+      background: rgba(2,6,23,0.55);
+      overflow: hidden;
+      position: relative;
+      content-visibility: auto;
+      contain-intrinsic-size: 80px;
+    }
+    .marquee::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(2,6,23,1) 0%, transparent 10%, transparent 90%, rgba(2,6,23,1) 100%);
+      pointer-events: none;
+    }
+    .tracks {
+      display: flex; gap: 22px; padding: 14px 0;
+      white-space: nowrap; animation: scroll 28s linear infinite;
+    }
+    @keyframes scroll {
+      to { transform: translateX(-50%); }
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 999px;
+      background: rgba(15,23,42,0.65);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: var(--text-secondary);
+      font-weight: 700;
+    }
+
+    /* Video Modal Styles */
+    .modal {
+      position: fixed !important; 
+      inset: 0 !important; 
+      z-index: 999999 !important; 
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      padding: 16px;
+      overflow: hidden;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.show { 
+      display: flex !important; 
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .video-panel {
+      width: min(90vw, 1000px);
+      max-height: 90vh;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.9));
+      border: 1px solid rgba(255,178,0,0.4);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(12px);
+      animation: pop 320ms cubic-bezier(.2,.8,.2,1) forwards;
+      position: relative;
+      z-index: 1000000;
+      display: flex;
+      flex-direction: column;
+      transform-origin: center center;
+    }
+    
+    @keyframes pop { to { transform: translateY(0); } }
+    
+    .video-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 24px 0;
+      border-bottom: 1px solid rgba(255,178,0,0.2);
+      margin-bottom: 20px;
+    }
+    
+    .video-info h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #FFB200);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .video-info h2 i {
+      color: var(--brand-gold);
+      font-size: 18px;
+    }
+    
+    .video-category {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    
+    .video-close {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #ffffff;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 18px;
+    }
+    
+    .video-close:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.3);
+      transform: scale(1.1);
+    }
+    
+    .video-panel-body {
+      padding: 0 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    
+    .video-container video {
+      width: 100%;
+      height: auto;
+      max-height: 60vh;
+      display: block;
+      border-radius: 12px;
+    }
+    
+    .video-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .video-description {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      max-height: 120px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+    
+    .video-description::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .video-description::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+    }
+    
+    .video-description::-webkit-scrollbar-thumb {
+      background: rgba(255,178,0,0.5);
+      border-radius: 3px;
+    }
+    
+    .video-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,178,0,0.2);
+    }
+    
+    .video-date {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    
+    .video-featured {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,178,0,0.2);
+      border: 1px solid rgba(255,178,0,0.3);
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--text-primary);
+      font-size: 16px;
+      transition: var(--transition-fast);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--brand-gold);
+      box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--brand-gold);
+    }
+
+    .footer-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 6px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.2);
+      color: var(--text-secondary);
+      text-decoration: none;
+      background: rgba(15,23,42,0.5);
+      transition: var(--transition-fast);
+    }
+
+    .social-link:hover {
+      border-color: rgba(148,163,184,0.4);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-container {
+        height: 70px;
+        padding: 0 16px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .wrapper {
+        padding: 90px 16px 40px;
+      }
+
+      .section {
+        margin-top: 60px;
+        padding: 40px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .portfolio-category-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .contact-form {
+        padding: 30px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: clamp(32px, 10vw, 48px);
+      }
+
+      .section-title {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+
+      .portfolio-content {
+        padding: 20px;
+      }
+      
+      .portfolio-category-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
+        Cochran Films
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="#book" class="nav-link nav-cta">Book Services</a>
+        </li>
+      </ul>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+      <h1 class="hero-title">STORIES THAT TELL THEMSELVES</h1>
+      <p class="hero-subtitle">
+        Through a data-driven Content Strategy and Omnichannel Marketing approach, we ensure your visuals aren't just seen—they convert across all platforms.
+      </p>
+      <a href="#book" class="hero-cta">
+        <i class="fas fa-rocket"></i>
+        Book Your Services
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-title">About Cochran Films</h2>
+        <p class="section-subtitle">
+          At Cochran Films, we create high-quality photo and video content, paired with strategic personal brand development, to help businesses, entrepreneurs, and creatives grow their brand, amplify their message, and connect with their audience in powerful, lasting ways.
+        </p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>Story-Driven Production</h3>
+            <p>From pitch to pixels, we tie cinematic media production to full-stack systems so every story moves business outcomes. Atlanta-built, deployable anywhere.</p>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-print"></i>
+            </div>
+            <h3>Live Event Printing</h3>
+            <p>Capture the Moment. Print It Instantly. From proms to corporate events, we deliver high-quality prints on-site with our smart camera-to-printer system.</p>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development & Maintenance</h3>
+            <p>We don't just build beautiful websites — we help your brand grow online for the long haul. From strategy and design to publishing and upkeep.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          From cinematic production to web development, we deliver comprehensive creative solutions that drive results.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="service-title">Video Production</h3>
+          <p class="service-description">
+            Professional video production including commercials, brand films, documentaries, and live event coverage. From corporate storytelling to live events, we deliver high-level production value and strategic impact.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">
+            Live event printing, portraits, product photography, and event coverage with instant printing capabilities. With 4x6 and 5x7 options, branded templates, and seamless approval processes.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-description">
+            Custom website development and maintenance, from strategy and design to publishing and ongoing support. We handle everything from strategy and design to publishing and upkeep.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="service-title">Brand Development</h3>
+          <p class="service-description">
+            Complete brand identity development including logos, design systems, and strategic brand positioning. Our newest service combines design, web, and systems setup — done for you.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users-gear"></i>
+          </div>
+          <h3 class="service-title">White-Label Services</h3>
+          <p class="service-description">
+            Enterprise-ready sites and systems you can deploy under your brand. Built for fast, brand-safe deployment with modern CI/CD and versioned infrastructure.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="service-title">Workshops & Training</h3>
+          <p class="service-description">
+            Build Your Website in Just 2 DAYS — With Expert Support Every Step of the Way. Join our in-person Website Workshop in Atlanta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="subtitle" style="margin:0 0 20px; max-width: 950px;">
+          From corporate storytelling to live events, explore our latest work that demonstrates high-level production value and strategic impact.
+        </p>
+      </div>
+      
+      <!-- Portfolio Content -->
+      <div class="portfolio-content">
+        <!-- Video Production Section -->
+        <div class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-video"></i> Video Production
+          </h3>
+          <div class="portfolio-grid" id="videoProductionGrid">
+            <!-- Video Production items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Video Production" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Video Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- Web Development Section -->
+        <div class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-code"></i> Web Development
+          </h3>
+          <div class="portfolio-grid" id="webDevelopmentGrid">
+            <!-- Web Development items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Web Development" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Web Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- Photography Section -->
+        <div class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-camera"></i> Photography
+          </h3>
+          <div class="portfolio-grid" id="photographyGrid">
+            <!-- Photography items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Photography" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Photography Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- Brand Development Section -->
+        <div class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-palette"></i> Brand Development
+          </h3>
+          <div class="portfolio-grid" id="brandDevelopmentGrid">
+            <!-- Brand Development items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Brand Development" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Brand Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book Services Section -->
+    <section id="book" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Book Your Services</h2>
+        <p class="section-subtitle">
+          Ready to start your project? Let's discuss how we can help bring your vision to life.
+        </p>
+      </div>
+
+      <div class="contact-form">
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service" class="form-label">Service Interest</label>
+            <select id="service" name="service" class="form-input" required>
+              <option value="">Select a service</option>
+              <option value="video-production">Video Production</option>
+              <option value="photography">Photography</option>
+              <option value="web-development">Web Development</option>
+              <option value="brand-development">Brand Development</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Project Details</label>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project, timeline, and goals..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          Have questions or want to learn more? We'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <p style="color: var(--text-secondary); margin: 0;">info@cochranfilms.com</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <p style="color: var(--text-secondary); margin: 0;">(470) 420 - 2169</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Location</label>
+          <p style="color: var(--text-secondary); margin: 0;">Atlanta, Georgia & Surrounding Areas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">What We Offer</h2>
+        <p class="section-subtitle">
+          Comprehensive solutions that combine design, web, and systems setup — done for you.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="service-title">New Brand Experience</h3>
+          <p class="service-description">Elegant, cinematic design that reflects our storytelling DNA.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3 class="service-title">White‑Label Services</h3>
+          <p class="service-description">Enterprise-ready sites and systems you can deploy under your brand.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3 class="service-title">Creator Platform</h3>
+          <p class="service-description">Onboarding, analytics, and streamlined project pipelines.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="service-title">Centralized Backend</h3>
+          <p class="service-description">Single source of truth, secure, and synchronized across systems.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3 class="service-title">Performance Obsessed</h3>
+          <p class="service-description">Fast, resilient, and delightful on every device and network.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="service-title">Smart Automation</h3>
+          <p class="service-description">Seamless orchestration from intake to delivery with minimal friction.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3 class="service-title">Component Library</h3>
+          <p class="service-description">Reusable UI blocks that scale across brands and campaigns.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-code-branch"></i>
+          </div>
+          <h3 class="service-title">GitHub Deployment</h3>
+          <p class="service-description">Modern CI/CD and versioned infrastructure for peace of mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Marquee -->
+    <section class="marquee" aria-label="Tech stack marquee">
+      <div class="tracks" id="tracks" aria-hidden="true">
+        <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+        <span class="pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="pill"><i class="fa-solid fa-brackets-curly"></i> JSON</span>
+        <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="pill"><i class="fa-solid fa-server"></i> APIs</span>
+        <span class="pill"><i class="fa-brands fa-git-alt"></i> GitHub</span>
+        <span class="pill"><i class="fa-solid fa-cloud-arrow-up"></i> Deploy</span>
+        <span class="pill"><i class="fa-solid fa-bolt"></i> Performance</span>
+        <span class="pill"><i class="fa-solid fa-lock"></i> Security</span>
+        <!-- Duplicate for seamless scroll -->
+        <span class="pill"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+        <span class="pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="pill"><i class="fa-solid fa-brackets-curly"></i> JSON</span>
+        <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="pill"><i class="fa-solid fa-server"></i> APIs</span>
+        <span class="pill"><i class="fa-brands fa-git-alt"></i> GitHub</span>
+        <span class="pill"><i class="fa-solid fa-cloud-arrow-up"></i> Deploy</span>
+        <span class="pill"><i class="fa-solid fa-bolt"></i> Performance</span>
+        <span class="pill"><i class="fa-solid fa-lock"></i> Security</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
+        Cochran Films
+      </div>
+
+      <div class="footer-social">
+        <a href="mailto:info@cochranfilms.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-youtube"></i>
+          YouTube
+        </a>
+        <a href="https://github.com/cochranfilms" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Cochran Films LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Player Modal -->
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+    <div class="video-panel">
+      <div class="video-panel-head">
+        <div class="video-info">
+          <h2 id="videoTitle"><i class="fa-solid fa-play"></i> <span id="videoTitleText">Video Title</span></h2>
+          <p id="videoCategory" class="video-category">Category</p>
+        </div>
+        <button class="video-close" id="closeVideo" aria-label="Close video player">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="video-panel-body">
+        <div class="video-container">
+          <video id="videoPlayer" controls preload="metadata" poster="" playsinline>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-details">
+          <div class="video-description" id="videoDescription">
+            Video description will appear here...
+          </div>
+          <div class="video-meta">
+            <span class="video-date" id="videoDate">Date</span>
+            <span class="video-featured" id="videoFeatured" style="display: none;">
+              <i class="fa-solid fa-star"></i> Featured Project
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Active navigation highlighting
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Here you would typically send the data to your backend
+      // For now, we'll just show a success message
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      this.reset();
+    });
+
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav-wrapper');
+      if (window.scrollY > 100) {
+        nav.style.background = 'rgba(15, 23, 42, 0.98)';
+      } else {
+        nav.style.background = 'rgba(15, 23, 42, 0.95)';
+      }
+    });
+
+    // Portfolio Management
+    (() => {
+      // Portfolio data from CSV - mapped to service categories
+      const portfolioData = [
+        // Video Production Items
+        {
+          "Title": "Evolve Contracting - National Small Business Week Highlight",
+          "Description": "DP | Gaffer | Editor | Audio\nShot on Sony FX6: 24-70mm f/2.8\nLights: Aputure Amaran COB 60x on a C-Stand w/lantern Diffuser.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_7a5a1e21bcb349369b5cfce51e197341~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_55d75649953a40d4963f44cb2322046f/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Caribbean Currency Live Vibes",
+          "Description": "Experience the vibrant energy of Caribbean Currency's \"Live Vibes\" event, featuring dynamic performances and a celebration of Caribbean culture.",
+          "Category": "Live Broadcast",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de69c46e54aa466cb4d377baeb26aef0~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d62f6ba8ce04461ab71530a5533a80f5/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Maïré Rosa of eComSpaces - National Small Business Week Highlight",
+          "Description": "Meet Maïré Rosa of eComSpaces in this National Small Business Week highlight. Discover her inspiring journey as a leader in e-commerce innovation.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a564fa653eee4790a1ea1e66efefe0be~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_159032edd60c4680a7539940fc5374d5/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Andre Dickens Atlanta Mayor Attends Women's Fundraiser During Candidacy",
+          "Description": "This video documents Andre Dickens, then a mayoral candidate, attending a powerful women's fundraiser event in Atlanta.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0d72d5e5a9fd48c8b90bf7641bcf38a1~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ab550ee6a99f4ed08b62e73b22038cb9/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Southern Gas Corporate Insight",
+          "Description": "Gain exclusive insights into the Southern Gas industry with this video, showcasing strategic discussions and solutions tailored to the corporate landscape.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_1c289bca3e0b47999bce809fce86fe38~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_7881fb57ef814133b8d1282555b62032/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE Reveals New Refrigeration",
+          "Description": "This video highlights the Russell Innovation Center for Entrepreneurs' (RICE) unveiling of cutting-edge refrigeration technology.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_d9b1500be39b4ed1a31550fe4401a488~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94d94e9fd17748abad50215fc079d20d/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Scratch Master DJ POPO Presents \"OH MY GOSH POPO\" Vol 1. Episode 1",
+          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro",
+          "Category": "Live Broadcast",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_e557a622d1b44de2a704308423f9c637~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e574d9226e0c4e09b17cf610c6a3fe88/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "A Bump In The Night Short",
+          "Description": "Directed by Cody Cochran for a Full Sail project, this suspenseful short film takes viewers on a thrilling ride filled with tension, creativity, and cinematic storytelling.",
+          "Category": "Shorts",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_95ef13cb9950461d8f3b8a2ab4bc27fe~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b0fe2a8b8a144008ba2d463f247e7a05/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh Commercial",
+          "Description": "A lively and engaging commercial showcasing the 7even Kids Fresh skincare line. This video brings the brand's commitment to fun, freshness, and high-quality products to life.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de8d250539694fdb8aee32fac7f9206d~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_4cdb075743f44fe6a09f19c7f66ed0e4/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Rich Girls HQ Brunch in Black",
+          "Description": "This video captures the elegance and empowerment of the \"Brunch in Black\" event hosted by Rich Girls HQ. Attendees celebrated community, connection, and success.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_9a41e83b5d814cf09c1d5039d5c1e2b0~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b9c609cc32d49fb91fd4825819ac2fb/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh: Dive into a World of Freshness & Fun",
+          "Description": "Step into the vibrant world of 7even Kids Fresh with this lively video! Showcasing the brand's fun, fresh approach to skincare.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_ab5e95728333493f892b74fefd16b702~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_6049704bb253437282ee6917efa0e67c/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE x Hanover Partnership",
+          "Description": "Explore the collaboration between RICE and Hanover in this video, highlighting a partnership that fosters innovation, growth, and opportunities for entrepreneurs.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0c3d150db7e8400c95843a68a6374d95~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_be4dd07088834d25a4c2afdb4d24dfe7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "7even Kids Fresh: Face Toner",
+          "Description": "Discover the refreshing benefits of 7even Kids Fresh Face Toner in this promotional video. Designed for young, sensitive skin, this toner provides a gentle yet effective cleansing experience.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_29c1d96286634e0ba8afe6e8efe8a47f~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e86e1fc17be8432ea11caed24a6a3fe7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Play Pits - National Small Business Week Highlight",
+          "Description": "Celebrate National Small Business Week with Play Pits, a remarkable brand making waves in the natural deodorant industry. In this feature, we highlight their inspiring journey.",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0078d563feca45a78d9282fd19d74dae~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_68efb32b81d2466b9870dd1aa5137aca/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Celebrating Atlanta's Black-Owned Businesses | The Russell Center",
+          "Description": "DP | Editor | Audio Mixer\nShot on Sony FX6: Sony 24-105mm f/4\nSoftware: Final Cut Pro X\n\nJoin us as we shine a spotlight on the thriving Black business community in Atlanta!",
+          "Category": "Commercials",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_077a43cf29284001a9453221835fffca~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_c0aa42ded8cc4cd2b1e5a37bba7ce066/2160p/mp4/file.mp4",
+          "UploadDate": "2025-01-04"
+        },
+        {
+          "Title": "DJ POPO Production - Behind The Scenes",
+          "Description": "Go behind the scenes with Scratch Master DJ POPO as we capture the magic of producing an inspiring feature on music, film, education, and collaboration.",
+          "Category": "Live Broadcast",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_79ee4a9e404b4ef98c8400ac3e352aea~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_137b3f277ddd4c3a8ea12891192ebc1c/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-29"
+        },
+        {
+          "Title": "RICE March Madness",
+          "Description": "Experience the excitement of RICE March Madness, an event that blends entrepreneurial energy with the thrill of competition, celebrating innovation and collaboration.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a313661976e748d29cbe2a921bad5c9f~mv2.png",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_cc70bbce41cf437f902f3699966aecd0/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE x ABC Veterans",
+          "Description": "This video showcases RICE's partnership with ABC Veterans, celebrating initiatives that support veteran entrepreneurs and their journey toward building successful businesses.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_2cd9c112ce5e4a2e8e0ebf6aecdbd8e7~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_a301105c12524eed809750b5bc557f96/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "RICE x PayPal Readiness Academy",
+          "Description": "This video highlights the RICE x PayPal Readiness Academy, an initiative empowering entrepreneurs with the tools and knowledge needed to succeed in the ever-evolving digital economy.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0fbea20d90d946dd85c36f0f6aa5f776~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2701be5cf36b416dac1bdcee2af552fe/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Southern Gas Leadership Forum 2023",
+          "Description": "A comprehensive look at the 2023 Southern Gas Leadership Forum, where industry leaders gathered to discuss innovations, challenges, and the future of energy leadership.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_6dfce90e14c04f6eab6a0f03309cde5d~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2a2475008bb745b99adb3e95060d071f/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "ACE Corporate Proposal",
+          "Description": "A polished presentation of the ACE Corporate Proposal, showcasing innovative strategies and solutions designed to meet business goals. This video highlights the professionalism and vision behind the project.",
+          "Category": "Corporate",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_50fd1992b8c3493f9bb4d9d46b702286~mv2.png",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ae62cb47d3d646b9815a61d6ba70b2eb/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-24"
+        },
+        {
+          "Title": "Scratch Master DJ POPO Presents OH MY GOSH POPO Vol 2. Episode 2",
+          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro",
+          "Category": "Live Broadcast",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_481d9b2e49af468583eef4c59957e49a~mv2.jpg",
+          "Is Featured": false,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94047491c1984aa3a159da4e19ef20e7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-01-14"
+        },
+        {
+          "Title": "Win Against Procrastination",
+          "Description": "In this 'Severance'-inspired short by Course Creator Academy, in collaboration with JB Flickss and Cochran Films, a simple task spirals into a mental maze of delay and distraction.",
+          "Category": "Shorts",
+          "ServiceCategory": "Video Production",
+          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de3bc871d7b349838350b58465236587~mv2.jpg",
+          "Is Featured": true,
+          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d5f23bd4e72c47a8ba1b47cbe9b047e7/1080p/mp4/file.mp4",
+          "UploadDate": "2025-07-19"
+        },
+        
+        // Note: Photography, Web Development, and Brand Development sections will be empty for now
+        // until their respective CSV files are provided
+        
+        // Web Development Items
+        {
+          "Title": "Course Creator Academy",
+          "Description": "Course Creator Academy is a content creation education platform to help students enhance their videography skills.",
+          "Category": "In-House",
+          "ServiceCategory": "Web Development",
+          "Thumbnail Image": "https://drive.google.com/file/d/1ma5v4VS7294PEtrzQwBNppP0mNIpxxUd/view?usp=sharing",
+          "Is Featured": true,
+          "playbackUrl": "",
+          "UploadDate": "2024-08-31",
+          "URL": "https://coursecreatoracademy.org/",
+          "Tech Stack": "Shopify (Online Store 2.0), Liquid, HTML5, CSS3, JavaScript (custom scripts), Shopify API, Shopify App Integrations (for forms, memberships, and payments), Google Analytics, SEO Optimization Tools",
+          "Role": "Full-Stack Developer & Systems Architect — handled the full build, theme customization, app integrations, and backend configuration for course management",
+          "Client": "Course Creator Academy (a division under CLC Collective, founded by Cody Cochran)",
+          "Timeline": "4 weeks — from initial planning to launch, including testing and Shopify API integrations",
+          "Challenges": "• Integrating a multi-tier membership structure using Shopify's native system plus third-party apps\n• Creating a responsive design optimized for both education content and service promotion\n• Ensuring seamless checkout flow for both physical merchandise and digital/in-person course purchases\n• Configuring SEO and analytics tracking for both static and dynamic content pages",
+          "Results": "• Fully functional education & services platform with automated onboarding for new students\n• Streamlined payment and course access flow that reduced manual admin by 60%\n• Increased lead capture rate via optimized inquiry and sign-up forms\n• Solid foundation for future app integration and scaling course offerings online"
+        }
+      ];
+
+      // Portfolio display settings
+      const itemsPerCategory = 6; // Show 6 items initially per category
+      const categoryGrids = {
+        'Video Production': 'videoProductionGrid',
+        'Web Development': 'webDevelopmentGrid',
+        'Photography': 'photographyGrid',
+        'Brand Development': 'brandDevelopmentGrid'
+      };
+
+      // Portfolio functionality
+      function createPortfolioItem(item) {
+        const isFeatured = item['Is Featured'] === true || item['Is Featured'] === 'true';
+        const uploadDate = new Date(item['UploadDate']);
+        const formattedDate = uploadDate.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'short', 
+          day: 'numeric' 
+        });
+
+        // Determine if this is a web development item
+        const isWebDev = item.ServiceCategory === 'Web Development';
+        const hasURL = item.URL && item.URL.trim() !== '';
+        
+        // Handle thumbnail image - convert Google Drive links to direct image URLs
+        let thumbnailSrc = item['Thumbnail Image'] || '';
+        if (thumbnailSrc && thumbnailSrc.includes('drive.google.com')) {
+          // Convert Google Drive sharing link to direct image URL
+          const fileId = thumbnailSrc.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+          if (fileId) {
+            thumbnailSrc = `https://drive.google.com/uc?export=view&id=${fileId}`;
+          }
+        }
+        
+        // Fallback for web development items if no valid thumbnail
+        if (isWebDev && (!thumbnailSrc || thumbnailSrc === '')) {
+          thumbnailSrc = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
+        }
+
+        return `
+          <div class="portfolio-item" data-category="${item.Category}" data-title="${item.Title}">
+            <div class="portfolio-thumbnail">
+              <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
+              ${isWebDev && hasURL ? 
+                `<div class="portfolio-play" style="background: rgba(16,185,129,0.9);">
+                  <i class="fa-solid fa-external-link-alt"></i>
+                </div>` : 
+                `<div class="portfolio-play">
+                  <i class="fa-solid fa-play"></i>
+                </div>`
+              }
+              ${isFeatured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-category">
+                <i class="fa-solid fa-tag"></i>
+                ${item.Category}
+              </div>
+              <h3 class="portfolio-title">${item.Title}</h3>
+              <p class="portfolio-description">${item.Description}</p>
+              
+              ${isWebDev ? `
+                <div class="portfolio-web-details" style="margin: 12px 0; padding: 12px; background: rgba(99,102,241,0.1); border-radius: 8px; border: 1px solid rgba(99,102,241,0.2);">
+                  ${item.Role ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Role:</strong> ${item.Role}</div>` : ''}
+                  ${item['Tech Stack'] ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Tech:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item['Tech Stack']}</span></div>` : ''}
+                  ${item.Timeline ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Timeline:</strong> ${item.Timeline}</div>` : ''}
+                </div>
+              ` : ''}
+              
+              <div class="portfolio-meta">
+                <span class="portfolio-date">${formattedDate}</span>
+                ${isFeatured ? '<span class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderPortfolioByCategory() {
+        // Render each service category separately
+        Object.entries(categoryGrids).forEach(([serviceCategory, gridId]) => {
+          const grid = document.getElementById(gridId);
+          if (!grid) return;
+
+          // Filter items by service category
+          const categoryItems = portfolioData.filter(item => 
+            item.ServiceCategory === serviceCategory
+          );
+
+          // Show initial items
+          const itemsToShow = categoryItems.slice(0, itemsPerCategory);
+          grid.innerHTML = itemsToShow.map(createPortfolioItem).join('');
+
+          // Show/hide load more button for this category
+          const loadMoreBtn = grid.parentElement.querySelector('.load-more-btn');
+          if (loadMoreBtn) {
+            loadMoreBtn.style.display = itemsToShow.length < categoryItems.length ? 'inline-flex' : 'none';
+          }
+
+          // Add click handlers for portfolio items
+          grid.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', () => {
+              const title = item.getAttribute('data-title');
+              const portfolioItem = portfolioData.find(p => p.Title === title);
+              
+              if (portfolioItem) {
+                if (portfolioItem.ServiceCategory === 'Web Development' && portfolioItem.URL) {
+                  // Open web development project in new tab
+                  window.open(portfolioItem.URL, '_blank');
+                } else if (portfolioItem.playbackUrl) {
+                  // Open video modal for video production items
+                  openVideoModal(portfolioItem);
+                }
+              }
+            });
+          });
+        });
+      }
+
+      // Video Modal functionality
+      function openVideoModal(portfolioItem) {
+        const modal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+        const videoTitleText = document.getElementById('videoTitleText');
+        const videoCategory = document.getElementById('videoCategory');
+        const videoDescription = document.getElementById('videoDescription');
+        const videoDate = document.getElementById('videoDate');
+        const videoFeatured = document.getElementById('videoFeatured');
+        
+        if (!modal || !videoPlayer || !videoSource) return;
+
+        // Set video content
+        videoTitleText.textContent = portfolioItem.Title;
+        videoCategory.textContent = portfolioItem.Category;
+        videoDescription.textContent = portfolioItem.Description;
+        
+        // Format date
+        const uploadDate = new Date(portfolioItem['UploadDate']);
+        videoDate.textContent = uploadDate.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+        
+        // Show/hide featured badge
+        const isFeatured = portfolioItem['Is Featured'] === true || portfolioItem['Is Featured'] === 'true';
+        videoFeatured.style.display = isFeatured ? 'inline-flex' : 'none';
+        
+        // Set video source
+        videoSource.src = portfolioItem.playbackUrl;
+        videoPlayer.poster = portfolioItem['Thumbnail Image'];
+        
+        // Load and play video
+        videoPlayer.load();
+        
+        // Show modal
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        
+        // Prevent body scrolling
+        document.body.style.overflow = 'hidden';
+        
+        // Focus management
+        const closeBtn = document.getElementById('closeVideo');
+        if (closeBtn) closeBtn.focus();
+      }
+
+      function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        
+        if (!modal) return;
+        
+        // Pause and reset video
+        if (videoPlayer) {
+          videoPlayer.pause();
+          videoPlayer.currentTime = 0;
+        }
+        
+        // Hide modal
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        
+        // Restore body scrolling
+        document.body.style.overflow = '';
+      }
+
+      function loadMoreForCategory(serviceCategory) {
+        const gridId = categoryGrids[serviceCategory];
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+
+        const categoryItems = portfolioData.filter(item => 
+          item.ServiceCategory === serviceCategory
+        );
+
+        const currentItems = grid.children.length;
+        const itemsToShow = categoryItems.slice(0, currentItems + itemsPerCategory);
+        
+        grid.innerHTML = itemsToShow.map(createPortfolioItem).join('');
+
+        // Show/hide load more button
+        const loadMoreBtn = grid.parentElement.querySelector('.load-more-btn');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = itemsToShow.length < categoryItems.length ? 'inline-flex' : 'none';
+        }
+
+        // Re-add click handlers
+        grid.querySelectorAll('.portfolio-item').forEach(item => {
+          item.addEventListener('click', () => {
+            const title = item.getAttribute('data-title');
+            const portfolioItem = portfolioData.find(p => p.Title === title);
+            
+            if (portfolioItem) {
+              if (portfolioItem.ServiceCategory === 'Web Development' && portfolioItem.URL) {
+                // Open web development project in new tab
+                window.open(portfolioItem.URL, '_blank');
+              } else if (portfolioItem.playbackUrl) {
+                // Open video modal for video production items
+                openVideoModal(portfolioItem);
+              }
+            }
+          });
+        });
+      }
+
+      // Initialize portfolio
+      function initPortfolio() {
+        // Set up load more buttons for each category
+        document.querySelectorAll('.load-more-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const serviceCategory = e.target.getAttribute('data-category');
+            loadMoreForCategory(serviceCategory);
+          });
+        });
+
+        // Set up video modal close button
+        const closeVideoBtn = document.getElementById('closeVideo');
+        if (closeVideoBtn) {
+          closeVideoBtn.addEventListener('click', closeVideoModal);
+        }
+
+        // Close video modal on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const videoModal = document.getElementById('videoModal');
+            if (videoModal && videoModal.classList.contains('show')) {
+              closeVideoModal();
+            }
+          }
+        });
+
+        // Close video modal when clicking outside
+        document.getElementById('videoModal')?.addEventListener('click', (e) => {
+          if (e.target.id === 'videoModal') {
+            closeVideoModal();
+          }
+        });
+
+        // Initial render
+        renderPortfolioByCategory();
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPortfolio);
+      } else {
+        initPortfolio();
+      }
+    })();
+  </script>
+</body>
+</html>

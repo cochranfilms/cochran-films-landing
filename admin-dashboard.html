@@ -370,9 +370,9 @@
                 showMessage('🔄 Loading data...', 'info');
                 
                 const [users, unsubscribes, preferences] = await Promise.all([
-                    fetch('/api/users').then(r => r.json()),
-                    fetch('/api/unsubscribes').then(r => r.json()),
-                    fetch('/api/preferences').then(r => r.json())
+                    fetch('https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/users').then(r => r.json()),
+                    fetch('https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/unsubscribes').then(r => r.json()),
+                    fetch('https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/preferences').then(r => r.json())
                 ]);
                 
                 allData = { users, unsubscribes, preferences };
@@ -585,7 +585,7 @@
             if (!confirm(`Are you sure you want to unsubscribe ${email}?`)) return;
             
             try {
-                const response = await fetch('/api/unsubscribe', {
+                const response = await fetch('https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/unsubscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
@@ -610,7 +610,7 @@
             if (!confirm(`Are you sure you want to resubscribe ${email}?`)) return;
             
             try {
-                const response = await fetch('/api/resubscribe', {
+                const response = await fetch('https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/resubscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email })

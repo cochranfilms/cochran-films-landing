@@ -2593,7 +2593,7 @@
             
             // Check if user is unsubscribed before sending
             try {
-              const unsubscribeCheck = await fetch(`/api/check-unsubscribe/${encodeURIComponent(email)}`);
+              const unsubscribeCheck = await fetch(`https://cochran-job-listings-jp031larl-cody-cochrans-projects.vercel.app/api/check-unsubscribe/${encodeURIComponent(email)}`);
               if (unsubscribeCheck.ok) {
                 const { isUnsubscribed } = await unsubscribeCheck.json();
                 if (isUnsubscribed) {

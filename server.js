@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const isProduction = process.env.NODE_ENV === 'production';
 
 // ES module equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -251,8 +252,9 @@ app.get('/admin', (req, res) => {
 // Initialize database and start server
 initDatabase().then(() => {
     app.listen(PORT, () => {
-        console.log(`🚀 Server running on http://localhost:${PORT}`);
-        console.log(`📊 Admin dashboard: http://localhost:${PORT}/admin`);
+        const host = isProduction ? 'production server' : `http://localhost:${PORT}`;
+        console.log(`🚀 Server running on ${host}`);
+        console.log(`📊 Admin dashboard: ${isProduction ? 'https://your-domain.com/admin' : `http://localhost:${PORT}/admin`}`);
         console.log(`📧 API endpoints:`);
         console.log(`   - GET  /api/users`);
         console.log(`   - GET  /api/unsubscribes`);
@@ -260,5 +262,10 @@ initDatabase().then(() => {
         console.log(`   - POST /api/unsubscribe`);
         console.log(`   - POST /api/preferences`);
         console.log(`   - POST /api/resubscribe`);
+        
+        if (isProduction) {
+            console.log(`🌐 Production mode enabled`);
+            console.log(`📝 Check logs for any errors`);
+        }
     });
 }).catch(console.error);
