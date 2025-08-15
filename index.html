@@ -2048,14 +2048,15 @@
               timeline: timeline || 'Not specified',
               budget_range: budget_range || 'Not specified',
               source: SOURCE,
-              submitted_at
+              submitted_at,
+              to_email: email
             };
 
             console.log('EmailJS template params:', templateParams);
             console.log('Using Service ID:', SERVICE_ID, 'Template ID:', TEMPLATE_ID);
 
             try {
-              const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+              const sendPromise = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, email);
               const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Email timeout')), 12000));
               await Promise.race([sendPromise, timeoutPromise]);
               console.log('EmailJS email sent successfully!');
