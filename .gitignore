@@ -100,3 +100,8 @@ og-image-generator-advanced.html
 # Temporary files
 *.tmp
 *.temp
+
+# Database files (created by the server)
+users.json
+unsubscribes.json
+preferences.json
