@@ -274,22 +274,31 @@
         // Handle unsubscribe confirmation
         document.getElementById('confirmUnsubscribe').addEventListener('click', async function() {
             try {
-                // Here you would typically make an API call to your backend
-                // to actually unsubscribe the user from your email list
-                
-                // For now, we'll simulate the process
                 status.className = 'status pending';
                 statusMessage.textContent = 'Processing unsubscribe...';
                 
-                // Simulate API call delay
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                // Make API call to backend
+                const response = await fetch('/api/unsubscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        token: token,
+                        reason: 'User requested'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to unsubscribe');
+                }
+                
+                const result = await response.json();
                 
                 // Show success
                 unsubscribeForm.style.display = 'none';
                 showSuccess('You have been successfully unsubscribed!');
                 
-                // Store unsubscribe status in localStorage (optional)
-                localStorage.setItem(`unsubscribed_${email}`, 'true');
+                console.log('Unsubscribe successful:', result);
                 
             } catch (error) {
                 console.error('Unsubscribe error:', error);

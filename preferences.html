@@ -429,15 +429,38 @@
                 saveButton.disabled = true;
                 saveButton.textContent = 'Saving...';
                 
-                // Save preferences
-                const preferences = savePreferences();
+                // Prepare preferences data
+                const preferences = {
+                    name: nameInput.value,
+                    launchNotifications: document.getElementById('launchNotifications').checked,
+                    industryInsights: document.getElementById('industryInsights').checked,
+                    specialOffers: document.getElementById('specialOffers').checked,
+                    newsletter: document.getElementById('newsletter').checked,
+                    frequency: document.querySelector('input[name="frequency"]:checked')?.value || 'monthly'
+                };
                 
-                // Simulate API call delay
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                // Make API call to backend
+                const response = await fetch('/api/preferences', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        token: token,
+                        preferences: preferences
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to save preferences');
+                }
+                
+                const result = await response.json();
                 
                 // Show success
                 preferencesForm.style.display = 'none';
                 showSuccess('Your preferences have been updated successfully!');
+                
+                console.log('Preferences saved:', result);
                 
             } catch (error) {
                 console.error('Save preferences error:', error);
