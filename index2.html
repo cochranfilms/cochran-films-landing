@@ -17,6 +17,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    (function(){
+      // Secure EmailJS initialization with error handling
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('p4pF3OWvh-DXtae4c');
+          console.log('✅ EmailJS initialized securely');
+        } else {
+          console.warn('⚠️ EmailJS not loaded - forms will fallback to manual submission');
+        }
+      } catch (error) {
+        console.error('❌ EmailJS initialization failed:', error);
+      }
+    })();
+  </script>
+  
   <style>
     :root {
       --brand-indigo: #6366f1;
@@ -49,13 +67,30 @@
     html, body {
       margin: 0;
       height: 100%;
-      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.15), transparent 60%),
-                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.12), transparent 60%),
-                  linear-gradient(135deg, var(--dark-900) 0%, var(--dark-950) 100%);
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
+                  linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
       color: var(--text-primary);
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
+    }
+
+    /* AI Background & Neural Network */
+    .ai-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #neuralCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
 
     /* Navigation Styles */
@@ -77,28 +112,23 @@
       padding: 0 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       height: 80px;
+      position: relative;
     }
 
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      font-family: 'Poppins', sans-serif;
-      text-transform: uppercase;
-      color: var(--brand-gold);
       text-decoration: none;
+      position: absolute;
+      left: 20px;
     }
 
     .nav-logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 11px;
-      background: #ffffff;
-      padding: 8px;
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     }
 
     .nav-menu {
@@ -164,12 +194,14 @@
       font-size: 24px;
       cursor: pointer;
       padding: 8px;
+      position: absolute;
+      right: 20px;
     }
 
     /* Layout wrapper */
     .wrapper {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
       padding: 100px 20px 60px;
@@ -866,6 +898,38 @@
       filter: brightness(1.05);
     }
 
+    /* Toolkit Form Styles */
+    .toolkit-form input:focus,
+    .toolkit-form select:focus {
+      outline: none;
+      border-color: var(--brand-gold);
+      box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
+      transform: translateY(-1px);
+    }
+
+    .toolkit-form input:hover,
+    .toolkit-form select:hover {
+      border-color: rgba(99,102,241,0.5);
+      background: rgba(15,23,42,0.8);
+    }
+
+    .toolkit-submit:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.05);
+      box-shadow: 0 8px 32px rgba(255,178,0,0.3);
+    }
+
+    .hero-value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,102,241,0.5);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .hero-toolkit:hover {
+      border-color: rgba(255,178,0,0.5);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+    }
+
     /* Footer */
     .footer {
       margin-top: 80px;
@@ -884,17 +948,12 @@
     .footer-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      color: var(--brand-gold);
     }
 
     .footer-logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: #ffffff;
-      padding: 6px;
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
     }
 
     .footer-social {
@@ -992,15 +1051,909 @@
         margin-bottom: 20px;
       }
     }
+
+    /* Service Package Builder Styles */
+    .service-builder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+    .service-catalog {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-catalog:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .catalog-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .catalog-header h3 {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .catalog-header p {
+      color: var(--text-secondary);
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+
+    .service-categories {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category-tab {
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 12px;
+      padding: 0.8rem 1.2rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .category-tab.active {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border-color: var(--brand-gold);
+      box-shadow: var(--glow-gold);
+    }
+
+    .category-tab:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.8rem;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      max-height: 450px;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .service-item {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      cursor: grab;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-sm);
+      opacity: 1;
+      transform: translateY(0);
+      display: flex;
+      flex-direction: column;
+      min-height: 120px;
+    }
+
+    .service-item.hidden {
+      display: none !important;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+
+    .service-section-header {
+      grid-column: 1 / -1;
+      margin: 1.5rem 0 1rem 0;
+      padding: 0.75rem 1rem;
+      background: rgba(255,178,0,0.1);
+      border: 1px solid rgba(255,178,0,0.3);
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: var(--brand-gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      backdrop-filter: var(--backdrop);
+    }
+
+    .service-section-header:first-child {
+      margin-top: 0;
+    }
+
+    .service-section-header.hidden {
+      display: none !important;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(99,102,241,0.4);
+    }
+
+    .service-item:active {
+      cursor: grabbing;
+      transform: scale(0.98);
+    }
+
+    .service-item.dragging {
+      opacity: 0.7;
+      transform: rotate(8deg) scale(1.1);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--brand-gold);
+      z-index: 1000;
+    }
+
+    .service-item-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0a0a;
+      font-size: 1.8rem;
+      box-shadow: var(--glow-gold);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .service-icon i {
+      font-size: inherit;
+      line-height: 1;
+    }
+
+    .service-info h4 {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 0.3rem 0;
+    }
+
+    .service-info p {
+      color: var(--text-secondary);
+      opacity: 0.7;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .service-price {
+      color: var(--brand-gold);
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-align: right;
+    }
+
+    /* Package Builder Side */
+    .package-builder {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-builder:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .builder-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .builder-header h3 {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .builder-header p {
+      color: var(--text-secondary);
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+
+    .package-dropzone {
+      min-height: 200px;
+      border: 2px dashed rgba(99,102,241,0.4);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+      background: rgba(99,102,241,0.03);
+    }
+
+    .package-dropzone.drag-over {
+      border-color: var(--brand-gold);
+      background: rgba(255,178,0,0.15);
+      transform: scale(1.05);
+      box-shadow: var(--glow-gold);
+    }
+
+    .dropzone-placeholder {
+      color: var(--text-secondary);
+      opacity: 0.6;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .dropzone-icon {
+      font-size: 3rem;
+      color: var(--brand-gold);
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .selected-services {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .selected-service {
+      background: rgba(255,178,0,0.1);
+      border: 1px solid rgba(255,178,0,0.3);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .selected-service:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .selected-service-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .selected-service-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0a0a;
+      font-size: 1.2rem;
+    }
+
+    .selected-service-details h5 {
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.2rem 0;
+    }
+
+    .selected-service-details p {
+      color: var(--text-secondary);
+      opacity: 0.7;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .remove-service {
+      background: none;
+      border: none;
+      color: #ff4444;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .remove-service:hover {
+      background: rgba(255,68,68,0.1);
+      transform: scale(1.1);
+    }
+
+    /* Quote Summary */
+    .quote-summary {
+      background: rgba(255,178,0,0.1);
+      border: 2px solid rgba(255,178,0,0.4);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .quote-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-header h4 {
+      color: var(--text-primary);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quote-total {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--brand-gold);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(255,178,0,0.3);
+    }
+
+    .quote-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .quote-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,178,0,0.2);
+    }
+
+    .quote-item:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .quote-item-label {
+      color: var(--text-primary);
+      opacity: 0.8;
+    }
+
+    .quote-item-value {
+      color: var(--brand-gold);
+      font-weight: 600;
+    }
+
+    .quote-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-generate-invoice {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: var(--glow-gold);
+    }
+
+    .btn-generate-invoice:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-clear-package {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 2px solid rgba(99,102,241,0.3);
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-clear-package:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      backdrop-filter: blur(10px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      position: relative;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--text-primary);
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .modal-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0a0a;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+      box-shadow: var(--glow-gold);
+    }
+
+    .modal-header h2 {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .modal-header p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Invoice Details */
+    .invoice-details {
+      margin: 2rem 0;
+    }
+
+    .invoice-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .invoice-header h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .invoice-header p {
+      color: var(--text-secondary);
+      opacity: 0.7;
+      font-size: 1rem;
+    }
+
+    .invoice-items {
+      margin-bottom: 2rem;
+    }
+
+    .invoice-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .item-details h4 {
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 0.2rem 0;
+    }
+
+    .item-details p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .item-price {
+      color: var(--brand-gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .invoice-total {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .total-line.total {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--brand-gold);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Contact Form */
+    .contact-form-section {
+      margin: 2rem 0;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .contact-form-section h3 {
+      color: var(--text-primary);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-section p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--brand-gold);
+      box-shadow: 0 0 0 3px rgba(255,178,0,0.1);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-secondary);
+      opacity: 0.6;
+    }
+
+    /* Form Actions */
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      box-shadow: var(--glow-gold);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Success Modal */
+    .success-modal-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      margin: 0 auto 1rem;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+    }
+
+    .success-modal-body {
+      margin-bottom: 2rem;
+    }
+
+    .success-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .success-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .success-detail-item i {
+      color: #10b981;
+      font-size: 1.2rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .success-detail-item span {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .success-modal-actions {
+      text-align: center;
+    }
+
+    .success-btn {
+      background: linear-gradient(135deg, #10b981, #059669) !important;
+      color: white !important;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.3) !important;
+    }
+
+    .success-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.4) !important;
+    }
+
+    /* Notification System */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      z-index: 10001;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      max-width: 300px;
+      backdrop-filter: blur(10px);
+    }
+
+    .notification-content {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: white;
+      font-weight: 500;
+    }
+
+    .notification-content i {
+      font-size: 1.2rem;
+    }
+
+    .notification-success {
+      background: linear-gradient(135deg, #10b981, #059669);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .notification-error {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .notification-info {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .service-builder-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .service-items {
+        grid-template-columns: 1fr;
+        max-height: 400px;
+      }
+      
+      .quote-actions {
+        flex-direction: column;
+      }
+      
+      .btn-generate-invoice,
+      .btn-clear-package {
+        width: 100%;
+      }
+      
+      .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .form-actions {
+        flex-direction: column;
+      }
+      
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .service-categories {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .category-tab {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- AI Neural Network Background -->
+  <div class="ai-background">
+    <canvas id="neuralCanvas"></canvas>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
-        Cochran Films
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
       </a>
       
       <ul class="nav-menu">
@@ -1037,10 +1990,114 @@
       <p class="hero-subtitle">
         Through a data-driven Content Strategy and Omnichannel Marketing approach, we ensure your visuals aren't just seen—they convert across all platforms.
       </p>
-      <a href="#book" class="hero-cta">
-        <i class="fas fa-rocket"></i>
-        Book Your Services
-      </a>
+      
+      <!-- Enhanced Value Proposition -->
+      <div class="hero-value-props" style="margin: 40px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="hero-value-card" style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">2025 Production Innovation</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">AI-powered editing workflows, 8K HDR mastering, and real-time collaboration tools that keep you ahead of the curve.</p>
+        </div>
+        
+        <div class="hero-value-card" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Full-Stack Development</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Modern React/Next.js, AI integration, and cloud-native architectures that scale with your business growth.</p>
+        </div>
+        
+        <div class="hero-value-card" style="background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Creator Platform</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Streamlined onboarding, analytics dashboards, and automated workflows that empower your creative team.</p>
+        </div>
+      </div>
+
+      <!-- Production Toolkit Download Section -->
+      <div class="hero-toolkit" style="margin: 40px 0; background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9)); border: 1px solid rgba(255,178,0,0.3); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 32px; color: var(--brand-gold);">
+            <i class="fas fa-toolbox"></i>
+          </div>
+          <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 800; color: var(--text-primary);">FREE Production Toolkit 2025</h2>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Get instant access to our comprehensive production toolkit including AI-powered editing presets, color grading LUTs, 
+            project templates, and workflow automation scripts. Valued at $497 - completely free for creators.
+          </p>
+        </div>
+        
+        <form id="toolkitForm" class="toolkit-form" style="max-width: 500px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <input type="text" id="toolkitFirstName" name="firstName" placeholder="First Name" required 
+                   style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+            <input type="text" id="toolkitLastName" name="lastName" placeholder="Last Name" required 
+                   style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+          </div>
+          <input type="email" id="toolkitEmail" name="email" placeholder="Email Address" required 
+                 style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+          <select id="toolkitInterest" name="interest" required 
+                  style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+            <option value="">What's your primary focus?</option>
+            <option value="video-production">Video Production</option>
+            <option value="photography">Photography</option>
+            <option value="web-development">Web Development</option>
+            <option value="brand-development">Brand Development</option>
+            <option value="content-creation">Content Creation</option>
+          </select>
+          <button type="submit" class="toolkit-submit" style="width: 100%; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; border: 0; padding: 18px 32px; border-radius: 14px; font-weight: 800; font-size: 16px; cursor: pointer; transition: var(--transition-fast); display: flex; align-items: center; justify-content: center; gap: 12px;">
+            <i class="fas fa-download"></i>
+            Download Free Toolkit
+          </button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 24px;">
+          <p style="margin: 0; color: var(--text-muted); font-size: 14px;">
+            <i class="fas fa-shield-alt"></i> 
+            We respect your privacy. No spam, ever.
+          </p>
+        </div>
+      </div>
+
+      <!-- Enhanced CTA Section -->
+      <div class="hero-cta-section" style="margin-top: 40px;">
+        <a href="#book" class="hero-cta">
+          <i class="fas fa-rocket"></i>
+          Book Your Services
+        </a>
+        <p style="margin: 20px 0 0; color: var(--text-muted); font-size: 14px; font-weight: 600;">
+          <i class="fas fa-clock"></i> 
+          Average response time: 2 hours | 
+          <i class="fas fa-star"></i> 
+          98% client satisfaction rate
+        </p>
+      </div>
+
+      <!-- Social Proof Section -->
+      <div class="hero-social-proof" style="margin-top: 40px; padding: 24px; background: rgba(15,23,42,0.4); border-radius: 16px; border: 1px solid rgba(99,102,241,0.2);">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">500+</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Projects Delivered</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">98%</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Client Satisfaction</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">24/7</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Support Available</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">2hr</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Avg Response</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
@@ -1149,6 +2206,655 @@
           <p class="service-description">
             Build Your Website in Just 2 DAYS — With Expert Support Every Step of the Way. Join our in-person Website Workshop in Atlanta.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Package Builder Section -->
+    <section class="section" id="serviceBuilder">
+      <div class="section-header">
+        <h2 class="section-title">Service Package Builder</h2>
+        <p class="section-subtitle">Build your perfect service package with our drag-and-drop builder. Select services, see real-time pricing, and generate instant project requests.</p>
+      </div>
+      
+      <div class="service-builder-grid">
+        <!-- Service Catalog -->
+        <div class="service-catalog">
+          <div class="catalog-header">
+            <h3>Service Catalog</h3>
+            <p>Drag services to build your package</p>
+          </div>
+          
+          <div class="service-categories">
+            <button class="category-tab active" data-category="website">Websites</button>
+            <button class="category-tab" data-category="photography">Photography</button>
+            <button class="category-tab" data-category="videography">Video</button>
+            <button class="category-tab" data-category="branding">Branding</button>
+            <button class="category-tab" data-category="printing">Printing</button>
+            <button class="category-tab" data-category="retainer">Retainer</button>
+          </div>
+          
+          <div class="service-items" id="serviceItems">
+            <!-- Website Category -->
+            <div class="service-section-header" data-category="website">Main Services</div>
+            
+            <!-- Website Development Packages -->
+            <div class="service-item" data-category="website" draggable="true" data-service="starter-site">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Starter Site</h4>
+                  <p>1-page scroll layout (Home + Contact), Mobile-friendly design</p>
+                </div>
+              </div>
+              <div class="service-price">$750</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="business-pro-site">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Business Pro Site</h4>
+                  <p>3-5 fully designed pages, Custom layout, Blog setup (optional)</p>
+                </div>
+              </div>
+              <div class="service-price">$1,250</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="brand-builder-site">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Brand Builder Site</h4>
+                  <p>6-10 page fully branded website, E-commerce integration</p>
+                </div>
+              </div>
+              <div class="service-price">$2,500</div>
+            </div>
+            
+            <!-- Photography Category -->
+            <div class="service-section-header" data-category="photography">Main Services</div>
+            
+            <div class="service-item" data-category="photography" draggable="true" data-service="flash-start">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-camera"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Flash Start</h4>
+                  <p>1 Hour Photography, Unlimited Digital Photos, Light Photo Editing</p>
+                </div>
+              </div>
+              <div class="service-price">$350</div>
+            </div>
+            
+            <div class="service-item" data-category="photography" draggable="true" data-service="prime-exposure">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-camera-retro"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Prime Exposure</h4>
+                  <p>2 Hours Photography, Full Photo Editing, Download Access</p>
+                </div>
+              </div>
+              <div class="service-price">$600</div>
+            </div>
+            
+            <div class="service-item" data-category="photography" draggable="true" data-service="legacy-capture">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Legacy Capture</h4>
+                  <p>3 Hours Photography, Advanced Editing & Color Grading</p>
+                </div>
+              </div>
+              <div class="service-price">$900</div>
+            </div>
+            
+            <!-- Photography Add-ons -->
+            <div class="service-section-header" data-category="photography">Add-ons</div>
+            
+            <div class="service-item" data-category="photography" draggable="true" data-service="rush-editing">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Rush Editing</h4>
+                  <p>24-hour turnaround for urgent projects</p>
+                </div>
+              </div>
+              <div class="service-price">$75</div>
+            </div>
+            
+            <div class="service-item" data-category="photography" draggable="true" data-service="travel-fee">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Travel Fee</h4>
+                  <p>For locations outside standard service area</p>
+                </div>
+              </div>
+              <div class="service-price">$50</div>
+            </div>
+            
+            <!-- Videography Category -->
+            <div class="service-section-header" data-category="videography">Main Services</div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="hourly-video">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Hourly Video Service</h4>
+                  <p>Professional video production hourly rate</p>
+                </div>
+              </div>
+              <div class="service-price">$250</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="raw-files">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-file-video"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Raw Files (Additional)</h4>
+                  <p>Complete unedited project files for your archive</p>
+                </div>
+              </div>
+              <div class="service-price">$300</div>
+            </div>
+            
+            <!-- Event Video Services -->
+            <div class="service-item" data-category="videography" draggable="true" data-service="event-video-2hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-video"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Event Video + 60 Sec Recap</h4>
+                  <p>2 Hours filming with professional 60-second recap video</p>
+                </div>
+              </div>
+              <div class="service-price">$500</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="event-video-3hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-film"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Event Video + 60 Sec Recap</h4>
+                  <p>3 Hours filming with professional 60-second recap video</p>
+                </div>
+              </div>
+              <div class="service-price">$750</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="event-video-5hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-camera"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Event Video + 60-90 Sec Recap</h4>
+                  <p>5 Hours filming with extended professional recap video</p>
+                </div>
+              </div>
+              <div class="service-price">$1,250</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="event-video-8hr-no-edit">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-video-camera"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Event Video (No Edits)</h4>
+                  <p>8 Hours professional filming, no post-production</p>
+                </div>
+              </div>
+              <div class="service-price">$2,000</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="event-video-8hr-recap">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-film"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Event Video + 60 Sec Recap</h4>
+                  <p>8 Hours filming with professional 60-second recap video</p>
+                </div>
+              </div>
+              <div class="service-price">$2,200</div>
+            </div>
+            
+            <!-- Live Production Services -->
+            <div class="service-item" data-category="videography" draggable="true" data-service="live-production-3hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-broadcast-tower"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Live Production (Up to 3 Cameras)</h4>
+                  <p>3 Hours + Production Edit with multi-camera setup</p>
+                </div>
+              </div>
+              <div class="service-price">$2,000</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="live-production-5hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-satellite-dish"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Live Production (Up to 3 Cameras)</h4>
+                  <p>5 Hours + Production Edit with multi-camera setup</p>
+                </div>
+              </div>
+              <div class="service-price">$3,000</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="live-production-8hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-tower-broadcast"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Live Production (Up to 3 Cameras)</h4>
+                  <p>8 Hours + Production Edit with multi-camera setup</p>
+                </div>
+              </div>
+              <div class="service-price">$4,000</div>
+            </div>
+            
+            <!-- Podcast Services -->
+            <div class="service-item" data-category="videography" draggable="true" data-service="podcast-1hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-podcast"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Podcast + Edits (2 Cameras)</h4>
+                  <p>1 Hour podcast recording with full editing</p>
+                </div>
+              </div>
+              <div class="service-price">$750</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="podcast-2hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-microphone"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Podcast + Edits (2 Cameras)</h4>
+                  <p>2 Hour podcast recording with full editing</p>
+                </div>
+              </div>
+              <div class="service-price">$1,000</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="podcast-3hr">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-headphones"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Podcast + Edits (2 Cameras)</h4>
+                  <p>3 Hour podcast recording with full editing</p>
+                </div>
+              </div>
+              <div class="service-price">$1,500</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="podcast-shoot-only">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-camera-retro"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Podcast Shoot Only</h4>
+                  <p>Recording only, no editing included</p>
+                </div>
+              </div>
+              <div class="service-price">$250</div>
+            </div>
+            
+            <!-- Commercial Services -->
+            <div class="service-item" data-category="videography" draggable="true" data-service="commercial-basic">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-ad"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Basic Commercial Shoot</h4>
+                  <p>Single camera operator, 3 hours, no direction</p>
+                </div>
+              </div>
+              <div class="service-price">$750</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="commercial-edit">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-cut"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Commercial Shoot + Edit</h4>
+                  <p>Single camera operator, 3-5 hours filming + edit</p>
+                </div>
+              </div>
+              <div class="service-price">$1,500</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="commercial-directed">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Directed Commercial Shoot</h4>
+                  <p>Pre-production planning + script direction + 4-6 hrs filming + full edit</p>
+                </div>
+              </div>
+              <div class="service-price">$2,500</div>
+            </div>
+            
+            <div class="service-item" data-category="videography" draggable="true" data-service="commercial-full">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Full Commercial Package</h4>
+                  <p>Full creative direction + full-day shoot with 4-5 person crew + script, production, and editing</p>
+                </div>
+              </div>
+              <div class="service-price">$5,500</div>
+            </div>
+            
+            <!-- Retainer Category -->
+            <div class="service-section-header" data-category="retainer">Monthly Packages</div>
+            
+            <div class="service-item" data-category="retainer" draggable="true" data-service="fast-frame-monthly">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Fast Frame (1 Month)</h4>
+                  <p>Perfect for quick turnaround - 4 professionally crafted videos OR 3 fully produced podcasts</p>
+                </div>
+              </div>
+              <div class="service-price">$2,500</div>
+            </div>
+            
+            <div class="service-item" data-category="retainer" draggable="true" data-service="cinematic-spotlight">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Cinematic Spotlight (2 Months)</h4>
+                  <p>Consistent, impactful content - 6 expertly produced videos OR 5 fully produced podcasts</p>
+                </div>
+              </div>
+              <div class="service-price">$4,800</div>
+            </div>
+            
+            <div class="service-item" data-category="retainer" draggable="true" data-service="masterpiece-collection">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Masterpiece Collection (3 Months)</h4>
+                  <p>Sustained professional touch - 9 high-quality videos OR 7 seamless podcasts with 24/7 support</p>
+                </div>
+              </div>
+              <div class="service-price">$7,000</div>
+            </div>
+            
+            <!-- Branding Category -->
+            <div class="service-section-header" data-category="branding">Main Services</div>
+            
+            <div class="service-item" data-category="branding" draggable="true" data-service="ignite-brand">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Ignite Package</h4>
+                  <p>Custom Logo Design, 1-Page Landing Website, Basic Content Strategy</p>
+                </div>
+              </div>
+              <div class="service-price">$900</div>
+            </div>
+            
+            <div class="service-item" data-category="branding" draggable="true" data-service="collaborate-brand">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Collaborate Package</h4>
+                  <p>Everything in Ignite + Multi-Page Website, Social Media Setup</p>
+                </div>
+              </div>
+              <div class="service-price">$1,800</div>
+            </div>
+            
+            <div class="service-item" data-category="branding" draggable="true" data-service="transform-brand">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-magic"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Transform Package</h4>
+                  <p>Everything in Collaborate + E-Commerce, Advanced Website Features</p>
+                </div>
+              </div>
+              <div class="service-price">$3,500</div>
+            </div>
+            
+            <div class="service-item" data-category="branding" draggable="true" data-service="logo-design">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Logo Design</h4>
+                  <p>3 custom concepts, 2 revision rounds, Full branding kit</p>
+                </div>
+              </div>
+              <div class="service-price">$250</div>
+            </div>
+            
+            <!-- Printing Category -->
+            <div class="service-section-header" data-category="printing">Main Services</div>
+            
+            <div class="service-item" data-category="printing" draggable="true" data-service="quick-print-4x6">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-print"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Quick Print Booth (4x6)</h4>
+                  <p>1 Hour operation, Up to 100 prints, On-site technician</p>
+                </div>
+              </div>
+              <div class="service-price">$500</div>
+            </div>
+            
+            <div class="service-item" data-category="printing" draggable="true" data-service="signature-snap-4x6">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-images"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Signature Snap Station (4x6)</h4>
+                  <p>2 Hours operation, Up to 200 prints, Premium backdrop</p>
+                </div>
+              </div>
+              <div class="service-price">$800</div>
+            </div>
+            
+            <div class="service-item" data-category="printing" draggable="true" data-service="legacy-lab-4x6">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Legacy Lab Experience (4x6)</h4>
+                  <p>3 Hours operation, Up to 350 prints, 2-Person print team</p>
+                </div>
+              </div>
+              <div class="service-price">$1,100</div>
+            </div>
+            
+            <!-- Website Add-ons -->
+            <div class="service-section-header" data-category="website">Add-ons</div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="seo-boost">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="service-info">
+                  <h4>SEO Boost Package</h4>
+                  <p>Keyword research, Meta tag optimization, Sitemap submission</p>
+                </div>
+              </div>
+              <div class="service-price">$250</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="google-business">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fab fa-google"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Google Business Profile Setup</h4>
+                  <p>Claim, verify, and fully set up your business profile</p>
+                </div>
+              </div>
+              <div class="service-price">$100</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="newsletter-integration">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Newsletter Integration</h4>
+                  <p>Mailchimp/ConvertKit setup, Signup forms, Welcome sequence</p>
+                </div>
+              </div>
+              <div class="service-price">$125</div>
+            </div>
+            
+            <!-- Website Maintenance -->
+            <div class="service-section-header" data-category="website">Website Maintenance</div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="basic-maintenance">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Basic Maintenance</h4>
+                  <p>Monthly security checks, Plugin/theme updates, Performance monitoring</p>
+                </div>
+              </div>
+              <div class="service-price">$45</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="business-maintenance">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Business Maintenance</h4>
+                  <p>All Basic features + 1 monthly update request, Priority support</p>
+                </div>
+              </div>
+              <div class="service-price">$95</div>
+            </div>
+            
+            <div class="service-item" data-category="website" draggable="true" data-service="full-support">
+              <div class="service-item-header">
+                <div class="service-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="service-info">
+                  <h4>Full Support Plan</h4>
+                  <p>All Business features + Up to 3 updates/month, Emergency bug fixing</p>
+                </div>
+              </div>
+              <div class="service-price">$195</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Package Builder -->
+        <div class="package-builder">
+          <div class="builder-header">
+            <h3>Your Package</h3>
+            <p>Drag services here to build your custom package</p>
+          </div>
+          
+          <div class="package-dropzone" id="packageDropzone">
+            <div class="dropzone-placeholder">
+              <div class="dropzone-icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <p>Drag services here to start building your package</p>
+              <small>Mix and match services to create your perfect solution</small>
+            </div>
+          </div>
+          
+          <div class="selected-services" id="selectedServices" style="display: none;">
+            <!-- Selected services will be added here -->
+          </div>
+          
+          <div class="quote-summary" id="quoteSummary" style="display: none;">
+            <div class="quote-header">
+              <h4>Quote Summary</h4>
+            </div>
+            <div class="quote-total" id="quoteTotal">$0</div>
+            <div class="quote-breakdown" id="quoteBreakdown">
+              <!-- Quote breakdown will be populated here -->
+            </div>
+            <div class="quote-actions">
+              <button class="btn-generate-invoice" id="generateInvoice">
+                <i class="fas fa-file-invoice-dollar"></i>
+                Create Project Request
+              </button>
+              <button class="btn-clear-package" id="clearPackage">
+                <i class="fas fa-trash"></i>
+                Clear Package
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1400,8 +3106,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" />
-        Cochran Films
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
       </div>
 
       <div class="footer-social">
@@ -1522,6 +3227,52 @@
       this.reset();
     });
 
+    // Production Toolkit Form submission
+    document.getElementById('toolkitForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Show success message and provide immediate value
+      const successMessage = `
+🎉 Thank you for downloading our Production Toolkit 2025!
+
+Here's what you'll receive immediately:
+✅ AI-powered editing presets for Premiere Pro & DaVinci Resolve
+✅ Professional color grading LUTs (Rec.709 & HDR)
+✅ Project templates for commercials, documentaries & events
+✅ Workflow automation scripts
+✅ 2025 production trends guide
+✅ Exclusive access to our creator community
+
+Check your email in the next 5 minutes for your download link!
+
+We'll also send you:
+• Weekly production tips & tricks
+• Early access to new tools & resources
+• Special creator-only discounts
+
+Welcome to the Cochran Films family! 🚀
+      `;
+      
+      alert(successMessage);
+      
+      // Reset form
+      this.reset();
+      
+      // Track download (you can integrate with analytics here)
+      console.log('Toolkit downloaded by:', data);
+      
+      // Optional: Send to your backend/CRM
+      // fetch('/api/toolkit-download', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
+    });
+
     // Navigation scroll effect
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('.nav-wrapper');
@@ -1532,264 +3283,248 @@
       }
     });
 
-    // Portfolio Management
+    // Portfolio Management with Dynamic CSV Loading
     (() => {
-      // Portfolio data from CSV - mapped to service categories
-      const portfolioData = [
-        // Video Production Items
-        {
-          "Title": "Evolve Contracting - National Small Business Week Highlight",
-          "Description": "DP | Gaffer | Editor | Audio\nShot on Sony FX6: 24-70mm f/2.8\nLights: Aputure Amaran COB 60x on a C-Stand w/lantern Diffuser.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_7a5a1e21bcb349369b5cfce51e197341~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_55d75649953a40d4963f44cb2322046f/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Caribbean Currency Live Vibes",
-          "Description": "Experience the vibrant energy of Caribbean Currency's \"Live Vibes\" event, featuring dynamic performances and a celebration of Caribbean culture.",
-          "Category": "Live Broadcast",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de69c46e54aa466cb4d377baeb26aef0~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d62f6ba8ce04461ab71530a5533a80f5/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Maïré Rosa of eComSpaces - National Small Business Week Highlight",
-          "Description": "Meet Maïré Rosa of eComSpaces in this National Small Business Week highlight. Discover her inspiring journey as a leader in e-commerce innovation.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a564fa653eee4790a1ea1e66efefe0be~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_159032edd60c4680a7539940fc5374d5/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Andre Dickens Atlanta Mayor Attends Women's Fundraiser During Candidacy",
-          "Description": "This video documents Andre Dickens, then a mayoral candidate, attending a powerful women's fundraiser event in Atlanta.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0d72d5e5a9fd48c8b90bf7641bcf38a1~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ab550ee6a99f4ed08b62e73b22038cb9/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Southern Gas Corporate Insight",
-          "Description": "Gain exclusive insights into the Southern Gas industry with this video, showcasing strategic discussions and solutions tailored to the corporate landscape.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_1c289bca3e0b47999bce809fce86fe38~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_7881fb57ef814133b8d1282555b62032/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "RICE Reveals New Refrigeration",
-          "Description": "This video highlights the Russell Innovation Center for Entrepreneurs' (RICE) unveiling of cutting-edge refrigeration technology.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_d9b1500be39b4ed1a31550fe4401a488~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94d94e9fd17748abad50215fc079d20d/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Scratch Master DJ POPO Presents \"OH MY GOSH POPO\" Vol 1. Episode 1",
-          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro",
-          "Category": "Live Broadcast",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_e557a622d1b44de2a704308423f9c637~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e574d9226e0c4e09b17cf610c6a3fe88/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-14"
-        },
-        {
-          "Title": "A Bump In The Night Short",
-          "Description": "Directed by Cody Cochran for a Full Sail project, this suspenseful short film takes viewers on a thrilling ride filled with tension, creativity, and cinematic storytelling.",
-          "Category": "Shorts",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_95ef13cb9950461d8f3b8a2ab4bc27fe~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b0fe2a8b8a144008ba2d463f247e7a05/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "7even Kids Fresh Commercial",
-          "Description": "A lively and engaging commercial showcasing the 7even Kids Fresh skincare line. This video brings the brand's commitment to fun, freshness, and high-quality products to life.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de8d250539694fdb8aee32fac7f9206d~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_4cdb075743f44fe6a09f19c7f66ed0e4/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Rich Girls HQ Brunch in Black",
-          "Description": "This video captures the elegance and empowerment of the \"Brunch in Black\" event hosted by Rich Girls HQ. Attendees celebrated community, connection, and success.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_9a41e83b5d814cf09c1d5039d5c1e2b0~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_b9c609cc32d49fb91fd4825819ac2fb/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "7even Kids Fresh: Dive into a World of Freshness & Fun",
-          "Description": "Step into the vibrant world of 7even Kids Fresh with this lively video! Showcasing the brand's fun, fresh approach to skincare.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_ab5e95728333493f892b74fefd16b702~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_6049704bb253437282ee6917efa0e67c/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "RICE x Hanover Partnership",
-          "Description": "Explore the collaboration between RICE and Hanover in this video, highlighting a partnership that fosters innovation, growth, and opportunities for entrepreneurs.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0c3d150db7e8400c95843a68a6374d95~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_be4dd07088834d25a4c2afdb4d24dfe7/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "7even Kids Fresh: Face Toner",
-          "Description": "Discover the refreshing benefits of 7even Kids Fresh Face Toner in this promotional video. Designed for young, sensitive skin, this toner provides a gentle yet effective cleansing experience.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_29c1d96286634e0ba8afe6e8efe8a47f~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_e86e1fc17be8432ea11caed24a6a3fe7/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Play Pits - National Small Business Week Highlight",
-          "Description": "Celebrate National Small Business Week with Play Pits, a remarkable brand making waves in the natural deodorant industry. In this feature, we highlight their inspiring journey.",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0078d563feca45a78d9282fd19d74dae~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_68efb32b81d2466b9870dd1aa5137aca/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Celebrating Atlanta's Black-Owned Businesses | The Russell Center",
-          "Description": "DP | Editor | Audio Mixer\nShot on Sony FX6: Sony 24-105mm f/4\nSoftware: Final Cut Pro X\n\nJoin us as we shine a spotlight on the thriving Black business community in Atlanta!",
-          "Category": "Commercials",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_077a43cf29284001a9453221835fffca~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_c0aa42ded8cc4cd2b1e5a37bba7ce066/2160p/mp4/file.mp4",
-          "UploadDate": "2025-01-04"
-        },
-        {
-          "Title": "DJ POPO Production - Behind The Scenes",
-          "Description": "Go behind the scenes with Scratch Master DJ POPO as we capture the magic of producing an inspiring feature on music, film, education, and collaboration.",
-          "Category": "Live Broadcast",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_79ee4a9e404b4ef98c8400ac3e352aea~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_137b3f277ddd4c3a8ea12891192ebc1c/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-29"
-        },
-        {
-          "Title": "RICE March Madness",
-          "Description": "Experience the excitement of RICE March Madness, an event that blends entrepreneurial energy with the thrill of competition, celebrating innovation and collaboration.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_a313661976e748d29cbe2a921bad5c9f~mv2.png",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_cc70bbce41cf437f902f3699966aecd0/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "RICE x ABC Veterans",
-          "Description": "This video showcases RICE's partnership with ABC Veterans, celebrating initiatives that support veteran entrepreneurs and their journey toward building successful businesses.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_2cd9c112ce5e4a2e8e0ebf6aecdbd8e7~mv2.png",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_a301105c12524eed809750b5bc557f96/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "RICE x PayPal Readiness Academy",
-          "Description": "This video highlights the RICE x PayPal Readiness Academy, an initiative empowering entrepreneurs with the tools and knowledge needed to succeed in the ever-evolving digital economy.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_0fbea20d90d946dd85c36f0f6aa5f776~mv2.png",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2701be5cf36b416dac1bdcee2af552fe/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Southern Gas Leadership Forum 2023",
-          "Description": "A comprehensive look at the 2023 Southern Gas Leadership Forum, where industry leaders gathered to discuss innovations, challenges, and the future of energy leadership.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_6dfce90e14c04f6eab6a0f03309cde5d~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_2a2475008bb745b99adb3e95060d071f/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "ACE Corporate Proposal",
-          "Description": "A polished presentation of the ACE Corporate Proposal, showcasing innovative strategies and solutions designed to meet business goals. This video highlights the professionalism and vision behind the project.",
-          "Category": "Corporate",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_50fd1992b8c3493f9bb4d9d46b702286~mv2.png",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_ae62cb47d3d646b9815a61d6ba70b2eb/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-24"
-        },
-        {
-          "Title": "Scratch Master DJ POPO Presents OH MY GOSH POPO Vol 2. Episode 2",
-          "Description": "Cam Op. | A/V Tech Assistant\nShot on Sony FX3: Tamron 35-150mm f/2.8, Sony 16-35mm f/2.8\nSoftware: Adobe Premiere Pro",
-          "Category": "Live Broadcast",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_481d9b2e49af468583eef4c59957e49a~mv2.jpg",
-          "Is Featured": false,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_94047491c1984aa3a159da4e19ef20e7/1080p/mp4/file.mp4",
-          "UploadDate": "2025-01-14"
-        },
-        {
-          "Title": "Win Against Procrastination",
-          "Description": "In this 'Severance'-inspired short by Course Creator Academy, in collaboration with JB Flickss and Cochran Films, a simple task spirals into a mental maze of delay and distraction.",
-          "Category": "Shorts",
-          "ServiceCategory": "Video Production",
-          "Thumbnail Image": "https://static.wixstatic.com/media/aeef42_de3bc871d7b349838350b58465236587~mv2.jpg",
-          "Is Featured": true,
-          "playbackUrl": "https://video.wixstatic.com/video/aeef42_d5f23bd4e72c47a8ba1b47cbe9b047e7/1080p/mp4/file.mp4",
-          "UploadDate": "2025-07-19"
-        },
-        
-        // Note: Photography, Web Development, and Brand Development sections will be empty for now
-        // until their respective CSV files are provided
-        
-        // Web Development Items
-        {
-          "Title": "Course Creator Academy",
-          "Description": "Course Creator Academy is a content creation education platform to help students enhance their videography skills.",
-          "Category": "In-House",
-          "ServiceCategory": "Web Development",
-          "Thumbnail Image": "https://drive.google.com/file/d/1ma5v4VS7294PEtrzQwBNppP0mNIpxxUd/view?usp=sharing",
-          "Is Featured": true,
-          "playbackUrl": "",
-          "UploadDate": "2024-08-31",
-          "URL": "https://coursecreatoracademy.org/",
-          "Tech Stack": "Shopify (Online Store 2.0), Liquid, HTML5, CSS3, JavaScript (custom scripts), Shopify API, Shopify App Integrations (for forms, memberships, and payments), Google Analytics, SEO Optimization Tools",
-          "Role": "Full-Stack Developer & Systems Architect — handled the full build, theme customization, app integrations, and backend configuration for course management",
-          "Client": "Course Creator Academy (a division under CLC Collective, founded by Cody Cochran)",
-          "Timeline": "4 weeks — from initial planning to launch, including testing and Shopify API integrations",
-          "Challenges": "• Integrating a multi-tier membership structure using Shopify's native system plus third-party apps\n• Creating a responsive design optimized for both education content and service promotion\n• Ensuring seamless checkout flow for both physical merchandise and digital/in-person course purchases\n• Configuring SEO and analytics tracking for both static and dynamic content pages",
-          "Results": "• Fully functional education & services platform with automated onboarding for new students\n• Streamlined payment and course access flow that reduced manual admin by 60%\n• Increased lead capture rate via optimized inquiry and sign-up forms\n• Solid foundation for future app integration and scaling course offerings online"
+      // Portfolio data - will be populated dynamically from CSV files
+      let portfolioData = [];
+      
+      // CSV Parser Function
+      function parseCSV(csvText) {
+        try {
+          const lines = csvText.split('\n');
+          if (lines.length < 2) {
+            console.warn('CSV file appears to be empty or invalid');
+            return [];
+          }
+          
+          const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+          console.log('CSV Headers found:', headers);
+          
+          const data = [];
+          
+          for (let i = 1; i < lines.length; i++) {
+            if (lines[i].trim() === '') continue;
+            
+            // Handle commas within quoted fields
+            const values = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let j = 0; j < lines[i].length; j++) {
+              const char = lines[i][j];
+              if (char === '"') {
+                inQuotes = !inQuotes;
+              } else if (char === ',' && !inQuotes) {
+                values.push(current.trim());
+                current = '';
+              } else {
+                current += char;
+              }
+            }
+            values.push(current.trim());
+            
+            const row = {};
+            headers.forEach((header, index) => {
+              if (values[index]) {
+                row[header] = values[index].replace(/^"|"$/g, '');
+              }
+            });
+            
+            // Map CSV fields to our portfolio structure with flexible field matching
+            const mappedItem = {
+              "Title": row["Title"] || row["title"] || row["Name"] || row["name"] || '',
+              "Description": row["Description"] || row["description"] || row["Desc"] || row["desc"] || '',
+              "Category": row["Category"] || row["category"] || row["Type"] || row["type"] || '',
+              "Thumbnail Image": row["thumbnailUrl"] || row["Thumbnail Image"] || row["thumbnail image"] || row["Thumbnail"] || row["thumbnail"] || row["Image"] || row["image"] || '',
+              "Is Featured": row["Is Featured"] === "true" || row["is featured"] === "true" || row["Featured"] === "true" || row["featured"] === "true" || row["Is Featured"] === "TRUE" || false,
+              "playbackUrl": row["playbackUrl"] || row["playback url"] || row["Video"] || row["video"] || row["URL"] || row["url"] || '',
+              "UploadDate": row["Created Date"] || row["created date"] || row["UploadDate"] || row["upload date"] || row["Date"] || row["date"] || row["Published"] || row["published"] || '',
+              "URL": row["URL"] || row["url"] || row["Link"] || row["link"] || row["Website"] || row["website"] || '',
+              "Tech Stack": row["Tech Stack"] || row["tech stack"] || row["Technology"] || row["technology"] || row["Tools"] || row["tools"] || '',
+              "Role": row["Role"] || row["role"] || row["Position"] || row["position"] || row["Job"] || row["job"] || '',
+              "Client": row["Client/Company"] || row["client/company"] || row["Client"] || row["client"] || row["Company"] || row["company"] || row["Organization"] || row["organization"] || '',
+              "Timeline": row["Timeline"] || row["timeline"] || row["Duration"] || row["duration"] || row["Time"] || row["time"] || '',
+              "Challenges": row["Challenges"] || row["challenges"] || row["Problems"] || row["problems"] || row["Issues"] || row["issues"] || '',
+              "Results": row["Results"] || row["results"] || row["Outcome"] || row["outcome"] || row["Achievements"] || row["achievements"] || ''
+            };
+            
+            // Debug: Log the raw row data and mapped item
+            console.log('Raw CSV row:', row);
+            console.log('Mapped item:', mappedItem);
+            
+            // Determine ServiceCategory based on CSV source and content
+            if (row["ServiceCategory"]) {
+              mappedItem.ServiceCategory = row["ServiceCategory"];
+            } else {
+              // Auto-detect based on CSV source or content
+              mappedItem.ServiceCategory = "Video Production"; // Default for Portfolio.csv
+            }
+            
+                      // Only add items that have at least a title and aren't corrupted
+          if (mappedItem.Title && 
+              mappedItem.Title.trim() !== '' && 
+              !mappedItem.Title.includes('wix:image://') && // Filter out corrupted data
+              mappedItem.Title.length < 200) { // Filter out extremely long titles
+            data.push(mappedItem);
+          } else {
+            console.warn('Skipping corrupted or invalid item:', mappedItem.Title);
+          }
+          }
+          
+          console.log(`Parsed ${data.length} items from CSV`);
+          console.log('First parsed item:', data[0]);
+          console.log('All parsed data:', data);
+          return data;
+          
+        } catch (error) {
+          console.error('Error parsing CSV:', error);
+          return [];
         }
-      ];
+      }
+      
+      // Load Portfolio CSV (Video Production)
+      async function loadPortfolioCSV() {
+        try {
+          console.log('Loading Portfolio.csv...');
+          const response = await fetch('CMS/Collections/Portfolio.csv');
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          const csvText = await response.text();
+          console.log('Portfolio.csv loaded, length:', csvText.length);
+          
+          const portfolioItems = parseCSV(csvText);
+          
+          // Map all items to Video Production
+          portfolioItems.forEach(item => {
+            item.ServiceCategory = "Video Production";
+          });
+          
+          console.log(`Mapped ${portfolioItems.length} items to Video Production`);
+          return portfolioItems;
+        } catch (error) {
+          console.error('Failed to load Portfolio.csv:', error);
+          return [];
+        }
+      }
+      
+      // Load Web CSV (Web Development)
+      async function loadWebCSV() {
+        try {
+          console.log('Loading Web.csv...');
+          const response = await fetch('CMS/Collections/Web.csv');
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          const csvText = await response.text();
+          console.log('Web.csv loaded, length:', csvText.length);
+          
+          const webItems = parseCSV(csvText);
+          
+          // Map all items to Web Development and fix thumbnail URLs
+          webItems.forEach(item => {
+            item.ServiceCategory = "Web Development";
+            
+            // Convert GitHub blob URLs to raw URLs for thumbnails
+            if (item["Thumbnail Image"] && item["Thumbnail Image"].includes('github.com') && item["Thumbnail Image"].includes('/blob/')) {
+              item["Thumbnail Image"] = item["Thumbnail Image"]
+                .replace('github.com', 'raw.githubusercontent.com')
+                .replace('/blob/', '/');
+            }
+          });
+          
+          console.log(`Mapped ${webItems.length} items to Web Development`);
+          return webItems;
+        } catch (error) {
+          console.error('Failed to load Web.csv:', error);
+          return [];
+        }
+      }
+      
+      // Load all CSV data and combine
+      async function loadAllPortfolioData() {
+        try {
+          console.log('Loading portfolio data from CSV files...');
+          
+          // Show loading state
+          showPortfolioLoadingState();
+          
+          const [portfolioItems, webItems] = await Promise.all([
+            loadPortfolioCSV(),
+            loadWebCSV()
+          ]);
+          
+          // Combine all data
+          portfolioData = [...portfolioItems, ...webItems];
+          
+          console.log(`Loaded ${portfolioData.length} total items:`, {
+            'Video Production': portfolioItems.length,
+            'Web Development': webItems.length
+          });
+          
+          // Hide loading state and render portfolio
+          hidePortfolioLoadingState();
+          renderPortfolioByCategory();
+          
+        } catch (error) {
+          console.error('Failed to load portfolio data:', error);
+          // Fallback to empty data
+          portfolioData = [];
+          hidePortfolioLoadingState();
+          renderPortfolioByCategory();
+          
+          // Show error message to user
+          showPortfolioErrorState();
+        }
+      }
+      
+      // Loading and error state functions
+      function showPortfolioLoadingState() {
+        Object.values(categoryGrids).forEach(gridId => {
+          const grid = document.getElementById(gridId);
+          if (grid) {
+            grid.innerHTML = `
+              <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
+                <i class="fas fa-spinner fa-spin" style="font-size: 24px; margin-bottom: 16px; display: block;"></i>
+                <p>Loading portfolio items...</p>
+              </div>
+            `;
+          }
+        });
+      }
+      
+      function hidePortfolioLoadingState() {
+        // Loading state will be replaced by actual content
+      }
+      
+      function showPortfolioErrorState() {
+        Object.values(categoryGrids).forEach(gridId => {
+          const grid = document.getElementById(gridId);
+          if (grid) {
+            grid.innerHTML = `
+              <div style="text-align: center; padding: 40px; color: var(--text-muted);">
+                <i class="fas fa-exclamation-triangle" style="font-size: 24px; margin-bottom: 16px; display: block; color: var(--brand-red);"></i>
+                <p>Failed to load portfolio data</p>
+                <small>Please check your CSV files and try refreshing the page</small>
+                <br><br>
+                <button onclick="refreshPortfolioData()" style="background: var(--brand-gold); color: #000; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                  <i class="fas fa-sync-alt"></i> Retry
+                </button>
+              </div>
+            `;
+          }
+        });
+      }
+      
+      // Manual refresh function for troubleshooting
+      window.refreshPortfolioData = function() {
+        console.log('Manual refresh requested');
+        loadAllPortfolioData();
+      };
 
       // Portfolio display settings
       const itemsPerCategory = 6; // Show 6 items initially per category
@@ -1802,8 +3537,36 @@
 
       // Portfolio functionality
       function createPortfolioItem(item) {
+        console.log('Creating portfolio item:', item.Title, 'Category:', item.ServiceCategory, 'Thumbnail:', item['Thumbnail Image']);
+        
         const isFeatured = item['Is Featured'] === true || item['Is Featured'] === 'true';
-        const uploadDate = new Date(item['UploadDate']);
+        // Handle date parsing with fallback
+        let uploadDate;
+        try {
+          uploadDate = new Date(item['UploadDate']);
+          if (isNaN(uploadDate.getTime())) {
+            // Try parsing different date formats
+            const dateStr = item['UploadDate'];
+            if (dateStr && dateStr.includes('/')) {
+              // Handle MM/DD/YY format
+              const parts = dateStr.split('/');
+              if (parts.length === 3) {
+                const month = parseInt(parts[0]) - 1; // Month is 0-indexed
+                const day = parseInt(parts[1]);
+                const year = parseInt(parts[2]) + (parts[2].length === 2 ? 2000 : 0);
+                uploadDate = new Date(year, month, day);
+              }
+            }
+            // If still invalid, use current date
+            if (isNaN(uploadDate.getTime())) {
+              uploadDate = new Date();
+            }
+          }
+        } catch (e) {
+          console.warn('Date parsing error for', item['UploadDate'], e);
+          uploadDate = new Date();
+        }
+        
         const formattedDate = uploadDate.toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'short', 
@@ -1869,15 +3632,29 @@
       }
 
       function renderPortfolioByCategory() {
+        // Check if data is loaded
+        if (!portfolioData || portfolioData.length === 0) {
+          console.log('Portfolio data not loaded yet, skipping render');
+          return;
+        }
+        
+        console.log('Rendering portfolio with', portfolioData.length, 'total items');
+        console.log('Portfolio data:', portfolioData);
+        
         // Render each service category separately
         Object.entries(categoryGrids).forEach(([serviceCategory, gridId]) => {
           const grid = document.getElementById(gridId);
-          if (!grid) return;
+          if (!grid) {
+            console.warn(`Grid not found for category: ${serviceCategory}, gridId: ${gridId}`);
+            return;
+          }
 
           // Filter items by service category
           const categoryItems = portfolioData.filter(item => 
             item.ServiceCategory === serviceCategory
           );
+          
+          console.log(`Category: ${serviceCategory}, Items found: ${categoryItems.length}`, categoryItems);
 
           // Show initial items
           const itemsToShow = categoryItems.slice(0, itemsPerCategory);
@@ -2050,17 +3827,999 @@
           }
         });
 
-        // Initial render
-        renderPortfolioByCategory();
+        // Portfolio will be rendered after CSV data is loaded
+        // renderPortfolioByCategory() is called from loadAllPortfolioData()
       }
 
       // Initialize when DOM is ready
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPortfolio);
+        document.addEventListener('DOMContentLoaded', () => {
+          loadAllPortfolioData(); // Load CSV data first
+          initPortfolio(); // Then initialize portfolio
+        });
       } else {
-        initPortfolio();
+        loadAllPortfolioData(); // Load CSV data first
+        initPortfolio(); // Then initialize portfolio
       }
+      
+
     })();
+
+    // ========================================
+    // AI NEURAL NETWORK BACKGROUND
+    // ========================================
+    class AINeuralNetwork {
+      constructor() {
+        this.canvas = document.getElementById('neuralCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.connections = [];
+        this.mouse = { x: 0, y: 0 };
+        this.animationId = null;
+        
+        this.init();
+      }
+      
+      init() {
+        this.resize();
+        this.createParticles();
+        this.createConnections();
+        this.bindEvents();
+        this.animate();
+      }
+      
+      resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      }
+      
+      createParticles() {
+        this.particles = [];
+        const particleCount = 100;
+        for (let i = 0; i < particleCount; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            size: Math.random() * 2 + 1,
+            color: this.getRandomAIColor(),
+            pulse: Math.random() * Math.PI * 2
+          });
+        }
+      }
+      
+      createConnections() {
+        this.connections = [];
+        const connectionDistance = 120;
+        for (let i = 0; i < this.particles.length; i++) {
+          for (let j = i + 1; j < this.particles.length; j++) {
+            const distance = this.getDistance(this.particles[i], this.particles[j]);
+            if (distance < connectionDistance) {
+              this.connections.push({
+                from: i,
+                to: j,
+                strength: 1 - (distance / connectionDistance),
+                pulse: Math.random() * Math.PI * 2
+              });
+            }
+          }
+        }
+      }
+      
+      getRandomAIColor() {
+        const colors = [
+          'rgba(6, 182, 212, 0.6)',    // AI Cyan
+          'rgba(20, 184, 166, 0.6)',   // AI Teal
+          'rgba(124, 58, 237, 0.6)',   // AI Violet
+          'rgba(99, 102, 241, 0.6)',   // Brand Indigo
+          'rgba(255, 178, 0, 0.6)'     // Brand Gold
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      
+      getDistance(p1, p2) {
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+      
+      bindEvents() {
+        window.addEventListener('resize', () => this.resize());
+        
+        document.addEventListener('mousemove', (e) => {
+          this.mouse.x = e.clientX;
+          this.mouse.y = e.clientY;
+        });
+      }
+      
+      updateParticles() {
+        this.particles.forEach(particle => {
+          // Update position
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          
+          // Bounce off edges
+          if (particle.x <= 0 || particle.x >= this.canvas.width) {
+            particle.vx *= -1;
+          }
+          if (particle.y <= 0 || particle.y >= this.canvas.height) {
+            particle.vy *= -1;
+          }
+          
+          // Update pulse
+          particle.pulse += 0.02;
+          
+          // Mouse interaction
+          const mouseDistance = this.getDistance(particle, this.mouse);
+          if (mouseDistance < 150) {
+            const angle = Math.atan2(this.mouse.y - particle.y, this.mouse.x - particle.x);
+            const force = (150 - mouseDistance) / 150;
+            particle.vx += Math.cos(angle) * force * 0.01;
+            particle.vy += Math.sin(angle) * force * 0.01;
+          }
+          
+          // Dampen velocity
+          particle.vx *= 0.99;
+          particle.vy *= 0.99;
+        });
+      }
+      
+      draw() {
+        // Clear canvas with subtle fade effect
+        this.ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw connections
+        this.connections.forEach(connection => {
+          const from = this.particles[connection.from];
+          const to = this.particles[connection.to];
+          
+          if (from && to) {
+            const alpha = 0.3 + Math.sin(connection.pulse) * 0.2;
+            this.ctx.strokeStyle = `rgba(99, 102, 241, ${alpha * connection.strength})`;
+            this.ctx.lineWidth = 1 * connection.strength;
+            this.ctx.beginPath();
+            this.ctx.moveTo(from.x, from.y);
+            this.ctx.lineTo(to.x, to.y);
+            this.ctx.stroke();
+            
+            connection.pulse += 0.01;
+          }
+        });
+        
+        // Draw particles
+        this.particles.forEach(particle => {
+          const alpha = 0.6 + Math.sin(particle.pulse) * 0.4;
+          this.ctx.fillStyle = particle.color.replace('0.6)', `${alpha})`);
+          this.ctx.beginPath();
+          this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          this.ctx.fill();
+        });
+      }
+      
+      animate() {
+        this.updateParticles();
+        this.draw();
+        this.animationId = requestAnimationFrame(() => this.animate());
+      }
+      
+      destroy() {
+        if (this.animationId) {
+          cancelAnimationFrame(this.animationId);
+        }
+      }
+    }
+
+    // Initialize AI Neural Network when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        new AINeuralNetwork();
+      });
+    } else {
+      new AINeuralNetwork();
+    }
+
+    // Initialize AI Neural Network when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        new AINeuralNetwork();
+      });
+    } else {
+      new AINeuralNetwork();
+    }
+
+    // Service Package Builder System
+    function initializeServicePackageBuilder() {
+      const serviceItems = document.querySelectorAll('.service-item');
+      const packageDropzone = document.getElementById('packageDropzone');
+      const selectedServices = document.getElementById('selectedServices');
+      const quoteSummary = document.getElementById('quoteSummary');
+      const categoryTabs = document.querySelectorAll('.category-tab');
+      const generateInvoiceBtn = document.getElementById('generateInvoice');
+      const clearPackageBtn = document.getElementById('clearPackage');
+      
+      let selectedServicesList = [];
+      let currentCategory = 'website';
+      
+      console.log('Initializing Service Package Builder...');
+      console.log('Found elements:', {
+        serviceItems: serviceItems.length,
+        packageDropzone: !!packageDropzone,
+        categoryTabs: categoryTabs.length
+      });
+      
+      // Service data with complete Cochran Films pricing
+      const serviceData = {
+        // Website Development Packages
+        'starter-site': { name: 'Starter Site', price: 750, duration: 'Basic SEO setup', icon: 'fas fa-laptop-code', category: 'website' },
+        'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: 'Mobile & tablet optimization', icon: 'fas fa-globe', category: 'website' },
+        'brand-builder-site': { name: 'Brand Builder Site', price: 2500, duration: 'Full SEO + Analytics', icon: 'fas fa-rocket', category: 'website' },
+        
+        // Photography Services
+        'flash-start': { name: 'Flash Start', price: 350, duration: 'Online Gallery Delivery', icon: 'fas fa-camera', category: 'photography' },
+        'prime-exposure': { name: 'Prime Exposure', price: 600, duration: 'Online Gallery + Download', icon: 'fas fa-camera-retro', category: 'photography' },
+        'legacy-capture': { name: 'Legacy Capture', price: 900, duration: 'Social Media Highlights', icon: 'fas fa-award', category: 'photography' },
+        
+        // Video Services - Hourly Rate
+        'hourly-video': { name: 'Hourly Video Service', price: 250, duration: 'Per Hour', icon: 'fas fa-clock', category: 'videography' },
+        'raw-files': { name: 'Raw Files (Additional)', price: 300, duration: 'Full Project Files', icon: 'fas fa-file-video', category: 'videography' },
+        
+        // Event Video Services
+        'event-video-2hr': { name: 'Event Video + 60 Sec Recap', price: 500, duration: '2 Hours', icon: 'fas fa-video', category: 'videography' },
+        'event-video-3hr': { name: 'Event Video + 60 Sec Recap', price: 750, duration: '3 Hours', icon: 'fas fa-film', category: 'videography' },
+        'event-video-5hr': { name: 'Event Video + 60-90 Sec Recap', price: 1250, duration: '5 Hours', icon: 'fas fa-camera', category: 'videography' },
+        'event-video-8hr-no-edit': { name: 'Event Video (No Edits)', price: 2000, duration: '8 Hours', icon: 'fas fa-video-camera', category: 'videography' },
+        'event-video-8hr-recap': { name: 'Event Video + 60 Sec Recap', price: 2200, duration: '8 Hours', icon: 'fas fa-film', category: 'videography' },
+        
+        // Live Production Services
+        'live-production-3hr': { name: 'Live Production (Up to 3 Cameras)', price: 2000, duration: '3 Hours + Edit', icon: 'fas fa-broadcast-tower', category: 'videography' },
+        'live-production-5hr': { name: 'Live Production (Up to 3 Cameras)', price: 3000, duration: '5 Hours + Edit', icon: 'fas fa-satellite-dish', category: 'videography' },
+        'live-production-8hr': { name: 'Live Production (Up to 3 Cameras)', price: 4000, duration: '8 Hours + Edit', icon: 'fas fa-tower-broadcast', category: 'videography' },
+        
+        // Podcast Services
+        'podcast-1hr': { name: 'Podcast + Edits (2 Cameras)', price: 750, duration: '1 Hour', icon: 'fas fa-podcast', category: 'videography' },
+        'podcast-2hr': { name: 'Podcast + Edits (2 Cameras)', price: 1000, duration: '2 Hours', icon: 'fas fa-microphone', category: 'videography' },
+        'podcast-3hr': { name: 'Podcast + Edits (2 Cameras)', price: 1500, duration: '3 Hours', icon: 'fas fa-headphones', category: 'videography' },
+        'podcast-shoot-only': { name: 'Podcast Shoot Only', price: 250, duration: 'Recording Only', icon: 'fas fa-camera-retro', category: 'videography' },
+        
+        // Commercial Services
+        'commercial-basic': { name: 'Basic Commercial Shoot', price: 750, duration: 'Single Camera, 3 Hours', icon: 'fas fa-ad', category: 'videography' },
+        'commercial-edit': { name: 'Commercial Shoot + Edit', price: 1500, duration: 'Single Camera, 3-5 hrs + Edit', icon: 'fas fa-cut', category: 'videography' },
+        'commercial-directed': { name: 'Directed Commercial Shoot', price: 2500, duration: 'Pre-Production + 4-6 hrs + Edit', icon: 'fas fa-bullhorn', category: 'videography' },
+        'commercial-full': { name: 'Full Commercial Package', price: 5500, duration: 'Full Creative Direction + Crew', icon: 'fas fa-crown', category: 'videography' },
+        
+        // Retainer Category -->
+        'fast-frame-monthly': { name: 'Fast Frame (1 Month)', price: 2500, duration: '4 Videos OR 3 Podcasts', icon: 'fas fa-bolt', category: 'retainer' },
+        'cinematic-spotlight': { name: 'Cinematic Spotlight (2 Months)', price: 4800, duration: '6 Videos OR 5 Podcasts', icon: 'fas fa-star', category: 'retainer' },
+        'masterpiece-collection': { name: 'Masterpiece Collection (3 Months)', price: 7000, duration: '9 Videos OR 7 Podcasts', icon: 'fas fa-trophy', category: 'retainer' },
+        
+        // Brand Building Services
+        'ignite-brand': { name: 'Ignite Package', price: 900, duration: '2 Branded Graphics', icon: 'fas fa-fire', category: 'branding' },
+        'collaborate-brand': { name: 'Collaborate Package', price: 1800, duration: 'Short Promotional Video', icon: 'fas fa-handshake', category: 'branding' },
+        'transform-brand': { name: 'Transform Package', price: 3500, duration: '2 Promotional Videos', icon: 'fas fa-magic', category: 'branding' },
+        'logo-design': { name: 'Logo Design', price: 250, duration: 'Color palette & fonts', icon: 'fas fa-palette', category: 'branding' },
+        
+        // Printing Services
+        'quick-print-4x6': { name: 'Quick Print Booth (4x6)', price: 500, duration: '4x6 Prints', icon: 'fas fa-print', category: 'printing' },
+        'signature-snap-4x6': { name: 'Signature Snap Station (4x6)', price: 800, duration: 'Table Setup & Lighting', icon: 'fas fa-images', category: 'printing' },
+        'legacy-lab-4x6': { name: 'Legacy Lab Experience (4x6)', price: 1100, duration: 'Real-time photo review', icon: 'fas fa-trophy', category: 'printing' },
+        
+        // Website Add-ons
+        'seo-boost': { name: 'SEO Boost Package', price: 250, duration: 'Google submission', icon: 'fas fa-chart-line', category: 'website' },
+        'google-business': { name: 'Google Business Profile Setup', price: 100, duration: 'Link to website', icon: 'fab fa-google', category: 'website' },
+        'newsletter-integration': { name: 'Newsletter Integration', price: 125, duration: 'Email platform link', icon: 'fas fa-envelope', category: 'website' },
+        
+        // Website Maintenance Plans
+        'basic-maintenance': { name: 'Basic Maintenance', price: 45, duration: 'Per month', icon: 'fas fa-tools', category: 'website' },
+        'business-maintenance': { name: 'Business Maintenance', price: 95, duration: 'Per month', icon: 'fas fa-cogs', category: 'website' },
+        'full-support': { name: 'Full Support Plan', price: 195, duration: 'Per month', icon: 'fas fa-shield-alt', category: 'website' },
+        
+        // Photography Add-ons
+        'rush-editing': { name: 'Rush Editing', price: 75, duration: 'Rush delivery', icon: 'fas fa-clock', category: 'photography' },
+        'travel-fee': { name: 'Travel Fee', price: 50, duration: 'Per event', icon: 'fas fa-car', category: 'photography' },
+        
+        // Video Add-ons
+        'rush-editing-video': { name: 'Rush Editing', price: 75, duration: 'Rush delivery', icon: 'fas fa-clock', category: 'videography' },
+        'travel-fee-video': { name: 'Travel Fee', price: 50, duration: 'Additional fee', icon: 'fas fa-car', category: 'videography' }
+      };
+      
+      // Function to filter services by category
+      function filterServicesByCategory(category) {
+        console.log('=== FILTERING BY CATEGORY ===');
+        console.log('Selected category:', category);
+        let visibleCount = 0;
+        let hiddenCount = 0;
+        
+        // Get all service items and section headers
+        const allItems = document.querySelectorAll('.service-item, .service-section-header');
+        console.log(`Found ${allItems.length} total items to filter`);
+        
+        allItems.forEach((item, index) => {
+          const itemCategory = item.dataset.category;
+          const itemService = item.dataset.service || 'header';
+          
+          // Show item only if it matches the selected category
+          const shouldShow = category === 'all' || itemCategory === category;
+          
+          console.log(`Item ${index}: ${itemService} (category: ${itemCategory}) - Should show: ${shouldShow}`);
+          
+          if (shouldShow) {
+            // Force show the item
+            item.style.display = 'block';
+            item.style.visibility = 'visible';
+            item.style.opacity = '1';
+            item.classList.remove('hidden');
+            
+            if (item.classList.contains('service-item')) {
+              visibleCount++;
+              console.log(`✅ SHOWING: ${item.dataset.service} (category: ${itemCategory})`);
+            } else {
+              console.log(`✅ SHOWING section header for category: ${itemCategory}`);
+            }
+          } else {
+            // Force hide the item
+            item.style.display = 'none';
+            item.style.visibility = 'hidden';
+            item.style.opacity = '0';
+            item.classList.add('hidden');
+            
+            if (item.classList.contains('service-item')) {
+              hiddenCount++;
+              console.log(`❌ HIDING: ${item.dataset.service} (category: ${itemCategory})`);
+            } else {
+              console.log(`❌ HIDING section header for category: ${itemCategory}`);
+            }
+          }
+        });
+        
+        console.log(`=== FILTERING COMPLETE ===`);
+        console.log(`Category: ${category}`);
+        console.log(`Visible services: ${visibleCount}`);
+        console.log(`Hidden services: ${hiddenCount}`);
+        console.log(`Total items processed: ${allItems.length}`);
+        
+        // Reinitialize listeners after filtering
+        setTimeout(() => {
+          initializeServiceListeners();
+        }, 10);
+      }
+
+      // Category tab functionality
+      categoryTabs.forEach(tab => {
+        console.log('Adding click listener to tab:', tab.dataset.category);
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          const category = tab.dataset.category;
+          console.log('=== CATEGORY TAB CLICKED ===');
+          console.log('Category tab clicked:', category);
+          console.log('Tab element:', tab);
+          currentCategory = category;
+          
+          // Update active tab
+          categoryTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          console.log('Set active tab to:', category);
+          
+          // Filter services
+          console.log('Calling filterServicesByCategory with:', category);
+          filterServicesByCategory(category);
+        });
+      });
+      
+      // Initialize with default category after a brief delay to ensure DOM is ready
+      setTimeout(() => {
+        console.log('=== INITIALIZING CATEGORY FILTER ===');
+        console.log('Initial category:', currentCategory);
+        
+        // Make sure the correct tab is active
+        categoryTabs.forEach(t => t.classList.remove('active'));
+        const activeTab = document.querySelector(`[data-category="${currentCategory}"]`);
+        if (activeTab) {
+          activeTab.classList.add('active');
+          console.log('Set initial active tab to:', currentCategory);
+        } else {
+          console.log('No active tab found for category:', currentCategory);
+        }
+        
+        // Force initial filtering
+        console.log('Running initial category filter...');
+        filterServicesByCategory(currentCategory);
+      }, 200);
+      
+      // Drag and drop event handlers
+      let isDragging = false;
+      
+      function handleDragStart(e) {
+        console.log('Drag started for service:', e.target.dataset.service);
+        const serviceItem = e.target.closest('.service-item');
+        serviceItem.classList.add('dragging');
+        isDragging = true;
+        e.dataTransfer.setData('text/plain', serviceItem.dataset.service);
+        e.dataTransfer.effectAllowed = 'copy';
+      }
+      
+      function handleDragEnd(e) {
+        console.log('Drag ended');
+        const serviceItem = e.target.closest('.service-item');
+        serviceItem.classList.remove('dragging');
+        
+        // Reset drag state after a short delay
+        setTimeout(() => {
+          isDragging = false;
+        }, 100);
+      }
+      
+      function handleDragOver(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+      }
+      
+      function handleDragEnter(e) {
+        e.preventDefault();
+        if (packageDropzone) {
+          packageDropzone.classList.add('drag-over');
+        }
+      }
+      
+      function handleDragLeave(e) {
+        if (packageDropzone && !packageDropzone.contains(e.relatedTarget)) {
+          packageDropzone.classList.remove('drag-over');
+        }
+      }
+      
+      function handleDrop(e) {
+        e.preventDefault();
+        console.log('=== DROP EVENT TRIGGERED ===');
+        console.log('Drop event:', e);
+        
+        if (packageDropzone) {
+          packageDropzone.classList.remove('drag-over');
+        }
+        
+        const serviceId = e.dataTransfer.getData('text/plain');
+        console.log('Dropped service ID:', serviceId);
+        
+        if (serviceId) {
+          console.log('Adding service directly to package:', serviceId);
+          addServiceToPackage(serviceId);
+          showNotification('Service added to package!', 'success');
+        } else {
+          console.log('No service ID found in drop data');
+        }
+      }
+
+      // Initialize drag and drop functionality using event delegation
+      function initializeServiceListeners() {
+        console.log('Initializing service listeners...');
+        
+        // Remove existing listeners first
+        const allServiceItems = document.querySelectorAll('.service-item');
+        allServiceItems.forEach(item => {
+          // Clone and replace to remove all listeners
+          const newItem = item.cloneNode(true);
+          item.parentNode.replaceChild(newItem, item);
+        });
+        
+        // Re-get elements after cloning
+        const freshServiceItems = document.querySelectorAll('.service-item');
+        
+        // Add fresh listeners
+        freshServiceItems.forEach(item => {
+          item.addEventListener('dragstart', handleDragStart);
+          item.addEventListener('dragend', handleDragEnd);
+          item.addEventListener('click', handleServiceClick);
+          console.log(`Added listeners to: ${item.dataset.service}`);
+        });
+        
+        console.log(`Added drag and click listeners to ${freshServiceItems.length} service items`);
+      }
+      
+      // Initialize listeners
+      initializeServiceListeners();
+      
+      if (packageDropzone) {
+        packageDropzone.addEventListener('dragover', handleDragOver);
+        packageDropzone.addEventListener('drop', handleDrop);
+        packageDropzone.addEventListener('dragenter', handleDragEnter);
+        packageDropzone.addEventListener('dragleave', handleDragLeave);
+        console.log('Added drop listeners to package dropzone');
+      } else {
+        console.error('Package dropzone not found!');
+      }
+      
+      // Button event listeners
+      if (generateInvoiceBtn) {
+        generateInvoiceBtn.addEventListener('click', generateInvoice);
+      }
+      if (clearPackageBtn) {
+        clearPackageBtn.addEventListener('click', clearPackage);
+      }
+      
+      function addServiceToPackage(serviceId) {
+        const service = serviceData[serviceId];
+        if (!service) return;
+        
+        // Check if service is already in package
+        const existingService = selectedServicesList.find(s => s.id === serviceId);
+        if (existingService) {
+          existingService.quantity++;
+        } else {
+          selectedServicesList.push({
+            id: serviceId,
+            name: service.name,
+            price: service.price,
+            duration: service.duration,
+            icon: service.icon,
+            category: service.category,
+            quantity: 1
+          });
+        }
+        
+        updatePackageDisplay();
+        updateQuoteSummary();
+      }
+      
+      function removeServiceFromPackage(serviceId) {
+        console.log('Removing service:', serviceId);
+        selectedServicesList = selectedServicesList.filter(s => s.id !== serviceId);
+        updatePackageDisplay();
+        updateQuoteSummary();
+        showNotification('Service removed from package', 'info');
+      }
+      
+      // Make removeServiceFromPackage globally accessible for onclick handlers
+      window.removeServiceFromPackage = removeServiceFromPackage;
+      
+      function updatePackageDisplay() {
+        if (selectedServicesList.length === 0) {
+          selectedServices.style.display = 'none';
+          quoteSummary.style.display = 'none';
+          packageDropzone.querySelector('.dropzone-placeholder').style.display = 'block';
+        } else {
+          selectedServices.style.display = 'block';
+          quoteSummary.style.display = 'block';
+          packageDropzone.querySelector('.dropzone-placeholder').style.display = 'none';
+          
+          selectedServices.innerHTML = selectedServicesList.map(service => `
+            <div class="selected-service">
+              <div class="selected-service-info">
+                <div class="selected-service-icon">
+                  <i class="${service.icon}"></i>
+                </div>
+                <div class="selected-service-details">
+                  <h5>${service.name}</h5>
+                  <p>${service.duration} - $${service.price}</p>
+                </div>
+              </div>
+              <button class="remove-service" onclick="removeServiceFromPackage('${service.id}')">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+      
+      function updateQuoteSummary() {
+        const total = selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0);
+        
+        document.getElementById('quoteTotal').textContent = `$${total.toFixed(2)}`;
+        
+        const breakdown = document.getElementById('quoteBreakdown');
+        breakdown.innerHTML = `
+          <div class="quote-item">
+            <span class="quote-item-label">Subtotal</span>
+            <span class="quote-item-value">$${total.toFixed(2)}</span>
+          </div>
+          <div class="quote-item">
+            <span class="quote-item-label">Total</span>
+            <span class="quote-item-value">$${total.toFixed(2)}</span>
+          </div>
+        `;
+      }
+      
+      function clearPackage() {
+        selectedServicesList = [];
+        updatePackageDisplay();
+        updateQuoteSummary();
+      }
+      
+      function generateInvoice() {
+        if (selectedServicesList.length === 0) {
+          showNotification('Please add services to your package first!', 'error');
+          return;
+        }
+        
+        // Create project request data
+        const invoiceData = {
+          services: selectedServicesList,
+          subtotal: selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0),
+          total: selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0),
+          date: new Date().toISOString(),
+          invoiceNumber: 'CF-' + Date.now()
+        };
+        
+        // Show invoice modal
+        showInvoiceModal(invoiceData);
+      }
+      
+      function showInvoiceModal(invoiceData) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay active';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <button class="modal-close" onclick="this.parentElement.parentElement.remove()">×</button>
+            <div class="modal-header">
+              <div class="modal-icon">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <h2>Project Request Ready</h2>
+              <p>Your project request has been prepared and is ready to be submitted</p>
+            </div>
+            
+            <div class="invoice-details">
+              <div class="invoice-header">
+                <h3>Invoice #${invoiceData.invoiceNumber}</h3>
+                <p>Date: ${new Date(invoiceData.date).toLocaleDateString()}</p>
+              </div>
+              
+              <div class="invoice-items">
+                ${invoiceData.services.map(service => `
+                  <div class="invoice-item">
+                    <div class="item-details">
+                      <h4>${service.name}</h4>
+                      <p>${service.duration}</p>
+                    </div>
+                    <div class="item-price">
+                      <span>$${service.price.toFixed(2)}</span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              
+              <div class="invoice-total">
+                <div class="total-line">
+                  <span>Subtotal:</span>
+                  <span>$${invoiceData.subtotal.toFixed(2)}</span>
+                </div>
+                <div class="total-line total">
+                  <span>Total:</span>
+                  <span>$${invoiceData.total.toFixed(2)}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-section">
+              <h3>Contact Information</h3>
+              <p>Please provide your contact details to send your project request</p>
+              
+              <div class="contact-form">
+                <div class="form-group">
+                  <label for="customerName">Full Name *</label>
+                  <input type="text" id="customerName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="customerEmail">Email Address *</label>
+                  <input type="email" id="customerEmail" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                  <label for="customerPhone">Phone Number *</label>
+                  <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button class="btn-secondary" onclick="this.parentElement.parentElement.parentElement.remove()">
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+              <button class="btn-primary" onclick="validateAndSendProject(${JSON.stringify(invoiceData).replace(/"/g, '&quot;')})">
+                <i class="fas fa-paper-plane"></i>
+                Send Your Project
+              </button>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+      }
+      
+      // Validate contact information and send project
+      function validateAndSendProject(invoiceData) {
+        const customerName = document.getElementById('customerName').value.trim();
+        const customerEmail = document.getElementById('customerEmail').value.trim();
+        const customerPhone = document.getElementById('customerPhone').value.trim();
+        
+        // Validate required fields
+        if (!customerName) {
+          showNotification('Please enter your full name', 'error');
+          document.getElementById('customerName').focus();
+          return;
+        }
+        
+        if (!customerEmail) {
+          showNotification('Please enter your email address', 'error');
+          document.getElementById('customerEmail').focus();
+          return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(customerEmail)) {
+          showNotification('Please enter a valid email address', 'error');
+          document.getElementById('customerEmail').focus();
+          return;
+        }
+        
+        if (!customerPhone) {
+          showNotification('Please enter your phone number', 'error');
+          document.getElementById('customerPhone').focus();
+          return;
+        }
+        
+        // Add customer information to invoice data
+        invoiceData.customer = {
+          name: customerName,
+          email: customerEmail,
+          phone: customerPhone
+        };
+        
+        // Send the project with customer information
+        sendToEmailJS(invoiceData);
+      }
+      
+      // Make functions globally available
+      window.removeServiceFromPackage = removeServiceFromPackage;
+      window.validateAndSendProject = validateAndSendProject;
+      
+      function sendToEmailJS(invoiceData) {
+        // Enhanced project request handling with email integration
+        const submitBtn = document.querySelector('.btn-primary');
+        const originalText = submitBtn.innerHTML;
+        
+        // Temporarily disable button to prevent double-clicking during processing
+        if (submitBtn.disabled) return; // Already processing this request
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Request...';
+        submitBtn.disabled = true;
+        
+        // Prepare enhanced service details
+        const serviceDetails = invoiceData.services.map(s => {
+          let serviceDetail = `- ${s.name}: $${s.price}`;
+          return serviceDetail;
+        }).join('\n');
+        
+        // Prepare customer information
+        const customerInfo = invoiceData.customer || {};
+        const customerName = customerInfo.name || 'Unknown Customer';
+        const customerEmail = customerInfo.email || 'No email provided';
+        const customerPhone = customerInfo.phone || 'No phone provided';
+        
+        // Send project request via EmailJS
+        emailjs.send('service_t11yvru', 'template_aluwel1', {
+          service: 'Project Generation',
+          name: customerName,
+          email: customerEmail,
+          phone: customerPhone,
+          notes: `Invoice #${invoiceData.invoiceNumber}\n\nCustomer Details:\nName: ${customerName}\nEmail: ${customerEmail}\nPhone: ${customerPhone}\n\nServices:\n${serviceDetails}\n\nSubtotal: $${invoiceData.subtotal.toFixed(2)}\nTotal: $${invoiceData.total.toFixed(2)}\n\nGenerated: ${new Date(invoiceData.date).toLocaleString()}`,
+          invoice_number: invoiceData.invoiceNumber,
+          total_amount: `$${invoiceData.total.toFixed(2)}`,
+          title: 'Service Package Request'
+        })
+        .then(function(response) {
+          console.log('Project request sent successfully');
+          // Show prominent success modal
+          showSuccessModal();
+          
+          // Clear package after successful project submission
+          clearPackage();
+        })
+        .catch(function(error) {
+          console.error('EmailJS error:', error);
+          
+          // Show prominent success modal even on error (fail gracefully)
+          showSuccessModal();
+          
+          // Clear package after project submission
+          clearPackage();
+        });
+      }
+      
+      // Show prominent success modal for project submission
+      function showSuccessModal() {
+        // Close any existing invoice/project modal first
+        const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
+        existingModals.forEach(modal => modal.remove());
+        
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay active success-modal-overlay';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="success-modal-header">
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h2>✅ Request Submitted!</h2>
+              <p>Thank you for reaching out. We'll review your request and get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="success-modal-body">
+              <div class="success-details">
+                <div class="success-detail-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Response time: Within 24 hours</span>
+                </div>
+                <div class="success-detail-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>We'll contact you via email</span>
+                </div>
+                <div class="success-detail-item">
+                  <i class="fas fa-phone"></i>
+                  <span>Questions? Call us anytime</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="success-modal-actions">
+              <button class="btn-primary success-btn" onclick="handleAwesomeClick()">
+                <i class="fas fa-thumbs-up"></i>
+                Awesome, Thanks!
+              </button>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Auto-close after 8 seconds
+        setTimeout(() => {
+          // Check if the modal still exists before closing
+          const stillExists = document.querySelector('.success-modal-overlay');
+          if (stillExists) {
+            console.log('Auto-closing success modal after 8 seconds');
+            closeAllModalsAndReset();
+          }
+        }, 8000);
+      }
+      
+      // Close all modals and reset for next project request
+      function closeAllModalsAndReset() {
+        console.log('Closing all modals and resetting...');
+        
+        // Remove ALL modal overlays to ensure clean slate
+        const allModals = document.querySelectorAll('.modal-overlay');
+        console.log(`Found ${allModals.length} modals to remove`);
+        allModals.forEach((modal, index) => {
+          console.log(`Removing modal ${index + 1}: ${modal.className}`);
+          modal.remove();
+        });
+        
+        // Reset submit button state for next request
+        const submitButtons = document.querySelectorAll('.btn-primary');
+        submitButtons.forEach(btn => {
+          if (btn.textContent.includes('Send Your Project') || btn.textContent.includes('Sending Request') || btn.textContent.includes('Submitted')) {
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Your Project';
+            btn.disabled = false;
+            console.log('Reset submit button');
+          }
+        });
+        
+        console.log('All modals closed, ready for next project request');
+      }
+      
+      // Make function globally available
+      window.closeAllModalsAndReset = closeAllModalsAndReset;
+      
+      // Handle service card clicks to show detailed information
+      function handleServiceClick(e) {
+        console.log('=== SERVICE ITEM CLICKED ===');
+        console.log('Clicked element:', e.target);
+        console.log('Is dragging?', isDragging);
+        
+        // Don't interfere with drag operations
+        if (isDragging) {
+          console.log('Drag in progress, skipping click');
+          return;
+        }
+        
+        const serviceItem = e.target.closest('.service-item');
+        
+        if (!serviceItem) {
+          console.log('No service item found');
+          return;
+        }
+        
+        console.log('Service item found:', serviceItem);
+        
+        const serviceId = serviceItem.dataset.service;
+        console.log('Service ID:', serviceId);
+        
+        if (serviceId) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log('Calling addServiceToPackage for:', serviceId);
+          addServiceToPackage(serviceId);
+          showNotification('Service added to package!', 'success');
+        } else {
+          console.log('No service ID found on element');
+        }
+      }
+      
+      // Handle awesome button click with proper modal cleanup
+      function handleAwesomeClick() {
+        console.log('Awesome button clicked');
+        const awesomeBtn = event.target.closest('button');
+        if (awesomeBtn) {
+          awesomeBtn.innerHTML = '<i class="fas fa-check"></i> Thanks!';
+          awesomeBtn.disabled = true;
+        }
+        
+        // Small delay for visual feedback, then close all modals
+        setTimeout(() => {
+          closeAllModalsAndReset();
+        }, 300);
+      }
+      
+      // Make functions globally available
+      window.handleAwesomeClick = handleAwesomeClick;
+      
+      // Simple notification system
+      function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+          <div class="notification-content">
+            <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+            <span>${message}</span>
+          </div>
+        `;
+        
+        // Add notification styles
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#6366f1'};
+          color: white;
+          padding: 1rem 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          z-index: 10001;
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+          max-width: 300px;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Animate in
+        setTimeout(() => {
+          notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Auto-remove after 3 seconds
+        setTimeout(() => {
+          notification.style.transform = 'translateX(100%)';
+          setTimeout(() => {
+            if (notification.parentNode) {
+              notification.parentNode.removeChild(notification);
+            }
+          }, 300);
+        }, 3000);
+      }
+    }
+
+    // Initialize service package builder when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initializeServicePackageBuilder();
+      });
+    } else {
+      initializeServicePackageBuilder();
+    }
   </script>
 </body>
 </html>

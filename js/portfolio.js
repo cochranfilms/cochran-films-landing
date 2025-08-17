@@ -1,0 +1,571 @@
+/**
+ * Portfolio Management and Filtering
+ * Handles portfolio display, filtering, and interactions
+ * Reads from Portfolio.csv (Video Production) and Web.csv (Web Development)
+ */
+
+class PortfolioManager {
+  constructor() {
+    this.portfolioItems = [];
+    this.filteredItems = [];
+    this.currentFilter = 'all';
+    this.filters = ['all', 'video-production', 'web-development'];
+    
+    this.init();
+  }
+
+  init() {
+    this.loadPortfolioData().then(() => {
+      this.renderPortfolioByCategory();
+      this.bindCategoryEvents();
+    });
+  }
+
+  async loadPortfolioData() {
+    try {
+      // Load both CSV files
+      const [portfolioData, webData] = await Promise.all([
+        this.fetchCSV('CMS/Collections/Portfolio.csv'),
+        this.fetchCSV('CMS/Collections/Web.csv')
+      ]);
+
+      // Process Portfolio.csv (Video Production)
+      const videoItems = this.parsePortfolioCSV(portfolioData);
+      
+      // Process Web.csv (Web Development)
+      const webItems = this.parseWebCSV(webData);
+
+      // Combine all items
+      this.portfolioItems = [...videoItems, ...webItems];
+      this.filteredItems = [...this.portfolioItems];
+      
+      console.log(`✅ Loaded ${videoItems.length} video projects and ${webItems.length} web projects`);
+      
+    } catch (error) {
+      console.error('❌ Error loading portfolio data:', error);
+      // Fallback to sample data if CSV loading fails
+      this.loadSampleData();
+    }
+  }
+
+  async fetchCSV(filePath) {
+    try {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.text();
+    } catch (error) {
+      console.warn(`⚠️ Could not load ${filePath}:`, error);
+      return null;
+    }
+  }
+
+  // Safely get a value from a parsed CSV row using multiple possible header names
+  getValue(row, possibleKeys) {
+    for (const key of possibleKeys) {
+      if (row[key] && String(row[key]).trim() !== '') {
+        return row[key];
+      }
+    }
+    return '';
+  }
+
+  // Normalize typical boolean strings (true/TRUE/1/yes)
+  toBoolean(value) {
+    if (value === undefined || value === null) return false;
+    const normalized = String(value).trim().toLowerCase();
+    return normalized === 'true' || normalized === '1' || normalized === 'yes' || normalized === 'y' || normalized === 't';
+  }
+
+  parsePortfolioCSV(csvData) {
+    if (!csvData) return [];
+    
+    try {
+      const lines = csvData.split('\n');
+      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+      const items = [];
+      
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        
+        const values = this.parseCSVLine(lines[i]);
+        if (values.length < headers.length) continue;
+        
+        const row = {};
+        headers.forEach((header, index) => {
+          row[header] = values[index] ? values[index].replace(/"/g, '').trim() : '';
+        });
+        
+        // Only add if we have essential data
+        if (row.Title && row.Category) {
+          const thumbnail = this.getValue(row, [
+            'thumbnailUrl',
+            'Thumbnail Image',
+            'Thumbnail',
+            'Image'
+          ]);
+          const isFeatured = this.toBoolean(this.getValue(row, [
+            'Is Featured',
+            'IsFeatured',
+            'Featured'
+          ]));
+          items.push({
+            id: row.ID || `portfolio-${i}`,
+            title: row.Title,
+            description: row.Description || 'Professional video production work',
+            image: thumbnail || this.createPlaceholder(row.Title, '#6366f1'),
+            category: 'video-production',
+            tags: [row.Category, 'Video Production'],
+            link: row.playbackUrl || row.Video || '#',
+            featured: isFeatured,
+            categoryRef: row.CategoryRef,
+            uploadDate: row.UploadDate,
+            ownerName: row.OwnerName
+          });
+        }
+      }
+      
+      return items;
+    } catch (error) {
+      console.error('❌ Error parsing Portfolio CSV:', error);
+      return [];
+    }
+  }
+
+  parseWebCSV(csvData) {
+    if (!csvData) return [];
+    
+    try {
+      const lines = csvData.split('\n');
+      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+      const items = [];
+      
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        
+        const values = this.parseCSVLine(lines[i]);
+        if (values.length < headers.length) continue;
+        
+        const row = {};
+        headers.forEach((header, index) => {
+          row[header] = values[index] ? values[index].replace(/"/g, '').trim() : '';
+        });
+        
+        // Only add if we have essential data
+        if (row.Title && row.Category) {
+          // Map thumbnail (handle GitHub blob -> raw)
+          let thumb = this.getValue(row, ['Thumbnail Image', 'Thumbnail', 'Image']);
+          if (thumb && thumb.includes('github.com') && thumb.includes('/blob/')) {
+            thumb = thumb.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+          }
+          const isFeatured = this.toBoolean(this.getValue(row, ['Is Featured', 'IsFeatured', 'Featured']));
+          items.push({
+            id: `web-${i}`,
+            title: row.Title,
+            description: row.Description || 'Professional web development project',
+            image: thumb || this.createPlaceholder(row.Title, '#10b981'),
+            category: 'web-development',
+            tags: row.Category.split(',').map(cat => cat.trim()),
+            link: row.URL || '#',
+            featured: isFeatured,
+            techStack: this.getValue(row, ['Tech Stack', 'TechStack']),
+            role: row.Role,
+            client: this.getValue(row, ['Client/Company', 'ClientCompany', 'Client']),
+            timeline: row.Timeline,
+            challenges: row.Challenges,
+            results: row.Results
+          });
+        }
+      }
+      
+      return items;
+    } catch (error) {
+      console.error('❌ Error parsing Web CSV:', error);
+      return [];
+    }
+  }
+
+  parseCSVLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        result.push(current);
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    
+    result.push(current);
+    return result;
+  }
+
+  createPlaceholder(text, color = '#1e293b') {
+    return 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="${color}"/>
+        <text x="200" y="140" font-family="Arial" font-size="18" fill="#64748b" text-anchor="middle" font-weight="bold">
+          ${text}
+        </text>
+        <text x="200" y="170" font-family="Arial" font-size="14" fill="#94a3b8" text-anchor="middle">
+          Portfolio Item
+        </text>
+      </svg>
+    `);
+  }
+
+  loadSampleData() {
+    console.log('📝 Loading sample portfolio data as fallback');
+    
+    // Sample portfolio data with data URI images
+    this.portfolioItems = [
+      {
+        id: 1,
+        title: 'Cochran Films Website',
+        description: 'Modern, responsive website showcasing our film production services',
+        image: this.createPlaceholder('CF Website', '#6366f1'),
+        category: 'web-development',
+        tags: ['Web Development', 'Responsive Design', 'Film Production'],
+        link: '#',
+        featured: true
+      },
+      {
+        id: 2,
+        title: 'Corporate Brand Video',
+        description: 'Professional corporate branding video for tech startup',
+        image: this.createPlaceholder('Brand Video', '#10b981'),
+        category: 'video-production',
+        tags: ['Video Production', 'Corporate', 'Branding'],
+        link: '#',
+        featured: false
+      }
+    ];
+    
+    this.filteredItems = [...this.portfolioItems];
+  }
+
+  bindEvents() {
+    // Filter buttons
+    const filterContainer = document.querySelector('.portfolio-filters');
+    if (filterContainer) {
+      filterContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-btn')) {
+          const filter = e.target.dataset.filter;
+          this.setFilter(filter);
+        }
+      });
+    }
+
+    // Portfolio item interactions
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('portfolio-item')) {
+        this.openPortfolioModal(e.target.dataset.id);
+      }
+      
+      if (e.target.classList.contains('portfolio-link')) {
+        e.preventDefault();
+        this.openPortfolioModal(e.target.closest('.portfolio-item').dataset.id);
+      }
+    });
+
+    // Search functionality
+    const searchInput = document.querySelector('.portfolio-search .search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        this.searchPortfolio(e.target.value);
+      });
+    }
+  }
+
+  setFilter(filter) {
+    this.currentFilter = filter;
+    
+    // Update active filter button
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
+    
+    // Filter items
+    if (filter === 'all') {
+      this.filteredItems = [...this.portfolioItems];
+    } else {
+      this.filteredItems = this.portfolioItems.filter(item => item.category === filter);
+    }
+    
+    this.renderPortfolio();
+    this.animatePortfolioItems();
+  }
+
+  searchPortfolio(query) {
+    if (!query.trim()) {
+      this.filteredItems = this.portfolioItems.filter(item => 
+        this.currentFilter === 'all' || item.category === this.currentFilter
+      );
+    } else {
+      const searchTerm = query.toLowerCase();
+      this.filteredItems = this.portfolioItems.filter(item => {
+        const matchesFilter = this.currentFilter === 'all' || item.category === this.currentFilter;
+        const matchesSearch = 
+          item.title.toLowerCase().includes(searchTerm) ||
+          item.description.toLowerCase().includes(searchTerm) ||
+          item.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+        
+        return matchesFilter && matchesSearch;
+      });
+    }
+    
+    this.renderPortfolio();
+    this.animatePortfolioItems();
+  }
+
+  renderPortfolio() {
+    const portfolioContainer = document.querySelector('.portfolio-grid');
+    if (!portfolioContainer) return;
+    
+    if (this.filteredItems.length === 0) {
+      portfolioContainer.innerHTML = `
+        <div class="no-results">
+          <h3>No portfolio items found</h3>
+          <p>Try adjusting your search or filter criteria.</p>
+        </div>
+      `;
+      return;
+    }
+    
+    // Create a simple placeholder image data URI
+    const placeholderImage = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#1e293b"/>
+        <text x="200" y="150" font-family="Arial" font-size="16" fill="#64748b" text-anchor="middle">
+          ${this.filteredItems.length} Project${this.filteredItems.length > 1 ? 's' : ''}
+        </text>
+      </svg>
+    `);
+    
+    portfolioContainer.innerHTML = this.filteredItems.map(item => `
+      <div class="portfolio-item" data-id="${item.id}">
+        <div class="portfolio-image-container">
+          <img src="${item.image}" alt="${item.title}" class="portfolio-image" 
+               onerror="this.src='${placeholderImage}'">
+          ${item.featured ? '<span class="featured-badge">Featured</span>' : ''}
+        </div>
+        <div class="portfolio-content">
+          <h3 class="portfolio-title">${item.title}</h3>
+          <p class="portfolio-description">${item.description}</p>
+          <div class="portfolio-tags">
+            ${item.tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
+          </div>
+          <a href="${item.link}" class="portfolio-link">View Project →</a>
+        </div>
+      </div>
+    `).join('');
+    
+    // Update portfolio stats after rendering
+    this.updatePortfolioStats();
+  }
+
+  // New: Render in index2-style categorized grids
+  renderPortfolioByCategory() {
+    const categoryGrids = {
+      'video-production': document.getElementById('videoProductionGrid'),
+      'web-development': document.getElementById('webDevelopmentGrid')
+    };
+
+    const hasAnyGrid = Object.values(categoryGrids).some(Boolean);
+    if (!hasAnyGrid) {
+      // Fallback to original single-grid render (e.g., non-modular pages)
+      this.renderPortfolio();
+      return;
+    }
+
+    // Clear existing
+    Object.values(categoryGrids).forEach(grid => { if (grid) grid.innerHTML = ''; });
+
+    const placeholderImage = 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#1e293b"/>
+        <text x="200" y="150" font-family="Arial" font-size="16" fill="#64748b" text-anchor="middle">Image</text>
+      </svg>
+    `);
+
+    const createCard = (item) => `
+      <div class="portfolio-item" data-id="${item.id}">
+        <div class="portfolio-thumbnail">
+          <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='${placeholderImage}'" />
+          <div class="portfolio-play${item.category === 'web-development' ? ' web' : ''}">
+            <i class="fa-solid ${item.category === 'web-development' ? 'fa-external-link-alt' : 'fa-play'}"></i>
+          </div>
+          ${item.featured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
+        </div>
+        <div class="portfolio-content">
+          <div class="portfolio-category"><i class="fa-solid fa-tag"></i> ${item.tags?.[0] || (item.category === 'web-development' ? 'Web' : 'Video')}</div>
+          <h3 class="portfolio-title">${item.title}</h3>
+          <p class="portfolio-description">${item.description}</p>
+          <div class="portfolio-meta">
+            <span class="portfolio-date">${new Date().toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'})}</span>
+            ${item.featured ? '<span class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+          </div>
+        </div>
+      </div>
+    `;
+
+    const videoItems = this.portfolioItems.filter(i => i.category === 'video-production');
+    const webItems = this.portfolioItems.filter(i => i.category === 'web-development');
+
+    if (categoryGrids['video-production']) {
+      categoryGrids['video-production'].innerHTML = videoItems.map(createCard).join('');
+    }
+    if (categoryGrids['web-development']) {
+      categoryGrids['web-development'].innerHTML = webItems.map(createCard).join('');
+    }
+
+    this.bindCardClicks();
+  }
+
+  bindCategoryEvents() {
+    // Load more buttons (hidden by default, wired for future use)
+    document.querySelectorAll('.load-more-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+        console.log('Load more requested for', category);
+      });
+    });
+  }
+
+  bindCardClicks() {
+    document.querySelectorAll('#videoProductionGrid .portfolio-item').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-id');
+        this.openPortfolioModal(id);
+      });
+    });
+
+    document.querySelectorAll('#webDevelopmentGrid .portfolio-item').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-id');
+        const item = this.portfolioItems.find(x => String(x.id) === String(id));
+        if (item && item.link && item.link !== '#') {
+          window.open(item.link, '_blank');
+        } else if (item) {
+          this.openPortfolioModal(id);
+        }
+      });
+    });
+  }
+
+  updatePortfolioStats() {
+    const statsContainer = document.querySelector('.portfolio-stats');
+    if (!statsContainer) return;
+    
+    const stats = this.getPortfolioStats();
+    const totalProjects = stats.all || 0;
+    const videoProjects = stats['video-production'] || 0;
+    const webProjects = stats['web-development'] || 0;
+    
+    // Update the stats display
+    const statNumbers = statsContainer.querySelectorAll('.stat-number');
+    if (statNumbers.length >= 4) {
+      statNumbers[0].textContent = `${totalProjects}+`;
+      statNumbers[1].textContent = `${Math.max(25, Math.floor(totalProjects * 0.5))}+`;
+      statNumbers[2].textContent = '5+';
+      statNumbers[3].textContent = '100%';
+    }
+    
+    // Update labels to be more specific
+    const statLabels = statsContainer.querySelectorAll('.stat-label');
+    if (statLabels.length >= 4) {
+      statLabels[0].textContent = 'Projects Completed';
+      statLabels[1].textContent = 'Happy Clients';
+      statLabels[2].textContent = 'Years Experience';
+      statLabels[3].textContent = 'Client Satisfaction';
+    }
+  }
+
+  animatePortfolioItems() {
+    const items = document.querySelectorAll('.portfolio-item');
+    items.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        item.style.transition = 'all 0.6s ease';
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, index * 100);
+    });
+  }
+
+  openPortfolioModal(itemId) {
+    const item = this.portfolioItems.find(i => String(i.id) === String(itemId));
+    if (!item) return;
+    const modal = document.getElementById('videoModal');
+    if (!modal) return;
+
+    const titleEl = document.getElementById('videoTitleText');
+    const categoryEl = document.getElementById('videoCategory');
+    const descEl = document.getElementById('videoDescription');
+    const dateEl = document.getElementById('videoDate');
+    const featuredEl = document.getElementById('videoFeatured');
+    const player = document.getElementById('videoPlayer');
+    const source = document.getElementById('videoSource');
+
+    if (titleEl) titleEl.textContent = item.title || 'Project';
+    if (categoryEl) categoryEl.textContent = item.category === 'web-development' ? 'Web Development' : 'Video Production';
+    if (descEl) descEl.textContent = item.description || '';
+    if (dateEl) dateEl.textContent = item.uploadDate || new Date().toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'});
+    if (featuredEl) featuredEl.style.display = item.featured ? 'inline-flex' : 'none';
+
+    // Only set video source for video items
+    if (item.category === 'video-production' && item.link && item.link !== '#') {
+      if (source) source.src = item.link;
+      if (player) { player.load(); }
+    } else {
+      if (source) source.src = '';
+      if (player) { try { player.pause(); } catch(_){} }
+    }
+
+    modal.classList.add('show');
+  }
+
+  // Public methods for external use
+  refreshPortfolio() {
+    this.renderPortfolio();
+    this.animatePortfolioItems();
+  }
+
+  getPortfolioStats() {
+    const stats = {};
+    this.filters.forEach(filter => {
+      if (filter === 'all') {
+        stats[filter] = this.portfolioItems.length;
+      } else {
+        stats[filter] = this.portfolioItems.filter(item => item.category === filter).length;
+      }
+    });
+    return stats;
+  }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.portfolio-section')) {
+    window.portfolioManager = new PortfolioManager();
+  }
+});
+
+// Export for module systems
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = PortfolioManager;
+}
+
+// Make the class globally available
+window.PortfolioManager = PortfolioManager;

@@ -1,0 +1,86 @@
+<section class="service-builder-section">
+  <div class="service-builder-container">
+    <div class="section-header">
+      <h2 class="section-title">Build Your Perfect Service Package</h2>
+      <p class="section-subtitle">Choose from our pre-built packages or customize your own solution</p>
+    </div>
+    
+    <div class="service-builder-grid">
+      <!-- Service packages will be dynamically loaded here -->
+    </div>
+    
+    <div class="selected-package">
+      <!-- Selected package details will appear here -->
+    </div>
+    
+    <div class="service-customizer">
+      <h3 class="customizer-title">Need Something Custom?</h3>
+      <p>Tell us about your project and we'll create a custom quote just for you.</p>
+      
+      <form class="quote-form">
+        <div class="customizer-options">
+          <div class="customizer-option">
+            <label class="option-label">Project Type</label>
+            <select class="option-input" name="projectType" required>
+              <option value="">Select Project Type</option>
+              <option value="website">Website Development</option>
+              <option value="ecommerce">E-commerce Platform</option>
+              <option value="webapp">Web Application</option>
+              <option value="branding">Brand Identity</option>
+              <option value="marketing">Marketing Campaign</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="customizer-option">
+            <label class="option-label">Budget Range</label>
+            <select class="option-input" name="budget" required>
+              <option value="">Select Budget Range</option>
+              <option value="1000-5000">$1,000 - $5,000</option>
+              <option value="5000-10000">$5,000 - $10,000</option>
+              <option value="10000-25000">$10,000 - $25,000</option>
+              <option value="25000+">$25,000+</option>
+            </select>
+          </div>
+          
+          <div class="customizer-option">
+            <label class="option-label">Timeline</label>
+            <select class="option-input" name="timeline" required>
+              <option value="">Select Timeline</option>
+              <option value="asap">ASAP</option>
+              <option value="1month">1 Month</option>
+              <option value="3months">3 Months</option>
+              <option value="6months">6 Months</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+          
+          <div class="customizer-option">
+            <label class="option-label">Company Name</label>
+            <input type="text" class="option-input" name="companyName" placeholder="Your Company Name" required>
+          </div>
+          
+          <div class="customizer-option">
+            <label class="option-label">Contact Email</label>
+            <input type="email" class="option-input" name="email" placeholder="your@email.com" required>
+          </div>
+          
+          <div class="customizer-option">
+            <label class="option-label">Phone Number</label>
+            <input type="tel" class="option-input" name="phone" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        
+        <div class="customizer-option full-width">
+          <label class="option-label">Project Description</label>
+          <textarea class="option-input" name="description" rows="4" 
+                    placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="submit-button">Get Custom Quote</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

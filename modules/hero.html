@@ -1,0 +1,115 @@
+<!-- Home Section -->
+<section id="home" class="section hero">
+  <h1 class="hero-title">STORIES THAT TELL THEMSELVES</h1>
+  <p class="hero-subtitle">
+    Through a data-driven Content Strategy and Omnichannel Marketing approach, we ensure your visuals aren't just seen—they convert across all platforms.
+  </p>
+  
+  <!-- Enhanced Value Proposition -->
+  <div class="hero-value-props" style="margin: 40px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+    <div class="hero-value-card" style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">2025 Production Innovation</h3>
+      <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">AI-powered editing workflows, 8K HDR mastering, and real-time collaboration tools that keep you ahead of the curve.</p>
+    </div>
+    
+    <div class="hero-value-card" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+        <i class="fas fa-code"></i>
+      </div>
+      <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Full-Stack Development</h3>
+      <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Modern React/Next.js, AI integration, and cloud-native architectures that scale with your business growth.</p>
+    </div>
+    
+    <div class="hero-value-card" style="background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+        <i class="fas fa-users"></i>
+      </div>
+      <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Creator Platform</h3>
+      <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Streamlined onboarding, analytics dashboards, and automated workflows that empower your creative team.</p>
+    </div>
+  </div>
+
+  <!-- Production Toolkit Download Section -->
+  <div class="hero-toolkit" style="margin: 40px 0; background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9)); border: 1px solid rgba(255,178,0,0.3); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+    <div style="text-align: center; margin-bottom: 32px;">
+      <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 32px; color: var(--brand-gold);">
+        <i class="fas fa-toolbox"></i>
+      </div>
+      <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 800; color: var(--text-primary);">FREE Production Toolkit 2025</h2>
+      <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Get instant access to our comprehensive production toolkit including AI-powered editing presets, color grading LUTs, 
+        project templates, and workflow automation scripts. Valued at $497 - completely free for creators.
+      </p>
+    </div>
+    
+    <form id="toolkitForm" class="toolkit-form" style="max-width: 500px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <input type="text" id="toolkitFirstName" name="firstName" placeholder="First Name" required 
+               style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+        <input type="text" id="toolkitLastName" name="lastName" placeholder="Last Name" required 
+               style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+      </div>
+      <input type="email" id="toolkitEmail" name="email" placeholder="Email Address" required 
+             style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+      <select id="toolkitInterest" name="interest" required 
+              style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+        <option value="">What's your primary focus?</option>
+        <option value="video-production">Video Production</option>
+        <option value="photography">Photography</option>
+        <option value="web-development">Web Development</option>
+        <option value="brand-development">Brand Development</option>
+        <option value="content-creation">Content Creation</option>
+      </select>
+      <button type="submit" class="toolkit-submit" style="width: 100%; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; border: 0; padding: 18px 32px; border-radius: 14px; font-weight: 800; font-size: 16px; cursor: pointer; transition: var(--transition-fast); display: flex; align-items: center; justify-content: center; gap: 12px;">
+        <i class="fas fa-download"></i>
+        Download Free Toolkit
+      </button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 24px;">
+      <p style="margin: 0; color: var(--text-muted); font-size: 14px;">
+        <i class="fas fa-shield-alt"></i> 
+        We respect your privacy. No spam, ever.
+      </p>
+    </div>
+  </div>
+
+  <!-- Enhanced CTA Section -->
+  <div class="hero-cta-section" style="margin-top: 40px;">
+    <a href="#book" class="hero-cta">
+      <i class="fas fa-rocket"></i>
+      Book Your Services
+    </a>
+    <p style="margin: 20px 0 0; color: var(--text-muted); font-size: 14px; font-weight: 600;">
+      <i class="fas fa-clock"></i> 
+      Average response time: 2 hours | 
+      <i class="fas fa-star"></i> 
+      98% client satisfaction rate
+    </p>
+  </div>
+
+  <!-- Social Proof Section -->
+  <div class="hero-social-proof" style="margin-top: 40px; padding: 24px; background: rgba(15,23,42,0.4); border-radius: 16px; border: 1px solid rgba(99,102,241,0.2);">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">500+</div>
+        <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Projects Delivered</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">98%</div>
+        <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Client Satisfaction</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">24/7</div>
+        <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Support Available</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">2hr</div>
+        <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Avg Response</div>
+      </div>
+    </div>
+  </div>
+</section>

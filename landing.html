@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
+  <meta name="title" content="Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta name="description" content="Cochran Films delivers high-level storytelling with full-stack execution. Professional video production, web development, and white-label services. Atlanta's premier creative agency." />
+  <meta name="keywords" content="creative agency, video production, web development, white-label services, Atlanta, storytelling, full-stack, branding, content creation, film production" />
+  <meta name="author" content="Cody Cochran, CEO & Founder" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cochranfilms.com/" />
+  <meta property="og:title" content="Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta property="og:description" content="Cochran Films delivers high-level storytelling with full-stack execution. Professional video production, web development, and white-label services." />
+  <meta property="og:image" content="https://landing.cochranfilms.com/Social_Share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:site_name" content="Cochran Films" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://cochranfilms.com/" />
+  <meta property="twitter:title" content="Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta property="twitter:description" content="Cochran Films delivers high-level storytelling with full-stack execution. Professional video production, web development, and white-label services." />
+  <meta property="twitter:image" content="https://landing.cochranfilms.com/Social_Share.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/aeef42_570164eee75f4394a4fc1cf9c62ceae0~mv2.png" />
+  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/aeef42_570164eee75f4394a4fc1cf9c62ceae0~mv2.png" />
+  <link rel="icon" type="image/x-icon" href="https://static.wixstatic.com/media/aeef42_570164eee75f4394a4fc1cf9c62ceae0~mv2.png" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="theme-color" content="#6366f1" />
+  <meta name="msapplication-TileColor" content="#6366f1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-app-title" content="Cochran Films" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="geo.region" content="US-GA" />
+  <meta name="geo.placename" content="Douglasville, Lithia Springs, Atlanta, Georgia" />
+  <meta name="geo.position" content="33.7490;-84.3880" />
+  <meta name="ICBM" content="33.7490, -84.3880" />
+  
+  <!-- Local Business Meta Tags -->
+  <meta name="business:contact_data:locality" content="Douglasville" />
+  <meta name="business:contact_data:region" content="Georgia" />
+  <meta name="business:contact_data:postal_code" content="30135" />
+  <meta name="business:contact_data:country_name" content="United States" />
+  <meta name="business:contact_data:phone_number" content="+1-404-XXX-XXXX" />
+  <meta name="business:contact_data:website" content="https://cochranfilms.com" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://cochranfilms.com/" />
+
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" imagesrcset="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png 512w" imagesizes="(max-width: 520px) 180px, 320px" fetchpriority="high">
+
+  <!-- GSAP for advanced animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="landing-styles.css">
+</head>
+<body>
+  <!-- AI Neural Network Background -->
+  <div class="ai-background">
+    <canvas id="neuralCanvas"></canvas>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Header with AI Integration -->
+    <header class="ai-header">
+      <div class="header-content">
+        <div class="brand-container">
+          <div class="logo-wrapper">
+            <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" class="main-logo" />
+            <div class="ai-status">
+              <div class="ai-indicator"></div>
+              <span>AI Active</span>
+            </div>
+          </div>
+        </div>
+        
+        <nav class="ai-nav">
+          <div class="nav-item" data-section="services">
+            <i class="fa-solid fa-cube"></i>
+            <span>Services</span>
+          </div>
+          <div class="nav-item" data-section="portfolio">
+            <i class="fa-solid fa-film"></i>
+            <span>Portfolio</span>
+          </div>
+          <a href="https://forms.gle/H44oamnuFgUtwb3k6" class="cta-button" target="_blank">
+            <i class="fa-solid fa-rocket"></i>
+            <span>Start Project</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="ai-badge">
+          <div class="ai-pulse"></div>
+          <i class="fa-solid fa-sparkles"></i>
+          <span>Welcome to Cochran Films</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="title-line">STORIES THAT TELL</span>
+          <span class="title-line highlight">THEMSELVES</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Through a data-driven Content Strategy and Omnichannel Marketing approach, we ensure your visuals aren't just seen—they convert across all platforms.
+        </p>
+        
+        <div class="hero-actions">
+          <button class="primary-cta" onclick="exploreWork()">
+            <span class="cta-text">Explore Our Work</span>
+            <div class="cta-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </button>
+          <button class="secondary-cta" onclick="startProject()">
+            <i class="fa-solid fa-play"></i>
+            <span>Start Your Story</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="hero-visual">
+        <div class="floating-elements">
+          <div class="floating-card" data-category="film">
+            <i class="fa-solid fa-video"></i>
+            <span>Video Production</span>
+          </div>
+          <div class="floating-card" data-category="web">
+            <i class="fa-solid fa-code"></i>
+            <span>Web Development</span>
+          </div>
+          <div class="floating-card" data-category="photo">
+            <i class="fa-solid fa-camera"></i>
+            <span>Photography</span>
+          </div>
+          <div class="floating-card" data-category="live">
+            <i class="fa-solid fa-broadcast-tower"></i>
+            <span>Live Events</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Preview -->
+    <section class="services-section">
+      <div class="section-header">
+        <h2>Our Core Services</h2>
+        <p>From cinematic production to web development, we deliver comprehensive creative solutions that drive results</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-service="film">
+          <div class="card-header">
+            <div class="service-icon">
+              <i class="fa-solid fa-video"></i>
+            </div>
+          </div>
+          <h3>Video Production</h3>
+          <p>Professional video production including commercials, brand films, documentaries, and live event coverage with high-level production value.</p>
+          <div class="service-features">
+            <span>4K/8K Capture</span>
+            <span>AI Color Correction</span>
+            <span>Live Events</span>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="web">
+          <div class="card-header">
+            <div class="service-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+          </div>
+          <h3>Web Development</h3>
+          <p>Custom website development and maintenance, from strategy and design to publishing and ongoing support.</p>
+          <div class="service-features">
+            <span>React/Next.js</span>
+            <span>AI Integration</span>
+            <span>Cloud Native</span>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="photo">
+          <div class="card-header">
+            <div class="service-icon">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+          </div>
+          <h3>Photography & Events</h3>
+          <p>Live event printing, portraits, product photography, and event coverage with instant printing capabilities.</p>
+          <div class="service-features">
+            <span>Live Printing</span>
+            <span>Branded Templates</span>
+            <span>Event Coverage</span>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="brand">
+          <div class="card-header">
+            <div class="service-icon">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+          </div>
+          <h3>Brand Development</h3>
+          <p>Complete brand identity development including logos, design systems, and strategic brand positioning.</p>
+          <div class="service-features">
+            <span>Logo Design</span>
+            <span>Brand Strategy</span>
+            <span>Design Systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-section">
+      <div class="section-header">
+        <h2>Why Choose Cochran Films</h2>
+        <p>We create high-quality photo and video content, paired with strategic personal brand development</p>
+      </div>
+      
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3>2025 Production Innovation</h3>
+          <p>AI-powered editing workflows, 8K HDR mastering, and real-time collaboration tools that keep you ahead of the curve.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Full-Stack Development</h3>
+          <p>Modern React/Next.js, AI integration, and cloud-native architectures that scale with your business growth.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Creator Platform</h3>
+          <p>Streamlined onboarding, analytics dashboards, and automated workflows that empower your creative team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof-section">
+      <div class="proof-content">
+        <div class="proof-item">
+          <div class="proof-number">500+</div>
+          <div class="proof-label">Projects Delivered</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">98%</div>
+          <div class="proof-label">Client Satisfaction</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">24/7</div>
+          <div class="proof-label">Support Available</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-number">2hr</div>
+          <div class="proof-label">Avg Response</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Join the revolution in creative production and brand development</p>
+        
+        <div class="cta-buttons">
+          <button class="explore-btn" onclick="exploreWork()">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Explore Our Work</span>
+          </button>
+          <button class="contact-btn" onclick="startProject()">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Start Your Project</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- AI Loading Overlay -->
+  <div class="ai-loading" id="aiLoading">
+    <div class="loading-content">
+      <div class="ai-logo">
+        <i class="fa-solid fa-brain"></i>
+      </div>
+      <div class="loading-text">
+        <span>Welcome to Cochran Films</span>
+        <div class="loading-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="landing-scripts.js"></script>
+</body>
+</html>
