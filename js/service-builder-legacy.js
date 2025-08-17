@@ -14,6 +14,7 @@
     const quoteTotal = qs('#quoteTotal');
     const quoteBreakdown = qs('#quoteBreakdown');
     const tabs = qsa('.category-tab');
+    const createBtn = document.getElementById('generateInvoice');
 
     if (!serviceItemsWrap || !dropzone || !tabs.length) return;
 
@@ -131,6 +132,39 @@
       selections = selections.filter(s => s.id !== id);
       renderSelections();
     });
+
+    // EmailJS submit (parity with index2)
+    if (createBtn) {
+      createBtn.addEventListener('click', async () => {
+        if (!selections.length) return;
+        try {
+          if (typeof emailjs !== 'undefined') {
+            const serviceId = 'service_t11yvru';
+            const templateId = 'template_aluwel1';
+            const lines = selections.map(s => `- ${s.name}: ${formatCurrency(s.price)}`).join('\n');
+            const total = selections.reduce((sum, s) => sum + (s.price||0), 0);
+            await emailjs.send(serviceId, templateId, {
+              service: 'Project Generation',
+              name: 'Website Quote',
+              email: 'noreply@cochranfilms.com',
+              phone: 'N/A',
+              notes: `Selected services:\n${lines}\n\nTotal: ${formatCurrency(total)}`,
+              total_amount: formatCurrency(total),
+              title: 'Service Package Request'
+            });
+            // Clear selections on success
+            selections = [];
+            renderSelections();
+            alert('Request sent! We will contact you shortly.');
+          } else {
+            alert('Email service not available.');
+          }
+        } catch (e) {
+          console.error('EmailJS error', e);
+          alert('Failed to send. Please try again.');
+        }
+      });
+    }
   }
 
   // Expose globally so module loader can call it
