@@ -278,25 +278,50 @@ class ServiceBuilder {
     const container = document.querySelector('.service-builder-grid');
     if (!container) return;
     
-    container.innerHTML = this.basePackages.map(pkg => `
-      <div class="service-package ${pkg.featured ? 'featured' : ''}">
-        <h3 class="package-name">${pkg.name}</h3>
-        <div class="package-price">
-          <span class="currency">$</span>${pkg.price}
-          <span class="period">/one-time</span>
+    // Two-column layout: left catalog, right builder (matches css/service-builder.css)
+    container.innerHTML = `
+      <div class="service-catalog">
+        <div class="catalog-header">
+          <h3>Service Packages</h3>
+          <p>Select a base package or drag services into your build</p>
         </div>
-        <p class="package-description">${pkg.description}</p>
-        <ul class="package-features">
-          ${pkg.features.map(feature => `<li>${feature}</li>`).join('')}
-        </ul>
-        <div class="package-delivery">
-          <strong>Delivery:</strong> ${pkg.delivery}
+        <div class="service-items">
+          ${this.basePackages.map(pkg => `
+            <div class="service-item">
+              <div class="service-item-header">
+                <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="service-info">
+                  <h4>${pkg.name}</h4>
+                  <p>${pkg.description}</p>
+                </div>
+                <div class="service-price">$${pkg.price}</div>
+              </div>
+              <button class="package-button package-select" data-package="${pkg.id}">Select Package</button>
+            </div>
+          `).join('')}
         </div>
-        <button class="package-button package-select" data-package="${pkg.id}">
-          Select Package
-        </button>
       </div>
-    `).join('');
+      <div class="package-builder">
+        <div class="builder-header">
+          <h3>Custom Package Builder</h3>
+          <p>Drag services here or select a base package to start</p>
+        </div>
+        <div class="package-dropzone">
+          <div class="dropzone-placeholder">Drag and drop services here</div>
+          <div class="dropzone-icon"><i class="fa-solid fa-box"></i></div>
+          <div class="selected-services"></div>
+        </div>
+        <div class="quote-summary">
+          <div class="quote-header"><h4>Quote Summary</h4></div>
+          <div class="quote-total" id="quoteTotal">$${this.totalPrice}</div>
+          <div class="quote-breakdown" id="quoteBreakdown"></div>
+          <div class="quote-actions">
+            <button class="btn-generate-invoice" id="generateInvoice"><i class="fa-solid fa-file-invoice-dollar"></i> Create Project Request</button>
+            <button class="btn-clear-package" id="clearPackage"><i class="fa-solid fa-trash"></i> Clear Package</button>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   submitQuote() {

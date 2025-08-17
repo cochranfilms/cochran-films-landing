@@ -78,45 +78,89 @@ class PortfolioManager {
     return normalized === 'true' || normalized === '1' || normalized === 'yes' || normalized === 'y' || normalized === 't';
   }
 
+  // Robust CSV parser that supports quoted fields with commas and newlines
+  parseCSVRows(csvText) {
+    if (!csvText) return { headers: [], rows: [] };
+    const rows = [];
+    const headers = [];
+    let currentField = '';
+    let currentRow = [];
+    let inQuotes = false;
+    let isHeaderParsed = false;
+    for (let i = 0; i < csvText.length; i++) {
+      const char = csvText[i];
+      const next = csvText[i + 1];
+      if (char === '"') {
+        // If doubled quote inside quoted field, add a literal quote
+        if (inQuotes && next === '"') {
+          currentField += '"';
+          i++; // skip next quote
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        currentRow.push(currentField);
+        currentField = '';
+      } else if ((char === '\n' || char === '\r') && !inQuotes) {
+        // End of row
+        if (char === '\r' && next === '\n') {
+          i++; // handle CRLF
+        }
+        currentRow.push(currentField);
+        currentField = '';
+        if (currentRow.length > 1 || (currentRow.length === 1 && currentRow[0].trim() !== '')) {
+          if (!isHeaderParsed) {
+            headers.push(...currentRow.map(h => h.replace(/"/g, '').trim()));
+            isHeaderParsed = true;
+          } else {
+            const obj = {};
+            headers.forEach((h, idx) => {
+              obj[h] = (currentRow[idx] || '').replace(/"/g, '').trim();
+            });
+            rows.push(obj);
+          }
+        }
+        currentRow = [];
+      } else {
+        currentField += char;
+      }
+    }
+    // Flush last row (if file doesn't end with newline)
+    if (currentField.length > 0 || currentRow.length > 0) {
+      currentRow.push(currentField);
+      if (!isHeaderParsed) {
+        headers.push(...currentRow.map(h => h.replace(/"/g, '').trim()));
+      } else {
+        const obj = {};
+        headers.forEach((h, idx) => {
+          obj[h] = (currentRow[idx] || '').replace(/"/g, '').trim();
+        });
+        rows.push(obj);
+      }
+    }
+    return { headers, rows };
+  }
+
   parsePortfolioCSV(csvData) {
     if (!csvData) return [];
-    
     try {
-      const lines = csvData.split('\n');
-      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+      const { rows } = this.parseCSVRows(csvData);
       const items = [];
-      
-      for (let i = 1; i < lines.length; i++) {
-        if (!lines[i].trim()) continue;
-        
-        const values = this.parseCSVLine(lines[i]);
-        if (values.length < headers.length) continue;
-        
-        const row = {};
-        headers.forEach((header, index) => {
-          row[header] = values[index] ? values[index].replace(/"/g, '').trim() : '';
-        });
-        
-        // Only add if we have essential data
-        if (row.Title && row.Category) {
+      rows.forEach((row, idx) => {
+        if (row.Title && (row.Category || row.ServiceCategory)) {
           const thumbnail = this.getValue(row, [
-            'thumbnailUrl',
-            'Thumbnail Image',
-            'Thumbnail',
-            'Image'
+            'thumbnailUrl', 'Thumbnail Image', 'Thumbnail', 'Image'
           ]);
           const isFeatured = this.toBoolean(this.getValue(row, [
-            'Is Featured',
-            'IsFeatured',
-            'Featured'
+            'Is Featured', 'IsFeatured', 'Featured'
           ]));
           items.push({
-            id: row.ID || `portfolio-${i}`,
+            id: row.ID || `portfolio-${idx + 1}`,
             title: row.Title,
             description: row.Description || 'Professional video production work',
             image: thumbnail || this.createPlaceholder(row.Title, '#6366f1'),
             category: 'video-production',
-            tags: [row.Category, 'Video Production'],
+            tags: [row.Category || 'Video Production', 'Video Production'],
             link: row.playbackUrl || row.Video || '#',
             featured: isFeatured,
             categoryRef: row.CategoryRef,
@@ -124,8 +168,7 @@ class PortfolioManager {
             ownerName: row.OwnerName
           });
         }
-      }
-      
+      });
       return items;
     } catch (error) {
       console.error('❌ Error parsing Portfolio CSV:', error);
@@ -135,38 +178,23 @@ class PortfolioManager {
 
   parseWebCSV(csvData) {
     if (!csvData) return [];
-    
     try {
-      const lines = csvData.split('\n');
-      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+      const { rows } = this.parseCSVRows(csvData);
       const items = [];
-      
-      for (let i = 1; i < lines.length; i++) {
-        if (!lines[i].trim()) continue;
-        
-        const values = this.parseCSVLine(lines[i]);
-        if (values.length < headers.length) continue;
-        
-        const row = {};
-        headers.forEach((header, index) => {
-          row[header] = values[index] ? values[index].replace(/"/g, '').trim() : '';
-        });
-        
-        // Only add if we have essential data
+      rows.forEach((row, idx) => {
         if (row.Title && row.Category) {
-          // Map thumbnail (handle GitHub blob -> raw)
           let thumb = this.getValue(row, ['Thumbnail Image', 'Thumbnail', 'Image']);
           if (thumb && thumb.includes('github.com') && thumb.includes('/blob/')) {
             thumb = thumb.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
           }
           const isFeatured = this.toBoolean(this.getValue(row, ['Is Featured', 'IsFeatured', 'Featured']));
           items.push({
-            id: `web-${i}`,
+            id: `web-${idx + 1}`,
             title: row.Title,
             description: row.Description || 'Professional web development project',
             image: thumb || this.createPlaceholder(row.Title, '#10b981'),
             category: 'web-development',
-            tags: row.Category.split(',').map(cat => cat.trim()),
+            tags: String(row.Category).split(',').map(cat => cat.trim()).filter(Boolean),
             link: row.URL || '#',
             featured: isFeatured,
             techStack: this.getValue(row, ['Tech Stack', 'TechStack']),
@@ -177,8 +205,7 @@ class PortfolioManager {
             results: row.Results
           });
         }
-      }
-      
+      });
       return items;
     } catch (error) {
       console.error('❌ Error parsing Web CSV:', error);
@@ -391,9 +418,9 @@ class PortfolioManager {
     Object.values(categoryGrids).forEach(grid => { if (grid) grid.innerHTML = ''; });
 
     const placeholderImage = 'data:image/svg+xml;base64,' + btoa(`
-      <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" fill="#1e293b"/>
-        <text x="200" y="150" font-family="Arial" font-size="16" fill="#64748b" text-anchor="middle">Image</text>
+      <svg width="1600" height="900" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1600" height="900" fill="#1e293b"/>
+        <text x="800" y="450" font-family="Arial" font-size="48" fill="#64748b" text-anchor="middle">Image</text>
       </svg>
     `);
 
