@@ -288,8 +288,16 @@ html, body {
 .portfolio-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
   margin-top: 20px;
+}
+
+/* Per-category grid counts */
+#videoProductionGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#webDevelopmentGrid {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .portfolio-item {
@@ -998,10 +1006,9 @@ html, body {
     gap: 24px;
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+  .portfolio-grid { gap: 24px; }
+  #videoProductionGrid,
+  #webDevelopmentGrid { grid-template-columns: 1fr; }
 
   .portfolio-category-title {
     font-size: 24px;

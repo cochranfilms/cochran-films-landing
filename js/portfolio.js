@@ -50,7 +50,8 @@ class PortfolioManager {
 
   async fetchCSV(filePath) {
     try {
-      const response = await fetch(filePath);
+      const url = filePath + (filePath.includes('?') ? '&' : '?') + 'v=' + Date.now();
+      const response = await fetch(url, { cache: 'no-cache' });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
