@@ -1,4 +1,4 @@
-<!-- Unified Video Modal (matches index2 structure/styles via base.css) -->
+<!-- Unified Video Modal (kept only the modal; removed gallery/playlist/embed templates) -->
 <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
   <div class="video-panel">
     <div class="video-panel-head">
@@ -29,7 +29,6 @@
     </div>
   </div>
   <script>
-    // Wire up close interactions
     document.addEventListener('click', (e) => {
       const modal = document.getElementById('videoModal');
       if (!modal) return;
@@ -40,93 +39,4 @@
       }
     });
   </script>
-</div>
-
-<!-- Video Thumbnail Template -->
-<div class="video-thumbnail" data-video-src="" data-video-title="" data-video-description="">
-  <div class="thumbnail-image">
-    <img src="" alt="Video thumbnail">
-    <div class="play-button">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polygon points="5,3 19,12 5,21 5,3"></polygon>
-      </svg>
-    </div>
-    <div class="video-duration">0:00</div>
-  </div>
-  <div class="thumbnail-info">
-    <h4 class="thumbnail-title">Video Title</h4>
-    <p class="thumbnail-description">Video description...</p>
-  </div>
-</div>
-
-<!-- Video Gallery Template -->
-<div class="video-gallery">
-  <div class="gallery-header">
-    <h3>Featured Videos</h3>
-    <div class="gallery-controls">
-      <button class="gallery-nav-btn" id="prev-videos">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15,18 9,12 15,6"></polyline>
-        </svg>
-      </button>
-      <button class="gallery-nav-btn" id="next-videos">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9,18 15,12 9,6"></polyline>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="gallery-container">
-    <div class="gallery-track" id="video-gallery-track">
-      <!-- Video thumbnails will be dynamically loaded here -->
-    </div>
-  </div>
-</div>
-
-<!-- Video Playlist Template -->
-<div class="video-playlist">
-  <h4>Related Videos</h4>
-  <div class="playlist-items">
-    <div class="playlist-item" data-video-src="" data-video-title="">
-      <div class="playlist-thumbnail">
-        <img src="" alt="Video thumbnail">
-        <div class="playlist-play-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="5,3 19,12 5,21 5,3"></polygon>
-          </svg>
-        </div>
-      </div>
-      <div class="playlist-info">
-        <h5 class="playlist-title">Video Title</h5>
-        <span class="playlist-duration">0:00</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Video Embed Template -->
-<div class="video-embed-container">
-  <div class="embed-header">
-    <h4>Embed This Video</h4>
-    <button class="copy-embed-btn" id="copy-embed-btn">Copy Code</button>
-  </div>
-  <div class="embed-code">
-    <code id="embed-code">
-      &lt;iframe src="video-url" width="560" height="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-    </code>
-  </div>
-  <div class="embed-options">
-    <label>
-      <input type="checkbox" id="autoplay-embed" value="autoplay">
-      Autoplay
-    </label>
-    <label>
-      <input type="checkbox" id="muted-embed" value="muted">
-      Muted
-    </label>
-    <label>
-      <input type="checkbox" id="controls-embed" value="controls" checked>
-      Show Controls
-    </label>
-  </div>
 </div>

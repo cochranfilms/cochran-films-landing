@@ -9,6 +9,7 @@ class ServiceBuilder {
     this.customPackages = [];
     this.currentPackage = null;
     this.totalPrice = 0;
+    this.selectedItems = [];
     
     this.init();
   }
@@ -17,6 +18,28 @@ class ServiceBuilder {
     this.loadBasePackages();
     this.bindEvents();
     this.renderServiceBuilder();
+    this.enableDragAndDrop();
+    this.bindBuilderControls();
+    this.bindCategoryTabs();
+    // Ensure initial category matches active tab
+    const active = document.querySelector('.category-tab.active');
+    const initial = active?.dataset?.category || 'website';
+    this.filterServicesByCategory(initial);
+
+    // Also initialize after module injection events just in case
+    document.addEventListener('modulesLoaded', () => {
+      this.rebind();
+    });
+  }
+
+  rebind() {
+    // Re-wire DnD and tabs if markup was re-injected
+    this.enableDragAndDrop();
+    this.bindBuilderControls();
+    this.bindCategoryTabs();
+    const active = document.querySelector('.category-tab.active');
+    const initial = active?.dataset?.category || 'website';
+    this.filterServicesByCategory(initial);
   }
 
   loadBasePackages() {
@@ -78,25 +101,55 @@ class ServiceBuilder {
   }
 
   bindEvents() {
-    // Package selection
+    // Delegated clicks for robustness (support inner icons)
     document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('package-select')) {
-        const packageId = e.target.dataset.package;
+      const selectBtn = e.target.closest('.package-select');
+      if (selectBtn) {
+        const packageId = selectBtn.dataset.package;
         this.selectPackage(packageId);
+        this.addSelectedServiceCard(packageId);
+        this.updateQuoteBreakdown();
+        return;
       }
-      
-      if (e.target.classList.contains('customize-package')) {
+
+      const customizeBtn = e.target.closest('.customize-package');
+      if (customizeBtn) {
         this.openCustomizer();
+        return;
       }
-      
-      if (e.target.classList.contains('add-service')) {
-        const serviceId = e.target.dataset.service;
+
+      const addBtn = e.target.closest('.add-service');
+      if (addBtn) {
+        const serviceId = addBtn.dataset.service;
         this.addCustomService(serviceId);
+        return;
       }
-      
-      if (e.target.classList.contains('remove-service')) {
-        const serviceId = e.target.dataset.service;
-        this.removeCustomService(serviceId);
+
+      const removeBtn = e.target.closest('.remove-service');
+      if (removeBtn) {
+        const serviceId = removeBtn.dataset.service;
+        // Update price and UI
+        if (this.currentPackage && this.currentPackage.id === serviceId) {
+          this.resetBuilder();
+        } else {
+          this.removeCustomService(serviceId);
+          removeBtn.closest('.selected-service')?.remove();
+          this.updateQuoteBreakdown();
+        }
+        return;
+      }
+
+      // Also allow clicking an item to add it (not only drag)
+      const serviceCard = e.target.closest('.service-item');
+      if (serviceCard && serviceCard.dataset.service) {
+        const id = serviceCard.dataset.service;
+        const name = serviceCard.querySelector('.service-info h4')?.textContent?.trim() || 'Service';
+        const priceText = serviceCard.querySelector('.service-price')?.textContent || '$0';
+        const price = parseInt(String(priceText).replace(/[^0-9]/g, ''), 10) || 0;
+        const category = serviceCard.dataset.category || '';
+        this.addServiceSelection({ id, name, price, category });
+        this.updateQuoteBreakdown();
+        return;
       }
     });
 
@@ -275,53 +328,264 @@ class ServiceBuilder {
   }
 
   renderServiceBuilder() {
-    const container = document.querySelector('.service-builder-grid');
-    if (!container) return;
-    
-    // Two-column layout: left catalog, right builder (matches css/service-builder.css)
-    container.innerHTML = `
-      <div class="service-catalog">
-        <div class="catalog-header">
-          <h3>Service Packages</h3>
-          <p>Select a base package or drag services into your build</p>
-        </div>
-        <div class="service-items">
-          ${this.basePackages.map(pkg => `
-            <div class="service-item">
-              <div class="service-item-header">
-                <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-                <div class="service-info">
-                  <h4>${pkg.name}</h4>
-                  <p>${pkg.description}</p>
-                </div>
-                <div class="service-price">$${pkg.price}</div>
-              </div>
-              <button class="package-button package-select" data-package="${pkg.id}">Select Package</button>
-            </div>
-          `).join('')}
+    // If the module already provides full markup (index2 clone), do not re-render
+    const hasProvidedMarkup = document.querySelector('.service-items') && document.querySelector('#packageDropzone');
+    if (hasProvidedMarkup) return;
+    // Otherwise, fallback to a minimal two-column builder (not used for modular index)
+  }
+
+  enableDragAndDrop() {
+    const items = document.querySelectorAll('.service-item');
+    items.forEach((item) => {
+      // ensure draggable attributes exist
+      if (!item.hasAttribute('draggable')) item.setAttribute('draggable', 'true');
+      item.addEventListener('dragstart', (e) => {
+        e.dataTransfer.effectAllowed = 'copy';
+        const id = item.dataset.service || item.dataset.package || '';
+        const name = item.querySelector('.service-info h4')?.textContent?.trim() || item.dataset.name || '';
+        const priceText = item.querySelector('.service-price')?.textContent || '';
+        const price = parseInt(priceText.replace(/[^0-9]/g, ''), 10) || parseInt(item.dataset.price || '0', 10) || 0;
+        const payload = { type: 'service', id, name, price };
+        try { e.dataTransfer.setData('text/plain', JSON.stringify(payload)); } catch(_) {}
+        try { e.dataTransfer.setData('text/id', id); } catch(_) {}
+        item.classList.add('dragging');
+      });
+      item.addEventListener('dragend', () => item.classList.remove('dragging'));
+    });
+
+    const dropzone = document.querySelector('.package-dropzone');
+    if (!dropzone) return;
+    const enter = (e) => { e.preventDefault(); dropzone.classList.add('drag-over'); };
+    dropzone.addEventListener('dragenter', enter);
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropzone.classList.add('drag-over');
+    });
+    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('drag-over');
+      let data = null;
+      try { data = JSON.parse(e.dataTransfer.getData('text/plain') || '{}'); } catch (_) {}
+      const dragEl = document.querySelector('.service-item.dragging');
+      const id = data?.id || dragEl?.dataset.service || dragEl?.dataset.package;
+      if (!id) return;
+      const name = data?.name || dragEl?.querySelector('.service-info h4')?.textContent?.trim() || 'Service';
+      const priceText = (data?.price ? `$${data.price}` : dragEl?.querySelector('.service-price')?.textContent) || '$0';
+      const price = parseInt(String(priceText).replace(/[^0-9]/g, ''), 10) || 0;
+      const category = dragEl?.dataset.category || '';
+      this.addServiceSelection({ id, name, price, category });
+      this.updateQuoteBreakdown();
+    });
+  }
+
+  bindBuilderControls() {
+    const clearBtn = document.getElementById('clearPackage');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => this.resetBuilder());
+    }
+    const genBtn = document.getElementById('generateInvoice');
+    if (genBtn) {
+      genBtn.addEventListener('click', () => this.generateInvoice());
+    }
+  }
+
+  bindCategoryTabs() {
+    const tabs = document.querySelectorAll('.category-tab');
+    tabs.forEach(tab => {
+      if (tab.dataset.bound === '1') return;
+      tab.dataset.bound = '1';
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const category = tab.dataset.category || 'website';
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        this.filterServicesByCategory(category);
+      }, { passive: false });
+    });
+  }
+
+  filterServicesByCategory(category) {
+    const items = document.querySelectorAll('.service-item');
+    const headers = document.querySelectorAll('.service-section-header');
+    items.forEach(el => {
+      const match = category === 'all' || el.dataset.category === category;
+      el.style.display = match ? 'flex' : 'none';
+      el.classList.toggle('hidden', !match);
+    });
+    headers.forEach(h => {
+      const match = category === 'all' || h.dataset.category === category;
+      h.style.display = match ? 'block' : 'none';
+      h.classList.toggle('hidden', !match);
+    });
+
+    // Ensure service list remains scrollable and visible after filter
+    const list = document.getElementById('serviceItems');
+    if (list) list.scrollTop = 0;
+  }
+
+  addSelectedServiceCard(packageId) {
+    const pkg = this.basePackages.find(p => p.id === packageId);
+    if (!pkg) return;
+    const list = document.querySelector('.selected-services');
+    if (!list) return;
+    // prevent duplicates
+    if (list.querySelector(`[data-selected-id="${packageId}"]`)) return;
+    const item = document.createElement('div');
+    item.className = 'selected-service';
+    item.setAttribute('data-selected-id', packageId);
+    item.innerHTML = `
+      <div class="selected-service-info">
+        <div class="selected-service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="selected-service-details">
+          <h5>${pkg.name}</h5>
+          <p>Base package</p>
         </div>
       </div>
-      <div class="package-builder">
-        <div class="builder-header">
-          <h3>Custom Package Builder</h3>
-          <p>Drag services here or select a base package to start</p>
-        </div>
-        <div class="package-dropzone">
-          <div class="dropzone-placeholder">Drag and drop services here</div>
-          <div class="dropzone-icon"><i class="fa-solid fa-box"></i></div>
-          <div class="selected-services"></div>
-        </div>
-        <div class="quote-summary">
-          <div class="quote-header"><h4>Quote Summary</h4></div>
-          <div class="quote-total" id="quoteTotal">$${this.totalPrice}</div>
-          <div class="quote-breakdown" id="quoteBreakdown"></div>
-          <div class="quote-actions">
-            <button class="btn-generate-invoice" id="generateInvoice"><i class="fa-solid fa-file-invoice-dollar"></i> Create Project Request</button>
-            <button class="btn-clear-package" id="clearPackage"><i class="fa-solid fa-trash"></i> Clear Package</button>
-          </div>
-        </div>
+      <div class="selected-service-actions">
+        <span class="item-price">$${pkg.price}</span>
+        <button class="remove-service" data-service="${packageId}" aria-label="Remove">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
     `;
+    list.appendChild(item);
+    this.addServiceSelection({ id: packageId, name: pkg.name, price: pkg.price });
+    // hide placeholder visuals
+    const placeholder = document.querySelector('.dropzone-placeholder');
+    const icon = document.querySelector('.dropzone-icon');
+    if (placeholder) placeholder.style.display = 'none';
+    if (icon) icon.style.display = 'none';
+  }
+
+  addServiceSelection(service) {
+    if (!service || !service.id) return;
+    if (!Array.isArray(this.selectedItems)) this.selectedItems = [];
+    const exists = this.selectedItems.some(s => s.id === service.id);
+    if (!exists) this.selectedItems.push(service);
+    this.totalPrice = this.selectedItems.reduce((sum, s) => sum + (s.price || 0), 0);
+    const list = document.querySelector('.selected-services');
+    if (!list) return;
+    const already = list.querySelector(`[data-selected-id="${service.id}"]`);
+    if (already) return;
+    const item = document.createElement('div');
+    item.className = 'selected-service';
+    item.setAttribute('data-selected-id', service.id);
+    item.innerHTML = `
+      <div class="selected-service-info">
+        <div class="selected-service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="selected-service-details">
+          <h5>${service.name}</h5>
+          <p>$${service.price}</p>
+        </div>
+      </div>
+      <div class="selected-service-actions">
+        <span class="item-price">$${service.price}</span>
+        <button class="remove-service" data-service="${service.id}" aria-label="Remove">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    `;
+    list.appendChild(item);
+    const placeholder = document.querySelector('.dropzone-placeholder');
+    const icon = document.querySelector('.dropzone-icon');
+    if (placeholder) placeholder.style.display = 'none';
+    if (icon) icon.style.display = 'none';
+    const quoteSummary = document.getElementById('quoteSummary');
+    if (quoteSummary) quoteSummary.style.display = 'block';
+  }
+
+  updateQuoteBreakdown() {
+    const breakdown = document.getElementById('quoteBreakdown');
+    const totalEl = document.getElementById('quoteTotal');
+    if (breakdown) {
+      const lines = (this.selectedItems || []).map(s => `
+        <div class="quote-item">
+          <span class="quote-item-label">${s.name}</span>
+          <span class="quote-item-value">$${s.price}</span>
+        </div>`).join('');
+      breakdown.innerHTML = lines || '';
+    }
+    if (totalEl) totalEl.textContent = `$${this.totalPrice}`;
+  }
+
+  resetBuilder() {
+    this.currentPackage = null;
+    this.totalPrice = 0;
+    this.selectedItems = [];
+    const list = document.querySelector('.selected-services');
+    if (list) list.innerHTML = '';
+    document.querySelectorAll('.package-select').forEach(btn => btn.classList.remove('active'));
+    const container = document.querySelector('.selected-package');
+    if (container) container.innerHTML = '';
+    this.updateQuoteBreakdown();
+    const placeholder = document.querySelector('.dropzone-placeholder');
+    const icon = document.querySelector('.dropzone-icon');
+    if (placeholder) placeholder.style.display = '';
+    if (icon) icon.style.display = '';
+    const quoteSummary = document.getElementById('quoteSummary');
+    if (quoteSummary) quoteSummary.style.display = 'none';
+  }
+
+  generateInvoice() {
+    if (!this.selectedItems || this.selectedItems.length === 0) {
+      this.showNotification('Please add services to your package first!', 'error');
+      return;
+    }
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay active';
+    const serviceLines = this.selectedItems.map(s => `- ${s.name}: $${s.price}`).join('\n');
+    modal.innerHTML = `
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">×</button>
+        <div class="modal-header">
+          <div class="modal-icon"><i class="fa-solid fa-file-invoice"></i></div>
+          <h2>Send Your Project Request</h2>
+          <p>Enter your contact details and we'll receive your selected services instantly.</p>
+        </div>
+        <div class="contact-form">
+          <div class="form-group"><label>Full Name</label><input type="text" id="sb_name" required placeholder="Your name"></div>
+          <div class="form-group"><label>Email</label><input type="email" id="sb_email" required placeholder="you@example.com"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" id="sb_phone" required placeholder="(555) 123-4567"></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-secondary" id="sb_cancel">Cancel</button>
+          <button class="btn-primary" id="sb_send"><i class="fa-solid fa-paper-plane"></i> Send Project</button>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+    const close = () => modal.remove();
+    modal.querySelector('.modal-close').addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    modal.querySelector('#sb_cancel').addEventListener('click', close);
+    modal.querySelector('#sb_send').addEventListener('click', async () => {
+      const name = document.getElementById('sb_name').value.trim();
+      const email = document.getElementById('sb_email').value.trim();
+      const phone = document.getElementById('sb_phone').value.trim();
+      if (!name || !email) { this.showNotification('Please fill in your name and email.', 'error'); return; }
+      try {
+        if (typeof emailjs !== 'undefined') {
+          await emailjs.send('service_t11yvru', 'template_aluwel1', {
+            service: 'Project Generation',
+            name,
+            email,
+            phone,
+            notes: `Selected services:\n${serviceLines}\n\nTotal: $${this.totalPrice}`,
+            total_amount: `$${this.totalPrice}`,
+            title: 'Service Package Request'
+          });
+          this.showNotification('Project request sent! We\'ll reach out shortly.', 'success');
+          close();
+          this.resetBuilder();
+        } else {
+          this.showNotification('EmailJS not available. Please try again later.', 'error');
+        }
+      } catch (err) {
+        console.error(err);
+        this.showNotification('Failed to send. Please try again.', 'error');
+      }
+    });
   }
 
   submitQuote() {
@@ -372,7 +636,7 @@ class ServiceBuilder {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.querySelector('.service-builder-section')) {
+  if (document.querySelector('.service-builder-section') && !window.serviceBuilder) {
     window.serviceBuilder = new ServiceBuilder();
   }
 });

@@ -8,9 +8,9 @@
   --brand-red: #ef4444;
   --dark-900: #0f172a;
   --dark-950: #020617;
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-muted: #ffffff;
   --card-bg: rgba(15, 23, 42, 0.7);
   --card-border: 1px solid rgba(99,102,241,0.20);
   --backdrop: blur(12px);
@@ -37,6 +37,11 @@ html, body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+/* Force global readable text – ensure white by default */
+body, p, li, label, input, select, textarea, span, a, small, strong, em, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
 }
 
 /* AI Background & Neural Network */
@@ -95,7 +100,7 @@ html, body {
 }
 
 .section-subtitle {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: clamp(18px, 2.4vw, 22px);
   max-width: 800px;
   margin: 0 auto;
@@ -195,7 +200,7 @@ html, body {
 }
 
 .service-description {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -271,7 +276,7 @@ html, body {
 .portfolio-category-title {
   font-size: 28px;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
   margin: 0 0 40px;
   display: flex;
   align-items: center;
@@ -281,7 +286,7 @@ html, body {
 }
 
 .portfolio-category-title i {
-  color: var(--brand-gold);
+  color: var(--brand-gold) !important;
   font-size: 24px;
 }
 
@@ -297,8 +302,59 @@ html, body {
 }
 
 #webDevelopmentGrid {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
+
+/* Photography grid: 3 per row; allow natural image aspect ratios */
+#photographyGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-thumbnail.photo {
+  aspect-ratio: auto;
+  background: none;
+}
+
+.portfolio-thumbnail.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Simple fullscreen lightbox for photography */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  padding: 20px;
+}
+.lightbox-overlay.show { display: flex; }
+.lightbox-image {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
 
 .portfolio-item {
   position: relative;
@@ -329,7 +385,7 @@ html, body {
 .portfolio-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* ensures true 16:9 crop */
   transition: var(--transition);
 }
 
@@ -364,7 +420,7 @@ html, body {
   border: 3px solid #ffffff;
   display: grid;
   place-items: center;
-  color: #000000;
+  color: #000000; /* keep icon black inside gold circle for contrast */
   font-size: 20px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   transition: var(--transition);

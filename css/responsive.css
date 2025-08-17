@@ -82,10 +82,7 @@
     gap: 1.5rem;
   }
   
-  .service-builder-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+  .service-builder-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 /* Medium Devices (tablets, 768px and up) */
@@ -103,10 +100,7 @@
     gap: 2rem;
   }
   
-  .service-builder-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
+  .service-builder-grid { grid-template-columns: 1fr; gap: 2rem; }
   
   .customizer-options {
     grid-template-columns: repeat(2, 1fr);
@@ -128,10 +122,7 @@
     gap: 2rem;
   }
   
-  .service-builder-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
+  .service-builder-grid { grid-template-columns: minmax(540px, 640px) minmax(380px, 460px); gap: 2rem; justify-content: center; }
 }
 
 /* Extra Large Devices (large desktops, 1200px and up) */
@@ -149,10 +140,7 @@
     gap: 2.5rem;
   }
   
-  .service-builder-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
-  }
+  .service-builder-grid { grid-template-columns: minmax(540px, 680px) minmax(380px, 520px); gap: 2.5rem; justify-content: center; }
 }
 
 /* Landscape Orientation Adjustments */
@@ -239,7 +227,8 @@
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
     --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
+    --text-secondary: #ffffff;
+    --text-muted: #ffffff;
     --accent-color: #007bff;
   }
 }
@@ -249,8 +238,9 @@
   :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
-    --text-primary: #1a1a1a;
-    --text-secondary: #6c757d;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-muted: #ffffff;
     --accent-color: #007bff;
   }
 }

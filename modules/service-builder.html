@@ -1,86 +1,364 @@
-<section class="service-builder-section">
+<section class="service-builder-section section" id="serviceBuilder">
   <div class="service-builder-container">
     <div class="section-header">
-      <h2 class="section-title">Build Your Perfect Service Package</h2>
-      <p class="section-subtitle">Choose from our pre-built packages or customize your own solution</p>
+      <h2 class="section-title">Service Package Builder</h2>
+      <p class="section-subtitle">Build your perfect service package with our drag-and-drop builder. Select services, see real-time pricing, and generate instant project requests.</p>
     </div>
-    
+
     <div class="service-builder-grid">
-      <!-- Service packages will be dynamically loaded here -->
-    </div>
-    
-    <div class="selected-package">
-      <!-- Selected package details will appear here -->
-    </div>
-    
-    <div class="service-customizer">
-      <h3 class="customizer-title">Need Something Custom?</h3>
-      <p>Tell us about your project and we'll create a custom quote just for you.</p>
-      
-      <form class="quote-form">
-        <div class="customizer-options">
-          <div class="customizer-option">
-            <label class="option-label">Project Type</label>
-            <select class="option-input" name="projectType" required>
-              <option value="">Select Project Type</option>
-              <option value="website">Website Development</option>
-              <option value="ecommerce">E-commerce Platform</option>
-              <option value="webapp">Web Application</option>
-              <option value="branding">Brand Identity</option>
-              <option value="marketing">Marketing Campaign</option>
-              <option value="other">Other</option>
-            </select>
+      <!-- Service Catalog (left) -->
+      <div class="service-catalog">
+        <div class="catalog-header">
+          <h3>Service Catalog</h3>
+          <p>Drag services to build your package</p>
+        </div>
+
+        <div class="service-categories">
+          <button class="category-tab active" data-category="website">Websites</button>
+          <button class="category-tab" data-category="photography">Photography</button>
+          <button class="category-tab" data-category="videography">Video</button>
+          <button class="category-tab" data-category="branding">Branding</button>
+          <button class="category-tab" data-category="printing">Printing</button>
+          <button class="category-tab" data-category="retainer">Retainer</button>
+        </div>
+
+        <div class="service-items" id="serviceItems">
+          <!-- Website Category -->
+          <div class="service-section-header" data-category="website">Main Services</div>
+
+          <div class="service-item" data-category="website" draggable="true" data-service="starter-site">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="service-info">
+                <h4>Starter Site</h4>
+                <p>1-page scroll layout (Home + Contact), Mobile-friendly design</p>
+              </div>
+            </div>
+            <div class="service-price">$750</div>
           </div>
-          
-          <div class="customizer-option">
-            <label class="option-label">Budget Range</label>
-            <select class="option-input" name="budget" required>
-              <option value="">Select Budget Range</option>
-              <option value="1000-5000">$1,000 - $5,000</option>
-              <option value="5000-10000">$5,000 - $10,000</option>
-              <option value="10000-25000">$10,000 - $25,000</option>
-              <option value="25000+">$25,000+</option>
-            </select>
+
+          <div class="service-item" data-category="website" draggable="true" data-service="business-pro-site">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-globe"></i></div>
+              <div class="service-info">
+                <h4>Business Pro Site</h4>
+                <p>3-5 fully designed pages, Custom layout, Blog setup (optional)</p>
+              </div>
+            </div>
+            <div class="service-price">$1,250</div>
           </div>
-          
-          <div class="customizer-option">
-            <label class="option-label">Timeline</label>
-            <select class="option-input" name="timeline" required>
-              <option value="">Select Timeline</option>
-              <option value="asap">ASAP</option>
-              <option value="1month">1 Month</option>
-              <option value="3months">3 Months</option>
-              <option value="6months">6 Months</option>
-              <option value="flexible">Flexible</option>
-            </select>
+
+          <div class="service-item" data-category="website" draggable="true" data-service="brand-builder-site">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-rocket"></i></div>
+              <div class="service-info">
+                <h4>Brand Builder Site</h4>
+                <p>6-10 page fully branded website, E-commerce integration</p>
+              </div>
+            </div>
+            <div class="service-price">$2,500</div>
           </div>
-          
-          <div class="customizer-option">
-            <label class="option-label">Company Name</label>
-            <input type="text" class="option-input" name="companyName" placeholder="Your Company Name" required>
+
+          <!-- Photography Category -->
+          <div class="service-section-header" data-category="photography">Main Services</div>
+
+          <div class="service-item" data-category="photography" draggable="true" data-service="flash-start">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-camera"></i></div>
+              <div class="service-info">
+                <h4>Flash Start</h4>
+                <p>1 Hour Photography, Unlimited Digital Photos, Light Photo Editing</p>
+              </div>
+            </div>
+            <div class="service-price">$350</div>
           </div>
-          
-          <div class="customizer-option">
-            <label class="option-label">Contact Email</label>
-            <input type="email" class="option-input" name="email" placeholder="your@email.com" required>
+
+          <div class="service-item" data-category="photography" draggable="true" data-service="prime-exposure">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+              <div class="service-info">
+                <h4>Prime Exposure</h4>
+                <p>2 Hours Photography, Full Photo Editing, Download Access</p>
+              </div>
+            </div>
+            <div class="service-price">$600</div>
           </div>
-          
-          <div class="customizer-option">
-            <label class="option-label">Phone Number</label>
-            <input type="tel" class="option-input" name="phone" placeholder="(555) 123-4567">
+
+          <div class="service-item" data-category="photography" draggable="true" data-service="legacy-capture">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-award"></i></div>
+              <div class="service-info">
+                <h4>Legacy Capture</h4>
+                <p>3 Hours Photography, Advanced Editing & Color Grading</p>
+              </div>
+            </div>
+            <div class="service-price">$900</div>
+          </div>
+
+          <div class="service-section-header" data-category="photography">Add-ons</div>
+
+          <div class="service-item" data-category="photography" draggable="true" data-service="rush-editing">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-clock"></i></div>
+              <div class="service-info">
+                <h4>Rush Editing</h4>
+                <p>24-hour turnaround for urgent projects</p>
+              </div>
+            </div>
+            <div class="service-price">$75</div>
+          </div>
+
+          <div class="service-item" data-category="photography" draggable="true" data-service="travel-fee">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-car"></i></div>
+              <div class="service-info">
+                <h4>Travel Fee</h4>
+                <p>For locations outside standard service area</p>
+              </div>
+            </div>
+            <div class="service-price">$50</div>
+          </div>
+
+          <!-- Videography Category (expanded per index2) -->
+          <div class="service-section-header" data-category="videography">Main Services</div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="hourly-video">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-clock"></i></div>
+              <div class="service-info">
+                <h4>Hourly Video Service</h4>
+                <p>Professional video production hourly rate</p>
+              </div>
+            </div>
+            <div class="service-price">$250</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="event-video-2hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-video"></i></div>
+              <div class="service-info">
+                <h4>Event Video + 60 Sec Recap</h4>
+                <p>2 Hours filming with professional 60-second recap video</p>
+              </div>
+            </div>
+            <div class="service-price">$500</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="event-video-3hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-film"></i></div>
+              <div class="service-info">
+                <h4>Event Video + 60 Sec Recap</h4>
+                <p>3 Hours filming with professional 60-second recap video</p>
+              </div>
+            </div>
+            <div class="service-price">$750</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="event-video-5hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-camera"></i></div>
+              <div class="service-info">
+                <h4>Event Video + 60-90 Sec Recap</h4>
+                <p>5 Hours filming with extended professional recap video</p>
+              </div>
+            </div>
+            <div class="service-price">$1,250</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="event-video-8hr-no-edit">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-video-camera"></i></div>
+              <div class="service-info">
+                <h4>Event Video (No Edits)</h4>
+                <p>8 Hours professional filming, no post-production</p>
+              </div>
+            </div>
+            <div class="service-price">$2,000</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="event-video-8hr-recap">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-film"></i></div>
+              <div class="service-info">
+                <h4>Event Video + 60 Sec Recap</h4>
+                <p>8 Hours filming with professional 60-second recap video</p>
+              </div>
+            </div>
+            <div class="service-price">$2,200</div>
+          </div>
+
+          <div class="service-section-header" data-category="videography">Podcast Services</div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="podcast-1hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-podcast"></i></div>
+              <div class="service-info">
+                <h4>Podcast + Edits (2 Cameras)</h4>
+                <p>1 Hour podcast recording with full editing</p>
+              </div>
+            </div>
+            <div class="service-price">$750</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="podcast-2hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-microphone"></i></div>
+              <div class="service-info">
+                <h4>Podcast + Edits (2 Cameras)</h4>
+                <p>2 Hour podcast recording with full editing</p>
+              </div>
+            </div>
+            <div class="service-price">$1,000</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="podcast-3hr">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-headphones"></i></div>
+              <div class="service-info">
+                <h4>Podcast + Edits (2 Cameras)</h4>
+                <p>3 Hour podcast recording with full editing</p>
+              </div>
+            </div>
+            <div class="service-price">$1,500</div>
+          </div>
+
+          <div class="service-item" data-category="videography" draggable="true" data-service="podcast-shoot-only">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+              <div class="service-info">
+                <h4>Podcast Shoot Only</h4>
+                <p>Recording only, no editing included</p>
+              </div>
+            </div>
+            <div class="service-price">$250</div>
+          </div>
+
+          <!-- Branding Category -->
+          <div class="service-section-header" data-category="branding">Main Services</div>
+          <div class="service-item" data-category="branding" draggable="true" data-service="ignite-brand">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-fire"></i></div>
+              <div class="service-info">
+                <h4>Ignite Package</h4>
+                <p>Custom Logo Design, 1-Page Landing Website, Basic Content Strategy</p>
+              </div>
+            </div>
+            <div class="service-price">$900</div>
+          </div>
+          <div class="service-item" data-category="branding" draggable="true" data-service="collaborate-brand">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-handshake"></i></div>
+              <div class="service-info">
+                <h4>Collaborate Package</h4>
+                <p>Everything in Ignite + Multi-Page Website, Social Media Setup</p>
+              </div>
+            </div>
+            <div class="service-price">$1,800</div>
+          </div>
+          <div class="service-item" data-category="branding" draggable="true" data-service="transform-brand">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-magic"></i></div>
+              <div class="service-info">
+                <h4>Transform Package</h4>
+                <p>Everything in Collaborate + E-Commerce, Advanced Website Features</p>
+              </div>
+            </div>
+            <div class="service-price">$3,500</div>
+          </div>
+          <div class="service-item" data-category="branding" draggable="true" data-service="logo-design">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-palette"></i></div>
+              <div class="service-info">
+                <h4>Logo Design</h4>
+                <p>3 custom concepts, 2 revision rounds, Full branding kit</p>
+              </div>
+            </div>
+            <div class="service-price">$250</div>
+          </div>
+
+          <!-- Printing Category -->
+          <div class="service-section-header" data-category="printing">Main Services</div>
+          <div class="service-item" data-category="printing" draggable="true" data-service="quick-print-4x6">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-print"></i></div>
+              <div class="service-info">
+                <h4>Quick Print Booth (4x6)</h4>
+                <p>1 Hour operation, Up to 100 prints, On-site technician</p>
+              </div>
+            </div>
+            <div class="service-price">$500</div>
+          </div>
+          <div class="service-item" data-category="printing" draggable="true" data-service="signature-snap-4x6">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-images"></i></div>
+              <div class="service-info">
+                <h4>Signature Snap Station (4x6)</h4>
+                <p>2 Hours operation, Up to 200 prints, Premium backdrop</p>
+              </div>
+            </div>
+            <div class="service-price">$800</div>
+          </div>
+          <div class="service-item" data-category="printing" draggable="true" data-service="legacy-lab-4x6">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-trophy"></i></div>
+              <div class="service-info">
+                <h4>Legacy Lab Experience (4x6)</h4>
+                <p>3 Hours operation, Up to 350 prints, 2-Person print team</p>
+              </div>
+            </div>
+            <div class="service-price">$1,100</div>
+          </div>
+
+          <!-- Website Add-ons -->
+          <div class="service-section-header" data-category="website">Add-ons</div>
+          <div class="service-item" data-category="website" draggable="true" data-service="seo-boost">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="service-info">
+                <h4>SEO Boost Package</h4>
+                <p>Keyword research, Meta tag optimization, Sitemap submission</p>
+              </div>
+            </div>
+            <div class="service-price">$250</div>
+          </div>
+          <div class="service-item" data-category="website" draggable="true" data-service="google-business">
+            <div class="service-item-header">
+              <div class="service-icon"><i class="fab fa-google"></i></div>
+              <div class="service-info">
+                <h4>Google Business Profile Setup</h4>
+                <p>Claim, verify, and fully set up your business profile</p>
+              </div>
+            </div>
+            <div class="service-price">$100</div>
           </div>
         </div>
-        
-        <div class="customizer-option full-width">
-          <label class="option-label">Project Description</label>
-          <textarea class="option-input" name="description" rows="4" 
-                    placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+      </div>
+
+      <!-- Package Builder (right) -->
+      <div class="package-builder">
+        <div class="builder-header">
+          <h3>Your Package</h3>
+          <p>Drag services here to build your custom package</p>
         </div>
-        
-        <div class="form-actions">
-          <button type="submit" class="submit-button">Get Custom Quote</button>
+        <div class="package-dropzone" id="packageDropzone">
+          <div class="dropzone-placeholder">
+            <div class="dropzone-icon"><i class="fas fa-plus"></i></div>
+            <p>Drag services here to start building your package</p>
+            <small>Mix and match services to create your perfect solution</small>
+          </div>
+          <div class="selected-services" id="selectedServices" style="display: none;"></div>
         </div>
-      </form>
+        <div class="quote-summary" id="quoteSummary" style="display: none;">
+          <div class="quote-header"><h4>Quote Summary</h4></div>
+          <div class="quote-total" id="quoteTotal">$0</div>
+          <div class="quote-breakdown" id="quoteBreakdown"></div>
+          <div class="quote-actions">
+            <button class="btn-generate-invoice" id="generateInvoice"><i class="fa-solid fa-file-invoice-dollar"></i> Create Project Request</button>
+            <button class="btn-clear-package" id="clearPackage"><i class="fa-solid fa-trash"></i> Clear Package</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

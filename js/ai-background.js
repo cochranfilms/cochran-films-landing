@@ -178,5 +178,20 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = AINeuralBackground;
 }
 
-// Make the class globally available
+// Make the class globally available and alias to legacy name used elsewhere
 window.AINeuralBackground = AINeuralBackground;
+// Backward compatibility with pages that instantiate AINeuralNetwork
+window.AINeuralNetwork = window.AINeuralNetwork || AINeuralBackground;
+
+// Safe auto-initialization (prevents duplicate instances)
+function initAINeural() {
+  if (window.__AI_BACKGROUND_INIT__) return;
+  window.__AI_BACKGROUND_INIT__ = true;
+  try { new (window.AINeuralNetwork || window.AINeuralBackground)(); } catch (e) { console.warn('AI background init failed:', e); }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAINeural);
+} else {
+  initAINeural();
+}

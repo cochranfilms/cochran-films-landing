@@ -84,6 +84,21 @@ class ModuleLoader {
 
     // Initialize any additional functionality
     this.initializeAdditionalFeatures();
+
+    // After everything is in the DOM, rebind builder once more to avoid race conditions
+    setTimeout(() => {
+      try {
+        if (document.querySelector('.service-builder-section')) {
+          if (typeof window.initializeServicePackageBuilder === 'function') {
+            window.initializeServicePackageBuilder();
+          } else if (window.ServiceBuilder && !window.serviceBuilder) {
+            window.serviceBuilder = new window.ServiceBuilder();
+          }
+        }
+      } catch (e) {
+        console.warn('Service builder post-load init failed:', e);
+      }
+    }, 50);
   }
 
   // Initialize additional features after modules are loaded
@@ -93,15 +108,22 @@ class ModuleLoader {
       new window.PortfolioManager();
     }
 
-    // Service builder functionality
-    if (window.ServicePackageBuilder) {
-      new window.ServicePackageBuilder();
+    // Service builder functionality (prefer index2 initializer for parity)
+    if (document.querySelector('.service-builder-section')) {
+      if (!document.querySelector('link[href*="font-awesome"][rel="stylesheet"]')) {
+        const fa = document.createElement('link');
+        fa.rel = 'stylesheet';
+        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
+        document.head.appendChild(fa);
+      }
+      if (typeof window.initializeServicePackageBuilder === 'function') {
+        window.initializeServicePackageBuilder();
+      } else if (window.ServiceBuilder && !window.serviceBuilder) {
+        window.serviceBuilder = new window.ServiceBuilder();
+      }
     }
 
-    // AI background
-    if (window.AINeuralNetwork) {
-      new window.AINeuralNetwork();
-    }
+    // AI background is now safely auto-initialized in ai-background.js
   }
 
   // Check if a specific module is loaded

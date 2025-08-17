@@ -148,7 +148,7 @@
 }
 
 .portfolio-description {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 0.95rem;
@@ -238,18 +238,14 @@
 }
 
 .stat-label {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
 }
 
-.no-results {
-  text-align: center;
-  padding: 3rem;
-  color: var(--text-secondary);
-}
+.no-results { text-align: center; padding: 3rem; color: var(--text-primary); }
 
 .no-results h3 {
   color: var(--text-primary);

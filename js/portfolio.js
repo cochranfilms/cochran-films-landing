@@ -24,9 +24,10 @@ class PortfolioManager {
   async loadPortfolioData() {
     try {
       // Load both CSV files
-      const [portfolioData, webData] = await Promise.all([
+      const [portfolioData, webData, photoData] = await Promise.all([
         this.fetchCSV('CMS/Collections/Portfolio.csv'),
-        this.fetchCSV('CMS/Collections/Web.csv')
+        this.fetchCSV('CMS/Collections/Web.csv'),
+        this.fetchCSV('CMS/Collections/Photography.csv')
       ]);
 
       // Process Portfolio.csv (Video Production)
@@ -35,11 +36,14 @@ class PortfolioManager {
       // Process Web.csv (Web Development)
       const webItems = this.parseWebCSV(webData);
 
+      // Process Photography.csv (Photography)
+      const photoItems = this.parsePhotographyCSV(photoData);
+
       // Combine all items
-      this.portfolioItems = [...videoItems, ...webItems];
+      this.portfolioItems = [...videoItems, ...webItems, ...photoItems];
       this.filteredItems = [...this.portfolioItems];
       
-      console.log(`✅ Loaded ${videoItems.length} video projects and ${webItems.length} web projects`);
+      console.log(`✅ Loaded ${videoItems.length} video projects, ${webItems.length} web projects, and ${photoItems.length} photos`);
       
     } catch (error) {
       console.error('❌ Error loading portfolio data:', error);
@@ -149,25 +153,40 @@ class PortfolioManager {
       const items = [];
       rows.forEach((row, idx) => {
         if (row.Title && (row.Category || row.ServiceCategory)) {
-          const thumbnail = this.getValue(row, [
-            'thumbnailUrl', 'Thumbnail Image', 'Thumbnail', 'Image'
-          ]);
-          const isFeatured = this.toBoolean(this.getValue(row, [
-            'Is Featured', 'IsFeatured', 'Featured'
-          ]));
-          items.push({
-            id: row.ID || `portfolio-${idx + 1}`,
-            title: row.Title,
-            description: row.Description || 'Professional video production work',
-            image: thumbnail || this.createPlaceholder(row.Title, '#6366f1'),
-            category: 'video-production',
-            tags: [row.Category || 'Video Production', 'Video Production'],
-            link: row.playbackUrl || row.Video || '#',
-            featured: isFeatured,
-            categoryRef: row.CategoryRef,
-            uploadDate: row.UploadDate,
-            ownerName: row.OwnerName
-          });
+          let thumbnail = this.getValue(row, ['thumbnailUrl', 'Thumbnail Image', 'Thumbnail', 'Image']);
+          const isFeatured = this.toBoolean(this.getValue(row, ['Is Featured', 'IsFeatured', 'Featured']));
+          const categoryText = String(row.Category || row.ServiceCategory || '').toLowerCase();
+          const hasVideo = !!(row.playbackUrl || row.Video);
+          const isPhoto = categoryText.includes('photo') || (!hasVideo && !!thumbnail);
+
+          if (isPhoto) {
+            items.push({
+              id: row.ID || `portfolio-photo-${idx + 1}`,
+              title: row.Title,
+              description: row.Description || '',
+              image: thumbnail || this.createPlaceholder(row.Title, '#0ea5e9'),
+              category: 'photography',
+              tags: [row.Category || 'Photography', 'Photography'],
+              link: row.URL || '#',
+              featured: isFeatured,
+              uploadDate: row.UploadDate,
+              ownerName: row.OwnerName
+            });
+          } else {
+            items.push({
+              id: row.ID || `portfolio-${idx + 1}`,
+              title: row.Title,
+              description: row.Description || 'Professional video production work',
+              image: thumbnail || this.createPlaceholder(row.Title, '#6366f1'),
+              category: 'video-production',
+              tags: [row.Category || 'Video Production', 'Video Production'],
+              link: row.playbackUrl || row.Video || '#',
+              featured: isFeatured,
+              categoryRef: row.CategoryRef,
+              uploadDate: row.UploadDate,
+              ownerName: row.OwnerName
+            });
+          }
         }
       });
       return items;
@@ -210,6 +229,58 @@ class PortfolioManager {
       return items;
     } catch (error) {
       console.error('❌ Error parsing Web CSV:', error);
+      return [];
+    }
+  }
+
+  // New: parse Photography CSV
+  parsePhotographyCSV(csvData) {
+    if (!csvData) return [];
+    try {
+      const { rows } = this.parseCSVRows(csvData);
+      const items = [];
+      rows.forEach((row, idx) => {
+        // Accept a variety of header names, including 'image_url'
+        let url = this.getValue(row, ['image_url', 'Image URL', 'image', 'img', 'Thumbnail Image', 'Image', 'thumbnailUrl']);
+
+        // If no known key, fall back to the first non-empty cell value
+        if (!url) {
+          const values = Object.values(row).map(v => (v || '').trim()).filter(Boolean);
+          if (values.length > 0) url = values[0];
+        }
+
+        if (!url) return; // skip empty rows
+
+        // Normalize GitHub blob URLs to raw
+        if (url.includes('github.com') && url.includes('/blob/')) {
+          url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+        }
+
+        // Create a friendly title from filename if none provided
+        const explicitTitle = row.Title && row.Title.trim();
+        const fallbackTitle = (() => {
+          try {
+            const pathname = new URL(url).pathname;
+            const file = pathname.split('/').pop() || 'Photo';
+            return decodeURIComponent(file).replace(/\.[a-zA-Z0-9]+$/, '').replace(/[-_]+/g, ' ');
+          } catch (_) { return 'Photo'; }
+        })();
+
+        items.push({
+          id: `photo-${idx + 1}`,
+          title: explicitTitle || fallbackTitle,
+          description: row.Description || '',
+          image: url,
+          category: 'photography',
+          tags: ['Photography'],
+          link: row.URL || url,
+          featured: this.toBoolean(this.getValue(row, ['Is Featured', 'IsFeatured', 'Featured'])),
+          uploadDate: row.UploadDate
+        });
+      });
+      return items;
+    } catch (error) {
+      console.error('❌ Error parsing Photography CSV:', error);
       return [];
     }
   }
@@ -405,7 +476,8 @@ class PortfolioManager {
   renderPortfolioByCategory() {
     const categoryGrids = {
       'video-production': document.getElementById('videoProductionGrid'),
-      'web-development': document.getElementById('webDevelopmentGrid')
+      'web-development': document.getElementById('webDevelopmentGrid'),
+      'photography': document.getElementById('photographyGrid')
     };
 
     const hasAnyGrid = Object.values(categoryGrids).some(Boolean);
@@ -448,12 +520,22 @@ class PortfolioManager {
 
     const videoItems = this.portfolioItems.filter(i => i.category === 'video-production');
     const webItems = this.portfolioItems.filter(i => i.category === 'web-development');
+    const photoItems = this.portfolioItems.filter(i => i.category === 'photography');
 
     if (categoryGrids['video-production']) {
       categoryGrids['video-production'].innerHTML = videoItems.map(createCard).join('');
     }
     if (categoryGrids['web-development']) {
       categoryGrids['web-development'].innerHTML = webItems.map(createCard).join('');
+    }
+    if (categoryGrids['photography']) {
+      categoryGrids['photography'].innerHTML = photoItems.map(item => `
+        <div class="portfolio-item photo" data-id="${item.id}" data-src="${item.image}">
+          <div class="portfolio-thumbnail photo">
+            <img src="${item.image}" alt="${item.title || ''}" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      `).join('');
     }
 
     this.bindCardClicks();
@@ -488,6 +570,52 @@ class PortfolioManager {
         }
       });
     });
+
+    // Photography: open lightbox
+    document.querySelectorAll('#photographyGrid .portfolio-item.photo').forEach(card => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-src');
+        if (src) {
+          this.openPhotoLightbox(src);
+        }
+      });
+    });
+  }
+
+  openPhotoLightbox(imageUrl) {
+    // Create overlay if not exists
+    let overlay = document.getElementById('photoLightbox');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'photoLightbox';
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML = `
+        <button class="lightbox-close" aria-label="Close">×</button>
+        <img class="lightbox-image" alt="Photography" />
+      `;
+      document.body.appendChild(overlay);
+
+      // Close interactions
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target.classList.contains('lightbox-close')) {
+          overlay.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('show')) {
+          overlay.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    const img = overlay.querySelector('.lightbox-image');
+    if (img) {
+      img.src = imageUrl;
+    }
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
   }
 
   updatePortfolioStats() {
