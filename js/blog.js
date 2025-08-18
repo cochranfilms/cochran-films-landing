@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
             <a class="read-more" href="${internalUrl}" ${hasSeoPage ? '' : 'target="_blank" rel="noopener"'}>Open post</a>
             <a class="read-more" href="${url}" target="_blank" rel="noopener">Read source</a>
+            <a class="read-more" href="/index2.html#home">Home</a>
           </div>
         </article>
       `;

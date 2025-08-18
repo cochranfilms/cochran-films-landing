@@ -103,6 +103,59 @@ class ModuleLoader {
 
   // Initialize additional features after modules are loaded
   initializeAdditionalFeatures() {
+    // Inject AI blog banner when on blog pages
+    try {
+      const path = location.pathname;
+      const isBlogList = /\/blog\.html$/.test(path);
+      const isBlogPost = /\/blog\/post\//.test(path);
+      if (isBlogList || isBlogPost) {
+        const main = document.querySelector('main.wrapper') || document.querySelector('main');
+        if (main && !document.getElementById('ai-blog-banner')) {
+          const banner = document.createElement('section');
+          banner.id = 'ai-blog-banner';
+          banner.style.cssText = 'margin-top:80px; margin-bottom:16px; border:1px solid rgba(99,102,241,0.25); background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9)); border-radius:16px; padding:16px 18px; color:#e5e7eb';
+          const meta = (document.querySelector('h1')?.textContent || '').toLowerCase();
+          let tagline = 'Daily insights on web design, filmmaking, video creation, and brand development—curated for creators and founders.';
+          if (isBlogPost) {
+            if (meta.includes('photo') || meta.includes('aperture') || meta.includes('lens')) tagline = 'You’re reading a photography feature. Expect practical, field-tested tips you can apply on your next shoot.';
+            else if (meta.includes('camera') || meta.includes('video') || meta.includes('cinema')) tagline = 'You’re reading a video production piece—gear, workflows, and storytelling that move audiences.';
+            else if (meta.includes('web') || meta.includes('vue') || meta.includes('java') || meta.includes('cms')) tagline = 'You’re reading a web and software article—clean architecture, performance, and modern UX patterns.';
+            else if (meta.includes('brand') || meta.includes('marketing')) tagline = 'You’re reading a branding strategy brief—positioning, messaging, and systems that scale.';
+          }
+          banner.innerHTML = `
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:42px;height:42px;border-radius:10px;background:rgba(255,178,0,0.15);display:grid;place-items:center;color:#FFB200"><i class="fas fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h2 style="margin:0 0 6px 0; font-size:18px; font-weight:800; background: linear-gradient(135deg, #fff, #dbeafe); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Cochran Films Daily Brief</h2>
+                <p style="margin:0; color:#cbd5e1;">${tagline}</p>
+                <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+                  <a href="/blog.html" class="nav-link" style="padding:8px 12px;border-radius:999px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.3);color:#cbd5e1;text-decoration:none;font-weight:700">← Back to Blog</a>
+                  <a href="/index2.html#home" class="nav-link" style="padding:8px 12px;border-radius:999px;background:rgba(255,178,0,0.15);border:1px solid rgba(255,178,0,0.35);color:#fef3c7;text-decoration:none;font-weight:800">Home</a>
+                </div>
+              </div>
+            </div>`;
+          main.prepend(banner);
+
+          // Add a subtle credit strip under the banner on post pages
+          if (isBlogPost) {
+            const credit = document.createElement('div');
+            credit.style.cssText = 'margin-top:8px;color:#94a3b8;font-size:12px;';
+            const src = document.querySelector('a.read-more[href^="http"]')?.getAttribute('href') || '';
+            try { const host = src ? new URL(src).hostname.replace(/^www\./,'') : ''; credit.textContent = host ? `Source: ${host} • Curated by Cochran Films` : 'Curated by Cochran Films'; } catch { credit.textContent = 'Curated by Cochran Films'; }
+            banner.appendChild(credit);
+          }
+        }
+        // Ensure top spacing so content isn't hidden under fixed nav
+        document.querySelectorAll('main.wrapper').forEach(el => {
+          const current = window.getComputedStyle(el).paddingTop;
+          if (!current || parseInt(current) < 100) {
+            el.style.paddingTop = '100px';
+          }
+        });
+      }
+    } catch (e) {
+      console.warn('AI blog banner injection failed:', e);
+    }
     // Portfolio functionality
     if (window.PortfolioManager) {
       new window.PortfolioManager();

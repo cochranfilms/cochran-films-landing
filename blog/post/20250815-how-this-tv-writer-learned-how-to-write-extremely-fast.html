@@ -30,20 +30,63 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>How This TV Writer Learned How to Write Extremely Fast</h1>
       <div class="meta">8/15/2025, 4:49:21 PM • production</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://nofilmschool.com/media-library/how-this-tv-writer-learned-how-to-write-extremely-fast.jpg?id=61469821&width=980" alt="How This TV Writer Learned How to Write Extremely Fast" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       <div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="https://www.youtube.com/embed/t9BwJihhhEA?rel=0" title="How This TV Writer Learned How to Write Extremely Fast" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-      <p>Steven Levitan knows how to make television that sticks with you. The Chicago-raised writer-producer has been crafting comedy gold for over three decades, starting with his early days writing for Wings to co-creating the Emmy-winning Modern Family. He&#39;s written hundreds of episodes of TV—the dream for many of us. It&#39;s clear he&#39;s figured out a few things t...</p>
+      <div class="excerpt">
+<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" src="https://nofilmschool.com/media-library/how-this-tv-writer-learned-how-to-write-extremely-fast.jpg?id=61469821&width=1200&height=800&coordinates=96%2C0%2C97%2C0"/><br/><br/><p><a rel="nofollow noopener" target="_blank" href="https://www.imdb.com/name/nm0506160/" target="_blank">Steven Levitan</a> knows how to make television that sticks with you. The Chicago-raised writer-producer has been crafting comedy gold for over three decades, starting with his early days writing for <em>Wings</em> to co-creating the Emmy-winning <em>Modern Family</em>. He's written hundreds of episodes of TV—the dream for many of us.</p>
+<p>It's clear he's figured out a few things that work. In a recent and far-ranging <a rel="nofollow noopener" target="_blank" href="https://www.youtube.com/watch?v=t9BwJihhhEA" target="_blank">interview</a>, Levitan offered tons of insight on his process, including how he <a rel="nofollow noopener" target="_blank" href="https://nofilmschool.com/how-long-does-it-take-to-write-a-screenplay" target="_blank">writes so much and so quickly</a>.</p>
+<p class="shortcode-media shortcode-media-youtube"> <span class="rm-shortcode" data-rm-shortcode-id="9f04e86f1b49007ff287bc849fff2a9e" style="display:block;position:relative;padding-top:56.25%;"></span> <small class="image-media media-caption" placeholder="Add Photo Caption...">- YouTube</small> <small class="image-media media-photo-credit" placeholder="Add Photo Credit..."> <a rel="nofollow noopener" target="_blank" href="https://www.youtube.com/watch?v=t9BwJihhhEA" target="_blank">www.youtube.com</a> </small> </p>
+<p>Levitan learned this lesson early, back when he was a TV news reporter fresh out of college, he said. He would show up on a scene, have to think on the fly, and prep a segment he would have to do live, all while under an intense time crunch.</p>
+<p>So later, when he showed up in a TV writers' room, "fast" meant something different.</p></div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://nofilmschool.com/steven-levitan-writing-fast" target="_blank" rel="noopener nofollow">Read full article at nofilmschool.com</a>
+        <a class="read-more" href="https://nofilmschool.com/steven-levitan-writing-fast" target="_blank" rel="noopener nofollow">Continue reading on nofilmschool.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #Modern family #Tv writing #Screenwriting advice #Steven levitan</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #Modern family #Tv writing #Screenwriting advice #Steven levitan</div>
+        <div>Credit: Source — nofilmschool.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-how-this-tv-writer-learned-how-to-write-extremely-fast";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>

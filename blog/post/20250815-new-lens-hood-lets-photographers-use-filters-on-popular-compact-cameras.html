@@ -30,20 +30,62 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>New Lens Hood Lets Photographers Use Filters on Popular Compact Cameras</h1>
       <div class="meta">8/15/2025, 3:03:42 PM • photography</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://petapixel.com/assets/uploads/2025/08/freewell-lens-hood-featured.jpg" alt="New Lens Hood Lets Photographers Use Filters on Popular Compact Cameras" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       
-      <p>Photo accessory company Freewell Gear announced Real Lens Hood, a convenient and versatile lens hood built for some of the most popular all-in-one cameras on the market, including the Fujifilm X100VI, Leica Q3 43, Fujifilm GFX100RF, and Ricoh GR III (and GR IIIx). [Read More]</p>
+      <div class="excerpt"><p class="feature-image"><a rel="nofollow noopener" target="_blank" href="https://petapixel.com/2025/08/15/new-lens-hood-lets-photographers-use-filters-on-popular-compact-cameras/"><img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" width="1600" height="840" src="https://petapixel.com/assets/uploads/2025/08/freewell-lens-hood-featured.jpg" class="attachment-card-large size-card-large wp-post-image" alt="A camera lens filter adapter kit is shown with its parts separated above, including the adapter ring, filter, and carrying case, and illustrations of two cameras below displaying the filter attached." decoding="async" /></a></p>
+<p>Photo accessory company Freewell Gear announced Real Lens Hood, a convenient and versatile lens hood built for some of the most popular all-in-one cameras on the market, including the Fujifilm X100VI, Leica Q3 43, Fujifilm GFX100RF, and Ricoh GR III (and GR IIIx).</p>
+
+<p class="read-more">[<a rel="nofollow noopener" target="_blank" href="https://petapixel.com/2025/08/15/new-lens-hood-lets-photographers-use-filters-on-popular-compact-cameras/">Read More</a>]</p>
+</div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://petapixel.com/2025/08/15/new-lens-hood-lets-photographers-use-filters-on-popular-compact-cameras/" target="_blank" rel="noopener nofollow">Read full article at petapixel.com</a>
+        <a class="read-more" href="https://petapixel.com/2025/08/15/new-lens-hood-lets-photographers-use-filters-on-popular-compact-cameras/" target="_blank" rel="noopener nofollow">Continue reading on petapixel.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #Equipment #News #freewellgear #Fujifilmgfx100rf #fujifilmx100vi #leicaq343 #lenshood #ricohgriii</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #Equipment #News #freewellgear #Fujifilmgfx100rf #fujifilmx100vi #leicaq343 #lenshood #ricohgriii</div>
+        <div>Credit: Source — petapixel.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-new-lens-hood-lets-photographers-use-filters-on-popular-compact-cameras";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>

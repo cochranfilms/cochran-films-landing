@@ -30,20 +30,65 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>Fujifilm Shooters Are Finally Getting This Fast, Portable, and Popular Autofocus-Enabled Prime Lens</h1>
       <div class="meta">8/15/2025, 1:55:07 PM • production</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://nofilmschool.com/media-library/ttartisan-af-75mm-f2-x.jpg?id=61468712&width=980" alt="Fujifilm Shooters Are Finally Getting This Fast, Portable, and Popular Autofocus-Enabled Prime Lens" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       <div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="https://www.youtube.com/embed/sRa9K2kcoD8?rel=0" title="Fujifilm Shooters Are Finally Getting This Fast, Portable, and Popular Autofocus-Enabled Prime Lens" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-      <p>Already available for L/Z/FE mounts, the TTArtisan AF 75mm f/2 has proven to be a fast, portable, and popular AF-enabled prime lens that looks great, but also certainly won’t break your budget. With this latest addition still staying below $200 for a fast prime, it’s a pretty good deal for photographers and videographers alike looking for a reliable, fast...</p>
+      <div class="excerpt">
+<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" src="https://nofilmschool.com/media-library/ttartisan-af-75mm-f2-x.jpg?id=61468712&width=1245&height=700&coordinates=0%2C0%2C0%2C0"/><br/><br/><p>Already available for L/Z/FE mounts, the TTArtisan AF 75mm f/2 has proven to be a fast, portable, and popular AF-enabled prime lens that looks great, but also certainly won’t break your budget. </p>
+<p>With this latest addition still staying below $200 for a fast prime, it’s a pretty good deal for photographers and videographers alike looking for a reliable, fast AF lens that can be used in a variety of situations.</p>
+<p>Let’s take a look at this new TTArtisan AF-FF 75mm F2 X and see what it could offer for your Fujifilm camera loadouts.</p>
+<hr/><h3>The TTArtisan AF 75mm F2 X</h3><br/><span class="rm-shortcode" data-rm-shortcode-id="b689f76a8cc8fa3eb8e245d2ce2e4639" style="display:block;position:relative;padding-top:56.25%;"></span><p>Ideal for portraiture or other macro-style shot types, the TTArtisan AF-FF 75mm F2 X is fast, portable, and quite affordable. Lightweight at 12 oz, the lens's bright f/2 aperture is effective at separating subjects from the background with a pleasing bokeh.</p>
+
+<p>The TTArtisan AF-FF 75mm F2 X can also focus on subjects as close as 2.5', while its optical design features an extra-low dispersion element and four high-index elements to increase sharpness and reduce chromatic aberrations. </p>
+<ul><li>Full-Frame | f/2 to f/16</li><li>Fast, Portrait-Length Prime</li><li>Stepper Motor Autofocus</li><li>Clickable Aperture Ring</li><li>ED and High Index Elements</li><li>9-Blade Diaphragm</li><li>All-Metal Construction</li><li>Rear Lens Cap with USB-C Port</li></ul></div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://nofilmschool.com/ttartisan-af-75mm-f2-x" target="_blank" rel="noopener nofollow">Read full article at nofilmschool.com</a>
+        <a class="read-more" href="https://nofilmschool.com/ttartisan-af-75mm-f2-x" target="_blank" rel="noopener nofollow">Continue reading on nofilmschool.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #Ttartisan #75mm lens #Prime lens #Fujifilm x mount #Ttartisan af 75mm f2 x</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #Ttartisan #75mm lens #Prime lens #Fujifilm x mount #Ttartisan af 75mm f2 x</div>
+        <div>Credit: Source — nofilmschool.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-fujifilm-shooters-are-finally-getting-this-fast-portable-and-popular-au";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>

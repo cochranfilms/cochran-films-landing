@@ -96,6 +96,41 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+// Build a safe, extended excerpt from the original article HTML
+function buildExcerptHtml(rawHtml, sourceUrl) {
+  if (!rawHtml) return '';
+  let html = String(rawHtml);
+
+  // Strip unsafe tags
+  html = html.replace(/<script[\s\S]*?<\/script>/gi, '')
+             .replace(/<style[\s\S]*?<\/style>/gi, '')
+             .replace(/<iframe[\s\S]*?<\/iframe>/gi, '');
+
+  // Absolutize relative URLs
+  html = html.replace(/\s(href|src)=("|')([^"']+)(\2)/gi, (m, attr, q, url, q2) => {
+    try {
+      const absolute = new URL(url, sourceUrl).href;
+      return ` ${attr}=${q}${absolute}${q2}`;
+    } catch {
+      return m;
+    }
+  });
+
+  // Safer links and images
+  html = html.replace(/<a\s/gi, '<a rel="nofollow noopener" target="_blank" ')
+             .replace(/<img\s/gi, '<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" ');
+
+  // Heuristic: take first 5 paragraphs; include first list if present
+  const parts = html.split(/<\/p>/i);
+  const excerptParts = parts.slice(0, 5).map(p => (p.includes('<p') ? `${p}</p>` : (p.trim() ? `<p>${p}</p>` : '')));
+  const list = html.match(/<(ul|ol)[\s\S]*?<\/(ul|ol)>/i);
+  if (list) excerptParts.push(list[0]);
+
+  let excerpt = excerptParts.join('\n');
+  if (excerpt.length > 5000) excerpt = excerpt.slice(0, 5000) + '…';
+  return excerpt;
+}
+
 function buildPostHtml(post) {
   const {
     title,
@@ -135,6 +170,9 @@ function buildPostHtml(post) {
     keywords
   };
 
+  const excerptHtml = buildExcerptHtml(post.contentHtml || '', sourceUrl);
+  const hostname = getHostname(sourceUrl);
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,21 +205,54 @@ function buildPostHtml(post) {
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>${escapeHtml(title)}</h1>
       <div class="meta">${new Date(publishedAt).toLocaleString()}${category ? ` • ${escapeHtml(category)}` : ''}</div>
       ${image ? `<div style="margin: 12px 0 16px 0;"><img src="${image}" alt="${escapeHtml(title)}" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>` : ''}
-      ${video ? `<div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="${video}" title="${escapeHtml(title)}" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>` : ''}
-      <p>${escapeHtml(summary)}</p>
+      ${video ? `<div style=\"margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;\"><iframe src=\"${video}\" title=\"${escapeHtml(title)}\" frameborder=\"0\" allowfullscreen style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>` : ''}
+      <div class="excerpt">${excerptHtml || `<p>${escapeHtml(summary)}</p>`}</div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="${sourceUrl}" target="_blank" rel="noopener nofollow">Read full article at ${escapeHtml(getHostname(sourceUrl))}</a>
+        <a class="read-more" href="${sourceUrl}" target="_blank" rel="noopener nofollow">Continue reading on ${escapeHtml(hostname)}</a>
       </p>
-      ${tags.length ? `<p style="margin-top:12px; color: var(--text-muted);">Tags: ${tags.map(t => `#${escapeHtml(t)}`).join(' ')}</p>` : ''}
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        ${tags.length ? `<div style=\"margin-bottom:6px;\">Tags: ${tags.map(t => `#${escapeHtml(t)}`).join(' ')}</div>` : ''}
+        <div>Credit: Source — ${escapeHtml(hostname)} • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = ${JSON.stringify(slug)};
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">\n' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>\n' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>\n' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>\n' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>\n' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>`;
 }
@@ -209,6 +280,7 @@ async function fetchFeed(url, category) {
         image,
         video,
         tags,
+        contentHtml,
       };
     });
   } catch (error) {

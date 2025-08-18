@@ -30,20 +30,63 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>3 Writing Tips From Hunter S. Thompson</h1>
       <div class="meta">8/15/2025, 2:45:06 PM • production</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://nofilmschool.com/media-library/3-writing-tips-from-hunter-s-thompson.jpg?id=61469414&width=980" alt="3 Writing Tips From Hunter S. Thompson" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       <div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="https://www.youtube.com/embed/1wsuRHRLeZ0?rel=0" title="3 Writing Tips From Hunter S. Thompson" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-      <p>One of the raconteurs of writing is Hunter S. Thompson. He had such a strong voice, a crazy life, and his work just got us dialed into worlds that we were not brave enough to enter ourselves. The guy had such a big personality and wrote so many important things that today I wanted to go over some writing tips I think everyone can pick up from his enduring...</p>
+      <div class="excerpt">
+<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" src="https://nofilmschool.com/media-library/3-writing-tips-from-hunter-s-thompson.jpg?id=61469414&width=1200&height=800&coordinates=97%2C0%2C98%2C0"/><br/><br/><p>One of the raconteurs of writing is Hunter S. Thompson. He had such a strong voice, a crazy life, and his work just got us dialed into worlds that we were not brave enough to enter ourselves. </p>
+<p>The guy had such a big personality and wrote so many important things that today I wanted to go over some writing tips I think everyone can pick up from his enduring legacy. </p>
+<p>Let's dive in. </p>
+<hr/><h3>1. Become the Story: The Heart of Gonzo</h3><br/><span class="rm-shortcode" data-rm-shortcode-id="5e2843e4f7121cd0f702abd28df48f64" style="display:block;position:relative;padding-top:56.25%;"></span><p><span style="background-color: initial;">At the core of Thompson's revolutionary style was the demolition of the traditional wall between observer and participant.<sup></sup></span> He jumped into <span style="background-color: initial;"><a rel="nofollow noopener" target="_blank" data-linked-post="2672443775" href="https://nofilmschool.com/first-person-pov-explained" target="_blank">first-person narrative</a> and made himself the story with Gonzo journalism.</span></p>
+<p>Thompson's Kentucky Derby piece for <em>Scanlan's Monthly</em> dragged the reader through a debauched, whiskey-soaked personal journey that captured the cultural zeitgeist in a way no detached report ever could.<sup></sup> <span></span></p></div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://nofilmschool.com/writing-tips-hunter-s-thompson" target="_blank" rel="noopener nofollow">Read full article at nofilmschool.com</a>
+        <a class="read-more" href="https://nofilmschool.com/writing-tips-hunter-s-thompson" target="_blank" rel="noopener nofollow">Continue reading on nofilmschool.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #Writing tips #Hunter s. thompson #Writing advice</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #Writing tips #Hunter s. thompson #Writing advice</div>
+        <div>Credit: Source — nofilmschool.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-3-writing-tips-from-hunter-s-thompson";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>

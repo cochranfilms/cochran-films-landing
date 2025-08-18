@@ -30,20 +30,63 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>What Are the Best Films from 50 Years Ago?</h1>
       <div class="meta">8/15/2025, 6:15:04 PM • production</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://nofilmschool.com/media-library/men-lounging-in-a-room-during-the-day-in-barry-lyndon.jpg?id=34060544&width=980" alt="What Are the Best Films from 50 Years Ago?" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       <div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="https://www.youtube.com/embed/U1fu_sA7XhE?rel=0" title="What Are the Best Films from 50 Years Ago?" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-      <p>In August 1975, about 50 years ago today, several popular films were showing in U.S. theaters, with Jaws being the reigning number-one box office hit. Jaws was the highest-grossing film of 1975 and held the number-one spot through much of the summer, heralding the era of summer blockbusters. Other notable films released and likely still playing around the...</p>
+      <div class="excerpt">
+<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" src="https://nofilmschool.com/media-library/men-lounging-in-a-room-during-the-day-in-barry-lyndon.jpg?id=34060544&width=1200&height=800&coordinates=96%2C0%2C96%2C0"/><br/><br/><p>In August 1975, about 50 years ago today, several popular films were showing in U.S. theaters, with <em>Jaws</em> being the reigning number-one box office hit.</p>
+<p><em>Jaws</em> was the highest-grossing film of 1975 and held the number-one spot through much of the summer, heralding the era of summer blockbusters. Other notable films released and likely still playing around the same time included <em>Shampoo</em>, <em>The Return of the Pink Panther</em>, <em></em>and maybe <em>Tommy</em> and <em>Rollerball</em>.</p>
+<p>It was, to put it mildly, a monster of a year in movies, one that gave us maybe the <a rel="nofollow noopener" target="_blank" href="https://editorial.rottentomatoes.com/guide/best-movies-1975/" rel="noopener noreferrer" target="_blank"><u>strongest Best Picture class ever</u></a>, so let's look back at a few. </p>
+<em></em><h2><em>Jaws</em></h2><div><em><br/></em></div><p class="shortcode-media shortcode-media-youtube"> <span class="rm-shortcode" data-rm-shortcode-id="139bc418c5dce65458c1e0cb5c827953" style="display:block;position:relative;padding-top:56.25%;"></span> <small class="image-media media-caption" placeholder="Add Photo Caption...">- YouTube</small> <small class="image-media media-photo-credit" placeholder="Add Photo Credit..."> <a rel="nofollow noopener" target="_blank" href="https://www.youtube.com/watch?v=U1fu_sA7XhE" target="_blank">www.youtube.com</a> </small> </p>
+<p><em>Jaws</em> dominated the year, grossing $260 million in North America and $470.7 million worldwide, <a rel="nofollow noopener" target="_blank" href="https://thedailyjaws.com/blog/jaws-and-the-ten-highest-grossing-films-of-1975" target="_blank">making it the highest-grossing film of the year</a>.<a rel="nofollow noopener" target="_blank" href="https://en.wikipedia.org/wiki/1975_in_film" rel="noopener noreferrer" target="_blank"> </a>It overtook <em>The Godfather</em> as the highest-grossing film ever, a title it would hold until <em>Star Wars</em> came along. By any measure, <em>Jaws</em> was 1975's king.</p></div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://nofilmschool.com/best-films-1975" target="_blank" rel="noopener nofollow">Read full article at nofilmschool.com</a>
+        <a class="read-more" href="https://nofilmschool.com/best-films-1975" target="_blank" rel="noopener nofollow">Continue reading on nofilmschool.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #Jaws #One flew over the cuckoo&#39;s nest #Barry lyndon #The rocky horror picture show #Dog day afternoon #Monty python #Mirror #1975 #Best movies</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #Jaws #One flew over the cuckoo&#39;s nest #Barry lyndon #The rocky horror picture show #Dog day afternoon #Monty python #Mirror #1975 #Best movies</div>
+        <div>Credit: Source — nofilmschool.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-what-are-the-best-films-from-50-years-ago";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>

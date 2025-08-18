@@ -30,20 +30,62 @@
 <body>
   <script>window.__MODULES_BASE_PATH__='../../';</script>
   <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
     <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
       <h1>Wildfire Service Condems AI Images Spreading on Social Media</h1>
       <div class="meta">8/15/2025, 1:27:27 PM • photography</div>
       <div style="margin: 12px 0 16px 0;"><img src="https://petapixel.com/assets/uploads/2025/08/AI-Fake-WIldfire-Images.jpg" alt="Wildfire Service Condems AI Images Spreading on Social Media" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>
       
-      <p>The B.C. Wildfire Service (BCWS) in Canada was forced to put out a statement about a surge in AI-generated wildfire images circulating on social media, warning that they can mislead people during emergencies. [Read More]</p>
+      <div class="excerpt"><p class="feature-image"><a rel="nofollow noopener" target="_blank" href="https://petapixel.com/2025/08/15/wildfire-service-condems-ai-images-spreading-on-social-media/"><img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" width="1600" height="840" src="https://petapixel.com/assets/uploads/2025/08/AI-Fake-WIldfire-Images.jpg" class="attachment-card-large size-card-large wp-post-image" alt="Side-by-side images of helicopters and planes dropping water and fire retardant on large wildfires burning through dense forests near roads and a city. Smoke billows into the sky. The image is labeled &quot;AI-GENERATED." decoding="async" /></a></p>
+<p>The B.C. Wildfire Service (BCWS) in Canada was forced to put out a statement about a surge in AI-generated wildfire images circulating on social media, warning that they can mislead people during emergencies.</p>
+
+<p class="read-more">[<a rel="nofollow noopener" target="_blank" href="https://petapixel.com/2025/08/15/wildfire-service-condems-ai-images-spreading-on-social-media/">Read More</a>]</p>
+</div>
       <p style="margin-top: 16px;">
-        <a class="read-more" href="https://petapixel.com/2025/08/15/wildfire-service-condems-ai-images-spreading-on-social-media/" target="_blank" rel="noopener nofollow">Read full article at petapixel.com</a>
+        <a class="read-more" href="https://petapixel.com/2025/08/15/wildfire-service-condems-ai-images-spreading-on-social-media/" target="_blank" rel="noopener nofollow">Continue reading on petapixel.com</a>
       </p>
-      <p style="margin-top:12px; color: var(--text-muted);">Tags: #News #Technology #aigenerated #aiimages #britishcolumbia #canada #wildfire</p>
-      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
+        <div style="margin-bottom:6px;">Tags: #News #Technology #aigenerated #aiimages #britishcolumbia #canada #wildfire</div>
+        <div>Credit: Source — petapixel.com • Curated by Cochran Films Daily Brief</div>
+      </div>
+      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
     </article>
+    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
   </main>
   <script src="../../js/modules.js"></script>
+  <script>
+  (function(){
+    try {
+      var slug = "20250815-wildfire-service-condems-ai-images-spreading-on-social-media";
+      fetch('/blog/posts.json?r=' + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+          if(!Array.isArray(list)) return;
+          var current = list.find(function(p){ return p.slug === slug; });
+          var cat = current && current.category || '';
+          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
+          if(!related.length) return;
+          var sec = document.getElementById('related-posts');
+          if(!sec) return;
+          var cards = related.map(function(p){
+            var href = '/blog/post/' + p.slug + '.html';
+            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+            return '<article class="blog-card" style="margin-top:12px;">
+' +
+                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>
+' +
+                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>
+' +
+                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>
+' +
+                   '  <a class="read-more" href="' + href + '">Open post</a>
+' +
+                   '</article>';
+          }).join('');
+          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
+        });
+    } catch(e) { console.warn(e); }
+  })();
+  </script>
 </body>
 </html>
