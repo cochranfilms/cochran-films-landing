@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       const image = post.image || '';
       const video = post.video || '';
 
+      const slug = post.slug;
+      const hasSeoPage = Boolean(slug);
+      const internalUrl = hasSeoPage ? `blog/post/${slug}.html` : url;
+
       return `
         <article class="blog-card">
           <h2>${title}</h2>
@@ -42,7 +46,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           ${image ? `<div style="margin: 8px 0 12px 0;"><img src="${image}" alt="${title}" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>` : ''}
           ${video ? `<div style="margin: 8px 0 12px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="${video}" title="${title}" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>` : ''}
           <p>${summary}</p>
-          <a class="read-more" href="${url}" target="_blank" rel="noopener">Read source</a>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a class="read-more" href="${internalUrl}" ${hasSeoPage ? '' : 'target="_blank" rel="noopener"'}>Open post</a>
+            <a class="read-more" href="${url}" target="_blank" rel="noopener">Read source</a>
+          </div>
         </article>
       `;
     }).join('');

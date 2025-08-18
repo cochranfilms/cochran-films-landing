@@ -29,6 +29,16 @@ jobs:
           TIMEZONE: 'America/New_York'
         run: npm run generate:blog
 
+      - name: Commit and push SEO pages
+        run: |
+          git add blog/posts.json blog/post/*.html
+          if git diff --staged --quiet; then
+            echo "No SEO page changes"
+          else
+            git commit -m "chore(blog): update posts and SEO pages [skip ci]"
+            git push
+          fi
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

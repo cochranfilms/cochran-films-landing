@@ -5,6 +5,10 @@ import RSSParser from 'rss-parser';
 const rssParser = new RSSParser({ timeout: 15000, customFields: { item: [ ['content:encoded', 'contentEncoded'], ['media:content', 'mediaContent'] ] } });
 
 const OUTPUT_FILE = path.resolve(process.cwd(), 'blog', 'posts.json');
+const POSTS_DIR = path.resolve(process.cwd(), 'blog', 'post');
+const SITE_BASE_URL = process.env.SITE_BASE_URL || 'https://landing.cochranfilms.com';
+const PUBLISHER_NAME = 'Cochran Films';
+const PUBLISHER_LOGO = 'CF_Logo_White2025.png';
 
 // Curated sources per category (stable RSS feeds)
 const SOURCES = {
@@ -63,6 +67,125 @@ function getHostname(url) {
   try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
 }
 
+function toYyyyMmDd(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return '';
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}${m}${day}`;
+}
+
+function slugify(input) {
+  return String(input || '')
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9\-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 80);
+}
+
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function buildPostHtml(post) {
+  const {
+    title,
+    summary,
+    image,
+    video,
+    url: sourceUrl,
+    publishedAt,
+    category,
+    tags = [],
+    slug
+  } = post;
+
+  const canonical = `${SITE_BASE_URL}/blog/post/${slug}.html`;
+  const metaTitle = post.metaTitle || `${title} | ${PUBLISHER_NAME} Daily Brief`;
+  const metaDescription = post.metaDescription || summary;
+  const keywords = tags.join(', ');
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: metaDescription,
+    datePublished: publishedAt,
+    dateModified: publishedAt,
+    mainEntityOfPage: canonical,
+    author: { '@type': 'Organization', name: PUBLISHER_NAME },
+    publisher: {
+      '@type': 'Organization',
+      name: PUBLISHER_NAME,
+      logo: { '@type': 'ImageObject', url: `${SITE_BASE_URL}/${PUBLISHER_LOGO}` }
+    },
+    image: image ? [image] : undefined,
+    url: canonical,
+    isBasedOn: sourceUrl,
+    articleSection: category,
+    keywords
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${escapeHtml(metaTitle)}</title>
+  <meta name="description" content="${escapeHtml(metaDescription)}" />
+  ${keywords ? `<meta name="keywords" content="${escapeHtml(keywords)}" />` : ''}
+  <link rel="canonical" href="${canonical}" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="${escapeHtml(metaTitle)}" />
+  <meta property="og:description" content="${escapeHtml(metaDescription)}" />
+  <meta property="og:url" content="${canonical}" />
+  ${image ? `<meta property="og:image" content="${image}" />` : ''}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${escapeHtml(metaTitle)}" />
+  <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
+  ${image ? `<meta name="twitter:image" content="${image}" />` : ''}
+
+  <script type="application/ld+json">${JSON.stringify(schema)}</script>
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/navigation.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <script>window.__MODULES_BASE_PATH__='../../';</script>
+  <div id="navigation-module"></div>
+  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+    <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
+      <h1>${escapeHtml(title)}</h1>
+      <div class="meta">${new Date(publishedAt).toLocaleString()}${category ? ` • ${escapeHtml(category)}` : ''}</div>
+      ${image ? `<div style="margin: 12px 0 16px 0;"><img src="${image}" alt="${escapeHtml(title)}" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>` : ''}
+      ${video ? `<div style="margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;"><iframe src="${video}" title="${escapeHtml(title)}" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>` : ''}
+      <p>${escapeHtml(summary)}</p>
+      <p style="margin-top: 16px;">
+        <a class="read-more" href="${sourceUrl}" target="_blank" rel="noopener nofollow">Read full article at ${escapeHtml(getHostname(sourceUrl))}</a>
+      </p>
+      ${tags.length ? `<p style="margin-top:12px; color: var(--text-muted);">Tags: ${tags.map(t => `#${escapeHtml(t)}`).join(' ')}</p>` : ''}
+      <p style="margin-top: 12px;"><a href="../..//blog.html">← Back to Blog</a></p>
+    </article>
+  </main>
+  <script src="../../js/modules.js"></script>
+</body>
+</html>`;
+}
+
 async function fetchFeed(url, category) {
   try {
     const feed = await rssParser.parseURL(url);
@@ -75,6 +198,7 @@ async function fetchFeed(url, category) {
       const image = imageFromEnclosure || imageFromHtml || null;
       const video = extractFirstIframeSrcFromHtml(contentHtml);
       const link = item.link || '';
+      const tags = Array.isArray(item.categories) && item.categories.length ? item.categories.map(c => String(c)) : [];
       return {
         title: item.title || 'Untitled',
         url: link,
@@ -84,6 +208,7 @@ async function fetchFeed(url, category) {
         summary: summary.length > 360 ? `${summary.slice(0, 357)}...` : summary,
         image,
         video,
+        tags,
       };
     });
   } catch (error) {
@@ -133,6 +258,18 @@ async function generate() {
     .filter(p => p.publishedAt)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, 36);
+
+  await fs.mkdir(POSTS_DIR, { recursive: true });
+  for (const post of deduped) {
+    const datePart = toYyyyMmDd(post.publishedAt);
+    const baseSlug = slugify(`${datePart}-${post.title}`);
+    post.slug = baseSlug || slugify(`${datePart}-${post.source}`) || String(Date.now());
+    post.metaTitle = `${post.title} | ${PUBLISHER_NAME} Daily Brief`;
+    post.metaDescription = post.summary;
+    const html = buildPostHtml(post);
+    const filePath = path.join(POSTS_DIR, `${post.slug}.html`);
+    await fs.writeFile(filePath, html);
+  }
 
   const pretty = JSON.stringify(deduped, null, 2);
   await fs.writeFile(OUTPUT_FILE, pretty);
