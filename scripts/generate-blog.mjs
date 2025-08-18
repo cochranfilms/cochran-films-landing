@@ -36,6 +36,53 @@ function stripHtml(html) {
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
+// Basic language/quality heuristics
+function asciiRatio(text) {
+  if (!text) return 0;
+  const s = String(text);
+  let ascii = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s.charCodeAt(i) <= 127) ascii++;
+  }
+  return ascii / s.length;
+}
+
+function looksEnglish(text) {
+  const ratio = asciiRatio(text);
+  // permit emojis/punctuation but require majority ASCII
+  return ratio >= 0.8;
+}
+
+function isHttpUrl(u) {
+  try { const x = new URL(u); return x.protocol === 'http:' || x.protocol === 'https:'; } catch { return false; }
+}
+
+// Build allowed hosts set from feeds to avoid random garbage sources
+const ALLOWED_HOSTS = new Set([
+  'nofilmschool.com', 'www.nofilmschool.com',
+  'www.studiobinder.com', 'studiobinder.com',
+  'www.smashingmagazine.com', 'smashingmagazine.com',
+  'web.dev', 'developer.chrome.com',
+  'dev.to', 'www.dev.to', 'medium.com',
+  'petapixel.com', 'www.petapixel.com',
+  'fstoppers.com', 'www.fstoppers.com',
+  'brandingmag.com', 'www.brandingmag.com',
+  'underconsideration.com', 'www.underconsideration.com'
+]);
+
+function isValidPost(p) {
+  if (!p) return false;
+  if (!isHttpUrl(p.url)) return false;
+  if (!p.title || p.title.trim().length < 8) return false;
+  if (!looksEnglish(p.title + ' ' + (p.summary || ''))) return false;
+  const host = getHostname(p.url);
+  if (host && !ALLOWED_HOSTS.has(host)) return false;
+  // Filter obvious non-article/code titles
+  const badTokens = ['.ts', '💊', '#1', '#2', '#3', '#4'];
+  if (badTokens.some(t => p.title.includes(t))) return false;
+  return true;
+}
+
 function extractFirstImageFromHtml(html) {
   if (!html) return null;
   const match = html.match(/<img[^>]+src=["']([^"'>]+)["'][^>]*>/i);
@@ -328,6 +375,7 @@ async function generate() {
 
   const deduped = Array.from(dedupedMap.values())
     .filter(p => p.publishedAt)
+    .filter(isValidPost)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, 36);
 

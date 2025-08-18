@@ -3291,91 +3291,82 @@ Welcome to the Cochran Films family! 🚀
       // CSV Parser Function
       function parseCSV(csvText) {
         try {
-          const lines = csvText.split('\n');
-          if (lines.length < 2) {
-            console.warn('CSV file appears to be empty or invalid');
-            return [];
-          }
-          
-          const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
-          console.log('CSV Headers found:', headers);
-          
-          const data = [];
-          
-          for (let i = 1; i < lines.length; i++) {
-            if (lines[i].trim() === '') continue;
-            
-            // Handle commas within quoted fields
-            const values = [];
-            let current = '';
-            let inQuotes = false;
-            
-            for (let j = 0; j < lines[i].length; j++) {
-              const char = lines[i][j];
-              if (char === '"') {
-                inQuotes = !inQuotes;
-              } else if (char === ',' && !inQuotes) {
-                values.push(current.trim());
-                current = '';
+          // Normalize newlines
+          const text = String(csvText).replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+          const rows = [];
+          let row = [];
+          let field = '';
+          let inQuotes = false;
+          for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            const next = text[i + 1];
+            if (char === '"') {
+              if (inQuotes && next === '"') {
+                field += '"'; // escaped quote
+                i++;
               } else {
-                current += char;
+                inQuotes = !inQuotes;
               }
-            }
-            values.push(current.trim());
-            
-            const row = {};
-            headers.forEach((header, index) => {
-              if (values[index]) {
-                row[header] = values[index].replace(/^"|"$/g, '');
-              }
-            });
-            
-            // Map CSV fields to our portfolio structure with flexible field matching
-            const mappedItem = {
-              "Title": row["Title"] || row["title"] || row["Name"] || row["name"] || '',
-              "Description": row["Description"] || row["description"] || row["Desc"] || row["desc"] || '',
-              "Category": row["Category"] || row["category"] || row["Type"] || row["type"] || '',
-              "Thumbnail Image": row["thumbnailUrl"] || row["Thumbnail Image"] || row["thumbnail image"] || row["Thumbnail"] || row["thumbnail"] || row["Image"] || row["image"] || '',
-              "Is Featured": row["Is Featured"] === "true" || row["is featured"] === "true" || row["Featured"] === "true" || row["featured"] === "true" || row["Is Featured"] === "TRUE" || false,
-              "playbackUrl": row["playbackUrl"] || row["playback url"] || row["Video"] || row["video"] || row["URL"] || row["url"] || '',
-              "UploadDate": row["Created Date"] || row["created date"] || row["UploadDate"] || row["upload date"] || row["Date"] || row["date"] || row["Published"] || row["published"] || '',
-              "URL": row["URL"] || row["url"] || row["Link"] || row["link"] || row["Website"] || row["website"] || '',
-              "Tech Stack": row["Tech Stack"] || row["tech stack"] || row["Technology"] || row["technology"] || row["Tools"] || row["tools"] || '',
-              "Role": row["Role"] || row["role"] || row["Position"] || row["position"] || row["Job"] || row["job"] || '',
-              "Client": row["Client/Company"] || row["client/company"] || row["Client"] || row["client"] || row["Company"] || row["company"] || row["Organization"] || row["organization"] || '',
-              "Timeline": row["Timeline"] || row["timeline"] || row["Duration"] || row["duration"] || row["Time"] || row["time"] || '',
-              "Challenges": row["Challenges"] || row["challenges"] || row["Problems"] || row["problems"] || row["Issues"] || row["issues"] || '',
-              "Results": row["Results"] || row["results"] || row["Outcome"] || row["outcome"] || row["Achievements"] || row["achievements"] || ''
-            };
-            
-            // Debug: Log the raw row data and mapped item
-            console.log('Raw CSV row:', row);
-            console.log('Mapped item:', mappedItem);
-            
-            // Determine ServiceCategory based on CSV source and content
-            if (row["ServiceCategory"]) {
-              mappedItem.ServiceCategory = row["ServiceCategory"];
+            } else if (char === ',' && !inQuotes) {
+              row.push(field);
+              field = '';
+            } else if (char === '\n' && !inQuotes) {
+              row.push(field);
+              rows.push(row);
+              row = [];
+              field = '';
             } else {
-              // Auto-detect based on CSV source or content
-              mappedItem.ServiceCategory = "Video Production"; // Default for Portfolio.csv
+              field += char;
             }
-            
-                      // Only add items that have at least a title and aren't corrupted
-          if (mappedItem.Title && 
-              mappedItem.Title.trim() !== '' && 
-              !mappedItem.Title.includes('wix:image://') && // Filter out corrupted data
-              mappedItem.Title.length < 200) { // Filter out extremely long titles
-            data.push(mappedItem);
-          } else {
-            console.warn('Skipping corrupted or invalid item:', mappedItem.Title);
           }
+          // Push last field/row
+          if (field.length > 0 || row.length > 0) {
+            row.push(field);
+            rows.push(row);
           }
-          
+
+          if (!rows.length) return [];
+          const headers = rows[0].map(h => h.replace(/\"/g, '"').replace(/^\"|\"$/g, '').trim());
+          const data = [];
+          for (let r = 1; r < rows.length; r++) {
+            const raw = rows[r];
+            if (!raw || raw.every(c => !c || c.trim() === '')) continue;
+            const obj = {};
+            headers.forEach((h, idx) => {
+              let v = raw[idx] != null ? String(raw[idx]) : '';
+              v = v.replace(/^\"|\"$/g, '').trim();
+              obj[h] = v;
+            });
+
+            const mappedItem = {
+              "Title": obj["Title"] || obj["title"] || obj["Name"] || obj["name"] || '',
+              "Description": obj["Description"] || obj["description"] || obj["Desc"] || obj["desc"] || '',
+              "Category": obj["Category"] || obj["category"] || obj["Type"] || obj["type"] || '',
+              "Thumbnail Image": obj["thumbnailUrl"] || obj["Thumbnail Image"] || obj["thumbnail image"] || obj["Thumbnail"] || obj["thumbnail"] || obj["Image"] || obj["image"] || '',
+              "Is Featured": obj["Is Featured"] === "true" || obj["is featured"] === "true" || obj["Featured"] === "true" || obj["featured"] === "true" || obj["Is Featured"] === "TRUE" || false,
+              "playbackUrl": obj["playbackUrl"] || obj["playback url"] || obj["Video"] || obj["video"] || obj["URL"] || obj["url"] || '',
+              "UploadDate": obj["Created Date"] || obj["created date"] || obj["UploadDate"] || obj["upload date"] || obj["Date"] || obj["date"] || obj["Published"] || obj["published"] || '',
+              "URL": obj["URL"] || obj["url"] || obj["Link"] || obj["link"] || obj["Website"] || obj["website"] || '',
+              "Tech Stack": obj["Tech Stack"] || obj["tech stack"] || obj["Technology"] || obj["technology"] || obj["Tools"] || obj["tools"] || '',
+              "Role": obj["Role"] || obj["role"] || obj["Position"] || obj["position"] || obj["Job"] || obj["job"] || '',
+              "Client": obj["Client/Company"] || obj["client/company"] || obj["Client"] || obj["client"] || obj["Company"] || obj["company"] || obj["Organization"] || obj["organization"] || '',
+              "Timeline": obj["Timeline"] || obj["timeline"] || obj["Duration"] || obj["duration"] || obj["Time"] || obj["time"] || '',
+              "Challenges": obj["Challenges"] || obj["challenges"] || obj["Problems"] || obj["problems"] || obj["Issues"] || obj["issues"] || '',
+              "Results": obj["Results"] || obj["results"] || obj["Outcome"] || obj["outcome"] || obj["Achievements"] || obj["achievements"] || ''
+            };
+
+            if (obj["ServiceCategory"]) {
+              mappedItem.ServiceCategory = obj["ServiceCategory"];
+            } else {
+              mappedItem.ServiceCategory = "Video Production";
+            }
+
+            if (mappedItem.Title && mappedItem.Title.trim() !== '' && !mappedItem.Title.includes('wix:image://') && mappedItem.Title.length < 200) {
+              data.push(mappedItem);
+            }
+          }
           console.log(`Parsed ${data.length} items from CSV`);
-          console.log('First parsed item:', data[0]);
-          console.log('All parsed data:', data);
           return data;
-          
         } catch (error) {
           console.error('Error parsing CSV:', error);
           return [];

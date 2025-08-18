@@ -59,6 +59,18 @@
   @media (min-width: 1080px) {
     #blog-posts { grid-template-columns: repeat(3, 1fr); }
   }
+  /* Mobile tweak for AI banner and grid */
+  @media (max-width: 767px) {
+    #ai-blog-banner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    #ai-blog-banner .nav-link {
+      width: 100%;
+      text-align: center;
+    }
+  }
 </style>
 </html>
 
