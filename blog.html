@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cochran Films — Blog</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Module -->
+  <div id="navigation-module"></div>
+
+  <main class="wrapper" style="padding-top: 40px; padding-bottom: 80px;">
+    <section>
+      <h1 style="margin-bottom: 8px;">Blog</h1>
+      <p style="color: var(--text-muted); margin-bottom: 24px;">Daily industry insights across production, web, brand, and photography.</p>
+
+      <div id="blog-posts" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/modules.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+<style>
+  /* Lightweight styles scoped to the blog page */
+  #blog-posts { display: grid; gap: 16px; }
+  .blog-card {
+    border: 1px solid var(--border-color, #222);
+    border-radius: 12px;
+    padding: 16px;
+    background: rgba(255,255,255,0.02);
+  }
+  .blog-card h2 { margin: 0 0 8px 0; font-size: 1.125rem; }
+  .blog-card .meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px; }
+  .blog-card a.read-more { color: var(--brand-gold, #e3c565); font-weight: 600; }
+  @media (min-width: 768px) {
+    #blog-posts { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1080px) {
+    #blog-posts { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</html>
+
+

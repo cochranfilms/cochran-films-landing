@@ -1,13 +1,362 @@
 [
   {
-    "title": "Welcome to the Cochran Films Daily Industry Brief",
-    "url": "blog.html",
-    "publishedAt": "2025-08-18T07:00:00Z",
-    "source": "cochranfilms.com",
-    "category": "announcement",
-    "summary": "Starting today, you’ll see a fresh, curated brief every day at 12:00 PM Eastern covering production, web development, brand strategy, and photography. Each post links directly to high-value articles from respected sources, with images and occasional video embeds. Bookmark this page and check back daily for a quick, insightful pulse on the creative tech landscape.",
-    "image": "CF_Logo_White2025.png"
+    "title": "The Fundamental Strengths of Java Powering Modern Development",
+    "url": "https://dev.to/vishal_more_02990955c9358/the-fundamental-strengths-of-java-powering-modern-development-48mb",
+    "publishedAt": "2025-08-18T06:52:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Read More: The Fundamental Strengths of Java Powering Modern Development Platform Independence One of Java’s biggest strengths is its “write once, run anywhere” philosophy. Thanks to the Java Virtual Machine (JVM), Java programs can run across different platforms without modification. This portability ensures that developers don’t need to rewrite applicat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxp854cmtaefinwf2v9wf.png",
+    "video": null
+  },
+  {
+    "title": "📌 Boost Your Network Marketing with the Best Binary MLM Software in Punjab! 🚀",
+    "url": "https://dev.to/himani_sharma_570fd46a005/boost-your-network-marketing-with-the-best-binary-mlm-software-in-punjab-3ii7",
+    "publishedAt": "2025-08-18T06:52:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Managing left and right downlines manually can be complicated and error-prone. With Touchwood Technologies, the leading provider of Binary MLM Software in Punjab, you get an advanced, automated, and user-friendly system to simplify operations and maximize growth. 💡 ✔️ Left & Right Leg Tracking – Accurate placement and balance monitoring 🔗 ✔️ Automated P...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Automotive Quality & Inspection Services: Ensuring Safety and Reliability",
+    "url": "https://dev.to/david_witson_4a336c40c56d/automotive-quality-inspection-services-ensuring-safety-and-reliability-321i",
+    "publishedAt": "2025-08-18T06:49:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The automotive industry is one of the most complex and competitive sectors in the world. Every vehicle rolling off the assembly line must meet the highest standards of safety, performance, and reliability. To achieve this, manufacturers rely heavily on automotive quality and inspection services a structured approach to verifying that every component, syst...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Suhagra 100 mg – Uses, Dosage, Side Effects, Price & Online Buying Guide",
+    "url": "https://dev.to/bestgenericpills/suhagra-100-mg-uses-dosage-side-effects-price-online-buying-guide-29h4",
+    "publishedAt": "2025-08-18T06:49:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Erectile dysfunction (ED) is a growing concern among men worldwide, and one of the most effective treatments is Suhagra 100 mg. Manufactured by Cipla, this trusted ED medicine contains Sildenafil Citrate—a clinically approved active ingredient that helps men achieve and maintain firm erections. Suhagra 100 mg is a prescription medication for the treatment...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Building Mercer Wealth Management — the story of creating a modern advisory website (a behind-the-scenes narrative)",
+    "url": "https://dev.to/visionfinanceobserver/building-mercer-wealth-management-the-story-of-creating-a-modern-advisory-website-a-3id8",
+    "publishedAt": "2025-08-18T06:43:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Executive summary We set out to build a clean, trustworthy, and technically robust website for Mercer WM: a small, high-touch wealth advisory practice that offers personalized financial planning, retirement strategies, tax-aware investing, and related client services. Our remit was to create a platform that communicates the firm’s values, supports client ...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "JuggleBee’s Great Leap – Data Migration, ActiveStorage, and Production Readiness (Part 2)",
+    "url": "https://dev.to/brazenbraden/jugglebees-great-leap-data-migration-activestorage-and-production-readiness-part-2-5110",
+    "publishedAt": "2025-08-18T06:41:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In case you missed Part 1, we covered: Why I started fresh on Rails 8 instead of doing incremental upgrades. Migrating core models/controllers/services to modern Rails conventions. Swapping Sprockets for importmaps and modernizing the JavaScript setup. Replacing Sidekiq + Redis + whenever with ActiveJob + SolidQueue. Moving deployments to Kamal 2 with Tra...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Top Strategies Used by Leading Crypto Influencer Marketing Companies",
+    "url": "https://dev.to/luna_miller_82b3b336358b9/top-strategies-used-by-leading-crypto-influencer-marketing-companies-3mi7",
+    "publishedAt": "2025-08-18T06:39:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The cryptocurrency industry has transformed from a niche market into a global movement, powered by communities, innovation, and digital trust. But with thousands of new projects launching every year, standing out has become a significant challenge. This is where crypto influencer marketing companies play a central role. These firms specialize in connectin...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Dynamic Interfaces with Vue Directives",
+    "url": "https://dev.to/jacobandrewsky/dynamic-interfaces-with-vue-directives-22gm",
+    "publishedAt": "2025-08-18T06:38:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Vue.js is one of the most popular front-end frameworks today, prized for its simplicity, reactivity, and component-based architecture. At the heart of Vue’s declarative style lie directives—special tokens in the markup that tell Vue how to reactively manipulate the DOM. If you’re building Vue applications, understanding directives is essential for creatin...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj7hlfz848ut2d9ly8i8q.png",
+    "video": null
+  },
+  {
+    "title": "Interface Segregation Principle (ISP)",
+    "url": "https://dev.to/ahmedraza_fyntune/interface-segregation-principle-isp-58m5",
+    "publishedAt": "2025-08-18T06:21:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Interface Segregation Principle (ISP) this topic is easy to understand and help us to develop code with loose coupled and more reusable 🔹 Understand ISP 👉 Definition: A fat interface = an interface with too many methods. A role-specific interface = smaller, focused interfaces. ⚠️ Violation Example (fat interface): interface Worker { public function work...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Traditional CMS vs Headless CMS: Why Developers Are Making the Switch",
+    "url": "https://dev.to/hardeepsingh01/traditional-cms-vs-headless-cms-why-developers-are-making-the-switch-3b78",
+    "publishedAt": "2025-08-18T06:07:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "headless CMS flips the model: it manages content in Traditional CMS (Quick Snapshot) Tightly coupled frontend + backend Templates and plugins handle most features Easy for non-technical editors, less flexible for devs Best for simple blogs or small business sites Headless CMS (Modern Approach) Content stored centrally; delivered via APIs Use any frontend ...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "RK3588S2: A High-Performance ARM SoC",
+    "url": "https://dev.to/dongpei_liao_8092a14d7c50/rk3588s2-a-high-performance-arm-soc-406l",
+    "publishedAt": "2025-08-18T06:05:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The RK3588S2 is Rockchip’s latest addition to its high-performance ARM-based processors. Designed to address the growing needs of PC, edge computing, and digital multimedia applications, the RK3588S2 integrates powerful processing cores, a versatile GPU, advanced video codecs, and AI acceleration. With this combination, the RK3588S2 is poised to power nex...",
+    "image": null,
+    "video": null
+  },
+  {
+    "title": "Add Watermarks to PDFs Online — Free and Easy PDF Editing Tool",
+    "url": "https://dev.to/boldsign/add-watermarks-to-pdfs-online-free-and-easy-pdf-editing-tool-578e",
+    "publishedAt": "2025-08-18T05:29:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We’re thrilled to introduce a new tool to the BoldSign free PDF tool collection— Add Watermark to PDF Online. Whether you’re a student, freelancer, business owner, or just someone organizing documents, this tool makes watermarking your PDFs quick and effortless. Add watermark tool Completely free—No hidden fees, no subscriptions. No sign-up required—Just ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fini7bkr7tdlpcee3lwv0.gif",
+    "video": null
+  },
+  {
+    "title": "My Thoughts—and Solution—To The Film vs. Digital Debate",
+    "url": "https://fstoppers.com/film/my-thoughts-and-solution-film-vs-digital-debate-708488?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T21:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Some say film photography is better than digital. Film has a more organic, natural look. Shooting with an analogue camera is a better experience and a purer form of photography. Others say digital photography is better because computer technology makes photography easier. You can shoot more frames and focus quicker, and experiment more by shooting more wi...",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/fstopper-main-film-digital.jpg",
+    "video": null
+  },
+  {
+    "title": "PanoVolo 1.9.0 has been released with DNG Panorama Export, and a Faster and more Accurate Optimizer",
+    "url": "https://fstoppers.com/reviews/panovolo-190-been-released-dng-panorama-export-and-faster-and-more-accurate-709315?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T20:12:12.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "I reviewed PanoVolo last year and found it excellent Windows or Mac software for creating panoramic images, even 360-degree ones. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/hero-pano.jpg",
+    "video": null
+  },
+  {
+    "title": "The Essential Photography Kit I Didn’t Know I Needed",
+    "url": "https://fstoppers.com/reviews/essential-photography-kit-i-didnt-know-i-needed-709295?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T19:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "As someone who first picked up a camera at 10 years old and has been shooting professionally for the last 20 years, I thought I had everything I needed in my kit bag. That is, until I came across the NEEWER PS099S Mini V Mount Battery, now an essential kit item that I don’t plan location shoots without. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/neewer_v_mount_battery_1.jpg",
+    "video": null
+  },
+  {
+    "title": "5 'Wrong' Camera and Lens Opinions That Are Actually Right",
+    "url": "https://fstoppers.com/gear/5-wrong-camera-and-lens-opinions-are-actually-right-709001?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T16:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Most photographers chase headline specs and flagship hype. Here are five “wrong” opinions that are usually right in the field. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/iss_25042_45830.jpg",
+    "video": null
+  },
+  {
+    "title": "Exploring the Strange and Luxurious World of Swiss Cameras",
+    "url": "https://petapixel.com/2025/08/17/exploring-the-strange-and-luxurious-world-of-swiss-cameras/",
+    "publishedAt": "2025-08-17T16:00:34.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Swiss manufacturing and craftsmanship have left their mark on a variety of fields, ranging from mechanical watches to sailplanes and, in the case of small but noteworthy endeavours such as those of Monteverdi, even luxury sports cars. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/swiss-camera-history-feat.jpg",
+    "video": null
+  },
+  {
+    "title": "Sigma’s New 17-40mm f/1.8 Could Replace Your Primes",
+    "url": "https://fstoppers.com/reviews/sigmas-new-17-40mm-f18-could-replace-your-primes-709334?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T14:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "The Sigma 17-40mm f/1.8 DC Art lens is a rare kind of zoom. It covers popular focal lengths like 24mm and 35mm, both staples in everyday shooting, while offering a wide maximum aperture that replaces several primes at once. Having this kind of flexibility in a single compact lens can change how you carry your kit and how you approach different types of wo...",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/the-best-lens-for-everything---youtube---0-0-38.jpeg",
+    "video": null
+  },
+  {
+    "title": "Hands-On With the Sigma BF Mirrorless Camera: Style, Quirks, and Real-World Shots",
+    "url": "https://fstoppers.com/reviews/hands-sigma-bf-mirrorless-camera-style-quirks-and-real-world-shots-709333?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T13:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Street photography demands a camera that can keep up with quick changes in light, busy crowds, and fleeting moments. The Sigma BF is built with a unique design and an unusual feature set that makes it stand out in this kind of environment. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/sigma-bf---sunset-photography-in-london-unlike-any-camera-i-ve-used---youtube---0-2-08.jpeg",
+    "video": null
+  },
+  {
+    "title": "Sony RX1R III Review: $5,100 Compact Full Frame Tested in the Real World",
+    "url": "https://fstoppers.com/reviews/sony-rx1r-iii-review-5100-compact-full-frame-tested-real-world-709332?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T12:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Sony just dropped a compact full frame camera with a 61-megapixel sensor and a fixed 35mm f/2 lens, priced at $5,100. Can a point-and-shoot, no matter how nice, really justify that cost? [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/sony-rx1r-iii-real-world-review_-over-priced-over-hyped-or-just-right_---youtube---0-4-36.jpeg",
+    "video": null
+  },
+  {
+    "title": "Understanding Aperture Will Instantly Improve Your Photography",
+    "url": "https://petapixel.com/2025/08/17/understanding-aperture-will-instantly-improve-your-photography/",
+    "publishedAt": "2025-08-17T12:00:02.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "In my previous article, we embarked on an adventure that started with a basic understanding of metering and exposure. Hopefully, you appreciate how the camera measures light and how its aperture, ISO, and shutter speed can be balanced to expose the image correctly. Each of those changes the way the image looks, and here’s what the aperture does. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/07/aperture-test-11-1600x840.jpg",
+    "video": null
+  },
+  {
+    "title": "How Much Commercial Photographers Really Make in 2025",
+    "url": "https://fstoppers.com/business/how-much-commercial-photographers-really-make-2025-709330?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-17T10:03:02.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Commercial photography looks glamorous from the outside, but the real question is whether it actually pays enough to make a career of it in 2025. Money isn’t the only reason you do the work, but knowing what’s possible helps you decide if the effort, the risk, and the uncertainty are worth it. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/photography-vs-ai---do-you-even-know-the-price-_---youtube---0-0-14.jpeg",
+    "video": null
+  },
+  {
+    "title": "5 Underrated Camera Features You Shouldn't Overlook",
+    "url": "https://fstoppers.com/gear/5-underrated-camera-features-shouldnt-overlook-708925?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T21:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Most photographers obsess over megapixels, autofocus points, and dynamic range when shopping for new gear. But while you're comparing sensor specs and lens sharpness charts, you're probably overlooking the features that could actually revolutionize how you shoot. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/aerial-9.jpg",
+    "video": null
+  },
+  {
+    "title": "Why This Camera Made Shooting Fun Again",
+    "url": "https://fstoppers.com/reviews/why-camera-made-shooting-fun-again-709236?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T19:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "A camera can feel like an extension of your job, or it can feel like something you carry because you want to. The difference matters because it changes whether you’re shooting for yourself or only to meet deadlines and expectations. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/the-camera-i-refuse-to-use-for-work---youtube---0-0-02.jpeg",
+    "video": null
+  },
+  {
+    "title": "DSLR vs Mirrorless Cameras: Why My DSLR Still Wins",
+    "url": "https://petapixel.com/2025/08/16/dslr-vs-mirrorless-cameras-why-my-dslr-still-wins/",
+    "publishedAt": "2025-08-16T18:00:37.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "I’ve been a photographer for 14 years — ten in Boston, Massachusetts, and the last four in Austin, Texas. I’ve photographed weddings, concerts, portraits, travel stories, and countless events where the light was less than perfect. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/dslr-vs-mirrorless-feat.jpg",
+    "video": null
+  },
+  {
+    "title": "Sam Altman Has No Idea What a Photograph Is and That Should Make You Angry",
+    "url": "https://fstoppers.com/opinion/sam-altman-no-idea-what-photograph-and-should-make-angry-709300?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T17:05:12.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Last week, OpenAI CEO Sam Altman said that photos and AI-generated imagery will converge. Given that his intellect receives so much acclaim, it’s alarming that he has no understanding of photography and its function within society, not to mention the far-reaching implications. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/sam-altman-doesnt-know-what-a-photograph-is-we-should-be-angry.jpg",
+    "video": null
+  },
+  {
+    "title": "The Comeback of the Pocket Powerhouse",
+    "url": "https://fstoppers.com/gear/comeback-pocket-powerhouse-708363?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T16:03:02.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "With the most recent announcement of the Sony RX1R III, the scarcity of the Fuji X100VI, and the popularity of the Leica Q, are we seeing a renaissance of the small compact camera? [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/jet_6957-edit-edit.jpg",
+    "video": null
+  },
+  {
+    "title": "Overrated? William Eggleston: The Photographer Who Changed Everything",
+    "url": "https://fstoppers.com/documentary/overrated-william-eggleston-photographer-who-changed-everything-707950?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T14:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "William Eggleston's documentation of the everyday, referred to by many as a revelation, is also regarded by others as overrated when judged in a modern context. This video by Tatiana Hopper, a respected voice on photography, dives into William Eggleston’s transformative work, leaving room for you to make up your own mind on where Eggleston's work sits in ...",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/william_eggleston.png",
+    "video": null
+  },
+  {
+    "title": "Photographing the Sardine Run in South Africa Changed My Life",
+    "url": "https://petapixel.com/2025/08/16/photographing-the-sardine-run-in-south-africa-changed-my-life/",
+    "publishedAt": "2025-08-16T14:00:03.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "For as long as I can remember, I’ve chased moments that remind me how small I am; the moments that make the world feel big again. The sardine run is one of those moments -- a crazy spectacle of survival, chaos, and connection all at once. I went all the way to South Africa to see it with my own eyes and to feel what it means to be a part of something this...",
+    "image": "https://petapixel.com/assets/uploads/2025/08/DSC00984-featured-sarah-teng-sardine-run.jpg",
+    "video": null
+  },
+  {
+    "title": "Why This $199 50mm Lens Could Be a Smart Pick",
+    "url": "https://fstoppers.com/reviews/why-199-50mm-lens-could-be-smart-pick-709235?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T13:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Some lenses stand out because they strike the right balance of size, price, and performance. The Viltrox AF 50mm f/2 Air falls into that category, offering you a lightweight and budget-friendly option without giving up too much in image quality. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/viltrox-air-50mm-f2-z-mount-review-_-as-good-on-nikon_---youtube---0-4-16.jpeg",
+    "video": null
+  },
+  {
+    "title": "The Sony RX1R III Hands-On: Big Sensor, Small Body, Real Limits",
+    "url": "https://fstoppers.com/reviews/sony-rx1r-iii-hands-big-sensor-small-body-real-limits-709234?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T12:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "The Sony RX1R III isn’t your usual camera upgrade. With its fixed 35mm f/2 Zeiss lens that hasn’t changed in a decade, it raises an immediate question: is this a serious tool for your work or just a niche option for specific situations? [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/sony-rx1r-iii---worth-the-money_-full-ai-edit---youtube---0-2-18.jpeg",
+    "video": null
+  },
+  {
+    "title": "The TTArtisan AF 40mm f/2 Lens: Cheap, Compact, and Surprisingly Sharp",
+    "url": "https://fstoppers.com/reviews/ttartisan-af-40mm-f2-lens-cheap-compact-and-surprisingly-sharp-709232?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T11:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "A 40mm lens has always been a sweet spot for many of you because it feels close to how your eye naturally sees the world. It gives a slightly wider view without looking exaggerated, which makes it useful in a lot of everyday shooting situations. The TTArtisan AF 40mm f/2 is trying to bring that perspective to more people with a price tag that’s hard to ig...",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/ttartisan-af-40mm-f_2-lens-review---youtube---0-0-59.jpeg",
+    "video": null
+  },
+  {
+    "title": "Apple Chooses Samsung Over Sony for US Image Sensor Supply",
+    "url": "https://fstoppers.com/business/apple-chooses-samsung-over-sony-us-image-sensor-supply-709014?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-16T10:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Samsung Electronics will manufacture three-layer stacked image sensors for Apple’s iPhone 18 at its Austin, Texas, plant, using a chipmaking technology described as a global first. The deal fits with Apple’s pledge to invest $100 billion in U.S. manufacturing. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/apple-samsung-iphone-camera-us-manufacturing-2025.jpg",
+    "video": null
+  },
+  {
+    "title": "What Are the Best Films from 50 Years Ago?",
+    "url": "https://nofilmschool.com/best-films-1975",
+    "publishedAt": "2025-08-15T22:15:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "In August 1975, about 50 years ago today, several popular films were showing in U.S. theaters, with Jaws being the reigning number-one box office hit. Jaws was the highest-grossing film of 1975 and held the number-one spot through much of the summer, heralding the era of summer blockbusters. Other notable films released and likely still playing around the...",
+    "image": "https://nofilmschool.com/media-library/men-lounging-in-a-room-during-the-day-in-barry-lyndon.jpg?id=34060544&width=980",
+    "video": "https://www.youtube.com/embed/U1fu_sA7XhE?rel=0"
+  },
+  {
+    "title": "Why Professional Artists Often Have The Worst Gear",
+    "url": "https://fstoppers.com/business/why-professional-artists-often-have-worst-gear-708113?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-15T21:03:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Today, I’d like to explore a question that comes to mind often whenever I get a chance to meet my film and photography heroes. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/pelican-cases.jpg",
+    "video": null
+  },
+  {
+    "title": "How This TV Writer Learned How to Write Extremely Fast",
+    "url": "https://nofilmschool.com/steven-levitan-writing-fast",
+    "publishedAt": "2025-08-15T20:49:21.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Steven Levitan knows how to make television that sticks with you. The Chicago-raised writer-producer has been crafting comedy gold for over three decades, starting with his early days writing for Wings to co-creating the Emmy-winning Modern Family. He's written hundreds of episodes of TV—the dream for many of us. It's clear he's figured out a few things t...",
+    "image": "https://nofilmschool.com/media-library/how-this-tv-writer-learned-how-to-write-extremely-fast.jpg?id=61469821&width=980",
+    "video": "https://www.youtube.com/embed/t9BwJihhhEA?rel=0"
   }
 ]
-
-
