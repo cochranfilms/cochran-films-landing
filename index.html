@@ -640,6 +640,8 @@
     }
     .prog-title { color: var(--text-muted); text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 700; }
     .prog-val { font-weight: 800; color: var(--brand-emerald); }
+    .trophy-badge { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; box-shadow: 0 4px 14px rgba(255,178,0,0.35); border: 1px solid rgba(255,178,0,0.4); }
+    .trophy-badge i { font-size: 16px; }
     .bar {
       width: 100%; height: 10px; border-radius: 999px;
       background: rgba(99,102,241,0.18);
@@ -1698,7 +1700,7 @@
     }
   </style>
 </head>
-<body data-launch-in-days="14" data-progress="68" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
+<body data-launch-in-days="14" data-progress="75" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
   <a href="#main" class="skip-link">Skip to main content</a>
   <canvas id="bg" aria-hidden="true"></canvas>
 
@@ -1771,8 +1773,9 @@
           <div class="prog-head">
             <div class="prog-title" id="progressLabel">Rebrand progress</div>
             <div class="prog-val" id="progVal">0%</div>
+            <div class="trophy-badge" id="trophyBadge" title="Milestone achieved" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
           </div>
-          <div class="bar" id="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68" aria-labelledby="progressLabel"><div class="fill" id="fill"></div></div>
+          <div class="bar" id="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75" aria-labelledby="progressLabel"><div class="fill" id="fill"></div></div>
           <div class="prog-tags">
             <span class="tag">UX + Visual</span>
             <span class="tag">Content</span>
@@ -2363,7 +2366,7 @@
        if (!progVal || !fill) return;
        
        // Get target progress from body data attribute
-       const target = parseInt(document.body.getAttribute('data-progress') || '68');
+       const target = parseInt(document.body.getAttribute('data-progress') || '75');
        let progress = 0;
        
        function animate() {

@@ -17,6 +17,19 @@
   <link rel="stylesheet" href="css/service-builder.css?v=20250817b">
   <link rel="stylesheet" href="css/modal.css?v=20250817b">
   <link rel="stylesheet" href="css/responsive.css?v=20250817b">
+
+  <!-- EmailJS (load directly here so it executes; do not rely on injected head module) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    (function(){
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('p4pF3OWvh-DXtae4c');
+          console.log('✅ EmailJS initialized (modular)');
+        }
+      } catch (e) { console.error('❌ EmailJS init failed (modular):', e); }
+    })();
+  </script>
 </head>
 <body>
   <!-- AI Neural Network Background -->

@@ -267,6 +267,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-height: 420px; /* fixed height with internal scroll */
+  overflow-y: auto;
 }
 
 .package-dropzone.drag-over {

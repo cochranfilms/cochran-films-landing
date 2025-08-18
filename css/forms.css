@@ -257,8 +257,34 @@
 /* Select dropdown look */
 .booking-form select { appearance: none; background-image: linear-gradient(135deg, rgba(255,178,0,0.15), rgba(99,102,241,0.10)); background-repeat: no-repeat; }
 
-.contact-section .social-links h3 {
+.contact-section .social-links { margin-top: 12px; }
+.contact-section .social-links h3 { color: var(--text-primary); margin: 8px 0; }
+
+/* Social links in contact section aligned with footer style */
+.contact-section .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.contact-section .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.2);
+  color: var(--text-secondary);
+  text-decoration: none;
+  background: rgba(15,23,42,0.5);
+  transition: var(--transition-fast);
+}
+
+.contact-section .social-link:hover {
+  border-color: rgba(148,163,184,0.4);
   color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
 /* Responsive */

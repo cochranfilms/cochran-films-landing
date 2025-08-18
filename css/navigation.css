@@ -49,6 +49,53 @@
   position: relative;
 }
 
+/* Submenu styles */
+.nav-item.has-submenu .dropdown-caret {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 8px;
+  margin-top: 6px;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(99,102,241,0.25);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  list-style: none;
+  display: none;
+  z-index: 1200;
+}
+
+.submenu .submenu-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.submenu .submenu-link:hover {
+  color: var(--text-primary);
+  background: rgba(99,102,241,0.1);
+}
+
+.nav-item.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Ensure submenu fits on screen when near right edge */
+.nav-item.has-submenu:last-child .submenu {
+  right: 0;
+  left: auto;
+}
+
 .nav-link {
   display: inline-flex;
   align-items: center;

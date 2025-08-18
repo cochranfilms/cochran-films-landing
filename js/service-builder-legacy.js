@@ -15,6 +15,8 @@
     const quoteBreakdown = qs('#quoteBreakdown');
     const tabs = qsa('.category-tab');
     const createBtn = document.getElementById('generateInvoice');
+    const quoteActions = document.querySelector('.quote-actions');
+    const packageBuilder = document.querySelector('.package-builder');
 
     if (!serviceItemsWrap || !dropzone || !tabs.length) return;
 
@@ -22,14 +24,52 @@
 
     function formatCurrency(n){ return `$${Number(n||0).toFixed(2).replace(/\.00$/, '')}`; }
 
+    function ensureContactFields(){
+      // Create lightweight contact inputs below the package card (not inside it)
+      let contact = document.getElementById('builderContact');
+      if (!contact) {
+        contact = document.createElement('div');
+        contact.id = 'builderContact';
+        contact.innerHTML = 
+          '<div class="form-group" style="margin-top:12px;">\
+            <label for="builderName">Your Name</label>\
+            <input id="builderName" type="text" placeholder="Full name" class="option-input" />\
+          </div>\
+          <div class="form-group" style="margin-top:8px;">\
+            <label for="builderPhone">Phone</label>\
+            <input id="builderPhone" type="tel" placeholder="(555) 123-4567" class="option-input" />\
+          </div>\
+          <div class="form-group" style="margin-top:8px;">\
+            <label for="builderEmail">Email</label>\
+            <input id="builderEmail" type="email" placeholder="you@example.com" class="option-input" />\
+          </div>\
+          <div class="form-group" style="margin-top:8px;">\
+            <label for="builderNotes">Notes</label>\
+            <textarea id="builderNotes" rows="3" placeholder="Project details, preferred times, etc." class="option-input"></textarea>\
+          </div>';
+        // Insert after the package builder card
+        if (packageBuilder && packageBuilder.parentElement) {
+          packageBuilder.parentElement.insertBefore(contact, packageBuilder.nextSibling);
+        } else if (quoteActions && quoteActions.parentElement) {
+          quoteActions.parentElement.insertBefore(contact, quoteActions.nextSibling);
+        } else {
+          quoteSummary.parentElement.appendChild(contact);
+        }
+      }
+      contact.style.display = 'block';
+    }
+
     function renderSelections(){
       if (!selections.length){
         selectedServices.style.display = 'none';
         quoteSummary.style.display = 'none';
+        const contact = document.getElementById('builderContact');
+        if (contact) contact.style.display = 'none';
         return;
       }
       selectedServices.style.display = 'block';
       quoteSummary.style.display = 'block';
+      ensureContactFields();
       selectedServices.innerHTML = selections.map(s => (
         `<div class="selected-service" data-selected-id="${s.id}">
           <div class="selected-service-info">
@@ -140,18 +180,27 @@
         try {
           if (typeof emailjs !== 'undefined') {
             const serviceId = 'service_t11yvru';
-            const templateId = 'template_aluwel1';
+            const templateId = 'service_builder';
             const lines = selections.map(s => `- ${s.name}: ${formatCurrency(s.price)}`).join('\n');
             const total = selections.reduce((sum, s) => sum + (s.price||0), 0);
-            await emailjs.send(serviceId, templateId, {
-              service: 'Project Generation',
-              name: 'Website Quote',
-              email: 'noreply@cochranfilms.com',
-              phone: 'N/A',
-              notes: `Selected services:\n${lines}\n\nTotal: ${formatCurrency(total)}`,
-              total_amount: formatCurrency(total),
-              title: 'Service Package Request'
-            });
+            const nameInput = document.getElementById('builderName');
+            const phoneInput = document.getElementById('builderPhone');
+            const emailInput = document.getElementById('builderEmail');
+            const notesInput = document.getElementById('builderNotes');
+            const NAME = (nameInput?.value || '').trim();
+            const PHONE = (phoneInput?.value || '').trim();
+            if (!NAME) { alert('Please enter your name.'); return; }
+            if (!PHONE) { alert('Please enter your phone.'); return; }
+            const EMAIL = (emailInput?.value || '').trim();
+            const NOTES = (notesInput?.value || '').trim();
+            if (!EMAIL || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(EMAIL)) { alert('Please enter a valid email.'); return; }
+
+            // Build simple text lines for universal EmailJS editors
+            const ITEM_TEXT = selections.map(s => `${s.name} — ${formatCurrency(s.price)}`).join('\n');
+            const QUOTE_TOTAL = formatCurrency(total);
+            const payload = { NAME, PHONE, EMAIL, NOTES, ITEM_TEXT, QUOTE_TOTAL };
+            console.log('EmailJS payload:', payload);
+            await emailjs.send(serviceId, templateId, payload);
             // Clear selections on success
             selections = [];
             renderSelections();

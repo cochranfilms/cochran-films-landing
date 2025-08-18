@@ -10,6 +10,7 @@ class CochranFilmsCore {
     this.initMobileMenu();
     this.initToolkitForm();
     this.initNavigationScrollEffect();
+    this.initPortfolioMenuAnchors();
     console.log('✅ CochranFilmsCore initialized');
   }
 
@@ -18,12 +19,36 @@ class CochranFilmsCore {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href') || '';
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
+        }
+      });
+    });
+  }
+
+  // Map portfolio root link to the section and submenu to specific category blocks
+  initPortfolioMenuAnchors() {
+    const portfolioRootLink = document.querySelector('.nav-item.has-submenu > .nav-link');
+    if (portfolioRootLink) {
+      portfolioRootLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = document.querySelector('#portfolio');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+    document.querySelectorAll('.submenu-link[href^="#portfolio-"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
