@@ -146,7 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const moduleElements = document.querySelectorAll('[id$="-module"]');
   moduleElements.forEach(element => {
     const moduleId = element.id;
-    const moduleFile = `modules/${moduleId.replace('-module', '')}.html`;
+    const base = (typeof window.__MODULES_BASE_PATH__ === 'string' && window.__MODULES_BASE_PATH__) ? window.__MODULES_BASE_PATH__ : '';
+    const moduleFile = `${base}modules/${moduleId.replace('-module', '')}.html`;
     window.moduleLoader.register(moduleId, moduleFile);
   });
   window.__MODULES_MANUALLY_INITIALIZED__ = true;
