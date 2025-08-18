@@ -103,6 +103,18 @@ class ModuleLoader {
 
   // Initialize additional features after modules are loaded
   initializeAdditionalFeatures() {
+    // Mobile nav toggle (works on any page that loads the navigation module)
+    try {
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      const menu = document.querySelector('.nav-menu');
+      if (toggle && menu && !toggle.__cfBound) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('show');
+        });
+        toggle.__cfBound = true;
+      }
+    } catch (e) { /* no-op */ }
+
     // Inject AI blog banner when on blog pages
     try {
       const path = location.pathname;

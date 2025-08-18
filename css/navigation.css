@@ -159,9 +159,21 @@
 
   .nav-menu {
     display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid rgba(99,102,241,0.2);
+    padding: 10px 12px 12px;
+    z-index: 1001;
   }
 
   .mobile-menu-toggle {
     display: block;
   }
+
+  .nav-menu.show { display: flex; }
 }

@@ -994,10 +994,24 @@
 
       .nav-menu {
         display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 6px;
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(99,102,241,0.2);
+        padding: 10px 12px 12px;
+        z-index: 1001;
       }
 
       .mobile-menu-toggle {
         display: block;
+      }
+
+      .nav-menu.show {
+        display: flex;
       }
 
       .wrapper {
@@ -3444,17 +3458,19 @@ Welcome to the Cochran Films family! 🚀
           // Show loading state
           showPortfolioLoadingState();
           
-          const [portfolioItems, webItems] = await Promise.all([
+          const [portfolioItems, webItems, photoItems] = await Promise.all([
             loadPortfolioCSV(),
-            loadWebCSV()
+            loadWebCSV(),
+            loadPhotographyCSV()
           ]);
           
           // Combine all data
-          portfolioData = [...portfolioItems, ...webItems];
+          portfolioData = [...portfolioItems, ...webItems, ...photoItems];
           
           console.log(`Loaded ${portfolioData.length} total items:`, {
             'Video Production': portfolioItems.length,
-            'Web Development': webItems.length
+            'Web Development': webItems.length,
+            'Photography': photoItems.length
           });
           
           // Hide loading state and render portfolio
@@ -3470,6 +3486,39 @@ Welcome to the Cochran Films family! 🚀
           
           // Show error message to user
           showPortfolioErrorState();
+        }
+      }
+
+      // Load a lightweight Photography CSV (images only)
+      async function loadPhotographyCSV() {
+        try {
+          console.log('Loading Photography.csv...');
+          const resp = await fetch('CMS/Collections/Photography.csv');
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          const txt = await resp.text();
+          const lines = txt.replace(/\r\n/g,'\n').split('\n').map(l => l.trim()).filter(Boolean);
+          const items = [];
+          for (let i = 1; i < lines.length; i++) { // skip header
+            const url = lines[i].split(',')[0];
+            if (!url) continue;
+            const item = {
+              Title: 'Photography',
+              Description: 'Gallery image',
+              Category: 'Photography',
+              'Thumbnail Image': url,
+              'Is Featured': false,
+              playbackUrl: '',
+              UploadDate: new Date().toISOString(),
+              URL: '',
+              ServiceCategory: 'Photography'
+            };
+            items.push(item);
+          }
+          console.log(`Loaded ${items.length} photography items`);
+          return items;
+        } catch (e) {
+          console.warn('Failed to load Photography.csv', e);
+          return [];
         }
       }
       
