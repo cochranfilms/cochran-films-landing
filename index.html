@@ -1698,6 +1698,78 @@
         max-height: 40vh;
       }
     }
+    
+    /* Celebration Modal Styles */
+    .celebrate-panel {
+      width: min(860px, 94vw);
+      max-height: 90vh;
+      border-radius: 22px;
+      overflow: hidden;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,0.24), transparent 60%),
+                  radial-gradient(1000px 600px at 110% 0%, rgba(255,178,0,0.22), transparent 60%),
+                  linear-gradient(180deg, rgba(2,6,23,0.96), rgba(2,6,23,0.9));
+      border: 1px solid rgba(255,178,0,0.45);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.55), 0 0 0 1px rgba(99,102,241,0.12) inset;
+      transform: translateY(14px);
+      animation: pop 360ms cubic-bezier(.2,.8,.2,1) forwards;
+      position: relative;
+      z-index: 1000000;
+      display: flex;
+      flex-direction: column;
+      transform-origin: center center;
+      backdrop-filter: blur(10px);
+    }
+    .celebrate-panel::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,178,0,0.08), rgba(99,102,241,0.08), rgba(255,255,255,0.05));
+      background-size: 200% 100%;
+      animation: shimmer 6s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes shimmer { to { background-position: 200% 0; } }
+    .celebrate-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      padding: 22px 22px 0;
+    }
+    .celebrate-close { margin-left: auto; }
+    .ai-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(99,102,241,0.2);
+      border: 1px solid rgba(99,102,241,0.35);
+      color: #c7d2fe; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 11px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset, 0 10px 24px rgba(99,102,241,0.18);
+    }
+    .celebrate-body { padding: 24px; display: grid; gap: 16px; }
+    .celebrate-title {
+      margin: 0; font-size: clamp(28px, 4.8vw, 44px); line-height: 1.08; font-weight: 900; letter-spacing: -0.02em;
+      color: #fff; text-align: center;
+    }
+    .shine-text {
+      background: linear-gradient(135deg, #ffffff, #dbeafe 40%, #ffd166 90%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      text-shadow: 0 10px 40px rgba(99,102,241,0.2);
+      display: inline-block;
+    }
+    .celebrate-sub {
+      margin: 0; color: var(--text-secondary); text-align: center; font-size: 16px; line-height: 1.6;
+    }
+    .celebrate-progress {
+      margin-top: 6px; display: grid; gap: 10px; justify-items: center;
+    }
+    .celebrate-meter { width: 100%; max-width: 560px; height: 14px; border-radius: 999px; background: rgba(99,102,241,0.18); overflow: hidden; border: 1px solid rgba(99,102,241,0.24); }
+    .celebrate-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--brand-indigo), var(--brand-gold)); box-shadow: var(--glow-indigo); border-radius: inherit; transition: width 900ms cubic-bezier(.4,0,.2,1); }
+    .celebrate-kpi { font-weight: 900; font-size: 14px; color: var(--brand-emerald); letter-spacing: .08em; text-transform: uppercase; }
+    .celebrate-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .celebrate-tags .tag { background: rgba(15,23,42,0.55); border-color: rgba(99,102,241,0.3); }
+    .celebrate-actions { margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .celebrate-actions .btn { min-width: 160px; }
+    @media (max-width: 520px) {
+      .celebrate-panel { width: 96vw; margin: 14px; }
+      .celebrate-title { font-size: clamp(24px, 7vw, 34px); }
+      .celebrate-sub { font-size: 15px; }
+    }
   </style>
 </head>
 <body data-launch-in-days="14" data-progress="75" data-form-endpoint="" data-instagram="" data-youtube="" data-github="">
@@ -2074,6 +2146,41 @@
               <i class="fa-solid fa-star"></i> Featured Project
             </span>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Celebration Modal (auto on first visit) -->
+  <div class="modal" id="celebrateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="celebrateTitle" aria-describedby="celebrateDesc">
+    <div class="celebrate-panel">
+      <div class="celebrate-head">
+        <span class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI‑Composed</span>
+        <button class="video-close celebrate-close" id="closeCelebrate" aria-label="Close celebration">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="celebrate-body">
+        <h2 class="celebrate-title" id="celebrateTitle">
+          <span class="shine-text">Cochran Films is <span id="celebrateProgressText">75%</span> to Launch</span>
+        </h2>
+        <p class="celebrate-sub" id="celebrateDesc">
+          To our clients, creators, and collaborators — thank you. Together we’ve pushed through the heavy lift of this rebrand, and the best is ahead. We’re energized for the rest of 2025 and already laying track for a bold 2026. Let’s build stories that move people and systems that scale them.
+        </p>
+        <div class="celebrate-progress">
+          <div class="celebrate-meter"><div class="celebrate-fill" id="celebrateFill"></div></div>
+          <div class="celebrate-kpi" id="celebrateKPI">Rebrand momentum: 75%</div>
+          <div class="celebrate-tags">
+            <span class="tag"><i class="fa-solid fa-film"></i> Story‑Driven</span>
+            <span class="tag"><i class="fa-solid fa-server"></i> Full‑Stack</span>
+            <span class="tag"><i class="fa-solid fa-star"></i> White‑Label</span>
+            <span class="tag"><i class="fa-solid fa-bolt"></i> Fast Turnaround</span>
+          </div>
+        </div>
+        <div class="celebrate-actions">
+          <button class="btn" id="celebrateToolkit"><i class="fa-solid fa-gift"></i> Get the Toolkit</button>
+          <a class="btn btn-ghost" href="#portfolio" id="celebratePortfolio"><i class="fa-solid fa-clapperboard"></i> Explore Portfolio</a>
+          <button class="btn btn-ghost" id="celebrateCalendar"><i class="fa-solid fa-calendar-plus"></i> Add Launch to Calendar</button>
         </div>
       </div>
     </div>
@@ -3316,6 +3423,83 @@
         document.addEventListener('DOMContentLoaded', initPortfolio);
       } else {
         initPortfolio();
+      }
+    })();
+    
+    // =========================
+    // Celebration Modal (auto open once per session)
+    // =========================
+    (() => {
+      const MODAL_ID = 'celebrateModal';
+      const STORAGE_KEY = 'cf_celebrate_shown_v1';
+      const modal = document.getElementById(MODAL_ID);
+      if (!modal) return;
+
+      const closeBtn = document.getElementById('closeCelebrate');
+      const openNotifyBtn = document.getElementById('openNotify');
+      const celebrateFill = document.getElementById('celebrateFill');
+      const celebrateKPI = document.getElementById('celebrateKPI');
+      const celebrateProgressText = document.getElementById('celebrateProgressText');
+
+      const progressTarget = parseInt(document.body.getAttribute('data-progress') || '75');
+      if (celebrateKPI) celebrateKPI.textContent = `Rebrand momentum: ${progressTarget}%`;
+      if (celebrateProgressText) celebrateProgressText.textContent = `${progressTarget}%`;
+
+      function open() {
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => {
+          if (celebrateFill) celebrateFill.style.width = `${progressTarget}%`;
+        });
+      }
+      function close() {
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Wire close
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target.id === MODAL_ID) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('show')) close(); });
+
+      // CTA hookups
+      const ctaToolkit = document.getElementById('celebrateToolkit');
+      const ctaCalendar = document.getElementById('celebrateCalendar');
+      const ctaPortfolio = document.getElementById('celebratePortfolio');
+
+      if (ctaToolkit && openNotifyBtn) {
+        ctaToolkit.addEventListener('click', () => {
+          close();
+          openNotifyBtn.click();
+        });
+      }
+      if (ctaCalendar) {
+        ctaCalendar.addEventListener('click', () => {
+          close();
+          const btn = document.getElementById('addCalendar');
+          if (btn) btn.click();
+        });
+      }
+      if (ctaPortfolio) {
+        ctaPortfolio.addEventListener('click', () => {
+          close();
+          try {
+            const el = document.getElementById('portfolio');
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } catch(_) {}
+        });
+      }
+
+      // Only show once per session
+      try {
+        const shown = sessionStorage.getItem(STORAGE_KEY);
+        if (!shown) {
+          setTimeout(() => { open(); sessionStorage.setItem(STORAGE_KEY, '1'); }, 600);
+        }
+      } catch(_) {
+        setTimeout(open, 600);
       }
     })();
   </script>
