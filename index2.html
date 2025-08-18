@@ -447,6 +447,21 @@
       margin-top: 20px;
     }
     
+    /* Masonry layout for Photography grid */
+    #photographyGrid {
+      display: block;
+      -moz-column-count: 3;
+      column-count: 3;
+      -moz-column-gap: 20px;
+      column-gap: 20px;
+    }
+    @media (max-width: 1024px) {
+      #photographyGrid { column-count: 2; }
+    }
+    @media (max-width: 640px) {
+      #photographyGrid { column-count: 1; }
+    }
+    
     .portfolio-item {
       position: relative;
       border-radius: 18px;
@@ -483,6 +498,18 @@
     .portfolio-item:hover .portfolio-thumbnail img {
       transform: scale(1.05);
     }
+
+    /* Photo-only items in masonry */
+    .portfolio-item.photo-only {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 20px;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+    }
+    .portfolio-item.photo-only .portfolio-thumbnail { height: auto; }
+    .portfolio-item.photo-only .portfolio-thumbnail img { height: auto; }
     
     .portfolio-overlay {
       position: absolute;
@@ -847,6 +874,27 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+
+    /* Image Lightbox */
+    .image-panel {
+      width: min(92vw, 1100px);
+      max-height: 92vh;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.9));
+      border: 1px solid rgba(255,178,0,0.4);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(12px);
+      animation: pop 320ms cubic-bezier(.2,.8,.2,1) forwards;
+      position: relative;
+      z-index: 1000000;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-panel-head { display:flex; align-items:center; justify-content:flex-end; padding: 12px; }
+    .image-panel-body { padding: 0 12px 12px; }
+    .photo-container { position: relative; width: 100%; max-height: 80vh; border-radius: 12px; overflow: hidden; background: #000; }
+    .photo-container img { width: 100%; height: auto; display: block; }
 
     /* Contact Section */
     .contact-form {
@@ -3658,11 +3706,7 @@ Welcome to the Cochran Films family! 🚀
         // For Photography items, render image-only cards (no overlays, titles, or metadata)
         if (isPhotoOnly) {
           return `
-            <div class="portfolio-item photo-only" data-category="${item.Category}">
-              <div class="portfolio-thumbnail">
-                <img src="${thumbnailSrc}" alt="${item.Title || 'Photo'}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
-              </div>
-            </div>
+            <div class=\"portfolio-item photo-only\" data-category=\"${item.Category}\" data-title=\"${item.Title || ''}\" data-src=\"${thumbnailSrc}\">\n              <div class=\"portfolio-thumbnail\">\n                <img src=\"${thumbnailSrc}\" alt=\"${item.Title || 'Photo'}\" loading=\"lazy\" onerror=\"this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&fit=crop&crop=center'\" />\n              </div>\n            </div>
           `;
         }
 
@@ -3751,6 +3795,9 @@ Welcome to the Cochran Films family! 🚀
                 if (portfolioItem.ServiceCategory === 'Web Development' && portfolioItem.URL) {
                   // Open web development project in new tab
                   window.open(portfolioItem.URL, '_blank');
+                } else if (portfolioItem.ServiceCategory === 'Photography') {
+                  // Open image lightbox for photography
+                  openImageModal(item.getAttribute('data-src') || portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Photo');
                 } else if (portfolioItem.playbackUrl) {
                   // Open video modal for video production items
                   openVideoModal(portfolioItem);
@@ -3810,6 +3857,35 @@ Welcome to the Cochran Films family! 🚀
         if (closeBtn) closeBtn.focus();
       }
 
+      // Simple image lightbox for photography
+      function openImageModal(src, altText) {
+        const modal = document.createElement('div');
+        modal.className = 'modal show';
+        modal.id = 'imageModal';
+        modal.setAttribute('aria-hidden','false');
+        modal.innerHTML = `
+          <div class="image-panel">
+            <div class="image-panel-head">
+              <button class="video-close" aria-label="Close image" id="closeImage"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="image-panel-body">
+              <div class="photo-container"><img src="${src}" alt="${altText || 'Photo'}" /></div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+        modal.addEventListener('click', (e)=>{ if(e.target.id==='imageModal') closeImageModal(); });
+        document.getElementById('closeImage')?.addEventListener('click', closeImageModal);
+        document.addEventListener('keydown', escCloseImage);
+        function escCloseImage(e){ if(e.key==='Escape') closeImageModal(); }
+        function closeImageModal(){
+          document.removeEventListener('keydown', escCloseImage);
+          document.body.style.overflow = '';
+          modal.remove();
+        }
+      }
+
       function closeVideoModal() {
         const modal = document.getElementById('videoModal');
         const videoPlayer = document.getElementById('videoPlayer');
@@ -3860,6 +3936,8 @@ Welcome to the Cochran Films family! 🚀
               if (portfolioItem.ServiceCategory === 'Web Development' && portfolioItem.URL) {
                 // Open web development project in new tab
                 window.open(portfolioItem.URL, '_blank');
+              } else if (portfolioItem.ServiceCategory === 'Photography') {
+                openImageModal(item.getAttribute('data-src') || portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Photo');
               } else if (portfolioItem.playbackUrl) {
                 // Open video modal for video production items
                 openVideoModal(portfolioItem);
