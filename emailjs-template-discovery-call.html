@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Discovery Call — Cochran Films</title>
+  <style>
+    body{margin:0;background:#0b1222;color:#e5e7eb;font-family:Arial,Helvetica,sans-serif}
+    .wrap{max-width:640px;margin:0 auto;padding:20px}
+    .card{background:#0f162c;border:1px solid rgba(99,102,241,.28);border-radius:14px;overflow:hidden}
+    .hd{padding:20px 20px 10px;border-bottom:1px solid rgba(99,102,241,.22)}
+    h1{margin:0;font-size:20px;color:#fff}
+    p{color:#cbd5e1}
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    .k{width:40%;padding:10px 12px;background:rgba(255,178,0,.06);color:#ffd166;font-weight:800;font-size:12px;border:1px solid rgba(255,178,0,.22)}
+    .v{width:60%;padding:10px 12px;border:1px solid rgba(255,178,0,.22)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hd"><h1>New Discovery Call</h1><p>Someone requested a discovery call.</p></div>
+      <div style="padding:20px">
+        <table>
+          <tr><td class="k">Email</td><td class="v">{{user_email}}</td></tr>
+          <tr><td class="k">Full Name</td><td class="v">{{user_name}}</td></tr>
+          <tr><td class="k">Phone</td><td class="v">{{phone}}</td></tr>
+          <tr><td class="k">Business</td><td class="v">{{business_name}}</td></tr>
+          <tr><td class="k">Preferred Date</td><td class="v">{{preferred_date}}</td></tr>
+          <tr><td class="k">Preferred Time</td><td class="v">{{preferred_time}}</td></tr>
+          <tr><td class="k">Time Zone</td><td class="v">{{timezone}}</td></tr>
+          <tr><td class="k">Stage</td><td class="v">{{brand_stage}}</td></tr>
+          <tr><td class="k">Help Needed</td><td class="v">{{help_needed}}</td></tr>
+          <tr><td class="k">Biggest Goal</td><td class="v">{{biggest_goal}}</td></tr>
+          <tr><td class="k">Notes</td><td class="v">{{notes}}</td></tr>
+          <tr><td class="k">Submitted</td><td class="v">{{submitted_at}}</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
