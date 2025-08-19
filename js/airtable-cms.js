@@ -52,6 +52,10 @@ class AirtableCMS {
     console.log('📊 Loading portfolio data from Airtable...');
     
     try {
+      // If running from file:// or invalid origin, skip Airtable and use CSV
+      if (!this.apiBase || !/^https?:\/\//.test(this.apiBase)) {
+        throw new Error(`Invalid API base: ${this.apiBase || '(empty)'} – falling back to CSV`);
+      }
       // Show loading state
       this.showPortfolioLoadingState();
       
@@ -74,6 +78,11 @@ class AirtableCMS {
         'Web Development': webData.length,
         'Photography': photoData.length
       });
+
+      // If Airtable returned zero usable items, trigger CSV fallback
+      if (!this.portfolioData || this.portfolioData.length === 0) {
+        throw new Error('Airtable returned zero items');
+      }
       
       // Hide loading state
       this.hidePortfolioLoadingState();
@@ -121,9 +130,8 @@ class AirtableCMS {
       
     } catch (error) {
       console.error(`❌ Failed to load ${category} data:`, error);
-      
-      // Return empty array if Airtable fails
-      return [];
+      // Rethrow to allow global fallback to CSV
+      throw error;
     }
   }
   
@@ -315,7 +323,7 @@ class AirtableCMS {
     const isPhotoOnly = item.ServiceCategory === 'Photography' && (!item.playbackUrl || item.playbackUrl === '');
     
     // Handle thumbnail image
-    let thumbnailSrc = item['Thumbnail Image'] || '';
+    let thumbnailSrc = item['Thumbnail Image'] || item['thumbnailUrl'] || item['Image'] || item['Thumbnail'] || '';
     if (thumbnailSrc && thumbnailSrc.includes('drive.google.com')) {
       // Convert Google Drive sharing link to direct image URL
       const fileId = thumbnailSrc.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
@@ -383,7 +391,8 @@ class AirtableCMS {
   renderPortfolioByCategory() {
     // Check if data is loaded
     if (!this.portfolioData || this.portfolioData.length === 0) {
-      console.log('Portfolio data not loaded yet, skipping render');
+      console.log('Portfolio data not loaded yet, showing error state');
+      this.showPortfolioErrorState();
       return;
     }
     
@@ -615,8 +624,9 @@ class AirtableCMS {
       const csvText = await response.text();
       console.log(`✅ CSV loaded: ${filePath}, length: ${csvText.length}`);
       
-      // Use simple CSV parsing for fallback
-      return this.parseCSVSimple(csvText);
+      // Use robust CSV parsing for fallback
+      const { rows } = this.parseCSVRows(csvText);
+      return rows || [];
       
     } catch (error) {
       console.warn(`⚠️ Failed to load CSV file ${filePath}:`, error);
@@ -624,33 +634,69 @@ class AirtableCMS {
     }
   }
   
-  parseCSVSimple(csvText) {
+  // Robust CSV parser that supports quoted fields with commas and newlines
+  parseCSVRows(csvText) {
     try {
-      const lines = csvText.split('\n').map(line => line.trim()).filter(Boolean);
-      if (lines.length < 2) return []; // Need header + at least one data row
-      
-      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
-      const data = [];
-      
-      for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(',').map(v => v.replace(/"/g, '').trim());
-        const item = {};
-        
-        headers.forEach((header, index) => {
-          item[header] = values[index] || '';
-        });
-        
-        if (item.Title || item.Name) {
-          data.push(item);
+      if (!csvText) return { headers: [], rows: [] };
+      const rows = [];
+      const headers = [];
+      let currentField = '';
+      let currentRow = [];
+      let inQuotes = false;
+      let isHeaderParsed = false;
+      for (let i = 0; i < csvText.length; i++) {
+        const char = csvText[i];
+        const next = csvText[i + 1];
+        if (char === '"') {
+          if (inQuotes && next === '"') {
+            currentField += '"';
+            i++;
+          } else {
+            inQuotes = !inQuotes;
+          }
+        } else if (char === ',' && !inQuotes) {
+          currentRow.push(currentField);
+          currentField = '';
+        } else if ((char === '\n' || char === '\r') && !inQuotes) {
+          if (char === '\r' && next === '\n') {
+            i++;
+          }
+          currentRow.push(currentField);
+          currentField = '';
+          if (currentRow.length > 1 || (currentRow.length === 1 && currentRow[0].trim() !== '')) {
+            if (!isHeaderParsed) {
+              headers.push(...currentRow.map(h => h.replace(/"/g, '').trim()));
+              isHeaderParsed = true;
+            } else {
+              const obj = {};
+              headers.forEach((h, idx) => {
+                obj[h] = (currentRow[idx] || '').replace(/"/g, '').trim();
+              });
+              rows.push(obj);
+            }
+          }
+          currentRow = [];
+        } else {
+          currentField += char;
         }
       }
-      
-      console.log(`📊 Parsed ${data.length} items from CSV`);
-      return data;
-      
+      if (currentField.length > 0 || currentRow.length > 0) {
+        currentRow.push(currentField);
+        if (!isHeaderParsed) {
+          headers.push(...currentRow.map(h => h.replace(/"/g, '').trim()));
+        } else {
+          const obj = {};
+          headers.forEach((h, idx) => {
+            obj[h] = (currentRow[idx] || '').replace(/"/g, '').trim();
+          });
+          rows.push(obj);
+        }
+      }
+      console.log(`📊 Parsed ${rows.length} items from CSV (robust parser)`);
+      return { headers, rows };
     } catch (error) {
-      console.error('❌ CSV parsing error:', error);
-      return [];
+      console.error('❌ CSV parsing error (robust):', error);
+      return { headers: [], rows: [] };
     }
   }
 }
