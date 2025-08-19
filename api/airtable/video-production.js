@@ -20,7 +20,8 @@ module.exports = async function handler(req, res) {
     const tableName = 'Portfolio';
     
     // Get Airtable API key from environment variables
-    const apiKey = process.env.AIRTABLE_API_KEY || process.env.AIRTABLE_TOKEN;
+    // Prefer base-specific token if provided, then fall back to global
+    const apiKey = process.env.AIRTABLE_API_KEY_VIDEO || process.env.AIRTABLE_API_KEY || process.env.AIRTABLE_TOKEN;
     
     if (!apiKey) {
       console.error('AIRTABLE_API_KEY environment variable not set');
