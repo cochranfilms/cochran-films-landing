@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23FFB200'/><text x='32' y='39' font-size='26' text-anchor='middle' fill='%230a0a0a' font-family='Arial, Helvetica, sans-serif'>CF</text></svg>"> 
   
   <!-- Primary Meta Tags -->
   <title>Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
@@ -3509,10 +3510,20 @@ Welcome to the Cochran Films family! 🚀
         const candidates = [];
         if (isHttp && /airtable\.com\//i.test(filePath)) {
           const base = filePath.replace(/#.*$/, '');
+          const encode = (u) => encodeURIComponent(u);
+          // Prefer serverless proxies if available
+          candidates.push(`/api/fetch-csv?url=${encode(base)}`);
+          candidates.push(`/netlify/functions/fetch-csv?url=${encode(base)}`);
           candidates.push(base);
           candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
           candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
           candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
+          // Last-resort public CORS proxy (temporary)
+          const corsProxy = 'https://cors.isomorphic-git.org/';
+          candidates.push(corsProxy + base);
+          candidates.push(corsProxy + (base + (base.endsWith('/') ? 'csv' : '/csv')));
+          candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'format=csv'));
+          candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'download=1'));
         } else {
           candidates.push(filePath);
         }

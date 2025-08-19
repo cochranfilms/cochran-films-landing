@@ -63,6 +63,7 @@ class PortfolioManager {
       // Resolve potential Airtable shared view links to CSV export endpoints
       const buildCacheBusted = (u) => u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now();
       const candidates = [];
+      const encode = (u) => encodeURIComponent(u);
       const isHttp = /^https?:\/\//i.test(filePath);
       if (isHttp && /airtable\.com\//i.test(filePath)) {
         const base = filePath.replace(/#.*$/, '');
@@ -71,6 +72,15 @@ class PortfolioManager {
         candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
         candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
         candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
+        // Try serverless proxies if present (Vercel/Netlify). These avoid browser CORS.
+        candidates.unshift(`/api/fetch-csv?url=${encode(base)}`);
+        candidates.unshift(`/netlify/functions/fetch-csv?url=${encode(base)}`);
+        // As a last-resort client-side CORS proxy (temporary), try isomorphic-git CORS proxy
+        const corsProxy = 'https://cors.isomorphic-git.org/';
+        candidates.push(corsProxy + base);
+        candidates.push(corsProxy + (base + (base.endsWith('/') ? 'csv' : '/csv')));
+        candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'format=csv'));
+        candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'download=1'));
       } else {
         candidates.push(filePath);
       }
