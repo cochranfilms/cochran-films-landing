@@ -15,20 +15,33 @@ const SOURCES = {
   production: [
     'https://nofilmschool.com/rss.xml',
     'https://www.studiobinder.com/blog/feed/',
+    // DJI newsroom feed is unstable; omit for now to avoid parse failures
   ],
   web: [
     'https://www.smashingmagazine.com/feed/',
     'https://web.dev/feed.xml',
     'https://dev.to/feed/tag/webdev',
+    'https://developer.mozilla.org/en-US/blog/feed.xml'
   ],
-  brand: [
-    'https://www.brandingmag.com/feed/',
-    'https://www.underconsideration.com/brandnew/rss2.php',
+  dev: [
+    'https://github.blog/feed/',
+    'https://vercel.com/changelog.atom',
+    'https://nextjs.org/feed.xml',
+    'https://blog.tailwindcss.com/rss/'
+  ],
+  tech: [
+    'https://9to5mac.com/feed/',
+    'https://www.theverge.com/rss/index.xml',
+    'https://www.apple.com/newsroom/rss-feed.rss'
   ],
   photography: [
     'https://petapixel.com/feed/',
-    'https://fstoppers.com/feed',
+    'https://fstoppers.com/feed'
   ],
+  brand: [
+    'https://www.brandingmag.com/feed/',
+    'https://www.underconsideration.com/brandnew/feed/'
+  ]
 };
 
 function stripHtml(html) {
@@ -67,8 +80,24 @@ const ALLOWED_HOSTS = new Set([
   'petapixel.com', 'www.petapixel.com',
   'fstoppers.com', 'www.fstoppers.com',
   'brandingmag.com', 'www.brandingmag.com',
-  'underconsideration.com', 'www.underconsideration.com'
+  'underconsideration.com', 'www.underconsideration.com',
+  // New additions
+  'dji.com', 'www.dji.com',
+  '9to5mac.com', 'www.9to5mac.com',
+  'theverge.com', 'www.theverge.com',
+  'apple.com', 'www.apple.com',
+  'github.blog', 'github.com',
+  'vercel.com', 'nextjs.org',
+  'tailwindcss.com', 'react.dev',
+  'developer.mozilla.org'
 ]);
+
+// Quality filters
+const BAD_TITLE_TOKENS = [
+  '.ts', '💊', '#1', '#2', '#3', '#4',
+  'deal', 'deals', 'discount', 'sale', 'coupon', 'giveaway',
+  'Black Friday', 'Cyber Monday', 'sponsored', 'ad:'
+];
 
 function isValidPost(p) {
   if (!p) return false;
@@ -77,9 +106,14 @@ function isValidPost(p) {
   if (!looksEnglish(p.title + ' ' + (p.summary || ''))) return false;
   const host = getHostname(p.url);
   if (host && !ALLOWED_HOSTS.has(host)) return false;
-  // Filter obvious non-article/code titles
-  const badTokens = ['.ts', '💊', '#1', '#2', '#3', '#4'];
-  if (badTokens.some(t => p.title.includes(t))) return false;
+  // Date window: prefer modern content (>= 2020)
+  if (!p.publishedAt) return false;
+  const year = new Date(p.publishedAt).getFullYear();
+  if (!(year >= 2020 && year <= 2100)) return false;
+  // Filter obvious non-article topics
+  if (BAD_TITLE_TOKENS.some(t => (p.title || '').toLowerCase().includes(t.toLowerCase()))) return false;
+  // Require some meaningful summary
+  if (!p.summary || stripHtml(p.summary).length < 40) return false;
   return true;
 }
 
@@ -163,9 +197,10 @@ function buildExcerptHtml(rawHtml, sourceUrl) {
     }
   });
 
-  // Safer links and images
+  // Safer links and remove inline images to avoid duplicate with our featured image
   html = html.replace(/<a\s/gi, '<a rel="nofollow noopener" target="_blank" ')
-             .replace(/<img\s/gi, '<img loading="lazy" style="max-width:100%;height:auto;border-radius:8px;" ');
+             // strip ALL images from the excerpt
+             .replace(/<img[^>]*>/gi, '');
 
   // Heuristic: take first 5 paragraphs; include first list if present
   const parts = html.split(/<\/p>/i);
@@ -275,6 +310,15 @@ function buildPostHtml(post) {
   (function(){
     try {
       var slug = ${JSON.stringify(slug)};
+      // Track recently viewed locally (for rail on blog.html)
+      try {
+        var recentRaw = localStorage.getItem('cf_recently_viewed') || '[]';
+        var recent = Array.isArray(JSON.parse(recentRaw)) ? JSON.parse(recentRaw) : [];
+        recent = recent.filter(function(r){ return r && r.slug !== slug; });
+        recent.unshift({ slug: slug, t: Date.now() });
+        if (recent.length > 12) recent = recent.slice(0,12);
+        localStorage.setItem('cf_recently_viewed', JSON.stringify(recent));
+      } catch(e) { /* ignore */ }
       fetch('/blog/posts.json?r=' + Date.now())
         .then(function(r){ return r.json(); })
         .then(function(list){
