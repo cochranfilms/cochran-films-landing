@@ -1,16 +1,8 @@
-import express from 'express';
-import { promises as fs } from 'fs';
-import path from 'path';
-import cors from 'cors';
-import { fileURLToPath } from 'url';
-import fetch from 'node-fetch';
-
-// Load environment variables
-require('dotenv').config();
-
 const express = require('express');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_YOUR_SECRET_KEY_HERE');
 const path = require('path');
+const cors = require('cors');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || 'sk_test_YOUR_SECRET_KEY_HERE');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -173,11 +165,5 @@ app.get('/cancel.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'cancel.html'));
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📱 Stripe integration ready`);
-  console.log(`🌐 Open http://localhost:${PORT} to test`);
-});
-
+// Do not call app.listen() in serverless. Export the app instead.
 module.exports = app;
