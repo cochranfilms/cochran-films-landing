@@ -866,13 +866,13 @@ body {
    ALTERNATING SECTION GRADIENT
    Apply the CTA blue gradient to every other section
    ======================================== */
-.main-container > section:nth-of-type(even):not(.cta-section) {
+.main-container > section:nth-of-type(even):not(.cta-section):not(#contact) {
   background: var(--gradient-ai);
   position: relative;
   overflow: hidden;
 }
 
-.main-container > section:nth-of-type(even):not(.cta-section)::before {
+.main-container > section:nth-of-type(even):not(.cta-section):not(#contact)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -881,6 +881,97 @@ body {
   height: 100%;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
   opacity: 0.3;
+}
+
+/* ========================================
+   MOMENTUM CARD (rebrand progress)
+   Mirrors the popup panel design from index.html
+   ======================================== */
+.momentum-section {
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.momentum-card {
+  width: min(860px, 94vw);
+  border-radius: 22px;
+  overflow: hidden;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,0.24), transparent 60%),
+              radial-gradient(1000px 600px at 110% 0%, rgba(255,178,0,0.22), transparent 60%),
+              linear-gradient(180deg, rgba(2,6,23,0.96), rgba(2,6,23,0.9));
+  border: 1px solid rgba(255,178,0,0.45);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.55), 0 0 0 1px rgba(99,102,241,0.12) inset;
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
+.momentum-title {
+  font-size: clamp(24px, 4.8vw, 36px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.momentum-title .shine {
+  background: linear-gradient(135deg, #ffffff, #dbeafe 40%, #ffd166 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 10px 40px rgba(99,102,241,0.2);
+}
+
+.momentum-sub {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.momentum-meter {
+  width: 100%;
+  max-width: 560px;
+  height: 14px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.18);
+  overflow: hidden;
+  border: 1px solid rgba(99,102,241,0.24);
+}
+
+.momentum-fill {
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(90deg, var(--brand-indigo), var(--brand-gold));
+  box-shadow: var(--glow-indigo);
+  border-radius: inherit;
+}
+
+.momentum-kpi {
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--brand-emerald);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.momentum-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.momentum-tags .tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(99,102,241,0.3);
+  color: var(--text-secondary);
+  background: rgba(15,23,42,0.55);
 }
 
 /* ========================================
