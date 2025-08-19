@@ -2,6 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "server.js", "use": "@vercel/node" },
+    { "src": "api/**/*.js", "use": "@vercel/node" },
     { "src": "*.html", "use": "@vercel/static" },
     { "src": "*.png", "use": "@vercel/static" },
     { "src": "*.jpg", "use": "@vercel/static" },
@@ -24,10 +25,7 @@
       "src": "^/blog$",
       "dest": "/blog.html"
     },
-    {
-      "src": "/api/(.*)",
-      "dest": "/server.js"
-    },
+    
     {
       "src": "/admin",
       "dest": "/server.js"
