@@ -16,8 +16,69 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
+
+// ======================================
+// Airtable Proxy API (used by index2.html)
+// ======================================
+const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN || process.env.AIRTABLE_API_KEY || '';
+const AIRTABLE_BASE_PORTFOLIO = process.env.AIRTABLE_BASE_PORTFOLIO || 'appjQxcRoClnZzghj';
+const AIRTABLE_BASE_WEB = process.env.AIRTABLE_BASE_WEB || 'appV5l9kZ5vAxcz4e';
+const AIRTABLE_BASE_PHOTOGRAPHY = process.env.AIRTABLE_BASE_PHOTOGRAPHY || 'appP1uFoRWjxPkQ5b';
+
+async function fetchAirtableRecords(baseId, tableName) {
+  if (!AIRTABLE_TOKEN) {
+    throw new Error('Missing AIRTABLE_TOKEN (or AIRTABLE_API_KEY) environment variable');
+  }
+
+  const url = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`;
+  const resp = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${AIRTABLE_TOKEN}`,
+      'Content-Type': 'application/json'
+    }
+  });
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(`Airtable ${resp.status} ${resp.statusText}: ${text}`);
+  }
+  return resp.json();
+}
+
+// Video Production
+app.get('/api/airtable/video-production', async (req, res) => {
+  try {
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PORTFOLIO, 'Portfolio');
+    res.status(200).json(data);
+  } catch (err) {
+    console.error('Airtable video-production error:', err);
+    res.status(500).json({ error: 'Failed to fetch Airtable records', message: err.message });
+  }
+});
+
+// Web Development
+app.get('/api/airtable/web-development', async (req, res) => {
+  try {
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_WEB, 'Web');
+    res.status(200).json(data);
+  } catch (err) {
+    console.error('Airtable web-development error:', err);
+    res.status(500).json({ error: 'Failed to fetch Airtable records', message: err.message });
+  }
+});
+
+// Photography
+app.get('/api/airtable/photography', async (req, res) => {
+  try {
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PHOTOGRAPHY, 'Photos');
+    res.status(200).json(data);
+  } catch (err) {
+    console.error('Airtable photography error:', err);
+    res.status(500).json({ error: 'Failed to fetch Airtable records', message: err.message });
+  }
+});
 
 // Stripe checkout session endpoint
 app.post('/api/create-checkout-session', async (req, res) => {
