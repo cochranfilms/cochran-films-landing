@@ -511,6 +511,32 @@
     .portfolio-item.photo-only .portfolio-thumbnail { height: auto; }
     .portfolio-item.photo-only .portfolio-thumbnail img { height: auto; }
     
+    /* Photography: remove outlines, borders, rounded corners, and blue backgrounds */
+    .portfolio-item.photo,
+    .portfolio-item.photo-only {
+      border: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      transform: none;
+    }
+    .portfolio-item.photo:hover,
+    .portfolio-item.photo-only:hover {
+      transform: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .portfolio-item.photo .portfolio-thumbnail,
+    .portfolio-item.photo-only .portfolio-thumbnail {
+      background: none;
+      border-radius: 0;
+      overflow: visible;
+    }
+    .portfolio-item.photo .portfolio-thumbnail img,
+    .portfolio-item.photo-only .portfolio-thumbnail img {
+      border-radius: 0;
+    }
+    
     .portfolio-overlay {
       position: absolute;
       inset: 0;

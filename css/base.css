@@ -321,6 +321,25 @@ body, p, li, label, input, select, textarea, span, a, small, strong, em, h1, h2,
   display: block;
 }
 
+/* Photography items should show the full photo with no chrome */
+.portfolio-item.photo,
+.portfolio-item.photo:hover {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.portfolio-thumbnail.photo {
+  overflow: visible;
+  border-radius: 0;
+}
+
+.portfolio-thumbnail.photo img {
+  border-radius: 0;
+}
+
 /* Simple fullscreen lightbox for photography */
 .lightbox-overlay {
   position: fixed;
