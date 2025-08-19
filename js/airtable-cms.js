@@ -143,12 +143,12 @@ class AirtableCMS {
       
       // Map Airtable fields to existing portfolio structure
       const transformedItem = {
-        Title: fields.Title || fields.Name || fields['Project Name'] || 'Untitled Project',
+        Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 'Untitled Project',
         Description: fields.Description || fields.Summary || fields['Project Description'] || '',
         Category: fields.Category || fields.Type || category,
-        'Thumbnail Image': fields['Thumbnail Image'] || fields.Image || fields.Thumbnail || '',
+        'Thumbnail Image': fields['thumbnailUrl'] || fields['Thumbnail Image'] || fields.Image || fields.Thumbnail || '',
         'Is Featured': fields['Is Featured'] || fields.Featured || false,
-        playbackUrl: fields['Video URL'] || fields['Playback URL'] || fields.URL || '',
+        playbackUrl: fields['Playback URL'] || fields['Video URL'] || fields.URL || '',
         UploadDate: fields['Created Date'] || fields['Upload Date'] || fields.Date || new Date().toISOString(),
         URL: fields['Website URL'] || fields.URL || fields.Link || '',
         'Tech Stack': fields['Tech Stack'] || fields.Technology || fields.Tools || '',
@@ -294,6 +294,37 @@ class AirtableCMS {
     });
   }
   
+  // Prefer a usable HTTPS thumbnail. Converts wix:image:// to static wix URLs and
+  // supports CSV fields like image_url and thumbnailUrl.
+  resolveThumbnailSrc(item) {
+    const isHttpUrl = (value) => typeof value === 'string' && /^https?:\/\//i.test(value);
+
+    // 1) Prefer explicit HTTPS thumbnailUrl when present
+    if (isHttpUrl(item['thumbnailUrl'])) return item['thumbnailUrl'];
+
+    // 2) Try CSV photography field names
+    if (isHttpUrl(item['image_url'])) return item['image_url'];
+    if (isHttpUrl(item['Image URL'])) return item['Image URL'];
+
+    // 3) Handle Wix image scheme in "Thumbnail Image" by converting to static URL
+    const thumb = item['Thumbnail Image'] || item['Image'] || item['Thumbnail'] || '';
+    if (typeof thumb === 'string' && thumb.startsWith('wix:image://')) {
+      // Format: wix:image://v1/<mediaIdWithExt>/... -> https://static.wixstatic.com/media/<mediaIdWithExt>
+      const match = thumb.match(/^wix:image:\/\/v1\/([^/]+)/i);
+      if (match && match[1]) {
+        return `https://static.wixstatic.com/media/${match[1]}`;
+      }
+    }
+
+    // 4) If any of the original fields are already HTTPS, use them
+    if (isHttpUrl(thumb)) return thumb;
+    if (isHttpUrl(item['Image'])) return item['Image'];
+    if (isHttpUrl(item['Thumbnail'])) return item['Thumbnail'];
+
+    // 5) Last resort placeholder
+    return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
+  }
+
   createPortfolioItem(item) {
     console.log('🎬 Creating portfolio item:', item.Title, 'Category:', item.ServiceCategory);
     
@@ -322,8 +353,8 @@ class AirtableCMS {
     const hasURL = item.URL && item.URL.trim() !== '';
     const isPhotoOnly = item.ServiceCategory === 'Photography' && (!item.playbackUrl || item.playbackUrl === '');
     
-    // Handle thumbnail image
-    let thumbnailSrc = item['Thumbnail Image'] || item['thumbnailUrl'] || item['Image'] || item['Thumbnail'] || '';
+    // Handle thumbnail image with robust resolver
+    let thumbnailSrc = this.resolveThumbnailSrc(item);
     if (thumbnailSrc && thumbnailSrc.includes('drive.google.com')) {
       // Convert Google Drive sharing link to direct image URL
       const fileId = thumbnailSrc.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
