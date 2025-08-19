@@ -298,23 +298,34 @@ class AirtableCMS {
   // supports CSV fields like image_url and thumbnailUrl.
   resolveThumbnailSrc(item) {
     const isHttpUrl = (value) => typeof value === 'string' && /^https?:\/\//i.test(value);
+    const isWixImageScheme = (value) => typeof value === 'string' && value.startsWith('wix:image://');
+
+    const normalizeWixImageUrl = (value) => {
+      if (!isWixImageScheme(value)) return '';
+      // Format: wix:image://v1/<mediaIdWithExt>/... -> https://static.wixstatic.com/media/<mediaIdWithExt>
+      const match = value.match(/^wix:image:\/\/v1\/([^/]+)/i);
+      return match && match[1] ? `https://static.wixstatic.com/media/${match[1]}` : '';
+    };
+
+    const firstDefined = (...candidates) => {
+      for (const c of candidates) {
+        if (typeof c === 'string' && c.trim() !== '') return c.trim();
+      }
+      return '';
+    };
 
     // 1) Prefer explicit HTTPS thumbnailUrl when present
     if (isHttpUrl(item['thumbnailUrl'])) return item['thumbnailUrl'];
 
-    // 2) Try CSV photography field names
+    // 2) Try CSV photography field names (support wix:image conversion too)
     if (isHttpUrl(item['image_url'])) return item['image_url'];
+    if (isWixImageScheme(item['image_url'])) return normalizeWixImageUrl(item['image_url']);
     if (isHttpUrl(item['Image URL'])) return item['Image URL'];
+    if (isWixImageScheme(item['Image URL'])) return normalizeWixImageUrl(item['Image URL']);
 
     // 3) Handle Wix image scheme in "Thumbnail Image" by converting to static URL
-    const thumb = item['Thumbnail Image'] || item['Image'] || item['Thumbnail'] || '';
-    if (typeof thumb === 'string' && thumb.startsWith('wix:image://')) {
-      // Format: wix:image://v1/<mediaIdWithExt>/... -> https://static.wixstatic.com/media/<mediaIdWithExt>
-      const match = thumb.match(/^wix:image:\/\/v1\/([^/]+)/i);
-      if (match && match[1]) {
-        return `https://static.wixstatic.com/media/${match[1]}`;
-      }
-    }
+    const thumb = firstDefined(item['Thumbnail Image'], item['Image'], item['Thumbnail']);
+    if (isWixImageScheme(thumb)) return normalizeWixImageUrl(thumb);
 
     // 4) If any of the original fields are already HTTPS, use them
     if (isHttpUrl(thumb)) return thumb;
@@ -624,12 +635,12 @@ class AirtableCMS {
         this.loadCSVFile('CMS/Collections/Photography.csv')
       ]);
       
-      // Combine all data
+      // Normalize and combine all data to match expected structure
       this.portfolioData = [
-        ...portfolioItems.map(item => ({ ...item, ServiceCategory: 'Video Production' })),
-        ...webItems.map(item => ({ ...item, ServiceCategory: 'Web Development' })),
-        ...photoItems.map(item => ({ ...item, ServiceCategory: 'Photography' }))
-      ];
+        ...portfolioItems.map(item => this.normalizeCsvItem(item, 'Video Production')),
+        ...webItems.map(item => this.normalizeCsvItem(item, 'Web Development')),
+        ...photoItems.map(item => this.normalizeCsvItem(item, 'Photography'))
+      ].filter(Boolean);
       
       console.log(`📈 CSV Fallback: Loaded ${this.portfolioData.length} total items`);
       
@@ -643,6 +654,58 @@ class AirtableCMS {
       console.error('❌ CSV fallback also failed:', error);
       this.showPortfolioErrorState();
     }
+  }
+
+  // Normalize CSV rows to the same shape used by transformAirtableData
+  normalizeCsvItem(row, category) {
+    if (!row) return null;
+    const pick = (...keys) => {
+      for (const k of keys) {
+        if (typeof row[k] === 'string' && row[k].trim() !== '') return row[k].trim();
+      }
+      return '';
+    };
+
+    const title = pick('Title', 'title', 'Name', 'name', 'Project Name', 'caption', 'Caption', 'Video');
+    const description = pick('Description', 'description', 'Summary', 'Project Description');
+    const categoryValue = pick('Category', 'Type') || category;
+    const playbackUrl = pick('Playback URL', 'Video URL', 'URL');
+    const url = pick('Website URL', 'URL', 'Link');
+    const techStack = pick('Tech Stack', 'Technology', 'Tools');
+    const role = pick('Role', 'Position', 'My Role');
+    const client = pick('Client', 'Client Name', 'Company');
+    const timeline = pick('Timeline', 'Duration', 'Project Timeline');
+    const challenges = pick('Challenges', 'Project Challenges');
+    const results = pick('Results', 'Project Results');
+    const createdAt = pick('Created Date', 'Upload Date', 'Date');
+    const isFeatured = pick('Is Featured', 'Featured');
+
+    // Thumbnail candidates, including CSV photography fields
+    const thumbnailUrl = pick('thumbnailUrl', 'Thumbnail Image', 'Image', 'Thumbnail', 'image_url', 'Image URL');
+
+    const item = {
+      Title: title || (category === 'Photography' ? 'Photo' : 'Untitled Project'),
+      Description: description,
+      Category: categoryValue,
+      'Thumbnail Image': thumbnailUrl,
+      'Is Featured': isFeatured === 'true' || isFeatured === true,
+      playbackUrl: playbackUrl,
+      UploadDate: createdAt || new Date().toISOString(),
+      URL: url,
+      'Tech Stack': techStack,
+      Role: role,
+      Client: client,
+      Timeline: timeline,
+      Challenges: challenges,
+      Results: results,
+      ServiceCategory: category
+    };
+
+    // Discard obviously empty items
+    if (!item.Title && !item['Thumbnail Image'] && !item.URL && !item.playbackUrl) {
+      return null;
+    }
+    return item;
   }
   
   async loadCSVFile(filePath) {
