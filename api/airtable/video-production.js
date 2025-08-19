@@ -1,5 +1,7 @@
 // Vercel API route for Video Production Airtable data
-export default async function handler(req, res) {
+const fetch = global.fetch || require('node-fetch');
+
+module.exports = async function handler(req, res) {
   // Enable CORS for development
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
