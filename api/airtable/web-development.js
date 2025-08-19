@@ -28,13 +28,16 @@ module.exports = async function handler(req, res) {
       return res.status(500).json({ 
         error: 'Airtable API key not configured',
         message: 'Please check your Vercel environment variables',
-        details: 'Set AIRTABLE_API_KEY in your Vercel project settings'
+        details: 'Set AIRTABLE_API_KEY in your Vercel project settings',
+        requestInfo: { baseId, tableName },
+        expectedEnvVars: ['AIRTABLE_API_KEY_WEB', 'AIRTABLE_API_KEY', 'AIRTABLE_TOKEN']
       });
     }
 
     const tokenType = apiKey.startsWith('pat') ? 'PAT' : (apiKey.startsWith('key') ? 'legacy' : 'unknown');
     const keySource = process.env.AIRTABLE_API_KEY_WEB ? 'AIRTABLE_API_KEY_WEB' : (process.env.AIRTABLE_API_KEY ? 'AIRTABLE_API_KEY' : 'AIRTABLE_TOKEN');
     console.log(`Fetching data from Airtable: ${baseId}/${tableName} (tokenType=${tokenType}, source=${keySource})`);
+    const requestInfo = { baseId, tableName, tokenType, keySource };
 
     // Fetch data from Airtable
     const response = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`, {
@@ -54,7 +57,8 @@ module.exports = async function handler(req, res) {
         status: response.status,
         statusText: response.statusText,
         airtableError: parsed || errorText,
-        endpoint: '/api/airtable/web-development'
+        endpoint: '/api/airtable/web-development',
+        requestInfo
       });
     }
 
