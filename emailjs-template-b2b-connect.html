@@ -34,6 +34,13 @@
           <tr><td class="k">Notes</td><td class="v">{{notes}}</td></tr>
           <tr><td class="k">Submitted</td><td class="v">{{submitted_at}}</td></tr>
         </table>
+        
+        <h3 style="margin: 20px 0 10px; color: #ffffff; font-size: 16px;">Communication Preferences</h3>
+        <table>
+          <tr><td class="k">Email Updates</td><td class="v">{{#opt_email}}✅ Yes{{/opt_email}}{{^opt_email}}❌ No{{/opt_email}}</td></tr>
+          <tr><td class="k">Phone Calls</td><td class="v">{{#opt_calls}}✅ Yes{{/opt_calls}}{{^opt_calls}}❌ No{{/opt_calls}}</td></tr>
+          <tr><td class="k">Text Messages</td><td class="v">{{#opt_texts}}✅ Yes{{/opt_texts}}{{^opt_texts}}❌ No{{/opt_texts}}</td></tr>
+        </table>
       </div>
     </div>
   </div>

@@ -59,6 +59,54 @@
     .btn-ghost { background: transparent; color: var(--text-secondary); border:1px solid rgba(148,163,184,0.22); font-weight:800; }
     .success { display:none; padding:18px; margin-top:10px; border-radius:12px; border:1px solid rgba(16,185,129,0.35); background: rgba(16,185,129,0.12); color:#ecfdf5; font-weight:700; }
     .success.show { display:block; }
+
+    /* Checkbox Styles */
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+    .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkmark {
+      height: 20px;
+      width: 20px;
+      background-color: #0f162c;
+      border: 1px solid rgba(148,163,184,0.25);
+      border-radius: 4px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .checkbox-label input:checked ~ .checkmark {
+      background-color: #6366f1;
+      border-color: #6366f1;
+    }
+    .checkmark:after {
+      content: "";
+      display: none;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    .checkbox-label input:checked ~ .checkmark:after {
+      display: block;
+    }
+    .label-text {
+      flex-grow: 1;
+    }
   </style>
 </head>
 <body>
@@ -107,6 +155,37 @@
                 <div class="col-6"><label for="web_referral">How did you hear about us?</label><select id="web_referral" class="input"><option>Instagram</option><option>YouTube</option><option>Google</option><option>Referral</option><option>Returning Client</option><option>Other</option></select></div>
                 <div class="col-12"><label for="web_pages_features">Pages / Features</label><textarea id="web_pages_features" rows="4" placeholder="e.g., Home, About, Services, Blog, Contact, E‑commerce, Booking, Member Area…"></textarea></div>
                 <div class="col-12"><label for="web_notes">Anything else we should know?</label><textarea id="web_notes" rows="4" placeholder="Tell us about your brand, audience, and what success looks like."></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your project and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my project and relevant web development insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important project updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
                 <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="web_submit"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button><a class="btn btn-ghost" href="./index.html"><i class="fa-solid fa-house"></i> Cancel</a></div>
                 <div class="col-12"><div class="success" id="web_success"><i class="fa-solid fa-circle-check"></i> Thanks! Your inquiry has been captured.</div></div>
               </div>
@@ -148,6 +227,37 @@
                 <div class="col-12"><label for="dc_help">What do you need help with? *</label><input class="input" id="dc_help" placeholder="Logo, Website, Content Strategy, Social Media, Email/Backend, All of the above..." required></div>
                 <div class="col-12"><label for="dc_goal">Biggest Goal *</label><textarea id="dc_goal" rows="4" required placeholder="I want my brand to stand out in a crowded market..."></textarea></div>
                 <div class="col-12"><label for="dc_notes">Anything else?</label><textarea id="dc_notes" rows="3"></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your discovery call and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my discovery call and relevant brand insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
                 <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="dc_submit"><i class="fa-solid fa-phone"></i> Request Call</button></div>
                 <div class="col-12"><div class="success" id="dc_success"><i class="fa-solid fa-circle-check"></i> Thanks! We'll send scheduling details.</div></div>
               </div>
@@ -177,6 +287,37 @@
                 <div class="col-6"><label for="b2b_time">Time *</label><input class="input" id="b2b_time" type="time" required></div>
                 <div class="col-12"><label for="b2b_tz">Time Zone *</label><select id="b2b_tz" class="input" required><option value="" disabled selected>Choose</option><option>America/New_York</option><option>America/Chicago</option><option>America/Denver</option><option>America/Los_Angeles</option><option>America/Phoenix</option><option>Europe/London</option><option>Europe/Paris</option><option>Asia/Tokyo</option><option>Australia/Sydney</option><option>Asia/Kolkata</option><option>Asia/Karachi</option><option>Africa/Lagos</option><option>Africa/Johannesburg</option><option>Asia/Dubai</option><option>Asia/Singapore</option><option>Asia/Hong_Kong</option><option>Asia/Shanghai</option><option>America/Sao_Paulo</option><option>America/Mexico_City</option><option>America/Toronto</option></select></div>
                 <div class="col-12"><label for="b2b_notes">Anything you’d like to add?</label><textarea id="b2b_notes" rows="3"></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on our business collaboration and share relevant opportunities. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about our collaboration and business opportunities</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
                 <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="b2b_submit"><i class="fa-solid fa-paper-plane"></i> Send</button></div>
                 <div class="col-12"><div class="success" id="b2b_success"><i class="fa-solid fa-circle-check"></i> Thanks! We’ll be in touch.</div></div>
               </div>
@@ -204,6 +345,37 @@
                 <div class="col-6"><label for="ms_location">Project Location *</label><input class="input" id="ms_location" required placeholder="City + Address or Venue"></div>
                 <div class="col-12"><label for="ms_vision">Tell us more about your vision *</label><textarea id="ms_vision" rows="4" required placeholder="Themes, ideas, goals, inspirations..."></textarea></div>
                 <div class="col-12"><label for="ms_referral">How did you hear about Cochran Films? *</label><select id="ms_referral" class="input" required><option>Google</option><option>Instagram</option><option>Facebook</option><option>Threads</option><option>Referral</option><option>Returning Client</option><option>Other</option></select></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your media project and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my media project and relevant insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important project updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
                 <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="ms_submit"><i class="fa-solid fa-paper-plane"></i> Send</button></div>
                 <div class="col-12"><div class="success" id="ms_success"><i class="fa-solid fa-circle-check"></i> Thanks! We’ll reach out within 24 hours.</div></div>
               </div>
@@ -253,6 +425,9 @@
         referral: document.getElementById('web_referral').value,
         pages_features: document.getElementById('web_pages_features').value.trim(),
         notes: document.getElementById('web_notes').value.trim(),
+        opt_email: document.getElementById('web_opt_email').checked,
+        opt_calls: document.getElementById('web_opt_calls').checked,
+        opt_texts: document.getElementById('web_opt_texts').checked,
         consent: 'Yes', submitted_at: new Date().toISOString()
       };
       try { await emailjs.send('service_t11yvru','web-development',p); document.getElementById('web_success').classList.add('show'); f.reset(); }
@@ -264,7 +439,23 @@
     document.getElementById('discoveryForm')?.addEventListener('submit', async (e)=>{
       e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
       const btn=document.getElementById('dc_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      const p={ user_email:dc_email.value.trim(), user_name:dc_name.value.trim(), phone:dc_phone.value.trim(), business_name:dc_business.value.trim(), preferred_date:dc_date.value, preferred_time:dc_time.value, timezone:dc_tz.value, brand_stage:dc_stage.value, help_needed:dc_help.value.trim(), biggest_goal:dc_goal.value.trim(), notes:dc_notes.value.trim(), submitted_at:new Date().toISOString() };
+      const p={ 
+        user_email: document.getElementById('dc_email').value.trim(), 
+        user_name: document.getElementById('dc_name').value.trim(), 
+        phone: document.getElementById('dc_phone').value.trim(), 
+        business_name: document.getElementById('dc_business').value.trim(), 
+        preferred_date: document.getElementById('dc_date').value, 
+        preferred_time: document.getElementById('dc_time').value, 
+        timezone: document.getElementById('dc_tz').value, 
+        brand_stage: document.getElementById('dc_stage').value, 
+        help_needed: document.getElementById('dc_help').value.trim(), 
+        biggest_goal: document.getElementById('dc_goal').value.trim(), 
+        notes: document.getElementById('dc_notes').value.trim(),
+        opt_email: document.getElementById('dc_opt_email').checked,
+        opt_calls: document.getElementById('dc_opt_calls').checked,
+        opt_texts: document.getElementById('dc_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
       try { await emailjs.send('service_t11yvru','Discovery-Call',p); document.getElementById('dc_success').classList.add('show'); f.reset(); }
       catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
       finally{ btn.disabled=false; btn.innerHTML=txt; }
@@ -273,8 +464,24 @@
     // B2B Connect (placeholder template id — update later)
     document.getElementById('b2bForm')?.addEventListener('submit', async (e)=>{
       e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
-      const btn=b2b_submit; const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      const p={ user_email:b2b_email.value.trim(), user_name:b2b_name.value.trim(), phone:b2b_phone.value.trim(), business_name:b2b_business.value.trim(), business_desc:b2b_desc.value.trim(), link:b2b_link.value.trim(), goal:b2b_goal.value, preferred_date:b2b_date.value, preferred_time:b2b_time.value, timezone:b2b_tz.value, notes:b2b_notes.value.trim(), submitted_at:new Date().toISOString() };
+      const btn=document.getElementById('b2b_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p={ 
+        user_email: document.getElementById('b2b_email').value.trim(), 
+        user_name: document.getElementById('b2b_name').value.trim(), 
+        phone: document.getElementById('b2b_phone').value.trim(), 
+        business_name: document.getElementById('b2b_business').value.trim(), 
+        business_desc: document.getElementById('b2b_desc').value.trim(), 
+        link: document.getElementById('b2b_link').value.trim(), 
+        goal: document.getElementById('b2b_goal').value, 
+        preferred_date: document.getElementById('b2b_date').value, 
+        preferred_time: document.getElementById('b2b_time').value, 
+        timezone: document.getElementById('b2b_tz').value, 
+        notes: document.getElementById('b2b_notes').value.trim(),
+        opt_email: document.getElementById('b2b_opt_email').checked,
+        opt_calls: document.getElementById('b2b_opt_calls').checked,
+        opt_texts: document.getElementById('b2b_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
       try { await emailjs.send('service_t11yvru','b2b-business',p); document.getElementById('b2b_success').classList.add('show'); f.reset(); }
       catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
       finally{ btn.disabled=false; btn.innerHTML=txt; }
@@ -283,8 +490,22 @@
     // Media Services (placeholder template id — update later)
     document.getElementById('mediaForm')?.addEventListener('submit', async (e)=>{
       e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
-      const btn=ms_submit; const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      const p={ user_email:ms_email.value.trim(), user_name:ms_name.value.trim(), phone:ms_phone.value.trim(), service_type:ms_service.value, project_type:ms_project_type.value.trim(), event_date:ms_date.value, location:ms_location.value.trim(), vision:ms_vision.value.trim(), referral:ms_referral.value, submitted_at:new Date().toISOString() };
+      const btn=document.getElementById('ms_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p={ 
+        user_email: document.getElementById('ms_email').value.trim(), 
+        user_name: document.getElementById('ms_name').value.trim(), 
+        phone: document.getElementById('ms_phone').value.trim(), 
+        service_type: document.getElementById('ms_service').value, 
+        project_type: document.getElementById('ms_project_type').value.trim(), 
+        event_date: document.getElementById('ms_date').value, 
+        location: document.getElementById('ms_location').value.trim(), 
+        vision: document.getElementById('ms_vision').value.trim(), 
+        referral: document.getElementById('ms_referral').value,
+        opt_email: document.getElementById('ms_opt_email').checked,
+        opt_calls: document.getElementById('ms_opt_calls').checked,
+        opt_texts: document.getElementById('ms_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
       try { await emailjs.send('service_t11yvru','media-production',p); document.getElementById('ms_success').classList.add('show'); f.reset(); }
       catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
       finally{ btn.disabled=false; btn.innerHTML=txt; }

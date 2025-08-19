@@ -153,6 +153,22 @@
                 <h2 class="h2" style="margin-top:18px;">Notes</h2>
                 <div class="p">{{notes}}</div>
 
+                <h2 class="h2" style="margin-top:18px;">Communication Preferences</h2>
+                <table role="presentation" class="kv" width="100%">
+                  <tr class="kv-row">
+                    <td class="kv-key">Email Updates</td>
+                    <td class="kv-val">{{#opt_email}}✅ Yes{{/opt_email}}{{^opt_email}}❌ No{{/opt_email}}</td>
+                  </tr>
+                  <tr class="kv-row">
+                    <td class="kv-key">Phone Calls</td>
+                    <td class="kv-val">{{#opt_calls}}✅ Yes{{/opt_calls}}{{^opt_calls}}❌ No{{/opt_calls}}</td>
+                  </tr>
+                  <tr class="kv-row">
+                    <td class="kv-key">Text Messages</td>
+                    <td class="kv-val">{{#opt_texts}}✅ Yes{{/opt_texts}}{{^opt_texts}}❌ No{{/opt_texts}}</td>
+                  </tr>
+                </table>
+
                 <div class="cta-row">
                   <a class="cta" href="mailto:{{user_email}}?subject=Re:%20Website%20Inquiry%20-%20Cochran%20Films">Reply to {{user_name}}</a>
                   <a class="cta-ghost" href="{{website_url}}">Open Website</a>

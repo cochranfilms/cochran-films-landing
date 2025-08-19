@@ -5,116 +5,31 @@ import RSSParser from 'rss-parser';
 const rssParser = new RSSParser({ timeout: 15000, customFields: { item: [ ['content:encoded', 'contentEncoded'], ['media:content', 'mediaContent'] ] } });
 
 const OUTPUT_FILE = path.resolve(process.cwd(), 'blog', 'posts.json');
-const POSTS_DIR = path.resolve(process.cwd(), 'blog', 'post');
-const SITE_BASE_URL = process.env.SITE_BASE_URL || 'https://landing.cochranfilms.com';
-const PUBLISHER_NAME = 'Cochran Films';
-const PUBLISHER_LOGO = 'CF_Logo_White2025.png';
 
 // Curated sources per category (stable RSS feeds)
 const SOURCES = {
   production: [
     'https://nofilmschool.com/rss.xml',
     'https://www.studiobinder.com/blog/feed/',
-    // DJI newsroom feed is unstable; omit for now to avoid parse failures
   ],
   web: [
     'https://www.smashingmagazine.com/feed/',
     'https://web.dev/feed.xml',
     'https://dev.to/feed/tag/webdev',
-    'https://developer.mozilla.org/en-US/blog/feed.xml'
-  ],
-  dev: [
-    'https://github.blog/feed/',
-    'https://vercel.com/changelog.atom',
-    'https://nextjs.org/feed.xml',
-    'https://blog.tailwindcss.com/rss/'
-  ],
-  tech: [
-    'https://9to5mac.com/feed/',
-    'https://www.theverge.com/rss/index.xml',
-    'https://www.apple.com/newsroom/rss-feed.rss'
-  ],
-  photography: [
-    'https://petapixel.com/feed/',
-    'https://fstoppers.com/feed'
   ],
   brand: [
     'https://www.brandingmag.com/feed/',
-    'https://www.underconsideration.com/brandnew/feed/'
-  ]
+    'https://www.underconsideration.com/brandnew/rss2.php',
+  ],
+  photography: [
+    'https://petapixel.com/feed/',
+    'https://fstoppers.com/feed',
+  ],
 };
 
 function stripHtml(html) {
   if (!html) return '';
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
-}
-
-// Basic language/quality heuristics
-function asciiRatio(text) {
-  if (!text) return 0;
-  const s = String(text);
-  let ascii = 0;
-  for (let i = 0; i < s.length; i++) {
-    if (s.charCodeAt(i) <= 127) ascii++;
-  }
-  return ascii / s.length;
-}
-
-function looksEnglish(text) {
-  const ratio = asciiRatio(text);
-  // permit emojis/punctuation but require majority ASCII
-  return ratio >= 0.8;
-}
-
-function isHttpUrl(u) {
-  try { const x = new URL(u); return x.protocol === 'http:' || x.protocol === 'https:'; } catch { return false; }
-}
-
-// Build allowed hosts set from feeds to avoid random garbage sources
-const ALLOWED_HOSTS = new Set([
-  'nofilmschool.com', 'www.nofilmschool.com',
-  'www.studiobinder.com', 'studiobinder.com',
-  'www.smashingmagazine.com', 'smashingmagazine.com',
-  'web.dev', 'developer.chrome.com',
-  'dev.to', 'www.dev.to', 'medium.com',
-  'petapixel.com', 'www.petapixel.com',
-  'fstoppers.com', 'www.fstoppers.com',
-  'brandingmag.com', 'www.brandingmag.com',
-  'underconsideration.com', 'www.underconsideration.com',
-  // New additions
-  'dji.com', 'www.dji.com',
-  '9to5mac.com', 'www.9to5mac.com',
-  'theverge.com', 'www.theverge.com',
-  'apple.com', 'www.apple.com',
-  'github.blog', 'github.com',
-  'vercel.com', 'nextjs.org',
-  'tailwindcss.com', 'react.dev',
-  'developer.mozilla.org'
-]);
-
-// Quality filters
-const BAD_TITLE_TOKENS = [
-  '.ts', '💊', '#1', '#2', '#3', '#4',
-  'deal', 'deals', 'discount', 'sale', 'coupon', 'giveaway',
-  'Black Friday', 'Cyber Monday', 'sponsored', 'ad:'
-];
-
-function isValidPost(p) {
-  if (!p) return false;
-  if (!isHttpUrl(p.url)) return false;
-  if (!p.title || p.title.trim().length < 8) return false;
-  if (!looksEnglish(p.title + ' ' + (p.summary || ''))) return false;
-  const host = getHostname(p.url);
-  if (host && !ALLOWED_HOSTS.has(host)) return false;
-  // Date window: prefer modern content (>= 2020)
-  if (!p.publishedAt) return false;
-  const year = new Date(p.publishedAt).getFullYear();
-  if (!(year >= 2020 && year <= 2100)) return false;
-  // Filter obvious non-article topics
-  if (BAD_TITLE_TOKENS.some(t => (p.title || '').toLowerCase().includes(t.toLowerCase()))) return false;
-  // Require some meaningful summary
-  if (!p.summary || stripHtml(p.summary).length < 40) return false;
-  return true;
 }
 
 function extractFirstImageFromHtml(html) {
@@ -148,206 +63,6 @@ function getHostname(url) {
   try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
 }
 
-function toYyyyMmDd(dateStr) {
-  if (!dateStr) return '';
-  const d = new Date(dateStr);
-  if (Number.isNaN(d.getTime())) return '';
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  return `${y}${m}${day}`;
-}
-
-function slugify(input) {
-  return String(input || '')
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9\-]/g, '')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '')
-    .slice(0, 80);
-}
-
-function escapeHtml(str) {
-  return String(str || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-// Build a safe, extended excerpt from the original article HTML
-function buildExcerptHtml(rawHtml, sourceUrl) {
-  if (!rawHtml) return '';
-  let html = String(rawHtml);
-
-  // Strip unsafe tags
-  html = html.replace(/<script[\s\S]*?<\/script>/gi, '')
-             .replace(/<style[\s\S]*?<\/style>/gi, '')
-             .replace(/<iframe[\s\S]*?<\/iframe>/gi, '');
-
-  // Absolutize relative URLs
-  html = html.replace(/\s(href|src)=("|')([^"']+)(\2)/gi, (m, attr, q, url, q2) => {
-    try {
-      const absolute = new URL(url, sourceUrl).href;
-      return ` ${attr}=${q}${absolute}${q2}`;
-    } catch {
-      return m;
-    }
-  });
-
-  // Safer links and remove inline images to avoid duplicate with our featured image
-  html = html.replace(/<a\s/gi, '<a rel="nofollow noopener" target="_blank" ')
-             // strip ALL images from the excerpt
-             .replace(/<img[^>]*>/gi, '');
-
-  // Heuristic: take first 5 paragraphs; include first list if present
-  const parts = html.split(/<\/p>/i);
-  const excerptParts = parts.slice(0, 5).map(p => (p.includes('<p') ? `${p}</p>` : (p.trim() ? `<p>${p}</p>` : '')));
-  const list = html.match(/<(ul|ol)[\s\S]*?<\/(ul|ol)>/i);
-  if (list) excerptParts.push(list[0]);
-
-  let excerpt = excerptParts.join('\n');
-  if (excerpt.length > 5000) excerpt = excerpt.slice(0, 5000) + '…';
-  return excerpt;
-}
-
-function buildPostHtml(post) {
-  const {
-    title,
-    summary,
-    image,
-    video,
-    url: sourceUrl,
-    publishedAt,
-    category,
-    tags = [],
-    slug
-  } = post;
-
-  const canonical = `${SITE_BASE_URL}/blog/post/${slug}.html`;
-  const metaTitle = post.metaTitle || `${title} | ${PUBLISHER_NAME} Daily Brief`;
-  const metaDescription = post.metaDescription || summary;
-  const keywords = tags.join(', ');
-
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: title,
-    description: metaDescription,
-    datePublished: publishedAt,
-    dateModified: publishedAt,
-    mainEntityOfPage: canonical,
-    author: { '@type': 'Organization', name: PUBLISHER_NAME },
-    publisher: {
-      '@type': 'Organization',
-      name: PUBLISHER_NAME,
-      logo: { '@type': 'ImageObject', url: `${SITE_BASE_URL}/${PUBLISHER_LOGO}` }
-    },
-    image: image ? [image] : undefined,
-    url: canonical,
-    isBasedOn: sourceUrl,
-    articleSection: category,
-    keywords
-  };
-
-  const excerptHtml = buildExcerptHtml(post.contentHtml || '', sourceUrl);
-  const hostname = getHostname(sourceUrl);
-
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${escapeHtml(metaTitle)}</title>
-  <meta name="description" content="${escapeHtml(metaDescription)}" />
-  ${keywords ? `<meta name="keywords" content="${escapeHtml(keywords)}" />` : ''}
-  <link rel="canonical" href="${canonical}" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="${escapeHtml(metaTitle)}" />
-  <meta property="og:description" content="${escapeHtml(metaDescription)}" />
-  <meta property="og:url" content="${canonical}" />
-  ${image ? `<meta property="og:image" content="${image}" />` : ''}
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${escapeHtml(metaTitle)}" />
-  <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
-  ${image ? `<meta name="twitter:image" content="${image}" />` : ''}
-
-  <script type="application/ld+json">${JSON.stringify(schema)}</script>
-
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/navigation.css">
-  <link rel="stylesheet" href="../../css/responsive.css">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-  <script>window.__MODULES_BASE_PATH__='../../';</script>
-  <div id="navigation-module"></div>
-  <main class="wrapper" style="padding-top: 100px; padding-bottom: 80px;">
-    <article class="blog-card" style="max-width: 900px; margin: 0 auto;">
-      <h1>${escapeHtml(title)}</h1>
-      <div class="meta">${new Date(publishedAt).toLocaleString()}${category ? ` • ${escapeHtml(category)}` : ''}</div>
-      ${image ? `<div style="margin: 12px 0 16px 0;"><img src="${image}" alt="${escapeHtml(title)}" style="width:100%;height:auto;border-radius:8px;" loading="lazy"></div>` : ''}
-      ${video ? `<div style=\"margin: 12px 0 16px 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;\"><iframe src=\"${video}\" title=\"${escapeHtml(title)}\" frameborder=\"0\" allowfullscreen style=\"position:absolute;top:0;left:0;width:100%;height:100%;\"></iframe></div>` : ''}
-      <div class="excerpt">${excerptHtml || `<p>${escapeHtml(summary)}</p>`}</div>
-      <p style="margin-top: 16px;">
-        <a class="read-more" href="${sourceUrl}" target="_blank" rel="noopener nofollow">Continue reading on ${escapeHtml(hostname)}</a>
-      </p>
-      <div style="margin-top:12px; color: var(--text-muted); font-size: 0.95rem;">
-        ${tags.length ? `<div style=\"margin-bottom:6px;\">Tags: ${tags.map(t => `#${escapeHtml(t)}`).join(' ')}</div>` : ''}
-        <div>Credit: Source — ${escapeHtml(hostname)} • Curated by Cochran Films Daily Brief</div>
-      </div>
-      <p style="margin-top: 12px;"><a href="/blog.html">← Back to Blog</a></p>
-    </article>
-    <section id="related-posts" style="max-width: 900px; margin: 24px auto 0;"></section>
-  </main>
-  <script src="../../js/modules.js"></script>
-  <script>
-  (function(){
-    try {
-      var slug = ${JSON.stringify(slug)};
-      // Track recently viewed locally (for rail on blog.html)
-      try {
-        var recentRaw = localStorage.getItem('cf_recently_viewed') || '[]';
-        var recent = Array.isArray(JSON.parse(recentRaw)) ? JSON.parse(recentRaw) : [];
-        recent = recent.filter(function(r){ return r && r.slug !== slug; });
-        recent.unshift({ slug: slug, t: Date.now() });
-        if (recent.length > 12) recent = recent.slice(0,12);
-        localStorage.setItem('cf_recently_viewed', JSON.stringify(recent));
-      } catch(e) { /* ignore */ }
-      fetch('/blog/posts.json?r=' + Date.now())
-        .then(function(r){ return r.json(); })
-        .then(function(list){
-          if(!Array.isArray(list)) return;
-          var current = list.find(function(p){ return p.slug === slug; });
-          var cat = current && current.category || '';
-          var related = list.filter(function(p){ return p.slug !== slug && (p.category === cat || p.source === current.source); }).slice(0, 3);
-          if(!related.length) return;
-          var sec = document.getElementById('related-posts');
-          if(!sec) return;
-          var cards = related.map(function(p){
-            var href = '/blog/post/' + p.slug + '.html';
-            var dateStr = p.publishedAt ? new Date(p.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
-            return '<article class="blog-card" style="margin-top:12px;">\n' +
-                   '  <h2 style="margin:0 0 6px 0;font-size:1.05rem;">' + (p.title || '') + '</h2>\n' +
-                   '  <div class="meta">' + dateStr + (p.category ? ' • ' + p.category : '') + '</div>\n' +
-                   '  <p style="margin:8px 0 10px 0;">' + (p.summary || '') + '</p>\n' +
-                   '  <a class="read-more" href="' + href + '">Open post</a>\n' +
-                   '</article>';
-          }).join('');
-          sec.innerHTML = '<h3 style="margin:8px 0 12px 0;">Related reads</h3>' + cards;
-        });
-    } catch(e) { console.warn(e); }
-  })();
-  </script>
-</body>
-</html>`;
-}
-
 async function fetchFeed(url, category) {
   try {
     const feed = await rssParser.parseURL(url);
@@ -360,7 +75,6 @@ async function fetchFeed(url, category) {
       const image = imageFromEnclosure || imageFromHtml || null;
       const video = extractFirstIframeSrcFromHtml(contentHtml);
       const link = item.link || '';
-      const tags = Array.isArray(item.categories) && item.categories.length ? item.categories.map(c => String(c)) : [];
       return {
         title: item.title || 'Untitled',
         url: link,
@@ -370,8 +84,6 @@ async function fetchFeed(url, category) {
         summary: summary.length > 360 ? `${summary.slice(0, 357)}...` : summary,
         image,
         video,
-        tags,
-        contentHtml,
       };
     });
   } catch (error) {
@@ -419,21 +131,8 @@ async function generate() {
 
   const deduped = Array.from(dedupedMap.values())
     .filter(p => p.publishedAt)
-    .filter(isValidPost)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, 36);
-
-  await fs.mkdir(POSTS_DIR, { recursive: true });
-  for (const post of deduped) {
-    const datePart = toYyyyMmDd(post.publishedAt);
-    const baseSlug = slugify(`${datePart}-${post.title}`);
-    post.slug = baseSlug || slugify(`${datePart}-${post.source}`) || String(Date.now());
-    post.metaTitle = `${post.title} | ${PUBLISHER_NAME} Daily Brief`;
-    post.metaDescription = post.summary;
-    const html = buildPostHtml(post);
-    const filePath = path.join(POSTS_DIR, `${post.slug}.html`);
-    await fs.writeFile(filePath, html);
-  }
 
   const pretty = JSON.stringify(deduped, null, 2);
   await fs.writeFile(OUTPUT_FILE, pretty);
