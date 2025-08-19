@@ -23,9 +23,15 @@ class PortfolioManager {
 
   async loadPortfolioData() {
     try {
-      // Load both CSV files
+      // Optional source overrides for remote CMS (e.g., Airtable shared view links)
+      // Video Production → Airtable shared view provided by user
+      const CSV_SOURCE_MAP = {
+        'CMS/Collections/Portfolio.csv': 'https://airtable.com/appjQxcRoClnZzghj/shrUGfmwgRIMW2ogA'
+      };
+
+      // Load all collections (with overrides where present)
       const [portfolioData, webData, photoData] = await Promise.all([
-        this.fetchCSV('CMS/Collections/Portfolio.csv'),
+        this.fetchCSV(CSV_SOURCE_MAP['CMS/Collections/Portfolio.csv'] || 'CMS/Collections/Portfolio.csv'),
         this.fetchCSV('CMS/Collections/Web.csv'),
         this.fetchCSV('CMS/Collections/Photography.csv')
       ]);
@@ -54,7 +60,40 @@ class PortfolioManager {
 
   async fetchCSV(filePath) {
     try {
-      const url = filePath + (filePath.includes('?') ? '&' : '?') + 'v=' + Date.now();
+      // Resolve potential Airtable shared view links to CSV export endpoints
+      const buildCacheBusted = (u) => u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now();
+      const candidates = [];
+      const isHttp = /^https?:\/\//i.test(filePath);
+      if (isHttp && /airtable\.com\//i.test(filePath)) {
+        const base = filePath.replace(/#.*$/, '');
+        // Try common CSV variants Airtable supports for shared views
+        candidates.push(base);
+        candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
+        candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
+        candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
+      } else {
+        candidates.push(filePath);
+      }
+
+      let lastError = null;
+      for (const c of candidates) {
+        try {
+          const url = buildCacheBusted(c);
+          const response = await fetch(url, { cache: 'no-cache' });
+          if (!response.ok) continue;
+          const contentType = (response.headers.get('content-type') || '').toLowerCase();
+          const text = await response.text();
+          // Accept obvious CSVs or anything that parses with our CSV reader
+          if (contentType.includes('text/csv') || contentType.includes('application/octet-stream') || /,|\n/.test(text)) {
+            return text;
+          }
+        } catch (inner) {
+          lastError = inner;
+        }
+      }
+
+      // Fallback to original path if candidates failed
+      const url = buildCacheBusted(filePath);
       const response = await fetch(url, { cache: 'no-cache' });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
