@@ -10,30 +10,24 @@ class PortfolioManager {
     this.filteredItems = [];
     this.currentFilter = 'all';
     this.filters = ['all', 'video-production', 'web-development'];
-    this.sourcesMap = {};
     
     this.init();
   }
 
   init() {
-    // Load optional CMS source overrides, then data
-    this.loadSourcesConfig()
-      .catch(() => {})
-      .finally(() => {
-        this.loadPortfolioData().then(() => {
-          this.renderPortfolioByCategory();
-          this.bindCategoryEvents();
-        });
-      });
+    this.loadPortfolioData().then(() => {
+      this.renderPortfolioByCategory();
+      this.bindCategoryEvents();
+    });
   }
 
   async loadPortfolioData() {
     try {
-      // Load all collections (with overrides where present)
+      // Load both CSV files
       const [portfolioData, webData, photoData] = await Promise.all([
-        this.fetchCSV(this.resolveSource('CMS/Collections/Portfolio.csv')),
-        this.fetchCSV(this.resolveSource('CMS/Collections/Web.csv')),
-        this.fetchCSV(this.resolveSource('CMS/Collections/Photography.csv'))
+        this.fetchCSV('CMS/Collections/Portfolio.csv'),
+        this.fetchCSV('CMS/Collections/Web.csv'),
+        this.fetchCSV('CMS/Collections/Photography.csv')
       ]);
 
       // Process Portfolio.csv (Video Production)
@@ -60,50 +54,7 @@ class PortfolioManager {
 
   async fetchCSV(filePath) {
     try {
-      // Resolve potential Airtable shared view links to CSV export endpoints
-      const buildCacheBusted = (u) => u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now();
-      const candidates = [];
-      const encode = (u) => encodeURIComponent(u);
-      const isHttp = /^https?:\/\//i.test(filePath);
-      if (isHttp && /airtable\.com\//i.test(filePath)) {
-        const base = filePath.replace(/#.*$/, '');
-        // Try common CSV variants Airtable supports for shared views
-        candidates.push(base);
-        candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
-        candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
-        candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
-        // Try serverless proxies if present (Vercel/Netlify). These avoid browser CORS.
-        candidates.unshift(`/api/fetch-csv?url=${encode(base)}`);
-        candidates.unshift(`/netlify/functions/fetch-csv?url=${encode(base)}`);
-        // As a last-resort client-side CORS proxy (temporary), try isomorphic-git CORS proxy
-        const corsProxy = 'https://cors.isomorphic-git.org/';
-        candidates.push(corsProxy + base);
-        candidates.push(corsProxy + (base + (base.endsWith('/') ? 'csv' : '/csv')));
-        candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'format=csv'));
-        candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'download=1'));
-      } else {
-        candidates.push(filePath);
-      }
-
-      let lastError = null;
-      for (const c of candidates) {
-        try {
-          const url = buildCacheBusted(c);
-          const response = await fetch(url, { cache: 'no-cache' });
-          if (!response.ok) continue;
-          const contentType = (response.headers.get('content-type') || '').toLowerCase();
-          const text = await response.text();
-          // Accept obvious CSVs or anything that parses with our CSV reader
-          if (contentType.includes('text/csv') || contentType.includes('application/octet-stream') || /,|\n/.test(text)) {
-            return text;
-          }
-        } catch (inner) {
-          lastError = inner;
-        }
-      }
-
-      // Fallback to original path if candidates failed
-      const url = buildCacheBusted(filePath);
+      const url = filePath + (filePath.includes('?') ? '&' : '?') + 'v=' + Date.now();
       const response = await fetch(url, { cache: 'no-cache' });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -113,32 +64,6 @@ class PortfolioManager {
       console.warn(`⚠️ Could not load ${filePath}:`, error);
       return null;
     }
-  }
-
-  // Load optional CMS source overrides from CMS/sources.json
-  async loadSourcesConfig() {
-    try {
-      const url = 'CMS/sources.json?v=' + Date.now();
-      const res = await fetch(url, { cache: 'no-cache' });
-      if (!res.ok) return;
-      const data = await res.json();
-      // Normalize to a simple filename → URL map
-      const map = {};
-      Object.entries(data || {}).forEach(([key, value]) => {
-        const file = String(key).split('/').pop();
-        map[file] = String(value);
-      });
-      this.sourcesMap = map;
-    } catch (_) {
-      // Ignore; fall back to local CSVs
-    }
-  }
-
-  // Resolve a local CSV path to an override URL if defined in sources.json
-  resolveSource(localPath) {
-    const file = localPath.split('/').pop();
-    const override = this.sourcesMap && this.sourcesMap[file];
-    return override || localPath;
   }
 
   // Safely get a value from a parsed CSV row using multiple possible header names

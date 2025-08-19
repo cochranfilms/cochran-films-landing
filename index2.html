@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23FFB200'/><text x='32' y='39' font-size='26' text-anchor='middle' fill='%230a0a0a' font-family='Arial, Helvetica, sans-serif'>CF</text></svg>"> 
   
   <!-- Primary Meta Tags -->
   <title>Cochran Films | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
@@ -3399,25 +3398,6 @@ Welcome to the Cochran Films family! 🚀
       // Portfolio data - will be populated dynamically from CSV files
       let portfolioData = [];
       
-      // Optional CMS source overrides
-      let sourcesMap = {};
-      function resolveSource(localPath) {
-        const file = localPath.split('/').pop();
-        return sourcesMap[file] || localPath;
-      }
-      async function loadSourcesConfig() {
-        try {
-          const res = await fetch('CMS/sources.json?v=' + Date.now(), { cache: 'no-cache' });
-          if (!res.ok) return;
-          const data = await res.json();
-          const map = {};
-          Object.entries(data || {}).forEach(([key, value]) => {
-            map[String(key).split('/').pop()] = String(value);
-          });
-          sourcesMap = map;
-        } catch (_) {}
-      }
-
       // CSV Parser Function
       function parseCSV(csvText) {
         try {
@@ -3503,52 +3483,17 @@ Welcome to the Cochran Films family! 🚀
         }
       }
       
-      // Helper to robustly fetch CSV (supports Airtable shared views)
-      async function fetchCSVSmart(filePath) {
-        const buildCacheBusted = (u) => u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now();
-        const isHttp = /^https?:\/\//i.test(filePath);
-        const candidates = [];
-        if (isHttp && /airtable\.com\//i.test(filePath)) {
-          const base = filePath.replace(/#.*$/, '');
-          const encode = (u) => encodeURIComponent(u);
-          // Prefer serverless proxies if available
-          candidates.push(`/api/fetch-csv?url=${encode(base)}`);
-          candidates.push(`/netlify/functions/fetch-csv?url=${encode(base)}`);
-          candidates.push(base);
-          candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
-          candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
-          candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
-          // Last-resort public CORS proxy (temporary)
-          const corsProxy = 'https://cors.isomorphic-git.org/';
-          candidates.push(corsProxy + base);
-          candidates.push(corsProxy + (base + (base.endsWith('/') ? 'csv' : '/csv')));
-          candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'format=csv'));
-          candidates.push(corsProxy + (base + (base.includes('?') ? '&' : '?') + 'download=1'));
-        } else {
-          candidates.push(filePath);
-        }
-        let lastError = null;
-        for (const c of candidates) {
-          try {
-            const url = buildCacheBusted(c);
-            const response = await fetch(url, { cache: 'no-cache' });
-            if (!response.ok) continue;
-            const text = await response.text();
-            if (/[,\n]/.test(text)) return text;
-          } catch (e) { lastError = e; }
-        }
-        // Final attempt on original path
-        const url = buildCacheBusted(filePath);
-        const resp = await fetch(url, { cache: 'no-cache' });
-        if (!resp.ok) throw new Error('HTTP ' + resp.status);
-        return await resp.text();
-      }
-
       // Load Portfolio CSV (Video Production)
       async function loadPortfolioCSV() {
         try {
           console.log('Loading Portfolio.csv...');
-          const csvText = await fetchCSVSmart(resolveSource('CMS/Collections/Portfolio.csv'));
+          const response = await fetch('CMS/Collections/Portfolio.csv');
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          const csvText = await response.text();
           console.log('Portfolio.csv loaded, length:', csvText.length);
           
           const portfolioItems = parseCSV(csvText);
@@ -3570,7 +3515,13 @@ Welcome to the Cochran Films family! 🚀
       async function loadWebCSV() {
         try {
           console.log('Loading Web.csv...');
-          const csvText = await fetchCSVSmart(resolveSource('CMS/Collections/Web.csv'));
+          const response = await fetch('CMS/Collections/Web.csv');
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          const csvText = await response.text();
           console.log('Web.csv loaded, length:', csvText.length);
           
           const webItems = parseCSV(csvText);
@@ -3638,7 +3589,9 @@ Welcome to the Cochran Films family! 🚀
       async function loadPhotographyCSV() {
         try {
           console.log('Loading Photography.csv...');
-          const txt = await fetchCSVSmart(resolveSource('CMS/Collections/Photography.csv'));
+          const resp = await fetch('CMS/Collections/Photography.csv');
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          const txt = await resp.text();
           const lines = txt.replace(/\r\n/g,'\n').split('\n').map(l => l.trim()).filter(Boolean);
           const items = [];
           for (let i = 1; i < lines.length; i++) { // skip header
@@ -4060,11 +4013,11 @@ Welcome to the Cochran Films family! 🚀
       // Initialize when DOM is ready
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-          loadSourcesConfig().finally(() => loadAllPortfolioData()); // Load config then CSV data
+          loadAllPortfolioData(); // Load CSV data first
           initPortfolio(); // Then initialize portfolio
         });
       } else {
-        loadSourcesConfig().finally(() => loadAllPortfolioData()); // Load config then CSV data
+        loadAllPortfolioData(); // Load CSV data first
         initPortfolio(); // Then initialize portfolio
       }
       
