@@ -19,6 +19,21 @@
   
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Stripe Integration -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    // Initialize Stripe with your publishable key
+    // Replace this with your actual publishable key
+    const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+    
+    // Global cart state
+    window.stripeCart = {
+      items: [],
+      total: 0
+    };
+  </script>
+  
   <script>
     (function(){
       // Secure EmailJS initialization with error handling
@@ -1952,6 +1967,382 @@
       box-shadow: 0 0 40px rgba(16, 185, 129, 0.4) !important;
     }
 
+    /* Stripe Cart & Checkout Styles */
+    .stripe-cart {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 350px;
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      z-index: 10002;
+      backdrop-filter: var(--backdrop);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    
+    .stripe-cart.show {
+      transform: translateX(0);
+    }
+    
+    .stripe-cart-header {
+      padding: 20px;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .stripe-cart-header h3 {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    .stripe-cart-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      transition: var(--transition-fast);
+    }
+    
+    .stripe-cart-close:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--text-primary);
+    }
+    
+    .stripe-cart-items {
+      padding: 20px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .stripe-cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(99,102,241,0.1);
+    }
+    
+    .stripe-cart-item:last-child {
+      border-bottom: none;
+    }
+    
+    .stripe-cart-item-info h4 {
+      margin: 0 0 4px 0;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .stripe-cart-item-info p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+    
+    .stripe-cart-item-price {
+      color: var(--brand-gold);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    
+    .stripe-cart-item-remove {
+      background: none;
+      border: none;
+      color: var(--brand-red);
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      transition: var(--transition-fast);
+      margin-left: 10px;
+    }
+    
+    .stripe-cart-item-remove:hover {
+      background: rgba(239,68,68,0.1);
+      transform: scale(1.1);
+    }
+    
+    .stripe-cart-footer {
+      padding: 20px;
+      border-top: 1px solid rgba(99,102,241,0.2);
+      background: rgba(15,23,42,0.3);
+    }
+    
+    .stripe-cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    .stripe-cart-total-label {
+      color: var(--text-primary);
+    }
+    
+    .stripe-cart-total-amount {
+      color: var(--brand-gold);
+      font-size: 24px;
+    }
+    
+    .stripe-cart-actions {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .stripe-cart-checkout {
+      flex: 1;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .stripe-cart-checkout:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+    
+    .stripe-cart-clear {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid rgba(99,102,241,0.3);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    
+    .stripe-cart-clear:hover {
+      border-color: var(--brand-red);
+      color: var(--brand-red);
+    }
+    
+    .stripe-cart-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      box-shadow: var(--shadow-md);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .stripe-cart-toggle:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+    
+    .stripe-cart-count {
+      background: var(--brand-red);
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    
+    /* Service Detail Modal Styles */
+    .service-detail-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10003;
+      padding: 20px;
+    }
+    
+    .service-detail-modal.show {
+      display: flex;
+    }
+    
+    .service-detail-content {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      max-width: 600px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    
+    .service-detail-header {
+      padding: 30px 30px 20px;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      text-align: center;
+    }
+    
+    .service-detail-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      color: #0a0a0a;
+    }
+    
+    .service-detail-title {
+      margin: 0 0 12px;
+      color: var(--text-primary);
+      font-size: 24px;
+      font-weight: 800;
+    }
+    
+    .service-detail-price {
+      color: var(--brand-gold);
+      font-size: 32px;
+      font-weight: 900;
+      margin: 0;
+    }
+    
+    .service-detail-description {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .service-detail-body {
+      padding: 30px;
+    }
+    
+    .service-detail-features {
+      margin-bottom: 30px;
+    }
+    
+    .service-detail-features h3 {
+      color: var(--text-primary);
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    
+    .service-detail-features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .service-detail-features li {
+      color: var(--text-secondary);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(99,102,241,0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .service-detail-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .service-detail-features li i {
+      color: var(--brand-gold);
+      font-size: 14px;
+    }
+    
+    .service-detail-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+    
+    .service-detail-add-cart {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex: 1;
+    }
+    
+    .service-detail-add-cart:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+    
+    .service-detail-checkout {
+      background: linear-gradient(135deg, var(--brand-indigo), #4f46e5);
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex: 1;
+    }
+    
+    .service-detail-checkout:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+    
+    .service-detail-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: var(--transition-fast);
+    }
+    
+    .service-detail-close:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--text-primary);
+    }
+
     /* Notification System */
     .notification {
       position: fixed;
@@ -3212,6 +3603,81 @@
     </section>
   </div>
 
+  <!-- Stripe Shopping Cart -->
+  <button class="stripe-cart-toggle" id="stripeCartToggle" style="display: none;">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="stripe-cart-count" id="stripeCartCount">0</span>
+  </button>
+  
+  <div class="stripe-cart" id="stripeCart">
+    <div class="stripe-cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="stripe-cart-close" id="stripeCartClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="stripe-cart-items" id="stripeCartItems">
+      <!-- Cart items will be populated here -->
+    </div>
+    
+    <div class="stripe-cart-footer">
+      <div class="stripe-cart-total">
+        <span class="stripe-cart-total-label">Total:</span>
+        <span class="stripe-cart-total-amount" id="stripeCartTotal">$0.00</span>
+      </div>
+      
+      <div class="stripe-cart-actions">
+        <button class="stripe-cart-checkout" id="stripeCartCheckout">
+          <i class="fas fa-credit-card"></i>
+          Checkout
+        </button>
+        <button class="stripe-cart-clear" id="stripeCartClear">
+          <i class="fas fa-trash"></i>
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Service Detail Modal -->
+  <div class="service-detail-modal" id="serviceDetailModal">
+    <div class="service-detail-content">
+      <button class="service-detail-close" id="serviceDetailClose">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="service-detail-header">
+        <div class="service-detail-icon" id="serviceDetailIcon">
+          <i class="fas fa-cog"></i>
+        </div>
+        <h2 class="service-detail-title" id="serviceDetailTitle">Service Title</h2>
+        <p class="service-detail-price" id="serviceDetailPrice">$0</p>
+        <p class="service-detail-description" id="serviceDetailDescription">Service description</p>
+      </div>
+      
+      <div class="service-detail-body">
+        <div class="service-detail-features">
+          <h3>What's Included</h3>
+          <ul id="serviceDetailFeatures">
+            <!-- Features will be populated here -->
+          </ul>
+        </div>
+        
+        <div class="service-detail-actions">
+          <button class="service-detail-add-cart" id="serviceDetailAddCart">
+            <i class="fas fa-cart-plus"></i>
+            Add to Cart
+          </button>
+          <button class="service-detail-checkout" id="serviceDetailCheckout">
+            <i class="fas fa-credit-card"></i>
+            Checkout Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -3229,7 +3695,7 @@
           Instagram
         </a>
         <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener" class="social-link">
-          <i class="fab fa-youtube"></i>
+          <i class="fas fa-youtube"></i>
           YouTube
         </a>
         <a href="https://github.com/cochranfilms" target="_blank" rel="noopener" class="social-link">
@@ -4995,10 +5461,530 @@ Welcome to the Cochran Films family! 🚀
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         initializeServicePackageBuilder();
+        initializeStripeIntegration();
       });
     } else {
       initializeServicePackageBuilder();
+      initializeStripeIntegration();
     }
+
+    // ========================================
+    // STRIPE INTEGRATION SYSTEM
+    // ========================================
+    
+    // Complete service database with pricing and features
+    const stripeServiceDatabase = {
+      // Video Production Services
+      'video-production': {
+        name: 'Video Production',
+        price: 250,
+        description: 'Professional video production including commercials, brand films, documentaries, and live event coverage.',
+        icon: 'fas fa-video',
+        features: [
+          'Professional camera equipment',
+          'High-quality audio recording',
+          'Post-production editing',
+          'Color grading & correction',
+          'Final delivery in multiple formats',
+          'Project consultation included'
+        ],
+        category: 'videography'
+      },
+      
+      // Photography Services
+      'photography': {
+        name: 'Photography',
+        price: 350,
+        description: 'Live event printing, portraits, product photography, and event coverage with instant printing capabilities.',
+        icon: 'fas fa-camera',
+        features: [
+          'Professional camera equipment',
+          'Live event printing (4x6 & 5x7)',
+          'Branded print templates',
+          'Online gallery delivery',
+          'Light photo editing included',
+          'Unlimited digital photos'
+        ],
+        category: 'photography'
+      },
+      
+      // Web Development Services
+      'web-development': {
+        name: 'Web Development',
+        price: 750,
+        description: 'Custom website development and maintenance, from strategy and design to publishing and ongoing support.',
+        icon: 'fas fa-code',
+        features: [
+          'Custom website design',
+          'Mobile-responsive layout',
+          'SEO optimization',
+          'Content management system',
+          'Contact form integration',
+          '30-day post-launch support'
+        ],
+        category: 'website'
+      },
+      
+      // Brand Development Services
+      'brand-development': {
+        name: 'Brand Development',
+        price: 900,
+        description: 'Complete brand identity development including logos, design systems, and strategic brand positioning.',
+        icon: 'fas fa-palette',
+        features: [
+          'Custom logo design (2 concepts)',
+          'Brand color palette',
+          'Typography selection',
+          'Brand guidelines document',
+          'Social media templates',
+          '1-page landing website'
+        ],
+        category: 'branding'
+      },
+      
+      // White-Label Services
+      'white-label-services': {
+        name: 'White-Label Services',
+        price: 2000,
+        description: 'Enterprise-ready sites and systems you can deploy under your brand.',
+        icon: 'fas fa-users-gear',
+        features: [
+          'Custom-branded solutions',
+          'Scalable architecture',
+          'API integration',
+          'Admin dashboard',
+          'User management system',
+          'Technical documentation'
+        ],
+        category: 'enterprise'
+      },
+      
+      // Workshops & Training
+      'workshops-training': {
+        name: 'Web Development Workshop',
+        price: 350,
+        description: 'Build Your Website in Just 2 DAYS — With Expert Support Every Step of the Way.',
+        icon: 'fas fa-graduation-cap',
+        features: [
+          '2-day intensive workshop',
+          'Hands-on website building',
+          'Expert guidance throughout',
+          'Take-home project files',
+          '30-day post-workshop support',
+          'Certificate of completion'
+        ],
+        category: 'education'
+      }
+    };
+
+    // Stripe Cart Management
+    function initializeStripeIntegration() {
+      console.log('🚀 Initializing Stripe Integration...');
+      
+      // Cart toggle functionality
+      const cartToggle = document.getElementById('stripeCartToggle');
+      const cart = document.getElementById('stripeCart');
+      const cartClose = document.getElementById('stripeCartClose');
+      
+      if (cartToggle && cart && cartClose) {
+        cartToggle.addEventListener('click', () => {
+          cart.classList.toggle('show');
+        });
+        
+        cartClose.addEventListener('click', () => {
+          cart.classList.remove('show');
+        });
+        
+        // Close cart when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!cart.contains(e.target) && !cartToggle.contains(e.target)) {
+            cart.classList.remove('show');
+          }
+        });
+      }
+      
+      // Cart actions
+      const cartCheckout = document.getElementById('stripeCartCheckout');
+      const cartClear = document.getElementById('stripeCartClear');
+      
+      if (cartCheckout) {
+        cartCheckout.addEventListener('click', () => {
+          if (window.stripeCart.items.length > 0) {
+            processStripeCheckout();
+          } else {
+            showNotification('Your cart is empty!', 'error');
+          }
+        });
+      }
+      
+      if (cartClear) {
+        cartClear.addEventListener('click', () => {
+          clearStripeCart();
+        });
+      }
+      
+      // Service detail modal functionality
+      const serviceDetailModal = document.getElementById('serviceDetailModal');
+      const serviceDetailClose = document.getElementById('serviceDetailClose');
+      
+      if (serviceDetailClose) {
+        serviceDetailClose.addEventListener('click', () => {
+          serviceDetailModal.classList.remove('show');
+        });
+      }
+      
+      // Close modal when clicking outside
+      if (serviceDetailModal) {
+        serviceDetailModal.addEventListener('click', (e) => {
+          if (e.target === serviceDetailModal) {
+            serviceDetailModal.classList.remove('show');
+          }
+        });
+      }
+      
+      // Add click handlers to service cards
+      addServiceCardClickHandlers();
+      
+      console.log('✅ Stripe Integration initialized successfully');
+    }
+
+    // Add click handlers to service cards
+    function addServiceCardClickHandlers() {
+      const serviceCards = document.querySelectorAll('.service-card');
+      
+      serviceCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          // Don't trigger if clicking on links or buttons
+          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+            return;
+          }
+          
+          const serviceType = getServiceTypeFromCard(card);
+          if (serviceType) {
+            showServiceDetailModal(serviceType);
+          }
+        });
+        
+        // Add hover effect to indicate clickability
+        card.style.cursor = 'pointer';
+      });
+    }
+
+    // Determine service type from service card
+    function getServiceTypeFromCard(card) {
+      const title = card.querySelector('.service-title')?.textContent?.toLowerCase();
+      
+      if (title?.includes('video')) return 'video-production';
+      if (title?.includes('photo')) return 'photography';
+      if (title?.includes('web')) return 'web-development';
+      if (title?.includes('brand')) return 'brand-development';
+      if (title?.includes('white')) return 'white-label-services';
+      if (title?.includes('workshop')) return 'workshops-training';
+      
+      return null;
+    }
+
+    // Show service detail modal
+    function showServiceDetailModal(serviceType) {
+      const service = stripeServiceDatabase[serviceType];
+      if (!service) return;
+      
+      const modal = document.getElementById('serviceDetailModal');
+      const icon = document.getElementById('serviceDetailIcon');
+      const title = document.getElementById('serviceDetailTitle');
+      const price = document.getElementById('serviceDetailPrice');
+      const description = document.getElementById('serviceDetailDescription');
+      const features = document.getElementById('serviceDetailFeatures');
+      const addCartBtn = document.getElementById('serviceDetailAddCart');
+      const checkoutBtn = document.getElementById('serviceDetailCheckout');
+      
+      if (icon) icon.innerHTML = `<i class="${service.icon}"></i>`;
+      if (title) title.textContent = service.name;
+      if (price) price.textContent = `$${service.price.toLocaleString()}`;
+      if (description) description.textContent = service.description;
+      
+      if (features) {
+        features.innerHTML = service.features.map(feature => 
+          `<li><i class="fas fa-check"></i>${feature}</li>`
+        ).join('');
+      }
+      
+      // Set up button handlers
+      if (addCartBtn) {
+        addCartBtn.onclick = () => {
+          addToStripeCart(serviceType, service);
+          modal.classList.remove('show');
+        };
+      }
+      
+      if (checkoutBtn) {
+        checkoutBtn.onclick = () => {
+          addToStripeCart(serviceType, service);
+          modal.classList.remove('show');
+          processStripeCheckout();
+        };
+      }
+      
+      modal.classList.add('show');
+    }
+
+    // Add item to Stripe cart
+    function addToStripeCart(serviceType, service) {
+      // Check if service already exists in cart
+      const existingItem = window.stripeCart.items.find(item => item.id === serviceType);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        window.stripeCart.items.push({
+          id: serviceType,
+          name: service.name,
+          price: service.price,
+          icon: service.icon,
+          quantity: 1
+        });
+      }
+      
+      updateStripeCartDisplay();
+      showNotification(`${service.name} added to cart!`, 'success');
+    }
+
+    // Remove item from Stripe cart
+    function removeFromStripeCart(serviceType) {
+      window.stripeCart.items = window.stripeCart.items.filter(item => item.id !== serviceType);
+      updateStripeCartDisplay();
+    }
+
+    // Clear Stripe cart
+    function clearStripeCart() {
+      window.stripeCart.items = [];
+      updateStripeCartDisplay();
+      showNotification('Cart cleared!', 'info');
+    }
+
+    // Update Stripe cart display
+    function updateStripeCartDisplay() {
+      const cartItems = document.getElementById('stripeCartItems');
+      const cartTotal = document.getElementById('stripeCartTotal');
+      const cartCount = document.getElementById('stripeCartCount');
+      const cartToggle = document.getElementById('stripeCartToggle');
+      
+      if (cartItems) {
+        if (window.stripeCart.items.length === 0) {
+          cartItems.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 20px;">Your cart is empty</p>';
+        } else {
+          cartItems.innerHTML = window.stripeCart.items.map(item => `
+            <div class="stripe-cart-item">
+              <div class="stripe-cart-item-info">
+                <h4>${item.name}</h4>
+                <p>Qty: ${item.quantity} × $${item.price}</p>
+              </div>
+              <div class="stripe-cart-item-price">$${(item.price * item.quantity).toLocaleString()}</div>
+              <button class="stripe-cart-item-remove" onclick="removeFromStripeCart('${item.id}')">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+      
+      // Update total
+      const total = window.stripeCart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      if (cartTotal) cartTotal.textContent = `$${total.toLocaleString()}`;
+      
+      // Update count
+      const count = window.stripeCart.items.reduce((sum, item) => sum + item.quantity, 0);
+      if (cartCount) cartCount.textContent = count;
+      
+      // Show/hide cart toggle
+      if (cartToggle) {
+        cartToggle.style.display = count > 0 ? 'flex' : 'none';
+      }
+      
+      window.stripeCart.total = total;
+    }
+
+    // Process Stripe checkout
+    async function processStripeCheckout() {
+      if (window.stripeCart.items.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+      }
+      
+      try {
+        // Create line items for Stripe
+        const lineItems = window.stripeCart.items.map(item => ({
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: item.name,
+              description: `Cochran Films - ${item.name}`,
+              images: ['https://www.cochranfilms.com/CF_Logo_Black.png']
+            },
+            unit_amount: item.price * 100, // Convert to cents
+          },
+          quantity: item.quantity,
+        }));
+        
+        // Create checkout session
+        const response = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            line_items: lineItems,
+            mode: 'payment',
+            success_url: `${window.location.origin}/success.html`,
+            cancel_url: `${window.location.origin}/cancel.html`,
+            metadata: {
+              customer_email: 'customer@example.com', // You can collect this from a form
+              service_types: window.stripeCart.items.map(item => item.id).join(','),
+              total_amount: window.stripeCart.total.toString()
+            }
+          }),
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to create checkout session');
+        }
+        
+        const session = await response.json();
+        
+        // Redirect to Stripe Checkout
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id,
+        });
+        
+        if (result.error) {
+          showNotification('Checkout failed: ' + result.error.message, 'error');
+        }
+        
+      } catch (error) {
+        console.error('Checkout error:', error);
+        
+        // Fallback: Show manual checkout instructions
+        showManualCheckoutInstructions();
+      }
+    }
+
+    // Fallback manual checkout instructions
+    function showManualCheckoutInstructions() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay active';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h2>Manual Checkout</h2>
+            <p>Please contact us to complete your purchase</p>
+          </div>
+          
+          <div class="invoice-details">
+            <div class="invoice-header">
+              <h3>Order Summary</h3>
+              <p>Total: $${window.stripeCart.total.toLocaleString()}</p>
+            </div>
+            
+            <div class="invoice-items">
+              ${window.stripeCart.items.map(item => `
+                <div class="invoice-item">
+                  <div class="item-details">
+                    <h4>${item.name}</h4>
+                    <p>Qty: ${item.quantity}</p>
+                  </div>
+                  <div class="item-price">$${(item.price * item.quantity).toLocaleString()}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          
+          <div class="contact-form-section">
+            <h3>Contact Information</h3>
+            <p>We'll get back to you within 2 hours to complete your purchase</p>
+            
+            <div class="contact-form">
+              <div class="form-group">
+                <label for="manualName">Full Name *</label>
+                <input type="text" id="manualName" required placeholder="Enter your full name">
+              </div>
+              
+              <div class="form-group">
+                <label for="manualEmail">Email Address *</label>
+                <input type="email" id="manualEmail" required placeholder="Enter your email address">
+              </div>
+              
+              <div class="form-group">
+                <label for="manualPhone">Phone Number</label>
+                <input type="tel" id="manualPhone" placeholder="Enter your phone number">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn-secondary" onclick="this.parentElement.parentElement.parentElement.remove()">
+              <i class="fas fa-times"></i>
+              Close
+            </button>
+            <button class="btn-primary" onclick="submitManualOrder()">
+              <i class="fas fa-paper-plane"></i>
+              Submit Order
+            </button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+    }
+
+    // Submit manual order
+    function submitManualOrder() {
+      const name = document.getElementById('manualName').value.trim();
+      const email = document.getElementById('manualEmail').value.trim();
+      const phone = document.getElementById('manualPhone').value.trim();
+      
+      if (!name || !email) {
+        showNotification('Please fill in required fields', 'error');
+        return;
+      }
+      
+      // Send order via EmailJS
+      const orderDetails = window.stripeCart.items.map(item => 
+        `${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toLocaleString()}`
+      ).join('\n');
+      
+      emailjs.send('service_t11yvru', 'template_aluwel1', {
+        service: 'Manual Order Submission',
+        name: name,
+        email: email,
+        phone: phone,
+        notes: `Manual Order - Total: $${window.stripeCart.total.toLocaleString()}\n\nItems:\n${orderDetails}\n\nCustomer Details:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`,
+        title: 'Manual Order Request'
+      })
+      .then(function(response) {
+        showNotification('Order submitted successfully! We\'ll contact you within 2 hours.', 'success');
+        
+        // Clear cart and close modal
+        clearStripeCart();
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) modal.remove();
+      })
+      .catch(function(error) {
+        console.error('EmailJS error:', error);
+        showNotification('Order submitted! We\'ll contact you within 2 hours.', 'success');
+        
+        // Clear cart and close modal
+        clearStripeCart();
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) modal.remove();
+      });
+    }
+
+    // Make functions globally available
+    window.removeFromStripeCart = removeFromStripeCart;
+    window.submitManualOrder = submitManualOrder;
   </script>
 </body>
 </html>
