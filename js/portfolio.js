@@ -10,31 +10,30 @@ class PortfolioManager {
     this.filteredItems = [];
     this.currentFilter = 'all';
     this.filters = ['all', 'video-production', 'web-development'];
+    this.sourcesMap = {};
     
     this.init();
   }
 
   init() {
-    this.loadPortfolioData().then(() => {
-      this.renderPortfolioByCategory();
-      this.bindCategoryEvents();
-    });
+    // Load optional CMS source overrides, then data
+    this.loadSourcesConfig()
+      .catch(() => {})
+      .finally(() => {
+        this.loadPortfolioData().then(() => {
+          this.renderPortfolioByCategory();
+          this.bindCategoryEvents();
+        });
+      });
   }
 
   async loadPortfolioData() {
     try {
-      // Optional source overrides for remote CMS (e.g., Airtable shared view links)
-      // Video Production → Airtable shared view provided by user
-      const CSV_SOURCE_MAP = {
-        'CMS/Collections/Portfolio.csv': 'https://airtable.com/appjQxcRoClnZzghj/shrUGfmwgRIMW2ogA',
-        'CMS/Collections/Web.csv': 'https://airtable.com/appV5l9kZ5vAxcz4e/shraQlFk74rqB8uMj'
-      };
-
       // Load all collections (with overrides where present)
       const [portfolioData, webData, photoData] = await Promise.all([
-        this.fetchCSV(CSV_SOURCE_MAP['CMS/Collections/Portfolio.csv'] || 'CMS/Collections/Portfolio.csv'),
-        this.fetchCSV(CSV_SOURCE_MAP['CMS/Collections/Web.csv'] || 'CMS/Collections/Web.csv'),
-        this.fetchCSV('CMS/Collections/Photography.csv')
+        this.fetchCSV(this.resolveSource('CMS/Collections/Portfolio.csv')),
+        this.fetchCSV(this.resolveSource('CMS/Collections/Web.csv')),
+        this.fetchCSV(this.resolveSource('CMS/Collections/Photography.csv'))
       ]);
 
       // Process Portfolio.csv (Video Production)
@@ -104,6 +103,32 @@ class PortfolioManager {
       console.warn(`⚠️ Could not load ${filePath}:`, error);
       return null;
     }
+  }
+
+  // Load optional CMS source overrides from CMS/sources.json
+  async loadSourcesConfig() {
+    try {
+      const url = 'CMS/sources.json?v=' + Date.now();
+      const res = await fetch(url, { cache: 'no-cache' });
+      if (!res.ok) return;
+      const data = await res.json();
+      // Normalize to a simple filename → URL map
+      const map = {};
+      Object.entries(data || {}).forEach(([key, value]) => {
+        const file = String(key).split('/').pop();
+        map[file] = String(value);
+      });
+      this.sourcesMap = map;
+    } catch (_) {
+      // Ignore; fall back to local CSVs
+    }
+  }
+
+  // Resolve a local CSV path to an override URL if defined in sources.json
+  resolveSource(localPath) {
+    const file = localPath.split('/').pop();
+    const override = this.sourcesMap && this.sourcesMap[file];
+    return override || localPath;
   }
 
   // Safely get a value from a parsed CSV row using multiple possible header names
