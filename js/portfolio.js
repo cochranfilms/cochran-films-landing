@@ -26,13 +26,14 @@ class PortfolioManager {
       // Optional source overrides for remote CMS (e.g., Airtable shared view links)
       // Video Production → Airtable shared view provided by user
       const CSV_SOURCE_MAP = {
-        'CMS/Collections/Portfolio.csv': 'https://airtable.com/appjQxcRoClnZzghj/shrUGfmwgRIMW2ogA'
+        'CMS/Collections/Portfolio.csv': 'https://airtable.com/appjQxcRoClnZzghj/shrUGfmwgRIMW2ogA',
+        'CMS/Collections/Web.csv': 'https://airtable.com/appV5l9kZ5vAxcz4e/shraQlFk74rqB8uMj'
       };
 
       // Load all collections (with overrides where present)
       const [portfolioData, webData, photoData] = await Promise.all([
         this.fetchCSV(CSV_SOURCE_MAP['CMS/Collections/Portfolio.csv'] || 'CMS/Collections/Portfolio.csv'),
-        this.fetchCSV('CMS/Collections/Web.csv'),
+        this.fetchCSV(CSV_SOURCE_MAP['CMS/Collections/Web.csv'] || 'CMS/Collections/Web.csv'),
         this.fetchCSV('CMS/Collections/Photography.csv')
       ]);
 
