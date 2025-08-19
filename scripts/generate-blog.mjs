@@ -16,6 +16,13 @@ const SOURCES = {
     'https://www.smashingmagazine.com/feed/',
     'https://web.dev/feed.xml',
     'https://dev.to/feed/tag/webdev',
+    'https://hnrss.org/frontpage',
+    'https://www.theverge.com/rss/index.xml',
+    'https://www.wired.com/feed/rss',
+  ],
+  apple: [
+    'https://www.macrumors.com/macrumors.xml',
+    'https://9to5mac.com/feed/',
   ],
   brand: [
     'https://www.brandingmag.com/feed/',
