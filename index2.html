@@ -3398,6 +3398,25 @@ Welcome to the Cochran Films family! 🚀
       // Portfolio data - will be populated dynamically from CSV files
       let portfolioData = [];
       
+      // Optional CMS source overrides
+      let sourcesMap = {};
+      function resolveSource(localPath) {
+        const file = localPath.split('/').pop();
+        return sourcesMap[file] || localPath;
+      }
+      async function loadSourcesConfig() {
+        try {
+          const res = await fetch('CMS/sources.json?v=' + Date.now(), { cache: 'no-cache' });
+          if (!res.ok) return;
+          const data = await res.json();
+          const map = {};
+          Object.entries(data || {}).forEach(([key, value]) => {
+            map[String(key).split('/').pop()] = String(value);
+          });
+          sourcesMap = map;
+        } catch (_) {}
+      }
+
       // CSV Parser Function
       function parseCSV(csvText) {
         try {
@@ -3483,17 +3502,42 @@ Welcome to the Cochran Films family! 🚀
         }
       }
       
+      // Helper to robustly fetch CSV (supports Airtable shared views)
+      async function fetchCSVSmart(filePath) {
+        const buildCacheBusted = (u) => u + (u.includes('?') ? '&' : '?') + 'v=' + Date.now();
+        const isHttp = /^https?:\/\//i.test(filePath);
+        const candidates = [];
+        if (isHttp && /airtable\.com\//i.test(filePath)) {
+          const base = filePath.replace(/#.*$/, '');
+          candidates.push(base);
+          candidates.push(base + (base.endsWith('/') ? 'csv' : '/csv'));
+          candidates.push(base + (base.includes('?') ? '&' : '?') + 'format=csv');
+          candidates.push(base + (base.includes('?') ? '&' : '?') + 'download=1');
+        } else {
+          candidates.push(filePath);
+        }
+        let lastError = null;
+        for (const c of candidates) {
+          try {
+            const url = buildCacheBusted(c);
+            const response = await fetch(url, { cache: 'no-cache' });
+            if (!response.ok) continue;
+            const text = await response.text();
+            if (/[,\n]/.test(text)) return text;
+          } catch (e) { lastError = e; }
+        }
+        // Final attempt on original path
+        const url = buildCacheBusted(filePath);
+        const resp = await fetch(url, { cache: 'no-cache' });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        return await resp.text();
+      }
+
       // Load Portfolio CSV (Video Production)
       async function loadPortfolioCSV() {
         try {
           console.log('Loading Portfolio.csv...');
-          const response = await fetch('CMS/Collections/Portfolio.csv');
-          
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-          }
-          
-          const csvText = await response.text();
+          const csvText = await fetchCSVSmart(resolveSource('CMS/Collections/Portfolio.csv'));
           console.log('Portfolio.csv loaded, length:', csvText.length);
           
           const portfolioItems = parseCSV(csvText);
@@ -3515,13 +3559,7 @@ Welcome to the Cochran Films family! 🚀
       async function loadWebCSV() {
         try {
           console.log('Loading Web.csv...');
-          const response = await fetch('CMS/Collections/Web.csv');
-          
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-          }
-          
-          const csvText = await response.text();
+          const csvText = await fetchCSVSmart(resolveSource('CMS/Collections/Web.csv'));
           console.log('Web.csv loaded, length:', csvText.length);
           
           const webItems = parseCSV(csvText);
@@ -3589,9 +3627,7 @@ Welcome to the Cochran Films family! 🚀
       async function loadPhotographyCSV() {
         try {
           console.log('Loading Photography.csv...');
-          const resp = await fetch('CMS/Collections/Photography.csv');
-          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-          const txt = await resp.text();
+          const txt = await fetchCSVSmart(resolveSource('CMS/Collections/Photography.csv'));
           const lines = txt.replace(/\r\n/g,'\n').split('\n').map(l => l.trim()).filter(Boolean);
           const items = [];
           for (let i = 1; i < lines.length; i++) { // skip header
@@ -4013,11 +4049,11 @@ Welcome to the Cochran Films family! 🚀
       // Initialize when DOM is ready
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
-          loadAllPortfolioData(); // Load CSV data first
+          loadSourcesConfig().finally(() => loadAllPortfolioData()); // Load config then CSV data
           initPortfolio(); // Then initialize portfolio
         });
       } else {
-        loadAllPortfolioData(); // Load CSV data first
+        loadSourcesConfig().finally(() => loadAllPortfolioData()); // Load config then CSV data
         initPortfolio(); // Then initialize portfolio
       }
       
