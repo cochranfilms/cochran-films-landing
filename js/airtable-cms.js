@@ -3,6 +3,13 @@
 
 class AirtableCMS {
   constructor() {
+    // Determine API base. When served from GitHub Pages/custom domain,
+    // call the Vercel serverless API explicitly.
+    this.apiBase = (typeof window !== 'undefined' && window.API_BASE_URL)
+      ? window.API_BASE_URL
+      : (typeof window !== 'undefined' && /cochranfilms\.com$/i.test(window.location.hostname)
+          ? 'https://cody-cochrans-projects.vercel.app'
+          : '');
     // Your Airtable base IDs from the URLs you provided
     this.bases = {
       'Video Production': 'appjQxcRoClnZzghj', // Portfolio CSV
@@ -88,7 +95,7 @@ class AirtableCMS {
       console.log(`📥 Loading ${category} data from Airtable...`);
       
       // Try to fetch from your Vercel environment
-      const apiEndpoint = `/api/airtable/${category.toLowerCase().replace(' ', '-')}`;
+      const apiEndpoint = `${this.apiBase}/api/airtable/${category.toLowerCase().replace(' ', '-')}`;
       console.log(`🔗 Calling API endpoint: ${apiEndpoint}`);
       
       const response = await fetch(apiEndpoint, {

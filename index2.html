@@ -21,6 +21,10 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <!-- Airtable CMS Integration -->
+  <script>
+    // Set API base for Airtable proxy when running behind custom domain
+    window.API_BASE_URL = 'https://cody-cochrans-projects.vercel.app';
+  </script>
   <script src="js/airtable-cms.js"></script>
   
   <!-- Stripe Integration -->
