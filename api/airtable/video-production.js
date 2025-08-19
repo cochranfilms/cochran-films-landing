@@ -32,7 +32,9 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    console.log(`Fetching data from Airtable: ${baseId}/${tableName}`);
+    const tokenType = apiKey.startsWith('pat') ? 'PAT' : (apiKey.startsWith('key') ? 'legacy' : 'unknown');
+    const keySource = process.env.AIRTABLE_API_KEY_VIDEO ? 'AIRTABLE_API_KEY_VIDEO' : (process.env.AIRTABLE_API_KEY ? 'AIRTABLE_API_KEY' : 'AIRTABLE_TOKEN');
+    console.log(`Fetching data from Airtable: ${baseId}/${tableName} (tokenType=${tokenType}, source=${keySource})`);
 
     // Fetch data from Airtable
     const response = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`, {
@@ -45,7 +47,15 @@ module.exports = async function handler(req, res) {
     if (!response.ok) {
       const errorText = await response.text();
       console.error(`Airtable API error: ${response.status} ${response.statusText}`, errorText);
-      throw new Error(`Airtable API error: ${response.status} ${response.statusText}`);
+      let parsed;
+      try { parsed = JSON.parse(errorText); } catch (_) { parsed = null; }
+      return res.status(response.status).json({
+        error: 'Airtable request failed',
+        status: response.status,
+        statusText: response.statusText,
+        airtableError: parsed || errorText,
+        endpoint: '/api/airtable/video-production'
+      });
     }
 
     const data = await response.json();
