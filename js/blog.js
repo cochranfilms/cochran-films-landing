@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   controlsContainer.style.margin = '0 0 16px 0';
   container.parentElement.insertBefore(controlsContainer, container);
 
+  // Create a non-sticky poll container below controls so it scrolls with content
+  const pollContainer = document.createElement('div');
+  pollContainer.id = 'dailyPoll';
+  pollContainer.className = 'blog-card';
+  pollContainer.style.margin = '8px 0 16px 0';
+  controlsContainer.insertAdjacentElement('afterend', pollContainer);
+
   const fallback = (message) => {
     container.innerHTML = `
       <div class="blog-card">
@@ -58,14 +65,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         </select>
         <button id="showFavorites" style="padding:8px 10px;border-radius:10px;background:rgba(255,178,0,0.15);border:1px solid rgba(255,178,0,0.35);color:#fef3c7;font-weight:700">Favorites</button>
       </div>
-      <div id="dailyPoll" class="blog-card" style="flex:1 1 100%;margin-top:8px;">
-        <h3 style="margin-top:0">Daily Poll</h3>
-        <p class="meta">What type of content do you want more of?</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          ${['production','web','apple','brand','photography'].map(opt => `<button class="poll-opt" data-opt="${opt}" style="padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.04);border:1px solid rgba(148,163,184,0.25);color:#e5e7eb">${opt}</button>`).join('')}
-        </div>
-        <div id="pollResult" class="meta" style="margin-top:8px"></div>
-      </div>
     `;
 
     document.getElementById('categoryFilter').addEventListener('change', (e) => {
@@ -85,7 +84,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const todayKey = new Date().toISOString().slice(0,10);
     let saved = JSON.parse(localStorage.getItem(POLL_KEY) || 'null');
     if (saved && saved.day !== todayKey) { saved = null; localStorage.removeItem(POLL_KEY); }
-    const pollResult = document.getElementById('pollResult');
+    // Render poll into dedicated non-sticky container
+    pollContainer.innerHTML = `
+      <h3 style="margin-top:0">Daily Poll</h3>
+      <p class="meta">What type of content do you want more of?</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        ${['production','web','apple','brand','photography'].map(opt => `<button class="poll-opt" data-opt="${opt}" style="padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.04);border:1px solid rgba(148,163,184,0.25);color:#e5e7eb">${opt}</button>`).join('')}
+      </div>
+      <div id="pollResult" class="meta" style="margin-top:8px"></div>
+    `;
+    const pollResult = pollContainer.querySelector('#pollResult');
     function showResult(data) {
       const total = Object.values(data).reduce((a,b)=>a+b,0) || 0;
       if (!total) { pollResult.textContent = 'No votes yet.'; return; }
@@ -94,7 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     let data = saved && saved.data ? saved.data : { production:0, web:0, apple:0, brand:0, photography:0 };
     if (saved && saved.voted) showResult(data);
-    controlsContainer.querySelectorAll('.poll-opt').forEach(btn => {
+    pollContainer.querySelectorAll('.poll-opt').forEach(btn => {
       btn.addEventListener('click', () => {
         if (localStorage.getItem(POLL_KEY)) { pollResult.textContent = 'You already voted today.'; return; }
         const opt = btn.dataset.opt; data[opt] = (data[opt]||0)+1;
