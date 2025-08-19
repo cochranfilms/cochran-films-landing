@@ -87,15 +87,11 @@ class AirtableCMS {
     try {
       console.log(`📥 Loading ${category} data from Airtable...`);
       
-      // Use Airtable's public API to fetch data
-      // Note: This requires your Airtable to be publicly accessible or you'll need to use server-side API calls
-      const url = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`;
-      
-      // For now, we'll use a proxy approach since Airtable requires API keys
-      // You'll need to set up a serverless function or use your Vercel environment variables
-      
       // Try to fetch from your Vercel environment
-      const response = await fetch(`/api/airtable/${category.toLowerCase().replace(' ', '-')}`, {
+      const apiEndpoint = `/api/airtable/${category.toLowerCase().replace(' ', '-')}`;
+      console.log(`🔗 Calling API endpoint: ${apiEndpoint}`);
+      
+      const response = await fetch(apiEndpoint, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -103,6 +99,8 @@ class AirtableCMS {
       });
       
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`❌ API Error ${response.status}: ${response.statusText}`, errorText);
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       
@@ -558,8 +556,93 @@ class AirtableCMS {
   
   fallbackToCSV() {
     console.log('🔄 Falling back to CSV system...');
-    // This will trigger the existing CSV loading system
-    // The existing code will handle this automatically
+    
+    // Try to load from CSV files as fallback
+    this.loadCSVFallback();
+  }
+  
+  async loadCSVFallback() {
+    console.log('📁 Attempting to load portfolio data from CSV files...');
+    
+    try {
+      // Show loading state
+      this.showPortfolioLoadingState();
+      
+      // Try to load from existing CSV files
+      const [portfolioItems, webItems, photoItems] = await Promise.all([
+        this.loadCSVFile('CMS/Collections/Portfolio.csv'),
+        this.loadCSVFile('CMS/Collections/Web.csv'),
+        this.loadCSVFile('CMS/Collections/Photography.csv')
+      ]);
+      
+      // Combine all data
+      this.portfolioData = [
+        ...portfolioItems.map(item => ({ ...item, ServiceCategory: 'Video Production' })),
+        ...webItems.map(item => ({ ...item, ServiceCategory: 'Web Development' })),
+        ...photoItems.map(item => ({ ...item, ServiceCategory: 'Photography' }))
+      ];
+      
+      console.log(`📈 CSV Fallback: Loaded ${this.portfolioData.length} total items`);
+      
+      // Hide loading state and render portfolio
+      this.hidePortfolioLoadingState();
+      this.renderPortfolioByCategory();
+      
+    } catch (error) {
+      console.error('❌ CSV fallback also failed:', error);
+      this.showPortfolioErrorState();
+    }
+  }
+  
+  async loadCSVFile(filePath) {
+    try {
+      console.log(`📖 Loading CSV file: ${filePath}`);
+      const response = await fetch(filePath);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const csvText = await response.text();
+      console.log(`✅ CSV loaded: ${filePath}, length: ${csvText.length}`);
+      
+      // Use simple CSV parsing for fallback
+      return this.parseCSVSimple(csvText);
+      
+    } catch (error) {
+      console.warn(`⚠️ Failed to load CSV file ${filePath}:`, error);
+      return [];
+    }
+  }
+  
+  parseCSVSimple(csvText) {
+    try {
+      const lines = csvText.split('\n').map(line => line.trim()).filter(Boolean);
+      if (lines.length < 2) return []; // Need header + at least one data row
+      
+      const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+      const data = [];
+      
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split(',').map(v => v.replace(/"/g, '').trim());
+        const item = {};
+        
+        headers.forEach((header, index) => {
+          item[header] = values[index] || '';
+        });
+        
+        if (item.Title || item.Name) {
+          data.push(item);
+        }
+      }
+      
+      console.log(`📊 Parsed ${data.length} items from CSV`);
+      return data;
+      
+    } catch (error) {
+      console.error('❌ CSV parsing error:', error);
+      return [];
+    }
   }
 }
 

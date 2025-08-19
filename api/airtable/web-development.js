@@ -1,5 +1,14 @@
 // Vercel API route for Web Development Airtable data
 export default async function handler(req, res) {
+  // Enable CORS for development
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'GET') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
@@ -15,9 +24,12 @@ export default async function handler(req, res) {
       console.error('AIRTABLE_API_KEY environment variable not set');
       return res.status(500).json({ 
         error: 'Airtable API key not configured',
-        message: 'Please check your Vercel environment variables'
+        message: 'Please check your Vercel environment variables',
+        details: 'Set AIRTABLE_API_KEY in your Vercel project settings'
       });
     }
+
+    console.log(`Fetching data from Airtable: ${baseId}/${tableName}`);
 
     // Fetch data from Airtable
     const response = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`, {
@@ -28,10 +40,13 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`Airtable API error: ${response.status} ${response.statusText}`, errorText);
       throw new Error(`Airtable API error: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
+    console.log(`Successfully fetched ${data.records?.length || 0} records from Airtable`);
     
     // Return the data
     res.status(200).json(data);
@@ -40,7 +55,9 @@ export default async function handler(req, res) {
     console.error('Error fetching Web Development data:', error);
     res.status(500).json({ 
       error: 'Failed to fetch data from Airtable',
-      message: error.message 
+      message: error.message,
+      timestamp: new Date().toISOString(),
+      endpoint: '/api/airtable/web-development'
     });
   }
 }
