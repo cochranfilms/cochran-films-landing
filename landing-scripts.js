@@ -313,25 +313,47 @@ class InteractiveFeatures {
   }
   
   initNavigation() {
-    const navItems = document.querySelectorAll('.nav-item');
-    const header = document.querySelector('.ai-header');
-    
-    // Smooth scroll to sections
-    navItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const section = item.getAttribute('data-section');
-        this.scrollToSection(section);
+    // Support unified nav (index2/blog parity)
+    const header = document.querySelector('.nav-wrapper');
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Mobile toggle
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
       });
-    });
-    
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+    }
+
+    // Smooth scroll for hash links
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('#')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu after select
+            navMenu?.classList.remove('show');
+            // Active state
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
       }
     });
+
+    // Header background on scroll
+    window.addEventListener('scroll', () => {
+      if (!header) return;
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(15, 23, 42, 0.98)';
+      } else {
+        header.style.background = 'rgba(15, 23, 42, 0.95)';
+      }
+    }, { passive: true });
   }
   
   scrollToSection(section) {
@@ -596,6 +618,9 @@ class CochranFilmsLanding {
       this.components.interactiveFeatures = new InteractiveFeatures();
       this.components.aiLoading = new AILoadingSystem();
       this.components.performance = new PerformanceOptimizer();
+
+      // Inline metric counters animation for social proof
+      this.animateCounters();
       
       // Initialize global functions
       this.initGlobalFunctions();
@@ -606,6 +631,24 @@ class CochranFilmsLanding {
       console.error('❌ Error initializing Landing Page:', error);
       this.fallbackMode();
     }
+  }
+
+  animateCounters() {
+    const counters = document.querySelectorAll('.proof-number');
+    counters.forEach(counter => {
+      const targetText = counter.textContent.trim();
+      const isPlus = targetText.endsWith('+');
+      const clean = parseInt(targetText.replace(/\D/g, ''), 10) || 0;
+      const duration = 1200;
+      const start = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - start) / duration);
+        const val = Math.floor(clean * p);
+        counter.textContent = isPlus ? `${val}+` : `${val}`;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
   }
   
   initGlobalFunctions() {

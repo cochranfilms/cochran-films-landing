@@ -67,6 +67,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"></noscript>
+  <!-- Shared site styles for unified navigation -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
   <link rel="preload" as="image" href="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" imagesrcset="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png 512w" imagesizes="(max-width: 520px) 180px, 320px" fetchpriority="high">
 
   <!-- GSAP for advanced animations -->
@@ -83,38 +86,48 @@
 
   <!-- Main Content -->
   <div class="main-container">
-    <!-- Header with AI Integration -->
-    <header class="ai-header">
-      <div class="header-content">
-        <div class="brand-container">
-          <div class="logo-wrapper">
-            <img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" class="main-logo" />
-            <div class="ai-status">
-              <div class="ai-indicator"></div>
-              <span>AI Active</span>
-            </div>
-          </div>
-        </div>
+    <!-- Unified Navigation (same as index2/blog) -->
+    <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+        </a>
         
-        <nav class="ai-nav">
-          <div class="nav-item" data-section="services">
-            <i class="fa-solid fa-cube"></i>
-            <span>Services</span>
-          </div>
-          <div class="nav-item" data-section="portfolio">
-            <i class="fa-solid fa-film"></i>
-            <span>Portfolio</span>
-          </div>
-          <a href="https://forms.gle/H44oamnuFgUtwb3k6" class="cta-button" target="_blank">
-            <i class="fa-solid fa-rocket"></i>
-            <span>Start Project</span>
-          </a>
-        </nav>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item has-submenu">
+            <a href="#portfolio" class="nav-link">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
+            <ul class="submenu" aria-label="Portfolio Categories">
+              <li><a href="#portfolio" class="submenu-link">Video Production</a></li>
+              <li><a href="#portfolio" class="submenu-link">Web Development</a></li>
+              <li><a href="#portfolio" class="submenu-link">Photography</a></li>
+              <li><a href="#portfolio" class="submenu-link">Brand Development</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="/blog.html" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#book" class="nav-link nav-cta">Book Services</a>
+          </li>
+        </ul>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section id="home" class="hero-section">
       <div class="hero-content">
         <div class="ai-badge">
           <div class="ai-pulse"></div>
@@ -168,8 +181,27 @@
       </div>
     </section>
 
+    <!-- Launch Progress Spotlight (from new brand momentum) -->
+    <section class="section-header" style="padding: 40px 16px; text-align:center;">
+      <div style="display:inline-grid; grid-template-columns: auto 1fr; align-items:center; gap:12px; padding:12px 16px; border:1px solid rgba(255,178,0,0.35); border-radius:14px; background: rgba(255,178,0,0.08);">
+        <span class="trophy-badge" title="Milestone: 80% achieved" style="display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--brand-gold), #ffd166); color:#0a0a0a; box-shadow: 0 4px 14px rgba(255,178,0,0.35); border:1px solid rgba(255,178,0,0.4);"><i class="fa-solid fa-award"></i></span>
+        <div style="text-align:left;">
+          <div style="font-weight:900; letter-spacing:.08em; text-transform:uppercase; color:var(--text-secondary); font-size:12px;">Rebrand Progress</div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="height:10px; width:220px; background: rgba(99,102,241,0.18); border-radius:999px; overflow:hidden;">
+              <div style="height:100%; width:80%; background: linear-gradient(90deg, var(--brand-indigo), var(--brand-emerald)); box-shadow: var(--glow-indigo);"></div>
+            </div>
+            <strong style="color:var(--brand-emerald);">80%</strong>
+          </div>
+        </div>
+      </div>
+      <p style="margin:14px auto 0; max-width:780px; color:var(--text-secondary);">
+        We’ve crossed 80% of the rebrand and it’s looking so good. We can’t wait to share the new experience with our users, collaborators, clients, and the broader community.
+      </p>
+    </section>
+
     <!-- Core Services Preview -->
-    <section class="services-section">
+    <section id="services" class="services-section">
       <div class="section-header">
         <h2>Our Core Services</h2>
         <p>From cinematic production to web development, we deliver comprehensive creative solutions that drive results</p>
@@ -238,6 +270,48 @@
       </div>
     </section>
 
+    <!-- Portfolio Teaser (links to full portfolio on index2.html) -->
+    <section id="portfolio" class="section" style="padding: 60px 16px;">
+      <div class="section-header">
+        <h2>Portfolio Highlights</h2>
+        <p>Explore a few standouts—dive deeper on our full portfolio page.</p>
+      </div>
+      <div class="services-grid" style="max-width:1200px;">
+        <a href="index2.html#videoProductionGrid" class="service-card" style="text-decoration:none;">
+          <div class="card-header">
+            <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+          </div>
+          <h3>Video Production</h3>
+          <p>Commercials, brand films, live events—built to captivate and convert.</p>
+          <div class="service-features"><span>4K/8K</span><span>Multi-cam</span><span>Color</span></div>
+        </a>
+        <a href="index2.html#webDevelopmentGrid" class="service-card" style="text-decoration:none;">
+          <div class="card-header">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          </div>
+          <h3>Web Development</h3>
+          <p>Modern sites, AI integrations, and cloud-native architectures.</p>
+          <div class="service-features"><span>Next.js</span><span>AI</span><span>Cloud</span></div>
+        </a>
+        <a href="index2.html#photographyGrid" class="service-card" style="text-decoration:none;">
+          <div class="card-header">
+            <div class="service-icon"><i class="fa-solid fa-camera"></i></div>
+          </div>
+          <h3>Photography</h3>
+          <p>Live printing, portraits, and event coverage with instant delivery.</p>
+          <div class="service-features"><span>Live Print</span><span>Events</span><span>Studio</span></div>
+        </a>
+        <a href="index2.html#brandDevelopmentGrid" class="service-card" style="text-decoration:none;">
+          <div class="card-header">
+            <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          </div>
+          <h3>Brand Development</h3>
+          <p>Logos, identity systems, and strategic brand positioning.</p>
+          <div class="service-features"><span>Identity</span><span>Systems</span><span>Strategy</span></div>
+        </a>
+      </div>
+    </section>
+
     <!-- Value Proposition -->
     <section class="value-section">
       <div class="section-header">
@@ -295,7 +369,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section id="book" class="cta-section">
       <div class="cta-content">
         <h2>Ready to Start Your Project?</h2>
         <p>Join the revolution in creative production and brand development</p>
@@ -309,6 +383,31 @@
             <i class="fa-solid fa-paper-plane"></i>
             <span>Start Your Project</span>
           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (parity with index2) -->
+    <section id="contact" class="section" style="padding: 60px 16px;">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Have questions or want to learn more? We'd love to hear from you.</p>
+      </div>
+      <div class="services-grid" style="max-width:800px;">
+        <div class="service-card">
+          <div class="card-header"><div class="service-icon"><i class="fa-solid fa-envelope"></i></div></div>
+          <h3>Email</h3>
+          <p style="margin:0; color:var(--text-secondary);">info@cochranfilms.com</p>
+        </div>
+        <div class="service-card">
+          <div class="card-header"><div class="service-icon"><i class="fa-solid fa-phone"></i></div></div>
+          <h3>Phone</h3>
+          <p style="margin:0; color:var(--text-secondary);">(470) 420 - 2169</p>
+        </div>
+        <div class="service-card">
+          <div class="card-header"><div class="service-icon"><i class="fa-solid fa-location-dot"></i></div></div>
+          <h3>Location</h3>
+          <p style="margin:0; color:var(--text-secondary);">Atlanta, Georgia & Surrounding Areas</p>
         </div>
       </div>
     </section>
