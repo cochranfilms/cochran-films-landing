@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -59,6 +60,139 @@ async function writeDB(filename, data) {
 }
 
 // API Routes
+
+// Airtable proxy: GET /api/airtable/:baseId/:tableName?view=Grid%20view&maxRecords=100&format=csv
+app.get('/api/airtable/:baseId/:tableName', async (req, res) => {
+    try {
+        const token = process.env.AIRTABLE_TOKEN;
+        if (!token) {
+            return res.status(500).json({ error: 'AIRTABLE_TOKEN is not configured' });
+        }
+
+        const { baseId, tableName } = req.params;
+        const {
+            view,
+            maxRecords,
+            pageSize,
+            filterByFormula,
+            format,
+            sort,
+            fields
+        } = req.query;
+
+        const tablePath = encodeURIComponent(tableName);
+        const apiBaseUrl = `https://api.airtable.com/v0/${baseId}/${tablePath}`;
+
+        // Build query params that Airtable supports
+        const searchParams = new URLSearchParams();
+        if (view) searchParams.set('view', String(view));
+        if (maxRecords) searchParams.set('maxRecords', String(maxRecords));
+        if (pageSize) searchParams.set('pageSize', String(pageSize));
+        if (filterByFormula) searchParams.set('filterByFormula', String(filterByFormula));
+        // sort can be JSON like [{"field":"Name","direction":"asc"}]
+        if (sort) searchParams.set('sort', String(sort));
+        // fields can be provided as comma-separated or repeated
+        if (fields) {
+            const fieldList = Array.isArray(fields)
+                ? fields
+                : String(fields).split(',').map(s => s.trim()).filter(Boolean);
+            for (const f of fieldList) searchParams.append('fields[]', f);
+        }
+
+        const headers = {
+            Authorization: `Bearer ${token}`
+        };
+
+        // Fetch all pages (handle offset) up to maxRecords if provided
+        const allRecords = [];
+        let offset;
+        const max = maxRecords ? Number(maxRecords) : undefined;
+        const effectivePageSize = pageSize ? Number(pageSize) : 100;
+
+        let safetyCounter = 0; // prevent infinite loops
+        do {
+            const pageParams = new URLSearchParams(searchParams);
+            pageParams.set('pageSize', String(Math.min(100, Math.max(1, effectivePageSize))));
+            if (offset) pageParams.set('offset', offset);
+
+            const url = `${apiBaseUrl}?${pageParams.toString()}`;
+            const resp = await fetch(url, { headers });
+            if (!resp.ok) {
+                const text = await resp.text();
+                return res.status(resp.status).send(text);
+            }
+            const data = await resp.json();
+            const records = Array.isArray(data.records) ? data.records : [];
+            allRecords.push(...records);
+            offset = data.offset;
+            if (max && allRecords.length >= max) {
+                allRecords.length = max; // trim to max
+                break;
+            }
+            safetyCounter++;
+        } while (offset && safetyCounter < 100);
+
+        // If CSV is requested, convert records to CSV string
+        if (String(format).toLowerCase() === 'csv') {
+            // Collect union of field names in order of first appearance
+            const headerSet = new Set();
+            for (const rec of allRecords) {
+                const fieldsObj = rec && rec.fields ? rec.fields : {};
+                for (const key of Object.keys(fieldsObj)) headerSet.add(key);
+            }
+            const headersOrdered = Array.from(headerSet);
+
+            // CSV escape function
+            const csvEscape = (val) => {
+                if (val === null || val === undefined) return '';
+                const s = String(val);
+                if (/[",\n\r]/.test(s)) {
+                    return '"' + s.replace(/"/g, '""') + '"';
+                }
+                return s;
+            };
+
+            // Value normalizer for Airtable rich types
+            const normalizeValue = (value) => {
+                if (Array.isArray(value)) {
+                    // If array of objects with url (attachments), return comma separated urls
+                    if (value.length > 0 && typeof value[0] === 'object' && value[0] !== null) {
+                        const urls = value
+                            .map(v => (v && (v.url || v.href || (v.thumbnails && v.thumbnails.full && v.thumbnails.full.url))) || null)
+                            .filter(Boolean);
+                        if (urls.length) return urls.join(', ');
+                        return value.map(v => (typeof v === 'object' ? JSON.stringify(v) : String(v))).join(', ');
+                    }
+                    return value.join(', ');
+                }
+                if (value && typeof value === 'object') {
+                    // Attachment or linked record object
+                    if (value.url) return value.url;
+                    return JSON.stringify(value);
+                }
+                return value;
+            };
+
+            const rows = [];
+            rows.push(headersOrdered.map(h => csvEscape(h)).join(','));
+            for (const rec of allRecords) {
+                const fieldsObj = rec && rec.fields ? rec.fields : {};
+                const row = headersOrdered.map(h => csvEscape(normalizeValue(fieldsObj[h])));
+                rows.push(row.join(','));
+            }
+
+            const csv = rows.join('\n');
+            res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+            return res.status(200).send(csv);
+        }
+
+        // Default: return JSON in Airtable format but with aggregated pages
+        return res.json({ records: allRecords });
+    } catch (error) {
+        console.error('Airtable proxy error:', error);
+        return res.status(500).json({ error: 'Failed to fetch Airtable data' });
+    }
+});
 
 // Get all users (for admin dashboard)
 app.get('/api/users', async (req, res) => {
@@ -259,6 +393,7 @@ initDatabase().then(() => {
         console.log(`   - GET  /api/users`);
         console.log(`   - GET  /api/unsubscribes`);
         console.log(`   - GET  /api/preferences`);
+        console.log(`   - GET  /api/airtable/:baseId/:tableName[?format=csv]`);
         console.log(`   - POST /api/unsubscribe`);
         console.log(`   - POST /api/preferences`);
         console.log(`   - POST /api/resubscribe`);
