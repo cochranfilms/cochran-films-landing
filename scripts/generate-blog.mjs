@@ -82,6 +82,8 @@ async function fetchFeed(url, category) {
       const image = imageFromEnclosure || imageFromHtml || null;
       const video = extractFirstIframeSrcFromHtml(contentHtml);
       const link = item.link || '';
+      const author = item.creator || item.author || (feed.title || '').trim();
+      const tags = (Array.isArray(item.categories) ? item.categories : []).filter(Boolean).slice(0, 8);
       return {
         title: item.title || 'Untitled',
         url: link,
@@ -91,6 +93,10 @@ async function fetchFeed(url, category) {
         summary: summary.length > 360 ? `${summary.slice(0, 357)}...` : summary,
         image,
         video,
+        author,
+        tags,
+        seoTitle: item.title || 'Untitled',
+        seoDescription: summary.length > 160 ? `${summary.slice(0, 157)}...` : summary
       };
     });
   } catch (error) {
@@ -137,11 +143,17 @@ async function generate() {
   }
 
   const deduped = Array.from(dedupedMap.values())
-    .filter(p => p.publishedAt)
+    // Only include posts with at least an image or a video for immersive content
+    .filter(p => p.publishedAt && (p.image || p.video))
+    // Keep 2025 relevant content only
+    .filter(p => {
+      try { return new Date(p.publishedAt).getFullYear() >= 2025; } catch { return false; }
+    })
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, 36);
 
   const pretty = JSON.stringify(deduped, null, 2);
+  await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
   await fs.writeFile(OUTPUT_FILE, pretty);
 
   console.log(`Wrote ${deduped.length} posts to ${OUTPUT_FILE}`);
