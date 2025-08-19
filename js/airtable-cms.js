@@ -5,11 +5,13 @@ class AirtableCMS {
   constructor() {
     // Determine API base. When served from GitHub Pages/custom domain,
     // call the Vercel serverless API explicitly.
+    const origin = (typeof window !== 'undefined' && window.location && window.location.origin)
+      ? window.location.origin
+      : '';
+    // Prefer explicit override if provided; otherwise use same-origin
     this.apiBase = (typeof window !== 'undefined' && window.API_BASE_URL)
       ? window.API_BASE_URL
-      : (typeof window !== 'undefined' && /cochranfilms\.com$/i.test(window.location.hostname)
-          ? 'https://cody-cochrans-projects.vercel.app'
-          : '');
+      : origin;
     // Your Airtable base IDs from the URLs you provided
     this.bases = {
       'Video Production': 'appjQxcRoClnZzghj', // Portfolio CSV

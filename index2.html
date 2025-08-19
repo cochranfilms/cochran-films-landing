@@ -22,8 +22,8 @@
   
   <!-- Airtable CMS Integration -->
   <script>
-    // Set API base for Airtable proxy when running behind custom domain
-    window.API_BASE_URL = 'https://cody-cochrans-projects.vercel.app';
+    // Set API base for Airtable proxy to the same origin (works with your Vercel domain or custom domain)
+    window.API_BASE_URL = window.location.origin;
   </script>
   <script src="js/airtable-cms.js"></script>
   
