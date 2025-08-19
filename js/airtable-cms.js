@@ -602,8 +602,10 @@ class AirtableCMS {
       
       console.log(`📈 CSV Fallback: Loaded ${this.portfolioData.length} total items`);
       
-      // Hide loading state and render portfolio
+      // Ensure portfolio display is initialized before rendering
       this.hidePortfolioLoadingState();
+      this.setupPortfolioDisplay();
+      this.setupEventHandlers();
       this.renderPortfolioByCategory();
       
     } catch (error) {
