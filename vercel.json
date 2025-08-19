@@ -15,6 +15,10 @@
       "dest": "/index2.html"
     },
     {
+      "src": "^/blog$",
+      "dest": "/blog.html"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/server.js"
     },
