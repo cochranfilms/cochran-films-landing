@@ -43,8 +43,8 @@ class AirtableCMS {
       console.log('✅ Airtable CMS initialized successfully');
     } catch (error) {
       console.error('❌ Failed to initialize Airtable CMS:', error);
-      // Fallback to existing CSV system if Airtable fails
-      this.fallbackToCSV();
+      // Do not fallback to CSV. Show an explicit error state.
+      this.showPortfolioErrorState();
     }
   }
   
@@ -654,45 +654,15 @@ class AirtableCMS {
   }
   
   fallbackToCSV() {
-    console.log('🔄 Falling back to CSV system...');
-    
-    // Try to load from CSV files as fallback
-    this.loadCSVFallback();
+    // Fallback disabled by request — only load from Airtable.
+    console.warn('CSV fallback disabled. Displaying error state.');
+    this.showPortfolioErrorState();
   }
   
   async loadCSVFallback() {
-    console.log('📁 Attempting to load portfolio data from CSV files...');
-    
-    try {
-      // Show loading state
-      this.showPortfolioLoadingState();
-      
-      // Try to load from existing CSV files
-      const [portfolioItems, webItems, photoItems] = await Promise.all([
-        this.loadCSVFile('CMS/Collections/Portfolio.csv'),
-        this.loadCSVFile('CMS/Collections/Web.csv'),
-        this.loadCSVFile('CMS/Collections/Photography.csv')
-      ]);
-      
-      // Normalize and combine all data to match expected structure
-      this.portfolioData = [
-        ...portfolioItems.map(item => this.normalizeCsvItem(item, 'Video Production')),
-        ...webItems.map(item => this.normalizeCsvItem(item, 'Web Development')),
-        ...photoItems.map(item => this.normalizeCsvItem(item, 'Photography'))
-      ].filter(Boolean);
-      
-      console.log(`📈 CSV Fallback: Loaded ${this.portfolioData.length} total items`);
-      
-      // Ensure portfolio display is initialized before rendering
-      this.hidePortfolioLoadingState();
-      this.setupPortfolioDisplay();
-      this.setupEventHandlers();
-      this.renderPortfolioByCategory();
-      
-    } catch (error) {
-      console.error('❌ CSV fallback also failed:', error);
-      this.showPortfolioErrorState();
-    }
+    // Disabled: CSV fallback removed. Keeping function for backward compatibility.
+    console.warn('loadCSVFallback() called but CSV fallback is disabled.');
+    this.showPortfolioErrorState();
   }
 
   // Normalize CSV rows to the same shape used by transformAirtableData
