@@ -3462,6 +3462,11 @@
           </div>
 
           <div class="form-group">
+            <label for="phone" class="form-label">Mobile Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g., 470-420-2169">
+          </div>
+
+          <div class="form-group">
             <label for="service" class="form-label">Service Interest</label>
             <select id="service" name="service" class="form-input" required>
               <option value="">Select a service</option>
@@ -3476,6 +3481,48 @@
           <div class="form-group">
             <label for="message" class="form-label">Project Details</label>
             <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project, timeline, and goals..." required></textarea>
+          </div>
+
+          <!-- Communication Preferences (SMS/Email compliance) -->
+          <div class="form-group">
+            <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 18px;">
+              <h3 style="margin: 0 0 12px; font-size: 16px; font-weight: 800; color: #ffffff;">Communication Preferences</h3>
+              <p style="margin: 0 0 12px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">Choose how you’d like us to contact you regarding your inquiry.</p>
+
+              <label style="display:flex; align-items:center; gap:10px; margin:8px 0; color:#cbd5e1; font-size:14px;">
+                <input type="checkbox" id="opt_email" checked>
+                <span>Email updates about this inquiry and relevant insights</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; margin:8px 0; color:#cbd5e1; font-size:14px;">
+                <input type="checkbox" id="opt_calls">
+                <span>Phone calls for important updates and consultations</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; margin:8px 0; color:#cbd5e1; font-size:14px;">
+                <input type="checkbox" id="opt_texts">
+                <span>Text messages for urgent updates and quick questions</span>
+              </label>
+
+              <!-- SMS Consent Language -->
+              <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,178,0,0.25);">
+                <p style="margin: 0 0 10px; color: #cbd5e1; font-size: 12px; line-height: 1.55;">
+                  Do you agree to receive text messages from <strong>Cochran Films</strong> sent from <strong>(470) 420‑2169</strong>? Message frequency varies and may include project updates, reminders, and service information. Message and data rates may apply. Reply <strong>STOP</strong> to end or <strong>HELP</strong> for help. For assistance, email <strong>info@cochranfilms.com</strong> or call <strong>(470) 420‑2169</strong>.
+                </p>
+                <label style="display:flex; align-items:center; gap:10px; margin:6px 0; color:#e5e7eb; font-size:14px;">
+                  <input type="radio" name="sms_consent" id="sms_consent_yes" value="yes">
+                  <span>Yes, I agree to receive text messages from Cochran Films</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:10px; margin:6px 0; color:#e5e7eb; font-size:14px;">
+                  <input type="radio" name="sms_consent" id="sms_consent_no" value="no" checked>
+                  <span>No, I do not want to receive text messages</span>
+                </label>
+
+                <p style="margin: 8px 0 0; color: #94a3b8; font-size: 12px;">
+                  By submitting this form, you consent to receive communications as specified above. See our
+                  <a href="https://www.cochranfilms.com/privacy-policy" target="_blank" rel="noopener noreferrer" style="color:#93c5fd; text-decoration:none; font-weight:600;">Privacy Policy</a>
+                  for how we handle your information.
+                </p>
+              </div>
+            </div>
           </div>
 
           <button type="submit" class="form-submit">
@@ -3797,17 +3844,59 @@
     });
 
     // Form submission
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      // Here you would typically send the data to your backend
-      // For now, we'll just show a success message
-      alert('Thank you for your message! We\'ll get back to you soon.');
-      this.reset();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      const opt_email = document.getElementById('opt_email').checked;
+      const opt_calls = document.getElementById('opt_calls').checked;
+      const opt_texts = document.getElementById('opt_texts').checked;
+      const sms_consent = document.getElementById('sms_consent_yes').checked ? 'Yes' : 'No';
+
+      const params = {
+        service: 'Contact Inquiry',
+        name,
+        email,
+        phone,
+        selected_service: service,
+        notes: message,
+        opt_email,
+        opt_calls,
+        opt_texts,
+        sms_consent,
+        submitted_at: new Date().toISOString()
+      };
+
+      // Store preferences locally for consistency with preferences page
+      try {
+        const existing = localStorage.getItem(`preferences_${email}`);
+        const base = existing ? JSON.parse(existing) : {};
+        localStorage.setItem(`preferences_${email}`, JSON.stringify({
+          ...base,
+          name,
+          opt_email,
+          opt_calls,
+          opt_texts,
+          sms_consent: sms_consent.toLowerCase(),
+          updatedAt: new Date().toISOString()
+        }));
+      } catch(_) {}
+
+      // Send via EmailJS (fallback to alert if unavailable)
+      try {
+        if (typeof emailjs !== 'undefined' && emailjs.send) {
+          await emailjs.send('service_t11yvru', 'template-contact', params);
+        }
+        alert('Thank you! Your message has been sent. We\'ll follow up shortly.\n\nHELP: info@cochranfilms.com or (470) 420-2169\nSTOP: Reply STOP to unsubscribe from texts. Message/data rates may apply.');
+        this.reset();
+      } catch (err) {
+        console.error('Email send failed:', err);
+        alert('Thanks for your message. We could not send via email automatically, but we\'ll follow up soon.');
+      }
     });
 
     // Production Toolkit Form submission
