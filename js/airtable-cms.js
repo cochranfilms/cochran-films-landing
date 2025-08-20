@@ -314,13 +314,40 @@ class AirtableCMS {
       return '';
     };
 
+    // Normalize common external share links to direct image URLs
+    const normalizeExternalUrl = (value) => {
+      if (!value || typeof value !== 'string') return '';
+      let url = value.trim();
+
+      // GitHub blob -> raw
+      if (url.includes('github.com') && url.includes('/blob/')) {
+        url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+      }
+
+      // Google Drive: support /file/d/ID, /uc?id=ID and /open?id=ID
+      if (url.includes('drive.google.com')) {
+        const dMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+        const qMatch = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+        const id = (dMatch && dMatch[1]) || (qMatch && qMatch[1]);
+        if (id) url = `https://drive.google.com/uc?export=view&id=${id}`;
+      }
+
+      // Dropbox share -> raw
+      if (url.includes('dropbox.com')) {
+        url = url.replace('?dl=0', '?raw=1').replace('?dl=1', '?raw=1');
+        if (!url.includes('?')) url += '?raw=1';
+      }
+
+      return url;
+    };
+
     // 1) Prefer explicit HTTPS thumbnailUrl when present
-    if (isHttpUrl(item['thumbnailUrl'])) return item['thumbnailUrl'];
+    if (isHttpUrl(item['thumbnailUrl'])) return normalizeExternalUrl(item['thumbnailUrl']);
 
     // 2) Try CSV photography field names (support wix:image conversion too)
-    if (isHttpUrl(item['image_url'])) return item['image_url'];
+    if (isHttpUrl(item['image_url'])) return normalizeExternalUrl(item['image_url']);
     if (isWixImageScheme(item['image_url'])) return normalizeWixImageUrl(item['image_url']);
-    if (isHttpUrl(item['Image URL'])) return item['Image URL'];
+    if (isHttpUrl(item['Image URL'])) return normalizeExternalUrl(item['Image URL']);
     if (isWixImageScheme(item['Image URL'])) return normalizeWixImageUrl(item['Image URL']);
 
     // 3) Handle Wix image scheme in "Thumbnail Image" by converting to static URL
@@ -328,9 +355,9 @@ class AirtableCMS {
     if (isWixImageScheme(thumb)) return normalizeWixImageUrl(thumb);
 
     // 4) If any of the original fields are already HTTPS, use them
-    if (isHttpUrl(thumb)) return thumb;
-    if (isHttpUrl(item['Image'])) return item['Image'];
-    if (isHttpUrl(item['Thumbnail'])) return item['Thumbnail'];
+    if (isHttpUrl(thumb)) return normalizeExternalUrl(thumb);
+    if (isHttpUrl(item['Image'])) return normalizeExternalUrl(item['Image']);
+    if (isHttpUrl(item['Thumbnail'])) return normalizeExternalUrl(item['Thumbnail']);
 
     // 5) Last resort placeholder
     return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
