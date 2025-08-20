@@ -43,7 +43,7 @@ async function fetchAirtableRecords(baseId, tableName) {
 // Video Production
 app.get('/api/airtable/video-production', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_PORTFOLIO, 'Portfolio.csv');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PORTFOLIO, 'Portfolio');
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable video-production error:', err);
@@ -54,7 +54,7 @@ app.get('/api/airtable/video-production', async (req, res) => {
 // Web Development
 app.get('/api/airtable/web-development', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_WEB, 'Web.csv');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_WEB, 'Web');
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable web-development error:', err);
@@ -65,7 +65,7 @@ app.get('/api/airtable/web-development', async (req, res) => {
 // Photography
 app.get('/api/airtable/photography', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_PHOTOGRAPHY, 'Photography.csv');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PHOTOGRAPHY, 'Photos');
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable photography error:', err);
