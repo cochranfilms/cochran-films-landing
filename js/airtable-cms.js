@@ -141,12 +141,32 @@ class AirtableCMS {
     return records.map(record => {
       const fields = record.fields;
       
+      // Resolve common attachment/string variations to a direct image URL
+      const coerceToUrl = (value) => {
+        if (!value) return '';
+        if (typeof value === 'string') return value.trim();
+        if (Array.isArray(value) && value.length && value[0] && typeof value[0] === 'object' && value[0].url) {
+          return String(value[0].url).trim();
+        }
+        if (typeof value === 'object' && value.url) return String(value.url).trim();
+        return '';
+      };
+      const rawThumb = coerceToUrl(fields['thumbnailUrl'] || fields['Thumbnail Image'] || fields.Image || fields.Thumbnail);
+      
+      // Normalize GitHub blob URLs to raw
+      const normalizeGithub = (url) => {
+        if (typeof url === 'string' && url.includes('github.com') && url.includes('/blob/')) {
+          return url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+        }
+        return url;
+      };
+      
       // Map Airtable fields to existing portfolio structure
       const transformedItem = {
         Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 'Untitled Project',
         Description: fields.Description || fields.Summary || fields['Project Description'] || '',
         Category: fields.Category || fields.Type || category,
-        'Thumbnail Image': fields['thumbnailUrl'] || fields['Thumbnail Image'] || fields.Image || fields.Thumbnail || '',
+        'Thumbnail Image': normalizeGithub(rawThumb),
         'Is Featured': fields['Is Featured'] || fields.Featured || false,
         playbackUrl: fields['Playback URL'] || fields['Video URL'] || fields.URL || '',
         UploadDate: fields['Created Date'] || fields['Upload Date'] || fields.Date || new Date().toISOString(),
@@ -299,6 +319,13 @@ class AirtableCMS {
   resolveThumbnailSrc(item) {
     const isHttpUrl = (value) => typeof value === 'string' && /^https?:\/\//i.test(value);
     const isWixImageScheme = (value) => typeof value === 'string' && value.startsWith('wix:image://');
+    const coerceToUrl = (value) => {
+      if (!value) return '';
+      if (typeof value === 'string') return value.trim();
+      if (Array.isArray(value) && value.length && value[0]?.url) return String(value[0].url).trim();
+      if (typeof value === 'object' && value.url) return String(value.url).trim();
+      return '';
+    };
 
     const normalizeWixImageUrl = (value) => {
       if (!isWixImageScheme(value)) return '';
@@ -306,31 +333,43 @@ class AirtableCMS {
       const match = value.match(/^wix:image:\/\/v1\/([^/]+)/i);
       return match && match[1] ? `https://static.wixstatic.com/media/${match[1]}` : '';
     };
+    const normalizeGithub = (url) => {
+      if (typeof url === 'string' && url.includes('github.com') && url.includes('/blob/')) {
+        return url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+      }
+      return url;
+    };
 
     const firstDefined = (...candidates) => {
       for (const c of candidates) {
-        if (typeof c === 'string' && c.trim() !== '') return c.trim();
+        const url = coerceToUrl(c);
+        if (typeof url === 'string' && url.trim() !== '') return url.trim();
       }
       return '';
     };
 
     // 1) Prefer explicit HTTPS thumbnailUrl when present
-    if (isHttpUrl(item['thumbnailUrl'])) return item['thumbnailUrl'];
+    const directThumb = coerceToUrl(item['thumbnailUrl']);
+    if (isHttpUrl(directThumb)) return normalizeGithub(directThumb);
 
     // 2) Try CSV photography field names (support wix:image conversion too)
-    if (isHttpUrl(item['image_url'])) return item['image_url'];
-    if (isWixImageScheme(item['image_url'])) return normalizeWixImageUrl(item['image_url']);
-    if (isHttpUrl(item['Image URL'])) return item['Image URL'];
-    if (isWixImageScheme(item['Image URL'])) return normalizeWixImageUrl(item['Image URL']);
+    const imageUrl = coerceToUrl(item['image_url']);
+    if (isHttpUrl(imageUrl)) return normalizeGithub(imageUrl);
+    if (isWixImageScheme(imageUrl)) return normalizeWixImageUrl(imageUrl);
+    const imageUrl2 = coerceToUrl(item['Image URL']);
+    if (isHttpUrl(imageUrl2)) return normalizeGithub(imageUrl2);
+    if (isWixImageScheme(imageUrl2)) return normalizeWixImageUrl(imageUrl2);
 
     // 3) Handle Wix image scheme in "Thumbnail Image" by converting to static URL
     const thumb = firstDefined(item['Thumbnail Image'], item['Image'], item['Thumbnail']);
     if (isWixImageScheme(thumb)) return normalizeWixImageUrl(thumb);
 
     // 4) If any of the original fields are already HTTPS, use them
-    if (isHttpUrl(thumb)) return thumb;
-    if (isHttpUrl(item['Image'])) return item['Image'];
-    if (isHttpUrl(item['Thumbnail'])) return item['Thumbnail'];
+    if (isHttpUrl(thumb)) return normalizeGithub(thumb);
+    const imageF = coerceToUrl(item['Image']);
+    if (isHttpUrl(imageF)) return normalizeGithub(imageF);
+    const thumbF = coerceToUrl(item['Thumbnail']);
+    if (isHttpUrl(thumbF)) return normalizeGithub(thumbF);
 
     // 5) Last resort placeholder
     return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
