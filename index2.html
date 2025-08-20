@@ -3889,7 +3889,7 @@
       // Send via EmailJS (fallback to alert if unavailable)
       try {
         if (typeof emailjs !== 'undefined' && emailjs.send) {
-          await emailjs.send('service_t11yvru', 'template-contact', params);
+          await emailjs.send('service_t11yvru', 'template-contact-client', params);
         }
         alert('Thank you! Your message has been sent. We\'ll follow up shortly.\n\nHELP: info@cochranfilms.com or (470) 420-2169\nSTOP: Reply STOP to unsubscribe from texts. Message/data rates may apply.');
         this.reset();

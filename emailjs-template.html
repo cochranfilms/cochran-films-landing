@@ -500,6 +500,20 @@
                 <h3>🔒 Your Privacy & Success</h3>
                 <p>Your information is encrypted and secure. We only reach out when it's strategic—resources, priority booking opportunities, or industry insights that can accelerate your creative success. Unsubscribe anytime with one click.</p>
             </div>
+
+            <div class="info-box">
+                <h3>📧 Your Communication Preferences</h3>
+                <p>Based on your selections, here's how we'll stay connected:</p>
+                <div style="background: rgba(255,178,0,0.08); border: 1px solid rgba(255,178,0,0.25); border-radius: 12px; padding: 20px; margin: 20px 0;">
+                    <div style="color: #92400e; font-weight: 700; font-size: 16px; margin: 0 0 12px;">How We'll Communicate</div>
+                    <div style="color: #92400e; font-size: 14px; line-height: 1.6;">
+                        {{#opt_email}}✅ <strong>Email Updates:</strong> Weekly production tips, new resources, and industry insights{{/opt_email}}{{^opt_email}}❌ <strong>Email Updates:</strong> Not enabled{{/opt_email}}<br>
+                        {{#opt_calls}}✅ <strong>Phone Calls:</strong> Important updates and consultations{{/opt_calls}}{{^opt_calls}}❌ <strong>Phone Calls:</strong> Not enabled{{/opt_calls}}<br>
+                        {{#opt_texts}}✅ <strong>Text Messages:</strong> Urgent updates and quick questions{{/opt_texts}}{{^opt_texts}}❌ <strong>Text Messages:</strong> Not enabled{{/opt_texts}}
+                    </div>
+                </div>
+                <p style="margin-top: 16px; color: #92400e; font-size: 14px;">You're in control of your communications. Update preferences anytime or unsubscribe with one click. We respect your privacy and will never spam you.</p>
+            </div>
         </div>
         
         <div class="footer">
