@@ -3,14 +3,31 @@
 ## Overview
 This document outlines the complete process for integrating Airtable with your Vercel-deployed application, including API key management, table name configuration, and troubleshooting common issues.
 
-## The Problem We Solved
+## The Problems We Solved
+
+### Problem 1: 403 Forbidden Errors
 The original implementation was failing with **403 Forbidden** errors because of a critical mismatch between the table names in your code and the actual table names in Airtable.
 
-### Root Cause
+#### Root Cause
 Your Airtable bases all have tables named **"Imported table"** (which is Airtable's default name when importing CSV data), but your API routes were looking for specific names:
 - ❌ `"Portfolio"` (Video Production)
 - ❌ `"Web"` (Web Development)  
 - ❌ `"Photos"` (Photography)
+
+### Problem 2: Photography Data Not Loading
+Even after fixing the table names, photography data wasn't displaying because the data structure was different from the other bases.
+
+#### Photography Data Structure Issue
+- **Video Production & Web Development**: Rich data with `Title`, `Description`, `Category`, etc.
+- **Photography**: Minimal data with only `image_url` field
+- **Result**: Photography items were being filtered out as "invalid" due to missing required fields
+
+#### Solution Applied
+Updated the data transformation logic to:
+1. Generate titles for photography items (e.g., "Photo 1234")
+2. Use `image_url` field for thumbnail images
+3. Provide default descriptions for photography work
+4. Allow photography items to pass validation even with minimal data
 
 ## Complete Setup Process
 
@@ -128,6 +145,30 @@ window.API_BASE_URL = window.location.origin;
 - Base IDs are visible in Airtable URLs
 - Format: `https://airtable.com/appXXXXXXXXXXXXXX`
 - The `appXXXXXXXXXXXXXX` part is your base ID
+
+### 4. Data Structure Differences
+- **Different bases may have completely different field structures**
+- **Never assume** all bases will have the same fields
+- **Always inspect** the actual data returned by each API endpoint
+- **Handle missing fields gracefully** in your transformation logic
+
+#### Example Data Structures
+```javascript
+// Video Production & Web Development (Rich Data)
+{
+  "Title": "Project Name",
+  "Description": "Project description",
+  "Category": "Commercials",
+  "Thumbnail Image": "image_url",
+  "Tech Stack": "Sony FX6, Adobe Premiere",
+  "Role": "DP | Editor | Gaffer"
+}
+
+// Photography (Minimal Data)
+{
+  "image_url": "https://landing.cochranfilms.com/CMS/Photos/photo.jpg"
+}
+```
 
 ## Troubleshooting Guide
 
