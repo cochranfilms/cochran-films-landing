@@ -47,7 +47,7 @@ async function handleUserPreferenceSubmission(req, res) {
     }
 
     // User Preferences base ID and table name
-    const baseId = 'appXjhRWId71m6xGe';
+    const baseId = process.env.AIRTABLE_BASE_USER_PREFERENCES || 'appXjhRWId71m6xGe';
     const tableName = 'User Preferences';
     
     // Prepare data for Airtable
@@ -139,7 +139,7 @@ async function handleUserPreferenceRetrieval(req, res) {
     }
 
     // User Preferences base ID and table name
-    const baseId = 'appXjhRWId71m6xGe';
+    const baseId = process.env.AIRTABLE_BASE_USER_PREFERENCES || 'appXjhRWId71m6xGe';
     const tableName = 'User Preferences';
     
     // Query Airtable for user preferences
