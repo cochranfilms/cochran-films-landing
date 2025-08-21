@@ -138,7 +138,7 @@ class AirtableCMS {
   transformAirtableData(records, category) {
     console.log(`🔄 Transforming ${records.length} records for ${category}...`);
     
-    return records.map(record => {
+    const transformedRecords = records.map(record => {
       const fields = record.fields;
       
       // Resolve common attachment/string variations to a direct image URL
@@ -163,10 +163,13 @@ class AirtableCMS {
       
       // Map Airtable fields to existing portfolio structure
       const transformedItem = {
-        Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 'Untitled Project',
-        Description: fields.Description || fields.Summary || fields['Project Description'] || '',
+        Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 
+               (category === 'Photography' ? `Photo ${record.id.slice(-4)}` : 'Untitled Project'),
+        Description: fields.Description || fields.Summary || fields['Project Description'] || 
+                    (category === 'Photography' ? 'Photography work from Cochran Films' : ''),
         Category: fields.Category || fields.Type || category,
-        'Thumbnail Image': normalizeGithub(rawThumb),
+        'Thumbnail Image': normalizeGithub(rawThumb) || 
+                          (category === 'Photography' ? fields.image_url : ''),
         'Is Featured': fields['Is Featured'] || fields.Featured || false,
         playbackUrl: fields['Playback URL'] || fields['Video URL'] || fields.URL || '',
         UploadDate: fields['Created Date'] || fields['Upload Date'] || fields.Date || new Date().toISOString(),
@@ -188,13 +191,16 @@ class AirtableCMS {
       });
       
       // Filter out invalid items
-      if (!transformedItem.Title || transformedItem.Title === 'Untitled Project') {
+      if (!transformedItem.Title || (transformedItem.Title === 'Untitled Project' && category !== 'Photography')) {
         return null;
       }
       
-      return transformedItem;
-    }).filter(Boolean); // Remove null items
-  }
+              return transformedItem;
+      }).filter(Boolean); // Remove null items
+    
+    console.log(`✅ Transformed ${transformedRecords.length} valid records for ${category}`);
+    return transformedRecords;
+    }
   
   showPortfolioLoadingState() {
     const categoryGrids = {
