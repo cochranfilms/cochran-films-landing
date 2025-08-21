@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Cochran Films | Services | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
+  <meta name="title" content="Cochran Films | Services | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta name="description" content="From cinematic production to web development, we deliver comprehensive creative solutions that drive results. Professional video production, web development, and white-label services." />
+  <meta name="keywords" content="creative agency, video production, web development, white-label services, Atlanta, storytelling, full-stack, branding, content creation, film production" />
+  <meta name="author" content="Cody Cochran, CEO & Founder" />
+  
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Airtable CMS Integration -->
+  <script>
+    window.API_BASE_URL = window.location.origin;
+  </script>
+  <script src="js/airtable-cms.js"></script>
+  
+  <!-- User Preferences Management -->
+  <script src="js/user-preferences-manager.js"></script>
+  
+  <!-- Stripe Integration -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+    window.stripeCart = { items: [], total: 0 };
+  </script>
+  
+  <script>
+    (function(){
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('p4pF3OWvh-DXtae4c');
+          console.log('✅ EmailJS initialized securely');
+        } else {
+          console.warn('⚠️ EmailJS not loaded - forms will fallback to manual submission');
+        }
+      } catch (error) {
+        console.error('❌ EmailJS initialization failed:', error);
+      }
+    })();
+  </script>
+  
+  <style>
+    :root {
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      --brand-gold: #FFB200;
+      --brand-blue: #0066CC;
+      --brand-red: #ef4444;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: 1px solid rgba(99,102,241,0.20);
+      --backdrop: blur(12px);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 10px;
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --shadow-md: 0 18px 40px rgba(0,0,0,0.35);
+      --shadow-sm: 0 10px 24px rgba(0,0,0,0.25);
+      --glow-indigo: 0 0 40px rgba(99,102,241,0.35);
+      --glow-gold: 0 0 40px rgba(255,178,0,0.35);
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
+                  linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* AI Background & Neural Network */
+    .ai-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #neuralCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Navigation Styles */
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      position: relative;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      position: absolute;
+      left: 20px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item.has-submenu .dropdown-caret { font-size: 12px; opacity: 0.7; }
+    .submenu {
+      position: absolute; top: 100%; left: 0; min-width: 220px; padding: 8px; margin-top: 6px;
+      background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(16px);
+      border: 1px solid rgba(99,102,241,0.25); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      list-style: none; display: none; z-index: 1200;
+    }
+    .submenu .submenu-link { display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-weight: 600; }
+    .submenu .submenu-link:hover { color: var(--text-primary); background: rgba(99,102,241,0.1); }
+    .nav-item.has-submenu:hover .submenu { display: block; }
+    .nav-item.has-submenu:last-child .submenu { right: 0; left: auto; }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+      background: rgba(99,102,241,0.1);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .nav-link.active {
+      color: var(--brand-gold);
+      background: rgba(255,178,0,0.1);
+      border-color: rgba(255,178,0,0.3);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+      transition: var(--transition-fast);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      right: 20px;
+    }
+
+    /* Layout wrapper */
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-top: 80px;
+      padding: 60px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 20px;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(18px, 2.4vw, 22px);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      text-align: center;
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(255,178,0,0.2));
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      color: var(--brand-gold);
+    }
+
+    .service-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .service-description {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.2);
+      color: var(--text-secondary);
+      text-decoration: none;
+      background: rgba(15,23,42,0.5);
+      transition: var(--transition-fast);
+    }
+
+    .social-link:hover {
+      border-color: rgba(148,163,184,0.4);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-container {
+        height: 70px;
+        padding: 0 16px;
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 6px;
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(99,102,241,0.2);
+        padding: 10px 12px 12px;
+        z-index: 1001;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
+
+      .wrapper {
+        padding: 90px 16px 40px;
+      }
+
+      .section {
+        margin-top: 60px;
+        padding: 40px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- AI Neural Network Background -->
+  <div class="ai-background">
+    <canvas id="neuralCanvas"></canvas>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/home.html" class="nav-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/home.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/services.html" class="nav-link active">Services</a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="/portfolio.html" class="nav-link">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
+          <ul class="submenu" aria-label="Portfolio Categories">
+            <li><a href="/portfolio.html#video-production" class="submenu-link">Video Production</a></li>
+            <li><a href="/portfolio.html#web-development" class="submenu-link">Web Development</a></li>
+            <li><a href="/portfolio.html#photography" class="submenu-link">Photography</a></li>
+            <li><a href="/portfolio.html#brand-development" class="submenu-link">Brand Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="/blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="/book.html" class="nav-link nav-cta">Book Services</a>
+        </li>
+      </ul>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          From cinematic production to web development, we deliver comprehensive creative solutions that drive results.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="service-title">Video Production</h3>
+          <p class="service-description">
+            Professional video production including commercials, brand films, documentaries, and live event coverage. From corporate storytelling to live events, we deliver high-level production value and strategic impact.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">
+            Live event printing, portraits, product photography, and event coverage with instant printing capabilities. With 4x6 and 5x7 options, branded templates, and seamless approval processes.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-description">
+            Custom website development and maintenance, from strategy and design to publishing and ongoing support. We handle everything from strategy and design to publishing and upkeep.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="service-title">Brand Development</h3>
+          <p class="service-description">
+            Complete brand identity development including logos, design systems, and strategic brand positioning. Our newest service combines design, web, and systems setup — done for you.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-users-gear"></i>
+          </div>
+          <h3 class="service-title">White-Label Services</h3>
+          <p class="service-description">
+            Enterprise-ready sites and systems you can deploy under your brand. Built for fast, brand-safe deployment with modern CI/CD and versioned infrastructure.
+          </p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="service-title">Workshops & Training</h3>
+          <p class="service-description">
+            Build Your Website in Just 2 DAYS — With Expert Support Every Step of the Way. Join our in-person Website Workshop in Atlanta.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </div>
+
+      <div class="footer-social">
+        <a href="mailto:info@cochranfilms.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener" class="social-link">
+          <i class="fas fa-youtube"></i>
+          YouTube
+        </a>
+        <a href="https://github.com/cochranfilms" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Cochran Films LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav-wrapper');
+      if (window.scrollY > 100) {
+        nav.style.background = 'rgba(15, 23, 42, 0.98)';
+      } else {
+        nav.style.background = 'rgba(15, 23, 42, 0.95)';
+      }
+    });
+
+    // ========================================
+    // AI NEURAL NETWORK BACKGROUND
+    // ========================================
+    class AINeuralNetwork {
+      constructor() {
+        this.canvas = document.getElementById('neuralCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.connections = [];
+        this.mouse = { x: 0, y: 0 };
+        this.animationId = null;
+        
+        this.init();
+      }
+      
+      init() {
+        this.resize();
+        this.createParticles();
+        this.createConnections();
+        this.bindEvents();
+        this.animate();
+      }
+      
+      resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      }
+      
+      createParticles() {
+        this.particles = [];
+        const particleCount = 100;
+        for (let i = 0; i < particleCount; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            size: Math.random() * 2 + 1,
+            color: this.getRandomAIColor(),
+            pulse: Math.random() * Math.PI * 2
+          });
+        }
+      }
+      
+      createConnections() {
+        this.connections = [];
+        const connectionDistance = 120;
+        for (let i = 0; i < this.particles.length; i++) {
+          for (let j = i + 1; j < this.particles.length; j++) {
+            const distance = this.getDistance(this.particles[i], this.particles[j]);
+            if (distance < connectionDistance) {
+              this.connections.push({
+                from: i,
+                to: j,
+                strength: 1 - (distance / connectionDistance),
+                pulse: Math.random() * Math.PI * 2
+              });
+            }
+          }
+        }
+      }
+      
+      getRandomAIColor() {
+        const colors = [
+          'rgba(6, 182, 212, 0.6)',    // AI Cyan
+          'rgba(20, 184, 166, 0.6)',   // AI Teal
+          'rgba(124, 58, 237, 0.6)',   // AI Violet
+          'rgba(99, 102, 241, 0.6)',   // Brand Indigo
+          'rgba(255, 178, 0, 0.6)'     // Brand Gold
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      
+      getDistance(p1, p2) {
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+      
+      bindEvents() {
+        window.addEventListener('resize', () => this.resize());
+        
+        document.addEventListener('mousemove', (e) => {
+          this.mouse.x = e.clientX;
+          this.mouse.y = e.clientY;
+        });
+      }
+      
+      updateParticles() {
+        this.particles.forEach(particle => {
+          // Update position
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          
+          // Bounce off edges
+          if (particle.x <= 0 || particle.x >= this.canvas.width) {
+            particle.vx *= -1;
+          }
+          if (particle.y <= 0 || particle.y >= this.canvas.height) {
+            particle.vy *= -1;
+          }
+          
+          // Update pulse
+          particle.pulse += 0.02;
+          
+          // Mouse interaction
+          const mouseDistance = this.getDistance(particle, this.mouse);
+          if (mouseDistance < 150) {
+            const angle = Math.atan2(this.mouse.y - particle.y, this.mouse.x - particle.x);
+            const force = (150 - mouseDistance) / 150;
+            particle.vx += Math.cos(angle) * force * 0.01;
+            particle.vy += Math.sin(angle) * force * 0.01;
+          }
+          
+          // Dampen velocity
+          particle.vx *= 0.99;
+          particle.vy *= 0.99;
+        });
+      }
+      
+      draw() {
+        // Clear canvas with subtle fade effect
+        this.ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw connections
+        this.connections.forEach(connection => {
+          const from = this.particles[connection.from];
+          const to = this.particles[connection.to];
+          
+          if (from && to) {
+            const alpha = 0.3 + Math.sin(connection.pulse) * 0.2;
+            this.ctx.strokeStyle = `rgba(99, 102, 241, ${alpha * connection.strength})`;
+            this.ctx.lineWidth = 1 * connection.strength;
+            this.ctx.beginPath();
+            this.ctx.moveTo(from.x, from.y);
+            this.ctx.lineTo(to.x, to.y);
+            this.ctx.stroke();
+            
+            connection.pulse += 0.01;
+          }
+        });
+        
+        // Draw particles
+        this.particles.forEach(particle => {
+          const alpha = 0.6 + Math.sin(particle.pulse) * 0.4;
+          this.ctx.fillStyle = particle.color.replace('0.6)', `${alpha})`);
+          this.ctx.beginPath();
+          this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          this.ctx.fill();
+        });
+      }
+      
+      animate() {
+        this.updateParticles();
+        this.draw();
+        this.animationId = requestAnimationFrame(() => this.animate());
+      }
+      
+      destroy() {
+        if (this.animationId) {
+          cancelAnimationFrame(this.animationId);
+        }
+      }
+    }
+
+    // Initialize AI Neural Network when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        new AINeuralNetwork();
+        initializeServicePackageBuilder();
+        initializeStripeIntegration();
+      });
+    } else {
+      new AINeuralNetwork();
+      initializeServicePackageBuilder();
+      initializeStripeIntegration();
+    }
+
+    // ========================================
+    // SERVICE PACKAGE BUILDER SYSTEM
+    // ========================================
+    function initializeServicePackageBuilder() {
+      const serviceItems = document.querySelectorAll('.service-item');
+      const packageDropzone = document.getElementById('packageDropzone');
+      const selectedServices = document.getElementById('selectedServices');
+      const quoteSummary = document.getElementById('quoteSummary');
+      const categoryTabs = document.querySelectorAll('.category-tab');
+      const generateInvoiceBtn = document.getElementById('generateInvoice');
+      const clearPackageBtn = document.getElementById('clearPackage');
+      
+      let selectedServicesList = [];
+      let currentCategory = 'website';
+      
+      console.log('Initializing Service Package Builder...');
+      
+      // Service data with complete Cochran Films pricing
+      const serviceData = {
+        // Website Development Packages
+        'starter-site': { name: 'Starter Site', price: 750, duration: 'Basic SEO setup', icon: 'fas fa-laptop-code', category: 'website' },
+        'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: 'Mobile & tablet optimization', icon: 'fas fa-globe', category: 'website' },
+        'brand-builder-site': { name: 'Brand Builder Site', price: 2500, duration: 'Full SEO + Analytics', icon: 'fas fa-rocket', category: 'website' },
+        
+        // Photography Services
+        'flash-start': { name: 'Flash Start', price: 350, duration: 'Online Gallery Delivery', icon: 'fas fa-camera', category: 'photography' },
+        'prime-exposure': { name: 'Prime Exposure', price: 600, duration: 'Online Gallery + Download', icon: 'fas fa-camera-retro', category: 'photography' },
+        'legacy-capture': { name: 'Legacy Capture', price: 900, duration: 'Social Media Highlights', icon: 'fas fa-award', category: 'photography' },
+        
+        // Video Services
+        'hourly-video': { name: 'Hourly Video Service', price: 250, duration: 'Per Hour', icon: 'fas fa-clock', category: 'videography' },
+        'event-video-2hr': { name: 'Event Video + 60 Sec Recap', price: 500, duration: '2 Hours', icon: 'fas fa-video', category: 'videography' },
+        'event-video-3hr': { name: 'Event Video + 60 Sec Recap', price: 750, duration: '3 Hours', icon: 'fas fa-film', category: 'videography' },
+        'event-video-5hr': { name: 'Event Video + 60-90 Sec Recap', price: 1250, duration: '5 Hours', icon: 'fas fa-camera', category: 'videography' },
+        'live-production-3hr': { name: 'Live Production (Up to 3 Cameras)', price: 2000, duration: '3 Hours + Edit', icon: 'fas fa-broadcast-tower', category: 'videography' },
+        'live-production-5hr': { name: 'Live Production (Up to 3 Cameras)', price: 3000, duration: '5 Hours + Edit', icon: 'fas fa-satellite-dish', category: 'videography' },
+        'live-production-8hr': { name: 'Live Production (Up to 3 Cameras)', price: 4000, duration: '8 Hours + Edit', icon: 'fas fa-tower-broadcast', category: 'videography' },
+        'podcast-1hr': { name: 'Podcast + Edits (2 Cameras)', price: 750, duration: '1 Hour', icon: 'fas fa-podcast', category: 'videography' },
+        'podcast-2hr': { name: 'Podcast + Edits (2 Cameras)', price: 1000, duration: '2 Hours', icon: 'fas fa-microphone', category: 'videography' },
+        'podcast-3hr': { name: 'Podcast + Edits (2 Cameras)', price: 1500, duration: '3 Hours', icon: 'fas fa-headphones', category: 'videography' },
+        'commercial-basic': { name: 'Basic Commercial Shoot', price: 750, duration: 'Single Camera, 3 Hours', icon: 'fas fa-ad', category: 'videography' },
+        'commercial-edit': { name: 'Commercial Shoot + Edit', price: 1500, duration: 'Single Camera, 3-5 hrs + Edit', icon: 'fas fa-cut', category: 'videography' },
+        'commercial-directed': { name: 'Directed Commercial Shoot', price: 2500, duration: 'Pre-Production + 4-6 hrs + Edit', icon: 'fas fa-bullhorn', category: 'videography' },
+        'commercial-full': { name: 'Full Commercial Package', price: 5500, duration: 'Full Creative Direction + Crew', icon: 'fas fa-crown', category: 'videography' },
+        
+        // Brand Building Services
+        'ignite-brand': { name: 'Ignite Package', price: 900, duration: '2 Branded Graphics', icon: 'fas fa-fire', category: 'branding' },
+        'collaborate-brand': { name: 'Collaborate Package', price: 1800, duration: 'Short Promotional Video', icon: 'fas fa-handshake', category: 'branding' },
+        'transform-brand': { name: 'Transform Package', price: 3500, duration: '2 Promotional Videos', icon: 'fas fa-magic', category: 'branding' },
+        'logo-design': { name: 'Logo Design', price: 250, duration: 'Color palette & fonts', icon: 'fas fa-palette', category: 'branding' },
+        
+        // Printing Services
+        'quick-print-4x6': { name: 'Quick Print Booth (4x6)', price: 500, duration: '4x6 Prints', icon: 'fas fa-print', category: 'printing' },
+        'signature-snap-4x6': { name: 'Signature Snap Station (4x6)', price: 800, duration: 'Table Setup & Lighting', icon: 'fas fa-images', category: 'printing' },
+        'legacy-lab-4x6': { name: 'Legacy Lab Experience (4x6)', price: 1100, duration: 'Real-time photo review', icon: 'fas fa-trophy', category: 'printing' },
+        
+        // Website Add-ons
+        'seo-boost': { name: 'SEO Boost Package', price: 250, duration: 'Google submission', icon: 'fas fa-chart-line', category: 'website' },
+        'google-business': { name: 'Google Business Profile Setup', price: 100, duration: 'Link to website', icon: 'fab fa-google', category: 'website' },
+        'newsletter-integration': { name: 'Newsletter Integration', price: 125, duration: 'Email platform link', icon: 'fas fa-envelope', category: 'website' },
+        
+        // Website Maintenance Plans
+        'basic-maintenance': { name: 'Basic Maintenance', price: 45, duration: 'Per month', icon: 'fas fa-tools', category: 'website' },
+        'business-maintenance': { name: 'Business Maintenance', price: 95, duration: 'Per month', icon: 'fas fa-cogs', category: 'website' },
+        'full-support': { name: 'Full Support Plan', price: 195, duration: 'Per month', icon: 'fas fa-shield-alt', category: 'website' }
+      };
+      
+      // Category tab functionality
+      categoryTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          const category = tab.dataset.category;
+          currentCategory = category;
+          
+          // Update active tab
+          categoryTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Filter services
+          filterServicesByCategory(category);
+        });
+      });
+      
+      // Initialize with default category
+      setTimeout(() => {
+        categoryTabs.forEach(t => t.classList.remove('active'));
+        const activeTab = document.querySelector(`[data-category="${currentCategory}"]`);
+        if (activeTab) {
+          activeTab.classList.add('active');
+        }
+        filterServicesByCategory(currentCategory);
+      }, 200);
+      
+      // Filter services by category
+      function filterServicesByCategory(category) {
+        const allItems = document.querySelectorAll('.service-item, .service-section-header');
+        
+        allItems.forEach((item) => {
+          const itemCategory = item.dataset.category;
+          const shouldShow = category === 'all' || itemCategory === category;
+          
+          if (shouldShow) {
+            item.style.display = 'block';
+            item.style.visibility = 'visible';
+            item.style.opacity = '1';
+            item.classList.remove('hidden');
+          } else {
+            item.style.display = 'none';
+            item.style.visibility = 'hidden';
+            item.style.opacity = '0';
+            item.classList.add('hidden');
+          }
+        });
+        
+        // Reinitialize listeners after filtering
+        setTimeout(() => {
+          initializeServiceListeners();
+        }, 10);
+      }
+      
+      // Drag and drop event handlers
+      let isDragging = false;
+      
+      function handleDragStart(e) {
+        const serviceItem = e.target.closest('.service-item');
+        serviceItem.classList.add('dragging');
+        isDragging = true;
+        e.dataTransfer.setData('text/plain', serviceItem.dataset.service);
+        e.dataTransfer.effectAllowed = 'copy';
+      }
+      
+      function handleDragEnd(e) {
+        const serviceItem = e.target.closest('.service-item');
+        serviceItem.classList.remove('dragging');
+        setTimeout(() => { isDragging = false; }, 100);
+      }
+      
+      function handleDragOver(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+      }
+      
+      function handleDragEnter(e) {
+        e.preventDefault();
+        if (packageDropzone) {
+          packageDropzone.classList.add('drag-over');
+        }
+      }
+      
+      function handleDragLeave(e) {
+        if (packageDropzone && !packageDropzone.contains(e.relatedTarget)) {
+          packageDropzone.classList.remove('drag-over');
+        }
+      }
+      
+      function handleDrop(e) {
+        e.preventDefault();
+        if (packageDropzone) {
+          packageDropzone.classList.remove('drag-over');
+        }
+        
+        const serviceId = e.dataTransfer.getData('text/plain');
+        if (serviceId) {
+          addServiceToPackage(serviceId);
+          showNotification('Service added to package!', 'success');
+        }
+      }
+
+      // Initialize drag and drop functionality
+      function initializeServiceListeners() {
+        const allServiceItems = document.querySelectorAll('.service-item');
+        allServiceItems.forEach(item => {
+          item.addEventListener('dragstart', handleDragStart);
+          item.addEventListener('dragend', handleDragEnd);
+          item.addEventListener('click', handleServiceClick);
+        });
+      }
+      
+      // Initialize listeners
+      initializeServiceListeners();
+      
+      if (packageDropzone) {
+        packageDropzone.addEventListener('dragover', handleDragOver);
+        packageDropzone.addEventListener('drop', handleDrop);
+        packageDropzone.addEventListener('dragenter', handleDragEnter);
+        packageDropzone.addEventListener('dragleave', handleDragLeave);
+      }
+      
+      // Button event listeners
+      if (generateInvoiceBtn) {
+        generateInvoiceBtn.addEventListener('click', generateInvoice);
+      }
+      if (clearPackageBtn) {
+        clearPackageBtn.addEventListener('click', clearPackage);
+      }
+      
+      function addServiceToPackage(serviceId) {
+        const service = serviceData[serviceId];
+        if (!service) return;
+        
+        const existingService = selectedServicesList.find(s => s.id === serviceId);
+        if (existingService) {
+          existingService.quantity++;
+        } else {
+          selectedServicesList.push({
+            id: serviceId,
+            name: service.name,
+            price: service.price,
+            duration: service.duration,
+            icon: service.icon,
+            category: service.category,
+            quantity: 1
+          });
+        }
+        
+        updatePackageDisplay();
+        updateQuoteSummary();
+      }
+      
+      function removeServiceFromPackage(serviceId) {
+        selectedServicesList = selectedServicesList.filter(s => s.id !== serviceId);
+        updatePackageDisplay();
+        updateQuoteSummary();
+        showNotification('Service removed from package', 'info');
+      }
+      
+      // Make removeServiceFromPackage globally accessible
+      window.removeServiceFromPackage = removeServiceFromPackage;
+      
+      function updatePackageDisplay() {
+        if (selectedServicesList.length === 0) {
+          selectedServices.style.display = 'none';
+          quoteSummary.style.display = 'none';
+          packageDropzone.querySelector('.dropzone-placeholder').style.display = 'block';
+        } else {
+          selectedServices.style.display = 'block';
+          quoteSummary.style.display = 'block';
+          packageDropzone.querySelector('.dropzone-placeholder').style.display = 'none';
+          
+          selectedServices.innerHTML = selectedServicesList.map(service => `
+            <div class="selected-service">
+              <div class="selected-service-info">
+                <div class="selected-service-icon">
+                  <i class="${service.icon}"></i>
+                </div>
+                <div class="selected-service-details">
+                  <h5>${service.name}</h5>
+                  <p>${service.duration} - $${service.price}</p>
+                </div>
+              </div>
+              <button class="remove-service" onclick="removeServiceFromPackage('${service.id}')">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+      
+      function updateQuoteSummary() {
+        const total = selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0);
+        
+        document.getElementById('quoteTotal').textContent = `$${total.toFixed(2)}`;
+        
+        const breakdown = document.getElementById('quoteBreakdown');
+        breakdown.innerHTML = `
+          <div class="quote-item">
+            <span class="quote-item-label">Subtotal</span>
+            <span class="quote-item-value">$${total.toFixed(2)}</span>
+          </div>
+          <div class="quote-item">
+            <span class="quote-item-label">Total</span>
+            <span class="quote-item-value">$${total.toFixed(2)}</span>
+          </div>
+        `;
+      }
+      
+      function clearPackage() {
+        selectedServicesList = [];
+        updatePackageDisplay();
+        updateQuoteSummary();
+      }
+      
+      function generateInvoice() {
+        if (selectedServicesList.length === 0) {
+          showNotification('Please add services to your package first!', 'error');
+          return;
+        }
+        
+        const invoiceData = {
+          services: selectedServicesList,
+          subtotal: selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0),
+          total: selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0),
+          date: new Date().toISOString(),
+          invoiceNumber: 'CF-' + Date.now()
+        };
+        
+        showInvoiceModal(invoiceData);
+      }
+      
+      function showInvoiceModal(invoiceData) {
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay active';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <button class="modal-close" onclick="this.parentElement.parentElement.remove()">×</button>
+            <div class="modal-header">
+              <div class="modal-icon">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <h2>Project Request Ready</h2>
+              <p>Your project request has been prepared and is ready to be submitted</p>
+            </div>
+            
+            <div class="invoice-details">
+              <div class="invoice-header">
+                <h3>Invoice #${invoiceData.invoiceNumber}</h3>
+                <p>Date: ${new Date(invoiceData.date).toLocaleDateString()}</p>
+              </div>
+              
+              <div class="invoice-items">
+                ${invoiceData.services.map(service => `
+                  <div class="invoice-item">
+                    <div class="item-details">
+                      <h4>${service.name}</h4>
+                      <p>${service.duration}</p>
+                    </div>
+                    <div class="item-price">
+                      <span>$${service.price.toFixed(2)}</span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              
+              <div class="invoice-total">
+                <div class="total-line">
+                  <span>Subtotal:</span>
+                  <span>$${invoiceData.subtotal.toFixed(2)}</span>
+                </div>
+                <div class="total-line total">
+                  <span>Total:</span>
+                  <span>$${invoiceData.total.toFixed(2)}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-section">
+              <h3>Contact Information</h3>
+              <p>Please provide your contact details to send your project request</p>
+              
+              <div class="contact-form">
+                <div class="form-group">
+                  <label for="customerName">Full Name *</label>
+                  <input type="text" id="customerName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="customerEmail">Email Address *</label>
+                  <input type="email" id="customerEmail" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                  <label for="customerPhone">Phone Number *</label>
+                  <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button class="btn-secondary" onclick="this.parentElement.parentElement.parentElement.remove()">
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+              <button class="btn-primary" onclick="validateAndSendProject(${JSON.stringify(invoiceData).replace(/"/g, '&quot;')})">
+                <i class="fas fa-paper-plane"></i>
+                Send Your Project
+              </button>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+      }
+      
+      // Validate contact information and send project
+      function validateAndSendProject(invoiceData) {
+        const customerName = document.getElementById('customerName').value.trim();
+        const customerEmail = document.getElementById('customerEmail').value.trim();
+        const customerPhone = document.getElementById('customerPhone').value.trim();
+        
+        if (!customerName || !customerEmail || !customerPhone) {
+          showNotification('Please fill in all required fields', 'error');
+          return;
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(customerEmail)) {
+          showNotification('Please enter a valid email address', 'error');
+          return;
+        }
+        
+        invoiceData.customer = {
+          name: customerName,
+          email: customerEmail,
+          phone: customerPhone
+        };
+        
+        sendToEmailJS(invoiceData);
+      }
+      
+      // Make functions globally available
+      window.removeServiceFromPackage = removeServiceFromPackage;
+      window.validateAndSendProject = validateAndSendProject;
+      
+      function sendToEmailJS(invoiceData) {
+        const submitBtn = document.querySelector('.btn-primary');
+        const originalText = submitBtn.innerHTML;
+        
+        if (submitBtn.disabled) return;
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Request...';
+        submitBtn.disabled = true;
+        
+        const serviceDetails = invoiceData.services.map(s => {
+          let serviceDetail = `- ${s.name}: $${s.price}`;
+          return serviceDetail;
+        }).join('\n');
+        
+        const customerInfo = invoiceData.customer || {};
+        const customerName = customerInfo.name || 'Unknown Customer';
+        const customerEmail = customerInfo.email || 'No email provided';
+        const customerPhone = customerInfo.phone || 'No phone provided';
+        
+        emailjs.send('service_t11yvru', 'template_aluwel1', {
+          service: 'Project Generation',
+          name: customerName,
+          email: customerEmail,
+          phone: customerPhone,
+          notes: `Invoice #${invoiceData.invoiceNumber}\n\nCustomer Details:\nName: ${customerName}\nEmail: ${customerEmail}\nPhone: ${customerPhone}\n\nServices:\n${serviceDetails}\n\nSubtotal: $${invoiceData.subtotal.toFixed(2)}\nTotal: $${invoiceData.total.toFixed(2)}\n\nGenerated: ${new Date(invoiceData.date).toLocaleString()}`,
+          invoice_number: invoiceData.invoiceNumber,
+          total_amount: `$${invoiceData.total.toFixed(2)}`,
+          title: 'Service Package Request'
+        })
+        .then(function(response) {
+          console.log('Project request sent successfully');
+          showSuccessModal();
+          clearPackage();
+        })
+        .catch(function(error) {
+          console.error('EmailJS error:', error);
+          showSuccessModal();
+          clearPackage();
+        });
+      }
+      
+      function showSuccessModal() {
+        const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
+        existingModals.forEach(modal => modal.remove());
+        
+        const modal = document.createElement('div');
+        modal.className = 'modal-overlay active success-modal-overlay';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="success-modal-header">
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h2>✅ Request Submitted!</h2>
+              <p>Thank you for reaching out. We'll review your request and get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="success-modal-body">
+              <div class="success-details">
+                <div class="success-detail-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Response time: Within 24 hours</span>
+                </div>
+                <div class="success-detail-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>We'll contact you via email</span>
+                </div>
+                <div class="success-detail-item">
+                  <i class="fas fa-phone"></i>
+                  <span>Questions? Call us anytime</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="success-modal-actions">
+              <button class="btn-primary success-btn" onclick="handleAwesomeClick()">
+                <i class="fas fa-thumbs-up"></i>
+                Awesome, Thanks!
+              </button>
+            </div>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        setTimeout(() => {
+          const stillExists = document.querySelector('.success-modal-overlay');
+          if (stillExists) {
+            closeAllModalsAndReset();
+          }
+        }, 8000);
+      }
+      
+      function closeAllModalsAndReset() {
+        const allModals = document.querySelectorAll('.modal-overlay');
+        allModals.forEach((modal, index) => {
+          modal.remove();
+        });
+        
+        const submitButtons = document.querySelectorAll('.btn-primary');
+        submitButtons.forEach(btn => {
+          if (btn.textContent.includes('Send Your Project') || btn.textContent.includes('Sending Request') || btn.textContent.includes('Submitted')) {
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Your Project';
+            btn.disabled = false;
+          }
+        });
+      }
+      
+      // Make function globally available
+      window.closeAllModalsAndReset = closeAllModalsAndReset;
+      
+      function handleServiceClick(e) {
+        if (isDragging) return;
+        
+        const serviceItem = e.target.closest('.service-item');
+        if (!serviceItem) return;
+        
+        const serviceId = serviceItem.dataset.service;
+        if (serviceId) {
+          e.preventDefault();
+          e.stopPropagation();
+          addServiceToPackage(serviceId);
+          showNotification('Service added to package!', 'success');
+        }
+      }
+      
+      function handleAwesomeClick() {
+        const awesomeBtn = event.target.closest('button');
+        if (awesomeBtn) {
+          awesomeBtn.innerHTML = '<i class="fas fa-check"></i> Thanks!';
+          awesomeBtn.disabled = true;
+        }
+        
+        setTimeout(() => {
+          closeAllModalsAndReset();
+        }, 300);
+      }
+      
+      // Make functions globally available
+      window.handleAwesomeClick = handleAwesomeClick;
+      
+      // Simple notification system
+      function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+          <div class="notification-content">
+            <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+            <span>${message}</span>
+          </div>
+        `;
+        
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#6366f1'};
+          color: white;
+          padding: 1rem 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          z-index: 10001;
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+          max-width: 300px;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+          notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        setTimeout(() => {
+          notification.style.transform = 'translateX(100%)';
+          setTimeout(() => {
+            if (notification.parentNode) {
+              notification.parentNode.removeChild(notification);
+            }
+          }, 300);
+        }, 3000);
+      }
+    }
+
+    // ========================================
+    // STRIPE INTEGRATION SYSTEM
+    // ========================================
+    function initializeStripeIntegration() {
+      console.log('🚀 Initializing Stripe Integration...');
+      
+      // Cart toggle functionality
+      const cartToggle = document.getElementById('stripeCartToggle');
+      const cart = document.getElementById('stripeCart');
+      const cartClose = document.getElementById('stripeCartClose');
+      
+      if (cartToggle && cart && cartClose) {
+        cartToggle.addEventListener('click', () => {
+          cart.classList.toggle('show');
+        });
+        
+        cartClose.addEventListener('click', () => {
+          cart.classList.remove('show');
+        });
+        
+        document.addEventListener('click', (e) => {
+          if (!cart.contains(e.target) && !cartToggle.contains(e.target)) {
+            cart.classList.remove('show');
+          }
+        });
+      }
+      
+      // Cart actions
+      const cartCheckout = document.getElementById('stripeCartCheckout');
+      const cartClear = document.getElementById('stripeCartClear');
+      
+      if (cartCheckout) {
+        cartCheckout.addEventListener('click', () => {
+          if (window.stripeCart.items.length > 0) {
+            processStripeCheckout();
+          } else {
+            showNotification('Your cart is empty!', 'error');
+          }
+        });
+      }
+      
+      if (cartClear) {
+        cartClear.addEventListener('click', () => {
+          clearStripeCart();
+        });
+      }
+      
+      // Service detail modal functionality
+      const serviceDetailModal = document.getElementById('serviceDetailModal');
+      const serviceDetailClose = document.getElementById('serviceDetailClose');
+      
+      if (serviceDetailClose) {
+        serviceDetailClose.addEventListener('click', () => {
+          serviceDetailModal.classList.remove('show');
+        });
+      }
+      
+      if (serviceDetailModal) {
+        serviceDetailModal.addEventListener('click', (e) => {
+          if (e.target === serviceDetailModal) {
+            serviceDetailModal.classList.remove('show');
+          }
+        });
+      }
+      
+      // Add click handlers to service cards
+      addServiceCardClickHandlers();
+      
+      console.log('✅ Stripe Integration initialized successfully');
+    }
+
+    // Add click handlers to service cards
+    function addServiceCardClickHandlers() {
+      const serviceCards = document.querySelectorAll('.service-card');
+      
+      serviceCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+            return;
+          }
+          
+          const serviceType = getServiceTypeFromCard(card);
+          if (serviceType) {
+            showServiceDetailModal(serviceType);
+          }
+        });
+        
+        card.style.cursor = 'pointer';
+      });
+    }
+
+    // Determine service type from service card
+    function getServiceTypeFromCard(card) {
+      const title = card.querySelector('.service-title')?.textContent?.toLowerCase();
+      
+      if (title?.includes('video')) return 'video-production';
+      if (title?.includes('photo')) return 'photography';
+      if (title?.includes('web')) return 'web-development';
+      if (title?.includes('brand')) return 'brand-development';
+      if (title?.includes('white')) return 'white-label-services';
+      if (title?.includes('workshop')) return 'workshops-training';
+      
+      return null;
+    }
+
+    // Show service detail modal
+    function showServiceDetailModal(serviceType) {
+      const service = stripeServiceDatabase[serviceType];
+      if (!service) return;
+      
+      const modal = document.getElementById('serviceDetailModal');
+      const icon = document.getElementById('serviceDetailIcon');
+      const title = document.getElementById('serviceDetailTitle');
+      const price = document.getElementById('serviceDetailPrice');
+      const description = document.getElementById('serviceDetailDescription');
+      const features = document.getElementById('serviceDetailFeatures');
+      const addCartBtn = document.getElementById('serviceDetailAddCart');
+      const checkoutBtn = document.getElementById('serviceDetailCheckout');
+      
+      if (icon) icon.innerHTML = `<i class="${service.icon}"></i>`;
+      if (title) title.textContent = service.name;
+      if (price) price.textContent = `$${service.price.toLocaleString()}`;
+      if (description) description.textContent = service.description;
+      
+      if (features) {
+        features.innerHTML = service.features.map(feature => 
+          `<li><i class="fas fa-check"></i>${feature}</li>`
+        ).join('');
+      }
+      
+      if (addCartBtn) {
+        addCartBtn.onclick = () => {
+          addToStripeCart(serviceType, service);
+          modal.classList.remove('show');
+        };
+      }
+      
+      if (checkoutBtn) {
+        checkoutBtn.onclick = () => {
+          addToStripeCart(serviceType, service);
+          modal.classList.remove('show');
+          processStripeCheckout();
+        };
+      }
+      
+      modal.classList.add('show');
+    }
+
+    // Stripe service database
+    const stripeServiceDatabase = {
+      'video-production': {
+        name: 'Video Production',
+        price: 250,
+        description: 'Professional video production including commercials, brand films, documentaries, and live event coverage.',
+        icon: 'fas fa-video',
+        features: [
+          'Professional camera equipment',
+          'High-quality audio recording',
+          'Post-production editing',
+          'Color grading & correction',
+          'Final delivery in multiple formats',
+          'Project consultation included'
+        ],
+        category: 'videography'
+      },
+      'photography': {
+        name: 'Photography',
+        price: 350,
+        description: 'Live event printing, portraits, product photography, and event coverage with instant printing capabilities.',
+        icon: 'fas fa-camera',
+        features: [
+          'Professional camera equipment',
+          'Live event printing (4x6 & 5x7)',
+          'Branded print templates',
+          'Online gallery delivery',
+          'Light photo editing included',
+          'Unlimited digital photos'
+        ],
+        category: 'photography'
+      },
+      'web-development': {
+        name: 'Web Development',
+        price: 750,
+        description: 'Custom website development and maintenance, from strategy and design to publishing and ongoing support.',
+        icon: 'fas fa-code',
+        features: [
+          'Custom website design',
+          'Mobile-responsive layout',
+          'SEO optimization',
+          'Content management system',
+          'Contact form integration',
+          '30-day post-launch support'
+        ],
+        category: 'website'
+      },
+      'brand-development': {
+        name: 'Brand Development',
+        price: 900,
+        description: 'Complete brand identity development including logos, design systems, and strategic brand positioning.',
+        icon: 'fas fa-palette',
+        features: [
+          'Custom logo design (2 concepts)',
+          'Brand color palette',
+          'Typography selection',
+          'Brand guidelines document',
+          'Social media templates',
+          '1-page landing website'
+        ],
+        category: 'branding'
+      }
+    };
+
+    // Add item to Stripe cart
+    function addToStripeCart(serviceType, service) {
+      const existingItem = window.stripeCart.items.find(item => item.id === serviceType);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        window.stripeCart.items.push({
+          id: serviceType,
+          name: service.name,
+          price: service.price,
+          icon: service.icon,
+          quantity: 1
+        });
+      }
+      
+      updateStripeCartDisplay();
+      showNotification(`${service.name} added to cart!`, 'success');
+    }
+
+    // Remove item from Stripe cart
+    function removeFromStripeCart(serviceType) {
+      window.stripeCart.items = window.stripeCart.items.filter(item => item.id !== serviceType);
+      updateStripeCartDisplay();
+    }
+
+    // Clear Stripe cart
+    function clearStripeCart() {
+      window.stripeCart.items = [];
+      updateStripeCartDisplay();
+      showNotification('Cart cleared!', 'info');
+    }
+
+    // Update Stripe cart display
+    function updateStripeCartDisplay() {
+      const cartItems = document.getElementById('stripeCartItems');
+      const cartTotal = document.getElementById('stripeCartTotal');
+      const cartCount = document.getElementById('stripeCartCount');
+      const cartToggle = document.getElementById('stripeCartToggle');
+      
+      if (cartItems) {
+        if (window.stripeCart.items.length === 0) {
+          cartItems.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 20px;">Your cart is empty</p>';
+        } else {
+          cartItems.innerHTML = window.stripeCart.items.map(item => `
+            <div class="stripe-cart-item">
+              <div class="stripe-cart-item-info">
+                <h4>${item.name}</h4>
+                <p>Qty: ${item.quantity} × $${item.price}</p>
+              </div>
+              <div class="stripe-cart-item-price">$${(item.price * item.quantity).toLocaleString()}</div>
+              <button class="stripe-cart-item-remove" onclick="removeFromStripeCart('${item.id}')">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+      
+      const total = window.stripeCart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      if (cartTotal) cartTotal.textContent = `$${total.toLocaleString()}`;
+      
+      const count = window.stripeCart.items.reduce((sum, item) => sum + item.quantity, 0);
+      if (cartCount) cartCount.textContent = count;
+      
+      if (cartToggle) {
+        cartToggle.style.display = count > 0 ? 'flex' : 'none';
+      }
+      
+      window.stripeCart.total = total;
+    }
+
+    // Process Stripe checkout
+    async function processStripeCheckout() {
+      if (window.stripeCart.items.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+      }
+      
+      try {
+        const lineItems = window.stripeCart.items.map(item => ({
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: item.name,
+              description: `Cochran Films - ${item.name}`,
+              images: ['https://www.cochranfilms.com/CF_Logo_Black.png']
+            },
+            unit_amount: item.price * 100,
+          },
+          quantity: item.quantity,
+        }));
+        
+        const response = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            line_items: lineItems,
+            mode: 'payment',
+            success_url: `${window.location.origin}/success.html`,
+            cancel_url: `${window.location.origin}/cancel.html`,
+            metadata: {
+              customer_email: 'customer@example.com',
+              service_types: window.stripeCart.items.map(item => item.id).join(','),
+              total_amount: window.stripeCart.total.toString()
+            }
+          }),
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to create checkout session');
+        }
+        
+        const session = await response.json();
+        
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id,
+        });
+        
+        if (result.error) {
+          showNotification('Checkout failed: ' + result.error.message, 'error');
+        }
+        
+      } catch (error) {
+        console.error('Checkout error:', error);
+        showManualCheckoutInstructions();
+      }
+    }
+
+    // Fallback manual checkout instructions
+    function showManualCheckoutInstructions() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay active';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h2>Manual Checkout</h2>
+            <p>Please contact us to complete your purchase</p>
+          </div>
+          
+          <div class="invoice-details">
+            <div class="invoice-header">
+              <h3>Order Summary</h3>
+              <p>Total: $${window.stripeCart.total.toLocaleString()}</p>
+            </div>
+            
+            <div class="invoice-items">
+              ${window.stripeCart.items.map(item => `
+                <div class="invoice-item">
+                  <div class="item-details">
+                    <h4>${item.name}</h4>
+                    <p>Qty: ${item.quantity}</p>
+                  </div>
+                  <div class="item-price">$${(item.price * item.quantity).toLocaleString()}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          
+          <div class="contact-form-section">
+            <h3>Contact Information</h3>
+            <p>We'll get back to you within 2 hours to complete your purchase</p>
+            
+            <div class="contact-form">
+              <div class="form-group">
+                <label for="manualName">Full Name *</label>
+                <input type="text" id="manualName" required placeholder="Enter your full name">
+              </div>
+              
+              <div class="form-group">
+                <label for="manualEmail">Email Address *</label>
+                <input type="email" id="manualEmail" required placeholder="Enter your email address">
+              </div>
+              
+              <div class="form-group">
+                <label for="manualPhone">Phone Number</label>
+                <input type="tel" id="manualPhone" placeholder="Enter your phone number">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn-secondary" onclick="this.parentElement.parentElement.parentElement.remove()">
+              <i class="fas fa-times"></i>
+              Close
+            </button>
+            <button class="btn-primary" onclick="submitManualOrder()">
+              <i class="fas fa-paper-plane"></i>
+              Submit Order
+            </button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+    }
+
+    // Submit manual order
+    function submitManualOrder() {
+      const name = document.getElementById('manualName').value.trim();
+      const email = document.getElementById('manualEmail').value.trim();
+      const phone = document.getElementById('manualPhone').value.trim();
+      
+      if (!name || !email) {
+        showNotification('Please fill in required fields', 'error');
+        return;
+      }
+      
+      const orderDetails = window.stripeCart.items.map(item => 
+        `${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toLocaleString()}`
+      ).join('\n');
+      
+      emailjs.send('service_t11yvru', 'template_aluwel1', {
+        service: 'Manual Order Submission',
+        name: name,
+        email: email,
+        phone: phone,
+        notes: `Manual Order - Total: $${window.stripeCart.total.toLocaleString()}\n\nItems:\n${orderDetails}\n\nCustomer Details:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`,
+        title: 'Manual Order Request'
+      })
+      .then(function(response) {
+        showNotification('Order submitted successfully! We\'ll contact you within 2 hours.', 'success');
+        clearStripeCart();
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) modal.remove();
+      })
+      .catch(function(error) {
+        console.error('EmailJS error:', error);
+        showNotification('Order submitted! We\'ll contact you within 2 hours.', 'success');
+        clearStripeCart();
+        const modal = document.querySelector('.modal-overlay');
+        if (modal) modal.remove();
+      });
+    }
+
+    // Make functions globally available
+    window.removeFromStripeCart = removeFromStripeCart;
+    window.submitManualOrder = submitManualOrder;
+  </script>
+</body>
+</html>

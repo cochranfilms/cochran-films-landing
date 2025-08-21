@@ -441,7 +441,18 @@ class InteractiveFeatures {
     
     // Navigate to main website with category focus
     setTimeout(() => {
-      window.location.href = `index2.html#${category.toLowerCase()}`;
+      // Navigate to the appropriate page
+      if (category === 'Video Production') {
+        window.location.href = 'portfolio.html#video-production';
+      } else if (category === 'Web Development') {
+        window.location.href = 'portfolio.html#web-development';
+      } else if (category === 'Photography') {
+        window.location.href = 'portfolio.html#photography';
+      } else if (category === 'Brand Development') {
+        window.location.href = 'portfolio.html#brand-development';
+      } else {
+        window.location.href = 'services.html';
+      }
     }, 300);
   }
 }
@@ -654,7 +665,7 @@ class CochranFilmsLanding {
   initGlobalFunctions() {
     // Make functions globally available
     window.exploreWork = () => {
-      window.location.href = 'index2.html';
+      window.location.href = 'home.html';
     };
     
     window.startProject = () => {

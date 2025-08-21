@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Primary Meta Tags -->
-  <title>Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta</title>
-  <meta name="title" content="Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta" />
-  <meta name="description" content="Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team." />
-  <meta name="keywords" content="creative blog, video production tips, web development insights, marketing trends, creative agency blog, Atlanta" />
+  <title>Cochran Films | Home | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
+  <meta name="title" content="Cochran Films | Home | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta name="description" content="Cochran Films delivers high-level storytelling with full-stack execution. Professional video production, web development, and white-label services. Atlanta's premier creative agency." />
+  <meta name="keywords" content="creative agency, video production, web development, white-label services, Atlanta, storytelling, full-stack, branding, content creation, film production" />
   <meta name="author" content="Cody Cochran, CEO & Founder" />
   
   <!-- Fonts + Icons (CDN) -->
@@ -17,11 +17,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- Airtable CMS Integration -->
   <script>
+    // Set API base for Airtable proxy to the same origin (works with your Vercel domain or custom domain)
     window.API_BASE_URL = window.location.origin;
   </script>
   <script src="js/airtable-cms.js"></script>
+  
+  <!-- User Preferences Management -->
+  <script src="js/user-preferences-manager.js"></script>
+  
+  <!-- Stripe Integration -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    // Initialize Stripe with your publishable key
+    // Replace this with your actual publishable key
+    const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+    
+    // Global cart state
+    window.stripeCart = {
+      items: [],
+      total: 0
+    };
+  </script>
+  
+  <script>
+    (function(){
+      // Secure EmailJS initialization with error handling
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('p4pF3OWvh-DXtae4c');
+          console.log('✅ EmailJS initialized securely');
+        } else {
+          console.warn('⚠️ EmailJS not loaded - forms will fallback to manual submission');
+        }
+      } catch (error) {
+        console.error('❌ EmailJS initialization failed:', error);
+      }
+    })();
+  </script>
   
   <style>
     :root {
@@ -132,6 +169,7 @@
       position: relative;
     }
 
+    /* Submenu styles for parity with blog navigation */
     .nav-item.has-submenu .dropdown-caret { font-size: 12px; opacity: 0.7; }
     .submenu {
       position: absolute; top: 100%; left: 0; min-width: 220px; padding: 8px; margin-top: 6px;
@@ -244,264 +282,52 @@
       line-height: 1.6;
     }
 
-    /* Blog Section */
-    .blog-content {
-      margin-top: 40px;
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 0;
     }
 
-    .blog-grid {
-      display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      margin-top: 40px;
+    .hero-title {
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 30px;
     }
 
-    .blog-item {
-      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
-      border: 1px solid rgba(99,102,241,0.22);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-      cursor: pointer;
-    }
-
-    .blog-item:hover {
-      transform: translateY(-6px);
-      border-color: rgba(99,102,241,0.45);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .blog-thumbnail {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      background: linear-gradient(45deg, rgba(99,102,241,0.1), rgba(255,178,0,0.1));
-    }
-
-    .blog-thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition);
-    }
-
-    .blog-item:hover .blog-thumbnail img {
-      transform: scale(1.05);
-    }
-
-    .blog-content-inner {
-      padding: 24px;
-    }
-
-    .blog-category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(99,102,241,0.18);
-      border: 1px solid rgba(99,102,241,0.3);
-      color: #c7d2fe;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
-    }
-
-    .blog-title {
-      font-size: 20px;
-      font-weight: 800;
-      color: #ffffff;
-      margin: 0 0 12px;
-      line-height: 1.4;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .blog-excerpt {
+    .hero-subtitle {
       color: var(--text-secondary);
-      font-size: 15px;
+      font-size: clamp(20px, 3vw, 24px);
+      max-width: 900px;
+      margin: 0 auto 40px;
       line-height: 1.6;
-      margin: 0 0 20px;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
-    .blog-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 20px;
-      border-top: 1px solid rgba(99,102,241,0.2);
-    }
-
-    .blog-date {
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .blog-read-more {
+    .hero-cta {
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--brand-gold);
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: var(--transition-fast);
-    }
-
-    .blog-read-more:hover {
-      color: #ffd166;
-      transform: translateX(4px);
-    }
-
-    .blog-read-more i {
-      font-size: 12px;
-      transition: var(--transition-fast);
-    }
-
-    .blog-read-more:hover i {
-      transform: translateX(2px);
-    }
-
-    /* Featured Blog Post */
-    .featured-blog {
-      background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.7));
-      border: 1px solid rgba(99,102,241,0.3);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-blog::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--brand-gold), var(--brand-indigo));
-    }
-
-    .featured-blog-header {
-      display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .featured-badge {
       background: linear-gradient(135deg, var(--brand-gold), #ffd166);
       color: #0a0a0a;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .featured-blog-title {
-      font-size: 28px;
-      font-weight: 900;
-      color: #ffffff;
-      margin: 0 0 16px;
-      line-height: 1.3;
-    }
-
-    .featured-blog-excerpt {
-      color: var(--text-secondary);
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 0 0 24px;
-      max-width: 600px;
-    }
-
-    .featured-blog-meta {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-
-    .featured-blog-category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(99,102,241,0.2);
-      border: 1px solid rgba(99,102,241,0.4);
-      color: #c7d2fe;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .featured-blog-date {
-      color: var(--text-muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .featured-blog-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 24px;
-      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
-      color: #0a0a0a;
-      text-decoration: none;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 16px;
-      transition: var(--transition-fast);
-      box-shadow: var(--glow-gold);
-    }
-
-    .featured-blog-cta:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
-
-    /* Load More Button */
-    .load-more-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      border: 0;
       padding: 16px 32px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.55);
-      border: 1px solid rgba(99,102,241,0.22);
-      color: var(--text-secondary);
-      font-weight: 700;
-      cursor: pointer;
+      border-radius: 16px;
+      font-weight: 900;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
       transition: var(--transition-fast);
-      font-size: 16px;
-      letter-spacing: 0.02em;
       text-decoration: none;
-      margin: 40px auto 0;
+      font-size: 18px;
     }
-    
-    .load-more-btn:hover {
-      border-color: rgba(99,102,241,0.45);
-      background: rgba(15,23,42,0.75);
-      color: #e2e8f0;
-      transform: translateY(-2px);
+
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.05);
     }
 
     /* Footer */
@@ -596,47 +422,15 @@
         margin-top: 60px;
         padding: 40px 0;
       }
-
-      .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .featured-blog {
-        padding: 24px;
-        margin-bottom: 40px;
-      }
-
-      .featured-blog-title {
-        font-size: 24px;
-      }
-
-      .featured-blog-excerpt {
-        font-size: 16px;
-      }
-
-      .featured-blog-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
     }
 
     @media (max-width: 480px) {
+      .hero-title {
+        font-size: clamp(32px, 10vw, 48px);
+      }
+
       .section-title {
         font-size: clamp(28px, 8vw, 40px);
-      }
-
-      .featured-blog {
-        padding: 20px;
-      }
-
-      .featured-blog-title {
-        font-size: 22px;
-      }
-
-      .featured-blog-excerpt {
-        font-size: 15px;
       }
     }
   </style>
@@ -656,7 +450,7 @@
       
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="/home.html" class="nav-link">Home</a>
+          <a href="/home.html" class="nav-link active">Home</a>
         </li>
         <li class="nav-item">
           <a href="/about.html" class="nav-link">About</a>
@@ -674,7 +468,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="/blog.html" class="nav-link active">Blog</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
         </li>
         <li class="nav-item">
           <a href="/contact.html" class="nav-link">Contact</a>
@@ -691,55 +485,118 @@
   </nav>
 
   <div class="wrapper">
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-      <div class="section-header">
-        <h2 class="section-title">Blog</h2>
-        <p class="section-subtitle">
-          Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team.
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+      <h1 class="hero-title">STORIES THAT TELL THEMSELVES</h1>
+      <p class="hero-subtitle">
+        Through a data-driven Content Strategy and Omnichannel Marketing approach, we ensure your visuals aren't just seen—they convert across all platforms.
+      </p>
+      
+      <!-- Enhanced Value Proposition -->
+      <div class="hero-value-props" style="margin: 40px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <div class="hero-value-card" style="background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">2025 Production Innovation</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">AI-powered editing workflows, 8K HDR mastering, and real-time collaboration tools that keep you ahead of the curve.</p>
+        </div>
+        
+        <div class="hero-value-card" style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(255,178,0,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Full-Stack Development</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Modern React/Next.js, AI integration, and cloud-native architectures that scale with your business growth.</p>
+        </div>
+        
+        <div class="hero-value-card" style="background: rgba(255,178,0,0.1); border: 1px solid rgba(255,178,0,0.3); border-radius: 16px; padding: 24px; text-align: center; backdrop-filter: blur(12px);">
+          <div style="width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 24px; color: var(--brand-gold);">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 800; color: var(--text-primary);">Creator Platform</h3>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">Streamlined onboarding, analytics dashboards, and automated workflows that empower your creative team.</p>
+        </div>
+      </div>
+
+      <!-- Production Toolkit Download Section -->
+      <div class="hero-toolkit" style="margin: 40px 0; background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9)); border: 1px solid rgba(255,178,0,0.3); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; background: linear-gradient(135deg, rgba(255,178,0,0.3), rgba(99,102,241,0.3)); display: grid; place-items: center; font-size: 32px; color: var(--brand-gold);">
+            <i class="fas fa-toolbox"></i>
+          </div>
+          <h2 style="margin: 0 0 16px; font-size: 28px; font-weight: 800; color: var(--text-primary);">FREE Production Toolkit 2025</h2>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Get instant access to our comprehensive production toolkit including AI-powered editing presets, color grading LUTs, 
+            project templates, and workflow automation scripts. Valued at $497 - completely free for creators.
+          </p>
+        </div>
+        
+        <form id="toolkitForm" class="toolkit-form" style="max-width: 500px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+            <input type="text" id="toolkitFirstName" name="firstName" placeholder="First Name" required 
+                   style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+            <input type="text" id="toolkitLastName" name="lastName" placeholder="Last Name" required 
+                   style="padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast);">
+          </div>
+          <input type="email" id="toolkitEmail" name="email" placeholder="Email Address" required 
+                 style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+          <select id="toolkitInterest" name="interest" required 
+                  style="width: 100%; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(99,102,241,0.3); color: var(--text-primary); font-size: 16px; transition: var(--transition-fast); margin-bottom: 20px;">
+            <option value="">What's your primary focus?</option>
+            <option value="video-production">Video Production</option>
+            <option value="photography">Photography</option>
+            <option value="web-development">Web Development</option>
+            <option value="brand-development">Brand Development</option>
+            <option value="content-creation">Content Creation</option>
+          </select>
+          <button type="submit" class="toolkit-submit" style="width: 100%; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; border: 0; padding: 18px 32px; border-radius: 14px; font-weight: 800; font-size: 16px; cursor: pointer; transition: var(--transition-fast); display: flex; align-items: center; justify-content: center; gap: 12px;">
+            <i class="fas fa-download"></i>
+            Download Free Toolkit
+          </button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 24px;">
+          <p style="margin: 0; color: var(--text-muted); font-size: 14px;">
+            <i class="fas fa-shield-alt"></i> 
+            We respect your privacy. No spam, ever.
+          </p>
+        </div>
+      </div>
+
+      <!-- Enhanced CTA Section -->
+      <div class="hero-cta-section" style="margin-top: 40px;">
+        <a href="/book.html" class="hero-cta">
+          <i class="fas fa-rocket"></i>
+          Book Your Services
+        </a>
+        <p style="margin: 20px 0 0; color: var(--text-muted); font-size: 14px; font-weight: 600;">
+          <i class="fas fa-clock"></i> 
+          Average response time: 2 hours | 
+          <i class="fas fa-star"></i> 
+          98% client satisfaction rate
         </p>
       </div>
-      
-      <!-- Blog Content -->
-      <div class="blog-content">
-        <!-- Featured Blog Post -->
-        <article class="featured-blog">
-          <div class="featured-blog-header">
-            <span class="featured-badge">Featured</span>
-            <span class="featured-blog-category">
-              <i class="fa-solid fa-lightbulb"></i> Creative Insights
-            </span>
-          </div>
-          
-          <h3 class="featured-blog-title">
-            The Future of Video Marketing: AI-Powered Content Creation
-          </h3>
-          
-          <p class="featured-blog-excerpt">
-            Discover how artificial intelligence is revolutionizing video production and marketing strategies. Learn about the latest tools, techniques, and trends that are shaping the future of digital content.
-          </p>
-          
-          <div class="featured-blog-meta">
-            <span class="featured-blog-date">
-              <i class="fa-regular fa-calendar"></i> January 15, 2025
-            </span>
-          </div>
-          
-          <a href="/blog-post.html" class="featured-blog-cta">
-            Read Full Article <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </article>
 
-        <!-- Blog Grid -->
-        <div class="blog-grid" id="blogGrid">
-          <!-- Blog items will be populated here -->
-        </div>
-
-        <!-- Load More Button -->
-        <div style="text-align: center; margin-top: 40px;">
-          <button class="load-more-btn" id="loadMoreBlog" style="display: none;">
-            <i class="fa-solid fa-plus"></i> Load More Articles
-          </button>
+      <!-- Social Proof Section -->
+      <div class="hero-social-proof" style="margin-top: 40px; padding: 24px; background: rgba(15,23,42,0.4); border-radius: 16px; border: 1px solid rgba(99,102,241,0.2);">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">500+</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Projects Delivered</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">98%</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Client Satisfaction</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">24/7</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Support Available</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 800; color: var(--brand-gold); margin-bottom: 4px;">2hr</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Avg Response</div>
+          </div>
         </div>
       </div>
     </section>
@@ -777,39 +634,95 @@
     </div>
   </footer>
 
-  <!-- Airtable CMS Initialization Script -->
   <script>
-    // Initialize Airtable CMS when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      // Check if Airtable CMS is available
-      if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
-        
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
-        
-        // Set up event handler for load more button
-        const loadMoreBtn = document.getElementById('loadMoreBlog');
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
-            }
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
           });
         }
-      } else {
-        console.warn('⚠️ Airtable CMS not loaded, blog will be empty');
-      }
+      });
     });
-  </script>
 
-  <script>
+    // Active navigation highlighting
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
     // Mobile menu toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     mobileToggle.addEventListener('click', () => {
       navMenu.classList.toggle('show');
+    });
+
+    // Production Toolkit Form submission
+    document.getElementById('toolkitForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Show success message and provide immediate value
+      const successMessage = `
+🎉 Thank you for downloading our Production Toolkit 2025!
+
+Here's what you'll receive immediately:
+✅ AI-powered editing presets for Premiere Pro & DaVinci Resolve
+✅ Professional color grading LUTs (Rec.709 & HDR)
+✅ Project templates for commercials, documentaries & events
+✅ Workflow automation scripts
+✅ 2025 production trends guide
+✅ Exclusive access to our creator community
+
+Check your email in the next 5 minutes for your download link!
+
+We'll also send you:
+• Weekly production tips & tricks
+• Early access to new tools & resources
+• Special creator-only discounts
+
+Welcome to the Cochran Films family! 🚀
+      `;
+      
+      alert(successMessage);
+      
+      // Reset form
+      this.reset();
+      
+      // Track download (you can integrate with analytics here)
+      console.log('Toolkit downloaded by:', data);
+      
+      // Optional: Send to your backend/CRM
+      // fetch('/api/toolkit-download', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data)
+      // });
     });
 
     // Navigation scroll effect
@@ -992,62 +905,10 @@
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         new AINeuralNetwork();
-        initializeBlogSystem();
       });
     } else {
       new AINeuralNetwork();
-      initializeBlogSystem();
     }
-
-    // ========================================
-    // AIRTABLE CMS INTEGRATION
-    // ========================================
-    
-    // Initialize Airtable CMS when the page loads
-    function initializeBlogSystem() {
-      // Check if Airtable CMS is available
-      if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
-        
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
-        
-        // Set up event handlers for load more buttons
-        document.querySelectorAll('.load-more-btn').forEach(btn => {
-          btn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
-            }
-          });
-        });
-      } else {
-        console.warn('⚠️ Airtable CMS not loaded, falling back to CSV loading...');
-        // Fallback to CSV loading if Airtable CMS is not available
-        if (typeof loadAllBlogData === 'function') {
-          loadAllBlogData();
-        }
-      }
-    }
-
-    // ========================================
-    // EMAILJS INTEGRATION
-    // ========================================
-    
-    // Initialize EmailJS
-    (function() {
-      try {
-        if (typeof emailjs !== 'undefined') {
-          emailjs.init('p4pF3OWvh-DXtae4c');
-          console.log('✅ EmailJS initialized securely');
-        } else {
-          console.warn('⚠️ EmailJS not loaded - forms will fallback to manual submission');
-        }
-      } catch (error) {
-        console.error('❌ EmailJS initialization failed:', error);
-      }
-    })();
   </script>
 </body>
 </html>
-
-

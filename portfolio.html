@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Primary Meta Tags -->
-  <title>Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta</title>
-  <meta name="title" content="Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta" />
-  <meta name="description" content="Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team." />
-  <meta name="keywords" content="creative blog, video production tips, web development insights, marketing trends, creative agency blog, Atlanta" />
+  <title>Cochran Films | Portfolio | Full-Stack Creative Agency & White-Label Services | Atlanta</title>
+  <meta name="title" content="Cochran Films | Portfolio | Full-Stack Creative Agency & White-Label Services | Atlanta" />
+  <meta name="description" content="From corporate storytelling to live events, explore our latest work that demonstrates high-level production value and strategic impact." />
+  <meta name="keywords" content="creative agency, video production, web development, white-label services, Atlanta, storytelling, full-stack, branding, content creation, film production" />
   <meta name="author" content="Cody Cochran, CEO & Founder" />
   
   <!-- Fonts + Icons (CDN) -->
@@ -244,58 +244,176 @@
       line-height: 1.6;
     }
 
-    /* Blog Section */
-    .blog-content {
+    /* Portfolio Section */
+    .portfolio-content {
       margin-top: 40px;
     }
 
-    .blog-grid {
+    .portfolio-category-section {
+      margin-bottom: 80px;
+    }
+
+    .portfolio-category-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio-category-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgba(99,102,241,0.3);
+    }
+
+    .portfolio-category-title i {
+      color: var(--brand-gold);
+      font-size: 24px;
+    }
+
+    .portfolio-grid {
       display: grid;
-      gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      margin-top: 40px;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      margin-top: 20px;
     }
-
-    .blog-item {
-      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
-      border: 1px solid rgba(99,102,241,0.22);
+    
+    /* Masonry layout for Photography grid */
+    #photographyGrid {
+      display: block;
+      -moz-column-count: 3;
+      column-count: 3;
+      -moz-column-gap: 20px;
+      column-gap: 20px;
+    }
+    @media (max-width: 1024px) {
+      #photographyGrid { column-count: 2; }
+    }
+    @media (max-width: 640px) {
+      #photographyGrid { column-count: 1; }
+    }
+    
+    .portfolio-item {
+      position: relative;
       border-radius: 18px;
       overflow: hidden;
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      border: 1px solid rgba(99,102,241,0.22);
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
+      transform-style: preserve-3d;
       cursor: pointer;
     }
-
-    .blog-item:hover {
-      transform: translateY(-6px);
+    
+    .portfolio-item:hover {
+      transform: translateY(-6px) scale(1.02);
       border-color: rgba(99,102,241,0.45);
       box-shadow: var(--shadow-lg);
     }
-
-    .blog-thumbnail {
+    
+    .portfolio-thumbnail {
       position: relative;
       width: 100%;
       height: 200px;
       overflow: hidden;
       background: linear-gradient(45deg, rgba(99,102,241,0.1), rgba(255,178,0,0.1));
     }
-
-    .blog-thumbnail img {
+    
+    .portfolio-thumbnail img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: var(--transition);
     }
-
-    .blog-item:hover .blog-thumbnail img {
+    
+    .portfolio-item:hover .portfolio-thumbnail img {
       transform: scale(1.05);
     }
 
-    .blog-content-inner {
-      padding: 24px;
+    /* Photo-only items in masonry */
+    .portfolio-item.photo-only {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 20px;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
     }
-
-    .blog-category {
+    .portfolio-item.photo-only .portfolio-thumbnail { height: auto; }
+    .portfolio-item.photo-only .portfolio-thumbnail img { height: auto; }
+    
+    /* Photography: remove outlines, borders, rounded corners, and blue backgrounds */
+    .portfolio-item.photo,
+    .portfolio-item.photo-only {
+      border: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      transform: none;
+    }
+    .portfolio-item.photo:hover,
+    .portfolio-item.photo-only:hover {
+      transform: none;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .portfolio-item.photo .portfolio-thumbnail,
+    .portfolio-item.photo-only .portfolio-thumbnail {
+      background: none;
+      border-radius: 0;
+      overflow: visible;
+    }
+    .portfolio-item.photo .portfolio-thumbnail img,
+    .portfolio-item.photo-only .portfolio-thumbnail img {
+      border-radius: 0;
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    
+    .portfolio-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,178,0,0.9);
+      border: 3px solid #ffffff;
+      display: grid;
+      place-items: center;
+      color: #000000;
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover .portfolio-play {
+      background: var(--brand-gold);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .portfolio-content {
+      padding: 20px;
+    }
+    
+    .portfolio-category {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -308,182 +426,70 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
-
-    .blog-title {
-      font-size: 20px;
+    
+    .portfolio-title {
+      font-size: 18px;
       font-weight: 800;
       color: #ffffff;
-      margin: 0 0 12px;
-      line-height: 1.4;
+      margin: 0 0 8px;
+      line-height: 1.3;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
-    .blog-excerpt {
+    
+    .portfolio-description {
       color: var(--text-secondary);
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.6;
-      margin: 0 0 20px;
+      margin: 0;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
-    .blog-meta {
+    
+    .portfolio-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 20px;
+      margin-top: 16px;
+      padding-top: 16px;
       border-top: 1px solid rgba(99,102,241,0.2);
     }
-
-    .blog-date {
+    
+    .portfolio-date {
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
     }
-
-    .blog-read-more {
+    
+    .portfolio-featured {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(255,178,0,0.2);
+      border: 1px solid rgba(255,178,0,0.3);
       color: var(--brand-gold);
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 700;
-      text-decoration: none;
-      transition: var(--transition-fast);
-    }
-
-    .blog-read-more:hover {
-      color: #ffd166;
-      transform: translateX(4px);
-    }
-
-    .blog-read-more i {
-      font-size: 12px;
-      transition: var(--transition-fast);
-    }
-
-    .blog-read-more:hover i {
-      transform: translateX(2px);
-    }
-
-    /* Featured Blog Post */
-    .featured-blog {
-      background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.7));
-      border: 1px solid rgba(99,102,241,0.3);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-blog::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--brand-gold), var(--brand-indigo));
-    }
-
-    .featured-blog-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .featured-badge {
-      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
-      color: #0a0a0a;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
 
-    .featured-blog-title {
-      font-size: 28px;
-      font-weight: 900;
-      color: #ffffff;
-      margin: 0 0 16px;
-      line-height: 1.3;
-    }
-
-    .featured-blog-excerpt {
-      color: var(--text-secondary);
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 0 0 24px;
-      max-width: 600px;
-    }
-
-    .featured-blog-meta {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-
-    .featured-blog-category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(99,102,241,0.2);
-      border: 1px solid rgba(99,102,241,0.4);
-      color: #c7d2fe;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .featured-blog-date {
-      color: var(--text-muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .featured-blog-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 24px;
-      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
-      color: #0a0a0a;
-      text-decoration: none;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 16px;
-      transition: var(--transition-fast);
-      box-shadow: var(--glow-gold);
-    }
-
-    .featured-blog-cta:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
-
-    /* Load More Button */
+    /* Load More Button Styles */
     .load-more-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 16px 32px;
+      padding: 12px 20px;
       border-radius: 999px;
       background: rgba(15,23,42,0.55);
       border: 1px solid rgba(99,102,241,0.22);
@@ -491,17 +497,16 @@
       font-weight: 700;
       cursor: pointer;
       transition: var(--transition-fast);
-      font-size: 16px;
+      font-size: 14px;
       letter-spacing: 0.02em;
       text-decoration: none;
-      margin: 40px auto 0;
     }
     
     .load-more-btn:hover {
       border-color: rgba(99,102,241,0.45);
       background: rgba(15,23,42,0.75);
       color: #e2e8f0;
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     /* Footer */
@@ -597,28 +602,14 @@
         padding: 40px 0;
       }
 
-      .blog-grid {
+      .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
 
-      .featured-blog {
-        padding: 24px;
-        margin-bottom: 40px;
-      }
-
-      .featured-blog-title {
+      .portfolio-category-title {
         font-size: 24px;
-      }
-
-      .featured-blog-excerpt {
-        font-size: 16px;
-      }
-
-      .featured-blog-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        margin-bottom: 30px;
       }
     }
 
@@ -627,16 +618,13 @@
         font-size: clamp(28px, 8vw, 40px);
       }
 
-      .featured-blog {
+      .portfolio-content {
         padding: 20px;
       }
-
-      .featured-blog-title {
-        font-size: 22px;
-      }
-
-      .featured-blog-excerpt {
-        font-size: 15px;
+      
+      .portfolio-category-title {
+        font-size: 20px;
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -665,7 +653,7 @@
           <a href="/services.html" class="nav-link">Services</a>
         </li>
         <li class="nav-item has-submenu">
-          <a href="/portfolio.html" class="nav-link">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
+          <a href="/portfolio.html" class="nav-link active">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
           <ul class="submenu" aria-label="Portfolio Categories">
             <li><a href="/portfolio.html#video-production" class="submenu-link">Video Production</a></li>
             <li><a href="/portfolio.html#web-development" class="submenu-link">Web Development</a></li>
@@ -674,7 +662,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="/blog.html" class="nav-link active">Blog</a>
+          <a href="/blog.html" class="nav-link">Blog</a>
         </li>
         <li class="nav-item">
           <a href="/contact.html" class="nav-link">Contact</a>
@@ -691,55 +679,75 @@
   </nav>
 
   <div class="wrapper">
-    <!-- Blog Section -->
-    <section id="blog" class="section">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
       <div class="section-header">
-        <h2 class="section-title">Blog</h2>
+        <h2 class="section-title">Portfolio</h2>
         <p class="section-subtitle">
-          Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team.
+          From corporate storytelling to live events, explore our latest work that demonstrates high-level production value and strategic impact.
         </p>
       </div>
       
-      <!-- Blog Content -->
-      <div class="blog-content">
-        <!-- Featured Blog Post -->
-        <article class="featured-blog">
-          <div class="featured-blog-header">
-            <span class="featured-badge">Featured</span>
-            <span class="featured-blog-category">
-              <i class="fa-solid fa-lightbulb"></i> Creative Insights
-            </span>
-          </div>
-          
-          <h3 class="featured-blog-title">
-            The Future of Video Marketing: AI-Powered Content Creation
+      <!-- Portfolio Content -->
+      <div class="portfolio-content">
+        <!-- Video Production Section -->
+        <div id="video-production" class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-video"></i> Video Production
           </h3>
-          
-          <p class="featured-blog-excerpt">
-            Discover how artificial intelligence is revolutionizing video production and marketing strategies. Learn about the latest tools, techniques, and trends that are shaping the future of digital content.
-          </p>
-          
-          <div class="featured-blog-meta">
-            <span class="featured-blog-date">
-              <i class="fa-regular fa-calendar"></i> January 15, 2025
-            </span>
+          <div class="portfolio-grid" id="videoProductionGrid">
+            <!-- Video Production items will be populated here -->
           </div>
-          
-          <a href="/blog-post.html" class="featured-blog-cta">
-            Read Full Article <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </article>
-
-        <!-- Blog Grid -->
-        <div class="blog-grid" id="blogGrid">
-          <!-- Blog items will be populated here -->
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Video Production" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Video Projects
+            </button>
+          </div>
         </div>
 
-        <!-- Load More Button -->
-        <div style="text-align: center; margin-top: 40px;">
-          <button class="load-more-btn" id="loadMoreBlog" style="display: none;">
-            <i class="fa-solid fa-plus"></i> Load More Articles
-          </button>
+        <!-- Web Development Section -->
+        <div id="web-development" class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-code"></i> Web Development
+          </h3>
+          <div class="portfolio-grid" id="webDevelopmentGrid">
+            <!-- Web Development items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Web Development" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Web Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- Photography Section -->
+        <div id="photography" class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-camera"></i> Photography
+          </h3>
+          <div class="portfolio-grid" id="photographyGrid">
+            <!-- Photography items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Photography" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Photography Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- Brand Development Section -->
+        <div id="brand-development" class="portfolio-category-section">
+          <h3 class="portfolio-category-title">
+            <i class="fa-solid fa-palette"></i> Brand Development
+          </h3>
+          <div class="portfolio-grid" id="brandDevelopmentGrid">
+            <!-- Brand Development items will be populated here -->
+          </div>
+          <div class="portfolio-actions" style="margin-top: 24px; text-align: center;">
+            <button class="cta-ghost load-more-btn" data-category="Brand Development" style="display: none;">
+              <i class="fa-solid fa-plus"></i> Load More Brand Projects
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -783,22 +791,22 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Check if Airtable CMS is available
       if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
+        console.log('🚀 Initializing Airtable CMS for Portfolio...');
         
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
+        // Initialize the portfolio system
+        window.airtableCMS.initializePortfolioSystem();
         
-        // Set up event handler for load more button
-        const loadMoreBtn = document.getElementById('loadMoreBlog');
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
+        // Set up event handlers for load more buttons
+        document.querySelectorAll('.load-more-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            if (window.airtableCMS && window.airtableCMS.loadMoreForCategory) {
+              window.airtableCMS.loadMoreForCategory(category);
             }
           });
-        }
+        });
       } else {
-        console.warn('⚠️ Airtable CMS not loaded, blog will be empty');
+        console.warn('⚠️ Airtable CMS not loaded, portfolio will be empty');
       }
     });
   </script>
@@ -992,11 +1000,11 @@
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
         new AINeuralNetwork();
-        initializeBlogSystem();
+        initializePortfolioSystem();
       });
     } else {
       new AINeuralNetwork();
-      initializeBlogSystem();
+      initializePortfolioSystem();
     }
 
     // ========================================
@@ -1004,27 +1012,28 @@
     // ========================================
     
     // Initialize Airtable CMS when the page loads
-    function initializeBlogSystem() {
+    function initializePortfolioSystem() {
       // Check if Airtable CMS is available
       if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
+        console.log('🚀 Initializing Airtable CMS for Portfolio...');
         
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
+        // Initialize the portfolio system
+        window.airtableCMS.initializePortfolioSystem();
         
         // Set up event handlers for load more buttons
         document.querySelectorAll('.load-more-btn').forEach(btn => {
           btn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
+            const category = this.getAttribute('data-category');
+            if (window.airtableCMS && window.airtableCMS.loadMoreForCategory) {
+              window.airtableCMS.loadMoreForCategory(category);
             }
           });
         });
       } else {
         console.warn('⚠️ Airtable CMS not loaded, falling back to CSV loading...');
         // Fallback to CSV loading if Airtable CMS is not available
-        if (typeof loadAllBlogData === 'function') {
-          loadAllBlogData();
+        if (typeof loadAllPortfolioData === 'function') {
+          loadAllPortfolioData();
         }
       }
     }
@@ -1046,8 +1055,113 @@
         console.error('❌ EmailJS initialization failed:', error);
       }
     })();
+
+    // ========================================
+    // VIDEO/IMAGE MODAL FUNCTIONS
+    // ========================================
+    
+    // Video Modal functionality
+    function openVideoModal(portfolioItem) {
+      const modal = document.getElementById('videoModal');
+      const videoPlayer = document.getElementById('videoPlayer');
+      const videoSource = document.getElementById('videoSource');
+      const videoTitleText = document.getElementById('videoTitleText');
+      const videoCategory = document.getElementById('videoCategory');
+      const videoDescription = document.getElementById('videoDescription');
+      const videoDate = document.getElementById('videoDate');
+      const videoFeatured = document.getElementById('videoFeatured');
+      
+      if (!modal || !videoPlayer || !videoSource) return;
+
+      // Set video content
+      videoTitleText.textContent = portfolioItem.Title;
+      videoCategory.textContent = portfolioItem.Category;
+      videoDescription.textContent = portfolioItem.Description;
+      
+      // Format date
+      const uploadDate = new Date(portfolioItem['UploadDate']);
+      videoDate.textContent = uploadDate.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      
+      // Show/hide featured badge
+      const isFeatured = portfolioItem['Is Featured'] === true || portfolioItem['Is Featured'] === 'true';
+      videoFeatured.style.display = isFeatured ? 'inline-flex' : 'none';
+      
+      // Set video source
+      videoSource.src = portfolioItem.playbackUrl;
+      videoPlayer.poster = portfolioItem['Thumbnail Image'];
+      
+      // Load and play video
+      videoPlayer.load();
+      
+      // Show modal
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false');
+      
+      // Prevent body scrolling
+      document.body.style.overflow = 'hidden';
+      
+      // Focus management
+      const closeBtn = document.getElementById('closeVideo');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    // Simple image lightbox for photography
+    function openImageModal(src, altText) {
+      const modal = document.createElement('div');
+      modal.className = 'modal show';
+      modal.id = 'imageModal';
+      modal.setAttribute('aria-hidden','false');
+      modal.innerHTML = `
+        <div class="image-panel">
+          <div class="image-panel-head">
+            <button class="video-close" aria-label="Close image" id="closeImage"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="image-panel-body">
+            <div class="photo-container"><img src="${src}" alt="${altText || 'Photo'}" /></div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+      modal.addEventListener('click', (e)=>{ if(e.target.id==='imageModal') closeImageModal(); });
+      document.getElementById('closeImage')?.addEventListener('click', closeImageModal);
+      document.addEventListener('keydown', escCloseImage);
+      function escCloseImage(e){ if(e.key==='Escape') closeImageModal(); }
+      function closeImageModal(){
+        document.removeEventListener('keydown', escCloseImage);
+        document.body.style.overflow = '';
+        modal.remove();
+      }
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const videoPlayer = document.getElementById('videoPlayer');
+      
+      if (!modal) return;
+      
+      // Pause and reset video
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+      }
+      
+      // Hide modal
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      
+      // Restore body scrolling
+      document.body.style.overflow = '';
+    }
+
+    // Make functions globally available
+    window.openVideoModal = openVideoModal;
+    window.openImageModal = openImageModal;
+    window.closeVideoModal = closeVideoModal;
   </script>
 </body>
 </html>
-
-
