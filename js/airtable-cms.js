@@ -346,6 +346,7 @@ class AirtableCMS {
       console.log('   Ctrl+Shift+C: Show cache indicator');
       console.log('   Ctrl+Shift+R: Force refresh with cache clear');
       console.log('   Ctrl+Shift+T: Run performance test');
+      console.log('   Ctrl+Shift+U: Run unified API performance test');
       console.log('   window.airtableCacheDebug: Access cache management functions');
       
     } catch (error) {
@@ -355,16 +356,106 @@ class AirtableCMS {
   }
   
   async loadAllPortfolioData() {
-    console.log('📊 Loading portfolio data from Airtable...');
+    console.log('📊 Loading portfolio data from unified API...');
     
     try {
-      // If running from file:// or invalid origin, skip Airtable and use CSV
-      if (!this.apiBase || !/^https?:\/\//.test(this.apiBase)) {
-        throw new Error(`Invalid API base: ${this.apiBase || '(empty)'} – falling back to CSV`);
-      }
-      // Show loading state
       this.showPortfolioLoadingState();
       
+      // Check if we have any valid cache first
+      const cacheStatus = this.getCacheStatus();
+      const hasValidCache = Object.values(cacheStatus).some(status => status.cached && !status.isExpired);
+      
+      if (hasValidCache) {
+        console.log('📦 Found valid cache, loading portfolio immediately...');
+        // Load portfolio data from cache first
+        await this.loadPortfolioFromCache();
+        
+        // Set up portfolio functionality
+        this.setupPortfolioDisplay();
+        this.setupEventHandlers();
+        this.renderPortfolioByCategory();
+        
+        // Warm up cache in background for next time
+        this.warmupCache();
+      } else {
+        console.log('🔄 No valid cache found, loading fresh data from unified API...');
+        // Load portfolio data from unified API
+        await this.loadPortfolioFromUnifiedAPI();
+        
+        // Set up the existing portfolio functionality
+        this.setupPortfolioDisplay();
+        this.setupEventHandlers();
+        
+        // Render the portfolio first
+        this.renderPortfolioByCategory();
+      }
+      
+      // Hide loading state
+      this.hidePortfolioLoadingState();
+      
+    } catch (error) {
+      console.error('❌ Failed to load unified portfolio data:', error);
+      this.hidePortfolioLoadingState();
+      throw error;
+    }
+  }
+
+  /**
+   * Load portfolio data from unified API endpoint
+   */
+  async loadPortfolioFromUnifiedAPI() {
+    try {
+      console.log('🔗 Calling unified portfolio API...');
+      const startTime = performance.now();
+      
+      const response = await fetch(`${this.apiBase}/api/airtable/portfolio`);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      const loadTime = performance.now() - startTime;
+      
+      console.log(`✅ Unified API loaded ${data.totalRecords} total records in ${loadTime.toFixed(2)}ms`);
+      console.log(`📊 Categories loaded: ${data.categories.join(', ')}`);
+      
+      if (data.errors && data.errors.length > 0) {
+        console.warn('⚠️ Some categories had errors:', data.errors);
+      }
+      
+      // Transform and combine all data
+      this.portfolioData = [];
+      
+      Object.entries(data.data).forEach(([category, categoryData]) => {
+        if (categoryData && categoryData.records) {
+          const transformedRecords = this.transformAirtableData(categoryData.records, category);
+          this.portfolioData.push(...transformedRecords);
+          
+          // Cache each category separately for granular control
+          this.cache.set(category, categoryData, this.getCategoryCacheTTL(category));
+          console.log(`💾 Cached ${category} with ${transformedRecords.length} transformed records`);
+        }
+      });
+      
+      console.log(`📈 Total portfolio items after transformation: ${this.portfolioData.length}`);
+      
+    } catch (error) {
+      console.error('❌ Failed to load from unified API:', error);
+      
+      // Fallback to individual API calls if unified endpoint fails
+      console.log('🔄 Falling back to individual API calls...');
+      await this.loadPortfolioFromIndividualAPIs();
+    }
+  }
+
+  /**
+   * Load portfolio data from individual API endpoints (fallback method)
+   */
+  async loadPortfolioFromIndividualAPIs() {
+    console.log('📊 Loading portfolio data from individual APIs (fallback)...');
+    
+    try {
       // Load data from all three Airtable bases
       const [videoData, webData, photoData] = await Promise.all([
         this.loadAirtableData('Video Production'),
@@ -379,22 +470,41 @@ class AirtableCMS {
         ...photoData.map(item => ({ ...item, ServiceCategory: 'Photography' }))
       ];
       
-      console.log(`📈 Loaded ${this.portfolioData.length} total items:`, {
+      console.log(`📈 Loaded ${this.portfolioData.length} total items from individual APIs:`, {
         'Video Production': videoData.length,
         'Web Development': webData.length,
         'Photography': photoData.length
       });
-
-      // If Airtable returned zero usable items, trigger CSV fallback
-      if (!this.portfolioData || this.portfolioData.length === 0) {
-        throw new Error('Airtable returned zero items');
-      }
-      
-      // Hide loading state
-      this.hidePortfolioLoadingState();
       
     } catch (error) {
-      console.error('❌ Failed to load Airtable data:', error);
+      console.error('❌ Failed to load from individual APIs:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Load portfolio data from cache
+   */
+  async loadPortfolioFromCache() {
+    console.log('📦 Loading portfolio data from cache...');
+    
+    try {
+      const categories = Object.keys(this.bases);
+      this.portfolioData = [];
+      
+      categories.forEach(category => {
+        const cachedData = this.cache.get(category);
+        if (cachedData && cachedData.data && cachedData.data.records) {
+          const transformedRecords = this.transformAirtableData(cachedData.data.records, category);
+          this.portfolioData.push(...transformedRecords);
+          console.log(`📦 Loaded ${transformedRecords.length} ${category} items from cache`);
+        }
+      });
+      
+      console.log(`📈 Total portfolio items loaded from cache: ${this.portfolioData.length}`);
+      
+    } catch (error) {
+      console.error('❌ Failed to load from cache:', error);
       throw error;
     }
   }
@@ -2120,10 +2230,19 @@ class AirtableCMS {
     // Don't block the UI, run in background
     setTimeout(async () => {
       try {
-        await this.preloadCache();
-        console.log('✅ Cache warmup completed in background');
+        // Use unified API for cache warming
+        await this.loadPortfolioFromUnifiedAPI();
+        console.log('✅ Cache warmup completed in background using unified API');
       } catch (error) {
         console.warn('⚠️ Background cache warmup failed:', error);
+        
+        // Fallback to individual APIs if unified fails
+        try {
+          await this.loadPortfolioFromIndividualAPIs();
+          console.log('✅ Cache warmup completed using individual APIs (fallback)');
+        } catch (fallbackError) {
+          console.warn('⚠️ Fallback cache warmup also failed:', fallbackError);
+        }
       }
     }, 1000);
   }
@@ -2214,6 +2333,15 @@ class AirtableCMS {
           font-size: 10px;
           cursor: pointer;
         ">Log</button>
+        <button onclick="window.airtableCacheDebug.runUnifiedAPITest()" style="
+          background: rgba(16,185,129,0.2);
+          border: 1px solid rgba(16,185,129,0.3);
+          color: #10b981;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 10px;
+          cursor: pointer;
+        ">Test API</button>
         <button onclick="this.parentElement.parentElement.remove()" style="
           background: rgba(148,163,184,0.2);
           border: 1px solid rgba(148,163,184,0.3);
@@ -2254,6 +2382,13 @@ class AirtableCMS {
         e.preventDefault();
         console.log('🚀 Running performance test (Ctrl+Shift+T)...');
         this.runPerformanceTest();
+      }
+
+      // Ctrl+Shift+U to run unified API performance test
+      if (e.ctrlKey && e.shiftKey && e.key === 'U') {
+        e.preventDefault();
+        console.log('🔗 Running unified API performance test (Ctrl+Shift+U)...');
+        this.runUnifiedAPITest();
       }
     });
   }
@@ -2307,6 +2442,135 @@ class AirtableCMS {
     this.showPerformanceResults(avgWithCache, avgWithoutCache, improvement);
     
     return { avgWithCache, avgWithoutCache, improvement };
+  }
+
+  /**
+   * Run unified API performance test
+   */
+  async runUnifiedAPITest() {
+    console.log('🚀 Running unified API performance test...');
+    
+    const iterations = 3;
+    const results = {
+      unifiedAPI: [],
+      individualAPIs: []
+    };
+    
+    // Test unified API performance
+    console.log('📊 Testing unified API...');
+    for (let i = 0; i < iterations; i++) {
+      const start = performance.now();
+      try {
+        await this.loadPortfolioFromUnifiedAPI();
+        const end = performance.now();
+        results.unifiedAPI.push(end - start);
+        console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
+      } catch (error) {
+        console.log(`   Iteration ${i + 1}: Failed - ${error.message}`);
+        results.unifiedAPI.push(null);
+      }
+    }
+    
+    // Test individual APIs performance
+    console.log('📊 Testing individual APIs...');
+    for (let i = 0; i < iterations; i++) {
+      const start = performance.now();
+      try {
+        await this.loadPortfolioFromIndividualAPIs();
+        const end = performance.now();
+        results.individualAPIs.push(end - start);
+        console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
+      } catch (error) {
+        console.log(`   Iteration ${i + 1}: Failed - ${error.message}`);
+        results.individualAPIs.push(null);
+      }
+    }
+    
+    // Calculate averages (excluding failed attempts)
+    const validUnified = results.unifiedAPI.filter(time => time !== null);
+    const validIndividual = results.individualAPIs.filter(time => time !== null);
+    
+    if (validUnified.length === 0 || validIndividual.length === 0) {
+      console.log('❌ Performance test failed - insufficient valid results');
+      return null;
+    }
+    
+    const avgUnified = validUnified.reduce((a, b) => a + b, 0) / validUnified.length;
+    const avgIndividual = validIndividual.reduce((a, b) => a + b, 0) / validIndividual.length;
+    const improvement = ((avgIndividual - avgUnified) / avgIndividual * 100).toFixed(1);
+    
+    console.log('📈 Unified API Performance Test Results:');
+    console.log(`   Unified API: ${avgUnified.toFixed(2)}ms average`);
+    console.log(`   Individual APIs: ${avgIndividual.toFixed(2)}ms average`);
+    console.log(`   Performance Improvement: ${improvement}% faster with unified API`);
+    
+    // Show results in UI
+    this.showUnifiedAPIPerformanceResults(avgUnified, avgIndividual, improvement);
+    
+    return { avgUnified, avgIndividual, improvement };
+  }
+
+  /**
+   * Show unified API performance test results in UI
+   */
+  showUnifiedAPIPerformanceResults(unified, individual, improvement) {
+    const resultsDiv = document.createElement('div');
+    resultsDiv.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(15, 23, 42, 0.98);
+      border: 2px solid var(--brand-indigo);
+      border-radius: 16px;
+      padding: 24px;
+      color: var(--text-primary);
+      font-family: monospace;
+      font-size: 14px;
+      z-index: 10001;
+      max-width: 450px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      text-align: center;
+    `;
+    
+    resultsDiv.innerHTML = `
+      <div style="margin-bottom: 20px; font-size: 24px; color: var(--brand-indigo);">
+        🚀 Unified API Performance Test
+      </div>
+      <div style="margin-bottom: 16px; text-align: left;">
+        <div style="margin-bottom: 8px;">
+          <span style="color: var(--brand-indigo);">🔗 Unified API:</span> ${unified.toFixed(2)}ms
+        </div>
+        <div style="margin-bottom: 8px;">
+          <span style="color: var(--brand-amber);">📡 Individual APIs:</span> ${individual.toFixed(2)}ms
+        </div>
+        <div style="margin-bottom: 16px; font-weight: 600; color: var(--brand-emerald);">
+          🎯 Improvement: ${improvement}% faster with unified API
+        </div>
+        <div style="font-size: 12px; color: var(--text-secondary);">
+          This test compares the new unified endpoint vs. the old individual API calls
+        </div>
+      </div>
+      <button onclick="this.parentElement.remove()" style="
+        background: var(--brand-indigo);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+      ">Close</button>
+    `;
+    
+    document.body.appendChild(resultsDiv);
+    
+    // Auto-remove after 8 seconds
+    setTimeout(() => {
+      if (resultsDiv.parentElement) {
+        resultsDiv.remove();
+      }
+    }, 8000);
   }
 
   /**
@@ -2446,6 +2710,14 @@ window.airtableCacheDebug = {
   runTest: async () => {
     if (window.airtableCMS) {
       return await window.airtableCMS.runPerformanceTest();
+    }
+    return null;
+  },
+
+  // Run unified API performance test
+  runUnifiedAPITest: async () => {
+    if (window.airtableCMS) {
+      return await window.airtableCMS.runUnifiedAPITest();
     }
     return null;
   }

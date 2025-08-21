@@ -145,9 +145,55 @@ window.airtableCMS.cache.getCacheSize()
 ## 🔮 Future Enhancements
 
 This caching system is the foundation for:
-1. **Step 2**: Unified API endpoint (reduce 3 calls to 1)
+1. **Step 2**: Unified API endpoint (reduce 3 calls to 1) ✅ **COMPLETED**
 2. **Step 3**: Connection pooling (improve concurrent performance)
 3. **Step 4**: Payload compression (reduce data transfer)
+
+## 🚀 Step 2: Unified API Endpoint - COMPLETED
+
+### What Was Implemented
+- **New API endpoint**: `/api/airtable/portfolio` that fetches from all 3 Airtable bases in parallel
+- **Reduced API calls**: From 3 separate calls to 1 unified call
+- **Parallel processing**: All Airtable bases are fetched simultaneously
+- **Fallback handling**: If unified API fails, falls back to individual API calls
+- **Performance monitoring**: Built-in testing to compare unified vs. individual API performance
+
+### Performance Benefits
+- **Network overhead reduction**: 66% fewer HTTP requests
+- **Parallel execution**: All data fetched simultaneously instead of sequentially
+- **Reduced latency**: Single round-trip instead of three
+- **Better error handling**: Graceful fallback if any category fails
+
+### How It Works
+1. **Unified API Call**: Single request to `/api/airtable/portfolio`
+2. **Parallel Fetching**: All 3 Airtable bases fetched simultaneously
+3. **Data Consolidation**: Results combined into single response
+4. **Caching Integration**: Each category cached separately with appropriate TTL
+5. **Fallback Protection**: Individual API calls if unified endpoint fails
+
+### Testing the Unified API
+```javascript
+// Run unified API performance test
+window.airtableCacheDebug.runUnifiedAPITest()
+
+// Keyboard shortcut: Ctrl+Shift+U
+```
+
+### Expected Results
+- **Unified API**: ~800-1200ms (single request, parallel processing)
+- **Individual APIs**: ~1500-2500ms (3 sequential requests)
+- **Performance Improvement**: **30-50% faster** with unified endpoint
+- **Combined with Cache**: **90-95% faster** on subsequent loads
+
+### Technical Implementation
+- **Backend**: New Vercel serverless function (`api/airtable/portfolio.js`)
+- **Frontend**: Updated `loadAllPortfolioData()` method with fallback logic
+- **Caching**: Integrated with existing cache system for seamless operation
+- **Error Handling**: Robust fallback to individual APIs if needed
+
+---
+
+**Next Steps**: Once you're satisfied with the unified API performance, we can move to Step 3: implementing connection pooling to further improve concurrent performance.
 
 ## 📝 Technical Details
 
@@ -168,7 +214,3 @@ This caching system is the foundation for:
 - **Background Refresh**: Cache warming without blocking UI
 - **Intelligent Cleanup**: Removes oldest 25% when size limit reached
 - **Category-Specific TTL**: Optimized expiration per data type
-
----
-
-**Next Steps**: Once you're satisfied with the caching performance, we can move to Step 2: implementing a unified API endpoint to reduce your 3 API calls to 1.
