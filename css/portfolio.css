@@ -448,24 +448,40 @@
   pointer-events: none;
 }
 
-/* Brand Development Grid - Full Width Items */
+/* Brand Development Grid - Full Width Items - NO CONTAINER CONSTRAINTS */
 .portfolio-category-section#portfolio-brand-development .portfolio-grid {
   grid-template-columns: 1fr;
   gap: 0;
   margin-top: 32px;
+  max-width: none !important;
+  width: 100% !important;
 }
 
-/* Brand Development Item Styling - Full Scale Design */
+.portfolio-category-section#portfolio-brand-development {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Brand Development Item Styling - Full Scale Design - EXPANDABLE */
 .portfolio-item.brand-development {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
   border-radius: 24px;
   border: 2px solid rgba(255, 178, 0, 0.3);
-  overflow: hidden;
+  overflow: visible !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(20px);
   position: relative;
   min-height: 500px;
-  width: 100%;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 40px !important;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .portfolio-item.brand-development::before {
@@ -491,57 +507,6 @@
     0 30px 60px rgba(0, 0, 0, 0.4),
     0 0 40px rgba(255, 178, 0, 0.2);
   border-color: rgba(255, 178, 0, 0.4);
-}
-
-/* Brand Development Layout - Full Scale One Row */
-.portfolio-item.brand-development {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-  min-height: 500px;
-  padding: 40px;
-}
-
-/* Video Section Styling */
-.portfolio-item.brand-development .video-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(99, 102, 241, 0.1));
-  border-radius: 16px;
-  padding: 24px;
-  border: 1px solid rgba(255, 178, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.portfolio-item.brand-development .video-section:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(135deg, rgba(255, 178, 0, 0.15), rgba(99, 102, 241, 0.15));
-  border-color: rgba(255, 178, 0, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Video Thumbnail Styling */
-.portfolio-item.brand-development .video-thumbnail {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  border: 2px solid rgba(255, 178, 0, 0.3);
-}
-
-.portfolio-item.brand-development .video-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-item.brand-development .video-section:hover .video-thumbnail img {
-  transform: scale(1.05);
 }
 
 /* YouTube Play Button */
@@ -629,52 +594,7 @@
   font-size: 1rem;
 }
 
-/* Responsive Design for Brand Development */
-@media (max-width: 1200px) {
-  .portfolio-item.brand-development {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    padding: 32px;
-  }
-  
-  .portfolio-item.brand-development .video-section:nth-child(3) {
-    grid-column: 1 / -1;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
 
-@media (max-width: 768px) {
-  .portfolio-item.brand-development {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 24px;
-  }
-  
-  .portfolio-item.brand-development .video-section:nth-child(3) {
-    grid-column: 1;
-    max-width: none;
-  }
-  
-  .portfolio-item.brand-development .video-thumbnail {
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-item.brand-development {
-    padding: 20px;
-    gap: 16px;
-  }
-  
-  .portfolio-item.brand-development .video-section {
-    padding: 20px;
-  }
-  
-  .portfolio-item.brand-development .video-thumbnail {
-    height: 160px;
-  }
-}
 
 /* ========================================
    CATEGORY BACKGROUNDS
@@ -738,7 +658,7 @@
   font-size: 2rem;
 }
 
-/* Enhanced Video Section Hover Effects */
+/* Enhanced Video Section Styling */
 .portfolio-item.brand-development .video-section {
   display: flex;
   flex-direction: column;
@@ -750,7 +670,10 @@
   border: 1px solid rgba(255, 178, 0, 0.2);
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
+  min-height: 400px;
+  width: 100% !important;
+  box-sizing: border-box;
 }
 
 .portfolio-item.brand-development .video-section::before {
@@ -932,4 +855,118 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Override Section Constraints for Brand Development */
+#portfolio {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#portfolio .section-header {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+}
+
+#portfolio .section-subtitle {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Brand Development Section - Full Width Override */
+.portfolio-category-section#portfolio-brand-development {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.portfolio-category-section#portfolio-brand-development .portfolio-category-title {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+}
+
+/* Brand Development Grid - Full Width Items - NO CONTAINER CONSTRAINTS */
+.portfolio-category-section#portfolio-brand-development .portfolio-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 32px;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 20px !important;
+}
+
+/* Additional Brand Development Expansion CSS */
+.portfolio-item.brand-development {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  border-radius: 24px;
+  border: 2px solid rgba(255, 178, 0, 0.3);
+  overflow: visible !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  min-height: 500px;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 40px !important;
+  box-sizing: border-box;
+}
+
+/* Ensure video sections can expand properly */
+.portfolio-item.brand-development .video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(99, 102, 241, 0.1));
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 178, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible !important;
+  min-height: 400px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Responsive grid that adapts to content */
+@media (min-width: 1200px) {
+  .portfolio-item.brand-development {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-item.brand-development {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px !important;
+  }
+  
+  .portfolio-item.brand-development .video-section:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-item.brand-development {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 20px !important;
+  }
+  
+  .portfolio-item.brand-development .video-section {
+    min-height: 350px;
+  }
 }
