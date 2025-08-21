@@ -819,7 +819,7 @@ class AirtableCMS {
     const normalizeWixImageUrl = (value) => {
       if (!isWixImageScheme(value)) return '';
       // Format: wix:image://v1/<mediaIdWithExt>/... -> https://static.wixstatic.com/media/<mediaIdWithExt>
-      const match = value.match(/^wix:image://v1\/([^/]+)/i);
+      const match = value.match(/^wix:image:\/\/v1\/([^\/]+)/i);
       return match && match[1] ? `https://static.wixstatic.com/media/${match[1]}` : '';
     };
     const normalizeGithub = (url) => {
