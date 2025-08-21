@@ -1252,11 +1252,13 @@
         new AINeuralNetwork();
         initializeServicePackageBuilder();
         initializeStripeIntegration();
+        setupCartEventListeners();
       });
     } else {
       new AINeuralNetwork();
       initializeServicePackageBuilder();
       initializeStripeIntegration();
+      setupCartEventListeners();
     }
 
     // ========================================
@@ -2380,9 +2382,204 @@
       }, 3000);
     }
 
+    // Stripe checkout processing
+    function processStripeCheckout() {
+      if (window.stripeCart.items.length === 0) {
+        showNotification('Your cart is empty!', 'error');
+        return;
+      }
+      
+      // Create line items for Stripe
+      const lineItems = window.stripeCart.items.map(item => ({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: item.name,
+            description: `${item.name} service`,
+          },
+          unit_amount: item.price * 100, // Stripe expects amounts in cents
+        },
+        quantity: item.quantity,
+      }));
+      
+      // For now, we'll use the manual order fallback since we don't have a Stripe backend
+      showManualCheckoutInstructions();
+    }
+    
+    // Show manual checkout instructions
+    function showManualCheckoutInstructions() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      `;
+      
+      const orderDetails = window.stripeCart.items.map(item => 
+        `${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toLocaleString()}`
+      ).join('\n');
+      
+      modal.innerHTML = `
+        <div style="
+          background: var(--dark-900);
+          border: var(--card-border);
+          border-radius: var(--radius-lg);
+          max-width: 500px;
+          width: 100%;
+          padding: 40px;
+          text-align: center;
+        ">
+          <h2 style="color: var(--text-primary); margin-bottom: 20px;">Complete Your Order</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 30px; line-height: 1.6;">
+            Total: <strong style="color: var(--brand-gold);">$${window.stripeCart.total.toLocaleString()}</strong>
+          </p>
+          <div style="
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            margin-bottom: 30px;
+            text-align: left;
+          ">
+            <h4 style="color: var(--text-primary); margin-bottom: 15px;">Order Summary:</h4>
+            <pre style="color: var(--text-secondary); font-family: monospace; white-space: pre-wrap;">${orderDetails}</pre>
+          </div>
+          <p style="color: var(--text-secondary); margin-bottom: 30px; line-height: 1.6;">
+            Please provide your contact information below and we'll process your order manually.
+          </p>
+          <div style="margin-bottom: 20px;">
+            <input type="text" id="manualName" placeholder="Your Name" required style="
+              width: 100%;
+              padding: 12px;
+              background: var(--dark-800);
+              border: 1px solid var(--card-border);
+              border-radius: var(--radius-md);
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            ">
+            <input type="email" id="manualEmail" placeholder="Your Email" required style="
+              width: 100%;
+              padding: 12px;
+              background: var(--dark-800);
+              border: 1px solid var(--card-border);
+              border-radius: var(--radius-md);
+              color: var(--text-primary);
+              margin-bottom: 10px;
+            ">
+            <input type="tel" id="manualPhone" placeholder="Your Phone (optional)" style="
+              width: 100%;
+              padding: 12px;
+              background: var(--dark-800);
+              border: 1px solid var(--card-border);
+              border-radius: var(--radius-md);
+              color: var(--text-primary);
+            ">
+          </div>
+          <div style="display: flex; gap: 15px; justify-content: center;">
+            <button onclick="this.closest('.modal-overlay').remove()" style="
+              padding: 12px 24px;
+              background: rgba(239, 68, 68, 0.1);
+              color: var(--brand-red);
+              border: 1px solid var(--brand-red);
+              border-radius: var(--radius-md);
+              cursor: pointer;
+              font-weight: 600;
+            ">
+              Close
+            </button>
+            <button onclick="submitManualOrder()" style="
+              padding: 12px 24px;
+              background: var(--brand-gold);
+              color: #000;
+              border: none;
+              border-radius: var(--radius-md);
+              cursor: pointer;
+              font-weight: 600;
+            ">
+              <i class="fas fa-paper-plane"></i>
+              Submit Order
+            </button>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+    }
+
+    // Setup cart event listeners
+    function setupCartEventListeners() {
+      // Cart toggle button
+      const cartToggle = document.getElementById('stripeCartToggle');
+      const cart = document.getElementById('stripeCart');
+      
+      if (cartToggle && cart) {
+        cartToggle.addEventListener('click', () => {
+          cart.classList.toggle('show');
+        });
+      }
+      
+      // Cart close button
+      const cartClose = document.getElementById('stripeCartClose');
+      if (cartClose && cart) {
+        cartClose.addEventListener('click', () => {
+          cart.classList.remove('show');
+        });
+      }
+      
+      // Cart checkout button
+      const cartCheckout = document.getElementById('stripeCartCheckout');
+      if (cartCheckout) {
+        cartCheckout.addEventListener('click', processStripeCheckout);
+      }
+      
+      // Cart clear button
+      const cartClear = document.getElementById('stripeCartClear');
+      if (cartClear) {
+        cartClear.addEventListener('click', clearStripeCart);
+      }
+      
+      // Service detail modal close button
+      const modalClose = document.getElementById('serviceDetailClose');
+      const modal = document.getElementById('serviceDetailModal');
+      
+      if (modalClose && modal) {
+        modalClose.addEventListener('click', () => {
+          modal.classList.remove('show');
+        });
+      }
+      
+      // Close modal when clicking outside
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('show');
+          }
+        });
+      }
+      
+      // Close cart when clicking outside
+      if (cart) {
+        cart.addEventListener('click', (e) => {
+          if (e.target === cart) {
+            cart.classList.remove('show');
+          }
+        });
+      }
+    }
+
     // Make functions globally available
     window.removeFromStripeCart = removeFromStripeCart;
     window.submitManualOrder = submitManualOrder;
+    window.processStripeCheckout = processStripeCheckout;
+    window.showManualCheckoutInstructions = showManualCheckoutInstructions;
   </script>
 </body>
 </html>
