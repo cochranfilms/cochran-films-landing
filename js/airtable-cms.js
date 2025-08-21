@@ -1247,41 +1247,64 @@ class AirtableCMS {
   }
 
   addVideoClickHandlers() {
-    // Add click handlers to video portfolio items - look for Airtable-generated items
-    const videoItems = document.querySelectorAll('[data-video-url], .video-item, .portfolio-item, .airtable-portfolio-item, [data-category="Video Production"]');
+    // Specifically target Video Production category items from Portfolio Airtable base
+    const videoProductionItems = document.querySelectorAll('[data-category="Video Production"], .portfolio-item[data-service-category="Video Production"], [data-service-category="Video Production"]');
     
-    // Also look for items that might contain video URLs
+    // Also look for items that contain video-related content or URLs
     const potentialVideoItems = document.querySelectorAll('.portfolio-item, .service-item, [class*="video"], [class*="portfolio"]');
     
     let totalVideoItems = 0;
     
-    // Process explicitly marked video items
-    videoItems.forEach(item => {
-      this.addVideoClickHandler(item);
-      totalVideoItems++;
-    });
-    
-    // Process potential video items by checking their content
-    potentialVideoItems.forEach(item => {
-      if (this.hasVideoContent(item)) {
+    // Process Video Production category items first
+    videoProductionItems.forEach(item => {
+      if (this.isVideoProductionItem(item)) {
         this.addVideoClickHandler(item);
         totalVideoItems++;
+        console.log(`🎬 Added video popup handler to: ${item.textContent?.substring(0, 50)}...`);
       }
     });
     
-    console.log(`🎬 Added click handlers to ${totalVideoItems} video items`);
+    // Process other potential video items by checking their content
+    potentialVideoItems.forEach(item => {
+      // Skip if already processed or if it's not a Video Production item
+      if (item.dataset.hasVideoHandler || !this.isVideoProductionItem(item)) return;
+      
+      if (this.hasVideoContent(item)) {
+        this.addVideoClickHandler(item);
+        totalVideoItems++;
+        console.log(`🎬 Added video popup handler to potential video item: ${item.textContent?.substring(0, 50)}...`);
+      }
+    });
+    
+    console.log(`🎬 Added click handlers to ${totalVideoItems} Video Production items`);
     
     // Debug: log what we found
     if (totalVideoItems === 0) {
-      console.log('🔍 Debug: No video items found. Available elements:', {
-        'data-video-url': document.querySelectorAll('[data-video-url]').length,
-        'video-item': document.querySelectorAll('.video-item').length,
-        'portfolio-item': document.querySelectorAll('.portfolio-item').length,
-        'airtable-portfolio-item': document.querySelectorAll('.airtable-portfolio-item').length,
+      console.log('🔍 Debug: No Video Production items found. Available elements:', {
         'Video Production category': document.querySelectorAll('[data-category="Video Production"]').length,
-        'potential items': potentialVideoItems.length
+        'Video Production service category': document.querySelectorAll('[data-service-category="Video Production"]').length,
+        'portfolio items': document.querySelectorAll('.portfolio-item').length,
+        'total portfolio data': this.portfolioData?.filter(item => item.ServiceCategory === 'Video Production').length || 0
       });
     }
+  }
+
+  isVideoProductionItem(item) {
+    // Check if this item belongs to Video Production category
+    const category = item.dataset.category || item.dataset.serviceCategory || '';
+    const textContent = item.textContent?.toLowerCase() || '';
+    
+    // Check explicit category markers
+    if (category === 'Video Production') return true;
+    
+    // Check if item contains video-related text
+    const videoKeywords = ['video', 'production', 'film', 'cinematic', 'editing', 'post-production'];
+    const hasVideoKeywords = videoKeywords.some(keyword => textContent.includes(keyword));
+    
+    // Check if item has video URLs or playback URLs
+    const hasVideoUrls = item.querySelector('[data-video-url], [data-playback-url], video, [src*=".mp4"], [src*=".mov"]');
+    
+    return hasVideoKeywords || hasVideoUrls;
   }
 
   hasVideoContent(item) {
@@ -1384,13 +1407,42 @@ class AirtableCMS {
     const elementText = element.textContent?.toLowerCase() || '';
     const elementTitle = element.querySelector('.title, .project-title, h3, h4, .portfolio-title')?.textContent || '';
     
+    // Prioritize Video Production items from Portfolio Airtable base
+    const videoProductionItems = this.portfolioData?.filter(item => 
+      item.ServiceCategory === 'Video Production' || item.Category === 'Video Production'
+    ) || [];
+    
+    // First, try to find exact matches in Video Production category
+    const exactMatch = videoProductionItems.find(item => {
+      const itemTitle = item.Title?.toLowerCase() || '';
+      return itemTitle && elementTitle.toLowerCase().includes(itemTitle.toLowerCase());
+    });
+    
+    if (exactMatch) {
+      console.log(`🎬 Found exact Video Production match: ${exactMatch.Title}`);
+      return exactMatch;
+    }
+    
+    // Then try to find by content similarity in Video Production category
+    const contentMatch = videoProductionItems.find(item => {
+      const itemTitle = item.Title?.toLowerCase() || '';
+      const itemDescription = item.Description?.toLowerCase() || '';
+      
+      return (itemTitle && elementText.includes(itemTitle.toLowerCase())) ||
+             (itemDescription && elementText.includes(itemDescription.toLowerCase()));
+    });
+    
+    if (contentMatch) {
+      console.log(`🎬 Found Video Production content match: ${contentMatch.Title}`);
+      return contentMatch;
+    }
+    
+    // Fallback to any portfolio item
     return this.portfolioData?.find(item => {
       const itemTitle = item.Title?.toLowerCase() || '';
       const itemCategory = item.Category?.toLowerCase() || '';
       
-      // Check if this element matches the portfolio item
       return (itemTitle && elementTitle.toLowerCase().includes(itemTitle.toLowerCase())) ||
-             (itemCategory === 'video production' && elementText.includes('video')) ||
              (itemTitle && elementText.includes(itemTitle.toLowerCase()));
     });
   }
