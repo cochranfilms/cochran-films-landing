@@ -36,12 +36,10 @@ class AirtableCache {
       
       // Check if cache is expired
       if (data.expiresAt && Date.now() > data.expiresAt) {
-        console.log(`🗑️ Cache expired for ${category}, removing...`);
         this.remove(category);
         return null;
       }
       
-      console.log(`✅ Cache hit for ${category} (${data.records?.length || 0} records)`);
       return data;
       
     } catch (error) {
@@ -66,12 +64,10 @@ class AirtableCache {
       
       // Check cache size before storing
       if (this.getCacheSize() > this.maxCacheSize) {
-        console.log('🧹 Cache size limit reached, cleaning up...');
         this.cleanupOldestCache();
       }
       
       localStorage.setItem(key, JSON.stringify(cacheData));
-      console.log(`💾 Cached ${category} data (expires in ${Math.round(ttl/1000/60)} minutes)`);
       
       // Store cache metadata for management
       this.updateCacheMetadata(category, cacheData);
@@ -98,7 +94,6 @@ class AirtableCache {
       const key = this.getCacheKey(category);
       localStorage.removeItem(key);
       this.removeCacheMetadata(category);
-      console.log(`🗑️ Removed cache for ${category}`);
     } catch (error) {
       console.warn(`⚠️ Cache removal error for ${category}:`, error);
     }
@@ -114,8 +109,6 @@ class AirtableCache {
       
       // Clear cache metadata
       localStorage.removeItem('airtable_cache_metadata');
-      
-      console.log(`🧹 Cleared ${keys.length} cached items`);
     } catch (error) {
       console.warn('⚠️ Cache clear error:', error);
     }
@@ -204,7 +197,7 @@ class AirtableCache {
       });
       
       if (cleanedCount > 0) {
-        console.log(`🧹 Cleaned up ${cleanedCount} expired cache entries`);
+  
       }
     } catch (error) {
       console.warn('⚠️ Cache cleanup error:', error);
@@ -227,7 +220,7 @@ class AirtableCache {
         this.remove(category);
       });
       
-      console.log(`🧹 Cleaned up ${toRemove} oldest cache entries`);
+
     } catch (error) {
       console.warn('⚠️ Oldest cache cleanup error:', error);
     }
@@ -297,7 +290,7 @@ class AirtableCMS {
   }
   
   async init() {
-    console.log('🚀 Initializing Airtable CMS with caching...');
+
     
     try {
       // Show initial loading state
@@ -308,7 +301,7 @@ class AirtableCMS {
       const hasValidCache = Object.values(cacheStatus).some(status => status.cached && !status.isExpired);
       
       if (hasValidCache) {
-        console.log('📦 Found valid cache, loading portfolio immediately...');
+  
         // Load portfolio data from cache first
         await this.loadAllPortfolioData();
         
@@ -320,7 +313,7 @@ class AirtableCMS {
         // Warm up cache in background for next time
         this.warmupCache();
       } else {
-        console.log('🔄 No valid cache found, loading fresh data...');
+  
         // Load portfolio data first
         await this.loadAllPortfolioData();
         
@@ -358,8 +351,6 @@ class AirtableCMS {
   }
   
   async loadAllPortfolioData() {
-    console.log('📊 Loading portfolio data from unified API...');
-    
     try {
       this.showPortfolioLoadingState();
       
@@ -368,7 +359,6 @@ class AirtableCMS {
       const hasValidCache = Object.values(cacheStatus).some(status => status.cached && !status.isExpired);
       
       if (hasValidCache) {
-        console.log('📦 Found valid cache, loading portfolio immediately...');
         // Load portfolio data from cache first
         await this.loadPortfolioFromCache();
         
@@ -380,7 +370,6 @@ class AirtableCMS {
         // Warm up cache in background for next time
         this.warmupCache();
       } else {
-        console.log('🔄 No valid cache found, loading fresh data from unified API...');
         // Load portfolio data from unified API
         await this.loadPortfolioFromUnifiedAPI();
         
@@ -407,7 +396,6 @@ class AirtableCMS {
    */
   async loadPortfolioFromUnifiedAPI() {
     try {
-      console.log('🔗 Calling unified portfolio API...');
       const startTime = performance.now();
       
       const response = await fetch(`${this.apiBase}/api/airtable/portfolio`);
@@ -417,19 +405,10 @@ class AirtableCMS {
       }
       
       const data = await response.json();
-      const loadTime = performance.now() - startTime;
-      
-      console.log(`✅ Unified API loaded ${data.totalRecords} total records in ${loadTime.toFixed(2)}ms`);
-      console.log(`📊 Categories loaded: ${data.categories.join(', ')}`);
       
       if (data.errors && data.errors.length > 0) {
         console.warn('⚠️ Some categories had errors:', data.errors);
-        console.log('🔍 Full error details:', data.errors);
       }
-      
-      // Debug: Check what categories are actually in the data
-      console.log('🔍 Available categories in data:', Object.keys(data.data || {}));
-      console.log('🔍 Data structure:', data.data);
       
       // Transform and combine all data
       this.portfolioData = [];
@@ -441,19 +420,14 @@ class AirtableCMS {
           
           // Cache each category separately for granular control
           this.cache.set(category, categoryData, this.getCategoryCacheTTL(category));
-          console.log(`💾 Cached ${category} with ${transformedRecords.length} transformed records`);
         }
       });
       
-      console.log(`📈 Total portfolio items after transformation: ${this.portfolioData.length}`);
-      
       // Check if Brand Development is missing and try to load it individually
       if (!data.data['Brand Development'] || !data.data['Brand Development'].records) {
-        console.log('🔄 Brand Development missing from unified API, trying individual call...');
         try {
           const brandData = await this.loadAirtableData('Brand Development');
           if (brandData && brandData.length > 0) {
-            console.log(`✅ Loaded ${brandData.length} Brand Development items individually`);
             this.portfolioData.push(...brandData.map(item => ({ ...item, ServiceCategory: 'Brand Development' })));
           }
         } catch (brandError) {
@@ -465,7 +439,6 @@ class AirtableCMS {
       console.error('❌ Failed to load from unified API:', error);
       
       // Fallback to individual API calls if unified endpoint fails
-      console.log('🔄 Falling back to individual API calls...');
       await this.loadPortfolioFromIndividualAPIs();
     }
   }
@@ -474,8 +447,6 @@ class AirtableCMS {
    * Load portfolio data from individual API endpoints (fallback method)
    */
   async loadPortfolioFromIndividualAPIs() {
-    console.log('📊 Loading portfolio data from individual APIs (fallback)...');
-    
     try {
       // Load data from all four Airtable bases
       const [videoData, webData, photoData, brandData] = await Promise.all([
@@ -493,13 +464,6 @@ class AirtableCMS {
         ...brandData.map(item => ({ ...item, ServiceCategory: 'Brand Development' }))
       ];
       
-      console.log(`📈 Loaded ${this.portfolioData.length} total items from individual APIs:`, {
-        'Video Production': videoData.length,
-        'Web Development': webData.length,
-        'Photography': photoData.length,
-        'Brand Development': brandData.length
-      });
-      
     } catch (error) {
       console.error('❌ Failed to load from individual APIs:', error);
       throw error;
@@ -510,8 +474,6 @@ class AirtableCMS {
    * Load portfolio data from cache
    */
   async loadPortfolioFromCache() {
-    console.log('📦 Loading portfolio data from cache...');
-    
     try {
       const categories = Object.keys(this.bases);
       this.portfolioData = [];
@@ -521,11 +483,11 @@ class AirtableCMS {
         if (cachedData && cachedData.data && cachedData.data.records) {
           const transformedRecords = this.transformAirtableData(cachedData.data.records, category);
           this.portfolioData.push(...transformedRecords);
-          console.log(`📦 Loaded ${transformedRecords.length} ${category} items from cache`);
+  
         }
       });
       
-      console.log(`📈 Total portfolio items loaded from cache: ${this.portfolioData.length}`);
+
       
     } catch (error) {
       console.error('❌ Failed to load from cache:', error);
@@ -543,20 +505,14 @@ class AirtableCMS {
     }
     
     try {
-      console.log(`📥 Loading ${category} data...`);
-      
       // Check cache first
       const cachedData = this.cache.get(category);
       if (cachedData) {
-        console.log(`✅ Serving ${category} from cache (${cachedData.data?.records?.length || 0} records)`);
         return this.transformAirtableData(cachedData.data.records || [], category);
       }
       
-      console.log(`🔄 Cache miss for ${category}, fetching from Airtable...`);
-      
       // Try to fetch from your Vercel environment
       const apiEndpoint = `${this.apiBase}/api/airtable/${category.toLowerCase().replace(' ', '-')}`;
-      console.log(`🔗 Calling API endpoint: ${apiEndpoint}`);
       
       const startTime = performance.now();
       const response = await fetch(apiEndpoint, {
@@ -573,9 +529,6 @@ class AirtableCMS {
       }
       
       const data = await response.json();
-      const loadTime = performance.now() - startTime;
-      
-      console.log(`✅ Loaded ${data.records?.length || 0} records for ${category} in ${loadTime.toFixed(2)}ms`);
       
       // Cache the successful response with category-specific TTL
       const cacheTTL = this.getCategoryCacheTTL(category);
@@ -590,7 +543,6 @@ class AirtableCMS {
       // Try to serve stale cache if available (graceful degradation)
       const staleCache = this.getStaleCache(category);
       if (staleCache) {
-        console.log(`⚠️ Serving stale cache for ${category} due to API failure`);
         return this.transformAirtableData(staleCache.data.records || [], category);
       }
       
@@ -628,7 +580,6 @@ class AirtableCMS {
       // Allow stale cache up to 2 hours old for fallback
       const maxStaleAge = 2 * 60 * 60 * 1000; // 2 hours
       if (data.cachedAt && (Date.now() - data.cachedAt) < maxStaleAge) {
-        console.log(`📦 Found stale cache for ${category} (${Math.round((Date.now() - data.cachedAt) / 1000 / 60)} minutes old)`);
         return data;
       }
       
@@ -640,8 +591,6 @@ class AirtableCMS {
   }
   
   transformAirtableData(records, category) {
-    console.log(`🔄 Transforming ${records.length} records for ${category}...`);
-    
     const transformedRecords = records.map(record => {
       const fields = record.fields;
       
@@ -718,7 +667,6 @@ class AirtableCMS {
               return transformedItem;
       }).filter(Boolean); // Remove null items
     
-    console.log(`✅ Transformed ${transformedRecords.length} valid records for ${category}`);
     return transformedRecords;
     }
   
@@ -774,11 +722,11 @@ class AirtableCMS {
   }
   
   async refreshData() {
-    console.log('🔄 Refreshing Airtable data...');
+
     try {
       await this.loadAllPortfolioData();
       this.renderPortfolioByCategory();
-      console.log('✅ Data refreshed successfully');
+
     } catch (error) {
       console.error('❌ Failed to refresh data:', error);
       this.showPortfolioErrorState();
@@ -786,7 +734,7 @@ class AirtableCMS {
   }
   
   initializePortfolioSystem() {
-    console.log('🎨 Initializing portfolio system with Airtable data...');
+
     
     // Set up the existing portfolio functionality
     this.setupPortfolioDisplay();
@@ -905,7 +853,6 @@ class AirtableCMS {
   }
 
   createPortfolioItem(item) {
-    console.log('🎬 Creating portfolio item:', item.Title, 'Category:', item.ServiceCategory);
     
     const isFeatured = item['Is Featured'] === true || item['Is Featured'] === 'true';
     
@@ -1060,8 +1007,6 @@ class AirtableCMS {
       return;
     }
     
-    console.log('🎨 Rendering portfolio with', this.portfolioData.length, 'total items');
-    
     // Render each service category separately
     Object.entries(this.categoryGrids).forEach(([serviceCategory, gridId]) => {
       const grid = document.getElementById(gridId);
@@ -1074,8 +1019,6 @@ class AirtableCMS {
       const categoryItems = this.portfolioData.filter(item => 
         item.ServiceCategory === serviceCategory
       );
-      
-      console.log(`Category: ${serviceCategory}, Items found: ${categoryItems.length}`);
 
       // Show initial items
       const itemsToShow = categoryItems.slice(0, this.itemsPerCategory);
@@ -1322,7 +1265,7 @@ class AirtableCMS {
       }
       
       const csvText = await response.text();
-      console.log(`✅ CSV loaded: ${filePath}, length: ${csvText.length}`);
+
       
       // Use robust CSV parsing for fallback
       const { rows } = this.parseCSVRows(csvText);
@@ -1392,7 +1335,7 @@ class AirtableCMS {
           rows.push(obj);
         }
       }
-      console.log(`📊 Parsed ${rows.length} items from CSV (robust parser)`);
+
       return { headers, rows };
     } catch (error) {
       console.error('❌ CSV parsing error (robust):', error);
@@ -1403,15 +1346,12 @@ class AirtableCMS {
   // ===== VIDEO POPUP SYSTEM =====
   
   initializeVideoPopups() {
-    console.log('🎥 Initializing video popup system...');
-    
     // Check if there are any Video Production items before initializing
     const hasVideoProductionItems = this.portfolioData?.some(item => 
       item.ServiceCategory === 'Video Production' || item.Category === 'Video Production'
     );
     
     if (!hasVideoProductionItems) {
-      console.log('🎥 No Video Production items found, skipping video popup initialization');
       return;
     }
     
@@ -1835,27 +1775,19 @@ class AirtableCMS {
   }
 
   addVideoClickHandlers() {
-    console.log('🎬 Starting to add video click handlers...');
-    
     // Only target Video Production category items from Portfolio Airtable base
     const videoProductionItems = document.querySelectorAll('[data-video-production="true"], [data-service-category="Video Production"], .portfolio-item[data-service-category="Video Production"]');
     
-    console.log('🎬 Found video production items:', videoProductionItems.length);
-    
     // Also look for items that contain video-related content or URLs
     const potentialVideoItems = document.querySelectorAll('.portfolio-item, .service-item, [class*="video"], [class*="portfolio"]');
-    
-    console.log('🎬 Found potential video items:', potentialVideoItems.length);
     
     let totalVideoItems = 0;
     
     // Process Video Production category items first
     videoProductionItems.forEach(item => {
-      console.log('🎬 Processing video production item:', item.dataset.serviceCategory, item.dataset.category);
       if (this.isVideoProductionItem(item)) {
         this.addVideoClickHandler(item);
         totalVideoItems++;
-        console.log(`🎬 Added video popup handler to Video Production item: ${item.textContent?.substring(0, 50)}...`);
       }
     });
     
@@ -1867,35 +1799,22 @@ class AirtableCMS {
       // Only add handlers to items that are actually Video Production category
       const serviceCategory = item.dataset.serviceCategory || item.dataset.category;
       if (serviceCategory && serviceCategory !== 'Video Production') {
-        console.log('🎬 Skipping non-Video Production item:', serviceCategory);
         return;
       }
       
       // Additional safety check: verify this is actually a Video Production item from portfolio data
       const portfolioItem = this.findPortfolioItemByElement(item);
       if (portfolioItem && portfolioItem.ServiceCategory !== 'Video Production' && portfolioItem.Category !== 'Video Production') {
-        console.log('🎬 Skipping item with non-Video Production portfolio data:', portfolioItem.ServiceCategory);
         return;
       }
       
       if (this.hasVideoContent(item)) {
         this.addVideoClickHandler(item);
         totalVideoItems++;
-        console.log(`🎬 Added video popup handler to potential video item: ${item.textContent?.substring(0, 50)}...`);
       }
     });
     
-    console.log(`🎬 Added click handlers to ${totalVideoItems} Video Production items`);
-    
-    // Debug: log what we found
-    if (totalVideoItems === 0) {
-      console.log('🔍 Debug: No Video Production items found. Available elements:', {
-        'data-video-production': document.querySelectorAll('[data-video-production="true"]').length,
-        'Video Production service category': document.querySelectorAll('[data-service-category="Video Production"]').length,
-        'portfolio items': document.querySelectorAll('.portfolio-item').length,
-        'total portfolio data': this.portfolioData?.filter(item => item.ServiceCategory === 'Video Production').length || 0
-      });
-    }
+
   }
 
   isVideoProductionItem(item) {
@@ -1904,34 +1823,22 @@ class AirtableCMS {
     const serviceCategory = item.dataset.serviceCategory;
     const category = item.dataset.category;
     
-    console.log('🔍 Checking if item is Video Production:', {
-      isVideoProduction,
-      serviceCategory,
-      category,
-      element: item
-    });
-    
     // Check explicit Video Production markers - these take priority
     if (isVideoProduction) {
-      console.log('✅ Item marked as video production');
       return true;
     }
     if (serviceCategory === 'Video Production') {
-      console.log('✅ Item has Video Production service category');
       return true;
     }
     if (category === 'Video Production') {
-      console.log('✅ Item has Video Production category');
       return true;
     }
     
     // If we have a category that's NOT Video Production, return false
     if (serviceCategory && serviceCategory !== 'Video Production') {
-      console.log('❌ Item has non-Video Production service category:', serviceCategory);
       return false;
     }
     if (category && category !== 'Video Production') {
-      console.log('❌ Item has non-Video Production category:', category);
       return false;
     }
     
@@ -1946,15 +1853,7 @@ class AirtableCMS {
     const hasVideoUrls = item.querySelector('[data-video-url], [data-playback-url], video, [src*=".mp4"], [src*=".mov"]');
     const hasPlaybackUrl = item.dataset.playbackUrl;
     
-    const result = hasVideoKeywords || hasVideoUrls || hasPlaybackUrl;
-    console.log('🔍 Content-based check result:', {
-      hasVideoKeywords,
-      hasVideoUrls,
-      hasPlaybackUrl,
-      result
-    });
-    
-    return result;
+    return hasVideoKeywords || hasVideoUrls || hasPlaybackUrl;
   }
 
   hasVideoContent(item) {
@@ -1972,7 +1871,6 @@ class AirtableCMS {
     
     // Additional safety check: ensure this is actually a Video Production item
     if (!this.isVideoProductionItem(item)) {
-      console.log('⚠️ Skipping non-Video Production item:', item);
       return;
     }
     
@@ -2003,8 +1901,6 @@ class AirtableCMS {
   }
 
   extractVideoData(item) {
-    console.log('🔍 Extracting video data from item:', item);
-    
     // Try to extract video data from various sources
     let videoUrl = item.dataset.videoUrl || 
                    item.querySelector('[data-video-url]')?.dataset.videoUrl ||
@@ -2018,19 +1914,16 @@ class AirtableCMS {
       const portfolioItem = this.findPortfolioItemByElement(item);
       if (portfolioItem) {
         videoUrl = portfolioItem.playbackUrl || portfolioItem.URL || portfolioItem['Video'];
-        console.log('📹 Found video URL from portfolio data:', videoUrl);
       }
     }
 
     if (!videoUrl) {
-      console.log('❌ No video URL found for item');
       return null;
     }
 
     // Additional check: ensure this is actually a Video Production item
     const portfolioItem = this.findPortfolioItemByElement(item);
     if (portfolioItem && portfolioItem.ServiceCategory !== 'Video Production' && portfolioItem.Category !== 'Video Production') {
-      console.log('❌ Item is not Video Production category:', portfolioItem.ServiceCategory);
       return null;
     }
 
@@ -2045,13 +1938,6 @@ class AirtableCMS {
     
     // Look for additional data in the portfolio
     const portfolioItemData = this.findPortfolioItemByVideoUrl(videoUrl) || portfolioItem;
-    
-    console.log('📊 Extracted video data:', {
-      title: portfolioItemData?.Title || title,
-      description: portfolioItemData?.Description || description,
-      videoUrl: videoUrl,
-      category: portfolioItemData?.Category || 'Video Production'
-    });
     
     return {
       title: portfolioItemData?.Title || title,
@@ -2082,7 +1968,6 @@ class AirtableCMS {
     });
     
     if (exactMatch) {
-      console.log(`🎬 Found exact Video Production match: ${exactMatch.Title}`);
       return exactMatch;
     }
     
@@ -2096,7 +1981,6 @@ class AirtableCMS {
     });
     
     if (contentMatch) {
-      console.log(`🎬 Found Video Production content match: ${contentMatch.Title}`);
       return contentMatch;
     }
     
@@ -2121,7 +2005,6 @@ class AirtableCMS {
   openVideoPopup(videoData) {
     // Final safety check: only open for Video Production items
     if (videoData.category && videoData.category.toLowerCase() !== 'video production') {
-      console.log('⚠️ Video popup blocked for non-Video Production category:', videoData.category);
       return;
     }
     
@@ -2255,7 +2138,7 @@ class AirtableCMS {
    */
   clearCache() {
     this.cache.clear();
-    console.log('🧹 All Airtable cache cleared');
+
   }
 
   /**
@@ -2263,14 +2146,14 @@ class AirtableCMS {
    */
   clearCategoryCache(category) {
     this.cache.remove(category);
-    console.log(`🧹 Cache cleared for ${category}`);
+    
   }
 
   /**
    * Force refresh data for a specific category (bypass cache)
    */
   async forceRefreshCategory(category) {
-    console.log(`🔄 Force refreshing ${category} data...`);
+    
     this.cache.remove(category);
     return await this.loadAirtableData(category);
   }
@@ -2309,12 +2192,12 @@ class AirtableCMS {
    * Preload all categories into cache (useful for initial page load)
    */
   async preloadCache() {
-    console.log('🚀 Preloading all categories into cache...');
+
     const categories = Object.keys(this.bases);
     
     try {
       await Promise.all(categories.map(category => this.loadAirtableData(category)));
-      console.log('✅ Cache preload completed');
+
     } catch (error) {
       console.warn('⚠️ Cache preload had some issues:', error);
     }
@@ -2324,21 +2207,17 @@ class AirtableCMS {
    * Warm up cache with background refresh
    */
   async warmupCache() {
-    console.log('🔥 Warming up cache in background...');
-    
     // Don't block the UI, run in background
     setTimeout(async () => {
       try {
         // Use unified API for cache warming
         await this.loadPortfolioFromUnifiedAPI();
-        console.log('✅ Cache warmup completed in background using unified API');
       } catch (error) {
         console.warn('⚠️ Background cache warmup failed:', error);
         
         // Fallback to individual APIs if unified fails
         try {
           await this.loadPortfolioFromIndividualAPIs();
-          console.log('✅ Cache warmup completed using individual APIs (fallback)');
         } catch (fallbackError) {
           console.warn('⚠️ Fallback cache warmup also failed:', fallbackError);
         }
@@ -2352,11 +2231,6 @@ class AirtableCMS {
   logCachePerformance() {
     const stats = this.getCacheStats();
     const status = this.getCacheStatus();
-    
-    console.log('📊 Cache Performance Summary:');
-    console.log(`   Total entries: ${stats.totalEntries}`);
-    console.log(`   Valid entries: ${stats.validEntries}`);
-    console.log(`   Cache size: ${stats.totalSizeMB}MB / ${stats.maxSizeMB}MB`);
     
     Object.entries(status).forEach(([category, info]) => {
       const statusIcon = info.cached ? (info.isExpired ? '⚠️' : '✅') : '❌';
@@ -2471,7 +2345,7 @@ class AirtableCMS {
       // Ctrl+Shift+R to refresh with cache clear
       if (e.ctrlKey && e.shiftKey && e.key === 'R') {
         e.preventDefault();
-        console.log('🔄 Force refresh with cache clear (Ctrl+Shift+R)');
+  
         this.clearCache();
         this.refreshData();
       }
@@ -2479,14 +2353,14 @@ class AirtableCMS {
       // Ctrl+Shift+T to run performance test
       if (e.ctrlKey && e.shiftKey && e.key === 'T') {
         e.preventDefault();
-        console.log('🚀 Running performance test (Ctrl+Shift+T)...');
+
         this.runPerformanceTest();
       }
 
       // Ctrl+Shift+U to run unified API performance test
       if (e.ctrlKey && e.shiftKey && e.key === 'U') {
         e.preventDefault();
-        console.log('🔗 Running unified API performance test (Ctrl+Shift+U)...');
+
         this.runUnifiedAPITest();
       }
     });
@@ -2496,8 +2370,6 @@ class AirtableCMS {
    * Run performance test to demonstrate caching benefits
    */
   async runPerformanceTest() {
-    console.log('🚀 Running cache performance test...');
-    
     const testCategory = 'Video Production';
     const iterations = 3;
     const results = {
@@ -2506,17 +2378,14 @@ class AirtableCMS {
     };
     
     // Test with cache (should be fast)
-    console.log('📊 Testing with cache...');
     for (let i = 0; i < iterations; i++) {
       const start = performance.now();
       await this.loadAirtableData(testCategory);
       const end = performance.now();
       results.withCache.push(end - start);
-      console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
     }
     
     // Clear cache and test without cache (should be slower)
-    console.log('📊 Testing without cache...');
     this.cache.remove(testCategory);
     
     for (let i = 0; i < iterations; i++) {
@@ -2524,18 +2393,12 @@ class AirtableCMS {
       await this.loadAirtableData(testCategory);
       const end = performance.now();
       results.withoutCache.push(end - start);
-      console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
     }
     
     // Calculate averages
     const avgWithCache = results.withCache.reduce((a, b) => a + b, 0) / results.withCache.length;
     const avgWithoutCache = results.withoutCache.reduce((a, b) => a + b, 0) / results.withoutCache.length;
     const improvement = ((avgWithoutCache - avgWithCache) / avgWithoutCache * 100).toFixed(1);
-    
-    console.log('📈 Performance Test Results:');
-    console.log(`   With Cache: ${avgWithCache.toFixed(2)}ms average`);
-    console.log(`   Without Cache: ${avgWithoutCache.toFixed(2)}ms average`);
-    console.log(`   Performance Improvement: ${improvement}% faster with cache`);
     
     // Show results in UI
     this.showPerformanceResults(avgWithCache, avgWithoutCache, improvement);
@@ -2547,8 +2410,6 @@ class AirtableCMS {
    * Run unified API performance test
    */
   async runUnifiedAPITest() {
-    console.log('🚀 Running unified API performance test...');
-    
     const iterations = 3;
     const results = {
       unifiedAPI: [],
@@ -2556,31 +2417,25 @@ class AirtableCMS {
     };
     
     // Test unified API performance
-    console.log('📊 Testing unified API...');
     for (let i = 0; i < iterations; i++) {
       const start = performance.now();
       try {
         await this.loadPortfolioFromUnifiedAPI();
         const end = performance.now();
         results.unifiedAPI.push(end - start);
-        console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
       } catch (error) {
-        console.log(`   Iteration ${i + 1}: Failed - ${error.message}`);
         results.unifiedAPI.push(null);
       }
     }
     
     // Test individual APIs performance
-    console.log('📊 Testing individual APIs...');
     for (let i = 0; i < iterations; i++) {
       const start = performance.now();
       try {
         await this.loadPortfolioFromIndividualAPIs();
         const end = performance.now();
         results.individualAPIs.push(end - start);
-        console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
       } catch (error) {
-        console.log(`   Iteration ${i + 1}: Failed - ${error.message}`);
         results.individualAPIs.push(null);
       }
     }
@@ -2590,18 +2445,12 @@ class AirtableCMS {
     const validIndividual = results.individualAPIs.filter(time => time !== null);
     
     if (validUnified.length === 0 || validIndividual.length === 0) {
-      console.log('❌ Performance test failed - insufficient valid results');
       return null;
     }
     
     const avgUnified = validUnified.reduce((a, b) => a + b, 0) / validUnified.length;
     const avgIndividual = validIndividual.reduce((a, b) => a + b, 0) / validIndividual.length;
     const improvement = ((avgIndividual - avgUnified) / avgIndividual * 100).toFixed(1);
-    
-    console.log('📈 Unified API Performance Test Results:');
-    console.log(`   Unified API: ${avgUnified.toFixed(2)}ms average`);
-    console.log(`   Individual APIs: ${avgIndividual.toFixed(2)}ms average`);
-    console.log(`   Performance Improvement: ${improvement}% faster with unified API`);
     
     // Show results in UI
     this.showUnifiedAPIPerformanceResults(avgUnified, avgIndividual, improvement);
@@ -2771,7 +2620,7 @@ window.airtableCacheDebug = {
   clearAll: () => {
     if (window.airtableCMS) {
       window.airtableCMS.clearCache();
-      console.log('🧹 All cache cleared via debug function');
+
     }
   },
   
@@ -2779,7 +2628,7 @@ window.airtableCacheDebug = {
   clearCategory: (category) => {
     if (window.airtableCMS) {
       window.airtableCMS.clearCategoryCache(category);
-      console.log(`🧹 Cache cleared for ${category} via debug function`);
+
     }
   },
   
@@ -2826,7 +2675,7 @@ window.airtableCacheDebug = {
 window.refreshAirtableData = function(clearCache = false) {
   if (window.airtableCMS) {
     if (clearCache) {
-      console.log('🔄 Refreshing with cache clear...');
+
       window.airtableCMS.clearCache();
     }
     window.airtableCMS.refreshData();
