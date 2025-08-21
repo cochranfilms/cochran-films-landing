@@ -34,17 +34,23 @@ class AirtableCMS {
     console.log('🚀 Initializing Airtable CMS...');
     
     try {
-      // Load all portfolio data from Airtable
+      // Load portfolio data first
       await this.loadAllPortfolioData();
       
-      // Initialize the existing portfolio system with Airtable data
-      this.initializePortfolioSystem();
+      // Set up the existing portfolio functionality
+      this.setupPortfolioDisplay();
+      this.setupEventHandlers();
       
-      console.log('✅ Airtable CMS initialized successfully');
+      // Render the portfolio first
+      this.renderPortfolioByCategory();
+      
+      // Initialize video popup system AFTER portfolio is rendered
+      setTimeout(() => {
+        this.initializeVideoPopups();
+      }, 200);
+      
     } catch (error) {
-      console.error('❌ Failed to initialize Airtable CMS:', error);
-      // Do not fallback to CSV. Show an explicit error state.
-      this.showPortfolioErrorState();
+      console.error('❌ Error during initialization:', error);
     }
   }
   
@@ -524,11 +530,6 @@ class AirtableCMS {
       // Add click handlers for portfolio items
       this.addPortfolioItemClickHandlers(grid);
     });
-    
-    // After portfolio is rendered, re-initialize video popups
-    setTimeout(() => {
-      this.initializeVideoPopups();
-    }, 100);
   }
   
   addPortfolioItemClickHandlers(grid) {
@@ -832,6 +833,16 @@ class AirtableCMS {
   initializeVideoPopups() {
     console.log('🎥 Initializing video popup system...');
     
+    // Check if there are any Video Production items before initializing
+    const hasVideoProductionItems = this.portfolioData?.some(item => 
+      item.ServiceCategory === 'Video Production' || item.Category === 'Video Production'
+    );
+    
+    if (!hasVideoProductionItems) {
+      console.log('🎥 No Video Production items found, skipping video popup initialization');
+      return;
+    }
+    
     // Create video popup container if it doesn't exist
     this.createVideoPopupContainer();
     
@@ -915,16 +926,13 @@ class AirtableCMS {
                 
                 <div class="ai-recommendation">
                   <h4>Based on this project, we recommend:</h4>
-                  <div class="recommendation-tags">
-                    <span class="tag">Video Production</span>
-                    <span class="tag">Post-Production</span>
-                    <span class="tag">Color Grading</span>
-                    <span class="tag">Sound Design</span>
+                  <div id="recommendationTags" class="recommendation-tags">
+                    <!-- Dynamic recommendations will be populated here -->
                   </div>
                 </div>
                 
                 <div class="ai-cta">
-                  <button class="ai-cta-btn primary" onclick="window.airtableCMS.openContactForm('video-production')">
+                  <button id="aiCtaBtn" class="ai-cta-btn primary">
                     <i class="fas fa-play"></i> Start Your Project
                   </button>
                   <button class="ai-cta-btn secondary" onclick="window.airtableCMS.scheduleConsultation()">
@@ -1255,16 +1263,23 @@ class AirtableCMS {
   }
 
   addVideoClickHandlers() {
-    // Specifically target Video Production category items from Portfolio Airtable base
+    console.log('🎬 Starting to add video click handlers...');
+    
+    // Only target Video Production category items from Portfolio Airtable base
     const videoProductionItems = document.querySelectorAll('[data-video-production="true"], [data-service-category="Video Production"], .portfolio-item[data-service-category="Video Production"]');
+    
+    console.log('🎬 Found video production items:', videoProductionItems.length);
     
     // Also look for items that contain video-related content or URLs
     const potentialVideoItems = document.querySelectorAll('.portfolio-item, .service-item, [class*="video"], [class*="portfolio"]');
+    
+    console.log('🎬 Found potential video items:', potentialVideoItems.length);
     
     let totalVideoItems = 0;
     
     // Process Video Production category items first
     videoProductionItems.forEach(item => {
+      console.log('🎬 Processing video production item:', item.dataset.serviceCategory, item.dataset.category);
       if (this.isVideoProductionItem(item)) {
         this.addVideoClickHandler(item);
         totalVideoItems++;
@@ -1276,6 +1291,20 @@ class AirtableCMS {
     potentialVideoItems.forEach(item => {
       // Skip if already processed or if it's not a Video Production item
       if (item.dataset.hasVideoHandler || !this.isVideoProductionItem(item)) return;
+      
+      // Only add handlers to items that are actually Video Production category
+      const serviceCategory = item.dataset.serviceCategory || item.dataset.category;
+      if (serviceCategory && serviceCategory !== 'Video Production') {
+        console.log('🎬 Skipping non-Video Production item:', serviceCategory);
+        return;
+      }
+      
+      // Additional safety check: verify this is actually a Video Production item from portfolio data
+      const portfolioItem = this.findPortfolioItemByElement(item);
+      if (portfolioItem && portfolioItem.ServiceCategory !== 'Video Production' && portfolioItem.Category !== 'Video Production') {
+        console.log('🎬 Skipping item with non-Video Production portfolio data:', portfolioItem.ServiceCategory);
+        return;
+      }
       
       if (this.hasVideoContent(item)) {
         this.addVideoClickHandler(item);
@@ -1302,12 +1331,40 @@ class AirtableCMS {
     const isVideoProduction = item.dataset.videoProduction === 'true';
     const serviceCategory = item.dataset.serviceCategory;
     const category = item.dataset.category;
-    const textContent = item.textContent?.toLowerCase() || '';
     
-    // Check explicit Video Production markers
-    if (isVideoProduction) return true;
-    if (serviceCategory === 'Video Production') return true;
-    if (category === 'Video Production') return true;
+    console.log('🔍 Checking if item is Video Production:', {
+      isVideoProduction,
+      serviceCategory,
+      category,
+      element: item
+    });
+    
+    // Check explicit Video Production markers - these take priority
+    if (isVideoProduction) {
+      console.log('✅ Item marked as video production');
+      return true;
+    }
+    if (serviceCategory === 'Video Production') {
+      console.log('✅ Item has Video Production service category');
+      return true;
+    }
+    if (category === 'Video Production') {
+      console.log('✅ Item has Video Production category');
+      return true;
+    }
+    
+    // If we have a category that's NOT Video Production, return false
+    if (serviceCategory && serviceCategory !== 'Video Production') {
+      console.log('❌ Item has non-Video Production service category:', serviceCategory);
+      return false;
+    }
+    if (category && category !== 'Video Production') {
+      console.log('❌ Item has non-Video Production category:', category);
+      return false;
+    }
+    
+    // Only check for video content if no explicit category is set
+    const textContent = item.textContent?.toLowerCase() || '';
     
     // Check if item contains video-related text
     const videoKeywords = ['video', 'production', 'film', 'cinematic', 'editing', 'post-production'];
@@ -1317,7 +1374,15 @@ class AirtableCMS {
     const hasVideoUrls = item.querySelector('[data-video-url], [data-playback-url], video, [src*=".mp4"], [src*=".mov"]');
     const hasPlaybackUrl = item.dataset.playbackUrl;
     
-    return hasVideoKeywords || hasVideoUrls || hasPlaybackUrl;
+    const result = hasVideoKeywords || hasVideoUrls || hasPlaybackUrl;
+    console.log('🔍 Content-based check result:', {
+      hasVideoKeywords,
+      hasVideoUrls,
+      hasPlaybackUrl,
+      result
+    });
+    
+    return result;
   }
 
   hasVideoContent(item) {
@@ -1332,6 +1397,12 @@ class AirtableCMS {
   addVideoClickHandler(item) {
     // Skip if already has handler
     if (item.dataset.hasVideoHandler) return;
+    
+    // Additional safety check: ensure this is actually a Video Production item
+    if (!this.isVideoProductionItem(item)) {
+      console.log('⚠️ Skipping non-Video Production item:', item);
+      return;
+    }
     
     item.dataset.hasVideoHandler = 'true';
     
@@ -1384,6 +1455,13 @@ class AirtableCMS {
       return null;
     }
 
+    // Additional check: ensure this is actually a Video Production item
+    const portfolioItem = this.findPortfolioItemByElement(item);
+    if (portfolioItem && portfolioItem.ServiceCategory !== 'Video Production' && portfolioItem.Category !== 'Video Production') {
+      console.log('❌ Item is not Video Production category:', portfolioItem.ServiceCategory);
+      return null;
+    }
+
     // Find the corresponding portfolio data
     const title = item.querySelector('.title, .project-title, h3, h4, .portfolio-title')?.textContent || 
                   item.textContent?.split('\n')[0]?.trim() || 
@@ -1394,24 +1472,24 @@ class AirtableCMS {
                        '';
     
     // Look for additional data in the portfolio
-    const portfolioItem = this.findPortfolioItemByVideoUrl(videoUrl) || this.findPortfolioItemByElement(item);
+    const portfolioItemData = this.findPortfolioItemByVideoUrl(videoUrl) || portfolioItem;
     
     console.log('📊 Extracted video data:', {
-      title: portfolioItem?.Title || title,
-      description: portfolioItem?.Description || description,
+      title: portfolioItemData?.Title || title,
+      description: portfolioItemData?.Description || description,
       videoUrl: videoUrl,
-      category: portfolioItem?.Category || 'Video Production'
+      category: portfolioItemData?.Category || 'Video Production'
     });
     
     return {
-      title: portfolioItem?.Title || title,
-      description: portfolioItem?.Description || description,
+      title: portfolioItemData?.Title || title,
+      description: portfolioItemData?.Description || description,
       videoUrl: videoUrl,
-      category: portfolioItem?.Category || 'Video Production',
-      role: portfolioItem?.Role || '',
-      client: portfolioItem?.Client || '',
-      timeline: portfolioItem?.Timeline || '',
-      playbackUrl: portfolioItem?.playbackUrl || videoUrl
+      category: portfolioItemData?.Category || 'Video Production',
+      role: portfolioItemData?.Role || '',
+      client: portfolioItemData?.Client || '',
+      timeline: portfolioItemData?.Timeline || '',
+      playbackUrl: portfolioItemData?.playbackUrl || videoUrl
     };
   }
 
@@ -1469,6 +1547,12 @@ class AirtableCMS {
   }
 
   openVideoPopup(videoData) {
+    // Final safety check: only open for Video Production items
+    if (videoData.category && videoData.category.toLowerCase() !== 'video production') {
+      console.log('⚠️ Video popup blocked for non-Video Production category:', videoData.category);
+      return;
+    }
+    
     const popup = document.getElementById('videoPopup');
     if (!popup) return;
 
@@ -1489,12 +1573,64 @@ class AirtableCMS {
       videoElement.load();
     }
 
+    // Dynamically populate AI recommendations based on category
+    this.populateAIRecommendations(videoData.category);
+
     // Show popup
     popup.style.display = 'flex';
     setTimeout(() => popup.classList.add('show'), 10);
 
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
+  }
+
+  populateAIRecommendations(category) {
+    const recommendationTags = document.getElementById('recommendationTags');
+    const aiCtaBtn = document.getElementById('aiCtaBtn');
+    
+    if (!recommendationTags || !aiCtaBtn) return;
+
+    let recommendations = [];
+    let ctaText = 'Start Your Project';
+    let ctaService = '';
+
+    // Define recommendations based on category
+    switch (category?.toLowerCase()) {
+      case 'video production':
+        recommendations = ['Video Production', 'Post-Production', 'Color Grading', 'Sound Design'];
+        ctaText = 'Start Your Video Project';
+        ctaService = 'video-production';
+        break;
+      case 'web development':
+        recommendations = ['Web Development', 'UI/UX Design', 'E-commerce Solutions', 'Website Maintenance'];
+        ctaText = 'Start Your Web Project';
+        ctaService = 'web-development';
+        break;
+      case 'photography':
+        recommendations = ['Photography', 'Photo Editing', 'Product Photography', 'Event Photography'];
+        ctaText = 'Start Your Photo Project';
+        ctaService = 'photography';
+        break;
+      case 'graphic design':
+        recommendations = ['Graphic Design', 'Brand Identity', 'Marketing Materials', 'Print Design'];
+        ctaText = 'Start Your Design Project';
+        ctaService = 'design';
+        break;
+      default:
+        // Fallback for unknown categories
+        recommendations = ['Professional Services', 'Custom Solutions', 'Consultation', 'Project Planning'];
+        ctaText = 'Start Your Project';
+        ctaService = 'general';
+    }
+
+    // Populate recommendation tags
+    recommendationTags.innerHTML = recommendations.map(rec => 
+      `<span class="tag">${rec}</span>`
+    ).join('');
+
+    // Update CTA button
+    aiCtaBtn.innerHTML = `<i class="fas fa-play"></i> ${ctaText}`;
+    aiCtaBtn.onclick = () => this.openContactForm(ctaService);
   }
 
   closeVideoPopup() {
