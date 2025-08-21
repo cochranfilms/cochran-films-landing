@@ -416,3 +416,400 @@
     font-size: 2rem;
   }
 }
+
+/* ========================================
+   BRAND DEVELOPMENT CUSTOM STYLING
+   ======================================== */
+
+/* Brand Development Category Background */
+.portfolio-category-section#portfolio-brand-development {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  border-radius: 24px;
+  padding: 40px;
+  margin: 40px 0;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-category-section#portfolio-brand-development::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 178, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Brand Development Grid - Full Width Items */
+.portfolio-category-section#portfolio-brand-development .portfolio-grid {
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+/* Brand Development Item Styling */
+.portfolio-item.brand-development {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 178, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+}
+
+.portfolio-item.brand-development::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-gold), var(--brand-indigo), var(--brand-gold));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.portfolio-item.brand-development:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(255, 178, 0, 0.2);
+  border-color: rgba(255, 178, 0, 0.4);
+}
+
+/* Brand Development Layout */
+.portfolio-item.brand-development {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 400px;
+}
+
+.portfolio-item.brand-development .portfolio-thumbnail {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.portfolio-item.brand-development .portfolio-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0a0a;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-item.brand-development:hover .portfolio-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.portfolio-item.brand-development .portfolio-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item.brand-development:hover .portfolio-thumbnail img {
+  transform: scale(1.1);
+}
+
+/* Brand Development Content */
+.portfolio-item.brand-development .portfolio-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+}
+
+/* Category Badge */
+.portfolio-item.brand-development .portfolio-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--brand-indigo), var(--brand-purple));
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.portfolio-item.brand-development .portfolio-category i {
+  color: var(--brand-gold);
+}
+
+/* Title Styling */
+.portfolio-item.brand-development .portfolio-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--text-primary), var(--brand-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.portfolio-item.brand-development .portfolio-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Brand Details Box */
+.portfolio-item.brand-development .portfolio-brand-details {
+  background: linear-gradient(135deg, rgba(255, 178, 0, 0.1), rgba(255, 178, 0, 0.05));
+  border: 1px solid rgba(255, 178, 0, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+}
+
+.portfolio-item.brand-development .portfolio-brand-details > div {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.portfolio-item.brand-development .portfolio-brand-details > div:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-item.brand-development .portfolio-brand-details strong {
+  color: var(--brand-gold);
+  font-weight: 700;
+  min-width: 80px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-item.brand-development .portfolio-brand-details span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Video URLs Display */
+.portfolio-item.brand-development .video-urls {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.portfolio-item.brand-development .video-urls h4 {
+  color: var(--brand-indigo);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portfolio-item.brand-development .video-urls h4 i {
+  color: var(--brand-gold);
+  font-size: 1rem;
+}
+
+.portfolio-item.brand-development .video-urls .video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.2);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-weight: 500;
+}
+
+.portfolio-item.brand-development .video-urls .video-link:hover {
+  background: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.portfolio-item.brand-development .video-urls .video-link i {
+  color: var(--brand-gold);
+  font-size: 0.9rem;
+}
+
+/* Meta Information */
+.portfolio-item.brand-development .portfolio-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-item.brand-development .portfolio-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.portfolio-item.brand-development .portfolio-featured {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(255, 178, 0, 0.4);
+  border: 1px solid rgba(255, 178, 0, 0.3);
+  z-index: 2;
+}
+
+/* Responsive Design for Brand Development */
+@media (max-width: 1024px) {
+  .portfolio-item.brand-development {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .portfolio-item.brand-development .portfolio-thumbnail {
+    min-height: 300px;
+  }
+  
+  .portfolio-item.brand-development .portfolio-content {
+    padding: 24px;
+  }
+  
+  .portfolio-item.brand-development .portfolio-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-category-section#portfolio-brand-development {
+    padding: 24px;
+    margin: 24px 0;
+  }
+  
+  .portfolio-item.brand-development .portfolio-content {
+    padding: 20px;
+  }
+  
+  .portfolio-item.brand-development .portfolio-title {
+    font-size: 1.25rem;
+  }
+  
+  .portfolio-item.brand-development .portfolio-brand-details {
+    padding: 16px;
+  }
+  
+  .portfolio-item.brand-development .video-urls {
+    padding: 12px;
+  }
+  
+  .portfolio-item.brand-development .video-urls .video-link {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ========================================
+   CATEGORY BACKGROUNDS
+   ======================================== */
+
+/* Video Production Background */
+.portfolio-category-section#portfolio-video-production {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05));
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Web Development Background */
+.portfolio-category-section#portfolio-web-development {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.05));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Photography Background */
+.portfolio-category-section#portfolio-photography {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Common Category Section Styling */
+.portfolio-category-section {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  padding: 32px;
+  margin: 32px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-category-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}

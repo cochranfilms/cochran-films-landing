@@ -912,33 +912,40 @@ class AirtableCMS {
              data-category="${item.Category}" 
              data-service-category="${item.ServiceCategory}"
              data-title="${item.Title}"
-             ${item.projectUrl ? `data-url="${item.projectUrl}"` : ''}>
+             ${item['Project URL (optional)'] ? `data-url="${item['Project URL (optional)']}"` : ''}>
           <div class="portfolio-thumbnail">
-            <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
-            ${item.projectUrl ? 
-              `<div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
-                <i class="fa-solid fa-external-link-alt"></i>
-              </div>` : 
-              `<div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
-                <i class="fa-solid fa-eye"></i>
-              </div>`
-            }
+            <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afd8babbc4a1?w=800&h=400&fit=crop&crop=center'" />
+            <div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
+              <i class="fa-solid fa-eye"></i>
+            </div>
             ${isFeatured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category">
               <i class="fa-solid fa-palette"></i>
-              ${item.Category}
+              ${item.Category || 'Brand Development'}
             </div>
             <h3 class="portfolio-title">${item.Title}</h3>
             <p class="portfolio-description">${item.Description}</p>
             
-            ${item.client || item.servicesProvided || item.deliverables || item.industry ? `
-              <div class="portfolio-brand-details" style="margin: 12px 0; padding: 12px; background: rgba(255,178,0,0.1); border-radius: 8px; border: 1px solid rgba(255,178,0,0.2);">
-                ${item.client ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Client:</strong> ${item.client}</div>` : ''}
-                ${item.servicesProvided ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Services:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.servicesProvided}</span></div>` : ''}
-                ${item.deliverables ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Deliverables:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.deliverables}</span></div>` : ''}
-                ${item.industry ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Industry:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.industry}</span></div>` : ''}
+            ${(item['Client/Brand Name'] || item.client || item['Client'] || item['Services Provided'] || item['Deliverables'] || item['Industry']) ? `
+              <div class="portfolio-brand-details">
+                ${item['Client/Brand Name'] || item.client || item['Client'] ? `<div><strong>Client:</strong> <span>${item['Client/Brand Name'] || item.client || item['Client']}</span></div>` : ''}
+                ${item['Services Provided'] ? `<div><strong>Services:</strong> <span>${item['Services Provided']}</span></div>` : ''}
+                ${item['Deliverables'] ? `<div><strong>Deliverables:</strong> <span>${item['Deliverables']}</span></div>` : ''}
+                ${item['Industry'] ? `<div><strong>Industry:</strong> <span>${item['Industry']}</span></div>` : ''}
+              </div>
+            ` : ''}
+            
+            ${(item['Video URLs'] && item['Video URLs'].trim() !== '') ? `
+              <div class="video-urls">
+                <h4><i class="fa-solid fa-play-circle"></i> Project Videos</h4>
+                ${item['Video URLs'].split(',').map(url => url.trim()).filter(url => url).map(url => `
+                  <a href="${url}" target="_blank" rel="noopener noreferrer" class="video-link">
+                    <i class="fa-brands fa-youtube"></i>
+                    ${url.includes('youtube.com') ? 'Watch on YouTube' : 'View Video'}
+                  </a>
+                `).join('')}
               </div>
             ` : ''}
             
