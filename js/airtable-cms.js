@@ -354,47 +354,35 @@ class AirtableCMS {
     try {
       this.showPortfolioLoadingState();
       
-      // Check if we have any valid cache first
-      const cacheStatus = this.getCacheStatus();
-      const hasValidCache = Object.values(cacheStatus).some(status => status.cached && !status.isExpired);
+      // FORCE FALLBACK DATA FOR NOW - Let's see your real portfolio working!
+      console.log('🔄 FORCING fallback data to show real portfolio content');
+      this.useFallbackData();
       
-      if (hasValidCache) {
-        // Load portfolio data from cache first
-        await this.loadPortfolioFromCache();
-        
-        // Set up portfolio functionality
-        this.setupPortfolioDisplay();
-        this.setupEventHandlers();
-        this.renderPortfolioByCategory();
-        
-        // Warm up cache in background for next time
-        this.warmupCache();
-      } else {
-        // Try to load portfolio data from unified API
-        try {
-          await this.loadPortfolioFromUnifiedAPI();
-        } catch (apiError) {
-          console.warn('⚠️ Airtable API failed, using fallback data:', apiError);
-          // Use fallback data when API fails
-          this.useFallbackData();
-        }
-        
-        // Set up the existing portfolio functionality
-        this.setupPortfolioDisplay();
-        this.setupEventHandlers();
-        
-        // Render the portfolio first
-        this.renderPortfolioByCategory();
-      }
+      // Set up portfolio functionality
+      this.setupPortfolioDisplay();
+      this.setupEventHandlers();
+      this.renderPortfolioByCategory();
       
       // Hide loading state
       this.hidePortfolioLoadingState();
       
+      // Try to load Airtable data in background (but don't wait for it)
+      setTimeout(async () => {
+        try {
+          console.log('🔄 Attempting Airtable API in background...');
+          await this.loadPortfolioFromUnifiedAPI();
+          // If Airtable succeeds, refresh the display
+          this.renderPortfolioByCategory();
+        } catch (apiError) {
+          console.warn('⚠️ Airtable API failed in background:', apiError);
+        }
+      }, 1000);
+      
     } catch (error) {
-      console.error('❌ Failed to load portfolio data, using fallback:', error);
+      console.error('❌ Error in portfolio setup:', error);
       this.hidePortfolioLoadingState();
       
-      // Use fallback data as last resort
+      // Ensure fallback data is used
       this.useFallbackData();
       this.setupPortfolioDisplay();
       this.setupEventHandlers();
@@ -1252,11 +1240,13 @@ class AirtableCMS {
     // Use fallback data when Airtable API fails
     if (window.FALLBACK_PORTFOLIO_DATA && window.FALLBACK_PORTFOLIO_DATA.length > 0) {
       console.log('🔄 Using fallback portfolio data:', window.FALLBACK_PORTFOLIO_DATA.length, 'items');
+      console.log('🔄 Fallback data:', window.FALLBACK_PORTFOLIO_DATA);
       this.portfolioData = window.FALLBACK_PORTFOLIO_DATA;
       return true;
     }
     
     console.warn('⚠️ No fallback data available');
+    console.warn('⚠️ window.FALLBACK_PORTFOLIO_DATA:', window.FALLBACK_PORTFOLIO_DATA);
     return false;
   }
   
