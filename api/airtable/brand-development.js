@@ -26,7 +26,7 @@ module.exports = async function handler(req, res) {
     const airtableConfig = {
       name: 'Brand Development',
       baseId: 'app9HS0yNn6uyFmJF',
-      tableName: 'Brand',
+      tableName: 'Imported table',  // Changed from 'Brand' to match pattern
       category: 'Brand Development'
     };
 

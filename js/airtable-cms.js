@@ -286,7 +286,7 @@ class AirtableCMS {
       'Video Production': 'Imported table',
       'Web Development': 'Imported table',
       'Photography': 'Imported table',
-      'Brand Development': 'Brand'
+      'Brand Development': 'Imported table'  // Changed from 'Brand' to match pattern
     };
 
     // Initialize caching system
