@@ -34,6 +34,7 @@
   <script>
     const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
     window.stripeCart = { items: [], total: 0 };
+    console.log('Stripe cart initialized:', window.stripeCart);
   </script>
   
   <script>
@@ -496,6 +497,7 @@
       transition: right 0.3s ease;
       display: flex;
       flex-direction: column;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
     }
 
     .stripe-cart.show {
@@ -890,6 +892,21 @@
         </p>
       </div>
 
+      <!-- Temporary Debug Button -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <button onclick="testCart()" style="
+          background: var(--brand-gold);
+          color: #000;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+        ">
+          Test Cart (Debug)
+        </button>
+      </div>
+
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
@@ -955,7 +972,7 @@
   </div>
 
   <!-- Stripe Shopping Cart -->
-  <button class="stripe-cart-toggle" id="stripeCartToggle" style="display: none;">
+  <button class="stripe-cart-toggle" id="stripeCartToggle">
     <i class="fas fa-shopping-cart"></i>
     <span class="stripe-cart-count" id="stripeCartCount">0</span>
   </button>
@@ -1253,12 +1270,14 @@
         initializeServicePackageBuilder();
         initializeStripeIntegration();
         setupCartEventListeners();
+        updateStripeCartDisplay(); // Initialize cart display
       });
     } else {
       new AINeuralNetwork();
       initializeServicePackageBuilder();
       initializeStripeIntegration();
       setupCartEventListeners();
+      updateStripeCartDisplay(); // Initialize cart display
     }
 
     // ========================================
@@ -1870,11 +1889,14 @@
       const cartClose = document.getElementById('stripeCartClose');
       
       if (cartToggle && cart && cartClose) {
+        console.log('Cart elements found, setting up toggle functionality');
         cartToggle.addEventListener('click', () => {
+          console.log('Cart toggle clicked, current state:', cart.classList.contains('show'));
           cart.classList.toggle('show');
         });
         
         cartClose.addEventListener('click', () => {
+          console.log('Cart close clicked');
           cart.classList.remove('show');
         });
         
@@ -1883,6 +1905,8 @@
             cart.classList.remove('show');
           }
         });
+      } else {
+        console.error('Cart elements not found:', { cartToggle, cart, cartClose });
       }
       
       // Cart actions
@@ -1941,6 +1965,7 @@
           
           const serviceType = getServiceTypeFromCard(card);
           if (serviceType) {
+            console.log('Service card clicked:', serviceType);
             showServiceDetailModal(serviceType);
           }
         });
@@ -2102,10 +2127,13 @@
 
     // Add item to Stripe cart
     function addToStripeCart(serviceType, service) {
+      console.log('Adding to cart:', serviceType, service);
+      
       const existingItem = window.stripeCart.items.find(item => item.id === serviceType);
       
       if (existingItem) {
         existingItem.quantity += 1;
+        console.log('Updated existing item quantity:', existingItem.quantity);
       } else {
         window.stripeCart.items.push({
           id: serviceType,
@@ -2114,8 +2142,10 @@
           icon: service.icon,
           quantity: 1
         });
+        console.log('Added new item to cart');
       }
       
+      console.log('Cart items:', window.stripeCart.items);
       updateStripeCartDisplay();
       showNotification(`${service.name} added to cart!`, 'success');
     }
@@ -2135,10 +2165,13 @@
 
     // Update Stripe cart display
     function updateStripeCartDisplay() {
+      console.log('Updating cart display...');
       const cartItems = document.getElementById('stripeCartItems');
       const cartTotal = document.getElementById('stripeCartTotal');
       const cartCount = document.getElementById('stripeCartCount');
       const cartToggle = document.getElementById('stripeCartToggle');
+      
+      console.log('Cart elements found:', { cartItems, cartTotal, cartCount, cartToggle });
       
       if (cartItems) {
         if (window.stripeCart.items.length === 0) {
@@ -2165,11 +2198,19 @@
       const count = window.stripeCart.items.reduce((sum, item) => sum + item.quantity, 0);
       if (cartCount) cartCount.textContent = count;
       
+      // Always show the cart toggle button, but hide count when empty
       if (cartToggle) {
-        cartToggle.style.display = count > 0 ? 'flex' : 'none';
+        cartToggle.style.display = 'flex';
+        console.log('Cart toggle display set to flex');
+      }
+      
+      if (cartCount) {
+        cartCount.style.display = count > 0 ? 'flex' : 'none';
+        console.log('Cart count display set to:', count > 0 ? 'flex' : 'none');
       }
       
       window.stripeCart.total = total;
+      console.log('Cart display updated. Items:', window.stripeCart.items.length, 'Total:', total, 'Count:', count);
     }
 
     // Process Stripe checkout
@@ -2580,6 +2621,35 @@
     window.submitManualOrder = submitManualOrder;
     window.processStripeCheckout = processStripeCheckout;
     window.showManualCheckoutInstructions = showManualCheckoutInstructions;
+    
+    // Debug function to test cart
+    function testCart() {
+      console.log('Testing cart functionality...');
+      console.log('Cart toggle element:', document.getElementById('stripeCartToggle'));
+      console.log('Cart element:', document.getElementById('stripeCart'));
+      console.log('Current cart items:', window.stripeCart.items);
+      console.log('Cart toggle display:', document.getElementById('stripeCartToggle')?.style.display);
+      
+      // Test adding an item
+      const testService = {
+        id: 'test-service',
+        name: 'Test Service',
+        price: 100,
+        icon: 'fas fa-cog'
+      };
+      
+      addToStripeCart('test-service', testService);
+      
+      // Test opening cart
+      const cart = document.getElementById('stripeCart');
+      if (cart) {
+        cart.classList.add('show');
+        console.log('Cart should now be visible');
+      }
+    }
+    
+    // Make testCart globally available
+    window.testCart = testCart;
   </script>
 </body>
 </html>
