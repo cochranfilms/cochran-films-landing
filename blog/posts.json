@@ -1,68 +1,271 @@
 [
   {
-    "title": "Everything announced at Made by Google 2025: Pixel 10, Pixel Watch 4, & more",
-    "url": "https://9to5google.com/2025/08/20/made-by-google-2025-announcements/",
-    "publishedAt": "2025-08-20T16:09:33.000Z",
-    "source": "9to5google.com",
-    "category": "apple",
-    "summary": "This year, Google announced everything about the Pixel 10, Pixel Watch 4, and Pixel Buds 2a before the actual Made by Google 2025 presentation gets underway in one hour with a number of special guests. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Made-by-Google-2025-cover.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "9to5Google",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Everything announced at Made by Google 2025: Pixel 10, Pixel Watch 4, & more",
-    "seoDescription": "This year, Google announced everything about the Pixel 10, Pixel Watch 4, and Pixel Buds 2a before the actual Made by Google 2025 presentation gets underway ..."
-  },
-  {
-    "title": "Build a College Database in Oracle LiveSQL – Step-by-Step Guide",
-    "url": "https://dev.to/pranav_aadithya_36edf63cb/build-a-college-database-in-oracle-livesql-step-by-step-guide-281l",
-    "publishedAt": "2025-08-20T16:07:43.000Z",
+    "title": "Is Hello Interview Worth It? An Honest Take for Developers Preparing for Tech Interviews",
+    "url": "https://dev.to/stack_overflowed/is-hello-interview-worth-it-an-honest-take-for-developers-preparing-for-tech-interviews-2k4b",
+    "publishedAt": "2025-08-21T06:47:40.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🎓 College Database Management System – Oracle LiveSQL This project demonstrates how to design and query a simple College Database using Oracle SQL on LiveSQL Schema Design We define four tables: Faculty – stores teacher details. Students – student records with department, DOB, email & phone. Courses – subject details with credits (1–5 only). Enrollments ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn1hzxn4jbm3fuqf77wz1.png",
+    "summary": "So you’ve decided it’s finally time to get serious about interview prep. No more winging it, no more hoping the recruiter skips system design questions, no more “I’ll just figure it out during the interview” (spoiler: you won’t). You start Googling resources and bam, you stumble on Hello Interview, a relatively new platform promising to help you crush tec...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fswrh58udfehvnao6kll8.png",
     "video": null,
-    "author": "Pranav Aadithya",
+    "author": "Stack Overflowed",
     "tags": [
       "webdev",
       "programming",
-      "dbms",
-      "learning"
+      "beginners",
+      "career"
     ],
-    "seoTitle": "Build a College Database in Oracle LiveSQL – Step-by-Step Guide",
-    "seoDescription": "🎓 College Database Management System – Oracle LiveSQL This project demonstrates how to design and query a simple College Database using Oracle SQL on LiveSQ..."
+    "seoTitle": "Is Hello Interview Worth It? An Honest Take for Developers Preparing for Tech Interviews",
+    "seoDescription": "So you’ve decided it’s finally time to get serious about interview prep. No more winging it, no more hoping the recruiter skips system design questions, no m..."
   },
   {
-    "title": "ESPN&#8217;s streaming launch brings a TikTok-like feed and AI commentary",
-    "url": "https://www.theverge.com/news/762294/espn-live-sports-streaming-app-launch-tiktok-feed-ai",
-    "publishedAt": "2025-08-20T16:06:00.000Z",
-    "source": "theverge.com",
+    "title": "edX vs Coursera: Which Platform Actually Teaches You Something (Before Your Coffee Runs Out)?",
+    "url": "https://dev.to/stack_overflowed/edx-vs-coursera-which-platform-actually-teaches-you-something-before-your-coffee-runs-out-1hfi",
+    "publishedAt": "2025-08-21T06:38:01.000Z",
+    "source": "dev.to",
     "category": "web",
-    "summary": "ESPN is showing off its overhauled app ahead of the launch of its live sports streaming service. On Wednesday, ESPN detailed all of the new features coming to the ESPN app, including a TikTok-style vertical video feed. ESPN’s long-awaited live sports streaming service costs $29.99 per month and puts all 12 of the network’s linear channels, including ESPN,...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/espn-app-launch-streaming.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "So you’ve decided to stop doomscrolling and actually learn something online. Nice. You fire up Google, type in “best online courses,” and suddenly two names dominate your screen: edX vs Coursera. But here’s the real question: which one actually helps you learn something useful, and not just collect another PDF certificate you’ll forget to add on LinkedIn?...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe93d3qk9k12yuv8bsqr6.png",
     "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "ESPN&#8217;s streaming launch brings a TikTok-like feed and AI commentary",
-    "seoDescription": "ESPN is showing off its overhauled app ahead of the launch of its live sports streaming service. On Wednesday, ESPN detailed all of the new features coming t..."
+    "author": "Stack Overflowed",
+    "tags": [
+      "webdev",
+      "programming",
+      "learning",
+      "career"
+    ],
+    "seoTitle": "edX vs Coursera: Which Platform Actually Teaches You Something (Before Your Coffee Runs Out)?",
+    "seoDescription": "So you’ve decided to stop doomscrolling and actually learn something online. Nice. You fire up Google, type in “best online courses,” and suddenly two names ..."
   },
   {
-    "title": "Master Photographer Brownie Harris Marks 50 Years With Retrospective Release",
-    "url": "https://fstoppers.com/interview/master-photographer-brownie-harris-marks-50-years-retrospective-release-709568?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
-    "publishedAt": "2025-08-20T16:04:01.000Z",
+    "title": "How to create an App service application in Azure.",
+    "url": "https://dev.to/onyemuche/how-to-create-an-app-service-application-in-azure-431m",
+    "publishedAt": "2025-08-21T06:30:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Azure App Service allows developers to build, host, and scale web apps, RESTful APIs, and mobile backends quickly without worrying about managing the underlying infrastructure. It is fully managed by platform as a service (PaaS).Think of it as a ready-to-use web hosting platform in the cloud, where you focus on your code and business logic while Azure tak...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frff84jpdq3f2wrwqr1a5.png",
+    "video": null,
+    "author": "EMMANUEL",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "cloudcomputing"
+    ],
+    "seoTitle": "How to create an App service application in Azure.",
+    "seoDescription": "Azure App Service allows developers to build, host, and scale web apps, RESTful APIs, and mobile backends quickly without worrying about managing the underly..."
+  },
+  {
+    "title": "SL Method for AI chats: Share to Save, Paste to Load",
+    "url": "https://dev.to/onestardao/sl-method-for-ai-chats-share-to-save-paste-to-load-1aol",
+    "publishedAt": "2025-08-21T06:24:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TLDR Most chat UIs let you share a conversation link. snapshot. Canonical notes: SL Method https://github.com/onestardao/WFGY/blob/main/StarterVillage/SL_Method.md Why I built it and the math engine behind my workflow: WFGY 2.0 core https://github.com/onestardao/WFGY/tree/main/core Quickstart in 30 seconds 1) Tune the chat until it behaves right 2) Press ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe7vk3snm9xmo3s52ovi5.png",
+    "video": null,
+    "author": "PSBigBig",
+    "tags": [
+      "webdev",
+      "ai",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "SL Method for AI chats: Share to Save, Paste to Load",
+    "seoDescription": "TLDR Most chat UIs let you share a conversation link. snapshot. Canonical notes: SL Method https://github.com/onestardao/WFGY/blob/main/StarterVillage/SL_Met..."
+  },
+  {
+    "title": "Red X Panel APK 9.0 (Free Fire) Download Latest Version Android",
+    "url": "https://dev.to/dan_le_e69ceddfc199b4c3e3/red-x-panel-apk-90-free-fire-download-latest-version-android-227l",
+    "publishedAt": "2025-08-21T06:22:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Downloada Free APK: Red X Panel What is Red X Panel App? Graphics in Red X Panel APK Latest Version Features in Red X Panel APK Download for Android Design and User Experience How to Download and Install Why Should You Use This App? Conclusion Red X Panel APK is a simple yet powerful tool for optimizing mobile touch sensitivity. Free, lightweight, and use...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwcoj3hysj3ixa97oc6ks.jpg",
+    "video": null,
+    "author": "Dan Le",
+    "tags": [
+      "gamedev",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "Red X Panel APK 9.0 (Free Fire) Download Latest Version Android",
+    "seoDescription": "Downloada Free APK: Red X Panel What is Red X Panel App? Graphics in Red X Panel APK Latest Version Features in Red X Panel APK Download for Android Design a..."
+  },
+  {
+    "title": "Bet You Didn’t Notice How Interstellar’s Music Is Timed to the Plot’s Physics",
+    "url": "https://nofilmschool.com/interstellar-music-timed-to-physics",
+    "publishedAt": "2025-08-21T06:00:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "What if a movie’s music could bend time just like its plot? That’s the magic at the heart of Interstellar (2014). Christopher Nolan’s space epic may be remembered for wormholes, black holes, and Matthew McConaughey crying in front of a wall of old video messages, but its score deserves equal praise. Hans Zimmer’s music sets the mood—but going further and ...",
+    "image": "https://nofilmschool.com/media-library/interstellars-music-is-timed-to-the-plots-physics.jpg?id=61496278&width=980",
+    "video": "https://www.youtube.com/embed/n6HtAu0fNQ4?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Interstellar",
+      "Christopher nolan",
+      "Music",
+      "Hans zimmer",
+      "Interstellar"
+    ],
+    "seoTitle": "Bet You Didn’t Notice How Interstellar’s Music Is Timed to the Plot’s Physics",
+    "seoDescription": "What if a movie’s music could bend time just like its plot? That’s the magic at the heart of Interstellar (2014). Christopher Nolan’s space epic may be remem..."
+  },
+  {
+    "title": "Film Noir to Neo-Noir: A Dark Makeover of Crime-Thrillers",
+    "url": "https://nofilmschool.com/film-noir-to-neo-noir",
+    "publishedAt": "2025-08-21T05:50:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The rain-slicked streets, the morally ambiguous detective, the femme fatale with a hidden agenda—these classic elements of film noir were too good to fade away into oblivion. So they evolved. Film Noir crawled into new skins, kept whispering dark thoughts into filmmakers’ ears, and reshaped itself into neo-noir. Sure, it shed its old skin, threw away tren...",
+    "image": "https://nofilmschool.com/media-library/blade-runner-anime.jpg?id=34070755&width=980",
+    "video": "https://www.youtube.com/embed/Yv-BPuqhW9U?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Film noir",
+      "Neo-noir",
+      "Genres",
+      "Film noir"
+    ],
+    "seoTitle": "Film Noir to Neo-Noir: A Dark Makeover of Crime-Thrillers",
+    "seoDescription": "The rain-slicked streets, the morally ambiguous detective, the femme fatale with a hidden agenda—these classic elements of film noir were too good to fade aw..."
+  },
+  {
+    "title": "Ranking Zach Creggers Filmography",
+    "url": "https://nofilmschool.com/zach-cregger-best-movies",
+    "publishedAt": "2025-08-21T05:37:39.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Zach Cregger’s career trajectory feels like a dare he made to himself—start in absurd, no-filter comedy and somehow pivot to bone-chilling, prestige horror. Beginning with the shock-value antics of Miss March (2009) and The Civil War on Drugs (2011), Cregger seemed destined to remain in the sketch-comedy lane carved out by his days with The Whitest Kids U...",
+    "image": "https://nofilmschool.com/media-library/ranking-of-zach-cregger-filmography.jpg?id=61489855&width=980",
+    "video": "https://www.youtube.com/embed/wk1_kDJhyBk?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Zach cregger",
+      "Best movies"
+    ],
+    "seoTitle": "Ranking Zach Creggers Filmography",
+    "seoDescription": "Zach Cregger’s career trajectory feels like a dare he made to himself—start in absurd, no-filter comedy and somehow pivot to bone-chilling, prestige horror. ..."
+  },
+  {
+    "title": "When Evil Walked In: 7 Greatest Villain Intros in TV History",
+    "url": "https://nofilmschool.com/greatest-villain-intros-in-tv",
+    "publishedAt": "2025-08-21T05:31:49.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Working in Bollywood films, you don’t have to tell me how crucial villain introductions are. We’ve basically taken our villain intros to a heightened level of melodrama now, sometimes treating them more seriously than a hero's introduction. On a more serious note, I’ve talked about this multiple times, how a hero’s strength is directly proportional to tha...",
+    "image": "https://nofilmschool.com/media-library/gus-fring.jpg?id=61496177&width=980",
+    "video": "https://www.youtube.com/embed/D05CmlITxtE?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Villains",
+      "Introduction",
+      "Best tv shows"
+    ],
+    "seoTitle": "When Evil Walked In: 7 Greatest Villain Intros in TV History",
+    "seoDescription": "Working in Bollywood films, you don’t have to tell me how crucial villain introductions are. We’ve basically taken our villain intros to a heightened level o..."
+  },
+  {
+    "title": "South Park mocks Tim Cook’s golden gift to Donald Trump",
+    "url": "https://9to5mac.com/2025/08/20/south-park-mocks-tim-cooks-golden-gift-to-donald-trump/",
+    "publishedAt": "2025-08-21T04:37:44.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "While political satire has always been a part of South Park across almost three decades, things have reached a whole new level during the new season, with plenty of jokes involving the Trump Presidency. Tonight, that involved Tim Cook, and his recent White House appearance. You can watch the clip below. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/cook-gift-glass.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "South Park mocks Tim Cook’s golden gift to Donald Trump",
+    "seoDescription": "While political satire has always been a part of South Park across almost three decades, things have reached a whole new level during the new season, with pl..."
+  },
+  {
+    "title": "Apple Releases Safari Technology Preview 226 With Bug Fixes and Performance Improvements",
+    "url": "https://www.macrumors.com/2025/08/20/apple-releases-safari-technology-preview-226/",
+    "publishedAt": "2025-08-21T00:00:25.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple today released a new update for Safari Technology Preview, the experimental browser that was first introduced in March 2016. Apple designed ‌Safari Technology Preview‌ to allow users to test features that are planned for future release versions of the Safari browser. ‌Safari Technology Preview‌ 226 includes fixes and updates for CSS, Canvas, JavaScr...",
+    "image": "https://images.macrumors.com/article-new/2024/07/Safari-Technology-Preview-Updated-Feature-1.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Blurb"
+    ],
+    "seoTitle": "Apple Releases Safari Technology Preview 226 With Bug Fixes and Performance Improvements",
+    "seoDescription": "Apple today released a new update for Safari Technology Preview, the experimental browser that was first introduced in March 2016. Apple designed ‌Safari Tec..."
+  },
+  {
+    "title": "The Ricoh GR IV Arrives: New Sensor, Redesigned 28mm Lens, 5-Axis IBIS, and 53 GB Internal Storage",
+    "url": "https://fstoppers.com/gear/ricoh-gr-iv-arrives-new-sensor-redesigned-28mm-lens-5-axis-ibis-and-53-gb-709646?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-20T23:36:24.000Z",
     "source": "fstoppers.com",
     "category": "photography",
-    "summary": "Photographer Brownie Harris has spent five decades capturing both the famous and the ordinary, with a portfolio that stretches from John F. Kennedy Jr. to factory workers and Hollywood sets. Earlier this year, Harris released Brownie Harris Retrospective 1970–2020, a book that brought together a lifetime of images and stories. [ Read More ]",
-    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/bhp_5245.jpg",
+    "summary": "Ricoh has announced the GR IV, a pocketable APS-C compact that continues the fixed-lens GR line with a higher-resolution sensor, a newly designed 28mm-equivalent lens, expanded in-body stabilization, and much larger internal storage. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/ricoh-gr-iv.jpeg",
     "video": null,
     "author": "Alex Cooke",
     "tags": [
       {
-        "_": "Interview",
+        "_": "Gear",
         "$": {
-          "domain": "https://fstoppers.com/category/interview"
+          "domain": "https://fstoppers.com/category/gear"
+        }
+      },
+      {
+        "_": "News",
+        "$": {
+          "domain": "https://fstoppers.com/category/news"
+        }
+      }
+    ],
+    "seoTitle": "The Ricoh GR IV Arrives: New Sensor, Redesigned 28mm Lens, 5-Axis IBIS, and 53 GB Internal Storage",
+    "seoDescription": "Ricoh has announced the GR IV, a pocketable APS-C compact that continues the fixed-lens GR line with a higher-resolution sensor, a newly designed 28mm-equiva..."
+  },
+  {
+    "title": "All the New AI Features Coming to Google's Pixel 10 Smartphones",
+    "url": "https://www.macrumors.com/2025/08/20/google-pixel-10-ai-features/",
+    "publishedAt": "2025-08-20T23:16:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Google introduced its next-generation Pixel 10 smartphones today, and while there are multiple hardware improvements, Google focused heavily on new AI features. The Pixel 10 devices offer quite a few new AI-powered capabilities, in addition to prior AI features that have come out over the last couple of years. We've rounded up the new features, some of wh...",
+    "image": "https://images.macrumors.com/article-new/2025/08/google-pixel-10-fold-1.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Gemini",
+      "Google",
+      "Google Pixel"
+    ],
+    "seoTitle": "All the New AI Features Coming to Google's Pixel 10 Smartphones",
+    "seoDescription": "Google introduced its next-generation Pixel 10 smartphones today, and while there are multiple hardware improvements, Google focused heavily on new AI featur..."
+  },
+  {
+    "title": "Are Sigma and Panasonic Coming for Canon, Nikon, and Sony?",
+    "url": "https://fstoppers.com/gear/are-sigma-and-panasonic-coming-canon-nikon-and-sony-709642?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-20T23:12:05.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Every so often, a product launch doesn’t just release something new. Rather, it changes the tone of an entire ecosystem. This is what Sigma has just done with two lenses that, on their own, would be remarkable, but together feel like a tectonic movement. And they show that the big three (Canon, Nikon, and Sony), might be on notice. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/l-mount-alliance-canon-nikon-sony-panasonic-leica-sigma.jpeg",
+    "video": null,
+    "author": "Alex Cooke",
+    "tags": [
+      {
+        "_": "Gear",
+        "$": {
+          "domain": "https://fstoppers.com/category/gear"
+        }
+      },
+      {
+        "_": "Opinion",
+        "$": {
+          "domain": "https://fstoppers.com/category/opinion"
         }
       },
       {
@@ -72,572 +275,269 @@
         }
       }
     ],
-    "seoTitle": "Master Photographer Brownie Harris Marks 50 Years With Retrospective Release",
-    "seoDescription": "Photographer Brownie Harris has spent five decades capturing both the famous and the ordinary, with a portfolio that stretches from John F. Kennedy Jr. to fa..."
+    "seoTitle": "Are Sigma and Panasonic Coming for Canon, Nikon, and Sony?",
+    "seoDescription": "Every so often, a product launch doesn’t just release something new. Rather, it changes the tone of an entire ecosystem. This is what Sigma has just done wit..."
   },
   {
-    "title": "Google Pixel 10 Series Hands-On: What’s New for Photographers?",
-    "url": "https://petapixel.com/2025/08/20/google-pixel-10-series-hands-on-whats-new-for-photographers/",
-    "publishedAt": "2025-08-20T16:01:40.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The 10th version of any flagship smartphone line should probably mean something, yet Google is launching its Pixel 10 series with no more fanfare than before. However, that doesn't mean there aren't changes worth being excited about. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/google-pixel-10-hands-on-featured.jpg",
+    "title": "Moises app can now generate AI bandmates based on a single instrument recording",
+    "url": "https://9to5mac.com/2025/08/20/moises-app-can-now-generate-ai-bandmates-based-on-a-single-instrument-recording/",
+    "publishedAt": "2025-08-20T23:02:15.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "In an update earlier today, the 2024 iPad App of the Year, Moises, released an impressive feature called AI Studio. It takes a recording of a single instrument and generates other instruments that match the original beat and style. Here’s how it works. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/moises-ai-studio.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Ted Kritsonis",
+    "author": "Marcus Mendes",
     "tags": [
-      "Mobile",
-      "News",
-      "Reviews",
-      "foldable",
-      "google",
-      "googlepixel",
-      "googlepixel10",
-      "googlepixel10pro"
+      "News"
     ],
-    "seoTitle": "Google Pixel 10 Series Hands-On: What’s New for Photographers?",
-    "seoDescription": "The 10th version of any flagship smartphone line should probably mean something, yet Google is launching its Pixel 10 series with no more fanfare than before..."
+    "seoTitle": "Moises app can now generate AI bandmates based on a single instrument recording",
+    "seoDescription": "In an update earlier today, the 2024 iPad App of the Year, Moises, released an impressive feature called AI Studio. It takes a recording of a single instrume..."
   },
   {
-    "title": "You Can Now Edit Images in Google Photos Using Only Your Voice",
-    "url": "https://petapixel.com/2025/08/20/you-can-now-edit-images-in-google-photos-using-only-your-voice/",
-    "publishedAt": "2025-08-20T16:00:43.000Z",
+    "title": "Nanoleaf's New 4D V2 Brings Zigzag Design and Better Colors to TV Backlighting",
+    "url": "https://www.macrumors.com/2025/08/20/nanoleaf-4d-v2/",
+    "publishedAt": "2025-08-20T22:24:42.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Nanoleaf this week announced the launch of the 4D V2, a product that's designed to provide ambient lighting that matches the colors on your TV set. The second version of the Screen Mirror and Lightstrip Kit offers more accurate screen mirroring for a more engaging viewing experience. The Nanoleaf 4D V2 has a redesigned zigzag lightstrip that makes it easi...",
+    "image": "https://images.macrumors.com/article-new/2025/08/nanoleaf-4d-v2.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Nanoleaf"
+    ],
+    "seoTitle": "Nanoleaf's New 4D V2 Brings Zigzag Design and Better Colors to TV Backlighting",
+    "seoDescription": "Nanoleaf this week announced the launch of the 4D V2, a product that's designed to provide ambient lighting that matches the colors on your TV set. The secon..."
+  },
+  {
+    "title": "9to5Mac Daily: August 20, 2025 – iPhone 17 cases, Apple Watch with Touch ID?",
+    "url": "https://9to5mac.com/2025/08/20/9to5mac-daily-august-20-2025/",
+    "publishedAt": "2025-08-20T22:14:49.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by Backblaze: Never lose a file again. Use code “9to5daily” at checkout for 10% off or try for free. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Seth Kurkowski",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "9to5Mac Daily: August 20, 2025 – iPhone 17 cases, Apple Watch with Touch ID?",
+    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
+  },
+  {
+    "title": "Today is your last chance to grab a PS5 before Sony’s price hikes go into effect",
+    "url": "https://www.theverge.com/tech/763043/sony-playstation-5-ps5-tariff-price-increase-deal-sale",
+    "publishedAt": "2025-08-20T22:09:58.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Sony announced a $50 price increase on all PlayStation 5 “slim” models in the US starting tomorrow, August 21st. The upcoming prices for a PS5 Digital Edition, the standard PS5, and the PS5 Pro are $499.99, $549.99, and $749.99, respectively; however, you can avoid paying the higher prices by picking up a PS5 at Amazon, Best Buy, Target, and Walmart today...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25630898/ps5_pro_sean_hollister_verge_003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "Today is your last chance to grab a PS5 before Sony’s price hikes go into effect",
+    "seoDescription": "Sony announced a $50 price increase on all PlayStation 5 “slim” models in the US starting tomorrow, August 21st. The upcoming prices for a PS5 Digital Editio..."
+  },
+  {
+    "title": "Google Photos Gets Conversational Editing",
+    "url": "https://www.macrumors.com/2025/08/20/google-photos-gets-conversational-editing/",
+    "publishedAt": "2025-08-20T22:01:23.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "With the launch of the Pixel 10 smartphones, Google announced new AI functionality that's coming to its Google Photos app and service. Users will be able to describe the edits that they want to make with text or voice in the Google ‌Photos‌ editing interface, and the changes will appear. Google says there will be no need to select tools or adjust sliders,...",
+    "image": "https://images.macrumors.com/article-new/2025/08/google-ai-photos.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Google Photos"
+    ],
+    "seoTitle": "Google Photos Gets Conversational Editing",
+    "seoDescription": "With the launch of the Pixel 10 smartphones, Google announced new AI functionality that's coming to its Google Photos app and service. Users will be able to ..."
+  },
+  {
+    "title": "Nearly Every Aspect of the Ricoh GR IV Compact Camera Is New",
+    "url": "https://petapixel.com/2025/08/20/nearly-every-aspect-of-the-ricoh-gr-iv-compact-camera-is-new/",
+    "publishedAt": "2025-08-20T22:01:05.000Z",
     "source": "petapixel.com",
     "category": "photography",
-    "summary": "Google Photos users can now ask the app to edit their photos for them using voice or text. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Google-Photos-CE-Keyword-Blog-Post.mp4",
+    "summary": "The highly anticipated Ricoh GR IV premium compact camera has been fully unveiled, and Ricoh has detailed the camera's new features and specifications. There is much more new with the GR IV than meets the eye. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/ricoh-gr-iv-news-featured.jpg",
     "video": null,
     "author": "Jeremy Gray",
     "tags": [
-      "Mobile",
-      "News",
-      "Software",
-      "ai",
-      "artificialintelligence",
-      "C2PA",
-      "editing",
-      "generativeai"
-    ],
-    "seoTitle": "You Can Now Edit Images in Google Photos Using Only Your Voice",
-    "seoDescription": "Google Photos users can now ask the app to edit their photos for them using voice or text. [Read More]"
-  },
-  {
-    "title": "Wandrd’s New Rogue V2 Sling Is Ready for Photography Adventures",
-    "url": "https://petapixel.com/2025/08/20/wandrds-new-rogue-v2-sling-is-ready-for-photography-adventures/",
-    "publishedAt": "2025-08-20T16:00:17.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Building on the success of past crowdfunding campaigns, Wandrd has launched the Rogue V2 Sling on Kickstarter, offering an ultra-rugged redesigned take on its popular everyday camera bag with discounted pricing for early backers. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/wandrd-rogue-v2-featured.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
       "Equipment",
       "News",
-      "bag",
-      "kickstarter",
-      "rogue",
-      "v2",
-      "wandrd"
+      "apsc",
+      "camera",
+      "compactcamera",
+      "pocketcamera",
+      "ricoh",
+      "ricohgriv"
     ],
-    "seoTitle": "Wandrd’s New Rogue V2 Sling Is Ready for Photography Adventures",
-    "seoDescription": "Building on the success of past crowdfunding campaigns, Wandrd has launched the Rogue V2 Sling on Kickstarter, offering an ultra-rugged redesigned take on it..."
+    "seoTitle": "Nearly Every Aspect of the Ricoh GR IV Compact Camera Is New",
+    "seoDescription": "The highly anticipated Ricoh GR IV premium compact camera has been fully unveiled, and Ricoh has detailed the camera's new features and specifications. There..."
   },
   {
-    "title": "Google’s Pixel 10 Series Boosts Processing for Better Software and AI",
-    "url": "https://petapixel.com/2025/08/20/googles-pixel-10-series-boosts-processing-for-better-software-and-ai/",
-    "publishedAt": "2025-08-20T16:00:12.000Z",
+    "title": "Ricoh’s Tiny GF-2 Flash for the GR IV Has a Clever Automatic Mode",
+    "url": "https://petapixel.com/2025/08/20/ricohs-tiny-gf-2-flash-for-the-gr-iv-has-a-clever-automatic-mode/",
+    "publishedAt": "2025-08-20T22:00:51.000Z",
     "source": "petapixel.com",
     "category": "photography",
-    "summary": "Google has announced the Pixel 10 series of devices, which promise significantly improved processing power to handle new software and AI-based features. The flagship devices, the Pixel 10 Pro and Pro XL, don't bring many hardware improvements to the table, instead focusing on usability in what may be seen as one of Google's more iterative updates. [Read M...",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Googles-Pixel-10-Series-Boosts-Processing-for-Better-Software-and-AI.jpg",
+    "summary": "Alongside the Ricoh GR IV compact camera, Ricoh Imaging announced the Ricoh GF-2, a new super-compact flash designed exclusively for the GR IV camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/ricoh-gr-2-flash-on-gr-iv-news-featured.jpg",
     "video": null,
-    "author": "Jaron Schneider",
+    "author": "Jeremy Gray",
     "tags": [
-      "Mobile",
+      "Equipment",
+      "Lighting",
       "News",
-      "android",
-      "google",
-      "googlepixel",
-      "googlepixel10",
-      "googlepixel10pro",
-      "googlepixel10profold"
+      "compactflash",
+      "flash",
+      "lighting",
+      "ricoh",
+      "ricohgf2"
     ],
-    "seoTitle": "Google’s Pixel 10 Series Boosts Processing for Better Software and AI",
-    "seoDescription": "Google has announced the Pixel 10 series of devices, which promise significantly improved processing power to handle new software and AI-based features. The ..."
+    "seoTitle": "Ricoh’s Tiny GF-2 Flash for the GR IV Has a Clever Automatic Mode",
+    "seoDescription": "Alongside the Ricoh GR IV compact camera, Ricoh Imaging announced the Ricoh GF-2, a new super-compact flash designed exclusively for the GR IV camera. [Read ..."
   },
   {
-    "title": "Google&#8217;s Pixel Buds 2A add Gemini, noise cancellation, and a replaceable battery",
-    "url": "https://www.theverge.com/hands-on/760852/google-pixel-buds-2a-hands-on-active-noise-cancellation-battery-gemini-earbuds",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
+    "title": "Ricoh’s GR IV launches in September for a much steeper price than its predecessor",
+    "url": "https://www.theverge.com/news/762848/ricoh-gr-iv-camera-gf2-flash-launch-price-specs",
+    "publishedAt": "2025-08-20T22:00:00.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Four years after launching the original Pixel Buds A-series, Google's back with the Pixel Buds 2A. The new budget buds are $30 more expensive at $129.99, but add some notable updates like an upgraded chip, Gemini access, a replaceable battery, and most importantly, active noise cancellation. The 2A also adds a Tensor A1 chip, which Google says \"unlocks th...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257901_Made_by_Google_2025_AJohnson_0025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "The stealthy and no-frills camera is back. Ricoh is launching its GR IV compact camera in mid-September for $1,499.95, accompanied by a tiny new GF-2 add-on flash for $119.95. As initially announced in May, the GR IV will feature a 26-megapixel APS-C sensor, slightly redesigned 28mm-equivalent f/2.8 lens, new autofocus and stabilization systems, and 53GB ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Lifestyle06.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Victoria Song",
+    "author": "Antonio G. Di Benedetto",
     "tags": [],
-    "seoTitle": "Google&#8217;s Pixel Buds 2A add Gemini, noise cancellation, and a replaceable battery",
-    "seoDescription": "Four years after launching the original Pixel Buds A-series, Google's back with the Pixel Buds 2A. The new budget buds are $30 more expensive at $129.99, but..."
+    "seoTitle": "Ricoh’s GR IV launches in September for a much steeper price than its predecessor",
+    "seoDescription": "The stealthy and no-frills camera is back. Ricoh is launching its GR IV compact camera in mid-September for $1,499.95, accompanied by a tiny new GF-2 add-on ..."
   },
   {
-    "title": "The Google Pixel 10 and 10 Pro come with magnets, a new chip, and AI everywhere",
-    "url": "https://www.theverge.com/hands-on/761055/google-pixel-10-pro-hands-on-camera-gemini",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
+    "title": "Google&#8217;s Gemini Live AI assistant will show you what it&#8217;s talking about",
+    "url": "https://www.theverge.com/news/763114/google-gemini-live-ai-visual-guidance-speech-update",
+    "publishedAt": "2025-08-20T21:58:03.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Phones on phones on phones. Google has formally announced the Pixel 10, 10 Pro, and 10 Pro XL, and their hardware upgrades can be summed up in two letter/number combinations: G5 and Qi2. Otherwise, there's not much to see on the outside of the phones. They mostly cost the same as last year's devices - $799 for the Pixel 10, $999 for the 10 Pro, and $1,199...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257901_Made_by_Google_2025_AJohnson_0012.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Allison Johnson",
-    "tags": [],
-    "seoTitle": "The Google Pixel 10 and 10 Pro come with magnets, a new chip, and AI everywhere",
-    "seoDescription": "Phones on phones on phones. Google has formally announced the Pixel 10, 10 Pro, and 10 Pro XL, and their hardware upgrades can be summed up in two letter/num..."
-  },
-  {
-    "title": "The newest Pixels put generative AI right inside the camera",
-    "url": "https://www.theverge.com/hands-on/761817/google-pixel-10-pro-res-zoom-ai",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The call is coming from inside the house. At The Verge, we like to ask \"What is a photo?\" when we're trying to sort out real and unreal images - especially those taken with phone cameras. But I think there's another question that we'll want to add to the mix starting right now: what is a camera? With the introduction of the Pixel 10 Pro and Pro XL, that a...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257901_Made_by_Google_2025_AJohnson_0037.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Allison Johnson",
-    "tags": [],
-    "seoTitle": "The newest Pixels put generative AI right inside the camera",
-    "seoDescription": "The call is coming from inside the house. At The Verge, we like to ask \"What is a photo?\" when we're trying to sort out real and unreal images - especially t..."
-  },
-  {
-    "title": "Fitbit’s AI health coach is the first I might actually be interested in",
-    "url": "https://www.theverge.com/hands-on/761965/fitbits-ai-health-coach-is-the-first-i-might-actually-be-interested-in",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "We won’t get to try it until October, but so far I’m cautiously curious. | Photo by Victoria Song / The Verge I'm not a fan of AI health and fitness features. Not only do they regurgitate Captain Obvious-level summaries of what you just did, but the \"insights\" are so generalized that a Google search is often more helpful. So it was with great skepticism t...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/fitbithealthcoach.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Victoria Song",
-    "tags": [],
-    "seoTitle": "Fitbit’s AI health coach is the first I might actually be interested in",
-    "seoDescription": "We won’t get to try it until October, but so far I’m cautiously curious. | Photo by Victoria Song / The Verge I'm not a fan of AI health and fitness features..."
-  },
-  {
-    "title": "Google’s Pixel Buds Pro 2 are getting new AI-powered features in September",
-    "url": "https://www.theverge.com/news/762048/googles-pixel-buds-pro-2-new-ai-powered-features",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google just announced its new budget Pixel Buds 2A, but it didn’t forget about the earbuds it launched last fall. Owners of the Pixel Buds Pro 2 will get an update in September that will deliver a few new AI-powered features. One of them, Adaptive Audio, automatically adjusts the volume based on the noise in your environment. Google’s also improving the a...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25565678/DSCF0104.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Victoria Song",
-    "tags": [],
-    "seoTitle": "Google’s Pixel Buds Pro 2 are getting new AI-powered features in September",
-    "seoDescription": "Google just announced its new budget Pixel Buds 2A, but it didn’t forget about the earbuds it launched last fall. Owners of the Pixel Buds Pro 2 will get an ..."
-  },
-  {
-    "title": "The Google Pixel 10 Pro Fold is the first fully dust-resistant foldable",
-    "url": "https://www.theverge.com/hands-on/762080/google-pixel-10-pro-fold-dust-rating-ip68",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Just look at that dust-tight hinge. Finally, a foldable to take to the beach. The Google Pixel 10 Pro Fold is official, matching last year's starting MSRP of $1,799, and it comes with an IP68 rating. That means full water and dust resistance, which is something that no other foldable maker has figured out yet - and no small feat for a device with moving p...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257901_Made_by_Google_2025_AJohnson_0002.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Allison Johnson",
-    "tags": [],
-    "seoTitle": "The Google Pixel 10 Pro Fold is the first fully dust-resistant foldable",
-    "seoDescription": "Just look at that dust-tight hinge. Finally, a foldable to take to the beach. The Google Pixel 10 Pro Fold is official, matching last year's starting MSRP of..."
-  },
-  {
-    "title": "Google Pixel 10 launch event: the 8 biggest announcements",
-    "url": "https://www.theverge.com/news/762150/google-pixel-10-launch-event-announcements",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google has just announced a bunch of shiny new devices to look at and AI features to yell about. As part of its Made by Google event, the company revealed an upgraded Pixel 10 lineup, a bubblier smartwatch with a brighter screen, and a ton of AI updates that extend across all of its new devices. Here’s everything that was announced at the Made by Google 2...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257901_Made_by_Google_2025_AJohnson_0014.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "Google is bringing a bundle of new features to Gemini Live, its AI assistant that you can have real-time conversations with. Next week, Gemini Live will be able to highlight things directly on your screen while sharing your camera, making it easier for the AI assistant to point out a specific item. If you’re trying to find the right tool for a project, fo...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gemini-live-highlight.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Emma Roth",
     "tags": [],
-    "seoTitle": "Google Pixel 10 launch event: the 8 biggest announcements",
-    "seoDescription": "Google has just announced a bunch of shiny new devices to look at and AI features to yell about. As part of its Made by Google event, the company revealed an..."
+    "seoTitle": "Google&#8217;s Gemini Live AI assistant will show you what it&#8217;s talking about",
+    "seoDescription": "Google is bringing a bundle of new features to Gemini Live, its AI assistant that you can have real-time conversations with. Next week, Gemini Live will be a..."
   },
   {
-    "title": "Google is launching its first magnetic wireless charging accessories",
-    "url": "https://www.theverge.com/news/762426/google-qi2-wireless-charger-pixelsnap-pixel-10-series",
-    "publishedAt": "2025-08-20T16:00:00.000Z",
+    "title": "Masimo sues US Customs over Apple Watch blood oxygen workaround",
+    "url": "https://9to5mac.com/2025/08/20/masimo-sues-us-customs-over-apple-watch-blood-oxygen-workaround/",
+    "publishedAt": "2025-08-20T21:40:37.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Last week, when Apple announced the release of a “redesigned Blood Oxygen feature” to the Apple Watch, many figured Masimo (who had been suing Apple over patents related to the feature), would look for a way to fight back. Today, the company did just that and filed a new lawsuit. But this time, it’s against the US Customs and Border Protection. Here’s why...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/02/apple-watch-health-sensors-blood-glucose.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Masimo sues US Customs over Apple Watch blood oxygen workaround",
+    "seoDescription": "Last week, when Apple announced the release of a “redesigned Blood Oxygen feature” to the Apple Watch, many figured Masimo (who had been suing Apple over pat..."
+  },
+  {
+    "title": "The Made by Google event felt like being sucked into an episode of Wandavision",
+    "url": "https://www.theverge.com/analysis/762891/made-by-google-pixel-10-jimmy-fallon",
+    "publishedAt": "2025-08-20T21:40:32.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Google’s new magnetic Pixelsnap charger attaches to an optional stand accessory. | Image: Google With its new Pixel 10 Series, Google is finally embracing the Qi2 wireless charging standard, making it much easier to securely attach wireless chargers thanks to a ring of magnets built into the device. That also makes the new phone compatible with the many M...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/pixelsnap5.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "There as not a single product that didn’t wow Fallon. | Screenshot: Google For the past twenty years or so, I've had a clear image of what a product launch keynote is supposed to be like. A charismatic executive walks across the stage, points to some animations and pre-taped clips, a live demo or two happens, and the crowd goes wild. Clips proliferate on ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/shitpost-Copy-01.00_00_52_12.Still008.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Andrew Liszewski",
+    "author": "Victoria Song",
     "tags": [],
-    "seoTitle": "Google is launching its first magnetic wireless charging accessories",
-    "seoDescription": "Google’s new magnetic Pixelsnap charger attaches to an optional stand accessory. | Image: Google With its new Pixel 10 Series, Google is finally embracing th..."
+    "seoTitle": "The Made by Google event felt like being sucked into an episode of Wandavision",
+    "seoDescription": "There as not a single product that didn’t wow Fallon. | Screenshot: Google For the past twenty years or so, I've had a clear image of what a product launch k..."
   },
   {
-    "title": "Building a Next.js Landing Page with Google Sheets Integration and Google Cloud Run Deployment",
-    "url": "https://dev.to/dalenguyen/building-a-nextjs-landing-page-with-google-sheets-integration-and-google-cloud-run-deployment-1j07",
-    "publishedAt": "2025-08-20T15:55:31.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Building a modern landing page that captures potential user emails is essential for any startup or product launch. In this comprehensive guide, I'll walk you through creating a Next.js 15 landing page that collects emails in Google Sheets and deploys seamlessly to Google Cloud Run. By the end of this tutorial, you'll have: A responsive Next.js 15 landing ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2phuemk9r27xfmibo4kn.gif",
-    "video": null,
-    "author": "Dale Nguyen",
-    "tags": [
-      "nextjs",
-      "googlecloud",
-      "googlesheet",
-      "webdev"
-    ],
-    "seoTitle": "Building a Next.js Landing Page with Google Sheets Integration and Google Cloud Run Deployment",
-    "seoDescription": "Building a modern landing page that captures potential user emails is essential for any startup or product launch. In this comprehensive guide, I'll walk you..."
-  },
-  {
-    "title": "DevLog 20250820: Updating Official Landing Page",
-    "url": "https://dev.to/methodox/devlog-20250820-updating-official-landing-page-3hpd",
-    "publishedAt": "2025-08-20T15:54:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The original methodox.io website was implemented by a friend using React, which under my demand uses serve-static or some npm module to be able to serve statically, since we host the final result as static site. He did a great job with overall styling and functionality, but it's a maintenance hassle. We've had lots of issue with it: Hard to update Not SEO...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg8u5vui2xgbvq7m5vuvf.png",
-    "video": null,
-    "author": "Charles Zhang",
-    "tags": [
-      "webdev",
-      "node",
-      "react",
-      "website"
-    ],
-    "seoTitle": "DevLog 20250820: Updating Official Landing Page",
-    "seoDescription": "The original methodox.io website was implemented by a friend using React, which under my demand uses serve-static or some npm module to be able to serve stat..."
-  },
-  {
-    "title": "Election Management System (EMS) – Secure Web-Based Digital Voting Platform",
-    "url": "https://dev.to/abubakar_shabbir/election-management-system-ems-secure-web-based-digital-voting-platform-228a",
-    "publishedAt": "2025-08-20T15:51:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I, Abubakar Shabbir, built the Election Management System (EMS), a modern, secure, and user-friendly digital voting web application using Python, Django, MySQL, and Bootstrap. This platform provides a transparent and efficient way to manage elections, handle voter registration, and monitor results in real-time. Secure Voter Management: Register voters and...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyhyvhix790uvuj342xh6.PNG",
-    "video": null,
-    "author": "AbuBakar Shabbir",
-    "tags": [
-      "webdev",
-      "python",
-      "django",
-      "abubakarshabbir"
-    ],
-    "seoTitle": "Election Management System (EMS) – Secure Web-Based Digital Voting Platform",
-    "seoDescription": "I, Abubakar Shabbir, built the Election Management System (EMS), a modern, secure, and user-friendly digital voting web application using Python, Django, MyS..."
-  },
-  {
-    "title": "These iPadOS 26 features make me want the M5 iPad Pro",
-    "url": "https://9to5mac.com/2025/08/20/these-ipados-26-features-make-me-want-the-m5-ipad-pro/",
-    "publishedAt": "2025-08-20T15:49:55.000Z",
+    "title": "Google declares the green vs blue bubbles debate ‘silly and tired’",
+    "url": "https://9to5mac.com/2025/08/20/google-declares-the-green-vs-blue-bubbles-debate-silly-and-tired/",
+    "publishedAt": "2025-08-20T21:30:01.000Z",
     "source": "9to5mac.com",
     "category": "apple",
-    "summary": "Apple is launching a brand new M5 iPad Pro this fall, alongside its biggest iPad software release ever in iPadOS 26. Here are the iPadOS 26 features that have me excited to get a new iPad. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/m5-ipad-pro-ipados-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "summary": "Today’s Made By Google event was full of interesting announcements, ranging from the new Pixel 10 lineup and the Pixel Watch 4 to impressive AI demos. During the event (which was bizarrely hosted by Jimmy Fallon), Google’s VP of marketing Adrienne Lofton also declared the green vs blue bubbles debate “over.” more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/google-event-fallon.png?w=1600",
     "video": null,
-    "author": "Ryan Christoffel",
+    "author": "Chance Miller",
     "tags": [
       "News"
     ],
-    "seoTitle": "These iPadOS 26 features make me want the M5 iPad Pro",
-    "seoDescription": "Apple is launching a brand new M5 iPad Pro this fall, alongside its biggest iPad software release ever in iPadOS 26. Here are the iPadOS 26 features that hav..."
+    "seoTitle": "Google declares the green vs blue bubbles debate ‘silly and tired’",
+    "seoDescription": "Today’s Made By Google event was full of interesting announcements, ranging from the new Pixel 10 lineup and the Pixel Watch 4 to impressive AI demos. During..."
   },
   {
-    "title": "Romantic story 🥰",
-    "url": "https://dev.to/othoi_55/romantic-story-3ngn",
-    "publishedAt": "2025-08-20T15:49:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "__ They met on a rainy evening 🌧️ when she forgot her umbrella. He offered his, their hands brushing lightly. From that moment, every little glance turned into laughter, every silence into comfort. 💕 Time passed, but their bond only grew stronger. He loved the way she dreamed big, and she adored how he believed in her endlessly. 🌹 One sunset, standing ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2fupfye67bhx711yfxus.jpg",
-    "video": null,
-    "author": "OTHOI",
-    "tags": [
-      "webdev",
-      "jokes",
-      "beginners"
-    ],
-    "seoTitle": "Romantic story 🥰",
-    "seoDescription": "__ They met on a rainy evening 🌧️ when she forgot her umbrella. He offered his, their hands brushing lightly. From that moment, every little glance turned i..."
-  },
-  {
-    "title": "Greater Manchester Gets Support for Apple Pay Express Mode",
-    "url": "https://www.macrumors.com/2025/08/20/manchester-gets-support-for-express-mode/",
-    "publishedAt": "2025-08-20T15:48:07.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Support for Apple Pay's Express Mode has this week been added to the Bee Network in Greater Manchester, enabling passengers to pay for bus and tram travel without unlocking their iPhone or Apple Watch. The new functionality marks the first time a UK integrated public transport system outside London has implemented Express Mode. According to Transport for ...",
-    "image": "https://images.macrumors.com/article-new/2023/11/apple-pay-feature-dynamic-island.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Apple Pay",
-      "Express Transit",
-      "United Kingdom"
-    ],
-    "seoTitle": "Greater Manchester Gets Support for Apple Pay Express Mode",
-    "seoDescription": "Support for Apple Pay's Express Mode has this week been added to the Bee Network in Greater Manchester, enabling passengers to pay for bus and tram travel wi..."
-  },
-  {
-    "title": "E-Lo-Meter: What the heck does Elon Musk do?",
-    "url": "https://dev.to/william_carlson_1f2a7d2d3/e-lo-meter-what-the-heck-does-elon-musk-do-469c",
-    "publishedAt": "2025-08-20T15:45:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What I Built A continuous intelligence pipeline that scrapes Elon Musk related posts, enriches them with Bright Data, and then passes the results to an AI Agent that classifies them by company. Finally, the output is submitted to Airtable where it powers a live dashboard of Musk’s shifting focus. Google Drive Video - Explaining the workflow Github gist li...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb9xgb3jpvie64zl8vpqu.png",
-    "video": null,
-    "author": "William Carlson",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "E-Lo-Meter: What the heck does Elon Musk do?",
-    "seoDescription": "What I Built A continuous intelligence pipeline that scrapes Elon Musk related posts, enriches them with Bright Data, and then passes the results to an AI Ag..."
-  },
-  {
-    "title": "Deals: 32GB/1TB M4 MacBook Air, 48GB MacBook Pro $300 off, M3 iPad Air $360 off, more",
-    "url": "https://9to5mac.com/2025/08/20/deals-m4-macbook-air-macbook-pro-ipad-air/",
-    "publishedAt": "2025-08-20T15:44:21.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Your 9to5Toys Lunch Break deals are now ready to go starting off with $200 discounts on upgraded M4 MacBook Air machines – this includes 1TB models and the 15-inch with 32GB of RAM. Next up we are featuring a $300 price drop on the most affordable M4 Pro MacBook Pro with 48GB of RAM and a giant limited-time deal on the 1TB 11-inch M3 iPad Air Wi-Fi + Cell...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-deals-iPad-Air-MacBook-Air.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Justin Kahn",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Deals: 32GB/1TB M4 MacBook Air, 48GB MacBook Pro $300 off, M3 iPad Air $360 off, more",
-    "seoDescription": "Your 9to5Toys Lunch Break deals are now ready to go starting off with $200 discounts on upgraded M4 MacBook Air machines – this includes 1TB models and the 1..."
-  },
-  {
-    "title": "White House Joins TikTok, The Social Network Trump Once Promised to Ban",
-    "url": "https://petapixel.com/2025/08/20/white-house-joins-tiktok-the-social-network-trump-once-promised-to-ban/",
-    "publishedAt": "2025-08-20T15:33:37.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The White House has launched an official TikTok account, six months after the app was supposed to be sold or banned in the United States. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/07/trump-ai-executive-order.jpg",
-    "video": null,
-    "author": "Matt Growcoot",
-    "tags": [
-      "News",
-      "presidenttrump",
-      "socialmedia",
-      "tiktok",
-      "tiktokban",
-      "whitehouse"
-    ],
-    "seoTitle": "White House Joins TikTok, The Social Network Trump Once Promised to Ban",
-    "seoDescription": "The White House has launched an official TikTok account, six months after the app was supposed to be sold or banned in the United States. [Read More]"
-  },
-  {
-    "title": "🚀 Goodbye Backend? Build Full-Powered Web Apps with Only Supabase + React!",
-    "url": "https://dev.to/ekwoster/goodbye-backend-build-full-powered-web-apps-with-only-supabase-react-4cip",
-    "publishedAt": "2025-08-20T15:24:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🚀 Goodbye Backend? Build Full-Powered Web Apps with Only Supabase + React! Imagine deploying a fully functional SaaS MVP without touching a single backend line of code or managing a database manually. Sounds like clickbait? It kinda is. But welcome to the world of Supabase + React – where you can skip the traditional backend and still build robust, secur...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fccuuiboec5315rsf4ju2.gif",
-    "video": null,
-    "author": "Yevhen Kozachenko 🇺🇦",
-    "tags": [
-      "supabase",
-      "react",
-      "webdev",
-      "serverless"
-    ],
-    "seoTitle": "🚀 Goodbye Backend? Build Full-Powered Web Apps with Only Supabase + React!",
-    "seoDescription": "🚀 Goodbye Backend? Build Full-Powered Web Apps with Only Supabase + React! Imagine deploying a fully functional SaaS MVP without touching a single backend l..."
-  },
-  {
-    "title": "Apple Rumored to Launch 'TechWoven' Cases for iPhone 17 With 'Crossbody Strap' Option",
-    "url": "https://www.macrumors.com/2025/08/20/techwoven-cases-crossbody-strap-rumor/",
-    "publishedAt": "2025-08-20T15:21:43.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is planning to launch a new \"TechWoven\" line of cases for the iPhone 17 series, according to a leaker known as \"Majin Bu.\" Two years ago, Apple stopped selling leather iPhone cases, as part of the company's efforts to reduce its carbon emissions. As an alternative, Apple introduced a new \"FineWoven\" line of fabric iPhone cases made from 68% post-con...",
-    "image": "https://images.macrumors.com/article-new/2025/08/TechWoven.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Featured",
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "Majin Bu"
-    ],
-    "seoTitle": "Apple Rumored to Launch 'TechWoven' Cases for iPhone 17 With 'Crossbody Strap' Option",
-    "seoDescription": "Apple is planning to launch a new \"TechWoven\" line of cases for the iPhone 17 series, according to a leaker known as \"Majin Bu.\" Two years ago, Apple stopped..."
-  },
-  {
-    "title": "Are You Ready to Handle the Rigours of 8K+ Video Editing With Your Storage Solutions?",
-    "url": "https://nofilmschool.com/owc-express-1m2-80g-portable-ssd",
-    "publishedAt": "2025-08-20T15:02:24.000Z",
+    "title": "How We Pulled Off the Insane Mirror Sequence for 'Nobody 2'",
+    "url": "https://nofilmschool.com/nobody-2-mirror-sequence",
+    "publishedAt": "2025-08-20T21:21:17.000Z",
     "source": "nofilmschool.com",
     "category": "production",
-    "summary": "The rigors of high-end video editing have never been more… rigorous. That statement could be transplanted to pretty much any time in the history of digital video editing, but it still remains true today. As such, most video editors know a good deal when they see one—but they also know the value of higher-end tech that pushes the boundaries of what previou...",
-    "image": "https://nofilmschool.com/media-library/owc-express-1m2-80g-portable-ssd.jpg?id=61494151&width=980",
+    "summary": "When I first read the script for Nobody 2, the hall of mirrors sequence jumped out immediately. It was a funhouse maze, full of traps set by Hutch (Bob Odenkirk), waiting for Sharon Stone’s character and her team of henchmen to arrive. On paper, it looked like a great set piece, but also a tricky one. We knew we had to figure out the smartest way to appro...",
+    "image": "https://nofilmschool.com/media-library/how-we-pulled-off-the-insane-mirror-sequence-for-nobody-2.jpg?id=61496297&width=980",
+    "video": "https://www.youtube.com/embed/-5X2pt95cIo?rel=0",
+    "author": "Callen Green ACS NZCS",
+    "tags": [
+      "Nobody 2",
+      "Action sequences"
+    ],
+    "seoTitle": "How We Pulled Off the Insane Mirror Sequence for 'Nobody 2'",
+    "seoDescription": "When I first read the script for Nobody 2, the hall of mirrors sequence jumped out immediately. It was a funhouse maze, full of traps set by Hutch (Bob Odenk..."
+  },
+  {
+    "title": "The Film That Won Venice by Accident (And Changed Cinema Forever)",
+    "url": "https://nofilmschool.com/venice-rashomon",
+    "publishedAt": "2025-08-20T21:15:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Imagine this. It's September 1951. You're director Akira Kurosawa, and you have just found out your film won the Golden Lion at the Venice Film Festival. But there's a catch. You didn't even know your film had been entered into competition. Well, that's exactly what happened. So when Rashomon won the festival's top prize, it surprised Kurosawa, Daiei Stud...",
+    "image": "https://nofilmschool.com/media-library/rashomon-movie-screencap.jpg?id=34083112&width=980",
     "video": null,
-    "author": "Jourdan Aldredge",
+    "author": "Jo Light",
     "tags": [
-      "Owc",
-      "Other world computing",
-      "Portable ssd",
-      "Owc express",
-      "Owc express 1m2 80g portable ssd"
+      "Rashomon",
+      "Venice film festival",
+      "Japanese cinema",
+      "Japanese filmmakers",
+      "Akira kurosawa",
+      "Akira kurosawa"
     ],
-    "seoTitle": "Are You Ready to Handle the Rigours of 8K+ Video Editing With Your Storage Solutions?",
-    "seoDescription": "The rigors of high-end video editing have never been more… rigorous. That statement could be transplanted to pretty much any time in the history of digital v..."
+    "seoTitle": "The Film That Won Venice by Accident (And Changed Cinema Forever)",
+    "seoDescription": "Imagine this. It's September 1951. You're director Akira Kurosawa, and you have just found out your film won the Golden Lion at the Venice Film Festival. But..."
   },
   {
-    "title": "Apple TV+ Shares 'The Morning Show' Season 4 Trailer",
-    "url": "https://www.macrumors.com/2025/08/20/apple-tv-shares-the-morning-show-season-4-trailer/",
-    "publishedAt": "2025-08-20T14:40:48.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today shared the first trailer for the fourth season of Apple TV+ original \"The Morning Show.\" Season four begins set in spring 2024, nearly two years after season three's merger between UBA and NBN, now operating as UBN. The story confronts issues of truth and trust in an era of deepfakes, conspiracy theories, and cover-ups. Reese Witherspoon and J...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/Klq88ERaGuM?si=9NV21djyouOtRNk-",
-    "author": "Hartley Charlton",
-    "tags": [
-      "Apple TV Plus",
-      "Apple TV Shows"
-    ],
-    "seoTitle": "Apple TV+ Shares 'The Morning Show' Season 4 Trailer",
-    "seoDescription": "Apple today shared the first trailer for the fourth season of Apple TV+ original \"The Morning Show.\" Season four begins set in spring 2024, nearly two years ..."
+    "title": "Framework is teasing a ‘big’ update for August 26th — could it be Framework 16?",
+    "url": "https://www.theverge.com/news/763037/framework-is-teasing-a-big-update-for-august-26th-could-it-be-framework-16",
+    "publishedAt": "2025-08-20T21:14:41.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Framework, the modular computer company, just released its first delightful tiny desktop PC, on top of its smallest laptop yet. But it’s already teasing its next big live announcement on YouTube for August 26th at 8am PT / 11am ET, saying it’ll reveal how “something big just got better.” While that may seem like a vague phrase, it might narrow things down...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/1Z8A9946.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/OZRG7Og61mw?rel=0",
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "Framework is teasing a ‘big’ update for August 26th — could it be Framework 16?",
+    "seoDescription": "Framework, the modular computer company, just released its first delightful tiny desktop PC, on top of its smallest laptop yet. But it’s already teasing its ..."
   },
   {
-    "title": "Apple Shows How iPhone's Action Mode Helps People With Parkinson's",
-    "url": "https://www.macrumors.com/2025/08/20/apple-no-frame-missed-video/",
-    "publishedAt": "2025-08-20T14:35:13.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today shared a touching video that highlights how the iPhone's Action mode allows for people with Parkinson's disease to record stable videos. Parkinson's disease can cause hand tremors, which could ordinarily result in a hand-held video recording appearing shaky, but the Camera app's Action mode automatically stabilizes video recordings so that foo...",
-    "image": "https://images.macrumors.com/article-new/2023/09/iPhone-15-Pro-Cameras.jpg",
-    "video": "https://www.youtube.com/embed/hEalzEnT70k?si=HNVBGuwkiu5n4-w6",
-    "author": "Joe Rossignol",
-    "tags": [
-      "Accessibility",
-      "Apple Ads"
-    ],
-    "seoTitle": "Apple Shows How iPhone's Action Mode Helps People With Parkinson's",
-    "seoDescription": "Apple today shared a touching video that highlights how the iPhone's Action mode allows for people with Parkinson's disease to record stable videos. Parkinso..."
-  },
-  {
-    "title": "Apple shares emotional film on how Action mode helps iPhone users with Parkinson’s",
-    "url": "https://9to5mac.com/2025/08/20/no-frame-missed-short-film/",
-    "publishedAt": "2025-08-20T14:32:01.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "In its short film No Frame Missed, Apple shows how an iPhone videography feature has become an unlikely source of support for users with Parkinson’s. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/action.webp?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple shares emotional film on how Action mode helps iPhone users with Parkinson’s",
-    "seoDescription": "In its short film No Frame Missed, Apple shows how an iPhone videography feature has become an unlikely source of support for users with Parkinson’s. more…"
-  },
-  {
-    "title": "Apple TV+ reveals darker, cutthroat return of The Morning Show in new trailer",
-    "url": "https://9to5mac.com/2025/08/20/apple-tv-reveals-darker-cutthroat-return-of-the-morning-show-in-new-trailer/",
-    "publishedAt": "2025-08-20T14:30:24.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "One of the longest running hits for Apple TV+, The Morning Show, is returning soon with season 4. And the new trailer reveals a darker turn coming for the series. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/the-morning-show-s4-witherspoon.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple TV+ reveals darker, cutthroat return of The Morning Show in new trailer",
-    "seoDescription": "One of the longest running hits for Apple TV+, The Morning Show, is returning soon with season 4. And the new trailer reveals a darker turn coming for the se..."
-  },
-  {
-    "title": "High Schoolers Discover the Joy of Disposable Cameras After Cellphone Ban",
-    "url": "https://petapixel.com/2025/08/20/high-schoolers-discover-the-joy-of-disposable-cameras-after-cellphone-ban/",
-    "publishedAt": "2025-08-20T14:11:18.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "After a high school in South Carolina prohibited cellphones, amid a statewide ban, one student adapted by bringing a disposable camera with her instead -- kicking off a trend. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Disposable-Camera.jpg",
-    "video": null,
-    "author": "Matt Growcoot",
-    "tags": [
-      "Analog",
-      "News",
-      "cellphoneban",
-      "disposable",
-      "disposablecamera",
-      "disposablecameras",
-      "highschool",
-      "phoneban"
-    ],
-    "seoTitle": "High Schoolers Discover the Joy of Disposable Cameras After Cellphone Ban",
-    "seoDescription": "After a high school in South Carolina prohibited cellphones, amid a statewide ban, one student adapted by bringing a disposable camera with her instead -- ki..."
-  },
-  {
-    "title": "$5,000 Grant Now Open for Surfing’s Next Iconic Photographer",
-    "url": "https://petapixel.com/2025/08/20/5000-grant-now-open-for-surfings-next-iconic-photographer/",
-    "publishedAt": "2025-08-20T14:09:46.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "A prestigious $5,000 grant, which has been awarded to some of surfing’s iconic photographers, is now open for applications. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/photographer-surf-grant.jpg",
-    "video": null,
-    "author": "Pesala Bandara",
-    "tags": [
-      "Culture",
-      "News",
-      "grant",
-      "surf",
-      "surfphotographer",
-      "youngphotographer"
-    ],
-    "seoTitle": "$5,000 Grant Now Open for Surfing’s Next Iconic Photographer",
-    "seoDescription": "A prestigious $5,000 grant, which has been awarded to some of surfing’s iconic photographers, is now open for applications. [Read More]"
-  },
-  {
-    "title": "Amazon goes after the iPad market as it plans $400 Android tablet",
-    "url": "https://9to5mac.com/2025/08/20/amazon-goes-after-the-ipad-market-as-it-plans-400-android-tablet/",
-    "publishedAt": "2025-08-20T14:04:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "have so far been cheap and cheerful devices, often bought for children. Running a heavily-customized version of Android known as Fire OS, they haven’t achieved much traction in the market … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Amazon-goes-after-the-iPad-market-as-it-plans-400-Android-tablet.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Amazon goes after the iPad market as it plans $400 Android tablet",
-    "seoDescription": "have so far been cheap and cheerful devices, often bought for children. Running a heavily-customized version of Android known as Fire OS, they haven’t achiev..."
-  },
-  {
-    "title": "Sigma 200mm f/2 Review: A Lens That Redefines Mirrorless Telephoto",
-    "url": "https://fstoppers.com/reviews/sigma-200mm-f2-review-lens-redefines-mirrorless-telephoto-709576?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
-    "publishedAt": "2025-08-20T14:04:01.000Z",
+    "title": "My Lens Is Bigger Than Yours: Why We Need to Stop Arguing Over Camera Gear",
+    "url": "https://fstoppers.com/reviews/my-lens-bigger-yours-why-need-stop-arguing-over-camera-gear-708798?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-20T21:04:59.000Z",
     "source": "fstoppers.com",
     "category": "photography",
-    "summary": "A 200mm f/2 lens isn’t the kind of glass you see every day. Sigma’s new entry changes the equation, bringing a prime of this kind to full frame mirrorless cameras for the first time. [ Read More ]",
-    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/this-lens-is-pure-magic-_-sigma-200mm-f2---youtube---0-10-14.jpeg",
+    "summary": "Specs aren’t everything. There are factors beyond what we can see in spec sheets that matter more when it comes to choosing gear, and we should always keep them in mind. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/dsc00070.jpeg",
     "video": null,
-    "author": "Alex Cooke",
+    "author": "Nicco Valenzuela",
     "tags": [
       {
         "_": "Reviews",
@@ -646,13 +546,136 @@
         }
       },
       {
+        "_": "Landscapes",
+        "$": {
+          "domain": "https://fstoppers.com/category/landscapes"
+        }
+      },
+      {
         "_": "Gear",
         "$": {
           "domain": "https://fstoppers.com/category/gear"
         }
+      },
+      {
+        "_": "Travel",
+        "$": {
+          "domain": "https://fstoppers.com/category/travel"
+        }
+      },
+      {
+        "_": "Fstoppers Originals",
+        "$": {
+          "domain": "https://fstoppers.com/category/fstoppers-originals"
+        }
       }
     ],
-    "seoTitle": "Sigma 200mm f/2 Review: A Lens That Redefines Mirrorless Telephoto",
-    "seoDescription": "A 200mm f/2 lens isn’t the kind of glass you see every day. Sigma’s new entry changes the equation, bringing a prime of this kind to full frame mirrorless ca..."
+    "seoTitle": "My Lens Is Bigger Than Yours: Why We Need to Stop Arguing Over Camera Gear",
+    "seoDescription": "Specs aren’t everything. There are factors beyond what we can see in spec sheets that matter more when it comes to choosing gear, and we should always keep t..."
+  },
+  {
+    "title": "Here’s How to Improve the Operational Stability of Your Sony a7RV Camera Today",
+    "url": "https://nofilmschool.com/sony-a7rv-firmware-update",
+    "publishedAt": "2025-08-20T21:00:06.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Who doesn’t love operational stability? Repeating a trend that Sony’s been pushing out to pretty much all of its cameras over the past few months, a new firmware update is now available for the Sony a7RV (aka the Sony a7R5). This firmware update (version 3.01) does one thing and one thing only. It “improves operational stability of the camera,” an update ...",
+    "image": "https://nofilmschool.com/media-library/sony-a7rv-firmware-update.jpg?id=61494181&width=980",
+    "video": "https://www.youtube.com/embed/mgjM20oDLSo?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Sony",
+      "Sony a7rv",
+      "Sony a7r5",
+      "Firmware update",
+      "Sony a7rv firmware update"
+    ],
+    "seoTitle": "Here’s How to Improve the Operational Stability of Your Sony a7RV Camera Today",
+    "seoDescription": "Who doesn’t love operational stability? Repeating a trend that Sony’s been pushing out to pretty much all of its cameras over the past few months, a new firm..."
+  },
+  {
+    "title": "iOS 26 makes Apple’s killer autofill code feature even better",
+    "url": "https://9to5mac.com/2025/08/20/apples-killer-one-time-code-autofill-feature-gets-even-better-in-ios-26/",
+    "publishedAt": "2025-08-20T20:53:15.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is always adding new features to its software, but every now and then a change arrives that it’s hard to live without. One such killer feature lets you autofill two-factor authentication codes, and it’s getting even better in iOS 26 and macOS Tahoe this fall. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/ios-26-wallpapers.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iOS 26 makes Apple’s killer autofill code feature even better",
+    "seoDescription": "Apple is always adding new features to its software, but every now and then a change arrives that it’s hard to live without. One such killer feature lets you..."
+  },
+  {
+    "title": "This Script Reader's Guide to Building a Hollywood Career",
+    "url": "https://nofilmschool.com/lessons-from-script-reader",
+    "publishedAt": "2025-08-20T20:46:32.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Andrew Zinnes is a screenwriter, author, and consultant with experience in film and TV, including roles as a development executive for Norman Lear (the one and only). Zinnes has been involved in script reading and development for companies such as Paramount Pictures, Artisan, and USA Network. He is also known for co-authoring industry textbooks like The D...",
+    "image": "https://nofilmschool.com/media-library/a-stack-of-scripts.jpg?id=34058487&width=980",
+    "video": "https://www.youtube.com/embed/cAENr1fruXc?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Script reading",
+      "Script reader",
+      "Industry"
+    ],
+    "seoTitle": "This Script Reader's Guide to Building a Hollywood Career",
+    "seoDescription": "Andrew Zinnes is a screenwriter, author, and consultant with experience in film and TV, including roles as a development executive for Norman Lear (the one a..."
+  },
+  {
+    "title": "‘How Apple AirPods Work’: This awesome video just made me love my AirPods even more",
+    "url": "https://9to5mac.com/2025/08/20/how-apple-airpods-work-video/",
+    "publishedAt": "2025-08-20T20:36:07.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Even if you’ve never wondered about how Apple manages to pack so much advanced tech inside its teeny tiny , do yourself a favor and set aside a few minutes to watch this awesome breakdown by the always fascinating folks at the Real Engineering YouTube Channel. Watch the video below. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/how-airpods-work.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "‘How Apple AirPods Work’: This awesome video just made me love my AirPods even more",
+    "seoDescription": "Even if you’ve never wondered about how Apple manages to pack so much advanced tech inside its teeny tiny , do yourself a favor and set aside a few minutes t..."
+  },
+  {
+    "title": "The game studio building a new BioShock just had mass layoffs",
+    "url": "https://www.theverge.com/news/762933/bioshock-cloud-chamber-take-two-2k-layoffs",
+    "publishedAt": "2025-08-20T20:15:48.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The team working on the next BioShock game is losing a third of its staff. According to Bloomberg, Take-Two is laying off more than 80 people at Cloud Chamber, which has been working on a new BioShock title, and the game has been delayed from a planned launch in late 2026 or early 2027. The game has already had a rocky development, and the changes likely ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/0000002511.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "The game studio building a new BioShock just had mass layoffs",
+    "seoDescription": "The team working on the next BioShock game is losing a third of its staff. According to Bloomberg, Take-Two is laying off more than 80 people at Cloud Chambe..."
+  },
+  {
+    "title": "Why Film Photography’s Revival Refuses to Die: Insights for 2025",
+    "url": "https://fstoppers.com/film/why-film-photographys-revival-refuses-die-insights-2025-709556?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS",
+    "publishedAt": "2025-08-20T20:04:01.000Z",
+    "source": "fstoppers.com",
+    "category": "photography",
+    "summary": "Thomas Heaton drops a quick gut check on the state of film: remember when old point-and-shoots gathered dust in thrift stores, then suddenly became flex pieces on Instagram? Overnight, Contax compacts leapt from a few hundred bucks to nosebleed prices. That wave carried a lot of us back into the darkroom. [ Read More ]",
+    "image": "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2025/08/ae1macroektar011_0.jpg",
+    "video": null,
+    "author": "Steven Van Worth",
+    "tags": [
+      {
+        "_": "Film Photography",
+        "$": {
+          "domain": "https://fstoppers.com/category/film-photography"
+        }
+      }
+    ],
+    "seoTitle": "Why Film Photography’s Revival Refuses to Die: Insights for 2025",
+    "seoDescription": "Thomas Heaton drops a quick gut check on the state of film: remember when old point-and-shoots gathered dust in thrift stores, then suddenly became flex piec..."
   }
 ]
