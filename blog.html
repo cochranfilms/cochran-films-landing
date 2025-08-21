@@ -17,14 +17,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-  <!-- Airtable CMS Integration -->
+  <!-- Blog Content Integration -->
   <script>
-    window.API_BASE_URL = window.location.origin;
+    // Blog posts will be loaded from /blog/posts.json
   </script>
-  <script src="js/airtable-cms.js"></script>
   
   <style>
     :root {
@@ -712,7 +708,7 @@
             <span class="featured-blog-category">
               <i class="fa-solid fa-lightbulb"></i> Creative Insights
             </span>
-          </div>
+            </div>
           
           <h3 class="featured-blog-title">
             The Future of Video Marketing: AI-Powered Content Creation
@@ -780,7 +776,14 @@
     </div>
   </footer>
 
-
+  <!-- Blog Content Initialization -->
+  <script>
+    // Initialize blog content when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🚀 Initializing Blog Content...');
+      initializeBlogSystem();
+    });
+  </script>
 
   <script>
     // Mobile menu toggle
@@ -804,17 +807,17 @@
     // ========================================
     // AI NEURAL NETWORK BACKGROUND
     // ========================================
-    class AINeuralNetwork {
+      class AINeuralNetwork {
       constructor() {
-        this.canvas = document.getElementById('neuralCanvas');
-        this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        this.connections = [];
-        this.mouse = { x: 0, y: 0 };
-        this.animationId = null;
+          this.canvas = document.getElementById('neuralCanvas');
+          this.ctx = this.canvas.getContext('2d');
+          this.particles = [];
+          this.connections = [];
+          this.mouse = { x: 0, y: 0 };
+          this.animationId = null;
         
-        this.init();
-      }
+          this.init();
+        }
       
       init() {
         this.resize();
@@ -830,10 +833,10 @@
       }
       
       createParticles() {
-        this.particles = [];
+          this.particles = [];
         const particleCount = 100;
         for (let i = 0; i < particleCount; i++) {
-          this.particles.push({
+            this.particles.push({
             x: Math.random() * this.canvas.width,
             y: Math.random() * this.canvas.height,
             vx: (Math.random() - 0.5) * 0.3,
@@ -841,12 +844,12 @@
             size: Math.random() * 2 + 1,
             color: this.getRandomAIColor(),
             pulse: Math.random() * Math.PI * 2
-          });
+            });
+          }
         }
-      }
       
       createConnections() {
-        this.connections = [];
+          this.connections = [];
         const connectionDistance = 120;
         for (let i = 0; i < this.particles.length; i++) {
           for (let j = i + 1; j < this.particles.length; j++) {
@@ -979,34 +982,166 @@
     }
 
     // ========================================
-    // AIRTABLE CMS INTEGRATION
+    // BLOG CONTENT LOADER (from posts.json)
     // ========================================
     
-    // Initialize Airtable CMS when the page loads
+    // Initialize blog system when the page loads
     function initializeBlogSystem() {
-      // Check if Airtable CMS is available
-      if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
+      console.log('🚀 Initializing Blog System...');
+      
+      // Load blog posts from the generated posts.json file
+      loadBlogPosts();
+      
+      // Set up event handlers for load more buttons
+      document.querySelectorAll('.load-more-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          loadMoreBlogPosts();
+        });
+      });
+    }
+    
+    // Load blog posts from posts.json
+    async function loadBlogPosts() {
+      try {
+        const response = await fetch('/blog/posts.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
+        const posts = await response.json();
+        console.log(`📚 Loaded ${posts.length} blog posts`);
         
-        // Set up event handlers for load more buttons
+        // Display the first 6 posts initially
+        displayBlogPosts(posts.slice(0, 6));
+        
+        // Show load more button if there are more posts
+        const loadMoreBtn = document.getElementById('loadMoreBlog');
+        if (loadMoreBtn && posts.length > 6) {
+          loadMoreBtn.style.display = 'inline-flex';
+          loadMoreBtn.onclick = () => loadMoreBlogPosts(posts);
+        }
+        
+      } catch (error) {
+        console.error('❌ Failed to load blog posts:', error);
+        // Show fallback content
+        displayFallbackBlogContent();
+      }
+    }
+    
+    // Display blog posts in the grid
+    function displayBlogPosts(posts) {
+      const blogGrid = document.getElementById('blogGrid');
+      if (!blogGrid) return;
+      
+      blogGrid.innerHTML = posts.map(post => `
+        <article class="blog-item" onclick="window.open('${post.url}', '_blank')">
+          <div class="blog-thumbnail">
+            ${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : 
+              `<div style="background: linear-gradient(45deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 24px;"><i class="fas fa-newspaper"></i></div>`}
+          </div>
+          <div class="blog-content-inner">
+            <div class="blog-category">
+              <i class="fas fa-${getCategoryIcon(post.category)}"></i>
+              ${post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+            </div>
+            <h3 class="blog-title">${post.title}</h3>
+            <p class="blog-excerpt">${post.summary}</p>
+            <div class="blog-meta">
+              <span class="blog-date">
+                <i class="fas fa-calendar"></i>
+                ${formatDate(post.publishedAt)}
+              </span>
+              <span class="blog-read-more">
+                Read More <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+    
+    // Load more blog posts
+    let currentPostIndex = 6;
+    function loadMoreBlogPosts(allPosts) {
+      if (!allPosts) return;
+      
+      const nextPosts = allPosts.slice(currentPostIndex, currentPostIndex + 6);
+      if (nextPosts.length === 0) return;
+      
+      const blogGrid = document.getElementById('blogGrid');
+      if (blogGrid) {
+        blogGrid.innerHTML += nextPosts.map(post => `
+          <article class="blog-item" onclick="window.open('${post.url}', '_blank')">
+            <div class="blog-thumbnail">
+              ${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : 
+                `<div style="background: linear-gradient(45deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 24px;"><i class="fas fa-newspaper"></i></div>`}
+            </div>
+            <div class="blog-content-inner">
+              <div class="blog-category">
+                <i class="fas fa-${getCategoryIcon(post.category)}"></i>
+                ${post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+              </div>
+              <h3 class="blog-title">${post.title}</h3>
+              <p class="blog-excerpt">${post.summary}</p>
+              <div class="blog-meta">
+                <span class="blog-date">
+                  <i class="fas fa-calendar"></i>
+                  ${formatDate(post.publishedAt)}
+                </span>
+                <span class="blog-read-more">
+                  Read More <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+      
+      currentPostIndex += 6;
+      
+      // Hide load more button if no more posts
+      if (currentPostIndex >= allPosts.length) {
         const loadMoreBtn = document.getElementById('loadMoreBlog');
         if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
-            }
-          });
-        }
-      } else {
-        console.warn('⚠️ Airtable CMS not loaded, falling back to CSV loading...');
-        // Fallback to CSV loading if Airtable CMS is not available
-        if (typeof loadAllBlogData === 'function') {
-          loadAllBlogData();
+          loadMoreBtn.style.display = 'none';
         }
       }
+    }
+    
+    // Get category icon
+    function getCategoryIcon(category) {
+      const icons = {
+        'web': 'fa-code',
+        'production': 'fa-video',
+        'photography': 'fa-camera',
+        'brand': 'fa-palette',
+        'apple': 'fa-apple-whole'
+      };
+      return icons[category] || 'fa-newspaper';
+    }
+    
+    // Format date
+    function formatDate(dateString) {
+      if (!dateString) return 'Recent';
+      const date = new Date(dateString);
+      return date.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+    }
+    
+    // Display fallback content if posts fail to load
+    function displayFallbackBlogContent() {
+      const blogGrid = document.getElementById('blogGrid');
+      if (!blogGrid) return;
+      
+      blogGrid.innerHTML = `
+        <div style="text-align: center; grid-column: 1 / -1; padding: 40px;">
+          <h3 style="color: var(--text-primary); margin-bottom: 20px;">Blog Content Loading...</h3>
+          <p style="color: var(--text-secondary);">Please refresh the page to load the latest blog posts.</p>
+        </div>
+      `;
     }
 
     // ========================================
