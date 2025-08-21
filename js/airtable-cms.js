@@ -21,9 +21,9 @@ class AirtableCMS {
     
     // Table names (these are typically the sheet names in your Airtable)
     this.tables = {
-      'Video Production': 'Portfolio',
-      'Web Development': 'Web',
-      'Photography': 'Photos'
+      'Video Production': 'Imported table',
+      'Web Development': 'Imported table',
+      'Photography': 'Imported table'
     };
     
     // Initialize the CMS

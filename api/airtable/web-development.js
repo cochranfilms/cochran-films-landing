@@ -17,7 +17,7 @@ module.exports = async function handler(req, res) {
 
   try {
     const baseId = 'appV5l9kZ5vAxcz4e';
-    const tableName = 'Web';
+    const tableName = 'Imported table';
     
     // Get Airtable API key from environment variables
     // Prefer base-specific token if provided, then fall back to global
