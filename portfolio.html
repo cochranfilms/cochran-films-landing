@@ -20,6 +20,65 @@
   <!-- Airtable CMS Integration -->
   <script>
     window.API_BASE_URL = window.location.origin;
+    
+    // FALLBACK DATA - This will show real content immediately while we debug Airtable
+    window.FALLBACK_PORTFOLIO_DATA = [
+      {
+        Title: "Evolve Contracting - National Small Business Week Highlight",
+        Description: "DP | Gaffer | Editor | Audio. Shot on Sony FX6: 24-70mm f/2.8. Lights: Aputure Amaran COB 60x on a C-Stand w/lantern Diffuser.",
+        Category: "Commercials",
+        'Thumbnail Image': "https://static.wixstatic.com/media/aeef42_7a5a1e21bcb349369b5cfce51e197341~mv2.jpg",
+        'Is Featured': true,
+        playbackUrl: "https://video.wixstatic.com/video/aeef42_55d75649953a40d4963f44cb2322046f/1080p/mp4/file.mp4",
+        UploadDate: "2025-01-24",
+        ServiceCategory: "Video Production"
+      },
+      {
+        Title: "Course Creator Academy",
+        Description: "Course Creator Academy is a content creation education platform to help students enhance their videography skills.",
+        Category: "E-Commerce",
+        'Thumbnail Image': "https://github.com/cochranfilms/cochran-films-landing/blob/3e356e1eacda5bfd00b02415e3dc94646676cc40/CMS/Thumbnails/Web%20Development/CCA_Live_Website.png",
+        'Is Featured': true,
+        URL: "https://coursecreatoracademy.org/",
+        'Tech Stack': "Shopify, Liquid, HTML5, CSS3, JavaScript",
+        Role: "Full-Stack Developer & Systems Architect",
+        Client: "Course Creator Academy",
+        Timeline: "4 weeks",
+        ServiceCategory: "Web Development"
+      },
+      {
+        Title: "Cochran Films Website",
+        Description: "A Wix Studio-based dynamic website for Cochran Films, designed as a central hub for its video portfolio, service offerings, and client inquiry funnel.",
+        Category: "Media Services",
+        'Thumbnail Image': "https://github.com/cochranfilms/cochran-films-landing/blob/e3cd354bbb5a92a30bda77c24e8acf72f1f0bb36/CMS/Thumbnails/Web%20Development/CF_Live_Website.png",
+        'Is Featured': false,
+        URL: "https://www.cochranfilms.com",
+        'Tech Stack': "Wix Studio CMS, Velo by Wix, JavaScript, HTML5, CSS3",
+        Role: "Full-Stack Web Developer & Media Systems Designer",
+        Client: "Cochran Films",
+        Timeline: "6 weeks",
+        ServiceCategory: "Web Development"
+      },
+      {
+        Title: "Photography Portfolio",
+        Description: "Professional photography showcasing our creative vision and technical expertise.",
+        Category: "Portrait",
+        'Thumbnail Image': "https://landing.cochranfilms.com/CMS/Photos/DSC05613-Enhanced-NR.jpg",
+        'Is Featured': false,
+        ServiceCategory: "Photography"
+      },
+      {
+        Title: "Brand Identity Design",
+        Description: "Comprehensive brand development including logo design, color palette, and visual identity guidelines.",
+        Category: "Brand Development",
+        'Thumbnail Image': "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center",
+        'Is Featured': true,
+        'Logo URL': "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center",
+        'Client/Brand Name': "Sample Brand",
+        'Services Provided': "Logo Design, Brand Identity, Visual Guidelines",
+        ServiceCategory: "Brand Development"
+      }
+    ];
   </script>
   <script src="js/airtable-cms.js"></script>
   

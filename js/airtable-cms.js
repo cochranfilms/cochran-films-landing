@@ -370,8 +370,14 @@ class AirtableCMS {
         // Warm up cache in background for next time
         this.warmupCache();
       } else {
-        // Load portfolio data from unified API
-        await this.loadPortfolioFromUnifiedAPI();
+        // Try to load portfolio data from unified API
+        try {
+          await this.loadPortfolioFromUnifiedAPI();
+        } catch (apiError) {
+          console.warn('⚠️ Airtable API failed, using fallback data:', apiError);
+          // Use fallback data when API fails
+          this.useFallbackData();
+        }
         
         // Set up the existing portfolio functionality
         this.setupPortfolioDisplay();
@@ -385,9 +391,14 @@ class AirtableCMS {
       this.hidePortfolioLoadingState();
       
     } catch (error) {
-      console.error('❌ Failed to load unified portfolio data:', error);
+      console.error('❌ Failed to load portfolio data, using fallback:', error);
       this.hidePortfolioLoadingState();
-      throw error;
+      
+      // Use fallback data as last resort
+      this.useFallbackData();
+      this.setupPortfolioDisplay();
+      this.setupEventHandlers();
+      this.renderPortfolioByCategory();
     }
   }
 
@@ -1235,6 +1246,18 @@ class AirtableCMS {
     
     // Restore body scrolling
     document.body.style.overflow = '';
+  }
+  
+  useFallbackData() {
+    // Use fallback data when Airtable API fails
+    if (window.FALLBACK_PORTFOLIO_DATA && window.FALLBACK_PORTFOLIO_DATA.length > 0) {
+      console.log('🔄 Using fallback portfolio data:', window.FALLBACK_PORTFOLIO_DATA.length, 'items');
+      this.portfolioData = window.FALLBACK_PORTFOLIO_DATA;
+      return true;
+    }
+    
+    console.warn('⚠️ No fallback data available');
+    return false;
   }
   
   fallbackToCSV() {
