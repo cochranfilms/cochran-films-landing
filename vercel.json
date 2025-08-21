@@ -30,6 +30,10 @@
       "dest": "/api/airtable/$1.js"
     },
     {
+      "src": "^/api/user-preferences$",
+      "dest": "/api/user-preferences.js"
+    },
+    {
       "src": "^/api/(create-checkout-session|webhook)$",
       "dest": "/server.js"
     },

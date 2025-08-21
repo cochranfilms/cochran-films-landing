@@ -272,6 +272,9 @@ class AirtableCMS {
     this.setupPortfolioDisplay();
     this.setupEventHandlers();
     
+    // Initialize video popup system
+    this.initializeVideoPopups();
+    
     // Render the portfolio
     this.renderPortfolioByCategory();
   }
@@ -809,6 +812,558 @@ class AirtableCMS {
       console.error('❌ CSV parsing error (robust):', error);
       return { headers: [], rows: [] };
     }
+  }
+
+  // ===== VIDEO POPUP SYSTEM =====
+  
+  initializeVideoPopups() {
+    console.log('🎥 Initializing video popup system...');
+    
+    // Create video popup container if it doesn't exist
+    this.createVideoPopupContainer();
+    
+    // Add click handlers to video items
+    this.addVideoClickHandlers();
+  }
+
+  createVideoPopupContainer() {
+    // Remove existing popup if it exists
+    const existingPopup = document.getElementById('videoPopup');
+    if (existingPopup) {
+      existingPopup.remove();
+    }
+
+    // Create popup container
+    const popupHTML = `
+      <div id="videoPopup" class="video-popup-overlay" style="display: none;">
+        <div class="video-popup-content">
+          <div class="video-popup-header">
+            <h2 id="popupTitle" class="popup-title"></h2>
+            <button class="popup-close-btn" onclick="window.airtableCMS.closeVideoPopup()">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          
+          <div class="video-popup-body">
+            <div class="video-player-section">
+              <div class="video-container">
+                <video id="popupVideo" controls preload="metadata">
+                  <source id="popupVideoSource" src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            
+            <div class="video-info-section">
+              <div class="video-description">
+                <h3>Project Description</h3>
+                <p id="popupDescription"></p>
+              </div>
+              
+              <div class="video-details">
+                <div class="detail-item">
+                  <strong>Category:</strong> <span id="popupCategory"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Role:</strong> <span id="popupRole"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Client:</strong> <span id="popupClient"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Timeline:</strong> <span id="popupTimeline"></span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="ai-service-card">
+              <div class="ai-card-header">
+                <div class="ai-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI-Powered Service Recommendation</h3>
+              </div>
+              
+              <div class="ai-card-content">
+                <div class="ai-stat-grid">
+                  <div class="ai-stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Clients</div>
+                  </div>
+                  <div class="ai-stat-item">
+                    <div class="stat-number">24-48h</div>
+                    <div class="stat-label">Turnaround Time</div>
+                  </div>
+                  <div class="ai-stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                  </div>
+                </div>
+                
+                <div class="ai-recommendation">
+                  <h4>Based on this project, we recommend:</h4>
+                  <div class="recommendation-tags">
+                    <span class="tag">Video Production</span>
+                    <span class="tag">Post-Production</span>
+                    <span class="tag">Color Grading</span>
+                    <span class="tag">Sound Design</span>
+                  </div>
+                </div>
+                
+                <div class="ai-cta">
+                  <button class="ai-cta-btn primary" onclick="window.airtableCMS.openContactForm('video-production')">
+                    <i class="fas fa-play"></i> Start Your Project
+                  </button>
+                  <button class="ai-cta-btn secondary" onclick="window.airtableCMS.scheduleConsultation()">
+                    <i class="fas fa-calendar"></i> Free Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Insert popup into body
+    document.body.insertAdjacentHTML('beforeend', popupHTML);
+    
+    // Add popup styles
+    this.addVideoPopupStyles();
+  }
+
+  addVideoPopupStyles() {
+    const styleId = 'videoPopupStyles';
+    if (document.getElementById(styleId)) return;
+
+    const styles = `
+      <style id="${styleId}">
+        .video-popup-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          backdrop-filter: blur(10px);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .video-popup-overlay.show {
+          opacity: 1;
+        }
+
+        .video-popup-content {
+          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+          border-radius: 20px;
+          max-width: 1200px;
+          width: 100%;
+          max-height: 90vh;
+          overflow-y: auto;
+          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+          border: 1px solid rgba(99, 102, 241, 0.3);
+          position: relative;
+        }
+
+        .video-popup-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 25px 30px;
+          border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+          background: linear-gradient(90deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
+        }
+
+        .popup-title {
+          color: #fff;
+          font-size: 28px;
+          font-weight: 700;
+          margin: 0;
+          background: linear-gradient(45deg, #6366f1, #8b5cf6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .popup-close-btn {
+          background: rgba(99, 102, 241, 0.2);
+          border: 1px solid rgba(99, 102, 241, 0.3);
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 18px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .popup-close-btn:hover {
+          background: rgba(99, 102, 241, 0.4);
+          transform: scale(1.1);
+        }
+
+        .video-popup-body {
+          padding: 30px;
+        }
+
+        .video-player-section {
+          margin-bottom: 30px;
+        }
+
+        .video-container {
+          position: relative;
+          width: 100%;
+          border-radius: 15px;
+          overflow: hidden;
+          background: #000;
+        }
+
+        .video-container video {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .video-info-section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        .video-description h3 {
+          color: #fff;
+          font-size: 20px;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .video-description p {
+          color: #cbd5e1;
+          line-height: 1.6;
+          font-size: 16px;
+        }
+
+        .video-details {
+          background: rgba(99, 102, 241, 0.1);
+          padding: 20px;
+          border-radius: 12px;
+          border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .detail-item {
+          margin-bottom: 12px;
+          color: #cbd5e1;
+        }
+
+        .detail-item strong {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .ai-service-card {
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+          border-radius: 20px;
+          padding: 30px;
+          border: 1px solid rgba(99, 102, 241, 0.3);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .ai-service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg, transparent 30%, rgba(99, 102, 241, 0.05) 50%, transparent 70%);
+          animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
+        .ai-card-header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 25px;
+        }
+
+        .ai-icon {
+          background: linear-gradient(45deg, #6366f1, #8b5cf6);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px;
+          font-size: 24px;
+          color: #fff;
+        }
+
+        .ai-card-header h3 {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .ai-stat-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-bottom: 25px;
+        }
+
+        .ai-stat-item {
+          text-align: center;
+          padding: 20px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+          font-size: 28px;
+          font-weight: 800;
+          color: #6366f1;
+          margin-bottom: 8px;
+        }
+
+        .stat-label {
+          color: #cbd5e1;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .ai-recommendation {
+          margin-bottom: 25px;
+        }
+
+        .ai-recommendation h4 {
+          color: #fff;
+          font-size: 18px;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .recommendation-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .tag {
+          background: linear-gradient(45deg, #6366f1, #8b5cf6);
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .ai-cta {
+          display: flex;
+          gap: 15px;
+          flex-wrap: wrap;
+        }
+
+        .ai-cta-btn {
+          padding: 12px 24px;
+          border-radius: 25px;
+          border: none;
+          font-weight: 600;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .ai-cta-btn.primary {
+          background: linear-gradient(45deg, #6366f1, #8b5cf6);
+          color: #fff;
+        }
+
+        .ai-cta-btn.primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        .ai-cta-btn.secondary {
+          background: transparent;
+          color: #6366f1;
+          border: 2px solid #6366f1;
+          cursor: pointer;
+        }
+
+        .ai-cta-btn.secondary:hover {
+          background: #6366f1;
+          color: #fff;
+        }
+
+        @media (max-width: 768px) {
+          .video-popup-content {
+            margin: 10px;
+            max-height: 95vh;
+          }
+          
+          .video-info-section {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+          
+          .ai-stat-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .ai-cta {
+            flex-direction: column;
+          }
+        }
+      </style>
+    `;
+
+    document.head.insertAdjacentHTML('beforeend', styles);
+  }
+
+  addVideoClickHandlers() {
+    // Add click handlers to video portfolio items
+    const videoItems = document.querySelectorAll('[data-video-url], .video-item, .portfolio-item');
+    
+    videoItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Extract video data from the item
+        const videoData = this.extractVideoData(item);
+        if (videoData) {
+          this.openVideoPopup(videoData);
+        }
+      });
+    });
+
+    console.log(`🎬 Added click handlers to ${videoItems.length} video items`);
+  }
+
+  extractVideoData(item) {
+    // Try to extract video data from various sources
+    const videoUrl = item.dataset.videoUrl || 
+                    item.querySelector('[data-video-url]')?.dataset.videoUrl ||
+                    item.querySelector('video source')?.src ||
+                    item.querySelector('video')?.src;
+
+    if (!videoUrl) return null;
+
+    // Find the corresponding portfolio data
+    const title = item.querySelector('.title, .project-title, h3, h4')?.textContent || 'Untitled Video';
+    const description = item.querySelector('.description, .project-description, p')?.textContent || '';
+    
+    // Look for additional data in the portfolio
+    const portfolioItem = this.findPortfolioItemByVideoUrl(videoUrl);
+    
+    return {
+      title: portfolioItem?.Title || title,
+      description: portfolioItem?.Description || description,
+      videoUrl: videoUrl,
+      category: portfolioItem?.Category || 'Video Production',
+      role: portfolioItem?.Role || '',
+      client: portfolioItem?.Client || '',
+      timeline: portfolioItem?.Timeline || '',
+      playbackUrl: portfolioItem?.playbackUrl || videoUrl
+    };
+  }
+
+  findPortfolioItemByVideoUrl(videoUrl) {
+    return this.portfolioData?.find(item => 
+      item.playbackUrl === videoUrl || 
+      item.URL === videoUrl ||
+      item['Video'] === videoUrl
+    );
+  }
+
+  openVideoPopup(videoData) {
+    const popup = document.getElementById('videoPopup');
+    if (!popup) return;
+
+    // Populate popup with video data
+    document.getElementById('popupTitle').textContent = videoData.title;
+    document.getElementById('popupDescription').textContent = videoData.description;
+    document.getElementById('popupCategory').textContent = videoData.category;
+    document.getElementById('popupRole').textContent = videoData.role || 'Not specified';
+    document.getElementById('popupClient').textContent = videoData.client || 'Not specified';
+    document.getElementById('popupTimeline').textContent = videoData.timeline || 'Not specified';
+
+    // Set video source
+    const videoElement = document.getElementById('popupVideo');
+    const videoSource = document.getElementById('popupVideoSource');
+    
+    if (videoData.playbackUrl) {
+      videoSource.src = videoData.playbackUrl;
+      videoElement.load();
+    }
+
+    // Show popup
+    popup.style.display = 'flex';
+    setTimeout(() => popup.classList.add('show'), 10);
+
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeVideoPopup() {
+    const popup = document.getElementById('videoPopup');
+    if (!popup) return;
+
+    // Hide popup
+    popup.classList.remove('show');
+    setTimeout(() => {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 300);
+
+    // Stop video
+    const video = document.getElementById('popupVideo');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  openContactForm(service) {
+    // Scroll to contact form
+    const contactForm = document.querySelector('#contact, .contact-form, [data-contact-form]');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close popup
+    this.closeVideoPopup();
+  }
+
+  scheduleConsultation() {
+    // Open consultation booking or scroll to booking form
+    const bookingForm = document.querySelector('#booking, .booking-form, [data-booking-form]');
+    if (bookingForm) {
+      bookingForm || bookingForm.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close popup
+    this.closeVideoPopup();
   }
 }
 
