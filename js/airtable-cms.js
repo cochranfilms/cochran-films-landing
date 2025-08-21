@@ -687,6 +687,22 @@ class AirtableCMS {
         ServiceCategory: category
       };
       
+      // Brand Development specific field mappings
+      if (category === 'Brand Development') {
+        transformedItem.logoUrl = fields['Logo URL'] || '';
+        transformedItem.client = fields['Client/Brand Name'] || fields.Client || fields['Client Name'] || '';
+        transformedItem.servicesProvided = fields['Services Provided'] || '';
+        transformedItem.deliverables = fields['Deliverables'] || '';
+        transformedItem.industry = fields['Industry'] || '';
+        transformedItem.results = fields['Results/Impact'] || fields.Results || '';
+        transformedItem.projectUrl = fields['Project URL (optional)'] || '';
+        transformedItem.videoUrls = fields['Video URLs'] || '';
+        // Use the thumbnail from the brand-specific field if available
+        if (fields['Thumbnail / Cover Image URL']) {
+          transformedItem['Thumbnail Image'] = normalizeGithub(fields['Thumbnail / Cover Image URL']);
+        }
+      }
+      
       // Clean up the data
       Object.keys(transformedItem).forEach(key => {
         if (typeof transformedItem[key] === 'string') {
@@ -949,10 +965,10 @@ class AirtableCMS {
              data-category="${item.Category}" 
              data-service-category="${item.ServiceCategory}"
              data-title="${item.Title}"
-             ${item.URL ? `data-url="${item.URL}"` : ''}>
+             ${item.projectUrl ? `data-url="${item.projectUrl}"` : ''}>
           <div class="portfolio-thumbnail">
             <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
-            ${item.URL ? 
+            ${item.projectUrl ? 
               `<div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
                 <i class="fa-solid fa-external-link-alt"></i>
               </div>` : 
@@ -970,11 +986,12 @@ class AirtableCMS {
             <h3 class="portfolio-title">${item.Title}</h3>
             <p class="portfolio-description">${item.Description}</p>
             
-            ${item.Client || item.Role || item['Tech Stack'] ? `
+            ${item.client || item.servicesProvided || item.deliverables || item.industry ? `
               <div class="portfolio-brand-details" style="margin: 12px 0; padding: 12px; background: rgba(255,178,0,0.1); border-radius: 8px; border: 1px solid rgba(255,178,0,0.2);">
-                ${item.Client ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Client:</strong> ${item.Client}</div>` : ''}
-                ${item.Role ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Role:</strong> ${item.Role}</div>` : ''}
-                ${item['Tech Stack'] ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Tools:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item['Tech Stack']}</span></div>` : ''}
+                ${item.client ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Client:</strong> ${item.client}</div>` : ''}
+                ${item.servicesProvided ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Services:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.servicesProvided}</span></div>` : ''}
+                ${item.deliverables ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Deliverables:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.deliverables}</span></div>` : ''}
+                ${item.industry ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Industry:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item.industry}</span></div>` : ''}
               </div>
             ` : ''}
             
@@ -1090,12 +1107,15 @@ class AirtableCMS {
             this.openImageModal(item.getAttribute('data-src') || portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Photo');
           } else if (portfolioItem.ServiceCategory === 'Brand Development') {
             // Open brand development item in image modal or external link
-            if (portfolioItem.URL && portfolioItem.URL.trim() !== '') {
-              // If there's a URL, open it in new tab
-              window.open(portfolioItem.URL, '_blank');
+            if (portfolioItem.projectUrl && portfolioItem.projectUrl.trim() !== '') {
+              // If there's a project URL, open it in new tab
+              window.open(portfolioItem.projectUrl, '_blank');
             } else if (portfolioItem['Thumbnail Image']) {
               // If no URL but has image, open in image modal
               this.openImageModal(portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Brand Development Project');
+            } else if (portfolioItem.logoUrl && portfolioItem.logoUrl.trim() !== '') {
+              // If no thumbnail but has logo, open logo in modal
+              this.openImageModal(portfolioItem.logoUrl, `${portfolioItem.Title} - Logo`);
             }
           } else if (portfolioItem.playbackUrl) {
             // Open video modal for video production items
