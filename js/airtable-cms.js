@@ -604,7 +604,19 @@ class AirtableCMS {
         if (typeof value === 'object' && value.url) return String(value.url).trim();
         return '';
       };
-      const rawThumb = coerceToUrl(fields['thumbnailUrl'] || fields['Thumbnail Image'] || fields.Image || fields.Thumbnail);
+      
+      // FIXED: Use correct field names from your CSV files
+      let rawThumb = '';
+      if (category === 'Photography') {
+        // Photography uses 'image_url' field
+        rawThumb = coerceToUrl(fields['image_url'] || fields['Image URL'] || fields['Thumbnail Image']);
+      } else if (category === 'Brand Development') {
+        // Brand Development uses 'Thumbnail / Cover Image URL' field
+        rawThumb = coerceToUrl(fields['Thumbnail / Cover Image URL'] || fields['Logo URL'] || fields['Thumbnail Image']);
+      } else {
+        // Portfolio and Web use 'Thumbnail Image' field
+        rawThumb = coerceToUrl(fields['Thumbnail Image'] || fields['thumbnailUrl'] || fields.Image || fields.Thumbnail);
+      }
       
       // Normalize GitHub blob URLs to raw
       const normalizeGithub = (url) => {
@@ -614,17 +626,17 @@ class AirtableCMS {
         return url;
       };
       
-      // Map Airtable fields to existing portfolio structure
+      // FIXED: Map Airtable fields to existing portfolio structure using your actual CSV field names
       const transformedItem = {
         Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 
                (category === 'Photography' ? `Photo ${record.id.slice(-4)}` : 'Untitled Project'),
         Description: fields.Description || fields.Summary || fields['Project Description'] || 
                     (category === 'Photography' ? 'Photography work from Cochran Films' : ''),
         Category: fields.Category || fields.Type || category,
-        'Thumbnail Image': normalizeGithub(rawThumb) || 
-                          (category === 'Photography' ? fields.image_url : ''),
+        'Thumbnail Image': normalizeGithub(rawThumb),
         'Is Featured': fields['Is Featured'] || fields.Featured || false,
-        playbackUrl: fields['Playback URL'] || fields['Video URL'] || fields.URL || '',
+        // FIXED: Use correct field names for video URLs
+        playbackUrl: fields['playbackUrl'] || fields['Playback URL'] || fields['Video URL'] || fields.URL || '',
         UploadDate: fields['Created Date'] || fields['Upload Date'] || fields.Date || new Date().toISOString(),
         URL: fields['Website URL'] || fields.URL || fields.Link || '',
         'Tech Stack': fields['Tech Stack'] || fields.Technology || fields.Tools || '',
@@ -636,7 +648,7 @@ class AirtableCMS {
         ServiceCategory: category
       };
       
-      // Brand Development specific field mappings
+      // Brand Development specific field mappings - FIXED to use your actual CSV field names
       if (category === 'Brand Development') {
         transformedItem.logoUrl = fields['Logo URL'] || '';
         transformedItem.client = fields['Client/Brand Name'] || fields.Client || fields['Client Name'] || '';
@@ -664,11 +676,11 @@ class AirtableCMS {
         return null;
       }
       
-              return transformedItem;
-      }).filter(Boolean); // Remove null items
+      return transformedItem;
+    }).filter(Boolean); // Remove null items
     
     return transformedRecords;
-    }
+  }
   
   showPortfolioLoadingState() {
     const categoryGrids = {
@@ -791,8 +803,8 @@ class AirtableCMS {
     });
   }
   
-  // Prefer a usable HTTPS thumbnail. Converts wix:image:// to static wix URLs and
-  // supports CSV fields like image_url and thumbnailUrl.
+  // FIXED: Prefer a usable HTTPS thumbnail. Converts wix:image:// to static wix URLs and
+  // supports your actual CSV field names from Portfolio.csv, Web.csv, Photography.csv, and Brand Development
   resolveThumbnailSrc(item) {
     const isHttpUrl = (value) => typeof value === 'string' && /^https?:\/\//i.test(value);
     const isWixImageScheme = (value) => typeof value === 'string' && value.startsWith('wix:image://');
@@ -807,7 +819,7 @@ class AirtableCMS {
     const normalizeWixImageUrl = (value) => {
       if (!isWixImageScheme(value)) return '';
       // Format: wix:image://v1/<mediaIdWithExt>/... -> https://static.wixstatic.com/media/<mediaIdWithExt>
-      const match = value.match(/^wix:image:\/\/v1\/([^/]+)/i);
+      const match = value.match(/^wix:image://v1\/([^/]+)/i);
       return match && match[1] ? `https://static.wixstatic.com/media/${match[1]}` : '';
     };
     const normalizeGithub = (url) => {
@@ -825,28 +837,27 @@ class AirtableCMS {
       return '';
     };
 
-    // 1) Prefer explicit HTTPS thumbnailUrl when present
-    const directThumb = coerceToUrl(item['thumbnailUrl']);
-    if (isHttpUrl(directThumb)) return normalizeGithub(directThumb);
+    // FIXED: Use your actual CSV field names in priority order
+    
+    // 1) Portfolio.csv and Web.csv use 'Thumbnail Image' field
+    const portfolioThumb = coerceToUrl(item['Thumbnail Image']);
+    if (isHttpUrl(portfolioThumb)) return normalizeGithub(portfolioThumb);
+    if (isWixImageScheme(portfolioThumb)) return normalizeWixImageUrl(portfolioThumb);
 
-    // 2) Try CSV photography field names (support wix:image conversion too)
-    const imageUrl = coerceToUrl(item['image_url']);
-    if (isHttpUrl(imageUrl)) return normalizeGithub(imageUrl);
-    if (isWixImageScheme(imageUrl)) return normalizeWixImageUrl(imageUrl);
-    const imageUrl2 = coerceToUrl(item['Image URL']);
-    if (isHttpUrl(imageUrl2)) return normalizeGithub(imageUrl2);
-    if (isWixImageScheme(imageUrl2)) return normalizeWixImageUrl(imageUrl2);
+    // 2) Photography.csv uses 'image_url' field
+    const photoImageUrl = coerceToUrl(item['image_url']);
+    if (isHttpUrl(photoImageUrl)) return normalizeGithub(photoImageUrl);
+    if (isWixImageScheme(photoImageUrl)) return normalizeWixImageUrl(photoImageUrl);
 
-    // 3) Handle Wix image scheme in "Thumbnail Image" by converting to static URL
-    const thumb = firstDefined(item['Thumbnail Image'], item['Image'], item['Thumbnail']);
-    if (isWixImageScheme(thumb)) return normalizeWixImageUrl(thumb);
+    // 3) Brand Development uses 'Thumbnail / Cover Image URL' field
+    const brandThumb = coerceToUrl(item['Thumbnail / Cover Image URL']);
+    if (isHttpUrl(brandThumb)) return normalizeGithub(brandThumb);
+    if (isWixImageScheme(brandThumb)) return normalizeWixImageUrl(brandThumb);
 
-    // 4) If any of the original fields are already HTTPS, use them
-    if (isHttpUrl(thumb)) return normalizeGithub(thumb);
-    const imageF = coerceToUrl(item['Image']);
-    if (isHttpUrl(imageF)) return normalizeGithub(imageF);
-    const thumbF = coerceToUrl(item['Thumbnail']);
-    if (isHttpUrl(thumbF)) return normalizeGithub(thumbF);
+    // 4) Fallback to other common field names
+    const fallbackThumb = firstDefined(item['Image'], item['Thumbnail'], item['thumbnailUrl'], item['Image URL']);
+    if (isHttpUrl(fallbackThumb)) return normalizeGithub(fallbackThumb);
+    if (isWixImageScheme(fallbackThumb)) return normalizeWixImageUrl(fallbackThumb);
 
     // 5) Last resort placeholder
     return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
@@ -1238,7 +1249,7 @@ class AirtableCMS {
     this.showPortfolioErrorState();
   }
 
-  // Normalize CSV rows to the same shape used by transformAirtableData
+  // FIXED: Normalize CSV rows to the same shape using your actual CSV field names
   normalizeCsvItem(row, category) {
     if (!row) return null;
     const pick = (...keys) => {
@@ -1251,7 +1262,7 @@ class AirtableCMS {
     const title = pick('Title', 'title', 'Name', 'name', 'Project Name', 'caption', 'Caption', 'Video');
     const description = pick('Description', 'description', 'Summary', 'Project Description');
     const categoryValue = pick('Category', 'Type') || category;
-    const playbackUrl = pick('Playback URL', 'Video URL', 'URL');
+    const playbackUrl = pick('playbackUrl', 'Playback URL', 'Video URL', 'URL');
     const url = pick('Website URL', 'URL', 'Link');
     const techStack = pick('Tech Stack', 'Technology', 'Tools');
     const role = pick('Role', 'Position', 'My Role');
@@ -1262,8 +1273,18 @@ class AirtableCMS {
     const createdAt = pick('Created Date', 'Upload Date', 'Date');
     const isFeatured = pick('Is Featured', 'Featured');
 
-    // Thumbnail candidates, including CSV photography fields
-    const thumbnailUrl = pick('thumbnailUrl', 'Thumbnail Image', 'Image', 'Thumbnail', 'image_url', 'Image URL');
+    // FIXED: Use your actual CSV field names for thumbnails
+    let thumbnailUrl = '';
+    if (category === 'Photography') {
+      // Photography.csv uses 'image_url' field
+      thumbnailUrl = pick('image_url', 'Image URL', 'Thumbnail Image');
+    } else if (category === 'Brand Development') {
+      // Brand Development uses 'Thumbnail / Cover Image URL' field
+      thumbnailUrl = pick('Thumbnail / Cover Image URL', 'Logo URL', 'Thumbnail Image');
+    } else {
+      // Portfolio.csv and Web.csv use 'Thumbnail Image' field
+      thumbnailUrl = pick('Thumbnail Image', 'thumbnailUrl', 'Image', 'Thumbnail');
+    }
 
     const item = {
       Title: title || (category === 'Photography' ? 'Photo' : 'Untitled Project'),
