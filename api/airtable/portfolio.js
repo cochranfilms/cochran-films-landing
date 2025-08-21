@@ -111,11 +111,18 @@ module.exports = async function handler(req, res) {
     let totalRecords = 0;
     
     results.forEach(result => {
+      console.log(`📊 Processing result for ${result.category}:`, {
+        success: result.success,
+        recordCount: result.recordCount,
+        error: result.error
+      });
+      
       if (result.success) {
         unifiedData[result.category] = result.data;
         totalRecords += result.recordCount;
       } else {
         errors.push(`${result.category}: ${result.error}`);
+        console.error(`❌ Failed to fetch ${result.category}:`, result.error);
       }
     });
 

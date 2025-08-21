@@ -44,6 +44,7 @@ module.exports = async function handler(req, res) {
 
     console.log(`🔑 Using API key: ${apiKey.substring(0, 8)}...`);
     console.log(`📥 Fetching ${airtableConfig.name} data from base ${airtableConfig.baseId}...`);
+    console.log(`🔗 API URL: https://api.airtable.com/v0/${airtableConfig.baseId}/${encodeURIComponent(airtableConfig.tableName)}`);
     
     const response = await fetch(`https://api.airtable.com/v0/${airtableConfig.baseId}/${encodeURIComponent(airtableConfig.tableName)}`, {
       headers: {
@@ -51,6 +52,8 @@ module.exports = async function handler(req, res) {
         'Content-Type': 'application/json'
       }
     });
+    
+    console.log(`📡 Response status: ${response.status} ${response.statusText}`);
 
     if (!response.ok) {
       const errorText = await response.text();

@@ -424,7 +424,12 @@ class AirtableCMS {
       
       if (data.errors && data.errors.length > 0) {
         console.warn('⚠️ Some categories had errors:', data.errors);
+        console.log('🔍 Full error details:', data.errors);
       }
+      
+      // Debug: Check what categories are actually in the data
+      console.log('🔍 Available categories in data:', Object.keys(data.data || {}));
+      console.log('🔍 Data structure:', data.data);
       
       // Transform and combine all data
       this.portfolioData = [];
@@ -441,6 +446,20 @@ class AirtableCMS {
       });
       
       console.log(`📈 Total portfolio items after transformation: ${this.portfolioData.length}`);
+      
+      // Check if Brand Development is missing and try to load it individually
+      if (!data.data['Brand Development'] || !data.data['Brand Development'].records) {
+        console.log('🔄 Brand Development missing from unified API, trying individual call...');
+        try {
+          const brandData = await this.loadAirtableData('Brand Development');
+          if (brandData && brandData.length > 0) {
+            console.log(`✅ Loaded ${brandData.length} Brand Development items individually`);
+            this.portfolioData.push(...brandData.map(item => ({ ...item, ServiceCategory: 'Brand Development' })));
+          }
+        } catch (brandError) {
+          console.warn('⚠️ Failed to load Brand Development individually:', brandError);
+        }
+      }
       
     } catch (error) {
       console.error('❌ Failed to load from unified API:', error);
