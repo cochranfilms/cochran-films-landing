@@ -905,55 +905,83 @@ class AirtableCMS {
       `;
     }
 
-    // For Brand Development items, render with brand-specific styling
+    // For Brand Development items, render with full-scale video layout
     if (item.ServiceCategory === 'Brand Development') {
+      // Parse video URLs and create video sections
+      let videoSections = '';
+      
+      if (item['Video URLs'] && item['Video URLs'].trim() !== '') {
+        const videoUrls = item['Video URLs'].split(',').map(url => url.trim()).filter(url => url);
+        
+        videoSections = videoUrls.map((url, index) => {
+          // Extract video ID from YouTube URL for thumbnail
+          let videoId = '';
+          let thumbnailUrl = thumbnailSrc; // Fallback to main thumbnail
+          
+          if (url.includes('youtube.com/watch?v=')) {
+            videoId = url.split('v=')[1]?.split('&')[0];
+            if (videoId) {
+              thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            }
+          } else if (url.includes('youtu.be/')) {
+            videoId = url.split('youtu.be/')[1]?.split('?')[0];
+            if (videoId) {
+              thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            }
+          }
+          
+          // Create video title and description
+          const videoTitle = item.Title + (videoUrls.length > 1 ? ` - Video ${index + 1}` : '');
+          const videoDescription = item.Description || 'Watch this brand development project on YouTube';
+          
+          return `
+            <div class="video-section">
+              <div class="video-thumbnail">
+                <img src="${thumbnailUrl}" alt="${videoTitle}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afd8babbc4a1?w=400&h=200&fit=crop&crop=center'" />
+                <div class="youtube-play" onclick="window.open('${url}', '_blank')">
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+              </div>
+              <div class="video-content">
+                <h4 class="video-title">${videoTitle}</h4>
+                <p class="video-description">${videoDescription}</p>
+                <a href="${url}" target="_blank" rel="noopener noreferrer" class="video-action">
+                  <i class="fa-brands fa-youtube"></i>
+                  Watch on YouTube
+                </a>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        // Fallback if no videos - show the main content
+        videoSections = `
+          <div class="video-section">
+            <div class="video-thumbnail">
+              <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afd8babbc4a1?w=400&h=200&fit=crop&crop=center'" />
+              <div class="youtube-play" style="background: rgba(255,178,0,0.9);">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+            </div>
+            <div class="video-content">
+              <h4 class="video-title">${item.Title}</h4>
+              <p class="video-description">${item.Description || 'Brand development project'}</p>
+              <div class="video-action" style="background: rgba(255,178,0,0.8); color: #0a0a0a;">
+                <i class="fa-solid fa-palette"></i>
+                Brand Project
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
       return `
         <div class="portfolio-item brand-development" 
              data-category="${item.Category}" 
              data-service-category="${item.ServiceCategory}"
              data-title="${item.Title}"
              ${item['Project URL (optional)'] ? `data-url="${item['Project URL (optional)']}"` : ''}>
-          <div class="portfolio-thumbnail">
-            <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afd8babbc4a1?w=800&h=400&fit=crop&crop=center'" />
-            <div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
-              <i class="fa-solid fa-eye"></i>
-            </div>
-            ${isFeatured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
-          </div>
-          <div class="portfolio-content">
-            <div class="portfolio-category">
-              <i class="fa-solid fa-palette"></i>
-              ${item.Category || 'Brand Development'}
-            </div>
-            <h3 class="portfolio-title">${item.Title}</h3>
-            <p class="portfolio-description">${item.Description}</p>
-            
-            ${(item['Client/Brand Name'] || item.client || item['Client'] || item['Services Provided'] || item['Deliverables'] || item['Industry']) ? `
-              <div class="portfolio-brand-details">
-                ${item['Client/Brand Name'] || item.client || item['Client'] ? `<div><strong>Client:</strong> <span>${item['Client/Brand Name'] || item.client || item['Client']}</span></div>` : ''}
-                ${item['Services Provided'] ? `<div><strong>Services:</strong> <span>${item['Services Provided']}</span></div>` : ''}
-                ${item['Deliverables'] ? `<div><strong>Deliverables:</strong> <span>${item['Deliverables']}</span></div>` : ''}
-                ${item['Industry'] ? `<div><strong>Industry:</strong> <span>${item['Industry']}</span></div>` : ''}
-              </div>
-            ` : ''}
-            
-            ${(item['Video URLs'] && item['Video URLs'].trim() !== '') ? `
-              <div class="video-urls">
-                <h4><i class="fa-solid fa-play-circle"></i> Project Videos</h4>
-                ${item['Video URLs'].split(',').map(url => url.trim()).filter(url => url).map(url => `
-                  <a href="${url}" target="_blank" rel="noopener noreferrer" class="video-link">
-                    <i class="fa-brands fa-youtube"></i>
-                    ${url.includes('youtube.com') ? 'Watch on YouTube' : 'View Video'}
-                  </a>
-                `).join('')}
-              </div>
-            ` : ''}
-            
-            <div class="portfolio-meta">
-              <span class="portfolio-date">${formattedDate}</span>
-              ${isFeatured ? '<span class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
-            </div>
-          </div>
+          ${videoSections}
         </div>
       `;
     }
