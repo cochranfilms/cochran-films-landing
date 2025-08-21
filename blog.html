@@ -17,6 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <!-- Airtable CMS Integration -->
   <script>
     window.API_BASE_URL = window.location.origin;
@@ -777,31 +780,7 @@
     </div>
   </footer>
 
-  <!-- Airtable CMS Initialization Script -->
-  <script>
-    // Initialize Airtable CMS when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      // Check if Airtable CMS is available
-      if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Blog...');
-        
-        // Initialize the blog system
-        window.airtableCMS.initializeBlogSystem();
-        
-        // Set up event handler for load more button
-        const loadMoreBtn = document.getElementById('loadMoreBlog');
-        if (loadMoreBtn) {
-          loadMoreBtn.addEventListener('click', function() {
-            if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
-              window.airtableCMS.loadMoreBlogPosts();
-            }
-          });
-        }
-      } else {
-        console.warn('⚠️ Airtable CMS not loaded, blog will be empty');
-      }
-    });
-  </script>
+
 
   <script>
     // Mobile menu toggle
@@ -1013,13 +992,14 @@
         window.airtableCMS.initializeBlogSystem();
         
         // Set up event handlers for load more buttons
-        document.querySelectorAll('.load-more-btn').forEach(btn => {
-          btn.addEventListener('click', function() {
+        const loadMoreBtn = document.getElementById('loadMoreBlog');
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener('click', function() {
             if (window.airtableCMS && window.airtableCMS.loadMoreBlogPosts) {
               window.airtableCMS.loadMoreBlogPosts();
             }
           });
-        });
+        }
       } else {
         console.warn('⚠️ Airtable CMS not loaded, falling back to CSV loading...');
         // Fallback to CSV loading if Airtable CMS is not available
