@@ -439,8 +439,16 @@ class AirtableCMS {
     }
 
     // Default rendering for video and web items
+    const isVideoProduction = item.ServiceCategory === 'Video Production';
+    
     return `
-      <div class="portfolio-item" data-category="${item.Category}" data-title="${item.Title}">
+      <div class="portfolio-item" 
+           data-category="${item.Category}" 
+           data-service-category="${item.ServiceCategory}"
+           data-title="${item.Title}"
+           ${isVideoProduction ? 'data-video-production="true"' : ''}
+           ${item.playbackUrl ? `data-playback-url="${item.playbackUrl}"` : ''}
+           ${item.URL ? `data-url="${item.URL}"` : ''}>
         <div class="portfolio-thumbnail">
           <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
           ${isWebDev && hasURL ? 
@@ -1248,7 +1256,7 @@ class AirtableCMS {
 
   addVideoClickHandlers() {
     // Specifically target Video Production category items from Portfolio Airtable base
-    const videoProductionItems = document.querySelectorAll('[data-category="Video Production"], .portfolio-item[data-service-category="Video Production"], [data-service-category="Video Production"]');
+    const videoProductionItems = document.querySelectorAll('[data-video-production="true"], [data-service-category="Video Production"], .portfolio-item[data-service-category="Video Production"]');
     
     // Also look for items that contain video-related content or URLs
     const potentialVideoItems = document.querySelectorAll('.portfolio-item, .service-item, [class*="video"], [class*="portfolio"]');
@@ -1260,7 +1268,7 @@ class AirtableCMS {
       if (this.isVideoProductionItem(item)) {
         this.addVideoClickHandler(item);
         totalVideoItems++;
-        console.log(`🎬 Added video popup handler to: ${item.textContent?.substring(0, 50)}...`);
+        console.log(`🎬 Added video popup handler to Video Production item: ${item.textContent?.substring(0, 50)}...`);
       }
     });
     
@@ -1281,7 +1289,7 @@ class AirtableCMS {
     // Debug: log what we found
     if (totalVideoItems === 0) {
       console.log('🔍 Debug: No Video Production items found. Available elements:', {
-        'Video Production category': document.querySelectorAll('[data-category="Video Production"]').length,
+        'data-video-production': document.querySelectorAll('[data-video-production="true"]').length,
         'Video Production service category': document.querySelectorAll('[data-service-category="Video Production"]').length,
         'portfolio items': document.querySelectorAll('.portfolio-item').length,
         'total portfolio data': this.portfolioData?.filter(item => item.ServiceCategory === 'Video Production').length || 0
@@ -1291,10 +1299,14 @@ class AirtableCMS {
 
   isVideoProductionItem(item) {
     // Check if this item belongs to Video Production category
-    const category = item.dataset.category || item.dataset.serviceCategory || '';
+    const isVideoProduction = item.dataset.videoProduction === 'true';
+    const serviceCategory = item.dataset.serviceCategory;
+    const category = item.dataset.category;
     const textContent = item.textContent?.toLowerCase() || '';
     
-    // Check explicit category markers
+    // Check explicit Video Production markers
+    if (isVideoProduction) return true;
+    if (serviceCategory === 'Video Production') return true;
     if (category === 'Video Production') return true;
     
     // Check if item contains video-related text
@@ -1303,8 +1315,9 @@ class AirtableCMS {
     
     // Check if item has video URLs or playback URLs
     const hasVideoUrls = item.querySelector('[data-video-url], [data-playback-url], video, [src*=".mp4"], [src*=".mov"]');
+    const hasPlaybackUrl = item.dataset.playbackUrl;
     
-    return hasVideoKeywords || hasVideoUrls;
+    return hasVideoKeywords || hasVideoUrls || hasPlaybackUrl;
   }
 
   hasVideoContent(item) {
