@@ -425,7 +425,7 @@ class UserPreferencesManager {
     try {
       // Map form types to EmailJS templates
       const templateMap = {
-        'contact': 'template-contact-client',
+        'contact': 'contact_form',
         'service': 'service_inquiry',
         'booking': 'booking_request',
         'newsletter': 'newsletter_signup'
@@ -433,7 +433,7 @@ class UserPreferencesManager {
       
       const templateId = templateMap[formType];
       if (templateId) {
-        emailjs.send('service_t11yvru', templateId, {
+        emailjs.send('template-contact-client', templateId, {
           to_name: formData.name,
           to_email: formData.email,
           message: formData.projectDetails || 'No additional details provided',
