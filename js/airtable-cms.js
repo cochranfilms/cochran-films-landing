@@ -1,6 +1,267 @@
 // Airtable CMS Integration for Cochran Films Portfolio
 // This file integrates with your existing portfolio structure without changing the styling or layout
 
+/**
+ * AirtableCache - Local storage-based caching system for Airtable data
+ * Provides intelligent caching with TTL, automatic cleanup, and fallback handling
+ */
+class AirtableCache {
+  constructor() {
+    this.cachePrefix = 'airtable_cache_';
+    this.defaultTTL = 30 * 60 * 1000; // 30 minutes default
+    this.maxCacheSize = 10 * 1024 * 1024; // 10MB max cache size
+    
+    // Initialize cache cleanup
+    this.cleanupExpiredCache();
+  }
+
+  /**
+   * Generate cache key for a specific category
+   */
+  getCacheKey(category) {
+    return `${this.cachePrefix}${category.toLowerCase().replace(/\s+/g, '_')}`;
+  }
+
+  /**
+   * Get cached data for a category
+   */
+  get(category) {
+    try {
+      const key = this.getCacheKey(category);
+      const cached = localStorage.getItem(key);
+      
+      if (!cached) return null;
+      
+      const data = JSON.parse(cached);
+      
+      // Check if cache is expired
+      if (data.expiresAt && Date.now() > data.expiresAt) {
+        console.log(`🗑️ Cache expired for ${category}, removing...`);
+        this.remove(category);
+        return null;
+      }
+      
+      console.log(`✅ Cache hit for ${category} (${data.records?.length || 0} records)`);
+      return data;
+      
+    } catch (error) {
+      console.warn(`⚠️ Cache read error for ${category}:`, error);
+      this.remove(category); // Clean up corrupted cache
+      return null;
+    }
+  }
+
+  /**
+   * Set cache data for a category
+   */
+  set(category, data, ttl = this.defaultTTL) {
+    try {
+      const key = this.getCacheKey(category);
+      const cacheData = {
+        data: data,
+        expiresAt: Date.now() + ttl,
+        cachedAt: Date.now(),
+        category: category
+      };
+      
+      // Check cache size before storing
+      if (this.getCacheSize() > this.maxCacheSize) {
+        console.log('🧹 Cache size limit reached, cleaning up...');
+        this.cleanupOldestCache();
+      }
+      
+      localStorage.setItem(key, JSON.stringify(cacheData));
+      console.log(`💾 Cached ${category} data (expires in ${Math.round(ttl/1000/60)} minutes)`);
+      
+      // Store cache metadata for management
+      this.updateCacheMetadata(category, cacheData);
+      
+    } catch (error) {
+      console.warn(`⚠️ Cache write error for ${category}:`, error);
+      // If localStorage is full, try to clean up and retry
+      if (error.name === 'QuotaExceededError') {
+        this.cleanupOldestCache();
+        try {
+          localStorage.setItem(key, JSON.stringify(cacheData));
+        } catch (retryError) {
+          console.error(`❌ Cache write failed after cleanup for ${category}:`, retryError);
+        }
+      }
+    }
+  }
+
+  /**
+   * Remove cache for a specific category
+   */
+  remove(category) {
+    try {
+      const key = this.getCacheKey(category);
+      localStorage.removeItem(key);
+      this.removeCacheMetadata(category);
+      console.log(`🗑️ Removed cache for ${category}`);
+    } catch (error) {
+      console.warn(`⚠️ Cache removal error for ${category}:`, error);
+    }
+  }
+
+  /**
+   * Clear all Airtable cache
+   */
+  clear() {
+    try {
+      const keys = Object.keys(localStorage).filter(key => key.startsWith(this.cachePrefix));
+      keys.forEach(key => localStorage.removeItem(key));
+      
+      // Clear cache metadata
+      localStorage.removeItem('airtable_cache_metadata');
+      
+      console.log(`🧹 Cleared ${keys.length} cached items`);
+    } catch (error) {
+      console.warn('⚠️ Cache clear error:', error);
+    }
+  }
+
+  /**
+   * Check if cache exists and is valid for a category
+   */
+  has(category) {
+    const cached = this.get(category);
+    return cached !== null;
+  }
+
+  /**
+   * Get cache metadata for management
+   */
+  getCacheMetadata() {
+    try {
+      const metadata = localStorage.getItem('airtable_cache_metadata');
+      return metadata ? JSON.parse(metadata) : {};
+    } catch (error) {
+      console.warn('⚠️ Cache metadata read error:', error);
+      return {};
+    }
+  }
+
+  /**
+   * Update cache metadata
+   */
+  updateCacheMetadata(category, cacheData) {
+    try {
+      const metadata = this.getCacheMetadata();
+      metadata[category] = {
+        cachedAt: cacheData.cachedAt,
+        expiresAt: cacheData.expiresAt,
+        size: JSON.stringify(cacheData).length
+      };
+      localStorage.setItem('airtable_cache_metadata', JSON.stringify(metadata));
+    } catch (error) {
+      console.warn('⚠️ Cache metadata update error:', error);
+    }
+  }
+
+  /**
+   * Remove cache metadata for a category
+   */
+  removeCacheMetadata(category) {
+    try {
+      const metadata = this.getCacheMetadata();
+      delete metadata[category];
+      localStorage.setItem('airtable_cache_metadata', JSON.stringify(metadata));
+    } catch (error) {
+      console.warn('⚠️ Cache metadata removal error:', error);
+    }
+  }
+
+  /**
+   * Get total cache size in bytes
+   */
+  getCacheSize() {
+    try {
+      const keys = Object.keys(localStorage).filter(key => key.startsWith(this.cachePrefix));
+      return keys.reduce((total, key) => {
+        return total + (localStorage.getItem(key)?.length || 0);
+      }, 0);
+    } catch (error) {
+      console.warn('⚠️ Cache size calculation error:', error);
+      return 0;
+    }
+  }
+
+  /**
+   * Clean up expired cache entries
+   */
+  cleanupExpiredCache() {
+    try {
+      const metadata = this.getCacheMetadata();
+      const now = Date.now();
+      let cleanedCount = 0;
+      
+      Object.entries(metadata).forEach(([category, info]) => {
+        if (info.expiresAt && now > info.expiresAt) {
+          this.remove(category);
+          cleanedCount++;
+        }
+      });
+      
+      if (cleanedCount > 0) {
+        console.log(`🧹 Cleaned up ${cleanedCount} expired cache entries`);
+      }
+    } catch (error) {
+      console.warn('⚠️ Cache cleanup error:', error);
+    }
+  }
+
+  /**
+   * Clean up oldest cache entries when size limit is reached
+   */
+  cleanupOldestCache() {
+    try {
+      const metadata = this.getCacheMetadata();
+      const entries = Object.entries(metadata)
+        .filter(([category, info]) => info.cachedAt)
+        .sort((a, b) => a[1].cachedAt - b[1].cachedAt);
+      
+      // Remove oldest 25% of entries
+      const toRemove = Math.ceil(entries.length * 0.25);
+      entries.slice(0, toRemove).forEach(([category]) => {
+        this.remove(category);
+      });
+      
+      console.log(`🧹 Cleaned up ${toRemove} oldest cache entries`);
+    } catch (error) {
+      console.warn('⚠️ Oldest cache cleanup error:', error);
+    }
+  }
+
+  /**
+   * Get cache statistics
+   */
+  getStats() {
+    try {
+      const metadata = this.getCacheMetadata();
+      const now = Date.now();
+      const totalEntries = Object.keys(metadata).length;
+      const expiredEntries = Object.values(metadata).filter(info => 
+        info.expiresAt && now > info.expiresAt
+      ).length;
+      const validEntries = totalEntries - expiredEntries;
+      const totalSize = this.getCacheSize();
+      
+      return {
+        totalEntries,
+        validEntries,
+        expiredEntries,
+        totalSizeBytes: totalSize,
+        totalSizeMB: (totalSize / 1024 / 1024).toFixed(2),
+        maxSizeMB: (this.maxCacheSize / 1024 / 1024).toFixed(2)
+      };
+    } catch (error) {
+      console.warn('⚠️ Cache stats error:', error);
+      return {};
+    }
+  }
+}
+
 class AirtableCMS {
   constructor() {
     // Determine API base. When served from GitHub Pages/custom domain,
@@ -25,32 +286,71 @@ class AirtableCMS {
       'Web Development': 'Imported table',
       'Photography': 'Imported table'
     };
+
+    // Initialize caching system
+    this.cache = new AirtableCache();
     
     // Initialize the CMS
     this.init();
   }
   
   async init() {
-    console.log('🚀 Initializing Airtable CMS...');
+    console.log('🚀 Initializing Airtable CMS with caching...');
     
     try {
-      // Load portfolio data first
-      await this.loadAllPortfolioData();
+      // Show initial loading state
+      this.showPortfolioLoadingState();
       
-      // Set up the existing portfolio functionality
-      this.setupPortfolioDisplay();
-      this.setupEventHandlers();
+      // Check if we have any valid cache first
+      const cacheStatus = this.getCacheStatus();
+      const hasValidCache = Object.values(cacheStatus).some(status => status.cached && !status.isExpired);
       
-      // Render the portfolio first
-      this.renderPortfolioByCategory();
+      if (hasValidCache) {
+        console.log('📦 Found valid cache, loading portfolio immediately...');
+        // Load portfolio data from cache first
+        await this.loadAllPortfolioData();
+        
+        // Set up portfolio functionality
+        this.setupPortfolioDisplay();
+        this.setupEventHandlers();
+        this.renderPortfolioByCategory();
+        
+        // Warm up cache in background for next time
+        this.warmupCache();
+      } else {
+        console.log('🔄 No valid cache found, loading fresh data...');
+        // Load portfolio data first
+        await this.loadAllPortfolioData();
+        
+        // Set up the existing portfolio functionality
+        this.setupPortfolioDisplay();
+        this.setupEventHandlers();
+        
+        // Render the portfolio first
+        this.renderPortfolioByCategory();
+      }
       
       // Initialize video popup system AFTER portfolio is rendered
       setTimeout(() => {
         this.initializeVideoPopups();
       }, 200);
       
+      // Setup cache debugging shortcuts
+      this.setupCacheShortcuts();
+      
+      // Log cache performance metrics
+      this.logCachePerformance();
+      
+      // Log debugging shortcuts
+      console.log('🔧 Cache Debug Shortcuts:');
+      console.log('   Ctrl+Shift+C: Show cache indicator');
+      console.log('   Ctrl+Shift+R: Force refresh with cache clear');
+      console.log('   Ctrl+Shift+T: Run performance test');
+      console.log('   window.airtableCacheDebug: Access cache management functions');
+      
     } catch (error) {
       console.error('❌ Error during initialization:', error);
+      this.showPortfolioErrorState();
     }
   }
   
@@ -109,12 +409,22 @@ class AirtableCMS {
     }
     
     try {
-      console.log(`📥 Loading ${category} data from Airtable...`);
+      console.log(`📥 Loading ${category} data...`);
+      
+      // Check cache first
+      const cachedData = this.cache.get(category);
+      if (cachedData) {
+        console.log(`✅ Serving ${category} from cache (${cachedData.data?.records?.length || 0} records)`);
+        return this.transformAirtableData(cachedData.data.records || [], category);
+      }
+      
+      console.log(`🔄 Cache miss for ${category}, fetching from Airtable...`);
       
       // Try to fetch from your Vercel environment
       const apiEndpoint = `${this.apiBase}/api/airtable/${category.toLowerCase().replace(' ', '-')}`;
       console.log(`🔗 Calling API endpoint: ${apiEndpoint}`);
       
+      const startTime = performance.now();
       const response = await fetch(apiEndpoint, {
         method: 'GET',
         headers: {
@@ -129,15 +439,68 @@ class AirtableCMS {
       }
       
       const data = await response.json();
-      console.log(`✅ Loaded ${data.records?.length || 0} records for ${category}`);
+      const loadTime = performance.now() - startTime;
+      
+      console.log(`✅ Loaded ${data.records?.length || 0} records for ${category} in ${loadTime.toFixed(2)}ms`);
+      
+      // Cache the successful response with category-specific TTL
+      const cacheTTL = this.getCategoryCacheTTL(category);
+      this.cache.set(category, data, cacheTTL);
       
       // Transform Airtable data to match existing portfolio structure
       return this.transformAirtableData(data.records || [], category);
       
     } catch (error) {
       console.error(`❌ Failed to load ${category} data:`, error);
+      
+      // Try to serve stale cache if available (graceful degradation)
+      const staleCache = this.getStaleCache(category);
+      if (staleCache) {
+        console.log(`⚠️ Serving stale cache for ${category} due to API failure`);
+        return this.transformAirtableData(staleCache.data.records || [], category);
+      }
+      
       // Rethrow to allow global fallback to CSV
       throw error;
+    }
+  }
+
+  /**
+   * Get category-specific cache TTL (some data changes more frequently)
+   */
+  getCategoryCacheTTL(category) {
+    const ttlMap = {
+      'Video Production': 45 * 60 * 1000,    // 45 minutes (videos change less frequently)
+      'Web Development': 30 * 60 * 1000,     // 30 minutes (websites change moderately)
+      'Photography': 20 * 60 * 1000          // 20 minutes (photos change more frequently)
+    };
+    
+    return ttlMap[category] || this.cache.defaultTTL;
+  }
+
+  /**
+   * Get stale cache data (expired but still usable for fallback)
+   */
+  getStaleCache(category) {
+    try {
+      const key = this.cache.getCacheKey(category);
+      const cached = localStorage.getItem(key);
+      
+      if (!cached) return null;
+      
+      const data = JSON.parse(cached);
+      
+      // Allow stale cache up to 2 hours old for fallback
+      const maxStaleAge = 2 * 60 * 60 * 1000; // 2 hours
+      if (data.cachedAt && (Date.now() - data.cachedAt) < maxStaleAge) {
+        console.log(`📦 Found stale cache for ${category} (${Math.round((Date.now() - data.cachedAt) / 1000 / 60)} minutes old)`);
+        return data;
+      }
+      
+      return null;
+    } catch (error) {
+      console.warn(`⚠️ Stale cache read error for ${category}:`, error);
+      return null;
     }
   }
   
@@ -1673,6 +2036,338 @@ class AirtableCMS {
     // Close popup
     this.closeVideoPopup();
   }
+
+  /**
+   * Cache management methods
+   */
+  
+  /**
+   * Clear all cache data
+   */
+  clearCache() {
+    this.cache.clear();
+    console.log('🧹 All Airtable cache cleared');
+  }
+
+  /**
+   * Clear cache for a specific category
+   */
+  clearCategoryCache(category) {
+    this.cache.remove(category);
+    console.log(`🧹 Cache cleared for ${category}`);
+  }
+
+  /**
+   * Force refresh data for a specific category (bypass cache)
+   */
+  async forceRefreshCategory(category) {
+    console.log(`🔄 Force refreshing ${category} data...`);
+    this.cache.remove(category);
+    return await this.loadAirtableData(category);
+  }
+
+  /**
+   * Get cache statistics
+   */
+  getCacheStats() {
+    return this.cache.getStats();
+  }
+
+  /**
+   * Check cache status for all categories
+   */
+  getCacheStatus() {
+    const categories = Object.keys(this.bases);
+    const status = {};
+    
+    categories.forEach(category => {
+      const cached = this.cache.has(category);
+      const data = this.cache.get(category);
+      
+      status[category] = {
+        cached: cached,
+        recordCount: data?.data?.records?.length || 0,
+        cachedAt: data?.cachedAt ? new Date(data.cachedAt).toLocaleString() : null,
+        expiresAt: data?.expiresAt ? new Date(data.expiresAt).toLocaleString() : null,
+        isExpired: data?.expiresAt ? Date.now() > data.expiresAt : true
+      };
+    });
+    
+    return status;
+  }
+
+  /**
+   * Preload all categories into cache (useful for initial page load)
+   */
+  async preloadCache() {
+    console.log('🚀 Preloading all categories into cache...');
+    const categories = Object.keys(this.bases);
+    
+    try {
+      await Promise.all(categories.map(category => this.loadAirtableData(category)));
+      console.log('✅ Cache preload completed');
+    } catch (error) {
+      console.warn('⚠️ Cache preload had some issues:', error);
+    }
+  }
+
+  /**
+   * Warm up cache with background refresh
+   */
+  async warmupCache() {
+    console.log('🔥 Warming up cache in background...');
+    
+    // Don't block the UI, run in background
+    setTimeout(async () => {
+      try {
+        await this.preloadCache();
+        console.log('✅ Cache warmup completed in background');
+      } catch (error) {
+        console.warn('⚠️ Background cache warmup failed:', error);
+      }
+    }, 1000);
+  }
+
+  /**
+   * Log cache performance metrics
+   */
+  logCachePerformance() {
+    const stats = this.getCacheStats();
+    const status = this.getCacheStatus();
+    
+    console.log('📊 Cache Performance Summary:');
+    console.log(`   Total entries: ${stats.totalEntries}`);
+    console.log(`   Valid entries: ${stats.validEntries}`);
+    console.log(`   Cache size: ${stats.totalSizeMB}MB / ${stats.maxSizeMB}MB`);
+    
+    Object.entries(status).forEach(([category, info]) => {
+      const statusIcon = info.cached ? (info.isExpired ? '⚠️' : '✅') : '❌';
+      console.log(`   ${statusIcon} ${category}: ${info.recordCount} records ${info.cached ? `(cached ${info.cachedAt})` : '(not cached)'}`);
+    });
+  }
+
+  /**
+   * Show cache performance indicator in UI (for debugging)
+   */
+  showCacheIndicator() {
+    const stats = this.getCacheStats();
+    const status = this.getCacheStatus();
+    
+    // Create or update cache indicator
+    let indicator = document.getElementById('cache-indicator');
+    if (!indicator) {
+      indicator = document.createElement('div');
+      indicator.id = 'cache-indicator';
+      indicator.style.cssText = `
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: rgba(15, 23, 42, 0.95);
+        border: 1px solid rgba(99,102,241,0.3);
+        border-radius: 12px;
+        padding: 16px;
+        color: var(--text-primary);
+        font-family: monospace;
+        font-size: 12px;
+        z-index: 10000;
+        max-width: 300px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      `;
+      document.body.appendChild(indicator);
+    }
+    
+    // Build indicator content
+    const content = `
+      <div style="margin-bottom: 12px; font-weight: 600; color: var(--brand-gold);">
+        🗄️ Cache Status
+      </div>
+      <div style="margin-bottom: 8px;">
+        <span style="color: var(--text-secondary);">Size:</span> ${stats.totalSizeMB}MB / ${stats.maxSizeMB}MB
+      </div>
+      <div style="margin-bottom: 8px;">
+        <span style="color: var(--text-secondary);">Entries:</span> ${stats.validEntries}/${stats.totalEntries}
+      </div>
+      <div style="margin-bottom: 12px;">
+        ${Object.entries(status).map(([cat, info]) => {
+          const icon = info.cached ? (info.isExpired ? '⚠️' : '✅') : '❌';
+          const color = info.cached ? (info.isExpired ? 'var(--brand-amber)' : 'var(--brand-emerald)') : 'var(--text-muted)';
+          return `<div style="color: ${color}; margin: 2px 0;">${icon} ${cat}: ${info.recordCount}</div>`;
+        }).join('')}
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 12px;">
+        <button onclick="window.airtableCacheDebug.clearAll()" style="
+          background: rgba(239,68,68,0.2);
+          border: 1px solid rgba(239,68,68,0.3);
+          color: #ef4444;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 10px;
+          cursor: pointer;
+        ">Clear All</button>
+        <button onclick="window.airtableCacheDebug.logDetails()" style="
+          background: rgba(99,102,241,0.2);
+          border: 1px solid rgba(99,102,241,0.3);
+          color: #6366f1;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 10px;
+          cursor: pointer;
+        ">Log</button>
+        <button onclick="this.parentElement.parentElement.remove()" style="
+          background: rgba(148,163,184,0.2);
+          border: 1px solid rgba(148,163,184,0.3);
+          color: #94a3b8;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 10px;
+          cursor: pointer;
+        ">Close</button>
+      </div>
+    `;
+    
+    indicator.innerHTML = content;
+  }
+
+  /**
+   * Setup keyboard shortcuts for cache debugging
+   */
+  setupCacheShortcuts() {
+    document.addEventListener('keydown', (e) => {
+      // Ctrl+Shift+C to show cache indicator
+      if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+        this.showCacheIndicator();
+        console.log('🗄️ Cache indicator shown (Ctrl+Shift+C)');
+      }
+      
+      // Ctrl+Shift+R to refresh with cache clear
+      if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+        e.preventDefault();
+        console.log('🔄 Force refresh with cache clear (Ctrl+Shift+R)');
+        this.clearCache();
+        this.refreshData();
+      }
+
+      // Ctrl+Shift+T to run performance test
+      if (e.ctrlKey && e.shiftKey && e.key === 'T') {
+        e.preventDefault();
+        console.log('🚀 Running performance test (Ctrl+Shift+T)...');
+        this.runPerformanceTest();
+      }
+    });
+  }
+
+  /**
+   * Run performance test to demonstrate caching benefits
+   */
+  async runPerformanceTest() {
+    console.log('🚀 Running cache performance test...');
+    
+    const testCategory = 'Video Production';
+    const iterations = 3;
+    const results = {
+      withCache: [],
+      withoutCache: []
+    };
+    
+    // Test with cache (should be fast)
+    console.log('📊 Testing with cache...');
+    for (let i = 0; i < iterations; i++) {
+      const start = performance.now();
+      await this.loadAirtableData(testCategory);
+      const end = performance.now();
+      results.withCache.push(end - start);
+      console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
+    }
+    
+    // Clear cache and test without cache (should be slower)
+    console.log('📊 Testing without cache...');
+    this.cache.remove(testCategory);
+    
+    for (let i = 0; i < iterations; i++) {
+      const start = performance.now();
+      await this.loadAirtableData(testCategory);
+      const end = performance.now();
+      results.withoutCache.push(end - start);
+      console.log(`   Iteration ${i + 1}: ${(end - start).toFixed(2)}ms`);
+    }
+    
+    // Calculate averages
+    const avgWithCache = results.withCache.reduce((a, b) => a + b, 0) / results.withCache.length;
+    const avgWithoutCache = results.withoutCache.reduce((a, b) => a + b, 0) / results.withoutCache.length;
+    const improvement = ((avgWithoutCache - avgWithCache) / avgWithoutCache * 100).toFixed(1);
+    
+    console.log('📈 Performance Test Results:');
+    console.log(`   With Cache: ${avgWithCache.toFixed(2)}ms average`);
+    console.log(`   Without Cache: ${avgWithoutCache.toFixed(2)}ms average`);
+    console.log(`   Performance Improvement: ${improvement}% faster with cache`);
+    
+    // Show results in UI
+    this.showPerformanceResults(avgWithCache, avgWithoutCache, improvement);
+    
+    return { avgWithCache, avgWithoutCache, improvement };
+  }
+
+  /**
+   * Show performance test results in UI
+   */
+  showPerformanceResults(withCache, withoutCache, improvement) {
+    const resultsDiv = document.createElement('div');
+    resultsDiv.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(15, 23, 42, 0.98);
+      border: 2px solid var(--brand-gold);
+      border-radius: 16px;
+      padding: 24px;
+      color: var(--text-primary);
+      font-family: monospace;
+      font-size: 14px;
+      z-index: 10001;
+      max-width: 400px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      text-align: center;
+    `;
+    
+    resultsDiv.innerHTML = `
+      <div style="margin-bottom: 20px; font-size: 24px; color: var(--brand-gold);">
+        🚀 Performance Test Results
+      </div>
+      <div style="margin-bottom: 16px; text-align: left;">
+        <div style="margin-bottom: 8px;">
+          <span style="color: var(--brand-emerald);">✅ With Cache:</span> ${withCache.toFixed(2)}ms
+        </div>
+        <div style="margin-bottom: 8px;">
+          <span style="color: var(--brand-red);">❌ Without Cache:</span> ${withoutCache.toFixed(2)}ms
+        </div>
+        <div style="margin-bottom: 16px; font-weight: 600; color: var(--brand-gold);">
+          🎯 Improvement: ${improvement}% faster
+        </div>
+      </div>
+      <button onclick="this.parentElement.remove()" style="
+        background: var(--brand-gold);
+        color: #000;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+      ">Close</button>
+    `;
+    
+    document.body.appendChild(resultsDiv);
+    
+    // Auto-remove after 8 seconds
+    setTimeout(() => {
+      if (resultsDiv.parentElement) {
+        resultsDiv.remove();
+      }
+    }, 8000);
+  }
 }
 
 // Initialize Airtable CMS when DOM is ready
@@ -1687,6 +2382,82 @@ if (document.readyState === 'loading') {
 // Make refresh function globally accessible
 window.refreshAirtableData = function() {
   if (window.airtableCMS) {
+    window.airtableCMS.refreshData();
+  }
+};
+
+// Cache debugging and management functions
+window.airtableCacheDebug = {
+  // Get cache statistics
+  getStats: () => {
+    if (window.airtableCMS) {
+      return window.airtableCMS.getCacheStats();
+    }
+    return null;
+  },
+  
+  // Get cache status for all categories
+  getStatus: () => {
+    if (window.airtableCMS) {
+      return window.airtableCMS.getCacheStatus();
+    }
+    return null;
+  },
+  
+  // Clear all cache
+  clearAll: () => {
+    if (window.airtableCMS) {
+      window.airtableCMS.clearCache();
+      console.log('🧹 All cache cleared via debug function');
+    }
+  },
+  
+  // Clear cache for specific category
+  clearCategory: (category) => {
+    if (window.airtableCMS) {
+      window.airtableCMS.clearCategoryCache(category);
+      console.log(`🧹 Cache cleared for ${category} via debug function`);
+    }
+  },
+  
+  // Force refresh specific category
+  forceRefresh: async (category) => {
+    if (window.airtableCMS) {
+      return await window.airtableCMS.forceRefreshCategory(category);
+    }
+    return null;
+  },
+  
+  // Preload all cache
+  preload: async () => {
+    if (window.airtableCMS) {
+      return await window.airtableCMS.preloadCache();
+    }
+  },
+  
+  // Log detailed cache information
+  logDetails: () => {
+    if (window.airtableCMS) {
+      window.airtableCMS.logCachePerformance();
+    }
+  },
+
+  // Run performance test
+  runTest: async () => {
+    if (window.airtableCMS) {
+      return await window.airtableCMS.runPerformanceTest();
+    }
+    return null;
+  }
+};
+
+// Enhanced refresh function with cache management
+window.refreshAirtableData = function(clearCache = false) {
+  if (window.airtableCMS) {
+    if (clearCache) {
+      console.log('🔄 Refreshing with cache clear...');
+      window.airtableCMS.clearCache();
+    }
     window.airtableCMS.refreshData();
   }
 };
