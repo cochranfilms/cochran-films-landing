@@ -35,9 +35,14 @@ class UserPreferencesManager {
 
   handleContactForms() {
     // Find all contact forms
-    const contactForms = document.querySelectorAll('form[data-form-type="contact"], .contact-form, #contact form');
+    const contactForms = document.querySelectorAll('form[data-form-type="contact"], .contact-form, #contact form, form');
     
     contactForms.forEach(form => {
+      // Skip forms that already have handlers
+      if (form.dataset.hasFormHandler) return;
+      
+      form.dataset.hasFormHandler = 'true';
+      
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         this.handleFormSubmission(form, 'contact');
@@ -45,6 +50,17 @@ class UserPreferencesManager {
     });
 
     console.log(`📝 Added handlers to ${contactForms.length} contact forms`);
+    
+    // Debug: log form details
+    contactForms.forEach((form, index) => {
+      console.log(`Form ${index + 1}:`, {
+        id: form.id,
+        className: form.className,
+        action: form.action,
+        method: form.method,
+        elements: form.elements ? form.elements.length : 'No elements property'
+      });
+    });
   }
 
   handleServiceForms() {
@@ -91,22 +107,35 @@ class UserPreferencesManager {
 
   async handleFormSubmission(form, formType) {
     try {
+      console.log(`🚀 Processing form submission: ${formType}`, {
+        formId: form.id,
+        formClass: form.className,
+        formAction: form.action
+      });
+      
       // Show loading state
       this.showFormLoading(form);
       
       // Extract form data
       const formData = this.extractFormData(form, formType);
       
+      console.log(`📊 Extracted form data:`, formData);
+      
       // Validate form data
       if (!this.validateFormData(formData)) {
+        console.warn('❌ Form validation failed');
         this.showFormError(form, 'Please fill in all required fields.');
         return;
       }
+      
+      console.log(`✅ Form validation passed, submitting to API...`);
       
       // Submit to User Preferences API
       const response = await this.submitToUserPreferences(formData);
       
       if (response.success) {
+        console.log(`✅ Form submitted successfully:`, response);
+        
         // Show success message
         this.showFormSuccess(form, 'Thank you! Your information has been submitted successfully.');
         
@@ -124,7 +153,7 @@ class UserPreferencesManager {
       }
       
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('❌ Form submission error:', error);
       this.showFormError(form, 'Sorry, there was an error submitting your form. Please try again.');
     } finally {
       // Hide loading state
@@ -139,10 +168,24 @@ class UserPreferencesManager {
       submissionDate: new Date().toISOString()
     };
 
-    // Extract form fields
-    const formElements = form.elements;
+    // Extract form fields - handle both HTMLFormElement and other form-like elements
+    let formElements = form.elements;
     
-    for (let element of formElements) {
+    // Fallback to querySelector if elements property doesn't exist
+    if (!formElements || !formElements.length) {
+      formElements = form.querySelectorAll('input, select, textarea');
+    }
+    
+    // Convert to array if it's not iterable
+    const elementsArray = Array.from(formElements || []);
+    
+    console.log(`🔍 Extracting data from form: ${form.id || form.className}`, {
+      formType: formType,
+      elementsFound: elementsArray.length,
+      hasElementsProperty: !!form.elements
+    });
+    
+    for (let element of elementsArray) {
       if (element.name && element.value) {
         const fieldName = element.name.toLowerCase();
         const fieldValue = element.value.trim();
