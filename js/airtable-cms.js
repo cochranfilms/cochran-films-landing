@@ -516,6 +516,11 @@ class AirtableCMS {
       // Add click handlers for portfolio items
       this.addPortfolioItemClickHandlers(grid);
     });
+    
+    // After portfolio is rendered, re-initialize video popups
+    setTimeout(() => {
+      this.initializeVideoPopups();
+    }, 100);
   }
   
   addPortfolioItemClickHandlers(grid) {
@@ -1242,39 +1247,125 @@ class AirtableCMS {
   }
 
   addVideoClickHandlers() {
-    // Add click handlers to video portfolio items
-    const videoItems = document.querySelectorAll('[data-video-url], .video-item, .portfolio-item');
+    // Add click handlers to video portfolio items - look for Airtable-generated items
+    const videoItems = document.querySelectorAll('[data-video-url], .video-item, .portfolio-item, .airtable-portfolio-item, [data-category="Video Production"]');
     
+    // Also look for items that might contain video URLs
+    const potentialVideoItems = document.querySelectorAll('.portfolio-item, .service-item, [class*="video"], [class*="portfolio"]');
+    
+    let totalVideoItems = 0;
+    
+    // Process explicitly marked video items
     videoItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        // Extract video data from the item
-        const videoData = this.extractVideoData(item);
-        if (videoData) {
-          this.openVideoPopup(videoData);
-        }
-      });
+      this.addVideoClickHandler(item);
+      totalVideoItems++;
     });
+    
+    // Process potential video items by checking their content
+    potentialVideoItems.forEach(item => {
+      if (this.hasVideoContent(item)) {
+        this.addVideoClickHandler(item);
+        totalVideoItems++;
+      }
+    });
+    
+    console.log(`🎬 Added click handlers to ${totalVideoItems} video items`);
+    
+    // Debug: log what we found
+    if (totalVideoItems === 0) {
+      console.log('🔍 Debug: No video items found. Available elements:', {
+        'data-video-url': document.querySelectorAll('[data-video-url]').length,
+        'video-item': document.querySelectorAll('.video-item').length,
+        'portfolio-item': document.querySelectorAll('.portfolio-item').length,
+        'airtable-portfolio-item': document.querySelectorAll('.airtable-portfolio-item').length,
+        'Video Production category': document.querySelectorAll('[data-category="Video Production"]').length,
+        'potential items': potentialVideoItems.length
+      });
+    }
+  }
 
-    console.log(`🎬 Added click handlers to ${videoItems.length} video items`);
+  hasVideoContent(item) {
+    // Check if item contains video-related content
+    const hasVideoUrl = item.querySelector('[data-video-url], video, [src*=".mp4"], [src*=".mov"], [src*=".avi"]');
+    const hasVideoText = item.textContent.toLowerCase().includes('video') || item.textContent.toLowerCase().includes('production');
+    const hasPlaybackUrl = item.dataset.playbackUrl || item.querySelector('[data-playback-url]');
+    
+    return hasVideoUrl || hasVideoText || hasPlaybackUrl;
+  }
+
+  addVideoClickHandler(item) {
+    // Skip if already has handler
+    if (item.dataset.hasVideoHandler) return;
+    
+    item.dataset.hasVideoHandler = 'true';
+    
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Extract video data from the item
+      const videoData = this.extractVideoData(item);
+      if (videoData) {
+        this.openVideoPopup(videoData);
+      }
+    });
+    
+    // Add visual indicator that it's clickable
+    item.style.cursor = 'pointer';
+    item.style.transition = 'transform 0.2s ease';
+    
+    // Add hover effect
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'scale(1.02)';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'scale(1)';
+    });
   }
 
   extractVideoData(item) {
+    console.log('🔍 Extracting video data from item:', item);
+    
     // Try to extract video data from various sources
-    const videoUrl = item.dataset.videoUrl || 
-                    item.querySelector('[data-video-url]')?.dataset.videoUrl ||
-                    item.querySelector('video source')?.src ||
-                    item.querySelector('video')?.src;
+    let videoUrl = item.dataset.videoUrl || 
+                   item.querySelector('[data-video-url]')?.dataset.videoUrl ||
+                   item.querySelector('video source')?.src ||
+                   item.querySelector('video')?.src ||
+                   item.dataset.playbackUrl ||
+                   item.querySelector('[data-playback-url]')?.dataset.playbackUrl;
 
-    if (!videoUrl) return null;
+    // If no direct video URL, try to find it in the portfolio data
+    if (!videoUrl) {
+      const portfolioItem = this.findPortfolioItemByElement(item);
+      if (portfolioItem) {
+        videoUrl = portfolioItem.playbackUrl || portfolioItem.URL || portfolioItem['Video'];
+        console.log('📹 Found video URL from portfolio data:', videoUrl);
+      }
+    }
+
+    if (!videoUrl) {
+      console.log('❌ No video URL found for item');
+      return null;
+    }
 
     // Find the corresponding portfolio data
-    const title = item.querySelector('.title, .project-title, h3, h4')?.textContent || 'Untitled Video';
-    const description = item.querySelector('.description, .project-description, p')?.textContent || '';
+    const title = item.querySelector('.title, .project-title, h3, h4, .portfolio-title')?.textContent || 
+                  item.textContent?.split('\n')[0]?.trim() || 
+                  'Untitled Video';
+    
+    const description = item.querySelector('.description, .project-description, p, .portfolio-description')?.textContent || 
+                       item.textContent?.split('\n')[1]?.trim() || 
+                       '';
     
     // Look for additional data in the portfolio
-    const portfolioItem = this.findPortfolioItemByVideoUrl(videoUrl);
+    const portfolioItem = this.findPortfolioItemByVideoUrl(videoUrl) || this.findPortfolioItemByElement(item);
+    
+    console.log('📊 Extracted video data:', {
+      title: portfolioItem?.Title || title,
+      description: portfolioItem?.Description || description,
+      videoUrl: videoUrl,
+      category: portfolioItem?.Category || 'Video Production'
+    });
     
     return {
       title: portfolioItem?.Title || title,
@@ -1286,6 +1377,22 @@ class AirtableCMS {
       timeline: portfolioItem?.Timeline || '',
       playbackUrl: portfolioItem?.playbackUrl || videoUrl
     };
+  }
+
+  findPortfolioItemByElement(element) {
+    // Try to find portfolio item by element content or attributes
+    const elementText = element.textContent?.toLowerCase() || '';
+    const elementTitle = element.querySelector('.title, .project-title, h3, h4, .portfolio-title')?.textContent || '';
+    
+    return this.portfolioData?.find(item => {
+      const itemTitle = item.Title?.toLowerCase() || '';
+      const itemCategory = item.Category?.toLowerCase() || '';
+      
+      // Check if this element matches the portfolio item
+      return (itemTitle && elementTitle.toLowerCase().includes(itemTitle.toLowerCase())) ||
+             (itemCategory === 'video production' && elementText.includes('video')) ||
+             (itemTitle && elementText.includes(itemTitle.toLowerCase()));
+    });
   }
 
   findPortfolioItemByVideoUrl(videoUrl) {
