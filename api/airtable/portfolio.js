@@ -22,7 +22,7 @@ module.exports = async function handler(req, res) {
     console.log('🚀 Unified Portfolio API called - fetching from all Airtable bases...');
     const startTime = Date.now();
 
-    // Airtable configuration for all three bases
+    // Airtable configuration for all four bases
     const airtableConfigs = [
       {
         name: 'Video Production',
@@ -41,6 +41,12 @@ module.exports = async function handler(req, res) {
         baseId: 'appP1uFoRWjxPkQ5b',
         tableName: 'Imported table',
         category: 'Photography'
+      },
+      {
+        name: 'Brand Development',
+        baseId: 'app9HS0yNn6uyFmJF',
+        tableName: 'Brand',
+        category: 'Brand Development'
       }
     ];
 

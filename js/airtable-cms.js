@@ -277,14 +277,16 @@ class AirtableCMS {
     this.bases = {
       'Video Production': 'appjQxcRoClnZzghj', // Portfolio CSV
       'Web Development': 'appV5l9kZ5vAxcz4e',  // Web CSV  
-      'Photography': 'appP1uFoRWjxPkQ5b'       // Photos CSV
+      'Photography': 'appP1uFoRWjxPkQ5b',      // Photos CSV
+      'Brand Development': 'app9HS0yNn6uyFmJF'  // Brand Development
     };
     
     // Table names (these are typically the sheet names in your Airtable)
     this.tables = {
       'Video Production': 'Imported table',
       'Web Development': 'Imported table',
-      'Photography': 'Imported table'
+      'Photography': 'Imported table',
+      'Brand Development': 'Brand'
     };
 
     // Initialize caching system
@@ -456,24 +458,27 @@ class AirtableCMS {
     console.log('📊 Loading portfolio data from individual APIs (fallback)...');
     
     try {
-      // Load data from all three Airtable bases
-      const [videoData, webData, photoData] = await Promise.all([
+      // Load data from all four Airtable bases
+      const [videoData, webData, photoData, brandData] = await Promise.all([
         this.loadAirtableData('Video Production'),
         this.loadAirtableData('Web Development'),
-        this.loadAirtableData('Photography')
+        this.loadAirtableData('Photography'),
+        this.loadAirtableData('Brand Development')
       ]);
       
       // Combine all data and map to existing portfolio structure
       this.portfolioData = [
         ...videoData.map(item => ({ ...item, ServiceCategory: 'Video Production' })),
         ...webData.map(item => ({ ...item, ServiceCategory: 'Web Development' })),
-        ...photoData.map(item => ({ ...item, ServiceCategory: 'Photography' }))
+        ...photoData.map(item => ({ ...item, ServiceCategory: 'Photography' })),
+        ...brandData.map(item => ({ ...item, ServiceCategory: 'Brand Development' }))
       ];
       
       console.log(`📈 Loaded ${this.portfolioData.length} total items from individual APIs:`, {
         'Video Production': videoData.length,
         'Web Development': webData.length,
-        'Photography': photoData.length
+        'Photography': photoData.length,
+        'Brand Development': brandData.length
       });
       
     } catch (error) {
@@ -582,7 +587,8 @@ class AirtableCMS {
     const ttlMap = {
       'Video Production': 45 * 60 * 1000,    // 45 minutes (videos change less frequently)
       'Web Development': 30 * 60 * 1000,     // 30 minutes (websites change moderately)
-      'Photography': 20 * 60 * 1000          // 20 minutes (photos change more frequently)
+      'Photography': 20 * 60 * 1000,         // 20 minutes (photos change more frequently)
+      'Brand Development': 60 * 60 * 1000     // 60 minutes (brand assets change less frequently)
     };
     
     return ttlMap[category] || this.cache.defaultTTL;
@@ -917,6 +923,51 @@ class AirtableCMS {
       `;
     }
 
+    // For Brand Development items, render with brand-specific styling
+    if (item.ServiceCategory === 'Brand Development') {
+      return `
+        <div class="portfolio-item brand-development" 
+             data-category="${item.Category}" 
+             data-service-category="${item.ServiceCategory}"
+             data-title="${item.Title}"
+             ${item.URL ? `data-url="${item.URL}"` : ''}>
+          <div class="portfolio-thumbnail">
+            <img src="${thumbnailSrc}" alt="${item.Title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center'" />
+            ${item.URL ? 
+              `<div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
+                <i class="fa-solid fa-external-link-alt"></i>
+              </div>` : 
+              `<div class="portfolio-play" style="background: rgba(255,178,0,0.9);">
+                <i class="fa-solid fa-eye"></i>
+              </div>`
+            }
+            ${isFeatured ? '<div class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category">
+              <i class="fa-solid fa-palette"></i>
+              ${item.Category}
+            </div>
+            <h3 class="portfolio-title">${item.Title}</h3>
+            <p class="portfolio-description">${item.Description}</p>
+            
+            ${item.Client || item.Role || item['Tech Stack'] ? `
+              <div class="portfolio-brand-details" style="margin: 12px 0; padding: 12px; background: rgba(255,178,0,0.1); border-radius: 8px; border: 1px solid rgba(255,178,0,0.2);">
+                ${item.Client ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Client:</strong> ${item.Client}</div>` : ''}
+                ${item.Role ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Role:</strong> ${item.Role}</div>` : ''}
+                ${item['Tech Stack'] ? `<div style="margin-bottom: 8px;"><strong style="color: var(--brand-gold);">Tools:</strong> <span style="font-size: 12px; color: var(--text-secondary);">${item['Tech Stack']}</span></div>` : ''}
+              </div>
+            ` : ''}
+            
+            <div class="portfolio-meta">
+              <span class="portfolio-date">${formattedDate}</span>
+              ${isFeatured ? '<span class="portfolio-featured"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     // Default rendering for video and web items
     const isVideoProduction = item.ServiceCategory === 'Video Production';
     
@@ -1018,6 +1069,15 @@ class AirtableCMS {
           } else if (portfolioItem.ServiceCategory === 'Photography') {
             // Open image lightbox for photography
             this.openImageModal(item.getAttribute('data-src') || portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Photo');
+          } else if (portfolioItem.ServiceCategory === 'Brand Development') {
+            // Open brand development item in image modal or external link
+            if (portfolioItem.URL && portfolioItem.URL.trim() !== '') {
+              // If there's a URL, open it in new tab
+              window.open(portfolioItem.URL, '_blank');
+            } else if (portfolioItem['Thumbnail Image']) {
+              // If no URL but has image, open in image modal
+              this.openImageModal(portfolioItem['Thumbnail Image'], portfolioItem.Title || 'Brand Development Project');
+            }
           } else if (portfolioItem.playbackUrl) {
             // Open video modal for video production items
             this.openVideoModal(portfolioItem);
