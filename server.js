@@ -10,6 +10,46 @@ const PORT = process.env.PORT || 3003;
 
 // Middleware
 app.use(cors());
+// IMPORTANT: Stripe webhook must receive the raw body for signature verification.
+// Define the webhook route BEFORE express.json() so the raw parser runs.
+app.post('/api/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
+  const sig = req.headers['stripe-signature'];
+  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET || 'whsec_your_webhook_secret_here';
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+  } catch (err) {
+    console.error('Webhook signature verification failed:', err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+
+  switch (event.type) {
+    case 'checkout.session.completed': {
+      const session = event.data.object;
+      console.log('Payment successful for session:', session.id);
+      console.log('Customer email:', session.customer_details?.email);
+      console.log('Amount total:', session.amount_total);
+      console.log('Metadata:', session.metadata);
+      break;
+    }
+    case 'payment_intent.succeeded': {
+      const paymentIntent = event.data.object;
+      console.log('Payment succeeded:', paymentIntent.id);
+      break;
+    }
+    case 'payment_intent.payment_failed': {
+      const failedPayment = event.data.object;
+      console.log('Payment failed:', failedPayment.id);
+      break;
+    }
+    default:
+      console.log(`Unhandled event type: ${event.type}`);
+  }
+
+  res.json({ received: true });
+});
+
+// Parse JSON for all non-webhook routes
 app.use(express.json());
 app.use(express.static('.'));
 
@@ -109,51 +149,11 @@ app.post('/api/create-checkout-session', async (req, res) => {
   }
 });
 
-// Stripe webhook endpoint for handling successful payments
-app.post('/api/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
-  const sig = req.headers['stripe-signature'];
-  const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET || 'whsec_your_webhook_secret_here'; // You'll get this from Stripe Dashboard
-
-  let event;
-
-  try {
-    event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
-  } catch (err) {
-    console.error('Webhook signature verification failed:', err.message);
-    return res.status(400).send(`Webhook Error: ${err.message}`);
-  }
-
-  // Handle the event
-  switch (event.type) {
-    case 'checkout.session.completed':
-      const session = event.data.object;
-      console.log('Payment successful for session:', session.id);
-      console.log('Customer email:', session.customer_details?.email);
-      console.log('Amount total:', session.amount_total);
-      console.log('Metadata:', session.metadata);
-      
-      // Here you can:
-      // 1. Send confirmation email to customer
-      // 2. Update your database
-      // 3. Create project tickets
-      // 4. Notify your team
-      break;
-      
-    case 'payment_intent.succeeded':
-      const paymentIntent = event.data.object;
-      console.log('Payment succeeded:', paymentIntent.id);
-      break;
-      
-    case 'payment_intent.payment_failed':
-      const failedPayment = event.data.object;
-      console.log('Payment failed:', failedPayment.id);
-      break;
-      
-    default:
-      console.log(`Unhandled event type: ${event.type}`);
-  }
-
-  res.json({ received: true });
+// Stripe public config endpoint (exposes publishable key to client)
+app.get('/api/config', (req, res) => {
+  const publishableKey = process.env.STRIPE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_test_YOUR_PUBLISHABLE_KEY_HERE';
+  res.set('Cache-Control', 'public, max-age=600');
+  res.json({ publishableKey });
 });
 
 // Success page

@@ -27,17 +27,13 @@ npm install
 
 ### 2. Configure Stripe Keys
 
-**IMPORTANT**: Replace the placeholder keys in the code with your actual Stripe keys.
+Use environment variables (Vercel → Project → Settings → Environment Variables):
 
-#### In `server.js` (Line 2):
-```javascript
-const stripe = require('stripe')('sk_test_YOUR_SECRET_KEY_HERE');
-```
+- STRIPE_SECRET_KEY = sk_live_... (server-side)
+- STRIPE_PUBLISHABLE_KEY = pk_live_... (client-side fetch via /api/config)
+- STRIPE_WEBHOOK_SECRET = whsec_... (for /api/webhook)
 
-#### In `index2.html` (Line 27):
-```javascript
-const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
-```
+The code already reads these values; no inline keys needed.
 
 ### 3. Start the Server
 
@@ -61,10 +57,7 @@ npm run dev
    - `payment_intent.succeeded`
    - `payment_intent.payment_failed`
 5. Copy the webhook signing secret
-6. Update `server.js` line 67:
-   ```javascript
-   const endpointSecret = 'whsec_YOUR_WEBHOOK_SECRET_HERE';
-   ```
+6. Set STRIPE_WEBHOOK_SECRET in your environment. The server reads it automatically.
 
 ### 2. Product Configuration
 1. Go to [Stripe Dashboard > Products](https://dashboard.stripe.com/products)

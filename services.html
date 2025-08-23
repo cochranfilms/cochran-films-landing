@@ -32,7 +32,8 @@
   <!-- Stripe Integration -->
   <script src="https://js.stripe.com/v3/"></script>
   <script>
-    const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+    // Stripe will be initialized after fetching publishable key from /api/config
+    let stripe = null;
     window.stripeCart = { items: [], total: 0 };
     console.log('Stripe cart initialized:', window.stripeCart);
   </script>
@@ -1265,17 +1266,19 @@
 
     // Initialize AI Neural Network when DOM is ready
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('DOMContentLoaded', async () => {
         new AINeuralNetwork();
         initializeServicePackageBuilder();
-        initializeStripeIntegration();
+        await initializeStripeAndConfig();
         updateStripeCartDisplay(); // Initialize cart display
       });
     } else {
-      new AINeuralNetwork();
-      initializeServicePackageBuilder();
-      initializeStripeIntegration();
-      updateStripeCartDisplay(); // Initialize cart display
+      (async () => {
+        new AINeuralNetwork();
+        initializeServicePackageBuilder();
+        await initializeStripeAndConfig();
+        updateStripeCartDisplay(); // Initialize cart display
+      })();
     }
 
     // ========================================
@@ -1878,6 +1881,18 @@
     // ========================================
     // STRIPE INTEGRATION SYSTEM
     // ========================================
+    async function initializeStripeAndConfig() {
+      try {
+        const resp = await fetch('/api/config', { cache: 'no-store' });
+        const { publishableKey } = await resp.json();
+        stripe = Stripe(publishableKey);
+      } catch (e) {
+        console.error('Failed to load Stripe publishable key, falling back to test key.', e);
+        stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE');
+      }
+      return initializeStripeIntegration();
+    }
+
     function initializeStripeIntegration() {
       console.log('🚀 Initializing Stripe Integration...');
       
