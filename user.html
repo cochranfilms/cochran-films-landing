@@ -31,14 +31,31 @@
 <body>
   <div class="wrapper">
     <section class="card" style="margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(255,178,0,0.12));">
-      <div>
-        <h2 style="margin:0 0 6px;font-size:22px;font-weight:900">Welcome back</h2>
+      <div style="flex:1">
+        <h2 style="margin:0 0 6px;font-size:22px;font-weight:900">Welcome</h2>
         <div class="muted">Sign in to sync favorites, comments, and invoices across devices</div>
       </div>
-      <div class="row">
-        <button id="auth0Login" class="btn" style="background:rgba(255,178,0,0.15);border-color:rgba(255,178,0,0.35)"><i class="fas fa-user-shield"></i> Sign in with Auth0</button>
-        <button id="firebaseLogin" class="btn"><i class="fas fa-fire"></i> Sign in with Firebase</button>
-      </div>
+      <form id="loginForm" style="display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap">
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <div style="min-width:220px">
+            <label class="muted" for="loginEmail" style="display:block;font-size:12px;margin:0 0 4px">Email</label>
+            <input id="loginEmail" type="email" placeholder="you@example.com" required />
+          </div>
+          <div style="min-width:200px">
+            <label class="muted" for="loginPassword" style="display:block;font-size:12px;margin:0 0 4px">Password</label>
+            <input id="loginPassword" type="password" placeholder="••••••••" required />
+          </div>
+          <div style="min-width:200px" id="nameContainer" hidden>
+            <label class="muted" for="loginName" style="display:block;font-size:12px;margin:0 0 4px">Full name (sign up)</label>
+            <input id="loginName" type="text" placeholder="Your name" />
+          </div>
+        </div>
+        <div class="row" style="gap:8px">
+          <button type="submit" class="btn" id="signinBtn"><i class="fas fa-right-to-bracket"></i> Sign In</button>
+          <button type="button" class="btn" id="toggleSignup"><i class="fas fa-user-plus"></i> Create Account</button>
+          <button type="button" class="btn" id="signoutBtn" style="display:none"><i class="fas fa-right-from-bracket"></i> Sign Out</button>
+        </div>
+      </form>
     </section>
     <header style="margin-bottom:16px">
       <h1>User Dashboard</h1>
@@ -54,7 +71,6 @@
         </div>
         <div style="margin-top:12px" class="row">
           <button class="btn" id="saveProfile"><i class="fas fa-save"></i> Save Profile</button>
-          <button class="btn" id="mockLogin"><i class="fas fa-right-to-bracket"></i> Mock Login</button>
           <a class="btn" href="/blog.html"><i class="fas fa-newspaper"></i> Go to Blog</a>
         </div>
       </div>
@@ -79,9 +95,22 @@
     </section>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
   <script>
-    // Optional: expose Firebase app if included elsewhere
+    // Initialize Firebase if config is provided globally
     window.__CF_FIREBASE = window.__CF_FIREBASE || {};
+    try {
+      if (!firebase.apps.length && window.__CF_FIREBASE_CONFIG) {
+        firebase.initializeApp(window.__CF_FIREBASE_CONFIG);
+      }
+      if (firebase.apps.length) {
+        window.__CF_FIREBASE.app = firebase.app();
+        window.__CF_FIREBASE.db = firebase.firestore();
+        window.__CF_FIREBASE.auth = firebase.auth();
+      }
+    } catch(e) { console.warn('Firebase init skipped:', e); }
 
     // Lightweight client-side data layer (replace with Firebase later)
     const UserAPI = {
@@ -148,25 +177,110 @@
         </div>`).join('') : '<div class="muted">No comments yet</div>';
     }
 
-    document.getElementById('saveProfile').onclick = ()=>{
+    document.getElementById('saveProfile').onclick = async ()=>{
       const name=document.getElementById('profileName').value.trim();
       const email=document.getElementById('profileEmail').value.trim();
-      UserAPI.setUser({ name, email, uid: 'local-'+btoa(email||Date.now()) });
-      renderProfile();
-    };
-    document.getElementById('mockLogin').onclick = ()=>{
-      const email = document.getElementById('profileEmail').value.trim() || `guest+${Date.now()}@example.com`;
-      UserAPI.setUser({ name: document.getElementById('profileName').value.trim()||'Guest User', email, uid: 'local-'+btoa(email) });
+      const auth = window.__CF_FIREBASE.auth;
+      if (auth && auth.currentUser) {
+        const db = window.__CF_FIREBASE.db;
+        await db.collection('Users').doc(auth.currentUser.uid).set({ displayName: name, email }, { merge: true });
+        UserAPI.setUser({ name, email, uid: auth.currentUser.uid });
+      } else {
+        UserAPI.setUser({ name, email, uid: 'local-'+btoa(email||Date.now()) });
+      }
       renderProfile();
     };
 
-    // Pretty login buttons (placeholders for Auth0/Firebase SDK integration)
-    document.getElementById('auth0Login').onclick = ()=>{
-      alert('Auth0 login not yet configured. This button is a placeholder.');
-    };
-    document.getElementById('firebaseLogin').onclick = ()=>{
-      alert('Firebase login not yet configured. This button is a placeholder.');
-    };
+    // Firebase Auth UI logic
+    (function authUI(){
+      const auth = window.__CF_FIREBASE.auth;
+      const db = window.__CF_FIREBASE.db;
+      const form = document.getElementById('loginForm');
+      const toggleSignup = document.getElementById('toggleSignup');
+      const nameContainer = document.getElementById('nameContainer');
+      const signoutBtn = document.getElementById('signoutBtn');
+      let isSignup = false;
+
+      function setMode(signup){
+        isSignup = signup; nameContainer.hidden = !signup;
+        document.getElementById('signinBtn').innerHTML = signup ? '<i class="fas fa-user-plus"></i> Create Account' : '<i class="fas fa-right-to-bracket"></i> Sign In';
+      }
+      toggleSignup.addEventListener('click', ()=> setMode(!isSignup));
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault(); if (!auth) { alert('Firebase not configured.'); return; }
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        const fullName = document.getElementById('loginName').value.trim();
+        try{
+          let cred;
+          if (isSignup) {
+            cred = await auth.createUserWithEmailAndPassword(email, password);
+            await cred.user.updateProfile({ displayName: fullName||email });
+          } else {
+            cred = await auth.signInWithEmailAndPassword(email, password);
+          }
+          // Upsert profile
+          await db.collection('Users').doc(cred.user.uid).set({
+            email: cred.user.email || email,
+            displayName: cred.user.displayName || fullName || email,
+            photoURL: cred.user.photoURL || '',
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            lastLoginAt: firebase.firestore.FieldValue.serverTimestamp(),
+          }, { merge: true });
+        }catch(err){ alert(err.message); }
+      });
+
+      signoutBtn.addEventListener('click', ()=> auth?.signOut());
+
+      let unsubFavs = null, unsubComments = null;
+      auth?.onAuthStateChanged((u)=>{
+        const signedIn = Boolean(u);
+        document.getElementById('authStatus').textContent = signedIn ? 'Signed In' : 'Guest';
+        signoutBtn.style.display = signedIn ? 'inline-flex' : 'none';
+        if (signedIn) {
+          // Reflect in profile fields
+          document.getElementById('profileEmail').value = u.email||'';
+          document.getElementById('profileName').value = u.displayName||'';
+          UserAPI.setUser({ name: u.displayName||'', email: u.email||'', uid: u.uid });
+          // Live favorites/comments
+          try{
+            unsubFavs?.(); unsubComments?.();
+            unsubFavs = db.collection('Users').doc(u.uid).collection('favorites').orderBy('savedAt','desc').onSnapshot(snap=>{
+              const favs = snap.docs.map(d => d.data());
+              const list=document.getElementById('favoritesList');
+              document.getElementById('favoritesCount').textContent = `${favs.length} saved`;
+              list.innerHTML = favs.length? favs.map(p=>`
+                <div class="item">
+                  <div style="display:flex;gap:10px;align-items:center;max-width:70%">
+                    <i class="fas fa-bookmark" style="color:var(--brand-gold)"></i>
+                    <div style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.title||p.url}</div>
+                  </div>
+                  <div class="row">
+                    <a class="btn" href="${p.url}" target="_blank" rel="noopener"><i class="fas fa-external-link"></i> Open</a>
+                  </div>
+                </div>`).join('') : '<div class="muted">No favorites yet</div>';
+            });
+            unsubComments = db.collection('Users').doc(u.uid).collection('comments').orderBy('createdAt','desc').onSnapshot(snap=>{
+              const cs = snap.docs.map(d => d.data());
+              const list=document.getElementById('commentsList');
+              list.innerHTML = cs.length? cs.map(c=>`
+                <div class="item">
+                  <div style="display:flex;flex-direction:column;max-width:70%">
+                    <strong>${c.postTitle||'Post'}</strong>
+                    <span class="muted">${new Date(c.createdAt).toLocaleString()}</span>
+                    <div style="margin-top:6px">${c.text}</div>
+                  </div>
+                  <a class="btn" href="${c.postUrl}" target="_blank" rel="noopener"><i class="fas fa-external-link"></i> Open</a>
+                </div>`).join('') : '<div class="muted">No comments yet</div>';
+            });
+          }catch(e){ console.warn(e); }
+        } else {
+          unsubFavs?.(); unsubComments?.();
+          renderFavorites(); renderComments();
+        }
+      });
+    })();
 
     // Initial render
     renderProfile(); renderFavorites(); renderInvoices(); renderComments();
