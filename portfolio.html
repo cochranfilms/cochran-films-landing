@@ -176,13 +176,16 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
-      max-width: 1400px;
+      max-width: 1200px;
       width: 100%;
       align-items: center;
+      margin: 0 auto;
+      padding: 2rem 0;
     }
 
     .slide-info {
       z-index: 2;
+      max-width: 560px;
     }
 
     .slide-category {
@@ -457,6 +460,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      outline: none;
     }
 
     .control-btn:hover {
@@ -475,6 +479,10 @@
       transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       z-index: 10;
     }
+
+    /* Prevent content overflow on smaller widths */
+    .slide-title, .slide-description { word-wrap: break-word; overflow-wrap: anywhere; }
+    .slide-cta { max-width: 100%; white-space: nowrap; }
 
     /* Floating Elements Animation */
     .floating-elements {
@@ -521,13 +529,16 @@
         text-align: center;
       }
       
-      .slide-title {
-        font-size: 3rem;
-      }
+      .slide-title { font-size: 3rem; }
       
       .gallery-grid {
         height: 400px;
       }
+    }
+
+    @media (max-width: 1280px) {
+      .slide-title { font-size: 3.5rem; }
+      .gallery-grid { height: 480px; }
     }
 
     @media (max-width: 768px) {
@@ -643,7 +654,7 @@
                 <span class="stat-label">Client Satisfaction</span>
               </div>
             </div>
-            <a href="#video-gallery" class="slide-cta">
+            <a href="/portfolio-category.html?category=Video%20Production" class="slide-cta">
               <span>Explore Videos</span>
               <i class="fas fa-play"></i>
             </a>
@@ -682,7 +693,7 @@
                 <span class="stat-label">Load Time</span>
               </div>
             </div>
-            <a href="#web-gallery" class="slide-cta">
+            <a href="/portfolio-category.html?category=Web%20Development" class="slide-cta">
               <span>View Projects</span>
               <i class="fas fa-external-link-alt"></i>
             </a>
@@ -721,7 +732,7 @@
                 <span class="stat-label">Resolution</span>
               </div>
             </div>
-            <a href="#photo-gallery" class="slide-cta">
+            <a href="/portfolio-category.html?category=Photography" class="slide-cta">
               <span>Browse Gallery</span>
               <i class="fas fa-images"></i>
             </a>
@@ -760,7 +771,7 @@
                 <span class="stat-label">Assets</span>
               </div>
             </div>
-            <a href="#brand-gallery" class="slide-cta">
+            <a href="/portfolio-category.html?category=Brand%20Development" class="slide-cta">
               <span>See Brands</span>
               <i class="fas fa-paint-brush"></i>
             </a>

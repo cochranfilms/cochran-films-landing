@@ -285,6 +285,9 @@ class AirtableCMS {
     // Initialize caching system
     this.cache = new AirtableCache();
     
+    // Rotation settings for slideshow featured items
+    this.rotationPeriod = (typeof window !== 'undefined' && window.PORTFOLIO_ROTATION_PERIOD) || 'daily'; // 'daily' | 'weekly'
+    
     // Initialize the CMS
     this.init();
   }
@@ -388,6 +391,170 @@ class AirtableCMS {
       this.setupEventHandlers();
       this.renderPortfolioByCategory();
     }
+  }
+
+  /**
+   * Deterministic rotating index for a category, changes daily/weekly
+   */
+  getRotatingIndex(category, length, period = this.rotationPeriod) {
+    if (!length || length <= 0) return 0;
+    const now = new Date();
+    let seed;
+    if (period === 'weekly') {
+      const yearStart = new Date(now.getFullYear(), 0, 1);
+      const dayOfYear = Math.floor((now - yearStart) / 86400000);
+      const weekIndex = Math.floor(dayOfYear / 7);
+      seed = weekIndex;
+    } else {
+      // daily
+      const yearStart = new Date(now.getFullYear(), 0, 1);
+      seed = Math.floor((now - yearStart) / 86400000);
+    }
+    // Category-specific salt for distribution
+    const catHash = this.simpleHash(String(category || 'all'));
+    const idx = Math.abs((seed + catHash) % length);
+    return idx;
+  }
+
+  simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = ((hash << 5) - hash) + str.charCodeAt(i);
+      hash |= 0;
+    }
+    return hash;
+  }
+
+  /**
+   * Ensure portfolio data is available; resolves quickly if already loaded
+   */
+  async ensureDataReady(timeoutMs = 4000) {
+    const start = Date.now();
+    while (!this.portfolioData || this.portfolioData.length === 0) {
+      // If fallback exists, use it immediately to avoid blank UI
+      if (Array.isArray(window.FALLBACK_PORTFOLIO_DATA) && window.FALLBACK_PORTFOLIO_DATA.length > 0) {
+        this.portfolioData = window.FALLBACK_PORTFOLIO_DATA;
+        break;
+      }
+      if (Date.now() - start > timeoutMs) break;
+      await new Promise(r => setTimeout(r, 120));
+    }
+    return Array.isArray(this.portfolioData) && this.portfolioData.length > 0;
+  }
+
+  /**
+   * Adapter used by the slideshow to inject items into a grid with daily rotation.
+   * Public API: window.airtableCMS.loadPortfolioItems(category, gridId, itemLimit, fields)
+   */
+  async loadPortfolioItems(category, gridId, itemLimit = 1, /* fieldsMapping unused but accepted for compatibility */) {
+    await this.ensureDataReady();
+    const all = (this.portfolioData || []).filter(item =>
+      (item.ServiceCategory === category) || (item.Category === category)
+    );
+    if (all.length === 0) return;
+    const count = Math.max(1, itemLimit);
+    const items = [];
+    let startIdx = this.getRotatingIndex(category, all.length);
+    for (let i = 0; i < Math.min(count, all.length); i++) {
+      items.push(all[(startIdx + i) % all.length]);
+    }
+    // Delegate rendering to the slideshow when available for consistent UI
+    if (typeof window !== 'undefined' && window.portfolioSlideshow && typeof window.portfolioSlideshow.populateGrid === 'function') {
+      window.portfolioSlideshow.populateGrid(gridId, items);
+    } else {
+      // Fallback: render minimal gallery item structure
+      const grid = document.getElementById(gridId);
+      if (grid) {
+        grid.innerHTML = items.map((item) => {
+          const thumb = this.resolveThumbnailSrc(item);
+          const isVideo = !!item.playbackUrl || (item.ServiceCategory === 'Video Production');
+          const isWeb = item.ServiceCategory === 'Web Development' && !!item.URL;
+          const icon = isVideo ? 'play' : (isWeb ? 'external-link-alt' : 'search-plus');
+          return `
+            <div class="gallery-item" data-collection="${String(category).toLowerCase().replace(/\s+/g,'-')}">
+              <img src="${thumb}" alt="${item.Title || 'Portfolio'}" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-play-btn"><i class="fas fa-${icon}"></i></div>
+                <div class="gallery-info"><h4>${item.Title || ''}</h4>${item.Category ? `<p>${item.Category}</p>` : ''}</div>
+              </div>
+            </div>`;
+        }).join('');
+        // Click behavior
+        grid.querySelectorAll('.gallery-item').forEach((el, idx) => {
+          const it = items[idx];
+          el.addEventListener('click', () => {
+            if (it.playbackUrl) { this.openVideoModal(it); }
+            else if (it.URL) { window.open(it.URL, '_blank'); }
+            else { this.openImageModal(this.resolveThumbnailSrc(it), it.Title || ''); }
+          });
+        });
+      }
+    }
+  }
+
+  /**
+   * Adapter to load featured items across categories for the featured slide
+   */
+  async loadFeaturedItems(gridId, itemLimit = 6) {
+    await this.ensureDataReady();
+    const featured = (this.portfolioData || []).filter(item => item['Is Featured']);
+    const list = featured.length > 0 ? featured : (this.portfolioData || []);
+    // Rotate start for variety
+    let startIdx = this.getRotatingIndex('Featured', list.length);
+    const items = [];
+    for (let i = 0; i < Math.min(itemLimit, list.length); i++) {
+      items.push(list[(startIdx + i) % list.length]);
+    }
+    if (typeof window !== 'undefined' && window.portfolioSlideshow && typeof window.portfolioSlideshow.populateGrid === 'function') {
+      window.portfolioSlideshow.populateGrid(gridId, items);
+    } else {
+      const grid = document.getElementById(gridId);
+      if (grid) {
+        grid.innerHTML = items.map((it) => {
+          const thumb = this.resolveThumbnailSrc(it);
+          return `
+            <div class="gallery-item" data-collection="featured">
+              <img src="${thumb}" alt="${it.Title || 'Featured'}" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-play-btn"><i class="fas fa-${it.playbackUrl ? 'play' : (it.URL ? 'external-link-alt' : 'eye')}"></i></div>
+                <div class="gallery-info"><h4>${it.Title || ''}</h4>${it.ServiceCategory ? `<p>${it.ServiceCategory}</p>` : ''}</div>
+              </div>
+            </div>`;
+        }).join('');
+        grid.querySelectorAll('.gallery-item').forEach((el, idx) => {
+          const it = items[idx];
+          el.addEventListener('click', () => {
+            if (it.playbackUrl) { this.openVideoModal(it); }
+            else if (it.URL) { window.open(it.URL, '_blank'); }
+            else { this.openImageModal(this.resolveThumbnailSrc(it), it.Title || ''); }
+          });
+        });
+      }
+    }
+  }
+
+  /**
+   * Render a full category collection into a container for the category page
+   */
+  async renderCategoryPage(category, gridId, options = {}) {
+    const settings = { sortByDateDesc: true, ...options };
+    await this.ensureDataReady();
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    const items = (this.portfolioData || []).filter(it =>
+      (it.ServiceCategory === category) || (it.Category === category)
+    );
+    if (items.length === 0) {
+      grid.innerHTML = `<div style="padding:40px; text-align:center; color: var(--text-secondary);">No items found in ${category}</div>`;
+      return;
+    }
+    const sorted = settings.sortByDateDesc ? items.slice().sort((a,b)=>{
+      const da = new Date(a.UploadDate || a.CreatedAt || 0).getTime();
+      const db = new Date(b.UploadDate || b.CreatedAt || 0).getTime();
+      return db - da;
+    }) : items;
+    grid.innerHTML = sorted.map(it => this.createPortfolioItem(it)).join('');
+    this.addPortfolioItemClickHandlers(grid);
   }
 
   /**

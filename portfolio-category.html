@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cochran Films | Portfolio Category</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <style>
+    body { background: #0b1020; color: #fff; }
+    .category-hero { padding: 120px 20px 40px; text-align: center; background: linear-gradient(135deg, rgba(26,11,46,.8), rgba(15,52,96,.8)); }
+    .category-hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 12px; }
+    .category-hero p { color: #cbd5e1; max-width: 800px; margin: 0 auto; }
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  </style>
+</head>
+<body>
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/home.html" class="nav-logo"><img src="CF_Logo_White2025.png" alt="Cochran Films logo" /></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="/services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="/book.html" class="nav-link nav-cta">Book Services</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <header class="category-hero">
+    <h1 id="categoryTitle">Portfolio</h1>
+    <p id="categoryDesc">Explore the full collection of our work in this category.</p>
+  </header>
+
+  <main class="container">
+    <div id="categoryGrid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"><img src="CF_Logo_White2025.png" alt="Cochran Films logo" /></div>
+      <div class="footer-copyright">© 2025 Cochran Films LLC. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    window.API_BASE_URL = window.location.origin;
+  </script>
+  <script src="js/airtable-cms.js"></script>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category') || 'Portfolio';
+      const titleEl = document.getElementById('categoryTitle');
+      titleEl.textContent = category;
+      const descEl = document.getElementById('categoryDesc');
+      const descMap = {
+        'Video Production': 'Cinematic storytelling across corporate, events, and branded content.',
+        'Web Development': 'High-performance websites and apps engineered for results.',
+        'Photography': 'Visual narratives that capture products, people, and events.',
+        'Brand Development': 'Identity systems, logos, and assets that build lasting brands.'
+      };
+      descEl.textContent = descMap[category] || descEl.textContent;
+
+      function renderWhenReady() {
+        if (window.airtableCMS && typeof window.airtableCMS.renderCategoryPage === 'function') {
+          window.airtableCMS.renderCategoryPage(category, 'categoryGrid');
+        } else {
+          setTimeout(renderWhenReady, 120);
+        }
+      }
+      renderWhenReady();
+    })();
+  </script>
+</body>
+</html>
+
+
