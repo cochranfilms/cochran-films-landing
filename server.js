@@ -149,6 +149,56 @@ app.post('/api/create-checkout-session', async (req, res) => {
   }
 });
 
+// Stripe Invoice creation endpoint
+app.post('/api/create-invoice', async (req, res) => {
+  try {
+    const { customer: customerInput, items, metadata } = req.body;
+
+    if (!Array.isArray(items) || items.length === 0) {
+      return res.status(400).json({ error: 'No invoice items provided' });
+    }
+
+    // Create or reuse customer by email
+    let customerId = customerInput?.id || null;
+    if (!customerId) {
+      const email = (customerInput?.email || '').trim();
+      const name = (customerInput?.name || '').trim();
+      if (!email) return res.status(400).json({ error: 'Customer email is required' });
+      const existing = await stripe.customers.list({ email, limit: 1 });
+      customerId = existing?.data?.[0]?.id || (await stripe.customers.create({ email, name })).id;
+    }
+
+    // Create invoice items
+    for (const it of items) {
+      const unitAmount = Math.round(Number(it.price) * 100);
+      await stripe.invoiceItems.create({
+        customer: customerId,
+        currency: 'usd',
+        unit_amount: unitAmount,
+        quantity: Number(it.quantity || 1),
+        description: it.name || 'Service',
+        metadata: { ...(metadata || {}), ...(it.metadata || {}), service_id: it.id || '' },
+      });
+    }
+
+    // Create draft invoice
+    const invoice = await stripe.invoices.create({
+      customer: customerId,
+      auto_advance: true,
+      collection_method: 'send_invoice',
+      days_until_due: 7,
+      metadata,
+    });
+
+    // Finalize to generate hosted invoice URL
+    const finalized = await stripe.invoices.finalizeInvoice(invoice.id);
+    res.json({ invoiceId: finalized.id, hostedInvoiceUrl: finalized.hosted_invoice_url, status: finalized.status });
+  } catch (error) {
+    console.error('Error creating invoice:', error);
+    res.status(500).json({ error: 'Failed to create invoice' });
+  }
+});
+
 // Stripe public config endpoint (exposes publishable key to client)
 app.get('/api/config', (req, res) => {
   const publishableKey = process.env.STRIPE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_test_YOUR_PUBLISHABLE_KEY_HERE';

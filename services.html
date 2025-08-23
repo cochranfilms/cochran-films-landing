@@ -1001,6 +1001,10 @@
           <i class="fas fa-credit-card"></i>
           Checkout
         </button>
+        <button class="stripe-cart-clear" id="stripeCartInvoice">
+          <i class="fas fa-file-invoice"></i>
+          Invoice
+        </button>
         <button class="stripe-cart-clear" id="stripeCartClear">
           <i class="fas fa-trash"></i>
           Clear
@@ -1935,6 +1939,16 @@
           }
         });
       }
+      const cartInvoice = document.getElementById('stripeCartInvoice');
+      if (cartInvoice) {
+        cartInvoice.addEventListener('click', () => {
+          if (window.stripeCart.items.length > 0) {
+            showInvoiceCreateModal();
+          } else {
+            showNotification('Your cart is empty!', 'error');
+          }
+        });
+      }
       
       if (cartClear) {
         cartClear.addEventListener('click', () => {
@@ -2503,6 +2517,69 @@
       `;
       
       document.body.appendChild(modal);
+    }
+
+    // Show invoice modal to collect customer info and create Stripe invoice
+    function showInvoiceCreateModal() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay active';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-icon"><i class="fas fa-file-invoice"></i></div>
+            <h2>Create Invoice</h2>
+            <p>Enter your details and we’ll generate a Stripe invoice you can pay online.</p>
+          </div>
+          <div class="contact-form">
+            <div class="form-group">
+              <label for="invoiceName">Full Name *</label>
+              <input type="text" id="invoiceName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="invoiceEmail">Email Address *</label>
+              <input type="email" id="invoiceEmail" required placeholder="Enter your email address">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn-secondary" onclick="this.closest('.modal-overlay').remove()">
+              <i class="fas fa-times"></i>
+              Cancel
+            </button>
+            <button class="btn-primary" id="invoiceCreateBtn">
+              <i class="fas fa-file-invoice-dollar"></i>
+              Generate Invoice
+            </button>
+          </div>
+          <div id="invoiceResult" style="margin-top:12px; display:none; text-align:center;"></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const btn = modal.querySelector('#invoiceCreateBtn');
+      const result = modal.querySelector('#invoiceResult');
+      btn.addEventListener('click', async () => {
+        const name = modal.querySelector('#invoiceName').value.trim();
+        const email = modal.querySelector('#invoiceEmail').value.trim();
+        if (!name || !email) { showNotification('Please fill in name and email', 'error'); return; }
+        btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating...';
+        try {
+          const payload = {
+            customer: { name, email },
+            items: window.stripeCart.items.map(it => ({ id: it.id, name: it.name, price: it.price, quantity: it.quantity })),
+            metadata: { source: 'services.html' }
+          };
+          const resp = await fetch('/api/create-invoice', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+          if (!resp.ok) throw new Error('Failed to create invoice');
+          const data = await resp.json();
+          result.style.display = 'block';
+          result.innerHTML = `<a class="nav-link" style="display:inline-block;" href="${data.hostedInvoiceUrl}" target="_blank" rel="noopener"><i class='fas fa-external-link-alt'></i> Open Stripe Invoice</a>`;
+          showNotification('Invoice created!', 'success');
+        } catch (e) {
+          showNotification('Could not create invoice. Please try again.', 'error');
+        } finally {
+          btn.disabled = false; btn.innerHTML = '<i class="fas fa-file-invoice-dollar"></i> Generate Invoice';
+        }
+      });
     }
 
     // Submit manual order
