@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   function isFavorited(id){ return getFavorites().includes(id); }
 
   const params = new URLSearchParams(location.search);
-  const id = params.get('id');
-  if (!id) { el.innerHTML = '<p class="meta">Missing article id.</p>'; return; }
+  let id = params.get('id');
+  const urlParam = params.get('url');
+  if (!id && urlParam) { id = computeIdFromUrl(urlParam); }
+  if (!id) {
+    el.innerHTML = '<div class="blog-card"><p class="meta">Missing article id.</p><p><a class="read-more" href="/blog.html">Go back to Blog</a></p></div>';
+    return;
+  }
 
   try {
     const ts = Date.now();
@@ -59,6 +64,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         <hr style="border-color:#1f2937; margin:18px 0" />
         <div class="meta">Source: ${source || 'Original publisher'}${author ? ` • Author: ${author}` : ''}${dateStr ? ` • Published: ${dateStr}` : ''}</div>
       </section>
+      <section id="comments" style="margin-top:24px">
+        <h3 style="margin:0 0 10px">Discussion</h3>
+        <div id="commentsRoot" class="blog-card" style="padding:12px"></div>
+      </section>
     `;
 
     // JSON-LD schema
@@ -86,6 +95,90 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (e) {
     console.error(e);
     el.innerHTML = '<p class="meta">Failed to load article.</p>';
+    return;
+  }
+
+  // ----- Comment / Message Board -----
+  try {
+    const commentsRoot = document.getElementById('commentsRoot');
+    if (!commentsRoot) return;
+
+    const currentUser = (window.__CFUserAPI && window.__CFUserAPI.getUser && window.__CFUserAPI.getUser()) || null;
+
+    function renderComposer() {
+      const userName = currentUser?.name || 'Guest';
+      commentsRoot.insertAdjacentHTML('afterbegin', `
+        <div id="composer" style="margin-bottom:12px;">
+          <div class="meta" style="margin-bottom:6px">Signed in as <strong>${userName}</strong> ${currentUser ? '' : `(guest)`}</div>
+          <textarea id="commentText" rows="3" placeholder="Share your thoughts..." style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:#0b1220;color:#e5e7eb"></textarea>
+          <div style="display:flex;gap:10px;margin-top:8px;align-items:center">
+            <button id="postComment" class="read-more" style="border:1px solid rgba(99,102,241,0.35);padding:8px 12px;border-radius:10px;background:rgba(99,102,241,0.12);color:#cbd5e1;cursor:pointer">Post Comment</button>
+            ${currentUser ? '' : `<a class="read-more" href="/user.html">Sign in for a better experience</a>`}
+          </div>
+        </div>
+      `);
+    }
+
+    function formatTime(ts){ try { return new Date(ts).toLocaleString(); } catch { return ''; } }
+
+    function renderList(items){
+      const listHtml = items.map(c => `
+        <div style="border:1px solid rgba(148,163,184,0.18);border-radius:10px;padding:10px;margin:8px 0;background:rgba(2,6,23,0.35)">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>${(c.user && (c.user.name||c.user.email)) || 'Anonymous'}</strong>
+            <span class="meta">${formatTime(c.createdAt||Date.now())}</span>
+          </div>
+          <div style="margin-top:6px;white-space:pre-wrap">${(c.text||'').replace(/[<>&]/g, s=>({"<":"&lt;",">":"&gt;","&":"&amp;"}[s]))}</div>
+        </div>
+      `).join('');
+      const containerId = 'commentItems';
+      let container = document.getElementById(containerId);
+      if (!container) { container = document.createElement('div'); container.id = containerId; commentsRoot.appendChild(container); }
+      container.innerHTML = listHtml || '<div class="meta">No comments yet. Be the first to share.</div>';
+    }
+
+    renderComposer();
+
+    // Storage adapters: Firestore if available, else local fallback via UserAPI
+    const firebaseAvailable = Boolean(window.firebase && window.firebase.firestore);
+    let dispose = () => {};
+
+    if (firebaseAvailable && window.__CF_FIREBASE?.db) {
+      // Compat API expected: window.firebase
+      const db = window.__CF_FIREBASE.db;
+      const colRef = db.collection('blog_posts').doc(id).collection('comments');
+      dispose = colRef.orderBy('createdAt','desc').onSnapshot((snap)=>{
+        const items = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        renderList(items);
+      });
+      const postBtn = document.getElementById('postComment');
+      postBtn?.addEventListener('click', async ()=>{
+        const text = (document.getElementById('commentText')||{}).value?.trim();
+        if (!text) return;
+        await colRef.add({ text, createdAt: Date.now(), postId: id, user: currentUser||{ name: 'Guest' } });
+        (document.getElementById('commentText')||{}).value = '';
+      });
+    } else {
+      // Local fallback using __CFUserAPI
+      function loadLocal(){
+        const items = (window.__CFUserAPI?.listComments?.()||[]).filter(c => c.postId===id || c.postUrl===location.href);
+        renderList(items);
+      }
+      loadLocal();
+      const postBtn = document.getElementById('postComment');
+      postBtn?.addEventListener('click', ()=>{
+        const text = (document.getElementById('commentText')||{}).value?.trim();
+        if (!text) return;
+        const entity = { text, postId: id, postUrl: location.href, postTitle: document.title.replace(' • Cochran Films','') };
+        (window.__CFUserAPI?.addComment||(()=>{}))(entity);
+        (document.getElementById('commentText')||{}).value = '';
+        setTimeout(loadLocal, 10);
+      });
+    }
+
+    window.addEventListener('beforeunload', () => { try { dispose(); } catch {} });
+  } catch (err) {
+    console.warn('Comments init failed:', err);
   }
 });
 

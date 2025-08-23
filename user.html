@@ -30,6 +30,16 @@
 </head>
 <body>
   <div class="wrapper">
+    <section class="card" style="margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(255,178,0,0.12));">
+      <div>
+        <h2 style="margin:0 0 6px;font-size:22px;font-weight:900">Welcome back</h2>
+        <div class="muted">Sign in to sync favorites, comments, and invoices across devices</div>
+      </div>
+      <div class="row">
+        <button id="auth0Login" class="btn" style="background:rgba(255,178,0,0.15);border-color:rgba(255,178,0,0.35)"><i class="fas fa-user-shield"></i> Sign in with Auth0</button>
+        <button id="firebaseLogin" class="btn"><i class="fas fa-fire"></i> Sign in with Firebase</button>
+      </div>
+    </section>
     <header style="margin-bottom:16px">
       <h1>User Dashboard</h1>
       <div class="muted">Manage your profile, invoices, favorites, and comments</div>
@@ -70,6 +80,9 @@
   </div>
 
   <script>
+    // Optional: expose Firebase app if included elsewhere
+    window.__CF_FIREBASE = window.__CF_FIREBASE || {};
+
     // Lightweight client-side data layer (replace with Firebase later)
     const UserAPI = {
       _k: 'cf_user_data_v1',
@@ -145,6 +158,14 @@
       const email = document.getElementById('profileEmail').value.trim() || `guest+${Date.now()}@example.com`;
       UserAPI.setUser({ name: document.getElementById('profileName').value.trim()||'Guest User', email, uid: 'local-'+btoa(email) });
       renderProfile();
+    };
+
+    // Pretty login buttons (placeholders for Auth0/Firebase SDK integration)
+    document.getElementById('auth0Login').onclick = ()=>{
+      alert('Auth0 login not yet configured. This button is a placeholder.');
+    };
+    document.getElementById('firebaseLogin').onclick = ()=>{
+      alert('Firebase login not yet configured. This button is a placeholder.');
     };
 
     // Initial render

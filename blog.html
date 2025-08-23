@@ -962,6 +962,12 @@
     // BLOG CONTENT LOADER (from posts.json)
     // ========================================
     
+    // Helpers for stable internal IDs derived from source URLs
+    function computeIdFromUrl(url){
+      try { return btoa(url).replace(/=+$/,''); } catch { return String(Math.abs(hashCode(url||''))); }
+    }
+    function hashCode(str){ let h=0; for (let i=0;i<str.length;i++){ h=(h<<5)-h+str.charCodeAt(i); h|=0;} return h; }
+
     // Initialize blog system when the page loads
     function initializeBlogSystem() {
       console.log('🚀 Initializing Blog System...');
@@ -1033,8 +1039,8 @@
       // Format date
       const publishedDate = formatDate(featuredPost.publishedAt);
       
-      // Create blog post detail link
-      const detailLink = `/blog-post.html?url=${encodeURIComponent(featuredPost.url)}`;
+      // Create blog post detail link (internal ID)
+      const detailLink = `/blog-post.html?id=${encodeURIComponent(computeIdFromUrl(featuredPost.url||''))}`;
       
       featuredContainer.innerHTML = `
         <div class="featured-blog-header">
@@ -1089,9 +1095,9 @@
                 <i class="fas fa-calendar"></i>
                 ${formatDate(post.publishedAt)}
               </span>
-              <span class="blog-read-more" data-open="${post.url}">
+              <a class="blog-read-more" href="/blog-post.html?id=${encodeURIComponent(computeIdFromUrl(post.url))}">
                 Read More <i class="fas fa-arrow-right"></i>
-              </span>
+              </a>
             </div>
             <div style="display:flex; gap:10px; margin-top:12px;">
               <button class="blog-action" data-save='${JSON.stringify({url: '${post.url}', title: post.title}).replace(/"/g, '&quot;')}' title="Save to Favorites" style="background:rgba(99,102,241,0.12); border:1px solid rgba(99,102,241,0.25); padding:8px 10px; border-radius:10px; color:#cbd5e1; cursor:pointer"><i class="fas fa-bookmark"></i></button>
@@ -1102,8 +1108,7 @@
         </article>
       `).join('');
 
-      // Wire actions
-      document.querySelectorAll('[data-open]').forEach(el=> el.addEventListener('click', ()=> window.open(el.getAttribute('data-open'), '_blank')));
+      // Wire actions (save/comment)
       document.querySelectorAll('[data-save]').forEach(el=> el.addEventListener('click', ()=>{
         try{
           const data = JSON.parse(el.getAttribute('data-save').replace(/&quot;/g,'"'));
