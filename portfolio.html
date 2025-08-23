@@ -484,6 +484,91 @@
     .slide-title, .slide-description { word-wrap: break-word; overflow-wrap: anywhere; }
     .slide-cta { max-width: 100%; white-space: nowrap; }
 
+    /* Enhanced Video Modal Styles */
+    .video-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .video-modal.show {
+      display: flex;
+    }
+
+    .video-modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
+
+    .video-modal-close:hover {
+      transform: scale(1.2);
+    }
+
+    /* Fix Navigation Menu Overlap */
+    .portfolio-slideshow {
+      padding-top: 80px; /* Add padding to account for fixed nav */
+    }
+
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    /* Adjust slide content for better visibility */
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      margin-top: 40px;
+    }
+
     /* Floating Elements Animation */
     .floating-elements {
       position: absolute;
@@ -654,10 +739,10 @@
                 <span class="stat-label">Client Satisfaction</span>
               </div>
             </div>
-            <a href="/portfolio-category.html?category=Video%20Production" class="slide-cta">
+            <button onclick="portfolioSlideshow.navigateToCategory('Video Production')" class="slide-cta">
               <span>Explore Videos</span>
               <i class="fas fa-play"></i>
-            </a>
+            </button>
           </div>
           <div class="slide-gallery" id="videoGallery">
             <div class="gallery-grid" id="videoProductionGrid">
@@ -693,10 +778,10 @@
                 <span class="stat-label">Load Time</span>
               </div>
             </div>
-            <a href="/portfolio-category.html?category=Web%20Development" class="slide-cta">
+            <button onclick="portfolioSlideshow.navigateToCategory('Web Development')" class="slide-cta">
               <span>View Projects</span>
               <i class="fas fa-external-link-alt"></i>
-            </a>
+            </button>
           </div>
           <div class="slide-gallery" id="webGallery">
             <div class="gallery-grid" id="webDevelopmentGrid">
@@ -732,10 +817,10 @@
                 <span class="stat-label">Resolution</span>
               </div>
             </div>
-            <a href="/portfolio-category.html?category=Photography" class="slide-cta">
+            <button onclick="portfolioSlideshow.navigateToCategory('Photography')" class="slide-cta">
               <span>Browse Gallery</span>
               <i class="fas fa-images"></i>
-            </a>
+            </button>
           </div>
           <div class="slide-gallery" id="photoGallery">
             <div class="gallery-grid" id="photographyGrid">
@@ -771,10 +856,10 @@
                 <span class="stat-label">Assets</span>
               </div>
             </div>
-            <a href="/portfolio-category.html?category=Brand%20Development" class="slide-cta">
+            <button onclick="portfolioSlideshow.navigateToCategory('Brand Development')" class="slide-cta">
               <span>See Brands</span>
               <i class="fas fa-paint-brush"></i>
-            </a>
+            </button>
           </div>
           <div class="slide-gallery" id="brandGallery">
             <div class="gallery-grid" id="brandDevelopmentGrid">
@@ -863,7 +948,9 @@
       <button class="video-modal-close" id="videoModalClose">
         <i class="fas fa-times"></i>
       </button>
-      <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+      <div class="video-wrapper">
+        <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
@@ -1306,21 +1393,21 @@
             // brand_cms_template.csv structure - brand projects
             normalized.title = item.Title || 'Brand Project';
             normalized.subtitle = item['Client/Brand Name'] || item.Industry || '';
-            normalized.imageUrl = item['Thumbnail / Cover Image URL'] || item['Logo URL'] || normalized.imageUrl;
+            normalized.imageUrl = item['Thumbnail / Cover Image URL'] || normalized.imageUrl;
             
-            // Determine action based on available URLs
-            if (item['Video URLs']) {
-              normalized.icon = 'play';
-              normalized.action = 'video';
-              normalized.actionUrl = item['Video URLs'];
-            } else if (item['Project URL (optional)']) {
+            // Always prioritize Project URL if available
+            if (item['Project URL (optional)']) {
               normalized.icon = 'external-link-alt';
               normalized.action = 'website';
               normalized.actionUrl = item['Project URL (optional)'];
+            } else if (item['Video URLs']) {
+              normalized.icon = 'play';
+              normalized.action = 'video';
+              normalized.actionUrl = item['Video URLs'];
             } else {
               normalized.icon = 'palette';
               normalized.action = 'image';
-              normalized.actionUrl = normalized.imageUrl;
+              normalized.actionUrl = item['Thumbnail / Cover Image URL'] || item['Logo URL'] || normalized.imageUrl;
             }
             normalized.hasDetails = true;
             break;
@@ -1380,6 +1467,29 @@
       openImageModal(imageUrl, title) {
         if (window.openImageModal) {
           window.openImageModal(imageUrl, title);
+        }
+      }
+
+      navigateToCategory(category) {
+        // Ensure proper URL encoding for category names with spaces
+        const encodedCategory = encodeURIComponent(category);
+        window.location.href = `/portfolio-category.html?category=${encodedCategory}`;
+      }
+
+      handleItemClick(itemData) {
+        // Handle different types of content appropriately
+        switch(itemData.action) {
+          case 'video':
+            this.openVideoModal(itemData.actionUrl);
+            break;
+          case 'website':
+            window.open(itemData.actionUrl, '_blank');
+            break;
+          case 'image':
+            this.openImageModal(itemData.imageUrl, itemData.title);
+            break;
+          default:
+            console.warn('Unknown action type:', itemData.action);
         }
       }
     }
