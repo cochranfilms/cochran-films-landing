@@ -501,7 +501,195 @@
       // Initialize
       renderPortfolio();
     })();
+
+    // Modal Functions
+    function openImageModal(imageSrc, imageAlt) {
+      // Create modal if it doesn't exist
+      let modal = document.getElementById('imageModal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'imageModal';
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+          <div class="image-modal-content">
+            <button class="image-modal-close" onclick="closeImageModal()">
+              <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="" />
+          </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Add click outside to close
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeImageModal();
+        });
+      }
+      
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modalImage.alt = imageAlt || 'Portfolio Image';
+      
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function openVideoModal(videoUrl) {
+      // Create modal if it doesn't exist
+      let modal = document.getElementById('videoModal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'videoModal';
+        modal.className = 'video-modal';
+        modal.innerHTML = `
+          <div class="video-modal-content">
+            <button class="video-modal-close" onclick="closeVideoModal()">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="video-wrapper">
+              <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Add click outside to close
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeVideoModal();
+        });
+      }
+      
+      const modalVideo = document.getElementById('modalVideo');
+      
+      // Convert YouTube URL to embed format if needed
+      let embedUrl = videoUrl;
+      if (videoUrl.includes('youtube.com/watch')) {
+        const videoId = videoUrl.split('v=')[1]?.split('&')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      } else if (videoUrl.includes('youtu.be/')) {
+        const videoId = videoUrl.split('youtu.be/')[1]?.split('?')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      }
+      
+      modalVideo.src = embedUrl;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      
+      if (modal && modalVideo) {
+        modal.classList.remove('show');
+        modalVideo.src = '';
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeImageModal();
+        closeVideoModal();
+      }
+    });
+
+    // Make functions globally available
+    window.openImageModal = openImageModal;
+    window.openVideoModal = openVideoModal;
+    window.closeImageModal = closeImageModal;
+    window.closeVideoModal = closeVideoModal;
   </script>
+
+  <!-- Modal Styles -->
+  <style>
+    .image-modal, .video-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(20px);
+    }
+
+    .image-modal.show, .video-modal.show {
+      display: flex;
+    }
+
+    .image-modal-content, .video-modal-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-modal-content img {
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .image-modal-close, .video-modal-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-modal-close:hover, .video-modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+    }
+  </style>
 </body>
 </html>
 
