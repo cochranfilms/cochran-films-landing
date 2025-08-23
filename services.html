@@ -2006,23 +2006,74 @@
       if (description) description.textContent = service.description;
       
       if (features) {
-        features.innerHTML = service.features.map(feature => 
-          `<li><i class="fas fa-check"></i>${feature}</li>`
-        ).join('');
+        const catalog = getCatalogForService(serviceType);
+        const packagesHtml = catalog.packages.length ? `
+          <div style="margin: 16px 0 10px; font-weight:700; color: var(--text-primary);">Packages</div>
+          <div id="servicePackageOptions" style="display:flex; flex-direction:column; gap:10px;">
+            ${catalog.packages.map((pkg, idx) => `
+              <label style="display:flex; align-items:center; gap:10px; padding:10px; border:1px solid rgba(148,163,184,0.25); border-radius:10px; cursor:pointer;">
+                <input type="radio" name="service-package" value="${pkg.id}" ${idx===0?'checked':''} />
+                <span style="flex:1; color: var(--text-secondary);">${pkg.name}</span>
+                <span style="color: var(--brand-gold); font-weight:800;">$${pkg.price.toLocaleString()}</span>
+              </label>
+            `).join('')}
+          </div>
+        ` : '';
+
+        const addOnsHtml = catalog.addOns.length ? `
+          <div style="margin: 18px 0 10px; font-weight:700; color: var(--text-primary);">Add-ons</div>
+          <div id="serviceAddOnOptions" style="display:flex; flex-direction:column; gap:8px;">
+            ${catalog.addOns.map(add => `
+              <label style="display:flex; align-items:center; gap:10px; padding:10px; border:1px solid rgba(148,163,184,0.2); border-radius:10px;">
+                <input type="checkbox" name="service-addon" value="${add.id}" data-price="${add.price}" />
+                <span style="flex:1; color: var(--text-secondary);">${add.name}</span>
+                <span style="color: var(--brand-gold); font-weight:800;">$${add.price.toLocaleString()}</span>
+              </label>
+            `).join('')}
+          </div>
+        ` : '';
+
+        features.innerHTML = `
+          ${service.features && service.features.length ? service.features.map(feature => `<li><i class="fas fa-check"></i>${feature}</li>`).join('') : ''}
+          ${packagesHtml}
+          ${addOnsHtml}
+        `;
       }
       
+      function getSelectedPackageAndAddOns() {
+        const catalog = getCatalogForService(serviceType);
+        const selectedPkgId = (document.querySelector('input[name="service-package"]:checked')?.value) || null;
+        const selectedPackage = catalog.packages.find(p => p.id === selectedPkgId) || null;
+        const selectedAddOns = Array.from(document.querySelectorAll('input[name="service-addon"]:checked')).map(cb => {
+          const id = cb.value;
+          const meta = catalog.addOns.find(a => a.id === id);
+          return meta ? { id: meta.id, name: meta.name, price: meta.price } : null;
+        }).filter(Boolean);
+        return { selectedPackage, selectedAddOns };
+      }
+
       if (addCartBtn) {
         addCartBtn.onclick = () => {
-          addToStripeCart(serviceType, service);
-          modal.classList.remove('show');
+          const { selectedPackage, selectedAddOns } = getSelectedPackageAndAddOns();
+          if (selectedPackage) {
+            addCompositeToCart(serviceType, service, selectedPackage, selectedAddOns);
+            modal.classList.remove('show');
+          } else {
+            showNotification('Please select a package', 'error');
+          }
         };
       }
       
       if (checkoutBtn) {
         checkoutBtn.onclick = () => {
-          addToStripeCart(serviceType, service);
-          modal.classList.remove('show');
-          processStripeCheckout();
+          const { selectedPackage, selectedAddOns } = getSelectedPackageAndAddOns();
+          if (selectedPackage) {
+            addCompositeToCart(serviceType, service, selectedPackage, selectedAddOns);
+            modal.classList.remove('show');
+            processStripeCheckout();
+          } else {
+            showNotification('Please select a package', 'error');
+          }
         };
       }
       
@@ -2123,6 +2174,77 @@
       }
     };
 
+    // Comprehensive service catalog with packages and add-ons (aligned with builder pricing)
+    const CF_SERVICES_CATALOG = {
+      'web-development': {
+        packages: [
+          { id: 'starter-site', name: 'Starter Site', price: 750 },
+          { id: 'business-pro-site', name: 'Business Pro Site', price: 1250 },
+          { id: 'brand-builder-site', name: 'Brand Builder Site', price: 2500 },
+        ],
+        addOns: [
+          { id: 'seo-boost', name: 'SEO Boost Package', price: 250 },
+          { id: 'google-business', name: 'Google Business Profile Setup', price: 100 },
+          { id: 'newsletter-integration', name: 'Newsletter Integration', price: 125 },
+          { id: 'basic-maintenance', name: 'Basic Maintenance (Monthly)', price: 45 },
+          { id: 'business-maintenance', name: 'Business Maintenance (Monthly)', price: 95 },
+          { id: 'full-support', name: 'Full Support Plan (Monthly)', price: 195 },
+        ],
+      },
+      'photography': {
+        packages: [
+          { id: 'flash-start', name: 'Flash Start', price: 350 },
+          { id: 'prime-exposure', name: 'Prime Exposure', price: 600 },
+          { id: 'legacy-capture', name: 'Legacy Capture', price: 900 },
+        ],
+        addOns: [
+          { id: 'quick-print-4x6', name: 'Quick Print Booth (4x6)', price: 500 },
+          { id: 'signature-snap-4x6', name: 'Signature Snap Station (4x6)', price: 800 },
+          { id: 'legacy-lab-4x6', name: 'Legacy Lab Experience (4x6)', price: 1100 },
+        ],
+      },
+      'video-production': {
+        packages: [
+          { id: 'hourly-video', name: 'Hourly Video Service (Per Hour)', price: 250 },
+          { id: 'event-video-2hr', name: 'Event Video + 60 Sec Recap (2 Hours)', price: 500 },
+          { id: 'event-video-3hr', name: 'Event Video + 60 Sec Recap (3 Hours)', price: 750 },
+          { id: 'event-video-5hr', name: 'Event Video + 60-90 Sec Recap (5 Hours)', price: 1250 },
+          { id: 'live-production-3hr', name: 'Live Production (Up to 3 Cameras) - 3 Hours + Edit', price: 2000 },
+          { id: 'live-production-5hr', name: 'Live Production (Up to 3 Cameras) - 5 Hours + Edit', price: 3000 },
+          { id: 'live-production-8hr', name: 'Live Production (Up to 3 Cameras) - 8 Hours + Edit', price: 4000 },
+          { id: 'podcast-1hr', name: 'Podcast + Edits (2 Cameras) - 1 Hour', price: 750 },
+          { id: 'podcast-2hr', name: 'Podcast + Edits (2 Cameras) - 2 Hours', price: 1000 },
+          { id: 'podcast-3hr', name: 'Podcast + Edits (2 Cameras) - 3 Hours', price: 1500 },
+          { id: 'commercial-basic', name: 'Basic Commercial Shoot (Single Camera, 3 Hours)', price: 750 },
+          { id: 'commercial-edit', name: 'Commercial Shoot + Edit (3-5 hrs + Edit)', price: 1500 },
+          { id: 'commercial-directed', name: 'Directed Commercial Shoot (Pre-Pro + 4-6 hrs + Edit)', price: 2500 },
+          { id: 'commercial-full', name: 'Full Commercial Package (Full Creative Direction + Crew)', price: 5500 },
+        ],
+        addOns: [],
+      },
+      'brand-development': {
+        packages: [
+          { id: 'ignite-brand', name: 'Ignite Package', price: 900 },
+          { id: 'collaborate-brand', name: 'Collaborate Package', price: 1800 },
+          { id: 'transform-brand', name: 'Transform Package', price: 3500 },
+          { id: 'logo-design', name: 'Logo Design', price: 250 },
+        ],
+        addOns: [],
+      },
+      'white-label-services': {
+        packages: [ { id: 'white-label-base', name: 'White-Label Services (Base)', price: 2000 } ],
+        addOns: [],
+      },
+      'workshops-training': {
+        packages: [ { id: 'web-dev-workshop', name: 'Web Development Workshop (2-Day)', price: 350 } ],
+        addOns: [],
+      },
+    };
+
+    function getCatalogForService(serviceType) {
+      return CF_SERVICES_CATALOG[serviceType] || { packages: [], addOns: [] };
+    }
+
     // Add item to Stripe cart
     function addToStripeCart(serviceType, service) {
       console.log('Adding to cart:', serviceType, service);
@@ -2146,6 +2268,33 @@
       console.log('Cart items:', window.stripeCart.items);
       updateStripeCartDisplay();
       showNotification(`${service.name} added to cart!`, 'success');
+    }
+
+    // Add composite (package + add-ons) to cart
+    function addCompositeToCart(serviceType, baseService, selectedPackage, selectedAddOns) {
+      const compositeId = `${serviceType}:${selectedPackage.id}`;
+      const displayName = `${baseService.name} — ${selectedPackage.name}`;
+      const existing = window.stripeCart.items.find(item => item.id === compositeId);
+      const addOnsTotal = (selectedAddOns || []).reduce((sum, a) => sum + a.price, 0);
+      const unitPrice = selectedPackage.price + addOnsTotal;
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        window.stripeCart.items.push({
+          id: compositeId,
+          name: displayName,
+          price: unitPrice,
+          icon: baseService.icon,
+          quantity: 1,
+          meta: {
+            serviceType,
+            packageId: selectedPackage.id,
+            addOns: selectedAddOns,
+          }
+        });
+      }
+      updateStripeCartDisplay();
+      showNotification(`${displayName} added to cart!`, 'success');
     }
 
     // Remove item from Stripe cart
