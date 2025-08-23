@@ -87,7 +87,7 @@
       }
     ];
   </script>
-  <script src="js/airtable-cms.js"></script>
+  <script src="js/airtable-cms.js?v=20250823a"></script>
   
   <style>
     /* Revolutionary Portfolio Design System */
@@ -1064,18 +1064,26 @@
       }
       
       initializeAirtableCMS() {
-        // Initialize Airtable CMS when available
-        document.addEventListener('DOMContentLoaded', () => {
-          if (typeof window.airtableCMS !== 'undefined') {
+        // Initialize Airtable CMS when available, with retry in case of timing
+        const tryInit = (attempt = 0) => {
+          if (typeof window.airtableCMS !== 'undefined' &&
+              typeof window.airtableCMS.loadPortfolioItems === 'function') {
             console.log('🚀 Initializing Revolutionary Portfolio with Airtable CMS...');
-            
-            // Initialize the portfolio system with new grid IDs
             this.setupAirtableIntegration();
+            return;
+          }
+          if (attempt < 30) { // retry ~3.6s total
+            setTimeout(() => tryInit(attempt + 1), 120);
           } else {
-            console.warn('⚠️ Airtable CMS not loaded, using fallback data');
+            console.warn('⚠️ Airtable CMS not detected after retries, using fallback data');
             this.loadFallbackData();
           }
-        });
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => tryInit());
+        } else {
+          tryInit();
+        }
       }
       
       setupAirtableIntegration() {

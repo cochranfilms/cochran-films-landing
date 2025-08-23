@@ -357,29 +357,29 @@ class AirtableCMS {
     try {
       this.showPortfolioLoadingState();
       
-      // FORCE FALLBACK DATA FOR NOW - Let's see your real portfolio working!
-      console.log('🔄 FORCING fallback data to show real portfolio content');
-      this.useFallbackData();
-      
-      // Set up portfolio functionality
-      this.setupPortfolioDisplay();
-      this.setupEventHandlers();
-      this.renderPortfolioByCategory();
-      
-      // Hide loading state
-      this.hidePortfolioLoadingState();
-      
-      // Try to load Airtable data in background (but don't wait for it)
-      setTimeout(async () => {
+      // Prefer real Airtable data; fallback only if needed
+      try {
+        await this.loadPortfolioFromUnifiedAPI();
+        this.setupPortfolioDisplay();
+        this.setupEventHandlers();
+        this.renderPortfolioByCategory();
+        this.hidePortfolioLoadingState();
+      } catch (apiErr) {
+        console.warn('⚠️ Unified API failed, attempting individual APIs...', apiErr);
         try {
-          console.log('🔄 Attempting Airtable API in background...');
-          await this.loadPortfolioFromUnifiedAPI();
-          // If Airtable succeeds, refresh the display
+          await this.loadPortfolioFromIndividualAPIs();
+          this.setupPortfolioDisplay();
+          this.setupEventHandlers();
           this.renderPortfolioByCategory();
-        } catch (apiError) {
-          console.warn('⚠️ Airtable API failed in background:', apiError);
+        } catch (indErr) {
+          console.warn('⚠️ Individual APIs failed, using fallback data', indErr);
+          this.useFallbackData();
+          this.setupPortfolioDisplay();
+          this.setupEventHandlers();
+          this.renderPortfolioByCategory();
         }
-      }, 1000);
+        this.hidePortfolioLoadingState();
+      }
       
     } catch (error) {
       console.error('❌ Error in portfolio setup:', error);
