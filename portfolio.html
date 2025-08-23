@@ -14,7 +14,7 @@
   <!-- Fonts + Icons (CDN) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   
   <!-- External CSS -->
@@ -90,7 +90,7 @@
   <script src="js/airtable-cms.js"></script>
   
   <style>
-    /* Minimal inline styles for compatibility */
+    /* Revolutionary Portfolio Design System */
     :root {
       --brand-indigo: #6366f1;
       --brand-emerald: #10b981;
@@ -105,31 +105,463 @@
       --text-muted: #94a3b8;
       --transition: all 300ms cubic-bezier(.4,0,.2,1);
       --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+      
+      /* New Portfolio Color Palette */
+      --cosmic-purple: #1a0b2e;
+      --deep-space: #16213e;
+      --electric-blue: #0f3460;
+      --neon-cyan: #00d4ff;
+      --aurora-green: #00ff88;
+      --plasma-pink: #ff006e;
+      --solar-gold: #ffbe0b;
+      --nebula-violet: #8338ec;
+      
+      /* Gradient Definitions */
+      --gradient-cosmic: linear-gradient(135deg, var(--cosmic-purple) 0%, var(--deep-space) 50%, var(--electric-blue) 100%);
+      --gradient-aurora: linear-gradient(135deg, var(--aurora-green) 0%, var(--neon-cyan) 50%, var(--nebula-violet) 100%);
+      --gradient-plasma: linear-gradient(135deg, var(--plasma-pink) 0%, var(--solar-gold) 50%, var(--brand-amber) 100%);
+      --gradient-electric: linear-gradient(135deg, var(--electric-blue) 0%, var(--brand-indigo) 50%, var(--nebula-violet) 100%);
     }
 
-    /* AI Background Canvas */
-    .ai-background {
-      position: fixed;
+    /* Global Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cosmic-purple);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Revolutionary Slideshow Container */
+    .portfolio-slideshow {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--gradient-cosmic);
+    }
+
+    .slideshow-track {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .portfolio-slide {
+      width: 20%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5%;
+    }
+
+    /* Alternating Slide Backgrounds */
+    .portfolio-slide:nth-child(1) { background: var(--gradient-cosmic); }
+    .portfolio-slide:nth-child(2) { background: var(--gradient-aurora); }
+    .portfolio-slide:nth-child(3) { background: var(--gradient-plasma); }
+    .portfolio-slide:nth-child(4) { background: var(--gradient-electric); }
+    .portfolio-slide:nth-child(5) { background: var(--gradient-cosmic); }
+
+    /* Slide Content Layout */
+    .slide-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1400px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .slide-info {
+      z-index: 2;
+    }
+
+    .slide-category {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .slide-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .slide-description {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .slide-stats {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .slide-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 2.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .slide-cta:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Revolutionary Gallery Grid */
+    .slide-gallery {
+      position: relative;
+      height: 600px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1rem;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .gallery-item:hover {
+      transform: translateZ(30px) rotateY(5deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.8) 0%, rgba(131,56,236,0.8) 100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-play-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--cosmic-purple);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-play-btn:hover {
+      transform: scale(1.1);
+      background: white;
+    }
+
+    /* Gallery Info Overlay */
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-info {
+      transform: translateY(0);
+    }
+
+    .gallery-info h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem 0;
+      line-height: 1.2;
+    }
+
+    .gallery-info p {
+      font-size: 0.75rem;
+      margin: 0;
+      opacity: 0.8;
+      line-height: 1.2;
+    }
+
+    /* Featured Items Styling */
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-item:nth-child(5) { grid-column: span 2; }
+
+    /* Collection-Specific Icons */
+    .gallery-item[data-collection="video"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--plasma-pink), var(--solar-gold));
+    }
+
+    .gallery-item[data-collection="web"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--electric-blue), var(--brand-indigo));
+    }
+
+    .gallery-item[data-collection="photo"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--aurora-green), var(--neon-cyan));
+    }
+
+    .gallery-item[data-collection="brand"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--nebula-violet), var(--brand-gold));
+    }
+
+    /* Slideshow Navigation */
+    .slideshow-nav {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-dot.active {
+      background: white;
+      transform: scale(1.2);
+    }
+
+    .nav-dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot.active::after {
+      opacity: 1;
+    }
+
+    /* Slideshow Controls */
+    .slideshow-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .control-prev { left: 2rem; }
+    .control-next { right: 2rem; }
+
+    .control-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .control-btn:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.4);
+      transform: scale(1.1);
+    }
+
+    /* Progress Indicator */
+    .slideshow-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--neon-cyan);
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      z-index: 10;
+    }
+
+    /* Floating Elements Animation */
+    .floating-elements {
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      pointer-events: none;
       overflow: hidden;
     }
 
-    #neuralCanvas {
-      width: 100%;
-      height: 100%;
-      display: block;
+    .floating-element {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .slide-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      
+      .slide-title {
+        font-size: 3rem;
+      }
+      
+      .gallery-grid {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-slideshow {
+        height: auto;
+        min-height: 100vh;
+      }
+      
+      .portfolio-slide {
+        padding: 2rem;
+      }
+      
+      .slide-title {
+        font-size: 2.5rem;
+      }
+      
+      .slide-description {
+        font-size: 1.1rem;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: 300px;
+      }
+      
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- AI Neural Network Background -->
-  <div class="ai-background">
-    <canvas id="neuralCanvas"></canvas>
-  </div>
+
 
   <!-- Navigation -->
   <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
@@ -174,107 +606,235 @@
     </div>
   </nav>
 
-  <div class="wrapper">
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-      <div class="section-header">
-        <h2 class="section-title">Portfolio</h2>
-        <p class="section-subtitle">
-          From corporate storytelling to live events, explore our latest work that demonstrates high-level production value and strategic impact.
-        </p>
-      </div>
+  <!-- Revolutionary Portfolio Slideshow -->
+  <main class="portfolio-slideshow" id="portfolioSlideshow">
+    <!-- Progress Indicator -->
+    <div class="slideshow-progress" id="slideshowProgress"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Slideshow Track -->
+    <div class="slideshow-track" id="slideshowTrack">
       
-      <div class="portfolio-content">
-        <!-- Video Production Section -->
-        <div class="portfolio-category-section premium" id="video-production">
-          <div class="category-header">
-            <h3 class="category-title">
-              <span class="icon-wrapper">
-                <i class="fa-solid fa-video"></i>
-              </span>
-              <span class="title-text">Video Production</span>
-            </h3>
-            <p class="category-description">Cinematic storytelling that captivates audiences</p>
+      <!-- Slide 1: Video Production -->
+      <div class="portfolio-slide" data-category="Video Production">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-video"></i>
+              Video Production
+            </div>
+            <h1 class="slide-title">Cinematic Storytelling</h1>
+            <p class="slide-description">
+              From corporate narratives to live events, we craft visual stories that captivate audiences and drive meaningful engagement through strategic cinematography and post-production excellence.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2M+</span>
+                <span class="stat-label">Views</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+              </div>
+            </div>
+            <a href="#video-gallery" class="slide-cta">
+              <span>Explore Videos</span>
+              <i class="fas fa-play"></i>
+            </a>
           </div>
-          <div class="portfolio-grid premium-grid" id="videoProductionGrid">
-            <!-- Video Production items will be populated here -->
-          </div>
-          <div class="portfolio-actions">
-            <button class="load-more-btn premium-btn" data-category="Video Production" style="display: none;">
-              <span class="btn-text">Load More Projects</span>
-              <i class="fas fa-arrow-down"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Web Development Section -->
-        <div class="portfolio-category-section premium" id="web-development">
-          <div class="category-header">
-            <h3 class="category-title">
-              <span class="icon-wrapper">
-                <i class="fa-solid fa-code"></i>
-              </span>
-              <span class="title-text">Web Development</span>
-            </h3>
-            <p class="category-description">Digital experiences that drive results</p>
-          </div>
-          <div class="portfolio-grid premium-grid" id="webDevelopmentGrid">
-            <!-- Web Development items will be populated here -->
-          </div>
-          <div class="portfolio-actions">
-            <button class="load-more-btn premium-btn" data-category="Web Development" style="display: none;">
-              <span class="btn-text">Load More Projects</span>
-              <i class="fas fa-arrow-down"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Photography Section -->
-        <div class="portfolio-category-section premium" id="photography">
-          <div class="category-header">
-            <h3 class="category-title">
-              <span class="icon-wrapper">
-                <i class="fa-solid fa-camera"></i>
-              </span>
-              <span class="title-text">Photography</span>
-            </h3>
-            <p class="category-description">Visual narratives that tell your story</p>
-          </div>
-          <div class="portfolio-grid premium-grid" id="photographyGrid">
-            <!-- Photography items will be populated here -->
-          </div>
-          <div class="portfolio-actions">
-            <button class="load-more-btn premium-btn" data-category="Photography" style="display: none;">
-              <span class="btn-text">Load More Projects</span>
-              <i class="fas fa-arrow-down"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Brand Development Section -->
-        <div class="portfolio-category-section premium" id="brand-development">
-          <div class="category-header">
-            <h3 class="category-title">
-              <span class="icon-wrapper">
-                <i class="fa-solid fa-palette"></i>
-              </span>
-              <span class="title-text">Brand Development</span>
-            </h3>
-            <p class="category-description">Identity systems that build lasting connections</p>
-          </div>
-          <div class="portfolio-grid premium-grid" id="brandDevelopmentGrid">
-            <!-- Brand Development items will be populated here -->
-          </div>
-          <div class="portfolio-actions">
-            <button class="load-more-btn premium-btn" data-category="Brand Development" style="display: none;">
-              <span class="btn-text">Load More Projects</span>
-              <i class="fas fa-arrow-down"></i>
-            </button>
+          <div class="slide-gallery" id="videoGallery">
+            <div class="gallery-grid" id="videoProductionGrid">
+              <!-- Video items will be populated here -->
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+
+      <!-- Slide 2: Web Development -->
+      <div class="portfolio-slide" data-category="Web Development">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-code"></i>
+              Web Development
+            </div>
+            <h1 class="slide-title">Digital Experiences</h1>
+            <p class="slide-description">
+              We build responsive, high-performance websites and web applications that drive results. From e-commerce platforms to custom CMS solutions, every project is crafted with precision and purpose.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Websites</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Uptime</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">3s</span>
+                <span class="stat-label">Load Time</span>
+              </div>
+            </div>
+            <a href="#web-gallery" class="slide-cta">
+              <span>View Projects</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="slide-gallery" id="webGallery">
+            <div class="gallery-grid" id="webDevelopmentGrid">
+              <!-- Web development items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Photography -->
+      <div class="portfolio-slide" data-category="Photography">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-camera"></i>
+              Photography
+            </div>
+            <h1 class="slide-title">Visual Narratives</h1>
+            <p class="slide-description">
+              Professional photography that captures the essence of your brand, events, and products. Our artistic vision combined with technical expertise delivers stunning imagery that tells your story.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Photos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Events</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4K</span>
+                <span class="stat-label">Resolution</span>
+              </div>
+            </div>
+            <a href="#photo-gallery" class="slide-cta">
+              <span>Browse Gallery</span>
+              <i class="fas fa-images"></i>
+            </a>
+          </div>
+          <div class="slide-gallery" id="photoGallery">
+            <div class="gallery-grid" id="photographyGrid">
+              <!-- Photography items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Brand Development -->
+      <div class="portfolio-slide" data-category="Brand Development">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-palette"></i>
+              Brand Development
+            </div>
+            <h1 class="slide-title">Identity Systems</h1>
+            <p class="slide-description">
+              Comprehensive brand development that builds lasting connections. From logo design to complete visual identity systems, we create cohesive brand experiences that resonate with your audience.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Brands</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Custom</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Assets</span>
+              </div>
+            </div>
+            <a href="#brand-gallery" class="slide-cta">
+              <span>See Brands</span>
+              <i class="fas fa-paint-brush"></i>
+            </a>
+          </div>
+          <div class="slide-gallery" id="brandGallery">
+            <div class="gallery-grid" id="brandDevelopmentGrid">
+              <!-- Brand development items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Featured Work -->
+      <div class="portfolio-slide" data-category="Featured">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-star"></i>
+              Featured Work
+            </div>
+            <h1 class="slide-title">Award-Winning Projects</h1>
+            <p class="slide-description">
+              Discover our most celebrated projects that have earned recognition for innovation, creativity, and technical excellence. These showcase pieces represent the pinnacle of our creative capabilities.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Awards</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10M+</span>
+                <span class="stat-label">Impressions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">ROI Increase</span>
+              </div>
+            </div>
+            <a href="/contact.html" class="slide-cta">
+              <span>Start Your Project</span>
+              <i class="fas fa-rocket"></i>
+            </a>
+          </div>
+          <div class="slide-gallery" id="featuredGallery">
+            <div class="gallery-grid" id="featuredGrid">
+              <!-- Featured items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slideshow Controls -->
+    <div class="slideshow-controls control-prev">
+      <button class="control-btn" id="prevSlide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+    <div class="slideshow-controls control-next">
+      <button class="control-btn" id="nextSlide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Slideshow Navigation -->
+    <div class="slideshow-nav" id="slideshowNav">
+      <div class="nav-dot active" data-slide="0"></div>
+      <div class="nav-dot" data-slide="1"></div>
+      <div class="nav-dot" data-slide="2"></div>
+      <div class="nav-dot" data-slide="3"></div>
+      <div class="nav-dot" data-slide="4"></div>
+    </div>
+  </main>
 
   <!-- Image Modal -->
   <div class="image-modal" id="imageModal">
@@ -328,30 +888,493 @@
     </div>
   </footer>
 
-  <!-- Airtable CMS Initialization Script -->
+  <!-- Revolutionary Portfolio Slideshow Script -->
   <script>
-    // Initialize Airtable CMS when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      // Check if Airtable CMS is available
-      if (typeof window.airtableCMS !== 'undefined') {
-        console.log('🚀 Initializing Airtable CMS for Portfolio...');
+    class RevolutionaryPortfolioSlideshow {
+      constructor() {
+        this.currentSlide = 0;
+        this.totalSlides = 5;
+        this.isAutoPlaying = true;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 8000;
+        this.isTransitioning = false;
         
-        // Initialize the portfolio system
-        window.airtableCMS.initializePortfolioSystem();
+        this.init();
+      }
+      
+      init() {
+        this.bindEvents();
+        this.createFloatingElements();
+        this.startAutoPlay();
+        this.updateProgress();
         
-        // Set up event handlers for load more buttons
-        document.querySelectorAll('.load-more-btn').forEach(btn => {
-          btn.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            if (window.airtableCMS && window.airtableCMS.loadMoreForCategory) {
-              window.airtableCMS.loadMoreForCategory(category);
+        // Initialize Airtable CMS integration
+        this.initializeAirtableCMS();
+      }
+      
+      bindEvents() {
+        // Navigation dots
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+          dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Control buttons
+        document.getElementById('prevSlide').addEventListener('click', () => this.previousSlide());
+        document.getElementById('nextSlide').addEventListener('click', () => this.nextSlide());
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') this.previousSlide();
+          if (e.key === 'ArrowRight') this.nextSlide();
+          if (e.key === ' ') {
+            e.preventDefault();
+            this.toggleAutoPlay();
+          }
+        });
+        
+        // Touch/swipe support
+        let startX = 0;
+        let endX = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+          endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+          
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+              this.nextSlide();
+            } else {
+              this.previousSlide();
+            }
+          }
+        });
+        
+        // Pause auto-play on hover
+        const slideshow = document.getElementById('portfolioSlideshow');
+        slideshow.addEventListener('mouseenter', () => this.pauseAutoPlay());
+        slideshow.addEventListener('mouseleave', () => this.resumeAutoPlay());
+      }
+      
+      goToSlide(slideIndex) {
+        if (this.isTransitioning || slideIndex === this.currentSlide) return;
+        
+        this.isTransitioning = true;
+        this.currentSlide = slideIndex;
+        
+        const track = document.getElementById('slideshowTrack');
+        const translateX = -slideIndex * 20; // 20% per slide
+        
+        track.style.transform = `translateX(${translateX}%)`;
+        
+        this.updateNavigation();
+        this.updateProgress();
+        this.animateSlideContent();
+        
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 1200);
+      }
+      
+      nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+      }
+      
+      previousSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevIndex);
+      }
+      
+      updateNavigation() {
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+          dot.classList.toggle('active', index === this.currentSlide);
+        });
+      }
+      
+      updateProgress() {
+        const progress = ((this.currentSlide + 1) / this.totalSlides) * 100;
+        document.getElementById('slideshowProgress').style.width = `${progress}%`;
+      }
+      
+      animateSlideContent() {
+        const currentSlideElement = document.querySelectorAll('.portfolio-slide')[this.currentSlide];
+        const elements = currentSlideElement.querySelectorAll('.slide-category, .slide-title, .slide-description, .slide-stats, .slide-cta, .gallery-item');
+        
+        elements.forEach((el, index) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          
+          setTimeout(() => {
+            el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, index * 100 + 300);
+        });
+      }
+      
+      createFloatingElements() {
+        const container = document.getElementById('floatingElements');
+        const elementCount = 15;
+        
+        for (let i = 0; i < elementCount; i++) {
+          const element = document.createElement('div');
+          element.className = 'floating-element';
+          element.style.left = Math.random() * 100 + '%';
+          element.style.animationDelay = Math.random() * 20 + 's';
+          element.style.animationDuration = (15 + Math.random() * 10) + 's';
+          container.appendChild(element);
+        }
+      }
+      
+      startAutoPlay() {
+        if (this.autoPlayInterval) return;
+        
+        this.autoPlayInterval = setInterval(() => {
+          if (this.isAutoPlaying) {
+            this.nextSlide();
+          }
+        }, this.autoPlayDelay);
+      }
+      
+      pauseAutoPlay() {
+        this.isAutoPlaying = false;
+      }
+      
+      resumeAutoPlay() {
+        this.isAutoPlaying = true;
+      }
+      
+      toggleAutoPlay() {
+        this.isAutoPlaying = !this.isAutoPlaying;
+      }
+      
+      initializeAirtableCMS() {
+        // Initialize Airtable CMS when available
+        document.addEventListener('DOMContentLoaded', () => {
+          if (typeof window.airtableCMS !== 'undefined') {
+            console.log('🚀 Initializing Revolutionary Portfolio with Airtable CMS...');
+            
+            // Initialize the portfolio system with new grid IDs
+            this.setupAirtableIntegration();
+          } else {
+            console.warn('⚠️ Airtable CMS not loaded, using fallback data');
+            this.loadFallbackData();
+          }
+        });
+      }
+      
+      setupAirtableIntegration() {
+        // Enhanced mapping system based on your CSV structures
+        const categoryConfig = {
+          'Video Production': {
+            gridId: 'videoProductionGrid',
+            fields: {
+              // Portfolio.csv structure - comprehensive video portfolio
+              title: ['Title'],
+              description: ['Description'],
+              category: ['Category'],
+              thumbnail: ['Thumbnail Image', 'thumbnailUrl'],
+              featured: ['Is Featured'],
+              playbackUrl: ['playbackUrl'],
+              uploadDate: ['UploadDate', 'Created Date'],
+              status: ['Status'],
+              labels: ['Labels'],
+              ownerName: ['OwnerName']
+            },
+            itemLimit: 9 // 3x3 grid with featured item spanning 2x2
+          },
+          'Web Development': {
+            gridId: 'webDevelopmentGrid', 
+            fields: {
+              // Web.csv structure - web development projects
+              title: ['Title'],
+              description: ['Description'],
+              category: ['Category'],
+              thumbnail: ['Thumbnail Image'],
+              featured: ['Is Featured'],
+              url: ['URL'],
+              techStack: ['Tech Stack'],
+              role: ['Role'],
+              client: ['Client/Company'],
+              timeline: ['Timeline'],
+              challenges: ['Challenges'],
+              results: ['Results'],
+              uploadDate: ['UploadDate']
+            },
+            itemLimit: 6
+          },
+          'Photography': {
+            gridId: 'photographyGrid',
+            fields: {
+              // Photography.csv structure - simple image gallery
+              imageUrl: ['image_url'],
+              title: ['Title', 'Name'], // Generated if not provided
+              description: ['Description'], // Generated if not provided
+              category: ['Category']
+            },
+            itemLimit: 6
+          },
+          'Brand Development': {
+            gridId: 'brandDevelopmentGrid',
+            fields: {
+              // brand_cms_template.csv structure - brand projects
+              title: ['Title'],
+              category: ['Category'],
+              description: ['Description'],
+              videoUrls: ['Video URLs'],
+              logoUrl: ['Logo URL'],
+              thumbnail: ['Thumbnail / Cover Image URL'],
+              clientName: ['Client/Brand Name'],
+              services: ['Services Provided'],
+              deliverables: ['Deliverables'],
+              industry: ['Industry'],
+              timeline: ['Timeline'],
+              results: ['Results/Impact'],
+              projectUrl: ['Project URL (optional)']
+            },
+            itemLimit: 6
+          }
+        };
+        
+        // Initialize each category with enhanced configuration
+        Object.entries(categoryConfig).forEach(([category, config]) => {
+          if (window.airtableCMS && window.airtableCMS.loadPortfolioItems) {
+            // Pass the field mapping configuration to the CMS
+            window.airtableCMS.loadPortfolioItems(category, config.gridId, config.itemLimit, config.fields);
+          }
+        });
+        
+        // Load featured items from all categories for the featured slide
+        if (window.airtableCMS && window.airtableCMS.loadFeaturedItems) {
+          window.airtableCMS.loadFeaturedItems('featuredGrid', 6);
+        }
+      }
+      
+      loadFallbackData() {
+        if (window.FALLBACK_PORTFOLIO_DATA) {
+          console.log('📦 Loading fallback portfolio data...');
+          
+          // Group fallback data by service category
+          const groupedData = {};
+          window.FALLBACK_PORTFOLIO_DATA.forEach(item => {
+            const category = item.ServiceCategory || 'Featured';
+            if (!groupedData[category]) {
+              groupedData[category] = [];
+            }
+            groupedData[category].push(item);
+          });
+          
+          // Populate each grid
+          Object.entries(groupedData).forEach(([category, items]) => {
+            const gridId = this.getCategoryGridId(category);
+            if (gridId) {
+              this.populateGrid(gridId, items.slice(0, 6));
             }
           });
-        });
-      } else {
-        console.warn('⚠️ Airtable CMS not loaded, portfolio will be empty');
+        }
       }
-    });
+      
+      getCategoryGridId(category) {
+        const gridMap = {
+          'Video Production': 'videoProductionGrid',
+          'Web Development': 'webDevelopmentGrid',
+          'Photography': 'photographyGrid',
+          'Brand Development': 'brandDevelopmentGrid'
+        };
+        return gridMap[category] || 'featuredGrid';
+      }
+      
+      populateGrid(gridId, items) {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        items.forEach((item, index) => {
+          const galleryItem = document.createElement('div');
+          galleryItem.className = 'gallery-item';
+          
+          // Enhanced field mapping based on collection type
+          const itemData = this.normalizeItemData(item, gridId);
+          
+          // Add collection data attribute for styling
+          const collectionType = gridId.replace('Grid', '').toLowerCase().replace(/([A-Z])/g, '-$1');
+          galleryItem.setAttribute('data-collection', collectionType.replace(/^-/, ''));
+          
+          galleryItem.innerHTML = `
+            <img src="${itemData.imageUrl}" alt="${itemData.title}" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-play-btn">
+                <i class="fas fa-${itemData.icon}"></i>
+              </div>
+              ${itemData.hasDetails ? `
+                <div class="gallery-info">
+                  <h4>${itemData.title}</h4>
+                  ${itemData.subtitle ? `<p>${itemData.subtitle}</p>` : ''}
+                </div>
+              ` : ''}
+            </div>
+          `;
+          
+          // Add click handler based on item type
+          galleryItem.addEventListener('click', () => {
+            if (itemData.action === 'video') {
+              this.openVideoModal(itemData.actionUrl);
+            } else if (itemData.action === 'website') {
+              window.open(itemData.actionUrl, '_blank');
+            } else if (itemData.action === 'image') {
+              this.openImageModal(itemData.imageUrl, itemData.title);
+            }
+          });
+          
+          grid.appendChild(galleryItem);
+        });
+      }
+      
+      normalizeItemData(item, gridId) {
+        // Determine collection type from grid ID
+        const collectionType = gridId.replace('Grid', '').replace(/([A-Z])/g, ' $1').trim();
+        
+        let normalized = {
+          title: 'Untitled',
+          subtitle: '',
+          imageUrl: 'https://via.placeholder.com/400x300?text=No+Image',
+          icon: 'eye',
+          action: 'image',
+          actionUrl: '',
+          hasDetails: false
+        };
+        
+        switch (collectionType) {
+          case 'video Production':
+            // Portfolio.csv structure - videos
+            normalized.title = item.Title || 'Video Project';
+            normalized.subtitle = item.Category || '';
+            normalized.imageUrl = item['Thumbnail Image'] || item.thumbnailUrl || normalized.imageUrl;
+            normalized.icon = 'play';
+            normalized.action = 'video';
+            normalized.actionUrl = item.playbackUrl || '';
+            normalized.hasDetails = true;
+            break;
+            
+          case 'web Development':
+            // Web.csv structure - websites
+            normalized.title = item.Title || 'Web Project';
+            normalized.subtitle = item['Tech Stack'] || item.Category || '';
+            normalized.imageUrl = item['Thumbnail Image'] || normalized.imageUrl;
+            normalized.icon = 'external-link-alt';
+            normalized.action = 'website';
+            normalized.actionUrl = item.URL || '';
+            normalized.hasDetails = true;
+            break;
+            
+          case 'photography':
+            // Photography.csv structure - images
+            normalized.title = item.Title || `Photo ${Date.now()}`;
+            normalized.subtitle = '';
+            normalized.imageUrl = item.image_url || item['Thumbnail Image'] || normalized.imageUrl;
+            normalized.icon = 'search-plus';
+            normalized.action = 'image';
+            normalized.actionUrl = normalized.imageUrl;
+            normalized.hasDetails = false;
+            break;
+            
+          case 'brand Development':
+            // brand_cms_template.csv structure - brand projects
+            normalized.title = item.Title || 'Brand Project';
+            normalized.subtitle = item['Client/Brand Name'] || item.Industry || '';
+            normalized.imageUrl = item['Thumbnail / Cover Image URL'] || item['Logo URL'] || normalized.imageUrl;
+            
+            // Determine action based on available URLs
+            if (item['Video URLs']) {
+              normalized.icon = 'play';
+              normalized.action = 'video';
+              normalized.actionUrl = item['Video URLs'];
+            } else if (item['Project URL (optional)']) {
+              normalized.icon = 'external-link-alt';
+              normalized.action = 'website';
+              normalized.actionUrl = item['Project URL (optional)'];
+            } else {
+              normalized.icon = 'palette';
+              normalized.action = 'image';
+              normalized.actionUrl = normalized.imageUrl;
+            }
+            normalized.hasDetails = true;
+            break;
+            
+          case 'featured':
+            // Featured items from any collection
+            normalized = this.normalizeFeaturedItem(item);
+            break;
+        }
+        
+        return normalized;
+      }
+      
+      normalizeFeaturedItem(item) {
+        // Handle featured items from any collection
+        const serviceCategory = item.ServiceCategory || item.Category || '';
+        
+        let normalized = {
+          title: item.Title || 'Featured Project',
+          subtitle: serviceCategory,
+          imageUrl: item['Thumbnail Image'] || item.thumbnailUrl || item.image_url || item['Logo URL'] || 'https://via.placeholder.com/400x300',
+          hasDetails: true
+        };
+        
+        // Determine action based on service category and available data
+        if (item.playbackUrl || serviceCategory.includes('Video')) {
+          normalized.icon = 'play';
+          normalized.action = 'video';
+          normalized.actionUrl = item.playbackUrl;
+        } else if (item.URL || serviceCategory.includes('Web')) {
+          normalized.icon = 'external-link-alt';
+          normalized.action = 'website';
+          normalized.actionUrl = item.URL;
+        } else if (serviceCategory.includes('Photography')) {
+          normalized.icon = 'search-plus';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        } else if (serviceCategory.includes('Brand')) {
+          normalized.icon = 'palette';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        } else {
+          normalized.icon = 'eye';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        }
+        
+        return normalized;
+      }
+      
+      openVideoModal(videoUrl) {
+        if (window.openVideoModal) {
+          window.openVideoModal(videoUrl);
+        }
+      }
+      
+      openImageModal(imageUrl, title) {
+        if (window.openImageModal) {
+          window.openImageModal(imageUrl, title);
+        }
+      }
+    }
+    
+    // Initialize the revolutionary slideshow
+    let portfolioSlideshow;
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        portfolioSlideshow = new RevolutionaryPortfolioSlideshow();
+      });
+    } else {
+      portfolioSlideshow = new RevolutionaryPortfolioSlideshow();
+    }
   </script>
 
   <script>
@@ -359,197 +1382,28 @@
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
 
-    // Navigation scroll effect
+    // Navigation scroll effect - enhanced for slideshow
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('.nav-wrapper');
-      if (window.scrollY > 100) {
-        nav.style.background = 'rgba(15, 23, 42, 0.98)';
-      } else {
-        nav.style.background = 'rgba(15, 23, 42, 0.95)';
+      if (nav) {
+        if (window.scrollY > 50) {
+          nav.style.background = 'rgba(15, 23, 42, 0.98)';
+          nav.style.backdropFilter = 'blur(20px)';
+        } else {
+          nav.style.background = 'rgba(15, 23, 42, 0.95)';
+          nav.style.backdropFilter = 'blur(10px)';
+        }
       }
     });
 
     // ========================================
-    // AI NEURAL NETWORK BACKGROUND
-    // ========================================
-    class AINeuralNetwork {
-      constructor() {
-        this.canvas = document.getElementById('neuralCanvas');
-        this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        this.connections = [];
-        this.mouse = { x: 0, y: 0 };
-        this.animationId = null;
-        
-        this.init();
-      }
-      
-      init() {
-        this.resize();
-        this.createParticles();
-        this.createConnections();
-        this.bindEvents();
-        this.animate();
-      }
-      
-      resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-      }
-      
-      createParticles() {
-        this.particles = [];
-        const particleCount = 100;
-        for (let i = 0; i < particleCount; i++) {
-          this.particles.push({
-            x: Math.random() * this.canvas.width,
-            y: Math.random() * this.canvas.height,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            size: Math.random() * 2 + 1,
-            color: this.getRandomAIColor(),
-            pulse: Math.random() * Math.PI * 2
-          });
-        }
-      }
-      
-      createConnections() {
-        this.connections = [];
-        const connectionDistance = 120;
-        for (let i = 0; i < this.particles.length; i++) {
-          for (let j = i + 1; j < this.particles.length; j++) {
-            const distance = this.getDistance(this.particles[i], this.particles[j]);
-            if (distance < connectionDistance) {
-              this.connections.push({
-                from: i,
-                to: j,
-                strength: 1 - (distance / connectionDistance),
-                pulse: Math.random() * Math.PI * 2
-              });
-            }
-          }
-        }
-      }
-      
-      getRandomAIColor() {
-        const colors = [
-          'rgba(6, 182, 212, 0.6)',    // AI Cyan
-          'rgba(20, 184, 166, 0.6)',   // AI Teal
-          'rgba(124, 58, 237, 0.6)',   // AI Violet
-          'rgba(99, 102, 241, 0.6)',   // Brand Indigo
-          'rgba(255, 178, 0, 0.6)'     // Brand Gold
-        ];
-        return colors[Math.floor(Math.random() * colors.length)];
-      }
-      
-      getDistance(p1, p2) {
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        return Math.sqrt(dx * dx + dy * dy);
-      }
-      
-      bindEvents() {
-        window.addEventListener('resize', () => this.resize());
-        
-        document.addEventListener('mousemove', (e) => {
-          this.mouse.x = e.clientX;
-          this.mouse.y = e.clientY;
-        });
-      }
-      
-      updateParticles() {
-        this.particles.forEach(particle => {
-          // Update position
-          particle.x += particle.vx;
-          particle.y += particle.vy;
-          
-          // Bounce off edges
-          if (particle.x <= 0 || particle.x >= this.canvas.width) {
-            particle.vx *= -1;
-          }
-          if (particle.y <= 0 || particle.y >= this.canvas.height) {
-            particle.vy *= -1;
-          }
-          
-          // Update pulse
-          particle.pulse += 0.02;
-          
-          // Mouse interaction
-          const mouseDistance = this.getDistance(particle, this.mouse);
-          if (mouseDistance < 150) {
-            const angle = Math.atan2(this.mouse.y - particle.y, this.mouse.x - particle.x);
-            const force = (150 - mouseDistance) / 150;
-            particle.vx += Math.cos(angle) * force * 0.01;
-            particle.vy += Math.sin(angle) * force * 0.01;
-          }
-          
-          // Dampen velocity
-          particle.vx *= 0.99;
-          particle.vy *= 0.99;
-        });
-      }
-      
-      draw() {
-        // Clear canvas with subtle fade effect
-        this.ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
-        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        // Draw connections
-        this.connections.forEach(connection => {
-          const from = this.particles[connection.from];
-          const to = this.particles[connection.to];
-          
-          if (from && to) {
-            const alpha = 0.3 + Math.sin(connection.pulse) * 0.2;
-            this.ctx.strokeStyle = `rgba(99, 102, 241, ${alpha * connection.strength})`;
-            this.ctx.lineWidth = 1 * connection.strength;
-            this.ctx.beginPath();
-            this.ctx.moveTo(from.x, from.y);
-            this.ctx.lineTo(to.x, to.y);
-            this.ctx.stroke();
-            
-            connection.pulse += 0.01;
-          }
-        });
-        
-        // Draw particles
-        this.particles.forEach(particle => {
-          const alpha = 0.6 + Math.sin(particle.pulse) * 0.4;
-          this.ctx.fillStyle = particle.color.replace('0.6)', `${alpha})`);
-          this.ctx.beginPath();
-          this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          this.ctx.fill();
-        });
-      }
-      
-      animate() {
-        this.updateParticles();
-        this.draw();
-        this.animationId = requestAnimationFrame(() => this.animate());
-      }
-      
-      destroy() {
-        if (this.animationId) {
-          cancelAnimationFrame(this.animationId);
-        }
-      }
-    }
-
-    // Initialize AI Neural Network when DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        new AINeuralNetwork();
-      });
-    } else {
-      new AINeuralNetwork();
-    }
-
-    // ========================================
-    // PORTFOLIO INTERACTIONS
+    // MODAL FUNCTIONS
     // ========================================
     
     // Open image modal
@@ -557,18 +1411,22 @@
       const modal = document.getElementById('imageModal');
       const modalImage = document.getElementById('modalImage');
       
-      modalImage.src = imageSrc;
-      modalImage.alt = imageAlt || 'Portfolio Image';
-      
-      modal.classList.add('show');
-      document.body.style.overflow = 'hidden';
+      if (modal && modalImage) {
+        modalImage.src = imageSrc;
+        modalImage.alt = imageAlt || 'Portfolio Image';
+        
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
     }
     
     // Close image modal
     function closeImageModal() {
       const modal = document.getElementById('imageModal');
-      modal.classList.remove('show');
-      document.body.style.overflow = 'auto';
+      if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
     }
     
     // Open video modal
@@ -576,19 +1434,21 @@
       const modal = document.getElementById('videoModal');
       const modalVideo = document.getElementById('modalVideo');
       
-      // Convert YouTube URL to embed format if needed
-      let embedUrl = videoUrl;
-      if (videoUrl.includes('youtube.com/watch')) {
-        const videoId = videoUrl.split('v=')[1];
-        embedUrl = `https://www.youtube.com/embed/${videoId}`;
-      } else if (videoUrl.includes('youtu.be/')) {
-        const videoId = videoUrl.split('youtu.be/')[1];
-        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      if (modal && modalVideo) {
+        // Convert YouTube URL to embed format if needed
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('youtube.com/watch')) {
+          const videoId = videoUrl.split('v=')[1]?.split('&')[0];
+          embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        } else if (videoUrl.includes('youtu.be/')) {
+          const videoId = videoUrl.split('youtu.be/')[1]?.split('?')[0];
+          embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        }
+        
+        modalVideo.src = embedUrl;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
       }
-      
-      modalVideo.src = embedUrl;
-      modal.classList.add('show');
-      document.body.style.overflow = 'hidden';
     }
     
     // Close video modal
@@ -596,9 +1456,11 @@
       const modal = document.getElementById('videoModal');
       const modalVideo = document.getElementById('modalVideo');
       
-      modal.classList.remove('show');
-      modalVideo.src = '';
-      document.body.style.overflow = 'auto';
+      if (modal && modalVideo) {
+        modal.classList.remove('show');
+        modalVideo.src = '';
+        document.body.style.overflow = 'auto';
+      }
     }
     
     // Event listeners for modals
