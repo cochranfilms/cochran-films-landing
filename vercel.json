@@ -34,7 +34,7 @@
       "dest": "/api/user-preferences.js"
     },
     {
-      "src": "^/api/(create-checkout-session|webhook)$",
+      "src": "^/api/(create-checkout-session|webhook|config)$",
       "dest": "/server.js"
     },
     
