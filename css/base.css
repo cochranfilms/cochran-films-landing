@@ -8,9 +8,9 @@
   --brand-red: #ef4444;
   --dark-900: #0f172a;
   --dark-950: #020617;
-  --text-primary: #ffffff;
-  --text-secondary: #ffffff;
-  --text-muted: #ffffff;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
   --card-bg: rgba(15, 23, 42, 0.7);
   --card-border: 1px solid rgba(99,102,241,0.20);
   --backdrop: blur(12px);
@@ -65,7 +65,7 @@ body, p, li, label, input, select, textarea, span, a, small, strong, em, h1, h2,
 .wrapper {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 100px 20px 60px;
 }

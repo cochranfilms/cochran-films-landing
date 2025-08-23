@@ -702,31 +702,8 @@
       <!-- Blog Content -->
       <div class="blog-content">
         <!-- Featured Blog Post -->
-        <article class="featured-blog">
-          <div class="featured-blog-header">
-            <span class="featured-badge">Featured</span>
-            <span class="featured-blog-category">
-              <i class="fa-solid fa-lightbulb"></i> Creative Insights
-            </span>
-            </div>
-          
-          <h3 class="featured-blog-title">
-            The Future of Video Marketing: AI-Powered Content Creation
-          </h3>
-          
-          <p class="featured-blog-excerpt">
-            Discover how artificial intelligence is revolutionizing video production and marketing strategies. Learn about the latest tools, techniques, and trends that are shaping the future of digital content.
-          </p>
-          
-          <div class="featured-blog-meta">
-            <span class="featured-blog-date">
-              <i class="fa-regular fa-calendar"></i> January 15, 2025
-            </span>
-          </div>
-          
-          <a href="/blog-post.html" class="featured-blog-cta">
-            Read Full Article <i class="fa-solid fa-arrow-right"></i>
-          </a>
+        <article class="featured-blog" id="featuredBlogPost">
+          <!-- Featured blog content will be populated dynamically -->
         </article>
 
         <!-- Blog Grid -->
@@ -1011,7 +988,10 @@
         const posts = await response.json();
         console.log(`📚 Loaded ${posts.length} blog posts`);
         
-        // Display the first 6 posts initially
+        // Display featured blog post (rotates daily)
+        displayFeaturedBlogPost(posts);
+        
+        // Display the first 6 posts initially (excluding the featured one)
         displayBlogPosts(posts.slice(0, 6));
         
         // Show load more button if there are more posts
@@ -1026,6 +1006,64 @@
         // Show fallback content
         displayFallbackBlogContent();
       }
+    }
+    
+    // Display featured blog post with daily rotation
+    function displayFeaturedBlogPost(posts) {
+      if (!posts || posts.length === 0) return;
+      
+      // Get today's date as a seed for consistent daily rotation
+      const today = new Date();
+      const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+      
+      // Use day of year as seed to get consistent daily featured post
+      const featuredIndex = dayOfYear % posts.length;
+      const featuredPost = posts[featuredIndex];
+      
+      if (!featuredPost) return;
+      
+      const featuredContainer = document.getElementById('featuredBlogPost');
+      if (!featuredContainer) return;
+      
+      // Get category icon and name
+      const categoryIcon = getCategoryIcon(featuredPost.category);
+      const categoryName = featuredPost.category ? 
+        featuredPost.category.charAt(0).toUpperCase() + featuredPost.category.slice(1) : 'General';
+      
+      // Format date
+      const publishedDate = formatDate(featuredPost.publishedAt);
+      
+      // Create blog post detail link
+      const detailLink = `/blog-post.html?url=${encodeURIComponent(featuredPost.url)}`;
+      
+      featuredContainer.innerHTML = `
+        <div class="featured-blog-header">
+          <span class="featured-badge">Featured</span>
+          <span class="featured-blog-category">
+            <i class="fa-solid fa-${categoryIcon}"></i> ${categoryName}
+          </span>
+        </div>
+        
+        <h3 class="featured-blog-title">
+          ${featuredPost.title}
+        </h3>
+        
+        <p class="featured-blog-excerpt">
+          ${featuredPost.summary || 'Discover the latest insights and trends in this featured article.'}
+        </p>
+        
+        <div class="featured-blog-meta">
+          <span class="featured-blog-date">
+            <i class="fa-regular fa-calendar"></i> ${publishedDate}
+          </span>
+        </div>
+        
+        <a href="${detailLink}" class="featured-blog-cta">
+          Read Full Article <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      `;
+      
+      console.log(`🌟 Featured post for day ${dayOfYear}: ${featuredPost.title}`);
     }
     
     // Display blog posts in the grid

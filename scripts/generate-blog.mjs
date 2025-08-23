@@ -106,21 +106,18 @@ async function fetchFeed(url, category) {
 }
 
 async function generate() {
-  // Optional time guard to run only at 12:00 in a specific timezone
-  if (process.env.ENFORCE_LOCAL_NOON === 'true') {
-    try {
-      const tz = process.env.TIMEZONE || 'America/New_York';
-      const fmt = new Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: false, timeZone: tz });
-      const parts = fmt.formatToParts(new Date());
-      const hourPart = parts.find(p => p.type === 'hour');
-      const hour = hourPart ? parseInt(hourPart.value, 10) : -1;
-      if (hour !== 12) {
-        console.log(`Skipping generation. Current hour in ${tz} is ${hour}, not 12.`);
-        return;
-      }
-    } catch (e) {
-      console.warn('Timezone check failed, proceeding anyway:', e.message);
+  // Check if we've already generated content today
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+  const cacheFile = path.join(path.dirname(OUTPUT_FILE), '.last-generation');
+  
+  try {
+    const lastGeneration = await fs.readFile(cacheFile, 'utf8').catch(() => '');
+    if (lastGeneration.trim() === today) {
+      console.log(`Blog already generated today (${today}). Skipping to avoid duplicate work.`);
+      return;
     }
+  } catch (e) {
+    console.log('No previous generation cache found, proceeding with generation.');
   }
 
   const allEntries = [];
@@ -155,6 +152,11 @@ async function generate() {
   const pretty = JSON.stringify(deduped, null, 2);
   await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
   await fs.writeFile(OUTPUT_FILE, pretty);
+
+  // Update the cache file to mark today as generated
+  const todayDate = new Date().toISOString().split('T')[0];
+  const cacheFilePath = path.join(path.dirname(OUTPUT_FILE), '.last-generation');
+  await fs.writeFile(cacheFilePath, todayDate);
 
   console.log(`Wrote ${deduped.length} posts to ${OUTPUT_FILE}`);
 }

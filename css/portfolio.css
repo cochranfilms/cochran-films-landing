@@ -117,9 +117,9 @@
 /* Premium Portfolio Grid */
 .premium-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 60px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 /* Premium Portfolio Item */
@@ -375,8 +375,8 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .premium-grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
   }
   
   .category-title {
