@@ -935,6 +935,14 @@ class AirtableCMS {
       'Brand Development': 'brandDevelopmentGrid'
     };
   }
+
+  hasAnyPortfolioGrids() {
+    try {
+      return Object.values(this.categoryGrids || {}).some(id => document.getElementById(id));
+    } catch (_) {
+      return false;
+    }
+  }
   
   setupEventHandlers() {
     // Set up load more buttons for each category
@@ -1214,18 +1222,18 @@ class AirtableCMS {
   renderPortfolioByCategory() {
     // Check if data is loaded
     if (!this.portfolioData || this.portfolioData.length === 0) {
-      console.log('Portfolio data not loaded yet, showing error state');
-      this.showPortfolioErrorState();
+      // Only show error state when slideshow grids actually exist on the page
+      if (this.hasAnyPortfolioGrids()) {
+        console.log('Portfolio data not loaded yet, showing error state');
+        this.showPortfolioErrorState();
+      }
       return;
     }
     
     // Render each service category separately
     Object.entries(this.categoryGrids).forEach(([serviceCategory, gridId]) => {
       const grid = document.getElementById(gridId);
-      if (!grid) {
-        console.warn(`Grid not found for category: ${serviceCategory}, gridId: ${gridId}`);
-        return;
-      }
+      if (!grid) { return; }
 
       // Filter items by service category
       const categoryItems = this.portfolioData.filter(item => 
