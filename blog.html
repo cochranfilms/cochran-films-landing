@@ -1072,7 +1072,7 @@
       if (!blogGrid) return;
       
       blogGrid.innerHTML = posts.map(post => `
-        <article class="blog-item" onclick="window.open('${post.url}', '_blank')">
+        <article class="blog-item">
           <div class="blog-thumbnail">
             ${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : 
               `<div style="background: linear-gradient(45deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 24px;"><i class="fas fa-newspaper"></i></div>`}
@@ -1089,13 +1089,34 @@
                 <i class="fas fa-calendar"></i>
                 ${formatDate(post.publishedAt)}
               </span>
-              <span class="blog-read-more">
+              <span class="blog-read-more" data-open="${post.url}">
                 Read More <i class="fas fa-arrow-right"></i>
               </span>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:12px;">
+              <button class="blog-action" data-save='${JSON.stringify({url: '${post.url}', title: post.title}).replace(/"/g, '&quot;')}' title="Save to Favorites" style="background:rgba(99,102,241,0.12); border:1px solid rgba(99,102,241,0.25); padding:8px 10px; border-radius:10px; color:#cbd5e1; cursor:pointer"><i class="fas fa-bookmark"></i></button>
+              <button class="blog-action" data-comment='${JSON.stringify({url: '${post.url}', title: post.title}).replace(/"/g, '&quot;')}' title="Comment" style="background:rgba(255,178,0,0.12); border:1px solid rgba(255,178,0,0.35); padding:8px 10px; border-radius:10px; color:#fef3c7; cursor:pointer"><i class="fas fa-comment"></i></button>
+              <a class="blog-action" href="${post.url}" target="_blank" rel="noopener" title="Open Source" style="background:rgba(148,163,184,0.12); border:1px solid rgba(148,163,184,0.25); padding:8px 10px; border-radius:10px; color:#cbd5e1; text-decoration:none"><i class="fas fa-external-link"></i></a>
             </div>
           </div>
         </article>
       `).join('');
+
+      // Wire actions
+      document.querySelectorAll('[data-open]').forEach(el=> el.addEventListener('click', ()=> window.open(el.getAttribute('data-open'), '_blank')));
+      document.querySelectorAll('[data-save]').forEach(el=> el.addEventListener('click', ()=>{
+        try{
+          const data = JSON.parse(el.getAttribute('data-save').replace(/&quot;/g,'"'));
+          (window.__CFUserAPI?.addFavorite||(()=>{}))(data);
+          el.style.opacity='0.7';
+        }catch{}
+      }));
+      document.querySelectorAll('[data-comment]').forEach(el=> el.addEventListener('click', ()=>{
+        try{
+          const data = JSON.parse(el.getAttribute('data-comment').replace(/&quot;/g,'"'));
+          openCommentModal(data);
+        }catch{}
+      }));
     }
     
     // Load more blog posts
