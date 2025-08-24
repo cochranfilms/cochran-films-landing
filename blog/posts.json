@@ -1,5 +1,43 @@
 [
   {
+    "title": "Top Reasons Why You Should Buy Verified Cash App Accounts Today",
+    "url": "https://dev.to/saruat_saruat_058df9417fb/top-reasons-why-you-should-buy-verified-cash-app-accounts-today-544o",
+    "publishedAt": "2025-08-24T18:44:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Risks Of Unverified Accounts Fraud Vulnerability Here are some reasons why unverified accounts are vulnerable: Lack of identity verification: Scammers can create multiple fake accounts. Limited Features Feature Verified Account Unverified Account Choose verified accounts for a better Cash App experience. Ensure your transactions are secure and your featur...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm8e6wya53nb2fi0pseus.png",
+    "video": null,
+    "author": "Buy Verified Cash App Accounts",
+    "tags": [
+      "webdev",
+      "ai",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Top Reasons Why You Should Buy Verified Cash App Accounts Today",
+    "seoDescription": "Risks Of Unverified Accounts Fraud Vulnerability Here are some reasons why unverified accounts are vulnerable: Lack of identity verification: Scammers can cr..."
+  },
+  {
+    "title": "“The Truth About Buying Verified PayPal Accounts: What You Must Know Before Taking the Risk”",
+    "url": "https://dev.to/vu03155/the-truth-about-buying-verified-paypal-accounts-what-you-must-know-before-taking-the-risk-279d",
+    "publishedAt": "2025-08-24T18:40:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "1. Introduction: The Growing Demand for PayPal In the modern digital economy, PayPal is more than just a payment service—it’s a gateway to international business, freelancing, and e-commerce. Millions of people depend on it daily to receive salaries, transfer money, and shop online. But for users in certain countries, creating and verifying a PayPal accou...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzq7acof2eoinnk7z6hzb.jpg",
+    "video": null,
+    "author": "Amelia Susie",
+    "tags": [
+      "programming",
+      "webdev",
+      "javascript",
+      "python"
+    ],
+    "seoTitle": "“The Truth About Buying Verified PayPal Accounts: What You Must Know Before Taking the Risk”",
+    "seoDescription": "1. Introduction: The Growing Demand for PayPal In the modern digital economy, PayPal is more than just a payment service—it’s a gateway to international busi..."
+  },
+  {
     "title": "GitNarrative Update: Added GitLab, Azure DevOps, and Bitbucket OAuth Integration",
     "url": "https://dev.to/grudged/gitnarrative-update-added-gitlab-azure-devops-and-bitbucket-oauth-integration-282l",
     "publishedAt": "2025-08-24T18:03:40.000Z",
@@ -55,101 +93,6 @@
     ],
     "seoTitle": "🛑 Stop Sprinkling sync.Map Everywhere",
     "seoDescription": "“Magically thread-safe” sounds great — until your codebase is full of latency spikes, hidden races, and weird allocations. Here’s what I’ve learned in practi..."
-  },
-  {
-    "title": "📊 pprof in 2025: Facts > Gut Feelings",
-    "url": "https://dev.to/aleksei_aleinikov/pprof-in-2025-facts-gut-feelings-3jji",
-    "publishedAt": "2025-08-24T17:16:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Your app feels slow. Instinct says: 👉 “It’s the DB.” 👉 “Add a cache.” 👉 “Maybe the network?” Too often — wrong. The real culprit? 🌀 Goroutine leaks 📦 Naive string concatenation 🗄️ Unbounded caches That’s where pprof steps in: CPU, memory, goroutines, blocking. No guesses — just facts. In my latest post I show: How to enable profiling (services + CLI...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe9el2atnnaqt7z9x852b.png",
-    "video": null,
-    "author": "Aleksei Aleinikov",
-    "tags": [
-      "architecture",
-      "webdev",
-      "devplusplus",
-      "programming"
-    ],
-    "seoTitle": "📊 pprof in 2025: Facts > Gut Feelings",
-    "seoDescription": "Your app feels slow. Instinct says: 👉 “It’s the DB.” 👉 “Add a cache.” 👉 “Maybe the network?” Too often — wrong. The real culprit? 🌀 Goroutine leaks 📦 Na..."
-  },
-  {
-    "title": "🙈 Fifteen if err != nil in a Row? Cut the Noise.",
-    "url": "https://dev.to/aleksei_aleinikov/fifteen-if-err-nil-in-a-row-cut-the-noise-37b7",
-    "publishedAt": "2025-08-24T17:14:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Go’s clarity is great — until your business logic drowns in endless error checks. I built a tiny lib called try to flip the script: try.Val → use values directly, errors become panics try.Catch → one defer to collect them as plain errors try.Async → safe goroutines without “who crashed the process?” 💡 Use cases: CSV import in 2 lines DB query without boi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foodt7kwyolx3dcw73a74.png",
-    "video": null,
-    "author": "Aleksei Aleinikov",
-    "tags": [
-      "go",
-      "webdev",
-      "programming",
-      "architecture"
-    ],
-    "seoTitle": "🙈 Fifteen if err != nil in a Row? Cut the Noise.",
-    "seoDescription": "Go’s clarity is great — until your business logic drowns in endless error checks. I built a tiny lib called try to flip the script: try.Val → use values dire..."
-  },
-  {
-    "title": "How I sped up my WordPress from 800ms to 30ms for FREE!",
-    "url": "https://dev.to/jurijs_iv/how-i-sped-up-my-wordpress-from-800ms-to-30ms-for-free-5gjh",
-    "publishedAt": "2025-08-24T17:12:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I was frustrated with my WordPress site's slow response times, until I discovered a WordPress Cache Plugin. And it change everything, at least for me! The Problem 🐌 My WordPress site was struggling with response times: Mostly between 200-400ms (acceptable) Frequent spikes above 1 second Often hovering around 800ms (disappointing) The Solution ⚡ After one...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.cyberpunk.tools%2Fassets%2Fwordpress-cloudflare%2F7.webp",
-    "video": null,
-    "author": "Jurijs Ivolga",
-    "tags": [
-      "wordpress",
-      "cloudflare",
-      "webperf",
-      "webdev"
-    ],
-    "seoTitle": "How I sped up my WordPress from 800ms to 30ms for FREE!",
-    "seoDescription": "I was frustrated with my WordPress site's slow response times, until I discovered a WordPress Cache Plugin. And it change everything, at least for me! The Pr..."
-  },
-  {
-    "title": "⚡ Go + Memory Pools: Dodging GC Pauses in 2025",
-    "url": "https://dev.to/aleksei_aleinikov/go-memory-pools-dodging-gc-pauses-in-2025-2b11",
-    "publishedAt": "2025-08-24T17:11:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "“Oh mighty GC, spare us during the telemetry burst!” 🙏 When 200 drones reported back at once, the GC froze everything just when latency had to stay low. My fix? Fast-path memory management with pools. I break down 3 practical patterns: Plus: micro-benchmarks and a decision checklist. 👉 Full article: Fast-Path Memory Management in Go — 2025 Edition https...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F42hbjwweno1zw6dcn3gs.png",
-    "video": null,
-    "author": "Aleksei Aleinikov",
-    "tags": [
-      "go",
-      "webdev",
-      "programming",
-      "design"
-    ],
-    "seoTitle": "⚡ Go + Memory Pools: Dodging GC Pauses in 2025",
-    "seoDescription": "“Oh mighty GC, spare us during the telemetry burst!” 🙏 When 200 drones reported back at once, the GC froze everything just when latency had to stay low. My ..."
-  },
-  {
-    "title": "⚡ Next.js + Go: The 2025 Dream Stack",
-    "url": "https://dev.to/aleksei_aleinikov/nextjs-go-the-2025-dream-stack-2jin",
-    "publishedAt": "2025-08-24T17:10:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "She just learned Go still doesn’t need an ORM. In 2025, the web still demands two things: instant loading 🚀 effortless user experience 🎯 My favorite recipe: I show how to wire them together: static + dynamic pages in Next.js a Go API with Gin smooth fetch from React plus: auth, streaming, and scaling tips 🔗 Full article: Next.js + Go — jump-start your ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftsux9oyc3nducc3gsmh8.png",
-    "video": null,
-    "author": "Aleksei Aleinikov",
-    "tags": [
-      "nextjs",
-      "go",
-      "frontend",
-      "webdev"
-    ],
-    "seoTitle": "⚡ Next.js + Go: The 2025 Dream Stack",
-    "seoDescription": "She just learned Go still doesn’t need an ORM. In 2025, the web still demands two things: instant loading 🚀 effortless user experience 🎯 My favorite recipe..."
   },
   {
     "title": "These are the Apple products that students should start with – Back to School Guide",
@@ -613,5 +556,56 @@
     ],
     "seoTitle": "Does iPadOS 26 make the iPad a computer? [Video]",
     "seoDescription": "The moment Apple announced iPadOS 26, it felt like us iPad users have finally been heard. For years the iPad has always been “almost there”. It had the power..."
+  },
+  {
+    "title": "Will Trump help 4Chan escape the UK’s internet police?",
+    "url": "https://www.theverge.com/politics/764653/4chan-uk-online-safety-act-trump",
+    "publishedAt": "2025-08-23T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: 4chan, Gab, and Kiwi Farms, each of which risked multimillion-dollar fines. Late last week, Preston Byrne, a First Amendment lawyer representing them, struck back. Byrne announced he would sue Ofcom i...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257906_4chan_UK_online_safety_law_CVirginia_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tina Nguyen",
+    "tags": [],
+    "seoTitle": "Will Trump help 4Chan escape the UK’s internet police?",
+    "seoDescription": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: ..."
+  },
+  {
+    "title": "When a Kiss Changed Cinema: 11 Iconic Moments",
+    "url": "https://nofilmschool.com/iconic-movie-kisses",
+    "publishedAt": "2025-08-23T05:18:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Fog swirls around a Paris train station. Two lovers meet, the world’s holding its breath. He kisses her like it’s both a promise and a farewell, the taste of wartime and regret lingering between them. Or maybe you’re picturing another kiss—one at the bow of a doomed ship, where the wind whips hair into chaos and the horizon feels infinite. Whatever the sc...",
+    "image": "https://nofilmschool.com/media-library/when-a-kiss-changed-cinema-11-iconic-moments.jpg?id=61504627&width=980",
+    "video": "https://www.youtube.com/embed/74kz5K70iAo?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Romance",
+      "Romance movies",
+      "Best movies",
+      "Romance"
+    ],
+    "seoTitle": "When a Kiss Changed Cinema: 11 Iconic Moments",
+    "seoDescription": "Fog swirls around a Paris train station. Two lovers meet, the world’s holding its breath. He kisses her like it’s both a promise and a farewell, the taste of..."
+  },
+  {
+    "title": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
+    "url": "https://nofilmschool.com/godfather-oranges-death-symbol",
+    "publishedAt": "2025-08-23T05:10:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunlit moment—until bullets rip through the air, sending the Don to the pavement and those bright orange spheres rolling into the gutter. On the surface, it’s just good blocking and choreography. But to sh...",
+    "image": "https://nofilmschool.com/media-library/the-godfather-uses-oranges-as-a-death-signal.jpg?id=61504654&width=980",
+    "video": "https://www.youtube.com/embed/wQKThExxrc0?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "The godfather",
+      "Symbolism",
+      "Film theory"
+    ],
+    "seoTitle": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
+    "seoDescription": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunli..."
   }
 ]
