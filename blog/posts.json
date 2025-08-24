@@ -1,5 +1,24 @@
 [
   {
+    "title": "HomeWise AI - Intelligent Property Analysis Platform",
+    "url": "https://dev.to/maximebeaudoin/homewise-ai-intelligent-property-analysis-platform-26j7",
+    "publishedAt": "2025-08-24T15:15:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data HomeWise AI is a modern, intelligent property analysis platform that transforms Zillow URLs into comprehensive, professional-grade property reports. Built specifically for first-time homebuyers, it leverages AI agents and real-time web data to provide detailed insights that he...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fopve1cimurjhnjbbdi3v.png",
+    "video": null,
+    "author": "Maxime Beaudoin",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "HomeWise AI - Intelligent Property Analysis Platform",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data HomeWise AI is a modern, intelligent property analysis platform that transfor..."
+  },
+  {
     "title": "Building a Full-Stack App with Turborepo, React, and Hono (Part 1: Project Setup and Database Configuration)",
     "url": "https://dev.to/parthiv_saikia_/building-a-full-stack-app-with-turborepo-react-and-hono-part-1-project-setup-and-database-3lpo",
     "publishedAt": "2025-08-24T14:51:05.000Z",
@@ -54,6 +73,23 @@
     "seoDescription": "Design patterns aren't just for backend developers who can't say a sentence without mentioning architecture or code quality. Frontend developers can benefit ..."
   },
   {
+    "title": "Amazon Discounts AirPods 4 to $89.99 and AirPods Pro 2 to $169 [Updated]",
+    "url": "https://www.macrumors.com/2025/08/24/amazon-discounts-airpods-4/",
+    "publishedAt": "2025-08-24T14:25:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running. $89.99 (matched at Best Buy), down from $129.00, which is a mat...",
+    "image": "https://images.macrumors.com/article-new/2023/05/Airpods-Pro-2-Discount-Feature-Orange.jpg",
+    "video": null,
+    "author": "Mitchel Broussard",
+    "tags": [
+      "Deals",
+      "Featured"
+    ],
+    "seoTitle": "Amazon Discounts AirPods 4 to $89.99 and AirPods Pro 2 to $169 [Updated]",
+    "seoDescription": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affilia..."
+  },
+  {
     "title": "AirPods Pro 3 Expected to Launch This Year With Key New Feature",
     "url": "https://www.macrumors.com/2025/08/24/airpods-pro-3-expected-this-year/",
     "publishedAt": "2025-08-24T14:16:04.000Z",
@@ -70,63 +106,6 @@
     ],
     "seoTitle": "AirPods Pro 3 Expected to Launch This Year With Key New Feature",
     "seoDescription": "Bloomberg's Mark Gurman expects Apple to release new AirPods Pro this year, and he said the earbuds will have a key new feature: heart rate monitoring. From ..."
-  },
-  {
-    "title": "Building Your First CLI Tool",
-    "url": "https://dev.to/anuradha9712/building-your-first-cli-tool-98h",
-    "publishedAt": "2025-08-24T14:14:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hello developers!! You must have use multiple CLI tools in your everyday development like echo, ls, cd etc. Let’s try to understand it in a better way by creating your own simple CLI tool. In this article, we will create a simple Calculator CLI tool. 🎯 What is CLI Tool? A CLI (Command Line Interface) tool is just a program you run in the terminal by typi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdzaiscjsgspuk7v42h96.png",
-    "video": null,
-    "author": "Anuradha Aggarwal",
-    "tags": [
-      "webdev",
-      "cli",
-      "programming",
-      "beginners"
-    ],
-    "seoTitle": "Building Your First CLI Tool",
-    "seoDescription": "Hello developers!! You must have use multiple CLI tools in your everyday development like echo, ls, cd etc. Let’s try to understand it in a better way by cre..."
-  },
-  {
-    "title": "Refactoring 032 - Apply Consistent Style Rules",
-    "url": "https://dev.to/mcsee/refactoring-032-apply-consistent-style-rules-4fhf",
-    "publishedAt": "2025-08-24T14:09:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Make your code look the same everywhere for everybody TL;DR: When machines generate large amounts of code, you need to apply one consistent style to all files. Inconsistent tabs Mixed spaces Uneven braces Disordered methods Inconsistent indentation Mixed formatting styles Random spacing patterns Scattered method ordering Irregular brace placement etc, etc...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F366059%2F1d8942bc-727d-4d1e-bc50-30ff073a34fc.jpeg",
-    "video": null,
-    "author": "Maxi Contieri",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "Refactoring 032 - Apply Consistent Style Rules",
-    "seoDescription": "Make your code look the same everywhere for everybody TL;DR: When machines generate large amounts of code, you need to apply one consistent style to all file..."
-  },
-  {
-    "title": "reactive sigment spa",
-    "url": "https://dev.to/yanivsuzana/reactive-sigment-spa-29lf",
-    "publishedAt": "2025-08-24T14:09:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🌱 Lightweight and Fast: Why I Built Sigment Instead of Using React yaniv soussana ・ Jul 14 #javascript #webdev #frontend #framework",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F384125%2Fe91ed97a-3e7e-4d29-839f-ef80c3f3bd37.png",
-    "video": null,
-    "author": "yaniv soussana",
-    "tags": [
-      "javascript",
-      "webdev",
-      "frontend",
-      "framework"
-    ],
-    "seoTitle": "reactive sigment spa",
-    "seoDescription": "🌱 Lightweight and Fast: Why I Built Sigment Instead of Using React yaniv soussana ・ Jul 14 #javascript #webdev #frontend #framework"
   },
   {
     "title": "Apple Health+ Reportedly Launching Next Year With Two New Features",
@@ -152,7 +131,7 @@
     "publishedAt": "2025-08-24T13:29:58.000Z",
     "source": "macrumors.com",
     "category": "apple",
-    "summary": "Apple's first foldable iPhone will be equipped with four cameras, and Touch ID instead of Face ID, according to Bloomberg's Mark Gurman. In his Power On newsletter today, Gurman said the four cameras will consist of one front camera, one inner camera, and two rear cameras. (He actually said there will be \"five\" cameras, but he only went on to mention four...",
+    "summary": "Apple's first foldable iPhone will be equipped with four cameras, and Touch ID instead of Face ID, according to Bloomberg's Mark Gurman. In his Power On newsletter today, Gurman said the four cameras will consist of one front camera, one inner camera, and two rear cameras. will likely extend to the foldable iPhone. The foldable iPhone will use Apple's sec...",
     "image": "https://images.macrumors.com/article-new/2025/08/Apple-Foldable-Thumb.jpg",
     "video": null,
     "author": "Joe Rossignol",
@@ -404,23 +383,6 @@
     "seoDescription": "The F1: The Movie has made a big splash at the box office at movie theaters around the world, and is now available to buy or rent at stores including , Apple..."
   },
   {
-    "title": "Amazon Discounts AirPods 4 to $99 and AirPods Pro 2 to $169",
-    "url": "https://www.macrumors.com/2025/08/23/amazon-discounts-airpods-4/",
-    "publishedAt": "2025-08-23T15:00:29.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running. $99.00 (matched at Best Buy), down from $129.00, which is just ...",
-    "image": "https://images.macrumors.com/article-new/2023/05/Airpods-Pro-2-Discount-Feature-Orange.jpg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Amazon Discounts AirPods 4 to $99 and AirPods Pro 2 to $169",
-    "seoDescription": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affilia..."
-  },
-  {
     "title": "What&#8217;s on your desk, Dominic Preston?",
     "url": "https://www.theverge.com/tech/762930/home-office-logitech-standing-desk",
     "publishedAt": "2025-08-23T15:00:00.000Z",
@@ -607,5 +569,39 @@
     ],
     "seoTitle": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
     "seoDescription": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunli..."
+  },
+  {
+    "title": "8 Iconic Movie Lines That Became Everyday Expressions",
+    "url": "https://nofilmschool.com/iconic-movie-lines-everyday-expressions",
+    "publishedAt": "2025-08-23T04:58:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The other day, my mom scoffed at me, saying that I speak “filmy.” I guess she was critiquing my annoying (talk about self-awareness) habit of using movie quotes in my everyday speech and slipping them into all kinds of conversations with Clint Eastwood’s confidence and Meryl Streep’s panache. You know those people who watch the same movie over and over ag...",
+    "image": "https://nofilmschool.com/media-library/arnold-schwarzenegger-as-the-terminator-in-terminator-2-judgment-day.jpg?id=39195865&width=980",
+    "video": "https://www.youtube.com/embed/TOgtj00Rp8s?rel=0&start=86",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Movie quotes",
+      "Famous lines"
+    ],
+    "seoTitle": "8 Iconic Movie Lines That Became Everyday Expressions",
+    "seoDescription": "The other day, my mom scoffed at me, saying that I speak “filmy.” I guess she was critiquing my annoying (talk about self-awareness) habit of using movie quo..."
+  },
+  {
+    "title": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
+    "url": "https://nofilmschool.com/silence-of-the-lambs-clarice-pov",
+    "publishedAt": "2025-08-23T04:44:10.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflective of the different personalities that exist in our society, with characters like Hannibal Lecter and Buffalo Bill, who will remain forever relevant, reminding us of our inherent violent instincts. Rel...",
+    "image": "https://nofilmschool.com/media-library/jodie-foster-as-clarice-meeting-hannibal-lectar-anthony-hopkins.jpg?id=61501822&width=980",
+    "video": "https://www.youtube.com/embed/6iB21hsprAQ?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Silence of the lambs",
+      "Pov"
+    ],
+    "seoTitle": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
+    "seoDescription": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflectiv..."
   }
 ]
