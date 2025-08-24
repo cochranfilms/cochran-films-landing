@@ -1,5 +1,81 @@
 [
   {
+    "title": "Running n8n Locally Without Regrets.",
+    "url": "https://dev.to/elliot_brenya/running-n8n-locally-without-regrets-3l55",
+    "publishedAt": "2025-08-24T04:02:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I like tools that give me control. I like seeing the logs roll in my own terminal. I like knowing where the database file lives. n8n fits that mood. It connects your apps, moves your data, and runs on your own machine. When something breaks, you can still touch the files, read the config, and fix it. That is the point of a local install. There are two roa...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvba3pkq6l6fio14ubphs.png",
+    "video": null,
+    "author": "Elliot Brenya sarfo",
+    "tags": [
+      "programming",
+      "webdev",
+      "javascript",
+      "tutorial"
+    ],
+    "seoTitle": "Running n8n Locally Without Regrets.",
+    "seoDescription": "I like tools that give me control. I like seeing the logs roll in my own terminal. I like knowing where the database file lives. n8n fits that mood. It conne..."
+  },
+  {
+    "title": "Most people start their AI journey by asking the wrong question. Which tool should I use? And that’s exactly why they burn out. Because tools change. Systems don’t. The faster you learn it, the better it will be for your growth.",
+    "url": "https://dev.to/jaideepparashar/most-people-start-their-ai-journey-by-asking-the-wrong-question-which-tool-should-i-use-and-1m9d",
+    "publishedAt": "2025-08-24T03:40:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why Your AI Journey Needs a System, Not Just Tools Jaideep Parashar ・ Aug 24 #ai #webdev #beginners #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "beginners",
+      "discuss"
+    ],
+    "seoTitle": "Most people start their AI journey by asking the wrong question. Which tool should I use? And that’s exactly why they burn out. Because tools change. Systems don’t. The faster you learn it, the better it will be for your growth.",
+    "seoDescription": "Why Your AI Journey Needs a System, Not Just Tools Jaideep Parashar ・ Aug 24 #ai #webdev #beginners #discuss"
+  },
+  {
+    "title": "Building a TTS Tool for My Friend in One Hour",
+    "url": "https://dev.to/battlelolo/building-a-tts-tool-for-my-friend-in-one-hour-k6i",
+    "publishedAt": "2025-08-24T03:34:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Building a TTS Tool for My Friend in One Hour My friend asked if there was a service that could read academic papers aloud - not like NotebookLM which creates podcast-style summaries, but something that would actually read the original text. She wanted to listen to papers like audiobooks when her eyes got tired. I didn't know of such a service, but since ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk3ud1x6nymg5ji91yw2q.png",
+    "video": null,
+    "author": "Youla Lee",
+    "tags": [
+      "tts",
+      "azure",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Building a TTS Tool for My Friend in One Hour",
+    "seoDescription": "Building a TTS Tool for My Friend in One Hour My friend asked if there was a service that could read academic papers aloud - not like NotebookLM which create..."
+  },
+  {
+    "title": "Why Your AI Journey Needs a System, Not Just Tools",
+    "url": "https://dev.to/jaideepparashar/why-your-ai-journey-needs-a-system-not-just-tools-3m85",
+    "publishedAt": "2025-08-24T03:32:50.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Most people start their AI journey by asking: “Which tool should I use?” And that’s exactly why they burn out. Because tools change. Systems don’t. Here’s why (and how) to shift your focus from tools → systems. Tools Are Temporary Today it’s ChatGPT, Claude, and Gemini. Tomorrow, new names will dominate. If your entire workflow depends on a single tool, y...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwsgebw0laie6sl7d30no.png",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "beginners",
+      "discuss"
+    ],
+    "seoTitle": "Why Your AI Journey Needs a System, Not Just Tools",
+    "seoDescription": "Most people start their AI journey by asking: “Which tool should I use?” And that’s exactly why they burn out. Because tools change. Systems don’t. Here’s wh..."
+  },
+  {
     "title": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
     "url": "https://dev.to/rohit_singh_ee84e64941db7/how-to-reduce-angular-bundle-size-for-faster-applications-5f4b",
     "publishedAt": "2025-08-24T03:13:46.000Z",
@@ -55,44 +131,6 @@
     ],
     "seoTitle": "Mock Interview: Top 10 Benefits for Your Career Growth",
     "seoDescription": "A mock interview isn’t just a rehearsal — it’s a structured way to simulate the real interview environment, practice your responses, and receive feedback tha..."
-  },
-  {
-    "title": "Free Sprint Name Generator 🤖✍️🏃",
-    "url": "https://dev.to/mattlewandowski93/free-sprint-name-generator-25o9",
-    "publishedAt": "2025-08-24T02:32:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let's face it, \"Sprint 47\" doesn't exactly inspire the team to leap out of bed on Monday morning. If you're tired of boring sprint names and want to inject some personality into your agile ceremonies, I've got just the tool for you. I recently discovered this free sprint name generator that has completely transformed our sprint kickoffs. It's ridiculously...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fum12nn9jy2hazlwdwguo.png",
-    "video": null,
-    "author": "Matt Lewandowski",
-    "tags": [
-      "webdev",
-      "agile",
-      "scrum",
-      "productivity"
-    ],
-    "seoTitle": "Free Sprint Name Generator 🤖✍️🏃",
-    "seoDescription": "Let's face it, \"Sprint 47\" doesn't exactly inspire the team to leap out of bed on Monday morning. If you're tired of boring sprint names and want to inject s..."
-  },
-  {
-    "title": "Vue-my-dropdown library",
-    "url": "https://dev.to/davidcmdev/vue-my-dropdown-library-48k1",
-    "publishedAt": "2025-08-23T23:38:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Vue My Dropdown Component Easily handle dropdown menus with this Vue 3 component. Vue.js >= 3.3.x 📖 Official documentation If you find this component useful, consider supporting its development: Become a sponsor on GitHub Your support helps me maintain and improve this open-source project. Updated GitHub username. Added sponsor badge to README.md. Added ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2FSponsor-%25F0%259F%2592%2596-pink",
-    "video": null,
-    "author": "David Casado Martínez",
-    "tags": [
-      "typescript",
-      "vue",
-      "ui",
-      "webdev"
-    ],
-    "seoTitle": "Vue-my-dropdown library",
-    "seoDescription": "Vue My Dropdown Component Easily handle dropdown menus with this Vue 3 component. Vue.js >= 3.3.x 📖 Official documentation If you find this component useful..."
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -576,33 +614,5 @@
     ],
     "seoTitle": "What's Next for Apple's iPad Lineup",
     "seoDescription": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're ..."
-  },
-  {
-    "title": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "url": "https://www.theverge.com/news/764480/intel-donald-trump-lip-bu-tan-deal",
-    "publishedAt": "2025-08-22T21:45:38.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billion into Intel, but most of the funds come from money that the government was supposed to pay the embattled chipmaker anyway. In an announcement on Friday, Intel said the federal government will fund it...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2230632606.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
-  },
-  {
-    "title": "Netflix wants its partners to follow these rules when using gen AI",
-    "url": "https://www.theverge.com/netflix/764433/netflix-gen-ai-production-guidelines",
-    "publishedAt": "2025-08-22T21:22:47.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-generated images in place of real archival photos. That documentary stood out as a shining example of gen AI’s ability to distort reality in situations where people are specifically looking to be told t...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK072_VRG_Illo_N_Barclay_7_netflix.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
-    "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
   }
 ]
