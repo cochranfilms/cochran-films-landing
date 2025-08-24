@@ -1,77 +1,141 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/anthonymax/-cfp",
-    "publishedAt": "2025-08-24T10:18:50.000Z",
+    "title": "Foldable iPhone coming next year to feature five cameras, Touch ID, Apple cellular modem",
+    "url": "https://9to5mac.com/2025/08/24/foldable-iphone-five-cameras-2026/",
+    "publishedAt": "2025-08-24T12:14:53.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Bloomberg’s Mark Gurman spilled some more details about the upcoming foldable iPhone in his Power On newsletter today. He says the foldable iPhone will open like a book to reveal a larger inner display, like many Android foldables. The foldable iPhone will feature a total of five cameras, one on the front screen, one on the inside and two on the back. It ...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/iphone-fold-01.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Foldable iPhone coming next year to feature five cameras, Touch ID, Apple cellular modem",
+    "seoDescription": "Bloomberg’s Mark Gurman spilled some more details about the upcoming foldable iPhone in his Power On newsletter today. He says the foldable iPhone will open ..."
+  },
+  {
+    "title": "When Phones Eat Cameras: Is This the Last Era for Dedicated Pro Gear?",
+    "url": "https://petapixel.com/2025/08/24/when-phones-eat-cameras-is-this-the-last-era-for-dedicated-pro-gear/",
+    "publishedAt": "2025-08-24T12:01:10.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The camera isn’t dying: it’s disappearing, not into nothing, but into something smaller, smarter, and always connected. For more … [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/When-Phones-Eat-Cameras-Is-This-the-Last-Era-for-Dedicated-Pro-Gear.jpg",
+    "video": null,
+    "author": "Bimal Nepal",
+    "tags": [
+      "Editorial",
+      "Opinion",
+      "Equipment",
+      "gear",
+      "mobile",
+      "opinion"
+    ],
+    "seoTitle": "When Phones Eat Cameras: Is This the Last Era for Dedicated Pro Gear?",
+    "seoDescription": "The camera isn’t dying: it’s disappearing, not into nothing, but into something smaller, smarter, and always connected. For more … [Read More]"
+  },
+  {
+    "title": "They’re trying to make deep-sea mining happen",
+    "url": "https://www.theverge.com/the-stepback-newsletter/763871/deep-sea-mining-happening-again",
+    "publishedAt": "2025-08-24T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "A protest in Netherlands. This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on deep-sea mining and critical minerals, follow Justine Calma. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started This is not how I thought things would go down when I st...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-1238331760.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Justine Calma",
+    "tags": [],
+    "seoTitle": "They’re trying to make deep-sea mining happen",
+    "seoDescription": "A protest in Netherlands. This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on deep-sea mining and cr..."
+  },
+  {
+    "title": "The most fun way to look through old photos",
+    "url": "https://www.theverge.com/installer-newsletter/764641/shutter-declutter-pixel-10-pro-fold-samsung-galaxy-buds-3-fe-herdling-installer",
+    "publishedAt": "2025-08-24T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Hi, friends! Welcome to Installer No. 95, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, new gadget season is starting, and also you can read all the old editions at the Installer homepage.) This week, I am listening to independent radio (shoutout to Seattle's KEXP), reading about the life of children's author Rich...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/installer-1-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "The most fun way to look through old photos",
+    "seoDescription": "Hi, friends! Welcome to Installer No. 95, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, new gadget season is starti..."
+  },
+  {
+    "title": "You might get a secret discount offer when you go to cancel Apple TV+",
+    "url": "https://9to5mac.com/2025/08/24/apple-tv-plus-secret-discount-offer-when-cancel/",
+    "publishedAt": "2025-08-24T11:25:42.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple TV+ just announced a 30% price rise, which may convince some subscribers to cancel and churn out for a while. However, the company seems to be prepared to mitigate for that somewhat. Users on Reddit discovered that when they went to cancel their subscription in the Apple TV app, they were presented with a 54% discount offer for two months. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-tv-plus-retention-offer.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "You might get a secret discount offer when you go to cancel Apple TV+",
+    "seoDescription": "Apple TV+ just announced a 30% price rise, which may convince some subscribers to cancel and churn out for a while. However, the company seems to be prepared..."
+  },
+  {
+    "title": "A great guide on neural network in R",
+    "url": "https://dev.to/dipti_m_2e7ba36c478d1a48a/a-great-guide-on-neural-network-in-r-37hm",
+    "publishedAt": "2025-08-24T11:22:25.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "summary": "Neural Network in R Dipti ・ Aug 24 #webdev #programming #beginners #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3437760%2F21fc9898-a9e9-413d-9221-0d156f0a1adc.png",
     "video": null,
-    "author": "Anthony Max",
+    "author": "Dipti M",
     "tags": [
       "webdev",
-      "javascript",
       "programming",
-      "opensource"
+      "beginners",
+      "discuss"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource"
+    "seoTitle": "A great guide on neural network in R",
+    "seoDescription": "Neural Network in R Dipti ・ Aug 24 #webdev #programming #beginners #discuss"
   },
   {
-    "title": "CSRF Protection in React: Tokens, Cookies & Best Practices",
-    "url": "https://dev.to/pentest_testing_corp/csrf-protection-in-react-tokens-cookies-best-practices-45d2",
-    "publishedAt": "2025-08-24T09:19:42.000Z",
+    "title": "Check out this post on R programming!!",
+    "url": "https://dev.to/thedatageek/check-out-this-post-on-r-programming-38fl",
+    "publishedAt": "2025-08-24T11:20:07.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Why CSRF still matters in React apps Even with SPAs, state-changing requests (POST/PUT/DELETE) can be forged if your session cookie is sent automatically. Use an explicit CSRF defense so the browser must prove intent. Issue a per-session (or per-request) CSRF token from your API. Store it in an HttpOnly cookie or expose via a safe bootstrap endpoint. Fron...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl73wjzju6z59irzjp8u3.jpg",
+    "summary": "Neural Network in R Dipti ・ Aug 24 #webdev #programming #beginners #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3437760%2F21fc9898-a9e9-413d-9221-0d156f0a1adc.png",
     "video": null,
-    "author": "Pentest Testing Corp",
-    "tags": [
-      "cybersecurity",
-      "vulnerabilities",
-      "react",
-      "webdev"
-    ],
-    "seoTitle": "CSRF Protection in React: Tokens, Cookies & Best Practices",
-    "seoDescription": "Why CSRF still matters in React apps Even with SPAs, state-changing requests (POST/PUT/DELETE) can be forged if your session cookie is sent automatically. Us..."
-  },
-  {
-    "title": "ARIA (Accessible Rich Internet Applications): Making Complex Web Applications Accessible",
-    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/aria-accessible-rich-internet-applications-making-complex-web-applications-accessible-4k99",
-    "publishedAt": "2025-08-24T08:45:53.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "“Imagine trying to log into your favorite app, but the ‘Login’ button is invisible to your screen reader. Would you still consider it usable?” For millions of users worldwide, this isn’t imagination — it’s reality. Accessibility isn’t just a buzzword; it’s the bridge between technology and inclusion. And in the heart of web accessibility lies ARIA (Access...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk7wnst23blwh2r3s3ixf.jpg",
-    "video": null,
-    "author": "Okoye Ndidiamaka",
+    "author": "Dipti",
     "tags": [
       "webdev",
-      "a11y",
-      "ux",
-      "uxdesign"
+      "programming",
+      "beginners",
+      "discuss"
     ],
-    "seoTitle": "ARIA (Accessible Rich Internet Applications): Making Complex Web Applications Accessible",
-    "seoDescription": "“Imagine trying to log into your favorite app, but the ‘Login’ button is invisible to your screen reader. Would you still consider it usable?” For millions o..."
+    "seoTitle": "Check out this post on R programming!!",
+    "seoDescription": "Neural Network in R Dipti ・ Aug 24 #webdev #programming #beginners #discuss"
   },
   {
-    "title": "Unraveling the Intrigue of Night Matka Night and the Strategic Edge of Milan Record Satta",
-    "url": "https://dev.to/digitalmarketing99/unraveling-the-intrigue-of-night-matka-night-and-the-strategic-edge-of-milan-record-satta-4oke",
-    "publishedAt": "2025-08-24T08:45:01.000Z",
+    "title": "Neural Network in R",
+    "url": "https://dev.to/thedatageek/neural-network-in-r-4lki",
+    "publishedAt": "2025-08-24T11:18:56.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "The world of Satta Matka—mystique-driven and numeric at its core—takes on a distinct vibrance in its nocturnal shifts. Whether you’re a seasoned player or a curious newcomer, understanding updates like Night Matka Night मिलन का रिकॉर्ड matka.fyi madhur morning panel record milan day chart 143 matka 420 sridevi night lucky number today kalyanmatkabazaar re...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6vp2h2brekif5ahnxfb5.png",
+    "summary": "A neural network is an information-processing model inspired by the human brain. Just like our nervous system is made up of interconnected neurons, a neural network consists of interconnected processing units (called nodes or artificial neurons). The key strength of neural networks lies in their parallel processing ability. Unlike traditional linear model...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnwd2ezrs8ncao19v6l5i.png",
     "video": null,
-    "author": "digitalmarketing99",
+    "author": "Dipti",
     "tags": [
       "webdev",
-      "ai"
+      "programming",
+      "beginners",
+      "discuss"
     ],
-    "seoTitle": "Unraveling the Intrigue of Night Matka Night and the Strategic Edge of Milan Record Satta",
-    "seoDescription": "The world of Satta Matka—mystique-driven and numeric at its core—takes on a distinct vibrance in its nocturnal shifts. Whether you’re a seasoned player or a ..."
+    "seoTitle": "Neural Network in R",
+    "seoDescription": "A neural network is an information-processing model inspired by the human brain. Just like our nervous system is made up of interconnected neurons, a neural ..."
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -539,63 +603,5 @@
     "tags": [],
     "seoTitle": "Apple accuses former Apple Watch staffer of conspiring to steal trade secrets for Oppo",
     "seoDescription": "Apple is suing a former employee on the Apple Watch team who left to join Oppo, alleging that he “conspired to steal Apple’s trade secrets relating to Apple ..."
-  },
-  {
-    "title": "What's Next for Apple's iPad Lineup",
-    "url": "https://www.macrumors.com/2025/08/22/apple-ipad-lineup-whats-next/",
-    "publishedAt": "2025-08-22T22:11:21.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're already hearing details on 2026 ‌iPad‌ launches. Subscribe to the MacRumors YouTube channel for more videos. iPad Pro Rumors suggest that Apple will update the iPad Pro models before the end of the ye...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/t7zuaeYUYaw",
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "What's Next for Apple's iPad Lineup",
-    "seoDescription": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're ..."
-  },
-  {
-    "title": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "url": "https://www.theverge.com/news/764480/intel-donald-trump-lip-bu-tan-deal",
-    "publishedAt": "2025-08-22T21:45:38.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billion into Intel, but most of the funds come from money that the government was supposed to pay the embattled chipmaker anyway. In an announcement on Friday, Intel said the federal government will fund it...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2230632606.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
-  },
-  {
-    "title": "Netflix wants its partners to follow these rules when using gen AI",
-    "url": "https://www.theverge.com/netflix/764433/netflix-gen-ai-production-guidelines",
-    "publishedAt": "2025-08-22T21:22:47.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-generated images in place of real archival photos. That documentary stood out as a shining example of gen AI’s ability to distort reality in situations where people are specifically looking to be told t...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK072_VRG_Illo_N_Barclay_7_netflix.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
-    "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
-  },
-  {
-    "title": "Bluesky blocks Mississippi under new age verification law",
-    "url": "https://www.theverge.com/internet-censorship/764697/bluesky-blocks-mississippi-age-verification-law",
-    "publishedAt": "2025-08-22T21:09:14.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. The decision, outlined in a blog post, will stand until courts decide the fate of the law. “Mississippi’s approach would fundamentally change how users access Bluesky,” says the post, in ways that rules...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK133_BLUESKY__A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Adi Robertson",
-    "tags": [],
-    "seoTitle": "Bluesky blocks Mississippi under new age verification law",
-    "seoDescription": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. Th..."
   }
 ]
