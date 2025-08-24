@@ -1,5 +1,96 @@
 [
   {
+    "title": "Building a Full-Stack App with Turborepo, React, and Hono (Part 1: Project Setup and Database Configuration)",
+    "url": "https://dev.to/parthiv_saikia_/building-a-full-stack-app-with-turborepo-react-and-hono-part-1-project-setup-and-database-3lpo",
+    "publishedAt": "2025-08-24T14:51:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What are monorepos? According to google, a monorepo is a single version control repository (like Git) that contains the source code for multiple projects, applications or modules. Instead of having separate repositories for each project, a monorepo consolidates all code into one centralized location. Dependency management is simple. Refactoring is easier....",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu93v0wbpplqawa75pybb.png",
+    "video": null,
+    "author": "PARTHIV SAIKIA",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "beginners"
+    ],
+    "seoTitle": "Building a Full-Stack App with Turborepo, React, and Hono (Part 1: Project Setup and Database Configuration)",
+    "seoDescription": "What are monorepos? According to google, a monorepo is a single version control repository (like Git) that contains the source code for multiple projects, ap..."
+  },
+  {
+    "title": "These are the Apple products that students should start with – Back to School Guide",
+    "url": "https://9to5mac.com/2025/08/24/apple-product-back-to-school-guide-for-students-2025-ipad-macbook/",
+    "publishedAt": "2025-08-24T14:50:30.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "School is about to start back up for a lot of people, and with how integral technology is to the classroom, having a good computer is always important. If you’re looking to pick up a new Apple device for school or college, I’ll be going over the best picks right here. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-back-to-school-2.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "These are the Apple products that students should start with – Back to School Guide",
+    "seoDescription": "School is about to start back up for a lot of people, and with how integral technology is to the classroom, having a good computer is always important. If yo..."
+  },
+  {
+    "title": "21 Fantastic React Design Patterns and When to Use Them",
+    "url": "https://dev.to/perssondennis/21-fantastic-react-design-patterns-and-when-to-use-them-7bb",
+    "publishedAt": "2025-08-24T14:41:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Design patterns aren't just for backend developers who can't say a sentence without mentioning architecture or code quality. Frontend developers can benefit from them too, especially in React where component composition and hooks provide perfect opportunities to implement solid React design patterns and improve code architecture. This article covers 21 de...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foiivsjw7xgo3apihnyjn.webp",
+    "video": null,
+    "author": "Dennis Persson",
+    "tags": [
+      "react",
+      "webdev",
+      "architecture",
+      "designpatterns"
+    ],
+    "seoTitle": "21 Fantastic React Design Patterns and When to Use Them",
+    "seoDescription": "Design patterns aren't just for backend developers who can't say a sentence without mentioning architecture or code quality. Frontend developers can benefit ..."
+  },
+  {
+    "title": "AirPods Pro 3 Expected to Launch This Year With Key New Feature",
+    "url": "https://www.macrumors.com/2025/08/24/airpods-pro-3-expected-this-year/",
+    "publishedAt": "2025-08-24T14:16:04.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Bloomberg's Mark Gurman expects Apple to release new AirPods Pro this year, and he said the earbuds will have a key new feature: heart rate monitoring. From his Power On newsletter today, with emphasis added: As for Apple's other devices, there's a lot in the fall pipeline — though many of the new products are only incremental upgrades. also expect new Ai...",
+    "image": "https://images.macrumors.com/article-new/2024/12/AirPods-Pro-3-Heart-Rate-Tracking-Feature.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "AirPods Pro",
+      "Featured",
+      "Mark Gurman"
+    ],
+    "seoTitle": "AirPods Pro 3 Expected to Launch This Year With Key New Feature",
+    "seoDescription": "Bloomberg's Mark Gurman expects Apple to release new AirPods Pro this year, and he said the earbuds will have a key new feature: heart rate monitoring. From ..."
+  },
+  {
+    "title": "Building Your First CLI Tool",
+    "url": "https://dev.to/anuradha9712/building-your-first-cli-tool-98h",
+    "publishedAt": "2025-08-24T14:14:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello developers!! You must have use multiple CLI tools in your everyday development like echo, ls, cd etc. Let’s try to understand it in a better way by creating your own simple CLI tool. In this article, we will create a simple Calculator CLI tool. 🎯 What is CLI Tool? A CLI (Command Line Interface) tool is just a program you run in the terminal by typi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdzaiscjsgspuk7v42h96.png",
+    "video": null,
+    "author": "Anuradha Aggarwal",
+    "tags": [
+      "webdev",
+      "cli",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Building Your First CLI Tool",
+    "seoDescription": "Hello developers!! You must have use multiple CLI tools in your everyday development like echo, ls, cd etc. Let’s try to understand it in a better way by cre..."
+  },
+  {
     "title": "Refactoring 032 - Apply Consistent Style Rules",
     "url": "https://dev.to/mcsee/refactoring-032-apply-consistent-style-rules-4fhf",
     "publishedAt": "2025-08-24T14:09:39.000Z",
@@ -73,25 +164,6 @@
     "seoDescription": "Apple's first foldable iPhone will be equipped with four cameras, and Touch ID instead of Face ID, according to Bloomberg's Mark Gurman. In his Power On news..."
   },
   {
-    "title": "Best Data Science Training Placement in Electronic City, Bangalore",
-    "url": "https://dev.to/siva_c933ebbc62fe9b95fd10/best-data-science-training-placement-in-electronic-city-bangalore-3jkk",
-    "publishedAt": "2025-08-24T13:13:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Our Data Science Certification Course in Electronic City, Bangalore is designed for beginners and working professionals. Through real-time Data Science projects, Machine Learning training, and Python for Data Science practice, you’ll learn to analyze, visualize, and interpret data for strategic decision-making. Who Should Join Our Data Science Course in E...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdfh2x7vji8s8ndbm2xx0.png",
-    "video": null,
-    "author": "Siva",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "datascience"
-    ],
-    "seoTitle": "Best Data Science Training Placement in Electronic City, Bangalore",
-    "seoDescription": "Our Data Science Certification Course in Electronic City, Bangalore is designed for beginners and working professionals. Through real-time Data Science proje..."
-  },
-  {
     "title": "The Framework Desktop and Linux have shown me the path to PC gaming in the living room",
     "url": "https://www.theverge.com/games/761025/framework-desktop-bazzite-linux-steam-machine-pc-game-console-impressions",
     "publishedAt": "2025-08-24T13:00:00.000Z",
@@ -104,6 +176,22 @@
     "tags": [],
     "seoTitle": "The Framework Desktop and Linux have shown me the path to PC gaming in the living room",
     "seoDescription": "It’s small, it’s relatively quiet, it has a handy sleep mode with remote wake-up, and the front tiles are even rotatable. The Framework Desktop is a great fi..."
+  },
+  {
+    "title": "iPhone 17 Pro Coming Soon With These 12 New Features",
+    "url": "https://www.macrumors.com/2025/08/24/iphone-17-pro-next-month/",
+    "publishedAt": "2025-08-24T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's iPhone 17 Pro and iPhone 17 Pro Max should be unveiled in a few more weeks, and there are plenty of rumors about the devices. In his Power On newsletter today, Bloomberg's Mark Gurman corroborated a rumor that iPhone 17 Pro models will be \"available in an orange color.\" Below, we recap key changes rumored for the iPhone 17 Pro models: Aluminum fra...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "iPhone 17 Pro"
+    ],
+    "seoTitle": "iPhone 17 Pro Coming Soon With These 12 New Features",
+    "seoDescription": "Apple's iPhone 17 Pro and iPhone 17 Pro Max should be unveiled in a few more weeks, and there are plenty of rumors about the devices. In his Power On newslet..."
   },
   {
     "title": "You likely shouldn’t hold your breath for a new pair of AirPods Max: report",
@@ -519,88 +607,5 @@
     ],
     "seoTitle": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
     "seoDescription": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunli..."
-  },
-  {
-    "title": "8 Iconic Movie Lines That Became Everyday Expressions",
-    "url": "https://nofilmschool.com/iconic-movie-lines-everyday-expressions",
-    "publishedAt": "2025-08-23T04:58:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The other day, my mom scoffed at me, saying that I speak “filmy.” I guess she was critiquing my annoying (talk about self-awareness) habit of using movie quotes in my everyday speech and slipping them into all kinds of conversations with Clint Eastwood’s confidence and Meryl Streep’s panache. You know those people who watch the same movie over and over ag...",
-    "image": "https://nofilmschool.com/media-library/arnold-schwarzenegger-as-the-terminator-in-terminator-2-judgment-day.jpg?id=39195865&width=980",
-    "video": "https://www.youtube.com/embed/TOgtj00Rp8s?rel=0&start=86",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "Movie quotes",
-      "Famous lines"
-    ],
-    "seoTitle": "8 Iconic Movie Lines That Became Everyday Expressions",
-    "seoDescription": "The other day, my mom scoffed at me, saying that I speak “filmy.” I guess she was critiquing my annoying (talk about self-awareness) habit of using movie quo..."
-  },
-  {
-    "title": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
-    "url": "https://nofilmschool.com/silence-of-the-lambs-clarice-pov",
-    "publishedAt": "2025-08-23T04:44:10.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflective of the different personalities that exist in our society, with characters like Hannibal Lecter and Buffalo Bill, who will remain forever relevant, reminding us of our inherent violent instincts. Rel...",
-    "image": "https://nofilmschool.com/media-library/jodie-foster-as-clarice-meeting-hannibal-lectar-anthony-hopkins.jpg?id=61501822&width=980",
-    "video": "https://www.youtube.com/embed/6iB21hsprAQ?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "Silence of the lambs",
-      "Pov"
-    ],
-    "seoTitle": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
-    "seoDescription": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflectiv..."
-  },
-  {
-    "title": "Apple reportedly prepping enterprise AI support beyond ChatGPT",
-    "url": "https://9to5mac.com/2025/08/22/apple-reportedly-prepping-enterprise-ai-support-beyond-chatgpt/",
-    "publishedAt": "2025-08-23T01:12:33.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "On personal iPhones, users can decide whether they want Apple Intelligence to connect to ChatGPT. But on corporate devices, things can be trickier. That’s why Apple is reportedly adding support for enterprise accounts, but in a way that extends beyond its current OpenAI partnership. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/chatgpt-siri-ios182-3-2.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple reportedly prepping enterprise AI support beyond ChatGPT",
-    "seoDescription": "On personal iPhones, users can decide whether they want Apple Intelligence to connect to ChatGPT. But on corporate devices, things can be trickier. That’s wh..."
-  },
-  {
-    "title": "These are the best new MacBook deals this month: options as low as $599",
-    "url": "https://9to5mac.com/2025/08/22/best-new-macbook-deals-in-august/",
-    "publishedAt": "2025-08-23T00:34:51.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "In the Apple Silicon era, MacBooks have become more affordable than ever – with brand new models starting as low as $599. With looming global tariffs, these great deals could potentially be coming to an end soon – so if you’re in the market for a new MacBook for any reason, now may be one of the best ever times to purchase. Apple’s upcoming macOS 26 updat...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/apple-macbook-air-m.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "These are the best new MacBook deals this month: options as low as $599",
-    "seoDescription": "In the Apple Silicon era, MacBooks have become more affordable than ever – with brand new models starting as low as $599. With looming global tariffs, these ..."
-  },
-  {
-    "title": "iOS 26: Eight New Features in Apple Music",
-    "url": "https://www.macrumors.com/guide/ios-26-music/",
-    "publishedAt": "2025-08-22T23:08:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple has made several updates to the Apple Music app in iOS 26, and it has AutoMix, which has become one of the most popular additions. ‌Apple Music‌ also features the Liquid Glass redesign like the rest of Apple's apps, along with new translation features and other quality of life improvements. AutoMix AutoMix is an upgrade to the crossfade feature in ‌...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Music-Glass-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured",
-      "iOS 26"
-    ],
-    "seoTitle": "iOS 26: Eight New Features in Apple Music",
-    "seoDescription": "Apple has made several updates to the Apple Music app in iOS 26, and it has AutoMix, which has become one of the most popular additions. ‌Apple Music‌ also f..."
   }
 ]
