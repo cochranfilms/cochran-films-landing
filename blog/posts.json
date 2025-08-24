@@ -1,5 +1,78 @@
 [
   {
+    "title": "Refactoring 032 - Apply Consistent Style Rules",
+    "url": "https://dev.to/mcsee/refactoring-032-apply-consistent-style-rules-4fhf",
+    "publishedAt": "2025-08-24T14:09:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Make your code look the same everywhere for everybody TL;DR: When machines generate large amounts of code, you need to apply one consistent style to all files. Inconsistent tabs Mixed spaces Uneven braces Disordered methods Inconsistent indentation Mixed formatting styles Random spacing patterns Scattered method ordering Irregular brace placement etc, etc...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F366059%2F1d8942bc-727d-4d1e-bc50-30ff073a34fc.jpeg",
+    "video": null,
+    "author": "Maxi Contieri",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "javascript"
+    ],
+    "seoTitle": "Refactoring 032 - Apply Consistent Style Rules",
+    "seoDescription": "Make your code look the same everywhere for everybody TL;DR: When machines generate large amounts of code, you need to apply one consistent style to all file..."
+  },
+  {
+    "title": "reactive sigment spa",
+    "url": "https://dev.to/yanivsuzana/reactive-sigment-spa-29lf",
+    "publishedAt": "2025-08-24T14:09:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🌱 Lightweight and Fast: Why I Built Sigment Instead of Using React yaniv soussana ・ Jul 14 #javascript #webdev #frontend #framework",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F384125%2Fe91ed97a-3e7e-4d29-839f-ef80c3f3bd37.png",
+    "video": null,
+    "author": "yaniv soussana",
+    "tags": [
+      "javascript",
+      "webdev",
+      "frontend",
+      "framework"
+    ],
+    "seoTitle": "reactive sigment spa",
+    "seoDescription": "🌱 Lightweight and Fast: Why I Built Sigment Instead of Using React yaniv soussana ・ Jul 14 #javascript #webdev #frontend #framework"
+  },
+  {
+    "title": "Apple Health+ Reportedly Launching Next Year With Two New Features",
+    "url": "https://www.macrumors.com/2025/08/24/apple-health-plus-rumored-to-launch-next-year/",
+    "publishedAt": "2025-08-24T13:40:11.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Bloomberg's Mark Gurman today said he expects a paid Apple Health+ service to debut next year. In his Power On newsletter, Gurman said Apple Health+ will consist of an AI-based health coach that offers nutrition planning and medical suggestions. part of iOS 19.4 (now known as iOS 26.4), but he later said that it would not be available until at least iOS 2...",
+    "image": "https://images.macrumors.com/article-new/2025/04/Apple-Health-Icon.png",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "Health and Fitness",
+      "iOS 27",
+      "Mark Gurman"
+    ],
+    "seoTitle": "Apple Health+ Reportedly Launching Next Year With Two New Features",
+    "seoDescription": "Bloomberg's Mark Gurman today said he expects a paid Apple Health+ service to debut next year. In his Power On newsletter, Gurman said Apple Health+ will con..."
+  },
+  {
+    "title": "Foldable iPhone Rumored to Feature Four Cameras, Touch ID, and More",
+    "url": "https://www.macrumors.com/2025/08/24/foldable-iphone-rumored-features/",
+    "publishedAt": "2025-08-24T13:29:58.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's first foldable iPhone will be equipped with four cameras, and Touch ID instead of Face ID, according to Bloomberg's Mark Gurman. In his Power On newsletter today, Gurman said the four cameras will consist of one front camera, one inner camera, and two rear cameras. (He actually said there will be \"five\" cameras, but he only went on to mention four...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Apple-Foldable-Thumb.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "Foldable iPhone",
+      "Mark Gurman"
+    ],
+    "seoTitle": "Foldable iPhone Rumored to Feature Four Cameras, Touch ID, and More",
+    "seoDescription": "Apple's first foldable iPhone will be equipped with four cameras, and Touch ID instead of Face ID, according to Bloomberg's Mark Gurman. In his Power On news..."
+  },
+  {
     "title": "Best Data Science Training Placement in Electronic City, Bangalore",
     "url": "https://dev.to/siva_c933ebbc62fe9b95fd10/best-data-science-training-placement-in-electronic-city-bangalore-3jkk",
     "publishedAt": "2025-08-24T13:13:41.000Z",
@@ -33,7 +106,7 @@
     "seoDescription": "It’s small, it’s relatively quiet, it has a handy sleep mode with remote wake-up, and the front tiles are even rotatable. The Framework Desktop is a great fi..."
   },
   {
-    "title": "New AirPods Max likely aren’t coming anytime soon: report",
+    "title": "You likely shouldn’t hold your breath for a new pair of AirPods Max: report",
     "url": "https://9to5mac.com/2025/08/24/apple-not-working-on-a-new-pair-of-airpods-max-report/",
     "publishedAt": "2025-08-24T12:56:08.000Z",
     "source": "9to5mac.com",
@@ -45,27 +118,8 @@
     "tags": [
       "News"
     ],
-    "seoTitle": "New AirPods Max likely aren’t coming anytime soon: report",
+    "seoTitle": "You likely shouldn’t hold your breath for a new pair of AirPods Max: report",
     "seoDescription": "have had a bit of a disappointing history. After much anticipation, they finally released at the tail end of 2020. Some fans were disappointed with the high ..."
-  },
-  {
-    "title": "il mio progetto",
-    "url": "https://dev.to/lorenzo_pucci_b4d57012e3b/il-mio-progetto-c8n",
-    "publishedAt": "2025-08-24T12:48:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "ciao a tutti ho sviluppato questo sito gratuito dove ogni utente può aggiungere o vedere delle fontanelle https://lollo1344.altervista.org/fontanelle/index.php se potreste in anzi tutto dare un occhiata anche al progetto principale che si trova a https://lollo1344.altervista.org e poi aggiungere fontanelle che conoscete",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faaqob1eej9lqty5xpgr4.png",
-    "video": null,
-    "author": "lorenzo pucci",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "css"
-    ],
-    "seoTitle": "il mio progetto",
-    "seoDescription": "ciao a tutti ho sviluppato questo sito gratuito dove ogni utente può aggiungere o vedere delle fontanelle https://lollo1344.altervista.org/fontanelle/index.p..."
   },
   {
     "title": "Foldable iPhone coming next year to feature four cameras, Touch ID, Apple cellular modem",
@@ -548,57 +602,5 @@
     ],
     "seoTitle": "iOS 26: Eight New Features in Apple Music",
     "seoDescription": "Apple has made several updates to the Apple Music app in iOS 26, and it has AutoMix, which has become one of the most popular additions. ‌Apple Music‌ also f..."
-  },
-  {
-    "title": "Filmmakers Are Using This Platform To Prevent AI Coverage Or Details Being Leaked",
-    "url": "https://nofilmschool.com/embershot",
-    "publishedAt": "2025-08-22T22:50:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When it was time to send the script for Weapons out, Zach Cregger wanted to control who could read it and when. This was going to be a hot spec, and they didn't want details to leak out, and they certainly didn't wait for AI to suck it up and summarize it. They wanted producers who believed in their work and were passionate about it. So Cregger used a new...",
-    "image": "https://nofilmschool.com/media-library/embershot.png?id=61506732&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Script services",
-      "Screenplay download",
-      "Embershot"
-    ],
-    "seoTitle": "Filmmakers Are Using This Platform To Prevent AI Coverage Or Details Being Leaked",
-    "seoDescription": "When it was time to send the script for Weapons out, Zach Cregger wanted to control who could read it and when. This was going to be a hot spec, and they did..."
-  },
-  {
-    "title": "Top 10 Seinfeld Episodes",
-    "url": "https://nofilmschool.com/top-seinfeld-episodes",
-    "publishedAt": "2025-08-22T22:35:16.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "It's hard to find a TV show more influential or culturally important than Seinfeld. It's a classic sitcom that carried some of the best characters and writing on TV for over a decade. It's the show I put on any time I know I need a laugh. What are your favorite episodes of the classic series? It took me a while to compose this, but I'm excited to go over ...",
-    "image": "https://nofilmschool.com/media-library/top-10-seinfeld-episodes.webp?id=61505229&width=980",
-    "video": "https://www.youtube.com/embed/_9b5JyFsfxY?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best tv",
-      "Seinfeld",
-      "Best episodes"
-    ],
-    "seoTitle": "Top 10 Seinfeld Episodes",
-    "seoDescription": "It's hard to find a TV show more influential or culturally important than Seinfeld. It's a classic sitcom that carried some of the best characters and writin..."
-  },
-  {
-    "title": "Apple trained a large language model to efficiently understand long-form video",
-    "url": "https://9to5mac.com/2025/08/22/apple-trained-a-large-language-model-to-efficiently-understand-long-form-video/",
-    "publishedAt": "2025-08-22T22:27:48.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple researchers have developed an adapted version of the SlowFast-LLaVA model that beats larger models at long-form video analysis and understanding. Here’s what that means. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/04/apple-intelligence-rainbow.jpeg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple trained a large language model to efficiently understand long-form video",
-    "seoDescription": "Apple researchers have developed an adapted version of the SlowFast-LLaVA model that beats larger models at long-form video analysis and understanding. Here’..."
   }
 ]
