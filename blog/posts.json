@@ -1,5 +1,24 @@
 [
   {
+    "title": "AI Leaderboards",
+    "url": "https://dev.to/thekarlesi/ai-leaderboards-45fh",
+    "publishedAt": "2025-08-24T06:46:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "So there are two sites that I found useful to know which AI leads in what area. The two are Chatbot Arena and Seal leaderboard. They tell you which AI is leading and in what area. For example, as at 24th August 2025, GPT-5 is leading in web development. It is then followed closely by Claude Opus. If you are interested in knowing which AI to use in the dif...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fifhw28mcdhr8fdtabh4h.png",
+    "video": null,
+    "author": "Esimit Karlgusta",
+    "tags": [
+      "ai",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "AI Leaderboards",
+    "seoDescription": "So there are two sites that I found useful to know which AI leads in what area. The two are Chatbot Arena and Seal leaderboard. They tell you which AI is lea..."
+  },
+  {
     "title": "Debugging AI Isn’t About More GPUs — It’s About Semantic Firewalls",
     "url": "https://dev.to/onestardao/debugging-ai-isnt-about-more-gpus-its-about-semantic-firewalls-38f7",
     "publishedAt": "2025-08-24T06:19:08.000Z",
@@ -36,25 +55,6 @@
     ],
     "seoTitle": "Run n8n locally",
     "seoDescription": "Running n8n Locally Without Regrets. Elliot Brenya sarfo ・ Aug 24 #programming #webdev #javascript #tutorial"
-  },
-  {
-    "title": "Amazon Bonus $750 FREE NOW",
-    "url": "https://dev.to/mukta_chad_2337555885783a/amazon-bonus-750-free-now-2gp",
-    "publishedAt": "2025-08-24T05:20:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Amazon Bonus $750",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp3ns9nykj1jt15j39av1.png",
-    "video": null,
-    "author": "Mukta chad",
-    "tags": [
-      "webdev",
-      "ai",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "Amazon Bonus $750 FREE NOW",
-    "seoDescription": "Amazon Bonus $750"
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
