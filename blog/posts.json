@@ -1,5 +1,24 @@
 [
   {
+    "title": "CSRF Protection in React: Tokens, Cookies & Best Practices",
+    "url": "https://dev.to/pentest_testing_corp/csrf-protection-in-react-tokens-cookies-best-practices-45d2",
+    "publishedAt": "2025-08-24T09:19:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why CSRF still matters in React apps Even with SPAs, state-changing requests (POST/PUT/DELETE) can be forged if your session cookie is sent automatically. Use an explicit CSRF defense so the browser must prove intent. Issue a per-session (or per-request) CSRF token from your API. Store it in an HttpOnly cookie or expose via a safe bootstrap endpoint. Fron...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl73wjzju6z59irzjp8u3.jpg",
+    "video": null,
+    "author": "Pentest Testing Corp",
+    "tags": [
+      "cybersecurity",
+      "vulnerabilities",
+      "react",
+      "webdev"
+    ],
+    "seoTitle": "CSRF Protection in React: Tokens, Cookies & Best Practices",
+    "seoDescription": "Why CSRF still matters in React apps Even with SPAs, state-changing requests (POST/PUT/DELETE) can be forged if your session cookie is sent automatically. Us..."
+  },
+  {
     "title": "ARIA (Accessible Rich Internet Applications): Making Complex Web Applications Accessible",
     "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/aria-accessible-rich-internet-applications-making-complex-web-applications-accessible-4k99",
     "publishedAt": "2025-08-24T08:45:53.000Z",
@@ -34,63 +53,6 @@
     ],
     "seoTitle": "Unraveling the Intrigue of Night Matka Night and the Strategic Edge of Milan Record Satta",
     "seoDescription": "The world of Satta Matka—mystique-driven and numeric at its core—takes on a distinct vibrance in its nocturnal shifts. Whether you’re a seasoned player or a ..."
-  },
-  {
-    "title": "Buy Verified CashApp Accounts",
-    "url": "https://dev.to/gy_iht_847a07ca9de584a5ed/buy-verified-cashapp-accounts-4nk7",
-    "publishedAt": "2025-08-24T07:56:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "\"Buy Verified CashApp Accounts smmserviceusainfo@gmail.com WhatsApp: +18573556333 Telegram: @SmmServicesUSA https://smmservicesusa.com/product/buy-verified-cashapp-accounts/",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/...",
-    "video": null,
-    "author": "Gy Iht",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "Buy Verified CashApp Accounts",
-    "seoDescription": "\"Buy Verified CashApp Accounts smmserviceusainfo@gmail.com WhatsApp: +18573556333 Telegram: @SmmServicesUSA https://smmservicesusa.com/product/buy-verified-c..."
-  },
-  {
-    "title": "I LOVE TYPESCRIPT!!",
-    "url": "https://dev.to/devvobiero/i-love-typescript-1a1e",
-    "publishedAt": "2025-08-24T07:50:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4xqi8veetf2q9hpoy5m9.png",
-    "video": null,
-    "author": "Paul Obiero",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "typescript"
-    ],
-    "seoTitle": "I LOVE TYPESCRIPT!!",
-    "seoDescription": ""
-  },
-  {
-    "title": "Apple iphone 16 Series Price in Usa & Review",
-    "url": "https://dev.to/social_media_555b90c0003e/apple-iphone-16-series-price-in-usa-review-1928",
-    "publishedAt": "2025-08-24T07:45:16.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Apple iPhone 16 has three variants (128/256/512GB/8GB). iPhone 16 has an 3561mAh battery and super-fast charging. This device runs with iOS 18 and is powered by the Apple A18 (3 nm) chipset. iPhone 16 launched with the model numbers A3287, A3081, A3286, A3288, iPhone17,3. Firstly, Its dimensional measure is 147.6 x 71.6 x 7.8 mm, and its weight is 170...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk3a6mrdgya7s6vv6agh3.webp",
-    "video": null,
-    "author": "Social Media",
-    "tags": [
-      "webdev",
-      "smartphone",
-      "iphone",
-      "16series"
-    ],
-    "seoTitle": "Apple iphone 16 Series Price in Usa & Review",
-    "seoDescription": "The Apple iPhone 16 has three variants (128/256/512GB/8GB). iPhone 16 has an 3561mAh battery and super-fast charging. This device runs with iOS 18 and is pow..."
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -602,5 +564,33 @@
     "tags": [],
     "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
     "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
+  },
+  {
+    "title": "Bluesky blocks Mississippi under new age verification law",
+    "url": "https://www.theverge.com/internet-censorship/764697/bluesky-blocks-mississippi-age-verification-law",
+    "publishedAt": "2025-08-22T21:09:14.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. The decision, outlined in a blog post, will stand until courts decide the fate of the law. “Mississippi’s approach would fundamentally change how users access Bluesky,” says the post, in ways that rules...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK133_BLUESKY__A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Adi Robertson",
+    "tags": [],
+    "seoTitle": "Bluesky blocks Mississippi under new age verification law",
+    "seoDescription": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. Th..."
+  },
+  {
+    "title": "Meta is going to stuff Midjourney AI images into your feed",
+    "url": "https://www.theverge.com/news/764715/meta-ai-midjourney-license-partnership",
+    "publishedAt": "2025-08-22T21:07:04.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang, announced on Friday. The partnership involves a “technical collaboration between our research teams,” Wang said, suggesting the deal involves more than simply using Midjourney’s existing product acr...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK043_VRG_Illo_N_Barclay_6_Meta.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Meta is going to stuff Midjourney AI images into your feed",
+    "seoDescription": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang..."
   }
 ]
