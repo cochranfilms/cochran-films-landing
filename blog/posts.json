@@ -1,31 +1,31 @@
 [
   {
-    "title": "3-Step Process to Spin Up a React App in Minutes with Vite 🚀",
-    "url": "https://dev.to/jocke_sjlin_4ca0d80beae0/3-step-process-to-spin-up-a-react-app-in-minutes-with-vite-1l26",
-    "publishedAt": "2025-08-24T05:11:37.000Z",
+    "title": "Debugging AI Isn’t About More GPUs — It’s About Semantic Firewalls",
+    "url": "https://dev.to/onestardao/debugging-ai-isnt-about-more-gpus-its-about-semantic-firewalls-38f7",
+    "publishedAt": "2025-08-24T06:19:08.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "When a build tool is named after the French word for \"fast\" (not the hunger-related kind), you can assume it's designed for one thing and one thing only: deploying projects as quickly and efficiently as possible. This is exactly what Vite is about, and it can be used not just with React but with other frameworks and tools like Vue, Svelte and even plain o...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgep5r4dbrfaivkp9o4v8.png",
+    "summary": "Debugging AI Isn’t About More GPUs — It’s About Semantic Firewalls Most people assume scaling GPUs or adding more data will solve their AI problems. In practice, the same failure patterns repeat: RAG pipelines collapsing on bad chunking embeddings drifting into useless space OCR pipelines hallucinating structure that isn’t there fine-tunes poisoned becaus...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyo0zo0hq082u2rxrj2t5.png",
     "video": null,
-    "author": "Jocke Sjölin",
+    "author": "PSBigBig",
     "tags": [
       "webdev",
-      "beginners",
-      "react",
-      "vite"
+      "programming",
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "3-Step Process to Spin Up a React App in Minutes with Vite 🚀",
-    "seoDescription": "When a build tool is named after the French word for \"fast\" (not the hunger-related kind), you can assume it's designed for one thing and one thing only: dep..."
+    "seoTitle": "Debugging AI Isn’t About More GPUs — It’s About Semantic Firewalls",
+    "seoDescription": "Debugging AI Isn’t About More GPUs — It’s About Semantic Firewalls Most people assume scaling GPUs or adding more data will solve their AI problems. In pract..."
   },
   {
-    "title": "Running n8n Locally Without Regrets.",
-    "url": "https://dev.to/elliot_brenya/running-n8n-locally-without-regrets-3l55",
-    "publishedAt": "2025-08-24T04:02:12.000Z",
+    "title": "Run n8n locally",
+    "url": "https://dev.to/elliot_brenya/run-n8n-locally-m3g",
+    "publishedAt": "2025-08-24T05:37:37.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "I like tools that give me control. I like seeing the logs roll in my own terminal. I like knowing where the database file lives. n8n fits that mood. It connects your apps, moves your data, and runs on your own machine. When something breaks, you can still touch the files, read the config, and fix it. That is the point of a local install. There are two roa...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvba3pkq6l6fio14ubphs.png",
+    "summary": "Running n8n Locally Without Regrets. Elliot Brenya sarfo ・ Aug 24 #programming #webdev #javascript #tutorial",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F696524%2Fe15ee59e-0885-43ca-86f1-682a73b6c2b3.jpeg",
     "video": null,
     "author": "Elliot Brenya sarfo",
     "tags": [
@@ -34,84 +34,27 @@
       "javascript",
       "tutorial"
     ],
-    "seoTitle": "Running n8n Locally Without Regrets.",
-    "seoDescription": "I like tools that give me control. I like seeing the logs roll in my own terminal. I like knowing where the database file lives. n8n fits that mood. It conne..."
+    "seoTitle": "Run n8n locally",
+    "seoDescription": "Running n8n Locally Without Regrets. Elliot Brenya sarfo ・ Aug 24 #programming #webdev #javascript #tutorial"
   },
   {
-    "title": "Most people start their AI journey by asking the wrong question. Which tool should I use? And that’s exactly why they burn out. Because tools change. Systems don’t. The faster you learn it, the better it will be for your growth.",
-    "url": "https://dev.to/jaideepparashar/most-people-start-their-ai-journey-by-asking-the-wrong-question-which-tool-should-i-use-and-1m9d",
-    "publishedAt": "2025-08-24T03:40:16.000Z",
+    "title": "Amazon Bonus $750 FREE NOW",
+    "url": "https://dev.to/mukta_chad_2337555885783a/amazon-bonus-750-free-now-2gp",
+    "publishedAt": "2025-08-24T05:20:33.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Why Your AI Journey Needs a System, Not Just Tools Jaideep Parashar ・ Aug 24 #ai #webdev #beginners #discuss",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "summary": "Amazon Bonus $750",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp3ns9nykj1jt15j39av1.png",
     "video": null,
-    "author": "Jaideep Parashar",
+    "author": "Mukta chad",
     "tags": [
-      "ai",
       "webdev",
-      "beginners",
-      "discuss"
-    ],
-    "seoTitle": "Most people start their AI journey by asking the wrong question. Which tool should I use? And that’s exactly why they burn out. Because tools change. Systems don’t. The faster you learn it, the better it will be for your growth.",
-    "seoDescription": "Why Your AI Journey Needs a System, Not Just Tools Jaideep Parashar ・ Aug 24 #ai #webdev #beginners #discuss"
-  },
-  {
-    "title": "Building a TTS Tool for My Friend in One Hour",
-    "url": "https://dev.to/battlelolo/building-a-tts-tool-for-my-friend-in-one-hour-k6i",
-    "publishedAt": "2025-08-24T03:34:54.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Building a TTS Tool for My Friend in One Hour My friend asked if there was a service that could read academic papers aloud - not like NotebookLM which creates podcast-style summaries, but something that would actually read the original text. She wanted to listen to papers like audiobooks when her eyes got tired. I didn't know of such a service, but since ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk3ud1x6nymg5ji91yw2q.png",
-    "video": null,
-    "author": "Youla Lee",
-    "tags": [
-      "tts",
-      "azure",
       "ai",
-      "webdev"
+      "programming",
+      "javascript"
     ],
-    "seoTitle": "Building a TTS Tool for My Friend in One Hour",
-    "seoDescription": "Building a TTS Tool for My Friend in One Hour My friend asked if there was a service that could read academic papers aloud - not like NotebookLM which create..."
-  },
-  {
-    "title": "Why Your AI Journey Needs a System, Not Just Tools",
-    "url": "https://dev.to/jaideepparashar/why-your-ai-journey-needs-a-system-not-just-tools-3m85",
-    "publishedAt": "2025-08-24T03:32:50.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Most people start their AI journey by asking: “Which tool should I use?” And that’s exactly why they burn out. Because tools change. Systems don’t. Here’s why (and how) to shift your focus from tools → systems. Tools Are Temporary Today it’s ChatGPT, Claude, and Gemini. Tomorrow, new names will dominate. If your entire workflow depends on a single tool, y...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwsgebw0laie6sl7d30no.png",
-    "video": null,
-    "author": "Jaideep Parashar",
-    "tags": [
-      "ai",
-      "webdev",
-      "beginners",
-      "discuss"
-    ],
-    "seoTitle": "Why Your AI Journey Needs a System, Not Just Tools",
-    "seoDescription": "Most people start their AI journey by asking: “Which tool should I use?” And that’s exactly why they burn out. Because tools change. Systems don’t. Here’s wh..."
-  },
-  {
-    "title": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
-    "url": "https://dev.to/rohit_singh_ee84e64941db7/how-to-reduce-angular-bundle-size-for-faster-applications-5f4b",
-    "publishedAt": "2025-08-24T03:13:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A bloated Angular bundle can slow down your application, increase bounce rates, and hurt SEO rankings. Optimizing your bundle size not only improves performance but also delivers a smoother user experience. In this guide, we’ll cover practical ways to reduce Angular bundle size and speed up your applications. 🔑 Why Bundle Size Matters? Faster load times ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
-    "video": null,
-    "author": "ROHIT SINGH",
-    "tags": [
-      "angular",
-      "javascript",
-      "webdev",
-      "frontend"
-    ],
-    "seoTitle": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
-    "seoDescription": "A bloated Angular bundle can slow down your application, increase bounce rates, and hurt SEO rankings. Optimizing your bundle size not only improves performa..."
+    "seoTitle": "Amazon Bonus $750 FREE NOW",
+    "seoDescription": "Amazon Bonus $750"
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -609,5 +552,47 @@
     "tags": [],
     "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
     "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
+  },
+  {
+    "title": "Netflix wants its partners to follow these rules when using gen AI",
+    "url": "https://www.theverge.com/netflix/764433/netflix-gen-ai-production-guidelines",
+    "publishedAt": "2025-08-22T21:22:47.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-generated images in place of real archival photos. That documentary stood out as a shining example of gen AI’s ability to distort reality in situations where people are specifically looking to be told t...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK072_VRG_Illo_N_Barclay_7_netflix.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
+    "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
+  },
+  {
+    "title": "Bluesky blocks Mississippi under new age verification law",
+    "url": "https://www.theverge.com/internet-censorship/764697/bluesky-blocks-mississippi-age-verification-law",
+    "publishedAt": "2025-08-22T21:09:14.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. The decision, outlined in a blog post, will stand until courts decide the fate of the law. “Mississippi’s approach would fundamentally change how users access Bluesky,” says the post, in ways that rules...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK133_BLUESKY__A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Adi Robertson",
+    "tags": [],
+    "seoTitle": "Bluesky blocks Mississippi under new age verification law",
+    "seoDescription": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. Th..."
+  },
+  {
+    "title": "Meta is going to stuff Midjourney AI images into your feed",
+    "url": "https://www.theverge.com/news/764715/meta-ai-midjourney-license-partnership",
+    "publishedAt": "2025-08-22T21:07:04.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang, announced on Friday. The partnership involves a “technical collaboration between our research teams,” Wang said, suggesting the deal involves more than simply using Midjourney’s existing product acr...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK043_VRG_Illo_N_Barclay_6_Meta.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Meta is going to stuff Midjourney AI images into your feed",
+    "seoDescription": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang..."
   }
 ]
