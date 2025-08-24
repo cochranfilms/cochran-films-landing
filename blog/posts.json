@@ -1,38 +1,417 @@
 [
   {
-    "title": "Accessible Forms and Inputs: Designing Forms That Everyone Can Use",
-    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/accessible-forms-and-inputs-designing-forms-that-everyone-can-use-1pd2",
-    "publishedAt": "2025-08-23T07:20:30.000Z",
+    "title": "Vue-my-dropdown library",
+    "url": "https://dev.to/davidcmdev/vue-my-dropdown-library-48k1",
+    "publishedAt": "2025-08-23T23:38:13.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "We’ve all been there. You’re filling out an online form—maybe signing up for a newsletter, booking a flight, or applying for a job—and suddenly, everything goes wrong. The placeholder disappears as soon as you start typing. The error message simply says “Invalid input” with no clue about what you did wrong. Or worse, the form simply won’t let you move for...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0vqzxm3uvuxxieu0z6sy.jpg",
+    "summary": "Vue My Dropdown Component Easily handle dropdown menus with this Vue 3 component. Vue.js >= 3.3.x 📖 Official documentation If you find this component useful, consider supporting its development: Become a sponsor on GitHub Your support helps me maintain and improve this open-source project. Updated GitHub username. Added sponsor badge to README.md. Added ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2FSponsor-%25F0%259F%2592%2596-pink",
     "video": null,
-    "author": "Okoye Ndidiamaka",
+    "author": "David Casado Martínez",
     "tags": [
-      "webdev",
-      "inclusivedesign",
-      "a11y",
-      "uxdesign"
-    ],
-    "seoTitle": "Accessible Forms and Inputs: Designing Forms That Everyone Can Use",
-    "seoDescription": "We’ve all been there. You’re filling out an online form—maybe signing up for a newsletter, booking a flight, or applying for a job—and suddenly, everything g..."
-  },
-  {
-    "title": "Top Strategies for Mastering Mobile App Development",
-    "url": "https://dev.to/kodmatrix/top-strategies-for-mastering-mobile-app-development-1058",
-    "publishedAt": "2025-08-23T06:20:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Strategy: Great apps are painkillers, not vitamins. Validate the problem before you write a single line of code. Must be helpful for Mobile App Development. Problem interviews: Talk to 10–20 target users. Ask about their current workflow, the “last time” they faced the problem, and what they did instead. Avoid pitching; instead, listen for workarounds...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhmd38cccb3jw6p3imgy5.png",
-    "video": null,
-    "author": "KodMatrix",
-    "tags": [
+      "typescript",
+      "vue",
+      "ui",
       "webdev"
     ],
-    "seoTitle": "Top Strategies for Mastering Mobile App Development",
-    "seoDescription": "The Strategy: Great apps are painkillers, not vitamins. Validate the problem before you write a single line of code. Must be helpful for Mobile App Developme..."
+    "seoTitle": "Vue-my-dropdown library",
+    "seoDescription": "Vue My Dropdown Component Easily handle dropdown menus with this Vue 3 component. Vue.js >= 3.3.x 📖 Official documentation If you find this component useful..."
+  },
+  {
+    "title": "Unit Tests: What are they and what are they for?",
+    "url": "https://dev.to/arthur_gif/unit-tests-what-are-they-and-what-are-they-for-i5e",
+    "publishedAt": "2025-08-23T22:58:09.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What are Unit Tests? Unit tests are small programs designed to verify that each isolated part of your code (usually methods or functions) is working correctly. The idea is to break the system down into units and ensure that each unit does exactly what it's supposed to. Reliability – ensures your code works as expected. Bug prevention – if something breaks...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fugqi1j9cfy4aadogepgi.png",
+    "video": null,
+    "author": "Arthur Sales",
+    "tags": [
+      "programming",
+      "webdev",
+      "softwaredevelopment",
+      "testing"
+    ],
+    "seoTitle": "Unit Tests: What are they and what are they for?",
+    "seoDescription": "What are Unit Tests? Unit tests are small programs designed to verify that each isolated part of your code (usually methods or functions) is working correctl..."
+  },
+  {
+    "title": "7 Days to a Better You: Simple Steps to Build Confidence and Good Habits",
+    "url": "https://dev.to/abdelali_oualla_1/7-days-to-a-better-you-simple-steps-to-build-confidence-and-good-habits-170d",
+    "publishedAt": "2025-08-23T22:17:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "_Are you ready to transform your life in just 7 days? “7 Days to a Better You: Simple Steps to Build Confidence and Good Habits” by Abdelali Oualla is your practical, step-by-step guide to building confidence, improving your mindset, and creating lasting positive habits—without overwhelm or complicated plans. This book gives you one focused action per day...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flk35wrk1pmvdpmpl3ptb.jpg",
+    "video": null,
+    "author": "Abdelali Oualla",
+    "tags": [
+      "books",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "7 Days to a Better You: Simple Steps to Build Confidence and Good Habits",
+    "seoDescription": "_Are you ready to transform your life in just 7 days? “7 Days to a Better You: Simple Steps to Build Confidence and Good Habits” by Abdelali Oualla is your p..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/leee_rodgers1/-if4",
+    "publishedAt": "2025-08-23T21:53:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "video": null,
+    "author": "Lee Rodgers1",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource"
+  },
+  {
+    "title": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
+    "url": "https://dev.to/md_abdulalim_dcdcb1c8800/unlock-your-true-potential-with-resist-take-control-build-strength-and-transform-your-life-21g9",
+    "publishedAt": "2025-08-23T21:49:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "https://jvz1.com/c/3398919/421391/",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3w7it7384dyvg59ldawr.jpg",
+    "video": null,
+    "author": "Md Abdul Alim",
+    "tags": [
+      "learngoogleaistudio",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
+    "seoDescription": "https://jvz1.com/c/3398919/421391/"
+  },
+  {
+    "title": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
+    "url": "https://dev.to/md_abdulalim_dcdcb1c8800/unlock-your-true-potential-with-resist-take-control-build-strength-and-transform-your-life-3578",
+    "publishedAt": "2025-08-23T21:44:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuf5236luudxvdam8w8z3.jpg",
+    "video": null,
+    "author": "Md Abdul Alim",
+    "tags": [
+      "webdev",
+      "ai",
+      "javascript",
+      "beginners"
+    ],
+    "seoTitle": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
+    "seoDescription": ""
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/anthonymax/-471o",
+    "publishedAt": "2025-08-23T21:26:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "video": null,
+    "author": "Anthony Max",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource"
+  },
+  {
+    "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
+    "url": "https://9to5mac.com/2025/08/23/indie-app-spotlight-grano-food-barcode-scanner-for-iphone/",
+    "publishedAt": "2025-08-23T19:30:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would like your app featured, get in contact. Most people want to eat healthier, but knowing where to start can always be a challenge. Grano aims to bridge that gap, by allowing you to easily scan barcodes of ...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Grano-Indie-App-Spotlight.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
+    "seoDescription": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would lik..."
+  },
+  {
+    "title": "iOS 26 Adds 25W Qi2 Wireless Charging Support to iPhone 16 Models",
+    "url": "https://www.macrumors.com/2025/08/23/ios-26-adds-qi2-25w-support-to-iphone-16-series/",
+    "publishedAt": "2025-08-23T18:31:15.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "While it has yet to be officially announced by Apple, the upcoming iOS 26 update adds Qi 2.2 support to all iPhone 16 models, except for the iPhone 16e. iPhone 16, iPhone 16 Plus, iPhone 16 Pro, and iPhone 16 Pro Max models running iOS 26 can be wirelessly charged with any Qi 2.2 charger at up to 25W speeds. Previously, those devices could only achieve 25...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Belkin-25W-Charging-Stand-1.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "Featured",
+      "iOS 26",
+      "Belkin"
+    ],
+    "seoTitle": "iOS 26 Adds 25W Qi2 Wireless Charging Support to iPhone 16 Models",
+    "seoDescription": "While it has yet to be officially announced by Apple, the upcoming iOS 26 update adds Qi 2.2 support to all iPhone 16 models, except for the iPhone 16e. iPho..."
+  },
+  {
+    "title": "Apple might release a cheaper MacBook soon, but you shouldn’t wait for it",
+    "url": "https://9to5mac.com/2025/08/23/heres-why-you-shouldnt-wait-for-the-cheaper-a18-pro-macbook/",
+    "publishedAt": "2025-08-23T17:58:54.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Last month, iPhone 16 Pro Max. While a cheaper MacBook is certainly a welcome add, the question truly stands: will Apple do it properly, or will it serve as another decoy model? more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/macbook-air-m4.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple might release a cheaper MacBook soon, but you shouldn’t wait for it",
+    "seoDescription": "Last month, iPhone 16 Pro Max. While a cheaper MacBook is certainly a welcome add, the question truly stands: will Apple do it properly, or will it serve as ..."
+  },
+  {
+    "title": "Bose’s compact TV Speaker is more than $100 off right now",
+    "url": "https://www.theverge.com/tech/764496/bose-tv-speaker-soundbar-8bitdo-ultimate-2-bluetooth-controller-deal-sale",
+    "publishedAt": "2025-08-23T16:41:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Bose’s entry-level soundbar features a compact design, making it a great fit for small bedrooms. | Image: Bose If you’re looking to upgrade your movie night, a soundbar is an easy way to beef up the audio. While there are some high-priced options out there, you don’t have to spend a lot to actually hear a movie’s dialog. Right now, the Bose TV Speaker is ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Bose-TV-Speaker.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandon Russell",
+    "tags": [],
+    "seoTitle": "Bose’s compact TV Speaker is more than $100 off right now",
+    "seoDescription": "Bose’s entry-level soundbar features a compact design, making it a great fit for small bedrooms. | Image: Bose If you’re looking to upgrade your movie night,..."
+  },
+  {
+    "title": "OPPO Responds to Apple's Trade Secrets Lawsuit",
+    "url": "https://www.macrumors.com/2025/08/23/oppo-responds-to-apple-lawsuit/",
+    "publishedAt": "2025-08-23T15:26:26.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple on Thursday filed a lawsuit against its former employee Chen Shi, as well as the companies OPPO and InnoPeak Technology, over alleged trade secret misappropriation. Apple alleges that Shi \"conspired to steal Apple's trade secrets relating to Apple Watch and to disclose them to his new employers, OPPO and InnoPeak.\" OPPO is a Chinese company that sel...",
+    "image": "https://images.macrumors.com/article-new/2024/09/Apple-Watch-Series-10-Jet-Black.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "Apple Lawsuits",
+      "Oppo"
+    ],
+    "seoTitle": "OPPO Responds to Apple's Trade Secrets Lawsuit",
+    "seoDescription": "Apple on Thursday filed a lawsuit against its former employee Chen Shi, as well as the companies OPPO and InnoPeak Technology, over alleged trade secret misa..."
+  },
+  {
+    "title": "Apple could rejuvenate the next iPad Air model with one new feature",
+    "url": "https://9to5mac.com/2025/08/23/apple-m4-ipad-air-feature-request-face-id/",
+    "publishedAt": "2025-08-23T15:22:51.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Thehasn’t been a particularly interesting product for a number of years. Apple redesigned it in 2020 with the fourth generation model, and since then – it’s just been spec bumps and small feature upgrades. However, I think the next refresh could be a great opportunity to introduce a large feature upgrade: Face ID. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/Apple-iPad-Air-hero-250304.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple could rejuvenate the next iPad Air model with one new feature",
+    "seoDescription": "Thehasn’t been a particularly interesting product for a number of years. Apple redesigned it in 2020 with the fourth generation model, and since then – it’s ..."
+  },
+  {
+    "title": "When will F1 movie be on Apple TV? Here’s the expected streaming release date",
+    "url": "https://9to5mac.com/2025/08/23/f1-movie-when-stream-apple-tv/",
+    "publishedAt": "2025-08-23T15:02:14.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The F1: The Movie has made a big splash at the box office at movie theaters around the world, and is now available to buy or rent at stores including , Apple TV, and more. The film is being distributed in partnership with Warner Bros. But as a fully financed Apple Original production, it will end up streaming on Apple TV+. Here’s the expected streaming re...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/apple-tv-f1-movie.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "When will F1 movie be on Apple TV? Here’s the expected streaming release date",
+    "seoDescription": "The F1: The Movie has made a big splash at the box office at movie theaters around the world, and is now available to buy or rent at stores including , Apple..."
+  },
+  {
+    "title": "Amazon Discounts AirPods 4 to $99 and AirPods Pro 2 to $169",
+    "url": "https://www.macrumors.com/2025/08/23/amazon-discounts-airpods-4/",
+    "publishedAt": "2025-08-23T15:00:29.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running. $99.00 (matched at Best Buy), down from $129.00, which is just ...",
+    "image": "https://images.macrumors.com/article-new/2023/05/Airpods-Pro-2-Discount-Feature-Orange.jpg",
+    "video": null,
+    "author": "Mitchel Broussard",
+    "tags": [
+      "Deals",
+      "Featured"
+    ],
+    "seoTitle": "Amazon Discounts AirPods 4 to $99 and AirPods Pro 2 to $169",
+    "seoDescription": "Amazon this weekend has a pair of solid discounts on the AirPods 4 and AirPods Pro 2, providing up to $80 off these headphones. Note: MacRumors is an affilia..."
+  },
+  {
+    "title": "What&#8217;s on your desk, Dominic Preston?",
+    "url": "https://www.theverge.com/tech/762930/home-office-logitech-standing-desk",
+    "publishedAt": "2025-08-23T15:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Not all of The Verge’s staff live in the US. For example, news editor Dominic Preston is based in London and is, as he says, “responsible for keeping our news coverage ticking over in UK mornings before the US team comes online.” He also curates our new Verge Daily newsletter and covers Android phones, especially all the models that don’t launch in the US...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/whats-on-your-desk-dominic-preston-16.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://volume.vox-cdn.com/embed/a0a686f5a?player_type=youtube&#038;loop=1&#038;placement=article&#038;tracking=article:rss",
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "What&#8217;s on your desk, Dominic Preston?",
+    "seoDescription": "Not all of The Verge’s staff live in the US. For example, news editor Dominic Preston is based in London and is, as he says, “responsible for keeping our new..."
+  },
+  {
+    "title": "Sigma 12mm f/1.4 DC Contemporary Review: An Absolute Gem",
+    "url": "https://petapixel.com/2025/08/23/sigma-12mm-f-1-4-dc-contemporary-review-an-absolute-gem/",
+    "publishedAt": "2025-08-23T14:01:08.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The industry desperately needs more lens support for APS-C cameras and it often feels like a neglected market. Full frame is clearly the favored child when it comes to the camera game, but I happen to love smaller sensor cameras, which give a great mixture of compactness and quality. Sigma is on a roll, making sure to give users excellent and affordable o...",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Sigma-12mm-f1.4-DC-Contemporary-Review-A-Gem-in-Every-Sense.jpg",
+    "video": null,
+    "author": "Chris Niccolls",
+    "tags": [
+      "Equipment",
+      "Reviews",
+      "apsccamera",
+      "apsclens",
+      "architecturalphotography",
+      "canonrfmount",
+      "fujifilmxmount",
+      "landscapephotography"
+    ],
+    "seoTitle": "Sigma 12mm f/1.4 DC Contemporary Review: An Absolute Gem",
+    "seoDescription": "The industry desperately needs more lens support for APS-C cameras and it often feels like a neglected market. Full frame is clearly the favored child when i..."
+  },
+  {
+    "title": "Apple @ Work: Macs, AI, and the blind spot in enterprise security",
+    "url": "https://9to5mac.com/2025/08/23/macs-ai-and-the-blind-spot-in-enterprise-security/",
+    "publishedAt": "2025-08-23T14:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/1Password.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple @ Work: Macs, AI, and the blind spot in enterprise security",
+    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-g..."
+  },
+  {
+    "title": "The Fairphone 6 no longer feels like a compromise (except in the US)",
+    "url": "https://www.theverge.com/phones/762755/fairphone-6-review-no-longer-compromise",
+    "publishedAt": "2025-08-23T13:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Fairphone 6 arrives almost two years after the 5, a testament to the company's approach to the upgrade cycle. If anything, I suspect the company would be frustrated if Fairphone 5 owners were considering a new model already - these are phones to keep, to repair, and to hold on to until the bitter end. The newest Fairphone continues the company's commi...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/fairphone-6-15.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "The Fairphone 6 no longer feels like a compromise (except in the US)",
+    "seoDescription": "The Fairphone 6 arrives almost two years after the 5, a testament to the company's approach to the upgrade cycle. If anything, I suspect the company would be..."
+  },
+  {
+    "title": "You Should Spend Time Understanding Your Camera’s Shutter Speed",
+    "url": "https://petapixel.com/2025/08/23/you-should-spend-time-understanding-your-cameras-shutter-speed/",
+    "publishedAt": "2025-08-23T13:01:36.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Choosing the correct shutter speed is imperative. Here’s how it works and why you should take it into consideration when shooting any photograph. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/07/tern-with-a-fish-1600x840.jpg",
+    "video": null,
+    "author": "Ivor Rackham",
+    "tags": [
+      "Educational",
+      "Tutorials",
+      "camerashutter",
+      "cameraterms",
+      "educational",
+      "exposure",
+      "science",
+      "shutters"
+    ],
+    "seoTitle": "You Should Spend Time Understanding Your Camera’s Shutter Speed",
+    "seoDescription": "Choosing the correct shutter speed is imperative. Here’s how it works and why you should take it into consideration when shooting any photograph. [Read More]"
+  },
+  {
+    "title": "Ninja Gaiden: Ragebound is a perfect reimagining of the classic series",
+    "url": "https://www.theverge.com/games-review/716421/ninja-gaiden-ragebound-review-nintendo-switch-playstation-xbox-pc",
+    "publishedAt": "2025-08-23T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Ninja Gaiden is having a renaissance. The last mainline entry was originally released more than a decade ago, but by the end of 2025, there will be three new Ninja Gaiden titles. Two are 3D: Ninja Gaiden 2 Black, a modern-day remaster of Ninja Gaiden II released earlier this year, and Ninja Gaiden 4, co-developed by PlatinumGames and set to release in Oct...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/ss_8aff638775921a8dc1dec6916ea29cb2bc6f9f4a.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Ninja Gaiden: Ragebound is a perfect reimagining of the classic series",
+    "seoDescription": "Ninja Gaiden is having a renaissance. The last mainline entry was originally released more than a decade ago, but by the end of 2025, there will be three new..."
+  },
+  {
+    "title": "Top Stories: All-New Apple Operating System, iPhone Leaks, and More",
+    "url": "https://www.macrumors.com/2025/08/23/top-stories-all-new-apple-operating-system/",
+    "publishedAt": "2025-08-23T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's annual September event with new iPhone and Apple Watch models and potentially a few other announcements is coming up quickly, so we should be hearing something soon about an official date. We're continuing to hear rumors about those iPhone and Apple Watch models, plus a few other products that are a bit further down the line. Apple is also putting...",
+    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-23.jpg",
+    "video": null,
+    "author": "MacRumors Staff",
+    "tags": [
+      "Featured",
+      "Top Stories"
+    ],
+    "seoTitle": "Top Stories: All-New Apple Operating System, iPhone Leaks, and More",
+    "seoDescription": "Apple's annual September event with new iPhone and Apple Watch models and potentially a few other announcements is coming up quickly, so we should be hearing..."
+  },
+  {
+    "title": "Does iPadOS 26 make the iPad a computer? [Video]",
+    "url": "https://9to5mac.com/2025/08/23/does-ipados-26-make-the-ipad-a-computer-video/",
+    "publishedAt": "2025-08-23T13:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The moment Apple announced iPadOS 26, it felt like us iPad users have finally been heard. For years the iPad has always been “almost there”. It had the powerful hardware, but the software made the experience too limited for most people. But now with iPadOS 26, that gap is almost gone. The new windowing system, improved multitasking, and better file manage...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/ipad-vs-mac.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Fernando Silva",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Does iPadOS 26 make the iPad a computer? [Video]",
+    "seoDescription": "The moment Apple announced iPadOS 26, it felt like us iPad users have finally been heard. For years the iPad has always been “almost there”. It had the power..."
+  },
+  {
+    "title": "Will Trump help 4Chan escape the UK’s internet police?",
+    "url": "https://www.theverge.com/politics/764653/4chan-uk-online-safety-act-trump",
+    "publishedAt": "2025-08-23T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: 4chan, Gab, and Kiwi Farms, each of which risked multimillion-dollar fines. Late last week, Preston Byrne, a First Amendment lawyer representing them, struck back. Byrne announced he would sue Ofcom i...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257906_4chan_UK_online_safety_law_CVirginia_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tina Nguyen",
+    "tags": [],
+    "seoTitle": "Will Trump help 4Chan escape the UK’s internet police?",
+    "seoDescription": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: ..."
   },
   {
     "title": "When a Kiss Changed Cinema: 11 Iconic Moments",
@@ -221,7 +600,7 @@
     "seoDescription": "Apple is suing a former employee on the Apple Watch team who left to join Oppo, alleging that he “conspired to steal Apple’s trade secrets relating to Apple ..."
   },
   {
-    "title": "What’s Next for Apple’s iPad Lineup",
+    "title": "What's Next for Apple's iPad Lineup",
     "url": "https://www.macrumors.com/2025/08/22/apple-ipad-lineup-whats-next/",
     "publishedAt": "2025-08-22T22:11:21.000Z",
     "source": "macrumors.com",
@@ -233,374 +612,7 @@
     "tags": [
       "Featured"
     ],
-    "seoTitle": "What’s Next for Apple’s iPad Lineup",
+    "seoTitle": "What's Next for Apple's iPad Lineup",
     "seoDescription": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're ..."
-  },
-  {
-    "title": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "url": "https://www.theverge.com/news/764480/intel-donald-trump-lip-bu-tan-deal",
-    "publishedAt": "2025-08-22T21:45:38.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billion into Intel, but most of the funds come from money that the government was supposed to pay the embattled chipmaker anyway. In an announcement on Friday, Intel said the federal government will fund it...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2230632606.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
-    "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
-  },
-  {
-    "title": "Netflix wants its partners to follow these rules when using gen AI",
-    "url": "https://www.theverge.com/netflix/764433/netflix-gen-ai-production-guidelines",
-    "publishedAt": "2025-08-22T21:22:47.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-generated images in place of real archival photos. That documentary stood out as a shining example of gen AI’s ability to distort reality in situations where people are specifically looking to be told t...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK072_VRG_Illo_N_Barclay_7_netflix.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
-    "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
-  },
-  {
-    "title": "Bluesky blocks Mississippi under new age verification law",
-    "url": "https://www.theverge.com/internet-censorship/764697/bluesky-blocks-mississippi-age-verification-law",
-    "publishedAt": "2025-08-22T21:09:14.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. The decision, outlined in a blog post, will stand until courts decide the fate of the law. “Mississippi’s approach would fundamentally change how users access Bluesky,” says the post, in ways that rules...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK133_BLUESKY__A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Adi Robertson",
-    "tags": [],
-    "seoTitle": "Bluesky blocks Mississippi under new age verification law",
-    "seoDescription": "Bluesky will block access from Mississippi IP addresses in response to a new state law requiring age verification and parental consent for underage users. Th..."
-  },
-  {
-    "title": "Meta is going to stuff Midjourney AI images into your feed",
-    "url": "https://www.theverge.com/news/764715/meta-ai-midjourney-license-partnership",
-    "publishedAt": "2025-08-22T21:07:04.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang, announced on Friday. The partnership involves a “technical collaboration between our research teams,” Wang said, suggesting the deal involves more than simply using Midjourney’s existing product acr...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK043_VRG_Illo_N_Barclay_6_Meta.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jay Peters",
-    "tags": [],
-    "seoTitle": "Meta is going to stuff Midjourney AI images into your feed",
-    "seoDescription": "Meta is partnering with Midjourney to “license their aesthetic technology” for use in its own models and products, Meta’s new chief AI officer, Alexandr Wang..."
-  },
-  {
-    "title": "How Camera Tech and Emotional Storytelling Overlap in Chris Hemsworth’s Series ‘Limitless’",
-    "url": "https://petapixel.com/2025/08/22/how-camera-tech-and-emotional-storytelling-overlap-in-chris-hemsworths-series-limitless/",
-    "publishedAt": "2025-08-22T20:57:28.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The new season of National Geographic's \"Limitless\" with Chris Hemsworth follows the star actor as he explores different ways that everyone can live better, healthier lives. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/limitless-hemsworth-lidgerwood-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Culture",
-      "Interviews",
-      "News",
-      "Spotlight",
-      "celebrity",
-      "chrishemsworth",
-      "cinematography",
-      "directorofphotography"
-    ],
-    "seoTitle": "How Camera Tech and Emotional Storytelling Overlap in Chris Hemsworth’s Series ‘Limitless’",
-    "seoDescription": "The new season of National Geographic's \"Limitless\" with Chris Hemsworth follows the star actor as he explores different ways that everyone can live better, ..."
-  },
-  {
-    "title": "The power shift inside OpenAI",
-    "url": "https://www.theverge.com/command-line-newsletter/764650/openai-chatgpt-fidji-simo-sam-altman-power-shift",
-    "publishedAt": "2025-08-22T20:30:05.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Fidji Simo is wrapping up her first week at OpenAI, where she is expected to oversee most of the company's roughly 3,000 employees. To investors and partners, OpenAI leaders have been describing the former Instacart CEO as the kind of steady hand the company needs. Her mandate is clear: turn a chaotic, unprofitable startup into a disciplined, publicly tra...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Fidji-Simo-CL-site-wide.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Alex Heath",
-    "tags": [],
-    "seoTitle": "The power shift inside OpenAI",
-    "seoDescription": "Fidji Simo is wrapping up her first week at OpenAI, where she is expected to oversee most of the company's roughly 3,000 employees. To investors and partners..."
-  },
-  {
-    "title": "LLM Siri: The Complete Guide to Apple's AI Assistant Overhaul Coming in 2026",
-    "url": "https://www.macrumors.com/guide/llm-siri/",
-    "publishedAt": "2025-08-22T20:23:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is developing a new version of Siri that's supposed to be better than the existing ‌Siri‌ in every way. It will be smarter and able to do more, functioning like ChatGPT or Claude instead of a barely competent 2012-era smartphone assistant. Upgrading ‌Siri‌ hasn't been without hiccups, and it's been delayed once. We've rounded up everything we know a...",
-    "image": "https://images.macrumors.com/article-new/2025/08/Finder-Siri-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "LLM Siri: The Complete Guide to Apple's AI Assistant Overhaul Coming in 2026",
-    "seoDescription": "Apple is developing a new version of Siri that's supposed to be better than the existing ‌Siri‌ in every way. It will be smarter and able to do more, functio..."
-  },
-  {
-    "title": "Capture the World Around You With These Insta360 Pocket-Sized 360-Degree Cameras",
-    "url": "https://nofilmschool.com/insta360-pocket-sized-360-degree-cameras",
-    "publishedAt": "2025-08-22T20:20:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Powered by powerful sensors and large touchscreens, these 360-degree cameras from Insta360 are capable of capturing high definition 360° and single-lens video with one portable action camera. Ideal for travel vloggers and other hybrid content creators, these 360-degree videos are the way of the future. And in our latest \"Deals of the Week\" roundup, we hav...",
-    "image": "https://nofilmschool.com/media-library/capture-the-world-around-you-with-these-insta360-pocket-sized-360-degree-cameras.png?id=61506532&width=980",
-    "video": null,
-    "author": "NFS Staff",
-    "tags": [
-      "Filmmaker deals",
-      "Filmmaking deals of the week",
-      "Deals",
-      "Insta360",
-      "360-degree camera",
-      "Filmmaking deals of the week"
-    ],
-    "seoTitle": "Capture the World Around You With These Insta360 Pocket-Sized 360-Degree Cameras",
-    "seoDescription": "Powered by powerful sensors and large touchscreens, these 360-degree cameras from Insta360 are capable of capturing high definition 360° and single-lens vide..."
-  },
-  {
-    "title": "Trump confirms US government’s 10% stake in Intel, stock climbs [Update: Intel statement]",
-    "url": "https://9to5mac.com/2025/08/22/trump-confirms-us-governments-10-stake-in-intel-stock-climbs/",
-    "publishedAt": "2025-08-22T20:19:11.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "After hinting at it earlier this week, President Trump confirmed today during a World Cup press briefing, that the U.S. government will take a 10% stake in Intel, capping a pretty eventful two-week stretch. Here’s how that happened. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/08/15000-Intel-job-cuts.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Trump confirms US government’s 10% stake in Intel, stock climbs [Update: Intel statement]",
-    "seoDescription": "After hinting at it earlier this week, President Trump confirmed today during a World Cup press briefing, that the U.S. government will take a 10% stake in I..."
-  },
-  {
-    "title": "Why Week Two Is a Movie's True \"Opening Weekend\"",
-    "url": "https://nofilmschool.com/week-two-box-office",
-    "publishedAt": "2025-08-22T20:05:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Interesting reporting out of The Hollywood Reporter this week, where they're proclaiming a film's second weekend is now basically its opening weekend. Looking at The Fantastic Four: First Steps as its example, THR points to a continuing trend in big-budget movies. They might open strong, but can they sustain their momentum through a second week? Marvel's ...",
-    "image": "https://nofilmschool.com/media-library/the-fantastic-four-first-steps-post-credit-scenes-explained.png?id=61325880&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "Box office numbers",
-      "Box office"
-    ],
-    "seoTitle": "Why Week Two Is a Movie's True \"Opening Weekend\"",
-    "seoDescription": "Interesting reporting out of The Hollywood Reporter this week, where they're proclaiming a film's second weekend is now basically its opening weekend. Lookin..."
-  },
-  {
-    "title": "The 50 best Labor Day deals we’ve found so far",
-    "url": "https://www.theverge.com/tech/756227/best-labor-day-sales-deals-2025",
-    "publishedAt": "2025-08-22T20:03:48.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The Sonos Roam 2 is already $40 off ahead of Labor Day, dropping it to $139. Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment, at least there is always a great selection of deals to combat the post-summer blues. You’ll have to wait until September 1st to celebrate the actual ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Sonos-Roam-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The 50 best Labor Day deals we’ve found so far",
-    "seoDescription": "The Sonos Roam 2 is already $40 off ahead of Labor Day, dropping it to $139. Labor Day marks the unofficial end of summer, and while the prospect of cooler w..."
-  },
-  {
-    "title": "Tarantino and De Palma Wax About Film Violence",
-    "url": "https://nofilmschool.com/tarantino-and-de-palma-violence",
-    "publishedAt": "2025-08-22T19:55:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Quentin Tarantino and Brian De Palma are two auteur filmmakers who are not afraid to show a little violence on screen. Together, they're responsible for buckets of blood and mayhem, and for some of the best movies of all time. Any chance to see them sit down and talk about craft is a great one. That's why I love this clip I found about them waxing poetic ...",
-    "image": "https://nofilmschool.com/media-library/tarantino-and-de-palma-wax-about-film-violence.jpg?id=61505140&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Brian de palma",
-      "Violence",
-      "Violence in film",
-      "Quentin tarantino",
-      "Quentin tarantino"
-    ],
-    "seoTitle": "Tarantino and De Palma Wax About Film Violence",
-    "seoDescription": "Quentin Tarantino and Brian De Palma are two auteur filmmakers who are not afraid to show a little violence on screen. Together, they're responsible for buck..."
-  },
-  {
-    "title": "The 10 Best Terence Stamp Movies",
-    "url": "https://nofilmschool.com/best-terence-stamp-movies",
-    "publishedAt": "2025-08-22T19:35:36.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Terence Stamp died on August 17, 2025, at the age of 87, leaving behind one of cinema's most fascinating legacies. The British actor was \"the master of the brooding silence,\" according to The Guardian, and his career spanned six decades with nearly 100 roles. From his Oscar-nominated debut to his final performance, Stamp brought good looks and gravitas to...",
-    "image": "https://nofilmschool.com/media-library/the-10-best-terence-stamp-movies.webp?id=61506489&width=980",
-    "video": "https://www.youtube.com/embed/qF6Hlvi_CCo?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "The limey",
-      "The adventures of priscilla queen of the desert",
-      "Billy budd",
-      "Terence stamp"
-    ],
-    "seoTitle": "The 10 Best Terence Stamp Movies",
-    "seoDescription": "Terence Stamp died on August 17, 2025, at the age of 87, leaving behind one of cinema's most fascinating legacies. The British actor was \"the master of the b..."
-  },
-  {
-    "title": "Apple drags ex-Apple Watch engineer to court over Oppo trade secret leak",
-    "url": "https://9to5mac.com/2025/08/22/apple-drags-ex-apple-watch-engineer-to-court-over-oppo-trade-secret-leak/",
-    "publishedAt": "2025-08-22T19:15:14.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Every now and then, we hear about Apple going after ex-employees who allegedly try to take trade secrets with them when they get hired by the competition. That’s the case with Chen Shi, a former Sensor System Architect for the Apple Watch team. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/apple-watch-face.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple drags ex-Apple Watch engineer to court over Oppo trade secret leak",
-    "seoDescription": "Every now and then, we hear about Apple going after ex-employees who allegedly try to take trade secrets with them when they get hired by the competition. Th..."
-  },
-  {
-    "title": "Workers need better protections from the heat ",
-    "url": "https://www.theverge.com/news/764463/heat-stress-health-work-protections",
-    "publishedAt": "2025-08-22T19:03:12.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Expect record-breaking temperatures to change the workplace, the World Health Organization (WHO) and World Meteorological Organization (WMO) warned today in a new report. When workers don’t have adequate protections from heat stress, their health and productivity suffer. It’s a risk employers and lawmakers have to take more seriously if they want to keep ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK438_global_warming_climate_change_fire.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Justine Calma",
-    "tags": [],
-    "seoTitle": "Workers need better protections from the heat ",
-    "seoDescription": "Expect record-breaking temperatures to change the workplace, the World Health Organization (WHO) and World Meteorological Organization (WMO) warned today in ..."
-  },
-  {
-    "title": "Should You Develop Your Villain Before Any Other Character?",
-    "url": "https://nofilmschool.com/develop-villain-first",
-    "publishedAt": "2025-08-22T18:53:10.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Greg Porper is a writer who prides himself on creating stories that push boundaries. His recent indie feature, Don't Tell Larry, features Ed Begley Jr., Dot-Marie Jones, and more well-known comedians in a plot of corporate mishaps. The film's story centers on Susan (Patty Guggenheim) telling a white lie about not inviting her eccentric coworker Larry (Kie...",
-    "image": "https://nofilmschool.com/media-library/don-t-tell-larry.webp?id=61501376&width=980",
-    "video": "https://www.youtube.com/embed/-r31VczpYfM?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Character development",
-      "Villain",
-      "Screenwriting advice",
-      "Greg porper",
-      "Writing tips",
-      "Writing advice",
-      "Screenwriting"
-    ],
-    "seoTitle": "Should You Develop Your Villain Before Any Other Character?",
-    "seoDescription": "Greg Porper is a writer who prides himself on creating stories that push boundaries. His recent indie feature, Don't Tell Larry, features Ed Begley Jr., Dot-..."
-  },
-  {
-    "title": "Abxylute will actually sell Intel and Tencent’s gigantic glasses-free 3D handheld",
-    "url": "https://www.theverge.com/report/763957/abxylute-will-actually-sell-intel-and-tencents-gigantic-glasses-free-3d-handheld",
-    "publishedAt": "2025-08-22T18:24:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The Abxylute 3D One. In January, one of the wildest Intel prototypes I witnessed at CES was a giant handheld gaming PC with an 11-inch autostereoscopic (read: glasses-free) 3D screen, detachable controllers, an Intel Lunar Lake chip, and a dedicated toggle to switch between 2D and 3D modes. Co-developed by Intel and Tencent Games, it was called the Sunday...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/tencent-abxylute-sunday-dragon-3d-one-008.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "Abxylute will actually sell Intel and Tencent’s gigantic glasses-free 3D handheld",
-    "seoDescription": "The Abxylute 3D One. In January, one of the wildest Intel prototypes I witnessed at CES was a giant handheld gaming PC with an 11-inch autostereoscopic (read..."
-  },
-  {
-    "title": "Apple Sues Ex-Employee Who Allegedly Stole Apple Watch Secrets for Chinese Rival Oppo",
-    "url": "https://www.macrumors.com/2025/08/22/apple-watch-trade-secret-theft-oppo/",
-    "publishedAt": "2025-08-22T18:14:34.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today filed a lawsuit in Northern California against Chen Shi, a former employee who left Apple and took a job at Chinese smartphone maker Oppo. According to Apple, Shi stole trade secrets relating to Apple Watch development and provided the information to Oppo. Shi was a \"highly compensated Sensor System Architect\" at Apple from January 2020 to Jun...",
-    "image": "https://images.macrumors.com/article-new/2025/07/apple-watch-series-10-prime-day-2025.jpeg",
-    "video": "https://www.scribd.com/embeds/905036579/content?start_page=1&view_mode=scroll&access_key=key-pJUL42bG0bywAkkyYET9",
-    "author": "Juli Clover",
-    "tags": [
-      "Apple Lawsuits",
-      "Oppo"
-    ],
-    "seoTitle": "Apple Sues Ex-Employee Who Allegedly Stole Apple Watch Secrets for Chinese Rival Oppo",
-    "seoDescription": "Apple today filed a lawsuit in Northern California against Chen Shi, a former employee who left Apple and took a job at Chinese smartphone maker Oppo. Accord..."
-  },
-  {
-    "title": "Apple TV+: Vera Farmiga joins upcoming basketball-themed comedy co-produced by LeBron James",
-    "url": "https://9to5mac.com/2025/08/22/apple-tv-vera-farmiga-joins-upcoming-basketball-themed-comedy-co-produced-by-lebron-james/",
-    "publishedAt": "2025-08-22T18:12:13.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple Studios is developing an untitled movie based on Weekend Rebels, a 2023 German comedy-drama about a father and his autistic son in search of a favorite Premier League club. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-plus-tvos26-screensaver-06.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple TV+: Vera Farmiga joins upcoming basketball-themed comedy co-produced by LeBron James",
-    "seoDescription": "Apple Studios is developing an untitled movie based on Weekend Rebels, a 2023 German comedy-drama about a father and his autistic son in search of a favorite..."
-  },
-  {
-    "title": "HomeKit Weekly: This Aqara kit is the HomeKit starter pack I wish I had years ago",
-    "url": "https://9to5mac.com/2025/08/22/aqara-camera-protect-kit/",
-    "publishedAt": "2025-08-22T18:10:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "When people ask me where to start with HomeKit, I usually give them a list of products that work well together that are easy to set up: a motion sensor, a door sensor, and maybe a camera if you want one. Aqara has made that question a lot easier to answer with its new . It’s a true HomeKit starter kit in a box. You get a 2K camera that doubles as a Matter...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/Aqara-Camera-Protect-Kit-.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "HomeKit Weekly: This Aqara kit is the HomeKit starter pack I wish I had years ago",
-    "seoDescription": "When people ask me where to start with HomeKit, I usually give them a list of products that work well together that are easy to set up: a motion sensor, a do..."
-  },
-  {
-    "title": "Microsoft tests letting you resume Android apps on Windows 11",
-    "url": "https://www.theverge.com/news/764484/microsoft-tests-letting-you-resume-android-apps-on-windows-11",
-    "publishedAt": "2025-08-22T18:09:23.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Microsoft is testing a new Windows 11 feature that will let you resume using your Android apps right on your PC. The capability is gradually rolling out to Windows Insiders in the Dev and Beta Channels, and only supports the Spotify app for now. If you’re in the test, you can try out the feature by linking your Android phone to your PC, and then opening u...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK109_WINDOWS_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Microsoft tests letting you resume Android apps on Windows 11",
-    "seoDescription": "Microsoft is testing a new Windows 11 feature that will let you resume using your Android apps right on your PC. The capability is gradually rolling out to W..."
-  },
-  {
-    "title": "Haukland Teams With Wildlife Photographer Simon d’Entremont for Feature-Packed Jacket",
-    "url": "https://petapixel.com/2025/08/22/haukland-teams-with-wildlife-photographer-simon-dentremont-for-feature-packed-jacket/",
-    "publishedAt": "2025-08-22T18:01:46.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Acclaimed Canadian nature and wildlife photographer Simon d'Entremont teamed up with Haukland to make a custom \"Signature Edition\" jacket for outdoor photographers. It comes in an Earthy olive green tone. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/haukland-simon-dentremont-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "News",
-      "haukland",
-      "hauklandparkapro",
-      "jacket",
-      "nature",
-      "outdoors",
-      "simondentremont"
-    ],
-    "seoTitle": "Haukland Teams With Wildlife Photographer Simon d’Entremont for Feature-Packed Jacket",
-    "seoDescription": "Acclaimed Canadian nature and wildlife photographer Simon d'Entremont teamed up with Haukland to make a custom \"Signature Edition\" jacket for outdoor photogr..."
   }
 ]
