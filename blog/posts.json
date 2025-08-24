@@ -1,5 +1,24 @@
 [
   {
+    "title": "3-Step Process to Spin Up a React App in Minutes with Vite 🚀",
+    "url": "https://dev.to/jocke_sjlin_4ca0d80beae0/3-step-process-to-spin-up-a-react-app-in-minutes-with-vite-1l26",
+    "publishedAt": "2025-08-24T05:11:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When a build tool is named after the French word for \"fast\" (not the hunger-related kind), you can assume it's designed for one thing and one thing only: deploying projects as quickly and efficiently as possible. This is exactly what Vite is about, and it can be used not just with React but with other frameworks and tools like Vue, Svelte and even plain o...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgep5r4dbrfaivkp9o4v8.png",
+    "video": null,
+    "author": "Jocke Sjölin",
+    "tags": [
+      "webdev",
+      "beginners",
+      "react",
+      "vite"
+    ],
+    "seoTitle": "3-Step Process to Spin Up a React App in Minutes with Vite 🚀",
+    "seoDescription": "When a build tool is named after the French word for \"fast\" (not the hunger-related kind), you can assume it's designed for one thing and one thing only: dep..."
+  },
+  {
     "title": "Running n8n Locally Without Regrets.",
     "url": "https://dev.to/elliot_brenya/running-n8n-locally-without-regrets-3l55",
     "publishedAt": "2025-08-24T04:02:12.000Z",
@@ -93,44 +112,6 @@
     ],
     "seoTitle": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
     "seoDescription": "A bloated Angular bundle can slow down your application, increase bounce rates, and hurt SEO rankings. Optimizing your bundle size not only improves performa..."
-  },
-  {
-    "title": "I'm also looking forward to ship an NPM package ! You guyz got any idea ?",
-    "url": "https://dev.to/masterdevsabith/im-also-looking-forward-to-ship-an-npm-package-you-guyz-got-any-idea--2g33",
-    "publishedAt": "2025-08-24T02:46:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "LinkLens – React Link Detection & Rich Preview Component for URLs, Mentions & Hashtags Aromal ・ Aug 23 #npm #webdev #react #javascript",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3454489%2F3bf90fd2-f500-4e1a-8b5e-568c329a0afd.jpeg",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "npm",
-      "webdev",
-      "react",
-      "javascript"
-    ],
-    "seoTitle": "I'm also looking forward to ship an NPM package ! You guyz got any idea ?",
-    "seoDescription": "LinkLens – React Link Detection & Rich Preview Component for URLs, Mentions & Hashtags Aromal ・ Aug 23 #npm #webdev #react #javascript"
-  },
-  {
-    "title": "Mock Interview: Top 10 Benefits for Your Career Growth",
-    "url": "https://dev.to/william2025/mock-interview-top-10-benefits-for-your-career-growth-gaf",
-    "publishedAt": "2025-08-24T02:38:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A mock interview isn’t just a rehearsal — it’s a structured way to simulate the real interview environment, practice your responses, and receive feedback that helps you improve. Whether conducted with a mentor, a coach, or through AI-based platforms, mock interviews can significantly increase your confidence and success rate. Here are the Top 10 Benefits ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpzblj9pz39ls8y4uf1yp.png",
-    "video": null,
-    "author": "William2025",
-    "tags": [
-      "webdev",
-      "ai",
-      "tutorial",
-      "career"
-    ],
-    "seoTitle": "Mock Interview: Top 10 Benefits for Your Career Growth",
-    "seoDescription": "A mock interview isn’t just a rehearsal — it’s a structured way to simulate the real interview environment, practice your responses, and receive feedback tha..."
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -614,5 +595,19 @@
     ],
     "seoTitle": "What's Next for Apple's iPad Lineup",
     "seoDescription": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're ..."
+  },
+  {
+    "title": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
+    "url": "https://www.theverge.com/news/764480/intel-donald-trump-lip-bu-tan-deal",
+    "publishedAt": "2025-08-22T21:45:38.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billion into Intel, but most of the funds come from money that the government was supposed to pay the embattled chipmaker anyway. In an announcement on Friday, Intel said the federal government will fund it...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2230632606.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
+    "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
   }
 ]
