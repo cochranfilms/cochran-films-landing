@@ -1,5 +1,81 @@
 [
   {
+    "title": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
+    "url": "https://dev.to/rohit_singh_ee84e64941db7/how-to-reduce-angular-bundle-size-for-faster-applications-5f4b",
+    "publishedAt": "2025-08-24T03:13:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A bloated Angular bundle can slow down your application, increase bounce rates, and hurt SEO rankings. Optimizing your bundle size not only improves performance but also delivers a smoother user experience. In this guide, we’ll cover practical ways to reduce Angular bundle size and speed up your applications. 🔑 Why Bundle Size Matters? Faster load times ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
+    "video": null,
+    "author": "ROHIT SINGH",
+    "tags": [
+      "angular",
+      "javascript",
+      "webdev",
+      "frontend"
+    ],
+    "seoTitle": "🚀 How to Reduce Angular Bundle Size for Faster Applications",
+    "seoDescription": "A bloated Angular bundle can slow down your application, increase bounce rates, and hurt SEO rankings. Optimizing your bundle size not only improves performa..."
+  },
+  {
+    "title": "I'm also looking forward to ship an NPM package ! You guyz got any idea ?",
+    "url": "https://dev.to/masterdevsabith/im-also-looking-forward-to-ship-an-npm-package-you-guyz-got-any-idea--2g33",
+    "publishedAt": "2025-08-24T02:46:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "LinkLens – React Link Detection & Rich Preview Component for URLs, Mentions & Hashtags Aromal ・ Aug 23 #npm #webdev #react #javascript",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3454489%2F3bf90fd2-f500-4e1a-8b5e-568c329a0afd.jpeg",
+    "video": null,
+    "author": "Muhammed Sabith",
+    "tags": [
+      "npm",
+      "webdev",
+      "react",
+      "javascript"
+    ],
+    "seoTitle": "I'm also looking forward to ship an NPM package ! You guyz got any idea ?",
+    "seoDescription": "LinkLens – React Link Detection & Rich Preview Component for URLs, Mentions & Hashtags Aromal ・ Aug 23 #npm #webdev #react #javascript"
+  },
+  {
+    "title": "Mock Interview: Top 10 Benefits for Your Career Growth",
+    "url": "https://dev.to/william2025/mock-interview-top-10-benefits-for-your-career-growth-gaf",
+    "publishedAt": "2025-08-24T02:38:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A mock interview isn’t just a rehearsal — it’s a structured way to simulate the real interview environment, practice your responses, and receive feedback that helps you improve. Whether conducted with a mentor, a coach, or through AI-based platforms, mock interviews can significantly increase your confidence and success rate. Here are the Top 10 Benefits ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpzblj9pz39ls8y4uf1yp.png",
+    "video": null,
+    "author": "William2025",
+    "tags": [
+      "webdev",
+      "ai",
+      "tutorial",
+      "career"
+    ],
+    "seoTitle": "Mock Interview: Top 10 Benefits for Your Career Growth",
+    "seoDescription": "A mock interview isn’t just a rehearsal — it’s a structured way to simulate the real interview environment, practice your responses, and receive feedback tha..."
+  },
+  {
+    "title": "Free Sprint Name Generator 🤖✍️🏃",
+    "url": "https://dev.to/mattlewandowski93/free-sprint-name-generator-25o9",
+    "publishedAt": "2025-08-24T02:32:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Let's face it, \"Sprint 47\" doesn't exactly inspire the team to leap out of bed on Monday morning. If you're tired of boring sprint names and want to inject some personality into your agile ceremonies, I've got just the tool for you. I recently discovered this free sprint name generator that has completely transformed our sprint kickoffs. It's ridiculously...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fum12nn9jy2hazlwdwguo.png",
+    "video": null,
+    "author": "Matt Lewandowski",
+    "tags": [
+      "webdev",
+      "agile",
+      "scrum",
+      "productivity"
+    ],
+    "seoTitle": "Free Sprint Name Generator 🤖✍️🏃",
+    "seoDescription": "Let's face it, \"Sprint 47\" doesn't exactly inspire the team to leap out of bed on Monday morning. If you're tired of boring sprint names and want to inject s..."
+  },
+  {
     "title": "Vue-my-dropdown library",
     "url": "https://dev.to/davidcmdev/vue-my-dropdown-library-48k1",
     "publishedAt": "2025-08-23T23:38:13.000Z",
@@ -17,120 +93,6 @@
     ],
     "seoTitle": "Vue-my-dropdown library",
     "seoDescription": "Vue My Dropdown Component Easily handle dropdown menus with this Vue 3 component. Vue.js >= 3.3.x 📖 Official documentation If you find this component useful..."
-  },
-  {
-    "title": "Unit Tests: What are they and what are they for?",
-    "url": "https://dev.to/arthur_gif/unit-tests-what-are-they-and-what-are-they-for-i5e",
-    "publishedAt": "2025-08-23T22:58:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What are Unit Tests? Unit tests are small programs designed to verify that each isolated part of your code (usually methods or functions) is working correctly. The idea is to break the system down into units and ensure that each unit does exactly what it's supposed to. Reliability – ensures your code works as expected. Bug prevention – if something breaks...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fugqi1j9cfy4aadogepgi.png",
-    "video": null,
-    "author": "Arthur Sales",
-    "tags": [
-      "programming",
-      "webdev",
-      "softwaredevelopment",
-      "testing"
-    ],
-    "seoTitle": "Unit Tests: What are they and what are they for?",
-    "seoDescription": "What are Unit Tests? Unit tests are small programs designed to verify that each isolated part of your code (usually methods or functions) is working correctl..."
-  },
-  {
-    "title": "7 Days to a Better You: Simple Steps to Build Confidence and Good Habits",
-    "url": "https://dev.to/abdelali_oualla_1/7-days-to-a-better-you-simple-steps-to-build-confidence-and-good-habits-170d",
-    "publishedAt": "2025-08-23T22:17:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "_Are you ready to transform your life in just 7 days? “7 Days to a Better You: Simple Steps to Build Confidence and Good Habits” by Abdelali Oualla is your practical, step-by-step guide to building confidence, improving your mindset, and creating lasting positive habits—without overwhelm or complicated plans. This book gives you one focused action per day...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flk35wrk1pmvdpmpl3ptb.jpg",
-    "video": null,
-    "author": "Abdelali Oualla",
-    "tags": [
-      "books",
-      "webdev",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "7 Days to a Better You: Simple Steps to Build Confidence and Good Habits",
-    "seoDescription": "_Are you ready to transform your life in just 7 days? “7 Days to a Better You: Simple Steps to Build Confidence and Good Habits” by Abdelali Oualla is your p..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/leee_rodgers1/-if4",
-    "publishedAt": "2025-08-23T21:53:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
-    "video": null,
-    "author": "Lee Rodgers1",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource"
-  },
-  {
-    "title": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
-    "url": "https://dev.to/md_abdulalim_dcdcb1c8800/unlock-your-true-potential-with-resist-take-control-build-strength-and-transform-your-life-21g9",
-    "publishedAt": "2025-08-23T21:49:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "https://jvz1.com/c/3398919/421391/",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3w7it7384dyvg59ldawr.jpg",
-    "video": null,
-    "author": "Md Abdul Alim",
-    "tags": [
-      "learngoogleaistudio",
-      "webdev",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
-    "seoDescription": "https://jvz1.com/c/3398919/421391/"
-  },
-  {
-    "title": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
-    "url": "https://dev.to/md_abdulalim_dcdcb1c8800/unlock-your-true-potential-with-resist-take-control-build-strength-and-transform-your-life-3578",
-    "publishedAt": "2025-08-23T21:44:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuf5236luudxvdam8w8z3.jpg",
-    "video": null,
-    "author": "Md Abdul Alim",
-    "tags": [
-      "webdev",
-      "ai",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "✨ Unlock Your True Potential with Resist – Take Control, Build Strength, and Transform Your Life!",
-    "seoDescription": ""
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/anthonymax/-471o",
-    "publishedAt": "2025-08-23T21:26:16.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
-    "video": null,
-    "author": "Anthony Max",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "I built a bundle-saving UI tool and open-sourced it 🔥 Anthony Max ・ Aug 23 #webdev #javascript #programming #opensource"
   },
   {
     "title": "Indie App Spotlight: ‘Grano’ scans barcodes to help you understand what’s in your food",
@@ -614,5 +576,33 @@
     ],
     "seoTitle": "What's Next for Apple's iPad Lineup",
     "seoDescription": "Apple refreshed a few of its iPad models earlier this year, but we aren't done yet. There are still new iPads rumored to be coming later in 2025, plus we're ..."
+  },
+  {
+    "title": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
+    "url": "https://www.theverge.com/news/764480/intel-donald-trump-lip-bu-tan-deal",
+    "publishedAt": "2025-08-22T21:45:38.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billion into Intel, but most of the funds come from money that the government was supposed to pay the embattled chipmaker anyway. In an announcement on Friday, Intel said the federal government will fund it...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2230632606.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "US government takes 10 percent stake in Intel in exchange for money it was already on the hook for",
+    "seoDescription": "Trump revealed the news during a briefing about the World Cup. | Photographer: Annabelle Gordon/UPI/Bloomberg via Getty Image The US is investing $8.9 billio..."
+  },
+  {
+    "title": "Netflix wants its partners to follow these rules when using gen AI",
+    "url": "https://www.theverge.com/netflix/764433/netflix-gen-ai-production-guidelines",
+    "publishedAt": "2025-08-22T21:22:47.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-generated images in place of real archival photos. That documentary stood out as a shining example of gen AI’s ability to distort reality in situations where people are specifically looking to be told t...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK072_VRG_Illo_N_Barclay_7_netflix.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "Netflix wants its partners to follow these rules when using gen AI",
+    "seoDescription": "Netflix has already faced backlash over the use of AI in What Jennifer Did, director Jenny Popplewell’s 2024 true crime documentary that seemingly used AI-ge..."
   }
 ]
