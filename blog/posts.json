@@ -1,5 +1,24 @@
 [
   {
+    "title": "How to Block Access to .git and .svn Files with SafeLine WAF",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-block-access-to-git-and-svn-files-with-safeline-waf-45m",
+    "publishedAt": "2025-08-25T03:28:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Sensitive version control and config files like .git, .svn, .htaccess, and shell history files should never be exposed over the web. If left unprotected, they can leak credentials, internal repo details, or other private data. SafeLine WAF provides a simple but effective ruleset to block any direct HTTP access to these files, making it a must-have for hom...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flo2sf6ys9qaioy0rhnuk.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "webdev",
+      "cybersecurity",
+      "safeline",
+      "waf"
+    ],
+    "seoTitle": "How to Block Access to .git and .svn Files with SafeLine WAF",
+    "seoDescription": "Sensitive version control and config files like .git, .svn, .htaccess, and shell history files should never be exposed over the web. If left unprotected, the..."
+  },
+  {
     "title": "Auto-provisioning a complex Alibaba Cloud ECS order with MuleRun’s Browser Use Agent",
     "url": "https://dev.to/wenwencai/auto-provisioning-a-complex-alibaba-cloud-ecs-order-with-muleruns-browser-use-agent-ddg",
     "publishedAt": "2025-08-25T02:50:46.000Z",
@@ -582,23 +601,5 @@
     ],
     "seoTitle": "When a Kiss Changed Cinema: 11 Iconic Moments",
     "seoDescription": "Fog swirls around a Paris train station. Two lovers meet, the world’s holding its breath. He kisses her like it’s both a promise and a farewell, the taste of..."
-  },
-  {
-    "title": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
-    "url": "https://nofilmschool.com/godfather-oranges-death-symbol",
-    "publishedAt": "2025-08-23T05:10:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunlit moment—until bullets rip through the air, sending the Don to the pavement and those bright orange spheres rolling into the gutter. On the surface, it’s just good blocking and choreography. But to sh...",
-    "image": "https://nofilmschool.com/media-library/the-godfather-uses-oranges-as-a-death-signal.jpg?id=61504654&width=980",
-    "video": "https://www.youtube.com/embed/wQKThExxrc0?rel=0",
-    "author": "Vishal Wagh",
-    "tags": [
-      "The godfather",
-      "Symbolism",
-      "Film theory"
-    ],
-    "seoTitle": "Bet You Didn’t Notice 'The Godfather' Uses Oranges as a Death Signal",
-    "seoDescription": "Halfway through The Godfather (1972), Vito Corleone (Marlon Brando) strolls out of a market, hands full of groceries and a bag of oranges. It’s a calm, sunli..."
   }
 ]
