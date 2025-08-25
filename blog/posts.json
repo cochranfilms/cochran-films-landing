@@ -1,59 +1,19 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/anthonymax/-2gc2",
-    "publishedAt": "2025-08-24T21:23:03.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "10 Open Source Gems To Become The Ultimate Developer 🔥 Anthony Max ・ Aug 24 #webdev #javascript #programming #opensource",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "title": "Apple’s refurbished store might seem like a good deal, but is that actually the case?",
+    "url": "https://9to5mac.com/2025/08/24/is-apples-refurbished-store-actually-worth-the-money/",
+    "publishedAt": "2025-08-25T00:27:54.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has long offered a refurbished store on its website, where it sells recent generation products at a pretty sizable discount. Unlike other refurbished offerings, Apple guarantees a replaced outer shell, battery, and glass – ensuring no wear and tear. You also get a 1 year Apple warranty and the ability to add AppleCare if you’d like. That sounds grea...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/03/iphone-15-silicone-cases.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Anthony Max",
+    "author": "Michael Burkhardt",
     "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
+      "News"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "10 Open Source Gems To Become The Ultimate Developer 🔥 Anthony Max ・ Aug 24 #webdev #javascript #programming #opensource"
-  },
-  {
-    "title": "10 Open Source Gems To Become The Ultimate Developer 🔥",
-    "url": "https://dev.to/anthonymax/10-open-source-gems-to-become-the-ultimate-developer-dkk",
-    "publishedAt": "2025-08-24T21:19:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "TL;DR Every day we use different technological tools, already on automatism, although we have not heard about them before. With the knowledge of the new, we gain that competitiveness in the market that will provide us with what we want, be it an online store or a simple calculator. In this article, I have collected some tools, knowledge of which will help...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqwg787mtyqj8js1fovnz.png",
-    "video": null,
-    "author": "Anthony Max",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
-    ],
-    "seoTitle": "10 Open Source Gems To Become The Ultimate Developer 🔥",
-    "seoDescription": "TL;DR Every day we use different technological tools, already on automatism, although we have not heard about them before. With the knowledge of the new, we ..."
-  },
-  {
-    "title": "Gonk - The First Steps and Routing",
-    "url": "https://dev.to/ajmerr/gonk-the-first-steps-and-routing-e3b",
-    "publishedAt": "2025-08-24T20:34:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What is Gonk? Gonk is a project that is part of a four part project that I have planned. Gonk itself is an HTTP Framework I am developing based on the stdlib net/http package from Go. It will include routing, middleware, JSON utility, and more. I know I'll be asked why I even decided to create a web framework for Go. There are already very well fleshed ou...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F73x2157p2ylo2n8xan8j.png",
-    "video": null,
-    "author": "Austin",
-    "tags": [
-      "go",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "Gonk - The First Steps and Routing",
-    "seoDescription": "What is Gonk? Gonk is a project that is part of a four part project that I have planned. Gonk itself is an HTTP Framework I am developing based on the stdlib..."
+    "seoTitle": "Apple’s refurbished store might seem like a good deal, but is that actually the case?",
+    "seoDescription": "Apple has long offered a refurbished store on its website, where it sells recent generation products at a pretty sizable discount. Unlike other refurbished o..."
   },
   {
     "title": "Apple Has Reportedly Considered Releasing iPhone 17 Air Bumper Case",
@@ -603,5 +563,38 @@
     ],
     "seoTitle": "8 Iconic Movie Lines That Became Everyday Expressions",
     "seoDescription": "The other day, my mom scoffed at me, saying that I speak “filmy.” I guess she was critiquing my annoying (talk about self-awareness) habit of using movie quo..."
+  },
+  {
+    "title": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
+    "url": "https://nofilmschool.com/silence-of-the-lambs-clarice-pov",
+    "publishedAt": "2025-08-23T04:44:10.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflective of the different personalities that exist in our society, with characters like Hannibal Lecter and Buffalo Bill, who will remain forever relevant, reminding us of our inherent violent instincts. Rel...",
+    "image": "https://nofilmschool.com/media-library/jodie-foster-as-clarice-meeting-hannibal-lectar-anthony-hopkins.jpg?id=61501822&width=980",
+    "video": "https://www.youtube.com/embed/6iB21hsprAQ?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Silence of the lambs",
+      "Pov"
+    ],
+    "seoTitle": "Did You Notice 'The Silence of the Lambs' Is Basically Clarice's POV",
+    "seoDescription": "Beyond the suspense and thrill that come with the hot pursuit of a mastermind killer, Jonathan Demme’s The Silence of the Lambs is spine-chillingly reflectiv..."
+  },
+  {
+    "title": "Apple reportedly prepping enterprise AI support beyond ChatGPT",
+    "url": "https://9to5mac.com/2025/08/22/apple-reportedly-prepping-enterprise-ai-support-beyond-chatgpt/",
+    "publishedAt": "2025-08-23T01:12:33.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "On personal iPhones, users can decide whether they want Apple Intelligence to connect to ChatGPT. But on corporate devices, things can be trickier. That’s why Apple is reportedly adding support for enterprise accounts, but in a way that extends beyond its current OpenAI partnership. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/chatgpt-siri-ios182-3-2.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple reportedly prepping enterprise AI support beyond ChatGPT",
+    "seoDescription": "On personal iPhones, users can decide whether they want Apple Intelligence to connect to ChatGPT. But on corporate devices, things can be trickier. That’s wh..."
   }
 ]
