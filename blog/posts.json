@@ -1,22 +1,164 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/martinpersson/-1n1g",
-    "publishedAt": "2025-08-25T11:04:56.000Z",
+    "title": "Is Coursera Worth It? An Honest Breakdown for Developers",
+    "url": "https://dev.to/stack_overflowed/is-coursera-worth-it-an-honest-breakdown-for-developers-22d0",
+    "publishedAt": "2025-08-25T12:28:00.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "How I Use Effect.ts to Orchestrate a Type-Safe GraphQL Backend Martin Persson ・ Aug 19 #webdev #typescript #graphql #backend",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F439900%2F08f49e13-739f-424a-aecf-40fc6ae261f4.jpeg",
+    "summary": "If you’ve ever Googled “best online learning platforms” or “how to finally learn Python without crying”, you’ve probably come across Coursera. It’s one of the biggest names in online education, backed by universities, big tech companies, and fancy credentials you can slap on your LinkedIn. But let’s cut to the chase: Is Coursera worth it? Is it the golden...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0tx1o1ymaeuapq50xdae.png",
     "video": null,
-    "author": "Martin Persson",
+    "author": "Stack Overflowed",
     "tags": [
       "webdev",
-      "typescript",
-      "graphql",
-      "backend"
+      "programming",
+      "beginners",
+      "learning"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "How I Use Effect.ts to Orchestrate a Type-Safe GraphQL Backend Martin Persson ・ Aug 19 #webdev #typescript #graphql #backend"
+    "seoTitle": "Is Coursera Worth It? An Honest Breakdown for Developers",
+    "seoDescription": "If you’ve ever Googled “best online learning platforms” or “how to finally learn Python without crying”, you’ve probably come across Coursera. It’s one of th..."
+  },
+  {
+    "title": "Why Enterprises Are Choosing Custom Crypto Arbitrage Trading Bot Development Solutions",
+    "url": "https://dev.to/tomhardy/why-enterprises-are-choosing-custom-crypto-arbitrage-trading-bot-development-solutions-45i0",
+    "publishedAt": "2025-08-25T12:24:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction In today's fast growing digital economy, enterprises are constantly seeking innovative ways to maximize profits while minimizing risks. The world of cryptocurrency trading has opened new opportunities and among them. Crypto arbitrage trading stands out as one of the most profitable strategies. By leveraging price differences across exchanges ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fil5302qvlir8v527ldz3.jpg",
+    "video": null,
+    "author": "Tom Hardy S",
+    "tags": [
+      "tradingbot",
+      "blockchain",
+      "webdev"
+    ],
+    "seoTitle": "Why Enterprises Are Choosing Custom Crypto Arbitrage Trading Bot Development Solutions",
+    "seoDescription": "Introduction In today's fast growing digital economy, enterprises are constantly seeking innovative ways to maximize profits while minimizing risks. The worl..."
+  },
+  {
+    "title": "Vibecoding a Mobile-Friendly Umbraco backoffice experience",
+    "url": "https://dev.to/luukpeters/vibecoding-a-mobile-friendly-umbraco-backoffice-experience-occ",
+    "publishedAt": "2025-08-25T12:13:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "One of the pain points of the new backoffice introduced in Umbraco 14, is that the backoffice is not mobile-friendly. This issue has been raised in this discussion on GitHub. As of Umbraco 16, the experience on a mobile device is still far from usable. Buttons and navigation elements are either inaccessible or too small to interact with properly. Sure, yo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg975lc7ubx639eao8snd.gif",
+    "video": null,
+    "author": "Luuk Peters",
+    "tags": [
+      "umbraco",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Vibecoding a Mobile-Friendly Umbraco backoffice experience",
+    "seoDescription": "One of the pain points of the new backoffice introduced in Umbraco 14, is that the backoffice is not mobile-friendly. This issue has been raised in this disc..."
+  },
+  {
+    "title": "Why Apple Isn't Making New AirPods Max Anytime Soon",
+    "url": "https://www.macrumors.com/2025/08/25/airpods-max-2-not-coming-anytime-soon/",
+    "publishedAt": "2025-08-25T12:03:49.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "AirPods Max fans hoping for a second-generation version of Apple's over-ear headphones shouldn't hold their breath, according to Bloomberg's Mark Gurman. In his latest Power On newsletter, Gurman suggests Apple's wireless noise-canceling cans are stuck in commercial limbo – \"too popular for Apple to stop selling them, and not popular enough for the compan...",
+    "image": "https://images.macrumors.com/article-new/2025/03/Apple-AirPods-Max-hero.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "AirPods Max",
+      "Mark Gurman"
+    ],
+    "seoTitle": "Why Apple Isn't Making New AirPods Max Anytime Soon",
+    "seoDescription": "AirPods Max fans hoping for a second-generation version of Apple's over-ear headphones shouldn't hold their breath, according to Bloomberg's Mark Gurman. In ..."
+  },
+  {
+    "title": "First Netflix House opens its doors on November 12th",
+    "url": "https://www.theverge.com/news/765025/first-netflix-house-opens-its-doors-on-november-12th",
+    "publishedAt": "2025-08-25T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Netflix House Philadelphia. | Image: Netflix The first two Netflix House venues now have their grand opening dates. Netflix House Philadelphia will open on November 12th at King of Prussia Mall, and Netflix House Dallas will open on December 11th at Galleria Dallas. These real-world manifestations of Netflix’s intellectual property span “more than 100,000...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Aerial-Art-Netflix-House-Philadelphia.png?quality=90&#038;strip=all&#038;crop=5.4,2.9561200923788,94.6,90.24480369515",
+    "video": null,
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "First Netflix House opens its doors on November 12th",
+    "seoDescription": "Netflix House Philadelphia. | Image: Netflix The first two Netflix House venues now have their grand opening dates. Netflix House Philadelphia will open on N..."
+  },
+  {
+    "title": "Rumor: Apple testing iPhone 4-like Bumper case for iPhone 17 Air",
+    "url": "https://9to5mac.com/2025/08/25/rumor-apple-testing-iphone-4-like-bumper-case-for-iphone-17-air/",
+    "publishedAt": "2025-08-25T11:54:39.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is expected to launch a new flavor of its Smart Battery Case alongside the ultra-thin iPhone 17 Air next month. As it turns out, that’s not the only forgotten iPhone case the company has up its sleeve. Mark Gurman reports that Apple has “at least considered/tested” a case for the iPhone 17 Air that “surrounds the edges but doesn’t cover the back.” m...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-4-bumper.jpeg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Rumor: Apple testing iPhone 4-like Bumper case for iPhone 17 Air",
+    "seoDescription": "Apple is expected to launch a new flavor of its Smart Battery Case alongside the ultra-thin iPhone 17 Air next month. As it turns out, that’s not the only fo..."
+  },
+  {
+    "title": "Terrifying Moment Motorcyle Almost Hits Cameraman During Race",
+    "url": "https://petapixel.com/2025/08/25/terrifying-moment-motorcyle-almost-hits-cameraman-during-race/",
+    "publishedAt": "2025-08-25T11:49:21.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "During the MotoGP race this weekend in Hungary, a cameraman had a scary moment when a crashing motorcycle came flipping toward him and very nearly hit him as he was standing atop a broadcast podium. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/MotoGP-Bike-Crash-Cameraman.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "accident",
+      "cameraman",
+      "lucky",
+      "motogp",
+      "motorsports",
+      "motorsportsphotography",
+      "nearmiss"
+    ],
+    "seoTitle": "Terrifying Moment Motorcyle Almost Hits Cameraman During Race",
+    "seoDescription": "During the MotoGP race this weekend in Hungary, a cameraman had a scary moment when a crashing motorcycle came flipping toward him and very nearly hit him as..."
+  },
+  {
+    "title": "2026 Foldable iPhone: All the Leaks So Far",
+    "url": "https://www.macrumors.com/2025/08/25/2026-foldable-iphone-leak-roundup/",
+    "publishedAt": "2025-08-25T11:40:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is expected to launch a new foldable iPhone next year, based on multiple rumors and credible sources. The long-awaited device has been rumored for years now, but signs increasingly suggest that 2026 could indeed be the year that Apple releases its first foldable device. Below, we've collated an updated set of key details that have been leaked about ...",
+    "image": "https://images.macrumors.com/article-new/2025/03/Foldable-iPhone-2023-Feature-Homescreen.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Featured",
+      "Foldable iPhone"
+    ],
+    "seoTitle": "2026 Foldable iPhone: All the Leaks So Far",
+    "seoDescription": "Apple is expected to launch a new foldable iPhone next year, based on multiple rumors and credible sources. The long-awaited device has been rumored for year..."
+  },
+  {
+    "title": "Two All-New iPhone 17 Colors Seemingly Confirmed",
+    "url": "https://www.macrumors.com/2025/08/25/iphone-17-pros-rumored-new-orange-color-confirmed/",
+    "publishedAt": "2025-08-25T11:22:41.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple will offer the upcoming iPhone 17 Pro and iPhone 17 Pro Max in a new orange color, according to Bloomberg's Mark Gurman. Gurman made the claim in the latest edition of his Power On newsletter, adding that the new iPhone 17 Air – replacing the iPhone 16 Plus – will come in a new light blue color. multiple rumors about a new iPhone 17 Pro color being ...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Alleged-iPhone-17-Pro-Antenna-Design.jpeg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Featured",
+      "iPhone 17 Air",
+      "iPhone 17 Pro",
+      "Mark Gurman"
+    ],
+    "seoTitle": "Two All-New iPhone 17 Colors Seemingly Confirmed",
+    "seoDescription": "Apple will offer the upcoming iPhone 17 Pro and iPhone 17 Pro Max in a new orange color, according to Bloomberg's Mark Gurman. Gurman made the claim in the l..."
   },
   {
     "title": "Photographer Sues Detroit Lions Over Use of Jared Goff High School Photos",
@@ -42,24 +184,6 @@
     "seoDescription": "A photographer has filed a lawsuit against the Detroit Lions, alleging the NFL team used his photos of quarterback Jared Goff without proper licensing. [Read..."
   },
   {
-    "title": "Best SEO Company for Real Estate to Drive Leads & Sales",
-    "url": "https://dev.to/ezrankingservice/best-seo-company-for-real-estate-to-drive-leads-sales-5bjf",
-    "publishedAt": "2025-08-25T10:52:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "EZ Rankings the best SEO company for real estate helps realtors, brokers, and property businesses enhance their online presence and generate quality leads. Our customized SEO strategies focus on local search optimization, keyword targeting, and content marketing to ensure your listings reach potential buyers and investors. With proven expertise in the rea...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fapwje7xhuohuqnrfkazz.png",
-    "video": null,
-    "author": "EZ Rankings",
-    "tags": [
-      "seo",
-      "ppc",
-      "webdev"
-    ],
-    "seoTitle": "Best SEO Company for Real Estate to Drive Leads & Sales",
-    "seoDescription": "EZ Rankings the best SEO company for real estate helps realtors, brokers, and property businesses enhance their online presence and generate quality leads. O..."
-  },
-  {
     "title": "iPhone 17 Pro May Be Able to Wirelessly Charge AirPods, Apple Watch",
     "url": "https://www.macrumors.com/2025/08/25/iphone-17-pro-wireless-charge-airpods-apple-watch/",
     "publishedAt": "2025-08-25T10:52:00.000Z",
@@ -75,63 +199,6 @@
     ],
     "seoTitle": "iPhone 17 Pro May Be Able to Wirelessly Charge AirPods, Apple Watch",
     "seoDescription": "Apple's upcoming iPhone 17 Pro models could include a reverse wireless charging feature making them capable of delivering power to other Apple devices, accor..."
-  },
-  {
-    "title": "Boost Dark Chocolate Pack (200mg THC)",
-    "url": "https://dev.to/anki_toy_74ee561ae3c85240/boost-dark-chocolate-pack-200mg-thc-14e4",
-    "publishedAt": "2025-08-25T10:50:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "https://greenrxhub.com/ https://greenrxhub.com/product/boost-dark-chocolate-pack-200mg-thc/ ThePillBox007@outlook.com **Indulge in the rich, decadent taste of Boost Dark Chocolate infused with 200mg of premium THC for a perfectly balanced edible experience. Crafted for those who love both luxury chocolate and cannabis wellness, this pack delivers a smooth...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frfa4g7j6r84twpcec999.jpg",
-    "video": null,
-    "author": "anki toy",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Boost Dark Chocolate Pack (200mg THC)",
-    "seoDescription": "https://greenrxhub.com/ https://greenrxhub.com/product/boost-dark-chocolate-pack-200mg-thc/ ThePillBox007@outlook.com **Indulge in the rich, decadent taste o..."
-  },
-  {
-    "title": "Udemy vs Udacity: Which Platform Actually Helps You Learn (Without Losing Your Mind)?",
-    "url": "https://dev.to/stack_overflowed/udemy-vs-udacity-which-platform-actually-helps-you-learn-without-losing-your-mind-4e4h",
-    "publishedAt": "2025-08-25T10:45:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "So you’ve decided to level up. Maybe you want to finally stop faking your way through JavaScript, maybe you’ve got your eyes on a machine learning job, or maybe you’re just tired of LinkedIn telling you that “lifelong learning” is the secret to career success. Either way, you’re now staring at the two big names that pop up everywhere: Udemy vs Udacity. Bu...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu5fcubr74ypci4ldzm4v.png",
-    "video": null,
-    "author": "Stack Overflowed",
-    "tags": [
-      "webdev",
-      "programming",
-      "career",
-      "learning"
-    ],
-    "seoTitle": "Udemy vs Udacity: Which Platform Actually Helps You Learn (Without Losing Your Mind)?",
-    "seoDescription": "So you’ve decided to level up. Maybe you want to finally stop faking your way through JavaScript, maybe you’ve got your eyes on a machine learning job, or ma..."
-  },
-  {
-    "title": "The Developer’s Blueprint for Founder-First SaaS: Inside 1Matrix.io",
-    "url": "https://dev.to/1matrix/the-developers-blueprint-for-founder-first-saas-inside-1matrixio-586g",
-    "publishedAt": "2025-08-25T10:44:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Beyond Code: Why Founders Need Systems, Not Just Software The Hidden Parallel Between Startups and Codebases Every developer has seen it: human-scale technical debt. Technical Debt at the Human Layer In engineering, technical debt means shortcuts today that cost you tomorrow. Multiple logins → context switching Eventually, the founder spends more time on ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fegmfzb8sic5d9ttm2y4k.png",
-    "video": null,
-    "author": "1Matrix",
-    "tags": [
-      "saas",
-      "webdev",
-      "automation",
-      "startup"
-    ],
-    "seoTitle": "The Developer’s Blueprint for Founder-First SaaS: Inside 1Matrix.io",
-    "seoDescription": "Beyond Code: Why Founders Need Systems, Not Just Software The Hidden Parallel Between Startups and Codebases Every developer has seen it: human-scale technic..."
   },
   {
     "title": "Apple’s F1 movie tops $600m at worldwide box office, surpassing all expectations",
@@ -547,72 +614,5 @@
     ],
     "seoTitle": "When will F1 movie be on Apple TV? Here’s the expected streaming release date",
     "seoDescription": "The F1: The Movie has made a big splash at the box office at movie theaters around the world, and is now available to buy or rent at stores including , Apple..."
-  },
-  {
-    "title": "What&#8217;s on your desk, Dominic Preston?",
-    "url": "https://www.theverge.com/tech/762930/home-office-logitech-standing-desk",
-    "publishedAt": "2025-08-23T15:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Not all of The Verge’s staff live in the US. For example, news editor Dominic Preston is based in London and is, as he says, “responsible for keeping our news coverage ticking over in UK mornings before the US team comes online.” He also curates our new Verge Daily newsletter and covers Android phones, especially all the models that don’t launch in the US...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/whats-on-your-desk-dominic-preston-16.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": "https://volume.vox-cdn.com/embed/a0a686f5a?player_type=youtube&#038;loop=1&#038;placement=article&#038;tracking=article:rss",
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "What&#8217;s on your desk, Dominic Preston?",
-    "seoDescription": "Not all of The Verge’s staff live in the US. For example, news editor Dominic Preston is based in London and is, as he says, “responsible for keeping our new..."
-  },
-  {
-    "title": "Sigma 12mm f/1.4 DC Contemporary Review: An Absolute Gem",
-    "url": "https://petapixel.com/2025/08/23/sigma-12mm-f-1-4-dc-contemporary-review-an-absolute-gem/",
-    "publishedAt": "2025-08-23T14:01:08.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The industry desperately needs more lens support for APS-C cameras and it often feels like a neglected market. Full frame is clearly the favored child when it comes to the camera game, but I happen to love smaller sensor cameras, which give a great mixture of compactness and quality. Sigma is on a roll, making sure to give users excellent and affordable o...",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Sigma-12mm-f1.4-DC-Contemporary-Review-A-Gem-in-Every-Sense.jpg",
-    "video": null,
-    "author": "Chris Niccolls",
-    "tags": [
-      "Equipment",
-      "Reviews",
-      "apsccamera",
-      "apsclens",
-      "architecturalphotography",
-      "canonrfmount",
-      "fujifilmxmount",
-      "landscapephotography"
-    ],
-    "seoTitle": "Sigma 12mm f/1.4 DC Contemporary Review: An Absolute Gem",
-    "seoDescription": "The industry desperately needs more lens support for APS-C cameras and it often feels like a neglected market. Full frame is clearly the favored child when i..."
-  },
-  {
-    "title": "Apple @ Work: Macs, AI, and the blind spot in enterprise security",
-    "url": "https://9to5mac.com/2025/08/23/macs-ai-and-the-blind-spot-in-enterprise-security/",
-    "publishedAt": "2025-08-23T14:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/1Password.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple @ Work: Macs, AI, and the blind spot in enterprise security",
-    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-g..."
-  },
-  {
-    "title": "The Fairphone 6 no longer feels like a compromise (except in the US)",
-    "url": "https://www.theverge.com/phones/762755/fairphone-6-review-no-longer-compromise",
-    "publishedAt": "2025-08-23T13:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The Fairphone 6 arrives almost two years after the 5, a testament to the company's approach to the upgrade cycle. If anything, I suspect the company would be frustrated if Fairphone 5 owners were considering a new model already - these are phones to keep, to repair, and to hold on to until the bitter end. The newest Fairphone continues the company's commi...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/fairphone-6-15.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "The Fairphone 6 no longer feels like a compromise (except in the US)",
-    "seoDescription": "The Fairphone 6 arrives almost two years after the 5, a testament to the company's approach to the upgrade cycle. If anything, I suspect the company would be..."
   }
 ]
