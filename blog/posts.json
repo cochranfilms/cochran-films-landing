@@ -1,136 +1,60 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/rajesh_patel/-9ap",
-    "publishedAt": "2025-08-25T05:12:04.000Z",
+    "title": "Will AI Replace Code Reviews?",
+    "url": "https://dev.to/dct_technology/will-ai-replace-code-reviews-44fi",
+    "publishedAt": "2025-08-25T06:21:23.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "summary": "Imagine this: you push your code to GitHub, and within seconds, an AI leaves detailed comments pointing out potential bugs, performance issues, and even better naming conventions. Sounds futuristic, right? But here’s the burning question — will AI replace code reviews, or just assist them? Code reviews aren’t just about spotting typos or bugs. They: Ensur...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1o7vnk7ikyykt2soxvgp.png",
     "video": null,
-    "author": "Rajesh Patel",
+    "author": "DCT Technology Pvt. Ltd.",
     "tags": [
+      "codereview",
+      "ai",
       "webdev",
-      "timetracking",
-      "productivity",
-      "learning"
+      "programming"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning"
+    "seoTitle": "Will AI Replace Code Reviews?",
+    "seoDescription": "Imagine this: you push your code to GitHub, and within seconds, an AI leaves detailed comments pointing out potential bugs, performance issues, and even bett..."
   },
   {
-    "title": "Stripe approach of time tracking for who hate Time tracking",
-    "url": "https://dev.to/naik_sejal/stripe-approach-of-time-tracking-for-who-hate-time-tracking-376p",
-    "publishedAt": "2025-08-25T05:09:56.000Z",
+    "title": "Understanding the CAP Theorem: Trade-Offs and Design Strategies for Distributed Systems",
+    "url": "https://dev.to/vincenttommi/understanding-the-cap-theorem-trade-offs-and-design-strategies-for-distributed-systems-5cbi",
+    "publishedAt": "2025-08-25T06:18:34.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "summary": "The CAP theorem, introduced by Eric Brewer in 2000, is a cornerstone of distributed systems design. It highlights the trade-offs between Consistency, Availability, and Partition Tolerance, stating that a distributed system can only guarantee two of these three properties at any given time. This article dives into the three pillars of the CAP theorem, thei...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm40g5bwd5jsixcy4ljen.png",
     "video": null,
-    "author": "Sejal",
+    "author": "Vincent Tommi",
     "tags": [
-      "webdev",
-      "timetracking",
-      "productivity",
-      "learning"
-    ],
-    "seoTitle": "Stripe approach of time tracking for who hate Time tracking",
-    "seoDescription": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning"
-  },
-  {
-    "title": "How I Built a Chrome Extension That Eliminates Salesforce Debugging Hell",
-    "url": "https://dev.to/arijitparia2002/how-i-built-a-chrome-extension-that-eliminates-salesforce-debugging-hell-404f",
-    "publishedAt": "2025-08-25T05:09:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Problem That Drove Me Crazy Picture this: It's 4 PM, production is down, and you're debugging a Salesforce issue. You have 17 browser tabs open: Tab 1: The user's record causing the error Tab 2: Setup → Debug Logs (still loading...) Tab 3: Developer Console for SOQL queries Tab 4: Setup → Apex Classes to find the trigger Tab 5: Back to Debug Logs (404...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8c3dt6asz60yezs0dgwo.png",
-    "video": null,
-    "author": "ARIJIT PARIA",
-    "tags": [
-      "salesforce",
-      "webdev",
-      "productivity",
-      "chromeextension"
-    ],
-    "seoTitle": "How I Built a Chrome Extension That Eliminates Salesforce Debugging Hell",
-    "seoDescription": "The Problem That Drove Me Crazy Picture this: It's 4 PM, production is down, and you're debugging a Salesforce issue. You have 17 browser tabs open: Tab 1: T..."
-  },
-  {
-    "title": "Stripe Approach on Time Tracking",
-    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/stripe-approach-on-time-tracking-8dm",
-    "publishedAt": "2025-08-25T05:08:45.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Bhavy K",
-    "tags": [
-      "webdev",
-      "timetracking",
-      "productivity",
-      "learning"
-    ],
-    "seoTitle": "Stripe Approach on Time Tracking",
-    "seoDescription": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning"
-  },
-  {
-    "title": "Why Time Tracking is Important for Agency owners",
-    "url": "https://dev.to/pratham_naik_project_manager/why-time-tracking-is-important-for-agency-owners-400",
-    "publishedAt": "2025-08-25T05:08:03.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "timetracking",
-      "productivity",
-      "learning"
-    ],
-    "seoTitle": "Why Time Tracking is Important for Agency owners",
-    "seoDescription": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach Pratham naik for Teamcamp ・ Aug 25 #webdev #timetracking #productivity #learning"
-  },
-  {
-    "title": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach",
-    "url": "https://dev.to/teamcamp/time-tracking-for-agency-owners-who-hate-time-tracking-the-stripe-approach-4a3i",
-    "publishedAt": "2025-08-25T05:07:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Agency owners face a brutal paradox. You need accurate time tracking to bill clients and optimize operations. But manual timers kill developer focus and produce garbage data. Your team hates stopping mid-flow to click buttons. Clients question inflated hours. Projects bleed profitability. What if you could track time like Stripe tracks API usage? No manua...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fprxlcadvmctssjio9j50.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "timetracking",
-      "productivity",
-      "learning"
-    ],
-    "seoTitle": "Time Tracking for Agency Owners Who Hate Time Tracking: The Stripe Approach",
-    "seoDescription": "Agency owners face a brutal paradox. You need accurate time tracking to bill clients and optimize operations. But manual timers kill developer focus and prod..."
-  },
-  {
-    "title": "Do you guys use this ai feature",
-    "url": "https://dev.to/masterdevsabith/do-you-guys-use-this-ai-feature-3hoo",
-    "publishedAt": "2025-08-25T04:25:31.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I recently found out this ai feature",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frz3eracb5piy71rh0347.png",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "discuss",
       "programming",
+      "systems",
       "webdev",
-      "react"
+      "systemdesign"
     ],
-    "seoTitle": "Do you guys use this ai feature",
-    "seoDescription": "I recently found out this ai feature"
+    "seoTitle": "Understanding the CAP Theorem: Trade-Offs and Design Strategies for Distributed Systems",
+    "seoDescription": "The CAP theorem, introduced by Eric Brewer in 2000, is a cornerstone of distributed systems design. It highlights the trade-offs between Consistency, Availab..."
+  },
+  {
+    "title": "Aiinak: Powering Smarter Teams and Stronger Results",
+    "url": "https://dev.to/aiinak9876/aiinak-powering-smarter-teams-and-stronger-results-36i4",
+    "publishedAt": "2025-08-25T05:48:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every business leader dreams of having a team that works smarter, not harder. But in today’s fast-paced work culture, distractions, repetitive tasks, and scattered systems often drain productivity. Aiinak was created to change that reality. It doesn’t just give you tools—it transforms how teams collaborate and deliver results. When people are supported wi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkhsyf20lb6jta0chm6dm.png",
+    "video": null,
+    "author": "aiinak.com",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Aiinak: Powering Smarter Teams and Stronger Results",
+    "seoDescription": "Every business leader dreams of having a team that works smarter, not harder. But in today’s fast-paced work culture, distractions, repetitive tasks, and sca..."
   },
   {
     "title": "Mac mini vs Mac Studio: For under $900 right now, which one should you pick up?",
@@ -611,5 +535,71 @@
     "tags": [],
     "seoTitle": "Ninja Gaiden: Ragebound is a perfect reimagining of the classic series",
     "seoDescription": "Ninja Gaiden is having a renaissance. The last mainline entry was originally released more than a decade ago, but by the end of 2025, there will be three new..."
+  },
+  {
+    "title": "Top Stories: All-New Apple Operating System, iPhone Leaks, and More",
+    "url": "https://www.macrumors.com/2025/08/23/top-stories-all-new-apple-operating-system/",
+    "publishedAt": "2025-08-23T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's annual September event with new iPhone and Apple Watch models and potentially a few other announcements is coming up quickly, so we should be hearing something soon about an official date. We're continuing to hear rumors about those iPhone and Apple Watch models, plus a few other products that are a bit further down the line. Apple is also putting...",
+    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-23.jpg",
+    "video": null,
+    "author": "MacRumors Staff",
+    "tags": [
+      "Featured",
+      "Top Stories"
+    ],
+    "seoTitle": "Top Stories: All-New Apple Operating System, iPhone Leaks, and More",
+    "seoDescription": "Apple's annual September event with new iPhone and Apple Watch models and potentially a few other announcements is coming up quickly, so we should be hearing..."
+  },
+  {
+    "title": "Does iPadOS 26 make the iPad a computer? [Video]",
+    "url": "https://9to5mac.com/2025/08/23/does-ipados-26-make-the-ipad-a-computer-video/",
+    "publishedAt": "2025-08-23T13:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The moment Apple announced iPadOS 26, it felt like us iPad users have finally been heard. For years the iPad has always been “almost there”. It had the powerful hardware, but the software made the experience too limited for most people. But now with iPadOS 26, that gap is almost gone. The new windowing system, improved multitasking, and better file manage...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/ipad-vs-mac.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Fernando Silva",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Does iPadOS 26 make the iPad a computer? [Video]",
+    "seoDescription": "The moment Apple announced iPadOS 26, it felt like us iPad users have finally been heard. For years the iPad has always been “almost there”. It had the power..."
+  },
+  {
+    "title": "Will Trump help 4Chan escape the UK’s internet police?",
+    "url": "https://www.theverge.com/politics/764653/4chan-uk-online-safety-act-trump",
+    "publishedAt": "2025-08-23T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: 4chan, Gab, and Kiwi Farms, each of which risked multimillion-dollar fines. Late last week, Preston Byrne, a First Amendment lawyer representing them, struck back. Byrne announced he would sue Ofcom i...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257906_4chan_UK_online_safety_law_CVirginia_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tina Nguyen",
+    "tags": [],
+    "seoTitle": "Will Trump help 4Chan escape the UK’s internet police?",
+    "seoDescription": "After the United Kingdom began enforcing its sweeping Online Safety Act in April, British regulator Ofcom served violation notices to three notorious sites: ..."
+  },
+  {
+    "title": "When a Kiss Changed Cinema: 11 Iconic Moments",
+    "url": "https://nofilmschool.com/iconic-movie-kisses",
+    "publishedAt": "2025-08-23T05:18:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Fog swirls around a Paris train station. Two lovers meet, the world’s holding its breath. He kisses her like it’s both a promise and a farewell, the taste of wartime and regret lingering between them. Or maybe you’re picturing another kiss—one at the bow of a doomed ship, where the wind whips hair into chaos and the horizon feels infinite. Whatever the sc...",
+    "image": "https://nofilmschool.com/media-library/when-a-kiss-changed-cinema-11-iconic-moments.jpg?id=61504627&width=980",
+    "video": "https://www.youtube.com/embed/74kz5K70iAo?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Romance",
+      "Romance movies",
+      "Best movies",
+      "Romance"
+    ],
+    "seoTitle": "When a Kiss Changed Cinema: 11 Iconic Moments",
+    "seoDescription": "Fog swirls around a Paris train station. Two lovers meet, the world’s holding its breath. He kisses her like it’s both a promise and a farewell, the taste of..."
   }
 ]
