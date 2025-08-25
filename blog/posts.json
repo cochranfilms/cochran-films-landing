@@ -1,5 +1,227 @@
 [
   {
+    "title": "The new entry-level Kindle Colorsoft is $30 off for a limited time",
+    "url": "https://www.theverge.com/tech/765254/amazon-kindle-colorsoft-16gb-e-reader-deal-sale",
+    "publishedAt": "2025-08-25T22:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Amazon’s 16GB Kindle Colorsoft is less than a month old, but it’s already on sale for $219.99 ($30 off) at Amazon, Best Buy, and Target. Meanwhile, the new Colorsoft Kids — which includes a 12-month subscription to Amazon Kids Plus, a two-year extended warranty, and a cover-style case — has been discounted to $239.99 ($30 off) at Amazon, Best Buy, and Tar...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/Colorsoft-Hero.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The new entry-level Kindle Colorsoft is $30 off for a limited time",
+    "seoDescription": "Amazon’s 16GB Kindle Colorsoft is less than a month old, but it’s already on sale for $219.99 ($30 off) at Amazon, Best Buy, and Target. Meanwhile, the new C..."
+  },
+  {
+    "title": "How to Use Weak Pointers in Go 1.24",
+    "url": "https://dev.to/leapcell/how-to-use-weak-pointers-in-go-124-2i6j",
+    "publishedAt": "2025-08-25T21:58:52.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In Go, a weak pointer refers to a reference that does not prevent the garbage collector (GC) from reclaiming the target object. When an object is only referenced by weak pointers and has no strong references, the GC will still treat it as unreachable and reclaim it; afterwards, all weak pointers to it will automatically become nil. In short, a weak pointe...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq4ns62a2a3yxa07gg538.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "How to Use Weak Pointers in Go 1.24",
+    "seoDescription": "In Go, a weak pointer refers to a reference that does not prevent the garbage collector (GC) from reclaiming the target object. When an object is only refere..."
+  },
+  {
+    "title": "Apple releases public beta 5 for tvOS 26 and more",
+    "url": "https://9to5mac.com/2025/08/25/tvos-public-beta-5/",
+    "publishedAt": "2025-08-25T21:57:01.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has just released public beta 5 for tvOS 26 and more. Here’s what to expect. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/tvOS-26-public-beta.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple releases public beta 5 for tvOS 26 and more",
+    "seoDescription": "Apple has just released public beta 5 for tvOS 26 and more. Here’s what to expect. more…"
+  },
+  {
+    "title": "Python para digitalizar manuscritos de cartas antiguas",
+    "url": "https://dev.to/mia_murphy_1506f044d953e6/python-para-digitalizar-manuscritos-de-cartas-antiguas-2ck0",
+    "publishedAt": "2025-08-25T21:53:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La preservación de documentos manuscritos ha sido un desafío para historiadores, coleccionistas y familias durante siglos. Las cartas antiguas, en particular, guardan relatos íntimos, vínculos emocionales y secretos culturales que de otra manera podrían perderse con el paso del tiempo. En la actualidad, la programación nos permite crear herramientas que n...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvcynsek0cyeln3tg9hth.png",
+    "video": null,
+    "author": "mia murphy",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python para digitalizar manuscritos de cartas antiguas",
+    "seoDescription": "La preservación de documentos manuscritos ha sido un desafío para historiadores, coleccionistas y familias durante siglos. Las cartas antiguas, en particular..."
+  },
+  {
+    "title": "Apple study shows LLMs also benefit from the oldest productivity trick in the book",
+    "url": "https://9to5mac.com/2025/08/25/apple-study-shows-llms-also-benefit-from-the-oldest-productivity-trick-in-the-book/",
+    "publishedAt": "2025-08-25T21:53:37.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "In a new study co-authored by Apple researchers, an open-source large language model (LLM) saw big performance improvements after being told to check its own work by using one simple productivity trick. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/06/reminders-logo-ios18.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple study shows LLMs also benefit from the oldest productivity trick in the book",
+    "seoDescription": "In a new study co-authored by Apple researchers, an open-source large language model (LLM) saw big performance improvements after being told to check its own..."
+  },
+  {
+    "title": "Apple Releases Fifth Public Betas of iOS 26 and More",
+    "url": "https://www.macrumors.com/2025/08/25/apple-releases-ios-26-public-beta-5/",
+    "publishedAt": "2025-08-25T21:52:51.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple today released the fifth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September launch. The fifth public betas come a week after the fourth public betas, and the updates correspond with the eighth developer betas that were released earlier today. Public beta testers that have regist...",
+    "image": "https://images.macrumors.com/article-new/2025/08/ios-26-liquid-glass-lock-screen-beta-6.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "iOS 26"
+    ],
+    "seoTitle": "Apple Releases Fifth Public Betas of iOS 26 and More",
+    "seoDescription": "Apple today released the fifth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September lau..."
+  },
+  {
+    "title": "Testing a Perl Mojolicious web app",
+    "url": "https://dev.to/dragostrif/testing-an-perl-mojolicious-web-app-43j7",
+    "publishedAt": "2025-08-25T21:50:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This post assumes that you know you way around Mojolicious web framework. If not you should start here: Mojolicious-Tutorial. mojolicious-and-docke mojolicious-and-docker-part-2 Testing web applications be can tricky because it involves many different components like the html, java script, css, databases and last but not least the Perl code. For the purpo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fod4d67g5rvvmyrjlsz5f.png",
+    "video": null,
+    "author": "DragosTrif",
+    "tags": [
+      "webdev",
+      "perl",
+      "mojolicious",
+      "testing"
+    ],
+    "seoTitle": "Testing a Perl Mojolicious web app",
+    "seoDescription": "This post assumes that you know you way around Mojolicious web framework. If not you should start here: Mojolicious-Tutorial. mojolicious-and-docke mojolicio..."
+  },
+  {
+    "title": "macOS Tahoe 26 public beta 5 rolling out now, install guide",
+    "url": "https://9to5mac.com/2025/08/25/macos-tahoe-26-public-beta-5-rolling-out-now-install-guide/",
+    "publishedAt": "2025-08-25T21:48:38.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has rolled out the fifth public beta of macOS Tahoe 26, continuing its weekly release schedule for public and developer betas ahead of the official launch next month. Here’s how to install it. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/macOS-26-public-beta.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "macOS Tahoe 26 public beta 5 rolling out now, install guide",
+    "seoDescription": "Apple has rolled out the fifth public beta of macOS Tahoe 26, continuing its weekly release schedule for public and developer betas ahead of the official lau..."
+  },
+  {
+    "title": "iOS 26 and iPadOS 26 public beta 5 now available",
+    "url": "https://9to5mac.com/2025/08/25/ios-26-public-beta-5/",
+    "publishedAt": "2025-08-25T21:48:19.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Following iOS 26 and iPadOS 26 beta 8 earlier today, Apple has released the fifth iOS 26 and iPadOS 26 public betas. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/iOS-26-public-beta.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iOS 26 and iPadOS 26 public beta 5 now available",
+    "seoDescription": "Following iOS 26 and iPadOS 26 beta 8 earlier today, Apple has released the fifth iOS 26 and iPadOS 26 public betas. more…"
+  },
+  {
+    "title": "9to5Mac Daily: August 25, 2025 – Apple and Gemini rumors",
+    "url": "https://9to5mac.com/2025/08/25/daily-august-25-2025/",
+    "publishedAt": "2025-08-25T21:44:50.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Seth Kurkowski",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "9to5Mac Daily: August 25, 2025 – Apple and Gemini rumors",
+    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
+  },
+  {
+    "title": "Velas IoT sincronizadas con energía de la lectura de cartas",
+    "url": "https://dev.to/zoila_davis_4c964ae3b6241/velas-iot-sincronizadas-con-energia-de-la-lectura-de-cartas-2ik6",
+    "publishedAt": "2025-08-25T21:38:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La relación entre la espiritualidad y la tecnología siempre ha existido, aunque no siempre de manera evidente. Durante siglos, las personas han buscado formas de conectar con lo invisible: desde rituales con velas hasta tiradas de cartas para comprender el presente y proyectar el futuro. Hoy en día, esa búsqueda se mezcla con dispositivos inteligentes que...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9svnulwd47oaoz15oalu.png",
+    "video": null,
+    "author": "Zoila Davis",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Velas IoT sincronizadas con energía de la lectura de cartas",
+    "seoDescription": "La relación entre la espiritualidad y la tecnología siempre ha existido, aunque no siempre de manera evidente. Durante siglos, las personas han buscado forma..."
+  },
+  {
+    "title": "iOS 26 Beta Testing Likely Complete After Apple Seeds Beta 8",
+    "url": "https://www.macrumors.com/2025/08/25/ios-26-beta-testing-likely-complete/",
+    "publishedAt": "2025-08-25T21:26:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple today provided developers with iOS 26 beta 8, which means that beta testing is likely coming to an end. Apple typically only seeds eight developer betas of an iOS update before the software gets a final launch. Apple did not go beyond eight betas for iOS 18, iOS 17, iOS 16, iOS 15, iOS 14, or iOS 13. Way back in 2018, iOS 12 did have a ninth beta, a...",
+    "image": "https://images.macrumors.com/article-new/2025/06/iOS-26-Feature.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured",
+      "iOS 26"
+    ],
+    "seoTitle": "iOS 26 Beta Testing Likely Complete After Apple Seeds Beta 8",
+    "seoDescription": "Apple today provided developers with iOS 26 beta 8, which means that beta testing is likely coming to an end. Apple typically only seeds eight developer beta..."
+  },
+  {
+    "title": "Sistemas IoT que miden la frecuencia cardíaca durante los hechizos de amor",
+    "url": "https://dev.to/jaime_smith_cfd7d9641239c/sistemas-iot-que-miden-la-frecuencia-cardiaca-durante-los-hechizos-de-amor-3lfn",
+    "publishedAt": "2025-08-25T21:16:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La tecnología IoT (Internet de las Cosas) ha dejado de ser exclusiva de la medicina, el hogar inteligente o la industria, para abrirse camino en ámbitos menos convencionales como las prácticas espirituales. Una de las aplicaciones más innovadoras es la medición de la frecuencia cardíaca durante rituales o hechizos de amor. La integración de sensores biomé...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2m9qpvtfb735q02xevqd.png",
+    "video": null,
+    "author": "Jaime Smith",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Sistemas IoT que miden la frecuencia cardíaca durante los hechizos de amor",
+    "seoDescription": "La tecnología IoT (Internet de las Cosas) ha dejado de ser exclusiva de la medicina, el hogar inteligente o la industria, para abrirse camino en ámbitos meno..."
+  },
+  {
     "title": "Wireless IoT Devices Measuring Treatment Efficiency in CoolSculpting",
     "url": "https://dev.to/wiz_pack_b4bde018764ea181/wireless-iot-devices-measuring-treatment-efficiency-in-coolsculpting-2bkp",
     "publishedAt": "2025-08-25T20:37:12.000Z",
@@ -183,25 +405,6 @@
     "seoDescription": "Judd Apatow is a hero of mine. When I was a kid, I felt like no one was making movies or TV shows that hit my sense of humor, and then out of nowhere, it fel..."
   },
   {
-    "title": "From Idea to MVP: Building Our Own Platform for Old Game Mods",
-    "url": "https://dev.to/alexsandr_pierierodov/from-idea-to-mvp-building-our-own-platform-for-old-game-mods-148i",
-    "publishedAt": "2025-08-25T19:27:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A Bit of Background My idea was pretty simple at first: I wanted to create a website that I could develop in my free time (I work as a Frontend Developer). My partner (from now on I’ll call him Modbanger) was coming from a different angle. He became the curator and author of part of the content on our site, and also worked on the concept and design. Writi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5szs59nlrgx8412t2vih.png",
-    "video": null,
-    "author": "Alexsandr Pierierodov",
-    "tags": [
-      "webdev",
-      "mvp",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "From Idea to MVP: Building Our Own Platform for Old Game Mods",
-    "seoDescription": "A Bit of Background My idea was pretty simple at first: I wanted to create a website that I could develop in my free time (I work as a Frontend Developer). M..."
-  },
-  {
     "title": "iOS 26 is probably complete",
     "url": "https://9to5mac.com/2025/08/25/ios-beta-history/",
     "publishedAt": "2025-08-25T19:21:55.000Z",
@@ -281,44 +484,6 @@
     "seoDescription": "I love a good action movie, especially if it involves martial arts. While I have no idea how to punch and kick like these guys on screen, I have to admit I'm..."
   },
   {
-    "title": "Python for Optimizing IoT Device Control in Carboxytherapy",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/python-for-optimizing-iot-device-control-in-carboxytherapy-4693",
-    "publishedAt": "2025-08-25T19:08:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Carboxytherapy is an advanced treatment that involves the controlled administration of medical-grade carbon dioxide (CO₂) beneath the skin. It is widely used for skin rejuvenation, cellulite reduction, scar improvement, and localized fat treatment. While the medical principles behind carboxytherapy are well established, technology now plays an increasingl...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdw8ayamq7nmopp4yy5mf.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python for Optimizing IoT Device Control in Carboxytherapy",
-    "seoDescription": "Carboxytherapy is an advanced treatment that involves the controlled administration of medical-grade carbon dioxide (CO₂) beneath the skin. It is widely used..."
-  },
-  {
-    "title": "AI 2027: Will Superintelligence Arrive Sooner Than We Imagine?",
-    "url": "https://dev.to/synergy_shock/ai-2027-will-superintelligence-arrive-sooner-than-we-imagine-30gk",
-    "publishedAt": "2025-08-25T19:05:51.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the fast-paced world of artificial intelligence, the question is no longer if superintelligence will arrive, but when.An ambitious project led by former OpenAI researcher, Daniel Kokotajlo, has captured the community’s attention by proposing a concrete and near-term date: 2027. This scenario invites us to reflect on the possibility of an exponential ac...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvgjziqbg1ixn3b83q3xj.jpg",
-    "video": null,
-    "author": "Synergy Shock",
-    "tags": [
-      "ai",
-      "discuss",
-      "superintelligence",
-      "webdev"
-    ],
-    "seoTitle": "AI 2027: Will Superintelligence Arrive Sooner Than We Imagine?",
-    "seoDescription": "In the fast-paced world of artificial intelligence, the question is no longer if superintelligence will arrive, but when.An ambitious project led by former O..."
-  },
-  {
     "title": "You Can Make Every Watt Count With SmallRig's Handheld Power Stick Finally Hitting Stores",
     "url": "https://nofilmschool.com/smallrig-hps99-handheld-power-stick-hits-stores",
     "publishedAt": "2025-08-25T19:00:05.000Z",
@@ -338,25 +503,6 @@
     ],
     "seoTitle": "You Can Make Every Watt Count With SmallRig's Handheld Power Stick Finally Hitting Stores",
     "seoDescription": "We’ve all been there: you’ve been out on location, or even in a studio, but working on a very chaotic project, and all of a sudden, you’re out of power. Of c..."
-  },
-  {
-    "title": "\"Trusted Verified PayPal Accounts for Effortless Online Transactions\"",
-    "url": "https://dev.to/pvazoneusa202526/trusted-verified-paypal-accounts-for-effortless-online-transactions-5918",
-    "publishedAt": "2025-08-25T18:55:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Benefits Of Verified PayPal Accounts Enhanced Security Two-Factor Authentication: Adds an extra step for login verification. Increased Transaction Limits Buy Verified PayPal Accounts With verified accounts, you can handle larger transactions with ease. How To Identify A Verified PayPal Account Verification Process Key Indicators Next, look at the account ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhramhlrwsjip3c3d5um4.jpg",
-    "video": null,
-    "author": "Buy Verified PayPal Accounts",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "\"Trusted Verified PayPal Accounts for Effortless Online Transactions\"",
-    "seoDescription": "Benefits Of Verified PayPal Accounts Enhanced Security Two-Factor Authentication: Adds an extra step for login verification. Increased Transaction Limits Buy..."
   },
   {
     "title": "Google Nest Camera and Doorbell leak shows off new colors and 2K video recording",
@@ -503,170 +649,5 @@
     ],
     "seoTitle": "Netflix Releases Its AI Rules for Filmmakers",
     "seoDescription": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sur..."
-  },
-  {
-    "title": "Apple’s latest TV+ subscription price hike might open the door to this opportunity",
-    "url": "https://9to5mac.com/2025/08/25/apple-tv-plus-price-hike-new-opportunity-for-ad-plan/",
-    "publishedAt": "2025-08-25T18:11:08.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Recently, Apple announced yet another price hike for its Apple TV+ service. This time, it’s increasing 30% from $9.99/month to $12.99/month. After the service launched in 2019 at $4.99/month, its received a couple price hikes. This new price hike, though, likely opens the door to something Apple has reportedly been considering for quite a while – an ad-su...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-plus-tvos26-screensaver-07.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple’s latest TV+ subscription price hike might open the door to this opportunity",
-    "seoDescription": "Recently, Apple announced yet another price hike for its Apple TV+ service. This time, it’s increasing 30% from $9.99/month to $12.99/month. After the servic..."
-  },
-  {
-    "title": "Are We Experiencing The Spec Boom We've Been Waiting For?",
-    "url": "https://nofilmschool.com/spec-boom-august-2025",
-    "publishedAt": "2025-08-25T18:10:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Let's not bury the lede: eight spec scripts have sold so far in August of 2025. That's a massive number that should make every writer in the world excited. It comes off the tails of original movies like Weapons and Sinners, crushing at the box office. It might be a harbinger of hope for Hollywood that realizes there is real money in original ideas and for...",
-    "image": "https://nofilmschool.com/media-library/are-we-experiencing-the-spec-boom-we-ve-been-waiting-for.jpg?id=60046349&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Screenplay",
-      "Spec script"
-    ],
-    "seoTitle": "Are We Experiencing The Spec Boom We've Been Waiting For?",
-    "seoDescription": "Let's not bury the lede: eight spec scripts have sold so far in August of 2025. That's a massive number that should make every writer in the world excited. I..."
-  },
-  {
-    "title": "MagSafe Monday: Want a no‑nonsense car mount that keeps your air vents clear?",
-    "url": "https://9to5mac.com/2025/08/25/hypermount-vacuum-car-mount/",
-    "publishedAt": "2025-08-25T18:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "If you want a simple car mount that works with MagSafe and doesn’t take over your air vents, your choices are pretty limited. The is a great choice. It sticks to your dash or windshield, holds tight, and doesn’t budge even on bumpy roads and around corners. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/statik.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "MagSafe Monday: Want a no‑nonsense car mount that keeps your air vents clear?",
-    "seoDescription": "If you want a simple car mount that works with MagSafe and doesn’t take over your air vents, your choices are pretty limited. The is a great choice. It stick..."
-  },
-  {
-    "title": "All of Ari Aster's Projects, Ranked",
-    "url": "https://nofilmschool.com/all-ari-aster-projects",
-    "publishedAt": "2025-08-25T17:50:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbing short films before joining the greats of the horror scene with 2018's Hereditary. Since then, he's continued to challenge audiences with work that blends psychological terror, dark comedy, and human...",
-    "image": "https://nofilmschool.com/media-library/hereditary-trailer.jpg?id=34072652&width=980",
-    "video": "https://www.youtube.com/embed/P27XyQvr7Ag?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Short films",
-      "Ari aster",
-      "Best movies"
-    ],
-    "seoTitle": "All of Ari Aster's Projects, Ranked",
-    "seoDescription": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbin..."
-  },
-  {
-    "title": "M3 iPad Air Gets Massive $150 Discounts Across Entire Lineup, Starting at $449",
-    "url": "https://www.macrumors.com/2025/08/25/m3-ipad-air-massive-discounts/",
-    "publishedAt": "2025-08-25T17:43:33.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "We're tracking record low prices across the entire M3 iPad Air lineup today, with discounts available at both Amazon and Best Buy. This sale includes savings on both Wi-Fi and cellular models of the tablet. Note: MacRumors is an affiliate partner with some of these vendors. When you click a link and make a purchase, we may receive a small payment, which h...",
-    "image": "https://images.macrumors.com/article-new/2025/05/m3-ipad-air-new-green.jpeg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals"
-    ],
-    "seoTitle": "M3 iPad Air Gets Massive $150 Discounts Across Entire Lineup, Starting at $449",
-    "seoDescription": "We're tracking record low prices across the entire M3 iPad Air lineup today, with discounts available at both Amazon and Best Buy. This sale includes savings..."
-  },
-  {
-    "title": "Photographer Upends His Whole Life to Chase Auroras Around the Arctic",
-    "url": "https://petapixel.com/2025/08/25/photographer-upends-his-whole-life-to-chase-auroras-around-the-arctic/",
-    "publishedAt": "2025-08-25T17:42:34.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "One night in 2018, I was viewing the international space station through a telescope in the observatory of Helsinki. Suddenly, I looked into the opposite direction and there, for the first time ever, I would see the northern lights dancing over the city below. The experience was otherworldly and I wanted to see them again and again. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Photographer-Upends-His-Whole-Life-to-Chase-Auroras-Around-the-Arctic.jpg",
-    "video": null,
-    "author": "Dennis Lehtonen",
-    "tags": [
-      "Inspiration",
-      "Spotlight",
-      "arctic",
-      "aurora",
-      "auroraborealis",
-      "finland",
-      "greenland",
-      "lapland"
-    ],
-    "seoTitle": "Photographer Upends His Whole Life to Chase Auroras Around the Arctic",
-    "seoDescription": "One night in 2018, I was viewing the international space station through a telescope in the observatory of Helsinki. Suddenly, I looked into the opposite dir..."
-  },
-  {
-    "title": "What Disney's Gen Z Strategy Means for Filmmakers",
-    "url": "https://nofilmschool.com/disney-gen-z",
-    "publishedAt": "2025-08-25T17:37:39.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "According to reporting from Variety, Disney wants original ideas—specifically, the studio wants movies that will bring young men back to the brand. \"Young men\" in this case means Gen Z, ages 13-28. Every studio wants to reach Gen Z, so that's not news. But it's unique that Disney is calling for original concepts after the MCU and Star Wars franchises have...",
-    "image": "https://nofilmschool.com/media-library/amandla-stenberg-in-the-acolyte.png?id=52450736&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "Gen z",
-      "Box office",
-      "Disney",
-      "Hollywood",
-      "Industry"
-    ],
-    "seoTitle": "What Disney's Gen Z Strategy Means for Filmmakers",
-    "seoDescription": "According to reporting from Variety, Disney wants original ideas—specifically, the studio wants movies that will bring young men back to the brand. \"Young me..."
-  },
-  {
-    "title": "GoPro Has Designed an Osmo Pocket Competitor with Modular Pieces",
-    "url": "https://petapixel.com/2025/08/25/gopro-has-designed-an-osmo-pocket-competitor-with-modular-pieces/",
-    "publishedAt": "2025-08-25T17:15:50.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The DJI Osmo Pocket 3 is not only the most popular camcorder on the planet, it's one of the most popular camera devices, period. It is also occupying its niche pretty much uncontested, as only a smartphone or an action camera are modern viable competitors. That might not remain the case for long, however, as GoPro has designed a competitor. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/GoPro-Has-Designed-an-Osmo-Pocket-Competitor-with-Modular-Pieces.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Equipment",
-      "News",
-      "design",
-      "dji",
-      "djiosmopocket",
-      "djiosmopocket3",
-      "gopro",
-      "goprokarma"
-    ],
-    "seoTitle": "GoPro Has Designed an Osmo Pocket Competitor with Modular Pieces",
-    "seoDescription": "The DJI Osmo Pocket 3 is not only the most popular camcorder on the planet, it's one of the most popular camera devices, period. It is also occupying its nic..."
-  },
-  {
-    "title": "watchOS 26 beta 8 available now for Apple Watch",
-    "url": "https://9to5mac.com/2025/08/25/watchos-26-beta-8-available-now-for-apple-watch/",
-    "publishedAt": "2025-08-25T17:09:24.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "watchOS 26 is the next major Apple Watch software update, and today beta 8 was released to developers ahead of the expected public launch next month. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/watchOS-26-b8.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "watchOS 26 beta 8 available now for Apple Watch",
-    "seoDescription": "watchOS 26 is the next major Apple Watch software update, and today beta 8 was released to developers ahead of the expected public launch next month. more…"
   }
 ]
