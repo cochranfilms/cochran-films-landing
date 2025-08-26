@@ -1,5 +1,63 @@
 [
   {
+    "title": "Me ajudou bastante",
+    "url": "https://dev.to/dev_king/me-ajudou-bastante-1nn0",
+    "publishedAt": "2025-08-26T23:07:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Clean Up Your React Code: How the Object Lookup Pattern Replaces Endless Ifs Werliton Silva ・ Aug 19 #webdev #react #beginners #programming",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F450483%2Feb166a12-3bfa-487f-aebd-a91d7c33a48a.png",
+    "video": null,
+    "author": "Dev King",
+    "tags": [
+      "webdev",
+      "react",
+      "beginners",
+      "programming"
+    ],
+    "seoTitle": "Me ajudou bastante",
+    "seoDescription": "Clean Up Your React Code: How the Object Lookup Pattern Replaces Endless Ifs Werliton Silva ・ Aug 19 #webdev #react #beginners #programming"
+  },
+  {
+    "title": "15 Breathtaking Photos From the 61st Wildlife Photographer of the Year",
+    "url": "https://petapixel.com/2025/08/26/15-breathtaking-photos-from-the-61st-wildlife-photographer-of-the-year/",
+    "publishedAt": "2025-08-26T23:01:55.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The Natural History Museum in London unveiled a first look at 15 of the breathtaking photos that are in the running to win the 61st Wildlife Photographer of the Year competition, including a lion staring down a cobra, a pack of Arctic wolves, and bats flying through the dark toward the camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/wpoty-sneak-peek-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "News",
+      "Spotlight",
+      "competition",
+      "conservation",
+      "contest",
+      "london",
+      "naturalhistorymuseum",
+      "nature"
+    ],
+    "seoTitle": "15 Breathtaking Photos From the 61st Wildlife Photographer of the Year",
+    "seoDescription": "The Natural History Museum in London unveiled a first look at 15 of the breathtaking photos that are in the running to win the 61st Wildlife Photographer of ..."
+  },
+  {
+    "title": "Analyst warns of ‘tempered’ iPhone 17 Air response, but maintains Apple’s stock rating",
+    "url": "https://9to5mac.com/2025/08/26/analyst-warns-of-tempered-iphone-17-air-response-but-maintains-apples-stock-rating/",
+    "publishedAt": "2025-08-26T22:25:45.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "In a new investor note, Bank of America Research analyst Wamsi Mohani offered his market outlook ahead of the upcoming September 9 event, where the iPhone 17 lineup will be announced. Here’s what he said. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/06/apple-stock-up.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Analyst warns of ‘tempered’ iPhone 17 Air response, but maintains Apple’s stock rating",
+    "seoDescription": "In a new investor note, Bank of America Research analyst Wamsi Mohani offered his market outlook ahead of the upcoming September 9 event, where the iPhone 17..."
+  },
+  {
     "title": "Wie ich meine Webseite zur KI-Antwortmaschine umgebaut habe (und warum du das auch tun solltest)",
     "url": "https://dev.to/ivo_sa/wie-ich-meine-webseite-zur-ki-antwortmaschine-umgebaut-habe-und-warum-du-das-auch-tun-solltest-n4h",
     "publishedAt": "2025-08-26T22:00:00.000Z",
@@ -314,25 +372,6 @@
     "seoDescription": "Apple’s iPhone 17 event is officially just around the corner. As new hardware arrives, we can expect Apple to discontinue seven products that it currently se..."
   },
   {
-    "title": "Profiling in Go: A Practical Guide to Finding Performance Bottlenecks",
-    "url": "https://dev.to/seyedahmaddv/profiling-in-go-a-practical-guide-to-finding-performance-bottlenecks-32e7",
-    "publishedAt": "2025-08-26T19:55:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When working with Go, performance is often a key consideration. Whether you’re building a small CLI tool or a large-scale backend service, understanding how your code consumes CPU, memory, and other resources is essential. In this post, we’ll walk through Go’s built-in profiling tools, how to use them, and how to interpret their results. 🚀 What is Profil...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkaseoj7mxmdhq4vslhmz.png",
-    "video": null,
-    "author": "Seyed Ahmad",
-    "tags": [
-      "profiling",
-      "go",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Profiling in Go: A Practical Guide to Finding Performance Bottlenecks",
-    "seoDescription": "When working with Go, performance is often a key consideration. Whether you’re building a small CLI tool or a large-scale backend service, understanding how ..."
-  },
-  {
     "title": "Apple Announces Fourth Store in India",
     "url": "https://www.macrumors.com/2025/08/26/apple-announces-fourth-store-in-india/",
     "publishedAt": "2025-08-26T19:44:06.000Z",
@@ -584,44 +623,5 @@
     ],
     "seoTitle": "How to watch Apple’s iPhone 17 event live on September 9",
     "seoDescription": "It’s official: Apple is holding its big iPhone 17 event on Tuesday, September 9. The ‘Awe dropping’ announcements will be streamed live online. Here’s how to..."
-  },
-  {
-    "title": "Apple’s September 9 event logo has a fun interactive easter egg",
-    "url": "https://9to5mac.com/2025/08/26/apples-september-9-event-logo-has-a-fun-interactive-easter-egg/",
-    "publishedAt": "2025-08-26T17:23:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is holding its iPhone 17 launch event, dubbed ‘Awe dropping,’ on Tuesday, September 9. And the event logo on Apple’s website comes with a fun easter egg. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-event-interactive-logo-awe-dropping.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple’s September 9 event logo has a fun interactive easter egg",
-    "seoDescription": "Apple is holding its iPhone 17 launch event, dubbed ‘Awe dropping,’ on Tuesday, September 9. And the event logo on Apple’s website comes with a fun easter eg..."
-  },
-  {
-    "title": "Apple Set to Announce ‘Awe Dropping’ New iPhone Models",
-    "url": "https://petapixel.com/2025/08/26/apple-set-to-announce-awe-dropping-new-iphone-models/",
-    "publishedAt": "2025-08-26T17:18:01.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Apple announced its annual iPhone launch event today, teasing \"awe dropping\" reveals on September 9. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/apple-event-sept-2025-teaser-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Mobile",
-      "News",
-      "Technology",
-      "apple",
-      "ios26",
-      "iphone",
-      "iphone17",
-      "iphone17air"
-    ],
-    "seoTitle": "Apple Set to Announce ‘Awe Dropping’ New iPhone Models",
-    "seoDescription": "Apple announced its annual iPhone launch event today, teasing \"awe dropping\" reveals on September 9. [Read More]"
   }
 ]
