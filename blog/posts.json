@@ -1,88 +1,12 @@
 [
   {
-    "title": "One Click, Complete Control with Aiinak",
-    "url": "https://dev.to/aiinak9876/one-click-complete-control-with-aiinak-47j8",
-    "publishedAt": "2025-08-26T05:12:56.000Z",
+    "title": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
+    "url": "https://dev.to/member_74898956/stop-guessing-start-measuring-a-pragmatic-guide-to-web-performance-5a38",
+    "publishedAt": "2025-08-26T06:16:07.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "drowning in tools. One app for emails, another for project tracking, a different one for documents, and yet another for meetings. Switching between them feels like running a marathon before you even start real work. The truth is, every extra click steals time and energy. That’s why Aiinak was designed to give professionals one simple advantage: complete c...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3gsoxpdeuncvbv0pont6.jpg",
-    "video": null,
-    "author": "aiinak.com",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "One Click, Complete Control with Aiinak",
-    "seoDescription": "drowning in tools. One app for emails, another for project tracking, a different one for documents, and yet another for meetings. Switching between them feel..."
-  },
-  {
-    "title": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually",
-    "url": "https://dev.to/teamcamp/i-audited-100-agency-workflows-the-3-collaboration-mistakes-costing-50k-annually-2c9c",
-    "publishedAt": "2025-08-26T05:10:19.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Agency work feels intense. Projects move quick. Clients demand more. Deadlines never wait. Teams feel pressure from all sides. Productivity drops. Profit margins shrink. Why does this happen so often? Across 100 agency audits, three collaboration mistakes stood out. These mistakes are not complex, but they are costly. I watched teams waste twelve hours we...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftb3ofy34hu7wipwn8fzq.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "agency",
-      "webdev",
-      "productivity",
-      "discuss"
-    ],
-    "seoTitle": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually",
-    "seoDescription": "Agency work feels intense. Projects move quick. Clients demand more. Deadlines never wait. Teams feel pressure from all sides. Productivity drops. Profit mar..."
-  },
-  {
-    "title": "Expand Your Reach with the Comprehensive China Business Email List",
-    "url": "https://dev.to/chinamaillistsdata/expand-your-reach-with-the-comprehensive-china-business-email-list-1bee",
-    "publishedAt": "2025-08-26T04:49:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In today’s fast-paced global market, connecting with the right business contacts is crucial for growth and success. The China Business Email List by Ready Mailing Team provides businesses with a reliable and up-to-date database to streamline communication, enhance marketing strategies, and unlock opportunities in one of the world’s largest economies. Chin...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp2yimc9cjeowvm5suab7.png",
-    "video": null,
-    "author": "China Business Email List",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Expand Your Reach with the Comprehensive China Business Email List",
-    "seoDescription": "In today’s fast-paced global market, connecting with the right business contacts is crucial for growth and success. The China Business Email List by Ready Ma..."
-  },
-  {
-    "title": "On my elm-knobs Elm package",
-    "url": "https://dev.to/agj/on-my-elm-knobs-elm-package-162g",
-    "publishedAt": "2025-08-26T04:03:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Two years ago I made a simple Elm package to scratch my own itch, named agj/elm-knobs. I wanted a simple interface to tweak constants dynamically in order to see how they affect a visual algorithm (which was just a project I was working on for fun; I'll post about it if I actually get around to finishing it). I found a few packages that get close to what ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkxvz9buvdnm0iayqu5jl.png",
-    "video": null,
-    "author": "agj",
-    "tags": [
-      "elm",
-      "testing",
-      "frontend",
-      "webdev"
-    ],
-    "seoTitle": "On my elm-knobs Elm package",
-    "seoDescription": "Two years ago I made a simple Elm package to scratch my own itch, named agj/elm-knobs. I wanted a simple interface to tweak constants dynamically in order to..."
-  },
-  {
-    "title": "Your-Tests-Are-Slow-and-Brittle-Youre-Testing-the-Wrong-Thing",
-    "url": "https://dev.to/member_74898956/your-tests-are-slow-and-brittle-youre-testing-the-wrong-thing-id3",
-    "publishedAt": "2025-08-26T03:19:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "GitHub Home \"We should write more tests.\" In every technical meeting, this sentence is repeated like a sacred mantra. Everyone nods in agreement, everyone knows this is the \"right\" thing to do. But back at their desks, the expression on many faces turns to one of pain. 😫 Why? Because in many projects, writing tests is a chore. The tests run as slow as a ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftm6x16004gb6sw06754q.png",
+    "summary": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-commerce service, the system we had poured six months of hard work into, had crumbled like a paper house in the face of peak traffic. CPU at 100%, memory overflows, and logs filled with timeout errors....",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/..%2Fmarkdown-images%2Fplaintext_flamegraph.svg",
     "video": null,
     "author": "member_74898956",
     "tags": [
@@ -91,8 +15,195 @@
       "rust",
       "backend"
     ],
-    "seoTitle": "Your-Tests-Are-Slow-and-Brittle-Youre-Testing-the-Wrong-Thing",
-    "seoDescription": "GitHub Home \"We should write more tests.\" In every technical meeting, this sentence is repeated like a sacred mantra. Everyone nods in agreement, everyone kn..."
+    "seoTitle": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
+    "seoDescription": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-c..."
+  },
+  {
+    "title": "How to Design Systems That Evolve With Business Needs",
+    "url": "https://dev.to/dct_technology/how-to-design-systems-that-evolve-with-business-needs-4d6b",
+    "publishedAt": "2025-08-26T06:05:50.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine this: you’ve just built the perfect system for your business. Everything runs smoothly, the workflows are efficient, and the users are happy. But six months later… new requirements pop up. The market changes, customer expectations rise, and suddenly your “perfect” system starts breaking under pressure. That’s the reality of building for businesses...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvg1el9ndca60uvzxu2kr.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "webdev",
+      "systemdesign",
+      "softwareengineering",
+      "seo"
+    ],
+    "seoTitle": "How to Design Systems That Evolve With Business Needs",
+    "seoDescription": "Imagine this: you’ve just built the perfect system for your business. Everything runs smoothly, the workflows are efficient, and the users are happy. But six..."
+  },
+  {
+    "title": "11+ V0 Alternatives That Every Developer Must Try",
+    "url": "https://dev.to/vinishbhaskar/v0-alternatives-4c8n",
+    "publishedAt": "2025-08-26T05:57:31.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Looking for the best V0 alternatives in 2025? V0 (by Vercel) is a powerful AI web app builder that turns prompts and Figma files into UI components, Next.js apps, and prototypes. It’s fast, intuitive, and works well for developers who love staying in flow. However, like most AI coding tools, V0 has its limitations. Customization can be tricky, scaling cos...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fam6p3e9i7dq67ai9oers.png",
+    "video": null,
+    "author": "Vinish Bhaskar",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "11+ V0 Alternatives That Every Developer Must Try",
+    "seoDescription": "Looking for the best V0 alternatives in 2025? V0 (by Vercel) is a powerful AI web app builder that turns prompts and Figma files into UI components, Next.js ..."
+  },
+  {
+    "title": "How Back to the Future III Pulled Off Its Most Dangerous Stunt",
+    "url": "https://nofilmschool.com/back-to-the-future-iii-train-crash",
+    "publishedAt": "2025-08-26T05:55:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "By the time Back to the Future Part III (1990) rolled into theaters, the trilogy had already bent time, rewired timelines, and parked a DeLorean into cinema history. And yet, Robert Zemeckis and Bob Gale weren’t done. They wanted one last, pulse-pounding set piece to send Marty McFly (Michael J. Fox) and Doc Brown (Christopher Lloyd) home. The answer? A h...",
+    "image": "https://nofilmschool.com/media-library/back-to-the-future-part-3-1990.jpg?id=61504667&width=980",
+    "video": "https://www.youtube.com/embed/RDJCoE0JmF0?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Back to the future iii",
+      "Stunts"
+    ],
+    "seoTitle": "How Back to the Future III Pulled Off Its Most Dangerous Stunt",
+    "seoDescription": "By the time Back to the Future Part III (1990) rolled into theaters, the trilogy had already bent time, rewired timelines, and parked a DeLorean into cinema ..."
+  },
+  {
+    "title": "Building Autonomy Without Losing Accountability",
+    "url": "https://dev.to/dct_technology/building-autonomy-without-losing-accountability-3c3g",
+    "publishedAt": "2025-08-26T05:48:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine this: You give your team full freedom to work the way they want. No micromanaging. No constant check-ins. They’re thrilled. But a few weeks later, deadlines are missed, priorities clash, and you’re left wondering — where did accountability go? This is the silent struggle most teams face. Too much autonomy without structure becomes chaos. Too much ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fumwnq8ah6r6a56xyb89r.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "webdev",
+      "design",
+      "seo",
+      "itconsulting"
+    ],
+    "seoTitle": "Building Autonomy Without Losing Accountability",
+    "seoDescription": "Imagine this: You give your team full freedom to work the way they want. No micromanaging. No constant check-ins. They’re thrilled. But a few weeks later, de..."
+  },
+  {
+    "title": "The Secret Hero Blueprint Inside 'The Shawshank Redemption'",
+    "url": "https://nofilmschool.com/shawshank-redemption-hero-arc",
+    "publishedAt": "2025-08-26T05:45:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Andy Dufresne (Tim Robbins) doesn’t enter The Shawshank Redemption (1994) with a bang. In fact, he barely makes a ripple. He’s quiet, stiff, and looks more like a man who got lost on his way to a tax seminar than someone headed for one of Maine’s toughest prisons. There’s no dramatic breakdown, no big speeches. Just a man, wrongly convicted, trying to sta...",
+    "image": "https://nofilmschool.com/media-library/how-the-shawshank-redemption-quietly-builds-a-hero.jpg?id=61509630&width=980",
+    "video": "https://www.youtube.com/embed/eql5zmZbYWY?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "The shawshank redemption",
+      "Character arc",
+      "Character development",
+      "Character analysis"
+    ],
+    "seoTitle": "The Secret Hero Blueprint Inside 'The Shawshank Redemption'",
+    "seoDescription": "Andy Dufresne (Tim Robbins) doesn’t enter The Shawshank Redemption (1994) with a bang. In fact, he barely makes a ripple. He’s quiet, stiff, and looks more l..."
+  },
+  {
+    "title": "The Horror Movie That Terrified Audiences Without a Single Kill",
+    "url": "https://nofilmschool.com/blair-witch-scary-without-gore",
+    "publishedAt": "2025-08-26T05:35:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Eduardo Sanchez and Daniel Myrick’s The Blair Witch Project (1999) is widely acclaimed for pioneering the found footage filmmaking genre in Hollywood. At the same time, it is one of the most nuanced horror films that you can come across. The narrative explores the legend of the Blair Witch, but only through the recovered raw footage shot by three film stu...",
+    "image": "https://nofilmschool.com/media-library/the-horror-movie-that-terrified-audiences-without-a-single-kill.jpg?id=61513319&width=980",
+    "video": "https://www.youtube.com/embed/MBZ-POVsrlI?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "The blair witch project",
+      "Found footage",
+      "Horror",
+      "The blair witch project"
+    ],
+    "seoTitle": "The Horror Movie That Terrified Audiences Without a Single Kill",
+    "seoDescription": "Eduardo Sanchez and Daniel Myrick’s The Blair Witch Project (1999) is widely acclaimed for pioneering the found footage filmmaking genre in Hollywood. At the..."
+  },
+  {
+    "title": "The Classic Film That Was Written While the Cameras Rolled",
+    "url": "https://nofilmschool.com/casablanca-behind-the-scenes",
+    "publishedAt": "2025-08-26T05:21:55.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Set against the backdrop of World War II, Michael Curtiz’s Casablanca premiered in 1942 (a year before its official U.S release on February 1, 1943), at a time when there were U.S. troops actively deployed in North Africa. Not only did the film skyrocket the careers of the two leading actors (Ingrid Bergman and Humphrey Bogart), but it also left a mark on...",
+    "image": "https://nofilmschool.com/media-library/illsa-s-letter-to-richard.jpg?id=61509988&width=980",
+    "video": "https://www.youtube.com/embed/BkL9l7qovsE?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Casablanca",
+      "History",
+      "Casablanca"
+    ],
+    "seoTitle": "The Classic Film That Was Written While the Cameras Rolled",
+    "seoDescription": "Set against the backdrop of World War II, Michael Curtiz’s Casablanca premiered in 1942 (a year before its official U.S release on February 1, 1943), at a ti..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/rajesh_patel/-b9k",
+    "publishedAt": "2025-08-26T05:17:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Rajesh Patel",
+    "tags": [
+      "agency",
+      "webdev",
+      "productivity",
+      "discuss"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss"
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/nikhil_sachapara/-2h85",
+    "publishedAt": "2025-08-26T05:17:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "nikhil sachapara",
+    "tags": [
+      "agency",
+      "webdev",
+      "productivity",
+      "discuss"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss"
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/naik_sejal/-35b4",
+    "publishedAt": "2025-08-26T05:16:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Sejal",
+    "tags": [
+      "agency",
+      "webdev",
+      "productivity",
+      "discuss"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "I Audited 100 Agency Workflows: The 3 Collaboration Mistakes Costing $50k+ Annually Pratham naik for Teamcamp ・ Aug 26 #agency #webdev #productivity #discuss"
   },
   {
     "title": "YouTube TV could lose Fox channels this week",
@@ -529,117 +640,5 @@
     ],
     "seoTitle": "Is This Smart Vacuum Company Moving into the Aerial Drone Market?",
     "seoDescription": "While not a super well-known brand to many Western consumers, the Chinese smart robotic vacuum company Dreame is reportedly making moves to possibly move int..."
-  },
-  {
-    "title": "New Apple TV 4K will get my upgrade for one feature alone",
-    "url": "https://9to5mac.com/2025/08/25/new-apple-tv-4k-will-get-my-upgrade-for-one-feature-alone/",
-    "publishedAt": "2025-08-25T18:45:21.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s big product launch season is almost here, headlined by the iPhone 17 line, Apple Watch Ultra 3, and AirPods Pro 3. There’s a new Apple TV 4K coming too, and I’m planning to upgrade for one rumored feature alone. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-4k-new.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New Apple TV 4K will get my upgrade for one feature alone",
-    "seoDescription": "Apple’s big product launch season is almost here, headlined by the iPhone 17 line, Apple Watch Ultra 3, and AirPods Pro 3. There’s a new Apple TV 4K coming t..."
-  },
-  {
-    "title": "‘I’m a Victim and Totally Innocent’ Says US Open Photographer Who Walked Onto the Court",
-    "url": "https://petapixel.com/2025/08/25/im-a-victim-and-totally-innocent-says-us-open-photographer-who-walked-onto-the-court/",
-    "publishedAt": "2025-08-25T18:44:24.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The photographer who made international headlines after interrupting a pivotal match point in a US Open tennis match last night has broken his silence, stating that he did nothing wrong and is a victim of an online mob. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/us-open-photographer-1600x840-1-1600x840.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "News",
-      "benjaminbonzi",
-      "controversy",
-      "daniilmedvedev",
-      "selcukacar",
-      "sports",
-      "sportsphotographer",
-      "sportsphotography"
-    ],
-    "seoTitle": "‘I’m a Victim and Totally Innocent’ Says US Open Photographer Who Walked Onto the Court",
-    "seoDescription": "The photographer who made international headlines after interrupting a pivotal match point in a US Open tennis match last night has broken his silence, stati..."
-  },
-  {
-    "title": "James Gunn Says Perfect Continuity Isn't Worth the Cost",
-    "url": "https://nofilmschool.com/james-gunn-peacemaker-continuity",
-    "publishedAt": "2025-08-25T18:40:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "James Gunn's recent interview about Peacemaker Season 2 offers some insights about the realities of building a cinematic universe while managing budgets (and audience expectations). Have you been watching? There was certainly some buzz online about one particular shot from the premiere episode. Did you like it? Were you upset? Spoilers below, if you haven...",
-    "image": "https://nofilmschool.com/media-library/james-gunn-says-perfect-continuity-isn-t-worth-the-cost.jpg?id=61511912&width=980",
-    "video": "https://www.youtube.com/embed/Ca5E-t9pVZo?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "James gunn",
-      "Peacemaker",
-      "Continuity"
-    ],
-    "seoTitle": "James Gunn Says Perfect Continuity Isn't Worth the Cost",
-    "seoDescription": "James Gunn's recent interview about Peacemaker Season 2 offers some insights about the realities of building a cinematic universe while managing budgets (and..."
-  },
-  {
-    "title": "Get Disney+, Hulu, and ESPN Unlimited for $29.99/Month for Your First Year",
-    "url": "https://www.macrumors.com/2025/08/25/disney-hulu-espn-new-bundle/",
-    "publishedAt": "2025-08-25T18:32:14.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Disney has introduced a new promotion on its streaming service this month, offering a bundle of Disney+ (with ads), Hulu (with ads), and ESPN Unlimited for $29.99 per month for your first year. This offer represents a savings of over 39 percent on the bundle, and after your first year ends it will return to the then-current monthly price unless cancelled....",
-    "image": "https://images.macrumors.com/article-new/2025/03/disney-plus-blue-image.jpg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Get Disney+, Hulu, and ESPN Unlimited for $29.99/Month for Your First Year",
-    "seoDescription": "Disney has introduced a new promotion on its streaming service this month, offering a bundle of Disney+ (with ads), Hulu (with ads), and ESPN Unlimited for $..."
-  },
-  {
-    "title": "The Summer Box Office is Way Lower Than Expected",
-    "url": "https://nofilmschool.com/summer-box-office-low",
-    "publishedAt": "2025-08-25T18:30:06.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Even though movie theater owners might have been feeling pretty good about their summer prospects a few months ago, the actual numbers coming in might be making them a bit nervous. Comscore reports that from May 1 to Aug. 24, domestic box office sales hit $3.53 billion. This is well short of the predicted $4 billion everyone was hoping for. By the time th...",
-    "image": "https://nofilmschool.com/media-library/a-minecraft-movie.webp?id=59808383&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "News",
-      "Box office",
-      "Summer movies",
-      "Hollywood",
-      "Industry"
-    ],
-    "seoTitle": "The Summer Box Office is Way Lower Than Expected",
-    "seoDescription": "Even though movie theater owners might have been feeling pretty good about their summer prospects a few months ago, the actual numbers coming in might be mak..."
-  },
-  {
-    "title": "Netflix Releases Its AI Rules for Filmmakers",
-    "url": "https://nofilmschool.com/netflix-ai-rules-for-filmmakers",
-    "publishedAt": "2025-08-25T18:20:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sure you have things totally clear. AI is one of those hot-button issues that's both controversial and inevitable. It's here, and we have to deal with it. But it doesn't mean we have to use it, and it do...",
-    "image": "https://nofilmschool.com/media-library/netflix-releases-its-ai-rules-for-filmmakers.jpg?id=60031780&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Ai",
-      "Artificial intelligence",
-      "Netflix"
-    ],
-    "seoTitle": "Netflix Releases Its AI Rules for Filmmakers",
-    "seoDescription": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sur..."
   }
 ]
