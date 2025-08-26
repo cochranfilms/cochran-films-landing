@@ -1,41 +1,171 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/hadil/-4a8e",
-    "publishedAt": "2025-08-26T09:09:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #productivity #interview",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10682%2Fbc1a28a5-111a-4dd5-83ec-0d6fc5ccc93f.jpeg",
+    "title": "Man Nearly Scammed by Face-Swapped Photo of His Missing Dog",
+    "url": "https://petapixel.com/2025/08/26/man-nearly-scammed-by-face-swapped-photo-of-his-missing-dog/",
+    "publishedAt": "2025-08-26T10:13:15.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "A man was nearly tricked out of reward money after a scammer sent him a face-swapped, digitally altered photo of his missing dog. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/dog-owner-scammed-face-swapped-photo-missing-dog.jpg",
     "video": null,
-    "author": "Hadil Ben Abdallah",
+    "author": "Pesala Bandara",
     "tags": [
-      "webdev",
-      "programming",
-      "productivity",
-      "interview"
+      "Law",
+      "News",
+      "Post-Processing",
+      "Technology",
+      "faceswap",
+      "fraud",
+      "missing",
+      "photoshop"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #produ..."
+    "seoTitle": "Man Nearly Scammed by Face-Swapped Photo of His Missing Dog",
+    "seoDescription": "A man was nearly tricked out of reward money after a scammer sent him a face-swapped, digitally altered photo of his missing dog. [Read More]"
   },
   {
-    "title": "From Prompt to AI-Powered Finance App in Minutes",
-    "url": "https://dev.to/sajjadrahman56/from-prompt-to-ai-powered-finance-app-in-minutes-4og5",
-    "publishedAt": "2025-08-26T08:34:00.000Z",
+    "title": "Apple @ Work Podcast: Device security vs identity management in the enterprise",
+    "url": "https://9to5mac.com/2025/08/26/apple-work-podcast-device-security-vs-identity-management-in-the-enterprise/",
+    "publishedAt": "2025-08-26T10:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-at-Work-Liquid-Glass-light.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple @ Work Podcast: Device security vs identity management in the enterprise",
+    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-g..."
+  },
+  {
+    "title": "Best Free Digital Business Cards in 2025: Top Platforms Compared",
+    "url": "https://dev.to/joywinter90/best-free-digital-business-cards-in-2025-top-platforms-compared-l3a",
+    "publishedAt": "2025-08-26T09:58:48.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "How I Built a Smart Money-Saving App Using Google AI Studio Have you ever wanted to build your own AI-powered app but felt overwhelmed by boilerplate code, endless setup, tools, and debugging? What if I told you that you could simply describe your idea in a single prompt, and within minutes, Google AI Studio could generate a fully functional app for you? ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg152t80n30l1gl41t8ne.png",
+    "summary": "Paper business cards have been a networking staple for centuries, but the way we connect has evolved. Since 2020, digital-first networking has taken off, and free digital business cards have become a popular way to share information instantly and sustainably. A recent study even shows that 72% of professionals now prefer digital cards over traditional pap...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fivkqv5amawlv8whnsco1.png",
     "video": null,
-    "author": "Sajjad Rahman",
+    "author": "Joy Winter",
+    "tags": [
+      "webdev",
+      "ai",
+      "devops",
+      "discuss"
+    ],
+    "seoTitle": "Best Free Digital Business Cards in 2025: Top Platforms Compared",
+    "seoDescription": "Paper business cards have been a networking staple for centuries, but the way we connect has evolved. Since 2020, digital-first networking has taken off, and..."
+  },
+  {
+    "title": "Array Methods Every Programmer Should Know",
+    "url": "https://dev.to/lourdesyang1023/array-methods-every-programmer-should-know-3b5o",
+    "publishedAt": "2025-08-26T09:58:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Arrays are one of the most fundamental data structures in programming, and mastering array methods can significantly improve your efficiency and code readability. Whether you're working with JavaScript, Python, or other languages, understanding these key methods is essential. 1. forEach() 2. map() 3. filter() 4. reduce() 5. find() 6. some() and every() so...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx1qyrpjv5wxi44rlqv6n.png",
+    "video": null,
+    "author": "Lourdesyang",
+    "tags": [
+      "programming",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "Array Methods Every Programmer Should Know",
+    "seoDescription": "Arrays are one of the most fundamental data structures in programming, and mastering array methods can significantly improve your efficiency and code readabi..."
+  },
+  {
+    "title": "Why Car Detailing in Dubai is Essential for Vehicle Care",
+    "url": "https://dev.to/alhusayn_ridha_e9b5d3b8ca/why-car-detailing-in-dubai-is-essential-for-vehicle-care-58g3",
+    "publishedAt": "2025-08-26T09:58:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Dubai is a city where cars aren't just a means of transport -- they are a symbol of lifestyle, luxury, and status. With the scorching sun, desert dust, and humid coastal climate, vehicles in Dubai face unique challenges that can quickly take a toll on their appearance and performance. This is why car detailing in Dubai is not a luxury but an essential asp...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fss2v3jjv9zmnb6l8zwg8.png",
+    "video": null,
+    "author": "Alhusayn Ridha",
+    "tags": [
+      "webdev"
+    ],
+    "seoTitle": "Why Car Detailing in Dubai is Essential for Vehicle Care",
+    "seoDescription": "Dubai is a city where cars aren't just a means of transport -- they are a symbol of lifestyle, luxury, and status. With the scorching sun, desert dust, and h..."
+  },
+  {
+    "title": "Premier League Broadcasts Ref Cam for the First Time, Captures ‘Sick’ Goal",
+    "url": "https://petapixel.com/2025/08/26/premier-league-broadcasts-ref-cam-for-the-first-time-captures-sick-goal/",
+    "publishedAt": "2025-08-26T09:50:37.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The most popular sports league in the world, the Premier League, deployed its new Ref Cam feature last night -- feeding in the unique vantage point into the live broadcast. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Ref-Cam-Premier-League.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "bodycam",
+      "broadcast",
+      "broadcastcamera",
+      "premierleague",
+      "refcam",
+      "soccer"
+    ],
+    "seoTitle": "Premier League Broadcasts Ref Cam for the First Time, Captures ‘Sick’ Goal",
+    "seoDescription": "The most popular sports league in the world, the Premier League, deployed its new Ref Cam feature last night -- feeding in the unique vantage point into the ..."
+  },
+  {
+    "title": "How To Configure Microsoft Defender for Cloud Enhanced Security Features for Servers",
+    "url": "https://dev.to/ajayid10/how-to-configure-microsoft-defender-for-cloud-enhanced-security-features-for-servers-4j58",
+    "publishedAt": "2025-08-26T09:45:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Microsoft Defender for Cloud is Microsoft’s cloud-native security platform that helps protect workloads across Azure, on-premises, and multi-cloud environments. Step By Step to configure Microsoft Defender for Cloud Enhanced Security Features for Servers Step 1: Enable Microsoft Defender for Servers Step 2: In the Management section, select Environment se...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcllg6jl7vd2ggzh1cnd2.png",
+    "video": null,
+    "author": "Ajayi Daniel",
+    "tags": [
+      "cloud",
+      "devops",
+      "webdev",
+      "security"
+    ],
+    "seoTitle": "How To Configure Microsoft Defender for Cloud Enhanced Security Features for Servers",
+    "seoDescription": "Microsoft Defender for Cloud is Microsoft’s cloud-native security platform that helps protect workloads across Azure, on-premises, and multi-cloud environmen..."
+  },
+  {
+    "title": "I will try",
+    "url": "https://dev.to/abir17/i-will-try-18fb",
+    "publishedAt": "2025-08-26T09:40:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "From Prompt to AI-Powered Finance App in Minutes Sajjad Rahman ・ Aug 26 #learngoogleaistudio #gemini #deved #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F905098%2Fdf184674-677d-46ab-aa2e-7cc7b1e07033.png",
+    "video": null,
+    "author": "abir",
     "tags": [
       "learngoogleaistudio",
       "gemini",
       "deved",
       "webdev"
     ],
-    "seoTitle": "From Prompt to AI-Powered Finance App in Minutes",
-    "seoDescription": "How I Built a Smart Money-Saving App Using Google AI Studio Have you ever wanted to build your own AI-powered app but felt overwhelmed by boilerplate code, e..."
+    "seoTitle": "I will try",
+    "seoDescription": "From Prompt to AI-Powered Finance App in Minutes Sajjad Rahman ・ Aug 26 #learngoogleaistudio #gemini #deved #webdev"
+  },
+  {
+    "title": "Apple Music Transfer Tool for Switching From Spotify Now Available in UK and 7 Other Countries",
+    "url": "https://www.macrumors.com/2025/08/26/apple-music-transfer-tool-6-more-countries/",
+    "publishedAt": "2025-08-26T09:15:51.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple has quietly expanded availability of its music transfer tool to six additional countries, allowing users to import playlists and libraries from competing streaming services directly into Apple Music. The feature initially launched in Australia and New Zealand in May 2025, and is now available in Brazil, Canada, France, Germany, Mexico, and the Unite...",
+    "image": "https://images.macrumors.com/article-new/2024/08/apple-music.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Apple Music"
+    ],
+    "seoTitle": "Apple Music Transfer Tool for Switching From Spotify Now Available in UK and 7 Other Countries",
+    "seoDescription": "Apple has quietly expanded availability of its music transfer tool to six additional countries, allowing users to import playlists and libraries from competi..."
   },
   {
     "title": "’20-Hour’ Line to Enter Burning Man Captured Creatively From Above",
@@ -60,23 +190,18 @@
     "seoDescription": "While waiting in an extremely long line to enter Burning Man festival, video creator Steven Donovan decided to film the huge pack of vehicles by flying overh..."
   },
   {
-    "title": "TypeScript Generics: The Magic Wand for Reusable Type-Safe Code",
-    "url": "https://dev.to/hamid_zangiabadi/typescript-generics-the-magic-wand-for-reusable-type-safe-code-4am4",
-    "publishedAt": "2025-08-26T08:06:35.000Z",
-    "source": "dev.to",
+    "title": "Optimizing PWAs For Different Display Modes",
+    "url": "https://smashingmagazine.com/2025/08/optimizing-pwas-different-display-modes/",
+    "publishedAt": "2025-08-26T08:00:00.000Z",
+    "source": "smashingmagazine.com",
     "category": "web",
-    "summary": "Ever felt like you're writing the same function over and over, just with different types? Welcome to the world of TypeScript generics – where code reusability meets type safety in perfect harmony. Imagine you're building a toolbox. Instead of having separate hammers for nails, screws, and pins, wouldn't it be amazing to have one universal hammer that adap...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fepqv0kudyhpk3s6y0smc.webp",
+    "summary": "Progressive Web Apps (PWAs) are a great way to make apps built for the web feel native, but in moving away from a browser environment, we can introduce usability issues. This article covers how we can modify our app depending on what display mode is applied to mitigate these issues.",
+    "image": "http://files.smashing.media/articles/optimizing-pwas-different-display-modes/optimizing-pwas-different-display-modes.jpg",
     "video": null,
-    "author": "hamid zangiabadi",
-    "tags": [
-      "typescript",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "TypeScript Generics: The Magic Wand for Reusable Type-Safe Code",
-    "seoDescription": "Ever felt like you're writing the same function over and over, just with different types? Welcome to the world of TypeScript generics – where code reusabilit..."
+    "author": "hello@smashingmagazine.com (Declan Chidlow)",
+    "tags": [],
+    "seoTitle": "Optimizing PWAs For Different Display Modes",
+    "seoDescription": "Progressive Web Apps (PWAs) are a great way to make apps built for the web feel native, but in moving away from a browser environment, we can introduce usabi..."
   },
   {
     "title": "How Back to the Future III Pulled Off Its Most Dangerous Stunt",
@@ -513,135 +638,5 @@
     ],
     "seoTitle": "Alibaba Unveils An Open Source, Text-Based, AI Photo Editor",
     "seoDescription": "China-based e-commerce giant Alibaba's AI research team has released an open-source, text-based AI photo editor that the developers claim brings \"state-of-th..."
-  },
-  {
-    "title": "Jet Li's Top 10 Movies",
-    "url": "https://nofilmschool.com/best-jet-li-movies",
-    "publishedAt": "2025-08-25T19:10:06.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "I love a good action movie, especially if it involves martial arts. While I have no idea how to punch and kick like these guys on screen, I have to admit I'm a sucker for these kinds of hand-to-hand battles. And one of the best actors to take us into these films is Jet Li. I remember my first time seeing him in a movie; I was struck by the way he moved so...",
-    "image": "https://nofilmschool.com/media-library/jet-li-s-top-10-movies.jpg?id=61512864&width=980",
-    "video": "https://www.youtube.com/embed/MgsddFEe9Oc?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Jet li",
-      "Martial arts movies"
-    ],
-    "seoTitle": "Jet Li's Top 10 Movies",
-    "seoDescription": "I love a good action movie, especially if it involves martial arts. While I have no idea how to punch and kick like these guys on screen, I have to admit I'm..."
-  },
-  {
-    "title": "You Can Make Every Watt Count With SmallRig's Handheld Power Stick Finally Hitting Stores",
-    "url": "https://nofilmschool.com/smallrig-hps99-handheld-power-stick-hits-stores",
-    "publishedAt": "2025-08-25T19:00:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "We’ve all been there: you’ve been out on location, or even in a studio, but working on a very chaotic project, and all of a sudden, you’re out of power. Of course, there are many solutions to make sure that your camera, lights, and gear don’t lose power. Your best tool is going to be your planning time, but we all know that doesn’t always happen. The HPS9...",
-    "image": "https://nofilmschool.com/media-library/smallrig-hps99-handheld-power-stick.jpg?id=61510775&width=980",
-    "video": "https://www.youtube.com/embed/vHjzQQ7KMxA?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Smallrig",
-      "Handheld power stick",
-      "Power stick",
-      "Portable power",
-      "Portable power station",
-      "Smallrig hps99 handheld power stick"
-    ],
-    "seoTitle": "You Can Make Every Watt Count With SmallRig's Handheld Power Stick Finally Hitting Stores",
-    "seoDescription": "We’ve all been there: you’ve been out on location, or even in a studio, but working on a very chaotic project, and all of a sudden, you’re out of power. Of c..."
-  },
-  {
-    "title": "Google Nest Camera and Doorbell leak shows off new colors and 2K video recording",
-    "url": "https://www.theverge.com/news/765373/google-home-nest-cam-doorbell-2k-video-leak-gemini",
-    "publishedAt": "2025-08-25T18:54:18.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Check out the “berry” red on the indoor Nest Cam. According to a new report from Android Headlines, Google’s next-generation Nest Cams might get an upgrade from 1080p to 2K. Along with a series of leaked images that it says show off new colors for Google’s next set of devices, the report indicates the upcoming battery-powered Nest Cam and its indoor-only ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/nest-leak.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Google Nest Camera and Doorbell leak shows off new colors and 2K video recording",
-    "seoDescription": "Check out the “berry” red on the indoor Nest Cam. According to a new report from Android Headlines, Google’s next-generation Nest Cams might get an upgrade f..."
-  },
-  {
-    "title": "Is This Smart Vacuum Company Moving into the Aerial Drone Market?",
-    "url": "https://nofilmschool.com/dreame-drone-rumors",
-    "publishedAt": "2025-08-25T18:50:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "While not a super well-known brand to many Western consumers, the Chinese smart robotic vacuum company Dreame is reportedly making moves to possibly move into the aerial drone space. Could this be a new major competitor to DJI? Only time will tell, but based on rumors and online consensus surrounding this powerful robotic cleaning brand, it might at the v...",
-    "image": "https://nofilmschool.com/media-library/dreame-drone-rumors.jpg?id=61510683&width=980",
-    "video": null,
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Drone rumors",
-      "Dreame",
-      "Dji competitor",
-      "Aerial drone",
-      "​dreame drone rumors"
-    ],
-    "seoTitle": "Is This Smart Vacuum Company Moving into the Aerial Drone Market?",
-    "seoDescription": "While not a super well-known brand to many Western consumers, the Chinese smart robotic vacuum company Dreame is reportedly making moves to possibly move int..."
-  },
-  {
-    "title": "New Apple TV 4K will get my upgrade for one feature alone",
-    "url": "https://9to5mac.com/2025/08/25/new-apple-tv-4k-will-get-my-upgrade-for-one-feature-alone/",
-    "publishedAt": "2025-08-25T18:45:21.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s big product launch season is almost here, headlined by the iPhone 17 line, Apple Watch Ultra 3, and AirPods Pro 3. There’s a new Apple TV 4K coming too, and I’m planning to upgrade for one rumored feature alone. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-4k-new.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New Apple TV 4K will get my upgrade for one feature alone",
-    "seoDescription": "Apple’s big product launch season is almost here, headlined by the iPhone 17 line, Apple Watch Ultra 3, and AirPods Pro 3. There’s a new Apple TV 4K coming t..."
-  },
-  {
-    "title": "‘I’m a Victim and Totally Innocent’ Says US Open Photographer Who Walked Onto the Court",
-    "url": "https://petapixel.com/2025/08/25/im-a-victim-and-totally-innocent-says-us-open-photographer-who-walked-onto-the-court/",
-    "publishedAt": "2025-08-25T18:44:24.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The photographer who made international headlines after interrupting a pivotal match point in a US Open tennis match last night has broken his silence, stating that he did nothing wrong and is a victim of an online mob. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/us-open-photographer-1600x840-1-1600x840.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "News",
-      "benjaminbonzi",
-      "controversy",
-      "daniilmedvedev",
-      "selcukacar",
-      "sports",
-      "sportsphotographer",
-      "sportsphotography"
-    ],
-    "seoTitle": "‘I’m a Victim and Totally Innocent’ Says US Open Photographer Who Walked Onto the Court",
-    "seoDescription": "The photographer who made international headlines after interrupting a pivotal match point in a US Open tennis match last night has broken his silence, stati..."
-  },
-  {
-    "title": "James Gunn Says Perfect Continuity Isn't Worth the Cost",
-    "url": "https://nofilmschool.com/james-gunn-peacemaker-continuity",
-    "publishedAt": "2025-08-25T18:40:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "James Gunn's recent interview about Peacemaker Season 2 offers some insights about the realities of building a cinematic universe while managing budgets (and audience expectations). Have you been watching? There was certainly some buzz online about one particular shot from the premiere episode. Did you like it? Were you upset? Spoilers below, if you haven...",
-    "image": "https://nofilmschool.com/media-library/james-gunn-says-perfect-continuity-isn-t-worth-the-cost.jpg?id=61511912&width=980",
-    "video": "https://www.youtube.com/embed/Ca5E-t9pVZo?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "James gunn",
-      "Peacemaker",
-      "Continuity"
-    ],
-    "seoTitle": "James Gunn Says Perfect Continuity Isn't Worth the Cost",
-    "seoDescription": "James Gunn's recent interview about Peacemaker Season 2 offers some insights about the realities of building a cinematic universe while managing budgets (and..."
   }
 ]
