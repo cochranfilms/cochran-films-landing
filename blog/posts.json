@@ -1,5 +1,43 @@
 [
   {
+    "title": "On my elm-knobs Elm package",
+    "url": "https://dev.to/agj/on-my-elm-knobs-elm-package-162g",
+    "publishedAt": "2025-08-26T04:03:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Two years ago I made a simple Elm package to scratch my own itch, named agj/elm-knobs. I wanted a simple interface to tweak constants dynamically in order to see how they affect a visual algorithm (which was just a project I was working on for fun; I'll post about it if I actually get around to finishing it). I found a few packages that get close to what ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkxvz9buvdnm0iayqu5jl.png",
+    "video": null,
+    "author": "agj",
+    "tags": [
+      "elm",
+      "testing",
+      "frontend",
+      "webdev"
+    ],
+    "seoTitle": "On my elm-knobs Elm package",
+    "seoDescription": "Two years ago I made a simple Elm package to scratch my own itch, named agj/elm-knobs. I wanted a simple interface to tweak constants dynamically in order to..."
+  },
+  {
+    "title": "Your-Tests-Are-Slow-and-Brittle-Youre-Testing-the-Wrong-Thing",
+    "url": "https://dev.to/member_74898956/your-tests-are-slow-and-brittle-youre-testing-the-wrong-thing-id3",
+    "publishedAt": "2025-08-26T03:19:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "GitHub Home \"We should write more tests.\" In every technical meeting, this sentence is repeated like a sacred mantra. Everyone nods in agreement, everyone knows this is the \"right\" thing to do. But back at their desks, the expression on many faces turns to one of pain. 😫 Why? Because in many projects, writing tests is a chore. The tests run as slow as a ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftm6x16004gb6sw06754q.png",
+    "video": null,
+    "author": "member_74898956",
+    "tags": [
+      "webdev",
+      "programming",
+      "rust",
+      "backend"
+    ],
+    "seoTitle": "Your-Tests-Are-Slow-and-Brittle-Youre-Testing-the-Wrong-Thing",
+    "seoDescription": "GitHub Home \"We should write more tests.\" In every technical meeting, this sentence is repeated like a sacred mantra. Everyone nods in agreement, everyone kn..."
+  },
+  {
     "title": "YouTube TV could lose Fox channels this week",
     "url": "https://www.theverge.com/news/765663/fox-news-sports-youtube-tv-fox-one-carriage-dispute",
     "publishedAt": "2025-08-26T00:26:22.000Z",
@@ -28,23 +66,6 @@
     ],
     "seoTitle": "From iPhone 17 Air to iPhone 20: Apple's Redesign Timeline",
     "seoDescription": "Apple is planning to completely change the design of the iPhone over the course of the next three years, leading to a radically different \"‌iPhone‌ 20\" to ce..."
-  },
-  {
-    "title": "AI Soft Announces Public Launch of Alli AI — A Next-Gen Platform for Creators",
-    "url": "https://dev.to/alliai/ai-soft-announces-public-launch-of-alli-ai-a-next-gen-platform-for-creators-gb5",
-    "publishedAt": "2025-08-25T22:30:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "AI Soft today announced the public release of Alli AI, an artificial intelligence-powered platform designed to streamline creative workflows for professionals and enthusiasts alike. The platform is now available to all users, including a free trial version that lets creators explore its full range of tools. Alli AI offers advanced capabilities in image en...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpi6dyoig9u3oej3ty264.gif",
-    "video": null,
-    "author": "Alli Ai",
-    "tags": [
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "AI Soft Announces Public Launch of Alli AI — A Next-Gen Platform for Creators",
-    "seoDescription": "AI Soft today announced the public release of Alli AI, an artificial intelligence-powered platform designed to streamline creative workflows for professional..."
   },
   {
     "title": "The new entry-level Kindle Colorsoft is $30 off for a limited time",
@@ -612,23 +633,5 @@
     ],
     "seoTitle": "MagSafe Monday: Want a no‑nonsense car mount that keeps your air vents clear?",
     "seoDescription": "If you want a simple car mount that works with MagSafe and doesn’t take over your air vents, your choices are pretty limited. The is a great choice. It stick..."
-  },
-  {
-    "title": "All of Ari Aster's Projects, Ranked",
-    "url": "https://nofilmschool.com/all-ari-aster-projects",
-    "publishedAt": "2025-08-25T17:50:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbing short films before joining the greats of the horror scene with 2018's Hereditary. Since then, he's continued to challenge audiences with work that blends psychological terror, dark comedy, and human...",
-    "image": "https://nofilmschool.com/media-library/hereditary-trailer.jpg?id=34072652&width=980",
-    "video": "https://www.youtube.com/embed/P27XyQvr7Ag?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Short films",
-      "Ari aster",
-      "Best movies"
-    ],
-    "seoTitle": "All of Ari Aster's Projects, Ranked",
-    "seoDescription": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbin..."
   }
 ]
