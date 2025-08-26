@@ -1,5 +1,19 @@
 [
   {
+    "title": "YouTube TV could lose Fox channels this week",
+    "url": "https://www.theverge.com/news/765663/fox-news-sports-youtube-tv-fox-one-carriage-dispute",
+    "publishedAt": "2025-08-26T00:26:22.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "With the start of the NFL season looming, it’s also a window where many TV contracts are up for renewal, and on Monday evening, YouTube TV and Fox sent out alerts indicating that their contract could come to an end as soon as August 27th, at 5PM ET. Google-owned YouTube TV says that “Fox is asking for payments that are far higher than what partners with c...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/acastro_STK092_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Richard Lawler",
+    "tags": [],
+    "seoTitle": "YouTube TV could lose Fox channels this week",
+    "seoDescription": "With the start of the NFL season looming, it’s also a window where many TV contracts are up for renewal, and on Monday evening, YouTube TV and Fox sent out a..."
+  },
+  {
     "title": "From iPhone 17 Air to iPhone 20: Apple's Redesign Timeline",
     "url": "https://www.macrumors.com/2025/08/25/apple-iphone-timeline-2027/",
     "publishedAt": "2025-08-25T23:04:31.000Z",
@@ -234,63 +248,6 @@
     ],
     "seoTitle": "iOS 26 Beta Testing Likely Complete After Apple Seeds Beta 8",
     "seoDescription": "Apple today provided developers with iOS 26 beta 8, which means that beta testing is likely coming to an end. Apple typically only seeds eight developer beta..."
-  },
-  {
-    "title": "Sistemas IoT que miden la frecuencia cardíaca durante los hechizos de amor",
-    "url": "https://dev.to/jaime_smith_cfd7d9641239c/sistemas-iot-que-miden-la-frecuencia-cardiaca-durante-los-hechizos-de-amor-3lfn",
-    "publishedAt": "2025-08-25T21:16:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La tecnología IoT (Internet de las Cosas) ha dejado de ser exclusiva de la medicina, el hogar inteligente o la industria, para abrirse camino en ámbitos menos convencionales como las prácticas espirituales. Una de las aplicaciones más innovadoras es la medición de la frecuencia cardíaca durante rituales o hechizos de amor. La integración de sensores biomé...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2m9qpvtfb735q02xevqd.png",
-    "video": null,
-    "author": "Jaime Smith",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Sistemas IoT que miden la frecuencia cardíaca durante los hechizos de amor",
-    "seoDescription": "La tecnología IoT (Internet de las Cosas) ha dejado de ser exclusiva de la medicina, el hogar inteligente o la industria, para abrirse camino en ámbitos meno..."
-  },
-  {
-    "title": "Wireless IoT Devices Measuring Treatment Efficiency in CoolSculpting",
-    "url": "https://dev.to/wiz_pack_b4bde018764ea181/wireless-iot-devices-measuring-treatment-efficiency-in-coolsculpting-2bkp",
-    "publishedAt": "2025-08-25T20:37:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the last decade, non-invasive fat reduction treatments like CoolSculpting have become extremely popular worldwide. Patients are looking for procedures that provide visible results without surgery, and clinics are adopting new technologies to make the process more effective. One of the most exciting innovations is the integration of wireless IoT (Intern...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft5fwmh60b166f2s2irt4.png",
-    "video": null,
-    "author": "WIZ PACK",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Wireless IoT Devices Measuring Treatment Efficiency in CoolSculpting",
-    "seoDescription": "In the last decade, non-invasive fat reduction treatments like CoolSculpting have become extremely popular worldwide. Patients are looking for procedures tha..."
-  },
-  {
-    "title": "Python Tools for Clinic Workflow Optimization in CoolSculpting",
-    "url": "https://dev.to/giovany_osorio_707759bc6b/python-tools-for-clinic-workflow-optimization-in-coolsculpting-20bp",
-    "publishedAt": "2025-08-25T20:31:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "CoolSculpting has become one of the most in-demand non-surgical treatments for fat reduction. As clinics grow and patient demand increases, the efficiency of internal processes becomes just as important as the treatments themselves. Managing schedules, maintaining accurate patient records, forecasting clinic capacity, and analyzing financial data are all ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5rkvn1lbb4oj4w27b3r3.png",
-    "video": null,
-    "author": "Giovany Osorio",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python Tools for Clinic Workflow Optimization in CoolSculpting",
-    "seoDescription": "CoolSculpting has become one of the most in-demand non-surgical treatments for fat reduction. As clinics grow and patient demand increases, the efficiency of..."
   },
   {
     "title": "Apple TV+ is getting its best fall lineup ever, here’s everything new",
@@ -644,5 +601,43 @@
     ],
     "seoTitle": "Get Disney+, Hulu, and ESPN Unlimited for $29.99/Month for Your First Year",
     "seoDescription": "Disney has introduced a new promotion on its streaming service this month, offering a bundle of Disney+ (with ads), Hulu (with ads), and ESPN Unlimited for $..."
+  },
+  {
+    "title": "The Summer Box Office is Way Lower Than Expected",
+    "url": "https://nofilmschool.com/summer-box-office-low",
+    "publishedAt": "2025-08-25T18:30:06.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Even though movie theater owners might have been feeling pretty good about their summer prospects a few months ago, the actual numbers coming in might be making them a bit nervous. Comscore reports that from May 1 to Aug. 24, domestic box office sales hit $3.53 billion. This is well short of the predicted $4 billion everyone was hoping for. By the time th...",
+    "image": "https://nofilmschool.com/media-library/a-minecraft-movie.webp?id=59808383&width=980",
+    "video": null,
+    "author": "Jo Light",
+    "tags": [
+      "News",
+      "Box office",
+      "Summer movies",
+      "Hollywood",
+      "Industry"
+    ],
+    "seoTitle": "The Summer Box Office is Way Lower Than Expected",
+    "seoDescription": "Even though movie theater owners might have been feeling pretty good about their summer prospects a few months ago, the actual numbers coming in might be mak..."
+  },
+  {
+    "title": "Netflix Releases Its AI Rules for Filmmakers",
+    "url": "https://nofilmschool.com/netflix-ai-rules-for-filmmakers",
+    "publishedAt": "2025-08-25T18:20:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sure you have things totally clear. AI is one of those hot-button issues that's both controversial and inevitable. It's here, and we have to deal with it. But it doesn't mean we have to use it, and it do...",
+    "image": "https://nofilmschool.com/media-library/netflix-releases-its-ai-rules-for-filmmakers.jpg?id=60031780&width=980",
+    "video": null,
+    "author": "Jason Hellerman",
+    "tags": [
+      "Ai",
+      "Artificial intelligence",
+      "Netflix"
+    ],
+    "seoTitle": "Netflix Releases Its AI Rules for Filmmakers",
+    "seoDescription": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sur..."
   }
 ]
