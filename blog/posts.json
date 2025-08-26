@@ -1,17 +1,154 @@
 [
   {
+    "title": "AI super PACs, the hottest investment in tech",
+    "url": "https://www.theverge.com/regulator-newsletter/766105/ai-super-pac-tech-investments",
+    "publishedAt": "2025-08-26T20:14:09.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Hello and welcome to Regulator, a newsletter about the collision between Big Tech and Washington (last week of summer edition). If you enjoy this, consider subscribing to get this newsletter weekly and everything The Verge has to offer. Ever since the US Supreme Court ruled in Citizens United v. FEC that corporations had the right to free speech and there...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/STKB318_STARGATE_CVIRGINIA_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tina Nguyen",
+    "tags": [],
+    "seoTitle": "AI super PACs, the hottest investment in tech",
+    "seoDescription": "Hello and welcome to Regulator, a newsletter about the collision between Big Tech and Washington (last week of summer edition). If you enjoy this, consider s..."
+  },
+  {
+    "title": "Seven products Apple will discontinue following iPhone 17 event",
+    "url": "https://9to5mac.com/2025/08/26/discontinued-apple-products/",
+    "publishedAt": "2025-08-26T20:04:03.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple’s iPhone 17 event is officially just around the corner. As new hardware arrives, we can expect Apple to discontinue seven products that it currently sells. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/IMG_0019.jpeg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Seven products Apple will discontinue following iPhone 17 event",
+    "seoDescription": "Apple’s iPhone 17 event is officially just around the corner. As new hardware arrives, we can expect Apple to discontinue seven products that it currently se..."
+  },
+  {
+    "title": "Profiling in Go: A Practical Guide to Finding Performance Bottlenecks",
+    "url": "https://dev.to/seyedahmaddv/profiling-in-go-a-practical-guide-to-finding-performance-bottlenecks-32e7",
+    "publishedAt": "2025-08-26T19:55:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When working with Go, performance is often a key consideration. Whether you’re building a small CLI tool or a large-scale backend service, understanding how your code consumes CPU, memory, and other resources is essential. In this post, we’ll walk through Go’s built-in profiling tools, how to use them, and how to interpret their results. 🚀 What is Profil...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkaseoj7mxmdhq4vslhmz.png",
+    "video": null,
+    "author": "Seyed Ahmad",
+    "tags": [
+      "profiling",
+      "go",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "Profiling in Go: A Practical Guide to Finding Performance Bottlenecks",
+    "seoDescription": "When working with Go, performance is often a key consideration. Whether you’re building a small CLI tool or a large-scale backend service, understanding how ..."
+  },
+  {
+    "title": "Apple Announces Fourth Store in India",
+    "url": "https://www.macrumors.com/2025/08/26/apple-announces-fourth-store-in-india/",
+    "publishedAt": "2025-08-26T19:44:06.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is launching a new retail store location in India, with Apple Koregaon Park set to open on Thursday, September 4 at 1:00 p.m. local time. Apple Koregaon Park is located in Pune, in the state of Maharashtra. Apple already has two retail store locations that are operational in India, including one in Mumbai and one in New Delhi. announced a third stor...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Apple-Hebbal-Wallpaper.jpeg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Apple Store"
+    ],
+    "seoTitle": "Apple Announces Fourth Store in India",
+    "seoDescription": "Apple is launching a new retail store location in India, with Apple Koregaon Park set to open on Thursday, September 4 at 1:00 p.m. local time. Apple Koregao..."
+  },
+  {
+    "title": "Deploy Your Web Application on Vercel Quickly",
+    "url": "https://dev.to/md_shahzebalam/deploy-your-web-application-on-vercel-quickly--1if0",
+    "publishedAt": "2025-08-26T19:43:19.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🚀 Deploy Your Web Application on Vercel Quickly If you’ve just built your first project with React, Next.js, or even plain HTML/CSS/JS, the next exciting step is getting it live on the internet. That’s where Vercel comes in. It’s one of the easiest and fastest platforms to deploy web apps no complicated setup, no extra servers, and free hosting for hobby...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbr8q68z5uhz8ytc04gzu.png",
+    "video": null,
+    "author": "Mohammad Shahzeb Alam",
+    "tags": [
+      "frontend",
+      "vercel",
+      "beginners",
+      "webdev"
+    ],
+    "seoTitle": "Deploy Your Web Application on Vercel Quickly",
+    "seoDescription": "🚀 Deploy Your Web Application on Vercel Quickly If you’ve just built your first project with React, Next.js, or even plain HTML/CSS/JS, the next exciting st..."
+  },
+  {
+    "title": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
+    "url": "https://9to5mac.com/2025/08/26/ai-skeptics-are-running-out-of-rope-to-argue-apple-isnt-desperately-behind/",
+    "publishedAt": "2025-08-26T19:37:20.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly is Apple behind on?,” or “Catch up? Catch up to what?”. And while this sort of comment tends to come from people who seem to spend quite a lot of time and effort trying to make sure that everyone kno...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/siri-dumpster-fire.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
+    "seoDescription": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly..."
+  },
+  {
+    "title": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
+    "url": "https://dev.to/forgecode/8-tool-tech-stack-to-build-an-enterprise-grade-rag-system-without-the-headaches-i8",
+    "publishedAt": "2025-08-26T19:16:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed. RAG essentially means hooking your LLM up to your own data. As AWS puts it, RAG lets a model “reference an authoritative knowledge base outside of its training data”. In practice that means integrat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxi0vf0ib6dbjrksi0avi.gif",
+    "video": null,
+    "author": "Pankaj Singh",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
+    "seoDescription": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed..."
+  },
+  {
+    "title": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
+    "url": "https://nofilmschool.com/ne-zha-2-hit",
+    "publishedAt": "2025-08-26T19:15:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's called Ne Zha 2, and it's an animated sequel to a 2019 international Chinese hit (which made over $700 million itself) that has been doing gangbusters everywhere except in the United States. In fact, only...",
+    "image": "https://nofilmschool.com/media-library/ne-zha-2-the-animated-movie-that-made-almost-2-billion-outside-of-america.png?id=61520589&width=980",
+    "video": "https://www.youtube.com/embed/iPZYPWdrta4?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Animation",
+      "Box office",
+      "Ne zha 2"
+    ],
+    "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
+    "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
+  },
+  {
     "title": "The winners and losers of Taylor Swift’s engagement announcement",
     "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
     "publishedAt": "2025-08-26T19:04:14.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "The world’s most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it’s not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday — if it’s good enough for Beyoncé, it’s good enough for anyone. Swift and Kelce are, for the...",
+    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Mia Sato",
     "tags": [],
     "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
-    "seoDescription": "The world’s most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it’s not much of a surprise that pop star ..."
+    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
   },
   {
     "title": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
@@ -83,22 +220,6 @@
     "tags": [],
     "seoTitle": "Framework is working on a giant haptic touchpad, Trackpoint nub, and eGPU for its laptops",
     "seoDescription": "Today, Framework announced the second-gen Framework Laptop 16 with two industry firsts: the first Nvidia graphics card upgrade you can perform at home in jus..."
-  },
-  {
-    "title": "Why Garage Door Spring Replacement Shouldn’t Be a DIY Project",
-    "url": "https://dev.to/405garage/why-garage-door-spring-replacement-shouldnt-be-a-diy-project-5eic",
-    "publishedAt": "2025-08-26T18:29:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Think changing a garage door spring is as simple as swapping out a lightbulb? Think again. Every year, thousands of homeowners end up in the ER due to garage door accidents. Most of those injuries come from one part, the spring. At first glance, it might seem like a manageable task. YouTube is filled with step-by-step tutorials that make it look easy. But...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr1w9yui9qwdv0d60r7ae.png",
-    "video": null,
-    "author": "405 Garage",
-    "tags": [
-      "webdev"
-    ],
-    "seoTitle": "Why Garage Door Spring Replacement Shouldn’t Be a DIY Project",
-    "seoDescription": "Think changing a garage door spring is as simple as swapping out a lightbulb? Think again. Every year, thousands of homeowners end up in the ER due to garage..."
   },
   {
     "title": "Leitz Cine Hugo 40mm T1.5 Prime Brings Leica M Spirit to Filmmaking",
@@ -394,13 +515,13 @@
     "publishedAt": "2025-08-26T16:12:16.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Apple has announced the date of its next big event: September 9th, 2024, at 1PM ET / 10AM PT. The event, which has the tagline “Awe dropping,” will take place at the Steve Jobs Theater in Apple Park. This is where we expect to hear more about the iPhone 17 lineup, which rumors (and at least one supposed public sighting) indicate will add a Google Pixel-li...",
+    "summary": "Apple has announced the date of its next big event: September 9th, 2025, at 1PM ET / 10AM PT. The event, which has the tagline “Awe dropping,” will take place at the Steve Jobs Theater in Apple Park. This is where we expect to hear more about the iPhone 17 lineup, which rumors (and at least one supposed public sighting) indicate will add a Google Pixel-li...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/unnamed-4.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Richard Lawler",
     "tags": [],
     "seoTitle": "Apple’s iPhone 17 launch event is set for September 9th",
-    "seoDescription": "Apple has announced the date of its next big event: September 9th, 2024, at 1PM ET / 10AM PT. The event, which has the tagline “Awe dropping,” will take plac..."
+    "seoDescription": "Apple has announced the date of its next big event: September 9th, 2025, at 1PM ET / 10AM PT. The event, which has the tagline “Awe dropping,” will take plac..."
   },
   {
     "title": "Apple officially announces iPhone 17 event: ‘Awe dropping’",
@@ -494,121 +615,5 @@
     ],
     "seoTitle": "iPhone 17 announcement imminent as alleged Apple Event ‘hashmoji’ surfaces",
     "seoDescription": "Update: 9to5Mac has confirmed this information. Apple is expected to officially announce its September iPhone 17 event as soon as today. An alleged “hashmoji..."
-  },
-  {
-    "title": "iOS 26: Capture iPhone Screen Content in HDR",
-    "url": "https://www.macrumors.com/how-to/ios-vibrant-screenshots-iphone-hdr/",
-    "publishedAt": "2025-08-26T15:30:59.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple's iOS 26 update, currently in beta, brings a nice optional upgrade to screen capture quality with HDR (High Dynamic Range) capture support. The new feature captures or video-records what's on your iPhone's screen while preserving rich colors and detail. HDR screenshots are particularly valuable when capturing content with high contrast – like bright...",
-    "image": "https://images.macrumors.com/article-new/2025/06/iOS-26-Screenshots.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "iOS 26: Capture iPhone Screen Content in HDR",
-    "seoDescription": "Apple's iOS 26 update, currently in beta, brings a nice optional upgrade to screen capture quality with HDR (High Dynamic Range) capture support. The new fea..."
-  },
-  {
-    "title": "Apple Wallet in iOS 26 adds a toggle to disable controversial feature",
-    "url": "https://9to5mac.com/2025/08/26/apple-wallet-in-ios-26-adds-a-toggle-to-disable-controversial-feature/",
-    "publishedAt": "2025-08-26T15:18:29.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s Wallet app has a lot of new features coming in iOS 26, including one that’s easy to miss: a toggle that lets you disable an annoying and controversial type of push notifications. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/apple-wallet-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple Wallet in iOS 26 adds a toggle to disable controversial feature",
-    "seoDescription": "Apple’s Wallet app has a lot of new features coming in iOS 26, including one that’s easy to miss: a toggle that lets you disable an annoying and controversia..."
-  },
-  {
-    "title": "Dyson’s 360 Vis Nav, our favorite robot vacuum for carpets, is half off",
-    "url": "https://www.theverge.com/tech/765920/dyson-360-vis-nav-google-tv-streamer-4k-deal-sale",
-    "publishedAt": "2025-08-26T15:17:18.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Dyson’s 360 Vis Nav is $500 off. The Dyson 360 Vis Nav is one of the most powerful robot vacuums out there. In fact, its 65 air watts of suction makes it the best option for carpets (even high pile) that we’ve tested yet. And, right now it’s half off at $499 at Amazon, Target, and directly from Dyson. Dyson 360 Vis Nav robot vacuum Where to Buy: $999.99 $...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/dyson360vispink.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "Dyson’s 360 Vis Nav, our favorite robot vacuum for carpets, is half off",
-    "seoDescription": "Dyson’s 360 Vis Nav is $500 off. The Dyson 360 Vis Nav is one of the most powerful robot vacuums out there. In fact, its 65 air watts of suction makes it the..."
-  },
-  {
-    "title": "Report: Apple Discussed Buying Mistral AI and Perplexity",
-    "url": "https://www.macrumors.com/2025/08/26/apple-discussed-buying-mistral-ai-and-perplexity/",
-    "publishedAt": "2025-08-26T15:13:01.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple executives have reportedly discussed acquiring Mistral AI and Perplexity, The Information reports. Services chief Eddy Cue is apparently the most vocal advocate of a deal to buy AI firms to bolster the company's offerings. Cue previously supported propositions of Apple acquiring Netflix and Tesla, both of which Apple CEO Tim Cook turned down. Other ...",
-    "image": "https://images.macrumors.com/article-new/2024/09/iphone-16-apple-intelligence.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Eddy Cue",
-      "The Information"
-    ],
-    "seoTitle": "Report: Apple Discussed Buying Mistral AI and Perplexity",
-    "seoDescription": "Apple executives have reportedly discussed acquiring Mistral AI and Perplexity, The Information reports. Services chief Eddy Cue is apparently the most vocal..."
-  },
-  {
-    "title": "Ready for a Fresh and Fast Take on the Standard Zoom? Check Out This New Hasselblad XCD 35-100mm",
-    "url": "https://nofilmschool.com/hasselblad-standard-zoom-lens",
-    "publishedAt": "2025-08-26T15:11:37.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Ideally designed for medium format cameras, the new Hasselblad XCD 35-100mm f/2.8-4 is a fresh and fast take on the standard zoom that could actually be a fun option for all types of creative shooters. Covering a wide-angle to portrait-length field of view, and featuring a bright f/2.8-4 maximum aperture range, this zoom is a nice single-lens option for e...",
-    "image": "https://nofilmschool.com/media-library/hasselblad-xcd-35-100mm-f-2-8-4-e.png?id=61518165&width=980",
-    "video": "https://www.youtube.com/embed/pyRqoY8ETB4?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Hasselblad",
-      "Standard zoom",
-      "Zoom lens",
-      "Hasselblad x",
-      "Hasselblad xcd 35-100mm f2.8-4 e"
-    ],
-    "seoTitle": "Ready for a Fresh and Fast Take on the Standard Zoom? Check Out This New Hasselblad XCD 35-100mm",
-    "seoDescription": "Ideally designed for medium format cameras, the new Hasselblad XCD 35-100mm f/2.8-4 is a fresh and fast take on the standard zoom that could actually be a fu..."
-  },
-  {
-    "title": "Tesla rejected $60 million settlement in Autopilot case that ultimately cost it 4 times that amount",
-    "url": "https://www.theverge.com/tesla/765907/tesla-rejected-60-settlement-in-autopilot-case-that-ultimately-cost-it-4-times-that-amount",
-    "publishedAt": "2025-08-26T15:05:22.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Tesla rejected a $60 million settlement in the wrongful death case that ended up costing the company $243 million in punitive and compensatory damages, Reuters reported today, citing newly filed legal documents. The proposal stemmed from a lawsuit filed by the families of the victims in a 2019 crash in which a Tesla Model S driver using Autopilot crashed ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/STK086_TeslaC.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew J. Hawkins",
-    "tags": [],
-    "seoTitle": "Tesla rejected $60 million settlement in Autopilot case that ultimately cost it 4 times that amount",
-    "seoDescription": "Tesla rejected a $60 million settlement in the wrongful death case that ended up costing the company $243 million in punitive and compensatory damages, Reute..."
-  },
-  {
-    "title": "Framework is now selling the first gaming laptop that lets you easily upgrade its GPU — with Nvidia’s blessing",
-    "url": "https://www.theverge.com/laptops/765528/framework-is-now-selling-the-first-gaming-laptop-that-lets-you-easily-upgrade-its-gpu-with-nvidias-blessing",
-    "publishedAt": "2025-08-26T15:05:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Framework CEO Nirav Patel said he would deliver \"the holy grail for gamers\" with the Framework Laptop 16. In 2023, he suggested it'd be the first consumer notebook to fulfil the promise of modular, upgradable graphics cards like a desktop PC. We at The Verge were skeptical, because the last time we heard someone tell that story, it ended in lawsuits and f...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257914_laptop_change_bg_color_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "Framework is now selling the first gaming laptop that lets you easily upgrade its GPU — with Nvidia’s blessing",
-    "seoDescription": "Framework CEO Nirav Patel said he would deliver \"the holy grail for gamers\" with the Framework Laptop 16. In 2023, he suggested it'd be the first consumer no..."
   }
 ]
