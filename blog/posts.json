@@ -1,6 +1,199 @@
 [
   {
-    "title": "Dish gives up on becoming the fourth major carrier",
+    "title": "Get Faster Load Times for Your Blackmagic Cloud Projects With Latest Resolve Update",
+    "url": "https://nofilmschool.com/davinci-resolve-update-2011",
+    "publishedAt": "2025-08-26T17:10:36.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Another slightly-major firmware update is out for DaVinci Resolve that is set to add and address many new features in Blackmagic Design’s editing platform. As is always the case, these updates are highly recommended not only for the new features and improvements, but also because they fix minor bugs and generally improve stability as well. If you’re a Res...",
+    "image": "https://nofilmschool.com/media-library/davinci-resolve-update-20-1-1.jpg?id=61518203&width=980",
+    "video": null,
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Davinci resolve update 20.1.1",
+      "Davinci resolve update",
+      "Blackmagic design",
+      "Davinci resolve",
+      "Davinci resolve"
+    ],
+    "seoTitle": "Get Faster Load Times for Your Blackmagic Cloud Projects With Latest Resolve Update",
+    "seoDescription": "Another slightly-major firmware update is out for DaVinci Resolve that is set to add and address many new features in Blackmagic Design’s editing platform. A..."
+  },
+  {
+    "title": "CRKD’s $99 Peak Design clone is great for handhelds",
+    "url": "https://www.theverge.com/reviews/765340/crkd-vortex-backpack-peak-design-handheld-gaming-review",
+    "publishedAt": "2025-08-26T17:10:33.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Each handheld pocket features adequate room on the sides, and a layer of padding covering the screen area. Embracer Group-owned CRKD recently launched a backpack, the $99.99 Vortex 1.0. During a recent vacation, I swapped it in place of my go-to for the past eight or so years, the 20-liter Peak Design Everyday backpack, which CRKD has thoroughly cribbed t...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/P8250251.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Cameron Faulkner",
+    "tags": [],
+    "seoTitle": "CRKD’s $99 Peak Design clone is great for handhelds",
+    "seoDescription": "Each handheld pocket features adequate room on the sides, and a layer of padding covering the screen area. Embracer Group-owned CRKD recently launched a back..."
+  },
+  {
+    "title": "Using AI to build an AI Security Product",
+    "url": "https://dev.to/toul-nyc/using-ai-to-build-an-ai-security-product-352i",
+    "publishedAt": "2025-08-26T16:56:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey, everyone, writing this post to share my thoughts on using AI to build an AI backed project from scratch; Policy Pulsar, and a workflow that I found worked well for me as a solo-founder. This is my 3rd or fourth AI based project and I wanted to try something completely different for my work flow. Previously, I did it all from scratch, using GO and som...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy9n4xb44vc37txwwt0vv.png",
+    "video": null,
+    "author": "Toul",
+    "tags": [
+      "ai",
+      "security",
+      "webdev",
+      "aws"
+    ],
+    "seoTitle": "Using AI to build an AI Security Product",
+    "seoDescription": "Hey, everyone, writing this post to share my thoughts on using AI to build an AI backed project from scratch; Policy Pulsar, and a workflow that I found work..."
+  },
+  {
+    "title": "Why Apple is fighting legal battles in two countries over 12 cents per iPhone",
+    "url": "https://9to5mac.com/2025/08/26/why-apple-is-fighting-legal-battles-in-two-countries-over-12-cents-per-iphone/",
+    "publishedAt": "2025-08-26T16:55:27.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is engaged in legal battles in both the UK and the US over 4G patents used in its mobile devices. The company has applied for permission to appeal a UK verdict which would cost it an additional 12 cents per iPhone. While this might sound crazy, the company says that very much more is at stake, not just for its own business, but for companies of ever...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Why-Apple-is-fighting-legal-battles-in-two-countries-over-12-cents-per-iPhone.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Why Apple is fighting legal battles in two countries over 12 cents per iPhone",
+    "seoDescription": "Apple is engaged in legal battles in both the UK and the US over 4G patents used in its mobile devices. The company has applied for permission to appeal a UK..."
+  },
+  {
+    "title": "This week's ship: Expensely 🪙",
+    "url": "https://dev.to/shravzzv/this-weeks-ship-expensely-5d7f",
+    "publishedAt": "2025-08-26T16:54:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Hey everyone 👋, “ship something every week” challenge! This week’s build is Expensely — a clean and minimal income/expenses tracker. 👉 Live demo: expensely-money.vercel.app GitHub repo: github.com/shravzzv/expensely / expensely This is a Next.js project bootstrapped with create-next-app. Getting Started First, run the development server: np...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "Sai Shravan Vadla",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "beginners"
+    ],
+    "seoTitle": "This week's ship: Expensely 🪙",
+    "seoDescription": "Introduction Hey everyone 👋, “ship something every week” challenge! This week’s build is Expensely — a clean and minimal income/expenses tracker. 👉 Live de..."
+  },
+  {
+    "title": "Apple Designed Interactive Logo for September 9 Event",
+    "url": "https://www.macrumors.com/2025/08/26/apple-event-2025-interactive-logo/",
+    "publishedAt": "2025-08-26T16:51:24.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple created a unique interactive Apple logo for its September 9 event, which can be interacted with on the main Apple.com website. The website currently features an animated Apple logo front and center, which changes when touched. On an iPhone or an iPad, holding a finger over the Apple logo shifts it to a darker orange the longer you hold, and when swi...",
+    "image": "https://images.macrumors.com/article-new/2025/08/apple-event-september-2025-interactive-logo.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "September 2025 Apple Event"
+    ],
+    "seoTitle": "Apple Designed Interactive Logo for September 9 Event",
+    "seoDescription": "Apple created a unique interactive Apple logo for its September 9 event, which can be interacted with on the main Apple.com website. The website currently fe..."
+  },
+  {
+    "title": "IRE A HACKER RECOVERY CRYPTOCURRENCY / BANK RECOVERY EXPERT OPTIMUM HACKER RECOVERY",
+    "url": "https://dev.to/gabriel_anderson_4b96adea/ire-a-hacker-recovery-cryptocurrency-bank-recovery-expert-optimum-hacker-recovery-55h9",
+    "publishedAt": "2025-08-26T16:45:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Optimum Hackers Recovery Agency saved my life after I lost $410,500 in Bitcoin to a fraudulent broker, After realising I had been scammed, I felt utterly hopeless and desperate for help. I began searching for a hacker online and came across Optimum Hackers Recovery they were prompt and extremely competent. If you have been defrauded, get in touch with the...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb12bn6yjh8un4plltemf.png",
+    "video": null,
+    "author": "Gabriel Anderson",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "IRE A HACKER RECOVERY CRYPTOCURRENCY / BANK RECOVERY EXPERT OPTIMUM HACKER RECOVERY",
+    "seoDescription": "Optimum Hackers Recovery Agency saved my life after I lost $410,500 in Bitcoin to a fraudulent broker, After realising I had been scammed, I felt utterly hop..."
+  },
+  {
+    "title": "Nomad introduces new Apple Watch Band – Tempo",
+    "url": "https://9to5mac.com/2025/08/26/nomad-introduces-new-apple-watch-band-tempo/",
+    "publishedAt": "2025-08-26T16:43:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "I’ve been using Nomad’s Apple Watch bands for years, and I recommend them to anyone with an Apple Watch. They offer a great mix of premium materials, thoughtful design, and durability. That is true of all of their Apple Watch Band categories, from their leather bands to their titanium bands to their best-selling Sports bands. But now, Nomad is introducing...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Nomad-Tempo.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Fernando Silva",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Nomad introduces new Apple Watch Band – Tempo",
+    "seoDescription": "I’ve been using Nomad’s Apple Watch bands for years, and I recommend them to anyone with an Apple Watch. They offer a great mix of premium materials, thought..."
+  },
+  {
+    "title": "Instagram's Newest Update Changes Everything: How to Master Linked Reels",
+    "url": "https://dev.to/viralnoise/instagrams-newest-update-changes-everything-how-to-master-linked-reels-102l",
+    "publishedAt": "2025-08-26T16:36:41.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "By Viralnoise The new linked Reels feature lets you connect multiple short-form videos into sequential series, basically turning Instagram into a platform for web series and episodic content. Think of it as Instagram's answer to the viral storytelling formats that have been dominating TikTok. How to use Instagram's new linked Reels feature to create binge...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxz0j1km5f35q437nliby.jpg",
+    "video": null,
+    "author": "Viralnoise",
+    "tags": [
+      "webdev",
+      "socialmedia",
+      "instagram",
+      "reels"
+    ],
+    "seoTitle": "Instagram's Newest Update Changes Everything: How to Master Linked Reels",
+    "seoDescription": "By Viralnoise The new linked Reels feature lets you connect multiple short-form videos into sequential series, basically turning Instagram into a platform fo..."
+  },
+  {
+    "title": "Buy Only Fans Accounts",
+    "url": "https://dev.to/dylan76/buy-only-fans-accounts-437n",
+    "publishedAt": "2025-08-26T16:34:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Buy Verified OnlyFans Creator Account Only Fans has exploded in popularity over the last few years. It’s a platform where creators can share content, connect with fans, and even make money doing what they love. From models and fitness coaches to musicians and influencers — everyone’s jumping on it. But starting on Only Fans from scratch can be slow and to...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh2uu94o3wbhhjaivxo7g.png",
+    "video": null,
+    "author": "Dylan Hirst",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Buy Only Fans Accounts",
+    "seoDescription": "Buy Verified OnlyFans Creator Account Only Fans has exploded in popularity over the last few years. It’s a platform where creators can share content, connect..."
+  },
+  {
+    "title": "Apple's 'Awe Dropping' Event Placeholder Now on YouTube",
+    "url": "https://www.macrumors.com/2025/08/26/apple-september-2025-event-youtube/",
+    "publishedAt": "2025-08-26T16:29:21.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "After this morning's announcement of Apple's upcoming iPhone-centric event on September 9, Apple has added an event placeholder to its YouTube channel. Apple will stream the \"Awe Dropping\" event on YouTube, on its Apple Events website, and in the Apple TV app, so there are multiple ways to watch it. YouTube users can click on the video placeholder and sel...",
+    "image": null,
+    "video": "https://www.youtube.com/embed/H3KnMyojEQU",
+    "author": "Juli Clover",
+    "tags": [
+      "September 2025 Apple Event"
+    ],
+    "seoTitle": "Apple's 'Awe Dropping' Event Placeholder Now on YouTube",
+    "seoDescription": "After this morning's announcement of Apple's upcoming iPhone-centric event on September 9, Apple has added an event placeholder to its YouTube channel. Apple..."
+  },
+  {
+    "title": "Dish gives up on becoming the fourth major wireless carrier",
     "url": "https://www.theverge.com/report/766038/dish-echostar-spectrum-att-sale-fourth-carrier",
     "publishedAt": "2025-08-26T16:14:42.000Z",
     "source": "theverge.com",
@@ -10,7 +203,7 @@
     "video": null,
     "author": "Emma Roth",
     "tags": [],
-    "seoTitle": "Dish gives up on becoming the fourth major carrier",
+    "seoTitle": "Dish gives up on becoming the fourth major wireless carrier",
     "seoDescription": "Dish's parent company, EchoStar, is selling a broad swath of its 5G spectrum licenses to AT&T for $23 billion. Under the deal, the Dish-owned Boost Mobile wi..."
   },
   {
@@ -89,44 +282,6 @@
     "seoDescription": "Google is putting AI-powered language learning tools into its Translate app. The new feature, rolling out now in beta, can create customized language lessons..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/omardulaimi/-434l",
-    "publishedAt": "2025-08-26T15:55:22.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Stop losing your breakpoints: Meet Breakpoint Bookmarks for VS Code Omar Dulaimi ・ Aug 22 #vscode #python #webdev #javascript",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F198488%2F8134e88b-e053-45c0-82a4-54190b3e1533.jpg",
-    "video": null,
-    "author": "Omar Dulaimi",
-    "tags": [
-      "vscode",
-      "python",
-      "webdev",
-      "javascript"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Stop losing your breakpoints: Meet Breakpoint Bookmarks for VS Code Omar Dulaimi ・ Aug 22 #vscode #python #webdev #javascript"
-  },
-  {
-    "title": "Buy Verified Chime Accounts Fast Delivery And Trusted Seller #buyverifiedchimeaccounts",
-    "url": "https://dev.to/kallysally2025/buy-verified-chime-accounts-fast-delivery-and-trusted-sellerbuyverifiedchimeaccounts-3aoa",
-    "publishedAt": "2025-08-26T15:45:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "[Buy a verified Chime account](https://usaitpva.com/product/buy-verified-chime-account/ ) instantly with secure setup, fast delivery, and 24/7 support. Get a fully verified, regulatory-compliant Chime account for secure transactions, international access, and reliable customer support worldwide. Get all kinds of online banking services Telegram: @usaitpva",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh3bpnqaq4hvv76gr8rbn.jpg",
-    "video": null,
-    "author": "Kelly Sally",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Buy Verified Chime Accounts Fast Delivery And Trusted Seller #buyverifiedchimeaccounts",
-    "seoDescription": "[Buy a verified Chime account](https://usaitpva.com/product/buy-verified-chime-account/ ) instantly with secure setup, fast delivery, and 24/7 support. Get a..."
-  },
-  {
     "title": "Deals: M4 iPad Pro $200 off, M4 iMac, iPhone 15 Pro Max/16 Pro up to $720 off, MacBook Air, AirPods, more",
     "url": "https://9to5mac.com/2025/08/26/deals-ipad-pro-m4-imac-iphone-15-pro-max-macbook-air/",
     "publishedAt": "2025-08-26T15:45:16.000Z",
@@ -178,25 +333,6 @@
     ],
     "seoTitle": "iOS 26: Capture iPhone Screen Content in HDR",
     "seoDescription": "Apple's iOS 26 update, currently in beta, brings a nice optional upgrade to screen capture quality with HDR (High Dynamic Range) capture support. The new fea..."
-  },
-  {
-    "title": "Gradle vs. Maven: Which Java Build Tool Should You Use?",
-    "url": "https://dev.to/platypus98/gradle-vs-maven-which-java-build-tool-should-you-use-58p4",
-    "publishedAt": "2025-08-26T15:21:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When it comes to Java build tools, the great debate is always: Gradle or Maven? Maven uses pom.xml. Many people get a headache just hearing \"XML,\" thinking it's verbose and clunky. But look at it another way: XML's biggest weakness is also its greatest strength. It's rigid, standardized, and immediately understandable. A newcomer, even one who's never use...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwylmjgxrvgnjqdey7zs7.png",
-    "video": null,
-    "author": "Platypus ",
-    "tags": [
-      "webdev",
-      "programming",
-      "java",
-      "maven"
-    ],
-    "seoTitle": "Gradle vs. Maven: Which Java Build Tool Should You Use?",
-    "seoDescription": "When it comes to Java build tools, the great debate is always: Gradle or Maven? Maven uses pom.xml. Many people get a headache just hearing \"XML,\" thinking i..."
   },
   {
     "title": "Apple Wallet in iOS 26 adds a toggle to disable controversial feature",
@@ -455,20 +591,6 @@
     "seoDescription": "Earlier this year, we spotted signs of a Logitech MX Master 4 in the works, replacing the 3S, and we subsequently got a closer look at it. Now a new report s..."
   },
   {
-    "title": "Google will verify Android developers distributing apps outside the Play store",
-    "url": "https://www.theverge.com/news/765881/google-android-apps-side-loading-developer-verification",
-    "publishedAt": "2025-08-26T14:02:47.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "New verification rules will take effect in certain regions next year, before rolling out globally. Google is increasing security measures around sideloading apps by removing anonymity for Android developers who distribute outside of the Play Store. Starting in September next year, Google will require developers in Brazil, Indonesia, Singapore, and Thailan...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24007892/acastro_STK112_android_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "Google will verify Android developers distributing apps outside the Play store",
-    "seoDescription": "New verification rules will take effect in certain regions next year, before rolling out globally. Google is increasing security measures around sideloading ..."
-  },
-  {
     "title": "Get the iPad Mini 7 for $399 at Amazon This Week ($100 Off)",
     "url": "https://www.macrumors.com/2025/08/26/get-the-ipad-mini-7-for-399-3/",
     "publishedAt": "2025-08-26T13:47:36.000Z",
@@ -484,124 +606,5 @@
     ],
     "seoTitle": "Get the iPad Mini 7 for $399 at Amazon This Week ($100 Off)",
     "seoDescription": "Amazon this week is providing low prices on multiple models of the iPad mini 7, starting at $399.00 for the 128GB Wi-Fi tablet, down from $499.00. Colors on ..."
-  },
-  {
-    "title": "Rumor: AirPods Pro 3 design will borrow two changes from AirPods 4",
-    "url": "https://9to5mac.com/2025/08/26/rumor-airpods-pro-3-design-will-borrow-two-changes-from-airpods-4/",
-    "publishedAt": "2025-08-26T13:31:19.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Earlier this week, Bloomberg offered great news for the AirPods Pro 3 launch timing, and now a new rumor indicates Apple has design changes coming that take inspiration from AirPods 4. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/airpods-pro-2-in-case.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Rumor: AirPods Pro 3 design will borrow two changes from AirPods 4",
-    "seoDescription": "Earlier this week, Bloomberg offered great news for the AirPods Pro 3 launch timing, and now a new rumor indicates Apple has design changes coming that take ..."
-  },
-  {
-    "title": "Laowa Brings Its Wild 8-15mm Fisheye Zoom to Medium Format Cameras",
-    "url": "https://petapixel.com/2025/08/26/laowa-brings-its-wild-8-15mm-fisheye-zoom-to-medium-format-cameras/",
-    "publishedAt": "2025-08-26T13:27:23.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Venus Optics is bringing its exceptionally unusual Laowa 8-15mm f/2.8 FF Zoom Fisheye lens to Fujifilm and Hasselblad medium format mirrorless cameras. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/06/laowa-8-15mm-fisheye-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "News",
-      "fisheye",
-      "fisheyelens",
-      "fujifilm",
-      "gfx",
-      "hasselblad",
-      "laowa815mmf28fisheyezoom"
-    ],
-    "seoTitle": "Laowa Brings Its Wild 8-15mm Fisheye Zoom to Medium Format Cameras",
-    "seoDescription": "Venus Optics is bringing its exceptionally unusual Laowa 8-15mm f/2.8 FF Zoom Fisheye lens to Fujifilm and Hasselblad medium format mirrorless cameras. [Read..."
-  },
-  {
-    "title": "Hands-on: Kuxiu debuts tiny smart connector charger for iPad: meet the M30 [Updated]",
-    "url": "https://9to5mac.com/2025/08/26/kuxiu-debuts-tiny-smart-connector-charger-for-ipad-meet-the-m30/",
-    "publishedAt": "2025-08-26T13:03:52.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Kuxiu continues to make some of the best iPad accessories in the game. They were the first to introduce “wireless” charging for the iPad by implementing the smart connector into their products, like the X33 Pro Max. It was the first magnetic iPad stand that also charged your iPad Pro with those smart connectors. They have doubled down on that and made it ...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/fernando.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Fernando Silva",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Hands-on: Kuxiu debuts tiny smart connector charger for iPad: meet the M30 [Updated]",
-    "seoDescription": "Kuxiu continues to make some of the best iPad accessories in the game. They were the first to introduce “wireless” charging for the iPad by implementing the ..."
-  },
-  {
-    "title": "Parallels Desktop 26 Adds Support for macOS Tahoe and Windows 11 2025 Update",
-    "url": "https://www.macrumors.com/2025/08/26/parallels-desktop-26-macos-tahoe-support/",
-    "publishedAt": "2025-08-26T13:00:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Parallels Desktop 26 for Mac has just been released, bringing new features and performance enhancements to the virtualization software, including full support for Apple's forthcoming macOS Tahoe operating system. In an effort to reduce user confusion, Parallels Desktop 26 now follows the same new versioning practice that Apple's operating systems have ado...",
-    "image": "https://images.macrumors.com/article-new/2025/08/Parallels-Desktop-26-for-Mac-Steam-running-in-Windows-11-VM.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Parallels Desktop"
-    ],
-    "seoTitle": "Parallels Desktop 26 Adds Support for macOS Tahoe and Windows 11 2025 Update",
-    "seoDescription": "Parallels Desktop 26 for Mac has just been released, bringing new features and performance enhancements to the virtualization software, including full suppor..."
-  },
-  {
-    "title": "Level Lock Pro is now shipping with Apple home key, Matter support, and more",
-    "url": "https://9to5mac.com/2025/08/26/level-lock-pro-is-now-shipping-with-apple-home-key-matter-support-and-more/",
-    "publishedAt": "2025-08-26T13:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Since Apple introduced home key, it has quickly become one of the most important features for smart locks. Basic HomeKit support just doesn’t cut it anymore. Unlocking your front door with just a tap from an iPhone or Apple Watch feels magical, and once you’ve experienced it, it’s hard to imagine going back to keys or even an app. was one of the first com...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Level-Lock.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Level Lock Pro is now shipping with Apple home key, Matter support, and more",
-    "seoDescription": "Since Apple introduced home key, it has quickly become one of the most important features for smart locks. Basic HomeKit support just doesn’t cut it anymore...."
-  },
-  {
-    "title": "Parallels Desktop 26 arrives with macOS 26 support and enterprise IT management tools",
-    "url": "https://9to5mac.com/2025/08/26/parallels-desktop-26-brings-macos-26-support-and-new-tools-for-it/",
-    "publishedAt": "2025-08-26T13:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "For nearly two decades, Parallels has been one of the go to solutions for running Windows on the Mac, and with version 26 the company is doubling down on both sides of that equation while making it easier to deploy at work. Parallels Desktop 26 arrives with day one support for macOS 26 Tahoe and Windows 11 25H2, along with a strong set of IT focused impro...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Parallels-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Parallels Desktop 26 arrives with macOS 26 support and enterprise IT management tools",
-    "seoDescription": "For nearly two decades, Parallels has been one of the go to solutions for running Windows on the Mac, and with version 26 the company is doubling down on bot..."
-  },
-  {
-    "title": "The Apple Watch is not actually carbon neutral, says German court",
-    "url": "https://9to5mac.com/2025/08/26/apple-watch-not-carbon-neutral-german-court/",
-    "publishedAt": "2025-08-26T12:56:41.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is no longer allowed to advertise the Apple Watch as carbon neutral, a German court ruled following a protest from environmentalists about Apple’s promoted claims. The Frankfurt court found the company misled consumers for describing the Apple Watch as a CO2-neutral product. Apple first unveiled its first carbon neutral products starting with the Ap...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-watch-carbon-neutral-germany.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Benjamin Mayo",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "The Apple Watch is not actually carbon neutral, says German court",
-    "seoDescription": "Apple is no longer allowed to advertise the Apple Watch as carbon neutral, a German court ruled following a protest from environmentalists about Apple’s prom..."
   }
 ]
