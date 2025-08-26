@@ -61,25 +61,6 @@
     "seoDescription": "Amazon’s 16GB Kindle Colorsoft is less than a month old, but it’s already on sale for $219.99 ($30 off) at Amazon, Best Buy, and Target. Meanwhile, the new C..."
   },
   {
-    "title": "How to Use Weak Pointers in Go 1.24",
-    "url": "https://dev.to/leapcell/how-to-use-weak-pointers-in-go-124-2i6j",
-    "publishedAt": "2025-08-25T21:58:52.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In Go, a weak pointer refers to a reference that does not prevent the garbage collector (GC) from reclaiming the target object. When an object is only referenced by weak pointers and has no strong references, the GC will still treat it as unreachable and reclaim it; afterwards, all weak pointers to it will automatically become nil. In short, a weak pointe...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq4ns62a2a3yxa07gg538.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "How to Use Weak Pointers in Go 1.24",
-    "seoDescription": "In Go, a weak pointer refers to a reference that does not prevent the garbage collector (GC) from reclaiming the target object. When an object is only refere..."
-  },
-  {
     "title": "Apple releases public beta 5 for tvOS 26 and more",
     "url": "https://9to5mac.com/2025/08/25/tvos-public-beta-5/",
     "publishedAt": "2025-08-25T21:57:01.000Z",
@@ -94,25 +75,6 @@
     ],
     "seoTitle": "Apple releases public beta 5 for tvOS 26 and more",
     "seoDescription": "Apple has just released public beta 5 for tvOS 26 and more. Here’s what to expect. more…"
-  },
-  {
-    "title": "Python para digitalizar manuscritos de cartas antiguas",
-    "url": "https://dev.to/mia_murphy_1506f044d953e6/python-para-digitalizar-manuscritos-de-cartas-antiguas-2ck0",
-    "publishedAt": "2025-08-25T21:53:54.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La preservación de documentos manuscritos ha sido un desafío para historiadores, coleccionistas y familias durante siglos. Las cartas antiguas, en particular, guardan relatos íntimos, vínculos emocionales y secretos culturales que de otra manera podrían perderse con el paso del tiempo. En la actualidad, la programación nos permite crear herramientas que n...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvcynsek0cyeln3tg9hth.png",
-    "video": null,
-    "author": "mia murphy",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python para digitalizar manuscritos de cartas antiguas",
-    "seoDescription": "La preservación de documentos manuscritos ha sido un desafío para historiadores, coleccionistas y familias durante siglos. Las cartas antiguas, en particular..."
   },
   {
     "title": "Apple study shows LLMs also benefit from the oldest productivity trick in the book",
@@ -145,25 +107,6 @@
     ],
     "seoTitle": "Apple Releases Fifth Public Betas of iOS 26 and More",
     "seoDescription": "Apple today released the fifth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September lau..."
-  },
-  {
-    "title": "Testing a Perl Mojolicious web app",
-    "url": "https://dev.to/dragostrif/testing-an-perl-mojolicious-web-app-43j7",
-    "publishedAt": "2025-08-25T21:50:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This post assumes that you know you way around Mojolicious web framework. If not you should start here: Mojolicious-Tutorial. mojolicious-and-docke mojolicious-and-docker-part-2 Testing web applications be can tricky because it involves many different components like the html, java script, css, databases and last but not least the Perl code. For the purpo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fod4d67g5rvvmyrjlsz5f.png",
-    "video": null,
-    "author": "DragosTrif",
-    "tags": [
-      "webdev",
-      "perl",
-      "mojolicious",
-      "testing"
-    ],
-    "seoTitle": "Testing a Perl Mojolicious web app",
-    "seoDescription": "This post assumes that you know you way around Mojolicious web framework. If not you should start here: Mojolicious-Tutorial. mojolicious-and-docke mojolicio..."
   },
   {
     "title": "macOS Tahoe 26 public beta 5 rolling out now, install guide",
@@ -212,25 +155,6 @@
     ],
     "seoTitle": "9to5Mac Daily: August 25, 2025 – Apple and Gemini rumors",
     "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Velas IoT sincronizadas con energía de la lectura de cartas",
-    "url": "https://dev.to/zoila_davis_4c964ae3b6241/velas-iot-sincronizadas-con-energia-de-la-lectura-de-cartas-2ik6",
-    "publishedAt": "2025-08-25T21:38:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La relación entre la espiritualidad y la tecnología siempre ha existido, aunque no siempre de manera evidente. Durante siglos, las personas han buscado formas de conectar con lo invisible: desde rituales con velas hasta tiradas de cartas para comprender el presente y proyectar el futuro. Hoy en día, esa búsqueda se mezcla con dispositivos inteligentes que...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9svnulwd47oaoz15oalu.png",
-    "video": null,
-    "author": "Zoila Davis",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Velas IoT sincronizadas con energía de la lectura de cartas",
-    "seoDescription": "La relación entre la espiritualidad y la tecnología siempre ha existido, aunque no siempre de manera evidente. Durante siglos, las personas han buscado forma..."
   },
   {
     "title": "iOS 26 Beta Testing Likely Complete After Apple Seeds Beta 8",
@@ -639,5 +563,72 @@
     ],
     "seoTitle": "Netflix Releases Its AI Rules for Filmmakers",
     "seoDescription": "One of the best things about Netflix is that they're super open with all their policies. And when it comes to using AI in your projects, you want to make sur..."
+  },
+  {
+    "title": "Apple’s latest TV+ subscription price hike might open the door to this opportunity",
+    "url": "https://9to5mac.com/2025/08/25/apple-tv-plus-price-hike-new-opportunity-for-ad-plan/",
+    "publishedAt": "2025-08-25T18:11:08.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Recently, Apple announced yet another price hike for its Apple TV+ service. This time, it’s increasing 30% from $9.99/month to $12.99/month. After the service launched in 2019 at $4.99/month, its received a couple price hikes. This new price hike, though, likely opens the door to something Apple has reportedly been considering for quite a while – an ad-su...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-plus-tvos26-screensaver-07.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple’s latest TV+ subscription price hike might open the door to this opportunity",
+    "seoDescription": "Recently, Apple announced yet another price hike for its Apple TV+ service. This time, it’s increasing 30% from $9.99/month to $12.99/month. After the servic..."
+  },
+  {
+    "title": "Are We Experiencing The Spec Boom We've Been Waiting For?",
+    "url": "https://nofilmschool.com/spec-boom-august-2025",
+    "publishedAt": "2025-08-25T18:10:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Let's not bury the lede: eight spec scripts have sold so far in August of 2025. That's a massive number that should make every writer in the world excited. It comes off the tails of original movies like Weapons and Sinners, crushing at the box office. It might be a harbinger of hope for Hollywood that realizes there is real money in original ideas and for...",
+    "image": "https://nofilmschool.com/media-library/are-we-experiencing-the-spec-boom-we-ve-been-waiting-for.jpg?id=60046349&width=980",
+    "video": null,
+    "author": "Jason Hellerman",
+    "tags": [
+      "Screenplay",
+      "Spec script"
+    ],
+    "seoTitle": "Are We Experiencing The Spec Boom We've Been Waiting For?",
+    "seoDescription": "Let's not bury the lede: eight spec scripts have sold so far in August of 2025. That's a massive number that should make every writer in the world excited. I..."
+  },
+  {
+    "title": "MagSafe Monday: Want a no‑nonsense car mount that keeps your air vents clear?",
+    "url": "https://9to5mac.com/2025/08/25/hypermount-vacuum-car-mount/",
+    "publishedAt": "2025-08-25T18:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "If you want a simple car mount that works with MagSafe and doesn’t take over your air vents, your choices are pretty limited. The is a great choice. It sticks to your dash or windshield, holds tight, and doesn’t budge even on bumpy roads and around corners. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/statik.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "MagSafe Monday: Want a no‑nonsense car mount that keeps your air vents clear?",
+    "seoDescription": "If you want a simple car mount that works with MagSafe and doesn’t take over your air vents, your choices are pretty limited. The is a great choice. It stick..."
+  },
+  {
+    "title": "All of Ari Aster's Projects, Ranked",
+    "url": "https://nofilmschool.com/all-ari-aster-projects",
+    "publishedAt": "2025-08-25T17:50:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbing short films before joining the greats of the horror scene with 2018's Hereditary. Since then, he's continued to challenge audiences with work that blends psychological terror, dark comedy, and human...",
+    "image": "https://nofilmschool.com/media-library/hereditary-trailer.jpg?id=34072652&width=980",
+    "video": "https://www.youtube.com/embed/P27XyQvr7Ag?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Short films",
+      "Ari aster",
+      "Best movies"
+    ],
+    "seoTitle": "All of Ari Aster's Projects, Ranked",
+    "seoDescription": "Ari Aster has made his mark as one of modern cinema's most provocative voices. The New York-born director cut his teeth on a series of increasingly disturbin..."
   }
 ]
