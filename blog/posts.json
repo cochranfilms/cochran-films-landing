@@ -1,60 +1,82 @@
 [
   {
-    "title": "How to test and document an API without ever leaving the editor",
-    "url": "https://dev.to/kiselitza/how-to-test-and-document-an-api-without-ever-leaving-the-editor-58mj",
-    "publishedAt": "2025-08-26T06:50:36.000Z",
+    "title": "’20-Hour’ Line to Enter Burning Man Captured Creatively From Above",
+    "url": "https://petapixel.com/2025/08/26/20-hour-line-to-enter-burning-man-captured-creatively-from-above/",
+    "publishedAt": "2025-08-26T08:19:31.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "While waiting in an extremely long line to enter Burning Man festival, video creator Steven Donovan decided to film the huge pack of vehicles by flying overhead -- but no, he didn't use a drone. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Burning-Man-Line.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "burningman",
+      "festival",
+      "fpolev",
+      "line",
+      "stevendonovan",
+      "waiting"
+    ],
+    "seoTitle": "’20-Hour’ Line to Enter Burning Man Captured Creatively From Above",
+    "seoDescription": "While waiting in an extremely long line to enter Burning Man festival, video creator Steven Donovan decided to film the huge pack of vehicles by flying overh..."
+  },
+  {
+    "title": "TypeScript Generics: The Magic Wand for Reusable Type-Safe Code",
+    "url": "https://dev.to/hamid_zangiabadi/typescript-generics-the-magic-wand-for-reusable-type-safe-code-4am4",
+    "publishedAt": "2025-08-26T08:06:35.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Tabbing between browser pages, Postman, and doc platforms for API testing and documentation creates stale docs and kills productivity. Voiden's markdown-style files let you spec, test, and document APIs offline in one place, using a Git-based workflow you already know, without ever having to leave the editor. Managing APIs across multiple tools is a produ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzydxrpbz7f3rh0wgykbh.gif",
+    "summary": "Ever felt like you're writing the same function over and over, just with different types? Welcome to the world of TypeScript generics – where code reusability meets type safety in perfect harmony. Imagine you're building a toolbox. Instead of having separate hammers for nails, screws, and pins, wouldn't it be amazing to have one universal hammer that adap...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fepqv0kudyhpk3s6y0smc.webp",
     "video": null,
-    "author": "aldin",
+    "author": "hamid zangiabadi",
+    "tags": [
+      "typescript",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "TypeScript Generics: The Magic Wand for Reusable Type-Safe Code",
+    "seoDescription": "Ever felt like you're writing the same function over and over, just with different types? Welcome to the world of TypeScript generics – where code reusabilit..."
+  },
+  {
+    "title": "Instacart Mileage Deduction 2025: Track Miles with Ease",
+    "url": "https://dev.to/premiumblogs/instacart-mileage-deduction-2025-track-miles-with-ease-cgh",
+    "publishedAt": "2025-08-26T07:50:31.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Instacart mileage deduction is one of the most powerful ways for shoppers to save money on taxes. Since Instacart classifies its shoppers as independent contractors, drivers are responsible for paying their own self-employment taxes. Fortunately, they also qualify for valuable deductions — and mileage is typically the largest one. With the IRS standard bu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpir96dr9d9b98v08w0qn.png",
+    "video": null,
+    "author": "Mason Lawlor",
     "tags": [
       "webdev",
       "programming",
-      "productivity",
-      "api"
+      "javascript",
+      "ai"
     ],
-    "seoTitle": "How to test and document an API without ever leaving the editor",
-    "seoDescription": "Tabbing between browser pages, Postman, and doc platforms for API testing and documentation creates stale docs and kills productivity. Voiden's markdown-styl..."
+    "seoTitle": "Instacart Mileage Deduction 2025: Track Miles with Ease",
+    "seoDescription": "Instacart mileage deduction is one of the most powerful ways for shoppers to save money on taxes. Since Instacart classifies its shoppers as independent cont..."
   },
   {
-    "title": "Color Contrast and Visual Accessibility: Why Inclusive Design Starts with the Right Shades",
-    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/color-contrast-and-visual-accessibility-why-inclusive-design-starts-with-the-right-shades-bp0",
-    "publishedAt": "2025-08-26T06:40:09.000Z",
+    "title": "Hidden Risks vs. Proven Benefits: Why Smart Companies Still Outsource IT",
+    "url": "https://dev.to/testrig/hidden-risks-vs-proven-benefits-why-smart-companies-still-outsource-it-5dlc",
+    "publishedAt": "2025-08-26T07:34:18.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "💡 “I can see it… but why can’t they?” That’s the silent frustration millions of visually impaired users experience daily. Imagine landing on a beautifully designed website only to find that the “Sign Up” button blends into the background. You squint. You zoom. You guess. Eventually, you leave. This is where color contrast steps in—not as a fancy design t...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5y4nbwsfxk03eumh9qje.jpg",
+    "summary": "The global IT landscape has changed dramatically in the last decade. Once seen primarily as a cost-saving tactic, outsourcing today has evolved into a strategic lever that smart companies use to stay competitive, scale efficiently, and accelerate digital transformation. Yet, the debate never ends: while outsourcing unlocks undeniable advantages, it also c...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F73hqiwkgjqz9rwvw0fcl.jpg",
     "video": null,
-    "author": "Okoye Ndidiamaka",
+    "author": "Testrig Technologies",
     "tags": [
       "webdev",
-      "a11y",
-      "colorcontrast",
-      "uxdesign"
-    ],
-    "seoTitle": "Color Contrast and Visual Accessibility: Why Inclusive Design Starts with the Right Shades",
-    "seoDescription": "💡 “I can see it… but why can’t they?” That’s the silent frustration millions of visually impaired users experience daily. Imagine landing on a beautifully d..."
-  },
-  {
-    "title": "Everything React: From Basics to Advanced - Introduction to the Series",
-    "url": "https://dev.to/mendoncamaria/everything-react-from-basics-to-advanced-introduction-to-the-series-279n",
-    "publishedAt": "2025-08-26T06:30:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hi everyone! My name is Maria Mendonca, and I've been a ReactJS Developer for three years. Over that time, I've faced my share of challenges and celebrated my share of victories. Now, I'm excited to share everything I've learned with you. I'm starting this series to be your personal guide, helping you navigate the world of React and overcome the same hurd...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbizf7w5wn3k1zpfh0xd9.png",
-    "video": null,
-    "author": "Maria Mendonca",
-    "tags": [
-      "react",
+      "programming",
       "beginners",
-      "javascript",
-      "webdev"
+      "learning"
     ],
-    "seoTitle": "Everything React: From Basics to Advanced - Introduction to the Series",
-    "seoDescription": "Hi everyone! My name is Maria Mendonca, and I've been a ReactJS Developer for three years. Over that time, I've faced my share of challenges and celebrated m..."
+    "seoTitle": "Hidden Risks vs. Proven Benefits: Why Smart Companies Still Outsource IT",
+    "seoDescription": "The global IT landscape has changed dramatically in the last decade. Once seen primarily as a cost-saving tactic, outsourcing today has evolved into a strate..."
   },
   {
     "title": "How Back to the Future III Pulled Off Its Most Dangerous Stunt",
@@ -621,22 +643,5 @@
     ],
     "seoTitle": "James Gunn Says Perfect Continuity Isn't Worth the Cost",
     "seoDescription": "James Gunn's recent interview about Peacemaker Season 2 offers some insights about the realities of building a cinematic universe while managing budgets (and..."
-  },
-  {
-    "title": "Get Disney+, Hulu, and ESPN Unlimited for $29.99/Month for Your First Year",
-    "url": "https://www.macrumors.com/2025/08/25/disney-hulu-espn-new-bundle/",
-    "publishedAt": "2025-08-25T18:32:14.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Disney has introduced a new promotion on its streaming service this month, offering a bundle of Disney+ (with ads), Hulu (with ads), and ESPN Unlimited for $29.99 per month for your first year. This offer represents a savings of over 39 percent on the bundle, and after your first year ends it will return to the then-current monthly price unless cancelled....",
-    "image": "https://images.macrumors.com/article-new/2025/03/disney-plus-blue-image.jpg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Get Disney+, Hulu, and ESPN Unlimited for $29.99/Month for Your First Year",
-    "seoDescription": "Disney has introduced a new promotion on its streaming service this month, offering a bundle of Disney+ (with ads), Hulu (with ads), and ESPN Unlimited for $..."
   }
 ]
