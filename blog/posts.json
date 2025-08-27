@@ -1,5 +1,91 @@
 [
   {
+    "title": "Optimize Go Performance: Value vs. Pointer Types for Fewer Memory Allocations",
+    "url": "https://dev.to/jones_charles_ad50858dbc0/optimize-go-performance-value-vs-pointer-types-for-fewer-memory-allocations-33ck",
+    "publishedAt": "2025-08-27T00:46:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey Go developers! If you’re building high-performance apps with Go and have a year or two of experience, you’ve probably worked with structs, slices, and goroutines. But have you thought about how choosing between value and pointer types can make or break your app’s performance? Memory allocations impact latency and garbage collection (GC) pressure, espe...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6l25aqgh7sppmflibpfl.png",
+    "video": null,
+    "author": "Jones Charles",
+    "tags": [
+      "go",
+      "performance",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "Optimize Go Performance: Value vs. Pointer Types for Fewer Memory Allocations",
+    "seoDescription": "Hey Go developers! If you’re building high-performance apps with Go and have a year or two of experience, you’ve probably worked with structs, slices, and go..."
+  },
+  {
+    "title": "Microsoft hosts emergency press conference after protesters &#8216;storm a building&#8217;",
+    "url": "https://www.theverge.com/microsoft/766429/microsoft-emergency-press-conference-palestine-protest",
+    "publishedAt": "2025-08-27T00:22:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Microsoft president Brad Smith hosted an impromptu press conference on Tuesday afternoon, just hours after protesters gained access to a building at the company’s headquarters and held a sit-in demonstration inside his office. Seated on the edge of his desk, in the office that had been occupied by protesters earlier that day, Smith addressed a group of re...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Screenshot-2025-08-26-at-7.26.46%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/T6tl7KoIVgA?rel=0",
+    "author": "Jacob Kastrenakes",
+    "tags": [],
+    "seoTitle": "Microsoft hosts emergency press conference after protesters &#8216;storm a building&#8217;",
+    "seoDescription": "Microsoft president Brad Smith hosted an impromptu press conference on Tuesday afternoon, just hours after protesters gained access to a building at the comp..."
+  },
+  {
+    "title": "Applying SOLID Principles in Go",
+    "url": "https://dev.to/leapcell/applying-solid-principles-in-go-3l7i",
+    "publishedAt": "2025-08-26T23:54:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In software development, building maintainable, scalable, and robust code is the ultimate goal. The SOLID principles, proposed by Robert C. Martin (also known as Uncle Bob), provide a foundation for achieving this goal. How can these principles be applied to the Go programming language? Known for its simplicity and pragmatism, Go allows us to explore how ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe0e10vtcva1mgfpw5c1t.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Applying SOLID Principles in Go",
+    "seoDescription": "In software development, building maintainable, scalable, and robust code is the ultimate goal. The SOLID principles, proposed by Robert C. Martin (also know..."
+  },
+  {
+    "title": "Robert Altman Movies, Ranked",
+    "url": "https://nofilmschool.com/best-robert-altman-movies",
+    "publishedAt": "2025-08-26T23:22:21.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Robert Altman's movies are so unique, you kind of just have to watch a lot of them to see what you like. I find them to be polarizing, and when I force friends to watch them, I feel like everyone comes out with their own hot takes on what they love and which they hate. So, today, I decided to make a top 10 of his films and let you all judge me. Let's dive...",
+    "image": "https://nofilmschool.com/media-library/robert-altman-movies-ranked.webp?id=52535580&width=980",
+    "video": "https://www.youtube.com/embed/Xkr5p0XCaUQ?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Robert altman",
+      "Robert altman"
+    ],
+    "seoTitle": "Robert Altman Movies, Ranked",
+    "seoDescription": "Robert Altman's movies are so unique, you kind of just have to watch a lot of them to see what you like. I find them to be polarizing, and when I force frien..."
+  },
+  {
+    "title": "Five Things to Expect From Apple's 'Awe Dropping' September 9 Event",
+    "url": "https://www.macrumors.com/2025/08/26/apple-september-9-event-rumors/",
+    "publishedAt": "2025-08-26T23:17:16.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple today announced its \"Awe Dropping\" iPhone-centric event, which is set to take place on Tuesday, September 9 at 10:00 a.m. Pacific Time. There are a long list of products that are coming, but we thought we'd pull out five feature highlights to look forward to. That Super Thin iPhone - Apple's September 9 event will see the unveiling of the first rede...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Awe-Dropping-Apple-Event-Feature.jpg",
+    "video": "https://www.youtube.com/embed/H3KnMyojEQU",
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "Five Things to Expect From Apple's 'Awe Dropping' September 9 Event",
+    "seoDescription": "Apple today announced its \"Awe Dropping\" iPhone-centric event, which is set to take place on Tuesday, September 9 at 10:00 a.m. Pacific Time. There are a lon..."
+  },
+  {
     "title": "Me ajudou bastante",
     "url": "https://dev.to/dev_king/me-ajudou-bastante-1nn0",
     "publishedAt": "2025-08-26T23:07:39.000Z",
@@ -528,100 +614,5 @@
     ],
     "seoTitle": "Leitz Cine Hugo 40mm T1.5 Prime Brings Leica M Spirit to Filmmaking",
     "seoDescription": "The Leitz Cine Hugo 40mm T1.5 is Leica's latest, super-fast prime lens for professional filmmakers and videographers. [Read More]"
-  },
-  {
-    "title": "Amazon's \"Buy\" Button Doesn't Mean What You Think It Does",
-    "url": "https://nofilmschool.com/prime-video-lawsuit",
-    "publishedAt": "2025-08-26T18:05:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Amazon is facing a new lawsuit over something a lot of us probably never think about when we click \"buy\" on Prime Video. A new proposed class action lawsuit filed Friday in Washington federal court accuses the company of running a \"bait and switch\" operation, allegedly misleading consumers into believing they've purchased movies and TV shows when they've ...",
-    "image": "https://nofilmschool.com/media-library/man-watching-tv-with-remote-control-in-hand.png?id=61518343&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "Amazon",
-      "Streaming",
-      "Lawsuit"
-    ],
-    "seoTitle": "Amazon's \"Buy\" Button Doesn't Mean What You Think It Does",
-    "seoDescription": "Amazon is facing a new lawsuit over something a lot of us probably never think about when we click \"buy\" on Prime Video. A new proposed class action lawsuit ..."
-  },
-  {
-    "title": "Is Wscripted+ a Viable Alternative to Coverfly and The Black List?",
-    "url": "https://nofilmschool.com/wscripted-script-platform",
-    "publishedAt": "2025-08-26T17:55:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "What services are you using to host your screenplays and get discovered? Are you hosted on The Black List or Stage 32? Or are you looking for a new home for your projects after the closure of Coverfly? We've been poking around and looked into Wscripted, which is a company focused on diversifying story discovery and financing for film, TV, and publishing. ...",
-    "image": "https://nofilmschool.com/media-library/is-wscripted-a-viable-alternative-to-coverfly-and-the-black-list.png?id=61518798&width=980",
-    "video": null,
-    "author": "NFS Staff",
-    "tags": [
-      "Coverfly",
-      "Wscripted",
-      "The black list",
-      "Ai coverage",
-      "Screenwriting"
-    ],
-    "seoTitle": "Is Wscripted+ a Viable Alternative to Coverfly and The Black List?",
-    "seoDescription": "What services are you using to host your screenplays and get discovered? Are you hosted on The Black List or Stage 32? Or are you looking for a new home for ..."
-  },
-  {
-    "title": "Sony’s Latest Firmware Updates for Several FX-Line Cameras Offer “BIG” New Features",
-    "url": "https://nofilmschool.com/sony-fx-firmware-updates",
-    "publishedAt": "2025-08-26T17:45:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "While this news might sound like Sony is launching its own Power 5 Conference to the NCAA college football, we’re excited to share what this new BIG6 home screen is and how it works with several of Sony’s popular FX-line cameras. Set to offer new firmware updates for the Sony FX3, FX3A, and the FX30, Sony is rolling out firmware updates that will add BIG6...",
-    "image": "https://nofilmschool.com/media-library/sony-fx-firmware-updates.jpg?id=61518255&width=980",
-    "video": "https://www.youtube.com/embed/FFn7MPudrNs?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Sony",
-      "Firmware updates",
-      "Sony fx3",
-      "Sony fx3a",
-      "Sony fx30",
-      "Sony fx firmware updates"
-    ],
-    "seoTitle": "Sony’s Latest Firmware Updates for Several FX-Line Cameras Offer “BIG” New Features",
-    "seoDescription": "While this news might sound like Sony is launching its own Power 5 Conference to the NCAA college football, we’re excited to share what this new BIG6 home sc..."
-  },
-  {
-    "title": "The Note Christopher Nolan Gave Gary Oldman to Change His Performance",
-    "url": "https://nofilmschool.com/nolan-note-oldman",
-    "publishedAt": "2025-08-26T17:35:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Christopher Nolan has built a reputation as a director who commands respect through restraint. He doesn't rely on micromanagement. Famously, he prohibits the use of phones on set and favors working in close coordination with his actors, avoiding the use of video village. And he's gotten some great performances from his casts over the years, so if we can d...",
-    "image": "https://nofilmschool.com/media-library/bts-shot-of-christopher-nolan-directing-dunkirk.jpg?id=34048865&width=980",
-    "video": "https://www.youtube.com/embed/B5B5wX9N9pw?rel=0&start=1337",
-    "author": "Jo Light",
-    "tags": [
-      "Gary oldman",
-      "Directing",
-      "Directing advice",
-      "Christopher nolan",
-      "Christopher nolan"
-    ],
-    "seoTitle": "The Note Christopher Nolan Gave Gary Oldman to Change His Performance",
-    "seoDescription": "Christopher Nolan has built a reputation as a director who commands respect through restraint. He doesn't rely on micromanagement. Famously, he prohibits the..."
-  },
-  {
-    "title": "How to watch Apple’s iPhone 17 event live on September 9",
-    "url": "https://9to5mac.com/2025/08/26/how-to-watch-apples-iphone-17-event-live-on-september-9/",
-    "publishedAt": "2025-08-26T17:33:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "It’s official: Apple is holding its big iPhone 17 event on Tuesday, September 9. The ‘Awe dropping’ announcements will be streamed live online. Here’s how to watch the iPhone 17 event. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-event-how-to-watch.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "How to watch Apple’s iPhone 17 event live on September 9",
-    "seoDescription": "It’s official: Apple is holding its big iPhone 17 event on Tuesday, September 9. The ‘Awe dropping’ announcements will be streamed live online. Here’s how to..."
   }
 ]
