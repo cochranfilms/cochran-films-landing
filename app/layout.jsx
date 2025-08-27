@@ -1,9 +1,4 @@
 import './globals.css'
-import '../public/css/base.css'
-import '../public/css/portfolio.css'
-import '../public/css/navigation.css'
-import '../public/css/footer.css'
-import '../public/css/responsive.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import { ToastProvider } from './components/Toast'
@@ -18,6 +13,11 @@ export default function RootLayout({children}){
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/base.css" />
+        <link rel="stylesheet" href="/css/portfolio.css" />
+        <link rel="stylesheet" href="/css/navigation.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/responsive.css" />
       </head>
       <body>
         <ToastProvider>

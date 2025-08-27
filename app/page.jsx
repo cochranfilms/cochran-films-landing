@@ -1,6 +1,6 @@
+import { redirect } from 'next/navigation'
+
 export default function Page(){
-  if (typeof window !== 'undefined') {
-    window.location.replace('/home')
-  }
-  return null
+  redirect('/home')
 }
+export const metadata = { robots: { index: false, follow: false } }
