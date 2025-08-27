@@ -1,5 +1,24 @@
 [
   {
+    "title": "Laravel 12 Rate Limiting: Why Your Application Needs This Feature",
+    "url": "https://dev.to/nganggurdev/laravel-12-rate-limiting-why-your-application-needs-this-feature-3gn",
+    "publishedAt": "2025-08-27T05:06:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Ever had users spam your login form, flood your APIs, or accidentally overload your server with too many requests? That’s where Rate Limiting in Laravel comes to the rescue. With the latest version, Laravel makes it easier than ever to control request traffic, protect APIs, and prevent abuse — all with just a few lines of code. Here’s what you’ll learn in...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyn4nu4ggeetypd9btbi7.webp",
+    "video": null,
+    "author": "Nganggur Dev",
+    "tags": [
+      "laravel",
+      "php",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Laravel 12 Rate Limiting: Why Your Application Needs This Feature",
+    "seoDescription": "Ever had users spam your login form, flood your APIs, or accidentally overload your server with too many requests? That’s where Rate Limiting in Laravel come..."
+  },
+  {
     "title": "When I talk to small business owners, I often hear the same thing: “AI sounds great, but isn’t it only for big companies with tech teams?” Here are 7 Ways Small Businesses Can Use AI Today, and a giveaway for DEV Community!",
     "url": "https://dev.to/jaideepparashar/when-i-talk-to-small-business-owners-i-often-hear-the-same-thing-ai-sounds-great-but-isnt-453d",
     "publishedAt": "2025-08-27T04:12:44.000Z",
@@ -116,63 +135,6 @@
     ],
     "seoTitle": "Postman vs Bruno: What Are the Key Differences?",
     "seoDescription": "In the ever-evolving landscape of API development tools, a David vs Goliath story is unfolding. Postman has long reigned supreme as the go-to API client, but..."
-  },
-  {
-    "title": "Setting Up SafeLine WAF for WordPress Security",
-    "url": "https://dev.to/carrie_luo1/setting-up-safeline-waf-for-wordpress-security-41g8",
-    "publishedAt": "2025-08-27T03:40:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "WordPress powers over 40% of websites globally, making it a prime target for hackers. To protect your WordPress site from malicious traffic, SQL This guide will walk you through setting up SafeLine WAF for WordPress security with a practical, hands-on approach. Before you begin, ensure you have: A WordPress site running (e.g., on Apache or Nginx). A serve...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzq37awz255v7ukgvd9iy.png",
-    "video": null,
-    "author": "Carrie",
-    "tags": [
-      "wordpress",
-      "security",
-      "waf",
-      "webdev"
-    ],
-    "seoTitle": "Setting Up SafeLine WAF for WordPress Security",
-    "seoDescription": "WordPress powers over 40% of websites globally, making it a prime target for hackers. To protect your WordPress site from malicious traffic, SQL This guide w..."
-  },
-  {
-    "title": "How to Fix Halo Upload Blocking Issues When Working With Scripts or Technical Docs",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-fix-halo-upload-blocking-issues-when-working-with-scripts-or-technical-docs-2k0i",
-    "publishedAt": "2025-08-27T03:27:58.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Halo is a popular open-source content management and blogging platform. Some users have reported issues where Halo’s built-in security rules block certain upload or editing actions—especially when working with script files or technical documentation that requires PUT/POST requests to Halo’s APIs. This article explains what’s happening, why it occurs, and ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmfo2etxb0o1s5tvzcnb1.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "cybersecurity",
-      "safeline",
-      "webdev",
-      "beginners"
-    ],
-    "seoTitle": "How to Fix Halo Upload Blocking Issues When Working With Scripts or Technical Docs",
-    "seoDescription": "Halo is a popular open-source content management and blogging platform. Some users have reported issues where Halo’s built-in security rules block certain up..."
-  },
-  {
-    "title": "🚀 Just published: Nano Banana – AI-powered image and video generation with unmatched consistency. Discover how Google’s Nano Banana keeps every frame and edit perfectly aligned, from static images to multi-frame video. Perfect for creators exploring AR,",
-    "url": "https://dev.to/juddiy/just-published-nano-banana-ai-powered-image-and-video-generation-with-unmatched-58h8",
-    "publishedAt": "2025-08-27T03:07:47.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Nano Banana: From Image Consistency to High-Quality Video Generation Juddiy ・ Aug 27 #webdev #programming #ai #discuss",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1495887%2F79c06275-2768-4481-ac2a-0b36dc373392.jpg",
-    "video": null,
-    "author": "Juddiy",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "discuss"
-    ],
-    "seoTitle": "🚀 Just published: Nano Banana – AI-powered image and video generation with unmatched consistency. Discover how Google’s Nano Banana keeps every frame and edit perfectly aligned, from static images to multi-frame video. Perfect for creators exploring AR,",
-    "seoDescription": "Nano Banana: From Image Consistency to High-Quality Video Generation Juddiy ・ Aug 27 #webdev #programming #ai #discuss"
   },
   {
     "title": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
@@ -623,5 +585,41 @@
     ],
     "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
     "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
+  },
+  {
+    "title": "The winners and losers of Taylor Swift’s engagement announcement",
+    "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
+    "publishedAt": "2025-08-26T19:04:14.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Mia Sato",
+    "tags": [],
+    "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
+    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
+  },
+  {
+    "title": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
+    "url": "https://petapixel.com/2025/08/26/award-winning-photographer-elevates-commercial-images-to-fine-art/",
+    "publishedAt": "2025-08-26T19:00:44.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how we perceive objects, images, and stories, elevating commercial work to fine art. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Dustin-Edward-Arnold-PetaPixel-BG-3-Panel.jpg",
+    "video": null,
+    "author": "Kate Garibaldi",
+    "tags": [
+      "Inspiration",
+      "Spotlight",
+      "commercial",
+      "dustinedwardarnold",
+      "luxury",
+      "revery",
+      "spotlight"
+    ],
+    "seoTitle": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
+    "seoDescription": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how..."
   }
 ]
