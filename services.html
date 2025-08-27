@@ -910,6 +910,14 @@
     @media (max-width: 500px) {
       .gallery-grid { grid-template-columns: 1fr; }
     }
+    
+    /* Masonry layout for Photography */
+    .masonry-grid { column-count: 4; column-gap: 14px; }
+    .masonry-item { break-inside: avoid; margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(148,163,184,0.2); background: rgba(15,23,42,0.5); }
+    .masonry-item img { width: 100%; height: auto; display: block; object-fit: contain; background: rgba(2,6,23,0.6); }
+    @media (max-width: 1200px) { .masonry-grid { column-count: 3; } }
+    @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+    @media (max-width: 520px) { .masonry-grid { column-count: 1; } }
   </style>
 </head>
 <body>
@@ -1076,7 +1084,7 @@
             <h3 class="services-portfolio-title"><i class="fas fa-camera" style="color: var(--brand-gold);"></i> Photography</h3>
             <p class="services-portfolio-subtitle">Tap to view</p>
           </div>
-          <div class="gallery-grid" id="photographyGridServices"></div>
+          <div class="masonry-grid" id="photographyGridServices"></div>
         </div>
         <div>
           <div class="services-portfolio-header">
@@ -3029,6 +3037,27 @@
             </div>
           </div>
         `).join('');
+        return;
+      }
+      const isPhotoGrid = gridId.toLowerCase().includes('photo');
+      if (isPhotoGrid) {
+        // Photography: image-only masonry tiles, preserve ratios
+        grid.innerHTML = items.map((it) => {
+          const img = (it['image_url'] || it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail) || placeholder;
+          const alt = it.Title || 'Photo';
+          return `
+            <div class="masonry-item">
+              <img src="${img}" alt="${alt}" loading="lazy" />
+            </div>
+          `;
+        }).join('');
+        Array.from(grid.querySelectorAll('.masonry-item img')).forEach((el) => {
+          el.addEventListener('click', () => {
+            if (window.airtableCMS && window.airtableCMS.openImageModal) {
+              window.airtableCMS.openImageModal(el.src, el.alt || '');
+            }
+          });
+        });
         return;
       }
       grid.innerHTML = items.map((it) => {
