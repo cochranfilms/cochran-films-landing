@@ -1,5 +1,86 @@
 [
   {
+    "title": "Colombia joins the list of countries probing Apple over App Store antitrust concerns",
+    "url": "https://9to5mac.com/2025/08/27/colombia-joins-the-list-of-countries-probing-apple-over-app-store-antitrust-concerns/",
+    "publishedAt": "2025-08-27T20:13:25.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "From the United States to the United Kingdom, from Brazil to Japan, and in many countries in between, Apple has been facing a series of antitrust probes, particularly over its App Store rules. Now, Colombia is also joining in. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/app-store-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Colombia joins the list of countries probing Apple over App Store antitrust concerns",
+    "seoDescription": "From the United States to the United Kingdom, from Brazil to Japan, and in many countries in between, Apple has been facing a series of antitrust probes, par..."
+  },
+  {
+    "title": "How to Build AI-Generated Loading Messages in Rails 8 with Hotwire & Stimulus",
+    "url": "https://dev.to/untaught/how-to-build-ai-generated-loading-messages-in-rails-8-with-hotwire-stimulus-3c0o",
+    "publishedAt": "2025-08-27T20:04:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Have you noticed how Claude Code shows funny loading messages while it’s working? Things like “Wizarding” or “Pontificating.” I think they’re fun. They give you a small taste of what user experiences with AI could look like in the future. The app will generate dynamic loading messages with a little help from AI. Here’s a quick preview: Here’s the flow: Wh...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Funtaught.sfo3.cdn.digitaloceanspaces.com%2Fghost%2Fposts%2Fai-powered-loading-messages%2Ffinal_result.gif",
+    "video": null,
+    "author": "Andres Urdaneta",
+    "tags": [
+      "webdev",
+      "ruby",
+      "rails",
+      "ai"
+    ],
+    "seoTitle": "How to Build AI-Generated Loading Messages in Rails 8 with Hotwire & Stimulus",
+    "seoDescription": "Have you noticed how Claude Code shows funny loading messages while it’s working? Things like “Wizarding” or “Pontificating.” I think they’re fun. They give ..."
+  },
+  {
+    "title": "Apple just got partial App Store vindication from a very unlikely source",
+    "url": "https://9to5mac.com/2025/08/27/apple-just-got-partial-app-store-vindication-from-google/",
+    "publishedAt": "2025-08-27T19:56:58.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has been under fire from legislators for its App Store practices for years. But while it’s been forced to make iPhone changes in the EU and the US might soon follow, Google is now trending the opposite direction with its Android policies. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/app-store-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple just got partial App Store vindication from a very unlikely source",
+    "seoDescription": "Apple has been under fire from legislators for its App Store practices for years. But while it’s been forced to make iPhone changes in the EU and the US migh..."
+  },
+  {
+    "title": "Pixel 10’s new ‘Head Start’ tool makes it easier for iPhone users to switch [Gallery]",
+    "url": "https://9to5google.com/2025/08/27/google-pixel-10-head-start-switch-tool/",
+    "publishedAt": "2025-08-27T19:51:47.000Z",
+    "source": "9to5google.com",
+    "category": "apple",
+    "summary": "Google is clearly trying to get more people to switch to Pixel 10, as the company has just launched a new “Head Start” tool that walks users through the process of moving into their new phone. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/pixel-10-and-iphone-16-1.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "9to5Google",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Pixel 10’s new ‘Head Start’ tool makes it easier for iPhone users to switch [Gallery]",
+    "seoDescription": "Google is clearly trying to get more people to switch to Pixel 10, as the company has just launched a new “Head Start” tool that walks users through the proc..."
+  },
+  {
+    "title": "The 75 best Labor Day deals we’ve found so far",
+    "url": "https://www.theverge.com/tech/756227/best-labor-day-sales-deals-2025",
+    "publishedAt": "2025-08-27T19:22:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment, at least there is always a great selection of deals to combat the post-summer blues. You’ll have to wait until September 1st to celebrate the actual holiday, sure, but in the meantime, we’ve gone ahead and rounded up the best ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257912_labor_day_deals__CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The 75 best Labor Day deals we’ve found so far",
+    "seoDescription": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment, at least there is always a..."
+  },
+  {
     "title": "Legendary Composer John Williams... Doesn't Like Film Music?",
     "url": "https://nofilmschool.com/john-williams-dislikes-soundtracks",
     "publishedAt": "2025-08-27T19:10:05.000Z",
@@ -177,25 +258,6 @@
     "seoDescription": "iOS 26 is launching soon, headlined by a fresh Liquid Glass design that makes your iPhone look brand new. Apple has a ton of new app icons coming with its re..."
   },
   {
-    "title": "Python y Realidad Aumentada en Rituales de Limpieza Espiritual",
-    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-y-realidad-aumentada-en-rituales-de-limpieza-espiritual-91j",
-    "publishedAt": "2025-08-27T18:28:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La relación entre lo espiritual y la tecnología ha evolucionado con el En este contexto, Python y la realidad aumentada (AR) aparecen como Los rituales de limpieza espiritual han existido en múltiples culturas: Hoy, estas prácticas mantienen su vigencia. Personas de distintas Limpieza Espiritual en Chicago se ha convertido en un ejemplo de La realidad aum...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyzv199ahg2a9md167dxw.png",
-    "video": null,
-    "author": "angelyn Muñoz",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python y Realidad Aumentada en Rituales de Limpieza Espiritual",
-    "seoDescription": "La relación entre lo espiritual y la tecnología ha evolucionado con el En este contexto, Python y la realidad aumentada (AR) aparecen como Los rituales de li..."
-  },
-  {
     "title": "Why 'Megadoc' Is Such a Unique Documentary",
     "url": "https://nofilmschool.com/megadoc-documentary",
     "publishedAt": "2025-08-27T18:25:23.000Z",
@@ -215,7 +277,7 @@
     "seoDescription": "Francis Ford Coppola's pet project, Megalopolis, certainly did give filmgoers one of the most unique cinematic experiences of recent memory. It was a little ..."
   },
   {
-    "title": "Apple Blocks iTorrent App from EU Alternative App Marketplace",
+    "title": "Apple Blocks iTorrent App From EU Alternative App Marketplace",
     "url": "https://www.macrumors.com/2025/08/27/apple-blocks-itorrent-app-eu/",
     "publishedAt": "2025-08-27T18:17:49.000Z",
     "source": "macrumors.com",
@@ -227,7 +289,7 @@
     "tags": [
       "European Union"
     ],
-    "seoTitle": "Apple Blocks iTorrent App from EU Alternative App Marketplace",
+    "seoTitle": "Apple Blocks iTorrent App From EU Alternative App Marketplace",
     "seoDescription": "Apple is no longer allowing torrenting app iTorrent to be distributed via the AltStore Pal alternative app marketplace in the European Union, according to To..."
   },
   {
@@ -523,20 +585,6 @@
     "seoDescription": "After a 16-year-old took his own life following months of confiding in ChatGPT, OpenAI will be introducing parental controls and is considering additional sa..."
   },
   {
-    "title": "Kwikset’s new locks point to a smarter, more open future for your front door",
-    "url": "https://www.theverge.com/smart-home/766403/kwisket-halo-select-plus-nfc-home-key-matter",
-    "publishedAt": "2025-08-27T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Kwikset’s latest smart lock, the Halo Select Plus, features NFC-powered tap-to-unlock functionality, allowing you to use your phone as your key. Kwikset is doubling down on open standards and new technologies as it expands its smart lock offerings. In an exclusive interview with The Verge, the company revealed that it will launch its first NFC-powered tap...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Halo-Select-Plus_KW_9801-WIFI-THRD-TSCR-15_V1_Light_Door_Wake_Unlocked.jpg?quality=90&#038;strip=all&#038;crop=15.769378662109,0,84.230621337891,70.331872558594",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "Kwikset’s new locks point to a smarter, more open future for your front door",
-    "seoDescription": "Kwikset’s latest smart lock, the Halo Select Plus, features NFC-powered tap-to-unlock functionality, allowing you to use your phone as your key. Kwikset is d..."
-  },
-  {
     "title": "Eddy Cue wanted Apple to acquire two big companies, but Tim Cook said no",
     "url": "https://9to5mac.com/2025/08/27/eddy-cue-pushed-for-apple-to-acquire-two-big-companies-but-tim-cook-said-no/",
     "publishedAt": "2025-08-27T15:49:34.000Z",
@@ -583,60 +631,5 @@
     ],
     "seoTitle": "Netflix’s new all-time top movie hit at the perfect time for Apple TV+",
     "seoDescription": "Netflix has a new all-time most popular movie: as of yesterday, KPop Demon Hunters is the service’s best performer ever. And the timing could be especially g..."
-  },
-  {
-    "title": "Mosyle identifies new Mac malware that evades detection through fake PDF conversion tool",
-    "url": "https://9to5mac.com/2025/08/27/mosyle-identifies-new-mac-malware-that-evades-detection-through-fake-pdf-conversion-tool/",
-    "publishedAt": "2025-08-27T15:31:55.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Mosyle, a leader in Apple device management and security, has exclusively revealed to 9to5Mac details on a new Mac malware strain, dubbed “JSCoreRunner”. The zero-day threat evaded all detections on VirusTotal at the time of discovery, spreading through a malicious PDF conversion site called fileripple[.]com to trick users into downloading what appears to...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/chrome-dino-01.png?w=1600",
-    "video": null,
-    "author": "Arin Waichulis",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Mosyle identifies new Mac malware that evades detection through fake PDF conversion tool",
-    "seoDescription": "Mosyle, a leader in Apple device management and security, has exclusively revealed to 9to5Mac details on a new Mac malware strain, dubbed “JSCoreRunner”. The..."
-  },
-  {
-    "title": "AirPods Pro 3 release date: When to expect the new model’s launch",
-    "url": "https://9to5mac.com/2025/08/27/airpods-pro-3-release-date-when-to-expect-the-new-models-launch/",
-    "publishedAt": "2025-08-27T14:45:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Three years after AirPods Pro 2 first debuted, Apple is nearly ready to unveil the popular product’s successor. Here’s the expected release date for AirPods Pro 3. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/airpods-pro-3.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "AirPods Pro 3 release date: When to expect the new model’s launch",
-    "seoDescription": "Three years after AirPods Pro 2 first debuted, Apple is nearly ready to unveil the popular product’s successor. Here’s the expected release date for AirPods ..."
-  },
-  {
-    "title": "Nothing Used Stock Photos to Advertise the Phone 3’s Camera",
-    "url": "https://petapixel.com/2025/08/27/nothing-used-stock-photos-to-advertise-the-phone-3s-camera/",
-    "publishedAt": "2025-08-27T14:38:03.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Nothing used a set of stock photos to advertise the Phone 3's camera capabilities. The images appeared on in-store demonstration units under the title \"WithNothing\" along with the line, \"Judge for yourself. Here's what our community has captured with Phone (3).\" [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/2.mp4",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Mobile",
-      "News",
-      "advertising",
-      "apology",
-      "falseadvertising",
-      "mobile",
-      "nothing",
-      "nothingphone3"
-    ],
-    "seoTitle": "Nothing Used Stock Photos to Advertise the Phone 3’s Camera",
-    "seoDescription": "Nothing used a set of stock photos to advertise the Phone 3's camera capabilities. The images appeared on in-store demonstration units under the title \"WithN..."
   }
 ]
