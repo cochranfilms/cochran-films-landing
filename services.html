@@ -3069,7 +3069,7 @@
         const sub = it.Description || it['Tech Stack'] || it.Client || '';
         const date = (it.UploadDate || '').split('T')[0] || '';
         const featured = it['Is Featured'] === true || it['Is Featured'] === 'true';
-        const chip = it.ServiceCategory || it.Category || '';
+        const chip = (it.RealCategory && it.RealCategory !== 'Video Production') ? it.RealCategory : (it.ServiceCategory || it.Category || '');
         return `
           <div class="cf-card" data-service-category="${chip}" ${isVideo && it.playbackUrl ? `data-playback-url="${it.playbackUrl}"` : ''}>
             <div class="cf-thumb">
@@ -3100,6 +3100,7 @@
               videoUrl: it.playbackUrl || el.dataset.playbackUrl,
               playbackUrl: it.playbackUrl || el.dataset.playbackUrl,
               category: it.ServiceCategory || it.Category || 'Video Production',
+              realCategory: it.RealCategory || '',
               role: it.Role || '',
               client: it.Client || '',
               timeline: it.Timeline || ''

@@ -792,6 +792,32 @@ class AirtableCMS {
         return url;
       };
       
+      // Helper: derive a more specific category for Video Production
+      const deriveVideoSubcategory = (f, title, desc) => {
+        const direct = (f['Video Type'] || f['Content Type'] || f['Subcategory'] || f['Format'] || f['Genre'] || f['CategoryRef'] || f['Type'] || '').toString().trim();
+        const normalize = (s) => String(s || '').toLowerCase();
+        const nice = (s) => s ? s.split(' ').map(w => w.charAt(0).toUpperCase()+w.slice(1)).join(' ') : '';
+        if (direct && normalize(direct) !== 'video production') return nice(direct);
+        const text = `${title || ''} ${desc || ''}`.toLowerCase();
+        const map = [
+          ['commercial|ad|spot|promo', 'Commercial'],
+          ['highlight|recap|sizzle', 'Event Highlight'],
+          ['event|conference|summit|festival|ceremony|expo', 'Event Coverage'],
+          ['interview|sit-down|q&a|q and a', 'Interview'],
+          ['podcast', 'Podcast'],
+          ['live stream|livestream|live production|broadcast', 'Live Production'],
+          ['documentary|docu', 'Documentary'],
+          ['training|education|tutorial|how-to|how to|course', 'Training / Tutorial'],
+          ['testimonial|case study|review', 'Testimonial'],
+          ['product|demo|unboxing', 'Product Video'],
+          ['brand film|brand story|anthem', 'Brand Film']
+        ];
+        for (const [pattern, label] of map) {
+          if (new RegExp(pattern).test(text)) return label;
+        }
+        return 'Video Production';
+      };
+
       // FIXED: Map Airtable fields to existing portfolio structure using your actual CSV field names
       const transformedItem = {
         Title: fields.Title || fields.Name || fields['Project Name'] || fields['Video'] || 
@@ -837,6 +863,11 @@ class AirtableCMS {
         }
       });
       
+      // Derive real subcategory for video items
+      if (category === 'Video Production') {
+        transformedItem.RealCategory = deriveVideoSubcategory(fields, transformedItem.Title, transformedItem.Description);
+      }
+
       // Filter out invalid items
       if (!transformedItem.Title || (transformedItem.Title === 'Untitled Project' && category !== 'Photography')) {
         return null;
@@ -2265,7 +2296,7 @@ class AirtableCMS {
     }
 
     // Dynamically populate AI recommendations based on category
-    this.populateAIRecommendations(videoData.category);
+    this.populateAIRecommendations(videoData.category, { realCategory: videoData.realCategory });
 
     // Show popup
     popup.style.display = 'flex';
@@ -2275,7 +2306,7 @@ class AirtableCMS {
     document.body.style.overflow = 'hidden';
   }
 
-  populateAIRecommendations(category) {
+  populateAIRecommendations(category, context = {}) {
     const recommendationTags = document.getElementById('recommendationTags');
     const aiCtaBtn = document.getElementById('aiCtaBtn');
     
@@ -2285,11 +2316,57 @@ class AirtableCMS {
     let ctaText = 'Start Your Project';
     let ctaService = '';
 
+    const realCat = (context.realCategory || category || '').toLowerCase();
     // Define recommendations based on category
-    switch (category?.toLowerCase()) {
+    switch (realCat) {
       case 'video production':
         recommendations = ['Video Production', 'Post-Production', 'Color Grading', 'Sound Design'];
         ctaText = 'Start Your Video Project';
+        ctaService = 'video-production';
+        break;
+      case 'commercial':
+        recommendations = ['Commercial Production', 'Creative Direction', 'Script + Storyboards', 'Media Buying'];
+        ctaText = 'Plan Your Commercial';
+        ctaService = 'video-production';
+        break;
+      case 'event coverage':
+        recommendations = ['Event Coverage', 'Same-Day Edit', 'Multi-Cam Coverage', 'Live Highlights'];
+        ctaText = 'Book Event Coverage';
+        ctaService = 'video-production';
+        break;
+      case 'event highlight':
+        recommendations = ['Event Highlights', 'Social Cutdowns', 'Reels/TikTok Package'];
+        ctaText = 'Create Event Highlight';
+        ctaService = 'video-production';
+        break;
+      case 'interview':
+        recommendations = ['Interview Setup', '2-Cam Package', 'Pro Audio + Lighting', 'Transcript + Captions'];
+        ctaText = 'Schedule Interview Production';
+        ctaService = 'video-production';
+        break;
+      case 'documentary':
+        recommendations = ['Docu-Style Production', 'Story Development', 'Color + Sound Mix'];
+        ctaText = 'Start Documentary Project';
+        ctaService = 'video-production';
+        break;
+      case 'live production':
+        recommendations = ['Live Production', 'Multi-Cam Switching', 'Streaming Setup', 'Graphics Package'];
+        ctaText = 'Book Live Production';
+        ctaService = 'video-production';
+        break;
+      case 'testimonial':
+        recommendations = ['Testimonial Series', 'Case Study Edit', 'Social Proof Campaign'];
+        ctaText = 'Capture Testimonials';
+        ctaService = 'video-production';
+        break;
+      case 'product video':
+        recommendations = ['Product Video', 'Studio Setup', 'Motion Graphics', 'E‑commerce Cutdowns'];
+        ctaText = 'Produce Product Video';
+        ctaService = 'video-production';
+        break;
+      case 'training / tutorial':
+        recommendations = ['Training Videos', 'Screen Capture + VO', 'LMS Packaging'];
+        ctaText = 'Create Training Series';
         ctaService = 'video-production';
         break;
       case 'web development':
