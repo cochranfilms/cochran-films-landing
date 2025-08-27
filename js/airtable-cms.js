@@ -2132,16 +2132,8 @@ class AirtableCMS {
     
     // Add visual indicator that it's clickable
     item.style.cursor = 'pointer';
-    item.style.transition = 'transform 0.2s ease';
-    
-    // Add hover effect
-    item.addEventListener('mouseenter', () => {
-      item.style.transform = 'scale(1.02)';
-    });
-    
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = 'scale(1)';
-    });
+    // Minimize hover effect (remove scale animation)
+    item.style.transition = 'none';
   }
 
   extractVideoData(item) {
