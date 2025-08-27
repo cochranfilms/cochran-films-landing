@@ -1,79 +1,115 @@
 [
   {
-    "title": "Laravel 12 Rate Limiting: Why Your Application Needs This Feature",
-    "url": "https://dev.to/nganggurdev/laravel-12-rate-limiting-why-your-application-needs-this-feature-3gn",
-    "publishedAt": "2025-08-27T05:06:40.000Z",
+    "title": "8 Best Practices for Adding an Image Uploader to Your Website",
+    "url": "https://dev.to/ideradevtools/8-best-practices-for-adding-an-image-uploader-to-your-website-1e8e",
+    "publishedAt": "2025-08-27T06:13:23.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Ever had users spam your login form, flood your APIs, or accidentally overload your server with too many requests? That’s where Rate Limiting in Laravel comes to the rescue. With the latest version, Laravel makes it easier than ever to control request traffic, protect APIs, and prevent abuse — all with just a few lines of code. Here’s what you’ll learn in...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyn4nu4ggeetypd9btbi7.webp",
+    "summary": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies of his certificates. When he selects the images and clicks the upload button, an error message appears, and the complete form is refreshed. Can you imagine the user frustration? User experience is th...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuhs3hr8utqcqnolei1x2.png",
     "video": null,
-    "author": "Nganggur Dev",
+    "author": "IderaDevTools",
     "tags": [
-      "laravel",
-      "php",
-      "webdev",
-      "programming"
+      "filestack",
+      "programming",
+      "javascript",
+      "webdev"
     ],
-    "seoTitle": "Laravel 12 Rate Limiting: Why Your Application Needs This Feature",
-    "seoDescription": "Ever had users spam your login form, flood your APIs, or accidentally overload your server with too many requests? That’s where Rate Limiting in Laravel come..."
+    "seoTitle": "8 Best Practices for Adding an Image Uploader to Your Website",
+    "seoDescription": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies..."
   },
   {
-    "title": "When I talk to small business owners, I often hear the same thing: “AI sounds great, but isn’t it only for big companies with tech teams?” Here are 7 Ways Small Businesses Can Use AI Today, and a giveaway for DEV Community!",
-    "url": "https://dev.to/jaideepparashar/when-i-talk-to-small-business-owners-i-often-hear-the-same-thing-ai-sounds-great-but-isnt-453d",
-    "publishedAt": "2025-08-27T04:12:44.000Z",
+    "title": "8 Best Practices for Adding an Image Uploader to Your Website",
+    "url": "https://dev.to/ideradevtools/8-best-practices-for-adding-an-image-uploader-to-your-website-4l8f",
+    "publishedAt": "2025-08-27T06:13:23.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Thank You for 500 Followers + A Special Giveaway Jaideep Parashar ・ Aug 27 #ai #webdev #programming #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "summary": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies of his certificates. When he selects the images and clicks the upload button, an error message appears, and the complete form is refreshed. Can you imagine the user frustration? User experience is th...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuhs3hr8utqcqnolei1x2.png",
     "video": null,
-    "author": "Jaideep Parashar",
+    "author": "IderaDevTools",
     "tags": [
-      "ai",
-      "webdev",
+      "filestack",
       "programming",
-      "beginners"
+      "javascript",
+      "webdev"
     ],
-    "seoTitle": "When I talk to small business owners, I often hear the same thing: “AI sounds great, but isn’t it only for big companies with tech teams?” Here are 7 Ways Small Businesses Can Use AI Today, and a giveaway for DEV Community!",
-    "seoDescription": "Thank You for 500 Followers + A Special Giveaway Jaideep Parashar ・ Aug 27 #ai #webdev #programming #beginners"
+    "seoTitle": "8 Best Practices for Adding an Image Uploader to Your Website",
+    "seoDescription": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies..."
   },
   {
-    "title": "Thank You for 500 Followers + A Special Giveaway",
-    "url": "https://dev.to/jaideepparashar/thank-you-for-500-followers-a-special-giveaway-1iaj",
-    "publishedAt": "2025-08-27T04:07:08.000Z",
+    "title": "Designing for Scale: Why Small Decisions Break Big Systems",
+    "url": "https://dev.to/dct_technology/designing-for-scale-why-small-decisions-break-big-systems-4039",
+    "publishedAt": "2025-08-27T05:45:43.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. 👉 Thank you. Every comment, share, and message reminds me why I began this journey: To help people move from AI fear to AI fluency. Your support has made this space more than just articles — it’s becoming a community. 🎁 A Special Giveaway for You As a token of gratitude...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fepcgucjkj9xpikrdffec.png",
+    "summary": "You don’t need to build the next Facebook or Netflix to realize one thing: tiny design choices can make or break your system at scale. It often starts innocently— Let’s explore why small design decisions matter, how they snowball, and what you can do to future-proof your systems. In complex systems, every small decision compounds over time. A missing inde...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flqzp05u2jvbwpapv5bkf.png",
     "video": null,
-    "author": "Jaideep Parashar",
+    "author": "DCT Technology Pvt. Ltd.",
     "tags": [
-      "ai",
+      "scalabledesign",
       "webdev",
-      "programming",
-      "beginners"
+      "systemdesign",
+      "cleancode"
     ],
-    "seoTitle": "Thank You for 500 Followers + A Special Giveaway",
-    "seoDescription": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. 👉 Thank you. Every comment, share, and message reminds me why I began t..."
+    "seoTitle": "Designing for Scale: Why Small Decisions Break Big Systems",
+    "seoDescription": "You don’t need to build the next Facebook or Netflix to realize one thing: tiny design choices can make or break your system at scale. It often starts innoce..."
   },
   {
-    "title": "Love seeing more open-source contenders!",
-    "url": "https://dev.to/linkin/love-seeing-more-open-source-contenders-29a2",
-    "publishedAt": "2025-08-27T04:03:51.000Z",
+    "title": "Why Your Sprint Velocity Means Nothing",
+    "url": "https://dev.to/dct_technology/why-your-sprint-velocity-means-nothing-3ljh",
+    "publishedAt": "2025-08-27T05:41:41.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Postman vs Bruno: What Are the Key Differences? Fallon Jimmy ・ Aug 27 #programming #webdev #beginners #devops",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2191871%2F01077452-5ffd-4131-9dde-caaffa7e2af8.jpg",
+    "summary": "Let me tell you a quick story. A few years back, I worked with a team that proudly showed off their sprint velocity chart. Every sprint, the number went up — 20 points, 30 points, 45 points… applause all around. But here’s the problem: stakeholders were frustrated, deadlines were slipping, and the product still didn’t meet user needs. So why did it happen...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp05azq4ywippmufwoq8v.png",
     "video": null,
-    "author": "Linkin",
+    "author": "DCT Technology Pvt. Ltd.",
     "tags": [
-      "programming",
+      "agile",
       "webdev",
-      "beginners",
-      "devops"
+      "programming",
+      "javascript"
     ],
-    "seoTitle": "Love seeing more open-source contenders!",
-    "seoDescription": "Postman vs Bruno: What Are the Key Differences? Fallon Jimmy ・ Aug 27 #programming #webdev #beginners #devops"
+    "seoTitle": "Why Your Sprint Velocity Means Nothing",
+    "seoDescription": "Let me tell you a quick story. A few years back, I worked with a team that proudly showed off their sprint velocity chart. Every sprint, the number went up —..."
+  },
+  {
+    "title": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
+    "url": "https://nofilmschool.com/spider-man-iconic-ethos-line",
+    "publishedAt": "2025-08-27T05:40:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Can you tell me what the main difference is between a superhero and a supervillain? No, it’s not the difference in their physical or cerebral power or their background, or even their actions. Because let’s face it, every superhero is as flawed as the villains (and that’s the beauty of superhero movies). To me, the difference lies in a particular ethos– \"W...",
+    "image": "https://nofilmschool.com/media-library/with-great-power-comes-great-responsibility-the-line-that-defined-spider-mans-ethos.jpg?id=61522475&width=980",
+    "video": "https://www.youtube.com/embed/guuYU74wU70?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Spider-man",
+      "Movie quotes",
+      "Famous lines"
+    ],
+    "seoTitle": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
+    "seoDescription": "Can you tell me what the main difference is between a superhero and a supervillain? No, it’s not the difference in their physical or cerebral power or their ..."
+  },
+  {
+    "title": "How One Quote From ‘The Wizard of Oz’ Unlocks Its Deeper Message",
+    "url": "https://nofilmschool.com/wizard-of-oz-iconic-line",
+    "publishedAt": "2025-08-27T05:26:35.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The Wizard of Oz (1939) is one of the most lucid yet transformative fantasies you’ll ever watch. Following young Dorothy Gale (Judy Garland), the narrative takes us to the magical Land of Oz, a mystical land that bears a deep resemblance to our very own realities. There are good people and then there are bad; there’s corruption and politics, and finally, ...",
+    "image": "https://nofilmschool.com/media-library/dorothy-at-the-land-of-oz.jpg?id=61518772&width=980",
+    "video": "https://www.youtube.com/embed/FfpF8UUVTeM?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "The wizard of oz",
+      "Famous lines",
+      "Movie quotes"
+    ],
+    "seoTitle": "How One Quote From ‘The Wizard of Oz’ Unlocks Its Deeper Message",
+    "seoDescription": "The Wizard of Oz (1939) is one of the most lucid yet transformative fantasies you’ll ever watch. Following young Dorothy Gale (Judy Garland), the narrative t..."
   },
   {
     "title": "Nikon Z6 III’s First Major Firmware Update Adds Bird AF, Auto Capture, and C2PA",
@@ -97,44 +133,6 @@
     ],
     "seoTitle": "Nikon Z6 III’s First Major Firmware Update Adds Bird AF, Auto Capture, and C2PA",
     "seoDescription": "Nikon released firmware version 2.00 for its popular full-frame Z6 III mirrorless camera. The major update adds new subject detection features, automatic cap..."
-  },
-  {
-    "title": "How to Block Access to Admin Paths on Your Website with SafeLine WAF",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-block-access-to-admin-paths-on-your-website-with-safeline-waf-13c0",
-    "publishedAt": "2025-08-27T03:54:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When running a self-hosted site or web app, exposing your admin interface to the public web can be risky. Malicious bots and scanners often try to discover and brute-force admin URLs to gain unauthorized access. A simple but effective measure is to block or hide admin paths. This article shows how to use SafeLine WAF to restrict access to any URL containi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv5aql8xw8odkvd1g0d8g.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "safeline",
-      "waf",
-      "cybersecurity",
-      "webdev"
-    ],
-    "seoTitle": "How to Block Access to Admin Paths on Your Website with SafeLine WAF",
-    "seoDescription": "When running a self-hosted site or web app, exposing your admin interface to the public web can be risky. Malicious bots and scanners often try to discover a..."
-  },
-  {
-    "title": "Postman vs Bruno: What Are the Key Differences?",
-    "url": "https://dev.to/fallon_jimmy/postman-vs-bruno-what-are-the-key-differences-5ba7",
-    "publishedAt": "2025-08-27T03:52:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the ever-evolving landscape of API development tools, a David vs Goliath story is unfolding. Postman has long reigned supreme as the go-to API client, but a newcomer named Bruno is challenging the status quo with a fresh approach that's turning heads in the developer community. Is this open-source contender truly capable of disrupting Postman's dominan...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmshdtzqgy87gzfwudg5c.png",
-    "video": null,
-    "author": "Fallon Jimmy",
-    "tags": [
-      "programming",
-      "webdev",
-      "beginners",
-      "devops"
-    ],
-    "seoTitle": "Postman vs Bruno: What Are the Key Differences?",
-    "seoDescription": "In the ever-evolving landscape of API development tools, a David vs Goliath story is unfolding. Postman has long reigned supreme as the go-to API client, but..."
   },
   {
     "title": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
