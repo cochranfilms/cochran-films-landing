@@ -1,5 +1,78 @@
 [
   {
+    "title": "[Boost]",
+    "url": "https://dev.to/mikelrisyad/-4a5p",
+    "publishedAt": "2025-08-27T06:58:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F461127%2F034233c4-ba6e-473c-8a8d-783831764a10.jpeg",
+    "video": null,
+    "author": "Mikel Risyad",
+    "tags": [
+      "cloud",
+      "devops",
+      "opensource",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev"
+  },
+  {
+    "title": "Aiinak: Where Work Meets Innovation",
+    "url": "https://dev.to/aiinak9876/aiinak-where-work-meets-innovation-3n55",
+    "publishedAt": "2025-08-27T06:42:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every workplace today is under pressure to do more with less. Teams are stretched thin, deadlines keep coming, and technology changes faster than we can catch up. In the middle of this chaos, businesses are searching for something that makes work not only easier but smarter. That’s exactly where Aiinak steps in The Meeting Point of Work and Innovation Inn...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn0mi1pga011rr60qy170.png",
+    "video": null,
+    "author": "aiinak.com",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Aiinak: Where Work Meets Innovation",
+    "seoDescription": "Every workplace today is under pressure to do more with less. Teams are stretched thin, deadlines keep coming, and technology changes faster than we can catc..."
+  },
+  {
+    "title": "Social Media Management Services to Grow Your Online Presence",
+    "url": "https://dev.to/webdinoz_india/social-media-management-services-to-grow-your-online-presence-2nch",
+    "publishedAt": "2025-08-27T06:36:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Enhance your brand’s online presence with social media management services. We create, manage, and optimize your social media profiles to drive engagement, growth, and success. https://webdinoz.com/social-media-management/",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffw3jk4n54sug1lvj7dst.png",
+    "video": null,
+    "author": "webdinoz",
+    "tags": [
+      "webdev",
+      "ai",
+      "design",
+      "development"
+    ],
+    "seoTitle": "Social Media Management Services to Grow Your Online Presence",
+    "seoDescription": "Enhance your brand’s online presence with social media management services. We create, manage, and optimize your social media profiles to drive engagement, g..."
+  },
+  {
+    "title": "iOS 26: Fine-Tune Podcast Playback Speeds",
+    "url": "https://www.macrumors.com/how-to/ios-fine-tune-podcast-playback-speeds/",
+    "publishedAt": "2025-08-27T06:21:40.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "With iOS 26 (currently in beta), Apple has finally caught up with rival podcast apps like Overcast by adding more fine-grained playback speed controls to the Podcasts app. While competitors have long offered precise speed adjustments, Apple's rigid presets often left you caught between speeds that felt either too slow or uncomfortably fast. In previous ve...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Podcasts-Glass-Feature.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Apple Podcasts"
+    ],
+    "seoTitle": "iOS 26: Fine-Tune Podcast Playback Speeds",
+    "seoDescription": "With iOS 26 (currently in beta), Apple has finally caught up with rival podcast apps like Overcast by adding more fine-grained playback speed controls to the..."
+  },
+  {
     "title": "8 Best Practices for Adding an Image Uploader to Your Website",
     "url": "https://dev.to/ideradevtools/8-best-practices-for-adding-an-image-uploader-to-your-website-1e8e",
     "publishedAt": "2025-08-27T06:13:23.000Z",
@@ -36,44 +109,6 @@
     ],
     "seoTitle": "8 Best Practices for Adding an Image Uploader to Your Website",
     "seoDescription": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies..."
-  },
-  {
-    "title": "Designing for Scale: Why Small Decisions Break Big Systems",
-    "url": "https://dev.to/dct_technology/designing-for-scale-why-small-decisions-break-big-systems-4039",
-    "publishedAt": "2025-08-27T05:45:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You don’t need to build the next Facebook or Netflix to realize one thing: tiny design choices can make or break your system at scale. It often starts innocently— Let’s explore why small design decisions matter, how they snowball, and what you can do to future-proof your systems. In complex systems, every small decision compounds over time. A missing inde...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flqzp05u2jvbwpapv5bkf.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "scalabledesign",
-      "webdev",
-      "systemdesign",
-      "cleancode"
-    ],
-    "seoTitle": "Designing for Scale: Why Small Decisions Break Big Systems",
-    "seoDescription": "You don’t need to build the next Facebook or Netflix to realize one thing: tiny design choices can make or break your system at scale. It often starts innoce..."
-  },
-  {
-    "title": "Why Your Sprint Velocity Means Nothing",
-    "url": "https://dev.to/dct_technology/why-your-sprint-velocity-means-nothing-3ljh",
-    "publishedAt": "2025-08-27T05:41:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let me tell you a quick story. A few years back, I worked with a team that proudly showed off their sprint velocity chart. Every sprint, the number went up — 20 points, 30 points, 45 points… applause all around. But here’s the problem: stakeholders were frustrated, deadlines were slipping, and the product still didn’t meet user needs. So why did it happen...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp05azq4ywippmufwoq8v.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "agile",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "Why Your Sprint Velocity Means Nothing",
-    "seoDescription": "Let me tell you a quick story. A few years back, I worked with a team that proudly showed off their sprint velocity chart. Every sprint, the number went up —..."
   },
   {
     "title": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
@@ -583,41 +618,5 @@
     ],
     "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
     "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
-  },
-  {
-    "title": "The winners and losers of Taylor Swift’s engagement announcement",
-    "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
-    "publishedAt": "2025-08-26T19:04:14.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Mia Sato",
-    "tags": [],
-    "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
-    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
-  },
-  {
-    "title": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
-    "url": "https://petapixel.com/2025/08/26/award-winning-photographer-elevates-commercial-images-to-fine-art/",
-    "publishedAt": "2025-08-26T19:00:44.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how we perceive objects, images, and stories, elevating commercial work to fine art. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Dustin-Edward-Arnold-PetaPixel-BG-3-Panel.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Inspiration",
-      "Spotlight",
-      "commercial",
-      "dustinedwardarnold",
-      "luxury",
-      "revery",
-      "spotlight"
-    ],
-    "seoTitle": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
-    "seoDescription": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how..."
   }
 ]
