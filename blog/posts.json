@@ -1,5 +1,59 @@
 [
   {
+    "title": "AI-Powered Company Intelligence Bot: Real-Time Business Analysis with n8n and Bright Data",
+    "url": "https://dev.to/depapp/ai-powered-company-intelligence-bot-real-time-business-analysis-with-n8n-and-bright-data-4787",
+    "publishedAt": "2025-08-27T02:13:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The bot solves the problem of time-consuming manual research by automatically analyzing companies across 20+ metrics in five key categories: Business Metrics (market value, growth rate, profitability), Investment Profile (funding score, ROI potential, risk assessment), Innovat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9lit3ed0j5azng5v0t0p.png",
+    "video": null,
+    "author": "depa panjie purnama",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "AI-Powered Company Intelligence Bot: Real-Time Business Analysis with n8n and Bright Data",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The bot solves the problem of time-consuming manual research by automatically..."
+  },
+  {
+    "title": "First time knowing this",
+    "url": "https://dev.to/masterdevsabith/first-time-knowing-this-587b",
+    "publishedAt": "2025-08-27T01:53:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Master React State: When to Use useState vs useReducer (No More Confusion) Werliton Silva ・ Aug 21 #webdev #programming #react #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F450483%2Feb166a12-3bfa-487f-aebd-a91d7c33a48a.png",
+    "video": null,
+    "author": "Muhammed Sabith",
+    "tags": [
+      "webdev",
+      "programming",
+      "react",
+      "beginners"
+    ],
+    "seoTitle": "First time knowing this",
+    "seoDescription": "Master React State: When to Use useState vs useReducer (No More Confusion) Werliton Silva ・ Aug 21 #webdev #programming #react #beginners"
+  },
+  {
+    "title": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
+    "url": "https://9to5mac.com/2025/08/26/security-bite-viral-tiktoks-promote-undetectable-find-my-enabled-gps-trackers-for-stalking/",
+    "publishedAt": "2025-08-27T01:29:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we do. Our unique integrated approach to management and security combines state-of-the-art Apple-specific security solutions for fully automated Hardening & Compliance, Next Generation EDR, AI-powered Z...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2022/04/TikTok-thumbs-down.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Arin Waichulis",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
+    "seoDescription": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we..."
+  },
+  {
     "title": "Optimize Go Performance: Value vs. Pointer Types for Fewer Memory Allocations",
     "url": "https://dev.to/jones_charles_ad50858dbc0/optimize-go-performance-value-vs-pointer-types-for-fewer-memory-allocations-33ck",
     "publishedAt": "2025-08-27T00:46:44.000Z",
@@ -142,23 +196,6 @@
     ],
     "seoTitle": "Analyst warns of ‘tempered’ iPhone 17 Air response, but maintains Apple’s stock rating",
     "seoDescription": "In a new investor note, Bank of America Research analyst Wamsi Mohani offered his market outlook ahead of the upcoming September 9 event, where the iPhone 17..."
-  },
-  {
-    "title": "Wie ich meine Webseite zur KI-Antwortmaschine umgebaut habe (und warum du das auch tun solltest)",
-    "url": "https://dev.to/ivo_sa/wie-ich-meine-webseite-zur-ki-antwortmaschine-umgebaut-habe-und-warum-du-das-auch-tun-solltest-n4h",
-    "publishedAt": "2025-08-26T22:00:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Stell dir vor, du suchst nach \"React Performance optimieren\" und bekommst nicht 10 blaue Links, sondern direkt die Antwort: \"Verwende React.memo für funktionale Komponenten, implementiere Code-Splitting und optimiere deine Bundle-Größe.\" Genau so funktioniert die Zukunft der Suche – und als Entwickler solltest du deine Webseite darauf vorbereiten. Als ich...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvdz0yoy3dycm0xl1f1lr.webp",
-    "video": null,
-    "author": "Ivo S.",
-    "tags": [
-      "webdev",
-      "german"
-    ],
-    "seoTitle": "Wie ich meine Webseite zur KI-Antwortmaschine umgebaut habe (und warum du das auch tun solltest)",
-    "seoDescription": "Stell dir vor, du suchst nach \"React Performance optimieren\" und bekommst nicht 10 blaue Links, sondern direkt die Antwort: \"Verwende React.memo für funktion..."
   },
   {
     "title": "9to5Mac Daily: August 26, 2025 – Apple vs Elon Musk, more",
@@ -577,42 +614,5 @@
     ],
     "seoTitle": "3 Big Screenwriting Lessons From 'True Detective'",
     "seoDescription": "I remember the day I sat down to watch the pilot of True Detective. It was one of those wonderful hours of TV that completely blew my socks off. It had this ..."
-  },
-  {
-    "title": "Framework is working on a giant haptic touchpad, Trackpoint nub, and eGPU for its laptops",
-    "url": "https://www.theverge.com/news/766161/framework-egpu-haptic-touchpad-trackpoint-nub",
-    "publishedAt": "2025-08-26T18:46:19.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Today, Framework announced the second-gen Framework Laptop 16 with two industry firsts: the first Nvidia laptop graphics card upgrade you can perform at home in just a couple minutes, and the first complete 240W laptop charging solution over a USB-C cable. But the company’s also revealing some intriguing upgrades that didn’t quite make the cut — including...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/framework-16-prototypes-001.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": "https://www.youtube.com/embed/0RzUBqtgODM?rel=0",
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "Framework is working on a giant haptic touchpad, Trackpoint nub, and eGPU for its laptops",
-    "seoDescription": "Today, Framework announced the second-gen Framework Laptop 16 with two industry firsts: the first Nvidia laptop graphics card upgrade you can perform at home..."
-  },
-  {
-    "title": "Leitz Cine Hugo 40mm T1.5 Prime Brings Leica M Spirit to Filmmaking",
-    "url": "https://petapixel.com/2025/08/26/leitz-cine-hugo-40mm-t1-5-prime-brings-leica-m-spirit-to-filmmaking/",
-    "publishedAt": "2025-08-26T18:22:05.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The Leitz Cine Hugo 40mm T1.5 is Leica's latest, super-fast prime lens for professional filmmakers and videographers. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Hugo_40_black_angular_HiRes.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "News",
-      "cine",
-      "cinemalens",
-      "fullframe",
-      "leica",
-      "leitz",
-      "leitzcine"
-    ],
-    "seoTitle": "Leitz Cine Hugo 40mm T1.5 Prime Brings Leica M Spirit to Filmmaking",
-    "seoDescription": "The Leitz Cine Hugo 40mm T1.5 is Leica's latest, super-fast prime lens for professional filmmakers and videographers. [Read More]"
   }
 ]
