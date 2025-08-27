@@ -3043,11 +3043,11 @@
       if (isPhotoGrid) {
         // Photography: image-only masonry tiles, preserve ratios
         grid.innerHTML = items.map((it) => {
-          const img = (it['image_url'] || it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail) || placeholder;
+          const img = (window.airtableCMS && window.airtableCMS.resolveThumbnailSrc ? window.airtableCMS.resolveThumbnailSrc(it) : (it['image_url'] || it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail)) || placeholder;
           const alt = it.Title || 'Photo';
           return `
             <div class="masonry-item">
-              <img src="${img}" alt="${alt}" loading="lazy" />
+              <img src="${img}" alt="${alt}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'" />
             </div>
           `;
         }).join('');
@@ -3061,7 +3061,7 @@
         return;
       }
       grid.innerHTML = items.map((it) => {
-        const img = (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail) || placeholder;
+        const img = (window.airtableCMS && window.airtableCMS.resolveThumbnailSrc ? window.airtableCMS.resolveThumbnailSrc(it) : (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail)) || placeholder;
         const isVideo = !!it.playbackUrl || (it.ServiceCategory === 'Video Production');
         const isWeb = it.ServiceCategory === 'Web Development' && !!it.URL;
         const icon = isVideo ? 'play' : (isWeb ? 'external-link-alt' : 'eye');
@@ -3071,9 +3071,9 @@
         const featured = it['Is Featured'] === true || it['Is Featured'] === 'true';
         const chip = it.ServiceCategory || it.Category || '';
         return `
-          <div class="cf-card">
+          <div class="cf-card" data-service-category="${chip}" ${isVideo && it.playbackUrl ? `data-playback-url="${it.playbackUrl}"` : ''}>
             <div class="cf-thumb">
-              <img src="${img}" alt="${title}" loading="lazy">
+              <img src="${img}" alt="${title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'">
               ${chip ? `<span class="cf-chip">${chip}</span>` : ''}
               ${featured ? `<span class="cf-badge" title="Featured"><i class="fas fa-star"></i></span>` : ''}
               <div class="cf-action"><i class="fas fa-${icon}"></i></div>
@@ -3093,8 +3093,18 @@
       Array.from(grid.children).forEach((el, idx) => {
         const it = items[idx];
         el.addEventListener('click', () => {
-          if (it.playbackUrl && window.airtableCMS && window.airtableCMS.openVideoModal) {
-            window.airtableCMS.openVideoModal(it);
+          if ((it.playbackUrl || el.dataset.playbackUrl) && window.airtableCMS && window.airtableCMS.openVideoPopup) {
+            const data = {
+              title: it.Title || '',
+              description: it.Description || '',
+              videoUrl: it.playbackUrl || el.dataset.playbackUrl,
+              playbackUrl: it.playbackUrl || el.dataset.playbackUrl,
+              category: it.ServiceCategory || it.Category || 'Video Production',
+              role: it.Role || '',
+              client: it.Client || '',
+              timeline: it.Timeline || ''
+            };
+            window.airtableCMS.openVideoPopup(data);
           } else if (it.URL) {
             window.open(it.URL, '_blank');
           } else if (window.airtableCMS && window.airtableCMS.openImageModal) {
