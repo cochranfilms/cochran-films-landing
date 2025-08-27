@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta</title>
+  <meta name="title" content="Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta" />
+  <meta name="description" content="Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team." />
+  <meta name="keywords" content="creative blog, video production tips, web development insights, marketing trends, creative agency blog, Atlanta" />
+  <meta name="author" content="Cody Cochran, CEO & Founder" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cochranfilms.com/blog" />
+  <meta property="og:title" content="Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta" />
+  <meta property="og:description" content="Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team." />
+  <meta property="og:image" content="https://landing.cochranfilms.com/Social_Share.jpg" />
+  <meta property="og:image:secure_url" content="https://landing.cochranfilms.com/Social_Share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Cochran Films Blog — Creative Insights & Industry Updates" />
+  <meta property="og:site_name" content="Cochran Films" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://cochranfilms.com/blog" />
+  <meta name="twitter:title" content="Cochran Films | Blog | Creative Insights & Industry Updates | Atlanta" />
+  <meta name="twitter:description" content="Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team." />
+  <meta name="twitter:image" content="https://landing.cochranfilms.com/Social_Share.jpg" />
+  <meta name="twitter:image:alt" content="Cochran Films Blog — Creative Insights & Industry Updates" />
+  
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+  <!-- Blog Content Integration -->
+  <script>
+    // Blog posts will be loaded from /blog/posts.json
+  </script>
+  
+  <style>
+    :root {
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      --brand-gold: #FFB200;
+      --brand-blue: #0066CC;
+      --brand-red: #ef4444;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --card-border: 1px solid rgba(99,102,241,0.20);
+      --backdrop: blur(12px);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 10px;
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --shadow-md: 0 18px 40px rgba(0,0,0,0.35);
+      --shadow-sm: 0 10px 24px rgba(0,0,0,0.25);
+      --glow-indigo: 0 0 40px rgba(99,102,241,0.35);
+      --glow-gold: 0 0 40px rgba(255,178,0,0.35);
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
+                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
+                  linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* AI Background & Neural Network */
+    .ai-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #neuralCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Navigation Styles */
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      position: relative;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      position: absolute;
+      left: 20px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item.has-submenu .dropdown-caret { font-size: 12px; opacity: 0.7; }
+    .submenu {
+      position: absolute; top: 100%; left: 0; min-width: 220px; padding: 8px; margin-top: 6px;
+      background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(16px);
+      border: 1px solid rgba(99,102,241,0.25); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      list-style: none; display: none; z-index: 1200;
+    }
+    .submenu .submenu-link { display: block; padding: 10px 12px; border-radius: 8px; color: var(--text-secondary); text-decoration: none; font-weight: 600; }
+    .submenu .submenu-link:hover { color: var(--text-primary); background: rgba(99,102,241,0.1); }
+    .nav-item.has-submenu:hover .submenu { display: block; }
+    .nav-item.has-submenu:last-child .submenu { right: 0; left: auto; }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+      background: rgba(99,102,241,0.1);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .nav-link.active {
+      color: var(--brand-gold);
+      background: rgba(255,178,0,0.1);
+      border-color: rgba(255,178,0,0.3);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+      transition: var(--transition-fast);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      position: absolute;
+      right: 20px;
+    }
+
+    /* Layout wrapper */
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+    }
+
+    /* Section Styles */
+    .section {
+      margin-top: 80px;
+      padding: 60px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 20px;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: clamp(18px, 2.4vw, 22px);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Blog Section */
+    .blog-content {
+      margin-top: 40px;
+    }
+
+    .blog-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      margin-top: 40px;
+    }
+
+    .blog-item {
+      background: linear-gradient(180deg, rgba(15,23,42,0.75), rgba(2,6,23,0.65));
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .blog-item:hover {
+      transform: translateY(-6px);
+      border-color: rgba(99,102,241,0.45);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .blog-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(45deg, rgba(99,102,241,0.1), rgba(255,178,0,0.1));
+    }
+
+    .blog-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .blog-item:hover .blog-thumbnail img {
+      transform: scale(1.05);
+    }
+
+    .blog-content-inner {
+      padding: 24px;
+    }
+
+    .blog-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(99,102,241,0.18);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: #c7d2fe;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .blog-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 12px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blog-excerpt {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 0 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+
+    .blog-date {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--brand-gold);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .blog-read-more:hover {
+      color: #ffd166;
+      transform: translateX(4px);
+    }
+
+    .blog-read-more i {
+      font-size: 12px;
+      transition: var(--transition-fast);
+    }
+
+    .blog-read-more:hover i {
+      transform: translateX(2px);
+    }
+
+    /* Featured Blog Post */
+    .featured-blog {
+      background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.7));
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-blog::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-gold), var(--brand-indigo));
+    }
+
+    .featured-blog-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .featured-badge {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .featured-blog-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+
+    .featured-blog-excerpt {
+      color: var(--text-secondary);
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 24px;
+      max-width: 600px;
+    }
+
+    .featured-blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .featured-blog-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(99,102,241,0.2);
+      border: 1px solid rgba(99,102,241,0.4);
+      color: #c7d2fe;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .featured-blog-date {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .featured-blog-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 16px;
+      transition: var(--transition-fast);
+      box-shadow: var(--glow-gold);
+    }
+
+    .featured-blog-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    /* Load More Button */
+    .load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.55);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: var(--text-secondary);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      margin: 40px auto 0;
+    }
+    
+    .load-more-btn:hover {
+      border-color: rgba(99,102,241,0.45);
+      background: rgba(15,23,42,0.75);
+      color: #e2e8f0;
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(99,102,241,0.2);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.2);
+      color: var(--text-secondary);
+      text-decoration: none;
+      background: rgba(15,23,42,0.5);
+      transition: var(--transition-fast);
+    }
+
+    .social-link:hover {
+      border-color: rgba(148,163,184,0.4);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-container {
+        height: 70px;
+        padding: 0 16px;
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 6px;
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid rgba(99,102,241,0.2);
+        padding: 10px 12px 12px;
+        z-index: 1001;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
+
+      .wrapper {
+        padding: 90px 16px 40px;
+      }
+
+      .section {
+        margin-top: 60px;
+        padding: 40px 0;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .featured-blog {
+        padding: 24px;
+        margin-bottom: 40px;
+      }
+
+      .featured-blog-title {
+        font-size: 24px;
+      }
+
+      .featured-blog-excerpt {
+        font-size: 16px;
+      }
+
+      .featured-blog-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-title {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .featured-blog {
+        padding: 20px;
+      }
+
+      .featured-blog-title {
+        font-size: 22px;
+      }
+
+      .featured-blog-excerpt {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- AI Neural Network Background -->
+  <div class="ai-background">
+    <canvas id="neuralCanvas"></canvas>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/home.html" class="nav-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/home.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="/portfolio.html" class="nav-link">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
+          <ul class="submenu" aria-label="Portfolio Categories">
+            <li><a href="/portfolio.html#video-production" class="submenu-link">Video Production</a></li>
+            <li><a href="/portfolio.html#web-development" class="submenu-link">Web Development</a></li>
+            <li><a href="/portfolio.html#photography" class="submenu-link">Photography</a></li>
+            <li><a href="/portfolio.html#brand-development" class="submenu-link">Brand Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="/blog.html" class="nav-link active">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="/book.html" class="nav-link nav-cta">Book Services</a>
+        </li>
+      </ul>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Blog</h2>
+        <p class="section-subtitle">
+          Stay updated with the latest trends in video production, web development, and creative marketing. Expert insights from our team.
+        </p>
+      </div>
+      
+      <!-- Blog Content -->
+      <div class="blog-content">
+        <!-- Featured Blog Post -->
+        <article class="featured-blog" id="featuredBlogPost">
+          <!-- Featured blog content will be populated dynamically -->
+        </article>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog items will be populated here -->
+        </div>
+
+        <!-- Load More Button -->
+        <div style="text-align: center; margin-top: 40px;">
+          <button class="load-more-btn" id="loadMoreBlog" style="display: none;">
+            <i class="fa-solid fa-plus"></i> Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </div>
+
+      <div class="footer-social">
+        <a href="mailto:info@cochranfilms.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener" class="social-link">
+          <i class="fas fa-youtube"></i>
+          YouTube
+        </a>
+        <a href="https://github.com/cochranfilms" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Cochran Films LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Blog Content Initialization -->
+  <script>
+    // Initialize blog content when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🚀 Initializing Blog Content...');
+      initializeBlogSystem();
+    });
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav-wrapper');
+      if (window.scrollY > 100) {
+        nav.style.background = 'rgba(15, 23, 42, 0.98)';
+      } else {
+        nav.style.background = 'rgba(15, 23, 42, 0.95)';
+      }
+    });
+
+    // ========================================
+    // AI NEURAL NETWORK BACKGROUND
+    // ========================================
+      class AINeuralNetwork {
+      constructor() {
+          this.canvas = document.getElementById('neuralCanvas');
+          this.ctx = this.canvas.getContext('2d');
+          this.particles = [];
+          this.connections = [];
+          this.mouse = { x: 0, y: 0 };
+          this.animationId = null;
+        
+          this.init();
+        }
+      
+      init() {
+        this.resize();
+        this.createParticles();
+        this.createConnections();
+        this.bindEvents();
+        this.animate();
+      }
+      
+      resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+      }
+      
+      createParticles() {
+          this.particles = [];
+        const particleCount = 100;
+        for (let i = 0; i < particleCount; i++) {
+            this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            size: Math.random() * 2 + 1,
+            color: this.getRandomAIColor(),
+            pulse: Math.random() * Math.PI * 2
+            });
+          }
+        }
+      
+      createConnections() {
+          this.connections = [];
+        const connectionDistance = 120;
+        for (let i = 0; i < this.particles.length; i++) {
+          for (let j = i + 1; j < this.particles.length; j++) {
+            const distance = this.getDistance(this.particles[i], this.particles[j]);
+            if (distance < connectionDistance) {
+              this.connections.push({
+                from: i,
+                to: j,
+                strength: 1 - (distance / connectionDistance),
+                pulse: Math.random() * Math.PI * 2
+              });
+            }
+          }
+        }
+      }
+      
+      getRandomAIColor() {
+        const colors = [
+          'rgba(6, 182, 212, 0.6)',    // AI Cyan
+          'rgba(20, 184, 166, 0.6)',   // AI Teal
+          'rgba(124, 58, 237, 0.6)',   // AI Violet
+          'rgba(99, 102, 241, 0.6)',   // Brand Indigo
+          'rgba(255, 178, 0, 0.6)'     // Brand Gold
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      
+      getDistance(p1, p2) {
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+      
+      bindEvents() {
+        window.addEventListener('resize', () => this.resize());
+        
+        document.addEventListener('mousemove', (e) => {
+          this.mouse.x = e.clientX;
+          this.mouse.y = e.clientY;
+        });
+      }
+      
+      updateParticles() {
+        this.particles.forEach(particle => {
+          // Update position
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+          
+          // Bounce off edges
+          if (particle.x <= 0 || particle.x >= this.canvas.width) {
+            particle.vx *= -1;
+          }
+          if (particle.y <= 0 || particle.y >= this.canvas.height) {
+            particle.vy *= -1;
+          }
+          
+          // Update pulse
+          particle.pulse += 0.02;
+          
+          // Mouse interaction
+          const mouseDistance = this.getDistance(particle, this.mouse);
+          if (mouseDistance < 150) {
+            const angle = Math.atan2(this.mouse.y - particle.y, this.mouse.x - particle.x);
+            const force = (150 - mouseDistance) / 150;
+            particle.vx += Math.cos(angle) * force * 0.01;
+            particle.vy += Math.sin(angle) * force * 0.01;
+          }
+          
+          // Dampen velocity
+          particle.vx *= 0.99;
+          particle.vy *= 0.99;
+        });
+      }
+      
+      draw() {
+        // Clear canvas with subtle fade effect
+        this.ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw connections
+        this.connections.forEach(connection => {
+          const from = this.particles[connection.from];
+          const to = this.particles[connection.to];
+          
+          if (from && to) {
+            const alpha = 0.3 + Math.sin(connection.pulse) * 0.2;
+            this.ctx.strokeStyle = `rgba(99, 102, 241, ${alpha * connection.strength})`;
+            this.ctx.lineWidth = 1 * connection.strength;
+            this.ctx.beginPath();
+            this.ctx.moveTo(from.x, from.y);
+            this.ctx.lineTo(to.x, to.y);
+            this.ctx.stroke();
+            
+            connection.pulse += 0.01;
+          }
+        });
+        
+        // Draw particles
+        this.particles.forEach(particle => {
+          const alpha = 0.6 + Math.sin(particle.pulse) * 0.4;
+          this.ctx.fillStyle = particle.color.replace('0.6)', `${alpha})`);
+          this.ctx.beginPath();
+          this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          this.ctx.fill();
+        });
+      }
+      
+      animate() {
+        this.updateParticles();
+        this.draw();
+        this.animationId = requestAnimationFrame(() => this.animate());
+      }
+      
+      destroy() {
+        if (this.animationId) {
+          cancelAnimationFrame(this.animationId);
+        }
+      }
+    }
+
+    // Initialize AI Neural Network when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        new AINeuralNetwork();
+        initializeBlogSystem();
+      });
+    } else {
+      new AINeuralNetwork();
+      initializeBlogSystem();
+    }
+
+    // ========================================
+    // BLOG CONTENT LOADER (from posts.json)
+    // ========================================
+    
+    // Helpers for stable internal IDs derived from source URLs
+    function computeIdFromUrl(url){
+      try { return btoa(url).replace(/=+$/,''); } catch { return String(Math.abs(hashCode(url||''))); }
+    }
+    function hashCode(str){ let h=0; for (let i=0;i<str.length;i++){ h=(h<<5)-h+str.charCodeAt(i); h|=0;} return h; }
+
+    // Initialize blog system when the page loads
+    function initializeBlogSystem() {
+      console.log('🚀 Initializing Blog System...');
+      
+      // Load blog posts from the generated posts.json file
+      loadBlogPosts();
+      
+      // Set up event handlers for load more buttons
+      document.querySelectorAll('.load-more-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          loadMoreBlogPosts();
+        });
+      });
+    }
+    
+    // Load blog posts from posts.json
+    async function loadBlogPosts() {
+      try {
+        const response = await fetch('/blog/posts.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const posts = await response.json();
+        console.log(`📚 Loaded ${posts.length} blog posts`);
+        
+        // Display featured blog post (rotates daily)
+        displayFeaturedBlogPost(posts);
+        
+        // Display the first 6 posts initially (excluding the featured one)
+        displayBlogPosts(posts.slice(0, 6));
+        
+        // Show load more button if there are more posts
+        const loadMoreBtn = document.getElementById('loadMoreBlog');
+        if (loadMoreBtn && posts.length > 6) {
+          loadMoreBtn.style.display = 'inline-flex';
+          loadMoreBtn.onclick = () => loadMoreBlogPosts(posts);
+        }
+        
+      } catch (error) {
+        console.error('❌ Failed to load blog posts:', error);
+        // Show fallback content
+        displayFallbackBlogContent();
+      }
+    }
+    
+    // Display featured blog post with daily rotation
+    function displayFeaturedBlogPost(posts) {
+      if (!posts || posts.length === 0) return;
+      
+      // Get today's date as a seed for consistent daily rotation
+      const today = new Date();
+      const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+      
+      // Use day of year as seed to get consistent daily featured post
+      const featuredIndex = dayOfYear % posts.length;
+      const featuredPost = posts[featuredIndex];
+      
+      if (!featuredPost) return;
+      
+      const featuredContainer = document.getElementById('featuredBlogPost');
+      if (!featuredContainer) return;
+      
+      // Get category icon and name
+      const categoryIcon = getCategoryIcon(featuredPost.category);
+      const categoryName = featuredPost.category ? 
+        featuredPost.category.charAt(0).toUpperCase() + featuredPost.category.slice(1) : 'General';
+      
+      // Format date
+      const publishedDate = formatDate(featuredPost.publishedAt);
+      
+      // Create blog post detail link (internal ID)
+      const detailLink = `/blog-post.html?id=${encodeURIComponent(computeIdFromUrl(featuredPost.url||''))}`;
+      
+      featuredContainer.innerHTML = `
+        <div class="featured-blog-header">
+          <span class="featured-badge">Featured</span>
+          <span class="featured-blog-category">
+            <i class="fa-solid fa-${categoryIcon}"></i> ${categoryName}
+          </span>
+        </div>
+        
+        <h3 class="featured-blog-title">
+          ${featuredPost.title}
+        </h3>
+        
+        <p class="featured-blog-excerpt">
+          ${featuredPost.summary || 'Discover the latest insights and trends in this featured article.'}
+        </p>
+        
+        <div class="featured-blog-meta">
+          <span class="featured-blog-date">
+            <i class="fa-regular fa-calendar"></i> ${publishedDate}
+          </span>
+        </div>
+        
+        <a href="${detailLink}" class="featured-blog-cta">
+          Read Full Article <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      `;
+      
+      console.log(`🌟 Featured post for day ${dayOfYear}: ${featuredPost.title}`);
+    }
+    
+    // Display blog posts in the grid
+    function displayBlogPosts(posts) {
+      const blogGrid = document.getElementById('blogGrid');
+      if (!blogGrid) return;
+      
+      blogGrid.innerHTML = posts.map(post => `
+        <article class="blog-item">
+          <div class="blog-thumbnail">
+            ${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : 
+              `<div style="background: linear-gradient(45deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 24px;"><i class="fas fa-newspaper"></i></div>`}
+          </div>
+          <div class="blog-content-inner">
+            <div class="blog-category">
+              <i class="fas fa-${getCategoryIcon(post.category)}"></i>
+              ${post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+            </div>
+            <h3 class="blog-title">${post.title}</h3>
+            <p class="blog-excerpt">${post.summary}</p>
+            <div class="blog-meta">
+              <span class="blog-date">
+                <i class="fas fa-calendar"></i>
+                ${formatDate(post.publishedAt)}
+              </span>
+              <a class="blog-read-more" href="/blog-post.html?id=${encodeURIComponent(computeIdFromUrl(post.url))}">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:12px;">
+              <button class="blog-action" data-save='${JSON.stringify({url: '${post.url}', title: post.title}).replace(/"/g, '&quot;')}' title="Save to Favorites" style="background:rgba(99,102,241,0.12); border:1px solid rgba(99,102,241,0.25); padding:8px 10px; border-radius:10px; color:#cbd5e1; cursor:pointer"><i class="fas fa-bookmark"></i></button>
+              <button class="blog-action" data-comment='${JSON.stringify({url: '${post.url}', title: post.title}).replace(/"/g, '&quot;')}' title="Comment" style="background:rgba(255,178,0,0.12); border:1px solid rgba(255,178,0,0.35); padding:8px 10px; border-radius:10px; color:#fef3c7; cursor:pointer"><i class="fas fa-comment"></i></button>
+              <a class="blog-action" href="${post.url}" target="_blank" rel="noopener" title="Open Source" style="background:rgba(148,163,184,0.12); border:1px solid rgba(148,163,184,0.25); padding:8px 10px; border-radius:10px; color:#cbd5e1; text-decoration:none"><i class="fas fa-external-link"></i></a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      // Wire actions (save/comment)
+      document.querySelectorAll('[data-save]').forEach(el=> el.addEventListener('click', ()=>{
+        try{
+          const data = JSON.parse(el.getAttribute('data-save').replace(/&quot;/g,'"'));
+          (window.__CFUserAPI?.addFavorite||(()=>{}))(data);
+          el.style.opacity='0.7';
+        }catch{}
+      }));
+      document.querySelectorAll('[data-comment]').forEach(el=> el.addEventListener('click', ()=>{
+        try{
+          const data = JSON.parse(el.getAttribute('data-comment').replace(/&quot;/g,'"'));
+          openCommentModal(data);
+        }catch{}
+      }));
+    }
+    
+    // Load more blog posts
+    let currentPostIndex = 6;
+    function loadMoreBlogPosts(allPosts) {
+      if (!allPosts) return;
+      
+      const nextPosts = allPosts.slice(currentPostIndex, currentPostIndex + 6);
+      if (nextPosts.length === 0) return;
+      
+      const blogGrid = document.getElementById('blogGrid');
+      if (blogGrid) {
+        blogGrid.innerHTML += nextPosts.map(post => `
+          <article class="blog-item" onclick="window.open('${post.url}', '_blank')">
+            <div class="blog-thumbnail">
+              ${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : 
+                `<div style="background: linear-gradient(45deg, rgba(99,102,241,0.3), rgba(255,178,0,0.3)); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 24px;"><i class="fas fa-newspaper"></i></div>`}
+            </div>
+            <div class="blog-content-inner">
+              <div class="blog-category">
+                <i class="fas fa-${getCategoryIcon(post.category)}"></i>
+                ${post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+              </div>
+              <h3 class="blog-title">${post.title}</h3>
+              <p class="blog-excerpt">${post.summary}</p>
+              <div class="blog-meta">
+                <span class="blog-date">
+                  <i class="fas fa-calendar"></i>
+                  ${formatDate(post.publishedAt)}
+                </span>
+                <span class="blog-read-more">
+                  Read More <i class="fas fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+      
+      currentPostIndex += 6;
+      
+      // Hide load more button if no more posts
+      if (currentPostIndex >= allPosts.length) {
+        const loadMoreBtn = document.getElementById('loadMoreBlog');
+        if (loadMoreBtn) {
+          loadMoreBtn.style.display = 'none';
+        }
+      }
+    }
+    
+    // Get category icon
+    function getCategoryIcon(category) {
+      const icons = {
+        'web': 'fa-code',
+        'production': 'fa-video',
+        'photography': 'fa-camera',
+        'brand': 'fa-palette',
+        'apple': 'fa-apple-whole'
+      };
+      return icons[category] || 'fa-newspaper';
+    }
+    
+    // Format date
+    function formatDate(dateString) {
+      if (!dateString) return 'Recent';
+      const date = new Date(dateString);
+      return date.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+    }
+    
+    // Display fallback content if posts fail to load
+    function displayFallbackBlogContent() {
+      const blogGrid = document.getElementById('blogGrid');
+      if (!blogGrid) return;
+      
+      blogGrid.innerHTML = `
+        <div style="text-align: center; grid-column: 1 / -1; padding: 40px;">
+          <h3 style="color: var(--text-primary); margin-bottom: 20px;">Blog Content Loading...</h3>
+          <p style="color: var(--text-secondary);">Please refresh the page to load the latest blog posts.</p>
+        </div>
+      `;
+    }
+
+    // ========================================
+    // EMAILJS INTEGRATION
+    // ========================================
+    
+    // Initialize EmailJS
+    (function() {
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('p4pF3OWvh-DXtae4c');
+          console.log('✅ EmailJS initialized securely');
+        } else {
+          console.warn('⚠️ EmailJS not loaded - forms will fallback to manual submission');
+        }
+      } catch (error) {
+        console.error('❌ EmailJS initialization failed:', error);
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
