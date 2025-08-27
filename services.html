@@ -879,6 +879,31 @@
     .gallery-info { margin-left: 8px; color: var(--text-secondary); font-size: 12px; }
     .gallery-info h4 { margin: 0; font-size: 13px; color: var(--text-primary); font-weight: 700; }
     
+    /* Elevated card presentation */
+    .cf-card { border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(148,163,184,0.18); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .cf-card:hover { transform: translateY(-4px); border-color: rgba(255,178,0,0.35); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+    .cf-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: rgba(2,6,23,0.6); }
+    .cf-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.02); transition: transform .35s ease, filter .35s ease; }
+    .cf-card:hover .cf-thumb img { transform: scale(1.06); filter: saturate(1.1); }
+    .cf-chip { position: absolute; top: 10px; left: 10px; padding: 6px 10px; font-size: 12px; border-radius: 999px; background: rgba(2,6,23,0.7); color: var(--text-secondary); border: 1px solid rgba(148,163,184,0.25); backdrop-filter: blur(6px); }
+    .cf-badge { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; box-shadow: var(--glow-gold); }
+    .cf-action { position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,178,0,0.9); color: #0a0a0a; opacity: 0; transform: translateY(8px); transition: var(--transition-fast); box-shadow: var(--glow-gold); }
+    .cf-card:hover .cf-action { opacity: 1; transform: translateY(0); }
+    .cf-body { padding: 12px 14px 14px; }
+    .cf-title { margin: 0 0 6px; font-size: 15px; line-height: 1.35; font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em; }
+    .cf-sub { margin: 0 0 10px; color: var(--text-secondary); font-size: 12px; }
+    .cf-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--text-muted); }
+    .cf-pill { padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.25); background: rgba(15,23,42,0.5); color: var(--text-secondary); max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cf-date { color: var(--text-muted); }
+    
+    /* Skeletons */
+    .cf-skel { border-radius: 16px; overflow: hidden; border: 1px solid rgba(148,163,184,0.15); background: rgba(2,6,23,0.5); }
+    .cf-skel-top { aspect-ratio: 16/9; background: linear-gradient(90deg, rgba(30,41,59,0.6) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.6) 75%); background-size: 400% 100%; animation: shimmer 1.6s infinite; }
+    .cf-skel-body { padding: 12px 14px 16px; }
+    .cf-skel-line { height: 10px; border-radius: 6px; background: linear-gradient(90deg, rgba(30,41,59,0.6) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.6) 75%); background-size: 400% 100%; animation: shimmer 1.6s infinite; margin-bottom: 8px; }
+    .cf-skel-line.lg { height: 14px; border-radius: 8px; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    
     @media (max-width: 768px) {
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -2993,18 +3018,44 @@
       const grid = document.getElementById(gridId);
       if (!grid) return;
       const placeholder = 'data:image/svg+xml;base64,' + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="#0b1220"/></svg>`);
+      // Skeletons while we render
+      if (!Array.isArray(items) || items.length === 0) {
+        grid.innerHTML = new Array(6).fill(0).map(() => `
+          <div class="cf-skel">
+            <div class="cf-skel-top"></div>
+            <div class="cf-skel-body">
+              <div class="cf-skel-line lg" style="width:70%"></div>
+              <div class="cf-skel-line" style="width:45%"></div>
+            </div>
+          </div>
+        `).join('');
+        return;
+      }
       grid.innerHTML = items.map((it) => {
-        const img = (it.thumbnailUrl || it.Thumbnail || it.Image || it.image || it.thumbnail || it['Thumbnail Image']) || placeholder;
+        const img = (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail) || placeholder;
         const isVideo = !!it.playbackUrl || (it.ServiceCategory === 'Video Production');
         const isWeb = it.ServiceCategory === 'Web Development' && !!it.URL;
         const icon = isVideo ? 'play' : (isWeb ? 'external-link-alt' : 'eye');
         const title = it.Title || it.title || '';
+        const sub = it.Description || it['Tech Stack'] || it.Client || '';
+        const date = (it.UploadDate || '').split('T')[0] || '';
+        const featured = it['Is Featured'] === true || it['Is Featured'] === 'true';
+        const chip = it.ServiceCategory || it.Category || '';
         return `
-          <div class="gallery-item">
-            <img src="${img}" alt="${title}">
-            <div class="gallery-overlay">
-              <div class="gallery-info"><h4>${title}</h4></div>
-              <div class="gallery-play-btn"><i class="fas fa-${icon}"></i></div>
+          <div class="cf-card">
+            <div class="cf-thumb">
+              <img src="${img}" alt="${title}" loading="lazy">
+              ${chip ? `<span class="cf-chip">${chip}</span>` : ''}
+              ${featured ? `<span class="cf-badge" title="Featured"><i class="fas fa-star"></i></span>` : ''}
+              <div class="cf-action"><i class="fas fa-${icon}"></i></div>
+            </div>
+            <div class="cf-body">
+              <h4 class="cf-title">${title}</h4>
+              ${sub ? `<p class="cf-sub">${sub}</p>` : ''}
+              <div class="cf-meta">
+                ${it.Client ? `<span class="cf-pill"><i class=\"fas fa-user\"></i> ${it.Client}</span>` : `${it['Tech Stack'] ? `<span class=\"cf-pill\"><i class=\"fas fa-code\"></i> ${it['Tech Stack']}</span>` : '<span></span>'}`}
+                ${date ? `<span class="cf-date">${date}</span>` : '<span></span>'}
+              </div>
             </div>
           </div>
         `;
@@ -3018,7 +3069,7 @@
           } else if (it.URL) {
             window.open(it.URL, '_blank');
           } else if (window.airtableCMS && window.airtableCMS.openImageModal) {
-            const src = (it.thumbnailUrl || it.Thumbnail || it.Image || it.image || it.thumbnail);
+            const src = (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail || placeholder);
             window.airtableCMS.openImageModal(src, it.Title || '');
           }
         });
