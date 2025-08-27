@@ -1,5 +1,142 @@
 [
   {
+    "title": "When I talk to small business owners, I often hear the same thing: “AI sounds great, but isn’t it only for big companies with tech teams?” Here are 7 Ways Small Businesses Can Use AI Today, and a giveaway for DEV Community!",
+    "url": "https://dev.to/jaideepparashar/when-i-talk-to-small-business-owners-i-often-hear-the-same-thing-ai-sounds-great-but-isnt-453d",
+    "publishedAt": "2025-08-27T04:12:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Thank You for 500 Followers + A Special Giveaway Jaideep Parashar ・ Aug 27 #ai #webdev #programming #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "When I talk to small business owners, I often hear the same thing: “AI sounds great, but isn’t it only for big companies with tech teams?” Here are 7 Ways Small Businesses Can Use AI Today, and a giveaway for DEV Community!",
+    "seoDescription": "Thank You for 500 Followers + A Special Giveaway Jaideep Parashar ・ Aug 27 #ai #webdev #programming #beginners"
+  },
+  {
+    "title": "Thank You for 500 Followers + A Special Giveaway",
+    "url": "https://dev.to/jaideepparashar/thank-you-for-500-followers-a-special-giveaway-1iaj",
+    "publishedAt": "2025-08-27T04:07:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. 👉 Thank you. Every comment, share, and message reminds me why I began this journey: To help people move from AI fear to AI fluency. Your support has made this space more than just articles — it’s becoming a community. 🎁 A Special Giveaway for You As a token of gratitude...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fepcgucjkj9xpikrdffec.png",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Thank You for 500 Followers + A Special Giveaway",
+    "seoDescription": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. 👉 Thank you. Every comment, share, and message reminds me why I began t..."
+  },
+  {
+    "title": "Love seeing more open-source contenders!",
+    "url": "https://dev.to/linkin/love-seeing-more-open-source-contenders-29a2",
+    "publishedAt": "2025-08-27T04:03:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Postman vs Bruno: What Are the Key Differences? Fallon Jimmy ・ Aug 27 #programming #webdev #beginners #devops",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2191871%2F01077452-5ffd-4131-9dde-caaffa7e2af8.jpg",
+    "video": null,
+    "author": "Linkin",
+    "tags": [
+      "programming",
+      "webdev",
+      "beginners",
+      "devops"
+    ],
+    "seoTitle": "Love seeing more open-source contenders!",
+    "seoDescription": "Postman vs Bruno: What Are the Key Differences? Fallon Jimmy ・ Aug 27 #programming #webdev #beginners #devops"
+  },
+  {
+    "title": "Nikon Z6 III’s First Major Firmware Update Adds Bird AF, Auto Capture, and C2PA",
+    "url": "https://petapixel.com/2025/08/26/nikon-z6-iiis-first-major-firmware-update-adds-bird-af-auto-capture-and-c2pa/",
+    "publishedAt": "2025-08-27T04:01:14.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Nikon released firmware version 2.00 for its popular full-frame Z6 III mirrorless camera. The major update adds new subject detection features, automatic capture, C2PA functionality, and much more. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/nikon-z6-iii-firmware-2-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "autofocus",
+      "birds",
+      "C2PA",
+      "contentauthenticity",
+      "firmware",
+      "nikonimagingcloud"
+    ],
+    "seoTitle": "Nikon Z6 III’s First Major Firmware Update Adds Bird AF, Auto Capture, and C2PA",
+    "seoDescription": "Nikon released firmware version 2.00 for its popular full-frame Z6 III mirrorless camera. The major update adds new subject detection features, automatic cap..."
+  },
+  {
+    "title": "How to Block Access to Admin Paths on Your Website with SafeLine WAF",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-block-access-to-admin-paths-on-your-website-with-safeline-waf-13c0",
+    "publishedAt": "2025-08-27T03:54:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When running a self-hosted site or web app, exposing your admin interface to the public web can be risky. Malicious bots and scanners often try to discover and brute-force admin URLs to gain unauthorized access. A simple but effective measure is to block or hide admin paths. This article shows how to use SafeLine WAF to restrict access to any URL containi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv5aql8xw8odkvd1g0d8g.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "safeline",
+      "waf",
+      "cybersecurity",
+      "webdev"
+    ],
+    "seoTitle": "How to Block Access to Admin Paths on Your Website with SafeLine WAF",
+    "seoDescription": "When running a self-hosted site or web app, exposing your admin interface to the public web can be risky. Malicious bots and scanners often try to discover a..."
+  },
+  {
+    "title": "Postman vs Bruno: What Are the Key Differences?",
+    "url": "https://dev.to/fallon_jimmy/postman-vs-bruno-what-are-the-key-differences-5ba7",
+    "publishedAt": "2025-08-27T03:52:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In the ever-evolving landscape of API development tools, a David vs Goliath story is unfolding. Postman has long reigned supreme as the go-to API client, but a newcomer named Bruno is challenging the status quo with a fresh approach that's turning heads in the developer community. Is this open-source contender truly capable of disrupting Postman's dominan...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmshdtzqgy87gzfwudg5c.png",
+    "video": null,
+    "author": "Fallon Jimmy",
+    "tags": [
+      "programming",
+      "webdev",
+      "beginners",
+      "devops"
+    ],
+    "seoTitle": "Postman vs Bruno: What Are the Key Differences?",
+    "seoDescription": "In the ever-evolving landscape of API development tools, a David vs Goliath story is unfolding. Postman has long reigned supreme as the go-to API client, but..."
+  },
+  {
+    "title": "Setting Up SafeLine WAF for WordPress Security",
+    "url": "https://dev.to/carrie_luo1/setting-up-safeline-waf-for-wordpress-security-41g8",
+    "publishedAt": "2025-08-27T03:40:29.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "WordPress powers over 40% of websites globally, making it a prime target for hackers. To protect your WordPress site from malicious traffic, SQL This guide will walk you through setting up SafeLine WAF for WordPress security with a practical, hands-on approach. Before you begin, ensure you have: A WordPress site running (e.g., on Apache or Nginx). A serve...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzq37awz255v7ukgvd9iy.png",
+    "video": null,
+    "author": "Carrie",
+    "tags": [
+      "wordpress",
+      "security",
+      "waf",
+      "webdev"
+    ],
+    "seoTitle": "Setting Up SafeLine WAF for WordPress Security",
+    "seoDescription": "WordPress powers over 40% of websites globally, making it a prime target for hackers. To protect your WordPress site from malicious traffic, SQL This guide w..."
+  },
+  {
     "title": "How to Fix Halo Upload Blocking Issues When Working With Scripts or Technical Docs",
     "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-fix-halo-upload-blocking-issues-when-working-with-scripts-or-technical-docs-2k0i",
     "publishedAt": "2025-08-27T03:27:58.000Z",
@@ -38,44 +175,6 @@
     "seoDescription": "Nano Banana: From Image Consistency to High-Quality Video Generation Juddiy ・ Aug 27 #webdev #programming #ai #discuss"
   },
   {
-    "title": "AI-Powered Company Intelligence Bot: Real-Time Business Analysis with n8n and Bright Data",
-    "url": "https://dev.to/depapp/ai-powered-company-intelligence-bot-real-time-business-analysis-with-n8n-and-bright-data-4787",
-    "publishedAt": "2025-08-27T02:13:24.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The bot solves the problem of time-consuming manual research by automatically analyzing companies across 20+ metrics in five key categories: Business Metrics (market value, growth rate, profitability), Investment Profile (funding score, ROI potential, risk assessment), Innovat...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9lit3ed0j5azng5v0t0p.png",
-    "video": null,
-    "author": "depa panjie purnama",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "AI-Powered Company Intelligence Bot: Real-Time Business Analysis with n8n and Bright Data",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The bot solves the problem of time-consuming manual research by automatically..."
-  },
-  {
-    "title": "First time knowing this",
-    "url": "https://dev.to/masterdevsabith/first-time-knowing-this-587b",
-    "publishedAt": "2025-08-27T01:53:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Master React State: When to Use useState vs useReducer (No More Confusion) Werliton Silva ・ Aug 21 #webdev #programming #react #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F450483%2Feb166a12-3bfa-487f-aebd-a91d7c33a48a.png",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "webdev",
-      "programming",
-      "react",
-      "beginners"
-    ],
-    "seoTitle": "First time knowing this",
-    "seoDescription": "Master React State: When to Use useState vs useReducer (No More Confusion) Werliton Silva ・ Aug 21 #webdev #programming #react #beginners"
-  },
-  {
     "title": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
     "url": "https://9to5mac.com/2025/08/26/security-bite-viral-tiktoks-promote-undetectable-find-my-enabled-gps-trackers-for-stalking/",
     "publishedAt": "2025-08-27T01:29:05.000Z",
@@ -90,25 +189,6 @@
     ],
     "seoTitle": "Security Bite: Viral TikToks promote ‘undetectable’ Find My-enabled GPS trackers for stalking",
     "seoDescription": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we..."
-  },
-  {
-    "title": "Optimize Go Performance: Value vs. Pointer Types for Fewer Memory Allocations",
-    "url": "https://dev.to/jones_charles_ad50858dbc0/optimize-go-performance-value-vs-pointer-types-for-fewer-memory-allocations-33ck",
-    "publishedAt": "2025-08-27T00:46:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey Go developers! If you’re building high-performance apps with Go and have a year or two of experience, you’ve probably worked with structs, slices, and goroutines. But have you thought about how choosing between value and pointer types can make or break your app’s performance? Memory allocations impact latency and garbage collection (GC) pressure, espe...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6l25aqgh7sppmflibpfl.png",
-    "video": null,
-    "author": "Jones Charles",
-    "tags": [
-      "go",
-      "performance",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Optimize Go Performance: Value vs. Pointer Types for Fewer Memory Allocations",
-    "seoDescription": "Hey Go developers! If you’re building high-performance apps with Go and have a year or two of experience, you’ve probably worked with structs, slices, and go..."
   },
   {
     "title": "Microsoft hosts emergency press conference after protesters &#8216;storm a building&#8217;",
@@ -543,76 +623,5 @@
     ],
     "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
     "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
-  },
-  {
-    "title": "The winners and losers of Taylor Swift’s engagement announcement",
-    "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
-    "publishedAt": "2025-08-26T19:04:14.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Mia Sato",
-    "tags": [],
-    "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
-    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
-  },
-  {
-    "title": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
-    "url": "https://petapixel.com/2025/08/26/award-winning-photographer-elevates-commercial-images-to-fine-art/",
-    "publishedAt": "2025-08-26T19:00:44.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how we perceive objects, images, and stories, elevating commercial work to fine art. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Dustin-Edward-Arnold-PetaPixel-BG-3-Panel.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Inspiration",
-      "Spotlight",
-      "commercial",
-      "dustinedwardarnold",
-      "luxury",
-      "revery",
-      "spotlight"
-    ],
-    "seoTitle": "Award-Winning Photographer Elevates Commercial Images to Fine Art",
-    "seoDescription": "Dustin Edward Arnold moves fluidly between titles: designer, photographer, and creative director. At the center of his practice is an instinct to reshape how..."
-  },
-  {
-    "title": "Apple is unlikely to announce these products at its September event",
-    "url": "https://9to5mac.com/2025/08/26/apple-is-unlikely-to-announce-these-products-at-its-september-9-event/",
-    "publishedAt": "2025-08-26T18:53:59.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is hosting its biggest event of the year on September 9. New iPhone 17 models, Apple Watch Ultra 3, AirPods Pro 3, and more are expected. But there are a variety of soon-to-release Apple products that likely won’t make a September event appearance. Here’s what not to expect from Apple’s ‘Awe dropping’ event. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2022/10/AAPL-Q4-2022.jpg?quality=82&#038;strip=all&#038;w=1500",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple is unlikely to announce these products at its September event",
-    "seoDescription": "Apple is hosting its biggest event of the year on September 9. New iPhone 17 models, Apple Watch Ultra 3, AirPods Pro 3, and more are expected. But there are..."
-  },
-  {
-    "title": "3 Big Screenwriting Lessons From 'True Detective'",
-    "url": "https://nofilmschool.com/screenwriting-lessons-from-true-detective",
-    "publishedAt": "2025-08-26T18:51:30.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "I remember the day I sat down to watch the pilot of True Detective. It was one of those wonderful hours of TV that completely blew my socks off. It had this contemporary noir feel that sucked you in and made you feel like anything was possible. Now, we're four seasons deep on the show, and looking at a new season coming starring Nic Cage. But before all t...",
-    "image": "https://nofilmschool.com/media-library/3-big-screenwriting-lessons-from-true-detective.jpg?id=51107026&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "True detective",
-      "Screenwriting lessons",
-      "Writing advice",
-      "Writing tips"
-    ],
-    "seoTitle": "3 Big Screenwriting Lessons From 'True Detective'",
-    "seoDescription": "I remember the day I sat down to watch the pilot of True Detective. It was one of those wonderful hours of TV that completely blew my socks off. It had this ..."
   }
 ]
