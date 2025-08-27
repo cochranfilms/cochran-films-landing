@@ -1,5 +1,100 @@
 [
   {
+    "title": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
+    "url": "https://dev.to/member_74898956/stop-guessing-start-measuring-a-pragmatic-guide-to-web-performance-1l7g",
+    "publishedAt": "2025-08-27T08:03:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-commerce service, the system we had poured six months of hard work into, had crumbled like a paper house in the face of peak traffic. CPU at 100%, memory overflows, and logs filled with timeout errors....",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/..%2Fmarkdown-images%2Fplaintext_flamegraph.svg",
+    "video": null,
+    "author": "member_74898956",
+    "tags": [
+      "webdev",
+      "programming",
+      "rust",
+      "backend"
+    ],
+    "seoTitle": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
+    "seoDescription": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-c..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/kate-nm/-113l",
+    "publishedAt": "2025-08-27T07:41:09.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096328%2Fd8253f1a-d3e8-4ec1-a0ae-eb60372d4d01.jpeg",
+    "video": null,
+    "author": "Ntokozo Kate Moyo",
+    "tags": [
+      "react",
+      "beginners",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev"
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/kate-nm/-2cp4",
+    "publishedAt": "2025-08-27T07:41:09.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096328%2Fd8253f1a-d3e8-4ec1-a0ae-eb60372d4d01.jpeg",
+    "video": null,
+    "author": "Ntokozo Kate Moyo",
+    "tags": [
+      "react",
+      "beginners",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev"
+  },
+  {
+    "title": "How I Got the Idea for TestDino",
+    "url": "https://dev.to/testdino/how-i-got-the-idea-for-testdino-176c",
+    "publishedAt": "2025-08-27T07:38:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "12+ years in QA taught me one thing: flaky tests are the worst part of the job. You run a test, it fails; run it again, it passes. Two hours later, nothing is wrong. Sound familiar? I have been there many times. My team was there, and so were others. Only QAs understood the failures. We spent 6 to 8 hours weekly deciding if failures were real or flaky, ev...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj7hv1jvqxrgny8zggesb.png",
+    "video": null,
+    "author": "testdino",
+    "tags": [
+      "webdev",
+      "testing",
+      "playwright",
+      "selenium"
+    ],
+    "seoTitle": "How I Got the Idea for TestDino",
+    "seoDescription": "12+ years in QA taught me one thing: flaky tests are the worst part of the job. You run a test, it fails; run it again, it passes. Two hours later, nothing i..."
+  },
+  {
+    "title": "How the Best UI UX Design Service Company Can Elevate Your Digital Presence",
+    "url": "https://dev.to/krishnasharma/how-the-best-ui-ux-design-service-company-can-elevate-your-digital-presence-4h4d",
+    "publishedAt": "2025-08-27T07:20:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s digital-first world, a brand’s success is no longer determined only by the quality of its products or services. Customers judge businesses heavily by their digital presence—their websites, apps, and online platforms. A sleek design, seamless navigation, and delightful user experience often make the difference between a customer who engages and ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7lj31euhz1fypd8032qa.webp",
+    "video": null,
+    "author": "krishna sharma",
+    "tags": [
+      "webdev",
+      "programming",
+      "webdesign",
+      "uiux"
+    ],
+    "seoTitle": "How the Best UI UX Design Service Company Can Elevate Your Digital Presence",
+    "seoDescription": "In today’s digital-first world, a brand’s success is no longer determined only by the quality of its products or services. Customers judge businesses heavily..."
+  },
+  {
     "title": "[Boost]",
     "url": "https://dev.to/mikelrisyad/-4a5p",
     "publishedAt": "2025-08-27T06:58:34.000Z",
@@ -19,44 +114,6 @@
     "seoDescription": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev"
   },
   {
-    "title": "Aiinak: Where Work Meets Innovation",
-    "url": "https://dev.to/aiinak9876/aiinak-where-work-meets-innovation-3n55",
-    "publishedAt": "2025-08-27T06:42:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Every workplace today is under pressure to do more with less. Teams are stretched thin, deadlines keep coming, and technology changes faster than we can catch up. In the middle of this chaos, businesses are searching for something that makes work not only easier but smarter. That’s exactly where Aiinak steps in The Meeting Point of Work and Innovation Inn...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn0mi1pga011rr60qy170.png",
-    "video": null,
-    "author": "aiinak.com",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Aiinak: Where Work Meets Innovation",
-    "seoDescription": "Every workplace today is under pressure to do more with less. Teams are stretched thin, deadlines keep coming, and technology changes faster than we can catc..."
-  },
-  {
-    "title": "Social Media Management Services to Grow Your Online Presence",
-    "url": "https://dev.to/webdinoz_india/social-media-management-services-to-grow-your-online-presence-2nch",
-    "publishedAt": "2025-08-27T06:36:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Enhance your brand’s online presence with social media management services. We create, manage, and optimize your social media profiles to drive engagement, growth, and success. https://webdinoz.com/social-media-management/",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffw3jk4n54sug1lvj7dst.png",
-    "video": null,
-    "author": "webdinoz",
-    "tags": [
-      "webdev",
-      "ai",
-      "design",
-      "development"
-    ],
-    "seoTitle": "Social Media Management Services to Grow Your Online Presence",
-    "seoDescription": "Enhance your brand’s online presence with social media management services. We create, manage, and optimize your social media profiles to drive engagement, g..."
-  },
-  {
     "title": "iOS 26: Fine-Tune Podcast Playback Speeds",
     "url": "https://www.macrumors.com/how-to/ios-fine-tune-podcast-playback-speeds/",
     "publishedAt": "2025-08-27T06:21:40.000Z",
@@ -71,44 +128,6 @@
     ],
     "seoTitle": "iOS 26: Fine-Tune Podcast Playback Speeds",
     "seoDescription": "With iOS 26 (currently in beta), Apple has finally caught up with rival podcast apps like Overcast by adding more fine-grained playback speed controls to the..."
-  },
-  {
-    "title": "8 Best Practices for Adding an Image Uploader to Your Website",
-    "url": "https://dev.to/ideradevtools/8-best-practices-for-adding-an-image-uploader-to-your-website-1e8e",
-    "publishedAt": "2025-08-27T06:13:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies of his certificates. When he selects the images and clicks the upload button, an error message appears, and the complete form is refreshed. Can you imagine the user frustration? User experience is th...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuhs3hr8utqcqnolei1x2.png",
-    "video": null,
-    "author": "IderaDevTools",
-    "tags": [
-      "filestack",
-      "programming",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "8 Best Practices for Adding an Image Uploader to Your Website",
-    "seoDescription": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies..."
-  },
-  {
-    "title": "8 Best Practices for Adding an Image Uploader to Your Website",
-    "url": "https://dev.to/ideradevtools/8-best-practices-for-adding-an-image-uploader-to-your-website-4l8f",
-    "publishedAt": "2025-08-27T06:13:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies of his certificates. When he selects the images and clicks the upload button, an error message appears, and the complete form is refreshed. Can you imagine the user frustration? User experience is th...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuhs3hr8utqcqnolei1x2.png",
-    "video": null,
-    "author": "IderaDevTools",
-    "tags": [
-      "filestack",
-      "programming",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "8 Best Practices for Adding an Image Uploader to Your Website",
-    "seoDescription": "Imagine this: a student is filling out a lengthy online form in an educational institute, and he is almost done. Finally, he has to upload the scanned copies..."
   },
   {
     "title": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
@@ -600,23 +619,5 @@
     ],
     "seoTitle": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
     "seoDescription": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly..."
-  },
-  {
-    "title": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
-    "url": "https://nofilmschool.com/ne-zha-2-hit",
-    "publishedAt": "2025-08-26T19:15:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's called Ne Zha 2, and it's an animated sequel to a 2019 international Chinese hit (which made over $700 million itself) that has been doing gangbusters everywhere except in the United States. In fact, only...",
-    "image": "https://nofilmschool.com/media-library/ne-zha-2-the-animated-movie-that-made-almost-2-billion-outside-of-america.png?id=61520589&width=980",
-    "video": "https://www.youtube.com/embed/iPZYPWdrta4?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Animation",
-      "Box office",
-      "Ne zha 2"
-    ],
-    "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
-    "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
   }
 ]
