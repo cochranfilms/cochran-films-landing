@@ -1,5 +1,77 @@
 [
   {
+    "title": "Full-Stack Interview Prep #1: SQL Injection Explained Simply (with Go & Node.js Examples)",
+    "url": "https://dev.to/davjesse/full-stack-interview-prep-1-sql-injection-explained-simply-with-go-nodejs-examples-lg6",
+    "publishedAt": "2025-08-27T15:06:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "You’re in a technical interview. The interviewer looks up from their notes and asks: “How would you protect a login form from SQL injection?” In that moment, your answer isn’t just about passing the interview — it’s about whether you understand one of the web’s most common security threats. SQL Injection is when an attacker sneaks malicious input into a d...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbcufjg86cv0hibg6wqt2.png",
+    "video": null,
+    "author": "David Jesse Odhiambo",
+    "tags": [
+      "security",
+      "webdev",
+      "fullstack",
+      "database"
+    ],
+    "seoTitle": "Full-Stack Interview Prep #1: SQL Injection Explained Simply (with Go & Node.js Examples)",
+    "seoDescription": "You’re in a technical interview. The interviewer looks up from their notes and asks: “How would you protect a login form from SQL injection?” In that moment,..."
+  },
+  {
+    "title": "AirPods Pro 3 release date: When to expect the new model’s launch",
+    "url": "https://9to5mac.com/2025/08/27/airpods-pro-3-release-date-when-to-expect-the-new-models-launch/",
+    "publishedAt": "2025-08-27T14:45:04.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Three years after AirPods Pro 2 first debuted, Apple is nearly ready to unveil the popular product’s successor. Here’s the expected release date for AirPods Pro 3. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/airpods-pro-3.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "AirPods Pro 3 release date: When to expect the new model’s launch",
+    "seoDescription": "Three years after AirPods Pro 2 first debuted, Apple is nearly ready to unveil the popular product’s successor. Here’s the expected release date for AirPods ..."
+  },
+  {
+    "title": "EVs are getting a temporary Trump bump thanks to expiring incentives",
+    "url": "https://www.theverge.com/electric-cars/766609/ev-sales-increase-trump-tax-credit-expire",
+    "publishedAt": "2025-08-27T14:39:34.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "President Donald Trump has made no secret of his disdain for electric vehicles. On the first day of his presidency, he signed an executive order to eliminate EV incentives that he has often falsely portrayed as an “electric vehicle mandate.” And last month, Republicans in Congress voted to kill the $7,500 tax credit, among other subsidies designed to make...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK437_ELECTRIC_VEHICLE_EVS_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew J. Hawkins",
+    "tags": [],
+    "seoTitle": "EVs are getting a temporary Trump bump thanks to expiring incentives",
+    "seoDescription": "President Donald Trump has made no secret of his disdain for electric vehicles. On the first day of his presidency, he signed an executive order to eliminate..."
+  },
+  {
+    "title": "Nothing Used Stock Photos to Advertise the Phone 3’s Camera",
+    "url": "https://petapixel.com/2025/08/27/nothing-used-stock-photos-to-advertise-the-phone-3s-camera/",
+    "publishedAt": "2025-08-27T14:38:03.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Nothing used a set of stock photos to advertise the Phone 3's camera capabilities. The images appeared on in-store demonstration units under the title \"WithNothing\" along with the line, \"Judge for yourself. Here's what our community has captured with Phone (3).\" [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Nothing-Used-Stock-Photos-to-Advertise-the-Phone-3s-Camera-Capability.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Mobile",
+      "News",
+      "advertising",
+      "apology",
+      "falseadvertising",
+      "mobile",
+      "nothing",
+      "nothingphone3"
+    ],
+    "seoTitle": "Nothing Used Stock Photos to Advertise the Phone 3’s Camera",
+    "seoDescription": "Nothing used a set of stock photos to advertise the Phone 3's camera capabilities. The images appeared on in-store demonstration units under the title \"WithN..."
+  },
+  {
     "title": "Exciting New Exhibition Honors Nearly 200 Years of Analog Photography",
     "url": "https://petapixel.com/2025/08/27/exciting-new-exhibition-honors-nearly-200-years-of-analog-photography/",
     "publishedAt": "2025-08-27T14:06:39.000Z",
@@ -150,44 +222,6 @@
     ],
     "seoTitle": "Apple Music Radio Stations Now Available via TuneIn",
     "seoDescription": "Apple Music's six radio stations will be available outside the ‌Apple Music‌ app for the first time via TuneIn, the Wall Street Journal reports. Starting tod..."
-  },
-  {
-    "title": "I Built an AI Event Butler So I'd Never Miss Another Tech Meetup (And You Can Too)",
-    "url": "https://dev.to/varshithvhegde/i-built-an-ai-event-butler-so-id-never-miss-another-tech-meetup-and-you-can-too-37io",
-    "publishedAt": "2025-08-27T13:27:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Picture this: You're a developer in Bangalore (or any tech hub), and you're constantly hearing about \"that amazing meetup I missed last week\" or \"did you know there was a React conference yesterday?\" Sound familiar? Yeah, me too. That's when I decided to build my own AI-powere...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2vk7a4u5ttidlhkgvbzp.png",
-    "video": null,
-    "author": "Varshith V Hegde",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "I Built an AI Event Butler So I'd Never Miss Another Tech Meetup (And You Can Too)",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Picture this: You're a developer in Bangalore (or any tech hub), and you're c..."
-  },
-  {
-    "title": "Hello #community, Here is the article on Edge Hosting vs Cloud Hosting and it's differences",
-    "url": "https://dev.to/shreyas_joshi_accuwebhosting/hello-community-here-is-the-article-on-edge-hosting-vs-cloud-hosting-and-its-differences-4k8o",
-    "publishedAt": "2025-08-27T13:23:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Edge Hosting vs Cloud Hosting: Which One to Choose? Shreyas Joshi ・ Aug 27 #cloudcomputing #serverless #techtalks #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2425199%2F4fc04ebb-0de1-403e-8350-cd2fc9c6d2ea.jpg",
-    "video": null,
-    "author": "Shreyas Joshi",
-    "tags": [
-      "cloudcomputing",
-      "serverless",
-      "techtalks",
-      "webdev"
-    ],
-    "seoTitle": "Hello #community, Here is the article on Edge Hosting vs Cloud Hosting and it's differences",
-    "seoDescription": "Edge Hosting vs Cloud Hosting: Which One to Choose? Shreyas Joshi ・ Aug 27 #cloudcomputing #serverless #techtalks #webdev"
   },
   {
     "title": "Apple Music radio stations are now available outside of Apple Music for the first time",
@@ -588,41 +622,5 @@
     ],
     "seoTitle": "iOS 26: Fine-Tune Podcast Playback Speeds",
     "seoDescription": "With iOS 26 (currently in beta), Apple has finally caught up with rival podcast apps like Overcast by adding more fine-grained playback speed controls to the..."
-  },
-  {
-    "title": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
-    "url": "https://nofilmschool.com/spider-man-iconic-ethos-line",
-    "publishedAt": "2025-08-27T05:40:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Can you tell me what the main difference is between a superhero and a supervillain? No, it’s not the difference in their physical or cerebral power or their background, or even their actions. Because let’s face it, every superhero is as flawed as the villains (and that’s the beauty of superhero movies). To me, the difference lies in a particular ethos– \"W...",
-    "image": "https://nofilmschool.com/media-library/with-great-power-comes-great-responsibility-the-line-that-defined-spider-mans-ethos.jpg?id=61522475&width=980",
-    "video": "https://www.youtube.com/embed/guuYU74wU70?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "Spider-man",
-      "Movie quotes",
-      "Famous lines"
-    ],
-    "seoTitle": "Why Spider-Man’s Entire Ethos Comes Down to Just Seven Words",
-    "seoDescription": "Can you tell me what the main difference is between a superhero and a supervillain? No, it’s not the difference in their physical or cerebral power or their ..."
-  },
-  {
-    "title": "How One Quote From ‘The Wizard of Oz’ Unlocks Its Deeper Message",
-    "url": "https://nofilmschool.com/wizard-of-oz-iconic-line",
-    "publishedAt": "2025-08-27T05:26:35.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The Wizard of Oz (1939) is one of the most lucid yet transformative fantasies you’ll ever watch. Following young Dorothy Gale (Judy Garland), the narrative takes us to the magical Land of Oz, a mystical land that bears a deep resemblance to our very own realities. There are good people and then there are bad; there’s corruption and politics, and finally, ...",
-    "image": "https://nofilmschool.com/media-library/dorothy-at-the-land-of-oz.jpg?id=61518772&width=980",
-    "video": "https://www.youtube.com/embed/FfpF8UUVTeM?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "The wizard of oz",
-      "Famous lines",
-      "Movie quotes"
-    ],
-    "seoTitle": "How One Quote From ‘The Wizard of Oz’ Unlocks Its Deeper Message",
-    "seoDescription": "The Wizard of Oz (1939) is one of the most lucid yet transformative fantasies you’ll ever watch. Following young Dorothy Gale (Judy Garland), the narrative t..."
   }
 ]
