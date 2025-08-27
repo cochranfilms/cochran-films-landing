@@ -1,5 +1,65 @@
 [
   {
+    "title": "Understanding WebSockets: A Beginner’s Guide to Real-Time Web Communication day 38 of system design basics",
+    "url": "https://dev.to/vincenttommi/understanding-websockets-a-beginners-guide-to-real-time-web-communication-day-38-of-system-design-2m5m",
+    "publishedAt": "2025-08-27T08:45:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine playing an online game where the leaderboard updates instantly as players score points, or chatting with friends on a messaging app where messages pop up without refreshing the page. These seamless, real-time experiences feel almost magical—but how do they work? The answer is often WebSockets, a powerful technology that enables instant, two-way co...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvk3xkt5a964nkmdmcst2.png",
+    "video": null,
+    "author": "Vincent Tommi",
+    "tags": [
+      "programming",
+      "python",
+      "opensource",
+      "webdev"
+    ],
+    "seoTitle": "Understanding WebSockets: A Beginner’s Guide to Real-Time Web Communication day 38 of system design basics",
+    "seoDescription": "Imagine playing an online game where the leaderboard updates instantly as players score points, or chatting with friends on a messaging app where messages po..."
+  },
+  {
+    "title": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
+    "url": "https://dev.to/forgecode/8-tool-tech-stack-to-build-an-enterprise-grade-rag-system-without-the-headaches-42h",
+    "publishedAt": "2025-08-27T08:39:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed. RAG essentially means hooking your LLM up to your own data. As AWS puts it, RAG lets a model “reference an authoritative knowledge base outside of its training data”. In practice that means integrat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxi0vf0ib6dbjrksi0avi.gif",
+    "video": null,
+    "author": "Pankaj Singh",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
+    "seoDescription": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed..."
+  },
+  {
+    "title": "Humpback Cam Captures First-Whale-View of a Breach",
+    "url": "https://petapixel.com/2025/08/27/humpback-cam-captures-first-whale-view-of-a-breach/",
+    "publishedAt": "2025-08-27T08:27:42.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "A camera attached to a humpback whale captured the spectacular moment the giant marine mammal breached the surface -- leaping skyward and clearing the horizon. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Humpack-Whale-View-Breach.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "behavior",
+      "breach",
+      "humpbackwhale",
+      "nature",
+      "whale",
+      "whalecam"
+    ],
+    "seoTitle": "Humpback Cam Captures First-Whale-View of a Breach",
+    "seoDescription": "A camera attached to a humpback whale captured the spectacular moment the giant marine mammal breached the surface -- leaping skyward and clearing the horizo..."
+  },
+  {
     "title": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
     "url": "https://dev.to/member_74898956/stop-guessing-start-measuring-a-pragmatic-guide-to-web-performance-1l7g",
     "publishedAt": "2025-08-27T08:03:59.000Z",
@@ -17,101 +77,6 @@
     ],
     "seoTitle": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
     "seoDescription": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-c..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/kate-nm/-113l",
-    "publishedAt": "2025-08-27T07:41:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096328%2Fd8253f1a-d3e8-4ec1-a0ae-eb60372d4d01.jpeg",
-    "video": null,
-    "author": "Ntokozo Kate Moyo",
-    "tags": [
-      "react",
-      "beginners",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/kate-nm/-2cp4",
-    "publishedAt": "2025-08-27T07:41:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096328%2Fd8253f1a-d3e8-4ec1-a0ae-eb60372d4d01.jpeg",
-    "video": null,
-    "author": "Ntokozo Kate Moyo",
-    "tags": [
-      "react",
-      "beginners",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Everything React: From Basics to Advanced - Introduction to the Series Maria Mendonca ・ Aug 26 #react #beginners #javascript #webdev"
-  },
-  {
-    "title": "How I Got the Idea for TestDino",
-    "url": "https://dev.to/testdino/how-i-got-the-idea-for-testdino-176c",
-    "publishedAt": "2025-08-27T07:38:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "12+ years in QA taught me one thing: flaky tests are the worst part of the job. You run a test, it fails; run it again, it passes. Two hours later, nothing is wrong. Sound familiar? I have been there many times. My team was there, and so were others. Only QAs understood the failures. We spent 6 to 8 hours weekly deciding if failures were real or flaky, ev...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj7hv1jvqxrgny8zggesb.png",
-    "video": null,
-    "author": "testdino",
-    "tags": [
-      "webdev",
-      "testing",
-      "playwright",
-      "selenium"
-    ],
-    "seoTitle": "How I Got the Idea for TestDino",
-    "seoDescription": "12+ years in QA taught me one thing: flaky tests are the worst part of the job. You run a test, it fails; run it again, it passes. Two hours later, nothing i..."
-  },
-  {
-    "title": "How the Best UI UX Design Service Company Can Elevate Your Digital Presence",
-    "url": "https://dev.to/krishnasharma/how-the-best-ui-ux-design-service-company-can-elevate-your-digital-presence-4h4d",
-    "publishedAt": "2025-08-27T07:20:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In today’s digital-first world, a brand’s success is no longer determined only by the quality of its products or services. Customers judge businesses heavily by their digital presence—their websites, apps, and online platforms. A sleek design, seamless navigation, and delightful user experience often make the difference between a customer who engages and ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7lj31euhz1fypd8032qa.webp",
-    "video": null,
-    "author": "krishna sharma",
-    "tags": [
-      "webdev",
-      "programming",
-      "webdesign",
-      "uiux"
-    ],
-    "seoTitle": "How the Best UI UX Design Service Company Can Elevate Your Digital Presence",
-    "seoDescription": "In today’s digital-first world, a brand’s success is no longer determined only by the quality of its products or services. Customers judge businesses heavily..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/mikelrisyad/-4a5p",
-    "publishedAt": "2025-08-27T06:58:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F461127%2F034233c4-ba6e-473c-8a8d-783831764a10.jpeg",
-    "video": null,
-    "author": "Mikel Risyad",
-    "tags": [
-      "cloud",
-      "devops",
-      "opensource",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev"
   },
   {
     "title": "iOS 26: Fine-Tune Podcast Playback Speeds",
@@ -619,5 +584,37 @@
     ],
     "seoTitle": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
     "seoDescription": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly..."
+  },
+  {
+    "title": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
+    "url": "https://nofilmschool.com/ne-zha-2-hit",
+    "publishedAt": "2025-08-26T19:15:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's called Ne Zha 2, and it's an animated sequel to a 2019 international Chinese hit (which made over $700 million itself) that has been doing gangbusters everywhere except in the United States. In fact, only...",
+    "image": "https://nofilmschool.com/media-library/ne-zha-2-the-animated-movie-that-made-almost-2-billion-outside-of-america.png?id=61520589&width=980",
+    "video": "https://www.youtube.com/embed/iPZYPWdrta4?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Animation",
+      "Box office",
+      "Ne zha 2"
+    ],
+    "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
+    "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
+  },
+  {
+    "title": "The winners and losers of Taylor Swift’s engagement announcement",
+    "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
+    "publishedAt": "2025-08-26T19:04:14.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Mia Sato",
+    "tags": [],
+    "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
+    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
   }
 ]
