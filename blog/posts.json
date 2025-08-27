@@ -1,41 +1,110 @@
 [
   {
-    "title": "Understanding WebSockets: A Beginner’s Guide to Real-Time Web Communication day 38 of system design basics",
-    "url": "https://dev.to/vincenttommi/understanding-websockets-a-beginners-guide-to-real-time-web-communication-day-38-of-system-design-2m5m",
-    "publishedAt": "2025-08-27T08:45:13.000Z",
+    "title": "Luxury Villa in Thailand",
+    "url": "https://dev.to/hostmyvilla_feb0f8ae29b32/luxury-villa-in-thailand-ng9",
+    "publishedAt": "2025-08-27T10:10:53.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Imagine playing an online game where the leaderboard updates instantly as players score points, or chatting with friends on a messaging app where messages pop up without refreshing the page. These seamless, real-time experiences feel almost magical—but how do they work? The answer is often WebSockets, a powerful technology that enables instant, two-way co...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvk3xkt5a964nkmdmcst2.png",
+    "summary": "About Us: At Host My Villa we specialize in offering handpicked luxury villa rentals in Thailand, including holiday beach villas, beachfront villas in Koh Samui, and private pool villas in Phuket. Our mission is to provide guests with world-class comfort, privacy, and unforgettable holiday experiences. Whether you’re looking for a serene family getaway, a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsdm789ywy62zloy2epsf.jpg",
     "video": null,
-    "author": "Vincent Tommi",
+    "author": "Hostmyvilla",
     "tags": [
-      "programming",
-      "python",
-      "opensource",
-      "webdev"
+      "seo",
+      "workplace",
+      "webdev",
+      "website"
     ],
-    "seoTitle": "Understanding WebSockets: A Beginner’s Guide to Real-Time Web Communication day 38 of system design basics",
-    "seoDescription": "Imagine playing an online game where the leaderboard updates instantly as players score points, or chatting with friends on a messaging app where messages po..."
+    "seoTitle": "Luxury Villa in Thailand",
+    "seoDescription": "About Us: At Host My Villa we specialize in offering handpicked luxury villa rentals in Thailand, including holiday beach villas, beachfront villas in Koh Sa..."
   },
   {
-    "title": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
-    "url": "https://dev.to/forgecode/8-tool-tech-stack-to-build-an-enterprise-grade-rag-system-without-the-headaches-42h",
-    "publishedAt": "2025-08-27T08:39:40.000Z",
+    "title": "Ferrari Rental Dubai: A Journey into Luxury and Speed",
+    "url": "https://dev.to/ferrari_rentaldubai_c04b/ferrari-rental-dubai-a-journey-into-luxury-and-speed-24k1",
+    "publishedAt": "2025-08-27T10:10:43.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed. RAG essentially means hooking your LLM up to your own data. As AWS puts it, RAG lets a model “reference an authoritative knowledge base outside of its training data”. In practice that means integrat...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxi0vf0ib6dbjrksi0avi.gif",
+    "summary": "Dubai is a city where luxury isn’t just a lifestyle it’s a standard. From towering skyscrapers to world class shopping and pristine beaches, the city thrives on offering the best. And when it comes to cars, nothing captures the spirit of Dubai better than a Ferrari rental Dubai. It’s not just transportation it’s an experience that combines power, elegance...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy4o2f0e2bt4mdm029w5o.jpeg",
     "video": null,
-    "author": "Pankaj Singh",
+    "author": "Ferrari Rental Dubai",
+    "tags": [
+      "programming",
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "Ferrari Rental Dubai: A Journey into Luxury and Speed",
+    "seoDescription": "Dubai is a city where luxury isn’t just a lifestyle it’s a standard. From towering skyscrapers to world class shopping and pristine beaches, the city thrives..."
+  },
+  {
+    "title": "&#8216;Vibe-hacking&#8217; is now a top AI threat",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/766435/anthropic-claude-threat-intelligence-report-ai-cybersecurity-hacking",
+    "publishedAt": "2025-08-27T10:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "\"Agentic AI systems are being weaponized.\" That's one of the first lines of Anthropic's new Threat Intelligence report, out today, which details the wide range of cases in which Claude - and likely many other leading AI agents and chatbots - are being abused. First up: \"Vibe-hacking.\" One sophisticated cybercrime ring that Anthropic says it recently disru...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK_414_AI_CHATBOT_R2_CVirginia_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Hayden Field",
+    "tags": [],
+    "seoTitle": "&#8216;Vibe-hacking&#8217; is now a top AI threat",
+    "seoDescription": "\"Agentic AI systems are being weaponized.\" That's one of the first lines of Anthropic's new Threat Intelligence report, out today, which details the wide ran..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/gautam_dodiya_1718/-3h39",
+    "publishedAt": "2025-08-27T09:26:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How I Got the Idea for TestDino testdino ・ Aug 27 #webdev #testing #playwright #selenium",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3387297%2F5f8aea3f-7a2d-4101-9bf5-494fc7ddf5d3.png",
+    "video": null,
+    "author": "Gautam Dodiya",
     "tags": [
       "webdev",
-      "programming",
-      "ai",
-      "beginners"
+      "testing",
+      "playwright",
+      "selenium"
     ],
-    "seoTitle": "8 Tool Tech Stack to Build an Enterprise-Grade RAG System (Without the Headaches)",
-    "seoDescription": "Ever since I dove into a major enterprise RAG (Retrieval-Augmented Generation) project, I’ve learned that it takes more than just “GPT and coffee” to succeed..."
+    "seoTitle": "[Boost]",
+    "seoDescription": "How I Got the Idea for TestDino testdino ・ Aug 27 #webdev #testing #playwright #selenium"
+  },
+  {
+    "title": "London targets noisy commuters with headphone campaign",
+    "url": "https://www.theverge.com/news/766522/london-tfl-headphone-campaign-noisy-passengers",
+    "publishedAt": "2025-08-27T09:26:17.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "TfL is using posters to encourage passengers to wear headphones when listening to audio. | Image: TfL / The Verge After bringing 4G and 5G connectivity to the Underground, London’s public transport authority has started scolding noisy passengers who subject everyone to music and calls blasting out of their phones. A new poster campaign launched by Transpo...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/tfl-headaphones-ai-no-logo.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "London targets noisy commuters with headphone campaign",
+    "seoDescription": "TfL is using posters to encourage passengers to wear headphones when listening to audio. | Image: TfL / The Verge After bringing 4G and 5G connectivity to th..."
+  },
+  {
+    "title": "US Open Pushes Back Against Photographer Who Walked onto Tennis Court",
+    "url": "https://petapixel.com/2025/08/27/us-open-pushes-back-against-photographer-who-walked-onto-tennis-court/",
+    "publishedAt": "2025-08-27T09:22:04.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "After Selcuk Acar, the photographer at the center of this week's US Open controversy, claimed that he was the \"victim and totally innocent,\" the United States Tennis Association (USTA) has refuted his argument. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Selcuk-Acar-US-Open.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "benjaminbonzi",
+      "daniilmedvedev",
+      "selcukacar",
+      "sports",
+      "sportsphotographer",
+      "tennis",
+      "usopen"
+    ],
+    "seoTitle": "US Open Pushes Back Against Photographer Who Walked onto Tennis Court",
+    "seoDescription": "After Selcuk Acar, the photographer at the center of this week's US Open controversy, claimed that he was the \"victim and totally innocent,\" the United State..."
   },
   {
     "title": "Humpback Cam Captures First-Whale-View of a Breach",
@@ -44,7 +113,7 @@
     "source": "petapixel.com",
     "category": "photography",
     "summary": "A camera attached to a humpback whale captured the spectacular moment the giant marine mammal breached the surface -- leaping skyward and clearing the horizon. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Humpack-Whale-View-Breach.jpg",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Whale-tagging-and-breach.mp4",
     "video": null,
     "author": "Matt Growcoot",
     "tags": [
@@ -58,25 +127,6 @@
     ],
     "seoTitle": "Humpback Cam Captures First-Whale-View of a Breach",
     "seoDescription": "A camera attached to a humpback whale captured the spectacular moment the giant marine mammal breached the surface -- leaping skyward and clearing the horizo..."
-  },
-  {
-    "title": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
-    "url": "https://dev.to/member_74898956/stop-guessing-start-measuring-a-pragmatic-guide-to-web-performance-1l7g",
-    "publishedAt": "2025-08-27T08:03:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-commerce service, the system we had poured six months of hard work into, had crumbled like a paper house in the face of peak traffic. CPU at 100%, memory overflows, and logs filled with timeout errors....",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/..%2Fmarkdown-images%2Fplaintext_flamegraph.svg",
-    "video": null,
-    "author": "member_74898956",
-    "tags": [
-      "webdev",
-      "programming",
-      "rust",
-      "backend"
-    ],
-    "seoTitle": "Stop-Guessing-Start-Measuring-A-Pragmatic-Guide-to-Web-Performance",
-    "seoDescription": "GitHub Home It was another Black Friday. At 3 AM, my phone started screaming like crazy. 😱 It wasn't my alarm; it was the monitoring alert. Our flagship e-c..."
   },
   {
     "title": "iOS 26: Fine-Tune Podcast Playback Speeds",
@@ -568,53 +618,5 @@
     ],
     "seoTitle": "Apple Announces Fourth Store in India",
     "seoDescription": "Apple is launching a new retail store location in India, with Apple Koregaon Park set to open on Thursday, September 4 at 1:00 p.m. local time. Apple Koregao..."
-  },
-  {
-    "title": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
-    "url": "https://9to5mac.com/2025/08/26/ai-skeptics-are-running-out-of-rope-to-argue-apple-isnt-desperately-behind/",
-    "publishedAt": "2025-08-26T19:37:20.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly is Apple behind on?,” or “Catch up? Catch up to what?”. And while this sort of comment tends to come from people who seem to spend quite a lot of time and effort trying to make sure that everyone kno...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/siri-dumpster-fire.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "AI skeptics are running out of rope to argue Apple isn’t desperately behind",
-    "seoDescription": "Whenever a new story comes out detailing yet another setback with Apple’s AI initiatives and roadmaps, without fail, someone shows up and asks: “What exactly..."
-  },
-  {
-    "title": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
-    "url": "https://nofilmschool.com/ne-zha-2-hit",
-    "publishedAt": "2025-08-26T19:15:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's called Ne Zha 2, and it's an animated sequel to a 2019 international Chinese hit (which made over $700 million itself) that has been doing gangbusters everywhere except in the United States. In fact, only...",
-    "image": "https://nofilmschool.com/media-library/ne-zha-2-the-animated-movie-that-made-almost-2-billion-outside-of-america.png?id=61520589&width=980",
-    "video": "https://www.youtube.com/embed/iPZYPWdrta4?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Animation",
-      "Box office",
-      "Ne zha 2"
-    ],
-    "seoTitle": "'Ne Zha 2': The Animated Movie That Made Almost $2 Billion Outside of America",
-    "seoDescription": "What if I told you there was an animated family movie about to cross the $2 billion mark at the box office that most Americans have never heard of? It's call..."
-  },
-  {
-    "title": "The winners and losers of Taylor Swift’s engagement announcement",
-    "url": "https://www.theverge.com/news/766173/taylor-swift-travis-kelce-engagement-announcement-instagram-threads",
-    "publishedAt": "2025-08-26T19:04:14.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star Taylor Swift and football player Travis Kelce opted to announce their engagement on the platform on Tuesday - if it's good enough for Beyoncé, it's good enough for anyone. Swift and Kelce are, for the...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2196496408.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Mia Sato",
-    "tags": [],
-    "seoTitle": "The winners and losers of Taylor Swift’s engagement announcement",
-    "seoDescription": "The world's most famous celebrity couple got engaged, and the first place the news broke was on Instagram. By now, it's not much of a surprise that pop star ..."
   }
 ]
