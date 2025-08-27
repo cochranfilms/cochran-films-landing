@@ -1,10 +1,12 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
+import VideoModal from './VideoModal'
 
 export default function CMSGrid({ title, subtitle, items = [], layout = 'gallery', onCardClick }){
   const gridClass = 'premium-grid'
   const cards = useMemo(() => items.map((it, idx) => renderPremiumCard(it, idx, onCardClick)), [items, onCardClick])
+  const [modal, setModal] = useState({ open: false, title: '', url: '' })
   return (
     <section className="portfolio-category-section premium">
       <div className="category-header">
@@ -15,7 +17,11 @@ export default function CMSGrid({ title, subtitle, items = [], layout = 'gallery
         {subtitle ? (<p className="category-description">{subtitle}</p>) : null}
       </div>
       <div className={gridClass}>
-        {items.length === 0 ? premiumSkeletons() : cards}
+        {items.length === 0 ? premiumSkeletons() : items.map((it, idx) => renderPremiumCard(it, idx, (clicked)=>{
+          if (clicked.playbackUrl){ setModal({ open: true, title: clicked.Title||'', url: clicked.playbackUrl }) }
+          else if (onCardClick) onCardClick(clicked)
+          else if (clicked.URL) window.open(clicked.URL,'_blank')
+        }))}
       </div>
       <div className="portfolio-actions">
         <a className="premium-btn" href="#" onClick={(e)=>e.preventDefault()}>
@@ -23,6 +29,7 @@ export default function CMSGrid({ title, subtitle, items = [], layout = 'gallery
           <i className="fas fa-arrow-down"></i>
         </a>
       </div>
+      <VideoModal open={modal.open} onClose={()=>setModal({ open:false, title:'', url:'' })} title={modal.title} playbackUrl={modal.url} />
     </section>
   )
 }
@@ -43,11 +50,7 @@ function renderPremiumCard(it, idx, onCardClick){
   const sub = it.Description || it['Tech Stack'] || it.Client || ''
 
   return (
-    <article className="portfolio-item" key={idx} onClick={() => {
-      if (onCardClick) onCardClick(it)
-      else if (it.playbackUrl) { window.open(it.playbackUrl,'_blank') }
-      else if (it.URL) { window.open(it.URL,'_blank') }
-    }}>
+    <article className="portfolio-item" key={idx} onClick={() => onCardClick?.(it)}>
       <div className="portfolio-item-media">
         <img src={img} alt={it.Title||'Item'} loading="lazy" onError={(e)=> e.currentTarget.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'} />
         {isVideo ? (<div className="video-play-button"><i className="fas fa-play"></i></div>) : null}

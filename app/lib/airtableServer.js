@@ -32,13 +32,41 @@ function coerceArray(value){
 }
 
 function deriveThumbnail(fields){
-  const direct = pickField(fields, ['Thumbnail Image','thumbnailUrl','Thumbnail','Preview','Image','image','Cover'])
-  if (direct) return direct
+  const firstUrlFrom = (val) => {
+    if (!val) return undefined
+    if (typeof val === 'string') return val
+    if (Array.isArray(val) && val.length){
+      const first = val[0]
+      if (typeof first === 'string') return first
+      if (first && typeof first === 'object' && first.url) return first.url
+    }
+    if (typeof val === 'object' && val.url) return val.url
+    return undefined
+  }
+  const directCandidates = [
+    'Thumbnail Image','thumbnailUrl','Thumbnail','Preview','Poster','Cover','Image','image','Still','Attachments'
+  ]
+  for (const name of directCandidates){
+    const u = firstUrlFrom(fields[name])
+    if (u) return u
+  }
   const muxPlaybackId = pickField(fields, ['Mux Playback ID','muxPlaybackId'])
   if (muxPlaybackId) return `https://image.mux.com/${muxPlaybackId}/thumbnail.jpg?width=1200&fit_mode=preserve` 
   const vimeo = pickField(fields, ['Vimeo','vimeo'])
   if (vimeo && typeof vimeo === 'string') return `https://vumbnail.com/${vimeo.replace(/.*\/([0-9]+).*/, '$1')}.jpg`
   return 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'
+}
+
+function derivePlaybackUrl(fields){
+  const url = pickField(fields, ['Playback URL','Video URL','Mux URL','muxUrl','playbackUrl'])
+  if (url) return url
+  const muxId = pickField(fields, ['Mux Playback ID','muxPlaybackId'])
+  if (muxId) return `https://stream.mux.com/${muxId}.m3u8`
+  const yt = pickField(fields, ['YouTube','youtube'])
+  if (yt) return yt
+  const vimeo = pickField(fields, ['Vimeo','vimeo'])
+  if (vimeo) return vimeo
+  return undefined
 }
 
 export function normalizeRecord(category, record){
@@ -47,6 +75,7 @@ export function normalizeRecord(category, record){
   const description = pickField(f, ['Description','Summary','Notes','About'])
   const url = pickField(f, ['URL','Link','Project URL','Live URL','Website'])
   const playbackUrl = pickField(f, ['Playback URL','Video URL','Video','Mux URL','Mux Playback URL'])
+    || derivePlaybackUrl(f)
   const client = pickField(f, ['Client','Company','Brand'])
   const techStack = pickField(f, ['Tech Stack','Stack','Technologies'])
   const uploadDate = pickField(f, ['UploadDate','Date','Published','Created'])
