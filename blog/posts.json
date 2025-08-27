@@ -1,5 +1,43 @@
 [
   {
+    "title": "How to Fix Halo Upload Blocking Issues When Working With Scripts or Technical Docs",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/how-to-fix-halo-upload-blocking-issues-when-working-with-scripts-or-technical-docs-2k0i",
+    "publishedAt": "2025-08-27T03:27:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Halo is a popular open-source content management and blogging platform. Some users have reported issues where Halo’s built-in security rules block certain upload or editing actions—especially when working with script files or technical documentation that requires PUT/POST requests to Halo’s APIs. This article explains what’s happening, why it occurs, and ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmfo2etxb0o1s5tvzcnb1.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "cybersecurity",
+      "safeline",
+      "webdev",
+      "beginners"
+    ],
+    "seoTitle": "How to Fix Halo Upload Blocking Issues When Working With Scripts or Technical Docs",
+    "seoDescription": "Halo is a popular open-source content management and blogging platform. Some users have reported issues where Halo’s built-in security rules block certain up..."
+  },
+  {
+    "title": "🚀 Just published: Nano Banana – AI-powered image and video generation with unmatched consistency. Discover how Google’s Nano Banana keeps every frame and edit perfectly aligned, from static images to multi-frame video. Perfect for creators exploring AR,",
+    "url": "https://dev.to/juddiy/just-published-nano-banana-ai-powered-image-and-video-generation-with-unmatched-58h8",
+    "publishedAt": "2025-08-27T03:07:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Nano Banana: From Image Consistency to High-Quality Video Generation Juddiy ・ Aug 27 #webdev #programming #ai #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1495887%2F79c06275-2768-4481-ac2a-0b36dc373392.jpg",
+    "video": null,
+    "author": "Juddiy",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "discuss"
+    ],
+    "seoTitle": "🚀 Just published: Nano Banana – AI-powered image and video generation with unmatched consistency. Discover how Google’s Nano Banana keeps every frame and edit perfectly aligned, from static images to multi-frame video. Perfect for creators exploring AR,",
+    "seoDescription": "Nano Banana: From Image Consistency to High-Quality Video Generation Juddiy ・ Aug 27 #webdev #programming #ai #discuss"
+  },
+  {
     "title": "AI-Powered Company Intelligence Bot: Real-Time Business Analysis with n8n and Bright Data",
     "url": "https://dev.to/depapp/ai-powered-company-intelligence-bot-real-time-business-analysis-with-n8n-and-bright-data-4787",
     "publishedAt": "2025-08-27T02:13:24.000Z",
@@ -87,25 +125,6 @@
     "seoDescription": "Microsoft president Brad Smith hosted an impromptu press conference on Tuesday afternoon, just hours after protesters gained access to a building at the comp..."
   },
   {
-    "title": "Applying SOLID Principles in Go",
-    "url": "https://dev.to/leapcell/applying-solid-principles-in-go-3l7i",
-    "publishedAt": "2025-08-26T23:54:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In software development, building maintainable, scalable, and robust code is the ultimate goal. The SOLID principles, proposed by Robert C. Martin (also known as Uncle Bob), provide a foundation for achieving this goal. How can these principles be applied to the Go programming language? Known for its simplicity and pragmatism, Go allows us to explore how ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe0e10vtcva1mgfpw5c1t.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "Applying SOLID Principles in Go",
-    "seoDescription": "In software development, building maintainable, scalable, and robust code is the ultimate goal. The SOLID principles, proposed by Robert C. Martin (also know..."
-  },
-  {
     "title": "Robert Altman Movies, Ranked",
     "url": "https://nofilmschool.com/best-robert-altman-movies",
     "publishedAt": "2025-08-26T23:22:21.000Z",
@@ -138,25 +157,6 @@
     ],
     "seoTitle": "Five Things to Expect From Apple's 'Awe Dropping' September 9 Event",
     "seoDescription": "Apple today announced its \"Awe Dropping\" iPhone-centric event, which is set to take place on Tuesday, September 9 at 10:00 a.m. Pacific Time. There are a lon..."
-  },
-  {
-    "title": "Me ajudou bastante",
-    "url": "https://dev.to/dev_king/me-ajudou-bastante-1nn0",
-    "publishedAt": "2025-08-26T23:07:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Clean Up Your React Code: How the Object Lookup Pattern Replaces Endless Ifs Werliton Silva ・ Aug 19 #webdev #react #beginners #programming",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F450483%2Feb166a12-3bfa-487f-aebd-a91d7c33a48a.png",
-    "video": null,
-    "author": "Dev King",
-    "tags": [
-      "webdev",
-      "react",
-      "beginners",
-      "programming"
-    ],
-    "seoTitle": "Me ajudou bastante",
-    "seoDescription": "Clean Up Your React Code: How the Object Lookup Pattern Replaces Endless Ifs Werliton Silva ・ Aug 19 #webdev #react #beginners #programming"
   },
   {
     "title": "15 Breathtaking Photos From the 61st Wildlife Photographer of the Year",
