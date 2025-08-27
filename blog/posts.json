@@ -1,5 +1,57 @@
 [
   {
+    "title": "Samsung is Unpacking again in early September",
+    "url": "https://www.theverge.com/news/767164/samsung-is-unpacking-again-in-early-september",
+    "publishedAt": "2025-08-27T23:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Maybe those little AI sparkles are bursting out of a trifold phone? Maybe? Apple isn’t the only tech company to send out launch event invitations this week. If you’re keeping score at home, September is actually next week somehow, and Samsung is sneaking a virtual Unpacked in on September 4th before Apple hosts its annual iPhone event the following week. ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/samsung_unpacked_sep2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Allison Johnson",
+    "tags": [],
+    "seoTitle": "Samsung is Unpacking again in early September",
+    "seoDescription": "Maybe those little AI sparkles are bursting out of a trifold phone? Maybe? Apple isn’t the only tech company to send out launch event invitations this week. ..."
+  },
+  {
+    "title": "Algoritmos en Python y astrología: conexión con amarres de amor",
+    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/algoritmos-en-python-y-astrologia-conexion-con-amarres-de-amor-39k7",
+    "publishedAt": "2025-08-27T22:43:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La programación en Python se ha consolidado como una de las herramientas más poderosas en el mundo moderno. Desde la inteligencia artificial hasta el análisis de datos, sus aplicaciones son prácticamente infinitas. Sin embargo, existe un terreno poco explorado en el que también puede tener un papel interesante: el mundo esotérico y espiritual, particularm...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1pe4b05hfebe6i86sna7.png",
+    "video": null,
+    "author": "Takeo Sartorius",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Algoritmos en Python y astrología: conexión con amarres de amor",
+    "seoDescription": "La programación en Python se ha consolidado como una de las herramientas más poderosas en el mundo moderno. Desde la inteligencia artificial hasta el análisi..."
+  },
+  {
+    "title": "Cómo usar Python Pandas para analizar casos de amarres de amor",
+    "url": "https://dev.to/karen_londres/como-usar-python-pandas-para-analizar-casos-de-amarres-de-amor-232k",
+    "publishedAt": "2025-08-27T22:21:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "En el mundo actual, la programación no solo se limita a la tecnología y a los negocios, también se puede aplicar en contextos culturales, sociales e incluso espirituales. En este artículo veremos cómo usar Python y la librería Pandas para organizar y analizar datos relacionados con los llamados amarres de amor. La idea no es validar científicamente estas ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffnbt4zt65yjl713skkgm.png",
+    "video": null,
+    "author": "Karen Londres",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Cómo usar Python Pandas para analizar casos de amarres de amor",
+    "seoDescription": "En el mundo actual, la programación no solo se limita a la tecnología y a los negocios, también se puede aplicar en contextos culturales, sociales e incluso ..."
+  },
+  {
     "title": "IDC nearly doubles worldwide smartphone forecast for 2025, cites ‘accelerated iOS growth’",
     "url": "https://9to5mac.com/2025/08/27/idc-nearly-doubles-worldwide-smartphone-forecast-for-2025-cites-accelerated-ios-growth/",
     "publishedAt": "2025-08-27T22:10:54.000Z",
@@ -308,25 +360,6 @@
     "seoDescription": "Our verified UPWORK Accounts are fully a ensuring secure transactions and protecting your funds. Whether for personal use or business, these accounts payment..."
   },
   {
-    "title": "IoT Integration for Smart Fence Lighting Systems",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/iot-integration-for-smart-fence-lighting-systems-45gj",
-    "publishedAt": "2025-08-27T20:32:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The concept of integrating IoT into our daily lives has grown exponentially over the last decade. From smart thermostats to connected doorbells, the Internet of Things is making our homes safer, more efficient, and much smarter. One of the latest applications gaining attention is the integration of IoT into fence lighting systems. By combining traditional...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxcelpm6rj8bttlaks740.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "IoT Integration for Smart Fence Lighting Systems",
-    "seoDescription": "The concept of integrating IoT into our daily lives has grown exponentially over the last decade. From smart thermostats to connected doorbells, the Internet..."
-  },
-  {
     "title": "New AirTag 2 is coming very soon with these rumored features",
     "url": "https://9to5mac.com/2025/08/27/new-airtag-2-is-coming-soon-with-these-rumored-features/",
     "publishedAt": "2025-08-27T20:15:12.000Z",
@@ -596,44 +629,5 @@
     ],
     "seoTitle": "Apple Blocks iTorrent App From EU Alternative App Marketplace",
     "seoDescription": "Apple is no longer allowing torrenting app iTorrent to be distributed via the AltStore Pal alternative app marketplace in the European Union, according to To..."
-  },
-  {
-    "title": "Indie Filmmakers Are Likely Going to Go Crazy About This New Affordable Prime Lens Line",
-    "url": "https://nofilmschool.com/dzofilm-vespid2-prime-lens-line",
-    "publishedAt": "2025-08-27T18:14:22.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When the DZOfilm Vespid Primes were first released in 2020, they introduced an image circle capable of covering the ARRI Alexa LF Open Gate, effectively covering large-format filmmaking. This was a significant development for filmmakers at the time, and it remains so today. The Vespid2 line of cinema prime lenses has been a long time coming, and many indi...",
-    "image": "https://nofilmschool.com/media-library/dzofilm-vespid2-prime-lens-line.jpg?id=61525014&width=980",
-    "video": "https://www.youtube.com/embed/mzTQeBjs85M?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Dzofilm",
-      "Vespid2",
-      "Prime lens line",
-      "Prime lenses",
-      "Dzofilm vespid2"
-    ],
-    "seoTitle": "Indie Filmmakers Are Likely Going to Go Crazy About This New Affordable Prime Lens Line",
-    "seoDescription": "When the DZOfilm Vespid Primes were first released in 2020, they introduced an image circle capable of covering the ARRI Alexa LF Open Gate, effectively cove..."
-  },
-  {
-    "title": "California Updates Its Tax Incentives To Keep Hollywood Here",
-    "url": "https://nofilmschool.com/california-updates-tax-incentives",
-    "publishedAt": "2025-08-27T18:09:19.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "We covered the $750 million in tax incentives that California doled out in order to try to keep film and TV production here. But when we did, we also talked about how this functioned more to lure new shows to stay here, because other shows had already left. So, what's happening with the incentives now, and are they actually working? The curtain has been p...",
-    "image": "https://nofilmschool.com/media-library/how-the-studio-shoots-complicated-oners-for-every-shot.jpg?id=59702656&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "California",
-      "Tax incentives",
-      "Hollywood",
-      "Industry"
-    ],
-    "seoTitle": "California Updates Its Tax Incentives To Keep Hollywood Here",
-    "seoDescription": "We covered the $750 million in tax incentives that California doled out in order to try to keep film and TV production here. But when we did, we also talked ..."
   }
 ]
