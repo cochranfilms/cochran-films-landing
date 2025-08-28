@@ -1,5 +1,297 @@
 [
   {
+    "title": "Better Sidekiq Classes",
+    "url": "https://dev.to/brazenbraden/better-sidekiq-classes-430b",
+    "publishedAt": "2025-08-28T22:12:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Sidekiq is pretty much the go-to solution for enqueuing jobs for background processing when working on a Ruby-based project. It's simple to implement, has a clear DSL, and is well-supported by common testing frameworks like RSpec. That being said, and I may be nitpicking, but the standard implementation examples do add a little extra overhead if you wish ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0qg0e63pe5tvzedbljf3.png",
+    "video": null,
+    "author": "Braden King",
+    "tags": [
+      "ruby",
+      "rails",
+      "webdev"
+    ],
+    "seoTitle": "Better Sidekiq Classes",
+    "seoDescription": "Sidekiq is pretty much the go-to solution for enqueuing jobs for background processing when working on a Ruby-based project. It's simple to implement, has a ..."
+  },
+  {
+    "title": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
+    "url": "https://nofilmschool.com/cutting-comedy-inside-the-edit-of-saturday-night-lives-50th-anniversary",
+    "publishedAt": "2025-08-28T22:05:08.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 50th Anniversary special. The episode features returning guest Ryan Spears—four-time Emmy nominee and Film Unit editor at SNL—joined by longtime collaborators Daniel Garcia and Paul Del Gesso. Together...",
+    "image": "https://nofilmschool.com/media-library/cutting-comedy-inside-the-edit-of-saturday-night-lives-50th-anniversary.webp?id=61531785&width=980",
+    "video": "https://playlist.megaphone.fm?e=NFS1940006855",
+    "author": "NFS Staff",
+    "tags": [
+      "No film school podcast",
+      "Podcast",
+      "Interviews",
+      "Saturday night live"
+    ],
+    "seoTitle": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
+    "seoDescription": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 5..."
+  },
+  {
+    "title": "Python in Image Recognition for Botox Results",
+    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-in-image-recognition-for-botox-results-39gb",
+    "publishedAt": "2025-08-28T22:00:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In recent years, artificial intelligence has played a key role in the image using Python to evaluate and track the results of cosmetic Traditionally, before-and-after pictures are compared visually, which For example, clinics offering Botox Elmwood Park services could Python provides an extensive ecosystem of libraries that make it a OpenCV: For image pro...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frieo07oi4km4oxb6upb5.png",
+    "video": null,
+    "author": "angelyn Muñoz",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python in Image Recognition for Botox Results",
+    "seoDescription": "In recent years, artificial intelligence has played a key role in the image using Python to evaluate and track the results of cosmetic Traditionally, before-..."
+  },
+  {
+    "title": "iOS 26: What's New With the Podcasts App",
+    "url": "https://www.macrumors.com/guide/ios-26-podcasts/",
+    "publishedAt": "2025-08-28T22:00:34.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "The Podcasts app didn't get as many iOS 26 updates as some of Apple's other apps, but there are some design changes and feature tweaks that are worth knowing about. Liquid Glass Like all of Apple's apps, the Podcasts app adopts the new Liquid Glass design language. UI elements have a glass-like, translucent look that let the background art shine through. ...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Podcasts-Glass-Feature.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured",
+      "iOS 26"
+    ],
+    "seoTitle": "iOS 26: What's New With the Podcasts App",
+    "seoDescription": "The Podcasts app didn't get as many iOS 26 updates as some of Apple's other apps, but there are some design changes and feature tweaks that are worth knowing..."
+  },
+  {
+    "title": "25 chunking tricks for RAG that devs actually use",
+    "url": "https://dev.to/dev_tips/25-chunking-tricks-for-rag-that-devs-actually-use-2ndg",
+    "publishedAt": "2025-08-28T21:53:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Not another theory-filled blog post just real chunking strategies that work (or blew up in testing). Chunking is the unsung hero of RAG pipelines. Done right, it makes your LLM feel sharp and reliable. Done wrong, it spits out hallucinations like “The Eiffel Tower is a vegetable.” This guide skips the fluff. No recycled diagrams. No “just use LangChain lo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AXhUpCjvm5FZhKzPblZrwlA.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "25 chunking tricks for RAG that devs actually use",
+    "seoDescription": "Not another theory-filled blog post just real chunking strategies that work (or blew up in testing). Chunking is the unsung hero of RAG pipelines. Done right..."
+  },
+  {
+    "title": "The first open AI coder that rivals Claude is here",
+    "url": "https://dev.to/dev_tips/the-first-open-ai-coder-that-rivals-claude-is-here-15bn",
+    "publishedAt": "2025-08-28T21:45:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Quen 3 Coder isn’t just another model it’s an agentic coding monster that might change the game for devs and AI labs alike. Programmers, you might want to sit down for this If you’ve been chilling comfortably under the warm blanket of Claude 4’s dominance in AI-assisted coding… wake up. A Chinese company just threw a firecracker under your office chair. A...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ALkVoiTYJwpfDQPWcCuUTEA.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "The first open AI coder that rivals Claude is here",
+    "seoDescription": "Quen 3 Coder isn’t just another model it’s an agentic coding monster that might change the game for devs and AI labs alike. Programmers, you might want to si..."
+  },
+  {
+    "title": "Introduction to Commitlint and Semantic Commits for Beginner Devs",
+    "url": "https://dev.to/werliton/introduction-to-commitlint-and-semantic-commits-for-beginner-devs-1ima",
+    "publishedAt": "2025-08-28T21:38:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Have you ever wondered why some development teams have super organized, easy-to-understand, and standardized commit messages? That’s thanks to semantic commits and tools like commitlint. In this article, I’ll show you how to start using these practices in your project with simple language and practical examples you can apply today. Semantic commits are co...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbzz95zawtq70zzjgf9cs.png",
+    "video": null,
+    "author": "Werliton Silva",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Introduction to Commitlint and Semantic Commits for Beginner Devs",
+    "seoDescription": "Have you ever wondered why some development teams have super organized, easy-to-understand, and standardized commit messages? That’s thanks to semantic commi..."
+  },
+  {
+    "title": "How I’d scale a side project to 1 million users (without melting my server)",
+    "url": "https://dev.to/dev_tips/how-id-scale-a-side-project-to-1-million-users-without-melting-my-server-gno",
+    "publishedAt": "2025-08-28T21:37:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A dev-friendly breakdown of what to build only when you need to skip the startup overengineering and scale like a sane person Let’s be real: most side projects never see more than your mom, your friend, and maybe a Reddit stranger. But every now and then your app blows up. Hacker News, Product Hunt, Twitter. Boom. Suddenly your cute little SQLite setup is...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2Az5KVqoMXVPzj3lRyGCuekA.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "ai",
+      "productivity",
+      "devops"
+    ],
+    "seoTitle": "How I’d scale a side project to 1 million users (without melting my server)",
+    "seoDescription": "A dev-friendly breakdown of what to build only when you need to skip the startup overengineering and scale like a sane person Let’s be real: most side projec..."
+  },
+  {
+    "title": "Debugging Login Forms: E2LLM (JSON Snapshots) Show the Hidden State",
+    "url": "https://dev.to/alexey_sokolov_10deecd763/debugging-login-forms-e2llm-json-snapshots-show-the-hidden-state-5361",
+    "publishedAt": "2025-08-28T21:34:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The Pain: When Login Buttons Don’t Work You open a login page. The UI looks fine: an email field, a “Continue” button, and several “Login with Google/Apple/GitHub” options. But the test fails. The “Continue” button doesn’t trigger, or one of the login options is disabled by a script. Selenium screenshots look normal, but QA can’t see what’s really happeni...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcli6hxqi559kyynvhtts.jpg",
+    "video": null,
+    "author": "Alechko",
+    "tags": [
+      "e2llm",
+      "webdev",
+      "qa",
+      "programming"
+    ],
+    "seoTitle": "Debugging Login Forms: E2LLM (JSON Snapshots) Show the Hidden State",
+    "seoDescription": "The Pain: When Login Buttons Don’t Work You open a login page. The UI looks fine: an email field, a “Continue” button, and several “Login with Google/Apple/G..."
+  },
+  {
+    "title": "Git rebase isn’t scary. You just never had it explained right",
+    "url": "https://dev.to/dev_tips/git-rebase-isnt-scary-you-just-never-had-it-explained-right-5fp0",
+    "publishedAt": "2025-08-28T21:32:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How rebasing actually works, when to use it, and why it’s not the villain in your Git history So you’ve mastered the holy trinity of git add, git commit, and git push. You even know the dark magic of git reset --hard, which you learned the hard way after erasing six hours of work because, “eh, staging looked weird.” Congrats, you’re officially Git dangero...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AQtH5lM-eCHH0hg4iD3JBfQ.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "ai",
+      "productivity",
+      "devops"
+    ],
+    "seoTitle": "Git rebase isn’t scary. You just never had it explained right",
+    "seoDescription": "How rebasing actually works, when to use it, and why it’s not the villain in your Git history So you’ve mastered the holy trinity of git add, git commit, and..."
+  },
+  {
+    "title": "Incogni deletes your family’s private info from the internet – here’s why that matters",
+    "url": "https://9to5mac.com/2025/08/28/incogni-deletes-your-familys-private-info-from-the-internet-heres-why-that-matters/",
+    "publishedAt": "2025-08-28T21:30:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "In today’s world, everyone needs to have dozens, if not hundreds of different online accounts to keep up with their everyday life. That’s a lot of potentially sensitive data in the hands of tons of different companies – and it’s easy to not think about that. You and your family’s data is incredibly valuable to data brokers, but it isn’t too difficult to p...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/1600x900-with-Logo.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Sponsored Post",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Incogni deletes your family’s private info from the internet – here’s why that matters",
+    "seoDescription": "In today’s world, everyone needs to have dozens, if not hundreds of different online accounts to keep up with their everyday life. That’s a lot of potentiall..."
+  },
+  {
+    "title": "This iMac G3 LEGO idea is as unlikely to get approved as it is awesome",
+    "url": "https://9to5mac.com/2025/08/28/this-imac-g3-lego-idea-is-as-unlikely-to-get-approved-as-it-is-awesome/",
+    "publishedAt": "2025-08-28T21:29:22.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Every once in a while, an Apple-related project gets submitted to LEGO’s Product Ideas page. Just recently, the LEGO Apple Store concept quickly blew past the 10,000-vote threshold needed to enter official review. Now, a new submission is making the rounds, and it is pretty cool. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/lego-imac-g3.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "This iMac G3 LEGO idea is as unlikely to get approved as it is awesome",
+    "seoDescription": "Every once in a while, an Apple-related project gets submitted to LEGO’s Product Ideas page. Just recently, the LEGO Apple Store concept quickly blew past th..."
+  },
+  {
+    "title": "Next.js 16: The real dirt behind the hype",
+    "url": "https://dev.to/dev_tips/nextjs-16-the-real-dirt-behind-the-hype-33on",
+    "publishedAt": "2025-08-28T21:28:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What’s in 15.4, what’s landing in 16, and what’s still missing What 15.4 gave us (and why 16 matters) Next.js 15.4 landed quietly in July 2025, but it laid serious groundwork: Turbopack was locked in with full test coverage, cacheComponents entered beta to unify Next's confusing caching behaviors, and new devtools started peeking through. There were also ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2Aq14FS_xso5EaOtP7yK2rJA.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devops"
+    ],
+    "seoTitle": "Next.js 16: The real dirt behind the hype",
+    "seoDescription": "What’s in 15.4, what’s landing in 16, and what’s still missing What 15.4 gave us (and why 16 matters) Next.js 15.4 landed quietly in July 2025, but it laid s..."
+  },
+  {
+    "title": "It Kinde of works: Part 2 of many",
+    "url": "https://dev.to/kinde/it-kinde-of-works-part-2-of-many-2mc4",
+    "publishedAt": "2025-08-28T21:23:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The Kinde of posts are to highlight how Kinde's authentication can be used in fun and unproductive ways. This series will step through things like using our starter kits, workflows, properties, feature flags, custom UI, and a bunch of other features. The demo website has no real purpose, but we're going to try and get you to like and subscribe to our the ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzosfk6b7qz2r87i7v04a.png",
+    "video": null,
+    "author": "Alex Norman",
+    "tags": [
+      "kinde",
+      "authentication",
+      "webdev",
+      "sideprojects"
+    ],
+    "seoTitle": "It Kinde of works: Part 2 of many",
+    "seoDescription": "The Kinde of posts are to highlight how Kinde's authentication can be used in fun and unproductive ways. This series will step through things like using our ..."
+  },
+  {
+    "title": "\"What We’re Doing Is Not a Scorsese Restoration\": Behind the Curtain of the AI-Enhanced 'Oz'",
+    "url": "https://nofilmschool.com/ai-enhanced-oz",
+    "publishedAt": "2025-08-28T21:20:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Hold on to your slippers, Dorothy. You're not in Kansas anymore. Now you're in Las Vegas, on a 160,000-square-foot wall of LED panels in 16K. The original filmmakers in 1939 likely would have never dreamed of screening in such a setting. It's being called \"one of the most significant partnerships between a studio and technology company to use artificial i...",
+    "image": "https://nofilmschool.com/media-library/why-is-everyone-pissed-about-the-wizard-of-oz-at-the-sphere.jpg?id=34050755&width=980",
+    "video": "https://www.youtube.com/embed/0gpwcaNyIrY?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Ai",
+      "Artificial intelligence",
+      "Upscaling",
+      "16k",
+      "Sphere",
+      "Las vegas",
+      "Wizard of oz"
+    ],
+    "seoTitle": "\"What We’re Doing Is Not a Scorsese Restoration\": Behind the Curtain of the AI-Enhanced 'Oz'",
+    "seoDescription": "Hold on to your slippers, Dorothy. You're not in Kansas anymore. Now you're in Las Vegas, on a 160,000-square-foot wall of LED panels in 16K. The original fi..."
+  },
+  {
+    "title": "Microsoft AI launches its first in-house models",
+    "url": "https://www.theverge.com/news/767809/microsoft-in-house-ai-models-launch-openai",
+    "publishedAt": "2025-08-28T21:13:04.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Microsoft’s AI division announced its first homegrown AI models on Thursday: MAI-Voice-1 AI and MAI-1-preview. The company says its new MAI-Voice-1 speech model can generate a minute’s worth of audio in under one second on just one GPU, while MAI-1-preview “offers a glimpse of future offerings inside Copilot.” Microsoft already uses MA1-Voice-1 to power a...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK095_Microsoft_04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Microsoft AI launches its first in-house models",
+    "seoDescription": "Microsoft’s AI division announced its first homegrown AI models on Thursday: MAI-Voice-1 AI and MAI-1-preview. The company says its new MAI-Voice-1 speech mo..."
+  },
+  {
     "title": "Lighting Doesn’t Have to Be Difficult For Content Creators With These Easy-to-Use LED Panels",
     "url": "https://nofilmschool.com/nanlite-miro-round-panel-lights",
     "publishedAt": "2025-08-28T21:10:04.000Z",
@@ -63,62 +355,6 @@
     "seoDescription": "I'm a silent film fan who grew up with the films of Charlie Chaplin and Buster Keaton, so I've always been fascinated by cinema's ability to tell stories wit..."
   },
   {
-    "title": "You don’t need 20 tools. Just use Postgres (seriously!)",
-    "url": "https://dev.to/dev_tips/you-dont-need-20-tools-just-use-postgres-seriously-4be7",
-    "publishedAt": "2025-08-28T20:53:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "One boring old SQL database might be the best backend in 2025. Modern web development feels like building IKEA furniture with 15 screwdrivers, none of which fit. You want to ship a simple app a dashboard, a chat tool, a personal project. Suddenly, you’re spinning up Redis for caching, Elasticsearch for search, Firebase for real-time sync, cron jobs with s...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AvepIjm2OZCh_ffY1qLTV_A.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "postgres",
-      "devops",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "You don’t need 20 tools. Just use Postgres (seriously!)",
-    "seoDescription": "One boring old SQL database might be the best backend in 2025. Modern web development feels like building IKEA furniture with 15 screwdrivers, none of which ..."
-  },
-  {
-    "title": "Automate like a boss: how I used n8n, Docker, and AI to build my lazy dev stack",
-    "url": "https://dev.to/dev_tips/automate-like-a-boss-how-i-used-n8n-docker-and-ai-to-build-my-lazy-dev-stack-4e1m",
-    "publishedAt": "2025-08-28T20:41:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The automation itch every dev gets I didn’t plan to automate my life. It started with a single annoying task copying Twitter DMs into Notion. Felt dumb. Repetitive. Manual. It was the kind of thing a script should do while I eat noodles and pretend I’m productive. Fast-forward a weekend and I had an entire AI-powered workflow stack: n8n doing the orchestr...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ATcZygICinLOOxKYpd8swNw.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "docker",
-      "ai",
-      "devops",
-      "webdev"
-    ],
-    "seoTitle": "Automate like a boss: how I used n8n, Docker, and AI to build my lazy dev stack",
-    "seoDescription": "The automation itch every dev gets I didn’t plan to automate my life. It started with a single annoying task copying Twitter DMs into Notion. Felt dumb. Repe..."
-  },
-  {
-    "title": "Elite Limo: Premium Car & Limo Services in New York, Hamptons, and Fire Island",
-    "url": "https://dev.to/chaudry_hamza_75b900b6bbb/elite-limo-premium-car-limo-services-in-new-york-hamptons-and-fire-island-56km",
-    "publishedAt": "2025-08-28T20:37:21.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Traveling in New York can be both exciting and overwhelming. From bustling city streets to the quiet escape of the Hamptons and the laid-back vibe of Fire Island, every destination demands reliable and comfortable transportation. That’s where Elite Limo comes in. Elite Limo has established itself as one of New York’s most trusted luxury transportation pro...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn73afr5u524uf3vca7rw.jpg",
-    "video": null,
-    "author": "chaudry Hamza",
-    "tags": [
-      "travel",
-      "car",
-      "webdev"
-    ],
-    "seoTitle": "Elite Limo: Premium Car & Limo Services in New York, Hamptons, and Fire Island",
-    "seoDescription": "Traveling in New York can be both exciting and overwhelming. From bustling city streets to the quiet escape of the Hamptons and the laid-back vibe of Fire Is..."
-  },
-  {
     "title": "Threads is testing long-form posts with support for formatted text",
     "url": "https://9to5mac.com/2025/08/28/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
     "publishedAt": "2025-08-28T20:29:29.000Z",
@@ -133,25 +369,6 @@
     ],
     "seoTitle": "Threads is testing long-form posts with support for formatted text",
     "seoDescription": "While Threads already allows up to 500 characters per post (which is more than enough for casual users used to the microblogging format), it is now testing s..."
-  },
-  {
-    "title": "The SharePoint exploit that breached U.S. Nuke Systems (and why devs should care)",
-    "url": "https://dev.to/dev_tips/the-sharepoint-exploit-that-breached-us-nuke-systems-and-why-devs-should-care-10dc",
-    "publishedAt": "2025-08-28T20:25:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What a deserialization bug, a missing trust boundary, and some ancient .NET code can teach us about secure system design. ☢️ Wait, what? In one of the most “you can’t make this up” security stories of the year, in July 2025, a vulnerability in Microsoft SharePoint, yes, SharePoint, led to unauthorized access to none other than the U.S. nuclear security ag...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1%2AV2FJT1B4-Kt1nG1SyMOkHQ.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "cybersecurity",
-      "ai"
-    ],
-    "seoTitle": "The SharePoint exploit that breached U.S. Nuke Systems (and why devs should care)",
-    "seoDescription": "What a deserialization bug, a missing trust boundary, and some ancient .NET code can teach us about secure system design. ☢️ Wait, what? In one of the most “..."
   },
   {
     "title": "Photographer Tells the Stories of the People Behind the Headlines",
@@ -174,25 +391,6 @@
     ],
     "seoTitle": "Photographer Tells the Stories of the People Behind the Headlines",
     "seoDescription": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine..."
-  },
-  {
-    "title": "7 open-source MCP servers that make AI agents actually learn stuff",
-    "url": "https://dev.to/dev_tips/7-open-source-mcp-servers-that-make-ai-agents-actually-learn-stuff-4bch",
-    "publishedAt": "2025-08-28T20:10:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Forget robots the smartest AIs are grinding skills in block-based sandboxes with full control AI agents don’t need robot arms or fancy sensors to learn sometimes, all they need is a sandbox world made of blocks and a good server. MCP (short for Minecraft Control Panel, though nobody calls it that anymore) has quietly become a go-to playground for training...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2An44qFqZTYhNyd7xUb3u8eg.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "opensource",
-      "ai"
-    ],
-    "seoTitle": "7 open-source MCP servers that make AI agents actually learn stuff",
-    "seoDescription": "Forget robots the smartest AIs are grinding skills in block-based sandboxes with full control AI agents don’t need robot arms or fancy sensors to learn somet..."
   },
   {
     "title": "Are you hoping for a live iPhone event on September 9? [Poll]",
@@ -247,25 +445,6 @@
     ],
     "seoTitle": "You’re a Photographer Trapped Between Worlds in This New Video Game Adventure",
     "seoDescription": "A new adventure game is set to arrive this fall that will put players in the shoes of a former photographer stuck in a fantasy world. The only way to return ..."
-  },
-  {
-    "title": "Desarrollo de un software en Python para interpretar compatibilidad en amarres de amor",
-    "url": "https://dev.to/rafael_ramirez_233e181cf9/desarrollo-de-un-software-en-python-para-interpretar-compatibilidad-en-amarres-de-amor-1i0b",
-    "publishedAt": "2025-08-28T19:37:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En la era digital, cada vez es más común ver cómo la tecnología se une Este tipo de herramientas no buscan reemplazar las prácticas Python es uno de los lenguajes de programación más utilizados en el A través de un software en Python se pueden procesar elementos como: Fechas de nacimiento (para cálculos numerológicos o astrológicos).\\ Nombres y letras (pa...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx00zlusb818jxktds4u0.png",
-    "video": null,
-    "author": "RAFAEL RAMIREZ",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Desarrollo de un software en Python para interpretar compatibilidad en amarres de amor",
-    "seoDescription": "En la era digital, cada vez es más común ver cómo la tecnología se une Este tipo de herramientas no buscan reemplazar las prácticas Python es uno de los leng..."
   },
   {
     "title": "Sometimes, You Can’t Fix a Broken Camera (But You Should Still Try)",
@@ -466,190 +645,5 @@
     ],
     "seoTitle": "3 Big Screenwriting Lessons From 'The Office'",
     "seoDescription": "When I settle in for the night and need a show that just makes me laugh, I'll put on The Office. It was the perfect sitcom, one that lasted a while with the ..."
-  },
-  {
-    "title": "Apple Releases Xcode 26 Beta 7 With GPT-5 Support and Claude Integration",
-    "url": "https://www.macrumors.com/2025/08/28/xcode-gpt-5-claude-integration/",
-    "publishedAt": "2025-08-28T17:54:44.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today released the latest version of Xcode 26, introducing several new features that developers can take advantage of. ChatGPT in Xcode now supports GPT-5, so developers can choose to start new conversations with GPT-5 or GPT-4.1. GPT-5 is the new default option, with two models to select from. GPT-5 is optimized for quick, high-quality results that...",
-    "image": "https://images.macrumors.com/article-new/2021/04/apple-developer-app-feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Xcode"
-    ],
-    "seoTitle": "Apple Releases Xcode 26 Beta 7 With GPT-5 Support and Claude Integration",
-    "seoDescription": "Apple today released the latest version of Xcode 26, introducing several new features that developers can take advantage of. ChatGPT in Xcode now supports GP..."
-  },
-  {
-    "title": "Anthropic Will Now Train Claude on Your Chats, Here's How to Opt Out",
-    "url": "https://www.macrumors.com/2025/08/28/anthropic-claude-chat-training/",
-    "publishedAt": "2025-08-28T17:46:43.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Anthropic announced today that it is changing its Consumer Terms and Privacy Policy, with plans to train its AI chatbot Claude with user data. New users will be able to opt out at signup. Existing users will receive a popup that allows them to opt out of Anthropic using their data for AI training purposes. The popup is labeled \"Updates to Consumer Terms a...",
-    "image": "https://images.macrumors.com/article-new/2025/08/anthropic-data-collection.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Anthropic"
-    ],
-    "seoTitle": "Anthropic Will Now Train Claude on Your Chats, Here's How to Opt Out",
-    "seoDescription": "Anthropic announced today that it is changing its Consumer Terms and Privacy Policy, with plans to train its AI chatbot Claude with user data. New users will..."
-  },
-  {
-    "title": "Get a New Perspective For Your Shots With This Unique AstrHori Fisheye Lens",
-    "url": "https://nofilmschool.com/astrhori-fisheye-lens",
-    "publishedAt": "2025-08-28T17:43:38.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Who doesn’t love a good fisheye lens? A staple of early 2000s-era music videos, the ultra-wide look is back with many ironic—and even sincere—directors and filmmakers, as the fisheye look is always going to be unique and challenging. Fisheye can also be fun to shoot, so having an affordable, yet highly capable fisheye lens to keep in your bag is also usua...",
-    "image": "https://nofilmschool.com/media-library/astrhori-6mm-f-2-8-fisheye-lens.jpg?id=61529945&width=980",
-    "video": "https://www.youtube.com/embed/ZbJo_gKKKZE?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Astrhori",
-      "Fisheye lens",
-      "Fisheye",
-      "Astrhori 6mm f2.8 fisheye lens"
-    ],
-    "seoTitle": "Get a New Perspective For Your Shots With This Unique AstrHori Fisheye Lens",
-    "seoDescription": "Who doesn’t love a good fisheye lens? A staple of early 2000s-era music videos, the ultra-wide look is back with many ironic—and even sincere—directors and f..."
-  },
-  {
-    "title": "Apple Watch Ultra 3’s software might be another reason to upgrade from Ultra 1",
-    "url": "https://9to5mac.com/2025/08/28/apple-watch-ultra-3s-software-might-be-another-reason-to-upgrade-from-ultra-1/",
-    "publishedAt": "2025-08-28T17:43:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Two years after its predecessor launched, Apple Watch Ultra 3 is almost here. And in addition to the array of hardware upgrades coming, the Ultra 3 could also push Ultra 1 owners to upgrade with a variety of software features. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2022/09/Apple-Watch-Ultra-Release.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple Watch Ultra 3’s software might be another reason to upgrade from Ultra 1",
-    "seoDescription": "Two years after its predecessor launched, Apple Watch Ultra 3 is almost here. And in addition to the array of hardware upgrades coming, the Ultra 3 could als..."
-  },
-  {
-    "title": "The Broncolor Stelos 800 L Strobe Uses Universal V-Mount Batteries",
-    "url": "https://petapixel.com/2025/08/28/the-broncolor-stelos-800-l-strobe-uses-universal-v-mount-batteries/",
-    "publishedAt": "2025-08-28T17:39:16.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Broncolor has announced the Stelos 800 L, a high-end, battery-powered, location monobloc strobe that packs 800Ws of power and supports high speed sync. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/The-Broncolor-Stelos-800-L-Strobe-Uses-Universal-V-Mount-Batteries.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Equipment",
-      "Lighting",
-      "News",
-      "batterystrobe",
-      "broncolor",
-      "broncolorstelos",
-      "broncolorstelos800L",
-      "stelos"
-    ],
-    "seoTitle": "The Broncolor Stelos 800 L Strobe Uses Universal V-Mount Batteries",
-    "seoDescription": "Broncolor has announced the Stelos 800 L, a high-end, battery-powered, location monobloc strobe that packs 800Ws of power and supports high speed sync. [Read..."
-  },
-  {
-    "title": "Unpacking Chloe Zhao's Poignant Remarks on Making a Movie With No Limitations",
-    "url": "https://nofilmschool.com/chloe-zhaos-limitations",
-    "publishedAt": "2025-08-28T17:36:31.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Chloe Zhao is one of the most thoughtful directors. She really puts a lot of care into her shots and into her characters. I was so excited to see the trailer for her new film, Hamnet, which looks like a return to form. - YouTube www.youtube.com Previously, she spent some time in the Marvel world after an indie film, where she had a lot of money to make an...",
-    "image": "https://nofilmschool.com/media-library/unpacking-chloe-zhao-s-poignant-remarks-on-making-a-movie-with-no-limitations.jpg?id=61530415&width=980",
-    "video": "https://www.youtube.com/embed/E2xtmPkuksA?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Eternals",
-      "Marvel",
-      "Hamnet",
-      "Chloe zhao",
-      "Budget"
-    ],
-    "seoTitle": "Unpacking Chloe Zhao's Poignant Remarks on Making a Movie With No Limitations",
-    "seoDescription": "Chloe Zhao is one of the most thoughtful directors. She really puts a lot of care into her shots and into her characters. I was so excited to see the trailer..."
-  },
-  {
-    "title": "GM’s new adapters reflect the increasingly confused reality of EV charging",
-    "url": "https://www.theverge.com/electric-cars/767535/gms-new-adapters-reflect-increasingly-confused-world-ev-charging",
-    "publishedAt": "2025-08-28T17:25:33.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Look, I sympathize. When General Motors said it would adopt Tesla’s North American Charging Standard (NACS) for its electric vehicles back in 2023, we knew this meant adapters. But we never could have imagined how many adapters we would get. Today, GM announced three additional adapters to help EV owners charge at home or in public. And while I’m sure tha...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24533944/STK437_Electric_Vehicle_charge_EV.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew J. Hawkins",
-    "tags": [],
-    "seoTitle": "GM’s new adapters reflect the increasingly confused reality of EV charging",
-    "seoDescription": "Look, I sympathize. When General Motors said it would adopt Tesla’s North American Charging Standard (NACS) for its electric vehicles back in 2023, we knew t..."
-  },
-  {
-    "title": "The Panasonic S1 II Is Secretly a Groundbreaking Full-Frame Camera",
-    "url": "https://petapixel.com/2025/08/28/why-is-the-panasonic-s1-iis-dynamic-range-so-darn-good/",
-    "publishedAt": "2025-08-28T17:25:11.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The Panasonic Lumix S1 II is the first full-frame hybrid camera to employ Dual Gain Output (DGO), significantly improving its dynamic range performance in certain photographic situations. But for some reason, Panasonic didn't tell anyone about this when it launched the camera. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/07/lumix-s1-ii-front.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "News",
-      "Technology",
-      "dgo",
-      "dr",
-      "dualgainoutput",
-      "dynamicrange",
-      "hdr"
-    ],
-    "seoTitle": "The Panasonic S1 II Is Secretly a Groundbreaking Full-Frame Camera",
-    "seoDescription": "The Panasonic Lumix S1 II is the first full-frame hybrid camera to employ Dual Gain Output (DGO), significantly improving its dynamic range performance in ce..."
-  },
-  {
-    "title": "This New Sigma Lens is Too Popular As Company Apologizes For Shipping Delays",
-    "url": "https://nofilmschool.com/sigma-200mm-shipping-delays",
-    "publishedAt": "2025-08-28T17:17:32.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "You know companies love to do this, but when you have a victory lap to take—take it! Sigma has issued an apology post regarding the supply status of the new Sigma 200mm f/2 DG OS Sports lens, which was announced just a few weeks ago. As the world’s first 200mm f/2 telephoto prime lens for full-frame mirrorless cameras, the Sigma 200mm f/2 DG OS Sports cer...",
-    "image": "https://nofilmschool.com/media-library/sigma-200mm-shipping-delays.jpg?id=61530024&width=980",
-    "video": "https://www.youtube.com/embed/g1FL4freiVc?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Sigma",
-      "Sigma 200mm",
-      "Telephoto lens",
-      "Telephoto prime",
-      "Sigma 200mm f2 dg og sports lens"
-    ],
-    "seoTitle": "This New Sigma Lens is Too Popular As Company Apologizes For Shipping Delays",
-    "seoDescription": "You know companies love to do this, but when you have a victory lap to take—take it! Sigma has issued an apology post regarding the supply status of the new ..."
-  },
-  {
-    "title": "Dissecting the Best Gus Van Sant Movies",
-    "url": "https://nofilmschool.com/best-gus-van-sant-movies",
-    "publishedAt": "2025-08-28T17:12:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Very few directors have the ability to make incredibly personal indie movies alongside Hollywood studio fare. And Gus Van Sant is a guy who does both and injects his voice and point of view at every level. Today, I want to go over ten of his movies I really dig, and talk about what makes them special. Let's dive in. 1. Good Will Hunting (1997) I think thi...",
-    "image": "https://nofilmschool.com/media-library/dissecting-the-best-gus-van-sant-movies.jpg?id=34884141&width=980",
-    "video": "https://www.youtube.com/embed/ReIJ1lbL-Q8?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Gus van sant",
-      "Gus van sant"
-    ],
-    "seoTitle": "Dissecting the Best Gus Van Sant Movies",
-    "seoDescription": "Very few directors have the ability to make incredibly personal indie movies alongside Hollywood studio fare. And Gus Van Sant is a guy who does both and inj..."
   }
 ]
