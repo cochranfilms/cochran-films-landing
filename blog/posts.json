@@ -1,5 +1,181 @@
 [
   {
+    "title": "Lighting Doesn’t Have to Be Difficult For Content Creators With These Easy-to-Use LED Panels",
+    "url": "https://nofilmschool.com/nanlite-miro-round-panel-lights",
+    "publishedAt": "2025-08-28T21:10:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Yes, lighting for video can be hard work. If it weren’t hard, everyone would do it all the time, and all content would look cinematic and awesome. Instead, lighting requires patience and a keen eye for detail. It also, you know, requires lights. If you’re a content creator or super-DIY filmmaker looking for lighting options on a budget and with tight time...",
+    "image": "https://nofilmschool.com/media-library/nanlite-miro-round-panel-lights.jpg?id=61529919&width=980",
+    "video": "https://www.youtube.com/embed/-S6msyYTz1s?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Nanlite",
+      "Nanlite miro",
+      "Round panel lights",
+      "Led lights",
+      "Panel lights",
+      "Nanlite miro round panel lights"
+    ],
+    "seoTitle": "Lighting Doesn’t Have to Be Difficult For Content Creators With These Easy-to-Use LED Panels",
+    "seoDescription": "Yes, lighting for video can be hard work. If it weren’t hard, everyone would do it all the time, and all content would look cinematic and awesome. Instead, l..."
+  },
+  {
+    "title": "DJI’s US Retail Presence Has Become Very Confusing",
+    "url": "https://petapixel.com/2025/08/28/djis-us-retail-presence-has-become-very-confusing/",
+    "publishedAt": "2025-08-28T21:06:25.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "DJI announced the Mic 3 this morning, and, like with DJI's last few launches, the retail situation in the United States is a confusing mess. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/DJIs-US-Retail-Presence-Is-Confusing.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "Industry",
+      "News",
+      "adorama",
+      "amazon",
+      "bhphoto",
+      "dji",
+      "djimic3"
+    ],
+    "seoTitle": "DJI’s US Retail Presence Has Become Very Confusing",
+    "seoDescription": "DJI announced the Mic 3 this morning, and, like with DJI's last few launches, the retail situation in the United States is a confusing mess. [Read More]"
+  },
+  {
+    "title": "5 Action Films with Almost No Dialogue—And Why They Work",
+    "url": "https://nofilmschool.com/action-films-no-dialogue",
+    "publishedAt": "2025-08-28T20:55:46.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "I'm a silent film fan who grew up with the films of Charlie Chaplin and Buster Keaton, so I've always been fascinated by cinema's ability to tell stories without words. But there's something particularly striking about modern action films that choose silence over exposition. When you strip away dialogue, it forces the audience to focus more on what the fi...",
+    "image": "https://nofilmschool.com/media-library/5-action-films-with-almost-no-dialogue-and-why-they-work.webp?id=61531648&width=980",
+    "video": "https://www.youtube.com/embed/no1rl9Gvx-s?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Directing",
+      "Dialogue",
+      "Action films",
+      "Screenwriting"
+    ],
+    "seoTitle": "5 Action Films with Almost No Dialogue—And Why They Work",
+    "seoDescription": "I'm a silent film fan who grew up with the films of Charlie Chaplin and Buster Keaton, so I've always been fascinated by cinema's ability to tell stories wit..."
+  },
+  {
+    "title": "You don’t need 20 tools. Just use Postgres (seriously!)",
+    "url": "https://dev.to/dev_tips/you-dont-need-20-tools-just-use-postgres-seriously-4be7",
+    "publishedAt": "2025-08-28T20:53:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "One boring old SQL database might be the best backend in 2025. Modern web development feels like building IKEA furniture with 15 screwdrivers, none of which fit. You want to ship a simple app a dashboard, a chat tool, a personal project. Suddenly, you’re spinning up Redis for caching, Elasticsearch for search, Firebase for real-time sync, cron jobs with s...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AvepIjm2OZCh_ffY1qLTV_A.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "postgres",
+      "devops",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "You don’t need 20 tools. Just use Postgres (seriously!)",
+    "seoDescription": "One boring old SQL database might be the best backend in 2025. Modern web development feels like building IKEA furniture with 15 screwdrivers, none of which ..."
+  },
+  {
+    "title": "Automate like a boss: how I used n8n, Docker, and AI to build my lazy dev stack",
+    "url": "https://dev.to/dev_tips/automate-like-a-boss-how-i-used-n8n-docker-and-ai-to-build-my-lazy-dev-stack-4e1m",
+    "publishedAt": "2025-08-28T20:41:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The automation itch every dev gets I didn’t plan to automate my life. It started with a single annoying task copying Twitter DMs into Notion. Felt dumb. Repetitive. Manual. It was the kind of thing a script should do while I eat noodles and pretend I’m productive. Fast-forward a weekend and I had an entire AI-powered workflow stack: n8n doing the orchestr...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ATcZygICinLOOxKYpd8swNw.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "docker",
+      "ai",
+      "devops",
+      "webdev"
+    ],
+    "seoTitle": "Automate like a boss: how I used n8n, Docker, and AI to build my lazy dev stack",
+    "seoDescription": "The automation itch every dev gets I didn’t plan to automate my life. It started with a single annoying task copying Twitter DMs into Notion. Felt dumb. Repe..."
+  },
+  {
+    "title": "Elite Limo: Premium Car & Limo Services in New York, Hamptons, and Fire Island",
+    "url": "https://dev.to/chaudry_hamza_75b900b6bbb/elite-limo-premium-car-limo-services-in-new-york-hamptons-and-fire-island-56km",
+    "publishedAt": "2025-08-28T20:37:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Traveling in New York can be both exciting and overwhelming. From bustling city streets to the quiet escape of the Hamptons and the laid-back vibe of Fire Island, every destination demands reliable and comfortable transportation. That’s where Elite Limo comes in. Elite Limo has established itself as one of New York’s most trusted luxury transportation pro...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn73afr5u524uf3vca7rw.jpg",
+    "video": null,
+    "author": "chaudry Hamza",
+    "tags": [
+      "travel",
+      "car",
+      "webdev"
+    ],
+    "seoTitle": "Elite Limo: Premium Car & Limo Services in New York, Hamptons, and Fire Island",
+    "seoDescription": "Traveling in New York can be both exciting and overwhelming. From bustling city streets to the quiet escape of the Hamptons and the laid-back vibe of Fire Is..."
+  },
+  {
+    "title": "Threads is testing long-form posts with support for formatted text",
+    "url": "https://9to5mac.com/2025/08/28/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
+    "publishedAt": "2025-08-28T20:29:29.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "While Threads already allows up to 500 characters per post (which is more than enough for casual users used to the microblogging format), it is now testing support for long-form posts through “text attachments”. Here’s how it works. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/08/Cross-post-from-Instagram-and-Facebook-to-Threads.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Threads is testing long-form posts with support for formatted text",
+    "seoDescription": "While Threads already allows up to 500 characters per post (which is more than enough for casual users used to the microblogging format), it is now testing s..."
+  },
+  {
+    "title": "The SharePoint exploit that breached U.S. Nuke Systems (and why devs should care)",
+    "url": "https://dev.to/dev_tips/the-sharepoint-exploit-that-breached-us-nuke-systems-and-why-devs-should-care-10dc",
+    "publishedAt": "2025-08-28T20:25:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What a deserialization bug, a missing trust boundary, and some ancient .NET code can teach us about secure system design. ☢️ Wait, what? In one of the most “you can’t make this up” security stories of the year, in July 2025, a vulnerability in Microsoft SharePoint, yes, SharePoint, led to unauthorized access to none other than the U.S. nuclear security ag...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1%2AV2FJT1B4-Kt1nG1SyMOkHQ.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "cybersecurity",
+      "ai"
+    ],
+    "seoTitle": "The SharePoint exploit that breached U.S. Nuke Systems (and why devs should care)",
+    "seoDescription": "What a deserialization bug, a missing trust boundary, and some ancient .NET code can teach us about secure system design. ☢️ Wait, what? In one of the most “..."
+  },
+  {
+    "title": "Photographer Tells the Stories of the People Behind the Headlines",
+    "url": "https://petapixel.com/2025/08/28/photographer-tells-the-stories-of-the-people-behind-the-headlines/",
+    "publishedAt": "2025-08-28T20:19:19.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine art. Through his lens, he aspires to capture life with unerring honesty. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Spotlight-Michael-McWeeney-PetaPixel-BG-3-Panel.jpg",
+    "video": null,
+    "author": "Kate Garibaldi",
+    "tags": [
+      "Inspiration",
+      "Interviews",
+      "Spotlight",
+      "dailylife",
+      "documentary",
+      "michaelmcweeny",
+      "myemptyespresso"
+    ],
+    "seoTitle": "Photographer Tells the Stories of the People Behind the Headlines",
+    "seoDescription": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine..."
+  },
+  {
     "title": "7 open-source MCP servers that make AI agents actually learn stuff",
     "url": "https://dev.to/dev_tips/7-open-source-mcp-servers-that-make-ai-agents-actually-learn-stuff-4bch",
     "publishedAt": "2025-08-28T20:10:26.000Z",
@@ -186,25 +362,6 @@
     "seoDescription": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build...."
   },
   {
-    "title": "Backend downtime during a demo",
-    "url": "https://dev.to/arranstrange/backend-downtime-during-a-demo-5ff9",
-    "publishedAt": "2025-08-28T18:44:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I had a demo ruined by backend downtime. I was demoing my Little Black Book app — a React and Express project for storing, adding, amending, deleting, sharing etc. cocktail recipes. The frontend was loading fine, but when I tried to fetch the list of drinks from the API, the request just froze. No response. No errors. Just dead air. The worst part was I k...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0umhtuv51ruiebo4xamy.png",
-    "video": null,
-    "author": "Arran",
-    "tags": [
-      "uptime",
-      "backend",
-      "interview",
-      "webdev"
-    ],
-    "seoTitle": "Backend downtime during a demo",
-    "seoDescription": "I had a demo ruined by backend downtime. I was demoing my Little Black Book app — a React and Express project for storing, adding, amending, deleting, sharin..."
-  },
-  {
     "title": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
     "url": "https://9to5mac.com/2025/08/28/happy-hour-553/",
     "publishedAt": "2025-08-28T18:35:19.000Z",
@@ -247,25 +404,6 @@
     "tags": [],
     "seoTitle": "The best Labor Day TV sales",
     "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
-  },
-  {
-    "title": "Cómo usar Python y análisis de datos en prácticas de Santería",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/como-usar-python-y-analisis-de-datos-en-practicas-de-santeria-70k",
-    "publishedAt": "2025-08-28T18:18:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La Santería es una práctica espiritual y cultural con raíces africanas que se ha expandido ampliamente en América Latina y en comunidades de Estados Unidos. Se caracteriza por su profunda conexión con los orishas, el uso de rituales, ofrendas, consultas y la preservación de conocimientos transmitidos oralmente a lo largo de generaciones. Hoy en día, vivim...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmtmzi1llfowcp41pfhbt.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Cómo usar Python y análisis de datos en prácticas de Santería",
-    "seoDescription": "La Santería es una práctica espiritual y cultural con raíces africanas que se ha expandido ampliamente en América Latina y en comunidades de Estados Unidos. ..."
   },
   {
     "title": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
@@ -513,109 +651,5 @@
     ],
     "seoTitle": "Dissecting the Best Gus Van Sant Movies",
     "seoDescription": "Very few directors have the ability to make incredibly personal indie movies alongside Hollywood studio fare. And Gus Van Sant is a guy who does both and inj..."
-  },
-  {
-    "title": "Star Wars: Starfighter is going to be star-studded",
-    "url": "https://www.theverge.com/film/767588/star-wars-starfighter-cast",
-    "publishedAt": "2025-08-28T17:04:05.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Aaron Pierre at Vanity Fair & Instagram's The 2025 Vanities Party Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally confirmed the other actors who will be bringing the film to life alongside Ryan Gosling. Lucasfilm announced today that Star Wars: Starfighters has added Flynn Gray, Matt Smith, Mia Goth, Aaron Pierre, Si...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2201574763.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Star Wars: Starfighter is going to be star-studded",
-    "seoDescription": "Aaron Pierre at Vanity Fair & Instagram's The 2025 Vanities Party Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally conf..."
-  },
-  {
-    "title": "Battlefield 6 PC requirements are pretty chill — if you don&#8217;t mind 30fps",
-    "url": "https://www.theverge.com/news/767582/battlefield-6-pc-requirements-are-pretty-chill-if-you-dont-mind-30fps",
-    "publishedAt": "2025-08-28T16:48:57.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "EA is promising Battlefield 6 will offer “the best PC experience in the history of the franchise,” including 4K resolution, 21:9 and 32:9 ultrawide monitors, HDR, uncapped framerates, both PS5 and Xbox gamepad support on PC, the ability to create and browse servers, streamer and incognito modes, and more — but it won’t require powerful hardware or even an...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Battlefield-6-System-Requirements-Header.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "Battlefield 6 PC requirements are pretty chill — if you don&#8217;t mind 30fps",
-    "seoDescription": "EA is promising Battlefield 6 will offer “the best PC experience in the history of the franchise,” including 4K resolution, 21:9 and 32:9 ultrawide monitors,..."
-  },
-  {
-    "title": "Apple teases new Powerbeats Fit earbuds launching soon",
-    "url": "https://9to5mac.com/2025/08/28/apple-teases-new-powerbeats-fit-earbuds-launching-soon/",
-    "publishedAt": "2025-08-28T16:46:37.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is working on a new flavor of its popular Powerbeats earbuds, dubbed the Powerbeats Fit. Apple teased the new earbuds in a video on YouTube today, referring to them as “fit for every move.” Apple says the Powerbeats Fit are “coming fall 2025.” more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/beats-fit-01.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple teases new Powerbeats Fit earbuds launching soon",
-    "seoDescription": "Apple is working on a new flavor of its popular Powerbeats earbuds, dubbed the Powerbeats Fit. Apple teased the new earbuds in a video on YouTube today, refe..."
-  },
-  {
-    "title": "Pixel 10 Pro XL vs. iPhone 16 Pro Max: Has Google closed the gap? [Video]",
-    "url": "https://9to5google.com/2025/08/28/pixel-10-pro-xl-vs-iphone-16-pro-max-has-google-closed-the-gap-video/",
-    "publishedAt": "2025-08-28T16:42:35.000Z",
-    "source": "9to5google.com",
-    "category": "apple",
-    "summary": "From jibes to full-blown homage, the Pixel 10 Pro XL owes a lot to the iPhone and, by extension, the 16 Pro Max. Just how does Apple’s best device of last year stack up against Google’s best of this year? Here’s all you need to know. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Pixel-10-Pro-XL-and-iPhone-16-Pro-Max-design-overview-1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "9to5Google",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Pixel 10 Pro XL vs. iPhone 16 Pro Max: Has Google closed the gap? [Video]",
-    "seoDescription": "From jibes to full-blown homage, the Pixel 10 Pro XL owes a lot to the iPhone and, by extension, the 16 Pro Max. Just how does Apple’s best device of last ye..."
-  },
-  {
-    "title": "Apple Teases New Powerbeats Fit Earbuds",
-    "url": "https://www.macrumors.com/2025/08/28/apple-teases-new-powerbeats-fit-earbuds/",
-    "publishedAt": "2025-08-28T16:27:59.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is working on a new version of the Powerbeats earbuds called the Powerbeats Fit, and the company shared a teaser video of the upcoming earbuds on its YouTube channel. The Powerbeats Fit look similar to the Beats Fit Pro, featuring a small in-ear earbud with a silicone wingtip that secures them in the ear. \"Fit for every move,\" reads the tagline of A...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/tBYZhv7c1M8",
-    "author": "Juli Clover",
-    "tags": [
-      "Beats"
-    ],
-    "seoTitle": "Apple Teases New Powerbeats Fit Earbuds",
-    "seoDescription": "Apple is working on a new version of the Powerbeats earbuds called the Powerbeats Fit, and the company shared a teaser video of the upcoming earbuds on its Y..."
-  },
-  {
-    "title": "Fubo Sports is a $55.99 / month streaming bundle made for watching football",
-    "url": "https://www.theverge.com/news/767572/fubo-sports-espn-nfl-network-college-football-streaming",
-    "publishedAt": "2025-08-28T16:19:11.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Fubo is launching a new Sports plan on September 2nd that costs $55.99 per month and comes with over 20 live sports and news-focused channels, including the ESPN and Fox Sports channels, as well as local stations owned by ABC, CBS, and Fox. Where available, this package includes coverage for network TV-broadcast pro and college football games that might s...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2231355331.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Fubo Sports is a $55.99 / month streaming bundle made for watching football",
-    "seoDescription": "Fubo is launching a new Sports plan on September 2nd that costs $55.99 per month and comes with over 20 live sports and news-focused channels, including the ..."
-  },
-  {
-    "title": "Kobo replaces Pocket with Instapaper on its e-readers in a free update",
-    "url": "https://www.theverge.com/news/767527/instapaper-replaces-pocket-on-kobo-e-readers",
-    "publishedAt": "2025-08-28T16:16:22.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "A big draw of Kobo e-readers has always been Pocket integration. But, when Mozilla announced in late May that it was shutting down the read-it-later app in July, the Kobo community was left in a bit of a lurch. To the company’s credit, in late July, it announced that it would be replacing Pocket with another stalwart of the scene, Instapaper. And, just a ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/tumblr_fc9965ba31050ba10fb9f373bc07bdb2_d16fdd00_1280.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Kobo replaces Pocket with Instapaper on its e-readers in a free update",
-    "seoDescription": "A big draw of Kobo e-readers has always been Pocket integration. But, when Mozilla announced in late May that it was shutting down the read-it-later app in J..."
   }
 ]
