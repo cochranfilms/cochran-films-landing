@@ -1,5 +1,152 @@
 [
   {
+    "title": "Web Wide Worlds: An Open Technology Stack for Digital Worlds",
+    "url": "https://dev.to/dyfi/web-wide-worlds-an-open-technology-stack-for-digital-worlds-e3p",
+    "publishedAt": "2025-08-28T23:03:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Over the past several years, I’ve been building Web Wide Worlds—an open-source framework for creating persistent, explorable 3D environments using web-native technologies. This stack makes building a digital world like building a website—modular, remixable, and accessible across devices. Web Wide Worlds is a modular framework for defining, deploying, and ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn2inpoe5mimhewgiykoh.png",
+    "video": null,
+    "author": "Dylan Baker",
+    "tags": [
+      "webdev",
+      "opensource",
+      "web3",
+      "gamedev"
+    ],
+    "seoTitle": "Web Wide Worlds: An Open Technology Stack for Digital Worlds",
+    "seoDescription": "Over the past several years, I’ve been building Web Wide Worlds—an open-source framework for creating persistent, explorable 3D environments using web-native..."
+  },
+  {
+    "title": "Understanding Slice and Map Expansion in Go",
+    "url": "https://dev.to/leapcell/understanding-slice-and-map-expansion-in-go-37ib",
+    "publishedAt": "2025-08-28T22:58:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In the study of Go language, the expansion strategy of arrays and Maps is a common and classic topic. This article aims to summarize and explain the expansion strategies of arrays and Maps. In Go, dynamic arrays are called slices. A slice provides a flexible and dynamically sized array solution. When using the append function to add elements to a slice, G...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fapy2uvorobk71pcaowgi.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Understanding Slice and Map Expansion in Go",
+    "seoDescription": "In the study of Go language, the expansion strategy of arrays and Maps is a common and classic topic. This article aims to summarize and explain the expansio..."
+  },
+  {
+    "title": "9to5Mac Daily: August 28, 2025 – AirPods Pro 3 rumors, Apple acquisition strategies",
+    "url": "https://9to5mac.com/2025/08/28/daily-august-28-2025/",
+    "publishedAt": "2025-08-28T22:53:57.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Seth Kurkowski",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "9to5Mac Daily: August 28, 2025 – AirPods Pro 3 rumors, Apple acquisition strategies",
+    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
+  },
+  {
+    "title": "Microsoft fires two more employees for participating in Palestine protests on campus",
+    "url": "https://www.theverge.com/microsoft/767841/microsoft-fires-two-more-protesters-no-azure-for-apartheid",
+    "publishedAt": "2025-08-28T22:51:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two employees, Nisreen Jaradat and Julius Shan, were fired “in connection” with demonstrations that saw protesters set up encampments at Microsoft’s headquarters, according to Hossam Nasr, an organizer wi...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/microsoftprotests.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jacob Kastrenakes",
+    "tags": [],
+    "seoTitle": "Microsoft fires two more employees for participating in Palestine protests on campus",
+    "seoDescription": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two ..."
+  },
+  {
+    "title": "How Software is Transforming Commercial Fence Company Operations",
+    "url": "https://dev.to/cristian_holquis_09836ff1/how-software-is-transforming-commercial-fence-company-operations-1ain",
+    "publishedAt": "2025-08-28T22:44:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction The fencing industry is undergoing a massive transformation. What used to be a business driven primarily by manual quoting, paper-based scheduling, and on-site inspections is now rapidly evolving into a digital-first industry. Software tools are changing how commercial fence companies manage projects, interact with customers, and even source ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fodsg34ebmx58fpas866k.png",
+    "video": null,
+    "author": "cristian holquis",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "How Software is Transforming Commercial Fence Company Operations",
+    "seoDescription": "Introduction The fencing industry is undergoing a massive transformation. What used to be a business driven primarily by manual quoting, paper-based scheduli..."
+  },
+  {
+    "title": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
+    "url": "https://nofilmschool.com/back-to-the-future-climax",
+    "publishedAt": "2025-08-28T22:19:55.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Forty years later, we're still talking about Marty McFly and that lightning bolt. As Michael J. Fox took the stage at Toronto's Fan Expo recently for the film's anniversary celebration, it was clear that fans are still all about this '80s sci-fi classic. Fox told the crowd, \"We were all just obsessed with the film while we were making it, and I'm not brag...",
+    "image": "https://nofilmschool.com/media-library/back-to-the-futures-clock-tower-scene-with-lightning-over-the-building.png?id=61525837&width=980",
+    "video": "https://www.youtube.com/embed/qbGwlvgpySE?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Editing",
+      "Practical effects",
+      "Screenwriting",
+      "Climax",
+      "Final act",
+      "Back to the future",
+      "Back to the future"
+    ],
+    "seoTitle": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
+    "seoDescription": "Forty years later, we're still talking about Marty McFly and that lightning bolt. As Michael J. Fox took the stage at Toronto's Fan Expo recently for the fil..."
+  },
+  {
+    "title": "Apps with IoT Integration for Real-Time Cleaning Monitoring",
+    "url": "https://dev.to/carmen_lopezlopeza_31258/apps-with-iot-integration-for-real-time-cleaning-monitoring-4ok9",
+    "publishedAt": "2025-08-28T22:18:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction The cleaning industry is rapidly evolving thanks to technology. Traditional methods of scheduling and tracking maintenance are being replaced by smart applications that use IoT (Internet of Things) devices. These apps provide real-time monitoring, ensure consistent standards, and allow businesses to optimize their cleaning operations efficien...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3d9073g5h6g44l4lc5aj.png",
+    "video": null,
+    "author": "carmen lopez lopeza",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Apps with IoT Integration for Real-Time Cleaning Monitoring",
+    "seoDescription": "Introduction The cleaning industry is rapidly evolving thanks to technology. Traditional methods of scheduling and tracking maintenance are being replaced by..."
+  },
+  {
+    "title": "Simplificando Testes no NestJS com Injeção de Valores",
+    "url": "https://dev.to/tadeubdev/simplificando-testes-no-nestjs-com-injecao-de-valores-3io4",
+    "publishedAt": "2025-08-28T22:13:11.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Quando trabalhamos com NestJS, é muito comum ver serviços injetando o ConfigService diretamente. Isso funciona bem, mas pode tornar os testes mais complexos e acoplar o código a detalhes de configuração. Vamos comigo enquanto escuto uma playlist de techno no youtube. Neste artigo, vou mostrar uma abordagem simples para desacoplar suas classes e facilitar ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwvbj4n6v1b5sqmc8ffpm.png",
+    "video": null,
+    "author": "Tadeu Barbosa",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "braziliandevs"
+    ],
+    "seoTitle": "Simplificando Testes no NestJS com Injeção de Valores",
+    "seoDescription": "Quando trabalhamos com NestJS, é muito comum ver serviços injetando o ConfigService diretamente. Isso funciona bem, mas pode tornar os testes mais complexos ..."
+  },
+  {
     "title": "Better Sidekiq Classes",
     "url": "https://dev.to/brazenbraden/better-sidekiq-classes-430b",
     "publishedAt": "2025-08-28T22:12:04.000Z",
@@ -129,63 +276,6 @@
     "seoDescription": "Have you ever wondered why some development teams have super organized, easy-to-understand, and standardized commit messages? That’s thanks to semantic commi..."
   },
   {
-    "title": "How I’d scale a side project to 1 million users (without melting my server)",
-    "url": "https://dev.to/dev_tips/how-id-scale-a-side-project-to-1-million-users-without-melting-my-server-gno",
-    "publishedAt": "2025-08-28T21:37:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A dev-friendly breakdown of what to build only when you need to skip the startup overengineering and scale like a sane person Let’s be real: most side projects never see more than your mom, your friend, and maybe a Reddit stranger. But every now and then your app blows up. Hacker News, Product Hunt, Twitter. Boom. Suddenly your cute little SQLite setup is...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2Az5KVqoMXVPzj3lRyGCuekA.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "ai",
-      "productivity",
-      "devops"
-    ],
-    "seoTitle": "How I’d scale a side project to 1 million users (without melting my server)",
-    "seoDescription": "A dev-friendly breakdown of what to build only when you need to skip the startup overengineering and scale like a sane person Let’s be real: most side projec..."
-  },
-  {
-    "title": "Debugging Login Forms: E2LLM (JSON Snapshots) Show the Hidden State",
-    "url": "https://dev.to/alexey_sokolov_10deecd763/debugging-login-forms-e2llm-json-snapshots-show-the-hidden-state-5361",
-    "publishedAt": "2025-08-28T21:34:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Pain: When Login Buttons Don’t Work You open a login page. The UI looks fine: an email field, a “Continue” button, and several “Login with Google/Apple/GitHub” options. But the test fails. The “Continue” button doesn’t trigger, or one of the login options is disabled by a script. Selenium screenshots look normal, but QA can’t see what’s really happeni...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcli6hxqi559kyynvhtts.jpg",
-    "video": null,
-    "author": "Alechko",
-    "tags": [
-      "e2llm",
-      "webdev",
-      "qa",
-      "programming"
-    ],
-    "seoTitle": "Debugging Login Forms: E2LLM (JSON Snapshots) Show the Hidden State",
-    "seoDescription": "The Pain: When Login Buttons Don’t Work You open a login page. The UI looks fine: an email field, a “Continue” button, and several “Login with Google/Apple/G..."
-  },
-  {
-    "title": "Git rebase isn’t scary. You just never had it explained right",
-    "url": "https://dev.to/dev_tips/git-rebase-isnt-scary-you-just-never-had-it-explained-right-5fp0",
-    "publishedAt": "2025-08-28T21:32:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "How rebasing actually works, when to use it, and why it’s not the villain in your Git history So you’ve mastered the holy trinity of git add, git commit, and git push. You even know the dark magic of git reset --hard, which you learned the hard way after erasing six hours of work because, “eh, staging looked weird.” Congrats, you’re officially Git dangero...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AQtH5lM-eCHH0hg4iD3JBfQ.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "ai",
-      "productivity",
-      "devops"
-    ],
-    "seoTitle": "Git rebase isn’t scary. You just never had it explained right",
-    "seoDescription": "How rebasing actually works, when to use it, and why it’s not the villain in your Git history So you’ve mastered the holy trinity of git add, git commit, and..."
-  },
-  {
     "title": "Incogni deletes your family’s private info from the internet – here’s why that matters",
     "url": "https://9to5mac.com/2025/08/28/incogni-deletes-your-familys-private-info-from-the-internet-heres-why-that-matters/",
     "publishedAt": "2025-08-28T21:30:00.000Z",
@@ -216,44 +306,6 @@
     ],
     "seoTitle": "This iMac G3 LEGO idea is as unlikely to get approved as it is awesome",
     "seoDescription": "Every once in a while, an Apple-related project gets submitted to LEGO’s Product Ideas page. Just recently, the LEGO Apple Store concept quickly blew past th..."
-  },
-  {
-    "title": "Next.js 16: The real dirt behind the hype",
-    "url": "https://dev.to/dev_tips/nextjs-16-the-real-dirt-behind-the-hype-33on",
-    "publishedAt": "2025-08-28T21:28:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What’s in 15.4, what’s landing in 16, and what’s still missing What 15.4 gave us (and why 16 matters) Next.js 15.4 landed quietly in July 2025, but it laid serious groundwork: Turbopack was locked in with full test coverage, cacheComponents entered beta to unify Next's confusing caching behaviors, and new devtools started peeking through. There were also ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2Aq14FS_xso5EaOtP7yK2rJA.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "devops"
-    ],
-    "seoTitle": "Next.js 16: The real dirt behind the hype",
-    "seoDescription": "What’s in 15.4, what’s landing in 16, and what’s still missing What 15.4 gave us (and why 16 matters) Next.js 15.4 landed quietly in July 2025, but it laid s..."
-  },
-  {
-    "title": "It Kinde of works: Part 2 of many",
-    "url": "https://dev.to/kinde/it-kinde-of-works-part-2-of-many-2mc4",
-    "publishedAt": "2025-08-28T21:23:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Kinde of posts are to highlight how Kinde's authentication can be used in fun and unproductive ways. This series will step through things like using our starter kits, workflows, properties, feature flags, custom UI, and a bunch of other features. The demo website has no real purpose, but we're going to try and get you to like and subscribe to our the ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzosfk6b7qz2r87i7v04a.png",
-    "video": null,
-    "author": "Alex Norman",
-    "tags": [
-      "kinde",
-      "authentication",
-      "webdev",
-      "sideprojects"
-    ],
-    "seoTitle": "It Kinde of works: Part 2 of many",
-    "seoDescription": "The Kinde of posts are to highlight how Kinde's authentication can be used in fun and unproductive ways. This series will step through things like using our ..."
   },
   {
     "title": "\"What We’re Doing Is Not a Scorsese Restoration\": Behind the Curtain of the AI-Enhanced 'Oz'",
@@ -597,53 +649,5 @@
     "tags": [],
     "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
     "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
-  },
-  {
-    "title": "I tested 15 cases for the Switch 2 and these are the best",
-    "url": "https://www.theverge.com/reviews/691319/best-switch-2-cases",
-    "publishedAt": "2025-08-28T18:09:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to put your hard-earned Switch 2 into a protective case. To me, it’s freeing. Using a case relieves me of the worry that it will accumulate tons of little scratches, or worse. I’ve tested several types ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257824_buying_guide_switch_2_case_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Cameron Faulkner",
-    "tags": [],
-    "seoTitle": "I tested 15 cases for the Switch 2 and these are the best",
-    "seoDescription": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to..."
-  },
-  {
-    "title": "New Xcode beta now available with GPT-5 and Claude support",
-    "url": "https://9to5mac.com/2025/08/28/new-xcode-beta-now-available-with-gpt-5-and-claude-support/",
-    "publishedAt": "2025-08-28T17:59:48.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integration with Anthropic’s Claude. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/xcode-claude.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New Xcode beta now available with GPT-5 and Claude support",
-    "seoDescription": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integra..."
-  },
-  {
-    "title": "3 Big Screenwriting Lessons From 'The Office'",
-    "url": "https://nofilmschool.com/screenwriting-lessons-from-the-office",
-    "publishedAt": "2025-08-28T17:55:20.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When I settle in for the night and need a show that just makes me laugh, I'll put on The Office. It was the perfect sitcom, one that lasted a while with the best characters, that also delivered some of the most rewatchable jokes. Now, watching TV can be a way to procrastinate on my new writing, but you'd be surprised how much gold you can mine from Scrant...",
-    "image": "https://nofilmschool.com/media-library/3-big-screenwriting-lessons-from-the-office.jpg?id=53721751&width=980",
-    "video": "https://www.youtube.com/embed/HLZyi24Z90A?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Screenwriting lessons",
-      "Tv writing",
-      "The office"
-    ],
-    "seoTitle": "3 Big Screenwriting Lessons From 'The Office'",
-    "seoDescription": "When I settle in for the night and need a show that just makes me laugh, I'll put on The Office. It was the perfect sitcom, one that lasted a while with the ..."
   }
 ]
