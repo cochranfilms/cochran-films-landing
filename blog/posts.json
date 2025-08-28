@@ -1,22 +1,116 @@
 [
   {
-    "title": "Applying KISS, DRY, and LOD Principles in Go",
-    "url": "https://dev.to/leapcell/applying-kiss-dry-and-lod-principles-in-go-1ikf",
-    "publishedAt": "2025-08-28T00:22:13.000Z",
+    "title": "Building a Multi-Agent Airline Seat Reassignment System with KaibanJS",
+    "url": "https://dev.to/kaibanjs/building-a-multi-agent-airline-seat-reassignment-system-with-kaibanjs-4kd8",
+    "publishedAt": "2025-08-28T02:47:54.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Besides the well-known SOLID principles, there are actually other useful and widely recognized design principles. This article introduces these design principles, mainly including the following three: KISS Principle; DRY Principle; LOD Principle. The KISS principle (Keep It Simple, Stupid) is an important principle in software development. It emphasizes k...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx2ngqrj2igbbmns6546m.png",
+    "summary": "Introduction: The Business Challenge Airlines frequently face last-minute seat availability changes due to cancellations or no-shows—especially in premium cabins. These situations pose both a revenue opportunity and a customer experience challenge. Automating the seat reassignment process with a coordinated multi-agent AI system can unlock real-time upsel...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpvfudlvjnkfyi8n2gylk.png",
     "video": null,
-    "author": "Leapcell",
+    "author": "Dariel Vila",
+    "tags": [
+      "ai",
+      "javascript",
+      "react",
+      "webdev"
+    ],
+    "seoTitle": "Building a Multi-Agent Airline Seat Reassignment System with KaibanJS",
+    "seoDescription": "Introduction: The Business Challenge Airlines frequently face last-minute seat availability changes due to cancellations or no-shows—especially in premium ca..."
+  },
+  {
+    "title": "Why I Still Pay for These 5 Tools in 2025 (Even as a Software Engineer)",
+    "url": "https://dev.to/xinjie_zou_d67d2805538130/why-i-still-pay-for-these-5-tools-in-2025-even-as-a-software-engineer-4mm5",
+    "publishedAt": "2025-08-28T02:44:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A common thought many developers have: “If there’s a free alternative, why would I ever pay?” Especially in software engineering, we rely heavily on open-source. Many of us joke: If I can use it for free, good luck trying to make me pay. But as I’ve gained more years of experience, I realized that some high-quality paid tools save me so much time and ment...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwkdeqp7cj9kwgfmqgsu1.png",
+    "video": null,
+    "author": "John Still",
     "tags": [
       "webdev",
       "programming",
-      "backend",
-      "go"
+      "productivity",
+      "softwareengineering"
     ],
-    "seoTitle": "Applying KISS, DRY, and LOD Principles in Go",
-    "seoDescription": "Besides the well-known SOLID principles, there are actually other useful and widely recognized design principles. This article introduces these design princi..."
+    "seoTitle": "Why I Still Pay for These 5 Tools in 2025 (Even as a Software Engineer)",
+    "seoDescription": "A common thought many developers have: “If there’s a free alternative, why would I ever pay?” Especially in software engineering, we rely heavily on open-sou..."
+  },
+  {
+    "title": "🚀 Just published a new post on dev.to! 👉 Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It I broke down: The core principle of disposable emails A step-by-step usage guide Pros, cons, and real-world use cases for deve",
+    "url": "https://dev.to/juddiy/just-published-a-new-post-on-devto-understanding-temporary-emails-how-tempmail3com-works-2472",
+    "publishedAt": "2025-08-28T02:14:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It Juddiy ・ Aug 28 #webdev #ai #beginners #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1495887%2F79c06275-2768-4481-ac2a-0b36dc373392.jpg",
+    "video": null,
+    "author": "Juddiy",
+    "tags": [
+      "webdev",
+      "ai",
+      "beginners",
+      "discuss"
+    ],
+    "seoTitle": "🚀 Just published a new post on dev.to! 👉 Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It I broke down: The core principle of disposable emails A step-by-step usage guide Pros, cons, and real-world use cases for deve",
+    "seoDescription": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It Juddiy ・ Aug 28 #webdev #ai #beginners #discuss"
+  },
+  {
+    "title": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It",
+    "url": "https://dev.to/juddiy/understanding-temporary-emails-how-tempmail3com-works-and-why-you-might-need-it-klj",
+    "publishedAt": "2025-08-28T02:11:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s web ecosystem, almost every service requires an email address — whether you’re signing up for a trial, accessing gated content, or simply browsing a forum. While this helps platforms manage users, it also exposes us to the downside: spam, newsletters, and potential data breaches. That’s where temporary email services like tempmail3.com come in....",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbrull5wa08vls0k5hc8o.png",
+    "video": null,
+    "author": "Juddiy",
+    "tags": [
+      "webdev",
+      "ai",
+      "beginners",
+      "discuss"
+    ],
+    "seoTitle": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It",
+    "seoDescription": "In today’s web ecosystem, almost every service requires an email address — whether you’re signing up for a trial, accessing gated content, or simply browsing..."
+  },
+  {
+    "title": "AstrHori 6mm f/2.8 Fisheye Lens Opens Up a Very Wide World of Possibilities",
+    "url": "https://petapixel.com/2025/08/27/astrhori-6mm-f-2-8-fisheye-lens-opens-up-a-very-wide-world-of-possibilities/",
+    "publishedAt": "2025-08-28T02:00:27.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "AstrHori's new 6mm f/2.8 circular fisheye for full-frame mirrorless cameras is extremely wide and designed for a wide range of photo and video applications, including dynamic landscapes, dramatic night sky photos, and striking architectural images. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/astrhori-fisheye-6mm-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "astrhori",
+      "astrhori6mmf28",
+      "circularfisheye",
+      "emount",
+      "fisheye",
+      "fullframelens"
+    ],
+    "seoTitle": "AstrHori 6mm f/2.8 Fisheye Lens Opens Up a Very Wide World of Possibilities",
+    "seoDescription": "AstrHori's new 6mm f/2.8 circular fisheye for full-frame mirrorless cameras is extremely wide and designed for a wide range of photo and video applications, ..."
+  },
+  {
+    "title": "Microsoft fires two employee protesters who occupied its president&#8217;s office",
+    "url": "https://www.theverge.com/news/767251/microsoft-fires-two-employees-building-34-brad-smith-office-protest",
+    "publishedAt": "2025-08-28T01:48:10.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Microsoft has fired two employees that were involved in a sit-in protest in vice chair and president Brad Smith’s office. Software engineers Riki Fameli and Anna Hattle were both dismissed today, after being part of a group of seven protesters that managed to get inside Smith’s office in Building 34 yesterday. Microsoft was forced to temporarily lock down...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25832915/STK095_MICROSOFT_2_CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Microsoft fires two employee protesters who occupied its president&#8217;s office",
+    "seoDescription": "Microsoft has fired two employees that were involved in a sit-in protest in vice chair and president Brad Smith’s office. Software engineers Riki Fameli and ..."
   },
   {
     "title": "FDA approves updated covid vaccines, but with severe new limits",
@@ -79,44 +173,6 @@
     "seoDescription": "Maybe those little AI sparkles are bursting out of a trifold phone? Maybe? Apple isn’t the only tech company to send out launch event invitations this week. ..."
   },
   {
-    "title": "Algoritmos en Python y astrología: conexión con amarres de amor",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/algoritmos-en-python-y-astrologia-conexion-con-amarres-de-amor-39k7",
-    "publishedAt": "2025-08-27T22:43:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La programación en Python se ha consolidado como una de las herramientas más poderosas en el mundo moderno. Desde la inteligencia artificial hasta el análisis de datos, sus aplicaciones son prácticamente infinitas. Sin embargo, existe un terreno poco explorado en el que también puede tener un papel interesante: el mundo esotérico y espiritual, particularm...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1pe4b05hfebe6i86sna7.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Algoritmos en Python y astrología: conexión con amarres de amor",
-    "seoDescription": "La programación en Python se ha consolidado como una de las herramientas más poderosas en el mundo moderno. Desde la inteligencia artificial hasta el análisi..."
-  },
-  {
-    "title": "Cómo usar Python Pandas para analizar casos de amarres de amor",
-    "url": "https://dev.to/karen_londres/como-usar-python-pandas-para-analizar-casos-de-amarres-de-amor-232k",
-    "publishedAt": "2025-08-27T22:21:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En el mundo actual, la programación no solo se limita a la tecnología y a los negocios, también se puede aplicar en contextos culturales, sociales e incluso espirituales. En este artículo veremos cómo usar Python y la librería Pandas para organizar y analizar datos relacionados con los llamados amarres de amor. La idea no es validar científicamente estas ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffnbt4zt65yjl713skkgm.png",
-    "video": null,
-    "author": "Karen Londres",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Cómo usar Python Pandas para analizar casos de amarres de amor",
-    "seoDescription": "En el mundo actual, la programación no solo se limita a la tecnología y a los negocios, también se puede aplicar en contextos culturales, sociales e incluso ..."
-  },
-  {
     "title": "IDC nearly doubles worldwide smartphone forecast for 2025, cites ‘accelerated iOS growth’",
     "url": "https://9to5mac.com/2025/08/27/idc-nearly-doubles-worldwide-smartphone-forecast-for-2025-cites-accelerated-ios-growth/",
     "publishedAt": "2025-08-27T22:10:54.000Z",
@@ -131,25 +187,6 @@
     ],
     "seoTitle": "IDC nearly doubles worldwide smartphone forecast for 2025, cites ‘accelerated iOS growth’",
     "seoDescription": "To say 2025 has been an unpredictable year for the smartphone market would be an understatement. Early in February, IDC had forecast a 2.6% growth, followed ..."
-  },
-  {
-    "title": "Programación en Python y Numerología en Amarres de Amor",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/programacion-en-python-y-numerologia-en-amarres-de-amor-3p9o",
-    "publishedAt": "2025-08-27T22:04:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La programación y la espiritualidad parecen mundos distantes: uno se basa en la lógica, la precisión matemática y los algoritmos, mientras que el otro se fundamenta en símbolos, interpretaciones y tradiciones esotéricas. Sin embargo, ambos tienen algo en común: la búsqueda de patrones que revelen significados ocultos. En este artículo te mostraré cómo Pyt...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjppahskylb580udjsyrg.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Programación en Python y Numerología en Amarres de Amor",
-    "seoDescription": "La programación y la espiritualidad parecen mundos distantes: uno se basa en la lógica, la precisión matemática y los algoritmos, mientras que el otro se fun..."
   },
   {
     "title": "Blackmagic Slashes Cinema Camera Prices",
@@ -173,25 +210,6 @@
     ],
     "seoTitle": "Blackmagic Slashes Cinema Camera Prices",
     "seoDescription": "Blackmagic Design announced a substantial price reduction across its Ursa Cine camera kits, marking a rare move in the high-end cinema camera market where pr..."
-  },
-  {
-    "title": "Software de recomendación en Python para interpretación de cartas",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/software-de-recomendacion-en-python-para-interpretacion-de-cartas-46f0",
-    "publishedAt": "2025-08-27T21:44:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En los últimos años hemos visto cómo la programación se integra en campos que antes se consideraban exclusivamente humanos o espirituales. El tarot y la interpretación de cartas no han quedado fuera de esta tendencia. Gracias a lenguajes como Python, ahora es posible diseñar programas que apoyen al lector de cartas, ayudándole a organizar significados, a ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fctn4q1k71gwvzwna5h3c.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "Software de recomendación en Python para interpretación de cartas",
-    "seoDescription": "En los últimos años hemos visto cómo la programación se integra en campos que antes se consideraban exclusivamente humanos o espirituales. El tarot y la inte..."
   },
   {
     "title": "Apple TV+: Romantic drama with Ted Lasso’s Brett Goldstein gets first trailer",
@@ -602,21 +620,5 @@
     ],
     "seoTitle": "Why 'Megadoc' Is Such a Unique Documentary",
     "seoDescription": "Francis Ford Coppola's pet project, Megalopolis, certainly did give filmgoers one of the most unique cinematic experiences of recent memory. It was a little ..."
-  },
-  {
-    "title": "Apple Blocks iTorrent App From EU Alternative App Marketplace",
-    "url": "https://www.macrumors.com/2025/08/27/apple-blocks-itorrent-app-eu/",
-    "publishedAt": "2025-08-27T18:17:49.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is no longer allowing torrenting app iTorrent to be distributed via the AltStore Pal alternative app marketplace in the European Union, according to TorrentFreak. Torrent apps like iTorrent and qBitControl have been available for download from AltStore PAL since July of last year. Torrent apps are not allowed in the official App Store, but Apple has...",
-    "image": "https://images.macrumors.com/article-new/2024/04/altstore-pal-eu.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "European Union"
-    ],
-    "seoTitle": "Apple Blocks iTorrent App From EU Alternative App Marketplace",
-    "seoDescription": "Apple is no longer allowing torrenting app iTorrent to be distributed via the AltStore Pal alternative app marketplace in the European Union, according to To..."
   }
 ]
