@@ -1,31 +1,12 @@
 [
   {
-    "title": "Top 7 WordPress Icon Plugins You Should Try",
-    "url": "https://dev.to/masumparvej/top-7-wordpress-icon-plugins-you-should-try-49ed",
-    "publishedAt": "2025-08-28T06:09:33.000Z",
+    "title": "The Importance of Azure Fabric Controller in Cloud Resource Administration",
+    "url": "https://dev.to/vishal_more_02990955c9358/the-importance-of-azure-fabric-controller-in-cloud-resource-administration-4cg1",
+    "publishedAt": "2025-08-28T06:57:30.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "You're building your WordPress site and need icons. Simple enough, right? Then you realize your theme has maybe three decent icons, and they don't match your design at all. So you search for icon plugins. Suddenly you're drowning in options. Some promise thousands of icons but haven’t been updated in years. Others work great until they clash with your the...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmr0ry7jhzs3srpnfxgas.png",
-    "video": null,
-    "author": "Masum Parvej",
-    "tags": [
-      "webdev",
-      "wordpress",
-      "vue",
-      "vscode"
-    ],
-    "seoTitle": "Top 7 WordPress Icon Plugins You Should Try",
-    "seoDescription": "You're building your WordPress site and need icons. Simple enough, right? Then you realize your theme has maybe three decent icons, and they don't match your..."
-  },
-  {
-    "title": "Enhancing AI Accuracy: 6 Contributions of Machine Learning",
-    "url": "https://dev.to/vishal_more_02990955c9358/enhancing-ai-accuracy-6-contributions-of-machine-learning-4457",
-    "publishedAt": "2025-08-28T05:55:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Read More: Enhancing AI Accuracy: 6 Contributions of Machine Learning In this blog, we’ll explore six key contributions of Machine Learning that enhance AI accuracy and why they matter for businesses, researchers, and everyday users. Data-Driven Learning Unlike traditional programming, Machine Learning allows AI systems to learn from data instead of relyi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fejh6wbrgtv05wlb7o8h5.png",
+    "summary": "What is the Azure Fabric Controller? The Azure Fabric Controller (FC) is a core component within Azure’s architecture that manages servers, applications, and services running in the cloud. Think of it as the operating system for Azure’s data centers. It monitors the health of hardware and software resources, makes intelligent decisions on placement, and e...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foksjvy5539beiefxplhe.png",
     "video": null,
     "author": "vishal more",
     "tags": [
@@ -34,44 +15,46 @@
       "ai",
       "beginners"
     ],
-    "seoTitle": "Enhancing AI Accuracy: 6 Contributions of Machine Learning",
-    "seoDescription": "Read More: Enhancing AI Accuracy: 6 Contributions of Machine Learning In this blog, we’ll explore six key contributions of Machine Learning that enhance AI a..."
+    "seoTitle": "The Importance of Azure Fabric Controller in Cloud Resource Administration",
+    "seoDescription": "What is the Azure Fabric Controller? The Azure Fabric Controller (FC) is a core component within Azure’s architecture that manages servers, applications, and..."
   },
   {
-    "title": "Introducing Launchitx – A New Way to Launch and Discover Indie Products",
-    "url": "https://dev.to/yan_eson_e902f7ca5e393b04/introducing-launchitx-a-new-way-to-launch-and-discover-indie-products-2l9m",
-    "publishedAt": "2025-08-28T05:31:20.000Z",
+    "title": "Things to Consider Before Choosing a Web Design Agency in Delhi",
+    "url": "https://dev.to/prettify_creative_531e7de/things-to-consider-before-choosing-a-web-design-agency-in-delhi-21bd",
+    "publishedAt": "2025-08-28T06:45:40.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Hello Dev Community, I’m thrilled to introduce Launchitx — a brand-new platform built for makers, developers, and startup teams. Here, you can not only launch your products but also gain exposure in a more lasting and targeted way, ensuring great products reach the people who truly need them. If you’ve ever launched a product on traditional platforms, you...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk7vrsblvg09hw90m2yv9.png",
+    "summary": "A website is something that has become an indispensable part of the modern business sphere. Indeed, websites are now working as the main drivers of online traffic, which leads to significant increases in the number of overall customers of the particular product or service. Each website functions differently, depending on its purpose and design. In fact, t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftq5jgs0xjd5ykr3n63jm.jpg",
     "video": null,
-    "author": "yan eson",
+    "author": "Prettify Creative",
     "tags": [
+      "website",
+      "design",
       "webdev",
-      "programming"
+      "frontend"
     ],
-    "seoTitle": "Introducing Launchitx – A New Way to Launch and Discover Indie Products",
-    "seoDescription": "Hello Dev Community, I’m thrilled to introduce Launchitx — a brand-new platform built for makers, developers, and startup teams. Here, you can not only launc..."
+    "seoTitle": "Things to Consider Before Choosing a Web Design Agency in Delhi",
+    "seoDescription": "A website is something that has become an indispensable part of the modern business sphere. Indeed, websites are now working as the main drivers of online tr..."
   },
   {
-    "title": "Database Sharding: When, Why, and How to Do It Right",
-    "url": "https://dev.to/dct_technology/database-sharding-when-why-and-how-to-do-it-right-1dg1",
-    "publishedAt": "2025-08-28T05:25:42.000Z",
+    "title": "Top 10 Free Dev Tools to Boost Productivity in 2025",
+    "url": "https://dev.to/therealmrmumba/top-10-free-dev-tools-to-boost-productivity-in-2025-1i9o",
+    "publishedAt": "2025-08-28T06:30:59.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Imagine you’re running a fast-growing app. At first, your single database works fine. Queries are fast, the app feels smooth, and you think you’re set for success. But as users grow, something happens: Queries slow down ⏳ Server costs skyrocket 💸 Backups feel like nightmares 😵 This is when database sharding steps in—an engineering strategy used by giant...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F33vftgq6rurr1ypwuyff.png",
+    "summary": "If you’re anything like me, you’ve probably got a graveyard of apps and tools installed “just to try them out.” Developers love experimenting with shiny new software but we don’t always love paying for it. The good news? There’s an incredible range of free dev tools that can supercharge your productivity without draining your wallet. In this article, we’l...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frxanaenvpwf9vb9rxzos.png",
     "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
+    "author": "Emmanuel Mumba",
     "tags": [
-      "database",
       "webdev",
-      "backend",
-      "webperf"
+      "programming",
+      "javascript",
+      "beginners"
     ],
-    "seoTitle": "Database Sharding: When, Why, and How to Do It Right",
-    "seoDescription": "Imagine you’re running a fast-growing app. At first, your single database works fine. Queries are fast, the app feels smooth, and you think you’re set for su..."
+    "seoTitle": "Top 10 Free Dev Tools to Boost Productivity in 2025",
+    "seoDescription": "If you’re anything like me, you’ve probably got a graveyard of apps and tools installed “just to try them out.” Developers love experimenting with shiny new ..."
   },
   {
     "title": "This Goodbye Line Remains One of Cinema’s Greatest Mic Drops",
@@ -622,5 +605,26 @@
     ],
     "seoTitle": "Taylor Swift’s Engagement Photos Will Be Very Influential, but Is That Good?",
     "seoDescription": "Taylor Swift and Travis Kelce's record-breaking engagement photos have the internet buzzing, and will undoubtedly give rise to new photography trends. Here's..."
+  },
+  {
+    "title": "Tariffs Be Damned! Blackmagic Design is Dropping Prices on URSA Cine Camera Kits",
+    "url": "https://nofilmschool.com/blackmagic-ursa-cine-camera-kits-price-reduced",
+    "publishedAt": "2025-08-27T18:40:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Well, this is pretty much the exact opposite of every headline we’ve had to write so far in 2025. Going against the rising prices that tariffs and other trade concerns are pushing up across the board, the Australian company Blackmagic Design has announced some significant price drops to some of its most popular cinema camera kits. This comes after Blackma...",
+    "image": "https://nofilmschool.com/media-library/blackmagic-ursa-cine-camera-kits-price-reduced.jpg?id=61525102&width=980",
+    "video": null,
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Blackmagic ursa cine camera kits",
+      "Camera kits",
+      "Ursa cine",
+      "Blackmagic ursa cine 12k lf",
+      "Blackmagic ursa cine 17k 65",
+      "Blackmagic design"
+    ],
+    "seoTitle": "Tariffs Be Damned! Blackmagic Design is Dropping Prices on URSA Cine Camera Kits",
+    "seoDescription": "Well, this is pretty much the exact opposite of every headline we’ve had to write so far in 2025. Going against the rising prices that tariffs and other trad..."
   }
 ]
