@@ -1,5 +1,107 @@
 [
   {
+    "title": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
+    "url": "https://9to5mac.com/2025/08/28/apple-notes-in-ios-26-works-better-than-ever-with-my-favorite-writing-tool/",
+    "publishedAt": "2025-08-28T18:59:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better than ever with Markdown thanks to import and export support for my go-to writing tool. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-notes-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
+    "seoDescription": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better th..."
+  },
+  {
+    "title": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
+    "url": "https://petapixel.com/2025/08/28/this-awesome-diy-digital-camera-has-a-waist-level-viewfinder/",
+    "publishedAt": "2025-08-28T18:54:43.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build. This time, Wilson combined a Mamiya C220 TLR viewfinder, Raspberry Pi, and Sony image sensor to create a waist-level viewfinder digital camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/wilson-diy-mini-hasselblad-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Do It Yourself",
+      "Equipment",
+      "News",
+      "3dprinted",
+      "camerahacks",
+      "customcamera",
+      "digitalcamera",
+      "DIY"
+    ],
+    "seoTitle": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
+    "seoDescription": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build...."
+  },
+  {
+    "title": "Backend downtime during a demo",
+    "url": "https://dev.to/arranstrange/backend-downtime-during-a-demo-5ff9",
+    "publishedAt": "2025-08-28T18:44:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I had a demo ruined by backend downtime. I was demoing my Little Black Book app — a React and Express project for storing, adding, amending, deleting, sharing etc. cocktail recipes. The frontend was loading fine, but when I tried to fetch the list of drinks from the API, the request just froze. No response. No errors. Just dead air. The worst part was I k...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0umhtuv51ruiebo4xamy.png",
+    "video": null,
+    "author": "Arran",
+    "tags": [
+      "uptime",
+      "backend",
+      "interview",
+      "webdev"
+    ],
+    "seoTitle": "Backend downtime during a demo",
+    "seoDescription": "I had a demo ruined by backend downtime. I was demoing my Little Black Book app — a React and Express project for storing, adding, amending, deleting, sharin..."
+  },
+  {
+    "title": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
+    "url": "https://9to5mac.com/2025/08/28/happy-hour-553/",
+    "publishedAt": "2025-08-28T18:35:19.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 and maybe AirPods Pro 3. There’s an interesting report on Apple’s strategic calculus when it comes to acquiring other companies, and Gemini might become the brain of Siri. Also, Apple TV+ ups its monthl...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/02/9to5mac-happy-hour-lead1.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
+    "seoDescription": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 an..."
+  },
+  {
+    "title": "Google’s Pixel Care Plus includes free screen and battery repair",
+    "url": "https://www.theverge.com/news/767711/google-pixel-care-plus-free-screen-and-battery-repair",
+    "publishedAt": "2025-08-28T18:24:50.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay $8 per-month, or $159 for a two-year plan on a Pixel 9. For a Pixel 10 Pro Fold, that jumps up to $339 for two years, or $18 per-month, with the optional loss and theft package for a small extra charg...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257917_Google_Pixel_10_review_AJohnson_0006.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Terrence O’Brien",
+    "tags": [],
+    "seoTitle": "Google’s Pixel Care Plus includes free screen and battery repair",
+    "seoDescription": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay ..."
+  },
+  {
+    "title": "The best Labor Day TV sales",
+    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
+    "publishedAt": "2025-08-28T18:19:17.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The best Labor Day TV sales",
+    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
+  },
+  {
     "title": "Cómo usar Python y análisis de datos en prácticas de Santería",
     "url": "https://dev.to/takeo_sartorius_c68c5ebb0/como-usar-python-y-analisis-de-datos-en-practicas-de-santeria-70k",
     "publishedAt": "2025-08-28T18:18:17.000Z",
@@ -304,7 +406,7 @@
     "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 28 #webdev #javascript #programming #opensource"
   },
   {
-    "title": "The New Sigma 200mm f/2 is Too Popular As Company Apologizes For Shipping Delays",
+    "title": "This New Sigma Lens is Too Popular As Company Apologizes For Shipping Delays",
     "url": "https://nofilmschool.com/sigma-200mm-shipping-delays",
     "publishedAt": "2025-08-28T17:17:32.000Z",
     "source": "nofilmschool.com",
@@ -320,27 +422,8 @@
       "Telephoto prime",
       "Sigma 200mm f2 dg og sports lens"
     ],
-    "seoTitle": "The New Sigma 200mm f/2 is Too Popular As Company Apologizes For Shipping Delays",
+    "seoTitle": "This New Sigma Lens is Too Popular As Company Apologizes For Shipping Delays",
     "seoDescription": "You know companies love to do this, but when you have a victory lap to take—take it! Sigma has issued an apology post regarding the supply status of the new ..."
-  },
-  {
-    "title": "Top 10 Free Dev Tools to Boost Productivity in 2025",
-    "url": "https://dev.to/hassamdev/-2bg",
-    "publishedAt": "2025-08-28T17:12:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
-    "video": null,
-    "author": "Hassam Fathe Muhammad",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "Top 10 Free Dev Tools to Boost Productivity in 2025",
-    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
   },
   {
     "title": "Dissecting the Best Gus Van Sant Movies",
@@ -523,20 +606,6 @@
     "seoDescription": "So I heard you want to play Kirby on hard mode: tough bosses, tricky platforming, complicated puzzles, hidden collectibles, and maybe even punishments for fa..."
   },
   {
-    "title": "Anthropic will start training its AI models on chat transcripts",
-    "url": "https://www.theverge.com/anthropic/767507/anthropic-user-data-consumers-ai-models-training-privacy",
-    "publishedAt": "2025-08-28T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Anthropic will start training its AI models on user data, including new chat transcripts and coding sessions, unless users choose to opt out. It's also extending its data retention policy to five years - again, for users that don't choose to opt out. All users will have to make a decision by September 28th. For users that click \"Accept\" now, Anthropic wil...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKB364_CLAUDE_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Hayden Field",
-    "tags": [],
-    "seoTitle": "Anthropic will start training its AI models on chat transcripts",
-    "seoDescription": "Anthropic will start training its AI models on user data, including new chat transcripts and coding sessions, unless users choose to opt out. It's also exten..."
-  },
-  {
     "title": "Deals: 1TB M4 MacBook Air, AirPods 4 now even lower, iPhone 15 Pro Max $725 off, MagSafe stands, more",
     "url": "https://9to5mac.com/2025/08/28/deals-macbook-pro-airpods-4-iphone-15-magsafe/",
     "publishedAt": "2025-08-28T15:45:08.000Z",
@@ -551,74 +620,5 @@
     ],
     "seoTitle": "Deals: 1TB M4 MacBook Air, AirPods 4 now even lower, iPhone 15 Pro Max $725 off, MagSafe stands, more",
     "seoDescription": "Today’s 9to5Toys Lunch Break is starting off with our growing collection of Apple gear Labor Day deals you’ll find organized for you right here. We are also ..."
-  },
-  {
-    "title": "Nanlite’s New Circular LEDs for Photo and Video Are Battery-Powered",
-    "url": "https://petapixel.com/2025/08/28/nanlites-new-circular-leds-for-photo-and-video-are-battery-powered/",
-    "publishedAt": "2025-08-28T15:44:59.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Nanlite has unveiled two compact panel lights that promise professional-grade performance in a small package, designed to give creators maximum flexibility and creative control. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Nanlite-Miro-PetaPixel-BG.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Equipment",
-      "Lighting",
-      "News",
-      "led",
-      "miro",
-      "Nanlite",
-      "panel"
-    ],
-    "seoTitle": "Nanlite’s New Circular LEDs for Photo and Video Are Battery-Powered",
-    "seoDescription": "Nanlite has unveiled two compact panel lights that promise professional-grade performance in a small package, designed to give creators maximum flexibility a..."
-  },
-  {
-    "title": "Microsoft Word now automatically saves new documents to the cloud",
-    "url": "https://www.theverge.com/news/767522/microsoft-word-automatic-document-save-cloud-default",
-    "publishedAt": "2025-08-28T15:40:34.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Microsoft is making a big change to how Word for Windows saves documents. The word processing app will soon automatically save new documents to the cloud, instead of Word users having to enable AutoSave and cloud storage options. “We are modernizing the way files are created and stored in Word for Windows,” says Raul Munoz, a product manager on the Office...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/officeicons.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tom Warren",
-    "tags": [],
-    "seoTitle": "Microsoft Word now automatically saves new documents to the cloud",
-    "seoDescription": "Microsoft is making a big change to how Word for Windows saves documents. The word processing app will soon automatically save new documents to the cloud, in..."
-  },
-  {
-    "title": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
-    "url": "https://www.macrumors.com/2025/08/28/apple-labor-day-sales-2025/",
-    "publishedAt": "2025-08-28T15:21:19.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "It's almost Labor Day weekend and a number of retailers have introduced deals that should be advantageous for anyone shopping around for Apple products and related accessories. In this article we've rounded up some of the best Labor Day deals for Apple devices, also including discounts on charging accessories, headphones, speakers, and more. Note: MacRumo...",
-    "image": "https://images.macrumors.com/article-new/2022/08/Labor-Day-Deals-Feature0011.jpg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
-    "seoDescription": "It's almost Labor Day weekend and a number of retailers have introduced deals that should be advantageous for anyone shopping around for Apple products and r..."
-  },
-  {
-    "title": "Live Activities keep getting better, and iOS 26 continues that trend",
-    "url": "https://9to5mac.com/2025/08/28/live-activities-keep-getting-better-and-ios-26-continues-that-trend/",
-    "publishedAt": "2025-08-28T15:20:44.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Live Activities have become one of the best iPhone features, and they’re getting even better in iOS 26. Here’s what’s new. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/live-activities-boarding-pass.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Live Activities keep getting better, and iOS 26 continues that trend",
-    "seoDescription": "Live Activities have become one of the best iPhone features, and they’re getting even better in iOS 26. Here’s what’s new. more…"
   }
 ]
