@@ -1,17 +1,378 @@
 [
   {
+    "title": "Cómo usar Python y análisis de datos en prácticas de Santería",
+    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/como-usar-python-y-analisis-de-datos-en-practicas-de-santeria-70k",
+    "publishedAt": "2025-08-28T18:18:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La Santería es una práctica espiritual y cultural con raíces africanas que se ha expandido ampliamente en América Latina y en comunidades de Estados Unidos. Se caracteriza por su profunda conexión con los orishas, el uso de rituales, ofrendas, consultas y la preservación de conocimientos transmitidos oralmente a lo largo de generaciones. Hoy en día, vivim...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmtmzi1llfowcp41pfhbt.png",
+    "video": null,
+    "author": "Takeo Sartorius",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Cómo usar Python y análisis de datos en prácticas de Santería",
+    "seoDescription": "La Santería es una práctica espiritual y cultural con raíces africanas que se ha expandido ampliamente en América Latina y en comunidades de Estados Unidos. ..."
+  },
+  {
+    "title": "♟️ Building a Chess App with React, Node.js, Kafka, and AWS (Part 1)",
+    "url": "https://dev.to/raviv_gilady/building-a-chess-app-with-react-nodejs-kafka-and-aws-part-1-4bph",
+    "publishedAt": "2025-08-28T18:12:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I built a chess web app where you play entirely through algebraic notation instead of a visual board. It runs on a React frontend, a Node.js server service, and a Kafka-powered Stockfish microservice, all Dockerized and deployed on AWS. This app lets you play chess in the browser—with a twist: Moves are entered in algebraic notation (no drag-and-drop boar...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fi.imgur.com%2F3aT3gv8.gif",
+    "video": null,
+    "author": "Raviv Gilady",
+    "tags": [
+      "showdev",
+      "react",
+      "webdev",
+      "docker"
+    ],
+    "seoTitle": "♟️ Building a Chess App with React, Node.js, Kafka, and AWS (Part 1)",
+    "seoDescription": "I built a chess web app where you play entirely through algebraic notation instead of a visual board. It runs on a React frontend, a Node.js server service, ..."
+  },
+  {
+    "title": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
+    "url": "https://www.theverge.com/news/767697/xbox-cross-device-play-history-cloud-gaming",
+    "publishedAt": "2025-08-28T18:09:58.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld, or PC, your recently played game list will remain the same, so you can jump right back in where you left off. The change, which first started testing with Insiders last month and is now rolling out ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK048_XBOX_2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
+    "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
+  },
+  {
+    "title": "I tested 15 cases for the Switch 2 and these are the best",
+    "url": "https://www.theverge.com/reviews/691319/best-switch-2-cases",
+    "publishedAt": "2025-08-28T18:09:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to put your hard-earned Switch 2 into a protective case. To me, it’s freeing. Using a case relieves me of the worry that it will accumulate tons of little scratches, or worse. I’ve tested several types ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257824_buying_guide_switch_2_case_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Cameron Faulkner",
+    "tags": [],
+    "seoTitle": "I tested 15 cases for the Switch 2 and these are the best",
+    "seoDescription": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to..."
+  },
+  {
+    "title": "New Xcode beta now available with GPT-5 and Claude support",
+    "url": "https://9to5mac.com/2025/08/28/new-xcode-beta-now-available-with-gpt-5-and-claude-support/",
+    "publishedAt": "2025-08-28T17:59:48.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integration with Anthropic’s Claude. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/xcode-claude.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "New Xcode beta now available with GPT-5 and Claude support",
+    "seoDescription": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integra..."
+  },
+  {
+    "title": "3 Big Screenwriting Lessons From 'The Office'",
+    "url": "https://nofilmschool.com/screenwriting-lessons-from-the-office",
+    "publishedAt": "2025-08-28T17:55:20.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When I settle in for the night and need a show that just makes me laugh, I'll put on The Office. It was the perfect sitcom, one that lasted a while with the best characters, that also delivered some of the most rewatchable jokes. Now, watching TV can be a way to procrastinate on my new writing, but you'd be surprised how much gold you can mine from Scrant...",
+    "image": "https://nofilmschool.com/media-library/3-big-screenwriting-lessons-from-the-office.jpg?id=53721751&width=980",
+    "video": "https://www.youtube.com/embed/HLZyi24Z90A?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Screenwriting lessons",
+      "Tv writing",
+      "The office"
+    ],
+    "seoTitle": "3 Big Screenwriting Lessons From 'The Office'",
+    "seoDescription": "When I settle in for the night and need a show that just makes me laugh, I'll put on The Office. It was the perfect sitcom, one that lasted a while with the ..."
+  },
+  {
+    "title": "Apple Releases Xcode 26 Beta 7 With GPT-5 Support and Claude Integration",
+    "url": "https://www.macrumors.com/2025/08/28/xcode-gpt-5-claude-integration/",
+    "publishedAt": "2025-08-28T17:54:44.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple today released the latest version of Xcode 26, introducing several new features that developers can take advantage of. ChatGPT in Xcode now supports GPT-5, so developers can choose to start new conversations with GPT-5 or GPT-4.1. GPT-5 is the new default option, with two models to select from. GPT-5 is optimized for quick, high-quality results that...",
+    "image": "https://images.macrumors.com/article-new/2021/04/apple-developer-app-feature.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Xcode"
+    ],
+    "seoTitle": "Apple Releases Xcode 26 Beta 7 With GPT-5 Support and Claude Integration",
+    "seoDescription": "Apple today released the latest version of Xcode 26, introducing several new features that developers can take advantage of. ChatGPT in Xcode now supports GP..."
+  },
+  {
+    "title": "🚀 Day 5 of LeetCode Grind",
+    "url": "https://dev.to/vrinda_khandelwal_45629fb/day-5-of-leetcode-grind-30gb",
+    "publishedAt": "2025-08-28T17:50:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "✅ Solved: Reverse Linked List (Easy, confidence booster 💪) Merge Two Sorted Lists (Easy, smooth ride ✨) Linked List Cycle (Easy, but took some thinking 🔄) Remove Nth Node From End of List (Medium — pointers game, tricky at first 👀) Add Two Numbers (Medium — felt like a mini project itself, lots of debugging 😅) 🔑 Takeaway: Easy ones built momentum. Me...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgdlwoczt6qcc2j7or6zd.png",
+    "video": null,
+    "author": "Vrinda Khandelwal",
+    "tags": [
+      "webdev",
+      "programming",
+      "cpp",
+      "100daysofcode"
+    ],
+    "seoTitle": "🚀 Day 5 of LeetCode Grind",
+    "seoDescription": "✅ Solved: Reverse Linked List (Easy, confidence booster 💪) Merge Two Sorted Lists (Easy, smooth ride ✨) Linked List Cycle (Easy, but took some thinking 🔄) ..."
+  },
+  {
+    "title": "Anthropic Will Now Train Claude on Your Chats, Here's How to Opt Out",
+    "url": "https://www.macrumors.com/2025/08/28/anthropic-claude-chat-training/",
+    "publishedAt": "2025-08-28T17:46:43.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Anthropic announced today that it is changing its Consumer Terms and Privacy Policy, with plans to train its AI chatbot Claude with user data. New users will be able to opt out at signup. Existing users will receive a popup that allows them to opt out of Anthropic using their data for AI training purposes. The popup is labeled \"Updates to Consumer Terms a...",
+    "image": "https://images.macrumors.com/article-new/2025/08/anthropic-data-collection.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Anthropic"
+    ],
+    "seoTitle": "Anthropic Will Now Train Claude on Your Chats, Here's How to Opt Out",
+    "seoDescription": "Anthropic announced today that it is changing its Consumer Terms and Privacy Policy, with plans to train its AI chatbot Claude with user data. New users will..."
+  },
+  {
+    "title": "Get a New Perspective For Your Shots With This Unique AstrHori Fisheye Lens",
+    "url": "https://nofilmschool.com/astrhori-fisheye-lens",
+    "publishedAt": "2025-08-28T17:43:38.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Who doesn’t love a good fisheye lens? A staple of early 2000s-era music videos, the ultra-wide look is back with many ironic—and even sincere—directors and filmmakers, as the fisheye look is always going to be unique and challenging. Fisheye can also be fun to shoot, so having an affordable, yet highly capable fisheye lens to keep in your bag is also usua...",
+    "image": "https://nofilmschool.com/media-library/astrhori-6mm-f-2-8-fisheye-lens.jpg?id=61529945&width=980",
+    "video": "https://www.youtube.com/embed/ZbJo_gKKKZE?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Astrhori",
+      "Fisheye lens",
+      "Fisheye",
+      "Astrhori 6mm f2.8 fisheye lens"
+    ],
+    "seoTitle": "Get a New Perspective For Your Shots With This Unique AstrHori Fisheye Lens",
+    "seoDescription": "Who doesn’t love a good fisheye lens? A staple of early 2000s-era music videos, the ultra-wide look is back with many ironic—and even sincere—directors and f..."
+  },
+  {
+    "title": "Apple Watch Ultra 3’s software might be another reason to upgrade from Ultra 1",
+    "url": "https://9to5mac.com/2025/08/28/apple-watch-ultra-3s-software-might-be-another-reason-to-upgrade-from-ultra-1/",
+    "publishedAt": "2025-08-28T17:43:04.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Two years after its predecessor launched, Apple Watch Ultra 3 is almost here. And in addition to the array of hardware upgrades coming, the Ultra 3 could also push Ultra 1 owners to upgrade with a variety of software features. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2022/09/Apple-Watch-Ultra-Release.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple Watch Ultra 3’s software might be another reason to upgrade from Ultra 1",
+    "seoDescription": "Two years after its predecessor launched, Apple Watch Ultra 3 is almost here. And in addition to the array of hardware upgrades coming, the Ultra 3 could als..."
+  },
+  {
+    "title": "# How Python Software Solutions Are Transforming Rental Property Cleaning Services",
+    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/-how-python-software-solutions-are-transforming-rental-property-cleaning-services-5889",
+    "publishedAt": "2025-08-28T17:41:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The rental property market has become more competitive than ever. Tenants expect spotless spaces, landlords need quick turnovers, and cleaning providers are asked to deliver fast, efficient, and consistent services. To meet these challenges, companies are turning to digital solutions—and Python software is playing a major role in transforming the industry...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwpo7j6oiy4yh2jl5m42q.png",
+    "video": null,
+    "author": "Takeo Sartorius",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "# How Python Software Solutions Are Transforming Rental Property Cleaning Services",
+    "seoDescription": "The rental property market has become more competitive than ever. Tenants expect spotless spaces, landlords need quick turnovers, and cleaning providers are ..."
+  },
+  {
+    "title": "The Broncolor Stelos 800 L Strobe Uses Universal V-Mount Batteries",
+    "url": "https://petapixel.com/2025/08/28/the-broncolor-stelos-800-l-strobe-uses-universal-v-mount-batteries/",
+    "publishedAt": "2025-08-28T17:39:16.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Broncolor has announced the Stelos 800 L, a high-end, battery-powered, location monobloc strobe that packs 800Ws of power and supports high speed sync. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/The-Broncolor-Stelos-800-L-Strobe-Uses-Universal-V-Mount-Batteries.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "Lighting",
+      "News",
+      "batterystrobe",
+      "broncolor",
+      "broncolorstelos",
+      "broncolorstelos800L",
+      "stelos"
+    ],
+    "seoTitle": "The Broncolor Stelos 800 L Strobe Uses Universal V-Mount Batteries",
+    "seoDescription": "Broncolor has announced the Stelos 800 L, a high-end, battery-powered, location monobloc strobe that packs 800Ws of power and supports high speed sync. [Read..."
+  },
+  {
+    "title": "Unpacking Chloe Zhao's Poignant Remarks on Making a Movie With No Limitations",
+    "url": "https://nofilmschool.com/chloe-zhaos-limitations",
+    "publishedAt": "2025-08-28T17:36:31.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Chloe Zhao is one of the most thoughtful directors. She really puts a lot of care into her shots and into her characters. I was so excited to see the trailer for her new film, Hamnet, which looks like a return to form. - YouTube www.youtube.com Previously, she spent some time in the Marvel world after an indie film, where she had a lot of money to make an...",
+    "image": "https://nofilmschool.com/media-library/unpacking-chloe-zhao-s-poignant-remarks-on-making-a-movie-with-no-limitations.jpg?id=61530415&width=980",
+    "video": "https://www.youtube.com/embed/E2xtmPkuksA?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Eternals",
+      "Marvel",
+      "Hamnet",
+      "Chloe zhao",
+      "Budget"
+    ],
+    "seoTitle": "Unpacking Chloe Zhao's Poignant Remarks on Making a Movie With No Limitations",
+    "seoDescription": "Chloe Zhao is one of the most thoughtful directors. She really puts a lot of care into her shots and into her characters. I was so excited to see the trailer..."
+  },
+  {
+    "title": "GM’s new adapters reflect the increasingly confused reality of EV charging",
+    "url": "https://www.theverge.com/electric-cars/767535/gms-new-adapters-reflect-increasingly-confused-world-ev-charging",
+    "publishedAt": "2025-08-28T17:25:33.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Look, I sympathize. When General Motors said it would adopt Tesla’s North American Charging Standard (NACS) for its electric vehicles back in 2023, we knew this meant adapters. But we never could have imagined how many adapters we would get. Today, GM announced three additional adapters to help EV owners charge at home or in public. And while I’m sure tha...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24533944/STK437_Electric_Vehicle_charge_EV.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew J. Hawkins",
+    "tags": [],
+    "seoTitle": "GM’s new adapters reflect the increasingly confused reality of EV charging",
+    "seoDescription": "Look, I sympathize. When General Motors said it would adopt Tesla’s North American Charging Standard (NACS) for its electric vehicles back in 2023, we knew t..."
+  },
+  {
+    "title": "The Panasonic S1 II Is Secretly a Groundbreaking Full-Frame Camera",
+    "url": "https://petapixel.com/2025/08/28/why-is-the-panasonic-s1-iis-dynamic-range-so-darn-good/",
+    "publishedAt": "2025-08-28T17:25:11.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The Panasonic Lumix S1 II is the first full-frame hybrid camera to employ Dual Gain Output (DGO), significantly improving its dynamic range performance in certain photographic situations. But for some reason, Panasonic didn't tell anyone about this when it launched the camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/07/lumix-s1-ii-front.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "Technology",
+      "dgo",
+      "dr",
+      "dualgainoutput",
+      "dynamicrange",
+      "hdr"
+    ],
+    "seoTitle": "The Panasonic S1 II Is Secretly a Groundbreaking Full-Frame Camera",
+    "seoDescription": "The Panasonic Lumix S1 II is the first full-frame hybrid camera to employ Dual Gain Output (DGO), significantly improving its dynamic range performance in ce..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/nawab_kumar_sarraf/-3a4o",
+    "publishedAt": "2025-08-28T17:19:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 28 #webdev #javascript #programming #opensource",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "video": null,
+    "author": "Nawab Kumar Sarraf",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 28 #webdev #javascript #programming #opensource"
+  },
+  {
+    "title": "The New Sigma 200mm f/2 is Too Popular As Company Apologizes For Shipping Delays",
+    "url": "https://nofilmschool.com/sigma-200mm-shipping-delays",
+    "publishedAt": "2025-08-28T17:17:32.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "You know companies love to do this, but when you have a victory lap to take—take it! Sigma has issued an apology post regarding the supply status of the new Sigma 200mm f/2 DG OS Sports lens, which was announced just a few weeks ago. As the world’s first 200mm f/2 telephoto prime lens for full-frame mirrorless cameras, the Sigma 200mm f/2 DG OS Sports cer...",
+    "image": "https://nofilmschool.com/media-library/sigma-200mm-shipping-delays.jpg?id=61530024&width=980",
+    "video": "https://www.youtube.com/embed/g1FL4freiVc?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Sigma",
+      "Sigma 200mm",
+      "Telephoto lens",
+      "Telephoto prime",
+      "Sigma 200mm f2 dg og sports lens"
+    ],
+    "seoTitle": "The New Sigma 200mm f/2 is Too Popular As Company Apologizes For Shipping Delays",
+    "seoDescription": "You know companies love to do this, but when you have a victory lap to take—take it! Sigma has issued an apology post regarding the supply status of the new ..."
+  },
+  {
+    "title": "Top 10 Free Dev Tools to Boost Productivity in 2025",
+    "url": "https://dev.to/hassamdev/-2bg",
+    "publishedAt": "2025-08-28T17:12:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
+    "video": null,
+    "author": "Hassam Fathe Muhammad",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "beginners"
+    ],
+    "seoTitle": "Top 10 Free Dev Tools to Boost Productivity in 2025",
+    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
+  },
+  {
+    "title": "Dissecting the Best Gus Van Sant Movies",
+    "url": "https://nofilmschool.com/best-gus-van-sant-movies",
+    "publishedAt": "2025-08-28T17:12:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Very few directors have the ability to make incredibly personal indie movies alongside Hollywood studio fare. And Gus Van Sant is a guy who does both and injects his voice and point of view at every level. Today, I want to go over ten of his movies I really dig, and talk about what makes them special. Let's dive in. 1. Good Will Hunting (1997) I think thi...",
+    "image": "https://nofilmschool.com/media-library/dissecting-the-best-gus-van-sant-movies.jpg?id=34884141&width=980",
+    "video": "https://www.youtube.com/embed/ReIJ1lbL-Q8?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Gus van sant",
+      "Gus van sant"
+    ],
+    "seoTitle": "Dissecting the Best Gus Van Sant Movies",
+    "seoDescription": "Very few directors have the ability to make incredibly personal indie movies alongside Hollywood studio fare. And Gus Van Sant is a guy who does both and inj..."
+  },
+  {
     "title": "Star Wars: Starfighter is going to be star-studded",
     "url": "https://www.theverge.com/film/767588/star-wars-starfighter-cast",
     "publishedAt": "2025-08-28T17:04:05.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally confirmed the other actors who will be bringing the film to life alongside Ryan Gosling. Lucasfilm announced today that Star Wars: Starfighters has added Flynn Gray, Matt Smith, Mia Goth, Aaron Pierre, Simon Bird, Jamael Westman, Daniel Ings, and Amy Adams to its cast. ...",
+    "summary": "Aaron Pierre at Vanity Fair & Instagram's The 2025 Vanities Party Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally confirmed the other actors who will be bringing the film to life alongside Ryan Gosling. Lucasfilm announced today that Star Wars: Starfighters has added Flynn Gray, Matt Smith, Mia Goth, Aaron Pierre, Si...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2201574763.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Charles Pulliam-Moore",
     "tags": [],
     "seoTitle": "Star Wars: Starfighter is going to be star-studded",
-    "seoDescription": "Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally confirmed the other actors who will be bringing the film to life along..."
+    "seoDescription": "Aaron Pierre at Vanity Fair & Instagram's The 2025 Vanities Party Production on Star Wars: Starfighter officially began today, and Lucasfilm has finally conf..."
   },
   {
     "title": "Battlefield 6 PC requirements are pretty chill — if you don&#8217;t mind 30fps",
@@ -90,25 +451,6 @@
     "seoDescription": "Fubo is launching a new Sports plan on September 2nd that costs $55.99 per month and comes with over 20 live sports and news-focused channels, including the ..."
   },
   {
-    "title": "OpenAPI Documentation for Spin Apps with Rust",
-    "url": "https://dev.to/fermyon/openapi-documentation-for-spin-apps-with-rust-c74",
-    "publishedAt": "2025-08-28T16:18:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "By: Thorsten Hans Generating and exposing machine- and human-readable documentation for RESTful APIs is a must, and those built with Spin are no exception. The OpenAPI Specification (OAS) is the de-facto standard when it comes to documenting RESTful APIs. In this article we will explore how one could generate OAS-compliant documentation from within Spin a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fefqpy66q8en31hwwaeeu.png",
-    "video": null,
-    "author": "Jasmine Mae",
-    "tags": [
-      "rust",
-      "api",
-      "webassembly",
-      "webdev"
-    ],
-    "seoTitle": "OpenAPI Documentation for Spin Apps with Rust",
-    "seoDescription": "By: Thorsten Hans Generating and exposing machine- and human-readable documentation for RESTful APIs is a must, and those built with Spin are no exception. T..."
-  },
-  {
     "title": "Kobo replaces Pocket with Instapaper on its e-readers in a free update",
     "url": "https://www.theverge.com/news/767527/instapaper-replaces-pocket-on-kobo-e-readers",
     "publishedAt": "2025-08-28T16:16:22.000Z",
@@ -144,24 +486,6 @@
     ],
     "seoTitle": "Police Arrest Impossible Suspect After Facial Recognition Blunder",
     "seoDescription": "A 6-foot-2-inch-tall man was wrongfully arrested after New York Police's facial recognition technology linked him to a suspect who was significantly shorter ..."
-  },
-  {
-    "title": "The Automated Advantage: Why Online Scheduling is a Game-Changer for Freelancers, Salons, and Local Service Pros",
-    "url": "https://dev.to/shamim_of/the-automated-advantage-why-online-scheduling-is-a-game-changer-for-freelancers-salons-and-local-2n50",
-    "publishedAt": "2025-08-28T16:07:16.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In today's fast-paced world, time is the most valuable commodity. For independent professionals, from freelance graphic designers and photographers to hair stylists and home repair technicians, every minute spent on administrative tasks is a minute not spent on billable work. This is where Online scheduling apps have become an indispensable tool, transfor...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhybx8ruj55k4r7qlet41.png",
-    "video": null,
-    "author": "shamim of",
-    "tags": [
-      "rendevio",
-      "omfaruk",
-      "webdev"
-    ],
-    "seoTitle": "The Automated Advantage: Why Online Scheduling is a Game-Changer for Freelancers, Salons, and Local Service Pros",
-    "seoDescription": "In today's fast-paced world, time is the most valuable commodity. For independent professionals, from freelance graphic designers and photographers to hair s..."
   },
   {
     "title": "You Can Use AI Chatbots to Quickly Find Things in Photos",
@@ -265,20 +589,6 @@
     "seoDescription": "Microsoft is making a big change to how Word for Windows saves documents. The word processing app will soon automatically save new documents to the cloud, in..."
   },
   {
-    "title": "How to supercharge Netflix’s shopping mall plans",
-    "url": "https://www.theverge.com/lowpass-newsletter/767106/netflix-house-sandbox-vr",
-    "publishedAt": "2025-08-28T15:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "This week, Netflix shared a few more details about its budding location business: The company will open its very first Netflix House in Philadelphia on November 11th, with a second location set to open in Dallas on December 11th. Both locations will span across 100,000 square feet, and offer ticketed experiences related to Netflix franchises like Stranger...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/SG_Screenshot_RLGL-3.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Janko Roettgers",
-    "tags": [],
-    "seoTitle": "How to supercharge Netflix’s shopping mall plans",
-    "seoDescription": "This week, Netflix shared a few more details about its budding location business: The company will open its very first Netflix House in Philadelphia on Novem..."
-  },
-  {
     "title": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
     "url": "https://www.macrumors.com/2025/08/28/apple-labor-day-sales-2025/",
     "publishedAt": "2025-08-28T15:21:19.000Z",
@@ -310,309 +620,5 @@
     ],
     "seoTitle": "Live Activities keep getting better, and iOS 26 continues that trend",
     "seoDescription": "Live Activities have become one of the best iPhone features, and they’re getting even better in iOS 26. Here’s what’s new. more…"
-  },
-  {
-    "title": "Popular Washington Mountain Photographer Dies in Climbing Fall",
-    "url": "https://petapixel.com/2025/08/28/popular-washington-mountain-photographer-dies-in-climbing-fall/",
-    "publishedAt": "2025-08-28T15:08:52.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "An adventure photographer, recognized for documenting climbs on Washington’s highest and most difficult peaks, has died after falling when a handhold broke loose during an ascent. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/mountain-photographer-killed-fall.jpg",
-    "video": null,
-    "author": "Pesala Bandara",
-    "tags": [
-      "News",
-      "adventurephotographer",
-      "obituary",
-      "washington"
-    ],
-    "seoTitle": "Popular Washington Mountain Photographer Dies in Climbing Fall",
-    "seoDescription": "An adventure photographer, recognized for documenting climbs on Washington’s highest and most difficult peaks, has died after falling when a handhold broke l..."
-  },
-  {
-    "title": "Google Photos adds image background removal for  custom stickers, only on iOS",
-    "url": "https://9to5google.com/2025/08/28/google-photos-image-background-removal-ios-stickers/",
-    "publishedAt": "2025-08-28T15:07:43.000Z",
-    "source": "9to5google.com",
-    "category": "apple",
-    "summary": "Google Photos is rolling out support for making custom stickers from your photos, but it only works on iOS with seemingly no plans to bring it to Android. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/google-photos-iphone-1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "9to5Google",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Google Photos adds image background removal for  custom stickers, only on iOS",
-    "seoDescription": "Google Photos is rolling out support for making custom stickers from your photos, but it only works on iOS with seemingly no plans to bring it to Android. more…"
-  },
-  {
-    "title": "Elden Ring Nightreign is getting even harder in September",
-    "url": "https://www.theverge.com/games/767490/elden-ring-nightreign-expansion-deep-of-night",
-    "publishedAt": "2025-08-28T15:05:08.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "If FromSoftware’s multiplayer take on Elden Ring was just a little too easy for you, the developer has just the thing coming up. The studio announced “Deep of Night,” a new mode for Nightreign that is focused specifically on difficulty. Namely, it sounds like it’ll make things much harder. From describes it as “a high-difficulty challenge mode designed fo...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/ELDEN-RING-NIGHTREIGN-DeepOfNight-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew Webster",
-    "tags": [],
-    "seoTitle": "Elden Ring Nightreign is getting even harder in September",
-    "seoDescription": "If FromSoftware’s multiplayer take on Elden Ring was just a little too easy for you, the developer has just the thing coming up. The studio announced “Deep o..."
-  },
-  {
-    "title": "MSI’s Katana gaming laptop is $400 off and includes Battlefield 6",
-    "url": "https://www.theverge.com/tech/767400/msi-gaming-laptop-rtx-5070-sony-xm5-oled-deal-sale",
-    "publishedAt": "2025-08-28T15:00:28.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "If you’re considering a gaming laptop, but you understandably don’t want to spend anywhere near $2,000, MSI’s Katana gaming laptop with the midrange RTX 5070 GPU is $1,099 (was $1,499.99) at Walmart. This machine has a lot to offer aside from a solid graphics chip for gaming. It includes a 15.6-inch QHD screen with a 165Hz refresh rate, an Intel Core i7-1...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/msikatanalead.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Cameron Faulkner",
-    "tags": [],
-    "seoTitle": "MSI’s Katana gaming laptop is $400 off and includes Battlefield 6",
-    "seoDescription": "If you’re considering a gaming laptop, but you understandably don’t want to spend anywhere near $2,000, MSI’s Katana gaming laptop with the midrange RTX 5070..."
-  },
-  {
-    "title": "DJI Won’t Stop Raising the Level of Its Wireless Microphone Lineup With New Mic 3",
-    "url": "https://nofilmschool.com/dji-mic-3",
-    "publishedAt": "2025-08-28T14:57:40.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "For a company suffering through an existential crisis with tariffs and trade wars that could absolutely destroy another brand, DJI seems to be doing just fine regardless of which countries it can (or at least chooses) to sell some of its top products in. Along with its line of camera drones and gimbals, DJI is also continuing to elevate its wireless micro...",
-    "image": "https://nofilmschool.com/media-library/dji-mic-3.jpg?id=61529854&width=980",
-    "video": "https://www.youtube.com/embed/IYQ9rWGMzI4?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Dji",
-      "Wireless microphone",
-      "Wireless microphone system",
-      "Dji mic 3"
-    ],
-    "seoTitle": "DJI Won’t Stop Raising the Level of Its Wireless Microphone Lineup With New Mic 3",
-    "seoDescription": "For a company suffering through an existential crisis with tariffs and trade wars that could absolutely destroy another brand, DJI seems to be doing just fin..."
-  },
-  {
-    "title": "iPhone 17's 'Crossbody Strap' Accessory to Feature Magnetic Design",
-    "url": "https://www.macrumors.com/2025/08/28/iphone-17-crossbody-strap-magnetic-design/",
-    "publishedAt": "2025-08-28T14:49:13.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple's cases for the iPhone 17 lineup will be accompanied by a new Crossbody Strap accessory with a unique magnetic design, according to the leaker known as \"Majin Bu.\" Apple's Crossbody Strap reportedly features an unusual magnetic design; it likely has a \"flexible metal core\" that makes it magnetic along its entire length. At the ends, \"rings polarized...",
-    "image": "https://images.macrumors.com/article-new/2025/08/crossbody-strap.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Featured",
-      "iPhone 17",
-      "iPhone 17 Pro",
-      "Majin Bu"
-    ],
-    "seoTitle": "iPhone 17's 'Crossbody Strap' Accessory to Feature Magnetic Design",
-    "seoDescription": "Apple's cases for the iPhone 17 lineup will be accompanied by a new Crossbody Strap accessory with a unique magnetic design, according to the leaker known as..."
-  },
-  {
-    "title": "What Not to Expect at Apple's 'Awe Dropping' September 9 Event",
-    "url": "https://www.macrumors.com/2025/08/28/what-not-to-expect-apple-iphone-17-event/",
-    "publishedAt": "2025-08-28T14:40:14.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple's annual fall event takes place on Tuesday, September 9, when it is expected to unveil the new iPhone 17 lineup, an Apple Watch Series 11, a third-generation Apple Watch Ultra, and potentially AirPods Pro 3. It may also make some additional new products available, but there are a handful of rumored upcoming devices that we don't expect to make an ap...",
-    "image": "https://images.macrumors.com/article-new/2025/08/Jaw-Dropping-What-Not-to-Expect-Feature-1.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "What Not to Expect at Apple's 'Awe Dropping' September 9 Event",
-    "seoDescription": "Apple's annual fall event takes place on Tuesday, September 9, when it is expected to unveil the new iPhone 17 lineup, an Apple Watch Series 11, a third-gene..."
-  },
-  {
-    "title": "Apple's App Store Under Investigation in Colombia",
-    "url": "https://www.macrumors.com/2025/08/28/app-store-under-investigation-in-colombia/",
-    "publishedAt": "2025-08-28T14:33:04.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Colombia's competition authority has opened a formal antitrust investigation into Apple, alleging that the company has abused its dominant position in the distribution of apps and purchases on iOS and iPadOS. The Superintendence of Industry and Commerce (SIC) announced the probe yesterday (via MobileTime), stating that its Delegation for the Protection of...",
-    "image": "https://images.macrumors.com/article-new/2022/01/iOS-App-Store-General-Feature-Desaturated.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Apple Antitrust",
-      "App Store",
-      "Colombia"
-    ],
-    "seoTitle": "Apple's App Store Under Investigation in Colombia",
-    "seoDescription": "Colombia's competition authority has opened a formal antitrust investigation into Apple, alleging that the company has abused its dominant position in the di..."
-  },
-  {
-    "title": "New iPhone 17 accessory from Apple leaked ahead of event",
-    "url": "https://9to5mac.com/2025/08/28/iphone-17-crossbody-strap-leak/",
-    "publishedAt": "2025-08-28T14:26:20.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "When leaker Majin Bu showed off clones of alleged TechWoven iPhone 17 case boxes, I noticed the fine print on the box mentioned compatibility with an unannounced accessory called Crossbody Strap. In a new post, Majin Bu has more details about this new iPhone 17 accessory from Apple. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/iphone-air.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New iPhone 17 accessory from Apple leaked ahead of event",
-    "seoDescription": "When leaker Majin Bu showed off clones of alleged TechWoven iPhone 17 case boxes, I noticed the fine print on the box mentioned compatibility with an unannou..."
-  },
-  {
-    "title": "DJI Mic 3 Is Smaller, Lighter, and So Much More Powerful",
-    "url": "https://petapixel.com/2025/08/28/dji-mic-3-is-smaller-lighter-and-so-much-more-powerful/",
-    "publishedAt": "2025-08-28T14:06:51.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "DJI Mic 3 is here, and DJI promises it is its most advanced mini wireless microphone yet. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/DJI-Mic-3_CityVlog_Small-and-portable_.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "News",
-      "audio",
-      "dji",
-      "djimic3",
-      "mic",
-      "recording",
-      "Sony"
-    ],
-    "seoTitle": "DJI Mic 3 Is Smaller, Lighter, and So Much More Powerful",
-    "seoDescription": "DJI Mic 3 is here, and DJI promises it is its most advanced mini wireless microphone yet. [Read More]"
-  },
-  {
-    "title": "Ricoh GR IV Review: A Successor Worth Waiting For",
-    "url": "https://petapixel.com/2025/08/28/ricoh-gr-iv-review-a-successor-worth-waiting-for/",
-    "publishedAt": "2025-08-28T14:01:58.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Small, pocketable cameras with fixed lenses hold an enviable position in the camera world. If a manufacturer makes one, it sells out. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Ricoh-GRIV-Review-Pocket-Power.jpg",
-    "video": null,
-    "author": "Chris Niccolls",
-    "tags": [
-      "Equipment",
-      "Reviews",
-      "blackandwhitephotography",
-      "digitalcompact",
-      "fujifilmx100vi",
-      "leicaq3",
-      "pocketcamera",
-      "review"
-    ],
-    "seoTitle": "Ricoh GR IV Review: A Successor Worth Waiting For",
-    "seoDescription": "Small, pocketable cameras with fixed lenses hold an enviable position in the camera world. If a manufacturer makes one, it sells out. [Read More]"
-  },
-  {
-    "title": "iPhone 17 pricing: Here’s the rumored cost for each new model",
-    "url": "https://9to5mac.com/2025/08/28/iphone-17-pricing-heres-the-rumored-cost-for-each-new-model/",
-    "publishedAt": "2025-08-28T13:59:54.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s big September event is coming up fast, with the company expected to unveil four new iPhones: iPhone 17, iPhone 17 Air, iPhone 17 Pro, and iPhone 17 Pro Max. Here are the rumored prices for each new iPhone 17 model, most of which could see a higher cost. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-lineup-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 pricing: Here’s the rumored cost for each new model",
-    "seoDescription": "Apple’s big September event is coming up fast, with the company expected to unveil four new iPhones: iPhone 17, iPhone 17 Air, iPhone 17 Pro, and iPhone 17 P..."
-  },
-  {
-    "title": "iOS 26 fixed the Photos app and it’s more powerful than ever",
-    "url": "https://9to5mac.com/2025/08/28/ios-26-fixed-the-photos-app-its-more-powerful-than-ever/",
-    "publishedAt": "2025-08-28T13:44:03.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Last year, with iOS 18, Apple tried to shake up the Photos App by making it more streamlined. They put everything under one view, and for most people, it was a flop. Instead of making it simpler to navigate, it was actually even more tedious to use. It felt like nothing really had its own place, and everything was just on one never-ending page. Apple seem...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Photos-FI.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Fernando Silva",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iOS 26 fixed the Photos app and it’s more powerful than ever",
-    "seoDescription": "Last year, with iOS 18, Apple tried to shake up the Photos App by making it more streamlined. They put everything under one view, and for most people, it was..."
-  },
-  {
-    "title": "A Satellite Accidentally Captured This Extremely Cool Photo of the Moon",
-    "url": "https://petapixel.com/2025/08/28/a-satellite-accidentally-captured-this-extremely-cool-photo-of-the-moon/",
-    "publishedAt": "2025-08-28T13:24:49.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Studying the Sun is crucial for monitoring space weather, as events like coronal mass ejections (CMEs) can disrupt satellites, power grids, and GPS navigation. And yet this scientific research can create beautiful art. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/NOAA-Coronagraph.mp4",
-    "video": null,
-    "author": "Matt Growcoot",
-    "tags": [
-      "Space",
-      "cme",
-      "corona",
-      "coronagraph",
-      "Coronal Mass Ejection",
-      "earth",
-      "earthshine",
-      "moon"
-    ],
-    "seoTitle": "A Satellite Accidentally Captured This Extremely Cool Photo of the Moon",
-    "seoDescription": "Studying the Sun is crucial for monitoring space weather, as events like coronal mass ejections (CMEs) can disrupt satellites, power grids, and GPS navigatio..."
-  },
-  {
-    "title": "AirPods Pro 3 Coming Soon With Smaller Case and Capacitive Button",
-    "url": "https://www.macrumors.com/2025/08/28/airpods-pro-3-smaller-case-and-capacitive-button/",
-    "publishedAt": "2025-08-28T12:57:18.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The AirPods Pro 3 will feature a slightly smaller charging case and a capacitive pairing button, according to the leaker known as Majin Bu. Citing discussions with a prominent accessory manufacturer, the leaker says that the charging case of the ‌AirPods Pro 3‌ could be slightly smaller than that of the current model, but will otherwise will be \"almost id...",
-    "image": "https://images.macrumors.com/article-new/2022/09/airpods-pro-2.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "AirPods Pro",
-      "AirPods Pro 3",
-      "Majin Bu"
-    ],
-    "seoTitle": "AirPods Pro 3 Coming Soon With Smaller Case and Capacitive Button",
-    "seoDescription": "The AirPods Pro 3 will feature a slightly smaller charging case and a capacitive pairing button, according to the leaker known as Majin Bu. Citing discussion..."
-  },
-  {
-    "title": "iOS 26: Remotely Control iPhone Camera With Your AirPods",
-    "url": "https://www.macrumors.com/how-to/ios-26-control-iphone-camera-with-your-airpods/",
-    "publishedAt": "2025-08-28T12:51:59.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple's iOS 26 update brings an unexpected camera trick to AirPods 4 and AirPods Pro 2 – the ability to control iPhone photo and video capture using AirPods stem gestures. The new Camera Remote feature essentially turns your wireless earbuds into a handy hands-free photography tool. Keep reading to learn how it works. New in iOS 26, Apple's Camera Remote ...",
-    "image": "https://images.macrumors.com/article-new/2018/02/airpods-4-stem.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "AirPods",
-      "AirPods Pro",
-      "Featured"
-    ],
-    "seoTitle": "iOS 26: Remotely Control iPhone Camera With Your AirPods",
-    "seoDescription": "Apple's iOS 26 update brings an unexpected camera trick to AirPods 4 and AirPods Pro 2 – the ability to control iPhone photo and video capture using AirPods ..."
-  },
-  {
-    "title": "For our readers, the iPhone 17 Air is more appealing than the Pro",
-    "url": "https://9to5mac.com/2025/08/28/for-our-readers-the-iphone-17-air-is-more-appealing-than-the-pro/",
-    "publishedAt": "2025-08-28T12:11:37.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A poll of nearly 3,000 9to5Mac readers revealed the unsurprising news that the most popular model in the upcoming lineup is the iPhone 17 Pro Max. But what may be a little more surprising is that, based on what we know so far, the iPhone 17 Air is more appealing than the iPhone 17 Pro … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/04/iphone-17-air-desert-titanium.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "For our readers, the iPhone 17 Air is more appealing than the Pro",
-    "seoDescription": "A poll of nearly 3,000 9to5Mac readers revealed the unsurprising news that the most popular model in the upcoming lineup is the iPhone 17 Pro Max. But what m..."
   }
 ]
