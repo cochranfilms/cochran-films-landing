@@ -1,79 +1,132 @@
 [
   {
-    "title": "Building a Multi-Agent Airline Seat Reassignment System with KaibanJS",
-    "url": "https://dev.to/kaibanjs/building-a-multi-agent-airline-seat-reassignment-system-with-kaibanjs-4kd8",
-    "publishedAt": "2025-08-28T02:47:54.000Z",
+    "title": "A Free Alternative to TinyPNG on Mac",
+    "url": "https://dev.to/junyu_fang_a216509a97501d/a-free-alternative-to-tinypng-on-mac-3j1c",
+    "publishedAt": "2025-08-28T04:12:19.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Introduction: The Business Challenge Airlines frequently face last-minute seat availability changes due to cancellations or no-shows—especially in premium cabins. These situations pose both a revenue opportunity and a customer experience challenge. Automating the seat reassignment process with a coordinated multi-agent AI system can unlock real-time upsel...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpvfudlvjnkfyi8n2gylk.png",
+    "summary": "Hello everyone, today I recommend \"Light Image Compressor\" for Mac. A free, open-source image compression tool that's a TinyPNG alternative. PS: The images are for entertainment purposes only; TinyPNG is still very useful.",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxslbde2r1q0hre9uwnje.png",
     "video": null,
-    "author": "Dariel Vila",
+    "author": "junyu fang",
     "tags": [
-      "ai",
-      "javascript",
-      "react",
-      "webdev"
+      "development",
+      "web3",
+      "webdev",
+      "programming"
     ],
-    "seoTitle": "Building a Multi-Agent Airline Seat Reassignment System with KaibanJS",
-    "seoDescription": "Introduction: The Business Challenge Airlines frequently face last-minute seat availability changes due to cancellations or no-shows—especially in premium ca..."
+    "seoTitle": "A Free Alternative to TinyPNG on Mac",
+    "seoDescription": "Hello everyone, today I recommend \"Light Image Compressor\" for Mac. A free, open-source image compression tool that's a TinyPNG alternative. PS: The images a..."
   },
   {
-    "title": "Why I Still Pay for These 5 Tools in 2025 (Even as a Software Engineer)",
-    "url": "https://dev.to/xinjie_zou_d67d2805538130/why-i-still-pay-for-these-5-tools-in-2025-even-as-a-software-engineer-4mm5",
-    "publishedAt": "2025-08-28T02:44:02.000Z",
+    "title": "How Stanley Kubrick Recreated New York Without Leaving London",
+    "url": "https://nofilmschool.com/kubrick-eyes-wide-shut-new-york",
+    "publishedAt": "2025-08-28T04:06:07.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Stanley Kubrick’s Eyes Wide Shut (1999) spends over two and a half hours roaming the streets of Manhattan—except not a single frame was shot there. The movie’s New York is a phantom city, conjured entirely in London through obsessive set building, camera trickery, and a level of production detail that borders on obsessive compulsion. Watching it, you migh...",
+    "image": "https://nofilmschool.com/media-library/how-stanley-kubrick-recreated-new-york-without-leaving-london.jpg?id=61527164&width=980",
+    "video": "https://www.youtube.com/embed/xgVo96JaqeM?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Stanley kubrick",
+      "Set design",
+      "Stanley kubrick"
+    ],
+    "seoTitle": "How Stanley Kubrick Recreated New York Without Leaving London",
+    "seoDescription": "Stanley Kubrick’s Eyes Wide Shut (1999) spends over two and a half hours roaming the streets of Manhattan—except not a single frame was shot there. The movie..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/tcodecyber/-2oke",
+    "publishedAt": "2025-08-28T04:01:54.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "A common thought many developers have: “If there’s a free alternative, why would I ever pay?” Especially in software engineering, we rely heavily on open-source. Many of us joke: If I can use it for free, good luck trying to make me pay. But as I’ve gained more years of experience, I realized that some high-quality paid tools save me so much time and ment...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwkdeqp7cj9kwgfmqgsu1.png",
+    "summary": "Day 64: When Professors Forget They're Teachers, Not Gatekeepers Somay ・ Aug 13 #webdev #programming #ai #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2572708%2F43f49f32-3b24-4a46-8afe-da660f0c82bb.jpeg",
     "video": null,
-    "author": "John Still",
+    "author": "Debugger",
     "tags": [
       "webdev",
       "programming",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Day 64: When Professors Forget They're Teachers, Not Gatekeepers Somay ・ Aug 13 #webdev #programming #ai #productivity"
+  },
+  {
+    "title": "[SOLVED] \"evm: execution reverted\" Error",
+    "url": "https://dev.to/metana/solved-evm-execution-reverted-error-d2",
+    "publishedAt": "2025-08-28T03:54:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TL;DR EVM execution reverted errors occur when smart contracts encounter rule violations, preventing incorrect transactions from executing on the Ethereum blockchain Common causes include business logic violations, insufficient gas, invalid jumps, stack overflow/underflow, and invalid opcodes Debugging tools like Remix Debugger UI, Truffle Debug, custom c...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmetana-website-rpd-3cgq.ue1.rapydapps.cloud%2Fwp-content%2Fuploads%2F2024%2F01%2Fcode_20240124_102244_via_10015_io-1024x703.png",
+    "video": null,
+    "author": "Metana",
+    "tags": [
+      "evm",
+      "execution",
+      "errors",
+      "webdev"
+    ],
+    "seoTitle": "[SOLVED] \"evm: execution reverted\" Error",
+    "seoDescription": "TL;DR EVM execution reverted errors occur when smart contracts encounter rule violations, preventing incorrect transactions from executing on the Ethereum bl..."
+  },
+  {
+    "title": "A single word, tone shift, or framing in the prompt can completely change the quality of your output. That’s the psychology of prompts, and mastering it is what separates casual users from experts.",
+    "url": "https://dev.to/jaideepparashar/a-single-word-tone-shift-or-framing-in-the-prompt-can-completely-change-the-quality-of-your-26kk",
+    "publishedAt": "2025-08-28T03:54:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The Psychology of Prompts: Why Wording Changes Everything Jaideep Parashar ・ Aug 28 #ai #beginners #productivity #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "beginners",
       "productivity",
-      "softwareengineering"
+      "webdev"
     ],
-    "seoTitle": "Why I Still Pay for These 5 Tools in 2025 (Even as a Software Engineer)",
-    "seoDescription": "A common thought many developers have: “If there’s a free alternative, why would I ever pay?” Especially in software engineering, we rely heavily on open-sou..."
+    "seoTitle": "A single word, tone shift, or framing in the prompt can completely change the quality of your output. That’s the psychology of prompts, and mastering it is what separates casual users from experts.",
+    "seoDescription": "The Psychology of Prompts: Why Wording Changes Everything Jaideep Parashar ・ Aug 28 #ai #beginners #productivity #webdev"
   },
   {
-    "title": "🚀 Just published a new post on dev.to! 👉 Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It I broke down: The core principle of disposable emails A step-by-step usage guide Pros, cons, and real-world use cases for deve",
-    "url": "https://dev.to/juddiy/just-published-a-new-post-on-devto-understanding-temporary-emails-how-tempmail3com-works-2472",
-    "publishedAt": "2025-08-28T02:14:17.000Z",
+    "title": "The Psychology of Prompts: Why Wording Changes Everything",
+    "url": "https://dev.to/jaideepparashar/the-psychology-of-prompts-why-wording-changes-everything-hpg",
+    "publishedAt": "2025-08-28T03:49:45.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It Juddiy ・ Aug 28 #webdev #ai #beginners #discuss",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1495887%2F79c06275-2768-4481-ac2a-0b36dc373392.jpg",
+    "summary": "When people first start using ChatGPT, they think it’s all about the tool. A single word, tone shift, or framing can completely change the quality of your output. Why Wording Matters AI doesn’t “understand” like humans. It interprets patterns. Think of it like this: If you ask “What’s the weather?”, you’ll get plain info. If you ask “Explain the weather l...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgh65g3h287olboxp4680.png",
     "video": null,
-    "author": "Juddiy",
+    "author": "Jaideep Parashar",
     "tags": [
-      "webdev",
       "ai",
       "beginners",
-      "discuss"
+      "productivity",
+      "webdev"
     ],
-    "seoTitle": "🚀 Just published a new post on dev.to! 👉 Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It I broke down: The core principle of disposable emails A step-by-step usage guide Pros, cons, and real-world use cases for deve",
-    "seoDescription": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It Juddiy ・ Aug 28 #webdev #ai #beginners #discuss"
+    "seoTitle": "The Psychology of Prompts: Why Wording Changes Everything",
+    "seoDescription": "When people first start using ChatGPT, they think it’s all about the tool. A single word, tone shift, or framing can completely change the quality of your ou..."
   },
   {
-    "title": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It",
-    "url": "https://dev.to/juddiy/understanding-temporary-emails-how-tempmail3com-works-and-why-you-might-need-it-klj",
-    "publishedAt": "2025-08-28T02:11:48.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In today’s web ecosystem, almost every service requires an email address — whether you’re signing up for a trial, accessing gated content, or simply browsing a forum. While this helps platforms manage users, it also exposes us to the downside: spam, newsletters, and potential data breaches. That’s where temporary email services like tempmail3.com come in....",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbrull5wa08vls0k5hc8o.png",
+    "title": "Apple suggests UK users may see slower feature rollouts under tighter regulation",
+    "url": "https://9to5mac.com/2025/08/27/apple-suggests-uk-users-may-see-slower-feature-rollouts-under-tighter-regulation/",
+    "publishedAt": "2025-08-28T03:35:43.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Last month, the United Kingdom’s competition regulator designated Apple and Google as having “strategic market status.” As a result, the two companies will be subject to different regulatory rules, some of which are very similar to Europe’s DMA. Tonight, Apple fired back. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/01/Apple-faces-1.8B-lawsuit-claiming-UK-App-Store-users-were-overcharged.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Juddiy",
+    "author": "Marcus Mendes",
     "tags": [
-      "webdev",
-      "ai",
-      "beginners",
-      "discuss"
+      "News"
     ],
-    "seoTitle": "Understanding Temporary Emails: How tempmail3.com Works and Why You Might Need It",
-    "seoDescription": "In today’s web ecosystem, almost every service requires an email address — whether you’re signing up for a trial, accessing gated content, or simply browsing..."
+    "seoTitle": "Apple suggests UK users may see slower feature rollouts under tighter regulation",
+    "seoDescription": "Last month, the United Kingdom’s competition regulator designated Apple and Google as having “strategic market status.” As a result, the two companies will b..."
   },
   {
     "title": "AstrHori 6mm f/2.8 Fisheye Lens Opens Up a Very Wide World of Possibilities",
@@ -571,54 +624,5 @@
     "tags": [],
     "seoTitle": "Trump administration suspends FEMA employees who warned about disaster response",
     "seoDescription": "FEMA has suspended at least 30 employees after they warned that spending limits, staffing cuts, and gaps in leadership hurt the agency’s ability to respond t..."
-  },
-  {
-    "title": "Metal Gear Solid Delta awkwardly mixes modern visuals with old-school frustrations",
-    "url": "https://www.theverge.com/games-review/766751/metal-gear-solid-delta-snake-eater-review",
-    "publishedAt": "2025-08-27T18:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Metal Gear Solid Delta: Snake Eater seemed to be designed specifically for me, at first. I've played and loved nearly every entry of the Metal Gear Solid series, and the original MGS is one of my favorite games of all time. These weird, third-person stealth action games feature bizarre characters and scenarios that have lingered in my memories through a c...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/ss_b63fda5d26ec95f8e12d78f5d23cb19484c73bf5.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tauriq Moosa",
-    "tags": [],
-    "seoTitle": "Metal Gear Solid Delta awkwardly mixes modern visuals with old-school frustrations",
-    "seoDescription": "Metal Gear Solid Delta: Snake Eater seemed to be designed specifically for me, at first. I've played and loved nearly every entry of the Metal Gear Solid ser..."
-  },
-  {
-    "title": "iOS 26 vs iOS 18: Five new icons you may not recognize after updating",
-    "url": "https://9to5mac.com/2025/08/27/ios-26-vs-ios-18-five-new-icons-you-may-not-recognize-after-updating/",
-    "publishedAt": "2025-08-27T18:28:44.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "iOS 26 is launching soon, headlined by a fresh Liquid Glass design that makes your iPhone look brand new. Apple has a ton of new app icons coming with its redesign, but the following five icons might be especially hard to recognize after you update. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/ios-26-apps-icons.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iOS 26 vs iOS 18: Five new icons you may not recognize after updating",
-    "seoDescription": "iOS 26 is launching soon, headlined by a fresh Liquid Glass design that makes your iPhone look brand new. Apple has a ton of new app icons coming with its re..."
-  },
-  {
-    "title": "Why 'Megadoc' Is Such a Unique Documentary",
-    "url": "https://nofilmschool.com/megadoc-documentary",
-    "publishedAt": "2025-08-27T18:25:23.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Francis Ford Coppola's pet project, Megalopolis, certainly did give filmgoers one of the most unique cinematic experiences of recent memory. It was a little quirky, from the New York Film Festival's long (like, really long) roundtable discussion between Coppola, Spike Lee, and Robert De Niro before the screening, to the in-theater actor who performed part...",
-    "image": "https://nofilmschool.com/media-library/adam-driver-in-megalopolis.jpg?id=52233450&width=980",
-    "video": "https://www.youtube.com/embed/pq6mvHZU0fc?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Francis ford coppola",
-      "Megadoc",
-      "Mike figgis",
-      "Megalopolis"
-    ],
-    "seoTitle": "Why 'Megadoc' Is Such a Unique Documentary",
-    "seoDescription": "Francis Ford Coppola's pet project, Megalopolis, certainly did give filmgoers one of the most unique cinematic experiences of recent memory. It was a little ..."
   }
 ]
