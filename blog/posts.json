@@ -1,19 +1,223 @@
 [
   {
-    "title": "Why 2025 is the Time to Get Power Apps Developers on Board for Enterprise Innovation Introduction",
-    "url": "https://dev.to/drishika_c0ec1fa6f192dcf6/why-2025-is-the-time-to-get-power-apps-developers-on-board-for-enterprise-innovationintroduction-2b7o",
-    "publishedAt": "2025-08-28T12:11:59.000Z",
+    "title": "A Satellite Accidentally Captured This Extremely Cool Photo of the Moon",
+    "url": "https://petapixel.com/2025/08/28/a-satellite-accidentally-captured-this-extremely-cool-photo-of-the-moon/",
+    "publishedAt": "2025-08-28T13:24:49.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Studying the Sun is crucial for monitoring space weather, as events like coronal mass ejections (CMEs) can disrupt satellites, power grids, and GPS navigation. And yet this scientific research can create beautiful art. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Coronagraph-Moon.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "Space",
+      "cme",
+      "corona",
+      "coronagraph",
+      "Coronal Mass Ejection",
+      "earth",
+      "earthshine",
+      "moon"
+    ],
+    "seoTitle": "A Satellite Accidentally Captured This Extremely Cool Photo of the Moon",
+    "seoDescription": "Studying the Sun is crucial for monitoring space weather, as events like coronal mass ejections (CMEs) can disrupt satellites, power grids, and GPS navigatio..."
+  },
+  {
+    "title": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL",
+    "url": "https://dev.to/rtnjt_bot/from-html-to-3d-why-i-rebuild-my-portfolio-with-react-vite-tailwind-frontql-a4m",
+    "publishedAt": "2025-08-28T13:12:16.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Technology is no longer merely a business enabler — it's the very foundation of growth. For businesses to flourish in 2025, companies that adopt fast-paced innovation, automate mundane tasks, and deploy customer-centric digital experiences quicker than the competition do. That's why and how businesses are looking to Microsoft's Power Platform. In particul...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjz0gyjvvd17auh1nqtgp.png",
+    "summary": "“A portfolio isn’t just a website. It’s your story, your brand, your invitation to connect.” – Every web developer ever (including me) Back in early 2022, my developer journey started with a humble, single-page website: a few lines of HTML, home-baked CSS, and a hint of JavaScript. I hosted it on GitHub Pages at RD's Portfolio. It did the job: showcasing ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff0uvf5ozjvz16vubbc2j.webp",
     "video": null,
-    "author": "drishika",
+    "author": "Ritanjit Das",
     "tags": [
-      "webdev"
+      "webdev",
+      "react",
+      "typescript",
+      "portfolio"
     ],
-    "seoTitle": "Why 2025 is the Time to Get Power Apps Developers on Board for Enterprise Innovation Introduction",
-    "seoDescription": "Technology is no longer merely a business enabler — it's the very foundation of growth. For businesses to flourish in 2025, companies that adopt fast-paced i..."
+    "seoTitle": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL",
+    "seoDescription": "“A portfolio isn’t just a website. It’s your story, your brand, your invitation to connect.” – Every web developer ever (including me) Back in early 2022, my..."
+  },
+  {
+    "title": "The death of cloud centralization: Last decade’s internet had a gravity problem",
+    "url": "https://dev.to/dev_tips/the-death-of-cloud-centralization-last-decades-internet-had-a-gravity-problem-28pf",
+    "publishedAt": "2025-08-28T13:11:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why workloads are fragmenting, edge is rising, and centralized cloud is quietly unraveling Press enter or click to view image in full size I used to think cloud centralization was the cheat code. Just deploy everything to us-east-1, toss it behind an API Gateway, slap a global CDN on top, and call it scalable. That’s what all the blog posts said, right? “...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AsqOJraQ4L5YZc3fJwO8_Kg.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "The death of cloud centralization: Last decade’s internet had a gravity problem",
+    "seoDescription": "Why workloads are fragmenting, edge is rising, and centralized cloud is quietly unraveling Press enter or click to view image in full size I used to think cl..."
+  },
+  {
+    "title": "Keep your system healthy with 20 cron jobs every DevOps engineer needs.",
+    "url": "https://dev.to/dev_tips/keep-your-system-healthy-with-20-cron-jobs-every-devops-engineer-needs-5ec",
+    "publishedAt": "2025-08-28T13:05:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Stop babysitting your servers. These cron jobs will keep your infra clean, safe, and drama-free so you can finally sleep through the night. Press enter or click to view image in full size You know that one server that always acts up at 2 AM like it just remembered it has feelings? Yeah. That’s why cron exists. If you’re in DevOps or managing infra even pa...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2AkflRFhSrznC8wgZhI17PNQ.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devops"
+    ],
+    "seoTitle": "Keep your system healthy with 20 cron jobs every DevOps engineer needs.",
+    "seoDescription": "Stop babysitting your servers. These cron jobs will keep your infra clean, safe, and drama-free so you can finally sleep through the night. Press enter or cl..."
+  },
+  {
+    "title": "So… you wanna build with LLMs?",
+    "url": "https://dev.to/dev_tips/so-you-wanna-build-with-llms-4bpe",
+    "publishedAt": "2025-08-28T12:59:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why LLM developers are in demand, what it actually takes, and how to get started (without losing your mind) Press enter or click to view image in full size Welcome to the LLM jungle LLMs are everywhere. Your code editor suggests full functions, your coworker uses ChatGPT to write emails, and your CEO just asked if “we can AI this.” Feels like we’re mid-se...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ASbrwzrxtTpf6ztWKKELScg.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "So… you wanna build with LLMs?",
+    "seoDescription": "Why LLM developers are in demand, what it actually takes, and how to get started (without losing your mind) Press enter or click to view image in full size W..."
+  },
+  {
+    "title": "JavaScript catches up: 4 modern frameworks for multi-agent LLM orchestration",
+    "url": "https://dev.to/kaibanjs/javascript-catches-up-4-modern-frameworks-for-multi-agent-llm-orchestration-51fn",
+    "publishedAt": "2025-08-28T12:57:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The rapid rise of LLM-powered agents has brought new attention to how we orchestrate complex, multi-agent systems—especially in AI-heavy domains like task automation, assistant chaining, and tool-based reasoning. For a while, Python had a clear head start in this space. Frameworks like LangChain, CrewAI, and LangGraph made it the go-to choice for prototyp...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foee828wv19lqfcyrkh3h.png",
+    "video": null,
+    "author": "Dariel Vila",
+    "tags": [
+      "javascript",
+      "webdev",
+      "agents",
+      "ai"
+    ],
+    "seoTitle": "JavaScript catches up: 4 modern frameworks for multi-agent LLM orchestration",
+    "seoDescription": "The rapid rise of LLM-powered agents has brought new attention to how we orchestrate complex, multi-agent systems—especially in AI-heavy domains like task au..."
+  },
+  {
+    "title": "AirPods Pro 3 Coming Soon With Smaller Case and Capacitive Button",
+    "url": "https://www.macrumors.com/2025/08/28/airpods-pro-3-smaller-case-and-capacitive-button/",
+    "publishedAt": "2025-08-28T12:57:18.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "The AirPods Pro 3 will feature a slightly smaller charging case and a capacitive pairing button, according to the leaker known as Majin Bu. Citing discussions with a prominent accessory manufacturer, the leaker says that the charging case of the ‌AirPods Pro 3‌ could be slightly smaller than that of the current model, but will otherwise will be \"almost id...",
+    "image": "https://images.macrumors.com/article-new/2022/09/airpods-pro-2.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "AirPods Pro",
+      "AirPods Pro 3",
+      "Majin Bu"
+    ],
+    "seoTitle": "AirPods Pro 3 Coming Soon With Smaller Case and Capacitive Button",
+    "seoDescription": "The AirPods Pro 3 will feature a slightly smaller charging case and a capacitive pairing button, according to the leaker known as Majin Bu. Citing discussion..."
+  },
+  {
+    "title": "How to stop sounding like a junior dev during stand-up",
+    "url": "https://dev.to/dev_tips/how-to-stop-sounding-like-a-junior-dev-during-stand-up-2iik",
+    "publishedAt": "2025-08-28T12:53:30.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What senior engineers do differently in daily updates (and how you can start sounding like one without faking it) Press enter or click to view image in full size Intro: We’ve all been that dev It’s 9:58 AM. You’re frantically trying to remember what you even did yesterday while pretending to look calm in the Zoom call. Your turn’s coming up. You open your...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AU1zP5Pz8FtzXZYzDHn-z4Q.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "How to stop sounding like a junior dev during stand-up",
+    "seoDescription": "What senior engineers do differently in daily updates (and how you can start sounding like one without faking it) Press enter or click to view image in full ..."
+  },
+  {
+    "title": "iOS 26: Remotely Control iPhone Camera With Your AirPods",
+    "url": "https://www.macrumors.com/how-to/ios-26-control-iphone-camera-with-your-airpods/",
+    "publishedAt": "2025-08-28T12:51:59.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's iOS 26 update brings an unexpected camera trick to AirPods 4 and AirPods Pro 2 – the ability to control iPhone photo and video capture using AirPods stem gestures. The new Camera Remote feature essentially turns your wireless earbuds into a handy hands-free photography tool. Keep reading to learn how it works. New in iOS 26, Apple's Camera Remote ...",
+    "image": "https://images.macrumors.com/article-new/2018/02/airpods-4-stem.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "AirPods",
+      "AirPods Pro",
+      "Featured"
+    ],
+    "seoTitle": "iOS 26: Remotely Control iPhone Camera With Your AirPods",
+    "seoDescription": "Apple's iOS 26 update brings an unexpected camera trick to AirPods 4 and AirPods Pro 2 – the ability to control iPhone photo and video capture using AirPods ..."
+  },
+  {
+    "title": "LLM Fundamentals: How Large Language Models Work",
+    "url": "https://dev.to/lovestaco/llm-fundamentals-a-deep-dive-into-how-large-language-models-work-3ohb",
+    "publishedAt": "2025-08-28T12:51:50.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Large Language Models (LLMs) like GPT, Claude, and Gemini power today’s most impressive AI applications—chatbots, coding assistants, searc...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0oyjmzl6vr96iecpyhs1.png",
+    "video": null,
+    "author": "Athreya aka Maneshwar",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "LLM Fundamentals: How Large Language Models Work",
+    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
+  },
+  {
+    "title": "ChargePoint’s new megawatt EV chargers could level the playing field with China",
+    "url": "https://www.theverge.com/news/766156/chargepoint-dc-fast-charging-600-kw-megawatt",
+    "publishedAt": "2025-08-28T12:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "ChargePoint is ramping up the power for its next-generation DC fast charging architecture to 600 kW for passenger vehicles, and up to 3.75 megawatts (3,750 kW) for heavy-duty trucks — enough to power an entire football stadium. Most EVs on the road aren’t able to accept more than 350 kW of power while charging, but ChargePoint CEO Rick Wilmer said the ide...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Under-Embargo-Until-August-28-at-8.30AM-ET_ChargePoint-DC_Image-Asset.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew J. Hawkins",
+    "tags": [],
+    "seoTitle": "ChargePoint’s new megawatt EV chargers could level the playing field with China",
+    "seoDescription": "ChargePoint is ramping up the power for its next-generation DC fast charging architecture to 600 kW for passenger vehicles, and up to 3.75 megawatts (3,750 k..."
+  },
+  {
+    "title": "The best alternatives to Spotify for listening to music",
+    "url": "https://www.theverge.com/22910685/music-listening-service-spotify-apple-youtube-amazon",
+    "publishedAt": "2025-08-28T12:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "When this article was originally written in February 2022, the big Spotify controversy was that artists were abandoning the audio service in protest of the company's contract with podcaster Joe Rogan, and some subscribers were deciding to follow the musicians' example. More recently, some users have threatened to bail after CEO Daniel Ek invested in a fir...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23954050/STK427_Getty_Headphones.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Barbara Krasnoff",
+    "tags": [],
+    "seoTitle": "The best alternatives to Spotify for listening to music",
+    "seoDescription": "When this article was originally written in February 2022, the big Spotify controversy was that artists were abandoning the audio service in protest of the c..."
   },
   {
     "title": "For our readers, the iPhone 17 Air is more appealing than the Pro",
@@ -32,25 +236,6 @@
     "seoDescription": "A poll of nearly 3,000 9to5Mac readers revealed the unsurprising news that the most popular model in the upcoming lineup is the iPhone 17 Pro Max. But what m..."
   },
   {
-    "title": "Top code editors: How have they evolved, and which are the best ones now?",
-    "url": "https://dev.to/dev_tips/top-code-editors-how-have-they-evolved-and-which-are-the-best-ones-now-47j1",
-    "publishedAt": "2025-08-28T12:11:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "From punch cards to VS Code, developers have shaped their tools, and now those tools are about to shape us back. Press enter or click to view image in full size Editors aren’t just tools they’re mirrors Code editors are the most personal tool in a developer’s stack. You can follow someone’s tutorial, fork their GitHub repo, use the same framework but the ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AwZDRz8FyIZmk-dhGE7PMQw.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Top code editors: How have they evolved, and which are the best ones now?",
-    "seoDescription": "From punch cards to VS Code, developers have shaped their tools, and now those tools are about to shape us back. Press enter or click to view image in full s..."
-  },
-  {
     "title": "MagSafe PopSockets have come for your Kindle",
     "url": "https://www.theverge.com/news/767369/popsocket-popcase-kindle-magsafe-price-availability",
     "publishedAt": "2025-08-28T12:05:06.000Z",
@@ -63,25 +248,6 @@
     "tags": [],
     "seoTitle": "MagSafe PopSockets have come for your Kindle",
     "seoDescription": "You can now add swappable magnetic PopSocket grips to Kindle e-readers without undertaking any DIY hacks. PopSocket has launched new PopCase Kindle cases tha..."
-  },
-  {
-    "title": "The solo dev SaaS stack powering $10K/month Micro-SaaS tools in 2025",
-    "url": "https://dev.to/dev_tips/the-solo-dev-saas-stack-powering-10kmonth-micro-saas-tools-in-2025-pl7",
-    "publishedAt": "2025-08-28T12:04:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Forget cofounders and pitch decks. In 2025, solo developers are launching profitable SaaS products using APIs, serverless stacks, and browser tabs. This is the exact playbook they’re using. Press enter or click to view image in full size This isn’t 2015. This isn’t 2015. You don’t need a cofounder, an office, or a VC who ghosted you after calling you “pre...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AR4VGcUV5QsURBhWqEVZepQ.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "The solo dev SaaS stack powering $10K/month Micro-SaaS tools in 2025",
-    "seoDescription": "Forget cofounders and pitch decks. In 2025, solo developers are launching profitable SaaS products using APIs, serverless stacks, and browser tabs. This is t..."
   },
   {
     "title": "DJI’s Mic 3 crams more features into a smaller package",
@@ -461,163 +627,5 @@
     "tags": [],
     "seoTitle": "Samsung is Unpacking again in early September",
     "seoDescription": "Maybe those little AI sparkles are bursting out of a trifold phone? Maybe? Apple isn’t the only tech company to send out launch event invitations this week. ..."
-  },
-  {
-    "title": "IDC nearly doubles worldwide smartphone forecast for 2025, cites ‘accelerated iOS growth’",
-    "url": "https://9to5mac.com/2025/08/27/idc-nearly-doubles-worldwide-smartphone-forecast-for-2025-cites-accelerated-ios-growth/",
-    "publishedAt": "2025-08-27T22:10:54.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "To say 2025 has been an unpredictable year for the smartphone market would be an understatement. Early in February, IDC had forecast a 2.6% growth, followed by a decrease to just 0.6% in May. Now, the institute has once again adjusted its forecast, thanks in part to “accelerated” iOS growth. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/09/iphone-16-touchscreen.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "IDC nearly doubles worldwide smartphone forecast for 2025, cites ‘accelerated iOS growth’",
-    "seoDescription": "To say 2025 has been an unpredictable year for the smartphone market would be an understatement. Early in February, IDC had forecast a 2.6% growth, followed ..."
-  },
-  {
-    "title": "Blackmagic Slashes Cinema Camera Prices",
-    "url": "https://petapixel.com/2025/08/27/blackmagic-slashes-cinema-camera-prices/",
-    "publishedAt": "2025-08-27T21:56:21.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Blackmagic Design announced a substantial price reduction across its Ursa Cine camera kits, marking a rare move in the high-end cinema camera market where prices have generally been rising. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Blackmagic-URSA-Cine-Camera-Kits-PetaPixel-BG-3-Panel.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Equipment",
-      "News",
-      "blackmagic",
-      "blackmagicursacine",
-      "cine",
-      "cinema",
-      "deals",
-      "largeformat"
-    ],
-    "seoTitle": "Blackmagic Slashes Cinema Camera Prices",
-    "seoDescription": "Blackmagic Design announced a substantial price reduction across its Ursa Cine camera kits, marking a rare move in the high-end cinema camera market where pr..."
-  },
-  {
-    "title": "Apple TV+: Romantic drama with Ted Lasso’s Brett Goldstein gets first trailer",
-    "url": "https://9to5mac.com/2025/08/27/apple-tv-romantic-drama-with-ted-lassos-brett-goldstein-gets-first-trailer/",
-    "publishedAt": "2025-08-27T21:37:25.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Last December, Apple announced a new romantic drama starring Brett Goldstein (Ted Lasso, Shrinking), and Imogen Poots (28 Weeks Later, Green Room), marking its third collaboration with the actor/writer. Today, the movie got its first trailer, ahead of its official release next month. Watch it below. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/appletv-all-of-you.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple TV+: Romantic drama with Ted Lasso’s Brett Goldstein gets first trailer",
-    "seoDescription": "Last December, Apple announced a new romantic drama starring Brett Goldstein (Ted Lasso, Shrinking), and Imogen Poots (28 Weeks Later, Green Room), marking i..."
-  },
-  {
-    "title": "These Are By Far the Best Labor Day Deals for Filmmakers Looking to Upgrade Their Gear",
-    "url": "https://nofilmschool.com/labor-day-deals-2025",
-    "publishedAt": "2025-08-27T21:28:07.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "While it's not quite as crazy as Black Friday, Labor Day has sneakily become one of the better shopping holidays for those looking to find great deals. For the filmmaker in your life, whether that be a friend or yourself, we're looking at some of the top discounts being offered for film and video gear. So, for our latest \"Deals of the Week\" roundup, we ha...",
-    "image": "https://nofilmschool.com/media-library/these-are-by-far-the-best-labor-day-deals-for-filmmakers-looking-to-upgrade-their-gear.png?id=61527035&width=980",
-    "video": null,
-    "author": "NFS Staff",
-    "tags": [
-      "Filmmaker deals",
-      "Filmmaking deals of the week",
-      "Deals",
-      "Labor day",
-      "Labor day deals",
-      "Filmmaking deals of the week"
-    ],
-    "seoTitle": "These Are By Far the Best Labor Day Deals for Filmmakers Looking to Upgrade Their Gear",
-    "seoDescription": "While it's not quite as crazy as Black Friday, Labor Day has sneakily become one of the better shopping holidays for those looking to find great deals. For t..."
-  },
-  {
-    "title": "9to5Mac Daily: August 27, 2025 – Apple’s ‘Awe dropping’ event",
-    "url": "https://9to5mac.com/2025/08/27/daily-august-27-2025/",
-    "publishedAt": "2025-08-27T21:15:13.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: August 27, 2025 – Apple’s ‘Awe dropping’ event",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "YouTube Has Become the World's Biggest TV Network—Is It Also the Next Movie Studio?",
-    "url": "https://nofilmschool.com/youtube-worlds-biggest-tv-network",
-    "publishedAt": "2025-08-27T21:15:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "YouTube has now spent half a year as the leading company in share of TV viewing in the United States, with 13.4% of all TV use in July, according to The Hollywood Reporter. That's a four-point lead over Disney, and it represents something we haven't seen before in entertainment history. The platform that started with grainy webcam videos has quietly becom...",
-    "image": "https://nofilmschool.com/media-library/youtube-tv.webp?id=56490831&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "Youtubers",
-      "Influencers",
-      "Studios",
-      "Distribution",
-      "Youtube"
-    ],
-    "seoTitle": "YouTube Has Become the World's Biggest TV Network—Is It Also the Next Movie Studio?",
-    "seoDescription": "YouTube has now spent half a year as the leading company in share of TV viewing in the United States, with 13.4% of all TV use in July, according to The Holl..."
-  },
-  {
-    "title": "4Chan and Kiwi Farms file joint lawsuit against the UK",
-    "url": "https://www.theverge.com/social/767063/4chan-kiwi-farms-lawsuit-uk-ofcom",
-    "publishedAt": "2025-08-27T21:11:53.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "On Wednesday, 4Chan and Kiwi Farms, two of the most controversial social media sites on the internet, filed a federal lawsuit against the British government, arguing that the requirements of the UK's Online Safety Act infringe on their Constitutional rights as American corporations. In a filing submitted to the U.S. District Court in the District of Colum...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/STKS492_HATE_SPEECH_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tina Nguyen",
-    "tags": [],
-    "seoTitle": "4Chan and Kiwi Farms file joint lawsuit against the UK",
-    "seoDescription": "On Wednesday, 4Chan and Kiwi Farms, two of the most controversial social media sites on the internet, filed a federal lawsuit against the British government,..."
-  },
-  {
-    "title": "Apple to secure nearly half of TSMC’s 2nm production (report)",
-    "url": "https://9to5mac.com/2025/08/27/apple-to-secure-nearly-half-of-tsmcs-2nm-production-report/",
-    "publishedAt": "2025-08-27T21:10:45.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "According to the latest rumors, Apple is slated to use TSMC’s 2nm process for its upcoming A20 chip, expected to power the iPhone 18 series. Now, a new report details the chipmaker’s roadmap for bringing the chip into mass production, and the industry-wide rush to secure an early supply. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/TSMC-ahead-of-schedule-on-trial-production-of-2nm-chips.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple to secure nearly half of TSMC’s 2nm production (report)",
-    "seoDescription": "According to the latest rumors, Apple is slated to use TSMC’s 2nm process for its upcoming A20 chip, expected to power the iPhone 18 series. Now, a new repor..."
-  },
-  {
-    "title": "How to make clear iPhone app icons with iOS 26",
-    "url": "https://9to5mac.com/2025/08/27/how-to-make-iphone-app-icons-clear-with-ios-26/",
-    "publishedAt": "2025-08-27T21:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "iOS 26 includes a system-wide redesign with transparent elements called Liquid Glass. The iPhone update also includes all-new app icons for Apple’s built-in apps. For the most dramatic change to your Home Screen, you can make every iPhone app icon clear for the first time. Here’s how it works. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/clear-app-icons-ios-26-iphone.webp?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "How to make clear iPhone app icons with iOS 26",
-    "seoDescription": "iOS 26 includes a system-wide redesign with transparent elements called Liquid Glass. The iPhone update also includes all-new app icons for Apple’s built-in ..."
   }
 ]
