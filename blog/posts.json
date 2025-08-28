@@ -1,41 +1,98 @@
 [
   {
-    "title": "Trends and Realities in GPU Pricing: What Buyers Should Know in 2026",
-    "url": "https://dev.to/cyfutureai/trends-and-realities-in-gpu-pricing-what-buyers-should-know-in-2026-lhc",
-    "publishedAt": "2025-08-28T09:09:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In 2026, the graphics processing unit (GPU) market remains a complex landscape defined by high demand, geopolitical influences, and shifting consumer priorities. Whether you are a gamer, professional, or AI enthusiast, understanding the current pricing trends and market forces driving GPU costs can help make more informed purchasing decisions. GPU prices ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiyyp11nvtv7eajmv08ah.png",
+    "title": "Apple Secures Half of TSMC's 2nm Production Capacity for iPhone 18",
+    "url": "https://www.macrumors.com/2025/08/28/apple-tsmc-2nm-production-iphone-18/",
+    "publishedAt": "2025-08-28T10:10:50.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple has ordered almost half of TSMC's initial 2nm production capacity for the iPhone 18 as the pure foundry begins mass production of its next-generation chip process. According to DigiTimes, TSMC's 2nm process went into production in the fourth quarter of 2025 as planned, with the foundry setting substrate pricing at a premium $30,000 per unit. Despite...",
+    "image": "https://images.macrumors.com/article-new/2025/03/a20-chip-feature.jpg",
     "video": null,
-    "author": "Cyfuture AI",
+    "author": "Tim Hardwick",
     "tags": [
-      "gpu",
-      "ai",
-      "webdev",
-      "cloud"
+      "iPhone 18",
+      "2nm",
+      "DigiTimes",
+      "TSMC"
     ],
-    "seoTitle": "Trends and Realities in GPU Pricing: What Buyers Should Know in 2026",
-    "seoDescription": "In 2026, the graphics processing unit (GPU) market remains a complex landscape defined by high demand, geopolitical influences, and shifting consumer priorit..."
+    "seoTitle": "Apple Secures Half of TSMC's 2nm Production Capacity for iPhone 18",
+    "seoDescription": "Apple has ordered almost half of TSMC's initial 2nm production capacity for the iPhone 18 as the pure foundry begins mass production of its next-generation c..."
   },
   {
-    "title": "WCAG Compliance: Why Accessibility is the Secret Weapon for Your Website’s Success",
-    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/wcag-compliance-why-accessibility-is-the-secret-weapon-for-your-websites-success-98a",
-    "publishedAt": "2025-08-28T09:06:47.000Z",
+    "title": "🔥Firebase vs ⚡Supabase in 2025: Which one actually scales with 🫵 you?",
+    "url": "https://dev.to/dev_tips/firebase-vs-supabase-in-2025-which-one-actually-scales-with-you-2374",
+    "publishedAt": "2025-08-28T10:03:33.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🚨 Imagine this… Meanwhile, a job seeker with hearing loss tries to watch your tutorial video, only to discover—no captions. Frustrated, he clicks away. And then, a loyal customer who relies on keyboard navigation gets stuck on your checkout page because your site only works with a mouse. Sale lost. 👉 This isn’t fiction. This is the reality for millions ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk40p4n41hylauuvbxgas.jpg",
+    "summary": "Both promise instant backends, realtime magic, and built-in auth. But once you scale past the MVP stage, only one keeps up without boxing you in. Here’s my take. TL;DR: Firebase is fantastic for fast MVPs and tight integration with Google’s ecosystem. Supabase gives you SQL, open standards, and Postgres under the hood meaning control, visibility, and long...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2AVSDh2rg_2Yv7LVGSq9EgDQ.jpeg",
     "video": null,
-    "author": "Okoye Ndidiamaka",
+    "author": "<devtips/>",
     "tags": [
       "webdev",
-      "wcag",
-      "webaccessibility",
-      "seo"
+      "programming",
+      "javascript",
+      "ai"
     ],
-    "seoTitle": "WCAG Compliance: Why Accessibility is the Secret Weapon for Your Website’s Success",
-    "seoDescription": "🚨 Imagine this… Meanwhile, a job seeker with hearing loss tries to watch your tutorial video, only to discover—no captions. Frustrated, he clicks away. And ..."
+    "seoTitle": "🔥Firebase vs ⚡Supabase in 2025: Which one actually scales with 🫵 you?",
+    "seoDescription": "Both promise instant backends, realtime magic, and built-in auth. But once you scale past the MVP stage, only one keeps up without boxing you in. Here’s my t..."
+  },
+  {
+    "title": "The two-part routine that helps me code, write, and actually finish stuff",
+    "url": "https://dev.to/dev_tips/the-two-part-routine-that-helps-me-code-write-and-actually-finish-stuff-fm4",
+    "publishedAt": "2025-08-28T09:56:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A daily rhythm that helped me write 150+ stories, ship code faster, and avoid burnout, without fancy apps or overthinking productivity. ⚡️ TL;DR I structure my day in two parts: Morning = Long, focused sessions for writing and deep coding. Afternoon = Short, actionable tasks like fixes, reviews, meetings, and shipping. Writing is always part of the AM dee...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1%2AEbpQ2sL61Hi05VoiBMQIEQ.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "opensource"
+    ],
+    "seoTitle": "The two-part routine that helps me code, write, and actually finish stuff",
+    "seoDescription": "A daily rhythm that helped me write 150+ stories, ship code faster, and avoid burnout, without fancy apps or overthinking productivity. ⚡️ TL;DR I structure ..."
+  },
+  {
+    "title": "I Upgraded to Vite 7: What Got 10x Better and Why It Might be the Future of Frontend Dev.",
+    "url": "https://dev.to/dev_tips/i-upgraded-to-vite-7-what-got-10x-better-and-why-it-might-be-the-future-of-frontend-dev-2oh8",
+    "publishedAt": "2025-08-28T09:49:30.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why I upgraded I’ve been using Vite in production since v2. For small-to-medium React and Vue apps, it’s been fast and dependable. When Vite 7 dropped, I upgraded one of our active projects, a ~40K LOC dashboard app to evaluate whether the new features could improve cold start performance, build stability, and local developer velocity. Press enter or clic...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1400%2F1%2A6Sx9JhKcAmI50m2cMiQVnA.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "opensource"
+    ],
+    "seoTitle": "I Upgraded to Vite 7: What Got 10x Better and Why It Might be the Future of Frontend Dev.",
+    "seoDescription": "Why I upgraded I’ve been using Vite in production since v2. For small-to-medium React and Vue apps, it’s been fast and dependable. When Vite 7 dropped, I upg..."
+  },
+  {
+    "title": "AI development services and ML development services with Offshore AI/ML Development Services",
+    "url": "https://dev.to/michael_keller_9d83ef0ce5/ai-development-services-and-ml-development-services-with-offshore-aiml-development-services-283l",
+    "publishedAt": "2025-08-28T09:43:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s global business landscape, organizations are increasingly leveraging AI development services and ML development services to drive innovation, enhance efficiency, and gain a competitive edge. One of the most cost-effective ways to access these technologies is through offshore AI/ML development services, where companies collaborate with remote te...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiq1zyiiy1kbev0faymiw.jpg",
+    "video": null,
+    "author": "Michael Keller",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "AI development services and ML development services with Offshore AI/ML Development Services",
+    "seoDescription": "In today’s global business landscape, organizations are increasingly leveraging AI development services and ML development services to drive innovation, enha..."
   },
   {
     "title": "Apple Warns UK Risks Feature Delays Under Proposed Competition Rules",
@@ -53,101 +110,6 @@
     ],
     "seoTitle": "Apple Warns UK Risks Feature Delays Under Proposed Competition Rules",
     "seoDescription": "Apple has warned that UK users could face delayed product features if the country's regulators proceed with \"EU-style rules\" that seek to make it easier for ..."
-  },
-  {
-    "title": "Understanding Webhooks: Streamlining Event-Driven Communication day 39 of system design",
-    "url": "https://dev.to/vincenttommi/understanding-webhooks-streamlining-event-driven-communication-day-39-of-system-design-3p52",
-    "publishedAt": "2025-08-28T08:31:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Webhooks are a powerful mechanism for enabling real-time, event-driven communication between servers. Unlike traditional API polling, where your application repeatedly checks for updates, webhooks allow a server to proactively send an HTTP request to your application the moment an event occurs. This approach is efficient, scalable, and widely used by plat...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F39h5jnj666a4ogmntssq.png",
-    "video": null,
-    "author": "Vincent Tommi",
-    "tags": [
-      "programming",
-      "systemdesign",
-      "webdev",
-      "beginners"
-    ],
-    "seoTitle": "Understanding Webhooks: Streamlining Event-Driven Communication day 39 of system design",
-    "seoDescription": "Webhooks are a powerful mechanism for enabling real-time, event-driven communication between servers. Unlike traditional API polling, where your application ..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/ananya330/-4k71",
-    "publishedAt": "2025-08-28T08:26:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
-    "video": null,
-    "author": "Ananya Balehithlu",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/miska_kovakova_7b0e462520/-5bce",
-    "publishedAt": "2025-08-28T08:25:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
-    "video": null,
-    "author": "Miska Kovakova",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/klaudia_kovov_bf17561f/-4c5n",
-    "publishedAt": "2025-08-28T08:19:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
-    "video": null,
-    "author": "Klaudia Kováčová",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/francesca_petracci_8892fa/-4cj2",
-    "publishedAt": "2025-08-28T08:18:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2096147%2Fcfb04d29-bd0a-4f15-9e93-594834b52f6b.jpg",
-    "video": null,
-    "author": "Francesca Petracci",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Top 10 Free Dev Tools to Boost Productivity in 2025 Emmanuel Mumba ・ Aug 28 #webdev #programming #javascript #beginners"
   },
   {
     "title": "This Goodbye Line Remains One of Cinema’s Greatest Mic Drops",
@@ -625,5 +587,38 @@
     ],
     "seoTitle": "Legendary Composer John Williams... Doesn't Like Film Music?",
     "seoDescription": "It wouldn't be dramatic to say John Williams soundtracked much of my childhood, when I would fall asleep listening to a Star Wars compilation CD, and now can..."
+  },
+  {
+    "title": "Seriously, What is the Best Coen Brothers Movie?",
+    "url": "https://nofilmschool.com/best-coen-brothers-movie",
+    "publishedAt": "2025-08-27T19:00:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "We love a good ranking and debate about a filmmaker's oeuvre. So, when we found World of Reel’s recent 100-critic poll that examines the Coen brothers' filmography, we were delighted. Fargo topped their list, with No Country for Old Men coming close behind. Great choices. However, further down, I was stunned to see O Brother, Where Art Thou? dead last. Af...",
+    "image": "https://nofilmschool.com/media-library/frances-mcdormand-in-fargo.jpg?id=34066573&width=980",
+    "video": "https://www.youtube.com/embed/TFzPVLdGtAg?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "The coen brothers",
+      "Coen brothers",
+      "Best movies",
+      "The coen brothers"
+    ],
+    "seoTitle": "Seriously, What is the Best Coen Brothers Movie?",
+    "seoDescription": "We love a good ranking and debate about a filmmaker's oeuvre. So, when we found World of Reel’s recent 100-critic poll that examines the Coen brothers' filmo..."
+  },
+  {
+    "title": "Microsoft&#8217;s Copilot AI is now inside Samsung TVs and monitors",
+    "url": "https://www.theverge.com/news/767078/microsoft-samsung-tv-copilot-ai-assistant-launch",
+    "publishedAt": "2025-08-27T18:48:14.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Microsoft’s Copilot AI assistant is officially coming to TVs, starting with Samsung’s 2025 lineup of TVs and smart monitors. With the integration, you can call upon Copilot and ask for movie suggestions, spoiler-free episode recaps, and other general questions. On TV, Copilot takes on a “friendly, animated presence” that resembles the opalescent Copilot A...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/copilot-tv-samsung.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Microsoft&#8217;s Copilot AI is now inside Samsung TVs and monitors",
+    "seoDescription": "Microsoft’s Copilot AI assistant is officially coming to TVs, starting with Samsung’s 2025 lineup of TVs and smart monitors. With the integration, you can ca..."
   }
 ]
