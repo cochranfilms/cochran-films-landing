@@ -1,5 +1,70 @@
 [
   {
+    "title": "Applying KISS, DRY, and LOD Principles in Go",
+    "url": "https://dev.to/leapcell/applying-kiss-dry-and-lod-principles-in-go-1ikf",
+    "publishedAt": "2025-08-28T00:22:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Besides the well-known SOLID principles, there are actually other useful and widely recognized design principles. This article introduces these design principles, mainly including the following three: KISS Principle; DRY Principle; LOD Principle. The KISS principle (Keep It Simple, Stupid) is an important principle in software development. It emphasizes k...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx2ngqrj2igbbmns6546m.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Applying KISS, DRY, and LOD Principles in Go",
+    "seoDescription": "Besides the well-known SOLID principles, there are actually other useful and widely recognized design principles. This article introduces these design princi..."
+  },
+  {
+    "title": "FDA approves updated covid vaccines, but with severe new limits",
+    "url": "https://www.theverge.com/news/767208/fda-covid-vaccine-approval-rfk-cdc-director-susan-monarez",
+    "publishedAt": "2025-08-28T00:10:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "On Wednesday, the FDA approved the new round of COVID-19 vaccines from Pfizer, Moderna, and Novavax for use by seniors over the age of 65. But for anyone younger than that, the FDA approval only mentions people who have “at least one underlying condition that puts them at high risk for severe outcomes from COVID-19.” It also removed one option for childre...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/acastro_210309_1777_vaccine_0004.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "FDA approves updated covid vaccines, but with severe new limits",
+    "seoDescription": "On Wednesday, the FDA approved the new round of COVID-19 vaccines from Pfizer, Moderna, and Novavax for use by seniors over the age of 65. But for anyone you..."
+  },
+  {
+    "title": "WhatsApp starts testing AI-powered writing suggestions on iOS [U: launched]",
+    "url": "https://9to5mac.com/2025/08/27/whatsapp-starts-testing-ai-powered-writing-suggestions-on-ios/",
+    "publishedAt": "2025-08-27T23:39:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Update, Aug 27: The feature was officially launched today for English-speaking users, according to the official WhatsApp blog. Original post below. In the latest TestFlight release for its iOS beta testers, WhatsApp rolled out a tool called “Writing Help,” which suggests replies based on the tone set by the user. Here’s how it works. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-writing-help.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "WhatsApp starts testing AI-powered writing suggestions on iOS [U: launched]",
+    "seoDescription": "Update, Aug 27: The feature was officially launched today for English-speaking users, according to the official WhatsApp blog. Original post below. In the la..."
+  },
+  {
+    "title": "Torrent app unavailable at AltStore PAL following apparent notarization revocation by Apple",
+    "url": "https://9to5mac.com/2025/08/27/torrent-app-unavailable-at-altstore-pal-following-apparent-notarization-revocation-by-apple/",
+    "publishedAt": "2025-08-27T23:28:21.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "When Apple was compelled to allow alternative iOS app stores in the EU, it adopted the notarization model familiar to Mac developers. This means that if Apple revokes the notarization of a certain app, its distribution and use get blocked, even though it was installed from outside the App Store. That’s exactly what seems to have happened to iTorrent. Here...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/altstore-itorrent.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Torrent app unavailable at AltStore PAL following apparent notarization revocation by Apple",
+    "seoDescription": "When Apple was compelled to allow alternative iOS app stores in the EU, it adopted the notarization model familiar to Mac developers. This means that if Appl..."
+  },
+  {
     "title": "Samsung is Unpacking again in early September",
     "url": "https://www.theverge.com/news/767164/samsung-is-unpacking-again-in-early-september",
     "publishedAt": "2025-08-27T23:00:00.000Z",
@@ -282,82 +347,6 @@
     ],
     "seoTitle": "iPhone 17 Air is Launching Soon, Here Are All the Rumors",
     "seoDescription": "The iPhone 17 Air that's coming in just under two weeks will feature the biggest design update we've seen to the iPhone since the ‌iPhone‌ X back in 2017. It..."
-  },
-  {
-    "title": "How to Add Real-Time Comments to Your Tiptap Editor with Velt and v0🔥",
-    "url": "https://dev.to/astrodevil/how-to-add-real-time-comments-to-your-tiptap-editor-with-velt-and-v0-329e",
-    "publishedAt": "2025-08-27T20:51:48.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction Many modern applications, such as Google Docs and Figma, allow users to leave comments and collaborate without needing to be online at the same time. For most applications, comments are no longer simply a nice-to-have feature but an expected one. If your app includes editing or shared content, adding a commenting feature can make it feel more...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fivnfmyhjzrwp7il5p20v.png",
-    "video": null,
-    "author": "Astrodevil",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "beginners"
-    ],
-    "seoTitle": "How to Add Real-Time Comments to Your Tiptap Editor with Velt and v0🔥",
-    "seoDescription": "Introduction Many modern applications, such as Google Docs and Figma, allow users to leave comments and collaborate without needing to be online at the same ..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/alexey_sokolov_10deecd763/-33h5",
-    "publishedAt": "2025-08-27T20:46:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "LLMs fail at debugging forms. Here’s how capturing runtime DOM as JSON helps. Alechko ・ Aug 27 #llm #webdev #ai #javascript",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3462436%2F2315a774-ee7c-40c5-8a1f-b0c2f6360a60.jpg",
-    "video": null,
-    "author": "Alechko",
-    "tags": [
-      "llm",
-      "webdev",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "LLMs fail at debugging forms. Here’s how capturing runtime DOM as JSON helps. Alechko ・ Aug 27 #llm #webdev #ai #javascript"
-  },
-  {
-    "title": "Simple Guide to Setting Up Git and GitHub",
-    "url": "https://dev.to/md_shahzebalam/simple-guide-to-setting-up-git-and-github-2pc3",
-    "publishedAt": "2025-08-27T20:39:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction Git is a Version Control System. It is a Tool that keep Track of your Code if you Changes Anything Git Will Recognise it Immediately and Change it Accordingly. Github is a Online Hosting Service of your Git Repo. In Simple Word its a Cloud For Developers like you Store your Data in Cloud as Same Github Does for Us to Keep Track of Our Code an...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffbc9b5zm89y0w8iaxvbl.png",
-    "video": null,
-    "author": "Mohammad Shahzeb Alam",
-    "tags": [
-      "git",
-      "github",
-      "opensource",
-      "webdev"
-    ],
-    "seoTitle": "Simple Guide to Setting Up Git and GitHub",
-    "seoDescription": "Introduction Git is a Version Control System. It is a Tool that keep Track of your Code if you Changes Anything Git Will Recognise it Immediately and Change ..."
-  },
-  {
-    "title": "Buy Verified UPWORK Accounts - usa",
-    "url": "https://dev.to/jack_paul_5950f85ca53c67a/buy-verified-upwork-accounts-usa-263d",
-    "publishedAt": "2025-08-27T20:37:14.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Our verified UPWORK Accounts are fully a ensuring secure transactions and protecting your funds. Whether for personal use or business, these accounts payments and offer enhanced security features. Buy now and a trusted UPWORK Account ready for all your online needs! buysmmsale@gmail.com https://buysmmsale.com/product/buy-verified-upwork-accounts/ https://...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo01distybyajx6ks1ejh.jpg",
-    "video": null,
-    "author": "Jack Paul",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Buy Verified UPWORK Accounts - usa",
-    "seoDescription": "Our verified UPWORK Accounts are fully a ensuring secure transactions and protecting your funds. Whether for personal use or business, these accounts payment..."
   },
   {
     "title": "New AirTag 2 is coming very soon with these rumored features",
