@@ -1,5 +1,269 @@
 [
   {
+    "title": "DeepSeek V3.1 vs GPT-5: 685B Parameters, 128K Context, 68 Cheaper",
+    "url": "https://dev.to/dev_tips/deepseek-v31-vs-gpt-5-685b-parameters-128k-context-68x-cheaper-13di",
+    "publishedAt": "2025-08-29T15:08:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Member-only story How an open-source release blindsided the ai world and why it matters for devs right now The AI world thought the script was locked: big U.S. labs drop billion-dollar models, everyone else plays catch-up. Then DeepSeek v3.1 showed up on Hugging Face like an uninvited raid boss. No launch keynote. No marketing blitz. Just 685 billion para...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2Ac0ODrM0WRYHHtSUdMZHeEw.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "coding"
+    ],
+    "seoTitle": "DeepSeek V3.1 vs GPT-5: 685B Parameters, 128K Context, 68 Cheaper",
+    "seoDescription": "Member-only story How an open-source release blindsided the ai world and why it matters for devs right now The AI world thought the script was locked: big U...."
+  },
+  {
+    "title": "Configuring CSP: A Test For Django 6.0",
+    "url": "https://dev.to/chiemezuo/configuring-csp-a-test-for-django-60-3a67",
+    "publishedAt": "2025-08-29T15:03:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Right away, some things could potentially be confusing about the title of this blog post. What is CSP? How does it relate to Django? Why Django 6.0? CSP is an acronym that stands for \"Content Security Policy\". Just as the name implies, it has a lot to do with \"security\", and this is achieved by placing restrictions (or policies) on the content from websit...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsogzgy85jmyvhm8bmn6k.gif",
+    "video": null,
+    "author": "Chiemezuo",
+    "tags": [
+      "django",
+      "webdev",
+      "security",
+      "python"
+    ],
+    "seoTitle": "Configuring CSP: A Test For Django 6.0",
+    "seoDescription": "Right away, some things could potentially be confusing about the title of this blog post. What is CSP? How does it relate to Django? Why Django 6.0? CSP is a..."
+  },
+  {
+    "title": "Brand new iPhone 17 accessories are coming from Apple, here’s what’s rumored",
+    "url": "https://9to5mac.com/2025/08/29/brand-new-iphone-17-accessories-are-coming-from-apple-heres-whats-rumored/",
+    "publishedAt": "2025-08-29T15:01:19.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is about to unveil its iPhone 17 lineup, and with it several brand new accessories are expected to debut. Joining the standard Apple silicone cases, here’s everything new that rumors say Apple has coming. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-lineup-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Brand new iPhone 17 accessories are coming from Apple, here’s what’s rumored",
+    "seoDescription": "Apple is about to unveil its iPhone 17 lineup, and with it several brand new accessories are expected to debut. Joining the standard Apple silicone cases, he..."
+  },
+  {
+    "title": "Programming in 2030: will devs still code, or just babysit AI?",
+    "url": "https://dev.to/dev_tips/programming-in-2030-will-devs-still-code-or-just-babysit-ai-4e8n",
+    "publishedAt": "2025-08-29T14:56:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Member-only story AI isn’t killing programming it’s mutating it. Here’s what will survive, what will vanish, and how to not get left behind. Here’s the wildest thing I saw last week: I opened my IDE, wrote maybe ten lines of code… and the AI did the rest. Tests passed. Code shipped. Coffee still warm. And that’s when it hit me this isn’t pair programming ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2A1A8iCtYm7EpCBpTF141Scg.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devops"
+    ],
+    "seoTitle": "Programming in 2030: will devs still code, or just babysit AI?",
+    "seoDescription": "Member-only story AI isn’t killing programming it’s mutating it. Here’s what will survive, what will vanish, and how to not get left behind. Here’s the wilde..."
+  },
+  {
+    "title": "Learn Docker in 3 hours.",
+    "url": "https://dev.to/morning_redemption_3940af/learn-docker-in-3-hours-91p",
+    "publishedAt": "2025-08-29T14:55:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hi, During the deployment of a MERN application, I encountered Docker for the first time. What initially seemed like just another tech buzzword turned out to be a game-changer in how applications are packaged and delivered. This post aims to provide both a conceptual foundation and a practical understanding of Docker. By the end, you’ll have the knowledge...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fssfi5mr1zm3iepva6tsf.jpg",
+    "video": null,
+    "author": "Morning Redemption",
+    "tags": [
+      "docker",
+      "webdev",
+      "crashcourse",
+      "devops"
+    ],
+    "seoTitle": "Learn Docker in 3 hours.",
+    "seoDescription": "Hi, During the deployment of a MERN application, I encountered Docker for the first time. What initially seemed like just another tech buzzword turned out to..."
+  },
+  {
+    "title": "This Gigantic 1970s Camera Gyro Shows How Far Tech Has Come",
+    "url": "https://petapixel.com/2025/08/29/this-gigantic-1970s-camera-gyro-shows-how-far-tech-has-come/",
+    "publishedAt": "2025-08-29T14:52:59.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The BBC recently shared a fascinating news report from all the way back in 1970, which featured a state-of-the-art camera accessory at the time: a gyro-stabilized camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Gyrocamera-1970.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "Features",
+      "Technology",
+      "gimbal",
+      "gyro",
+      "gyroscope",
+      "gyroscopic",
+      "gyroscopicstabilizer",
+      "historicalfriday"
+    ],
+    "seoTitle": "This Gigantic 1970s Camera Gyro Shows How Far Tech Has Come",
+    "seoDescription": "The BBC recently shared a fascinating news report from all the way back in 1970, which featured a state-of-the-art camera accessory at the time: a gyro-stabi..."
+  },
+  {
+    "title": "AI just killed the coding interview: Why LeetCode won’t get you hired anymore",
+    "url": "https://dev.to/dev_tips/ai-just-killed-the-coding-interview-why-leetcode-wont-get-you-hired-anymore-1da7",
+    "publishedAt": "2025-08-29T14:49:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Member-only story I solved hundreds of LeetCode problems, and all I got was a broken CI pipeline. Meanwhile, ChatGPT passed the same interview in 17 seconds. I once spent a whole summer grinding LeetCode like my life depended on it. Three months. Two hundred problems. My notebooks looked like a crime scene of binary trees and dynamic programming scribbles...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AaFUoxP3SdieCViSkg54HCg.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "AI just killed the coding interview: Why LeetCode won’t get you hired anymore",
+    "seoDescription": "Member-only story I solved hundreds of LeetCode problems, and all I got was a broken CI pipeline. Meanwhile, ChatGPT passed the same interview in 17 seconds...."
+  },
+  {
+    "title": "Web dev in 2026 will be chaos. Master these 50 skills or get left behind.",
+    "url": "https://dev.to/dev_tips/web-dev-in-2026-will-be-chaos-master-these-50-skills-or-get-left-behind-i9",
+    "publishedAt": "2025-08-29T14:44:31.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Member-only story AI lies, frameworks rot, and even CSS fights back. This is the survival manual for developers who want to stay relevant. I’ll be blunt: I almost quit web dev last year. Not because I couldn’t keep up with the frameworks, but because AI made me feel like I was being replaced by a five-dollar intern who never sleeps. Watching Copilot autoc...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2A-oX5vTEhO2qHIbMjfodXXA.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Web dev in 2026 will be chaos. Master these 50 skills or get left behind.",
+    "seoDescription": "Member-only story AI lies, frameworks rot, and even CSS fights back. This is the survival manual for developers who want to stay relevant. I’ll be blunt: I a..."
+  },
+  {
+    "title": "Canon Had the Top Camera Market Share in 2024",
+    "url": "https://petapixel.com/2025/08/29/canon-had-the-top-camera-market-share-in-2024/",
+    "publishedAt": "2025-08-29T14:38:56.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Among Japanese camera manufacturers, Canon sold the most cameras in 2024. Furthermore, in good news for the camera industry overall, nearly every manufacturer sold more cameras in 2024 than in 2023. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/nikkei-225-featured-canon.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "Industry",
+      "News",
+      "cameraindustry",
+      "camerasales",
+      "Canon",
+      "fujifilm",
+      "industry"
+    ],
+    "seoTitle": "Canon Had the Top Camera Market Share in 2024",
+    "seoDescription": "Among Japanese camera manufacturers, Canon sold the most cameras in 2024. Furthermore, in good news for the camera industry overall, nearly every manufacture..."
+  },
+  {
+    "title": "DZOFilm’s Upgraded Vespid2 Cine Primes Are Even Faster",
+    "url": "https://petapixel.com/2025/08/29/dzofilms-upgraded-vespid2-cine-primes-are-even-faster/",
+    "publishedAt": "2025-08-29T14:38:31.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "DZOFilm has released the Vespid2, a refreshed line of cinema prime lenses designed to deliver sharper image quality, reduced chromatic aberration in the center, and a more consistent bokeh across focal lengths, aiming to provide a refined yet accessible option for filmmakers. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/DZOFilm-Vespid2-PetaPixel-BG-copy.jpg",
+    "video": null,
+    "author": "Kate Garibaldi",
+    "tags": [
+      "Equipment",
+      "News",
+      "cine",
+      "dzofilm",
+      "prime",
+      "t1.9",
+      "vespid2"
+    ],
+    "seoTitle": "DZOFilm’s Upgraded Vespid2 Cine Primes Are Even Faster",
+    "seoDescription": "DZOFilm has released the Vespid2, a refreshed line of cinema prime lenses designed to deliver sharper image quality, reduced chromatic aberration in the cent..."
+  },
+  {
+    "title": "“How I Earned My First Amazon Gift Card Online in 2025”",
+    "url": "https://dev.to/emma88990/how-i-earned-my-first-amazon-gift-card-online-in-2025-25cm",
+    "publishedAt": "2025-08-29T14:36:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Have you ever wanted to buy something on Amazon but didn’t have extra cash in your wallet? That was exactly my situation earlier this year. I wanted to grab a book and a few tools from Amazon, but instead of asking friends or family, I decided to look for online earning opportunities. After some research, I discovered that there are legit ways to earn Ama...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6rsx2o5mi7ohy9dhp0i9.png",
+    "video": null,
+    "author": "Emma",
+    "tags": [
+      "webdev",
+      "javascript",
+      "ai",
+      "programming"
+    ],
+    "seoTitle": "“How I Earned My First Amazon Gift Card Online in 2025”",
+    "seoDescription": "Have you ever wanted to buy something on Amazon but didn’t have extra cash in your wallet? That was exactly my situation earlier this year. I wanted to grab ..."
+  },
+  {
+    "title": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
+    "url": "https://www.macrumors.com/2025/08/29/apple-labor-day-sales-2025/",
+    "publishedAt": "2025-08-29T14:21:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Labor Day weekend is here and numerous retailers have kicked off sales that should be advantageous for anyone shopping around for Apple products and related accessories. In this article we've rounded up some of the best Labor Day deals for Apple devices, also including discounts on charging accessories, headphones, speakers, and more. Note: MacRumors is a...",
+    "image": "https://images.macrumors.com/article-new/2022/08/Labor-Day-Deals-Feature0011.jpg",
+    "video": null,
+    "author": "Mitchel Broussard",
+    "tags": [
+      "Deals",
+      "Featured"
+    ],
+    "seoTitle": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
+    "seoDescription": "Labor Day weekend is here and numerous retailers have kicked off sales that should be advantageous for anyone shopping around for Apple products and related ..."
+  },
+  {
+    "title": "Turning KPop Demon Hunters into a franchise is going to take some smart strategizing",
+    "url": "https://www.theverge.com/netflix/767180/kpop-demon-hunters-sequel-franchise-netflix",
+    "publishedAt": "2025-08-29T14:15:25.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "When you watch KPop Demon Hunters, it is easy to see why it has become the most popular movie that Netflix has ever released. The animated musical's story about a trio of pop stars tasked with protecting humanity from monsters is familiar, but refreshingly different and infinitely more stylish than other narratives like it. The soundtrack is full of unden...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/KpopDemonHunters_ProRes422HQ_SDR_2ch_20250424.00_06_05_14.jpg?quality=90&#038;strip=all&#038;crop=0,5.2966417910448,100,94.703358208955",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "Turning KPop Demon Hunters into a franchise is going to take some smart strategizing",
+    "seoDescription": "When you watch KPop Demon Hunters, it is easy to see why it has become the most popular movie that Netflix has ever released. The animated musical's story ab..."
+  },
+  {
+    "title": "iPhone 17 Pro: Three reasons you might want to upgrade from iPhone 16 Pro",
+    "url": "https://9to5mac.com/2025/08/29/iphone-17-pro-three-reasons-you-might-want-to-upgrade-from-iphone-16-pro/",
+    "publishedAt": "2025-08-29T14:13:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is about to launch four new iPhones, including the iPhone 17 Pro and Pro Max. Based on rumors around what’s new this year, here are three reasons you might want to upgrade to an iPhone 17 Pro—even if you already own an iPhone 16 Pro. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-max-vs-16-pro-max-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 Pro: Three reasons you might want to upgrade from iPhone 16 Pro",
+    "seoDescription": "Apple is about to launch four new iPhones, including the iPhone 17 Pro and Pro Max. Based on rumors around what’s new this year, here are three reasons you m..."
+  },
+  {
     "title": "Tesla releases Model Y Performance in Europe — will it staunch the bleeding?",
     "url": "https://www.theverge.com/news/767959/tesla-model-y-performance-europe-range-specs-sales",
     "publishedAt": "2025-08-29T14:05:48.000Z",
@@ -12,25 +276,6 @@
     "tags": [],
     "seoTitle": "Tesla releases Model Y Performance in Europe — will it staunch the bleeding?",
     "seoDescription": "Tesla is offering a new performance version of its Model Y crossover for the European market. The new variant is aimed at boosting the company’s sales on the..."
-  },
-  {
-    "title": "Zero-touch Firebase SDKs with one command and CI magic",
-    "url": "https://dev.to/dev_tips/zero-touch-firebase-sdks-with-one-command-and-ci-magic-3hd8",
-    "publishedAt": "2025-08-29T14:05:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Stop hand-running Firebase CLI every time your schema changes. Wrap Data Connect codegen behind a single dev command and CI workflow that regenerates, tests, and publishes SDKs automatically. You know that sinking feeling when your Firebase schema changes and suddenly every PR is a roulette wheel of “who forgot to run codegen this time”? It’s like playing...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2ALn6Lvwc5xQpIcrbJRt4Q8A.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Zero-touch Firebase SDKs with one command and CI magic",
-    "seoDescription": "Stop hand-running Firebase CLI every time your schema changes. Wrap Data Connect codegen behind a single dev command and CI workflow that regenerates, tests,..."
   },
   {
     "title": "iOS 18.6.2 won’t let you downgrade, as Apple stops signing 18.6.1",
@@ -49,44 +294,6 @@
     "seoDescription": "Last week, Apple released its latest iPhone update: iOS 18.6.2. And now a little over one week later, the company has stopped signing its prior release, iOS ..."
   },
   {
-    "title": "Scale out or scale up? The 5-minute decision every dev faces",
-    "url": "https://dev.to/dev_tips/scale-out-or-scale-up-the-5-minute-decision-every-dev-faces-17nd",
-    "publishedAt": "2025-08-29T13:51:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "How to decide between adding more Pods/instances or beefing up the ones you already have without burning money or sleep. It’s 2 AM. PagerDuty just nuked your REM sleep. Traffic spiked, CPU graphs are red-lining, and your app is gasping like a raid boss at 1% HP. You’ve got two buttons staring back at you: add more instances or resize the ones you’ve got. ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2A-X3CMJSMEDWApw3sGBES0A.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "devops"
-    ],
-    "seoTitle": "Scale out or scale up? The 5-minute decision every dev faces",
-    "seoDescription": "How to decide between adding more Pods/instances or beefing up the ones you already have without burning money or sleep. It’s 2 AM. PagerDuty just nuked your..."
-  },
-  {
-    "title": "Let's understand the Event Loop",
-    "url": "https://dev.to/brendon_oneill__/lets-understand-the-event-loop-4aj2",
-    "publishedAt": "2025-08-29T13:50:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Event Loop The event loop is JavaScript's mechanism for handling asynchronous operations. It continuously checks if the call stack is empty and, if so, moves the next task to the stack for execution. This allows non-blocking operations, keeping the application responsive. Let's look at this example below. What do you think will be the printout of the numb...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F30nyie8ua5n0fvqlh6gt.webp",
-    "video": null,
-    "author": "Brendon O'Neill",
-    "tags": [
-      "webdev",
-      "javascript",
-      "tutorial",
-      "frontend"
-    ],
-    "seoTitle": "Let's understand the Event Loop",
-    "seoDescription": "Event Loop The event loop is JavaScript's mechanism for handling asynchronous operations. It continuously checks if the call stack is empty and, if so, moves..."
-  },
-  {
     "title": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
     "url": "https://www.theverge.com/news/767980/steam-uk-age-vertification-online-safety-act-credit-card-mature-games",
     "publishedAt": "2025-08-29T13:47:03.000Z",
@@ -99,25 +306,6 @@
     "tags": [],
     "seoTitle": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
     "seoDescription": "Valve has started to comply with the UK’s Online Safety Act, by rolling out a requirement for all Brits to verify their age with a credit card to access “mat..."
-  },
-  {
-    "title": "Reverse proxy vs load balancer: stop mixing them up (before prod takes the hit)",
-    "url": "https://dev.to/dev_tips/reverse-proxy-vs-load-balancer-stop-mixing-them-up-before-prod-takes-the-hit-4c7a",
-    "publishedAt": "2025-08-29T13:46:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "One diagram, real configs, and a decision tree to end the confusion once and for all. If I had a dollar for every time someone misused Nginx in production, I could probably afford an F5 appliance and still have enough left to buy coffee for the whole team. The number of times I’ve seen a reverse proxy thrown in as a “load balancer” (or vice versa) is… let...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2Aizy-YWNw6_as75l1mMJIfQ.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Reverse proxy vs load balancer: stop mixing them up (before prod takes the hit)",
-    "seoDescription": "One diagram, real configs, and a decision tree to end the confusion once and for all. If I had a dollar for every time someone misused Nginx in production, I..."
   },
   {
     "title": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
@@ -134,44 +322,6 @@
     ],
     "seoTitle": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
     "seoDescription": "Apple announced earlier this summer that 13 new vehicle brands would soon support car keys in the Wallet app, and now it seems that the first two are nearly ..."
-  },
-  {
-    "title": "Randomness in Development: Why \"Flip a Coin\" Still Matters in 2025",
-    "url": "https://dev.to/kyllie_ee82987da3e24f523e/randomness-in-development-why-flip-a-coin-still-matters-in-2025-3anj",
-    "publishedAt": "2025-08-29T13:38:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In software development, randomness is everywhere — from shuffling items in a game, simulating real-world behavior, or even just making a simple decision between two choices. Developers often use built-in functions like Math. Random () in JavaScript or Random in Python, but the concept goes deeper. At the heart of randomness is one of the oldest decision-...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fswg11ygbh0g2jinhw04y.png",
-    "video": null,
-    "author": "Kyllie",
-    "tags": [
-      "programming",
-      "unity3d",
-      "webdev",
-      "gamedev"
-    ],
-    "seoTitle": "Randomness in Development: Why \"Flip a Coin\" Still Matters in 2025",
-    "seoDescription": "In software development, randomness is everywhere — from shuffling items in a game, simulating real-world behavior, or even just making a simple decision bet..."
-  },
-  {
-    "title": "RH01 Scripting and Programming Foundations — Building Code Fluency from the Ground Up",
-    "url": "https://dev.to/cameron_adams_6a168a99f37/rh01-scripting-and-programming-foundations-building-code-fluency-from-the-ground-up-3a05",
-    "publishedAt": "2025-08-29T13:37:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "structured paths provide context for how baseline skills connect to professional workflows. Students often treat debugging as an afterthought, when in reality it is the most transferable skill across languages. RH01 drills reinforce step-through debugging, error tracing, and log analysis early in the process. The practice of reading stack traces, parsing ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F53s7wnrbtm7wtzym1jbf.png",
-    "video": null,
-    "author": "Cameron Adams",
-    "tags": [
-      "scriptingandprogramming",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "RH01 Scripting and Programming Foundations — Building Code Fluency from the Ground Up",
-    "seoDescription": "structured paths provide context for how baseline skills connect to professional workflows. Students often treat debugging as an afterthought, when in realit..."
   },
   {
     "title": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
@@ -476,151 +626,5 @@
     ],
     "seoTitle": "Behind the Scenes with the Directors and Editors of 'The Last Guest Of The Holloway Motel'",
     "seoDescription": "Powell learns he’ll soon be evicted from the motel and realizes he needs to reconcile his past and potentially return home to survive. Directed by Ramiel Pet..."
-  },
-  {
-    "title": "I Think This New Screenwriting Website Is Shady And Exploitative",
-    "url": "https://nofilmschool.com/get-it-made-screenwriting",
-    "publishedAt": "2025-08-29T00:50:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Man, it is so hard to break into Hollywood that nothing makes me madder than websites exploiting aspiring writers. Recently, a writer sent me an email asking me to look into a website called GET IT MADE. Now, that website has a very similar title to a consulting service I have used and reviewed called GET MADE. But these two sites are very different. And ...",
-    "image": "https://nofilmschool.com/media-library/i-think-this-new-screenwriting-website-is-shady-and-exploitative.jpg?id=61531961&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Screenwriting",
-      "Screenwriting lessons",
-      "Get it made",
-      "Screenwriting lessons"
-    ],
-    "seoTitle": "I Think This New Screenwriting Website Is Shady And Exploitative",
-    "seoDescription": "Man, it is so hard to break into Hollywood that nothing makes me madder than websites exploiting aspiring writers. Recently, a writer sent me an email asking..."
-  },
-  {
-    "title": "How to Write an Emmy-Nominated Docuseries, with  Timothy Moran From 'Chimp Crazy'",
-    "url": "https://nofilmschool.com/emmy-nominated-timothy-moran-doc-wrtier",
-    "publishedAt": "2025-08-29T00:40:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Timothy Moran is an Emmy Award-winning producer and writer whose work has consistently captured the cultural zeitgeist. His most recent series, Chimp Crazy, became HBO's most-viewed documentary series in four years. It was such an exciting, funny, and weird look at these people who keep exotic pets that should probably be in zoos or in the wild. Moran pre...",
-    "image": "https://nofilmschool.com/media-library/how-to-write-an-emmy-nominated-docuseries-with-timothy-moran-from-chimp-crazy.jpg?id=61530530&width=980",
-    "video": "https://www.youtube.com/embed/qqP1VUhCpi8?rel=0&start=3",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Timothy moran",
-      "Chimp crazy",
-      "Hbo",
-      "Writing",
-      "Documentary",
-      "Interviews"
-    ],
-    "seoTitle": "How to Write an Emmy-Nominated Docuseries, with  Timothy Moran From 'Chimp Crazy'",
-    "seoDescription": "Timothy Moran is an Emmy Award-winning producer and writer whose work has consistently captured the cultural zeitgeist. His most recent series, Chimp Crazy, ..."
-  },
-  {
-    "title": "Venice Honors Werner Herzog's 'Exuberant Creativity'",
-    "url": "https://nofilmschool.com/venice-honors-werner-herzog",
-    "publishedAt": "2025-08-29T00:30:39.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Werner Herzog has had a remarkable career. You're probably at least familiar with Grizzly Man or Cave of Forgotten Dreams. Or maybe you know the man himself, whose insightful but deadpan observations are delivered through the clip of his German accent. Now, the 82-year-old filmmaker is at the Venice Film Festival this week with a new documentary, Ghost El...",
-    "image": "https://nofilmschool.com/media-library/werner-herzog.jpg?id=61531954&width=980",
-    "video": null,
-    "author": "Jo Light",
-    "tags": [
-      "Francis ford coppola",
-      "Venice film festival",
-      "Werner herzog",
-      "Werner herzog"
-    ],
-    "seoTitle": "Venice Honors Werner Herzog's 'Exuberant Creativity'",
-    "seoDescription": "Werner Herzog has had a remarkable career. You're probably at least familiar with Grizzly Man or Cave of Forgotten Dreams. Or maybe you know the man himself,..."
-  },
-  {
-    "title": "Apple Watch Ultra 3 Coming Soon: What to Expect",
-    "url": "https://www.macrumors.com/guide/apple-watch-ultra-3-what-to-expect/",
-    "publishedAt": "2025-08-28T23:20:39.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "We have less than two weeks to go until Apple's September 9 \"Awe Dropping\" event, and it's finally time for the Apple Watch Ultra to get a refresh. Apple introduced a new color last year, but there was no new model, so it's due for an update. There are some useful new features in the works, which we've outlined below. Design and Display There aren't rumor...",
-    "image": "https://images.macrumors.com/article-new/2024/03/apple-watch-ultra-2-purple.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "Apple Watch Ultra 3 Coming Soon: What to Expect",
-    "seoDescription": "We have less than two weeks to go until Apple's September 9 \"Awe Dropping\" event, and it's finally time for the Apple Watch Ultra to get a refresh. Apple int..."
-  },
-  {
-    "title": "9to5Mac Daily: August 28, 2025 – AirPods Pro 3 rumors, Apple acquisition strategies",
-    "url": "https://9to5mac.com/2025/08/28/daily-august-28-2025/",
-    "publishedAt": "2025-08-28T22:53:57.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: August 28, 2025 – AirPods Pro 3 rumors, Apple acquisition strategies",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Microsoft fires two more employees for participating in Palestine protests on campus",
-    "url": "https://www.theverge.com/microsoft/767841/microsoft-fires-two-more-protesters-no-azure-for-apartheid",
-    "publishedAt": "2025-08-28T22:51:24.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two employees, Nisreen Jaradat and Julius Shan, were fired “in connection” with demonstrations that saw protesters set up encampments at Microsoft’s headquarters, according to Hossam Nasr, an organizer wi...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Sign.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jacob Kastrenakes",
-    "tags": [],
-    "seoTitle": "Microsoft fires two more employees for participating in Palestine protests on campus",
-    "seoDescription": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two ..."
-  },
-  {
-    "title": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
-    "url": "https://nofilmschool.com/back-to-the-future-climax",
-    "publishedAt": "2025-08-28T22:19:55.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Forty years later, we're still talking about Marty McFly and that lightning bolt. As Michael J. Fox took the stage at Toronto's Fan Expo recently for the film's anniversary celebration, it was clear that fans are still all about this '80s sci-fi classic. Fox told the crowd, \"We were all just obsessed with the film while we were making it, and I'm not brag...",
-    "image": "https://nofilmschool.com/media-library/back-to-the-futures-clock-tower-scene-with-lightning-over-the-building.png?id=61525837&width=980",
-    "video": "https://www.youtube.com/embed/qbGwlvgpySE?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Editing",
-      "Practical effects",
-      "Screenwriting",
-      "Climax",
-      "Final act",
-      "Back to the future",
-      "Back to the future"
-    ],
-    "seoTitle": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
-    "seoDescription": "Forty years later, we're still talking about Marty McFly and that lightning bolt. As Michael J. Fox took the stage at Toronto's Fan Expo recently for the fil..."
-  },
-  {
-    "title": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
-    "url": "https://nofilmschool.com/cutting-comedy-inside-the-edit-of-saturday-night-lives-50th-anniversary",
-    "publishedAt": "2025-08-28T22:05:08.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 50th Anniversary special. The episode features returning guest Ryan Spears—four-time Emmy nominee and Film Unit editor at SNL—joined by longtime collaborators Daniel Garcia and Paul Del Gesso. Together...",
-    "image": "https://nofilmschool.com/media-library/cutting-comedy-inside-the-edit-of-saturday-night-lives-50th-anniversary.webp?id=61531785&width=980",
-    "video": "https://playlist.megaphone.fm?e=NFS1940006855",
-    "author": "NFS Staff",
-    "tags": [
-      "No film school podcast",
-      "Podcast",
-      "Interviews",
-      "Saturday night live"
-    ],
-    "seoTitle": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
-    "seoDescription": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 5..."
   }
 ]
