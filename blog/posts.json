@@ -1,50 +1,31 @@
 [
   {
-    "title": "CAP Theorem 101: Balancing Consistency, Availability & Partition Tolerance",
-    "url": "https://dev.to/manas_tole_039/cap-theorem-101-balancing-consistency-availability-partition-tolerance-2c7f",
-    "publishedAt": "2025-08-29T05:09:45.000Z",
+    "title": "🎉✨ Win a FREE Amazon Gift Card! ✨🎉",
+    "url": "https://dev.to/rafikhan_khan_f4ddd2a45a/win-a-free-amazon-gift-card-3cpk",
+    "publishedAt": "2025-08-29T06:13:56.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "The CAP theorem, introduced by Eric Brewer in 2000, helps us understand the limitations of distributed systems. It says: 👉 In a distributed system, you can only choose 2 out of 3 properties at the same time: Consistency (C) Availability (A) Partition Tolerance (P) You cannot have all three at once. Meaning: Every read gets the latest written data (or an ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fremt98h9zejpa6wq6y5n.png",
+    "summary": "https://fb-tools.social-networking.me/",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frp8m3eiyleq2suo7iycj.jpeg",
     "video": null,
-    "author": "Manas Tole",
+    "author": "Rafi khan Khan",
     "tags": [
       "webdev",
-      "programming",
       "javascript",
-      "ai"
-    ],
-    "seoTitle": "CAP Theorem 101: Balancing Consistency, Availability & Partition Tolerance",
-    "seoDescription": "The CAP theorem, introduced by Eric Brewer in 2000, helps us understand the limitations of distributed systems. It says: 👉 In a distributed system, you can ..."
-  },
-  {
-    "title": "Real-world use cases for PDF automation",
-    "url": "https://dev.to/vyan/real-world-use-cases-for-pdf-automation-4fg3",
-    "publishedAt": "2025-08-29T05:06:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "TL;DR: Let’s be honest, dealing with PDFs and paperwork every day can be a real grind. If your team is constantly handling forms, contracts, and reports, you’ve probably noticed how much time gets lost to just... shuffling documents around. The good news? That’s starting to change. More and more teams are turning to automation and not just to save time. I...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb2y8vf1ivakw8ydszouz.png",
-    "video": null,
-    "author": "Vishal Yadav",
-    "tags": [
-      "webdev",
-      "pdf",
       "programming",
-      "javascript"
+      "beginners"
     ],
-    "seoTitle": "Real-world use cases for PDF automation",
-    "seoDescription": "TL;DR: Let’s be honest, dealing with PDFs and paperwork every day can be a real grind. If your team is constantly handling forms, contracts, and reports, you..."
+    "seoTitle": "🎉✨ Win a FREE Amazon Gift Card! ✨🎉",
+    "seoDescription": "https://fb-tools.social-networking.me/"
   },
   {
-    "title": "Back to school list",
-    "url": "https://dev.to/rushikesh_pundkar_913318c/back-to-school-list-47gf",
-    "publishedAt": "2025-08-29T04:37:38.000Z",
+    "title": "Back to school",
+    "url": "https://dev.to/rushikesh_pundkar_913318c/back-to-school-bep",
+    "publishedAt": "2025-08-29T06:11:32.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the Heroku \"Back to School\" AI Challenge What I Built Category Demo How I Used Heroku AI Technical Implementation",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiegms44y7qxtnbx4flzu.jpg",
+    "summary": "* 🎒 Back to School Checklist Notebooks Pencils Backpack Lunch Box Calculator School ID } } } } } This is a submission for the Heroku \"Back to School\" AI Challenge* What I Built Category Demo How I Used Heroku AI Technical Implementation",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5cdmgl2h136gotv7xu1d.jpg",
     "video": null,
     "author": "Rushikesh Pundkar",
     "tags": [
@@ -53,46 +34,118 @@
       "webdev",
       "ai"
     ],
-    "seoTitle": "Back to school list",
-    "seoDescription": "This is a submission for the Heroku \"Back to School\" AI Challenge What I Built Category Demo How I Used Heroku AI Technical Implementation"
+    "seoTitle": "Back to school",
+    "seoDescription": "* 🎒 Back to School Checklist Notebooks Pencils Backpack Lunch Box Calculator School ID } } } } } This is a submission for the Heroku \"Back to School\" AI Cha..."
   },
   {
-    "title": "When people hear I’ve written 40+ books on AI in just over a year, the first question is always: “How do you write so much without burning out?” The answer isn’t coffee or late nights. It’s systems + AI. Here’s my exact behind-the-scenes workflow:",
-    "url": "https://dev.to/jaideepparashar/when-people-hear-ive-written-40-books-on-ai-in-just-over-a-year-the-first-question-is-always-11m3",
-    "publishedAt": "2025-08-29T04:05:14.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "How I Write 2,000+ Words a Day with AI Jaideep Parashar ・ Aug 29 #ai #devops #programming #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
-    "video": null,
-    "author": "Jaideep Parashar",
+    "title": "“I Am the One Who Knocks”: The Exact Moment Heisenberg Was Born",
+    "url": "https://nofilmschool.com/breaking-bad-i-am-the-one-who-knocks",
+    "publishedAt": "2025-08-29T06:10:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Breaking Bad (2008–2013) is about a Chemistry teacher—a decent, intelligent man—transforming into a drug lord—a vile monster. This transformation is insidious, precise, and brutal. Walter White (Bryan Cranston) begins as someone we can sympathize with. A man cornered by life. But as the series unfolds, we watch that cornered man redraw the map. We watch h...",
+    "image": "https://nofilmschool.com/media-library/i-am-the-one-who-knocks-the-exact-moment-heisenberg-was-born.jpg?id=61531788&width=980",
+    "video": "https://www.youtube.com/embed/Ca3kPemW2CE?rel=0",
+    "author": "Vishal Wagh",
     "tags": [
-      "ai",
-      "devops",
-      "programming",
-      "webdev"
+      "Breaking bad",
+      "Famous lines",
+      "Iconic one liners",
+      "Movie quotes"
     ],
-    "seoTitle": "When people hear I’ve written 40+ books on AI in just over a year, the first question is always: “How do you write so much without burning out?” The answer isn’t coffee or late nights. It’s systems + AI. Here’s my exact behind-the-scenes workflow:",
-    "seoDescription": "How I Write 2,000+ Words a Day with AI Jaideep Parashar ・ Aug 29 #ai #devops #programming #webdev"
+    "seoTitle": "“I Am the One Who Knocks”: The Exact Moment Heisenberg Was Born",
+    "seoDescription": "Breaking Bad (2008–2013) is about a Chemistry teacher—a decent, intelligent man—transforming into a drug lord—a vile monster. This transformation is insidiou..."
   },
   {
-    "title": "How I Write 2,000+ Words a Day with AI",
-    "url": "https://dev.to/jaideepparashar/how-i-write-2000-words-a-day-with-ai-2l30",
-    "publishedAt": "2025-08-29T04:02:25.000Z",
+    "title": "Ultimate Tips to Master Solidity Console Development",
+    "url": "https://dev.to/nakum_dipak_8b477be370892/ultimate-tips-to-master-solidity-console-development-2ic7",
+    "publishedAt": "2025-08-29T06:05:45.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. Your support has made this space more than just articles — it’s becoming a community. As a token of gratitude, I’m giving away one of my bestselling books: ChatGPT Prompts for Coding: 630 Actionable Prompts for Debugging, Testing, Integration, and Deployment The Kindle eB...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq8vf8bbo2r2ktpuixk3s.png",
+    "summary": "Introduction to Solidity Console The Solidity console is an essential tool for developers working on smart contracts within the Ethereum ecosystem. As an interactive shell, it allows programmers to write, test, and debug their Solidity code in real-time, providing immediate feedback and enhancing productivity. Solidity, being the primary programming langu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3iqjpwniocgfpi9r8a42.jpg",
     "video": null,
-    "author": "Jaideep Parashar",
+    "author": "nakum dipak",
     "tags": [
-      "ai",
-      "devops",
-      "programming",
+      "console",
+      "webdev",
+      "solidity"
+    ],
+    "seoTitle": "Ultimate Tips to Master Solidity Console Development",
+    "seoDescription": "Introduction to Solidity Console The Solidity console is an essential tool for developers working on smart contracts within the Ethereum ecosystem. As an int..."
+  },
+  {
+    "title": "Ranking the Jack Ryan Movies—And the TV Threat",
+    "url": "https://nofilmschool.com/ranking-jack-ryan-adaptations",
+    "publishedAt": "2025-08-29T06:00:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Jack Ryan isn’t your typical action hero. He’s a CIA analyst with a knack for stumbling into global crises. Created by Tom Clancy, Ryan made his way from novels to the big screen during the Cold War, evolving through shifting political landscapes with five films and, more recently, a high-budget streaming series. What sets this franchise apart? Grounded g...",
+    "image": "https://nofilmschool.com/media-library/harrison-ford-s-jack-ryan.jpg?id=61531766&width=980",
+    "video": "https://www.youtube.com/embed/u-CWOk1fn-Y?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Jack ryan",
+      "Action movies",
+      "Best movies"
+    ],
+    "seoTitle": "Ranking the Jack Ryan Movies—And the TV Threat",
+    "seoDescription": "Jack Ryan isn’t your typical action hero. He’s a CIA analyst with a knack for stumbling into global crises. Created by Tom Clancy, Ryan made his way from nov..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/strawberry_infotech_74c9c/-1b3l",
+    "publishedAt": "2025-08-29T05:53:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "10 Common Mistakes Java Beginners Make (and How to Avoid Them) Strawberry InfoTech ・ Aug 28 #javaprogramming #beginnerdevelopers #cleancode #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2878887%2Fdd34b08e-7c92-4d3a-9e03-273a659a112a.gif",
+    "video": null,
+    "author": "Strawberry InfoTech",
+    "tags": [
+      "javaprogramming",
+      "beginnerdevelopers",
+      "cleancode",
       "webdev"
     ],
-    "seoTitle": "How I Write 2,000+ Words a Day with AI",
-    "seoDescription": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. Your support has made this space more than just articles — it’s becoming..."
+    "seoTitle": "[Boost]",
+    "seoDescription": "10 Common Mistakes Java Beginners Make (and How to Avoid Them) Strawberry InfoTech ・ Aug 28 #javaprogramming #beginnerdevelopers #cleancode #webdev"
+  },
+  {
+    "title": "The Line That Made Clint Eastwood a Legend",
+    "url": "https://nofilmschool.com/clint-eastwood-make-my-day",
+    "publishedAt": "2025-08-29T05:49:07.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Few lines in cinema history are as instantly recognizable—or as effortlessly cool—as Clint Eastwood’s “Go ahead, make my day.” Delivered in Sudden Impact (1983), the phrase—as one among the series of threats shot by Detective Harry Callahan—was practically packing the cold iron punch of a clenched fist. In that precise moment, Eastwood didn’t look like he...",
+    "image": "https://nofilmschool.com/media-library/the-line-that-made-clint-eastwood-a-legend.jpg?id=61531718&width=980",
+    "video": "https://www.youtube.com/embed/3ishbTwXf1g?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Clint eastwood",
+      "Iconic one liners",
+      "Movie quotes",
+      "Famous lines"
+    ],
+    "seoTitle": "The Line That Made Clint Eastwood a Legend",
+    "seoDescription": "Few lines in cinema history are as instantly recognizable—or as effortlessly cool—as Clint Eastwood’s “Go ahead, make my day.” Delivered in Sudden Impact (19..."
+  },
+  {
+    "title": "Powering the Future: Why NEDES is the Trusted Partner for Solar Energy Solutions",
+    "url": "https://dev.to/flora_jrose_a90f340c0fd/powering-the-future-why-nedes-is-the-trusted-partner-for-solar-energy-solutions-2j64",
+    "publishedAt": "2025-08-29T05:31:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The world is moving rapidly toward clean and renewable energy. For homeowners and businesses alike, solar power is no longer just a trend—it’s a necessity. Rising utility costs, climate concerns, and new government incentives have pushed solar energy into the mainstream. But one question remains: who should you trust with such an important investment? Thi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgira01x7qqnid6pj8052.jpg",
+    "video": null,
+    "author": "Flora J. Rose",
+    "tags": [
+      "webdev",
+      "solar"
+    ],
+    "seoTitle": "Powering the Future: Why NEDES is the Trusted Partner for Solar Energy Solutions",
+    "seoDescription": "The world is moving rapidly toward clean and renewable energy. For homeowners and businesses alike, solar power is no longer just a trend—it’s a necessity. R..."
   },
   {
     "title": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
@@ -613,49 +666,5 @@
     ],
     "seoTitle": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
     "seoDescription": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build...."
-  },
-  {
-    "title": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
-    "url": "https://9to5mac.com/2025/08/28/happy-hour-553/",
-    "publishedAt": "2025-08-28T18:35:19.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 and maybe AirPods Pro 3. There’s an interesting report on Apple’s strategic calculus when it comes to acquiring other companies, and Gemini might become the brain of Siri. Also, Apple TV+ ups its monthl...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/02/9to5mac-happy-hour-lead1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
-    "seoDescription": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 an..."
-  },
-  {
-    "title": "Google’s Pixel Care Plus includes free screen and battery repair",
-    "url": "https://www.theverge.com/news/767711/google-pixel-care-plus-free-screen-and-battery-repair",
-    "publishedAt": "2025-08-28T18:24:50.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay $8 per-month, or $159 for a two-year plan on a Pixel 9. For a Pixel 10 Pro Fold, that jumps up to $339 for two years, or $18 per-month, with the optional loss and theft package for a small extra charg...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257917_Google_Pixel_10_review_AJohnson_0006.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Google’s Pixel Care Plus includes free screen and battery repair",
-    "seoDescription": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay ..."
-  },
-  {
-    "title": "The best Labor Day TV sales",
-    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
-    "publishedAt": "2025-08-28T18:19:17.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best Labor Day TV sales",
-    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
   }
 ]
