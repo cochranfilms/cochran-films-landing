@@ -1,5 +1,80 @@
 [
   {
+    "title": "I Think This New Screenwriting Website Is Shady And Exploitative",
+    "url": "https://nofilmschool.com/get-it-made-screenwriting",
+    "publishedAt": "2025-08-29T00:50:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Man, it is so hard to break into Hollywood that nothing makes me madder than websites exploiting aspiring writers. Recently, a writer sent me an email asking me to look into a website called GET IT MADE. Now, that website has a very similar title to a consulting service I have used and reviewed called GET MADE. But these two sites are very different. And ...",
+    "image": "https://nofilmschool.com/media-library/i-think-this-new-screenwriting-website-is-shady-and-exploitative.jpg?id=61531961&width=980",
+    "video": null,
+    "author": "Jason Hellerman",
+    "tags": [
+      "Screenwriting",
+      "Screenwriting lessons",
+      "Get it made",
+      "Screenwriting lessons"
+    ],
+    "seoTitle": "I Think This New Screenwriting Website Is Shady And Exploitative",
+    "seoDescription": "Man, it is so hard to break into Hollywood that nothing makes me madder than websites exploiting aspiring writers. Recently, a writer sent me an email asking..."
+  },
+  {
+    "title": "How to Write an Emmy-Nominated Docuseries, with  Timothy Moran From 'Chimp Crazy'",
+    "url": "https://nofilmschool.com/emmy-nominated-timothy-moran-doc-wrtier",
+    "publishedAt": "2025-08-29T00:40:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Timothy Moran is an Emmy Award-winning producer and writer whose work has consistently captured the cultural zeitgeist. His most recent series, Chimp Crazy, became HBO's most-viewed documentary series in four years. It was such an exciting, funny, and weird look at these people who keep exotic pets that should probably be in zoos or in the wild. Moran pre...",
+    "image": "https://nofilmschool.com/media-library/how-to-write-an-emmy-nominated-docuseries-with-timothy-moran-from-chimp-crazy.jpg?id=61530530&width=980",
+    "video": "https://www.youtube.com/embed/qqP1VUhCpi8?rel=0&start=3",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Timothy moran",
+      "Chimp crazy",
+      "Hbo",
+      "Writing",
+      "Documentary",
+      "Interviews"
+    ],
+    "seoTitle": "How to Write an Emmy-Nominated Docuseries, with  Timothy Moran From 'Chimp Crazy'",
+    "seoDescription": "Timothy Moran is an Emmy Award-winning producer and writer whose work has consistently captured the cultural zeitgeist. His most recent series, Chimp Crazy, ..."
+  },
+  {
+    "title": "Venice Honors Werner Herzog's 'Exuberant Creativity'",
+    "url": "https://nofilmschool.com/venice-honors-werner-herzog",
+    "publishedAt": "2025-08-29T00:30:39.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Werner Herzog has had a remarkable career. You're probably at least familiar with Grizzly Man or Cave of Forgotten Dreams. Or maybe you know the man himself, whose insightful but deadpan observations are delivered through the clip of his German accent. Now, the 82-year-old filmmaker is at the Venice Film Festival this week with a new documentary, Ghost El...",
+    "image": "https://nofilmschool.com/media-library/werner-herzog.jpg?id=61531954&width=980",
+    "video": null,
+    "author": "Jo Light",
+    "tags": [
+      "Francis ford coppola",
+      "Venice film festival",
+      "Werner herzog",
+      "Werner herzog"
+    ],
+    "seoTitle": "Venice Honors Werner Herzog's 'Exuberant Creativity'",
+    "seoDescription": "Werner Herzog has had a remarkable career. You're probably at least familiar with Grizzly Man or Cave of Forgotten Dreams. Or maybe you know the man himself,..."
+  },
+  {
+    "title": "Apple Watch Ultra 3 Coming Soon: What to Expect",
+    "url": "https://www.macrumors.com/guide/apple-watch-ultra-3-what-to-expect/",
+    "publishedAt": "2025-08-28T23:20:39.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "We have less than two weeks to go until Apple's September 9 \"Awe Dropping\" event, and it's finally time for the Apple Watch Ultra to get a refresh. Apple introduced a new color last year, but there was no new model, so it's due for an update. There are some useful new features in the works, which we've outlined below. Design and Display There aren't rumor...",
+    "image": "https://images.macrumors.com/article-new/2024/03/apple-watch-ultra-2-purple.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "Apple Watch Ultra 3 Coming Soon: What to Expect",
+    "seoDescription": "We have less than two weeks to go until Apple's September 9 \"Awe Dropping\" event, and it's finally time for the Apple Watch Ultra to get a refresh. Apple int..."
+  },
+  {
     "title": "Web Wide Worlds: An Open Technology Stack for Digital Worlds",
     "url": "https://dev.to/dyfi/web-wide-worlds-an-open-technology-stack-for-digital-worlds-e3p",
     "publishedAt": "2025-08-28T23:03:23.000Z",
@@ -60,7 +135,7 @@
     "source": "theverge.com",
     "category": "web",
     "summary": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two employees, Nisreen Jaradat and Julius Shan, were fired “in connection” with demonstrations that saw protesters set up encampments at Microsoft’s headquarters, according to Hossam Nasr, an organizer wi...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/microsoftprotests.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Sign.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Jacob Kastrenakes",
     "tags": [],
@@ -128,43 +203,6 @@
     "seoDescription": "Introduction The cleaning industry is rapidly evolving thanks to technology. Traditional methods of scheduling and tracking maintenance are being replaced by..."
   },
   {
-    "title": "Simplificando Testes no NestJS com Injeção de Valores",
-    "url": "https://dev.to/tadeubdev/simplificando-testes-no-nestjs-com-injecao-de-valores-3io4",
-    "publishedAt": "2025-08-28T22:13:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Quando trabalhamos com NestJS, é muito comum ver serviços injetando o ConfigService diretamente. Isso funciona bem, mas pode tornar os testes mais complexos e acoplar o código a detalhes de configuração. Vamos comigo enquanto escuto uma playlist de techno no youtube. Neste artigo, vou mostrar uma abordagem simples para desacoplar suas classes e facilitar ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwvbj4n6v1b5sqmc8ffpm.png",
-    "video": null,
-    "author": "Tadeu Barbosa",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "braziliandevs"
-    ],
-    "seoTitle": "Simplificando Testes no NestJS com Injeção de Valores",
-    "seoDescription": "Quando trabalhamos com NestJS, é muito comum ver serviços injetando o ConfigService diretamente. Isso funciona bem, mas pode tornar os testes mais complexos ..."
-  },
-  {
-    "title": "Better Sidekiq Classes",
-    "url": "https://dev.to/brazenbraden/better-sidekiq-classes-430b",
-    "publishedAt": "2025-08-28T22:12:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Sidekiq is pretty much the go-to solution for enqueuing jobs for background processing when working on a Ruby-based project. It's simple to implement, has a clear DSL, and is well-supported by common testing frameworks like RSpec. That being said, and I may be nitpicking, but the standard implementation examples do add a little extra overhead if you wish ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0qg0e63pe5tvzedbljf3.png",
-    "video": null,
-    "author": "Braden King",
-    "tags": [
-      "ruby",
-      "rails",
-      "webdev"
-    ],
-    "seoTitle": "Better Sidekiq Classes",
-    "seoDescription": "Sidekiq is pretty much the go-to solution for enqueuing jobs for background processing when working on a Ruby-based project. It's simple to implement, has a ..."
-  },
-  {
     "title": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
     "url": "https://nofilmschool.com/cutting-comedy-inside-the-edit-of-saturday-night-lives-50th-anniversary",
     "publishedAt": "2025-08-28T22:05:08.000Z",
@@ -184,25 +222,6 @@
     "seoDescription": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 5..."
   },
   {
-    "title": "Python in Image Recognition for Botox Results",
-    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-in-image-recognition-for-botox-results-39gb",
-    "publishedAt": "2025-08-28T22:00:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In recent years, artificial intelligence has played a key role in the image using Python to evaluate and track the results of cosmetic Traditionally, before-and-after pictures are compared visually, which For example, clinics offering Botox Elmwood Park services could Python provides an extensive ecosystem of libraries that make it a OpenCV: For image pro...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frieo07oi4km4oxb6upb5.png",
-    "video": null,
-    "author": "angelyn Muñoz",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python in Image Recognition for Botox Results",
-    "seoDescription": "In recent years, artificial intelligence has played a key role in the image using Python to evaluate and track the results of cosmetic Traditionally, before-..."
-  },
-  {
     "title": "iOS 26: What's New With the Podcasts App",
     "url": "https://www.macrumors.com/guide/ios-26-podcasts/",
     "publishedAt": "2025-08-28T22:00:34.000Z",
@@ -218,62 +237,6 @@
     ],
     "seoTitle": "iOS 26: What's New With the Podcasts App",
     "seoDescription": "The Podcasts app didn't get as many iOS 26 updates as some of Apple's other apps, but there are some design changes and feature tweaks that are worth knowing..."
-  },
-  {
-    "title": "25 chunking tricks for RAG that devs actually use",
-    "url": "https://dev.to/dev_tips/25-chunking-tricks-for-rag-that-devs-actually-use-2ndg",
-    "publishedAt": "2025-08-28T21:53:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Not another theory-filled blog post just real chunking strategies that work (or blew up in testing). Chunking is the unsung hero of RAG pipelines. Done right, it makes your LLM feel sharp and reliable. Done wrong, it spits out hallucinations like “The Eiffel Tower is a vegetable.” This guide skips the fluff. No recycled diagrams. No “just use LangChain lo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AXhUpCjvm5FZhKzPblZrwlA.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "25 chunking tricks for RAG that devs actually use",
-    "seoDescription": "Not another theory-filled blog post just real chunking strategies that work (or blew up in testing). Chunking is the unsung hero of RAG pipelines. Done right..."
-  },
-  {
-    "title": "The first open AI coder that rivals Claude is here",
-    "url": "https://dev.to/dev_tips/the-first-open-ai-coder-that-rivals-claude-is-here-15bn",
-    "publishedAt": "2025-08-28T21:45:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Quen 3 Coder isn’t just another model it’s an agentic coding monster that might change the game for devs and AI labs alike. Programmers, you might want to sit down for this If you’ve been chilling comfortably under the warm blanket of Claude 4’s dominance in AI-assisted coding… wake up. A Chinese company just threw a firecracker under your office chair. A...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ALkVoiTYJwpfDQPWcCuUTEA.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "The first open AI coder that rivals Claude is here",
-    "seoDescription": "Quen 3 Coder isn’t just another model it’s an agentic coding monster that might change the game for devs and AI labs alike. Programmers, you might want to si..."
-  },
-  {
-    "title": "Introduction to Commitlint and Semantic Commits for Beginner Devs",
-    "url": "https://dev.to/werliton/introduction-to-commitlint-and-semantic-commits-for-beginner-devs-1ima",
-    "publishedAt": "2025-08-28T21:38:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Have you ever wondered why some development teams have super organized, easy-to-understand, and standardized commit messages? That’s thanks to semantic commits and tools like commitlint. In this article, I’ll show you how to start using these practices in your project with simple language and practical examples you can apply today. Semantic commits are co...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbzz95zawtq70zzjgf9cs.png",
-    "video": null,
-    "author": "Werliton Silva",
-    "tags": [
-      "webdev",
-      "programming",
-      "beginners"
-    ],
-    "seoTitle": "Introduction to Commitlint and Semantic Commits for Beginner Devs",
-    "seoDescription": "Have you ever wondered why some development teams have super organized, easy-to-understand, and standardized commit messages? That’s thanks to semantic commi..."
   },
   {
     "title": "Incogni deletes your family’s private info from the internet – here’s why that matters",
@@ -649,5 +612,35 @@
     "tags": [],
     "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
     "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
+  },
+  {
+    "title": "I tested 15 cases for the Switch 2 and these are the best",
+    "url": "https://www.theverge.com/reviews/691319/best-switch-2-cases",
+    "publishedAt": "2025-08-28T18:09:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to put your hard-earned Switch 2 into a protective case. To me, it’s freeing. Using a case relieves me of the worry that it will accumulate tons of little scratches, or worse. I’ve tested several types ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257824_buying_guide_switch_2_case_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Cameron Faulkner",
+    "tags": [],
+    "seoTitle": "I tested 15 cases for the Switch 2 and these are the best",
+    "seoDescription": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to..."
+  },
+  {
+    "title": "New Xcode beta now available with GPT-5 and Claude support",
+    "url": "https://9to5mac.com/2025/08/28/new-xcode-beta-now-available-with-gpt-5-and-claude-support/",
+    "publishedAt": "2025-08-28T17:59:48.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integration with Anthropic’s Claude. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/xcode-claude.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "New Xcode beta now available with GPT-5 and Claude support",
+    "seoDescription": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integra..."
   }
 ]
