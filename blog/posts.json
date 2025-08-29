@@ -1,5 +1,211 @@
 [
   {
+    "title": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/762594/fable-showrunner-edwatch-saatchi-interview",
+    "publishedAt": "2025-08-29T20:07:22.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. Even though Story Studio snagged an Emmy for one of its three animated features, a general lack of public interest in VR movies led Meta to shutter Oculus Story Studio back in 2017. The VR era has come...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Exit-Valley.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
+    "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
+  },
+  {
+    "title": "Shared States in React Have Never Been Easier ;)",
+    "url": "https://dev.to/hichemtab-tech/shared-states-in-react-have-never-been-easier--2m6p",
+    "publishedAt": "2025-08-29T20:01:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "You’re building a React app. You’ve got a counter, a user object, maybe a Firebase subscription. You think, hey I’ll just throw useState in there and I’m good. And then it hits you: what if I need this same state in another component? 😱 Options today? Context → wrap your whole App.tsx just to share one boolean. Boring. Annoying. Overkill. Redux → congrat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fotd5xb9907p530b0wr5i.png",
+    "video": null,
+    "author": "HichemTech",
+    "tags": [
+      "react",
+      "programming",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "Shared States in React Have Never Been Easier ;)",
+    "seoDescription": "You’re building a React app. You’ve got a counter, a user object, maybe a Firebase subscription. You think, hey I’ll just throw useState in there and I’m goo..."
+  },
+  {
+    "title": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "url": "https://nofilmschool.com/most-realistic-firefights",
+    "publishedAt": "2025-08-29T19:57:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies that earned the respect of military veterans, firearms experts, and film critics alike. They have highly accurate and visceral scenes that pop off the screen. Some of them are disturbing or scary, but...",
+    "image": "https://nofilmschool.com/media-library/what-are-the-most-realistic-firefights-ever-filmed-by-hollywood.jpg?id=61536059&width=980",
+    "video": "https://www.youtube.com/embed/UDYVy954biU?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Action",
+      "Firefights"
+    ],
+    "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
+  },
+  {
+    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
+    "publishedAt": "2025-08-29T19:53:06.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. I checked, and sure enough, I can send both, as well as ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
+  },
+  {
+    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
+    "publishedAt": "2025-08-29T19:44:15.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
+    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
+    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "The roses",
+      "Comedy",
+      "Remake",
+      "Adaptation"
+    ],
+    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
+  },
+  {
+    "title": "Machine Learning with Python for Aluminum Fence Durability",
+    "url": "https://dev.to/rafael_ramirez_233e181cf9/machine-learning-with-python-for-aluminum-fence-durability-3dop",
+    "publishedAt": "2025-08-29T19:38:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Durability has always been a central concern in the construction and home improvement industries. When property owners invest in a fence, they expect it to last for decades without losing its strength or beauty. Aluminum fences, in particular, have become increasingly popular because they combine aesthetics, low maintenance, and resistance to rust. But ho...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5pk6q52jcohj5e1nxxbp.png",
+    "video": null,
+    "author": "RAFAEL RAMIREZ",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Machine Learning with Python for Aluminum Fence Durability",
+    "seoDescription": "Durability has always been a central concern in the construction and home improvement industries. When property owners invest in a fence, they expect it to l..."
+  },
+  {
+    "title": "Michelle Yeoh's Top 10 Movies",
+    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
+    "publishedAt": "2025-08-29T19:27:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
+    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
+    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Michelle yeoh",
+      "Martial arts movies"
+    ],
+    "seoTitle": "Michelle Yeoh's Top 10 Movies",
+    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
+  },
+  {
+    "title": "My Google Summer of Code (GSoC) 2025 in View",
+    "url": "https://dev.to/chiemezuo/my-google-summer-of-code-gsoc-2025-in-view-23j1",
+    "publishedAt": "2025-08-29T19:24:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "On May 8, 2025, I received an email stating that my proposal, titled \"Content Security Policy Compatibility,\" for the Wagtail CMS had been accepted. It was an exciting moment, and 3 months later, I'm here to share how things went, along with links to all of the work that was done. I'll start with some context to understand the GSoC project topic, the stat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw73vg1dmaf31tcfnq3vu.png",
+    "video": null,
+    "author": "Chiemezuo",
+    "tags": [
+      "webdev",
+      "django",
+      "wagtail",
+      "programming"
+    ],
+    "seoTitle": "My Google Summer of Code (GSoC) 2025 in View",
+    "seoDescription": "On May 8, 2025, I received an email stating that my proposal, titled \"Content Security Policy Compatibility,\" for the Wagtail CMS had been accepted. It was a..."
+  },
+  {
+    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
+    "publishedAt": "2025-08-29T19:21:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Richard Lawler",
+    "tags": [],
+    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
+  },
+  {
+    "title": "iOS 26: 5 New Features in the Wallet App",
+    "url": "https://www.macrumors.com/guide/ios-26-wallet-app/",
+    "publishedAt": "2025-08-29T19:16:13.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and more. We've outlined everything new in the Wallet app below. Order Tracking The ‌iOS 26‌ Wallet app features enhanced order tracking, and you can now use it to track all of your purchases rather than j...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Wallet-Glass-Feature.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "iOS 26: 5 New Features in the Wallet App",
+    "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
+  },
+  {
+    "title": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
+    "url": "https://9to5mac.com/2025/08/29/hackers-chained-apple-and-whatsapp-flaws-in-advanced-spyware-campaign/",
+    "publishedAt": "2025-08-29T19:14:15.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted individuals.” Now, new details have emerged, and it appears that the hacking campaign also leveraged a now-fixed WhatsApp flaw to target its victims. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-hacked.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
+    "seoDescription": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted ind..."
+  },
+  {
+    "title": "Emma Stone's 'Bugonia' Earns Six-Minute Venice Ovation",
+    "url": "https://nofilmschool.com/bugonia-venice-ovation",
+    "publishedAt": "2025-08-29T19:12:09.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "I don't think standing ovations at festivals are the end-all, be-all of a film's worthiness, but hearing the buzz out of Venice for Yorgos Lanthimos' new film, Bugonia, has me excited. The film reportedly had the crowd going for six minutes, and so far, reviews are calling it a \"loopy\" black comedy/thriller and indicating that the crowd was receptive to i...",
+    "image": "https://nofilmschool.com/media-library/emma-stone-s-bugonia-earns-six-minute-venice-ovation.jpg?id=61536061&width=980",
+    "video": "https://www.youtube.com/embed/bd_5HcTujfc?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Emma stone",
+      "Bugonia",
+      "Venice film festival",
+      "Venice film festival 2025",
+      "Yorgos lanthimos"
+    ],
+    "seoTitle": "Emma Stone's 'Bugonia' Earns Six-Minute Venice Ovation",
+    "seoDescription": "I don't think standing ovations at festivals are the end-all, be-all of a film's worthiness, but hearing the buzz out of Venice for Yorgos Lanthimos' new fil..."
+  },
+  {
     "title": "Leak suggests new Philips Hue lights will have direct Matter support",
     "url": "https://www.theverge.com/news/768232/leak-philips-hue-lights-matter-over-thread",
     "publishedAt": "2025-08-29T19:08:13.000Z",
@@ -101,25 +307,6 @@
     "seoDescription": "How many photographers are men? What are the most common types of professional photography? How old are photographers in the biz? The State of the Photo Indu..."
   },
   {
-    "title": "Building Private-By-Default Apps with TEEs: The Oasis Stack",
-    "url": "https://dev.to/caerlower/building-private-by-default-apps-with-tees-the-oasis-stack-51p1",
-    "publishedAt": "2025-08-29T18:13:47.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When you deploy a smart contract on Ethereum or Solana, everything is public: contract state, inputs, outputs, even function calls. That transparency is great for auditing, but it kills privacy and limits what developers can build. That’s where Trusted Execution Environments (TEEs) come in. And more importantly, that’s where Oasis has built an entire deve...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr6eo3kxon2solifjuxjh.png",
-    "video": null,
-    "author": "Manav",
-    "tags": [
-      "privacy",
-      "blockchain",
-      "web3",
-      "webdev"
-    ],
-    "seoTitle": "Building Private-By-Default Apps with TEEs: The Oasis Stack",
-    "seoDescription": "When you deploy a smart contract on Ethereum or Solana, everything is public: contract state, inputs, outputs, even function calls. That transparency is grea..."
-  },
-  {
     "title": "This Browser-Based Tool Lets Filmmakers See if a Lens Covers a Sensor",
     "url": "https://petapixel.com/2025/08/29/this-browser-based-tool-lets-filmmakers-see-if-a-lens-covers-a-sensor/",
     "publishedAt": "2025-08-29T18:10:43.000Z",
@@ -143,61 +330,23 @@
     "seoDescription": "True Lens Services (TLS), a U.K.-based cinema lens manufacturer, has launched a new lens coverage tool that allows filmmakers to see if an optic will cover a..."
   },
   {
-    "title": "Humty",
-    "url": "https://dev.to/keya_khatun_b0884129bc101/humty-iam",
-    "publishedAt": "2025-08-29T18:04:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3yd6zvsjtqvvx0rg2r37.jpg",
-    "video": null,
-    "author": "KEYA KHATUN",
+    "title": "This Is the Reason Greg Daniels Likes Writing Comedy",
+    "url": "https://nofilmschool.com/greg-daniels-writing-comedy",
+    "publishedAt": "2025-08-29T17:40:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Greg Daniels, a writer, director, and producer, knows a thing or two about making hit TV. Daniels, who adapted the British version of The Office for American TV, also co-created Parks and Recreation with Michael Schur, developed King of the Hill with Mike Judge, and created the sci-fi comedy Upload for Amazon Prime. The Paper is an upcoming American mocku...",
+    "image": "https://nofilmschool.com/media-library/ned-domhnall-gleeson-in-the-paper.jpg?id=61531477&width=980",
+    "video": "https://www.youtube.com/embed/3f0cyQzOK-A?rel=0",
+    "author": "Jo Light",
     "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
+      "Television writing",
+      "Greg daniels",
+      "Tv writing",
+      "Comedy writing"
     ],
-    "seoTitle": "Humty",
-    "seoDescription": ""
-  },
-  {
-    "title": "Why do we need coding rules or conventions, anyway?",
-    "url": "https://dev.to/intersystems/why-do-we-need-coding-rules-or-conventions-anyway-2h18",
-    "publishedAt": "2025-08-29T17:45:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This great article sparked some recent private discussion, and I'd like to share some of my own thoughts from it. The motivating concern boils down to: Why do we need coding rules or conventions at all? What happened to the wonderful era of the Renaissance artist-programmer forging their own path, prior to being supplanted by the craftsman and now (even w...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk4j7vpurdud6vdx26ixt.jpeg",
-    "video": null,
-    "author": "InterSystems Developer",
-    "tags": [
-      "webdev",
-      "programming",
-      "beginners",
-      "discuss"
-    ],
-    "seoTitle": "Why do we need coding rules or conventions, anyway?",
-    "seoDescription": "This great article sparked some recent private discussion, and I'd like to share some of my own thoughts from it. The motivating concern boils down to: Why d..."
-  },
-  {
-    "title": "Yoni Steam Health Predictions Using Python AI Models",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/yoni-steam-health-predictions-using-python-ai-models-3dck",
-    "publishedAt": "2025-08-29T17:36:45.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The wellness industry is constantly evolving, combining traditional Yoni steam, sometimes called vaginal steaming, is a practice rooted in Although scientific research on the practice is still limited, many Yoni Steam Cleanse highlight that their clients are not only looking for This intersection between holistic wellness and modern technology Python is w...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fubjf92rkn4diq1h64j9n.jpg",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Yoni Steam Health Predictions Using Python AI Models",
-    "seoDescription": "The wellness industry is constantly evolving, combining traditional Yoni steam, sometimes called vaginal steaming, is a practice rooted in Although scientifi..."
+    "seoTitle": "This Is the Reason Greg Daniels Likes Writing Comedy",
+    "seoDescription": "Greg Daniels, a writer, director, and producer, knows a thing or two about making hit TV. Daniels, who adapted the British version of The Office for American..."
   },
   {
     "title": "Is 'Twilight' the Most Influential \"Bad\" Movie Ever Made?",
@@ -482,170 +631,5 @@
     "tags": [],
     "seoTitle": "Hisense&#8217;s take on the Samsung Frame TV is $300 off",
     "seoDescription": "Hisense’s S7N 55-inch TV doubles as a framed work of art. It’s hard to realize that Labor Day weekend — signalling the end of summer — is already here. It wo..."
-  },
-  {
-    "title": "The MacRumors Show: iPhone 17's 'Awe Dropping' Accessories",
-    "url": "https://www.macrumors.com/2025/08/29/the-macrumors-show-iphone-17-accessories/",
-    "publishedAt": "2025-08-29T15:12:17.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Following the announcement of Apple's upcoming \"Awe dropping\" event, on this week's episode of The MacRumors Show we talk through all of the new accessories rumored to debut alongside the iPhone 17 lineup. Subscribe to The MacRumors Show YouTube channel for more videos We take a closer look at Apple's invite for \"Awe dropping;\" the design could hint at th...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/-TN4f98d8bQ?si=hhAVvzAp3-cGqPZO",
-    "author": "Hartley Charlton",
-    "tags": [
-      "Featured",
-      "Featured (sticky)",
-      "The MacRumors Show"
-    ],
-    "seoTitle": "The MacRumors Show: iPhone 17's 'Awe Dropping' Accessories",
-    "seoDescription": "Following the announcement of Apple's upcoming \"Awe dropping\" event, on this week's episode of The MacRumors Show we talk through all of the new accessories ..."
-  },
-  {
-    "title": "Security Bite: Why it’s mathematically impossible to stop malware",
-    "url": "https://9to5mac.com/2025/08/29/security-bite-why-its-mathematically-impossible-to-stop-malware/",
-    "publishedAt": "2025-08-29T15:11:59.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we do. Our unique integrated approach to management and security combines state-of-the-art Apple-specific security solutions for fully automated Hardening & Compliance, Next Generation EDR, AI-powered Z...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/iphone-malware-app-store.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Arin Waichulis",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Security Bite: Why it’s mathematically impossible to stop malware",
-    "seoDescription": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we..."
-  },
-  {
-    "title": "Brand new iPhone 17 accessories are coming from Apple, here’s what’s rumored",
-    "url": "https://9to5mac.com/2025/08/29/brand-new-iphone-17-accessories-are-coming-from-apple-heres-whats-rumored/",
-    "publishedAt": "2025-08-29T15:01:19.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is about to unveil its iPhone 17 lineup, and with it several brand new accessories are expected to debut. Joining the standard Apple silicone cases, here’s everything new that rumors say Apple has coming. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-lineup-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Brand new iPhone 17 accessories are coming from Apple, here’s what’s rumored",
-    "seoDescription": "Apple is about to unveil its iPhone 17 lineup, and with it several brand new accessories are expected to debut. Joining the standard Apple silicone cases, he..."
-  },
-  {
-    "title": "This Gigantic 1970s Camera Gyro Shows How Far Tech Has Come",
-    "url": "https://petapixel.com/2025/08/29/this-gigantic-1970s-camera-gyro-shows-how-far-tech-has-come/",
-    "publishedAt": "2025-08-29T14:52:59.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The BBC recently shared a fascinating news report from all the way back in 1970, which featured a state-of-the-art camera accessory at the time: a gyro-stabilized camera. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Gyrocamera-1970.jpg",
-    "video": null,
-    "author": "Matt Growcoot",
-    "tags": [
-      "Features",
-      "Technology",
-      "gimbal",
-      "gyro",
-      "gyroscope",
-      "gyroscopic",
-      "gyroscopicstabilizer",
-      "historicalfriday"
-    ],
-    "seoTitle": "This Gigantic 1970s Camera Gyro Shows How Far Tech Has Come",
-    "seoDescription": "The BBC recently shared a fascinating news report from all the way back in 1970, which featured a state-of-the-art camera accessory at the time: a gyro-stabi..."
-  },
-  {
-    "title": "Canon Had the Top Camera Market Share in 2024",
-    "url": "https://petapixel.com/2025/08/29/canon-had-the-top-camera-market-share-in-2024/",
-    "publishedAt": "2025-08-29T14:38:56.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Among Japanese camera manufacturers, Canon sold the most cameras in 2024. Furthermore, in good news for the camera industry overall, nearly every manufacturer sold more cameras in 2024 than in 2023. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/nikkei-225-featured-canon.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "Industry",
-      "News",
-      "cameraindustry",
-      "camerasales",
-      "Canon",
-      "fujifilm",
-      "industry"
-    ],
-    "seoTitle": "Canon Had the Top Camera Market Share in 2024",
-    "seoDescription": "Among Japanese camera manufacturers, Canon sold the most cameras in 2024. Furthermore, in good news for the camera industry overall, nearly every manufacture..."
-  },
-  {
-    "title": "DZOFilm’s Upgraded Vespid2 Cine Primes Are Even Faster",
-    "url": "https://petapixel.com/2025/08/29/dzofilms-upgraded-vespid2-cine-primes-are-even-faster/",
-    "publishedAt": "2025-08-29T14:38:31.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "DZOFilm has released the Vespid2, a refreshed line of cinema prime lenses designed to deliver sharper image quality, reduced chromatic aberration in the center, and a more consistent bokeh across focal lengths, aiming to provide a refined yet accessible option for filmmakers. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/DZOFilm-Vespid2-PetaPixel-BG-copy.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Equipment",
-      "News",
-      "cine",
-      "dzofilm",
-      "prime",
-      "t1.9",
-      "vespid2"
-    ],
-    "seoTitle": "DZOFilm’s Upgraded Vespid2 Cine Primes Are Even Faster",
-    "seoDescription": "DZOFilm has released the Vespid2, a refreshed line of cinema prime lenses designed to deliver sharper image quality, reduced chromatic aberration in the cent..."
-  },
-  {
-    "title": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
-    "url": "https://www.macrumors.com/2025/08/29/apple-labor-day-sales-2025/",
-    "publishedAt": "2025-08-29T14:21:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Labor Day weekend is here and numerous retailers have kicked off sales that should be advantageous for anyone shopping around for Apple products and related accessories. In this article we've rounded up some of the best Labor Day deals for Apple devices, also including discounts on charging accessories, headphones, speakers, and more. Note: MacRumors is a...",
-    "image": "https://images.macrumors.com/article-new/2022/08/Labor-Day-Deals-Feature0011.jpg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Apple Labor Day Sales Include Year's Best Prices on AirPods, iPads, MacBooks, and More",
-    "seoDescription": "Labor Day weekend is here and numerous retailers have kicked off sales that should be advantageous for anyone shopping around for Apple products and related ..."
-  },
-  {
-    "title": "KPop Demon Hunters was this year’s biggest surprise, but can Netflix do it again?",
-    "url": "https://www.theverge.com/netflix/767180/kpop-demon-hunters-sequel-franchise-netflix",
-    "publishedAt": "2025-08-29T14:15:25.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "When you watch KPop Demon Hunters, it is easy to see why it has become the most popular movie that Netflix has ever released. The animated musical's story about a trio of pop stars tasked with protecting humanity from monsters is familiar, but refreshingly different and infinitely more stylish than other narratives like it. The soundtrack is full of unden...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/KpopDemonHunters_ProRes422HQ_SDR_2ch_20250424.00_06_05_14.jpg?quality=90&#038;strip=all&#038;crop=0,5.2966417910448,100,94.703358208955",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "KPop Demon Hunters was this year’s biggest surprise, but can Netflix do it again?",
-    "seoDescription": "When you watch KPop Demon Hunters, it is easy to see why it has become the most popular movie that Netflix has ever released. The animated musical's story ab..."
-  },
-  {
-    "title": "iPhone 17 Pro: Three reasons you might want to upgrade from iPhone 16 Pro",
-    "url": "https://9to5mac.com/2025/08/29/iphone-17-pro-three-reasons-you-might-want-to-upgrade-from-iphone-16-pro/",
-    "publishedAt": "2025-08-29T14:13:05.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is about to launch four new iPhones, including the iPhone 17 Pro and Pro Max. Based on rumors around what’s new this year, here are three reasons you might want to upgrade to an iPhone 17 Pro—even if you already own an iPhone 16 Pro. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-max-vs-16-pro-max-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 Pro: Three reasons you might want to upgrade from iPhone 16 Pro",
-    "seoDescription": "Apple is about to launch four new iPhones, including the iPhone 17 Pro and Pro Max. Based on rumors around what’s new this year, here are three reasons you m..."
   }
 ]
