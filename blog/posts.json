@@ -1,12 +1,12 @@
 [
   {
-    "title": "Nvidia’s nvl72 is insane but who can actually use it?",
-    "url": "https://dev.to/dev_tips/nvidias-nvl72-is-insane-but-who-can-actually-use-it-4fl5",
-    "publishedAt": "2025-08-29T12:20:15.000Z",
+    "title": "Your app isn’t IPv6-ready: a 30-minute checklist",
+    "url": "https://dev.to/dev_tips/your-app-isnt-ipv6-ready-a-30-minute-checklist-1n2d",
+    "publishedAt": "2025-08-29T13:16:26.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Nvidia’s GB200 NVL72 promises “exascale in a rack.” Here’s what that means for training, inference, and the cloud bills we cry over. So, Nvidia just casually dropped an exascale computer in a single rack. Yeah, you read that right. Exascale. One rack. If you’re thinking, “That sounds like a Minecraft server on steroids,” you’re not far off except this one...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AIiAdlTKv1FmtxjcL1XwB2Q.png",
+    "summary": "A blunt guide for devs: what breaks, how to fix it, and whether you should care right now So you think flipping on IPv6 is just “click a checkbox in the cloud console” and you’re done? Cute. That’s like switching your game from windowed to full-screen mid-raid half your UI vanishes, your GPU panics, and suddenly you’re tanking blind. IPv6 isn’t new, but t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AG1My19PddO2LGDCyYdtVYw.jpeg",
     "video": null,
     "author": "<devtips/>",
     "tags": [
@@ -15,65 +15,133 @@
       "javascript",
       "ai"
     ],
-    "seoTitle": "Nvidia’s nvl72 is insane but who can actually use it?",
-    "seoDescription": "Nvidia’s GB200 NVL72 promises “exascale in a rack.” Here’s what that means for training, inference, and the cloud bills we cry over. So, Nvidia just casually..."
+    "seoTitle": "Your app isn’t IPv6-ready: a 30-minute checklist",
+    "seoDescription": "A blunt guide for devs: what breaks, how to fix it, and whether you should care right now So you think flipping on IPv6 is just “click a checkbox in the clou..."
   },
   {
-    "title": "Zoho, Odoo, or NetSuite? ERP Comparison for Small & Mid-Sized Businesses",
-    "url": "https://dev.to/aiinak9876/zoho-odoo-or-netsuite-erp-comparison-for-small-mid-sized-businesses-58en",
-    "publishedAt": "2025-08-29T12:10:43.000Z",
+    "title": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
+    "url": "https://petapixel.com/2025/08/29/anthropic-reaches-settlement-in-landmark-ai-copyright-case-with-us-authors/",
+    "publishedAt": "2025-08-29T13:06:52.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Artificial intelligence company Anthropic has reached a settlement in a high-profile class action lawsuit brought by a group of U.S. authors who alleged the company used pirated books to train its AI systems without permission or compensation. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/06/anthropic-featured.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "Technology",
+      "aicopyright",
+      "aitraining",
+      "aitrainingdata",
+      "anthropic"
+    ],
+    "seoTitle": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
+    "seoDescription": "Artificial intelligence company Anthropic has reached a settlement in a high-profile class action lawsuit brought by a group of U.S. authors who alleged the ..."
+  },
+  {
+    "title": "JSONB vs JSON: the Postgres/MySQL showdown that actually matters",
+    "url": "https://dev.to/dev_tips/jsonb-vs-json-the-postgresmysql-showdown-that-actually-matters-id1",
+    "publishedAt": "2025-08-29T12:58:02.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Choosing the right ERP system can be overwhelming for small and mid-sized businesses. There are dozens of options available, each promising to save time, cut costs, and improve efficiency. Among the most popular names in 2025 are Zoho, Odoo, and NetSuite. All three are strong solutions, but they serve different types of businesses. Let’s compare them side...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpyt4loh3uo0amhmqhk8x.png",
+    "summary": "Schema design, indexing tricks, and performance wars what devs actually care about when picking their database fighter. If databases were video game characters, Postgres and MySQL would be those two rivals you always pick just to trash-talk your friends: the tanky but flexible mage (Postgres) vs the fast, reliable brawler (MySQL). Both can sling JSON now,...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AlGh1cRUt7sER9zTlmBWWtQ.png",
     "video": null,
-    "author": "aiinak.com",
+    "author": "<devtips/>",
     "tags": [
       "webdev",
       "programming",
       "javascript",
       "ai"
     ],
-    "seoTitle": "Zoho, Odoo, or NetSuite? ERP Comparison for Small & Mid-Sized Businesses",
-    "seoDescription": "Choosing the right ERP system can be overwhelming for small and mid-sized businesses. There are dozens of options available, each promising to save time, cut..."
+    "seoTitle": "JSONB vs JSON: the Postgres/MySQL showdown that actually matters",
+    "seoDescription": "Schema design, indexing tricks, and performance wars what devs actually care about when picking their database fighter. If databases were video game characte..."
   },
   {
-    "title": "The EU just rolled out the AI Office. Your AI product is now on its compliance radar.",
-    "url": "https://dev.to/dev_tips/the-eu-just-rolled-out-the-ai-office-your-ai-product-is-now-on-its-compliance-radar-4c6m",
-    "publishedAt": "2025-08-29T12:08:22.000Z",
+    "title": "Keeping your Streamlit app awake using Selenium and Github Actions",
+    "url": "https://dev.to/virgoalpha/keeping-your-streamlit-app-awake-using-selenium-and-github-actions-4ajd",
+    "publishedAt": "2025-08-29T12:56:15.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Member-only story Trigger EU penalties: The deadlines, documents, and dev headaches every AI builder should expect from the EU’s new AI watchdog The EU just spawned a new final boss for AI compliance, and yes, you’re in its raid group whether you queued or not. Even if you’re outside Europe, if you serve EU users, these rules will find you just like GDPR ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2A6Vec5PB3jtrsz67pIhpfuA.png",
+    "summary": "TLDR; Streamlit apps sleep after a period of inactivity if hosted on Streamlit Community Cloud (free tier) To wake your app up, you need to click a button We can use Github actions + Selenium to automate this button clicking every couple of hours Streamlit apps hosted on the Community Edition (free tier) go to sleep after some period of inactivity. This u...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fegfmxrll6s3kegjcfjyx.png",
+    "video": null,
+    "author": "Benson King'ori",
+    "tags": [
+      "selenium",
+      "githubactions",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Keeping your Streamlit app awake using Selenium and Github Actions",
+    "seoDescription": "TLDR; Streamlit apps sleep after a period of inactivity if hosted on Streamlit Community Cloud (free tier) To wake your app up, you need to click a button We..."
+  },
+  {
+    "title": "Stop saying “C is always faster”",
+    "url": "https://dev.to/dev_tips/stop-saying-c-is-always-faster-mna",
+    "publishedAt": "2025-08-29T12:49:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Real perf numbers, ergonomics, and the foot-guns nobody talks about “C is faster.” Yeah, and so is driving without seatbelts until you hit a wall. Every dev Discord, every Reddit thread, there’s always that one person chanting the gospel of C like it’s 1995. But here’s the thing: speed isn’t the whole story anymore. Modern runtimes, safety nets, and tooli...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ALapfHdsTBM6la8juYW_JVw.jpeg",
     "video": null,
     "author": "<devtips/>",
     "tags": [
       "webdev",
       "programming",
-      "ai",
-      "devops"
+      "c",
+      "productivity"
     ],
-    "seoTitle": "The EU just rolled out the AI Office. Your AI product is now on its compliance radar.",
-    "seoDescription": "Member-only story Trigger EU penalties: The deadlines, documents, and dev headaches every AI builder should expect from the EU’s new AI watchdog The EU just ..."
+    "seoTitle": "Stop saying “C is always faster”",
+    "seoDescription": "Real perf numbers, ergonomics, and the foot-guns nobody talks about “C is faster.” Yeah, and so is driving without seatbelts until you hit a wall. Every dev ..."
   },
   {
-    "title": "str-plus",
-    "url": "https://dev.to/shahid19_a5/-2jln",
-    "publishedAt": "2025-08-29T12:07:47.000Z",
+    "title": "Blizzard’s Diablo team has unionized",
+    "url": "https://www.theverge.com/news/767944/diablo-developers-form-union-blizzard-entertainment",
+    "publishedAt": "2025-08-29T12:47:08.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "More than 450 game developers on Blizzard’s Diablo team have formed a union, making them one of the largest and latest groups of Microsoft workers to do so. The new union includes game developers, artists, designers, engineers, and support staff across the Diablo franchise, according to the Communications Workers of America (CWA) press release, which vote...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25654793/decoder.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "Blizzard’s Diablo team has unionized",
+    "seoDescription": "More than 450 game developers on Blizzard’s Diablo team have formed a union, making them one of the largest and latest groups of Microsoft workers to do so. ..."
+  },
+  {
+    "title": "PyTorch vs TensorFlow 2025: Which one wins after 72 hours?",
+    "url": "https://dev.to/dev_tips/pytorch-vs-tensorflow-2025-which-one-wins-after-72-hours-a2b",
+    "publishedAt": "2025-08-29T12:37:37.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Str-Plus: 80+ Type-Safe JS/TS String Utilities Shahid Ullah Safi ・ Aug 29 #npm #webdev #javascript #typescript",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2163373%2F31390820-4f4e-4071-9639-16eacc60a07e.jpg",
+    "summary": "72 hours of switching exposed the tradeoffs in speed, debugging, and deployment. 72 hours. One GPU. Too much coffee. I decided to run the same models back and forth between PyTorch and TensorFlow in 2025, just to see where each one actually holds up. Spoiler: both made me rage quit at least once. Why now? Because both frameworks leveled up big time: PyTor...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AL16kApKu6kQNdYpfEqEhiQ.png",
     "video": null,
-    "author": "Shahid Ullah Safi",
+    "author": "<devtips/>",
     "tags": [
-      "npm",
       "webdev",
+      "programming",
       "javascript",
-      "typescript"
+      "ai"
     ],
-    "seoTitle": "str-plus",
-    "seoDescription": "Str-Plus: 80+ Type-Safe JS/TS String Utilities Shahid Ullah Safi ・ Aug 29 #npm #webdev #javascript #typescript"
+    "seoTitle": "PyTorch vs TensorFlow 2025: Which one wins after 72 hours?",
+    "seoDescription": "72 hours of switching exposed the tradeoffs in speed, debugging, and deployment. 72 hours. One GPU. Too much coffee. I decided to run the same models back an..."
+  },
+  {
+    "title": "The Pixel 10’s AI screamed at us",
+    "url": "https://www.theverge.com/the-vergecast/767883/pixel-10-pro-ai-dish-intel-musk-lawsuit",
+    "publishedAt": "2025-08-29T12:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "This seems to be the year that Google's AI features are actually starting to add up to something useful. After a week testing the Pixel 10 Pro, my colleagues Allison Johnson and Vee Song say some of the new features are legitimately useful - at least when they work, which isn't always as expected. Case in point: the live translate feature could shift thei...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257915_vergecast_CVirginia_VRG_0207_Site.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jacob Kastrenakes",
+    "tags": [],
+    "seoTitle": "The Pixel 10’s AI screamed at us",
+    "seoDescription": "This seems to be the year that Google's AI features are actually starting to add up to something useful. After a week testing the Pixel 10 Pro, my colleagues..."
   },
   {
     "title": "Apple and Samsung Push Back Against Xiaomi's Bold India Ads",
@@ -205,6 +273,20 @@
     "tags": [],
     "seoTitle": "This liquid-cooled projector promises an incredibly bright 6,200 lumen image",
     "seoDescription": "“Actual features are subject to the official product release.” | Image: Dangbei Dangbei is bringing its S7 Ultra Max all-in-one projector to Berlin next week..."
+  },
+  {
+    "title": "Prompting Is A Design Act: How To Brief, Guide And Iterate With AI",
+    "url": "https://smashingmagazine.com/2025/08/prompting-design-act-brief-guide-iterate-ai/",
+    "publishedAt": "2025-08-29T10:00:00.000Z",
+    "source": "smashingmagazine.com",
+    "category": "web",
+    "summary": "Prompting is more than giving AI some instructions. You could think of it as a design act, part creative brief and part conversation design. This second article on AI augmenting design work introduces a designerly approach to prompting: one that blends creative briefing, interaction design, and structural clarity.",
+    "image": "http://files.smashing.media/articles/prompting-design-act-brief-guide-iterate-ai/prompting-design-act-brief-guide-iterate-ai.jpg",
+    "video": null,
+    "author": "hello@smashingmagazine.com (Lyndon Cerejo)",
+    "tags": [],
+    "seoTitle": "Prompting Is A Design Act: How To Brief, Guide And Iterate With AI",
+    "seoDescription": "Prompting is more than giving AI some instructions. You could think of it as a design act, part creative brief and part conversation design. This second arti..."
   },
   {
     "title": "Google adds iPhone-like &#8216;Calling Cards&#8217; to its Phone app",
@@ -546,106 +628,5 @@
     "tags": [],
     "seoTitle": "Microsoft AI launches its first in-house models",
     "seoDescription": "Microsoft’s AI division announced its first homegrown AI models on Thursday: MAI-Voice-1 AI and MAI-1-preview. The company says its new MAI-Voice-1 speech mo..."
-  },
-  {
-    "title": "Lighting Doesn’t Have to Be Difficult For Content Creators With These Easy-to-Use LED Panels",
-    "url": "https://nofilmschool.com/nanlite-miro-round-panel-lights",
-    "publishedAt": "2025-08-28T21:10:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Yes, lighting for video can be hard work. If it weren’t hard, everyone would do it all the time, and all content would look cinematic and awesome. Instead, lighting requires patience and a keen eye for detail. It also, you know, requires lights. If you’re a content creator or super-DIY filmmaker looking for lighting options on a budget and with tight time...",
-    "image": "https://nofilmschool.com/media-library/nanlite-miro-round-panel-lights.jpg?id=61529919&width=980",
-    "video": "https://www.youtube.com/embed/-S6msyYTz1s?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Nanlite",
-      "Nanlite miro",
-      "Round panel lights",
-      "Led lights",
-      "Panel lights",
-      "Nanlite miro round panel lights"
-    ],
-    "seoTitle": "Lighting Doesn’t Have to Be Difficult For Content Creators With These Easy-to-Use LED Panels",
-    "seoDescription": "Yes, lighting for video can be hard work. If it weren’t hard, everyone would do it all the time, and all content would look cinematic and awesome. Instead, l..."
-  },
-  {
-    "title": "DJI’s US Retail Presence Has Become Very Confusing",
-    "url": "https://petapixel.com/2025/08/28/djis-us-retail-presence-has-become-very-confusing/",
-    "publishedAt": "2025-08-28T21:06:25.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "DJI announced the Mic 3 this morning, and, like with DJI's last few launches, the retail situation in the United States is a confusing mess. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/DJIs-US-Retail-Presence-Is-Confusing.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "Industry",
-      "News",
-      "adorama",
-      "amazon",
-      "bhphoto",
-      "dji",
-      "djimic3"
-    ],
-    "seoTitle": "DJI’s US Retail Presence Has Become Very Confusing",
-    "seoDescription": "DJI announced the Mic 3 this morning, and, like with DJI's last few launches, the retail situation in the United States is a confusing mess. [Read More]"
-  },
-  {
-    "title": "5 Action Films with Almost No Dialogue—And Why They Work",
-    "url": "https://nofilmschool.com/action-films-no-dialogue",
-    "publishedAt": "2025-08-28T20:55:46.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "I'm a silent film fan who grew up with the films of Charlie Chaplin and Buster Keaton, so I've always been fascinated by cinema's ability to tell stories without words. But there's something particularly striking about modern action films that choose silence over exposition. When you strip away dialogue, it forces the audience to focus more on what the fi...",
-    "image": "https://nofilmschool.com/media-library/5-action-films-with-almost-no-dialogue-and-why-they-work.webp?id=61531648&width=980",
-    "video": "https://www.youtube.com/embed/no1rl9Gvx-s?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Directing",
-      "Dialogue",
-      "Action films",
-      "Screenwriting"
-    ],
-    "seoTitle": "5 Action Films with Almost No Dialogue—And Why They Work",
-    "seoDescription": "I'm a silent film fan who grew up with the films of Charlie Chaplin and Buster Keaton, so I've always been fascinated by cinema's ability to tell stories wit..."
-  },
-  {
-    "title": "Threads is testing long-form posts with support for formatted text",
-    "url": "https://9to5mac.com/2025/08/28/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
-    "publishedAt": "2025-08-28T20:29:29.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "While Threads already allows up to 500 characters per post (which is more than enough for casual users used to the microblogging format), it is now testing support for long-form posts through “text attachments”. Here’s how it works. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/08/Cross-post-from-Instagram-and-Facebook-to-Threads.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Threads is testing long-form posts with support for formatted text",
-    "seoDescription": "While Threads already allows up to 500 characters per post (which is more than enough for casual users used to the microblogging format), it is now testing s..."
-  },
-  {
-    "title": "Photographer Tells the Stories of the People Behind the Headlines",
-    "url": "https://petapixel.com/2025/08/28/photographer-tells-the-stories-of-the-people-behind-the-headlines/",
-    "publishedAt": "2025-08-28T20:19:19.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine art. Through his lens, he aspires to capture life with unerring honesty. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Spotlight-Michael-McWeeney-PetaPixel-BG-3-Panel.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Inspiration",
-      "Interviews",
-      "Spotlight",
-      "dailylife",
-      "documentary",
-      "michaelmcweeny",
-      "myemptyespresso"
-    ],
-    "seoTitle": "Photographer Tells the Stories of the People Behind the Headlines",
-    "seoDescription": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine..."
   }
 ]
