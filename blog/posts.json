@@ -1,5 +1,43 @@
 [
   {
+    "title": "When people hear I’ve written 40+ books on AI in just over a year, the first question is always: “How do you write so much without burning out?” The answer isn’t coffee or late nights. It’s systems + AI. Here’s my exact behind-the-scenes workflow:",
+    "url": "https://dev.to/jaideepparashar/when-people-hear-ive-written-40-books-on-ai-in-just-over-a-year-the-first-question-is-always-11m3",
+    "publishedAt": "2025-08-29T04:05:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How I Write 2,000+ Words a Day with AI Jaideep Parashar ・ Aug 29 #ai #devops #programming #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "devops",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "When people hear I’ve written 40+ books on AI in just over a year, the first question is always: “How do you write so much without burning out?” The answer isn’t coffee or late nights. It’s systems + AI. Here’s my exact behind-the-scenes workflow:",
+    "seoDescription": "How I Write 2,000+ Words a Day with AI Jaideep Parashar ・ Aug 29 #ai #devops #programming #webdev"
+  },
+  {
+    "title": "How I Write 2,000+ Words a Day with AI",
+    "url": "https://dev.to/jaideepparashar/how-i-write-2000-words-a-day-with-ai-2l30",
+    "publishedAt": "2025-08-29T04:02:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. Your support has made this space more than just articles — it’s becoming a community. As a token of gratitude, I’m giving away one of my bestselling books: ChatGPT Prompts for Coding: 630 Actionable Prompts for Debugging, Testing, Integration, and Deployment The Kindle eB...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq8vf8bbo2r2ktpuixk3s.png",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "devops",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "How I Write 2,000+ Words a Day with AI",
+    "seoDescription": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. Your support has made this space more than just articles — it’s becoming..."
+  },
+  {
     "title": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness",
     "url": "https://dev.to/designly/filling-the-memory-gap-building-mcpmem-to-fix-ai-assistant-forgetfulness-1h18",
     "publishedAt": "2025-08-29T03:29:01.000Z",
@@ -623,33 +661,5 @@
     "tags": [],
     "seoTitle": "Google’s Pixel Care Plus includes free screen and battery repair",
     "seoDescription": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay ..."
-  },
-  {
-    "title": "The best Labor Day TV sales",
-    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
-    "publishedAt": "2025-08-28T18:19:17.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best Labor Day TV sales",
-    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
-  },
-  {
-    "title": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
-    "url": "https://www.theverge.com/news/767697/xbox-cross-device-play-history-cloud-gaming",
-    "publishedAt": "2025-08-28T18:09:58.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld, or PC, your recently played game list will remain the same, so you can jump right back in where you left off. The change, which first started testing with Insiders last month and is now rolling out ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK048_XBOX_2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
-    "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
   }
 ]
