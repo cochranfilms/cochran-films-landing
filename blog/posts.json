@@ -1,12 +1,26 @@
 [
   {
-    "title": "Your app isn’t IPv6-ready: a 30-minute checklist",
-    "url": "https://dev.to/dev_tips/your-app-isnt-ipv6-ready-a-30-minute-checklist-1n2d",
-    "publishedAt": "2025-08-29T13:16:26.000Z",
+    "title": "Tesla releases Model Y Performance in Europe — will it staunch the bleeding?",
+    "url": "https://www.theverge.com/news/767959/tesla-model-y-performance-europe-range-specs-sales",
+    "publishedAt": "2025-08-29T14:05:48.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Tesla is offering a new performance version of its Model Y crossover for the European market. The new variant is aimed at boosting the company’s sales on the continent, which have been in free fall for most of the year thanks to growing competition from China and brand damage from Elon Musk’s fascist antics. The Model Y Performance, which will go on sale ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Gzf10l8WAAEQjGX.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/_XvHhFjrbn0?rel=0",
+    "author": "Andrew J. Hawkins",
+    "tags": [],
+    "seoTitle": "Tesla releases Model Y Performance in Europe — will it staunch the bleeding?",
+    "seoDescription": "Tesla is offering a new performance version of its Model Y crossover for the European market. The new variant is aimed at boosting the company’s sales on the..."
+  },
+  {
+    "title": "Zero-touch Firebase SDKs with one command and CI magic",
+    "url": "https://dev.to/dev_tips/zero-touch-firebase-sdks-with-one-command-and-ci-magic-3hd8",
+    "publishedAt": "2025-08-29T14:05:17.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "A blunt guide for devs: what breaks, how to fix it, and whether you should care right now So you think flipping on IPv6 is just “click a checkbox in the cloud console” and you’re done? Cute. That’s like switching your game from windowed to full-screen mid-raid half your UI vanishes, your GPU panics, and suddenly you’re tanking blind. IPv6 isn’t new, but t...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AG1My19PddO2LGDCyYdtVYw.jpeg",
+    "summary": "Stop hand-running Firebase CLI every time your schema changes. Wrap Data Connect codegen behind a single dev command and CI workflow that regenerates, tests, and publishes SDKs automatically. You know that sinking feeling when your Firebase schema changes and suddenly every PR is a roulette wheel of “who forgot to run codegen this time”? It’s like playing...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2ALn6Lvwc5xQpIcrbJRt4Q8A.png",
     "video": null,
     "author": "<devtips/>",
     "tags": [
@@ -15,8 +29,149 @@
       "javascript",
       "ai"
     ],
-    "seoTitle": "Your app isn’t IPv6-ready: a 30-minute checklist",
-    "seoDescription": "A blunt guide for devs: what breaks, how to fix it, and whether you should care right now So you think flipping on IPv6 is just “click a checkbox in the clou..."
+    "seoTitle": "Zero-touch Firebase SDKs with one command and CI magic",
+    "seoDescription": "Stop hand-running Firebase CLI every time your schema changes. Wrap Data Connect codegen behind a single dev command and CI workflow that regenerates, tests,..."
+  },
+  {
+    "title": "iOS 18.6.2 won’t let you downgrade, as Apple stops signing 18.6.1",
+    "url": "https://9to5mac.com/2025/08/29/ios-18-6-2-wont-let-you-downgrade-as-apple-stops-signing-18-6-1/",
+    "publishedAt": "2025-08-29T13:59:52.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Last week, Apple released its latest iPhone update: iOS 18.6.2. And now a little over one week later, the company has stopped signing its prior release, iOS 18.6.1, removing any options for downgrading. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/ios-18.6.2.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iOS 18.6.2 won’t let you downgrade, as Apple stops signing 18.6.1",
+    "seoDescription": "Last week, Apple released its latest iPhone update: iOS 18.6.2. And now a little over one week later, the company has stopped signing its prior release, iOS ..."
+  },
+  {
+    "title": "Scale out or scale up? The 5-minute decision every dev faces",
+    "url": "https://dev.to/dev_tips/scale-out-or-scale-up-the-5-minute-decision-every-dev-faces-17nd",
+    "publishedAt": "2025-08-29T13:51:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How to decide between adding more Pods/instances or beefing up the ones you already have without burning money or sleep. It’s 2 AM. PagerDuty just nuked your REM sleep. Traffic spiked, CPU graphs are red-lining, and your app is gasping like a raid boss at 1% HP. You’ve got two buttons staring back at you: add more instances or resize the ones you’ve got. ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2A-X3CMJSMEDWApw3sGBES0A.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devops"
+    ],
+    "seoTitle": "Scale out or scale up? The 5-minute decision every dev faces",
+    "seoDescription": "How to decide between adding more Pods/instances or beefing up the ones you already have without burning money or sleep. It’s 2 AM. PagerDuty just nuked your..."
+  },
+  {
+    "title": "Let's understand the Event Loop",
+    "url": "https://dev.to/brendon_oneill__/lets-understand-the-event-loop-4aj2",
+    "publishedAt": "2025-08-29T13:50:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Event Loop The event loop is JavaScript's mechanism for handling asynchronous operations. It continuously checks if the call stack is empty and, if so, moves the next task to the stack for execution. This allows non-blocking operations, keeping the application responsive. Let's look at this example below. What do you think will be the printout of the numb...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F30nyie8ua5n0fvqlh6gt.webp",
+    "video": null,
+    "author": "Brendon O'Neill",
+    "tags": [
+      "webdev",
+      "javascript",
+      "tutorial",
+      "frontend"
+    ],
+    "seoTitle": "Let's understand the Event Loop",
+    "seoDescription": "Event Loop The event loop is JavaScript's mechanism for handling asynchronous operations. It continuously checks if the call stack is empty and, if so, moves..."
+  },
+  {
+    "title": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
+    "url": "https://www.theverge.com/news/767980/steam-uk-age-vertification-online-safety-act-credit-card-mature-games",
+    "publishedAt": "2025-08-29T13:47:03.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Valve has started to comply with the UK’s Online Safety Act, by rolling out a requirement for all Brits to verify their age with a credit card to access “mature content” pages and games on Steam. UK users won’t even be able to access the community hubs of mature content games unless a valid credit card is stored on a Steam account. While platforms like Re...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24062776/STK138_Stream_Kradtke_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
+    "seoDescription": "Valve has started to comply with the UK’s Online Safety Act, by rolling out a requirement for all Brits to verify their age with a credit card to access “mat..."
+  },
+  {
+    "title": "Reverse proxy vs load balancer: stop mixing them up (before prod takes the hit)",
+    "url": "https://dev.to/dev_tips/reverse-proxy-vs-load-balancer-stop-mixing-them-up-before-prod-takes-the-hit-4c7a",
+    "publishedAt": "2025-08-29T13:46:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "One diagram, real configs, and a decision tree to end the confusion once and for all. If I had a dollar for every time someone misused Nginx in production, I could probably afford an F5 appliance and still have enough left to buy coffee for the whole team. The number of times I’ve seen a reverse proxy thrown in as a “load balancer” (or vice versa) is… let...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2Aizy-YWNw6_as75l1mMJIfQ.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Reverse proxy vs load balancer: stop mixing them up (before prod takes the hit)",
+    "seoDescription": "One diagram, real configs, and a decision tree to end the confusion once and for all. If I had a dollar for every time someone misused Nginx in production, I..."
+  },
+  {
+    "title": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
+    "url": "https://9to5mac.com/2025/08/29/car-keys-in-wallet-are-about-to-launch-for-two-long-awaited-vehicles/",
+    "publishedAt": "2025-08-29T13:38:36.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple announced earlier this summer that 13 new vehicle brands would soon support car keys in the Wallet app, and now it seems that the first two are nearly ready to launch: Rivian’s second-gen R1S and R1T, which first announced support last June. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/apple-wallet-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
+    "seoDescription": "Apple announced earlier this summer that 13 new vehicle brands would soon support car keys in the Wallet app, and now it seems that the first two are nearly ..."
+  },
+  {
+    "title": "Randomness in Development: Why \"Flip a Coin\" Still Matters in 2025",
+    "url": "https://dev.to/kyllie_ee82987da3e24f523e/randomness-in-development-why-flip-a-coin-still-matters-in-2025-3anj",
+    "publishedAt": "2025-08-29T13:38:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In software development, randomness is everywhere — from shuffling items in a game, simulating real-world behavior, or even just making a simple decision between two choices. Developers often use built-in functions like Math. Random () in JavaScript or Random in Python, but the concept goes deeper. At the heart of randomness is one of the oldest decision-...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fswg11ygbh0g2jinhw04y.png",
+    "video": null,
+    "author": "Kyllie",
+    "tags": [
+      "programming",
+      "unity3d",
+      "webdev",
+      "gamedev"
+    ],
+    "seoTitle": "Randomness in Development: Why \"Flip a Coin\" Still Matters in 2025",
+    "seoDescription": "In software development, randomness is everywhere — from shuffling items in a game, simulating real-world behavior, or even just making a simple decision bet..."
+  },
+  {
+    "title": "RH01 Scripting and Programming Foundations — Building Code Fluency from the Ground Up",
+    "url": "https://dev.to/cameron_adams_6a168a99f37/rh01-scripting-and-programming-foundations-building-code-fluency-from-the-ground-up-3a05",
+    "publishedAt": "2025-08-29T13:37:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "structured paths provide context for how baseline skills connect to professional workflows. Students often treat debugging as an afterthought, when in reality it is the most transferable skill across languages. RH01 drills reinforce step-through debugging, error tracing, and log analysis early in the process. The practice of reading stack traces, parsing ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F53s7wnrbtm7wtzym1jbf.png",
+    "video": null,
+    "author": "Cameron Adams",
+    "tags": [
+      "scriptingandprogramming",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "RH01 Scripting and Programming Foundations — Building Code Fluency from the Ground Up",
+    "seoDescription": "structured paths provide context for how baseline skills connect to professional workflows. Students often treat debugging as an afterthought, when in realit..."
   },
   {
     "title": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
@@ -40,63 +195,6 @@
     "seoDescription": "Artificial intelligence company Anthropic has reached a settlement in a high-profile class action lawsuit brought by a group of U.S. authors who alleged the ..."
   },
   {
-    "title": "JSONB vs JSON: the Postgres/MySQL showdown that actually matters",
-    "url": "https://dev.to/dev_tips/jsonb-vs-json-the-postgresmysql-showdown-that-actually-matters-id1",
-    "publishedAt": "2025-08-29T12:58:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Schema design, indexing tricks, and performance wars what devs actually care about when picking their database fighter. If databases were video game characters, Postgres and MySQL would be those two rivals you always pick just to trash-talk your friends: the tanky but flexible mage (Postgres) vs the fast, reliable brawler (MySQL). Both can sling JSON now,...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AlGh1cRUt7sER9zTlmBWWtQ.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "JSONB vs JSON: the Postgres/MySQL showdown that actually matters",
-    "seoDescription": "Schema design, indexing tricks, and performance wars what devs actually care about when picking their database fighter. If databases were video game characte..."
-  },
-  {
-    "title": "Keeping your Streamlit app awake using Selenium and Github Actions",
-    "url": "https://dev.to/virgoalpha/keeping-your-streamlit-app-awake-using-selenium-and-github-actions-4ajd",
-    "publishedAt": "2025-08-29T12:56:15.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "TLDR; Streamlit apps sleep after a period of inactivity if hosted on Streamlit Community Cloud (free tier) To wake your app up, you need to click a button We can use Github actions + Selenium to automate this button clicking every couple of hours Streamlit apps hosted on the Community Edition (free tier) go to sleep after some period of inactivity. This u...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fegfmxrll6s3kegjcfjyx.png",
-    "video": null,
-    "author": "Benson King'ori",
-    "tags": [
-      "selenium",
-      "githubactions",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "Keeping your Streamlit app awake using Selenium and Github Actions",
-    "seoDescription": "TLDR; Streamlit apps sleep after a period of inactivity if hosted on Streamlit Community Cloud (free tier) To wake your app up, you need to click a button We..."
-  },
-  {
-    "title": "Stop saying “C is always faster”",
-    "url": "https://dev.to/dev_tips/stop-saying-c-is-always-faster-mna",
-    "publishedAt": "2025-08-29T12:49:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Real perf numbers, ergonomics, and the foot-guns nobody talks about “C is faster.” Yeah, and so is driving without seatbelts until you hit a wall. Every dev Discord, every Reddit thread, there’s always that one person chanting the gospel of C like it’s 1995. But here’s the thing: speed isn’t the whole story anymore. Modern runtimes, safety nets, and tooli...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ALapfHdsTBM6la8juYW_JVw.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "c",
-      "productivity"
-    ],
-    "seoTitle": "Stop saying “C is always faster”",
-    "seoDescription": "Real perf numbers, ergonomics, and the foot-guns nobody talks about “C is faster.” Yeah, and so is driving without seatbelts until you hit a wall. Every dev ..."
-  },
-  {
     "title": "Blizzard’s Diablo team has unionized",
     "url": "https://www.theverge.com/news/767944/diablo-developers-form-union-blizzard-entertainment",
     "publishedAt": "2025-08-29T12:47:08.000Z",
@@ -109,25 +207,6 @@
     "tags": [],
     "seoTitle": "Blizzard’s Diablo team has unionized",
     "seoDescription": "More than 450 game developers on Blizzard’s Diablo team have formed a union, making them one of the largest and latest groups of Microsoft workers to do so. ..."
-  },
-  {
-    "title": "PyTorch vs TensorFlow 2025: Which one wins after 72 hours?",
-    "url": "https://dev.to/dev_tips/pytorch-vs-tensorflow-2025-which-one-wins-after-72-hours-a2b",
-    "publishedAt": "2025-08-29T12:37:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "72 hours of switching exposed the tradeoffs in speed, debugging, and deployment. 72 hours. One GPU. Too much coffee. I decided to run the same models back and forth between PyTorch and TensorFlow in 2025, just to see where each one actually holds up. Spoiler: both made me rage quit at least once. Why now? Because both frameworks leveled up big time: PyTor...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AL16kApKu6kQNdYpfEqEhiQ.png",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "PyTorch vs TensorFlow 2025: Which one wins after 72 hours?",
-    "seoDescription": "72 hours of switching exposed the tradeoffs in speed, debugging, and deployment. 72 hours. One GPU. Too much coffee. I decided to run the same models back an..."
   },
   {
     "title": "The Pixel 10’s AI screamed at us",
@@ -543,90 +622,5 @@
     ],
     "seoTitle": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
     "seoDescription": "In this episode of the No Film School Podcast, we delve into the high-pressure, fast-paced world of sketch comedy editing on Saturday Night Live's historic 5..."
-  },
-  {
-    "title": "iOS 26: What's New With the Podcasts App",
-    "url": "https://www.macrumors.com/guide/ios-26-podcasts/",
-    "publishedAt": "2025-08-28T22:00:34.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The Podcasts app didn't get as many iOS 26 updates as some of Apple's other apps, but there are some design changes and feature tweaks that are worth knowing about. Liquid Glass Like all of Apple's apps, the Podcasts app adopts the new Liquid Glass design language. UI elements have a glass-like, translucent look that let the background art shine through. ...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Podcasts-Glass-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured",
-      "iOS 26"
-    ],
-    "seoTitle": "iOS 26: What's New With the Podcasts App",
-    "seoDescription": "The Podcasts app didn't get as many iOS 26 updates as some of Apple's other apps, but there are some design changes and feature tweaks that are worth knowing..."
-  },
-  {
-    "title": "Incogni deletes your family’s private info from the internet – here’s why that matters",
-    "url": "https://9to5mac.com/2025/08/28/incogni-deletes-your-familys-private-info-from-the-internet-heres-why-that-matters/",
-    "publishedAt": "2025-08-28T21:30:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "In today’s world, everyone needs to have dozens, if not hundreds of different online accounts to keep up with their everyday life. That’s a lot of potentially sensitive data in the hands of tons of different companies – and it’s easy to not think about that. You and your family’s data is incredibly valuable to data brokers, but it isn’t too difficult to p...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/1600x900-with-Logo.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Sponsored Post",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Incogni deletes your family’s private info from the internet – here’s why that matters",
-    "seoDescription": "In today’s world, everyone needs to have dozens, if not hundreds of different online accounts to keep up with their everyday life. That’s a lot of potentiall..."
-  },
-  {
-    "title": "This iMac G3 LEGO idea is as unlikely to get approved as it is awesome",
-    "url": "https://9to5mac.com/2025/08/28/this-imac-g3-lego-idea-is-as-unlikely-to-get-approved-as-it-is-awesome/",
-    "publishedAt": "2025-08-28T21:29:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Every once in a while, an Apple-related project gets submitted to LEGO’s Product Ideas page. Just recently, the LEGO Apple Store concept quickly blew past the 10,000-vote threshold needed to enter official review. Now, a new submission is making the rounds, and it is pretty cool. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/lego-imac-g3.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "This iMac G3 LEGO idea is as unlikely to get approved as it is awesome",
-    "seoDescription": "Every once in a while, an Apple-related project gets submitted to LEGO’s Product Ideas page. Just recently, the LEGO Apple Store concept quickly blew past th..."
-  },
-  {
-    "title": "\"What We’re Doing Is Not a Scorsese Restoration\": Behind the Curtain of the AI-Enhanced 'Oz'",
-    "url": "https://nofilmschool.com/ai-enhanced-oz",
-    "publishedAt": "2025-08-28T21:20:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Hold on to your slippers, Dorothy. You're not in Kansas anymore. Now you're in Las Vegas, on a 160,000-square-foot wall of LED panels in 16K. The original filmmakers in 1939 likely would have never dreamed of screening in such a setting. It's being called \"one of the most significant partnerships between a studio and technology company to use artificial i...",
-    "image": "https://nofilmschool.com/media-library/why-is-everyone-pissed-about-the-wizard-of-oz-at-the-sphere.jpg?id=34050755&width=980",
-    "video": "https://www.youtube.com/embed/0gpwcaNyIrY?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Ai",
-      "Artificial intelligence",
-      "Upscaling",
-      "16k",
-      "Sphere",
-      "Las vegas",
-      "Wizard of oz"
-    ],
-    "seoTitle": "\"What We’re Doing Is Not a Scorsese Restoration\": Behind the Curtain of the AI-Enhanced 'Oz'",
-    "seoDescription": "Hold on to your slippers, Dorothy. You're not in Kansas anymore. Now you're in Las Vegas, on a 160,000-square-foot wall of LED panels in 16K. The original fi..."
-  },
-  {
-    "title": "Microsoft AI launches its first in-house models",
-    "url": "https://www.theverge.com/news/767809/microsoft-in-house-ai-models-launch-openai",
-    "publishedAt": "2025-08-28T21:13:04.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Microsoft’s AI division announced its first homegrown AI models on Thursday: MAI-Voice-1 AI and MAI-1-preview. The company says its new MAI-Voice-1 speech model can generate a minute’s worth of audio in under one second on just one GPU, while MAI-1-preview “offers a glimpse of future offerings inside Copilot.” Microsoft already uses MA1-Voice-1 to power a...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK095_Microsoft_04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Microsoft AI launches its first in-house models",
-    "seoDescription": "Microsoft’s AI division announced its first homegrown AI models on Thursday: MAI-Voice-1 AI and MAI-1-preview. The company says its new MAI-Voice-1 speech mo..."
   }
 ]
