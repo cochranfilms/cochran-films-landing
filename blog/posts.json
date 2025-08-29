@@ -1,5 +1,220 @@
 [
   {
+    "title": "How Many Photographers Are Making Over $300,000 a Year?",
+    "url": "https://petapixel.com/2025/08/29/how-many-photographers-are-making-over-300000-a-year/",
+    "publishedAt": "2025-08-29T18:18:00.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "How many photographers are men? What are the most common types of professional photography? How old are photographers in the biz? The State of the Photo Industry Survey 2024 considers all these questions and many more. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/state-of-the-photo-industry-2024-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Industry",
+      "News",
+      "heathermorton",
+      "photoindustry",
+      "professional",
+      "stateoftheindustry",
+      "survey"
+    ],
+    "seoTitle": "How Many Photographers Are Making Over $300,000 a Year?",
+    "seoDescription": "How many photographers are men? What are the most common types of professional photography? How old are photographers in the biz? The State of the Photo Indu..."
+  },
+  {
+    "title": "Building Private-By-Default Apps with TEEs: The Oasis Stack",
+    "url": "https://dev.to/caerlower/building-private-by-default-apps-with-tees-the-oasis-stack-51p1",
+    "publishedAt": "2025-08-29T18:13:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When you deploy a smart contract on Ethereum or Solana, everything is public: contract state, inputs, outputs, even function calls. That transparency is great for auditing, but it kills privacy and limits what developers can build. That’s where Trusted Execution Environments (TEEs) come in. And more importantly, that’s where Oasis has built an entire deve...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr6eo3kxon2solifjuxjh.png",
+    "video": null,
+    "author": "Manav",
+    "tags": [
+      "privacy",
+      "blockchain",
+      "web3",
+      "webdev"
+    ],
+    "seoTitle": "Building Private-By-Default Apps with TEEs: The Oasis Stack",
+    "seoDescription": "When you deploy a smart contract on Ethereum or Solana, everything is public: contract state, inputs, outputs, even function calls. That transparency is grea..."
+  },
+  {
+    "title": "This Browser-Based Tool Lets Filmmakers See if a Lens Covers a Sensor",
+    "url": "https://petapixel.com/2025/08/29/this-browser-based-tool-lets-filmmakers-see-if-a-lens-covers-a-sensor/",
+    "publishedAt": "2025-08-29T18:10:43.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "True Lens Services (TLS), a U.K.-based cinema lens manufacturer, has launched a new lens coverage tool that allows filmmakers to see if an optic will cover a particular sensor. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/This-Browser-Based-Tool-Lets-Filmmakers-See-if-a-Lens-Covers-a-Sensor.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "News",
+      "cinelens",
+      "cinema",
+      "cinemalens",
+      "coverage",
+      "plmount",
+      "rehousedlens"
+    ],
+    "seoTitle": "This Browser-Based Tool Lets Filmmakers See if a Lens Covers a Sensor",
+    "seoDescription": "True Lens Services (TLS), a U.K.-based cinema lens manufacturer, has launched a new lens coverage tool that allows filmmakers to see if an optic will cover a..."
+  },
+  {
+    "title": "Humty",
+    "url": "https://dev.to/keya_khatun_b0884129bc101/humty-iam",
+    "publishedAt": "2025-08-29T18:04:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3yd6zvsjtqvvx0rg2r37.jpg",
+    "video": null,
+    "author": "KEYA KHATUN",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Humty",
+    "seoDescription": ""
+  },
+  {
+    "title": "Why do we need coding rules or conventions, anyway?",
+    "url": "https://dev.to/intersystems/why-do-we-need-coding-rules-or-conventions-anyway-2h18",
+    "publishedAt": "2025-08-29T17:45:41.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This great article sparked some recent private discussion, and I'd like to share some of my own thoughts from it. The motivating concern boils down to: Why do we need coding rules or conventions at all? What happened to the wonderful era of the Renaissance artist-programmer forging their own path, prior to being supplanted by the craftsman and now (even w...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk4j7vpurdud6vdx26ixt.jpeg",
+    "video": null,
+    "author": "InterSystems Developer",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners",
+      "discuss"
+    ],
+    "seoTitle": "Why do we need coding rules or conventions, anyway?",
+    "seoDescription": "This great article sparked some recent private discussion, and I'd like to share some of my own thoughts from it. The motivating concern boils down to: Why d..."
+  },
+  {
+    "title": "Yoni Steam Health Predictions Using Python AI Models",
+    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/yoni-steam-health-predictions-using-python-ai-models-3dck",
+    "publishedAt": "2025-08-29T17:36:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The wellness industry is constantly evolving, combining traditional Yoni steam, sometimes called vaginal steaming, is a practice rooted in Although scientific research on the practice is still limited, many Yoni Steam Cleanse highlight that their clients are not only looking for This intersection between holistic wellness and modern technology Python is w...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fubjf92rkn4diq1h64j9n.jpg",
+    "video": null,
+    "author": "Takeo Sartorius",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Yoni Steam Health Predictions Using Python AI Models",
+    "seoDescription": "The wellness industry is constantly evolving, combining traditional Yoni steam, sometimes called vaginal steaming, is a practice rooted in Although scientifi..."
+  },
+  {
+    "title": "Hi >>>",
+    "url": "https://dev.to/magdalena_ckrebs_ce297a/hi--3gg7",
+    "publishedAt": "2025-08-29T17:33:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzt15lw97ccuvul16avnf.jpg",
+    "video": null,
+    "author": "Magdalena C. Krebs",
+    "tags": [
+      "webdev",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Hi >>>",
+    "seoDescription": ""
+  },
+  {
+    "title": "Hellow",
+    "url": "https://dev.to/jennifer_skirkpatrick_a/hellow-3abc",
+    "publishedAt": "2025-08-29T17:31:41.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyt95jqb50imcfcn0hflt.jpg",
+    "video": null,
+    "author": "Jennifer S. Kirkpatrick",
+    "tags": [
+      "webdev",
+      "ai",
+      "python",
+      "react"
+    ],
+    "seoTitle": "Hellow",
+    "seoDescription": ""
+  },
+  {
+    "title": "Is 'Twilight' the Most Influential \"Bad\" Movie Ever Made?",
+    "url": "https://nofilmschool.com/twilight-influence",
+    "publishedAt": "2025-08-29T17:30:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "You have to admit. Twilight reshaped entertainment, even if some critics still roll their eyes. As all five Twilight movies return to theaters from Oct. 29 to Nov. 2 for the book series' 20th anniversary, it's worth asking: has any \"bad\" movie been more influential than the sparkling vampire saga? Twilight fundamentally changed the entertainment landscape...",
+    "image": "https://nofilmschool.com/media-library/robert-pattinson-in-twilight.png?id=61531926&width=980",
+    "video": "https://www.youtube.com/embed/uxjNDE2fMjI?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Catherine hardwicke",
+      "David slade",
+      "Robert pattinson",
+      "Kristen stewart",
+      "Twilight"
+    ],
+    "seoTitle": "Is 'Twilight' the Most Influential \"Bad\" Movie Ever Made?",
+    "seoDescription": "You have to admit. Twilight reshaped entertainment, even if some critics still roll their eyes. As all five Twilight movies return to theaters from Oct. 29 t..."
+  },
+  {
+    "title": "My Third Year as a Developer Advocate: Talks, Tech, and Teaching",
+    "url": "https://dev.to/c_yatteau/my-third-year-as-a-developer-advocate-talks-tech-and-teaching-39oa",
+    "publishedAt": "2025-08-29T17:23:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "From Teaching to Tech: Year Three (Aug 2024 - Aug 2025) It's hard to believe that I have now wrapped up three years as a Developer Advocate at Esri. As I've made my way through each year, I've realized that each one has had its own 'theme'. Year One was all about learning and acclimating to my new role in an Esri-centric environment. Year Two was about ga...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpkfyrhk486ztl2vm333f.png",
+    "video": null,
+    "author": "Courtney Yatteau",
+    "tags": [
+      "webdev",
+      "devrel",
+      "techtalks",
+      "womenintech"
+    ],
+    "seoTitle": "My Third Year as a Developer Advocate: Talks, Tech, and Teaching",
+    "seoDescription": "From Teaching to Tech: Year Three (Aug 2024 - Aug 2025) It's hard to believe that I have now wrapped up three years as a Developer Advocate at Esri. As I've ..."
+  },
+  {
+    "title": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
+    "url": "https://nofilmschool.com/eddie-ai-new-features",
+    "publishedAt": "2025-08-29T17:20:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered several of the updates that have seen expanded NLE integrations and file compatibilities, 30 new languages, and your usual array of management and performance improvements. If you haven’t been follow...",
+    "image": "https://nofilmschool.com/media-library/eddie-ai-new-features.jpg?id=61534270&width=980",
+    "video": "https://www.youtube.com/embed/qk-X5F-a3fM?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Ai video editing",
+      "Ai assistant editor",
+      "Eddie ai"
+    ],
+    "seoTitle": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
+    "seoDescription": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered..."
+  },
+  {
     "title": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
     "url": "https://nofilmschool.com/prograde-digital-pg10-usb4-external-ssd",
     "publishedAt": "2025-08-29T17:08:04.000Z",
@@ -44,24 +259,6 @@
     "seoDescription": "This week on the PetaPixel podcast, the team discusses the Hasselblad X2D II 100C and the Ricoh GR IV. Two very different cameras, but both have their merits..."
   },
   {
-    "title": "Angular Migrate To New Control Flow Syntax",
-    "url": "https://dev.to/nagarlalit/angular-migrate-to-new-control-flow-syntax-421n",
-    "publishedAt": "2025-08-29T16:59:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "From Angular V17, the team has introduced new syntax for if-else, for loop, and switch case. You can update the existing code to the new syntax using the command available in angular CLI. Official documentation link :- Following are the steps to migrate Navigate to the root folder of the project in command line tool and execute following command ng genera...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F582k3of3ei6my4k8n49g.png",
-    "video": null,
-    "author": "NagarLalit",
-    "tags": [
-      "angular",
-      "webdev",
-      "angular17"
-    ],
-    "seoTitle": "Angular Migrate To New Control Flow Syntax",
-    "seoDescription": "From Angular V17, the team has introduced new syntax for if-else, for loop, and switch case. You can update the existing code to the new syntax using the com..."
-  },
-  {
     "title": "Can You Guess the Rumored Name for Fujifilm’s Successor to the X-T30 II?",
     "url": "https://nofilmschool.com/fujifilm-x-t30-ii-successor",
     "publishedAt": "2025-08-29T16:58:08.000Z",
@@ -82,7 +279,7 @@
     "seoDescription": "In what might be the least dramatic news of all time, according to reports online from Fujirumors, trusted sources have revealed what the name of the next ve..."
   },
   {
-    "title": "Why AirPods Pro 3 will be an instant upgrade for me",
+    "title": "AirPods 3 are imminent, here’s why I’m upgrading",
     "url": "https://9to5mac.com/2025/08/29/why-airpods-pro-3-will-be-an-instant-upgrade-for-me/",
     "publishedAt": "2025-08-29T16:57:55.000Z",
     "source": "9to5mac.com",
@@ -94,7 +291,7 @@
     "tags": [
       "News"
     ],
-    "seoTitle": "Why AirPods Pro 3 will be an instant upgrade for me",
+    "seoTitle": "AirPods 3 are imminent, here’s why I’m upgrading",
     "seoDescription": "Apple’s “Awe dropping” event is officially set for September 9, and it’s likely to focus on the iPhone 17 and new Apple Watch models. Based on the latest rep..."
   },
   {
@@ -114,62 +311,6 @@
     ],
     "seoTitle": "The Very Best American Martial Arts Movies",
     "seoDescription": "America was absolutely enthralled with the martial arts movies coming out of Asia in the 60s and 70s. These films changed culture, and Hollywood knew it had ..."
-  },
-  {
-    "title": "The Top 600 Verified KuCoin Accounts Fast Delivery And Trusted Seller",
-    "url": "https://dev.to/roy_stamey_6c12808fb57cbd/the-top-600-verified-kucoin-accounts-fast-delivery-and-trusted-seller-4ll6",
-    "publishedAt": "2025-08-29T16:51:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "KuCoin is a global cryptocurrency exchange where users can buy, sell, and trade digital assets like Bitcoin, Ethereum, and thousands of other cryptocurrencies. To get all kinds of IT services Telegram : @usaitpva WhatsApp : +1 (938) 243-5014",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5msq5mm97h9150ui7rt6.jpg",
-    "video": null,
-    "author": "Roy Stamey",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "The Top 600 Verified KuCoin Accounts Fast Delivery And Trusted Seller",
-    "seoDescription": "KuCoin is a global cryptocurrency exchange where users can buy, sell, and trade digital assets like Bitcoin, Ethereum, and thousands of other cryptocurrencie..."
-  },
-  {
-    "title": "Inheritance in java",
-    "url": "https://dev.to/abishek_44a09d1e1af19b4ca/inheritance-in-java-4mgl",
-    "publishedAt": "2025-08-29T16:48:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Inheritance You bet. I'll write a blog post that's a perfect fit for a computer science blog. I'll make it engaging and informative, and ready to post. Inheritance: More Than Just Reusing Code Let's be real. When you first hear about inheritance, the typical explanation is something like, \"It's a way for a child class to inherit properties from a parent c...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq66awsqob5w82g1ascg5.png",
-    "video": null,
-    "author": "Abishek",
-    "tags": [
-      "webdev",
-      "programming",
-      "java"
-    ],
-    "seoTitle": "Inheritance in java",
-    "seoDescription": "Inheritance You bet. I'll write a blog post that's a perfect fit for a computer science blog. I'll make it engaging and informative, and ready to post. Inher..."
-  },
-  {
-    "title": "(Part 8) Build a Simple Chat Character Gallery: Integrating Chat API",
-    "url": "https://dev.to/jte0711/part-8-build-a-simple-chat-character-gallery-integrating-chat-api-1bk3",
-    "publishedAt": "2025-08-29T16:45:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "👋 Recap from Previous Post Yesterday, we finished building: ✅ Chat Page UI with a header, conversation area, and input section. ✅ The page now displays mock chat history, shows typing indicators, and includes a functional input field with validation Next step, API integration for the chat. In this part of the tutorial, we’ll integrate the Chat API with o...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fphmb1zg166alcdxicnk1.png",
-    "video": null,
-    "author": "James",
-    "tags": [
-      "webdev",
-      "ai",
-      "tutorial",
-      "typescript"
-    ],
-    "seoTitle": "(Part 8) Build a Simple Chat Character Gallery: Integrating Chat API",
-    "seoDescription": "👋 Recap from Previous Post Yesterday, we finished building: ✅ Chat Page UI with a header, conversation area, and input section. ✅ The page now displays mock..."
   },
   {
     "title": "Apple TV+ has two of its biggest hit shows returning very soon",
@@ -227,63 +368,6 @@
     ],
     "seoTitle": "Rollei Analog Is Teasing Something ‘Big’ for Film Photographers",
     "seoDescription": "Rollei Analog made its first Instagram post in nearly four years to tease \"big plans\" and \"new projects.\" [Read More]"
-  },
-  {
-    "title": "Linkedin Growth Radar AI Agents",
-    "url": "https://dev.to/mathieu_vie_3a2e72c4ab276/linkedin-growth-radar-ai-agents-3hfk",
-    "publishedAt": "2025-08-29T16:20:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built LinkedIn Growth Radar, a real-time AI agent that turns any public LinkedIn company URL into actionable business intelligence. Instead of scrolling through pages or manually collecting data, this workflow automatically: Fetches live LinkedIn company data using the Brigh...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmoc7q6zbpzi84bwt3qeg.png",
-    "video": null,
-    "author": "Mathieu Vie",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Linkedin Growth Radar AI Agents",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built LinkedIn Growth Radar, a real-time AI agent that turns any public Lin..."
-  },
-  {
-    "title": "Top Sources for Legit Verified PayPal Accounts for Seamless Payments",
-    "url": "https://dev.to/pvazoneusa262829/top-sources-for-legit-verified-paypal-accounts-for-seamless-payments-5c8g",
-    "publishedAt": "2025-08-29T16:10:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Benefits Of Verified PayPal Accounts Enhanced Security Two-Factor Authentication: Adds an extra step for login verification. Increased Transaction Limits Buy Verified PayPal Accounts With verified accounts, you can handle larger transactions with ease. How To Identify A Verified PayPal Account Verification Process Key Indicators Next, look at the account ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmhbhl2zesk41fljwm5z8.jpg",
-    "video": null,
-    "author": "pvazoneusa",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "Top Sources for Legit Verified PayPal Accounts for Seamless Payments",
-    "seoDescription": "Benefits Of Verified PayPal Accounts Enhanced Security Two-Factor Authentication: Adds an extra step for login verification. Increased Transaction Limits Buy..."
-  },
-  {
-    "title": "Programming in 2030: will devs still code, or just babysit AI?",
-    "url": "https://dev.to/dev_tips/programming-in-2030-will-devs-still-code-or-just-babysit-ai-51ap",
-    "publishedAt": "2025-08-29T16:09:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Member-only story AI isn’t killing programming it’s mutating it. Here’s what will survive, what will vanish, and how to not get left behind. Here’s the wildest thing I saw last week: I opened my IDE, wrote maybe ten lines of code… and the AI did the rest. Tests passed. Code shipped. Coffee still warm. And that’s when it hit me this isn’t pair programming ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2A1A8iCtYm7EpCBpTF141Scg.jpeg",
-    "video": null,
-    "author": "<devtips/>",
-    "tags": [
-      "webdev",
-      "ai",
-      "productivity",
-      "progra"
-    ],
-    "seoTitle": "Programming in 2030: will devs still code, or just babysit AI?",
-    "seoDescription": "Member-only story AI isn’t killing programming it’s mutating it. Here’s what will survive, what will vanish, and how to not get left behind. Here’s the wilde..."
   },
   {
     "title": "Framework actually did it: I upgraded a laptop’s entire GPU in just three minutes",
@@ -570,70 +654,5 @@
     ],
     "seoTitle": "iOS 18.6.2 won’t let you downgrade, as Apple stops signing 18.6.1",
     "seoDescription": "Last week, Apple released its latest iPhone update: iOS 18.6.2. And now a little over one week later, the company has stopped signing its prior release, iOS ..."
-  },
-  {
-    "title": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
-    "url": "https://www.theverge.com/news/767980/steam-uk-age-vertification-online-safety-act-credit-card-mature-games",
-    "publishedAt": "2025-08-29T13:47:03.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Valve has started to comply with the UK’s Online Safety Act, by rolling out a requirement for all Brits to verify their age with a credit card to access “mature content” pages and games on Steam. UK users won’t even be able to access the community hubs of mature content games unless a valid credit card is stored on a Steam account. While platforms like Re...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24062776/STK138_Stream_Kradtke_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tom Warren",
-    "tags": [],
-    "seoTitle": "Steam users in the UK will need a credit card to access &#8216;mature content&#8217; games",
-    "seoDescription": "Valve has started to comply with the UK’s Online Safety Act, by rolling out a requirement for all Brits to verify their age with a credit card to access “mat..."
-  },
-  {
-    "title": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
-    "url": "https://9to5mac.com/2025/08/29/car-keys-in-wallet-are-about-to-launch-for-two-long-awaited-vehicles/",
-    "publishedAt": "2025-08-29T13:38:36.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple announced earlier this summer that 13 new vehicle brands would soon support car keys in the Wallet app, and now it seems that the first two are nearly ready to launch: Rivian’s second-gen R1S and R1T, which first announced support last June. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/apple-wallet-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Car Keys in Wallet are about to launch for two long-awaited vehicles",
-    "seoDescription": "Apple announced earlier this summer that 13 new vehicle brands would soon support car keys in the Wallet app, and now it seems that the first two are nearly ..."
-  },
-  {
-    "title": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
-    "url": "https://petapixel.com/2025/08/29/anthropic-reaches-settlement-in-landmark-ai-copyright-case-with-us-authors/",
-    "publishedAt": "2025-08-29T13:06:52.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Artificial intelligence company Anthropic has reached a settlement in a high-profile class action lawsuit brought by a group of U.S. authors who alleged the company used pirated books to train its AI systems without permission or compensation. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/06/anthropic-featured.jpg",
-    "video": null,
-    "author": "Matt Growcoot",
-    "tags": [
-      "News",
-      "Technology",
-      "aicopyright",
-      "aitraining",
-      "aitrainingdata",
-      "anthropic"
-    ],
-    "seoTitle": "Anthropic Reaches Settlement in Landmark AI Copyright Case with US Authors",
-    "seoDescription": "Artificial intelligence company Anthropic has reached a settlement in a high-profile class action lawsuit brought by a group of U.S. authors who alleged the ..."
-  },
-  {
-    "title": "Blizzard’s Diablo team has unionized",
-    "url": "https://www.theverge.com/news/767944/diablo-developers-form-union-blizzard-entertainment",
-    "publishedAt": "2025-08-29T12:47:08.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "More than 450 game developers on Blizzard’s Diablo team have formed a union, making them one of the largest and latest groups of Microsoft workers to do so. The new union includes game developers, artists, designers, engineers, and support staff across the Diablo franchise, according to the Communications Workers of America (CWA) press release, which vote...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25654793/decoder.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "Blizzard’s Diablo team has unionized",
-    "seoDescription": "More than 450 game developers on Blizzard’s Diablo team have formed a union, making them one of the largest and latest groups of Microsoft workers to do so. ..."
   }
 ]
