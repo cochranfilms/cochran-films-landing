@@ -1,135 +1,97 @@
 [
   {
-    "title": "Boosting Team Performance with Power BI’s Cloud Reporting",
-    "url": "https://dev.to/vishal_more_02990955c9358/boosting-team-performance-with-power-bis-cloud-reporting-41mg",
-    "publishedAt": "2025-08-29T07:10:18.000Z",
+    "title": "Understanding SOLID Principles in Layman’s Terms",
+    "url": "https://dev.to/omotola_odumosu_/understanding-solid-principles-in-laymans-terms-2h3e",
+    "publishedAt": "2025-08-29T08:12:07.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Read More: Boosting Team Performance with Power BI’s Cloud Reporting What is Power BI Service? Power BI Service is a cloud-based analytics and reporting platform that allows businesses to connect data from multiple sources, create interactive dashboards, and share insights securely. Unlike traditional reporting tools, Power BI Service makes it easy for te...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc1h0ozx216shzadgf0eh.png",
+    "summary": "If you’ve ever felt like the SOLID principles sound too abstract, don’t worry; in this article we’ll break them down into simple, relatable examples with analogies. By the end, you’ll understand each one in a way you’ll never forget. Let’s dive in 1. Single Responsibility Principle (SRP) Each app does one job well. If your camera app also tried to send me...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcnw3vfusyi3mdpzs7rjn.png",
     "video": null,
-    "author": "vishal more",
+    "author": "Omotola Odumosu",
     "tags": [
       "webdev",
       "programming",
-      "ai",
-      "beginners"
+      "backenddevelopment",
+      "solidprinciples"
     ],
-    "seoTitle": "Boosting Team Performance with Power BI’s Cloud Reporting",
-    "seoDescription": "Read More: Boosting Team Performance with Power BI’s Cloud Reporting What is Power BI Service? Power BI Service is a cloud-based analytics and reporting plat..."
+    "seoTitle": "Understanding SOLID Principles in Layman’s Terms",
+    "seoDescription": "If you’ve ever felt like the SOLID principles sound too abstract, don’t worry; in this article we’ll break them down into simple, relatable examples with ana..."
   },
   {
-    "title": "Essential System Design Principles Every Developer Must Know",
-    "url": "https://dev.to/nakum_dipak_8b477be370892/essential-system-design-principles-every-developer-must-know-g6c",
-    "publishedAt": "2025-08-29T07:03:00.000Z",
+    "title": "DIY Sublimation Gifts: Time-Saving & Efficient Tips",
+    "url": "https://dev.to/sublimationblankspro/diy-sublimation-gifts-time-saving-efficient-tips-40gf",
+    "publishedAt": "2025-08-29T08:10:29.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "In today’s fast-paced software development world, building robust, scalable, and maintainable systems is not just desirable; it’s essential. Whether you’re designing a small microservice or architecting a large distributed platform, understanding the core principles of system design can dramatically improve your project’s success and longevity. This artic...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs7jz8vzn1jzzh0xqoime.jpg",
+    "summary": "Sublimation printing is a popular method for creating personalized gifts that stand out. Whether you're selling custom items or making gifts for loved ones, creating these personalized pieces can be a fun and rewarding process. However, with time constraints, it's essential to streamline your workflow to make the most of your efforts. Here are time-saving...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F67mxv1nkccpwgm78oow4.jpg",
     "video": null,
-    "author": "nakum dipak",
+    "author": "sublimationblanksproduct",
     "tags": [
-      "design",
-      "devrel",
-      "kubernetes",
-      "webdev"
-    ],
-    "seoTitle": "Essential System Design Principles Every Developer Must Know",
-    "seoDescription": "In today’s fast-paced software development world, building robust, scalable, and maintainable systems is not just desirable; it’s essential. Whether you’re d..."
-  },
-  {
-    "title": "The Multiple Personalities of Angular’s viewChild (the Read Parameter)",
-    "url": "https://dev.to/brianmtreese/the-multiple-personalities-of-angulars-viewchild-the-read-parameter-2c2j",
-    "publishedAt": "2025-08-29T07:00:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Most Angular developers know about viewChild(), but many don’t know about its secret weapon, the read parameter. In this tutorial, I’ll show you how you can use it to unlock completely different scenarios inside your components. By the end, you’ll not only understand what it does, you’ll be using it to write cleaner, more powerful Angular code. Stackblitz...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.briantree.se%2Fassets%2Fimg%2Fcontent%2Fuploads%2F2025%2F08-28%2Fdemo-1.png",
-    "video": null,
-    "author": "Brian Treese",
-    "tags": [
-      "angular",
+      "programming",
       "webdev",
-      "javascript",
-      "frontend"
+      "productivity",
+      "news"
     ],
-    "seoTitle": "The Multiple Personalities of Angular’s viewChild (the Read Parameter)",
-    "seoDescription": "Most Angular developers know about viewChild(), but many don’t know about its secret weapon, the read parameter. In this tutorial, I’ll show you how you can ..."
+    "seoTitle": "DIY Sublimation Gifts: Time-Saving & Efficient Tips",
+    "seoDescription": "Sublimation printing is a popular method for creating personalized gifts that stand out. Whether you're selling custom items or making gifts for loved ones, ..."
   },
   {
-    "title": "Powerful System Design Principles Every Developer Needs to Master",
-    "url": "https://dev.to/nakum_dipak_8b477be370892/powerful-system-design-principles-every-developer-needs-to-master-4jdb",
-    "publishedAt": "2025-08-29T06:59:40.000Z",
+    "title": "Is NeetCode Worth It? A Developer’s Take on the Hype",
+    "url": "https://dev.to/stack_overflowed/is-neetcode-worth-it-a-developers-take-on-the-hype-4n0m",
+    "publishedAt": "2025-08-29T07:43:17.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Introduction to System Design Principles System design is a crucial skill for developers aiming to build scalable, robust, and maintainable software systems. Whether you’re building web applications, cloud services, or backend infrastructure, understanding system design principles helps you make decisions that impact the performance, availability, and use...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5gmrjbxvj8ypsz56joub.jpg",
+    "summary": "If you’ve spent any time grinding LeetCode, scrolling through Reddit’s coding interview threads, or binge-watching YouTube solutions, you’ve probably come across NeetCode. What started as a YouTube channel breaking down LeetCode problems step-by-step has quickly become a go-to interview prep resource. NeetCode now has curated problem lists, explanations, ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fodnefhst4h9w1a6idw61.png",
     "video": null,
-    "author": "nakum dipak",
-    "tags": [
-      "systems",
-      "design",
-      "developer",
-      "webdev"
-    ],
-    "seoTitle": "Powerful System Design Principles Every Developer Needs to Master",
-    "seoDescription": "Introduction to System Design Principles System design is a crucial skill for developers aiming to build scalable, robust, and maintainable software systems...."
-  },
-  {
-    "title": "Powerful AI Techniques Transforming Development in 2025",
-    "url": "https://dev.to/nakum_dipak_8b477be370892/powerful-ai-techniques-transforming-development-in-2025-2p2i",
-    "publishedAt": "2025-08-29T06:52:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction to AI Techniques in Modern Development Artificial Intelligence (AI) has revolutionized the way software developers create and optimize applications. As we progress through 2025, the landscape of AI development is evolving rapidly, introducing a variety of innovative techniques that increase efficiency, accuracy, and creativity in building sma...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvasujusf976byf0sabxm.jpg",
-    "video": null,
-    "author": "nakum dipak",
-    "tags": [
-      "ai",
-      "development",
-      "webdev"
-    ],
-    "seoTitle": "Powerful AI Techniques Transforming Development in 2025",
-    "seoDescription": "Introduction to AI Techniques in Modern Development Artificial Intelligence (AI) has revolutionized the way software developers create and optimize applicati..."
-  },
-  {
-    "title": "Using Agents for Business Development",
-    "url": "https://dev.to/andremoreira73/using-agents-for-business-development-51i6",
-    "publishedAt": "2025-08-29T06:43:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data An intelligent lead qualification workflow powered by n8n AI Agent, Bright Data, and GPT-5-mini Trade shows are goldmines for business development, but manually researching hundreds of exhibitors is time-consuming and inefficient. This workflow automates the entire prospecting...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foaowh9c82i58r1sksp3a.png",
-    "video": null,
-    "author": "Andre Moreira",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Using Agents for Business Development",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data An intelligent lead qualification workflow powered by n8n AI Agent, Bright Da..."
-  },
-  {
-    "title": "Top Dust Collector Company in the World",
-    "url": "https://dev.to/intensiv_filterhimenviro/top-dust-collector-company-in-the-world-14ko",
-    "publishedAt": "2025-08-29T06:32:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the ever-expanding industrial landscape, one of the most pressing challenges is the control of air pollution and dust emissions. Factories, power plants, steel mills, cement units, and chemical facilities generate enormous volumes of fine particulate matter that, if left unchecked, threaten both environmental sustainability and human health. As governm...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft9p6k07lpfryw5a4r8qq.png",
-    "video": null,
-    "author": "intensiv filter himenviro dust collector",
+    "author": "Stack Overflowed",
     "tags": [
       "webdev",
       "programming",
-      "javascript",
-      "ai"
+      "career",
+      "learning"
     ],
-    "seoTitle": "Top Dust Collector Company in the World",
-    "seoDescription": "In the ever-expanding industrial landscape, one of the most pressing challenges is the control of air pollution and dust emissions. Factories, power plants, ..."
+    "seoTitle": "Is NeetCode Worth It? A Developer’s Take on the Hype",
+    "seoDescription": "If you’ve spent any time grinding LeetCode, scrolling through Reddit’s coding interview threads, or binge-watching YouTube solutions, you’ve probably come ac..."
+  },
+  {
+    "title": "AI is Transforming Modern Software Development",
+    "url": "https://dev.to/nakum_dipak_8b477be370892/ai-is-transforming-modern-software-development-1oa6",
+    "publishedAt": "2025-08-29T07:27:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Artificial Intelligence (AI) has steadily become an indispensable asset in the realm of software development. By introducing efficiency, accuracy, and intelligence into workflows, AI is revolutionizing how developers build, test, and maintain software today. From improving code quality to optimizing deployment pipelines, AI-powered solutions are shaping t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs9r8bf7nddc5afml38pi.jpg",
+    "video": null,
+    "author": "nakum dipak",
+    "tags": [
+      "ai",
+      "software",
+      "webdev"
+    ],
+    "seoTitle": "AI is Transforming Modern Software Development",
+    "seoDescription": "Artificial Intelligence (AI) has steadily become an indispensable asset in the realm of software development. By introducing efficiency, accuracy, and intell..."
+  },
+  {
+    "title": "Why JavaScript Is the Best Programming Language in the World",
+    "url": "https://dev.to/martinszeltins/why-javascript-is-the-best-programming-language-in-the-world-4062",
+    "publishedAt": "2025-08-29T07:21:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "\"Any application that can be written in JavaScript, will eventually be written in JavaScript.\" - Jeff Atwood (Co-founder of StackOverflow) The world runs on JavaScript. Apps, games, servers, websites, even your fridge runs on JavaScript. JavaScript is everywhere. From social media platforms to productivity tools to your IDE. JavaScript is the silent engin...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F50fntw34vh2fxxykv155.png",
+    "video": null,
+    "author": "Neo Hacker",
+    "tags": [
+      "webdev",
+      "javascript",
+      "react",
+      "programming"
+    ],
+    "seoTitle": "Why JavaScript Is the Best Programming Language in the World",
+    "seoDescription": "\"Any application that can be written in JavaScript, will eventually be written in JavaScript.\" - Jeff Atwood (Co-founder of StackOverflow) The world runs on ..."
   },
   {
     "title": "“I Am the One Who Knocks”: The Exact Moment Heisenberg Was Born",
@@ -667,5 +629,44 @@
     ],
     "seoTitle": "Get a Free Month of Apple Arcade From Halfbrick",
     "seoDescription": "Halfbrick, the developer behind popular titles like Fruit Ninja, teamed up with Apple to offer free Apple Arcade promo codes, and there's still time to take ..."
+  },
+  {
+    "title": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
+    "url": "https://9to5mac.com/2025/08/28/apple-notes-in-ios-26-works-better-than-ever-with-my-favorite-writing-tool/",
+    "publishedAt": "2025-08-28T18:59:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better than ever with Markdown thanks to import and export support for my go-to writing tool. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-notes-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
+    "seoDescription": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better th..."
+  },
+  {
+    "title": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
+    "url": "https://petapixel.com/2025/08/28/this-awesome-diy-digital-camera-has-a-waist-level-viewfinder/",
+    "publishedAt": "2025-08-28T18:54:43.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build. This time, Wilson combined a Mamiya C220 TLR viewfinder, Raspberry Pi, and Sony image sensor to create a waist-level viewfinder digital camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/wilson-diy-mini-hasselblad-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Do It Yourself",
+      "Equipment",
+      "News",
+      "3dprinted",
+      "camerahacks",
+      "customcamera",
+      "digitalcamera",
+      "DIY"
+    ],
+    "seoTitle": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
+    "seoDescription": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build...."
   }
 ]
