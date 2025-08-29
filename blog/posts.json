@@ -1,5 +1,62 @@
 [
   {
+    "title": "CAP Theorem 101: Balancing Consistency, Availability & Partition Tolerance",
+    "url": "https://dev.to/manas_tole_039/cap-theorem-101-balancing-consistency-availability-partition-tolerance-2c7f",
+    "publishedAt": "2025-08-29T05:09:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The CAP theorem, introduced by Eric Brewer in 2000, helps us understand the limitations of distributed systems. It says: 👉 In a distributed system, you can only choose 2 out of 3 properties at the same time: Consistency (C) Availability (A) Partition Tolerance (P) You cannot have all three at once. Meaning: Every read gets the latest written data (or an ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fremt98h9zejpa6wq6y5n.png",
+    "video": null,
+    "author": "Manas Tole",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "CAP Theorem 101: Balancing Consistency, Availability & Partition Tolerance",
+    "seoDescription": "The CAP theorem, introduced by Eric Brewer in 2000, helps us understand the limitations of distributed systems. It says: 👉 In a distributed system, you can ..."
+  },
+  {
+    "title": "Real-world use cases for PDF automation",
+    "url": "https://dev.to/vyan/real-world-use-cases-for-pdf-automation-4fg3",
+    "publishedAt": "2025-08-29T05:06:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TL;DR: Let’s be honest, dealing with PDFs and paperwork every day can be a real grind. If your team is constantly handling forms, contracts, and reports, you’ve probably noticed how much time gets lost to just... shuffling documents around. The good news? That’s starting to change. More and more teams are turning to automation and not just to save time. I...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb2y8vf1ivakw8ydszouz.png",
+    "video": null,
+    "author": "Vishal Yadav",
+    "tags": [
+      "webdev",
+      "pdf",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Real-world use cases for PDF automation",
+    "seoDescription": "TL;DR: Let’s be honest, dealing with PDFs and paperwork every day can be a real grind. If your team is constantly handling forms, contracts, and reports, you..."
+  },
+  {
+    "title": "Back to school list",
+    "url": "https://dev.to/rushikesh_pundkar_913318c/back-to-school-list-47gf",
+    "publishedAt": "2025-08-29T04:37:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the Heroku \"Back to School\" AI Challenge What I Built Category Demo How I Used Heroku AI Technical Implementation",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiegms44y7qxtnbx4flzu.jpg",
+    "video": null,
+    "author": "Rushikesh Pundkar",
+    "tags": [
+      "devchallenge",
+      "herokuchallenge",
+      "webdev",
+      "ai"
+    ],
+    "seoTitle": "Back to school list",
+    "seoDescription": "This is a submission for the Heroku \"Back to School\" AI Challenge What I Built Category Demo How I Used Heroku AI Technical Implementation"
+  },
+  {
     "title": "When people hear I’ve written 40+ books on AI in just over a year, the first question is always: “How do you write so much without burning out?” The answer isn’t coffee or late nights. It’s systems + AI. Here’s my exact behind-the-scenes workflow:",
     "url": "https://dev.to/jaideepparashar/when-people-hear-ive-written-40-books-on-ai-in-just-over-a-year-the-first-question-is-always-11m3",
     "publishedAt": "2025-08-29T04:05:14.000Z",
@@ -36,81 +93,6 @@
     ],
     "seoTitle": "How I Write 2,000+ Words a Day with AI",
     "seoDescription": "When I started sharing on dev.to, I didn’t expect the response to grow this quickly. Your support has made this space more than just articles — it’s becoming..."
-  },
-  {
-    "title": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness",
-    "url": "https://dev.to/designly/filling-the-memory-gap-building-mcpmem-to-fix-ai-assistant-forgetfulness-1h18",
-    "publishedAt": "2025-08-29T03:29:01.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness How I hacked together a semantic memory system for AI assistants with the Model Context Protocol You’ve probably run into this: you’re mid-project, bouncing ideas off Cursor, Claude, or whatever AI assistant you like. After hours of hashing through architecture choices and debugging...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwl0k2khm9obhku8v3wyj.png",
-    "video": null,
-    "author": "Jay @ Designly",
-    "tags": [
-      "mcp",
-      "programming",
-      "webdev",
-      "ai"
-    ],
-    "seoTitle": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness",
-    "seoDescription": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness How I hacked together a semantic memory system for AI assistants with the Model Con..."
-  },
-  {
-    "title": "Unblocking Halo Uploads with SafeLine WAF",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/unblocking-halo-uploads-with-safeline-waf-4mam",
-    "publishedAt": "2025-08-29T03:25:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Use-case: When publishing tech docs or pushing script files to Halo’s content library, your requests may get blocked by your Web Application Firewall. Fix: Add a narrowly scoped allowlist (whitelist) in SafeLine WAF for Halo’s API endpoints—carefully. Heads-up: This is a convenience rule. It trades some protection for functionality. Validate in staging, a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnfpa2i5raw6c6iihgyua.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "safeline",
-      "waf",
-      "cybersecurity",
-      "webdev"
-    ],
-    "seoTitle": "Unblocking Halo Uploads with SafeLine WAF",
-    "seoDescription": "Use-case: When publishing tech docs or pushing script files to Halo’s content library, your requests may get blocked by your Web Application Firewall. Fix: A..."
-  },
-  {
-    "title": "How to Build an Accordion Component in React",
-    "url": "https://dev.to/pradnya_hegde_060984c4c23/how-to-build-an-accordion-component-in-react-1ia9",
-    "publishedAt": "2025-08-29T02:55:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "An Accordion component is a UI pattern where only one section can be expanded at a time, and clicking on a section will either expand it or collapse it. You may have come across this component in an FAQ section of any website. In this article, we are going to discuss a web app, using React Hook useState(), that can expand a single section or multiple sect...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs9rw556svqugfldej8q5.png",
-    "video": null,
-    "author": "Pradnya Hegde",
-    "tags": [
-      "react",
-      "webdev",
-      "reactstate"
-    ],
-    "seoTitle": "How to Build an Accordion Component in React",
-    "seoDescription": "An Accordion component is a UI pattern where only one section can be expanded at a time, and clicking on a section will either expand it or collapse it. You ..."
-  },
-  {
-    "title": "CVE-2023-42442: JumpServer Session Replay Leak Could Expose Sensitive Ops Data",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/cve-2023-42442-jumpserver-session-replay-leak-could-expose-sensitive-ops-data-2f64",
-    "publishedAt": "2025-08-29T02:43:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. JumpServer is a widely used open-source bastion host solution that provi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmegnbraj21hxaqofk97u.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "cybersecurity",
-      "webdev",
-      "beginners",
-      "vulnerabilities"
-    ],
-    "seoTitle": "CVE-2023-42442: JumpServer Session Replay Leak Could Expose Sensitive Ops Data",
-    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
   },
   {
     "title": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
@@ -661,5 +643,19 @@
     "tags": [],
     "seoTitle": "Google’s Pixel Care Plus includes free screen and battery repair",
     "seoDescription": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay ..."
+  },
+  {
+    "title": "The best Labor Day TV sales",
+    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
+    "publishedAt": "2025-08-28T18:19:17.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The best Labor Day TV sales",
+    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
   }
 ]
