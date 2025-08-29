@@ -1,5 +1,43 @@
 [
   {
+    "title": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness",
+    "url": "https://dev.to/designly/filling-the-memory-gap-building-mcpmem-to-fix-ai-assistant-forgetfulness-1h18",
+    "publishedAt": "2025-08-29T03:29:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness How I hacked together a semantic memory system for AI assistants with the Model Context Protocol You’ve probably run into this: you’re mid-project, bouncing ideas off Cursor, Claude, or whatever AI assistant you like. After hours of hashing through architecture choices and debugging...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwl0k2khm9obhku8v3wyj.png",
+    "video": null,
+    "author": "Jay @ Designly",
+    "tags": [
+      "mcp",
+      "programming",
+      "webdev",
+      "ai"
+    ],
+    "seoTitle": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness",
+    "seoDescription": "Filling the Memory Gap: Building MCPMem to Fix AI Assistant Forgetfulness How I hacked together a semantic memory system for AI assistants with the Model Con..."
+  },
+  {
+    "title": "Unblocking Halo Uploads with SafeLine WAF",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/unblocking-halo-uploads-with-safeline-waf-4mam",
+    "publishedAt": "2025-08-29T03:25:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Use-case: When publishing tech docs or pushing script files to Halo’s content library, your requests may get blocked by your Web Application Firewall. Fix: Add a narrowly scoped allowlist (whitelist) in SafeLine WAF for Halo’s API endpoints—carefully. Heads-up: This is a convenience rule. It trades some protection for functionality. Validate in staging, a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnfpa2i5raw6c6iihgyua.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "safeline",
+      "waf",
+      "cybersecurity",
+      "webdev"
+    ],
+    "seoTitle": "Unblocking Halo Uploads with SafeLine WAF",
+    "seoDescription": "Use-case: When publishing tech docs or pushing script files to Halo’s content library, your requests may get blocked by your Web Application Firewall. Fix: A..."
+  },
+  {
     "title": "How to Build an Accordion Component in React",
     "url": "https://dev.to/pradnya_hegde_060984c4c23/how-to-build-an-accordion-component-in-react-1ia9",
     "publishedAt": "2025-08-29T02:55:04.000Z",
@@ -150,44 +188,6 @@
     ],
     "seoTitle": "Apple Watch Ultra 3 Coming Soon: What to Expect",
     "seoDescription": "We have less than two weeks to go until Apple's September 9 \"Awe Dropping\" event, and it's finally time for the Apple Watch Ultra to get a refresh. Apple int..."
-  },
-  {
-    "title": "Web Wide Worlds: An Open Technology Stack for Digital Worlds",
-    "url": "https://dev.to/dyfi/web-wide-worlds-an-open-technology-stack-for-digital-worlds-e3p",
-    "publishedAt": "2025-08-28T23:03:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Over the past several years, I’ve been building Web Wide Worlds—an open-source framework for creating persistent, explorable 3D environments using web-native technologies. This stack makes building a digital world like building a website—modular, remixable, and accessible across devices. Web Wide Worlds is a modular framework for defining, deploying, and ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn2inpoe5mimhewgiykoh.png",
-    "video": null,
-    "author": "Dylan Baker",
-    "tags": [
-      "webdev",
-      "opensource",
-      "web3",
-      "gamedev"
-    ],
-    "seoTitle": "Web Wide Worlds: An Open Technology Stack for Digital Worlds",
-    "seoDescription": "Over the past several years, I’ve been building Web Wide Worlds—an open-source framework for creating persistent, explorable 3D environments using web-native..."
-  },
-  {
-    "title": "Understanding Slice and Map Expansion in Go",
-    "url": "https://dev.to/leapcell/understanding-slice-and-map-expansion-in-go-37ib",
-    "publishedAt": "2025-08-28T22:58:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the study of Go language, the expansion strategy of arrays and Maps is a common and classic topic. This article aims to summarize and explain the expansion strategies of arrays and Maps. In Go, dynamic arrays are called slices. A slice provides a flexible and dynamically sized array solution. When using the append function to add elements to a slice, G...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fapy2uvorobk71pcaowgi.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "Understanding Slice and Map Expansion in Go",
-    "seoDescription": "In the study of Go language, the expansion strategy of arrays and Maps is a common and classic topic. This article aims to summarize and explain the expansio..."
   },
   {
     "title": "9to5Mac Daily: August 28, 2025 – AirPods Pro 3 rumors, Apple acquisition strategies",
