@@ -1,5 +1,100 @@
 [
   {
+    "title": "Como me certifique como Vue.js Senior Developer y recomendaciones",
+    "url": "https://dev.to/aletorres1102/como-me-certifique-como-vuejs-senior-developer-y-recomendaciones-45d7",
+    "publishedAt": "2025-08-29T23:07:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Si estas próximo a realizar el examen o pensando en si tomar o no la certificación de Vue School emitida por certificates.dev te doy unos consejos, mi experiencia, recomendaciones y por ultimo una conclusión. Los últimos 4 años de mi carrera han sido puro Vue.js combinados con Python o Golang y aunque realice cosas también en React.js nunca me termine de ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiatgrp7qbbk80cc61tqp.png",
+    "video": null,
+    "author": "Alejandro Torres",
+    "tags": [
+      "vue",
+      "javascript",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Como me certifique como Vue.js Senior Developer y recomendaciones",
+    "seoDescription": "Si estas próximo a realizar el examen o pensando en si tomar o no la certificación de Vue School emitida por certificates.dev te doy unos consejos, mi experi..."
+  },
+  {
+    "title": "Hands-On with AWS: Building and Securing a 3-Tier Web App",
+    "url": "https://dev.to/ajithmanmu/hands-on-with-aws-building-and-securing-a-3-tier-web-app-1fjb",
+    "publishedAt": "2025-08-29T23:01:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Building a Secure 3-Tier Application on AWS I recently worked on a portfolio project where I built a 3-tier application on AWS. My goal wasn’t only to get the app running, but also to design it with security and best practices in mind, and then migrate everything into Terraform so it’s reproducible. 👉 Full source code and Terraform setup: three-tier-arch...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxnw350a9gongnid5lzt2.png",
+    "video": null,
+    "author": "ajithmanmu",
+    "tags": [
+      "aws",
+      "buildinpublic",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "Hands-On with AWS: Building and Securing a 3-Tier Web App",
+    "seoDescription": "Building a Secure 3-Tier Application on AWS I recently worked on a portfolio project where I built a 3-tier application on AWS. My goal wasn’t only to get th..."
+  },
+  {
+    "title": "Deconstructing gin.Context: More Than Just a Context",
+    "url": "https://dev.to/leapcell/deconstructing-gincontext-more-than-just-a-context-4nd0",
+    "publishedAt": "2025-08-29T23:00:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "First, we must understand the design purpose of gin.Context (or echo.Context). It is a context object specific to a web framework, used to handle a single HTTP request. Its responsibilities are very broad: Request parsing: obtain path parameters (c.Param()), query parameters (c.Query()), request headers (c.Header()), request body (c.BindJSON()). Response ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8g0jnliew0fdgrriz9qc.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Deconstructing gin.Context: More Than Just a Context",
+    "seoDescription": "First, we must understand the design purpose of gin.Context (or echo.Context). It is a context object specific to a web framework, used to handle a single HT..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/anthonymax/-b4f",
+    "publishedAt": "2025-08-29T22:52:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "video": null,
+    "author": "Anthony Max",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource"
+  },
+  {
+    "title": "10 Open Source Tools Every Developer Should Know 🔥",
+    "url": "https://dev.to/anthonymax/10-open-source-tools-every-developer-should-know-559p",
+    "publishedAt": "2025-08-29T22:50:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When studying a profession, we often encounter the fact that new knowledge gives us a feeling of the full picture, when everything becomes clearer. As the industry develops, something new appears every day that gives more advantageous positions to those who know it. This was the case, for example, with the emergence of ChatGPT, knowledge of which gave peo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7wct6kaab618gb0reakc.png",
+    "video": null,
+    "author": "Anthony Max",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "10 Open Source Tools Every Developer Should Know 🔥",
+    "seoDescription": "When studying a profession, we often encounter the fact that new knowledge gives us a feeling of the full picture, when everything becomes clearer. As the in..."
+  },
+  {
     "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
     "url": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
     "publishedAt": "2025-08-29T22:11:02.000Z",
@@ -94,25 +189,6 @@
     "seoDescription": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-se..."
   },
   {
-    "title": "Botox Business Management Software Solutions",
-    "url": "https://dev.to/jaime_smith_cfd7d9641239c/botox-business-management-software-solutions-5hbd",
-    "publishedAt": "2025-08-29T20:48:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Running a modern aesthetics clinic involves much more than providing Botox Business Management Software Solutions are now essential for In today's fast-paced world, patients want convenience. They prefer For example, a clinic offering Botox in Bartlett will benefit from a Here are some of the most impactful benefits: Time Savings: Automated appointment sc...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Forbcve640l0jyluyjq5q.png",
-    "video": null,
-    "author": "Jaime Smith",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Botox Business Management Software Solutions",
-    "seoDescription": "Running a modern aesthetics clinic involves much more than providing Botox Business Management Software Solutions are now essential for In today's fast-paced..."
-  },
-  {
     "title": "Native ISO: Is 800 Really What You Should Be Filming At?",
     "url": "https://nofilmschool.com/native-iso-is-800-really-what-you-should-be-filming-at",
     "publishedAt": "2025-08-29T20:47:40.000Z",
@@ -132,25 +208,6 @@
     "seoDescription": "In today's day of digital cinematography, most filmmakers will default to the recommended ISO settings set forth by the camera's manufacturer — but is this a..."
   },
   {
-    "title": "Learn FastAPI the Interactive Way — A Hands-On Tutorial Platform",
-    "url": "https://dev.to/stamigos/learn-fastapi-the-interactive-way-a-hands-on-tutorial-platform-lnn",
-    "publishedAt": "2025-08-29T20:38:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Learn FastAPI the Interactive Way FastAPI is one of the fastest-growing Python frameworks for building APIs. It’s async-first, leverages type hints, and comes with automatic validation and documentation. But the first hurdle for many learners is setup: installing dependencies, configuring uvicorn, and managing environments before you even write code. Fast...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fonlqjfswgwe1016s31wv.png",
-    "video": null,
-    "author": "Vitalii",
-    "tags": [
-      "python",
-      "fastapi",
-      "tutorial",
-      "webdev"
-    ],
-    "seoTitle": "Learn FastAPI the Interactive Way — A Hands-On Tutorial Platform",
-    "seoDescription": "Learn FastAPI the Interactive Way FastAPI is one of the fastest-growing Python frameworks for building APIs. It’s async-first, leverages type hints, and come..."
-  },
-  {
     "title": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
     "url": "https://9to5mac.com/2025/08/29/daily-august-29-2025/",
     "publishedAt": "2025-08-29T20:32:56.000Z",
@@ -165,25 +222,6 @@
     ],
     "seoTitle": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
     "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Building Your First MCP Server: A Beginner’s Guide",
-    "url": "https://dev.to/kevin-uehara/building-your-first-mcp-server-a-beginners-guide-59ml",
-    "publishedAt": "2025-08-29T20:25:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hi Folks! Are you all right? everything in peace? Everything calm? I hope you are well! It's been a while since I've posted anything here, but I'm back! If you ask for \"Give me 5 articles most rated of this week\" in your AI Agent, probably it will not be able to bring that information, because it does not have access to this data. Probably it will suggest...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjgyilra4ilnl5doyprf6.png",
-    "video": null,
-    "author": "Kevin Toshihiro Uehara",
-    "tags": [
-      "mcp",
-      "typescript",
-      "webdev",
-      "ai"
-    ],
-    "seoTitle": "Building Your First MCP Server: A Beginner’s Guide",
-    "seoDescription": "Hi Folks! Are you all right? everything in peace? Everything calm? I hope you are well! It's been a while since I've posted anything here, but I'm back! If y..."
   },
   {
     "title": "Read the 'Hacks' Pilot And Learn Character and Worldbuilding",
@@ -216,25 +254,6 @@
     "tags": [],
     "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
     "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
-  },
-  {
-    "title": "Shared States in React Have Never Been Easier ;)",
-    "url": "https://dev.to/hichemtab-tech/shared-states-in-react-have-never-been-easier--2m6p",
-    "publishedAt": "2025-08-29T20:01:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You’re building a React app. You’ve got a counter, a user object, maybe a Firebase subscription. You think, hey I’ll just throw useState in there and I’m good. And then it hits you: what if I need this same state in another component? 😱 Options today? Context → wrap your whole App.tsx just to share one boolean. Boring. Annoying. Overkill. Redux → congrat...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fotd5xb9907p530b0wr5i.png",
-    "video": null,
-    "author": "HichemTech",
-    "tags": [
-      "react",
-      "programming",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "Shared States in React Have Never Been Easier ;)",
-    "seoDescription": "You’re building a React app. You’ve got a counter, a user object, maybe a Firebase subscription. You think, hey I’ll just throw useState in there and I’m goo..."
   },
   {
     "title": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
@@ -286,25 +305,6 @@
     ],
     "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
     "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
-  },
-  {
-    "title": "Machine Learning with Python for Aluminum Fence Durability",
-    "url": "https://dev.to/rafael_ramirez_233e181cf9/machine-learning-with-python-for-aluminum-fence-durability-3dop",
-    "publishedAt": "2025-08-29T19:38:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Durability has always been a central concern in the construction and home improvement industries. When property owners invest in a fence, they expect it to last for decades without losing its strength or beauty. Aluminum fences, in particular, have become increasingly popular because they combine aesthetics, low maintenance, and resistance to rust. But ho...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5pk6q52jcohj5e1nxxbp.png",
-    "video": null,
-    "author": "RAFAEL RAMIREZ",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Machine Learning with Python for Aluminum Fence Durability",
-    "seoDescription": "Durability has always been a central concern in the construction and home improvement industries. When property owners invest in a fence, they expect it to l..."
   },
   {
     "title": "Michelle Yeoh's Top 10 Movies",
