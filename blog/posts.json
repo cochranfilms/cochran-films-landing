@@ -1,5 +1,149 @@
 [
   {
+    "title": "Nvidia’s nvl72 is insane but who can actually use it?",
+    "url": "https://dev.to/dev_tips/nvidias-nvl72-is-insane-but-who-can-actually-use-it-4fl5",
+    "publishedAt": "2025-08-29T12:20:15.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Nvidia’s GB200 NVL72 promises “exascale in a rack.” Here’s what that means for training, inference, and the cloud bills we cry over. So, Nvidia just casually dropped an exascale computer in a single rack. Yeah, you read that right. Exascale. One rack. If you’re thinking, “That sounds like a Minecraft server on steroids,” you’re not far off except this one...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AIiAdlTKv1FmtxjcL1XwB2Q.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Nvidia’s nvl72 is insane but who can actually use it?",
+    "seoDescription": "Nvidia’s GB200 NVL72 promises “exascale in a rack.” Here’s what that means for training, inference, and the cloud bills we cry over. So, Nvidia just casually..."
+  },
+  {
+    "title": "Zoho, Odoo, or NetSuite? ERP Comparison for Small & Mid-Sized Businesses",
+    "url": "https://dev.to/aiinak9876/zoho-odoo-or-netsuite-erp-comparison-for-small-mid-sized-businesses-58en",
+    "publishedAt": "2025-08-29T12:10:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Choosing the right ERP system can be overwhelming for small and mid-sized businesses. There are dozens of options available, each promising to save time, cut costs, and improve efficiency. Among the most popular names in 2025 are Zoho, Odoo, and NetSuite. All three are strong solutions, but they serve different types of businesses. Let’s compare them side...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpyt4loh3uo0amhmqhk8x.png",
+    "video": null,
+    "author": "aiinak.com",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Zoho, Odoo, or NetSuite? ERP Comparison for Small & Mid-Sized Businesses",
+    "seoDescription": "Choosing the right ERP system can be overwhelming for small and mid-sized businesses. There are dozens of options available, each promising to save time, cut..."
+  },
+  {
+    "title": "The EU just rolled out the AI Office. Your AI product is now on its compliance radar.",
+    "url": "https://dev.to/dev_tips/the-eu-just-rolled-out-the-ai-office-your-ai-product-is-now-on-its-compliance-radar-4c6m",
+    "publishedAt": "2025-08-29T12:08:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Member-only story Trigger EU penalties: The deadlines, documents, and dev headaches every AI builder should expect from the EU’s new AI watchdog The EU just spawned a new final boss for AI compliance, and yes, you’re in its raid group whether you queued or not. Even if you’re outside Europe, if you serve EU users, these rules will find you just like GDPR ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2A6Vec5PB3jtrsz67pIhpfuA.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devops"
+    ],
+    "seoTitle": "The EU just rolled out the AI Office. Your AI product is now on its compliance radar.",
+    "seoDescription": "Member-only story Trigger EU penalties: The deadlines, documents, and dev headaches every AI builder should expect from the EU’s new AI watchdog The EU just ..."
+  },
+  {
+    "title": "str-plus",
+    "url": "https://dev.to/shahid19_a5/-2jln",
+    "publishedAt": "2025-08-29T12:07:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Str-Plus: 80+ Type-Safe JS/TS String Utilities Shahid Ullah Safi ・ Aug 29 #npm #webdev #javascript #typescript",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2163373%2F31390820-4f4e-4071-9639-16eacc60a07e.jpg",
+    "video": null,
+    "author": "Shahid Ullah Safi",
+    "tags": [
+      "npm",
+      "webdev",
+      "javascript",
+      "typescript"
+    ],
+    "seoTitle": "str-plus",
+    "seoDescription": "Str-Plus: 80+ Type-Safe JS/TS String Utilities Shahid Ullah Safi ・ Aug 29 #npm #webdev #javascript #typescript"
+  },
+  {
+    "title": "Apple and Samsung Push Back Against Xiaomi's Bold India Ads",
+    "url": "https://www.macrumors.com/2025/08/29/apple-samsung-push-back-against-xiaomis-india-ads/",
+    "publishedAt": "2025-08-29T11:54:16.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple and Samsung have reportedly issued cease-and-desist notices to Xiaomi in India for an ad campaign that directly compares the rivals' devices to Xiaomi's products. The two companies have threatened the Chinese vendor with legal action, calling the ads \"disparaging.\" Ads have appeared in local print media and on social media that take pot shots at the...",
+    "image": "https://images.macrumors.com/article-new/2025/08/xiaomi-apple-ad-india.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "India",
+      "Xiaomi"
+    ],
+    "seoTitle": "Apple and Samsung Push Back Against Xiaomi's Bold India Ads",
+    "seoDescription": "Apple and Samsung have reportedly issued cease-and-desist notices to Xiaomi in India for an ad campaign that directly compares the rivals' devices to Xiaomi'..."
+  },
+  {
+    "title": "Lenovo leaks show concept laptop with rotating display",
+    "url": "https://www.theverge.com/news/767940/lenovo-rotating-display-laptop-concept-project-pivo-leak",
+    "publishedAt": "2025-08-29T11:52:54.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Project Pivo lets you swivel the laptop screen to view things in portrait mode. | Image: Evan Blass Lenovo is gearing up to show off its latest products at Europe’s IFA tech tradeshow next week, but leaks may have just given us a first look at what’s being announced. The most notable gadget shared by reputable leaker Evan Blass shows an image of a concept...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Lenovo-Project-Pivo-leak.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "Lenovo leaks show concept laptop with rotating display",
+    "seoDescription": "Project Pivo lets you swivel the laptop screen to view things in portrait mode. | Image: Evan Blass Lenovo is gearing up to show off its latest products at E..."
+  },
+  {
+    "title": "Model Shot Dead During Gun-Themed Polaroid Photo Shoot",
+    "url": "https://petapixel.com/2025/08/29/model-shot-dead-during-gun-themed-polaroid-photo-shoot/",
+    "publishedAt": "2025-08-29T11:42:08.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "A 23-year-old Las Vegas man has been shot dead during a photo shoot as he was taking pictures on a Polaroid camera of two women toting guns. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/mark-gaughan-las-vegas.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "death",
+      "firearm",
+      "gun",
+      "lasvegas",
+      "model",
+      "polaroid",
+      "props"
+    ],
+    "seoTitle": "Model Shot Dead During Gun-Themed Polaroid Photo Shoot",
+    "seoDescription": "A 23-year-old Las Vegas man has been shot dead during a photo shoot as he was taking pictures on a Polaroid camera of two women toting guns. [Read More]"
+  },
+  {
+    "title": "Apple iPhone 17 launch event: What to expect",
+    "url": "https://www.theverge.com/iphone/767381/apple-iphone-17-awe-dropping-launch-what-to-expect",
+    "publishedAt": "2025-08-29T11:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Apple is just days away from revealing its newest iPhones during its \"Awe dropping\" event on September 9th. It seems like this year's launch will offer more than just a simple spec bump, as rumors point to an ultra-thin iPhone arriving alongside the rest of Apple's upgraded smartphone lineup. Though the iPhone 17 will undoubtedly be the focal point of the...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/iPhone-17-launch.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Apple iPhone 17 launch event: What to expect",
+    "seoDescription": "Apple is just days away from revealing its newest iPhones during its \"Awe dropping\" event on September 9th. It seems like this year's launch will offer more ..."
+  },
+  {
     "title": "What’s really happening with the hires at Meta Superintelligence Labs",
     "url": "https://www.theverge.com/ai-artificial-intelligence/767746/meta-ai-superintelligence-lab-departures-scale-zuckerberg-memo",
     "publishedAt": "2025-08-29T11:00:00.000Z",
@@ -12,101 +156,6 @@
     "tags": [],
     "seoTitle": "What’s really happening with the hires at Meta Superintelligence Labs",
     "seoDescription": "In June, Mark Zuckerberg went for the ultimate Hail Mary in the ever-intensifying AI race: He spun up a brand-new Meta AI lab after making a $14.3 billion ac..."
-  },
-  {
-    "title": "Twitter’s Home Feed Explained Through Designing Data-Intensive Applications (Chapter 1)",
-    "url": "https://dev.to/imamarham10/twitters-home-feed-explained-through-designing-data-intensive-applications-chapter-1-k5f",
-    "publishedAt": "2025-08-29T10:50:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Twitter’s Home Feed Explained Through Designing Data-Intensive Applications (Chapter 1) | by Mohammad Arham Imam | Aug, 2025 | Medium Mohammad Arham Imam ・ Aug 28, 2025 ・ Medium",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A64%3A64%2F1%2AdmbNkD5D-u45r44go_cf0g.png",
-    "video": null,
-    "author": "Mohammad Arham Imam",
-    "tags": [
-      "softwareengineering",
-      "twitter",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Twitter’s Home Feed Explained Through Designing Data-Intensive Applications (Chapter 1)",
-    "seoDescription": "Twitter’s Home Feed Explained Through Designing Data-Intensive Applications (Chapter 1) | by Mohammad Arham Imam | Aug, 2025 | Medium Mohammad Arham Imam ・ A..."
-  },
-  {
-    "title": "The Growing Relevance of RAG Platform in Modern AI Applications",
-    "url": "https://dev.to/cyfutureai/the-growing-relevance-of-rag-platform-in-modern-ai-applications-1jc0",
-    "publishedAt": "2025-08-29T10:46:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the last few years, artificial intelligence has taken unimaginable strides forward, and businesses are actively looking for ways to harness its capabilities. One of the most promising breakthroughs in this domain is the RAG platform. The term \"RAG\" stands for Retrieval-Augmented Generation, a framework designed to combine the best of language models wi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkcmo7ior2309zt9wx7ib.png",
-    "video": null,
-    "author": "Cyfuture AI",
-    "tags": [
-      "ai",
-      "webdev",
-      "gpu",
-      "rag"
-    ],
-    "seoTitle": "The Growing Relevance of RAG Platform in Modern AI Applications",
-    "seoDescription": "In the last few years, artificial intelligence has taken unimaginable strides forward, and businesses are actively looking for ways to harness its capabiliti..."
-  },
-  {
-    "title": "Best Cookie Policy Template for WordPress Websites",
-    "url": "https://dev.to/mehwish_malik_4f29ff7fb04/best-cookie-policy-template-for-wordpress-websites-48k6",
-    "publishedAt": "2025-08-29T10:41:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You’re running a WordPress site—maybe a blog, portfolio, or small shop. You’ve got plugins for analytics or ads, but did you know they drop cookies that could land you in legal trouble if you don’t disclose them? A cookie policy isn’t just a nice-to-have; it’s a must to avoid fines from laws like GDPR or CCPA and to keep visitors trusting your site. Here’...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm37wbklb9nd0clib5kzi.png",
-    "video": null,
-    "author": "Mehwish Malik",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Best Cookie Policy Template for WordPress Websites",
-    "seoDescription": "You’re running a WordPress site—maybe a blog, portfolio, or small shop. You’ve got plugins for analytics or ads, but did you know they drop cookies that coul..."
-  },
-  {
-    "title": "🙌 🙌",
-    "url": "https://dev.to/ali_e97e4fa82de1024780940/-3cgg",
-    "publishedAt": "2025-08-29T10:40:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Bluesky Beats X Every Time: Why the Decentralized Underdog Is Taking Over Ali Farhat ・ Aug 29 #bluesky #x #webdev #socialmedia",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F659389%2F8e6166dd-dcf9-4c44-93f4-9eb9d8edbb6d.jpeg",
-    "video": null,
-    "author": "GetTraxx",
-    "tags": [
-      "bluesky",
-      "x",
-      "webdev",
-      "socialmedia"
-    ],
-    "seoTitle": "🙌 🙌",
-    "seoDescription": "Bluesky Beats X Every Time: Why the Decentralized Underdog Is Taking Over Ali Farhat ・ Aug 29 #bluesky #x #webdev #socialmedia"
-  },
-  {
-    "title": "The 9 Most Starred Open Source Delivery Solutions on Github",
-    "url": "https://dev.to/abbas_4e556b3ebaa603b1b29/the-9-highest-rated-open-source-delivery-solutions-on-github-4kbn",
-    "publishedAt": "2025-08-29T10:36:52.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "If you’re planning to launch your own food delivery business, you’ve probably realized that building everything from scratch can be costly and time-consuming. That’s why many entrepreneurs turn to open source food delivery platforms. These solutions allow you to start quickly, while also letting you customize the software to your needs. On top of that, it...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
-    "video": null,
-    "author": "Abbas",
-    "tags": [
-      "javascript",
-      "webdev",
-      "react",
-      "opensource"
-    ],
-    "seoTitle": "The 9 Most Starred Open Source Delivery Solutions on Github",
-    "seoDescription": "If you’re planning to launch your own food delivery business, you’ve probably realized that building everything from scratch can be costly and time-consuming..."
   },
   {
     "title": "Check Out This LEGO Classic Bondi Blue iMac G3",
@@ -228,7 +277,7 @@
     "seoDescription": "Few lines in cinema history are as instantly recognizable—or as effortlessly cool—as Clint Eastwood’s “Go ahead, make my day.” Delivered in Sudden Impact (19..."
   },
   {
-    "title": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
+    "title": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles [Update: Coming Soon]",
     "url": "https://www.macrumors.com/2025/08/28/rivian-activates-apple-car-key-support/",
     "publishedAt": "2025-08-29T01:54:40.000Z",
     "source": "macrumors.com",
@@ -241,7 +290,7 @@
       "iPhone Car Keys",
       "Rivian"
     ],
-    "seoTitle": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
+    "seoTitle": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles [Update: Coming Soon]",
     "seoDescription": "EV manufacturer Rivian appears to finally be rolling out support for Apple's digital car keys available through the Wallet app on iPhone and Apple Watch. Riv..."
   },
   {
@@ -598,59 +647,5 @@
     ],
     "seoTitle": "Photographer Tells the Stories of the People Behind the Headlines",
     "seoDescription": "Photographer Michael McWeeney captures the beauty in everyday life with a style and approach that combines documentary photography, photojournalism, and fine..."
-  },
-  {
-    "title": "Are you hoping for a live iPhone event on September 9? [Poll]",
-    "url": "https://9to5mac.com/2025/08/28/are-you-hoping-for-a-live-iphone-event-on-september-9-poll/",
-    "publishedAt": "2025-08-28T19:47:57.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "To say that Apple’s pre-recorded events are divisive is an understatement. What initially seemed like a pandemic-fueled stopgap has become the company’s standard way to make announcements, even though its competitors have largely moved back to live presentations. With the upcoming “Awe Dropping” event, Apple has an opportunity to take a new crack at the l...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/tim-cook-iphone-event-apple.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Are you hoping for a live iPhone event on September 9? [Poll]",
-    "seoDescription": "To say that Apple’s pre-recorded events are divisive is an understatement. What initially seemed like a pandemic-fueled stopgap has become the company’s stan..."
-  },
-  {
-    "title": "Ted Lasso season 4 is coming: Here’s everything we know so far",
-    "url": "https://9to5mac.com/2025/08/28/ted-lasso-season-4-is-coming-heres-everything-we-know-so-far/",
-    "publishedAt": "2025-08-28T19:43:14.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple TV+ has been on a comedy hot streak this year. But the TV+ comedy that will always live on in our hearts and minds—Ted Lasso—is currently preparing a new season. Here’s everything we know about Ted Lasso season 4. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/07/ted-lasso-emmy.jpeg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Ted Lasso season 4 is coming: Here’s everything we know so far",
-    "seoDescription": "Apple TV+ has been on a comedy hot streak this year. But the TV+ comedy that will always live on in our hearts and minds—Ted Lasso—is currently preparing a n..."
-  },
-  {
-    "title": "You’re a Photographer Trapped Between Worlds in This New Video Game Adventure",
-    "url": "https://petapixel.com/2025/08/28/youre-a-photographer-trapped-between-worlds-in-this-new-video-game-adventure/",
-    "publishedAt": "2025-08-28T19:41:38.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "A new adventure game is set to arrive this fall that will put players in the shoes of a former photographer stuck in a fantasy world. The only way to return home is using his camera. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Opus-Prism-Peak-PetaPixel-BG.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Culture",
-      "News",
-      "opus",
-      "prismpeak",
-      "shuishagames",
-      "sigono",
-      "videogame"
-    ],
-    "seoTitle": "You’re a Photographer Trapped Between Worlds in This New Video Game Adventure",
-    "seoDescription": "A new adventure game is set to arrive this fall that will put players in the shoes of a former photographer stuck in a fantasy world. The only way to return ..."
   }
 ]
