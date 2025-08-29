@@ -1,5 +1,82 @@
 [
   {
+    "title": "How to Build an Accordion Component in React",
+    "url": "https://dev.to/pradnya_hegde_060984c4c23/how-to-build-an-accordion-component-in-react-1ia9",
+    "publishedAt": "2025-08-29T02:55:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "An Accordion component is a UI pattern where only one section can be expanded at a time, and clicking on a section will either expand it or collapse it. You may have come across this component in an FAQ section of any website. In this article, we are going to discuss a web app, using React Hook useState(), that can expand a single section or multiple sect...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs9rw556svqugfldej8q5.png",
+    "video": null,
+    "author": "Pradnya Hegde",
+    "tags": [
+      "react",
+      "webdev",
+      "reactstate"
+    ],
+    "seoTitle": "How to Build an Accordion Component in React",
+    "seoDescription": "An Accordion component is a UI pattern where only one section can be expanded at a time, and clicking on a section will either expand it or collapse it. You ..."
+  },
+  {
+    "title": "CVE-2023-42442: JumpServer Session Replay Leak Could Expose Sensitive Ops Data",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/cve-2023-42442-jumpserver-session-replay-leak-could-expose-sensitive-ops-data-2f64",
+    "publishedAt": "2025-08-29T02:43:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. JumpServer is a widely used open-source bastion host solution that provi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmegnbraj21hxaqofk97u.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "cybersecurity",
+      "webdev",
+      "beginners",
+      "vulnerabilities"
+    ],
+    "seoTitle": "CVE-2023-42442: JumpServer Session Replay Leak Could Expose Sensitive Ops Data",
+    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
+  },
+  {
+    "title": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
+    "url": "https://www.macrumors.com/2025/08/28/rivian-activates-apple-car-key-support/",
+    "publishedAt": "2025-08-29T01:54:40.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "EV manufacturer Rivian appears to finally be rolling out support for Apple's digital car keys available through the Wallet app on iPhone and Apple Watch. Rivian announced support for the feature in debuting its second-generation R1S and R1T over a year ago, but the company had not activated it until today, as spotted in an Apple configuration file by MacR...",
+    "image": "https://images.macrumors.com/article-new/2024/06/rivian-r1s-v2.jpg",
+    "video": null,
+    "author": "Eric Slivka",
+    "tags": [
+      "iPhone Car Keys",
+      "Rivian"
+    ],
+    "seoTitle": "Rivian Activates Apple Car Key Support in Second-Generation Vehicles",
+    "seoDescription": "EV manufacturer Rivian appears to finally be rolling out support for Apple's digital car keys available through the Wallet app on iPhone and Apple Watch. Riv..."
+  },
+  {
+    "title": "Behind the Scenes with the Directors and Editors of 'The Last Guest Of The Holloway Motel'",
+    "url": "https://nofilmschool.com/behind-the-scenes-with-the-directors-and-editors-of-the-last-guest-of-the-holloway-motel",
+    "publishedAt": "2025-08-29T01:10:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Powell learns he’ll soon be evicted from the motel and realizes he needs to reconcile his past and potentially return home to survive. Directed by Ramiel Petros and Nick Freeman, the documentary was shot over 130+ days. Editors Petros, Freeman, Alex Jablonski, and Davis Coombe relied on Premiere Pro for everything in the edit (temp color, sound mixing, an...",
+    "image": "https://nofilmschool.com/media-library/the-last-guest-of-the-holloway-motel.png?id=61339685&width=980",
+    "video": null,
+    "author": "Sponsored Content",
+    "tags": [
+      "The last guest of the holloway motel",
+      "Premiere pro",
+      "Adobe",
+      "Ramiel petros",
+      "Nick freeman",
+      "Alex jablonski",
+      "Adobe sponsored",
+      "Interviews"
+    ],
+    "seoTitle": "Behind the Scenes with the Directors and Editors of 'The Last Guest Of The Holloway Motel'",
+    "seoDescription": "Powell learns he’ll soon be evicted from the motel and realizes he needs to reconcile his past and potentially return home to survive. Directed by Ramiel Pet..."
+  },
+  {
     "title": "I Think This New Screenwriting Website Is Shady And Exploitative",
     "url": "https://nofilmschool.com/get-it-made-screenwriting",
     "publishedAt": "2025-08-29T00:50:02.000Z",
@@ -143,25 +220,6 @@
     "seoDescription": "Microsoft has fired two more employees who participated in recent protests against the company’s contracts with the Israeli military and government. The two ..."
   },
   {
-    "title": "How Software is Transforming Commercial Fence Company Operations",
-    "url": "https://dev.to/cristian_holquis_09836ff1/how-software-is-transforming-commercial-fence-company-operations-1ain",
-    "publishedAt": "2025-08-28T22:44:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction The fencing industry is undergoing a massive transformation. What used to be a business driven primarily by manual quoting, paper-based scheduling, and on-site inspections is now rapidly evolving into a digital-first industry. Software tools are changing how commercial fence companies manage projects, interact with customers, and even source ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fodsg34ebmx58fpas866k.png",
-    "video": null,
-    "author": "cristian holquis",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "How Software is Transforming Commercial Fence Company Operations",
-    "seoDescription": "Introduction The fencing industry is undergoing a massive transformation. What used to be a business driven primarily by manual quoting, paper-based scheduli..."
-  },
-  {
     "title": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
     "url": "https://nofilmschool.com/back-to-the-future-climax",
     "publishedAt": "2025-08-28T22:19:55.000Z",
@@ -182,25 +240,6 @@
     ],
     "seoTitle": "Why 'Back to the Future's Clock Tower Scene Is a Masterclass in Suspense and Payoff",
     "seoDescription": "Forty years later, we're still talking about Marty McFly and that lightning bolt. As Michael J. Fox took the stage at Toronto's Fan Expo recently for the fil..."
-  },
-  {
-    "title": "Apps with IoT Integration for Real-Time Cleaning Monitoring",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/apps-with-iot-integration-for-real-time-cleaning-monitoring-4ok9",
-    "publishedAt": "2025-08-28T22:18:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction The cleaning industry is rapidly evolving thanks to technology. Traditional methods of scheduling and tracking maintenance are being replaced by smart applications that use IoT (Internet of Things) devices. These apps provide real-time monitoring, ensure consistent standards, and allow businesses to optimize their cleaning operations efficien...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3d9073g5h6g44l4lc5aj.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Apps with IoT Integration for Real-Time Cleaning Monitoring",
-    "seoDescription": "Introduction The cleaning industry is rapidly evolving thanks to technology. Traditional methods of scheduling and tracking maintenance are being replaced by..."
   },
   {
     "title": "Cutting Comedy: Inside the Edit of Saturday Night Live’s 50th Anniversary",
@@ -612,35 +651,5 @@
     "tags": [],
     "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
     "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
-  },
-  {
-    "title": "I tested 15 cases for the Switch 2 and these are the best",
-    "url": "https://www.theverge.com/reviews/691319/best-switch-2-cases",
-    "publishedAt": "2025-08-28T18:09:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to put your hard-earned Switch 2 into a protective case. To me, it’s freeing. Using a case relieves me of the worry that it will accumulate tons of little scratches, or worse. I’ve tested several types ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257824_buying_guide_switch_2_case_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Cameron Faulkner",
-    "tags": [],
-    "seoTitle": "I tested 15 cases for the Switch 2 and these are the best",
-    "seoDescription": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to..."
-  },
-  {
-    "title": "New Xcode beta now available with GPT-5 and Claude support",
-    "url": "https://9to5mac.com/2025/08/28/new-xcode-beta-now-available-with-gpt-5-and-claude-support/",
-    "publishedAt": "2025-08-28T17:59:48.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integration with Anthropic’s Claude. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/xcode-claude.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New Xcode beta now available with GPT-5 and Claude support",
-    "seoDescription": "Apple has released a new beta of Xcode 26 for developers today with a pair of notable changes. There’s now support for ChatGPT 5, as well as built-in integra..."
   }
 ]
