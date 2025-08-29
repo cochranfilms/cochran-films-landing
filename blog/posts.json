@@ -1,22 +1,126 @@
 [
   {
-    "title": "Start Grow in your Business With SEO.",
-    "url": "https://dev.to/brett_lee_b0eb6be9eeb75c6/start-grow-in-your-business-with-seo-20ad",
-    "publishedAt": "2025-08-29T09:07:38.000Z",
+    "title": "This liquid-cooled projector promises an incredibly bright 6,200 lumen image",
+    "url": "https://www.theverge.com/news/767898/dangei-6200-lumen-projector-specs-date",
+    "publishedAt": "2025-08-29T10:03:02.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "“Actual features are subject to the official product release.” | Image: Dangbei Dangbei is bringing its S7 Ultra Max all-in-one projector to Berlin next week for the big IFA tech show. That’s a good indication that the China-only 4K projector with a ridiculously bright 6,200 ISO lumen output is preparing for a global launch. Here’s the teaser Dangbei just...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/a7562621-8943-4116-8339-ec104415d75f-2.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/shzb2ffn-K8?rel=0",
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "This liquid-cooled projector promises an incredibly bright 6,200 lumen image",
+    "seoDescription": "“Actual features are subject to the official product release.” | Image: Dangbei Dangbei is bringing its S7 Ultra Max all-in-one projector to Berlin next week..."
+  },
+  {
+    "title": "Why PropTech Is the Next Big Thing Developers Should Pay Attention To",
+    "url": "https://dev.to/adam_smith_33f5e6810c8333/why-proptech-is-the-next-big-thing-developers-should-pay-attention-to-16gk",
+    "publishedAt": "2025-08-29T09:47:55.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjml7v1t3tb8u35uunuts.jpg",
+    "summary": "As real estate continues to embrace digital transformation, PropTech, property technology, is quickly becoming one of the most exciting spaces for developers to explore. From automated tenant management systems and AI-powered property valuations to virtual tours and IoT integrations in smart buildings, tech is reshaping how the property market operates. F...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7xdo74cp8nq7xi9rfjz1.png",
     "video": null,
-    "author": "Brett Lee",
+    "author": "Adam Smith",
     "tags": [
       "webdev",
       "programming",
-      "database",
-      "rails"
+      "javascript",
+      "ai"
     ],
-    "seoTitle": "Start Grow in your Business With SEO.",
-    "seoDescription": ""
+    "seoTitle": "Why PropTech Is the Next Big Thing Developers Should Pay Attention To",
+    "seoDescription": "As real estate continues to embrace digital transformation, PropTech, property technology, is quickly becoming one of the most exciting spaces for developers..."
+  },
+  {
+    "title": "How I Built an Image Generation MCP Server with Gemini 2.5 Flash Image (aka nano-banana)",
+    "url": "https://dev.to/shinpr/how-i-built-an-image-generation-mcp-server-with-gemini-25-flash-image-aka-nano-banana-17aa",
+    "publishedAt": "2025-08-29T09:47:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I've been working on a personal project that handles multiple images, and I wanted to streamline the image generation workflow. The repetitive cycle of generating images in a separate tool, downloading them, and integrating them into code was becoming tedious. That's when Google's newly announced Gemini 2.5 Flash Image, released on August 26, 2025, caught...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fir0ymbmem6chsu2gay2o.png",
+    "video": null,
+    "author": "Shinsuke KAGAWA",
+    "tags": [
+      "webdev",
+      "ai",
+      "typescript",
+      "tutorial"
+    ],
+    "seoTitle": "How I Built an Image Generation MCP Server with Gemini 2.5 Flash Image (aka nano-banana)",
+    "seoDescription": "I've been working on a personal project that handles multiple images, and I wanted to streamline the image generation workflow. The repetitive cycle of gener..."
+  },
+  {
+    "title": "Your Job Finder Companion",
+    "url": "https://dev.to/depapp/your-job-finder-companion-fpi",
+    "publishedAt": "2025-08-29T09:46:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built Your Job Finder Companion, an intelligent AI agent that automatically monitors LinkedIn, Indeed, and Glassdoor for job opportunities posted within the last 24 hours. The agent analyzes each opportunity with AI, scores them from 1-100, and delivers personalized notifica...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqeamtl6f6qyg4mn1hvt7.PNG",
+    "video": null,
+    "author": "depa panjie purnama",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Your Job Finder Companion",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built Your Job Finder Companion, an intelligent AI agent that automatically..."
+  },
+  {
+    "title": "How to Make Your Visual HTML WYSIWYG Editor Smarter with Image Sentiment Analysis",
+    "url": "https://dev.to/ideradevtools/how-to-make-your-visual-html-wysiwyg-editor-smarter-with-image-sentiment-analysis-4ji6",
+    "publishedAt": "2025-08-29T09:45:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every image has a story to tell, which means that emotion matters in each image upload. For example, let’s say that some moviegoers will have to choose between two horror films. It’s highly likely that they will choose the film with a poster that exhibits more fear and uneasiness. This is where image sentiment analysis comes in. It unlocks emotional conte...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffvjp0170b0ivx4u8547b.png",
+    "video": null,
+    "author": "IderaDevTools",
+    "tags": [
+      "froala",
+      "html",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "How to Make Your Visual HTML WYSIWYG Editor Smarter with Image Sentiment Analysis",
+    "seoDescription": "Every image has a story to tell, which means that emotion matters in each image upload. For example, let’s say that some moviegoers will have to choose betwe..."
+  },
+  {
+    "title": "Google adds iPhone-like &#8216;Calling Cards&#8217; to its Phone app",
+    "url": "https://www.theverge.com/news/767895/android-google-phone-app-calling-card-rollou",
+    "publishedAt": "2025-08-29T09:39:25.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "You can’t set your own Calling Card, but you can use them to customize how other contacts appear when they call you. Google’s Phone app is adding “Calling Cards” that let you customize the appearance of contact screens for incoming calls. They’re similar to the Contact Poster feature that iPhone users have had since 2023, allowing Google Phone app users t...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Google-Phone-app-Calling-cards.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "Google adds iPhone-like &#8216;Calling Cards&#8217; to its Phone app",
+    "seoDescription": "You can’t set your own Calling Card, but you can use them to customize how other contacts appear when they call you. Google’s Phone app is adding “Calling Ca..."
+  },
+  {
+    "title": "Bluetick Creatives: Powering Brands with Trendy Digital Solutions",
+    "url": "https://dev.to/bluetick_creative_37236ba/bluetick-creatives-powering-brands-with-trendy-digital-solutions-3l4l",
+    "publishedAt": "2025-08-29T09:30:52.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s fast-changing digital world, staying relevant means staying trendy. At Bluetick Creatives, we don’t just follow trends — we create experiences that set them. Our goal is simple: help businesses build a strong online presence with fresh, innovative, and creative strategies that resonate with today’s audience. 🌟 Why Bluetick Creatives? 🚀 Our Ta...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy5stk8q7cyp2oulyss1n.png",
+    "video": null,
+    "author": "Bluetick Creative",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Bluetick Creatives: Powering Brands with Trendy Digital Solutions",
+    "seoDescription": "In today’s fast-changing digital world, staying relevant means staying trendy. At Bluetick Creatives, we don’t just follow trends — we create experiences tha..."
   },
   {
     "title": "“I Am the One Who Knocks”: The Exact Moment Heisenberg Was Born",
@@ -554,102 +658,5 @@
     ],
     "seoTitle": "Get a Free Month of Apple Arcade From Halfbrick",
     "seoDescription": "Halfbrick, the developer behind popular titles like Fruit Ninja, teamed up with Apple to offer free Apple Arcade promo codes, and there's still time to take ..."
-  },
-  {
-    "title": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
-    "url": "https://9to5mac.com/2025/08/28/apple-notes-in-ios-26-works-better-than-ever-with-my-favorite-writing-tool/",
-    "publishedAt": "2025-08-28T18:59:05.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better than ever with Markdown thanks to import and export support for my go-to writing tool. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-notes-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple Notes in iOS 26 works better than ever with my favorite writing tool",
-    "seoDescription": "Apple Notes gets upgraded with new features every year, and iOS 26 is no exception. Among the handful of Notes changes in iOS 26, the app now works better th..."
-  },
-  {
-    "title": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
-    "url": "https://petapixel.com/2025/08/28/this-awesome-diy-digital-camera-has-a-waist-level-viewfinder/",
-    "publishedAt": "2025-08-28T18:54:43.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build. This time, Wilson combined a Mamiya C220 TLR viewfinder, Raspberry Pi, and Sony image sensor to create a waist-level viewfinder digital camera. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/wilson-diy-mini-hasselblad-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Do It Yourself",
-      "Equipment",
-      "News",
-      "3dprinted",
-      "camerahacks",
-      "customcamera",
-      "digitalcamera",
-      "DIY"
-    ],
-    "seoTitle": "This Awesome DIY Digital Camera Has a Waist-Level Viewfinder",
-    "seoDescription": "Photographer Malcolm Wilson, who recently converted a broken film camera into an infrared digital point-and-shoot, is back with another awesome camera build...."
-  },
-  {
-    "title": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
-    "url": "https://9to5mac.com/2025/08/28/happy-hour-553/",
-    "publishedAt": "2025-08-28T18:35:19.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 and maybe AirPods Pro 3. There’s an interesting report on Apple’s strategic calculus when it comes to acquiring other companies, and Gemini might become the brain of Siri. Also, Apple TV+ ups its monthl...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/02/9to5mac-happy-hour-lead1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 event is official, Apple acquisition strategy, TV+ price rise",
-    "seoDescription": "Benjamin and Chance prepare to have their jaw dropped in the run up to the September 9 Apple event where we expect to see iPhone 17, Apple Watch Series 11 an..."
-  },
-  {
-    "title": "Google’s Pixel Care Plus includes free screen and battery repair",
-    "url": "https://www.theverge.com/news/767711/google-pixel-care-plus-free-screen-and-battery-repair",
-    "publishedAt": "2025-08-28T18:24:50.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay $8 per-month, or $159 for a two-year plan on a Pixel 9. For a Pixel 10 Pro Fold, that jumps up to $339 for two years, or $18 per-month, with the optional loss and theft package for a small extra charg...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257917_Google_Pixel_10_review_AJohnson_0006.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Google’s Pixel Care Plus includes free screen and battery repair",
-    "seoDescription": "Google is phasing out its Preferred Care extended warranty plan for the Pixel Care Plus program. Pricing between the two is pretty similar. You’ll still pay ..."
-  },
-  {
-    "title": "The best Labor Day TV sales",
-    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
-    "publishedAt": "2025-08-28T18:19:17.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best Labor Day TV sales",
-    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
-  },
-  {
-    "title": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
-    "url": "https://www.theverge.com/news/767697/xbox-cross-device-play-history-cloud-gaming",
-    "publishedAt": "2025-08-28T18:09:58.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld, or PC, your recently played game list will remain the same, so you can jump right back in where you left off. The change, which first started testing with Insiders last month and is now rolling out ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK048_XBOX_2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Xbox&#8217;s cross-device play history syncs your recently played games on every  screen",
-    "seoDescription": "On Thursday, Xbox announced it’s widely rolling out cross-device play history. With the new update, even if you’re on a different Xbox console, Ally handheld..."
   }
 ]
