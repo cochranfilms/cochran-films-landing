@@ -1,5 +1,43 @@
 [
   {
+    "title": "Stop Breaking Your Django Apps: 10 Mistakes Beginners Must Avoid",
+    "url": "https://dev.to/azeemteli/stop-breaking-your-django-apps-10-mistakes-beginners-must-avoid-1ja7",
+    "publishedAt": "2025-08-30T08:07:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Learning Django is like trying to juggle while riding a unicycle 🪄🚴—fun, powerful, but also full of face-plant moments if you don’t know what you’re doing. Django is famous for its “batteries included” approach, but beginners often get tangled up in silly mistakes that can waste hours (or even days). Let’s walk through the 10 most common Django mistakes...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4tds15t1b0zim0fu738n.png",
+    "video": null,
+    "author": "Azeem Teli",
+    "tags": [
+      "webdev",
+      "programming",
+      "django",
+      "python"
+    ],
+    "seoTitle": "Stop Breaking Your Django Apps: 10 Mistakes Beginners Must Avoid",
+    "seoDescription": "Learning Django is like trying to juggle while riding a unicycle 🪄🚴—fun, powerful, but also full of face-plant moments if you don’t know what you’re doing...."
+  },
+  {
+    "title": "Building a Multi-Agent AI Brand Monitoring System with n8n and BrightData",
+    "url": "https://dev.to/prema_ananda/building-a-multi-agent-ai-brand-monitoring-system-with-n8n-and-brightdata-oe0",
+    "publishedAt": "2025-08-30T07:15:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created BrandGuard AI — a comprehensive multi-agent brand reputation monitoring system that fundamentally transforms how companies track and respond to online mentions. This isn't just another social media monitoring tool — it's an intelligent, fully automated platform that ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "Prema Ananda",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Building a Multi-Agent AI Brand Monitoring System with n8n and BrightData",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created BrandGuard AI — a comprehensive multi-agent brand reputation monito..."
+  },
+  {
     "title": "[Boost]",
     "url": "https://dev.to/anthonymax/-2ihd",
     "publishedAt": "2025-08-30T06:55:24.000Z",
@@ -17,101 +55,6 @@
     ],
     "seoTitle": "[Boost]",
     "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource"
-  },
-  {
-    "title": "How to Add Clerk Login & Logout Authentication in React.js Web Application",
-    "url": "https://dev.to/sudhanshudevelopers/how-to-add-clerk-authentication-to-reactjs-apps-5fm9",
-    "publishedAt": "2025-08-30T06:30:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Authentication is one of the most essential parts of any modern web application. Instead of building everything from scratch, we can use Clerk, a developer-friendly authentication and user management solution, to add secure and scalable login to a React.js app. Easy-to-use authentication flows (email, social logins, etc.) Pre-built UI components for login...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1f1ek9opdckxvojlaay3.png",
-    "video": null,
-    "author": "Sudhanshu Gaikwad",
-    "tags": [
-      "webdev",
-      "javascript",
-      "beginners",
-      "tutorial"
-    ],
-    "seoTitle": "How to Add Clerk Login & Logout Authentication in React.js Web Application",
-    "seoDescription": "Authentication is one of the most essential parts of any modern web application. Instead of building everything from scratch, we can use Clerk, a developer-f..."
-  },
-  {
-    "title": "Horizon Search",
-    "url": "https://dev.to/fearrrx/horizon-search-3349",
-    "publishedAt": "2025-08-30T06:22:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hi guys, I'm a 17 year old developer and i just finished making this website called \"Horizon Search\". So what exactly is Horizon Search? Horizon is an AI powered search & chat website which is powered by Google Gemini AI with real-time web search capabilities. It can understand and respond to complxe questions, analyze images, videos, and audio files and ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmocha-cdn.com%2F0198e5a2-4def-7f5b-88a9-2e95bddcb6dc%2FHorizon-Search-Cover-image.png",
-    "video": null,
-    "author": "✦",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "devex"
-    ],
-    "seoTitle": "Horizon Search",
-    "seoDescription": "Hi guys, I'm a 17 year old developer and i just finished making this website called \"Horizon Search\". So what exactly is Horizon Search? Horizon is an AI pow..."
-  },
-  {
-    "title": "Why Caching Is Both a Savior and a Trouble-Maker",
-    "url": "https://dev.to/dct_technology/why-caching-is-both-a-savior-and-a-trouble-maker-52aj",
-    "publishedAt": "2025-08-30T06:00:48.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine this: your website is loading in milliseconds. Users are impressed, conversions go up, and you feel like a rockstar developer. caching. But the same cache that makes your app blazing fast can also haunt you with stale data, debugging nightmares, and mysterious “it works on my machine” issues. Let’s dive deep into why caching is a double-edged swor...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxd22dxlm42og23fsw2cu.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "redis",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "Why Caching Is Both a Savior and a Trouble-Maker",
-    "seoDescription": "Imagine this: your website is loading in milliseconds. Users are impressed, conversions go up, and you feel like a rockstar developer. caching. But the same ..."
-  },
-  {
-    "title": "How Leaders Can Empower Instead of Control",
-    "url": "https://dev.to/dct_technology/how-leaders-can-empower-instead-of-control-4d9p",
-    "publishedAt": "2025-08-30T05:47:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine working under a leader who constantly checks your every move. Which team do you think will innovate faster? The answer is obvious: empowerment beats control every time. Many leaders believe that tighter control = better results. Control kills creativity. Micromanagement slows down projects. Fear of failure makes people play safe instead of trying ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnnvwy6gaxxeuam2vav32.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "leadership",
-      "design",
-      "seo",
-      "webdev"
-    ],
-    "seoTitle": "How Leaders Can Empower Instead of Control",
-    "seoDescription": "Imagine working under a leader who constantly checks your every move. Which team do you think will innovate faster? The answer is obvious: empowerment beats ..."
-  },
-  {
-    "title": "Co-Researcher – Accelerating Healthcare Research with Multi-Agent AI",
-    "url": "https://dev.to/ashiqsultan/co-researcher-accelerating-healthcare-research-with-multi-agent-ai-hjo",
-    "publishedAt": "2025-08-30T05:39:24.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a co-research application, which can speed up work for scientist working in healthcare or medicine industry. It uses multiple n8n AI Agent nodes, each note is responsible to conduct specific searches related to the research description like gathering clinical trial inf...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsswwrq4f5yaibwp79mx5.png",
-    "video": null,
-    "author": "Mohamed Ashiq Sultan",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Co-Researcher – Accelerating Healthcare Research with Multi-Agent AI",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a co-research application, which can speed up work for scientist work..."
   },
   {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
@@ -639,5 +582,64 @@
     ],
     "seoTitle": "This Is the Reason Greg Daniels Likes Writing Comedy",
     "seoDescription": "Greg Daniels, a writer, director, and producer, knows a thing or two about making hit TV. Daniels, who adapted the British version of The Office for American..."
+  },
+  {
+    "title": "Is 'Twilight' the Most Influential \"Bad\" Movie Ever Made?",
+    "url": "https://nofilmschool.com/twilight-influence",
+    "publishedAt": "2025-08-29T17:30:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "You have to admit. Twilight reshaped entertainment, even if some critics still roll their eyes. As all five Twilight movies return to theaters from Oct. 29 to Nov. 2 for the book series' 20th anniversary, it's worth asking: has any \"bad\" movie been more influential than the sparkling vampire saga? Twilight fundamentally changed the entertainment landscape...",
+    "image": "https://nofilmschool.com/media-library/robert-pattinson-in-twilight.png?id=61531926&width=980",
+    "video": "https://www.youtube.com/embed/uxjNDE2fMjI?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Catherine hardwicke",
+      "David slade",
+      "Robert pattinson",
+      "Kristen stewart",
+      "Twilight"
+    ],
+    "seoTitle": "Is 'Twilight' the Most Influential \"Bad\" Movie Ever Made?",
+    "seoDescription": "You have to admit. Twilight reshaped entertainment, even if some critics still roll their eyes. As all five Twilight movies return to theaters from Oct. 29 t..."
+  },
+  {
+    "title": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
+    "url": "https://nofilmschool.com/eddie-ai-new-features",
+    "publishedAt": "2025-08-29T17:20:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered several of the updates that have seen expanded NLE integrations and file compatibilities, 30 new languages, and your usual array of management and performance improvements. If you haven’t been follow...",
+    "image": "https://nofilmschool.com/media-library/eddie-ai-new-features.jpg?id=61534270&width=980",
+    "video": "https://www.youtube.com/embed/qk-X5F-a3fM?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Ai video editing",
+      "Ai assistant editor",
+      "Eddie ai"
+    ],
+    "seoTitle": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
+    "seoDescription": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered..."
+  },
+  {
+    "title": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
+    "url": "https://nofilmschool.com/prograde-digital-pg10-usb4-external-ssd",
+    "publishedAt": "2025-08-29T17:08:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer requests, professionals are looking for all the ways that they can to read, write, transfer, upload, and share footage as quickly as possible. To help with these endeavors, ProGrade Digital has launched a ...",
+    "image": "https://nofilmschool.com/media-library/image.png?id=61534108&width=980",
+    "video": null,
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Prograde digital",
+      "Usb4",
+      "External ssd",
+      "Ssd",
+      "16tb ssd",
+      "Prograde digital pg10 usb4 external ssd"
+    ],
+    "seoTitle": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
+    "seoDescription": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer reque..."
   }
 ]
