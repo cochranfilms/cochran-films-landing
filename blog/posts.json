@@ -1,5 +1,62 @@
 [
   {
+    "title": "[Boost]",
+    "url": "https://dev.to/anthonymax/-2ihd",
+    "publishedAt": "2025-08-30T06:55:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
+    "video": null,
+    "author": "Anthony Max",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource"
+  },
+  {
+    "title": "How to Add Clerk Login & Logout Authentication in React.js Web Application",
+    "url": "https://dev.to/sudhanshudevelopers/how-to-add-clerk-authentication-to-reactjs-apps-5fm9",
+    "publishedAt": "2025-08-30T06:30:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Authentication is one of the most essential parts of any modern web application. Instead of building everything from scratch, we can use Clerk, a developer-friendly authentication and user management solution, to add secure and scalable login to a React.js app. Easy-to-use authentication flows (email, social logins, etc.) Pre-built UI components for login...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1f1ek9opdckxvojlaay3.png",
+    "video": null,
+    "author": "Sudhanshu Gaikwad",
+    "tags": [
+      "webdev",
+      "javascript",
+      "beginners",
+      "tutorial"
+    ],
+    "seoTitle": "How to Add Clerk Login & Logout Authentication in React.js Web Application",
+    "seoDescription": "Authentication is one of the most essential parts of any modern web application. Instead of building everything from scratch, we can use Clerk, a developer-f..."
+  },
+  {
+    "title": "Horizon Search",
+    "url": "https://dev.to/fearrrx/horizon-search-3349",
+    "publishedAt": "2025-08-30T06:22:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hi guys, I'm a 17 year old developer and i just finished making this website called \"Horizon Search\". So what exactly is Horizon Search? Horizon is an AI powered search & chat website which is powered by Google Gemini AI with real-time web search capabilities. It can understand and respond to complxe questions, analyze images, videos, and audio files and ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmocha-cdn.com%2F0198e5a2-4def-7f5b-88a9-2e95bddcb6dc%2FHorizon-Search-Cover-image.png",
+    "video": null,
+    "author": "✦",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "devex"
+    ],
+    "seoTitle": "Horizon Search",
+    "seoDescription": "Hi guys, I'm a 17 year old developer and i just finished making this website called \"Horizon Search\". So what exactly is Horizon Search? Horizon is an AI pow..."
+  },
+  {
     "title": "Why Caching Is Both a Savior and a Trouble-Maker",
     "url": "https://dev.to/dct_technology/why-caching-is-both-a-savior-and-a-trouble-maker-52aj",
     "publishedAt": "2025-08-30T06:00:48.000Z",
@@ -57,44 +114,6 @@
     "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a co-research application, which can speed up work for scientist work..."
   },
   {
-    "title": "Equity Fundamental Octo Researcher: Next-Gen Stock Research",
-    "url": "https://dev.to/bikash119/equity-fundamental-octo-researcher-next-gen-stock-research-3a4n",
-    "publishedAt": "2025-08-30T05:26:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered assistant to streamline fundamental analysis for stock market investment ( India ). Investors typically spend hours reviewing annual reports, credit ratings, quarterly results, and transcripts to make investment decisions—a process that’s slow and overw...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdfwv6lwjev9930f2kjil.png",
-    "video": null,
-    "author": "bikash119",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Equity Fundamental Octo Researcher: Next-Gen Stock Research",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered assistant to streamline fundamental analysis for stoc..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/developeraromal/-5cgk",
-    "publishedAt": "2025-08-30T05:13:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Create Awesome Link Effect Muhammed Sabith ・ Aug 30 #npm #programming #javascript #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3454655%2F99a24e85-c529-4d5e-a029-d4647dc27dd4.png",
-    "video": null,
-    "author": "Aromal",
-    "tags": [
-      "npm",
-      "programming",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Create Awesome Link Effect Muhammed Sabith ・ Aug 30 #npm #programming #javascript #webdev"
-  },
-  {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
     "url": "https://nofilmschool.com/godfather-vito-michael-scenes",
     "publishedAt": "2025-08-30T05:10:02.000Z",
@@ -110,25 +129,6 @@
     ],
     "seoTitle": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
     "seoDescription": "In a film about family, power, and legacy, The Godfather (1972) gives us only three scenes where Vito and Michael Corleone share the screen—yet these fleetin..."
-  },
-  {
-    "title": "Create Awesome Link Effect",
-    "url": "https://dev.to/masterdevsabith/create-awesome-link-effect-4o92",
-    "publishedAt": "2025-08-30T05:03:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey React developers! 👋 Tired of manually handling URLs, hashtags, and mentions in chat apps, blogs, or social media platforms? Meet LinkLens, a lightweight React npm package that makes link detection, rich previews, and interactive content effortless. In this 2025-ready tutorial, we’ll explore how to enhance your app’s functionality, interactivity, and ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffut5w47bgehxeg45h06z.png",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "npm",
-      "programming",
-      "javascript",
-      "webdev"
-    ],
-    "seoTitle": "Create Awesome Link Effect",
-    "seoDescription": "Hey React developers! 👋 Tired of manually handling URLs, hashtags, and mentions in chat apps, blogs, or social media platforms? Meet LinkLens, a lightweight..."
   },
   {
     "title": "The Unexpected Story Behind Joker’s Lip-Licking in 'The Dark Knight'",
@@ -164,25 +164,6 @@
     ],
     "seoTitle": "8 Movies That Predicted the Future — And Got It Right",
     "seoDescription": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and thei..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/anahit_pashayan_5a255cfd1/-1blk",
-    "publishedAt": "2025-08-30T04:48:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Mutiny is Live: Where Ideas Find Their People and Capital Finds Its Purpose Somay ・ Aug 25 #webdev #ai #productivity #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2572708%2F43f49f32-3b24-4a46-8afe-da660f0c82bb.jpeg",
-    "video": null,
-    "author": "Anahit Pashayan",
-    "tags": [
-      "webdev",
-      "ai",
-      "productivity",
-      "beginners"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Mutiny is Live: Where Ideas Find Their People and Capital Finds Its Purpose Somay ・ Aug 25 #webdev #ai #productivity #beginners"
   },
   {
     "title": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
@@ -639,5 +620,24 @@
     ],
     "seoTitle": "This Browser-Based Tool Lets Filmmakers See if a Lens Covers a Sensor",
     "seoDescription": "True Lens Services (TLS), a U.K.-based cinema lens manufacturer, has launched a new lens coverage tool that allows filmmakers to see if an optic will cover a..."
+  },
+  {
+    "title": "This Is the Reason Greg Daniels Likes Writing Comedy",
+    "url": "https://nofilmschool.com/greg-daniels-writing-comedy",
+    "publishedAt": "2025-08-29T17:40:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Greg Daniels, a writer, director, and producer, knows a thing or two about making hit TV. Daniels, who adapted the British version of The Office for American TV, also co-created Parks and Recreation with Michael Schur, developed King of the Hill with Mike Judge, and created the sci-fi comedy Upload for Amazon Prime. The Paper is an upcoming American mocku...",
+    "image": "https://nofilmschool.com/media-library/ned-domhnall-gleeson-in-the-paper.jpg?id=61531477&width=980",
+    "video": "https://www.youtube.com/embed/3f0cyQzOK-A?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Television writing",
+      "Greg daniels",
+      "Tv writing",
+      "Comedy writing"
+    ],
+    "seoTitle": "This Is the Reason Greg Daniels Likes Writing Comedy",
+    "seoDescription": "Greg Daniels, a writer, director, and producer, knows a thing or two about making hit TV. Daniels, who adapted the British version of The Office for American..."
   }
 ]
