@@ -1,5 +1,118 @@
 [
   {
+    "title": "Your First React Component: JSX, Components, and the \"Hello, World\" Program(5/Sept)",
+    "url": "https://dev.to/mendoncamaria/your-first-react-component-jsx-components-and-the-hello-world-program5sept-3oj1",
+    "publishedAt": "2025-08-30T18:07:52.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! You now have a blank canvas, and this is where the real fun begins. In this article, we're going to take our first practical steps into the world of building UIs. We'll demystify JSX—the special syntax...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7pum1z1jy6axfv5obxxx.png",
+    "video": null,
+    "author": "Maria Mendonca",
+    "tags": [
+      "webdev",
+      "javascript",
+      "react",
+      "beginners"
+    ],
+    "seoTitle": "Your First React Component: JSX, Components, and the \"Hello, World\" Program(5/Sept)",
+    "seoDescription": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! Y..."
+  },
+  {
+    "title": "Python in Predictive Analytics for Wrought Iron Fence Protection",
+    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-in-predictive-analytics-for-wrought-iron-fence-protection-150c",
+    "publishedAt": "2025-08-30T17:58:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The use of predictive analytics powered by Python has grown beyond traditional industries like finance and healthcare. Today, it also provides solutions for infrastructure maintenance and protection of construction materials. One particularly interesting application is in the field of wrought iron fence protection. These fences, widely used for residentia...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyordvmh1xt6eccfw6q0c.png",
+    "video": null,
+    "author": "angelyn Muñoz",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python in Predictive Analytics for Wrought Iron Fence Protection",
+    "seoDescription": "The use of predictive analytics powered by Python has grown beyond traditional industries like finance and healthcare. Today, it also provides solutions for ..."
+  },
+  {
+    "title": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
+    "url": "https://nofilmschool.com/top-mistakes-in-the-shawshank-redemption",
+    "publishedAt": "2025-08-30T17:42:16.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "It’s crazy how films completely immerse us in them, and we miss out even on the most obvious flaws on screen. I like to believe that that's what magic feels like. While normal cinephiles move on after the experience, nerds like me rewatch those movies over and over again, like our lives depend on it, until the minor mistakes feel blinding. So, don’t mind ...",
+    "image": "https://nofilmschool.com/media-library/tim-robbins-as-andy.jpg?id=61536121&width=980",
+    "video": null,
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "The shawshank redemption",
+      "Frank darabont",
+      "Movie mistakes"
+    ],
+    "seoTitle": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
+    "seoDescription": "It’s crazy how films completely immerse us in them, and we miss out even on the most obvious flaws on screen. I like to believe that that's what magic feels ..."
+  },
+  {
+    "title": "GPT-OSS 20B: The Game-Changing Open AI Model That Runs on Your Laptop",
+    "url": "https://dev.to/anandsingh01/gpt-oss-20b-the-game-changing-open-ai-model-that-runs-on-your-laptop-18ha",
+    "publishedAt": "2025-08-30T17:40:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The AI landscape just shifted dramatically. OpenAI's release of GPT-OSS 20B under Apache 2.0 license isn't just another model drop. it's a paradigm shift that puts enterprise-grade AI directly into the hands of developers, startups, and organizations worldwide. For years, we've been locked into expensive cloud APIs and vendor dependencies. GPT-OSS 20B bre...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjyxi5zbj6zvyf70dg29d.png",
+    "video": null,
+    "author": "Anand Kumar Singh",
+    "tags": [
+      "webdev",
+      "ai",
+      "programming",
+      "data"
+    ],
+    "seoTitle": "GPT-OSS 20B: The Game-Changing Open AI Model That Runs on Your Laptop",
+    "seoDescription": "The AI landscape just shifted dramatically. OpenAI's release of GPT-OSS 20B under Apache 2.0 license isn't just another model drop. it's a paradigm shift tha..."
+  },
+  {
+    "title": "Python y Machine Learning en estudios culturales de la Santería",
+    "url": "https://dev.to/carmen_lopezlopeza_31258/python-y-machine-learning-en-estudios-culturales-de-la-santeria-4fjn",
+    "publishedAt": "2025-08-30T17:36:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La tecnología actual, en particular el machine learning con Python, ha demostrado ser una herramienta poderosa para el análisis de datos en campos muy diversos. Uno de los terrenos emergentes en los que estas técnicas están comenzando a tener un papel relevante es el estudio cultural y espiritual. La Santería, tradición religiosa con raíces africanas que ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu9tq6d6fb32ln7n0o1y6.png",
+    "video": null,
+    "author": "carmen lopez lopeza",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python y Machine Learning en estudios culturales de la Santería",
+    "seoDescription": "La tecnología actual, en particular el machine learning con Python, ha demostrado ser una herramienta poderosa para el análisis de datos en campos muy divers..."
+  },
+  {
+    "title": "102+ Touching Death Anniversary Quotes For Brother",
+    "url": "https://dev.to/willam_stock_5f8299da210d/102-touching-death-anniversary-quotes-for-brother-296a",
+    "publishedAt": "2025-08-30T17:29:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Losing a brother is one of the most painful experiences one can endure. Brothers are more than family—they are protectors, best friends, and partners in countless childhood memories. When they are gone, every anniversary of their passing brings waves of emotions: grief, nostalgia, and sometimes even gratitude for the moments shared. Marking a brother’s de...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9h4hraywylh1kzxl0lue.png",
+    "video": null,
+    "author": "Willam stock",
+    "tags": [
+      "webdev",
+      "fh",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "102+ Touching Death Anniversary Quotes For Brother",
+    "seoDescription": "Losing a brother is one of the most painful experiences one can endure. Brothers are more than family—they are protectors, best friends, and partners in coun..."
+  },
+  {
     "title": "Design System Data Driven: como coletar métricas e transformar código em decisões",
     "url": "https://dev.to/victor-assis/design-system-data-driven-como-coletar-metricas-e-transformar-codigo-em-decisoes-22n5",
     "publishedAt": "2025-08-30T17:08:36.000Z",
@@ -90,60 +203,20 @@
     "seoDescription": "Deploying a Python FastAPI application on the cloud ensures scalability, reliability, and performance. Amazon Web Services (AWS) provides powerful tools like..."
   },
   {
-    "title": "IoT-Enabled Mobile Apps for Personalized Ionic Foot Bath Programs",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/iot-enabled-mobile-apps-for-personalized-ionic-foot-bath-programs-2m3j",
-    "publishedAt": "2025-08-30T16:36:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The wellness industry is rapidly evolving, and technology is becoming a key driver in offering highly customized experiences for clients. One of the most exciting areas of innovation is the use of IoT-enabled mobile applications with ionic foot bath programs. By combining sensor technology, cloud-based analytics, and mobile interfaces, users can enjoy a d...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F50l9yyike4lq8t9irf3k.png",
+    "title": "It’s time for Apple to revive one of its discontinued iPad accessories",
+    "url": "https://9to5mac.com/2025/08/30/its-time-for-apple-to-revive-one-of-its-discontinued-ipad-accessories/",
+    "publishedAt": "2025-08-30T15:18:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essentially served as the same product. Nowadays, after the introduction of trackpad support in iPadOS and the , everything is unnecessarily convoluted – with each iPad model having a slightly different Magi...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2018/11/2018-iPad-Pro-Smart-Keyboard-Folio-on-Desk1.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Takeo Sartorius",
+    "author": "Michael Burkhardt",
     "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
+      "News"
     ],
-    "seoTitle": "IoT-Enabled Mobile Apps for Personalized Ionic Foot Bath Programs",
-    "seoDescription": "The wellness industry is rapidly evolving, and technology is becoming a key driver in offering highly customized experiences for clients. One of the most exc..."
-  },
-  {
-    "title": "Buy Verified CashApp Accounts",
-    "url": "https://dev.to/y_gi_9b45657ec9ac98d16837/buy-verified-cashapp-accounts-5g1e",
-    "publishedAt": "2025-08-30T15:53:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What is a Cash App Account? Buy Verified CashApp Accounts 1. 2. Verified Bank Accounts, Website Reviews and Social Accounts provider. Find us at Email:smmserviceusainfo@gmail.com WhatsApp: +18573556333 Telegram: @SmmServicesUSA ** Cash App is a mobile-based financial services platform developed by Block, Inc. (formerly Square, Inc.). Launched in 2013 as “...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3uxz5ebiavaqxcmg780q.png",
-    "video": null,
-    "author": "Y Gi",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "Buy Verified CashApp Accounts",
-    "seoDescription": "What is a Cash App Account? Buy Verified CashApp Accounts 1. 2. Verified Bank Accounts, Website Reviews and Social Accounts provider. Find us at Email:smmser..."
-  },
-  {
-    "title": "Entwicklung des Webdesigns: Von HTML zu KI – B2B-Leitfaden",
-    "url": "https://dev.to/internetagentur-scherer/entwicklung-des-webdesigns-von-html-zu-ki-b2b-leitfaden-30dj",
-    "publishedAt": "2025-08-30T15:19:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "1989 am CERN startete das Web. Von HTML & Tabellenlayouts über Responsive, Komponenten und JAMstack bis zu KI & VIBE-Coding: Ich ordne die Meilensteine ein – ohne Hype. Was du mitnimmst: klare Inhalte, Standards, Barrierefreiheit, Core Web Vitals und wo KI wirklich hilft. ➡️ Weiterlesen: https://www.internetagentur-scherer.de/aktuelles/entwicklung-webdesi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flsuhvoysoeeazpk1dj3p.jpg",
-    "video": null,
-    "author": "Jürgen Scherer",
-    "tags": [
-      "webdesign",
-      "seo",
-      "performance",
-      "webdev"
-    ],
-    "seoTitle": "Entwicklung des Webdesigns: Von HTML zu KI – B2B-Leitfaden",
-    "seoDescription": "1989 am CERN startete das Web. Von HTML & Tabellenlayouts über Responsive, Komponenten und JAMstack bis zu KI & VIBE-Coding: Ich ordne die Meilensteine ein –..."
+    "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
+    "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
   },
   {
     "title": "The 20 best Labor Day deals you can grab for $100 or less",
@@ -254,6 +327,23 @@
     "tags": [],
     "seoTitle": "Why do Waymos keep loitering in front of my house?",
     "seoDescription": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home..."
+  },
+  {
+    "title": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
+    "url": "https://nofilmschool.com/pulp-fiction-briefcase-mystery",
+    "publishedAt": "2025-08-30T05:20:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious to know, asks him, “We happy?” And us? We lean forward, just as desperate to peek inside. In that instant, Tarantino transforms a simple prop into one of the most famous mysteries in cinema history. W...",
+    "image": "https://nofilmschool.com/media-library/whats-in-pulp-fictions-briefcase-nothing-and-everything.jpg?id=61536518&width=980",
+    "video": "https://www.youtube.com/embed/qY2Vx8-yOsQ?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Pulp fiction",
+      "Props"
+    ],
+    "seoTitle": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
+    "seoDescription": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious ..."
   },
   {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
@@ -540,86 +630,5 @@
     ],
     "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
     "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
-  },
-  {
-    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
-    "publishedAt": "2025-08-29T19:53:06.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
-  },
-  {
-    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
-    "publishedAt": "2025-08-29T19:44:15.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
-    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
-    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "The roses",
-      "Comedy",
-      "Remake",
-      "Adaptation"
-    ],
-    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
-  },
-  {
-    "title": "Michelle Yeoh's Top 10 Movies",
-    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
-    "publishedAt": "2025-08-29T19:27:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
-    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
-    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Michelle yeoh",
-      "Martial arts movies"
-    ],
-    "seoTitle": "Michelle Yeoh's Top 10 Movies",
-    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
-  },
-  {
-    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
-    "publishedAt": "2025-08-29T19:21:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Richard Lawler",
-    "tags": [],
-    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
-  },
-  {
-    "title": "iOS 26: 5 New Features in the Wallet App",
-    "url": "https://www.macrumors.com/guide/ios-26-wallet-app/",
-    "publishedAt": "2025-08-29T19:16:13.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and more. We've outlined everything new in the Wallet app below. Order Tracking The ‌iOS 26‌ Wallet app features enhanced order tracking, and you can now use it to track all of your purchases rather than j...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Wallet-Glass-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "iOS 26: 5 New Features in the Wallet App",
-    "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
   }
 ]
