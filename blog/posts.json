@@ -188,25 +188,6 @@
     "seoDescription": "Building a Secure 3-Tier Application on AWS I recently worked on a portfolio project where I built a 3-tier application on AWS. My goal wasn’t only to get th..."
   },
   {
-    "title": "Deconstructing gin.Context: More Than Just a Context",
-    "url": "https://dev.to/leapcell/deconstructing-gincontext-more-than-just-a-context-4nd0",
-    "publishedAt": "2025-08-29T23:00:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "First, we must understand the design purpose of gin.Context (or echo.Context). It is a context object specific to a web framework, used to handle a single HTTP request. Its responsibilities are very broad: Request parsing: obtain path parameters (c.Param()), query parameters (c.Query()), request headers (c.Header()), request body (c.BindJSON()). Response ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8g0jnliew0fdgrriz9qc.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "Deconstructing gin.Context: More Than Just a Context",
-    "seoDescription": "First, we must understand the design purpose of gin.Context (or echo.Context). It is a context object specific to a web framework, used to handle a single HT..."
-  },
-  {
     "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
     "url": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
     "publishedAt": "2025-08-29T22:11:02.000Z",
@@ -644,5 +625,26 @@
     ],
     "seoTitle": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
     "seoDescription": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered..."
+  },
+  {
+    "title": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
+    "url": "https://nofilmschool.com/prograde-digital-pg10-usb4-external-ssd",
+    "publishedAt": "2025-08-29T17:08:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer requests, professionals are looking for all the ways that they can to read, write, transfer, upload, and share footage as quickly as possible. To help with these endeavors, ProGrade Digital has launched a ...",
+    "image": "https://nofilmschool.com/media-library/image.png?id=61534108&width=980",
+    "video": null,
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Prograde digital",
+      "Usb4",
+      "External ssd",
+      "Ssd",
+      "16tb ssd",
+      "Prograde digital pg10 usb4 external ssd"
+    ],
+    "seoTitle": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
+    "seoDescription": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer reque..."
   }
 ]
