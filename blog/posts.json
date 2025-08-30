@@ -1,5 +1,19 @@
 [
   {
+    "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
+    "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
+    "publishedAt": "2025-08-30T21:54:13.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or receive calls for hours, while DownDetector’s tracker peaked in the afternoon at around 3:30PM ET with more than 20,000 reports. Some customers report their service has continued to function throughou...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25594448/STK066_VERIZON_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Richard Lawler",
+    "tags": [],
+    "seoTitle": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
+    "seoDescription": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or ..."
+  },
+  {
     "title": "Responsive Tiled Mosaic Image Gallery",
     "url": "https://dev.to/jhvanderschee/responsive-tiled-mosaic-image-gallery-k76",
     "publishedAt": "2025-08-30T20:24:17.000Z",
@@ -592,21 +606,5 @@
     ],
     "seoTitle": "iOS 26: 5 New Features in the Wallet App",
     "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
-  },
-  {
-    "title": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
-    "url": "https://9to5mac.com/2025/08/29/hackers-chained-apple-and-whatsapp-flaws-in-advanced-spyware-campaign/",
-    "publishedAt": "2025-08-29T19:14:15.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted individuals.” Now, new details have emerged, and it appears that the hacking campaign also leveraged a now-fixed WhatsApp flaw to target its victims. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-hacked.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
-    "seoDescription": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted ind..."
   }
 ]
