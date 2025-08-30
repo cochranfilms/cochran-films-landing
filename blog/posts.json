@@ -169,25 +169,6 @@
     "seoDescription": "Si estas próximo a realizar el examen o pensando en si tomar o no la certificación de Vue School emitida por certificates.dev te doy unos consejos, mi experi..."
   },
   {
-    "title": "Hands-On with AWS: Building and Securing a 3-Tier Web App",
-    "url": "https://dev.to/ajithmanmu/hands-on-with-aws-building-and-securing-a-3-tier-web-app-1fjb",
-    "publishedAt": "2025-08-29T23:01:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Building a Secure 3-Tier Application on AWS I recently worked on a portfolio project where I built a 3-tier application on AWS. My goal wasn’t only to get the app running, but also to design it with security and best practices in mind, and then migrate everything into Terraform so it’s reproducible. 👉 Full source code and Terraform setup: three-tier-arch...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxnw350a9gongnid5lzt2.png",
-    "video": null,
-    "author": "ajithmanmu",
-    "tags": [
-      "aws",
-      "buildinpublic",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Hands-On with AWS: Building and Securing a 3-Tier Web App",
-    "seoDescription": "Building a Secure 3-Tier Application on AWS I recently worked on a portfolio project where I built a 3-tier application on AWS. My goal wasn’t only to get th..."
-  },
-  {
     "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
     "url": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
     "publishedAt": "2025-08-29T22:11:02.000Z",
@@ -646,5 +627,28 @@
     ],
     "seoTitle": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
     "seoDescription": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer reque..."
+  },
+  {
+    "title": "Hasselblad Has a Winner, and Did We NEED the GR IV? | The PetaPixel Podcast",
+    "url": "https://petapixel.com/2025/08/29/hasselblad-has-a-winner-and-did-we-need-the-gr-iv-the-petapixel-podcast/",
+    "publishedAt": "2025-08-29T17:01:01.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "This week on the PetaPixel podcast, the team discusses the Hasselblad X2D II 100C and the Ricoh GR IV. Two very different cameras, but both have their merits. But while the Hasselblad actually came down in price compared to its predecessor, the opposite is true of the GR IV. So, was it worth it? [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Hasselblad-Has-a-Winner-and-Did-We-NEED-the-GR-IV-The-PetaPixel-Podcast-1600x840.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Podcast",
+      "hasselblad",
+      "hasselbladx2dii100c",
+      "petapixelpodcast",
+      "podcast",
+      "ricoh",
+      "ricohgriv",
+      "thepetapixelpodcast"
+    ],
+    "seoTitle": "Hasselblad Has a Winner, and Did We NEED the GR IV? | The PetaPixel Podcast",
+    "seoDescription": "This week on the PetaPixel podcast, the team discusses the Hasselblad X2D II 100C and the Ricoh GR IV. Two very different cameras, but both have their merits..."
   }
 ]
