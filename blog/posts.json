@@ -1,59 +1,60 @@
 [
   {
-    "title": "From Chaos to Clean Code: How Refactoring Beats Callback Hell",
-    "url": "https://dev.to/emiderex/from-chaos-to-clean-code-how-refactoring-beats-callback-hell-36l7",
-    "publishedAt": "2025-08-30T10:03:52.000Z",
+    "title": "The Subtle Art of State Management Without Redux or Zustand",
+    "url": "https://dev.to/mrrookie/the-subtle-art-of-state-management-without-redux-or-zustand-1fjo",
+    "publishedAt": "2025-08-30T11:01:44.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Refactoring - a word that pops up often in software engineering circles, but many developers (especially those starting out) misunderstand what it actually means. Let’s clear it up. Refactoring isn’t about rewriting your entire codebase or discarding what you’ve built. It’s about making small, organized improvements to your existing code without altering ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frebql6v2gdw056flkqvh.webp",
+    "summary": "State management is the frontend engineer’s favorite battleground. Every team has a war story: Too much prop drilling Context providers everywhere Redux boilerplate bigger than the app itself I’ve seen teams spend weeks debating whether to use Redux, Zustand, MobX, or Context. But here’s the thing: you don’t always need a library. With careful patterns, R...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Figl6qvg6ztiy8d66nsdn.png",
     "video": null,
-    "author": "Emmanuel Ajibola",
+    "author": "Anish",
     "tags": [
       "webdev",
-      "refactorit",
-      "javascript"
+      "react",
+      "redux",
+      "programming"
     ],
-    "seoTitle": "From Chaos to Clean Code: How Refactoring Beats Callback Hell",
-    "seoDescription": "Refactoring - a word that pops up often in software engineering circles, but many developers (especially those starting out) misunderstand what it actually m..."
+    "seoTitle": "The Subtle Art of State Management Without Redux or Zustand",
+    "seoDescription": "State management is the frontend engineer’s favorite battleground. Every team has a war story: Too much prop drilling Context providers everywhere Redux boil..."
   },
   {
-    "title": "How X Checks Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
-    "url": "https://dev.to/theprinceraj/how-x-checks-your-username-in-milliseconds-a-gentle-guide-to-bloom-filters-4o6n",
-    "publishedAt": "2025-08-30T09:53:10.000Z",
+    "title": "The Power of \"^\" in package.json",
+    "url": "https://dev.to/bdhamithkumara/the-power-of-in-packagejson-4pb7",
+    "publishedAt": "2025-08-30T10:50:36.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "You must have tried searching for your username while creating your X account. Ever wondered how you get such a quick confirmation of whether an account with that username exists or not? Well, to be honest, even if it says that an account exists with that username, there might be no account with that username in the database. Surprised? Let's learn about ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fenrbo7hja2c0qk5djirl.png",
+    "summary": "If you've ever peeked into your package.json file when working with Next.js (or any JavaScript framework), you’ve probably noticed something like this, At first glance, it's just a version number with a little caret ^. Seems harmless, right? But that tiny symbol can determine whether your app runs smoothly in production or suddenly breaks after deployment...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsyt98ww63ss9480vi3ez.png",
     "video": null,
-    "author": "Prince Raj",
+    "author": "Dhamith Kumara",
     "tags": [
       "webdev",
-      "programming",
-      "backend",
-      "database"
+      "discuss",
+      "learning",
+      "development"
     ],
-    "seoTitle": "How X Checks Your Username in Milliseconds: A Gentle Guide to Bloom Filters",
-    "seoDescription": "You must have tried searching for your username while creating your X account. Ever wondered how you get such a quick confirmation of whether an account with..."
+    "seoTitle": "The Power of \"^\" in package.json",
+    "seoDescription": "If you've ever peeked into your package.json file when working with Next.js (or any JavaScript framework), you’ve probably noticed something like this, At fi..."
   },
   {
-    "title": "Why Cheap Pallets Are Killing Your Profits",
-    "url": "https://dev.to/rajratan_seo_9f0a92287b0c/why-cheap-pallets-are-killing-your-profits-2kgl",
-    "publishedAt": "2025-08-30T09:19:17.000Z",
+    "title": "First blog post :)",
+    "url": "https://dev.to/rtnjt_bot/first-blog-post--5d60",
+    "publishedAt": "2025-08-30T10:16:17.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "PAC® Pallet ](https://pallets.rajratan.in/)are designed to deliver long-term value—not short-term savings. The Hidden Costs of Cheap Pallets On the surface, cheap pallets look like a bargain. But once they are put to use in a brick plant, their weaknesses become clear: Low Durability – Wooden or low-grade pallets often crack under vibration and heavy load...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl54bbtzjn53r37b91t0k.jpg",
+    "summary": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL Ritanjit Das ・ Aug 28 #webdev #react #typescript #portfolio",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3423101%2F6cb50862-83b4-48a5-b6d2-d27ecf726617.jpeg",
     "video": null,
-    "author": "Rajratan seo",
+    "author": "Ritanjit Das",
     "tags": [
       "webdev",
-      "beginners",
-      "devops",
-      "discuss"
+      "react",
+      "typescript",
+      "portfolio"
     ],
-    "seoTitle": "Why Cheap Pallets Are Killing Your Profits",
-    "seoDescription": "PAC® Pallet ](https://pallets.rajratan.in/)are designed to deliver long-term value—not short-term savings. The Hidden Costs of Cheap Pallets On the surface, ..."
+    "seoTitle": "First blog post :)",
+    "seoDescription": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL Ritanjit Das ・ Aug 28 #webdev #react #typescript #portfolio"
   },
   {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
