@@ -1,5 +1,100 @@
 [
   {
+    "title": "Why Caching Is Both a Savior and a Trouble-Maker",
+    "url": "https://dev.to/dct_technology/why-caching-is-both-a-savior-and-a-trouble-maker-52aj",
+    "publishedAt": "2025-08-30T06:00:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine this: your website is loading in milliseconds. Users are impressed, conversions go up, and you feel like a rockstar developer. caching. But the same cache that makes your app blazing fast can also haunt you with stale data, debugging nightmares, and mysterious “it works on my machine” issues. Let’s dive deep into why caching is a double-edged swor...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxd22dxlm42og23fsw2cu.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "redis",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Why Caching Is Both a Savior and a Trouble-Maker",
+    "seoDescription": "Imagine this: your website is loading in milliseconds. Users are impressed, conversions go up, and you feel like a rockstar developer. caching. But the same ..."
+  },
+  {
+    "title": "How Leaders Can Empower Instead of Control",
+    "url": "https://dev.to/dct_technology/how-leaders-can-empower-instead-of-control-4d9p",
+    "publishedAt": "2025-08-30T05:47:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine working under a leader who constantly checks your every move. Which team do you think will innovate faster? The answer is obvious: empowerment beats control every time. Many leaders believe that tighter control = better results. Control kills creativity. Micromanagement slows down projects. Fear of failure makes people play safe instead of trying ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnnvwy6gaxxeuam2vav32.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "leadership",
+      "design",
+      "seo",
+      "webdev"
+    ],
+    "seoTitle": "How Leaders Can Empower Instead of Control",
+    "seoDescription": "Imagine working under a leader who constantly checks your every move. Which team do you think will innovate faster? The answer is obvious: empowerment beats ..."
+  },
+  {
+    "title": "Co-Researcher – Accelerating Healthcare Research with Multi-Agent AI",
+    "url": "https://dev.to/ashiqsultan/co-researcher-accelerating-healthcare-research-with-multi-agent-ai-hjo",
+    "publishedAt": "2025-08-30T05:39:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a co-research application, which can speed up work for scientist working in healthcare or medicine industry. It uses multiple n8n AI Agent nodes, each note is responsible to conduct specific searches related to the research description like gathering clinical trial inf...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsswwrq4f5yaibwp79mx5.png",
+    "video": null,
+    "author": "Mohamed Ashiq Sultan",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Co-Researcher – Accelerating Healthcare Research with Multi-Agent AI",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a co-research application, which can speed up work for scientist work..."
+  },
+  {
+    "title": "Equity Fundamental Octo Researcher: Next-Gen Stock Research",
+    "url": "https://dev.to/bikash119/equity-fundamental-octo-researcher-next-gen-stock-research-3a4n",
+    "publishedAt": "2025-08-30T05:26:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered assistant to streamline fundamental analysis for stock market investment ( India ). Investors typically spend hours reviewing annual reports, credit ratings, quarterly results, and transcripts to make investment decisions—a process that’s slow and overw...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdfwv6lwjev9930f2kjil.png",
+    "video": null,
+    "author": "bikash119",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Equity Fundamental Octo Researcher: Next-Gen Stock Research",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered assistant to streamline fundamental analysis for stoc..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/developeraromal/-5cgk",
+    "publishedAt": "2025-08-30T05:13:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Create Awesome Link Effect Muhammed Sabith ・ Aug 30 #npm #programming #javascript #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3454655%2F99a24e85-c529-4d5e-a029-d4647dc27dd4.png",
+    "video": null,
+    "author": "Aromal",
+    "tags": [
+      "npm",
+      "programming",
+      "javascript",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Create Awesome Link Effect Muhammed Sabith ・ Aug 30 #npm #programming #javascript #webdev"
+  },
+  {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
     "url": "https://nofilmschool.com/godfather-vito-michael-scenes",
     "publishedAt": "2025-08-30T05:10:02.000Z",
@@ -90,82 +185,6 @@
     "seoDescription": "Mutiny is Live: Where Ideas Find Their People and Capital Finds Its Purpose Somay ・ Aug 25 #webdev #ai #productivity #beginners"
   },
   {
-    "title": "🚨 This isn’t a hit piece. It’s a reality check for anyone building serious systems with GraphQL.",
-    "url": "https://dev.to/amaster507_59/this-isnt-a-hit-piece-its-a-reality-check-for-anyone-building-serious-systems-with-graphql-395i",
-    "publishedAt": "2025-08-30T04:38:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When the Graph Snaps: A Hard Look at GraphQL's Pain Points Anthony Master ・ Aug 30 #graphql #webdev #softwareengineering #softwaredevelopment",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F832703%2Fe16febe8-363d-4d0a-acdc-66a71a8882b8.jpeg",
-    "video": null,
-    "author": "Anthony Master",
-    "tags": [
-      "graphql",
-      "webdev",
-      "softwareengineering",
-      "softwaredevelopment"
-    ],
-    "seoTitle": "🚨 This isn’t a hit piece. It’s a reality check for anyone building serious systems with GraphQL.",
-    "seoDescription": "When the Graph Snaps: A Hard Look at GraphQL's Pain Points Anthony Master ・ Aug 30 #graphql #webdev #softwareengineering #softwaredevelopment"
-  },
-  {
-    "title": "Those who have a heart for coding should learn AI by heart. AI mastery isn’t about knowing prompting; it's about learning why to write a prompt. Only those who have a heart for coding and AI will lead the developers.",
-    "url": "https://dev.to/jaideepparashar/those-who-have-a-heart-for-coding-should-learn-ai-by-heart-ai-mastery-isnt-about-knowing-2ga8",
-    "publishedAt": "2025-08-30T04:32:58.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The 1% Rule of AI Mastery Jaideep Parashar ・ Aug 30 #ai #learning #machinelearning #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
-    "video": null,
-    "author": "Jaideep Parashar",
-    "tags": [
-      "ai",
-      "learning",
-      "machinelearning",
-      "webdev"
-    ],
-    "seoTitle": "Those who have a heart for coding should learn AI by heart. AI mastery isn’t about knowing prompting; it's about learning why to write a prompt. Only those who have a heart for coding and AI will lead the developers.",
-    "seoDescription": "The 1% Rule of AI Mastery Jaideep Parashar ・ Aug 30 #ai #learning #machinelearning #webdev"
-  },
-  {
-    "title": "The 1% Rule of AI Mastery",
-    "url": "https://dev.to/jaideepparashar/the-1-rule-of-ai-mastery-k59",
-    "publishedAt": "2025-08-30T04:22:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When people see me publishing 40+ AI books, building ReThynk AI, and posting daily here on dev.to, they often ask: “What’s the secret? How do you stay ahead in AI?” It’s not about giant leaps. That’s how I went from experimenting with prompts to building a global AI brand. Why 1% Matters A 1% improvement feels small. But over a year, it compounds. Think a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Famroyqqqqcyh40m67iq0.png",
-    "video": null,
-    "author": "Jaideep Parashar",
-    "tags": [
-      "ai",
-      "learning",
-      "machinelearning",
-      "webdev"
-    ],
-    "seoTitle": "The 1% Rule of AI Mastery",
-    "seoDescription": "When people see me publishing 40+ AI books, building ReThynk AI, and posting daily here on dev.to, they often ask: “What’s the secret? How do you stay ahead ..."
-  },
-  {
-    "title": "Albinism: Symptoms, Types, Causes, Diagnosis, Treatment, and More",
-    "url": "https://dev.to/quickhealthlife/albinism-symptoms-types-causes-diagnosis-treatment-and-more-po1",
-    "publishedAt": "2025-08-30T02:01:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Albinism is a rare genetic condition characterized by reduced or absent melanin production. Melanin is the pigment responsible for coloring our skin, hair, and eyes. This condition affects people worldwide, regardless of ethnicity or gender. While often visible through lighter physical features, albinism primarily impacts vision health and requires carefu...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fns77o1bfged2coxtxmqa.jpg",
-    "video": null,
-    "author": "Quickhealthlife",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Albinism: Symptoms, Types, Causes, Diagnosis, Treatment, and More",
-    "seoDescription": "Albinism is a rare genetic condition characterized by reduced or absent melanin production. Melanin is the pigment responsible for coloring our skin, hair, a..."
-  },
-  {
     "title": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
     "url": "https://9to5mac.com/2025/08/29/macbook-pro-m4-first-worthy-apple-silicon-upgrade/",
     "publishedAt": "2025-08-30T02:00:56.000Z",
@@ -180,25 +199,6 @@
     ],
     "seoTitle": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
     "seoDescription": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it..."
-  },
-  {
-    "title": "Built My First AI Travel Agent with OpenAI Assistants API and Real Flight Data",
-    "url": "https://dev.to/jeffrey_39f861255ebf7c628/built-my-first-ai-travel-agent-with-openai-assistants-api-and-real-flight-data-4h5p",
-    "publishedAt": "2025-08-30T01:52:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "*This is a submission for the AI Agents Challenge powered by n8n and Bright Data I used SerpApi for real-time flight data collection, but I'm interested in exploring Bright Data's Verified Node for enhanced data reliability and compliance in future versions. This is a solo submission. I built the entire project independently from backend API development t...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwdo2gxaitin635fnrvae.png",
-    "video": null,
-    "author": "Jeffrey",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Built My First AI Travel Agent with OpenAI Assistants API and Real Flight Data",
-    "seoDescription": "*This is a submission for the AI Agents Challenge powered by n8n and Bright Data I used SerpApi for real-time flight data collection, but I'm interested in e..."
   },
   {
     "title": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
