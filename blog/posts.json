@@ -1,5 +1,21 @@
 [
   {
+    "title": "Responsive Tiled Mosaic Image Gallery",
+    "url": "https://dev.to/jhvanderschee/responsive-tiled-mosaic-image-gallery-k76",
+    "publishedAt": "2025-08-30T20:24:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I was converting a website from WordPress to Hugo and needed an equivalent to the Tiled Image Gallery from Wordpress. I wanted the Tiled Mosaic style, but that was a little to complex, as it also contains colspans. I came up with this as an alternative. You can find it here: https://codepen.io/joosts/pen/LEpgLwN It has a WTFPL license and is almost fully ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4o596m08b2ds7kqe7xqt.jpg",
+    "video": null,
+    "author": "Joost van der Schee",
+    "tags": [
+      "webdev"
+    ],
+    "seoTitle": "Responsive Tiled Mosaic Image Gallery",
+    "seoDescription": "I was converting a website from WordPress to Hugo and needed an equivalent to the Tiled Image Gallery from Wordpress. I wanted the Tiled Mosaic style, but th..."
+  },
+  {
     "title": "How I put my homelab to use",
     "url": "https://dev.to/gaurang_pawar_e9c0710cbe5/how-i-put-my-homelab-to-use-3loo",
     "publishedAt": "2025-08-30T20:03:32.000Z",
@@ -17,44 +33,6 @@
     ],
     "seoTitle": "How I put my homelab to use",
     "seoDescription": "I recently launched sttrace.com, it's a site where people can practice real world software engineering problems. When it was finally time to move it from loc..."
-  },
-  {
-    "title": "Generative AI for Business: Beyond ChatGPT - Innovation, Compliance & Use Cases",
-    "url": "https://dev.to/zestminds_technologies_c1/generative-ai-for-business-beyond-chatgpt-innovation-compliance-use-cases-34od",
-    "publishedAt": "2025-08-30T19:36:15.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Generative AI is changing the way we build products, solve problems, and run businesses. But here’s the truth: ChatGPT ≠ Enterprise AI. As developers and tech leaders, we need to think beyond demos and ask the real questions: How do we ensure compliance (GDPR, HIPAA, CCPA)? Can AI integrate with our ERP/CRM pipelines? Will it scale without breaking infras...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.zestminds.com%2Fimages%2F205%2Fenterprise-ai-workflow-beyond-chatgpt.png",
-    "video": null,
-    "author": "Zestminds Technologies",
-    "tags": [
-      "chatgpt",
-      "ai",
-      "developers",
-      "webdev"
-    ],
-    "seoTitle": "Generative AI for Business: Beyond ChatGPT - Innovation, Compliance & Use Cases",
-    "seoDescription": "Generative AI is changing the way we build products, solve problems, and run businesses. But here’s the truth: ChatGPT ≠ Enterprise AI. As developers and tec..."
-  },
-  {
-    "title": "Instantly Convert PDFs to Structured JSON with JSONIFY",
-    "url": "https://dev.to/srijan_kumar_94e658aa3dda/instantly-convert-pdfs-to-structured-json-with-jsonify-5afm",
-    "publishedAt": "2025-08-30T19:05:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I’m excited to share JsonifyPDF, a fully open source project that converts PDF documents into structured JSON data using AI-powered extraction. Live Project: UI API What It Does: Features: Upload PDF files or specify publicly accessible PDF URLs. Receive clean, well-structured JSON outputs. Built with FastAPI backend and React frontend. Uses Gemini AI API...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fklio51m7sro6hwnlwb58.png",
-    "video": null,
-    "author": "Srijan Kumar",
-    "tags": [
-      "opensource",
-      "webdev",
-      "ai",
-      "python"
-    ],
-    "seoTitle": "Instantly Convert PDFs to Structured JSON with JSONIFY",
-    "seoDescription": "I’m excited to share JsonifyPDF, a fully open source project that converts PDF documents into structured JSON data using AI-powered extraction. Live Project:..."
   },
   {
     "title": "11 Al Pacino Movies That Define Great Acting",
@@ -614,5 +592,21 @@
     ],
     "seoTitle": "iOS 26: 5 New Features in the Wallet App",
     "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
+  },
+  {
+    "title": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
+    "url": "https://9to5mac.com/2025/08/29/hackers-chained-apple-and-whatsapp-flaws-in-advanced-spyware-campaign/",
+    "publishedAt": "2025-08-29T19:14:15.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted individuals.” Now, new details have emerged, and it appears that the hacking campaign also leveraged a now-fixed WhatsApp flaw to target its victims. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-hacked.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
+    "seoDescription": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted ind..."
   }
 ]
