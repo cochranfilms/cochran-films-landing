@@ -1,5 +1,114 @@
 [
   {
+    "title": "Design System Data Driven: como coletar métricas e transformar código em decisões",
+    "url": "https://dev.to/victor-assis/design-system-data-driven-como-coletar-metricas-e-transformar-codigo-em-decisoes-22n5",
+    "publishedAt": "2025-08-30T17:08:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Um Design System é reconhecido por suas vantagens na construção de aplicações front-end. Entre elas, a padronização visual é, na prática, o benefício mais relevante; os ganhos de velocidade acabam surgindo como consequência. No entanto, para além da padronização, há um aspecto cada vez mais estratégico: a coleta e análise de dados sobre o uso do DS. Assim...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthetnzg80fi4guglr7fe.png",
+    "video": null,
+    "author": "Victor Assis",
+    "tags": [
+      "analytics",
+      "programming",
+      "designsystem",
+      "webdev"
+    ],
+    "seoTitle": "Design System Data Driven: como coletar métricas e transformar código em decisões",
+    "seoDescription": "Um Design System é reconhecido por suas vantagens na construção de aplicações front-end. Entre elas, a padronização visual é, na prática, o benefício mais re..."
+  },
+  {
+    "title": "Clicks to Efficiency: Automate Your Daily Browser Tasks",
+    "url": "https://dev.to/thedevankit/clicks-to-efficiency-automate-your-daily-browser-tasks-5g55",
+    "publishedAt": "2025-08-30T17:07:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Few months back, I caught myself doing something ridiculous. I was copying the same project update into different systems - our timesheet portal and the client project management tool. Same text, different formats, 20-30 minutes gone. The worst part? I'd been doing this every single month. That's when it hit me. I'm a developer. Why am I living like this?...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr9ksuabgjytitmrrlyp2.png",
+    "video": null,
+    "author": "Ankitkumar Singh",
+    "tags": [
+      "webdev",
+      "javascript",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Clicks to Efficiency: Automate Your Daily Browser Tasks",
+    "seoDescription": "Few months back, I caught myself doing something ridiculous. I was copying the same project update into different systems - our timesheet portal and the clie..."
+  },
+  {
+    "title": "Lipo Laser Applications for Body Contouring Progress Tracking",
+    "url": "https://dev.to/rafael_ramirez_233e181cf9/lipo-laser-applications-for-body-contouring-progress-tracking-2mij",
+    "publishedAt": "2025-08-30T17:03:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In recent years, non-invasive body contouring has gained enormous popularity as people search for alternatives to surgery. Among the most effective techniques is Lipo Laser, a treatment that uses low-level laser therapy (LLLT) to stimulate fat cell reduction and improve body shape. While the results are often noticeable, one of the most important factors ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8xshwv05dz0orsj558f5.png",
+    "video": null,
+    "author": "RAFAEL RAMIREZ",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Lipo Laser Applications for Body Contouring Progress Tracking",
+    "seoDescription": "In recent years, non-invasive body contouring has gained enormous popularity as people search for alternatives to surgery. Among the most effective technique..."
+  },
+  {
+    "title": "No, a Windows update probably didn’t brick your SSD",
+    "url": "https://www.theverge.com/news/768431/windows-update-didnt-brick-your-ssd",
+    "publishedAt": "2025-08-30T16:57:19.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Phison controllers to fail. Tech influencers on YouTube and TikTok were quick to jump on the reports of corrupted data and disappearing drives, laying the blame squarely at Microsoft’s feet. We’re not s...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK109_WINDOWS_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Terrence O’Brien",
+    "tags": [],
+    "seoTitle": "No, a Windows update probably didn’t brick your SSD",
+    "seoDescription": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Ph..."
+  },
+  {
+    "title": "How to Deploy a Python FastAPI Application to an EC2 Instance Using Amazon ECR",
+    "url": "https://dev.to/hassan_shahzad_086a39f774/how-to-deploy-a-python-fastapi-application-to-an-ec2-instance-using-amazon-ecr-4i1h",
+    "publishedAt": "2025-08-30T16:54:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Deploying a Python FastAPI application on the cloud ensures scalability, reliability, and performance. Amazon Web Services (AWS) provides powerful tools like Amazon EC2 (Elastic Compute Cloud) and Amazon ECR (Elastic Container Registry) to simplify the deployment process using Docker containers. In this guide, we’ll walk you through step-by-step instructi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8l50peyx15mqoc0dedu8.jpg",
+    "video": null,
+    "author": "Hassan Shahzad",
+    "tags": [
+      "webdev",
+      "programming",
+      "python",
+      "aws"
+    ],
+    "seoTitle": "How to Deploy a Python FastAPI Application to an EC2 Instance Using Amazon ECR",
+    "seoDescription": "Deploying a Python FastAPI application on the cloud ensures scalability, reliability, and performance. Amazon Web Services (AWS) provides powerful tools like..."
+  },
+  {
+    "title": "IoT-Enabled Mobile Apps for Personalized Ionic Foot Bath Programs",
+    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/iot-enabled-mobile-apps-for-personalized-ionic-foot-bath-programs-2m3j",
+    "publishedAt": "2025-08-30T16:36:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The wellness industry is rapidly evolving, and technology is becoming a key driver in offering highly customized experiences for clients. One of the most exciting areas of innovation is the use of IoT-enabled mobile applications with ionic foot bath programs. By combining sensor technology, cloud-based analytics, and mobile interfaces, users can enjoy a d...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F50l9yyike4lq8t9irf3k.png",
+    "video": null,
+    "author": "Takeo Sartorius",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "IoT-Enabled Mobile Apps for Personalized Ionic Foot Bath Programs",
+    "seoDescription": "The wellness industry is rapidly evolving, and technology is becoming a key driver in offering highly customized experiences for clients. One of the most exc..."
+  },
+  {
     "title": "Buy Verified CashApp Accounts",
     "url": "https://dev.to/y_gi_9b45657ec9ac98d16837/buy-verified-cashapp-accounts-5g1e",
     "publishedAt": "2025-08-30T15:53:32.000Z",
@@ -35,62 +144,6 @@
     ],
     "seoTitle": "Entwicklung des Webdesigns: Von HTML zu KI – B2B-Leitfaden",
     "seoDescription": "1989 am CERN startete das Web. Von HTML & Tabellenlayouts über Responsive, Komponenten und JAMstack bis zu KI & VIBE-Coding: Ich ordne die Meilensteine ein –..."
-  },
-  {
-    "title": "AI vs ML vs MLOps: A Developer’s Roadmap to Getting Started",
-    "url": "https://dev.to/hellonehha/ai-vs-ml-vs-mlops-a-developers-roadmap-to-getting-started-14pi",
-    "publishedAt": "2025-08-30T14:56:47.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "If you’re asking yourself, “Where do I even start in AI engineering?” — you’re not alone. The landscape is crowded with buzzwords (AI, ML, DL, GenAI, MLOps), and it’s easy to feel lost. A few months ago, I had the same question: Where should I begin — AI, ML, or infrastructure? So, I went back to step zero to get clarity. In today’s blog, we’ll unpack the...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmwrp0bupwgy60cus1cuh.png",
-    "video": null,
-    "author": "Neha Sharma ",
-    "tags": [
-      "ai",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "AI vs ML vs MLOps: A Developer’s Roadmap to Getting Started",
-    "seoDescription": "If you’re asking yourself, “Where do I even start in AI engineering?” — you’re not alone. The landscape is crowded with buzzwords (AI, ML, DL, GenAI, MLOps),..."
-  },
-  {
-    "title": "why do developers leave coding today altogether ?",
-    "url": "https://dev.to/bekbrace/why-do-developers-leave-coding-today-altogether--2f56",
-    "publishedAt": "2025-08-30T14:43:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "why do they quit coding ? Bek Brace ・ Aug 30 #coding #chatgpt #programming #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F351271%2Fa78d9f63-7ca3-49fe-9510-94c85608d344.png",
-    "video": null,
-    "author": "Bek Brace",
-    "tags": [
-      "coding",
-      "chatgpt",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "why do developers leave coding today altogether ?",
-    "seoDescription": "why do they quit coding ? Bek Brace ・ Aug 30 #coding #chatgpt #programming #webdev"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/bekbrace/-51m9",
-    "publishedAt": "2025-08-30T14:42:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "why do they quit coding ? Bek Brace ・ Aug 30 #coding #chatgpt #programming #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F351271%2Fa78d9f63-7ca3-49fe-9510-94c85608d344.png",
-    "video": null,
-    "author": "Bek Brace",
-    "tags": [
-      "coding",
-      "chatgpt",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "why do they quit coding ? Bek Brace ・ Aug 30 #coding #chatgpt #programming #webdev"
   },
   {
     "title": "The 20 best Labor Day deals you can grab for $100 or less",
@@ -568,55 +621,5 @@
     ],
     "seoTitle": "iOS 26: 5 New Features in the Wallet App",
     "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
-  },
-  {
-    "title": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
-    "url": "https://9to5mac.com/2025/08/29/hackers-chained-apple-and-whatsapp-flaws-in-advanced-spyware-campaign/",
-    "publishedAt": "2025-08-29T19:14:15.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted individuals.” Now, new details have emerged, and it appears that the hacking campaign also leveraged a now-fixed WhatsApp flaw to target its victims. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-hacked.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Hackers chained Apple and WhatsApp flaws in ‘advanced spyware campaign’",
-    "seoDescription": "A few days ago, Apple fixed a vulnerability on iOS and macOS that “may have been exploited in an extremely sophisticated attack against specific targeted ind..."
-  },
-  {
-    "title": "Emma Stone's 'Bugonia' Earns Six-Minute Venice Ovation",
-    "url": "https://nofilmschool.com/bugonia-venice-ovation",
-    "publishedAt": "2025-08-29T19:12:09.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "I don't think standing ovations at festivals are the end-all, be-all of a film's worthiness, but hearing the buzz out of Venice for Yorgos Lanthimos' new film, Bugonia, has me excited. The film reportedly had the crowd going for six minutes, and so far, reviews are calling it a \"loopy\" black comedy/thriller and indicating that the crowd was receptive to i...",
-    "image": "https://nofilmschool.com/media-library/emma-stone-s-bugonia-earns-six-minute-venice-ovation.jpg?id=61536061&width=980",
-    "video": "https://www.youtube.com/embed/bd_5HcTujfc?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Emma stone",
-      "Bugonia",
-      "Venice film festival",
-      "Venice film festival 2025",
-      "Yorgos lanthimos"
-    ],
-    "seoTitle": "Emma Stone's 'Bugonia' Earns Six-Minute Venice Ovation",
-    "seoDescription": "I don't think standing ovations at festivals are the end-all, be-all of a film's worthiness, but hearing the buzz out of Venice for Yorgos Lanthimos' new fil..."
-  },
-  {
-    "title": "Leak suggests new Philips Hue lights will have direct Matter support",
-    "url": "https://www.theverge.com/news/768232/leak-philips-hue-lights-matter-over-thread",
-    "publishedAt": "2025-08-29T19:08:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There’s already been a number of leaks of upcoming Philips Hue products that are expected to be announced next week ahead of IFA. But one thing that hasn’t been mentioned was support for Matter-over-Thread. While there’s no confirmation that support is coming, there’s compelling evidence to suggest it might be. First off, packaging for two unannounced bul...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Hue-Leuchtmittel-2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Leak suggests new Philips Hue lights will have direct Matter support",
-    "seoDescription": "There’s already been a number of leaks of upcoming Philips Hue products that are expected to be announced next week ahead of IFA. But one thing that hasn’t b..."
   }
 ]
