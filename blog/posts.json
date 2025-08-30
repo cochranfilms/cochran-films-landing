@@ -1,41 +1,115 @@
 [
   {
-    "title": "Your First React Component: JSX, Components, and the \"Hello, World\" Program(5/Sept)",
-    "url": "https://dev.to/mendoncamaria/your-first-react-component-jsx-components-and-the-hello-world-program5sept-3oj1",
-    "publishedAt": "2025-08-30T18:07:52.000Z",
+    "title": "Instantly Convert PDFs to Structured JSON with JSONIFY",
+    "url": "https://dev.to/srijan_kumar_94e658aa3dda/instantly-convert-pdfs-to-structured-json-with-jsonify-5afm",
+    "publishedAt": "2025-08-30T19:05:38.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! You now have a blank canvas, and this is where the real fun begins. In this article, we're going to take our first practical steps into the world of building UIs. We'll demystify JSX—the special syntax...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7pum1z1jy6axfv5obxxx.png",
+    "summary": "I’m excited to share JsonifyPDF, a fully open source project that converts PDF documents into structured JSON data using AI-powered extraction. Live Project: UI API What It Does: Features: Upload PDF files or specify publicly accessible PDF URLs. Receive clean, well-structured JSON outputs. Built with FastAPI backend and React frontend. Uses Gemini AI API...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fklio51m7sro6hwnlwb58.png",
     "video": null,
-    "author": "Maria Mendonca",
+    "author": "Srijan Kumar",
     "tags": [
+      "opensource",
       "webdev",
-      "javascript",
-      "react",
-      "beginners"
+      "ai",
+      "python"
     ],
-    "seoTitle": "Your First React Component: JSX, Components, and the \"Hello, World\" Program(5/Sept)",
-    "seoDescription": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! Y..."
+    "seoTitle": "Instantly Convert PDFs to Structured JSON with JSONIFY",
+    "seoDescription": "I’m excited to share JsonifyPDF, a fully open source project that converts PDF documents into structured JSON data using AI-powered extraction. Live Project:..."
   },
   {
-    "title": "Python in Predictive Analytics for Wrought Iron Fence Protection",
-    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-in-predictive-analytics-for-wrought-iron-fence-protection-150c",
-    "publishedAt": "2025-08-30T17:58:16.000Z",
+    "title": "Python for Real-Time Botox Monitoring Systems",
+    "url": "https://dev.to/cristian_holquis_09836ff1/python-for-real-time-botox-monitoring-systems-4opp",
+    "publishedAt": "2025-08-30T18:44:33.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "The use of predictive analytics powered by Python has grown beyond traditional industries like finance and healthcare. Today, it also provides solutions for infrastructure maintenance and protection of construction materials. One particularly interesting application is in the field of wrought iron fence protection. These fences, widely used for residentia...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyordvmh1xt6eccfw6q0c.png",
+    "summary": "Python for Real-Time Botox Monitoring Systems The healthcare and cosmetic industries are increasingly adopting real-time data monitoring systems to enhance efficiency, safety, and patient satisfaction. In the field of aesthetic treatments such as Botox, Python offers robust tools for building applications that can track sessions, monitor patient feedback,...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsrbqd5rhp2jbt6fn0ncp.png",
     "video": null,
-    "author": "angelyn Muñoz",
+    "author": "cristian holquis",
     "tags": [
       "webdev",
       "programming",
       "javascript",
       "ai"
     ],
-    "seoTitle": "Python in Predictive Analytics for Wrought Iron Fence Protection",
-    "seoDescription": "The use of predictive analytics powered by Python has grown beyond traditional industries like finance and healthcare. Today, it also provides solutions for ..."
+    "seoTitle": "Python for Real-Time Botox Monitoring Systems",
+    "seoDescription": "Python for Real-Time Botox Monitoring Systems The healthcare and cosmetic industries are increasingly adopting real-time data monitoring systems to enhance e..."
+  },
+  {
+    "title": "Building a Smart Commute Assistant with Bright Data, n8n, and Weather & Google Maps APIs",
+    "url": "https://dev.to/nishikantaray/building-a-smart-commute-assistant-with-bright-data-n8n-and-weather-google-maps-apis-143o",
+    "publishedAt": "2025-08-30T18:39:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data A comprehensive breakdown of building an intelligent traffic solution using Bright Data, n8n, and multi-source data integration Core Components: Data Collection Layer: Bright Data web scraping + Weather/Maps APIs Processing Engine: n8n workflow automation with custom decision ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7f2v6y9iug48dt37wmgt.png",
+    "video": null,
+    "author": "Nishikanta Ray",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Building a Smart Commute Assistant with Bright Data, n8n, and Weather & Google Maps APIs",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data A comprehensive breakdown of building an intelligent traffic solution using B..."
+  },
+  {
+    "title": "Git Rebase: A Practical Guide",
+    "url": "https://dev.to/lovestaco/git-rebase-a-practical-guide-175p",
+    "publishedAt": "2025-08-30T18:35:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Rebasing is one of Git’s most powerful but also most misunderstood commands. It helps you keep a clean, linear commit history, but it also...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc0bs1ce90jcduladx5hq.jpg",
+    "video": null,
+    "author": "Athreya aka Maneshwar",
+    "tags": [
+      "git",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Git Rebase: A Practical Guide",
+    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
+  },
+  {
+    "title": "11 Al Pacino Movies That Define Great Acting",
+    "url": "https://nofilmschool.com/best-al-pacino-movies",
+    "publishedAt": "2025-08-30T18:30:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "There are actors who chase roles, and then there’s Al Pacino—who made the roles chase him. For over five decades, he’s delivered performances that feel less like acting and more like watching a man throw his soul onto the screen. Whether he’s whispering like a coiled serpent or erupting like a human fireball, Pacino’s presence demands your attention. His ...",
+    "image": "https://nofilmschool.com/media-library/11-al-pacino-movies-that-define-great-acting.webp?id=61538299&width=980",
+    "video": "https://www.youtube.com/embed/VDre1MOah0c?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Al pacino",
+      "Best movies"
+    ],
+    "seoTitle": "11 Al Pacino Movies That Define Great Acting",
+    "seoDescription": "There are actors who chase roles, and then there’s Al Pacino—who made the roles chase him. For over five decades, he’s delivered performances that feel less ..."
+  },
+  {
+    "title": "Python aplicado a la minería de datos sobre tradiciones de curanderos",
+    "url": "https://dev.to/carmen_lopezlopeza_31258/python-aplicado-a-la-mineria-de-datos-sobre-tradiciones-de-curanderos-26cl",
+    "publishedAt": "2025-08-30T18:24:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "La minería de datos es una de las aplicaciones más poderosas de la inteligencia artificial y el análisis estadístico moderno. Gracias a lenguajes de programación como Python, hoy es posible estudiar y procesar información cultural, histórica y social que antes era casi imposible analizar de forma masiva. Un ejemplo interesante de aplicación es el estudio ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcr6c83ocrzseeuppbasu.png",
+    "video": null,
+    "author": "carmen lopez lopeza",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python aplicado a la minería de datos sobre tradiciones de curanderos",
+    "seoDescription": "La minería de datos es una de las aplicaciones más poderosas de la inteligencia artificial y el análisis estadístico moderno. Gracias a lenguajes de programa..."
   },
   {
     "title": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
@@ -56,120 +130,6 @@
     "seoDescription": "It’s crazy how films completely immerse us in them, and we miss out even on the most obvious flaws on screen. I like to believe that that's what magic feels ..."
   },
   {
-    "title": "GPT-OSS 20B: The Game-Changing Open AI Model That Runs on Your Laptop",
-    "url": "https://dev.to/anandsingh01/gpt-oss-20b-the-game-changing-open-ai-model-that-runs-on-your-laptop-18ha",
-    "publishedAt": "2025-08-30T17:40:14.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The AI landscape just shifted dramatically. OpenAI's release of GPT-OSS 20B under Apache 2.0 license isn't just another model drop. it's a paradigm shift that puts enterprise-grade AI directly into the hands of developers, startups, and organizations worldwide. For years, we've been locked into expensive cloud APIs and vendor dependencies. GPT-OSS 20B bre...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjyxi5zbj6zvyf70dg29d.png",
-    "video": null,
-    "author": "Anand Kumar Singh",
-    "tags": [
-      "webdev",
-      "ai",
-      "programming",
-      "data"
-    ],
-    "seoTitle": "GPT-OSS 20B: The Game-Changing Open AI Model That Runs on Your Laptop",
-    "seoDescription": "The AI landscape just shifted dramatically. OpenAI's release of GPT-OSS 20B under Apache 2.0 license isn't just another model drop. it's a paradigm shift tha..."
-  },
-  {
-    "title": "Python y Machine Learning en estudios culturales de la Santería",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/python-y-machine-learning-en-estudios-culturales-de-la-santeria-4fjn",
-    "publishedAt": "2025-08-30T17:36:54.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La tecnología actual, en particular el machine learning con Python, ha demostrado ser una herramienta poderosa para el análisis de datos en campos muy diversos. Uno de los terrenos emergentes en los que estas técnicas están comenzando a tener un papel relevante es el estudio cultural y espiritual. La Santería, tradición religiosa con raíces africanas que ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu9tq6d6fb32ln7n0o1y6.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python y Machine Learning en estudios culturales de la Santería",
-    "seoDescription": "La tecnología actual, en particular el machine learning con Python, ha demostrado ser una herramienta poderosa para el análisis de datos en campos muy divers..."
-  },
-  {
-    "title": "102+ Touching Death Anniversary Quotes For Brother",
-    "url": "https://dev.to/willam_stock_5f8299da210d/102-touching-death-anniversary-quotes-for-brother-296a",
-    "publishedAt": "2025-08-30T17:29:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Losing a brother is one of the most painful experiences one can endure. Brothers are more than family—they are protectors, best friends, and partners in countless childhood memories. When they are gone, every anniversary of their passing brings waves of emotions: grief, nostalgia, and sometimes even gratitude for the moments shared. Marking a brother’s de...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9h4hraywylh1kzxl0lue.png",
-    "video": null,
-    "author": "Willam stock",
-    "tags": [
-      "webdev",
-      "fh",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "102+ Touching Death Anniversary Quotes For Brother",
-    "seoDescription": "Losing a brother is one of the most painful experiences one can endure. Brothers are more than family—they are protectors, best friends, and partners in coun..."
-  },
-  {
-    "title": "Design System Data Driven: como coletar métricas e transformar código em decisões",
-    "url": "https://dev.to/victor-assis/design-system-data-driven-como-coletar-metricas-e-transformar-codigo-em-decisoes-22n5",
-    "publishedAt": "2025-08-30T17:08:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Um Design System é reconhecido por suas vantagens na construção de aplicações front-end. Entre elas, a padronização visual é, na prática, o benefício mais relevante; os ganhos de velocidade acabam surgindo como consequência. No entanto, para além da padronização, há um aspecto cada vez mais estratégico: a coleta e análise de dados sobre o uso do DS. Assim...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fthetnzg80fi4guglr7fe.png",
-    "video": null,
-    "author": "Victor Assis",
-    "tags": [
-      "analytics",
-      "programming",
-      "designsystem",
-      "webdev"
-    ],
-    "seoTitle": "Design System Data Driven: como coletar métricas e transformar código em decisões",
-    "seoDescription": "Um Design System é reconhecido por suas vantagens na construção de aplicações front-end. Entre elas, a padronização visual é, na prática, o benefício mais re..."
-  },
-  {
-    "title": "Clicks to Efficiency: Automate Your Daily Browser Tasks",
-    "url": "https://dev.to/thedevankit/clicks-to-efficiency-automate-your-daily-browser-tasks-5g55",
-    "publishedAt": "2025-08-30T17:07:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Few months back, I caught myself doing something ridiculous. I was copying the same project update into different systems - our timesheet portal and the client project management tool. Same text, different formats, 20-30 minutes gone. The worst part? I'd been doing this every single month. That's when it hit me. I'm a developer. Why am I living like this?...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr9ksuabgjytitmrrlyp2.png",
-    "video": null,
-    "author": "Ankitkumar Singh",
-    "tags": [
-      "webdev",
-      "javascript",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Clicks to Efficiency: Automate Your Daily Browser Tasks",
-    "seoDescription": "Few months back, I caught myself doing something ridiculous. I was copying the same project update into different systems - our timesheet portal and the clie..."
-  },
-  {
-    "title": "Lipo Laser Applications for Body Contouring Progress Tracking",
-    "url": "https://dev.to/rafael_ramirez_233e181cf9/lipo-laser-applications-for-body-contouring-progress-tracking-2mij",
-    "publishedAt": "2025-08-30T17:03:01.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In recent years, non-invasive body contouring has gained enormous popularity as people search for alternatives to surgery. Among the most effective techniques is Lipo Laser, a treatment that uses low-level laser therapy (LLLT) to stimulate fat cell reduction and improve body shape. While the results are often noticeable, one of the most important factors ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8xshwv05dz0orsj558f5.png",
-    "video": null,
-    "author": "RAFAEL RAMIREZ",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Lipo Laser Applications for Body Contouring Progress Tracking",
-    "seoDescription": "In recent years, non-invasive body contouring has gained enormous popularity as people search for alternatives to surgery. Among the most effective technique..."
-  },
-  {
     "title": "No, a Windows update probably didn’t brick your SSD",
     "url": "https://www.theverge.com/news/768431/windows-update-didnt-brick-your-ssd",
     "publishedAt": "2025-08-30T16:57:19.000Z",
@@ -182,41 +142,6 @@
     "tags": [],
     "seoTitle": "No, a Windows update probably didn’t brick your SSD",
     "seoDescription": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Ph..."
-  },
-  {
-    "title": "How to Deploy a Python FastAPI Application to an EC2 Instance Using Amazon ECR",
-    "url": "https://dev.to/hassan_shahzad_086a39f774/how-to-deploy-a-python-fastapi-application-to-an-ec2-instance-using-amazon-ecr-4i1h",
-    "publishedAt": "2025-08-30T16:54:58.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Deploying a Python FastAPI application on the cloud ensures scalability, reliability, and performance. Amazon Web Services (AWS) provides powerful tools like Amazon EC2 (Elastic Compute Cloud) and Amazon ECR (Elastic Container Registry) to simplify the deployment process using Docker containers. In this guide, we’ll walk you through step-by-step instructi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8l50peyx15mqoc0dedu8.jpg",
-    "video": null,
-    "author": "Hassan Shahzad",
-    "tags": [
-      "webdev",
-      "programming",
-      "python",
-      "aws"
-    ],
-    "seoTitle": "How to Deploy a Python FastAPI Application to an EC2 Instance Using Amazon ECR",
-    "seoDescription": "Deploying a Python FastAPI application on the cloud ensures scalability, reliability, and performance. Amazon Web Services (AWS) provides powerful tools like..."
-  },
-  {
-    "title": "It’s time for Apple to revive one of its discontinued iPad accessories",
-    "url": "https://9to5mac.com/2025/08/30/its-time-for-apple-to-revive-one-of-its-discontinued-ipad-accessories/",
-    "publishedAt": "2025-08-30T15:18:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essentially served as the same product. Nowadays, after the introduction of trackpad support in iPadOS and the , everything is unnecessarily convoluted – with each iPad model having a slightly different Magi...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2018/11/2018-iPad-Pro-Smart-Keyboard-Folio-on-Desk1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
-    "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
   },
   {
     "title": "The 20 best Labor Day deals you can grab for $100 or less",
@@ -630,5 +555,70 @@
     ],
     "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
     "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
+  },
+  {
+    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
+    "publishedAt": "2025-08-29T19:53:06.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
+  },
+  {
+    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
+    "publishedAt": "2025-08-29T19:44:15.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
+    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
+    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "The roses",
+      "Comedy",
+      "Remake",
+      "Adaptation"
+    ],
+    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
+  },
+  {
+    "title": "Michelle Yeoh's Top 10 Movies",
+    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
+    "publishedAt": "2025-08-29T19:27:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
+    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
+    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Michelle yeoh",
+      "Martial arts movies"
+    ],
+    "seoTitle": "Michelle Yeoh's Top 10 Movies",
+    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
+  },
+  {
+    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
+    "publishedAt": "2025-08-29T19:21:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Richard Lawler",
+    "tags": [],
+    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
   }
 ]
