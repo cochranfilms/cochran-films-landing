@@ -1,5 +1,43 @@
 [
   {
+    "title": "How I put my homelab to use",
+    "url": "https://dev.to/gaurang_pawar_e9c0710cbe5/how-i-put-my-homelab-to-use-3loo",
+    "publishedAt": "2025-08-30T20:03:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I recently launched sttrace.com, it's a site where people can practice real world software engineering problems. When it was finally time to move it from localhost to the internet I had to figure out a way to host it without burning a hole in my pocket. It's a simple website with a React client, Node.js backend server and a container manager REST API serv...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fllaut43gux8ur11bjqzs.png",
+    "video": null,
+    "author": "Gaurang Pawar",
+    "tags": [
+      "devops",
+      "webdev",
+      "startup",
+      "networking"
+    ],
+    "seoTitle": "How I put my homelab to use",
+    "seoDescription": "I recently launched sttrace.com, it's a site where people can practice real world software engineering problems. When it was finally time to move it from loc..."
+  },
+  {
+    "title": "Generative AI for Business: Beyond ChatGPT - Innovation, Compliance & Use Cases",
+    "url": "https://dev.to/zestminds_technologies_c1/generative-ai-for-business-beyond-chatgpt-innovation-compliance-use-cases-34od",
+    "publishedAt": "2025-08-30T19:36:15.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Generative AI is changing the way we build products, solve problems, and run businesses. But here’s the truth: ChatGPT ≠ Enterprise AI. As developers and tech leaders, we need to think beyond demos and ask the real questions: How do we ensure compliance (GDPR, HIPAA, CCPA)? Can AI integrate with our ERP/CRM pipelines? Will it scale without breaking infras...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.zestminds.com%2Fimages%2F205%2Fenterprise-ai-workflow-beyond-chatgpt.png",
+    "video": null,
+    "author": "Zestminds Technologies",
+    "tags": [
+      "chatgpt",
+      "ai",
+      "developers",
+      "webdev"
+    ],
+    "seoTitle": "Generative AI for Business: Beyond ChatGPT - Innovation, Compliance & Use Cases",
+    "seoDescription": "Generative AI is changing the way we build products, solve problems, and run businesses. But here’s the truth: ChatGPT ≠ Enterprise AI. As developers and tec..."
+  },
+  {
     "title": "Instantly Convert PDFs to Structured JSON with JSONIFY",
     "url": "https://dev.to/srijan_kumar_94e658aa3dda/instantly-convert-pdfs-to-structured-json-with-jsonify-5afm",
     "publishedAt": "2025-08-30T19:05:38.000Z",
@@ -19,63 +57,6 @@
     "seoDescription": "I’m excited to share JsonifyPDF, a fully open source project that converts PDF documents into structured JSON data using AI-powered extraction. Live Project:..."
   },
   {
-    "title": "Python for Real-Time Botox Monitoring Systems",
-    "url": "https://dev.to/cristian_holquis_09836ff1/python-for-real-time-botox-monitoring-systems-4opp",
-    "publishedAt": "2025-08-30T18:44:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Python for Real-Time Botox Monitoring Systems The healthcare and cosmetic industries are increasingly adopting real-time data monitoring systems to enhance efficiency, safety, and patient satisfaction. In the field of aesthetic treatments such as Botox, Python offers robust tools for building applications that can track sessions, monitor patient feedback,...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsrbqd5rhp2jbt6fn0ncp.png",
-    "video": null,
-    "author": "cristian holquis",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python for Real-Time Botox Monitoring Systems",
-    "seoDescription": "Python for Real-Time Botox Monitoring Systems The healthcare and cosmetic industries are increasingly adopting real-time data monitoring systems to enhance e..."
-  },
-  {
-    "title": "Building a Smart Commute Assistant with Bright Data, n8n, and Weather & Google Maps APIs",
-    "url": "https://dev.to/nishikantaray/building-a-smart-commute-assistant-with-bright-data-n8n-and-weather-google-maps-apis-143o",
-    "publishedAt": "2025-08-30T18:39:48.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data A comprehensive breakdown of building an intelligent traffic solution using Bright Data, n8n, and multi-source data integration Core Components: Data Collection Layer: Bright Data web scraping + Weather/Maps APIs Processing Engine: n8n workflow automation with custom decision ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7f2v6y9iug48dt37wmgt.png",
-    "video": null,
-    "author": "Nishikanta Ray",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Building a Smart Commute Assistant with Bright Data, n8n, and Weather & Google Maps APIs",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data A comprehensive breakdown of building an intelligent traffic solution using B..."
-  },
-  {
-    "title": "Git Rebase: A Practical Guide",
-    "url": "https://dev.to/lovestaco/git-rebase-a-practical-guide-175p",
-    "publishedAt": "2025-08-30T18:35:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Rebasing is one of Git’s most powerful but also most misunderstood commands. It helps you keep a clean, linear commit history, but it also...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc0bs1ce90jcduladx5hq.jpg",
-    "video": null,
-    "author": "Athreya aka Maneshwar",
-    "tags": [
-      "git",
-      "webdev",
-      "programming",
-      "beginners"
-    ],
-    "seoTitle": "Git Rebase: A Practical Guide",
-    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
-  },
-  {
     "title": "11 Al Pacino Movies That Define Great Acting",
     "url": "https://nofilmschool.com/best-al-pacino-movies",
     "publishedAt": "2025-08-30T18:30:03.000Z",
@@ -91,25 +72,6 @@
     ],
     "seoTitle": "11 Al Pacino Movies That Define Great Acting",
     "seoDescription": "There are actors who chase roles, and then there’s Al Pacino—who made the roles chase him. For over five decades, he’s delivered performances that feel less ..."
-  },
-  {
-    "title": "Python aplicado a la minería de datos sobre tradiciones de curanderos",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/python-aplicado-a-la-mineria-de-datos-sobre-tradiciones-de-curanderos-26cl",
-    "publishedAt": "2025-08-30T18:24:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La minería de datos es una de las aplicaciones más poderosas de la inteligencia artificial y el análisis estadístico moderno. Gracias a lenguajes de programación como Python, hoy es posible estudiar y procesar información cultural, histórica y social que antes era casi imposible analizar de forma masiva. Un ejemplo interesante de aplicación es el estudio ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcr6c83ocrzseeuppbasu.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python aplicado a la minería de datos sobre tradiciones de curanderos",
-    "seoDescription": "La minería de datos es una de las aplicaciones más poderosas de la inteligencia artificial y el análisis estadístico moderno. Gracias a lenguajes de programa..."
   },
   {
     "title": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
@@ -142,6 +104,22 @@
     "tags": [],
     "seoTitle": "No, a Windows update probably didn’t brick your SSD",
     "seoDescription": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Ph..."
+  },
+  {
+    "title": "It’s time for Apple to revive one of its discontinued iPad accessories",
+    "url": "https://9to5mac.com/2025/08/30/its-time-for-apple-to-revive-one-of-its-discontinued-ipad-accessories/",
+    "publishedAt": "2025-08-30T15:18:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essentially served as the same product. Nowadays, after the introduction of trackpad support in iPadOS and the , everything is unnecessarily convoluted – with each iPad model having a slightly different Magi...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2018/11/2018-iPad-Pro-Smart-Keyboard-Folio-on-Desk1.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
+    "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
   },
   {
     "title": "The 20 best Labor Day deals you can grab for $100 or less",
@@ -620,5 +598,21 @@
     "tags": [],
     "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
     "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
+  },
+  {
+    "title": "iOS 26: 5 New Features in the Wallet App",
+    "url": "https://www.macrumors.com/guide/ios-26-wallet-app/",
+    "publishedAt": "2025-08-29T19:16:13.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and more. We've outlined everything new in the Wallet app below. Order Tracking The ‌iOS 26‌ Wallet app features enhanced order tracking, and you can now use it to track all of your purchases rather than j...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Wallet-Glass-Feature.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "iOS 26: 5 New Features in the Wallet App",
+    "seoDescription": "iOS 26 adds several features to the built-in Wallet app on the iPhone, providing a new way to track your online shopping, an update to boarding passes, and m..."
   }
 ]
