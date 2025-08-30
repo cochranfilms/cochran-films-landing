@@ -1,5 +1,66 @@
 [
   {
+    "title": "Create your own personal website for free — A guide to using GitHub Pages",
+    "url": "https://dev.to/cat_dogrunning_in_the_s/create-your-own-personal-website-for-free-a-guide-to-using-github-pages-1f7a",
+    "publishedAt": "2025-08-30T00:28:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Preface I've been wanting to create a website for my independently developed app, AudioAndVideoEditor. Setting up a server, domain name, and developing the website from scratch is obviously expensive. GitHub offers free static web hosting, allowing you to launch your website in just a few steps (compared to developing a website from scratch). This article...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftk1ww8vgpcpefc2byou1.jpg",
+    "video": null,
+    "author": "cat dog (running_in_the_storm)",
+    "tags": [
+      "productivity",
+      "github",
+      "webdev",
+      "opensource"
+    ],
+    "seoTitle": "Create your own personal website for free — A guide to using GitHub Pages",
+    "seoDescription": "Preface I've been wanting to create a website for my independently developed app, AudioAndVideoEditor. Setting up a server, domain name, and developing the w..."
+  },
+  {
+    "title": "Apple Says App Store Changes Go Too Far in New Epic Games Appeal Filing",
+    "url": "https://www.macrumors.com/2025/08/29/apple-app-store-epic-games-appeal-filing/",
+    "publishedAt": "2025-08-30T00:00:14.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "The court order that required Apple to change its anti-steering App Store rules is unlawful and unconstitutional, Apple said today in a reply brief directed at Epic Games and filed with the Ninth Circuit Court of Appeals. Apple argues that it has been stripped of its rights to be compensated for its intellectual property in a ruling that sets a dangerous ...",
+    "image": "https://images.macrumors.com/article-new/2022/01/iOS-App-Store-General-Feature-Black.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "App Store",
+      "Epic Games",
+      "Epic Games vs. Apple",
+      "Apple Lawsuits"
+    ],
+    "seoTitle": "Apple Says App Store Changes Go Too Far in New Epic Games Appeal Filing",
+    "seoDescription": "The court order that required Apple to change its anti-steering App Store rules is unlawful and unconstitutional, Apple said today in a reply brief directed ..."
+  },
+  {
+    "title": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
+    "url": "https://petapixel.com/2025/08/29/appeals-court-rules-trumps-sweeping-global-tariffs-are-illegal/",
+    "publishedAt": "2025-08-29T23:57:20.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The U.S. Court of Appeals for the Federal Circuit has upheld a lower court's ruling that the law President Donald Trump has been using to enact his widespread tariff policy does not actually grant him that power, setting up a final appeal to the Supreme Court. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/04/Trumps-Plan-for-a-24-Tariff-on-Japan-Likely-to-Impact-Camera-and-Lens-Prices.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Culture",
+      "Law",
+      "News",
+      "appeal",
+      "appealscourt",
+      "donaldtrump",
+      "law",
+      "ruling"
+    ],
+    "seoTitle": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
+    "seoDescription": "The U.S. Court of Appeals for the Federal Circuit has upheld a lower court's ruling that the law President Donald Trump has been using to enact his widesprea..."
+  },
+  {
     "title": "Como me certifique como Vue.js Senior Developer y recomendaciones",
     "url": "https://dev.to/aletorres1102/como-me-certifique-como-vuejs-senior-developer-y-recomendaciones-45d7",
     "publishedAt": "2025-08-29T23:07:04.000Z",
@@ -125,25 +186,6 @@
     ],
     "seoTitle": "iPhone’s Crash Detection feature saves teen who fell asleep behind the wheel",
     "seoDescription": "This is probably not the first time you’ve read about an iPhone automatically calling 911 following a serious car crash, but stories like this never cease to..."
-  },
-  {
-    "title": "Python Dashboards for Botox Business Analytics",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/python-dashboards-for-botox-business-analytics-40lj",
-    "publishedAt": "2025-08-29T21:13:01.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The aesthetics industry is not only about delivering excellent Python Dashboards for Botox Business Analytics are powerful tools - Many aesthetic clinics rely on manual tracking through spreadsheets or data-driven insights to make A clinic offering Botox streeterville il services could use a Which treatments are booked most often by age group.\\ What days ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F85gw8082ffn6cem5opze.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python Dashboards for Botox Business Analytics",
-    "seoDescription": "The aesthetics industry is not only about delivering excellent Python Dashboards for Botox Business Analytics are powerful tools - Many aesthetic clinics rel..."
   },
   {
     "title": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
@@ -615,39 +657,5 @@
     ],
     "seoTitle": "Can You Guess the Rumored Name for Fujifilm’s Successor to the X-T30 II?",
     "seoDescription": "In what might be the least dramatic news of all time, according to reports online from Fujirumors, trusted sources have revealed what the name of the next ve..."
-  },
-  {
-    "title": "AirPods 3 are imminent, here’s why I’m upgrading",
-    "url": "https://9to5mac.com/2025/08/29/why-airpods-pro-3-will-be-an-instant-upgrade-for-me/",
-    "publishedAt": "2025-08-29T16:57:55.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s “Awe dropping” event is officially set for September 9, and it’s likely to focus on the iPhone 17 and new Apple Watch models. Based on the latest reporting, however, the highly-anticipated AirPods Pro 3 might also make their debut at the event. AirPods Pro 3 are expected to offer a handful of notable upgrades, and they just might steal the show fo...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/airpods-pro-3-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "AirPods 3 are imminent, here’s why I’m upgrading",
-    "seoDescription": "Apple’s “Awe dropping” event is officially set for September 9, and it’s likely to focus on the iPhone 17 and new Apple Watch models. Based on the latest rep..."
-  },
-  {
-    "title": "The Very Best American Martial Arts Movies",
-    "url": "https://nofilmschool.com/american-martial-arts-cinema",
-    "publishedAt": "2025-08-29T16:55:40.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "America was absolutely enthralled with the martial arts movies coming out of Asia in the 60s and 70s. These films changed culture, and Hollywood knew it had to get a piece. That's why we saw such an influx of these titles, and we still see them today. There's something magical about using your body as a weapon and feeling like you have an advantage in any...",
-    "image": "https://nofilmschool.com/media-library/the-best-of-american-martial-arts-cinema.jpg?id=61534167&width=980",
-    "video": "https://www.youtube.com/embed/r_8Rw16uscg?rel=0&start=18",
-    "author": "Jason Hellerman",
-    "tags": [
-      "American film",
-      "Best movies",
-      "Martial arts movies"
-    ],
-    "seoTitle": "The Very Best American Martial Arts Movies",
-    "seoDescription": "America was absolutely enthralled with the martial arts movies coming out of Asia in the 60s and 70s. These films changed culture, and Hollywood knew it had ..."
   }
 ]
