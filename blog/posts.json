@@ -1,5 +1,94 @@
 [
   {
+    "title": "Albinism: Symptoms, Types, Causes, Diagnosis, Treatment, and More",
+    "url": "https://dev.to/quickhealthlife/albinism-symptoms-types-causes-diagnosis-treatment-and-more-po1",
+    "publishedAt": "2025-08-30T02:01:20.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Albinism is a rare genetic condition characterized by reduced or absent melanin production. Melanin is the pigment responsible for coloring our skin, hair, and eyes. This condition affects people worldwide, regardless of ethnicity or gender. While often visible through lighter physical features, albinism primarily impacts vision health and requires carefu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fns77o1bfged2coxtxmqa.jpg",
+    "video": null,
+    "author": "Quickhealthlife",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Albinism: Symptoms, Types, Causes, Diagnosis, Treatment, and More",
+    "seoDescription": "Albinism is a rare genetic condition characterized by reduced or absent melanin production. Melanin is the pigment responsible for coloring our skin, hair, a..."
+  },
+  {
+    "title": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
+    "url": "https://9to5mac.com/2025/08/29/macbook-pro-m4-first-worthy-apple-silicon-upgrade/",
+    "publishedAt": "2025-08-30T02:00:56.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it worth upgrading to, even if you already have an older . more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/MacBook-Pro-14.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
+    "seoDescription": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it..."
+  },
+  {
+    "title": "Built My First AI Travel Agent with OpenAI Assistants API and Real Flight Data",
+    "url": "https://dev.to/jeffrey_39f861255ebf7c628/built-my-first-ai-travel-agent-with-openai-assistants-api-and-real-flight-data-4h5p",
+    "publishedAt": "2025-08-30T01:52:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "*This is a submission for the AI Agents Challenge powered by n8n and Bright Data I used SerpApi for real-time flight data collection, but I'm interested in exploring Bright Data's Verified Node for enhanced data reliability and compliance in future versions. This is a solo submission. I built the entire project independently from backend API development t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwdo2gxaitin635fnrvae.png",
+    "video": null,
+    "author": "Jeffrey",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Built My First AI Travel Agent with OpenAI Assistants API and Real Flight Data",
+    "seoDescription": "*This is a submission for the AI Agents Challenge powered by n8n and Bright Data I used SerpApi for real-time flight data collection, but I'm interested in e..."
+  },
+  {
+    "title": "Meet Bugsy, Your AI Web Bug Hunter",
+    "url": "https://dev.to/isah_alamin_93d4e4d2ab01f/meet-bugsy-your-ai-web-bug-hunter-4dm3",
+    "publishedAt": "2025-08-30T01:19:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Meet Bugsy — my AI-powered bug hunter. Bugsy works as an ethical agent that scans websites for common security exposures and gently waves a red flag when it finds something risky. Think of it as a tireless security intern who never sleeps, never complains, and always documents...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fni3emj5hlgdy3mo020e1.png",
+    "video": null,
+    "author": "Isah Alamin",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Meet Bugsy, Your AI Web Bug Hunter",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Meet Bugsy — my AI-powered bug hunter. Bugsy works as an ethical agent that s..."
+  },
+  {
+    "title": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
+    "url": "https://9to5mac.com/2025/08/29/in-a-new-filing-apple-fights-back-against-courts-indefensible-epic-games-ruling/",
+    "publishedAt": "2025-08-30T01:11:36.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse Judge Yvonne Gonzalez Rogers’ 2021 decision, or vacate the new injunction and assign a new judge to the case. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/Epic-Games-accuses-Apple-of-delaying-its-game-store-launch.webp?w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
+    "seoDescription": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse ..."
+  },
+  {
     "title": "Create your own personal website for free — A guide to using GitHub Pages",
     "url": "https://dev.to/cat_dogrunning_in_the_s/create-your-own-personal-website-for-free-a-guide-to-using-github-pages-1f7a",
     "publishedAt": "2025-08-30T00:28:12.000Z",
@@ -24,7 +113,7 @@
     "publishedAt": "2025-08-30T00:00:14.000Z",
     "source": "macrumors.com",
     "category": "apple",
-    "summary": "The court order that required Apple to change its anti-steering App Store rules is unlawful and unconstitutional, Apple said today in a reply brief directed at Epic Games and filed with the Ninth Circuit Court of Appeals. Apple argues that it has been stripped of its rights to be compensated for its intellectual property in a ruling that sets a dangerous ...",
+    "summary": "The court order that required Apple to collect no fees from developers who link to purchases outside of the App Store is unconstitutional, Apple said today in a reply brief directed at Epic Games and filed with the Ninth Circuit Court of Appeals. Apple argues that it has been stripped of its rights to be compensated for its intellectual property in a ruli...",
     "image": "https://images.macrumors.com/article-new/2022/01/iOS-App-Store-General-Feature-Black.jpg",
     "video": null,
     "author": "Juli Clover",
@@ -35,7 +124,7 @@
       "Apple Lawsuits"
     ],
     "seoTitle": "Apple Says App Store Changes Go Too Far in New Epic Games Appeal Filing",
-    "seoDescription": "The court order that required Apple to change its anti-steering App Store rules is unlawful and unconstitutional, Apple said today in a reply brief directed ..."
+    "seoDescription": "The court order that required Apple to collect no fees from developers who link to purchases outside of the App Store is unconstitutional, Apple said today i..."
   },
   {
     "title": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
@@ -116,44 +205,6 @@
     ],
     "seoTitle": "Deconstructing gin.Context: More Than Just a Context",
     "seoDescription": "First, we must understand the design purpose of gin.Context (or echo.Context). It is a context object specific to a web framework, used to handle a single HT..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/anthonymax/-b4f",
-    "publishedAt": "2025-08-29T22:52:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2103048%2F716988a5-9c51-49bf-acef-191bc6dd2fee.jpeg",
-    "video": null,
-    "author": "Anthony Max",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "10 Open Source Tools Every Developer Should Know 🔥 Anthony Max ・ Aug 29 #webdev #javascript #programming #opensource"
-  },
-  {
-    "title": "10 Open Source Tools Every Developer Should Know 🔥",
-    "url": "https://dev.to/anthonymax/10-open-source-tools-every-developer-should-know-559p",
-    "publishedAt": "2025-08-29T22:50:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When studying a profession, we often encounter the fact that new knowledge gives us a feeling of the full picture, when everything becomes clearer. As the industry develops, something new appears every day that gives more advantageous positions to those who know it. This was the case, for example, with the emergence of ChatGPT, knowledge of which gave peo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7wct6kaab618gb0reakc.png",
-    "video": null,
-    "author": "Anthony Max",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "opensource"
-    ],
-    "seoTitle": "10 Open Source Tools Every Developer Should Know 🔥",
-    "seoDescription": "When studying a profession, we often encounter the fact that new knowledge gives us a feeling of the full picture, when everything becomes clearer. As the in..."
   },
   {
     "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
@@ -593,69 +644,5 @@
     ],
     "seoTitle": "Are You Ready For All of the New Features Coming to AI-Assisted Video Editing?",
     "seoDescription": "It’s been a busy month for the team at Eddie AI as the company reports that it has rolled out nearly 50 new features since the first of August. We’ve covered..."
-  },
-  {
-    "title": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
-    "url": "https://nofilmschool.com/prograde-digital-pg10-usb4-external-ssd",
-    "publishedAt": "2025-08-29T17:08:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer requests, professionals are looking for all the ways that they can to read, write, transfer, upload, and share footage as quickly as possible. To help with these endeavors, ProGrade Digital has launched a ...",
-    "image": "https://nofilmschool.com/media-library/image.png?id=61534108&width=980",
-    "video": null,
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Prograde digital",
-      "Usb4",
-      "External ssd",
-      "Ssd",
-      "16tb ssd",
-      "Prograde digital pg10 usb4 external ssd"
-    ],
-    "seoTitle": "Is This New 16TB External SSD Big and Fast Enough For Your Video Workflows?",
-    "seoDescription": "The world of video is speeding up. Not only do we have tighter windows and turnarounds for projects these days, but with larger file sizes and transfer reque..."
-  },
-  {
-    "title": "Hasselblad Has a Winner, and Did We NEED the GR IV? | The PetaPixel Podcast",
-    "url": "https://petapixel.com/2025/08/29/hasselblad-has-a-winner-and-did-we-need-the-gr-iv-the-petapixel-podcast/",
-    "publishedAt": "2025-08-29T17:01:01.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "This week on the PetaPixel podcast, the team discusses the Hasselblad X2D II 100C and the Ricoh GR IV. Two very different cameras, but both have their merits. But while the Hasselblad actually came down in price compared to its predecessor, the opposite is true of the GR IV. So, was it worth it? [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Hasselblad-Has-a-Winner-and-Did-We-NEED-the-GR-IV-The-PetaPixel-Podcast-1600x840.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Podcast",
-      "hasselblad",
-      "hasselbladx2dii100c",
-      "petapixelpodcast",
-      "podcast",
-      "ricoh",
-      "ricohgriv",
-      "thepetapixelpodcast"
-    ],
-    "seoTitle": "Hasselblad Has a Winner, and Did We NEED the GR IV? | The PetaPixel Podcast",
-    "seoDescription": "This week on the PetaPixel podcast, the team discusses the Hasselblad X2D II 100C and the Ricoh GR IV. Two very different cameras, but both have their merits..."
-  },
-  {
-    "title": "Can You Guess the Rumored Name for Fujifilm’s Successor to the X-T30 II?",
-    "url": "https://nofilmschool.com/fujifilm-x-t30-ii-successor",
-    "publishedAt": "2025-08-29T16:58:08.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In what might be the least dramatic news of all time, according to reports online from Fujirumors, trusted sources have revealed what the name of the next version of the Fujifilm X-T30 will be. And, man, when you find out, you’re going to be in total shock. Currently, the Fujifilm X-T30 II is the latest version of the company’s popular APS-C mirrorless ca...",
-    "image": "https://nofilmschool.com/media-library/fujifilm-x-t30-ii-successor.jpg?id=61534171&width=980",
-    "video": "https://www.youtube.com/embed/ZVuys1pxFbs?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Camera rumors",
-      "Fujifilm",
-      "Fujifilm x-t30 iii",
-      "Fujifilm x-t30",
-      "​fujifilm x-t30 ii"
-    ],
-    "seoTitle": "Can You Guess the Rumored Name for Fujifilm’s Successor to the X-T30 II?",
-    "seoDescription": "In what might be the least dramatic news of all time, according to reports online from Fujirumors, trusted sources have revealed what the name of the next ve..."
   }
 ]
