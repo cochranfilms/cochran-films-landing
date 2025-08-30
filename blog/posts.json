@@ -1,60 +1,55 @@
 [
   {
-    "title": "The Subtle Art of State Management Without Redux or Zustand",
-    "url": "https://dev.to/mrrookie/the-subtle-art-of-state-management-without-redux-or-zustand-1fjo",
-    "publishedAt": "2025-08-30T11:01:44.000Z",
+    "title": "LinkedIn Profile Deep Research with Insights + Bright Data Agent Analysis + n8n with Google Gemini",
+    "url": "https://dev.to/ranjancse/linkedin-profile-deep-research-with-insights-bright-data-agent-analysis-n8n-with-google-gemini-3i7p",
+    "publishedAt": "2025-08-30T12:02:55.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "State management is the frontend engineer’s favorite battleground. Every team has a war story: Too much prop drilling Context providers everywhere Redux boilerplate bigger than the app itself I’ve seen teams spend weeks debating whether to use Redux, Zustand, MobX, or Context. But here’s the thing: you don’t always need a library. With careful patterns, R...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Figl6qvg6ztiy8d66nsdn.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download Workflow LinkedIn Profile Deep Research with Insights + Bright Data Agent Analysis with Google Gemini The LinkedIn Deep Research + Gemini-Powered Workflow is an end-to-end automation pipeline designed to extract, analyze, and enrich professional data from LinkedIn pro...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo8deiyzgybw74udtnczy.png",
     "video": null,
-    "author": "Anish",
+    "author": "Ranjan Dailata",
     "tags": [
+      "n8nbrightdatachallenge",
       "webdev",
-      "react",
-      "redux",
-      "programming"
+      "ai",
+      "devchallenge"
     ],
-    "seoTitle": "The Subtle Art of State Management Without Redux or Zustand",
-    "seoDescription": "State management is the frontend engineer’s favorite battleground. Every team has a war story: Too much prop drilling Context providers everywhere Redux boil..."
+    "seoTitle": "LinkedIn Profile Deep Research with Insights + Bright Data Agent Analysis + n8n with Google Gemini",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download Workflow LinkedIn Profile Deep Research with Insights + Bright Data ..."
   },
   {
-    "title": "The Power of \"^\" in package.json",
-    "url": "https://dev.to/bdhamithkumara/the-power-of-in-packagejson-4pb7",
-    "publishedAt": "2025-08-30T10:50:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "If you've ever peeked into your package.json file when working with Next.js (or any JavaScript framework), you’ve probably noticed something like this, At first glance, it's just a version number with a little caret ^. Seems harmless, right? But that tiny symbol can determine whether your app runs smoothly in production or suddenly breaks after deployment...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsyt98ww63ss9480vi3ez.png",
+    "title": "On the Path to Being a Great Photographer? There’s Something You Should Know",
+    "url": "https://petapixel.com/2025/08/30/on-the-path-to-being-a-great-photographer-theres-something-you-should-know/",
+    "publishedAt": "2025-08-30T12:01:22.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefore, modifying your actions can improve your photography. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/07/creativity-6-1600x840.jpg",
     "video": null,
-    "author": "Dhamith Kumara",
+    "author": "Ivor Rackham",
     "tags": [
-      "webdev",
-      "discuss",
-      "learning",
-      "development"
+      "Educational",
+      "Inspiration",
+      "creativity",
+      "education"
     ],
-    "seoTitle": "The Power of \"^\" in package.json",
-    "seoDescription": "If you've ever peeked into your package.json file when working with Next.js (or any JavaScript framework), you’ve probably noticed something like this, At fi..."
+    "seoTitle": "On the Path to Being a Great Photographer? There’s Something You Should Know",
+    "seoDescription": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefor..."
   },
   {
-    "title": "First blog post :)",
-    "url": "https://dev.to/rtnjt_bot/first-blog-post--5d60",
-    "publishedAt": "2025-08-30T10:16:17.000Z",
-    "source": "dev.to",
+    "title": "Why do Waymos keep loitering in front of my house?",
+    "url": "https://www.theverge.com/google-waymo/766002/waymo-la-loiter-parking-robotaxi-ai-public-space",
+    "publishedAt": "2025-08-30T12:00:00.000Z",
+    "source": "theverge.com",
     "category": "web",
-    "summary": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL Ritanjit Das ・ Aug 28 #webdev #react #typescript #portfolio",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3423101%2F6cb50862-83b4-48a5-b6d2-d27ecf726617.jpeg",
+    "summary": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home!\" she says, calling to her parents, Lisa Delgin and Zach Tucker. It is by no means the first time a Waymo has come \"home\" to this particular spot. Last year, a Waymo robotaxi dropped Delgin and Tucke...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKS518_WAYMO_TAXI_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Ritanjit Das",
-    "tags": [
-      "webdev",
-      "react",
-      "typescript",
-      "portfolio"
-    ],
-    "seoTitle": "First blog post :)",
-    "seoDescription": "From HTML to 3D: Why I Rebuild My Portfolio with React, Vite, Tailwind & FrontQL Ritanjit Das ・ Aug 28 #webdev #react #typescript #portfolio"
+    "author": "Rachel Kraus",
+    "tags": [],
+    "seoTitle": "Why do Waymos keep loitering in front of my house?",
+    "seoDescription": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home..."
   },
   {
     "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
