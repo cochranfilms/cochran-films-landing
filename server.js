@@ -57,9 +57,263 @@ app.use(express.static('.'));
 // Airtable Proxy API (used by index2.html)
 // ======================================
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN || process.env.AIRTABLE_API_KEY || '';
-const AIRTABLE_BASE_PORTFOLIO = process.env.AIRTABLE_BASE_PORTFOLIO || 'appjQxcRoClnZzghj';
-const AIRTABLE_BASE_WEB = process.env.AIRTABLE_BASE_WEB || 'appV5l9kZ5vAxcz4e';
-const AIRTABLE_BASE_PHOTOGRAPHY = process.env.AIRTABLE_BASE_PHOTOGRAPHY || 'appP1uFoRWjxPkQ5b';
+const AIRTABLE_CONFIG = require('./airtable.config.js');
+const AIRTABLE_BASE_PORTFOLIO = AIRTABLE_CONFIG.BASES['Video Production'];
+const AIRTABLE_BASE_WEB = AIRTABLE_CONFIG.BASES['Web Development'];
+const AIRTABLE_BASE_PHOTOGRAPHY = AIRTABLE_CONFIG.BASES['Photography'];
+const AIRTABLE_BASE_BRAND = AIRTABLE_CONFIG.BASES['Brand Development'];
+
+// ================================
+// Airtable helpers and caching
+// ================================
+const MEMORY_CACHE = new Map();
+function getCache(key) {
+  const hit = MEMORY_CACHE.get(key);
+  if (!hit) return null;
+  const now = Date.now();
+  if (hit.expiresAt && hit.expiresAt > now) return hit.value;
+  MEMORY_CACHE.delete(key);
+  return null;
+}
+function setCache(key, value, ttlMs = 60_000) {
+  MEMORY_CACHE.set(key, { value, expiresAt: Date.now() + ttlMs });
+}
+
+function sanitizeUrl(value) {
+  if (!value) return null;
+  try {
+    const u = new URL(String(value));
+    return u.href;
+  } catch (_) {
+    return null;
+  }
+}
+
+function firstAttachmentUrl(value, predicate) {
+  if (!value) return null;
+  if (Array.isArray(value) && value.length) {
+    const file = predicate ? value.find(predicate) : value[0];
+    if (file && file.url) return file.url;
+  }
+  if (value && value.url) return value.url;
+  return null;
+}
+
+function markdownToHtml(md) {
+  if (!md) return '';
+  // Minimal safe conversion: paragraphs + line breaks; avoid heavy deps
+  const escaped = String(md)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  const withBreaks = escaped.replace(/\n\n+/g, '</p><p>').replace(/\n/g, '<br/>');
+  return `<p>${withBreaks}</p>`;
+}
+
+function parseBoolean(value) {
+  return value === true || String(value).toLowerCase() === 'true';
+}
+
+function applyCommonQuery(records, { page = 1, pageSize = 24, search = '', category = '', featured = '' }, { searchableFields = [], categoryField = '', featuredField = '' }) {
+  let items = Array.isArray(records) ? records.slice() : [];
+  const trimmedSearch = String(search || '').trim().toLowerCase();
+  const trimmedCategory = String(category || '').trim();
+  const filterFeatured = String(featured || '').toLowerCase() === 'true';
+
+  if (trimmedSearch) {
+    items = items.filter((it) =>
+      searchableFields.some((f) => String(it[f] || '').toLowerCase().includes(trimmedSearch))
+    );
+  }
+  if (trimmedCategory && categoryField) {
+    items = items.filter((it) => String(it[categoryField] || '') === trimmedCategory);
+  }
+  if (filterFeatured && featuredField) {
+    items = items.filter((it) => it[featuredField] === true);
+  }
+
+  const total = items.length;
+  const p = Math.max(1, parseInt(page, 10) || 1);
+  const ps = Math.min(100, Math.max(1, parseInt(pageSize, 10) || 24));
+  const start = (p - 1) * ps;
+  const end = start + ps;
+  const pageItems = items.slice(start, end);
+
+  return { items: pageItems, page: p, pageSize: ps, total, totalPages: Math.max(1, Math.ceil(total / ps)) };
+}
+
+async function fetchAirtableAll(baseId, tableName) {
+  if (!AIRTABLE_TOKEN) {
+    throw new Error('Missing AIRTABLE_TOKEN (or AIRTABLE_API_KEY) environment variable');
+  }
+  const cacheKey = `airtable:${baseId}:${tableName}`;
+  const cached = getCache(cacheKey);
+  if (cached) return cached;
+
+  const baseUrl = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`;
+  const headers = {
+    Authorization: `Bearer ${AIRTABLE_TOKEN}`,
+    'Content-Type': 'application/json'
+  };
+  let all = [];
+  let offset = undefined;
+  do {
+    const url = new URL(baseUrl);
+    url.searchParams.set('pageSize', '100');
+    if (offset) url.searchParams.set('offset', offset);
+    const resp = await fetch(url.href, { headers });
+    if (!resp.ok) {
+      const text = await resp.text();
+      throw new Error(`Airtable ${resp.status} ${resp.statusText}: ${text}`);
+    }
+    const data = await resp.json();
+    const records = Array.isArray(data.records) ? data.records : [];
+    all = all.concat(records);
+    offset = data.offset;
+  } while (offset);
+  setCache(cacheKey, all, 60_000); // 60s TTL
+  return all;
+}
+
+// ================================
+// Normalizers (strict DTOs)
+// ================================
+function normalizePortfolio(record) {
+  const f = record?.fields || {};
+  const title = f['Title'] || 'Untitled';
+  const descriptionHtml = markdownToHtml(f['Description'] || '');
+  const category = f['Category'] || '';
+  const thumb = firstAttachmentUrl(f['Thumbnail Image']) || sanitizeUrl(f['Thumbnail URL']);
+  const isFeatured = parseBoolean(f['Is Featured']);
+  const ownerName = f['Owner Name'] || 'Cochran Films';
+  const playbackUrl = sanitizeUrl(
+    f['Playback URL'] ||
+    (firstAttachmentUrl(f['Video'], (a) => (a.type || '').includes('mp4')))
+  );
+  // video source preference per rule
+  let video = null;
+  if (f['Playback URL']) {
+    video = { src: sanitizeUrl(f['Playback URL']), type: 'url' };
+  } else {
+    const mp4 = firstAttachmentUrl(f['Video'], (a) => (a.type || '').includes('mp4'));
+    if (mp4) video = { src: sanitizeUrl(mp4), type: 'mp4' };
+  }
+  return {
+    id: record.id,
+    title,
+    descriptionHtml,
+    category,
+    thumbnail: thumb ? { src: thumb, alt: title } : null,
+    featured: isFeatured,
+    ownerName,
+    video, // { src, type: 'mp4'|'url' } or null
+  };
+}
+
+function normalizeBrand(record) {
+  const f = record?.fields || {};
+  const title = f['Title'] || 'Untitled';
+  return {
+    id: record.id,
+    title,
+    category: f['Category'] || '',
+    descriptionHtml: markdownToHtml(f['Description'] || ''),
+    videoUrl: sanitizeUrl(f['Video URL']),
+    logoUrl: sanitizeUrl(f['Logo URL']),
+    thumbnail: sanitizeUrl(f['Thumbnail URL']) ? { src: sanitizeUrl(f['Thumbnail URL']), alt: title } : null,
+    clientName: f['Client / Brand Name'] || '',
+    services: f['Services'] || '',
+    deliverables: f['Deliverables'] || '',
+    industry: f['Industry'] || '',
+    timeline: f['Timeline'] || '',
+    resultsHtml: markdownToHtml(f['Results / Impact'] || ''),
+    projectUrl: sanitizeUrl(f['Project URL'])
+  };
+}
+
+function normalizeWeb(record) {
+  const f = record?.fields || {};
+  const title = f['Title'] || 'Untitled';
+  return {
+    id: record.id,
+    title,
+    descriptionHtml: markdownToHtml(f['Description'] || ''),
+    category: f['Category'] || '',
+    thumbnail: sanitizeUrl(f['Thumbnail Image URL']) ? { src: sanitizeUrl(f['Thumbnail Image URL']), alt: title } : null,
+    featured: parseBoolean(f['Is Featured']),
+    url: sanitizeUrl(f['URL']),
+    techStack: f['Tech Stack'] || '',
+    role: f['Role'] || '',
+    clientCompany: f['Client / Company'] || '',
+    timeline: f['Timeline'] || '',
+    challengesHtml: markdownToHtml(f['Challenges'] || ''),
+    resultsHtml: markdownToHtml(f['Results'] || '')
+  };
+}
+
+function normalizePhoto(record) {
+  const f = record?.fields || {};
+  const url = sanitizeUrl(f['Image URL']);
+  return {
+    id: record.id,
+    image: url ? { src: url, alt: 'Gallery image' } : null
+  };
+}
+
+// ================================
+// Normalized endpoints
+// ================================
+app.get('/api/portfolio', async (req, res) => {
+  try {
+    const records = await fetchAirtableAll(AIRTABLE_BASE_PORTFOLIO, AIRTABLE_CONFIG.TABLE_NAME);
+    const normalized = records.map(normalizePortfolio);
+    const result = applyCommonQuery(normalized, req.query, { searchableFields: ['title', 'descriptionHtml'], categoryField: 'category', featuredField: 'featured' });
+    res.set('Cache-Control', 's-maxage=60, stale-while-revalidate=600');
+    res.json(result);
+  } catch (err) {
+    console.error('portfolio error', err);
+    res.status(500).json({ error: 'Failed to fetch portfolio' });
+  }
+});
+
+app.get('/api/brand', async (req, res) => {
+  try {
+    const records = await fetchAirtableAll(AIRTABLE_BASE_BRAND, AIRTABLE_CONFIG.TABLE_NAME);
+    const normalized = records.map(normalizeBrand);
+    const result = applyCommonQuery(normalized, req.query, { searchableFields: ['title', 'descriptionHtml', 'resultsHtml'], categoryField: 'category' });
+    res.set('Cache-Control', 's-maxage=60, stale-while-revalidate=600');
+    res.json(result);
+  } catch (err) {
+    console.error('brand error', err);
+    res.status(500).json({ error: 'Failed to fetch brand' });
+  }
+});
+
+app.get('/api/web', async (req, res) => {
+  try {
+    const records = await fetchAirtableAll(AIRTABLE_BASE_WEB, AIRTABLE_CONFIG.TABLE_NAME);
+    const normalized = records.map(normalizeWeb);
+    const result = applyCommonQuery(normalized, req.query, { searchableFields: ['title', 'descriptionHtml', 'techStack'], categoryField: 'category', featuredField: 'featured' });
+    res.set('Cache-Control', 's-maxage=60, stale-while-revalidate=600');
+    res.json(result);
+  } catch (err) {
+    console.error('web error', err);
+    res.status(500).json({ error: 'Failed to fetch web' });
+  }
+});
+
+app.get('/api/photos', async (req, res) => {
+  try {
+    const records = await fetchAirtableAll(AIRTABLE_BASE_PHOTOGRAPHY, AIRTABLE_CONFIG.TABLE_NAME);
+    const normalized = records.map(normalizePhoto);
+    const result = applyCommonQuery(normalized, req.query, { searchableFields: [], categoryField: '' });
+    res.set('Cache-Control', 's-maxage=60, stale-while-revalidate=600');
+    res.json(result);
+  } catch (err) {
+    console.error('photos error', err);
+    res.status(500).json({ error: 'Failed to fetch photos' });
+  }
+});
 
 async function fetchAirtableRecords(baseId, tableName) {
   if (!AIRTABLE_TOKEN) {
@@ -83,7 +337,7 @@ async function fetchAirtableRecords(baseId, tableName) {
 // Video Production
 app.get('/api/airtable/video-production', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_PORTFOLIO, 'Portfolio');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PORTFOLIO, AIRTABLE_CONFIG.TABLE_NAME);
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable video-production error:', err);
@@ -94,7 +348,7 @@ app.get('/api/airtable/video-production', async (req, res) => {
 // Web Development
 app.get('/api/airtable/web-development', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_WEB, 'Web');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_WEB, AIRTABLE_CONFIG.TABLE_NAME);
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable web-development error:', err);
@@ -105,7 +359,7 @@ app.get('/api/airtable/web-development', async (req, res) => {
 // Photography
 app.get('/api/airtable/photography', async (req, res) => {
   try {
-    const data = await fetchAirtableRecords(AIRTABLE_BASE_PHOTOGRAPHY, 'Photos');
+    const data = await fetchAirtableRecords(AIRTABLE_BASE_PHOTOGRAPHY, AIRTABLE_CONFIG.TABLE_NAME);
     res.status(200).json(data);
   } catch (err) {
     console.error('Airtable photography error:', err);

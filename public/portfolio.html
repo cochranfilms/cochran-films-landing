@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Cochran Films | Portfolio | Creative Work & Projects | Atlanta</title>
+  <meta name="title" content="Cochran Films | Portfolio | Creative Work & Projects | Atlanta" />
+  <meta name="description" content="Explore our creative portfolio featuring video production, web development, photography, and brand development projects that showcase our expertise and creativity." />
+  <meta name="keywords" content="portfolio, video production, web development, photography, brand development, creative work, Atlanta" />
+  <meta name="author" content="Cody Cochran, CEO & Founder" />
+  
+  <!-- Fonts + Icons (CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Airtable CMS Integration -->
+  <script>
+    window.API_BASE_URL = window.location.origin;
+    
+    // FALLBACK DATA - This will show real content immediately while we debug Airtable
+    window.FALLBACK_PORTFOLIO_DATA = [
+      {
+        Title: "Evolve Contracting - National Small Business Week Highlight",
+        Description: "DP | Gaffer | Editor | Audio. Shot on Sony FX6: 24-70mm f/2.8. Lights: Aputure Amaran COB 60x on a C-Stand w/lantern Diffuser.",
+        Category: "Commercials",
+        'Thumbnail Image': "https://static.wixstatic.com/media/aeef42_7a5a1e21bcb349369b5cfce51e197341~mv2.jpg",
+        'Is Featured': true,
+        playbackUrl: "https://video.wixstatic.com/video/aeef42_55d75649953a40d4963f44cb2322046f/1080p/mp4/file.mp4",
+        UploadDate: "2025-01-24",
+        ServiceCategory: "Video Production"
+      },
+      {
+        Title: "Course Creator Academy",
+        Description: "Course Creator Academy is a content creation education platform to help students enhance their videography skills.",
+        Category: "E-Commerce",
+        'Thumbnail Image': "https://github.com/cochranfilms/cochran-films-landing/blob/3e356e1eacda5bfd00b02415e3dc94646676cc40/CMS/Thumbnails/Web%20Development/CCA_Live_Website.png",
+        'Is Featured': true,
+        URL: "https://coursecreatoracademy.org/",
+        'Tech Stack': "Shopify, Liquid, HTML5, CSS3, JavaScript",
+        Role: "Full-Stack Developer & Systems Architect",
+        Client: "Course Creator Academy",
+        Timeline: "4 weeks",
+        ServiceCategory: "Web Development"
+      },
+      {
+        Title: "Cochran Films Website",
+        Description: "A Wix Studio-based dynamic website for Cochran Films, designed as a central hub for its video portfolio, service offerings, and client inquiry funnel.",
+        Category: "Media Services",
+        'Thumbnail Image': "https://github.com/cochranfilms/cochran-films-landing/blob/e3cd354bbb5a92a30bda77c24e8acf72f1f0bb36/CMS/Thumbnails/Web%20Development/CF_Live_Website.png",
+        'Is Featured': false,
+        URL: "https://www.cochranfilms.com",
+        'Tech Stack': "Wix Studio CMS, Velo by Wix, JavaScript, HTML5, CSS3",
+        Role: "Full-Stack Web Developer & Media Systems Designer",
+        Client: "Cochran Films",
+        Timeline: "6 weeks",
+        ServiceCategory: "Web Development"
+      },
+      {
+        Title: "Photography Portfolio",
+        Description: "Professional photography showcasing our creative vision and technical expertise.",
+        Category: "Portrait",
+        'Thumbnail Image': "https://landing.cochranfilms.com/CMS/Photos/DSC05613-Enhanced-NR.jpg",
+        'Is Featured': false,
+        ServiceCategory: "Photography"
+      },
+      {
+        Title: "Brand Identity Design",
+        Description: "Comprehensive brand development including logo design, color palette, and visual identity guidelines.",
+        Category: "Brand Development",
+        'Thumbnail Image': "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=center",
+        'Is Featured': true,
+        'Logo URL': "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop&crop=center",
+        'Client/Brand Name': "Sample Brand",
+        'Services Provided': "Logo Design, Brand Identity, Visual Guidelines",
+        ServiceCategory: "Brand Development"
+      }
+    ];
+  </script>
+  <script src="js/airtable-cms.js?v=20250823b"></script>
+  
+  <style>
+    /* Revolutionary Portfolio Design System */
+    :root {
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      --brand-gold: #FFB200;
+      --brand-blue: #0066CC;
+      --brand-red: #ef4444;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+      
+      /* New Portfolio Color Palette */
+      --cosmic-purple: #1a0b2e;
+      --deep-space: #16213e;
+      --electric-blue: #0f3460;
+      --neon-cyan: #00d4ff;
+      --aurora-green: #00ff88;
+      --plasma-pink: #ff006e;
+      --solar-gold: #ffbe0b;
+      --nebula-violet: #8338ec;
+      
+      /* Gradient Definitions */
+      --gradient-cosmic: linear-gradient(135deg, var(--cosmic-purple) 0%, var(--deep-space) 50%, var(--electric-blue) 100%);
+      --gradient-aurora: linear-gradient(135deg, var(--aurora-green) 0%, var(--neon-cyan) 50%, var(--nebula-violet) 100%);
+      --gradient-plasma: linear-gradient(135deg, var(--plasma-pink) 0%, var(--solar-gold) 50%, var(--brand-amber) 100%);
+      --gradient-electric: linear-gradient(135deg, var(--electric-blue) 0%, var(--brand-indigo) 50%, var(--nebula-violet) 100%);
+    }
+
+    /* Global Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cosmic-purple);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Revolutionary Slideshow Container */
+    .portfolio-slideshow {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--gradient-cosmic);
+    }
+
+    .slideshow-track {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .portfolio-slide {
+      width: 20%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5%;
+    }
+
+    /* Alternating Slide Backgrounds */
+    .portfolio-slide:nth-child(1) { background: var(--gradient-cosmic); }
+    .portfolio-slide:nth-child(2) { background: var(--gradient-aurora); }
+    .portfolio-slide:nth-child(3) { background: var(--gradient-plasma); }
+    .portfolio-slide:nth-child(4) { background: var(--gradient-electric); }
+    .portfolio-slide:nth-child(5) { background: var(--gradient-cosmic); }
+
+    /* Slide Content Layout */
+    .slide-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .slide-info {
+      z-index: 2;
+      max-width: 560px;
+    }
+
+    .slide-category {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .slide-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .slide-description {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+    }
+
+    .slide-stats {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .slide-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 2.5rem;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .slide-cta:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Revolutionary Gallery Grid */
+    .slide-gallery {
+      position: relative;
+      height: 700px;
+      width: 100%;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.5rem;
+      height: 100%;
+      width: 100%;
+      transform-style: preserve-3d;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .gallery-item:hover {
+      transform: translateZ(30px) rotateY(5deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+
+    /* Minimal normalization: fixed ratio wrappers and line clamping for titles/subtitles */
+    .gallery-item { aspect-ratio: 16/9; }
+    .gallery-info h4 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .gallery-info p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.8) 0%, rgba(131,56,236,0.8) 100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-play-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--cosmic-purple);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-play-btn:hover {
+      transform: scale(1.1);
+      background: white;
+    }
+
+    /* Gallery Info Overlay */
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-info {
+      transform: translateY(0);
+    }
+
+    .gallery-info h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0 0 0.25rem 0;
+      line-height: 1.2;
+    }
+
+    .gallery-info p {
+      font-size: 0.75rem;
+      margin: 0;
+      opacity: 0.8;
+      line-height: 1.2;
+    }
+
+    /* Featured Items Styling */
+    .gallery-item:nth-child(1) { 
+      grid-column: span 2; 
+      grid-row: span 2; 
+    }
+    .gallery-item:nth-child(2) { 
+      grid-column: 3; 
+      grid-row: 1; 
+    }
+    .gallery-item:nth-child(3) { 
+      grid-column: 3; 
+      grid-row: 2; 
+    }
+    .gallery-item:nth-child(4) { 
+      grid-column: 1; 
+      grid-row: 3; 
+    }
+    .gallery-item:nth-child(5) { 
+      grid-column: 2; 
+      grid-row: 3; 
+    }
+    .gallery-item:nth-child(6) { 
+      grid-column: 3; 
+      grid-row: 3; 
+    }
+
+    /* Collection-Specific Icons */
+    .gallery-item[data-collection="video"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--plasma-pink), var(--solar-gold));
+    }
+
+    .gallery-item[data-collection="web"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--electric-blue), var(--brand-indigo));
+    }
+
+    .gallery-item[data-collection="photo"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--aurora-green), var(--neon-cyan));
+    }
+
+    .gallery-item[data-collection="brand"] .gallery-play-btn {
+      background: linear-gradient(135deg, var(--nebula-violet), var(--brand-gold));
+    }
+
+    /* Placeholder Items */
+    .gallery-placeholder {
+      background: rgba(255,255,255,0.05);
+      border: 2px dashed rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-placeholder:hover {
+      opacity: 0.8;
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .placeholder-content {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .placeholder-content i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .placeholder-content span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Slideshow Navigation */
+    .slideshow-nav {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-dot.active {
+      background: white;
+      transform: scale(1.2);
+    }
+
+    .nav-dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot.active::after {
+      opacity: 1;
+    }
+
+    /* Slideshow Controls */
+    .slideshow-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+
+    .control-prev { left: 2rem; }
+    .control-next { right: 2rem; }
+
+    .control-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+    }
+
+    .control-btn:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.4);
+      transform: scale(1.1);
+    }
+
+    /* Progress Indicator */
+    .slideshow-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--neon-cyan);
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      z-index: 10;
+    }
+
+    /* Prevent content overflow on smaller widths */
+    .slide-title, .slide-description { word-wrap: break-word; overflow-wrap: anywhere; }
+    .slide-cta { max-width: 100%; white-space: nowrap; }
+
+    /* Enhanced Video Modal Styles */
+    .video-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .video-modal.show {
+      display: flex;
+    }
+
+    .video-modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
+
+    .video-modal-close:hover {
+      transform: scale(1.2);
+    }
+
+    /* Fix Navigation Menu Overlap */
+    .portfolio-slideshow {
+      padding-top: 80px; /* Add padding to account for fixed nav */
+    }
+
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    /* Adjust slide content for better visibility */
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      margin-top: 40px;
+    }
+
+    /* Floating Elements Animation */
+    .floating-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .floating-element {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      animation: float 20s infinite linear;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .slide-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      
+      .slide-title { font-size: 3rem; }
+      
+      .gallery-grid {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .slide-title { font-size: 3.5rem; }
+      .gallery-grid { height: 480px; }
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-slideshow {
+        height: auto;
+        min-height: 100vh;
+      }
+      
+      .portfolio-slide {
+        padding: 2rem;
+      }
+      
+      .slide-title {
+        font-size: 2.5rem;
+      }
+      
+      .slide-description {
+        font-size: 1.1rem;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 400px;
+      }
+      
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: 1;
+      }
+      
+      .gallery-item:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      
+      .gallery-item:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      
+      .gallery-item:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      
+      .gallery-item:nth-child(5) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+      
+      .gallery-item:nth-child(6) {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Navigation -->
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/home.html" class="nav-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/home.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a href="/portfolio.html" class="nav-link active">Portfolio <i class="fas fa-chevron-down dropdown-caret" aria-hidden="true"></i></a>
+          <ul class="submenu" aria-label="Portfolio Categories">
+            <li><a href="/portfolio.html#video-production" class="submenu-link">Video Production</a></li>
+            <li><a href="/portfolio.html#web-development" class="submenu-link">Web Development</a></li>
+            <li><a href="/portfolio.html#photography" class="submenu-link">Photography</a></li>
+            <li><a href="/portfolio.html#brand-development" class="submenu-link">Brand Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="/blog.html" class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="/book.html" class="nav-link nav-cta">Book Services</a>
+        </li>
+      </ul>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Revolutionary Portfolio Slideshow -->
+  <main class="portfolio-slideshow" id="portfolioSlideshow">
+    <!-- Progress Indicator -->
+    <div class="slideshow-progress" id="slideshowProgress"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Slideshow Track -->
+    <div class="slideshow-track" id="slideshowTrack">
+      
+      <!-- Slide 1: Video Production -->
+      <div class="portfolio-slide" data-category="Video Production">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-video"></i>
+              Video Production
+            </div>
+            <h1 class="slide-title">Cinematic Storytelling</h1>
+            <p class="slide-description">
+              From corporate narratives to live events, we craft visual stories that captivate audiences and drive meaningful engagement through strategic cinematography and post-production excellence.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2M+</span>
+                <span class="stat-label">Views</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+              </div>
+            </div>
+            <button onclick="portfolioSlideshow.navigateToCategory('Video Production')" class="slide-cta">
+              <span>Explore Videos</span>
+              <i class="fas fa-play"></i>
+            </button>
+          </div>
+          <div class="slide-gallery" id="videoGallery">
+            <div class="gallery-grid" id="videoProductionGrid">
+              <!-- Video items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Web Development -->
+      <div class="portfolio-slide" data-category="Web Development">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-code"></i>
+              Web Development
+            </div>
+            <h1 class="slide-title">Digital Experiences</h1>
+            <p class="slide-description">
+              We build responsive, high-performance websites and web applications that drive results. From e-commerce platforms to custom CMS solutions, every project is crafted with precision and purpose.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Websites</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Uptime</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">3s</span>
+                <span class="stat-label">Load Time</span>
+              </div>
+            </div>
+            <button onclick="portfolioSlideshow.navigateToCategory('Web Development')" class="slide-cta">
+              <span>View Projects</span>
+              <i class="fas fa-external-link-alt"></i>
+            </button>
+          </div>
+          <div class="slide-gallery" id="webGallery">
+            <div class="gallery-grid" id="webDevelopmentGrid">
+              <!-- Web development items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Photography -->
+      <div class="portfolio-slide" data-category="Photography">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-camera"></i>
+              Photography
+            </div>
+            <h1 class="slide-title">Visual Narratives</h1>
+            <p class="slide-description">
+              Professional photography that captures the essence of your brand, events, and products. Our artistic vision combined with technical expertise delivers stunning imagery that tells your story.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Photos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Events</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4K</span>
+                <span class="stat-label">Resolution</span>
+              </div>
+            </div>
+            <button onclick="portfolioSlideshow.navigateToCategory('Photography')" class="slide-cta">
+              <span>Browse Gallery</span>
+              <i class="fas fa-images"></i>
+            </button>
+          </div>
+          <div class="slide-gallery" id="photoGallery">
+            <div class="gallery-grid" id="photographyGrid">
+              <!-- Photography items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Brand Development -->
+      <div class="portfolio-slide" data-category="Brand Development">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-palette"></i>
+              Brand Development
+            </div>
+            <h1 class="slide-title">Identity Systems</h1>
+            <p class="slide-description">
+              Comprehensive brand development that builds lasting connections. From logo design to complete visual identity systems, we create cohesive brand experiences that resonate with your audience.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Brands</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Custom</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Assets</span>
+              </div>
+            </div>
+            <button onclick="portfolioSlideshow.navigateToCategory('Brand Development')" class="slide-cta">
+              <span>See Brands</span>
+              <i class="fas fa-paint-brush"></i>
+            </button>
+          </div>
+          <div class="slide-gallery" id="brandGallery">
+            <div class="gallery-grid" id="brandDevelopmentGrid">
+              <!-- Brand development items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Featured Work -->
+      <div class="portfolio-slide" data-category="Featured">
+        <div class="slide-content">
+          <div class="slide-info">
+            <div class="slide-category">
+              <i class="fa-solid fa-star"></i>
+              Featured Work
+            </div>
+            <h1 class="slide-title">Award-Winning Projects</h1>
+            <p class="slide-description">
+              Discover our most celebrated projects that have earned recognition for innovation, creativity, and technical excellence. These showcase pieces represent the pinnacle of our creative capabilities.
+            </p>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Awards</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10M+</span>
+                <span class="stat-label">Impressions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">ROI Increase</span>
+              </div>
+            </div>
+            <a href="/contact.html" class="slide-cta">
+              <span>Start Your Project</span>
+              <i class="fas fa-rocket"></i>
+            </a>
+          </div>
+          <div class="slide-gallery" id="featuredGallery">
+            <div class="gallery-grid" id="featuredGrid">
+              <!-- Featured items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slideshow Controls -->
+    <div class="slideshow-controls control-prev">
+      <button class="control-btn" id="prevSlide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </div>
+    <div class="slideshow-controls control-next">
+      <button class="control-btn" id="nextSlide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Slideshow Navigation -->
+    <div class="slideshow-nav" id="slideshowNav">
+      <div class="nav-dot active" data-slide="0"></div>
+      <div class="nav-dot" data-slide="1"></div>
+      <div class="nav-dot" data-slide="2"></div>
+      <div class="nav-dot" data-slide="3"></div>
+      <div class="nav-dot" data-slide="4"></div>
+    </div>
+  </main>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="imageModalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modalImage" src="" alt="" />
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="videoModalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="video-wrapper">
+        <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" />
+      </div>
+
+      <div class="footer-social">
+        <a href="mailto:info@cochranfilms.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+        <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener" class="social-link">
+          <i class="fas fa-youtube"></i>
+          YouTube
+        </a>
+        <a href="https://github.com/cochranfilms" target="_blank" rel="noopener" class="social-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2025 Cochran Films LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Revolutionary Portfolio Slideshow Script -->
+  <script>
+    class RevolutionaryPortfolioSlideshow {
+      constructor() {
+        this.currentSlide = 0;
+        this.totalSlides = 5;
+        this.isAutoPlaying = true;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 8000;
+        this.isTransitioning = false;
+        
+        this.init();
+      }
+      
+      init() {
+        this.bindEvents();
+        this.createFloatingElements();
+        this.startAutoPlay();
+        this.updateProgress();
+        
+        // Initialize Airtable CMS integration
+        this.initializeAirtableCMS();
+      }
+      
+      bindEvents() {
+        // Navigation dots
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+          dot.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Control buttons
+        document.getElementById('prevSlide').addEventListener('click', () => this.previousSlide());
+        document.getElementById('nextSlide').addEventListener('click', () => this.nextSlide());
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') this.previousSlide();
+          if (e.key === 'ArrowRight') this.nextSlide();
+          if (e.key === ' ') {
+            e.preventDefault();
+            this.toggleAutoPlay();
+          }
+        });
+        
+        // Touch/swipe support
+        let startX = 0;
+        let endX = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+          endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+          
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+              this.nextSlide();
+            } else {
+              this.previousSlide();
+            }
+          }
+        });
+        
+        // Pause auto-play on hover
+        const slideshow = document.getElementById('portfolioSlideshow');
+        slideshow.addEventListener('mouseenter', () => this.pauseAutoPlay());
+        slideshow.addEventListener('mouseleave', () => this.resumeAutoPlay());
+      }
+      
+      goToSlide(slideIndex) {
+        if (this.isTransitioning || slideIndex === this.currentSlide) return;
+        
+        this.isTransitioning = true;
+        this.currentSlide = slideIndex;
+        
+        const track = document.getElementById('slideshowTrack');
+        const translateX = -slideIndex * 20; // 20% per slide
+        
+        track.style.transform = `translateX(${translateX}%)`;
+        
+        this.updateNavigation();
+        this.updateProgress();
+        this.animateSlideContent();
+        
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 1200);
+      }
+      
+      nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+      }
+      
+      previousSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevIndex);
+      }
+      
+      updateNavigation() {
+        document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+          dot.classList.toggle('active', index === this.currentSlide);
+        });
+      }
+      
+      updateProgress() {
+        const progress = ((this.currentSlide + 1) / this.totalSlides) * 100;
+        document.getElementById('slideshowProgress').style.width = `${progress}%`;
+      }
+      
+      animateSlideContent() {
+        const currentSlideElement = document.querySelectorAll('.portfolio-slide')[this.currentSlide];
+        const elements = currentSlideElement.querySelectorAll('.slide-category, .slide-title, .slide-description, .slide-stats, .slide-cta, .gallery-item');
+        
+        elements.forEach((el, index) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          
+          setTimeout(() => {
+            el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, index * 100 + 300);
+        });
+      }
+      
+      createFloatingElements() {
+        const container = document.getElementById('floatingElements');
+        const elementCount = 15;
+        
+        for (let i = 0; i < elementCount; i++) {
+          const element = document.createElement('div');
+          element.className = 'floating-element';
+          element.style.left = Math.random() * 100 + '%';
+          element.style.animationDelay = Math.random() * 20 + 's';
+          element.style.animationDuration = (15 + Math.random() * 10) + 's';
+          container.appendChild(element);
+        }
+      }
+      
+      startAutoPlay() {
+        if (this.autoPlayInterval) return;
+        
+        this.autoPlayInterval = setInterval(() => {
+          if (this.isAutoPlaying) {
+            this.nextSlide();
+          }
+        }, this.autoPlayDelay);
+      }
+      
+      pauseAutoPlay() {
+        this.isAutoPlaying = false;
+      }
+      
+      resumeAutoPlay() {
+        this.isAutoPlaying = true;
+      }
+      
+      toggleAutoPlay() {
+        this.isAutoPlaying = !this.isAutoPlaying;
+      }
+      
+      initializeAirtableCMS() {
+        // Initialize Airtable CMS when available, with retry in case of timing
+        const tryInit = (attempt = 0) => {
+          if (typeof window.airtableCMS !== 'undefined' &&
+              typeof window.airtableCMS.loadPortfolioItems === 'function') {
+            console.log('🚀 Initializing Revolutionary Portfolio with Airtable CMS...');
+            this.setupAirtableIntegration();
+            return;
+          }
+          if (attempt < 30) { // retry ~3.6s total
+            setTimeout(() => tryInit(attempt + 1), 120);
+          } else {
+            console.warn('⚠️ Airtable CMS not detected after retries, using fallback data');
+            this.loadFallbackData();
+          }
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => tryInit());
+        } else {
+          tryInit();
+        }
+      }
+      
+      setupAirtableIntegration() {
+        // Enhanced mapping system based on your CSV structures
+        const categoryConfig = {
+          'Video Production': {
+            gridId: 'videoProductionGrid',
+            fields: {
+              // Portfolio.csv structure - comprehensive video portfolio
+              title: ['Title'],
+              description: ['Description'],
+              category: ['Category'],
+              thumbnail: ['Thumbnail Image', 'thumbnailUrl'],
+              featured: ['Is Featured'],
+              playbackUrl: ['playbackUrl'],
+              uploadDate: ['UploadDate', 'Created Date'],
+              status: ['Status'],
+              labels: ['Labels'],
+              ownerName: ['OwnerName']
+            },
+            itemLimit: 9 // 3x3 grid with featured item spanning 2x2
+          },
+          'Web Development': {
+            gridId: 'webDevelopmentGrid', 
+            fields: {
+              // Web.csv structure - web development projects
+              title: ['Title'],
+              description: ['Description'],
+              category: ['Category'],
+              thumbnail: ['Thumbnail Image'],
+              featured: ['Is Featured'],
+              url: ['URL'],
+              techStack: ['Tech Stack'],
+              role: ['Role'],
+              client: ['Client/Company'],
+              timeline: ['Timeline'],
+              challenges: ['Challenges'],
+              results: ['Results'],
+              uploadDate: ['UploadDate']
+            },
+            itemLimit: 6
+          },
+          'Photography': {
+            gridId: 'photographyGrid',
+            fields: {
+              // Photography.csv structure - simple image gallery
+              imageUrl: ['image_url'],
+              title: ['Title', 'Name'], // Generated if not provided
+              description: ['Description'], // Generated if not provided
+              category: ['Category']
+            },
+            itemLimit: 6
+          },
+          'Brand Development': {
+            gridId: 'brandDevelopmentGrid',
+            fields: {
+              // brand_cms_template.csv structure - brand projects
+              title: ['Title'],
+              category: ['Category'],
+              description: ['Description'],
+              videoUrls: ['Video URLs'],
+              logoUrl: ['Logo URL'],
+              thumbnail: ['Thumbnail / Cover Image URL'],
+              clientName: ['Client/Brand Name'],
+              services: ['Services Provided'],
+              deliverables: ['Deliverables'],
+              industry: ['Industry'],
+              timeline: ['Timeline'],
+              results: ['Results/Impact'],
+              projectUrl: ['Project URL (optional)']
+            },
+            itemLimit: 6
+          }
+        };
+        
+        // Initialize each category with enhanced configuration
+        Object.entries(categoryConfig).forEach(([category, config]) => {
+          if (window.airtableCMS && window.airtableCMS.loadPortfolioItems) {
+            // Pass the field mapping configuration to the CMS
+            window.airtableCMS.loadPortfolioItems(category, config.gridId, config.itemLimit, config.fields);
+          }
+        });
+        
+        // Load featured items from all categories for the featured slide
+        if (window.airtableCMS && window.airtableCMS.loadFeaturedItems) {
+          window.airtableCMS.loadFeaturedItems('featuredGrid', 6);
+        }
+      }
+      
+      loadFallbackData() {
+        if (window.FALLBACK_PORTFOLIO_DATA) {
+          console.log('📦 Loading fallback portfolio data...');
+          
+          // Group fallback data by service category
+          const groupedData = {};
+          window.FALLBACK_PORTFOLIO_DATA.forEach(item => {
+            const category = item.ServiceCategory || 'Featured';
+            if (!groupedData[category]) {
+              groupedData[category] = [];
+            }
+            groupedData[category].push(item);
+          });
+          
+          // Populate each grid
+          Object.entries(groupedData).forEach(([category, items]) => {
+            const gridId = this.getCategoryGridId(category);
+            if (gridId) {
+              this.populateGrid(gridId, items.slice(0, 6));
+            }
+          });
+        }
+      }
+      
+      getCategoryGridId(category) {
+        const gridMap = {
+          'Video Production': 'videoProductionGrid',
+          'Web Development': 'webDevelopmentGrid',
+          'Photography': 'photographyGrid',
+          'Brand Development': 'brandDevelopmentGrid'
+        };
+        return gridMap[category] || 'featuredGrid';
+      }
+      
+      populateGrid(gridId, items) {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        
+        grid.innerHTML = '';
+        
+        // Limit items to 6 for better layout
+        const limitedItems = items.slice(0, 6);
+        
+        limitedItems.forEach((item, index) => {
+          const galleryItem = document.createElement('div');
+          galleryItem.className = 'gallery-item';
+          
+          // Enhanced field mapping based on collection type
+          const itemData = this.normalizeItemData(item, gridId);
+          
+          // Add collection data attribute for styling
+          const collectionType = gridId.replace('Grid', '').toLowerCase().replace(/([A-Z])/g, '-$1');
+          galleryItem.setAttribute('data-collection', collectionType.replace(/^-/, ''));
+          
+          galleryItem.innerHTML = `
+            <img src="${itemData.imageUrl}" alt="${itemData.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
+            <div class="gallery-overlay">
+              <div class="gallery-play-btn">
+                <i class="fas fa-${itemData.icon}"></i>
+              </div>
+            </div>
+            ${itemData.hasDetails ? `
+              <div class="gallery-info">
+                <h4>${itemData.title}</h4>
+                ${itemData.subtitle ? `<p>${itemData.subtitle}</p>` : ''}
+              </div>
+            ` : ''}
+          `;
+          
+          // Add click handler based on item type
+          galleryItem.addEventListener('click', () => {
+            if (itemData.action === 'video') {
+              this.openVideoModal(itemData.actionUrl);
+            } else if (itemData.action === 'website') {
+              window.open(itemData.actionUrl, '_blank');
+            } else if (itemData.action === 'image') {
+              this.openImageModal(itemData.imageUrl, itemData.title);
+            }
+          });
+          
+          grid.appendChild(galleryItem);
+        });
+        
+        // Fill empty slots if we have fewer than 6 items
+        while (grid.children.length < 6) {
+          const placeholderItem = document.createElement('div');
+          placeholderItem.className = 'gallery-item gallery-placeholder';
+          placeholderItem.innerHTML = `
+            <div class="placeholder-content">
+              <i class="fas fa-plus"></i>
+              <span>More Coming Soon</span>
+            </div>
+          `;
+          grid.appendChild(placeholderItem);
+        }
+      }
+      
+      normalizeItemData(item, gridId) {
+        // Determine collection type from grid ID
+        const collectionType = gridId.replace('Grid', '').replace(/([A-Z])/g, ' $1').trim();
+        
+        let normalized = {
+          title: 'Untitled',
+          subtitle: '',
+          imageUrl: 'https://via.placeholder.com/400x300?text=No+Image',
+          icon: 'eye',
+          action: 'image',
+          actionUrl: '',
+          hasDetails: false
+        };
+        
+        switch (collectionType) {
+          case 'video Production':
+            // Portfolio.csv structure - videos
+            normalized.title = item.Title || 'Video Project';
+            normalized.subtitle = item.Category || '';
+            normalized.imageUrl = item['Thumbnail Image'] || item.thumbnailUrl || normalized.imageUrl;
+            normalized.icon = 'play';
+            normalized.action = 'video';
+            normalized.actionUrl = item.playbackUrl || '';
+            normalized.hasDetails = true;
+            break;
+            
+          case 'web Development':
+            // Web.csv structure - websites
+            normalized.title = item.Title || 'Web Project';
+            normalized.subtitle = item['Tech Stack'] || item.Category || '';
+            normalized.imageUrl = item['Thumbnail Image'] || normalized.imageUrl;
+            normalized.icon = 'external-link-alt';
+            normalized.action = 'website';
+            normalized.actionUrl = item.URL || '';
+            normalized.hasDetails = true;
+            break;
+            
+          case 'photography':
+            // Photography.csv structure - images
+            normalized.title = item.Title || `Photo ${Date.now()}`;
+            normalized.subtitle = '';
+            normalized.imageUrl = item.image_url || item['Thumbnail Image'] || normalized.imageUrl;
+            normalized.icon = 'search-plus';
+            normalized.action = 'image';
+            normalized.actionUrl = normalized.imageUrl;
+            normalized.hasDetails = false;
+            break;
+            
+          case 'brand Development':
+            // brand_cms_template.csv structure - brand projects
+            normalized.title = item.Title || 'Brand Project';
+            normalized.subtitle = item['Client/Brand Name'] || item.Industry || '';
+            normalized.imageUrl = item['Thumbnail / Cover Image URL'] || normalized.imageUrl;
+            
+            // Always prioritize Project URL if available
+            if (item['Project URL (optional)']) {
+              normalized.icon = 'external-link-alt';
+              normalized.action = 'website';
+              normalized.actionUrl = item['Project URL (optional)'];
+            } else if (item['Video URLs']) {
+              normalized.icon = 'play';
+              normalized.action = 'video';
+              normalized.actionUrl = item['Video URLs'];
+            } else {
+              normalized.icon = 'palette';
+              normalized.action = 'image';
+              normalized.actionUrl = item['Thumbnail / Cover Image URL'] || item['Logo URL'] || normalized.imageUrl;
+            }
+            normalized.hasDetails = true;
+            break;
+            
+          case 'featured':
+            // Featured items from any collection
+            normalized = this.normalizeFeaturedItem(item);
+            break;
+        }
+        
+        return normalized;
+      }
+      
+      normalizeFeaturedItem(item) {
+        // Handle featured items from any collection
+        const serviceCategory = item.ServiceCategory || item.Category || '';
+        
+        let normalized = {
+          title: item.Title || 'Featured Project',
+          subtitle: serviceCategory,
+          imageUrl: item['Thumbnail Image'] || item.thumbnailUrl || item.image_url || item['Logo URL'] || 'https://via.placeholder.com/400x300',
+          hasDetails: true
+        };
+        
+        // Determine action based on service category and available data
+        if (item.playbackUrl || serviceCategory.includes('Video')) {
+          normalized.icon = 'play';
+          normalized.action = 'video';
+          normalized.actionUrl = item.playbackUrl;
+        } else if (item.URL || serviceCategory.includes('Web')) {
+          normalized.icon = 'external-link-alt';
+          normalized.action = 'website';
+          normalized.actionUrl = item.URL;
+        } else if (serviceCategory.includes('Photography')) {
+          normalized.icon = 'search-plus';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        } else if (serviceCategory.includes('Brand')) {
+          normalized.icon = 'palette';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        } else {
+          normalized.icon = 'eye';
+          normalized.action = 'image';
+          normalized.actionUrl = normalized.imageUrl;
+        }
+        
+        return normalized;
+      }
+      
+      openVideoModal(videoUrl) {
+        if (window.openVideoModal) {
+          window.openVideoModal(videoUrl);
+        }
+      }
+      
+      openImageModal(imageUrl, title) {
+        if (window.openImageModal) {
+          window.openImageModal(imageUrl, title);
+        }
+      }
+
+      navigateToCategory(category) {
+        // Ensure proper URL encoding for category names with spaces
+        const encodedCategory = encodeURIComponent(category);
+        window.location.href = `/portfolio-category.html?category=${encodedCategory}`;
+      }
+
+      handleItemClick(itemData) {
+        // Handle different types of content appropriately
+        switch(itemData.action) {
+          case 'video':
+            this.openVideoModal(itemData.actionUrl);
+            break;
+          case 'website':
+            window.open(itemData.actionUrl, '_blank');
+            break;
+          case 'image':
+            this.openImageModal(itemData.imageUrl, itemData.title);
+            break;
+          default:
+            console.warn('Unknown action type:', itemData.action);
+        }
+      }
+    }
+    
+    // Initialize the revolutionary slideshow
+    let portfolioSlideshow;
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        portfolioSlideshow = new RevolutionaryPortfolioSlideshow();
+      });
+    } else {
+      portfolioSlideshow = new RevolutionaryPortfolioSlideshow();
+    }
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
+
+    // Navigation scroll effect - enhanced for slideshow
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav-wrapper');
+      if (nav) {
+        if (window.scrollY > 50) {
+          nav.style.background = 'rgba(15, 23, 42, 0.98)';
+          nav.style.backdropFilter = 'blur(20px)';
+        } else {
+          nav.style.background = 'rgba(15, 23, 42, 0.95)';
+          nav.style.backdropFilter = 'blur(10px)';
+        }
+      }
+    });
+
+    // ========================================
+    // MODAL FUNCTIONS
+    // ========================================
+    
+    // Open image modal
+    function openImageModal(imageSrc, imageAlt) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      if (modal && modalImage) {
+        modalImage.src = imageSrc;
+        modalImage.alt = imageAlt || 'Portfolio Image';
+        
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    // Close image modal
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Open video modal
+    function openVideoModal(videoUrl) {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      
+      if (modal && modalVideo) {
+        // Convert YouTube URL to embed format if needed
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('youtube.com/watch')) {
+          const videoId = videoUrl.split('v=')[1]?.split('&')[0];
+          embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        } else if (videoUrl.includes('youtu.be/')) {
+          const videoId = videoUrl.split('youtu.be/')[1]?.split('?')[0];
+          embedUrl = `https://www.youtube.com/embed/${videoId}`;
+        }
+        
+        modalVideo.src = embedUrl;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    // Close video modal
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      
+      if (modal && modalVideo) {
+        modal.classList.remove('show');
+        modalVideo.src = '';
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Event listeners for modals
+    document.addEventListener('DOMContentLoaded', function() {
+      // Image modal close
+      const imageModalClose = document.getElementById('imageModalClose');
+      const imageModal = document.getElementById('imageModal');
+      
+      if (imageModalClose) {
+        imageModalClose.addEventListener('click', closeImageModal);
+      }
+      
+      if (imageModal) {
+        imageModal.addEventListener('click', function(e) {
+          if (e.target === imageModal) {
+            closeImageModal();
+          }
+        });
+      }
+      
+      // Video modal close
+      const videoModalClose = document.getElementById('videoModalClose');
+      const videoModal = document.getElementById('videoModal');
+      
+      if (videoModalClose) {
+        videoModalClose.addEventListener('click', closeVideoModal);
+      }
+      
+      if (videoModal) {
+        videoModal.addEventListener('click', function(e) {
+          if (e.target === videoModal) {
+            closeVideoModal();
+          }
+        });
+      }
+      
+      // Close modals with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeImageModal();
+          closeVideoModal();
+        }
+      });
+    });
+    
+    // Make functions globally available
+    window.openImageModal = openImageModal;
+    window.openVideoModal = openVideoModal;
+    window.closeImageModal = closeImageModal;
+    window.closeVideoModal = closeVideoModal;
+  </script>
+</body>
+</html>
