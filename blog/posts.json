@@ -1,5 +1,80 @@
 [
   {
+    "title": "Embracing Signal-Based Forms in Angular: The Future of Reactive Form Management",
+    "url": "https://dev.to/karol_modelski/embracing-signal-based-forms-in-angular-the-future-of-reactive-form-management-1lh0",
+    "publishedAt": "2025-08-31T07:00:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What if the next generation of Angular forms could be simpler, more reactive, and more powerful? Signal-based forms bring a transformative approach to how developers manage reactive forms in Angular, addressing common pain points with increased clarity and efficiency. Unlike traditional reactive forms, signals introduce a new level of automatic reactivity...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj025dz2ak6ygojbz9lcw.png",
+    "video": null,
+    "author": "Karol Modelski",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "angular"
+    ],
+    "seoTitle": "Embracing Signal-Based Forms in Angular: The Future of Reactive Form Management",
+    "seoDescription": "What if the next generation of Angular forms could be simpler, more reactive, and more powerful? Signal-based forms bring a transformative approach to how de..."
+  },
+  {
+    "title": "MonoGuard: Making Monorepo Management Less Painful",
+    "url": "https://dev.to/yu_chihwei_0481c8e2b679d/monoguard-making-monorepo-management-less-painful-2739",
+    "publishedAt": "2025-08-31T06:56:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Managing monorepos can feel like herding cats. Dependencies ## The Problem Our team hit this wall hard. Our monorepo grew to 50+ packages, ## The Solution MonoGuard analyzes your entire monorepo in 30 seconds: Zero Config: Just upload your files Privacy First: Local processing, auto-deletion Comprehensive: Dependencies, security, architecture Visual: Repo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04lf3qv50farswioys7w.jpg",
+    "video": null,
+    "author": "Yu Chih-Wei",
+    "tags": [
+      "webdev",
+      "productivity",
+      "analytics"
+    ],
+    "seoTitle": "MonoGuard: Making Monorepo Management Less Painful",
+    "seoDescription": "Managing monorepos can feel like herding cats. Dependencies ## The Problem Our team hit this wall hard. Our monorepo grew to 50+ packages, ## The Solution Mo..."
+  },
+  {
+    "title": "RankGap: Multi-Agent Amazon SEO & Product Visibility Analyzer",
+    "url": "https://dev.to/better-boy/rankgap-multi-agent-amazon-seo-product-visibility-analyzer-2h81",
+    "publishedAt": "2025-08-31T06:49:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Selling on Amazon is one thing; being discovered is another. RankGap is a multi-agent AI system designed to uncover Amazon ranking blind spots for your products using real-time data. It identifies where your product ranks, which search queries you’re missing, and how to optimi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftfcvkvn65dgrdf643m1l.png",
+    "video": null,
+    "author": "Abhi",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "RankGap: Multi-Agent Amazon SEO & Product Visibility Analyzer",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Selling on Amazon is one thing; being discovered is another. RankGap is a mul..."
+  },
+  {
+    "title": "The Good Devs, The Bad Stress and The Ugly Truth",
+    "url": "https://dev.to/m3yevn/the-good-devs-the-bad-stress-and-the-ugly-truth-35n1",
+    "publishedAt": "2025-08-31T06:33:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Kudos to the Devs who made it 💻🎉 There are many talented developers out there, and it's inspiring to see our achievements! Looking at LinkedIn profiles and social media posts, you'll find developers with impressive badges, certifications, and contributions that showcase our dedication to the craft. Many have earned that coveted \"Senior\" title through ha...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fytjd472419x8jcki656s.jpg",
+    "video": null,
+    "author": "Kevin Moe Myint Myat 👨‍💻",
+    "tags": [
+      "webdev",
+      "programming",
+      "mindfulengineering",
+      "stressmanagement"
+    ],
+    "seoTitle": "The Good Devs, The Bad Stress and The Ugly Truth",
+    "seoDescription": "Kudos to the Devs who made it 💻🎉 There are many talented developers out there, and it's inspiring to see our achievements! Looking at LinkedIn profiles and..."
+  },
+  {
     "title": "🧐How to AI code review for free (PR-Agent)🧠",
     "url": "https://dev.to/webdeveloperhyper/how-to-ai-code-review-for-free-pr-agent-1i8n",
     "publishedAt": "2025-08-31T05:02:18.000Z",
@@ -19,25 +94,6 @@
     "seoDescription": "Intro Sorry that I posted this article before finishing by mistake.🙇 ↓PR-Agent is an OSS that can make AI code review automatically. https://qodo-merge-docs..."
   },
   {
-    "title": "AI Sprint Goal Generator That Actually Works 🎯🤖",
-    "url": "https://dev.to/mattlewandowski93/ai-sprint-goal-generator-that-actually-works-m9n",
-    "publishedAt": "2025-08-31T02:44:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Remember that sprint where your goal was \"Complete user stories\"? Yeah, that's not a goal. If you're tired of fuzzy sprint goals that could mean anything, I've found something that actually helps. Every sprint planning, same story. Someone asks \"What's our sprint goal?\" and we scramble to write something meaningful. Usually we end up with gems like \"Impro...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6o8nwpdivxx0mgiyome5.png",
-    "video": null,
-    "author": "Matt Lewandowski",
-    "tags": [
-      "agile",
-      "scrum",
-      "webdev",
-      "productivity"
-    ],
-    "seoTitle": "AI Sprint Goal Generator That Actually Works 🎯🤖",
-    "seoDescription": "Remember that sprint where your goal was \"Complete user stories\"? Yeah, that's not a goal. If you're tired of fuzzy sprint goals that could mean anything, I'..."
-  },
-  {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
     "publishedAt": "2025-08-30T21:54:13.000Z",
@@ -50,22 +106,6 @@
     "tags": [],
     "seoTitle": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "seoDescription": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or ..."
-  },
-  {
-    "title": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
-    "url": "https://9to5mac.com/2025/08/30/indie-app-spotlight-profit-investment-portfolio-tracker-for-iphone/",
-    "publishedAt": "2025-08-30T19:30:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would like your app featured, get in contact. If you’re someone who invests, things can easily become messy, and you can end up with a wide variety of brokerage accounts for varying purposes. Profit makes trac...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Profit-Indie-App-Spotlight.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
-    "seoDescription": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would lik..."
   },
   {
     "title": "11 Al Pacino Movies That Define Great Acting",
@@ -577,37 +617,5 @@
     ],
     "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
     "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
-  },
-  {
-    "title": "Michelle Yeoh's Top 10 Movies",
-    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
-    "publishedAt": "2025-08-29T19:27:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
-    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
-    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Michelle yeoh",
-      "Martial arts movies"
-    ],
-    "seoTitle": "Michelle Yeoh's Top 10 Movies",
-    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
-  },
-  {
-    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
-    "publishedAt": "2025-08-29T19:21:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Richard Lawler",
-    "tags": [],
-    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
   }
 ]
