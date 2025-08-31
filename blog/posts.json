@@ -1,5 +1,81 @@
 [
   {
+    "title": "BrightData Recruit Intelligence (Company Data Analysis + Candidate Search)",
+    "url": "https://dev.to/ranjancse/brightdata-recruit-intelligence-company-data-analysis-candidate-search-2k04",
+    "publishedAt": "2025-08-31T09:11:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Powered by Google, Bing, DuckDuckGo + n8n + Google Gemini This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Recruit Intelligence with Google, Bing, DuckDuckGo + n8n + Google Gemini Workflow The BrightData Recruit Intelligence workflow is designed to streamline talent sourcing and company research using search engin...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqc61r9fvvylukn7k2u2m.png",
+    "video": null,
+    "author": "Ranjan Dailata",
+    "tags": [
+      "n8nbrightdatachallenge",
+      "webdev",
+      "ai",
+      "devchallenge"
+    ],
+    "seoTitle": "BrightData Recruit Intelligence (Company Data Analysis + Candidate Search)",
+    "seoDescription": "Powered by Google, Bing, DuckDuckGo + n8n + Google Gemini This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Recruit ..."
+  },
+  {
+    "title": "Javascript Advanced Object Validator",
+    "url": "https://dev.to/mamedul_islam/javascript-advanced-object-validator-5d64",
+    "publishedAt": "2025-08-31T08:55:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "objectPropValidator: Simple, Recursive JavaScript Object Validation objectPropValidator is a lightweight, zero-dependency JavaScript utility for validating object properties against a defined schema. It's designed to be simple, flexible, and powerful, allowing for recursive validation of nested objects with clear, helpful error messages. Whether you're va...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2Fversion-2.0.1-blue.svg",
+    "video": null,
+    "author": "Mamedul Islam",
+    "tags": [
+      "objectvalidator",
+      "javascript",
+      "schema",
+      "webdev"
+    ],
+    "seoTitle": "Javascript Advanced Object Validator",
+    "seoDescription": "objectPropValidator: Simple, Recursive JavaScript Object Validation objectPropValidator is a lightweight, zero-dependency JavaScript utility for validating o..."
+  },
+  {
+    "title": "How Kiro Replaced a Team of Developers: Building a Client-Side ML Platform with an AI-Driven IDE",
+    "url": "https://dev.to/pavloicsa/how-kiro-replaced-a-team-of-developers-building-a-client-side-ml-platform-with-an-ai-driven-ide-2h5a",
+    "publishedAt": "2025-08-31T08:26:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "My journey with Kiro started when I first saw the announcement on DevPost that Amazon had launched a new low/no-code hackathon. I am new to such events, but I was interested in participating because, as a beginner self-taught developer, I was curious to gain experience, especially in the field of AI-driven software and web development. At that time, I kne...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpnlyc3q1f6hlb8w0twcu.png",
+    "video": null,
+    "author": "Pavlo Lykhovyd",
+    "tags": [
+      "webdev",
+      "kiro",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "How Kiro Replaced a Team of Developers: Building a Client-Side ML Platform with an AI-Driven IDE",
+    "seoDescription": "My journey with Kiro started when I first saw the announcement on DevPost that Amazon had launched a new low/no-code hackathon. I am new to such events, but ..."
+  },
+  {
+    "title": "AI Agent for Google Play Review Monitoring",
+    "url": "https://dev.to/bridget_amana/ai-agent-for-google-play-review-monitoring-2p9b",
+    "publishedAt": "2025-08-31T08:24:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a workflow that takes reviews of an app from Google Play, runs sentiment analysis on them, and routes them based on the results. Positive reviews get logged for tracking, while negative ones are flagged so they can be acted on. The whole point was to create an automate...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbyfro7ehhwpv8a0skzfn.jpeg",
+    "video": null,
+    "author": "Bridget Amana",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "AI Agent for Google Play Review Monitoring",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a workflow that takes reviews of an app from Google Play, runs sentim..."
+  },
+  {
     "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
     "url": "https://smashingmagazine.com/2025/08/desktop-wallpaper-calendars-september-2025/",
     "publishedAt": "2025-08-31T08:00:00.000Z",
@@ -50,62 +126,6 @@
     ],
     "seoTitle": "【React Supabase】Improving My Study Log App: Persisting Daily Study Content and Hours",
     "seoDescription": "Introduction Thanks for your hard work. This time, I integrated Supabase with a learning log app built in React to achieve data persistence. Additionally, I ..."
-  },
-  {
-    "title": "Embracing Signal-Based Forms in Angular: The Future of Reactive Form Management",
-    "url": "https://dev.to/karol_modelski/embracing-signal-based-forms-in-angular-the-future-of-reactive-form-management-1lh0",
-    "publishedAt": "2025-08-31T07:00:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What if the next generation of Angular forms could be simpler, more reactive, and more powerful? Signal-based forms bring a transformative approach to how developers manage reactive forms in Angular, addressing common pain points with increased clarity and efficiency. Unlike traditional reactive forms, signals introduce a new level of automatic reactivity...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj025dz2ak6ygojbz9lcw.png",
-    "video": null,
-    "author": "Karol Modelski",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "angular"
-    ],
-    "seoTitle": "Embracing Signal-Based Forms in Angular: The Future of Reactive Form Management",
-    "seoDescription": "What if the next generation of Angular forms could be simpler, more reactive, and more powerful? Signal-based forms bring a transformative approach to how de..."
-  },
-  {
-    "title": "MonoGuard: Making Monorepo Management Less Painful",
-    "url": "https://dev.to/yu_chihwei_0481c8e2b679d/monoguard-making-monorepo-management-less-painful-2739",
-    "publishedAt": "2025-08-31T06:56:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Managing monorepos can feel like herding cats. Dependencies ## The Problem Our team hit this wall hard. Our monorepo grew to 50+ packages, ## The Solution MonoGuard analyzes your entire monorepo in 30 seconds: Zero Config: Just upload your files Privacy First: Local processing, auto-deletion Comprehensive: Dependencies, security, architecture Visual: Repo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04lf3qv50farswioys7w.jpg",
-    "video": null,
-    "author": "Yu Chih-Wei",
-    "tags": [
-      "webdev",
-      "productivity",
-      "analytics"
-    ],
-    "seoTitle": "MonoGuard: Making Monorepo Management Less Painful",
-    "seoDescription": "Managing monorepos can feel like herding cats. Dependencies ## The Problem Our team hit this wall hard. Our monorepo grew to 50+ packages, ## The Solution Mo..."
-  },
-  {
-    "title": "RankGap: Multi-Agent Amazon SEO & Product Visibility Analyzer",
-    "url": "https://dev.to/better-boy/rankgap-multi-agent-amazon-seo-product-visibility-analyzer-2h81",
-    "publishedAt": "2025-08-31T06:49:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Selling on Amazon is one thing; being discovered is another. RankGap is a multi-agent AI system designed to uncover Amazon ranking blind spots for your products using real-time data. It identifies where your product ranks, which search queries you’re missing, and how to optimi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftfcvkvn65dgrdf643m1l.png",
-    "video": null,
-    "author": "Abhi",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "RankGap: Multi-Agent Amazon SEO & Product Visibility Analyzer",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Selling on Amazon is one thing; being discovered is another. RankGap is a mul..."
   },
   {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
@@ -598,19 +618,5 @@
     ],
     "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
     "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
-  },
-  {
-    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
-    "publishedAt": "2025-08-29T19:53:06.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
   }
 ]
