@@ -1,5 +1,57 @@
 [
   {
+    "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
+    "url": "https://smashingmagazine.com/2025/08/desktop-wallpaper-calendars-september-2025/",
+    "publishedAt": "2025-08-31T08:00:00.000Z",
+    "source": "smashingmagazine.com",
+    "category": "web",
+    "summary": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your September just a bit more colorful. Enjoy!",
+    "image": "http://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/77eaabbb-9743-45b6-99f3-f35a5584275f/sept-17-funny-cats-preview-opt.png",
+    "video": null,
+    "author": "hello@smashingmagazine.com (Cosima Mielke)",
+    "tags": [],
+    "seoTitle": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
+    "seoDescription": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your Septe..."
+  },
+  {
+    "title": "Get Free Amazon Gift card 🥳👇",
+    "url": "https://dev.to/xalogov736/get-free-amazon-gift-card-54ea",
+    "publishedAt": "2025-08-31T07:59:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Click here 🙌 https://urlgo.in/1efw0",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftt46wzztflacbg3y32za.jpg",
+    "video": null,
+    "author": "Mary",
+    "tags": [
+      "programming",
+      "webdev",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Get Free Amazon Gift card 🥳👇",
+    "seoDescription": "Click here 🙌 https://urlgo.in/1efw0"
+  },
+  {
+    "title": "【React Supabase】Improving My Study Log App: Persisting Daily Study Content and Hours",
+    "url": "https://dev.to/kazutora_hattori_66972c88/reactxsupabase-improving-my-study-log-app-persisting-daily-study-content-and-hours-26g2",
+    "publishedAt": "2025-08-31T07:45:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Thanks for your hard work. This time, I integrated Supabase with a learning log app built in React to achieve data persistence. Additionally, I implemented hosting via Firebase, CI/CD automated deployment using GitHub Actions, and automated testing with Jest + React Testing Library. This article reviews the app's architecture, development cha...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fb8kn7hrmjfx2fvu8le8i.png",
+    "video": null,
+    "author": "Kazutora Hattori",
+    "tags": [
+      "react",
+      "programming",
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "【React Supabase】Improving My Study Log App: Persisting Daily Study Content and Hours",
+    "seoDescription": "Introduction Thanks for your hard work. This time, I integrated Supabase with a learning log app built in React to achieve data persistence. Additionally, I ..."
+  },
+  {
     "title": "Embracing Signal-Based Forms in Angular: The Future of Reactive Form Management",
     "url": "https://dev.to/karol_modelski/embracing-signal-based-forms-in-angular-the-future-of-reactive-form-management-1lh0",
     "publishedAt": "2025-08-31T07:00:00.000Z",
@@ -54,44 +106,6 @@
     ],
     "seoTitle": "RankGap: Multi-Agent Amazon SEO & Product Visibility Analyzer",
     "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Selling on Amazon is one thing; being discovered is another. RankGap is a mul..."
-  },
-  {
-    "title": "The Good Devs, The Bad Stress and The Ugly Truth",
-    "url": "https://dev.to/m3yevn/the-good-devs-the-bad-stress-and-the-ugly-truth-35n1",
-    "publishedAt": "2025-08-31T06:33:22.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Kudos to the Devs who made it 💻🎉 There are many talented developers out there, and it's inspiring to see our achievements! Looking at LinkedIn profiles and social media posts, you'll find developers with impressive badges, certifications, and contributions that showcase our dedication to the craft. Many have earned that coveted \"Senior\" title through ha...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fytjd472419x8jcki656s.jpg",
-    "video": null,
-    "author": "Kevin Moe Myint Myat 👨‍💻",
-    "tags": [
-      "webdev",
-      "programming",
-      "mindfulengineering",
-      "stressmanagement"
-    ],
-    "seoTitle": "The Good Devs, The Bad Stress and The Ugly Truth",
-    "seoDescription": "Kudos to the Devs who made it 💻🎉 There are many talented developers out there, and it's inspiring to see our achievements! Looking at LinkedIn profiles and..."
-  },
-  {
-    "title": "🧐How to AI code review for free (PR-Agent)🧠",
-    "url": "https://dev.to/webdeveloperhyper/how-to-ai-code-review-for-free-pr-agent-1i8n",
-    "publishedAt": "2025-08-31T05:02:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Intro Sorry that I posted this article before finishing by mistake.🙇 ↓PR-Agent is an OSS that can make AI code review automatically. https://qodo-merge-docs.qodo.ai/ free!🤑 You can use PR-Agent on repository such as GitHub, GitLab and others. slash commands in pull request comment. PR-Agent has 3 main functions. describe: explains the outline of the pul...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0h8v888fmz4t3h0fa4nn.png",
-    "video": null,
-    "author": "Web Developer Hyper",
-    "tags": [
-      "ai",
-      "webdev",
-      "github",
-      "opensource"
-    ],
-    "seoTitle": "🧐How to AI code review for free (PR-Agent)🧠",
-    "seoDescription": "Intro Sorry that I posted this article before finishing by mistake.🙇 ↓PR-Agent is an OSS that can make AI code review automatically. https://qodo-merge-docs..."
   },
   {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
@@ -598,24 +612,5 @@
     "tags": [],
     "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
     "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
-  },
-  {
-    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
-    "publishedAt": "2025-08-29T19:44:15.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
-    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
-    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "The roses",
-      "Comedy",
-      "Remake",
-      "Adaptation"
-    ],
-    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
   }
 ]
