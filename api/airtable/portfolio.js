@@ -22,14 +22,33 @@ module.exports = async function handler(req, res) {
     console.log('🚀 Unified Portfolio API called - fetching from all Airtable bases...');
     const startTime = Date.now();
 
-    // Airtable configuration for all bases (centralized)
-    const cfg = require('../../airtable.config.js');
-    const airtableConfigs = Object.entries(cfg.BASES).map(([category, baseId]) => ({
-      name: category,
-      baseId,
-      tableName: cfg.TABLE_NAME,
-      category
-    }));
+    // Airtable configuration for all four bases
+    const airtableConfigs = [
+      {
+        name: 'Video Production',
+        baseId: 'appjQxcRoClnZzghj',
+        tableName: 'Imported table',
+        category: 'Video Production'
+      },
+      {
+        name: 'Web Development',
+        baseId: 'appV5l9kZ5vAxcz4e',
+        tableName: 'Imported table',
+        category: 'Web Development'
+      },
+      {
+        name: 'Photography',
+        baseId: 'appP1uFoRWjxPkQ5b',
+        tableName: 'Imported table',
+        category: 'Photography'
+      },
+      {
+        name: 'Brand Development',
+        baseId: 'app9HS0yNn6uyFmJF',
+        tableName: 'Imported table',  // Changed from 'Brand' to match pattern
+        category: 'Brand Development'
+      }
+    ];
 
     // Get Airtable API key from environment variables
     const apiKey = process.env.AIRTABLE_API_KEY || process.env.AIRTABLE_TOKEN;

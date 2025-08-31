@@ -1,7 +1,6 @@
 export async function GET() {
-  const cfg = await import('../../../../airtable.config.js');
-  const baseId = cfg.default?.BASES?.['Photography'] || 'appP1uFoRWjxPkQ5b';
-  const tableName = cfg.default?.TABLE_NAME || 'Imported table';
+  const baseId = 'appP1uFoRWjxPkQ5b';
+  const tableName = 'Imported table';
   const apiKey = process.env.AIRTABLE_API_KEY_PHOTOGRAPHY || process.env.AIRTABLE_API_KEY || process.env.AIRTABLE_TOKEN;
   if (!apiKey) {
     return new Response(JSON.stringify({ error: 'Airtable API key not configured' }), { status: 500 });

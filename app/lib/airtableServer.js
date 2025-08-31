@@ -1,17 +1,11 @@
-import config from '../../airtable.config.js'
+const TABLE_NAME = 'Imported table'
 
-const TABLE_NAME = config?.TABLE_NAME || 'Imported table'
-
-const CATEGORY_META = Object.entries(config?.BASES || {}).reduce((acc, [category, baseId]) => {
-  const envKeyMap = {
-    'Video Production': ['AIRTABLE_API_KEY_VIDEO','AIRTABLE_API_KEY','AIRTABLE_TOKEN'],
-    'Web Development': ['AIRTABLE_API_KEY_WEB','AIRTABLE_API_KEY','AIRTABLE_TOKEN'],
-    'Photography': ['AIRTABLE_API_KEY_PHOTOGRAPHY','AIRTABLE_API_KEY','AIRTABLE_TOKEN'],
-    'Brand Development': ['AIRTABLE_API_KEY_BRAND','AIRTABLE_API_KEY','AIRTABLE_TOKEN']
-  }
-  acc[category] = { baseId, keyEnv: envKeyMap[category] || ['AIRTABLE_API_KEY','AIRTABLE_TOKEN'] }
-  return acc
-}, {})
+const CATEGORY_META = {
+  'Video Production': { baseId: 'appjQxcRoClnZzghj', keyEnv: ['AIRTABLE_API_KEY_VIDEO','AIRTABLE_API_KEY','AIRTABLE_TOKEN'] },
+  'Web Development': { baseId: 'appV5l9kZ5vAxcz4e', keyEnv: ['AIRTABLE_API_KEY_WEB','AIRTABLE_API_KEY','AIRTABLE_TOKEN'] },
+  'Photography': { baseId: 'appP1uFoRWjxPkQ5b', keyEnv: ['AIRTABLE_API_KEY_PHOTOGRAPHY','AIRTABLE_API_KEY','AIRTABLE_TOKEN'] },
+  'Brand Development': { baseId: 'appk9HCj1kWzK1JzQ', keyEnv: ['AIRTABLE_API_KEY_BRAND','AIRTABLE_API_KEY','AIRTABLE_TOKEN'] },
+}
 
 function resolveApiKey(keys){
   for (const name of keys){ if (process.env[name]) return process.env[name] }
