@@ -1,5 +1,81 @@
 [
   {
+    "title": "Here’s a step-by-step beginner-friendly guide to attach and mount an EBS volume on an Ubuntu EC2 instance in AWS.",
+    "url": "https://dev.to/oyewole_afuwape_f195efb15/heres-a-step-by-step-beginner-friendly-guide-to-attach-and-mount-an-ebs-volume-on-an-ubuntu-ec2-4b00",
+    "publishedAt": "2025-08-31T17:02:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "sign in to aws account using root user email after signing in to my account, this is the landing page i got Then i went to Ec2 to create my instance After given my instance a name, went on to select my Operating system which is UBUNTU After creating my EC2, then I went to create Volume as seen below After i created my Volume, then I attached the volume to...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3j69vyjmx2zcodkqitu6.png",
+    "video": null,
+    "author": "Oyewole Afuwape",
+    "tags": [
+      "webdev",
+      "aws",
+      "ec2",
+      "ubuntu"
+    ],
+    "seoTitle": "Here’s a step-by-step beginner-friendly guide to attach and mount an EBS volume on an Ubuntu EC2 instance in AWS.",
+    "seoDescription": "sign in to aws account using root user email after signing in to my account, this is the landing page i got Then i went to Ec2 to create my instance After gi..."
+  },
+  {
+    "title": "Instant AI Text Enhancements in React with prompt-my-client-react",
+    "url": "https://dev.to/rajanlagah/instant-ai-text-enhancements-in-react-with-prompt-my-client-react-4gpp",
+    "publishedAt": "2025-08-31T16:40:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TL;DR Why It’s Awesome usePrompt) for programmatic control Super-Easy Setup npm install prompt-my-client-react Option A: Use the Hook import { usePrompt } from 'prompt-my-client-react'; const { generatePrompt, isLoading, result } = usePrompt({ onSuccess: (response) => setText(response), }); await generatePrompt(text, \"Make this more professional\"); Option...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9wo35ji1c3v0lfzhli71.png",
+    "video": null,
+    "author": "Rajan lagah",
+    "tags": [
+      "webdev",
+      "react",
+      "promptengineering",
+      "javascript"
+    ],
+    "seoTitle": "Instant AI Text Enhancements in React with prompt-my-client-react",
+    "seoDescription": "TL;DR Why It’s Awesome usePrompt) for programmatic control Super-Easy Setup npm install prompt-my-client-react Option A: Use the Hook import { usePrompt } fr..."
+  },
+  {
+    "title": "Buy US,UK, Old and New Verified Cash App Accounts",
+    "url": "https://dev.to/md_bchhkkjh_548103bb8d99b/buy-usuk-old-and-new-verified-cash-app-accounts-20am",
+    "publishedAt": "2025-08-31T16:32:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Top How to Buy verified cash app usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cas...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F68j5e6z8rdnq9404epi7.png",
+    "video": null,
+    "author": "Md Bchhkkjh",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Buy US,UK, Old and New Verified Cash App Accounts",
+    "seoDescription": "Top How to Buy verified cash app usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlit..."
+  },
+  {
+    "title": "BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini",
+    "url": "https://dev.to/ranjancse/brightdata-company-deep-research-report-with-ai-agent-google-search-glassdoor-and-crunchbase--1cjb",
+    "publishedAt": "2025-08-31T16:20:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download the Workflow BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini This workflow is designed to perform deep company research by combining Bright Data scraping, Google Search enrichment, and AI-driven interpreta...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp1ivtzi2affz6rz19wfs.png",
+    "video": null,
+    "author": "Ranjan Dailata",
+    "tags": [
+      "n8nbrightdatachallenge",
+      "webdev",
+      "ai",
+      "devchallenge"
+    ],
+    "seoTitle": "BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download the Workflow BrightData Company Deep Research Report with AI Agent, ..."
+  },
+  {
     "title": "Ship code without even reading it?",
     "url": "https://dev.to/dev_tips/ship-code-without-even-reading-it-3p87",
     "publishedAt": "2025-08-31T16:02:26.000Z",
@@ -36,25 +112,6 @@
     ],
     "seoTitle": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
     "seoDescription": "Another hint has surfaced that Apple is preparing to eliminate the physical SIM card tray from iPhones in more countries this year. In particular, a source f..."
-  },
-  {
-    "title": "MY FIRST TRY WITH ER DIAGRAM....",
-    "url": "https://dev.to/sourav_mahato_3900/my-first-try-with-er-diagram-1edp",
-    "publishedAt": "2025-08-31T15:13:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "While exploring about backend workflow and environment, From tutorials and videos I come to know that database design is also very important part in development. .....Before I was only thinking about coding part, but slowly I understand that how data store and how data flow inside system is also very important........... I am not learning to become databa...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7slfdell3cbupoeijj7r.jpeg",
-    "video": null,
-    "author": "Sourav Mahato",
-    "tags": [
-      "development",
-      "webdev",
-      "backend",
-      "programming"
-    ],
-    "seoTitle": "MY FIRST TRY WITH ER DIAGRAM....",
-    "seoDescription": "While exploring about backend workflow and environment, From tutorials and videos I come to know that database design is also very important part in developm..."
   },
   {
     "title": "The Verge’s favorite gifts for book lovers",
@@ -542,57 +599,5 @@
     ],
     "seoTitle": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
     "seoDescription": "The U.S. Court of Appeals for the Federal Circuit has upheld a lower court's ruling that the law President Donald Trump has been using to enact his widesprea..."
-  },
-  {
-    "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
-    "url": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
-    "publishedAt": "2025-08-29T22:11:02.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The all-new iPhone 17 Air will likely be the standout device at Apple's September \"Awe Dropping\" event, but the iPhone 17 Pro isn't exactly getting left behind. There are design updates and new features coming, and we've outlined everything we know so far below. Design and Colors The ‌iPhone 17 Pro‌ models will come in the same two sizes as the iPhone 16 ...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iPhone-17-Pro-Feature-Dual.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "10 Days Until the iPhone 17 Pro: All the Rumors",
-    "seoDescription": "The all-new iPhone 17 Air will likely be the standout device at Apple's September \"Awe Dropping\" event, but the iPhone 17 Pro isn't exactly getting left behi..."
-  },
-  {
-    "title": "iPhone’s Crash Detection feature saves teen who fell asleep behind the wheel",
-    "url": "https://9to5mac.com/2025/08/29/iphones-crash-detection-feature-saves-teen-who-fell-asleep-behind-the-wheel/",
-    "publishedAt": "2025-08-29T21:15:38.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "This is probably not the first time you’ve read about an iPhone automatically calling 911 following a serious car crash, but stories like this never cease to impress. Watch the video below. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/crash-detection.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone’s Crash Detection feature saves teen who fell asleep behind the wheel",
-    "seoDescription": "This is probably not the first time you’ve read about an iPhone automatically calling 911 following a serious car crash, but stories like this never cease to..."
-  },
-  {
-    "title": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
-    "url": "https://nofilmschool.com/macon-blair-the-toxic-avenger",
-    "publishedAt": "2025-08-29T21:00:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In this episode of the No Film School Podcast, GG Hawkins sits down with filmmaker Macon Blair to discuss his journey from scrappy DIY filmmaking in Virginia to directing the 2025 reimagining of the cult classic The Toxic Avenger. The film hits theaters today, and Blair shares how he balanced homage and originality, kept the humor grounded in absurdity, a...",
-    "image": "https://nofilmschool.com/media-library/how-macon-blair-reinvented-the-cult-classic-the-toxic-avenger.jpg?id=61536345&width=980",
-    "video": "https://playlist.megaphone.fm?e=NFS6833473745",
-    "author": "NFS Staff",
-    "tags": [
-      "No film school podcast",
-      "Podcast",
-      "Interviews",
-      "Macon blair",
-      "The toxic avenger"
-    ],
-    "seoTitle": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
-    "seoDescription": "In this episode of the No Film School Podcast, GG Hawkins sits down with filmmaker Macon Blair to discuss his journey from scrappy DIY filmmaking in Virginia..."
   }
 ]
