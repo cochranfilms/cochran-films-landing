@@ -1,5 +1,113 @@
 [
   {
+    "title": "I built an AI Agent That reveals Wall Street Sentiment in seconds",
+    "url": "https://dev.to/indika_wimalasuriya/i-built-an-ai-agent-that-reveals-wall-street-sentiment-in-seconds-4ma2",
+    "publishedAt": "2025-08-31T21:08:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data What I Built I built an AI agent that aggregates and analyzes sentiment from: All online sources Major US stock market news sites X.com user posts It delivers a consolidated Wall Street sentiment report in seconds. The agent scans trending trader discussions, financial headlin...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3qenq70zm2z31w4vbj6b.png",
+    "video": null,
+    "author": "Indika_Wimalasuriya",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "I built an AI Agent That reveals Wall Street Sentiment in seconds",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data What I Built I built an AI agent that aggregates and analyzes sentiment from:..."
+  },
+  {
+    "title": "Chatbots can be manipulated through flattery and peer pressure",
+    "url": "https://www.theverge.com/news/768508/chatbots-are-susceptible-to-flattery-and-peer-pressure",
+    "publishedAt": "2025-08-31T21:06:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Generally, AI chatbots are not supposed to do things like call you names or tell you how to make controlled substances. But, just like a person, with the right psychological tactics, it seems like at least some LLMs can be convinced to break their own rules. Researchers from the University of Pennsylvania deployed tactics described by psychology professor...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Terrence O’Brien",
+    "tags": [],
+    "seoTitle": "Chatbots can be manipulated through flattery and peer pressure",
+    "seoDescription": "Generally, AI chatbots are not supposed to do things like call you names or tell you how to make controlled substances. But, just like a person, with the rig..."
+  },
+  {
+    "title": "Think 'The Social Network' Has a Hero? Think Again",
+    "url": "https://nofilmschool.com/the-social-network-no-heroes",
+    "publishedAt": "2025-08-31T21:00:02.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The Social Network is one of the most critically acclaimed David Fincher movies. Yet, this dramatic depiction of the founding of Facebook and the conflicts surrounding it, based on the book \"Accidental Billionaires,\" is arguably an anomaly in classical narratives. The Social Network is not your usual good versus evil story. While screenwriter Aaron Sorkin...",
+    "image": "https://nofilmschool.com/media-library/think-the-social-network-has-a-hero-think-again.jpg?id=61538366&width=980",
+    "video": "https://www.youtube.com/embed/lB95KLmpLR4?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "The social network",
+      "Villains",
+      "Antiheroes",
+      "Characters",
+      "Character analysis"
+    ],
+    "seoTitle": "Think 'The Social Network' Has a Hero? Think Again",
+    "seoDescription": "The Social Network is one of the most critically acclaimed David Fincher movies. Yet, this dramatic depiction of the founding of Facebook and the conflicts s..."
+  },
+  {
+    "title": "August 2025 At Releem - Recommendations Impact & Redundant Index Detection",
+    "url": "https://dev.to/drupaladmin/august-2025-at-releem-recommendations-impact-redundant-index-detection-2cp5",
+    "publishedAt": "2025-08-31T21:00:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We’ve been hard at work refining Releem to make your database monitoring and optimization even more intuitive and secure💪 This month brings a deeper query insights, and smarter health checks, so you get a clear, real-time view of database activity and can respond to problems in record time. See exactly why a query is slow with execution plans and real qu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi1651fv6soq6kdyjhn6j.png",
+    "video": null,
+    "author": "Roman Agabekov",
+    "tags": [
+      "mysql",
+      "devops",
+      "database",
+      "webdev"
+    ],
+    "seoTitle": "August 2025 At Releem - Recommendations Impact & Redundant Index Detection",
+    "seoDescription": "We’ve been hard at work refining Releem to make your database monitoring and optimization even more intuitive and secure💪 This month brings a deeper query i..."
+  },
+  {
+    "title": "Darth Vader’s Few Minutes of Screen Time Defined Movie Villains Forever",
+    "url": "https://nofilmschool.com/darth-vader-screen-time-impact",
+    "publishedAt": "2025-08-31T20:45:26.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Twelve minutes—that’s all it took for Darth Vader to become the most feared villain in cinema. In Star Wars: A New Hope (1977), he’s on screen for less than the time it takes to microwave a frozen pizza, yet his presence dominates every frame of the film. How does a character with such limited screen time end up shaping the entire galaxy far, far away? Th...",
+    "image": "https://nofilmschool.com/media-library/darth-vader.jpg?id=61538379&width=980",
+    "video": "https://www.youtube.com/embed/tRX4JFWffkM?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Darth vader",
+      "Star wars",
+      "Characters",
+      "Darth vader"
+    ],
+    "seoTitle": "Darth Vader’s Few Minutes of Screen Time Defined Movie Villains Forever",
+    "seoDescription": "Twelve minutes—that’s all it took for Darth Vader to become the most feared villain in cinema. In Star Wars: A New Hope (1977), he’s on screen for less than ..."
+  },
+  {
+    "title": "iPhone 17 Pro Clear Case Leak Reveals Three Key Changes",
+    "url": "https://www.macrumors.com/2025/08/31/iphone-17-pro-clear-case-leak/",
+    "publishedAt": "2025-08-31T20:26:02.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is expected to unveil the iPhone 17 series on Tuesday, September 9, and last-minute rumors about the devices continue to surface. The latest info comes from a leaker known as Majin Bu, who has shared alleged images of Apple's Clear Case for the iPhone 17 Pro and Pro Max, or at least replicas. Image Credit: @MajinBuOfficial The images show three alle...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-Iridescent-Feature-2.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "iPhone 17 Pro",
+      "Majin Bu"
+    ],
+    "seoTitle": "iPhone 17 Pro Clear Case Leak Reveals Three Key Changes",
+    "seoDescription": "Apple is expected to unveil the iPhone 17 series on Tuesday, September 9, and last-minute rumors about the devices continue to surface. The latest info comes..."
+  },
+  {
     "title": "iPhone 17 Air is basically guaranteed to make a US feature expand to more countries",
     "url": "https://9to5mac.com/2025/08/31/iphone-17-air-esim-only/",
     "publishedAt": "2025-08-31T20:06:42.000Z",
@@ -86,25 +194,6 @@
     ],
     "seoTitle": "CarPlay Ultra could soon land on an affordable EV after luxury car debut",
     "seoDescription": "CarPlay Ultra arrived this year after taking a bit longer than expected to materialize. The only catch is that next-generation CarPlay is only offered in car..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/aishwary_tiwari_1234/-1dmk",
-    "publishedAt": "2025-08-31T19:31:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "TypeScript Expert Revision Handbook Animesh Pandey ・ Aug 31 #webdev #programming #javascript #typescript",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F470180%2Fc356143f-e821-4c86-b621-49870ab3b429.jpg",
-    "video": null,
-    "author": "Aishwary Tiwari",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "typescript"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "TypeScript Expert Revision Handbook Animesh Pandey ・ Aug 31 #webdev #programming #javascript #typescript"
   },
   {
     "title": "Here’s what we’re expecting with future generations of Apple Vision Pro: roadmap",
@@ -502,88 +591,5 @@
     ],
     "seoTitle": "On the Path to Being a Great Photographer? There’s Something You Should Know",
     "seoDescription": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefor..."
-  },
-  {
-    "title": "Why do Waymos keep loitering in front of my house?",
-    "url": "https://www.theverge.com/google-waymo/766002/waymo-la-loiter-parking-robotaxi-ai-public-space",
-    "publishedAt": "2025-08-30T12:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home!\" she says, calling to her parents, Lisa Delgin and Zach Tucker. It is by no means the first time a Waymo has come \"home\" to this particular spot. Last year, a Waymo robotaxi dropped Delgin and Tucke...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKS518_WAYMO_TAXI_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Rachel Kraus",
-    "tags": [],
-    "seoTitle": "Why do Waymos keep loitering in front of my house?",
-    "seoDescription": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home..."
-  },
-  {
-    "title": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
-    "url": "https://nofilmschool.com/pulp-fiction-briefcase-mystery",
-    "publishedAt": "2025-08-30T05:20:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious to know, asks him, “We happy?” And us? We lean forward, just as desperate to peek inside. In that instant, Tarantino transforms a simple prop into one of the most famous mysteries in cinema history. W...",
-    "image": "https://nofilmschool.com/media-library/whats-in-pulp-fictions-briefcase-nothing-and-everything.jpg?id=61536518&width=980",
-    "video": "https://www.youtube.com/embed/qY2Vx8-yOsQ?rel=0",
-    "author": "Vishal Wagh",
-    "tags": [
-      "Pulp fiction",
-      "Props"
-    ],
-    "seoTitle": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
-    "seoDescription": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious ..."
-  },
-  {
-    "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
-    "url": "https://nofilmschool.com/godfather-vito-michael-scenes",
-    "publishedAt": "2025-08-30T05:10:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In a film about family, power, and legacy, The Godfather (1972) gives us only three scenes where Vito and Michael Corleone share the screen—yet these fleeting moments define the entire saga. It’s not the hugs, arguments, or long father-son talks that push Michael toward his eventual fate. It’s the silences. The looks. The weight of words that don’t need r...",
-    "image": "https://nofilmschool.com/media-library/vito-and-michael-corleones-3-defining-scenes-in-the-godfather.jpg?id=61532067&width=980",
-    "video": "https://www.youtube.com/embed/HCu9vOpwMp0?rel=0",
-    "author": "Vishal Wagh",
-    "tags": [
-      "The godfather",
-      "Film analysis"
-    ],
-    "seoTitle": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
-    "seoDescription": "In a film about family, power, and legacy, The Godfather (1972) gives us only three scenes where Vito and Michael Corleone share the screen—yet these fleetin..."
-  },
-  {
-    "title": "The Unexpected Story Behind Joker’s Lip-Licking in 'The Dark Knight'",
-    "url": "https://nofilmschool.com/heath-ledger-joker-lip-lick",
-    "publishedAt": "2025-08-30T05:00:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Do you believe that even the seemingly worst things happen for the best? It was during the filming of a particular Netflix original anthology. It was peak monsoon, and I still don’t understand why nobody accounted for the rain. Naturally, the rain literally pissed on our schedule; we barely finished filming. Months later, as I sat next to the DP, watching...",
-    "image": "https://nofilmschool.com/media-library/the-unexpected-story-behind-jokers-lip-licking-in-the-dark-knight.jpg?id=61536445&width=980",
-    "video": "https://www.youtube.com/embed/lNLmk7CPtOw?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "The dark knight",
-      "Heath ledger as the joker",
-      "The joker"
-    ],
-    "seoTitle": "The Unexpected Story Behind Joker’s Lip-Licking in 'The Dark Knight'",
-    "seoDescription": "Do you believe that even the seemingly worst things happen for the best? It was during the filming of a particular Netflix original anthology. It was peak mo..."
-  },
-  {
-    "title": "8 Movies That Predicted the Future — And Got It Right",
-    "url": "https://nofilmschool.com/movies-that-predicted-the-future",
-    "publishedAt": "2025-08-30T04:51:08.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and their needs, or else you might turn it into a fantasy. Because there’s no real point of reference, world-building for a story set far ahead in the future can be more challenging than recreating a historic...",
-    "image": "https://nofilmschool.com/media-library/8-movies-that-predicted-the-future-and-got-it-right.jpg?id=61536391&width=980",
-    "video": "https://www.youtube.com/embed/oR_e9y-bka0?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "Futuristic movies",
-      "Best movies"
-    ],
-    "seoTitle": "8 Movies That Predicted the Future — And Got It Right",
-    "seoDescription": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and thei..."
   }
 ]
