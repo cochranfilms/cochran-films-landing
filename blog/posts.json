@@ -1,22 +1,60 @@
 [
   {
-    "title": "Intranet-Only Projects Pitfall (Maven and SVN)",
-    "url": "https://dev.to/thellu/my-first-encounter-with-intranet-only-projects-and-the-pitfalls-i-hit-5998",
-    "publishedAt": "2025-08-31T15:06:35.000Z",
+    "title": "Ship code without even reading it?",
+    "url": "https://dev.to/dev_tips/ship-code-without-even-reading-it-3p87",
+    "publishedAt": "2025-08-31T16:02:26.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Recently, I had my very first experience working on a project that runs completely offline on an intranet. Since I had to figure out a lot of things from scratch, I decided to write down the issues I ran into — hopefully this saves someone else a few hours of frustration! Because of intranet security requirements, the project runs on a virtual machine tha...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu2xeb16nl8397ufz1eug.png",
+    "summary": "I once merged an AI-generated PR without reading a single line. CI was green, I shipped it… and staging exploded. Here’s why RTFC still matters in 2025. Confession time: I shipped code I never actually read. Copilot wrote the whole thing, CI went green, and I hit merge. An hour later, staging was dead in the water. The logs pointed to a function that didn...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ADtxkiqQ76h1lkusiY1irZg.jpeg",
     "video": null,
-    "author": "Thellu",
+    "author": "<devtips/>",
     "tags": [
       "webdev",
-      "programming",
-      "java",
-      "maven"
+      "ai",
+      "productivity",
+      "progra"
     ],
-    "seoTitle": "Intranet-Only Projects Pitfall (Maven and SVN)",
-    "seoDescription": "Recently, I had my very first experience working on a project that runs completely offline on an intranet. Since I had to figure out a lot of things from scr..."
+    "seoTitle": "Ship code without even reading it?",
+    "seoDescription": "I once merged an AI-generated PR without reading a single line. CI was green, I shipped it… and staging exploded. Here’s why RTFC still matters in 2025. Conf..."
+  },
+  {
+    "title": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
+    "url": "https://www.macrumors.com/2025/08/31/apple-hints-at-esim-only-iphone-17/",
+    "publishedAt": "2025-08-31T15:52:44.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Another hint has surfaced that Apple is preparing to eliminate the physical SIM card tray from iPhones in more countries this year. In particular, a source familiar with the matter has informed MacRumors that retail employees at Apple Authorized Resellers in the EU are required to complete a training course related to iPhones with eSIM support by Friday, ...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iPhone-eSIM-Feature.jpeg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "Featured",
+      "iPhone 17",
+      "iPhone 17 Air",
+      "iPhone 17 Pro"
+    ],
+    "seoTitle": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
+    "seoDescription": "Another hint has surfaced that Apple is preparing to eliminate the physical SIM card tray from iPhones in more countries this year. In particular, a source f..."
+  },
+  {
+    "title": "MY FIRST TRY WITH ER DIAGRAM....",
+    "url": "https://dev.to/sourav_mahato_3900/my-first-try-with-er-diagram-1edp",
+    "publishedAt": "2025-08-31T15:13:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "While exploring about backend workflow and environment, From tutorials and videos I come to know that database design is also very important part in development. .....Before I was only thinking about coding part, but slowly I understand that how data store and how data flow inside system is also very important........... I am not learning to become databa...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7slfdell3cbupoeijj7r.jpeg",
+    "video": null,
+    "author": "Sourav Mahato",
+    "tags": [
+      "development",
+      "webdev",
+      "backend",
+      "programming"
+    ],
+    "seoTitle": "MY FIRST TRY WITH ER DIAGRAM....",
+    "seoDescription": "While exploring about backend workflow and environment, From tutorials and videos I come to know that database design is also very important part in developm..."
   },
   {
     "title": "The Verge’s favorite gifts for book lovers",
@@ -31,44 +69,6 @@
     "tags": [],
     "seoTitle": "The Verge’s favorite gifts for book lovers",
     "seoDescription": "What do you gift somebody who loves books? The obvious answer is \"a book,\" but since true bibliophiles are probably sitting on a stack already, it's worth ge..."
-  },
-  {
-    "title": "Just dropped a new “Pasadena Garage” skull biker design – would love your thoughts",
-    "url": "https://dev.to/threadup/just-dropped-a-new-pasadena-garage-skull-biker-design-would-love-your-thoughts-4f73",
-    "publishedAt": "2025-08-31T14:42:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey everyone, The idea behind it was to mix classic biker lifestyle elements (freedom, garage culture, skull artwork) with a clean streetwear style you can actually wear day-to-day. I put it on hoodies, sweatshirts, and tees, and the print came out super bold. Not trying to spam or anything—just really excited to finally put this out there. If you’re into...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdxgj2j6w30ljuy2d3qfv.png",
-    "video": null,
-    "author": "Alex Mathiew",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "javascript"
-    ],
-    "seoTitle": "Just dropped a new “Pasadena Garage” skull biker design – would love your thoughts",
-    "seoDescription": "Hey everyone, The idea behind it was to mix classic biker lifestyle elements (freedom, garage culture, skull artwork) with a clean streetwear style you can a..."
-  },
-  {
-    "title": "Phishing: The Complete Guide to Cyber Deception and Protection",
-    "url": "https://dev.to/pragyasapkota/phishing-the-complete-guide-to-cyber-deception-and-protection-ag5",
-    "publishedAt": "2025-08-31T14:24:22.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Phishing: the art of convincing you to hand over your keys while you hold the door open for the thief. No fishing rod required — just a convincing email and a dash of misplaced trust. Phishing is one of the oldest — and still one of the most effective — cybercrime techniques. Although the basic trick is simple (pretend to be someone trustworthy to get peo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkd4br2wylb068xoxqbh4.jpg",
-    "video": null,
-    "author": "Pragya Sapkota",
-    "tags": [
-      "phishing",
-      "webdev",
-      "cybersecurity",
-      "beginners"
-    ],
-    "seoTitle": "Phishing: The Complete Guide to Cyber Deception and Protection",
-    "seoDescription": "Phishing: the art of convincing you to hand over your keys while you hold the door open for the thief. No fishing rod required — just a convincing email and ..."
   },
   {
     "title": "Meta is struggling to rein in its AI chatbots",
