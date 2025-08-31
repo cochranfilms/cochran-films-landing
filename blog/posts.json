@@ -1,5 +1,24 @@
 [
   {
+    "title": "🧐How to AI code review for free (PR-Agent)🧠",
+    "url": "https://dev.to/webdeveloperhyper/how-to-ai-code-review-for-free-pr-agent-1i8n",
+    "publishedAt": "2025-08-31T05:02:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Intro Sorry that I posted this article before finishing by mistake.🙇 ↓PR-Agent is an OSS that can make AI code review automatically. https://qodo-merge-docs.qodo.ai/ free!🤑 You can use PR-Agent on repository such as GitHub, GitLab and others. slash commands in pull request comment. PR-Agent has 3 main functions. describe: explains the outline of the pul...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0h8v888fmz4t3h0fa4nn.png",
+    "video": null,
+    "author": "Web Developer Hyper",
+    "tags": [
+      "ai",
+      "webdev",
+      "github",
+      "opensource"
+    ],
+    "seoTitle": "🧐How to AI code review for free (PR-Agent)🧠",
+    "seoDescription": "Intro Sorry that I posted this article before finishing by mistake.🙇 ↓PR-Agent is an OSS that can make AI code review automatically. https://qodo-merge-docs..."
+  },
+  {
     "title": "AI Sprint Goal Generator That Actually Works 🎯🤖",
     "url": "https://dev.to/mattlewandowski93/ai-sprint-goal-generator-that-actually-works-m9n",
     "publishedAt": "2025-08-31T02:44:34.000Z",
@@ -55,82 +74,6 @@
     ],
     "seoTitle": "Backend Logic Made Easy: How I Built a Clean User Registration API",
     "seoDescription": "Ever stared at a giant backend function and thought, “No way I can write this”? I’ve been there. But here’s the truth: backend development isn’t about writin..."
-  },
-  {
-    "title": "The truth is, AI isn’t here to replace developers; it’s here to accelerate it. If used correctly, developers can learn faster, deeper, and with more confidence.",
-    "url": "https://dev.to/jaideepparashar/the-truth-is-ai-isnt-here-to-replace-developers-its-here-to-accelerate-it-if-used-correctly-pi9",
-    "publishedAt": "2025-08-31T01:59:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "How Coders Can Use AI to Learn Faster (Without Cheating) Jaideep Parashar ・ Aug 31 #ai #devops #learning #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
-    "video": null,
-    "author": "Jaideep Parashar",
-    "tags": [
-      "ai",
-      "devops",
-      "learning",
-      "webdev"
-    ],
-    "seoTitle": "The truth is, AI isn’t here to replace developers; it’s here to accelerate it. If used correctly, developers can learn faster, deeper, and with more confidence.",
-    "seoDescription": "How Coders Can Use AI to Learn Faster (Without Cheating) Jaideep Parashar ・ Aug 31 #ai #devops #learning #webdev"
-  },
-  {
-    "title": "4 things backend developers should consider when developing services for mobile apps",
-    "url": "https://dev.to/marcotcdev/4-things-backend-developers-should-consider-when-developing-services-for-mobile-apps-5cnf",
-    "publishedAt": "2025-08-31T01:59:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let's say you are a backend developer, with some expertise in different systems. One day, your leader assigns you a new task; You have to develop and test a few REST endpoints for an upcoming mobile app. So far, so good. Since you have experience as backend developer, it is not that hard, alright? You build and deploy the changes, and everything seems ok ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo4w5cfh7kwu1x6kepg0m.gif",
-    "video": null,
-    "author": "Marco Coelho",
-    "tags": [
-      "backend",
-      "mobile",
-      "android",
-      "webdev"
-    ],
-    "seoTitle": "4 things backend developers should consider when developing services for mobile apps",
-    "seoDescription": "Let's say you are a backend developer, with some expertise in different systems. One day, your leader assigns you a new task; You have to develop and test a ..."
-  },
-  {
-    "title": "How Coders Can Use AI to Learn Faster (Without Cheating)",
-    "url": "https://dev.to/jaideepparashar/how-coders-can-use-ai-to-learn-faster-without-cheating-2gk0",
-    "publishedAt": "2025-08-31T01:54:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Whenever I speak to coders about AI, the biggest fear is this: “If I use ChatGPT, is it considered cheating?” The truth is, AI isn’t here to replace learning — it’s here to accelerate it. Here’s how. 1️⃣ Turn AI Into Your Study Buddy Instead of memorising blindly, let AI simplify concepts. Prompt: “Explain quantum physics like I’m 12 years old. Use analog...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk76ia9ukudgc9677igft.png",
-    "video": null,
-    "author": "Jaideep Parashar",
-    "tags": [
-      "ai",
-      "devops",
-      "learning",
-      "webdev"
-    ],
-    "seoTitle": "How Coders Can Use AI to Learn Faster (Without Cheating)",
-    "seoDescription": "Whenever I speak to coders about AI, the biggest fear is this: “If I use ChatGPT, is it considered cheating?” The truth is, AI isn’t here to replace learning..."
-  },
-  {
-    "title": "Robust Context in Go Microservices",
-    "url": "https://dev.to/leapcell/robust-context-in-go-microservices-ihp",
-    "publishedAt": "2025-08-31T01:38:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In modern microservice architectures, a single user request often triggers a call chain spanning multiple services. Effectively controlling the lifecycle of this call chain, passing common data, and “gracefully” terminating it when appropriate are key to ensuring system robustness, responsiveness, and resource efficiency. Go’s context.Context package is t...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzahds2mcq1ppe82uutgv.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "Robust Context in Go Microservices",
-    "seoDescription": "In modern microservice architectures, a single user request often triggers a call chain spanning multiple services. Effectively controlling the lifecycle of ..."
   },
   {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
@@ -623,5 +566,56 @@
     ],
     "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
     "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
+  },
+  {
+    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
+    "publishedAt": "2025-08-29T19:53:06.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
+  },
+  {
+    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
+    "publishedAt": "2025-08-29T19:44:15.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
+    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
+    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "The roses",
+      "Comedy",
+      "Remake",
+      "Adaptation"
+    ],
+    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
+  },
+  {
+    "title": "Michelle Yeoh's Top 10 Movies",
+    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
+    "publishedAt": "2025-08-29T19:27:05.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
+    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
+    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Michelle yeoh",
+      "Martial arts movies"
+    ],
+    "seoTitle": "Michelle Yeoh's Top 10 Movies",
+    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
   }
 ]
