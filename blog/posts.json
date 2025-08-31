@@ -1,21 +1,110 @@
 [
   {
-    "title": "🚀 Internship Job Finder Companion n8n & Bright Data Challenge – AI-Powered Internship Discovery",
-    "url": "https://dev.to/gihan_chinthaka_b55a3536d/internship-job-finder-companionn8n-bright-data-challenge-ai-powered-internship-discovery-26op",
-    "publishedAt": "2025-08-31T18:59:07.000Z",
+    "title": "iPhone 17 Air is basically guaranteed to make a US feature expand to more countries",
+    "url": "https://9to5mac.com/2025/08/31/iphone-17-air-esim-only/",
+    "publishedAt": "2025-08-31T20:06:42.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "When Apple reveals the iPhone 17 lineup in just 10 days, there’s one U.S. feature that is basically guaranteed to go international after three years. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/04/iphone-17-air-desert-titanium.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 Air is basically guaranteed to make a US feature expand to more countries",
+    "seoDescription": "When Apple reveals the iPhone 17 lineup in just 10 days, there’s one U.S. feature that is basically guaranteed to go international after three years. more…"
+  },
+  {
+    "title": "Building a Universe in the Browser: My Journey into Interstellar Web Simulators",
+    "url": "https://dev.to/vikas_kumarsingh_39e7df9/building-a-universe-in-the-browser-my-journey-into-interstellar-web-simulators-2nh6",
+    "publishedAt": "2025-08-31T20:05:35.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🌟 What I Built I built Internship Job Finder Companion, an AI-powered workflow that automatically checks jobseeker.lk for new internship opportunities, structures them, and makes them instantly accessible through Google Sheets and Email. The goal is to help students and job seekers quickly identify fresh internship openings, view requirements, and apply ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm7rt5o5qtlrw9wc1kb0u.png",
+    "summary": "Hey everyone! I'm incredibly excited (and a little nervous!) to share a passion project I've been pouring countless hours into: a browser-based space simulator that lets you explore a procedurally generated universe of over 200 star systems. Think NASA Eyes meets a touch of interstellar exploration, all running natively in your web browser. You can check ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa5vnfj2d8kv0dpt0pbe5.jpg",
     "video": null,
-    "author": "Gihan Chinthaka",
+    "author": "VIKAS KUMAR SINGH",
     "tags": [
-      "n8nbrightdatachallenge",
       "webdev",
-      "programming"
+      "react",
+      "javascript"
     ],
-    "seoTitle": "🚀 Internship Job Finder Companion n8n & Bright Data Challenge – AI-Powered Internship Discovery",
-    "seoDescription": "🌟 What I Built I built Internship Job Finder Companion, an AI-powered workflow that automatically checks jobseeker.lk for new internship opportunities, stru..."
+    "seoTitle": "Building a Universe in the Browser: My Journey into Interstellar Web Simulators",
+    "seoDescription": "Hey everyone! I'm incredibly excited (and a little nervous!) to share a passion project I've been pouring countless hours into: a browser-based space simulat..."
+  },
+  {
+    "title": "Go 1.25 Greentea GC vs Classic: HydrAIDE 1M Swamp Test Shows +22% CPU Efficiency, -8% Memory",
+    "url": "https://dev.to/hydraide/go-125-greentea-gc-vs-classic-hydraide-1m-swamp-test-shows-22-cpu-efficiency-8-memory-294h",
+    "publishedAt": "2025-08-31T20:05:20.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Go 1.25 new Greentea GC vs. classic GC. 1 Million Swamp stress test with HydrAIDE: +22% CPU efficiency, -8% memory, but rarer long spikes Introduction – Why now, why HydrAIDE? With the release of Go 1.25, an exciting experimental feature has arrived: the Greentea GC, a new garbage collector mode that promises to reduce GC overhead by 10–40%. But what does...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwlo9est7hn1hplqeppws.png",
+    "video": null,
+    "author": "Peter Gebri",
+    "tags": [
+      "go",
+      "opensource",
+      "webdev",
+      "news"
+    ],
+    "seoTitle": "Go 1.25 Greentea GC vs Classic: HydrAIDE 1M Swamp Test Shows +22% CPU Efficiency, -8% Memory",
+    "seoDescription": "Go 1.25 new Greentea GC vs. classic GC. 1 Million Swamp stress test with HydrAIDE: +22% CPU efficiency, -8% memory, but rarer long spikes Introduction – Why ..."
+  },
+  {
+    "title": "WYKRA: Web You Know, Real-time Analysis",
+    "url": "https://dev.to/olgabraginskaya/wykra-web-you-know-real-time-analysis-20i3",
+    "publishedAt": "2025-08-31T20:03:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data So you're tasked with finding influencers. Not just random ones, but ones that fit your niche, your vibe and maybe even your region. You type vague queries into Google. You scroll through Instagram. You open 19 Chrome tabs. You give up. We built WYKRA so you don’t have to. WYK...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz5b6hdcvf1kaxsvp0vr7.png",
+    "video": null,
+    "author": "Olga Braginskaya",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "WYKRA: Web You Know, Real-time Analysis",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data So you're tasked with finding influencers. Not just random ones, but ones tha..."
+  },
+  {
+    "title": "CarPlay Ultra could soon land on an affordable EV after luxury car debut",
+    "url": "https://9to5mac.com/2025/08/31/carplay-ultra-hyundai-ioniq-3/",
+    "publishedAt": "2025-08-31T19:40:32.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "CarPlay Ultra arrived this year after taking a bit longer than expected to materialize. The only catch is that next-generation CarPlay is only offered in cars that start around $200,000. That appears to be changing soon with an affordable EV option coming soon. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/Aston-Martin_Apple-CarPlay-Ultra_08.jpg?quality=82&#038;strip=all&#038;w=1499",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "CarPlay Ultra could soon land on an affordable EV after luxury car debut",
+    "seoDescription": "CarPlay Ultra arrived this year after taking a bit longer than expected to materialize. The only catch is that next-generation CarPlay is only offered in car..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/aishwary_tiwari_1234/-1dmk",
+    "publishedAt": "2025-08-31T19:31:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TypeScript Expert Revision Handbook Animesh Pandey ・ Aug 31 #webdev #programming #javascript #typescript",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F470180%2Fc356143f-e821-4c86-b621-49870ab3b429.jpg",
+    "video": null,
+    "author": "Aishwary Tiwari",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "typescript"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "TypeScript Expert Revision Handbook Animesh Pandey ・ Aug 31 #webdev #programming #javascript #typescript"
   },
   {
     "title": "Here’s what we’re expecting with future generations of Apple Vision Pro: roadmap",
@@ -34,44 +123,6 @@
     "seoDescription": "There have been a plethora of varying rumors for Apple’s next generation spatial computer. Is Apple prioritizing a cheaper model, or going all out with a sec..."
   },
   {
-    "title": "Automating Travel Planning with n8n and Real-time scrape using Bright Data",
-    "url": "https://dev.to/masud_ali_cc66779de0c2b2/automating-travel-planning-with-n8n-and-real-time-scrape-using-bright-data-2ao4",
-    "publishedAt": "2025-08-31T18:51:15.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered Travel Planner using n8n and Bright Data to streamline the process of finding flights and accommodations. This agent takes user input via a form, fetches real-time flight data from Google Flights, scrapes accommodation listings from Airbnb, Booking.com,...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flrlgkb1ogm49rprex9wx.png",
-    "video": null,
-    "author": "Mas'ud Ali",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Automating Travel Planning with n8n and Real-time scrape using Bright Data",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I created an AI-powered Travel Planner using n8n and Bright Data to streamlin..."
-  },
-  {
-    "title": "game changer",
-    "url": "https://dev.to/revis047/game-changer-2ad7",
-    "publishedAt": "2025-08-31T18:42:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Future of Decision-Making: AI Agent That Predicts Trends & Profits John Revis ・ Aug 31 #webdev #n8nbrightdatachallenge #devchallenge #ai",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1418678%2F7ce27046-6e8b-451f-8e1f-c99d4c52cb5d.png",
-    "video": null,
-    "author": "John Revis ",
-    "tags": [
-      "webdev",
-      "n8nbrightdatachallenge",
-      "devchallenge",
-      "ai"
-    ],
-    "seoTitle": "game changer",
-    "seoDescription": "The Future of Decision-Making: AI Agent That Predicts Trends & Profits John Revis ・ Aug 31 #webdev #n8nbrightdatachallenge #devchallenge #ai"
-  },
-  {
     "title": "Apple Says 11-Inch MacBook Air and Two Other Macs Are Now Obsolete",
     "url": "https://www.macrumors.com/2025/08/31/11-inch-macbook-air-is-obsolete/",
     "publishedAt": "2025-08-31T18:25:30.000Z",
@@ -86,25 +137,6 @@
     ],
     "seoTitle": "Apple Says 11-Inch MacBook Air and Two Other Macs Are Now Obsolete",
     "seoDescription": "Apple today added three Macs to the obsolete products list on its website, including the final model of the MacBook Air with a smaller 11-inch display. The t..."
-  },
-  {
-    "title": "Event-driven cookie manager for the modern web.",
-    "url": "https://dev.to/indianmodassir/event-driven-cookie-manager-for-the-modern-web-2pab",
-    "publishedAt": "2025-08-31T18:05:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Lightweight, event-driven cookie manager for parsing, setting, and tracking cookies with ease. To include cookie-events in Node, first install with npm. npm install cookie-events Clone a copy of the main cookie-events git repo by running: git clone git://github.com/jsvibe/cookie-events.git Below are some of the most common ways to include cookie-events. C...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvlygveqdaj5k1ow0p20d.png",
-    "video": null,
-    "author": "Indian Modassir",
-    "tags": [
-      "webdev",
-      "javascript",
-      "react",
-      "cookie"
-    ],
-    "seoTitle": "Event-driven cookie manager for the modern web.",
-    "seoDescription": "Lightweight, event-driven cookie manager for parsing, setting, and tracking cookies with ease. To include cookie-events in Node, first install with npm. npm ..."
   },
   {
     "title": "Apple just released a new AI chatbot to help retail employees sell iPhones",
@@ -553,37 +585,5 @@
     ],
     "seoTitle": "8 Movies That Predicted the Future — And Got It Right",
     "seoDescription": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and thei..."
-  },
-  {
-    "title": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
-    "url": "https://9to5mac.com/2025/08/29/macbook-pro-m4-first-worthy-apple-silicon-upgrade/",
-    "publishedAt": "2025-08-30T02:00:56.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it worth upgrading to, even if you already have an older . more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/MacBook-Pro-14.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
-    "seoDescription": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it..."
-  },
-  {
-    "title": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
-    "url": "https://9to5mac.com/2025/08/29/in-a-new-filing-apple-fights-back-against-courts-indefensible-epic-games-ruling/",
-    "publishedAt": "2025-08-30T01:11:36.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse Judge Yvonne Gonzalez Rogers’ 2021 decision, or vacate the new injunction and assign a new judge to the case. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/Epic-Games-accuses-Apple-of-delaying-its-game-store-launch.webp?w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
-    "seoDescription": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse ..."
   }
 ]
