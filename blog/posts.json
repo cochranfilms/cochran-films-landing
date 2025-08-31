@@ -38,44 +38,6 @@
     "seoDescription": "Remember that sprint where your goal was \"Complete user stories\"? Yeah, that's not a goal. If you're tired of fuzzy sprint goals that could mean anything, I'..."
   },
   {
-    "title": "AI Tool for Devs: A Review of 314 Prompts",
-    "url": "https://dev.to/thanhdaisy9x/ai-tool-for-devs-a-review-of-314-prompts-1b2j",
-    "publishedAt": "2025-08-31T02:37:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let’s face it, as developers, we’re great at solving complex problems with code. But what about the other side of the equation—the \"soft skills\" of content creation? Writing a compelling blog post, explaining a new library, or even coming up with a talk for a conference can often feel like a bigger challenge than the coding itself. The mental overhead of ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsxghs56lkqv3ad74h4ra.png",
-    "video": null,
-    "author": "Thanh Daisy",
-    "tags": [
-      "webdev",
-      "ai",
-      "marketing",
-      "seo"
-    ],
-    "seoTitle": "AI Tool for Devs: A Review of 314 Prompts",
-    "seoDescription": "Let’s face it, as developers, we’re great at solving complex problems with code. But what about the other side of the equation—the \"soft skills\" of content c..."
-  },
-  {
-    "title": "Backend Logic Made Easy: How I Built a Clean User Registration API",
-    "url": "https://dev.to/yuktisays/backend-logic-made-easy-how-i-built-a-clean-user-registration-api-4io6",
-    "publishedAt": "2025-08-31T02:26:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Ever stared at a giant backend function and thought, “No way I can write this”? I’ve been there. But here’s the truth: backend development isn’t about writing huge, scary functions — it’s about solving one small problem at a time. In this post, I’ll walk you through how I built a clean, structured user registration API using Node.js, Express, and MongoDB....",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5m5bd0o1vj5crbe45us3.png",
-    "video": null,
-    "author": "Yukti Sahu",
-    "tags": [
-      "beginners",
-      "webdev",
-      "javascript",
-      "node"
-    ],
-    "seoTitle": "Backend Logic Made Easy: How I Built a Clean User Registration API",
-    "seoDescription": "Ever stared at a giant backend function and thought, “No way I can write this”? I’ve been there. But here’s the truth: backend development isn’t about writin..."
-  },
-  {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
     "publishedAt": "2025-08-30T21:54:13.000Z",
@@ -88,6 +50,22 @@
     "tags": [],
     "seoTitle": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "seoDescription": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or ..."
+  },
+  {
+    "title": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
+    "url": "https://9to5mac.com/2025/08/30/indie-app-spotlight-profit-investment-portfolio-tracker-for-iphone/",
+    "publishedAt": "2025-08-30T19:30:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would like your app featured, get in contact. If you’re someone who invests, things can easily become messy, and you can end up with a wide variety of brokerage accounts for varying purposes. Profit makes trac...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Profit-Indie-App-Spotlight.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
+    "seoDescription": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would lik..."
   },
   {
     "title": "11 Al Pacino Movies That Define Great Acting",
@@ -617,5 +595,19 @@
     ],
     "seoTitle": "Michelle Yeoh's Top 10 Movies",
     "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
+  },
+  {
+    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
+    "publishedAt": "2025-08-29T19:21:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Richard Lawler",
+    "tags": [],
+    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
+    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
   }
 ]
