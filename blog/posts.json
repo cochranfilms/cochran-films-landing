@@ -1,5 +1,24 @@
 [
   {
+    "title": "💎 ANN: oauth2 v2.0.13",
+    "url": "https://dev.to/galtzo/ann-oauth2-v2013-271k",
+    "publishedAt": "2025-08-30T23:13:42.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "💎 ANN: oauth2 v2.0.13 supporting token revocation via URL-encoded params, complete examples, YARD docs, & RBS types. Used by > 500k other projects w/ 0 backers, & 0 sponsors, and a brand new open collective to change that! (holds out hand). Comprehensive examples below the fold. Cover photo (cropped) by Klara Kulikova on Unsplash 🔨 https://github.com/ru...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fraster.shields.io%2Fdiscord%2F1373797679469170758%3Fstyle%3Dfor-the-badge",
+    "video": null,
+    "author": "Peter H. Boling",
+    "tags": [
+      "webdev",
+      "ruby",
+      "oauth",
+      "opensource"
+    ],
+    "seoTitle": "💎 ANN: oauth2 v2.0.13",
+    "seoDescription": "💎 ANN: oauth2 v2.0.13 supporting token revocation via URL-encoded params, complete examples, YARD docs, & RBS types. Used by > 500k other projects w/ 0 back..."
+  },
+  {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
     "publishedAt": "2025-08-30T21:54:13.000Z",
@@ -28,25 +47,6 @@
     ],
     "seoTitle": "Responsive Tiled Mosaic Image Gallery",
     "seoDescription": "I was converting a website from WordPress to Hugo and needed an equivalent to the Tiled Image Gallery from Wordpress. I wanted the Tiled Mosaic style, but th..."
-  },
-  {
-    "title": "How I put my homelab to use",
-    "url": "https://dev.to/gaurang_pawar_e9c0710cbe5/how-i-put-my-homelab-to-use-3loo",
-    "publishedAt": "2025-08-30T20:03:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I recently launched sttrace.com, it's a site where people can practice real world software engineering problems. When it was finally time to move it from localhost to the internet I had to figure out a way to host it without burning a hole in my pocket. It's a simple website with a React client, Node.js backend server and a container manager REST API serv...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fllaut43gux8ur11bjqzs.png",
-    "video": null,
-    "author": "Gaurang Pawar",
-    "tags": [
-      "devops",
-      "webdev",
-      "startup",
-      "networking"
-    ],
-    "seoTitle": "How I put my homelab to use",
-    "seoDescription": "I recently launched sttrace.com, it's a site where people can practice real world software engineering problems. When it was finally time to move it from loc..."
   },
   {
     "title": "11 Al Pacino Movies That Define Great Acting",
