@@ -133,25 +133,6 @@
     "seoDescription": "In modern microservice architectures, a single user request often triggers a call chain spanning multiple services. Effectively controlling the lifecycle of ..."
   },
   {
-    "title": "💎 ANN: oauth2 v2.0.13",
-    "url": "https://dev.to/galtzo/ann-oauth2-v2013-271k",
-    "publishedAt": "2025-08-30T23:13:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "💎 ANN: oauth2 v2.0.13 supporting token revocation via URL-encoded params, complete examples, YARD docs, & RBS types. Used by > 500k other projects w/ 0 backers, & 0 sponsors, and a brand new open collective to change that! (holds out hand). Comprehensive examples below the fold. Cover photo (cropped) by Klara Kulikova on Unsplash 🔨 https://github.com/ru...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fraster.shields.io%2Fdiscord%2F1373797679469170758%3Fstyle%3Dfor-the-badge",
-    "video": null,
-    "author": "Peter H. Boling",
-    "tags": [
-      "webdev",
-      "ruby",
-      "oauth",
-      "opensource"
-    ],
-    "seoTitle": "💎 ANN: oauth2 v2.0.13",
-    "seoDescription": "💎 ANN: oauth2 v2.0.13 supporting token revocation via URL-encoded params, complete examples, YARD docs, & RBS types. Used by > 500k other projects w/ 0 back..."
-  },
-  {
     "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
     "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
     "publishedAt": "2025-08-30T21:54:13.000Z",
@@ -624,5 +605,23 @@
     "tags": [],
     "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
     "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
+  },
+  {
+    "title": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "url": "https://nofilmschool.com/most-realistic-firefights",
+    "publishedAt": "2025-08-29T19:57:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies that earned the respect of military veterans, firearms experts, and film critics alike. They have highly accurate and visceral scenes that pop off the screen. Some of them are disturbing or scary, but...",
+    "image": "https://nofilmschool.com/media-library/what-are-the-most-realistic-firefights-ever-filmed-by-hollywood.jpg?id=61536059&width=980",
+    "video": "https://www.youtube.com/embed/UDYVy954biU?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Action",
+      "Firefights"
+    ],
+    "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
   }
 ]
