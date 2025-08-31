@@ -1,5 +1,109 @@
 [
   {
+    "title": "iPhone 17 Pro Clear Case may feature redesign and possibly tinted options",
+    "url": "https://9to5mac.com/2025/08/31/iphone-17-pro-clear-case-may-feature-redesign-and-possibly-tinted-options/",
+    "publishedAt": "2025-08-31T14:07:35.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple will unveil the iPhone 17 lineup in just a few days. Before that happens, leaker Majin Bu has provided new details about a third case option from Apple with some unexpected changes. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-orange-concept.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 Pro Clear Case may feature redesign and possibly tinted options",
+    "seoDescription": "Apple will unveil the iPhone 17 lineup in just a few days. Before that happens, leaker Majin Bu has provided new details about a third case option from Apple..."
+  },
+  {
+    "title": "The case for Series 11e: Here’s why the next Apple Watch SE could have a new name",
+    "url": "https://9to5mac.com/2025/08/31/apple-watch-se-3-new-naming-possibility-series-11e/",
+    "publishedAt": "2025-08-31T13:53:31.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is likely going to introduce a new at its Awe Dropping event in just over a week. While we’ve been referring to this device as Apple Watch SE 3 for quite some time now, we’re yet to ask: will it actually be called that? more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/apple-watch-apple-store.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "The case for Series 11e: Here’s why the next Apple Watch SE could have a new name",
+    "seoDescription": "Apple is likely going to introduce a new at its Awe Dropping event in just over a week. While we’ve been referring to this device as Apple Watch SE 3 for qui..."
+  },
+  {
+    "title": "Apple’s discontinued MagSafe Battery Pack doesn’t just stick to iPhones now",
+    "url": "https://9to5mac.com/2025/08/31/apple-magsafe-battery-pack-pixel-10-pro/",
+    "publishedAt": "2025-08-31T13:29:43.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "We all miss Apple’s MagSafe Battery Pack and want to see it return. In the meantime, the old magnetic battery accessory has resurfaced in an unlikely place. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/05/magsafe-battery-pack.png?w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple’s discontinued MagSafe Battery Pack doesn’t just stick to iPhones now",
+    "seoDescription": "We all miss Apple’s MagSafe Battery Pack and want to see it return. In the meantime, the old magnetic battery accessory has resurfaced in an unlikely place. ..."
+  },
+  {
+    "title": "Compare design to website in one click",
+    "url": "https://dev.to/dren0r/compare-design-to-website-in-one-click-3kg",
+    "publishedAt": "2025-08-31T13:26:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hi, this is my first project. Hope you find it useful! Over.fig — a free Chrome extension that overlays your Figma semi-transparent design directly on the webpage for instant visual comparison. 🔧 How It Works: Paste your Figma link Pick a frame to overlay Compare instantly — your design floats right over your web page ✅ Key Features: Pixel-perfect accura...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp2z1vnnb80la4ef9va7t.png",
+    "video": null,
+    "author": "dren0r",
+    "tags": [
+      "webdev",
+      "figma",
+      "design",
+      "showdev"
+    ],
+    "seoTitle": "Compare design to website in one click",
+    "seoDescription": "Hi, this is my first project. Hope you find it useful! Over.fig — a free Chrome extension that overlays your Figma semi-transparent design directly on the we..."
+  },
+  {
+    "title": "The Browser is the New Terminal: A First Look at Iquipe Digital’s Revolutionary Web CLI",
+    "url": "https://dev.to/wildshark/the-browser-is-the-new-terminal-a-first-look-at-iquipe-digitals-revolutionary-web-cli-h13",
+    "publishedAt": "2025-08-31T13:24:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today's fast-paced development landscape, the need for immediate, secure access to server resources is paramount. Traditional methods often require setting up SSH clients, managing credentials, and navigating complex terminal environments. Iquipe Digital recognized this friction point and engineered a solution that combines the power of a command-line ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhkktuz6qbyy3fgkcqoam.jpeg",
+    "video": null,
+    "author": "iQuipe Digital",
+    "tags": [
+      "php",
+      "developer",
+      "cloudcomputing",
+      "webdev"
+    ],
+    "seoTitle": "The Browser is the New Terminal: A First Look at Iquipe Digital’s Revolutionary Web CLI",
+    "seoDescription": "In today's fast-paced development landscape, the need for immediate, secure access to server resources is paramount. Traditional methods often require settin..."
+  },
+  {
+    "title": "Python Quiz — Closures & Loop Variables",
+    "url": "https://dev.to/mahmoudessam/python-quiz-closures-loop-variables-n9d",
+    "publishedAt": "2025-08-31T13:20:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "What is the output of this code and why 🤔? def make_counters(): counters = [] for i in range(3): def counter(): return i counters.append(counter) return counters a, b, c = make_counters() print(a(), b(), c()) Outputs: a. 0 1 2 b. 2 2 2 c. 0 0 0 d. 1 1 1 e. Raises an error This short snippet looks simple, but it probes a set of Python behaviors that commo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2Flinkedin-0A66C2%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite",
+    "video": null,
+    "author": "Mahmoud EL-kariouny",
+    "tags": [
+      "python",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "Python Quiz — Closures & Loop Variables",
+    "seoDescription": "What is the output of this code and why 🤔? def make_counters(): counters = [] for i in range(3): def counter(): return i counters.append(counter) return cou..."
+  },
+  {
     "title": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data",
     "url": "https://dev.to/bennykillua/building-a-competitive-deal-hunter-agent-using-n8n-brightdata-real-time-web-data-42b6",
     "publishedAt": "2025-08-31T13:15:59.000Z",
@@ -35,25 +139,6 @@
     "seoDescription": "RODE is rolling out a major firmware update for the this week that turns the iPhone into a powerful wireless camera source. more…"
   },
   {
-    "title": "Buy Verified PayPal Account",
-    "url": "https://dev.to/usaitway99/buy-verified-paypal-account-af3",
-    "publishedAt": "2025-08-31T12:24:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Buy verified PayPal accounts at USAITWAY? Secure and fully verified PayPal accounts available for instant use, offering hassle-free online payments, transfers, and enhanced security. Our accounts are 100% verified, providing you with reliable, safe transactions for personal or business needs. Quick, discreet service with guaranteed features for peace of m...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7m85rd2v5cbclkppev1r.jpg",
-    "video": null,
-    "author": "Buy Verified PayPal Account",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Buy Verified PayPal Account",
-    "seoDescription": "Buy verified PayPal accounts at USAITWAY? Secure and fully verified PayPal accounts available for instant use, offering hassle-free online payments, transfer..."
-  },
-  {
     "title": "Why Are There No Digital Photo Albums?",
     "url": "https://petapixel.com/2025/08/31/why-are-there-no-digital-photo-albums/",
     "publishedAt": "2025-08-31T12:01:12.000Z",
@@ -71,25 +156,6 @@
     ],
     "seoTitle": "Why Are There No Digital Photo Albums?",
     "seoDescription": "It is hard for anyone to deny the positive effect that the transition from film to digital has had on photography. The sheer number of photographs taken each..."
-  },
-  {
-    "title": "Introduction to MongoDB and NoSQL — Day 1",
-    "url": "https://dev.to/shifa_2/introduction-to-mongodb-and-nosql-day-1-210i",
-    "publishedAt": "2025-08-31T12:00:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Lets not waste our time on intro directly dive deep into the concept MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called documents. Unlike traditional databases that require structured tables and fixed columns, MongoDB allows you to store varied data structures within the same collection. MongoDB is often used in the backen...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F39ag2sb734hexsxsfrny.png",
-    "video": null,
-    "author": "Shifa",
-    "tags": [
-      "sql",
-      "webdev",
-      "backend",
-      "mongodb"
-    ],
-    "seoTitle": "Introduction to MongoDB and NoSQL — Day 1",
-    "seoDescription": "Lets not waste our time on intro directly dive deep into the concept MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called docu..."
   },
   {
     "title": "AI agents are science fiction not yet ready for primetime",
@@ -541,72 +607,5 @@
     ],
     "seoTitle": "Webb Captures the First-Ever Image of the Butterfly Nebula’s Hidden Heart",
     "seoDescription": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-se..."
-  },
-  {
-    "title": "Native ISO: Is 800 Really What You Should Be Filming At?",
-    "url": "https://nofilmschool.com/native-iso-is-800-really-what-you-should-be-filming-at",
-    "publishedAt": "2025-08-29T20:47:40.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In today's day of digital cinematography, most filmmakers will default to the recommended ISO settings set forth by the camera's manufacturer — but is this always the best starting point? I would argue that it depends on what you are filming and, more importantly, what type of image you are trying to craft. The International Organization for Standardizati...",
-    "image": "https://nofilmschool.com/media-library/native-iso-is-800-really-what-you-should-be-filming-at.jpg?id=61536290&width=980",
-    "video": null,
-    "author": "Chris Haggerty",
-    "tags": [
-      "Native iso",
-      "Iso",
-      "Dynamic range",
-      "Cinematography advice"
-    ],
-    "seoTitle": "Native ISO: Is 800 Really What You Should Be Filming At?",
-    "seoDescription": "In today's day of digital cinematography, most filmmakers will default to the recommended ISO settings set forth by the camera's manufacturer — but is this a..."
-  },
-  {
-    "title": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
-    "url": "https://9to5mac.com/2025/08/29/daily-august-29-2025/",
-    "publishedAt": "2025-08-29T20:32:56.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Read the 'Hacks' Pilot And Learn Character and Worldbuilding",
-    "url": "https://nofilmschool.com/hacks-pilot-script",
-    "publishedAt": "2025-08-29T20:17:22.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The pilot episode of Hacks is a masterclass in television writing that brilliantly establishes its central characters and the conflict that drives the series. It was written by creators Lucia Aniello, Paul W. Downs, and Jen Statsky. Today, I want to look at what makes this pilot so successful and let you read it yourself. As always, this is for educationa...",
-    "image": "https://nofilmschool.com/media-library/read-the-hacks-pilot-and-learn-character-and-worldbuilding.webp?id=61536114&width=980",
-    "video": "https://www.youtube.com/embed/zFtJWuo7IrM?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Script download",
-      "Screenplay download",
-      "Hacks"
-    ],
-    "seoTitle": "Read the 'Hacks' Pilot And Learn Character and Worldbuilding",
-    "seoDescription": "The pilot episode of Hacks is a masterclass in television writing that brilliantly establishes its central characters and the conflict that drives the series..."
-  },
-  {
-    "title": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/762594/fable-showrunner-edwatch-saatchi-interview",
-    "publishedAt": "2025-08-29T20:07:22.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. Even though Story Studio snagged an Emmy for one of its three animated features, a general lack of public interest in VR movies led Meta to shutter Oculus Story Studio back in 2017. The VR era has come...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Exit-Valley.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
-    "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
   }
 ]
