@@ -1,22 +1,93 @@
 [
   {
-    "title": "Super WhatsApp Agent 🤖📱",
-    "url": "https://dev.to/amira_adel_e032821d5c75c5/super-whatsapp-agent-4mo4",
-    "publishedAt": "2025-08-31T11:06:34.000Z",
+    "title": "Why Are There No Digital Photo Albums?",
+    "url": "https://petapixel.com/2025/08/31/why-are-there-no-digital-photo-albums/",
+    "publishedAt": "2025-08-31T12:01:12.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "It is hard for anyone to deny the positive effect that the transition from film to digital has had on photography. The sheer number of photographs taken each year has increased exponentially in the digital age, particularly now that cameras are included on nearly every cell phone. But we have lost one aspect of photography: the photo album. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Why-Are-There-No-Digital-Photo-Albums.jpg",
+    "video": null,
+    "author": "Salvadore Ragusa",
+    "tags": [
+      "Opinion",
+      "opinion",
+      "photoalbum",
+      "photosharing"
+    ],
+    "seoTitle": "Why Are There No Digital Photo Albums?",
+    "seoDescription": "It is hard for anyone to deny the positive effect that the transition from film to digital has had on photography. The sheer number of photographs taken each..."
+  },
+  {
+    "title": "Introduction to MongoDB and NoSQL — Day 1",
+    "url": "https://dev.to/shifa_2/introduction-to-mongodb-and-nosql-day-1-210i",
+    "publishedAt": "2025-08-31T12:00:06.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with n8n, Bright Data, and OpenAI. 🧠 What the Agent Can Do You can type a question like \"What’s new with n8n?\" The Orchestrator routes it to the Search Agent. The Search Agent uses Bright Data + Google/W...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5616t5mk4z4c9rx9ntt6.jpg",
+    "summary": "Lets not waste our time on intro directly dive deep into the concept MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called documents. Unlike traditional databases that require structured tables and fixed columns, MongoDB allows you to store varied data structures within the same collection. MongoDB is often used in the backen...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F39ag2sb734hexsxsfrny.png",
     "video": null,
-    "author": "Amira Adel",
+    "author": "Shifa",
     "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
+      "sql",
+      "webdev",
+      "backend",
+      "mongodb"
     ],
-    "seoTitle": "Super WhatsApp Agent 🤖📱",
-    "seoDescription": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with..."
+    "seoTitle": "Introduction to MongoDB and NoSQL — Day 1",
+    "seoDescription": "Lets not waste our time on intro directly dive deep into the concept MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called docu..."
+  },
+  {
+    "title": "AI agents are science fiction not yet ready for primetime",
+    "url": "https://www.theverge.com/the-stepback-newsletter/767376/ai-agents-jarvis-what-can-they-do",
+    "publishedAt": "2025-08-31T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on all things AI, follow Hayden Field. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started It all started with J.A.R.V.I.S. Yes, that J.A.R.V.I.S. The one from the Marvel movies. Well, maybe it didn...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/JARVIS.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Hayden Field",
+    "tags": [],
+    "seoTitle": "AI agents are science fiction not yet ready for primetime",
+    "seoDescription": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on all things AI, follow Hayden Field. The Stepback..."
+  },
+  {
+    "title": "Why My Developer Portfolio Looks Like a Old Vintage 1940s Newspaper",
+    "url": "https://dev.to/salaarkhan-dev/why-my-developer-portfolio-looks-like-a-old-vintage-1940s-newspaper-3b73",
+    "publishedAt": "2025-08-31T11:57:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Case Note #001 Ink Over Glitter A modest paper, folded and stapled with code. A little vintage on the outside, a little modern under the hood. The scene opens on a crowded boulevard of websites; flashing neon, spinning widgets, endless billboards. Everyone shouting, no one listening. I wasn’t interested in being another voice in the noise. I wanted someth...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgrrz141axku7k6ju3a41.jpg",
+    "video": null,
+    "author": "Salaar Khan",
+    "tags": [
+      "webdev",
+      "portfolio",
+      "nextjs",
+      "frontend"
+    ],
+    "seoTitle": "Why My Developer Portfolio Looks Like a Old Vintage 1940s Newspaper",
+    "seoDescription": "Case Note #001 Ink Over Glitter A modest paper, folded and stapled with code. A little vintage on the outside, a little modern under the hood. The scene open..."
+  },
+  {
+    "title": "🚀 Making Life Easier with Simple Web Tools",
+    "url": "https://dev.to/klm709/making-life-easier-with-simple-web-tools-6gm",
+    "publishedAt": "2025-08-31T11:23:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey everyone 👋 I’ve always believed that small tools can make a big difference. That’s why I started quicksum.blog Whether you’re a blogger, student, or just someone who loves discovering handy tools, you’ll find something useful waiting there. 🌐✨ 👉 Check it out here:(https://quicksum.blog/text-conversion-tools-8/ I’d love to hear what kind of tools yo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6zf0uk09qgbwkyteljtp.jpeg",
+    "video": null,
+    "author": "muneer",
+    "tags": [
+      "productivity",
+      "webdev",
+      "tools",
+      "blogging"
+    ],
+    "seoTitle": "🚀 Making Life Easier with Simple Web Tools",
+    "seoDescription": "Hey everyone 👋 I’ve always believed that small tools can make a big difference. That’s why I started quicksum.blog Whether you’re a blogger, student, or jus..."
   },
   {
     "title": "Prevent Sensitive Data Exposure in React.js",
@@ -36,44 +107,6 @@
     ],
     "seoTitle": "Prevent Sensitive Data Exposure in React.js",
     "seoDescription": "Why this matters (fast TL;DR) Sensitive data exposure in React often happens in the browser bundle—API keys, tokens, stack traces, or logs shipped to users. ..."
-  },
-  {
-    "title": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
-    "url": "https://dev.to/hr21don/can-you-recognize-a-deepfake-heres-what-you-need-to-know-3jp4",
-    "publishedAt": "2025-08-31T10:42:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, sunds or pictures that look real which makes someone say or do things they never did. You've probably seen some of these recently in the news. For instance, a 53-year-old French woman, known as Anne, ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgt7s9877vyd1ed4g2ke4.png",
-    "video": null,
-    "author": "Helitha Rupasinghe",
-    "tags": [
-      "deepfake",
-      "ai",
-      "product",
-      "webdev"
-    ],
-    "seoTitle": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
-    "seoDescription": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, ..."
-  },
-  {
-    "title": "🎙️ Building Your Own Live Audio Waveform in React Native",
-    "url": "https://dev.to/toshiya_matsumoto_ac94abe/building-your-own-live-audio-waveform-in-react-native-4e49",
-    "publishedAt": "2025-08-31T09:46:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🚀 Motivation There aren’t many (if any!) well-known libraries out there for live audio recording data visualization with a waveform in React Native. So… why not just build one yourself? 😉 Pretty neat, right? Let’s dive in. Here’s the setup I used: `react-native`: 0.79.5 `expo`: 53.0.17 `expo-av`: 15.1.7 `react-native-svg`: 15.12.1 👉 Run it with: npx ex...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F938yepunba048103nlr8.gif",
-    "video": null,
-    "author": "Toshiya Matsumoto",
-    "tags": [
-      "reactnative",
-      "mobile",
-      "ios",
-      "webdev"
-    ],
-    "seoTitle": "🎙️ Building Your Own Live Audio Waveform in React Native",
-    "seoDescription": "🚀 Motivation There aren’t many (if any!) well-known libraries out there for live audio recording data visualization with a waveform in React Native. So… why..."
   },
   {
     "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
@@ -580,38 +613,5 @@
     ],
     "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
     "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
-  },
-  {
-    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
-    "publishedAt": "2025-08-29T19:53:06.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
-  },
-  {
-    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
-    "publishedAt": "2025-08-29T19:44:15.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
-    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
-    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "The roses",
-      "Comedy",
-      "Remake",
-      "Adaptation"
-    ],
-    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
   }
 ]
