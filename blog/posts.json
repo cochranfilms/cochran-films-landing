@@ -1,5 +1,62 @@
 [
   {
+    "title": "Super WhatsApp Agent 🤖📱",
+    "url": "https://dev.to/amira_adel_e032821d5c75c5/super-whatsapp-agent-4mo4",
+    "publishedAt": "2025-08-31T11:06:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with n8n, Bright Data, and OpenAI. 🧠 What the Agent Can Do You can type a question like \"What’s new with n8n?\" The Orchestrator routes it to the Search Agent. The Search Agent uses Bright Data + Google/W...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5616t5mk4z4c9rx9ntt6.jpg",
+    "video": null,
+    "author": "Amira Adel",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Super WhatsApp Agent 🤖📱",
+    "seoDescription": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with..."
+  },
+  {
+    "title": "Prevent Sensitive Data Exposure in React.js",
+    "url": "https://dev.to/pentest_testing_corp/prevent-sensitive-data-exposure-in-reactjs-3c7h",
+    "publishedAt": "2025-08-31T11:01:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why this matters (fast TL;DR) Sensitive data exposure in React often happens in the browser bundle—API keys, tokens, stack traces, or logs shipped to users. Below are concise patterns to avoid leaks and ship safely. Secrets baked into the bundle (.env misuse) Tokens in localStorage or query strings Verbose error overlays & stack traces in production Conso...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6xta58t9929ib31w17fe.jpg",
+    "video": null,
+    "author": "Pentest Testing Corp",
+    "tags": [
+      "cybersecurity",
+      "vulnerabilities",
+      "react",
+      "webdev"
+    ],
+    "seoTitle": "Prevent Sensitive Data Exposure in React.js",
+    "seoDescription": "Why this matters (fast TL;DR) Sensitive data exposure in React often happens in the browser bundle—API keys, tokens, stack traces, or logs shipped to users. ..."
+  },
+  {
+    "title": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
+    "url": "https://dev.to/hr21don/can-you-recognize-a-deepfake-heres-what-you-need-to-know-3jp4",
+    "publishedAt": "2025-08-31T10:42:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, sunds or pictures that look real which makes someone say or do things they never did. You've probably seen some of these recently in the news. For instance, a 53-year-old French woman, known as Anne, ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgt7s9877vyd1ed4g2ke4.png",
+    "video": null,
+    "author": "Helitha Rupasinghe",
+    "tags": [
+      "deepfake",
+      "ai",
+      "product",
+      "webdev"
+    ],
+    "seoTitle": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
+    "seoDescription": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, ..."
+  },
+  {
     "title": "🎙️ Building Your Own Live Audio Waveform in React Native",
     "url": "https://dev.to/toshiya_matsumoto_ac94abe/building-your-own-live-audio-waveform-in-react-native-4e49",
     "publishedAt": "2025-08-31T09:46:11.000Z",
@@ -17,25 +74,6 @@
     ],
     "seoTitle": "🎙️ Building Your Own Live Audio Waveform in React Native",
     "seoDescription": "🚀 Motivation There aren’t many (if any!) well-known libraries out there for live audio recording data visualization with a waveform in React Native. So… why..."
-  },
-  {
-    "title": "BrightData Recruit Intelligence (Company Data Analysis + Candidate Search)",
-    "url": "https://dev.to/ranjancse/brightdata-recruit-intelligence-company-data-analysis-candidate-search-2k04",
-    "publishedAt": "2025-08-31T09:11:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Powered by Google, Bing, DuckDuckGo + n8n + Google Gemini This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Recruit Intelligence with Google, Bing, DuckDuckGo + n8n + Google Gemini Workflow The BrightData Recruit Intelligence workflow is designed to streamline talent sourcing and company research using search engin...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqc61r9fvvylukn7k2u2m.png",
-    "video": null,
-    "author": "Ranjan Dailata",
-    "tags": [
-      "n8nbrightdatachallenge",
-      "webdev",
-      "ai",
-      "devchallenge"
-    ],
-    "seoTitle": "BrightData Recruit Intelligence (Company Data Analysis + Candidate Search)",
-    "seoDescription": "Powered by Google, Bing, DuckDuckGo + n8n + Google Gemini This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Recruit ..."
   },
   {
     "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
@@ -575,37 +613,5 @@
     ],
     "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
     "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
-  },
-  {
-    "title": "Michelle Yeoh's Top 10 Movies",
-    "url": "https://nofilmschool.com/michelle-yeoh-best-movies",
-    "publishedAt": "2025-08-29T19:27:05.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her Academy Award-winning role, her filmography is a testament to her enduring screen presence. Today, I want to go over the ten movies she has been in that I think are the best. Let's dive in. 1. Crouch...",
-    "image": "https://nofilmschool.com/media-library/michelle-yeoh-s-top-10-movies.jpg?id=61536090&width=980",
-    "video": "https://www.youtube.com/embed/q-HrIQLdaNE?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Michelle yeoh",
-      "Martial arts movies"
-    ],
-    "seoTitle": "Michelle Yeoh's Top 10 Movies",
-    "seoDescription": "Michelle Yeoh has solidified her place as a versatile and formidable talent in Hollywood. From her early days as a martial arts superstar in Hong Kong to her..."
-  },
-  {
-    "title": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "url": "https://www.theverge.com/microsoft-windows/768227/windows-11-25h2-release-preview-test",
-    "publishedAt": "2025-08-29T19:21:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 25H2 package is available now for testing in the Release Preview Channel. So, will you see new UI features or more AI tweaks included on your desktop with this update? Microsoft didn’t mention many spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK109_WINDOWS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Richard Lawler",
-    "tags": [],
-    "seoTitle": "Microsoft’s next annual update for Windows 11 is in Release Preview testing",
-    "seoDescription": "The schedule of annual updates for Windows 11 that arrive in the second half of the year will hold steady for 2025, and today, Microsoft announced that the 2..."
   }
 ]
