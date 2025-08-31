@@ -1,5 +1,98 @@
 [
   {
+    "title": "Social media drama analizer / monitor",
+    "url": "https://dev.to/simonhryszko/social-media-drama-analizer-monitor-5cfg",
+    "publishedAt": "2025-08-31T22:07:20.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built telegram bot what could help with alerting that your (or any) brand have troubles in social media (currently only on x) Feel free to chat with bot, but try not break it; it's not too stable unfortunetly: https://t.me/brand_crisis_checker_bot I splitted it into multiple...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo73k9r4t5melwt7qxuzk.png",
+    "video": null,
+    "author": "simon hryszko",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Social media drama analizer / monitor",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built telegram bot what could help with alerting that your (or any) brand h..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/asem_algably_8de47fab2ee3/-1021",
+    "publishedAt": "2025-08-31T21:55:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F461127%2F034233c4-ba6e-473c-8a8d-783831764a10.jpeg",
+    "video": null,
+    "author": "Asem algably",
+    "tags": [
+      "cloud",
+      "devops",
+      "opensource",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev"
+  },
+  {
+    "title": "Virtual Machines vs. Docker: A Beginner-Friendly Guide",
+    "url": "https://dev.to/emmanuel_sofs/virtual-machines-vs-docker-a-beginner-friendly-guide-58h9",
+    "publishedAt": "2025-08-31T21:52:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "If you’ve ever wondered why people keep talking about virtual machines and Docker containers, you’re not alone. Both are powerful technologies for running applications, but they work in different ways. Let’s break it down in simple terms. Virtualization is the process of running a “virtual” version of a computer inside your actual computer. This magic is ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffylboyaij5tv0ul5zuyz.png",
+    "video": null,
+    "author": "Emmanuel sofuwa",
+    "tags": [
+      "docker",
+      "virtualmachine",
+      "devops",
+      "webdev"
+    ],
+    "seoTitle": "Virtual Machines vs. Docker: A Beginner-Friendly Guide",
+    "seoDescription": "If you’ve ever wondered why people keep talking about virtual machines and Docker containers, you’re not alone. Both are powerful technologies for running ap..."
+  },
+  {
+    "title": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
+    "url": "https://www.macrumors.com/2025/08/31/next-carplay-ultra-vehicle-report/",
+    "publishedAt": "2025-08-31T21:46:49.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Hyundai's upcoming IONIQ 3 electric vehicle will support Apple's CarPlay Ultra system, according to the BBC publication Top Gear. Here is what Top Gear's Paul Horrell reported last week: The Ioniq 3 will be digital-forward. For a start it can run Apple's CarPlay Ultra if the driver wants. Even without the Apple skin, the interface allows more configuratio...",
+    "image": "https://images.macrumors.com/article-new/2025/05/CarPlay-Ultra-Climate-Controls.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "CarPlay",
+      "CarPlay Ultra"
+    ],
+    "seoTitle": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
+    "seoDescription": "Hyundai's upcoming IONIQ 3 electric vehicle will support Apple's CarPlay Ultra system, according to the BBC publication Top Gear. Here is what Top Gear's Pau..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/iscander01/-m46",
+    "publishedAt": "2025-08-31T21:13:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "WYKRA: Web You Know, Real-time Analysis Olga Braginskaya ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1050562%2Fe109cfc9-05e8-418b-baf0-7300b94453d5.jpg",
+    "video": null,
+    "author": "Alexander Bro",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "WYKRA: Web You Know, Real-time Analysis Olga Braginskaya ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev"
+  },
+  {
     "title": "I built an AI Agent That reveals Wall Street Sentiment in seconds",
     "url": "https://dev.to/indika_wimalasuriya/i-built-an-ai-agent-that-reveals-wall-street-sentiment-in-seconds-4ma2",
     "publishedAt": "2025-08-31T21:08:32.000Z",
@@ -122,62 +215,6 @@
     ],
     "seoTitle": "iPhone 17 Air is basically guaranteed to make a US feature expand to more countries",
     "seoDescription": "When Apple reveals the iPhone 17 lineup in just 10 days, there’s one U.S. feature that is basically guaranteed to go international after three years. more…"
-  },
-  {
-    "title": "Building a Universe in the Browser: My Journey into Interstellar Web Simulators",
-    "url": "https://dev.to/vikas_kumarsingh_39e7df9/building-a-universe-in-the-browser-my-journey-into-interstellar-web-simulators-2nh6",
-    "publishedAt": "2025-08-31T20:05:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey everyone! I'm incredibly excited (and a little nervous!) to share a passion project I've been pouring countless hours into: a browser-based space simulator that lets you explore a procedurally generated universe of over 200 star systems. Think NASA Eyes meets a touch of interstellar exploration, all running natively in your web browser. You can check ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa5vnfj2d8kv0dpt0pbe5.jpg",
-    "video": null,
-    "author": "VIKAS KUMAR SINGH",
-    "tags": [
-      "webdev",
-      "react",
-      "javascript"
-    ],
-    "seoTitle": "Building a Universe in the Browser: My Journey into Interstellar Web Simulators",
-    "seoDescription": "Hey everyone! I'm incredibly excited (and a little nervous!) to share a passion project I've been pouring countless hours into: a browser-based space simulat..."
-  },
-  {
-    "title": "Go 1.25 Greentea GC vs Classic: HydrAIDE 1M Swamp Test Shows +22% CPU Efficiency, -8% Memory",
-    "url": "https://dev.to/hydraide/go-125-greentea-gc-vs-classic-hydraide-1m-swamp-test-shows-22-cpu-efficiency-8-memory-294h",
-    "publishedAt": "2025-08-31T20:05:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Go 1.25 new Greentea GC vs. classic GC. 1 Million Swamp stress test with HydrAIDE: +22% CPU efficiency, -8% memory, but rarer long spikes Introduction – Why now, why HydrAIDE? With the release of Go 1.25, an exciting experimental feature has arrived: the Greentea GC, a new garbage collector mode that promises to reduce GC overhead by 10–40%. But what does...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwlo9est7hn1hplqeppws.png",
-    "video": null,
-    "author": "Peter Gebri",
-    "tags": [
-      "go",
-      "opensource",
-      "webdev",
-      "news"
-    ],
-    "seoTitle": "Go 1.25 Greentea GC vs Classic: HydrAIDE 1M Swamp Test Shows +22% CPU Efficiency, -8% Memory",
-    "seoDescription": "Go 1.25 new Greentea GC vs. classic GC. 1 Million Swamp stress test with HydrAIDE: +22% CPU efficiency, -8% memory, but rarer long spikes Introduction – Why ..."
-  },
-  {
-    "title": "WYKRA: Web You Know, Real-time Analysis",
-    "url": "https://dev.to/olgabraginskaya/wykra-web-you-know-real-time-analysis-20i3",
-    "publishedAt": "2025-08-31T20:03:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data So you're tasked with finding influencers. Not just random ones, but ones that fit your niche, your vibe and maybe even your region. You type vague queries into Google. You scroll through Instagram. You open 19 Chrome tabs. You give up. We built WYKRA so you don’t have to. WYK...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz5b6hdcvf1kaxsvp0vr7.png",
-    "video": null,
-    "author": "Olga Braginskaya",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "WYKRA: Web You Know, Real-time Analysis",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data So you're tasked with finding influencers. Not just random ones, but ones tha..."
   },
   {
     "title": "CarPlay Ultra could soon land on an affordable EV after luxury car debut",
@@ -556,40 +593,5 @@
     ],
     "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
     "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
-  },
-  {
-    "title": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
-    "url": "https://9to5mac.com/2025/08/30/sap-updates-privileges-with-new-tools-for-managing-admin-rights-on-macos/",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work ...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-at-Work-Liquid-Glass-light.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
-    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional g..."
-  },
-  {
-    "title": "On the Path to Being a Great Photographer? There’s Something You Should Know",
-    "url": "https://petapixel.com/2025/08/30/on-the-path-to-being-a-great-photographer-theres-something-you-should-know/",
-    "publishedAt": "2025-08-30T12:01:22.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefore, modifying your actions can improve your photography. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/07/creativity-6-1600x840.jpg",
-    "video": null,
-    "author": "Ivor Rackham",
-    "tags": [
-      "Educational",
-      "Inspiration",
-      "creativity",
-      "education"
-    ],
-    "seoTitle": "On the Path to Being a Great Photographer? There’s Something You Should Know",
-    "seoDescription": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefor..."
   }
 ]
