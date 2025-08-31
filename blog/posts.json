@@ -1,98 +1,93 @@
 [
   {
-    "title": "Here’s a step-by-step beginner-friendly guide to attach and mount an EBS volume on an Ubuntu EC2 instance in AWS.",
-    "url": "https://dev.to/oyewole_afuwape_f195efb15/heres-a-step-by-step-beginner-friendly-guide-to-attach-and-mount-an-ebs-volume-on-an-ubuntu-ec2-4b00",
-    "publishedAt": "2025-08-31T17:02:10.000Z",
+    "title": "Event-driven cookie manager for the modern web.",
+    "url": "https://dev.to/indianmodassir/event-driven-cookie-manager-for-the-modern-web-2pab",
+    "publishedAt": "2025-08-31T18:05:43.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "sign in to aws account using root user email after signing in to my account, this is the landing page i got Then i went to Ec2 to create my instance After given my instance a name, went on to select my Operating system which is UBUNTU After creating my EC2, then I went to create Volume as seen below After i created my Volume, then I attached the volume to...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3j69vyjmx2zcodkqitu6.png",
+    "summary": "Lightweight, event-driven cookie manager for parsing, setting, and tracking cookies with ease. To include cookie-events in Node, first install with npm. npm install cookie-events Clone a copy of the main cookie-events git repo by running: git clone git://github.com/jsvibe/cookie-events.git Below are some of the most common ways to include cookie-events. C...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvlygveqdaj5k1ow0p20d.png",
     "video": null,
-    "author": "Oyewole Afuwape",
+    "author": "Indian Modassir",
     "tags": [
       "webdev",
-      "aws",
-      "ec2",
-      "ubuntu"
-    ],
-    "seoTitle": "Here’s a step-by-step beginner-friendly guide to attach and mount an EBS volume on an Ubuntu EC2 instance in AWS.",
-    "seoDescription": "sign in to aws account using root user email after signing in to my account, this is the landing page i got Then i went to Ec2 to create my instance After gi..."
-  },
-  {
-    "title": "Instant AI Text Enhancements in React with prompt-my-client-react",
-    "url": "https://dev.to/rajanlagah/instant-ai-text-enhancements-in-react-with-prompt-my-client-react-4gpp",
-    "publishedAt": "2025-08-31T16:40:58.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "TL;DR Why It’s Awesome usePrompt) for programmatic control Super-Easy Setup npm install prompt-my-client-react Option A: Use the Hook import { usePrompt } from 'prompt-my-client-react'; const { generatePrompt, isLoading, result } = usePrompt({ onSuccess: (response) => setText(response), }); await generatePrompt(text, \"Make this more professional\"); Option...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9wo35ji1c3v0lfzhli71.png",
-    "video": null,
-    "author": "Rajan lagah",
-    "tags": [
-      "webdev",
+      "javascript",
       "react",
-      "promptengineering",
-      "javascript"
+      "cookie"
     ],
-    "seoTitle": "Instant AI Text Enhancements in React with prompt-my-client-react",
-    "seoDescription": "TL;DR Why It’s Awesome usePrompt) for programmatic control Super-Easy Setup npm install prompt-my-client-react Option A: Use the Hook import { usePrompt } fr..."
+    "seoTitle": "Event-driven cookie manager for the modern web.",
+    "seoDescription": "Lightweight, event-driven cookie manager for parsing, setting, and tracking cookies with ease. To include cookie-events in Node, first install with npm. npm ..."
   },
   {
-    "title": "Buy US,UK, Old and New Verified Cash App Accounts",
-    "url": "https://dev.to/md_bchhkkjh_548103bb8d99b/buy-usuk-old-and-new-verified-cash-app-accounts-20am",
-    "publishedAt": "2025-08-31T16:32:58.000Z",
+    "title": "Apple just released a new AI chatbot to help retail employees sell iPhones",
+    "url": "https://9to5mac.com/2025/08/31/apple-new-ai-chatbot-for-support-employees/",
+    "publishedAt": "2025-08-31T17:58:59.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "After implementing an AI chatbot in the Apple Support app to help customers a few weeks ago, the company is taking their AI chatbot push a step further. With Asa, Apple retail employees will now be able to ask questions and learn more about Apple products to improve their sales abilities. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/04/One-in-seven-iPhones-now-made-in-India.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple just released a new AI chatbot to help retail employees sell iPhones",
+    "seoDescription": "After implementing an AI chatbot in the Apple Support app to help customers a few weeks ago, the company is taking their AI chatbot push a step further. With..."
+  },
+  {
+    "title": "Solving “No Space Left on Device” with a Little Bit of AWS Trick",
+    "url": "https://dev.to/lovestaco/solving-no-space-left-on-device-with-a-little-bit-of-aws-trick-ced",
+    "publishedAt": "2025-08-31T17:46:06.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Top How to Buy verified cash app usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cas...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F68j5e6z8rdnq9404epi7.png",
+    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Today, my Ubuntu server started complaining: Discord: “Low disk space — only a 3 gigabytes left.” Some of my data was filling up fast, for...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvrtk5rkngda9uhu7y7pt.png",
     "video": null,
-    "author": "Md Bchhkkjh",
+    "author": "Athreya aka Maneshwar",
+    "tags": [
+      "devops",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Solving “No Space Left on Device” with a Little Bit of AWS Trick",
+    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
+  },
+  {
+    "title": "Periods of showers and thunderstorms expected Sunday",
+    "url": "https://dev.to/sahanaz_parvin_ca99c592c6/periods-of-showers-and-thunderstorms-expected-sunday-4f65",
+    "publishedAt": "2025-08-31T17:37:21.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "FORT MYERS, Fla. — Read more>> The next few days consist of a minor flood risk as well due to the rounds of rain possible for the entire peninsula.",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8krp2ilg7fsrozx46xzh.jpg",
+    "video": null,
+    "author": "sahanaz parvin",
     "tags": [
       "webdev",
       "programming",
-      "javascript",
-      "ai"
+      "ai",
+      "javascript"
     ],
-    "seoTitle": "Buy US,UK, Old and New Verified Cash App Accounts",
-    "seoDescription": "Top How to Buy verified cash app usasmmlite1@gmail.com https://usasmmlite.com/product/buy-verified-cash-app-accounts/ usasmmlite1@gmail.com https://usasmmlit..."
+    "seoTitle": "Periods of showers and thunderstorms expected Sunday",
+    "seoDescription": "FORT MYERS, Fla. — Read more>> The next few days consist of a minor flood risk as well due to the rounds of rain possible for the entire peninsula."
   },
   {
-    "title": "BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini",
-    "url": "https://dev.to/ranjancse/brightdata-company-deep-research-report-with-ai-agent-google-search-glassdoor-and-crunchbase--1cjb",
-    "publishedAt": "2025-08-31T16:20:26.000Z",
+    "title": "Luxury Egypt Tours: An Immersive Journey into Timeless Splendor",
+    "url": "https://dev.to/egyptunitedtours/luxury-egypt-tours-an-immersive-journey-into-timeless-splendor-55ee",
+    "publishedAt": "2025-08-31T17:28:12.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download the Workflow BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini This workflow is designed to perform deep company research by combining Bright Data scraping, Google Search enrichment, and AI-driven interpreta...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp1ivtzi2affz6rz19wfs.png",
+    "summary": "The essence of tourism lies in its ability to transport travelers to new worlds—unlocking stories of the past, revealing cultural richness, and inspiring unforgettable memories. Among the array of global travel experiences, Luxury Egypt tours stand apart as a truly immersive experience, blending opulence with antiquity. These curated journeys invite trave...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/...",
     "video": null,
-    "author": "Ranjan Dailata",
-    "tags": [
-      "n8nbrightdatachallenge",
-      "webdev",
-      "ai",
-      "devchallenge"
-    ],
-    "seoTitle": "BrightData Company Deep Research Report with AI Agent, Google Search, Glassdoor and CrunchBase + Google Gemini",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Download the Workflow BrightData Company Deep Research Report with AI Agent, ..."
-  },
-  {
-    "title": "Ship code without even reading it?",
-    "url": "https://dev.to/dev_tips/ship-code-without-even-reading-it-3p87",
-    "publishedAt": "2025-08-31T16:02:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I once merged an AI-generated PR without reading a single line. CI was green, I shipped it… and staging exploded. Here’s why RTFC still matters in 2025. Confession time: I shipped code I never actually read. Copilot wrote the whole thing, CI went green, and I hit merge. An hour later, staging was dead in the water. The logs pointed to a function that didn...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2ADtxkiqQ76h1lkusiY1irZg.jpeg",
-    "video": null,
-    "author": "<devtips/>",
+    "author": "egyptunitedtours",
     "tags": [
       "webdev",
-      "ai",
-      "productivity",
-      "progra"
+      "workplace"
     ],
-    "seoTitle": "Ship code without even reading it?",
-    "seoDescription": "I once merged an AI-generated PR without reading a single line. CI was green, I shipped it… and staging exploded. Here’s why RTFC still matters in 2025. Conf..."
+    "seoTitle": "Luxury Egypt Tours: An Immersive Journey into Timeless Splendor",
+    "seoDescription": "The essence of tourism lies in its ability to transport travelers to new worlds—unlocking stories of the past, revealing cultural richness, and inspiring unf..."
   },
   {
     "title": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
