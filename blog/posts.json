@@ -1,5 +1,90 @@
 [
   {
+    "title": "Intranet-Only Projects Pitfall (Maven and SVN)",
+    "url": "https://dev.to/thellu/my-first-encounter-with-intranet-only-projects-and-the-pitfalls-i-hit-5998",
+    "publishedAt": "2025-08-31T15:06:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Recently, I had my very first experience working on a project that runs completely offline on an intranet. Since I had to figure out a lot of things from scratch, I decided to write down the issues I ran into — hopefully this saves someone else a few hours of frustration! Because of intranet security requirements, the project runs on a virtual machine tha...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fu2xeb16nl8397ufz1eug.png",
+    "video": null,
+    "author": "Thellu",
+    "tags": [
+      "webdev",
+      "programming",
+      "java",
+      "maven"
+    ],
+    "seoTitle": "Intranet-Only Projects Pitfall (Maven and SVN)",
+    "seoDescription": "Recently, I had my very first experience working on a project that runs completely offline on an intranet. Since I had to figure out a lot of things from scr..."
+  },
+  {
+    "title": "The Verge’s favorite gifts for book lovers",
+    "url": "https://www.theverge.com/tech/761931/book-lovers-gadgets-tech-gift-guide-ideas-unique-holiday",
+    "publishedAt": "2025-08-31T15:00:20.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "What do you gift somebody who loves books? The obvious answer is \"a book,\" but since true bibliophiles are probably sitting on a stack already, it's worth getting a little more creative. Luckily for you, many of us at The Verge are big bookworms ourselves, which is why we rounded up a bunch of clever, useful gifts our staff can vouch for. Below, you'll fi...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257888_book_lovers_guide_CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sheena Vasani",
+    "tags": [],
+    "seoTitle": "The Verge’s favorite gifts for book lovers",
+    "seoDescription": "What do you gift somebody who loves books? The obvious answer is \"a book,\" but since true bibliophiles are probably sitting on a stack already, it's worth ge..."
+  },
+  {
+    "title": "Just dropped a new “Pasadena Garage” skull biker design – would love your thoughts",
+    "url": "https://dev.to/threadup/just-dropped-a-new-pasadena-garage-skull-biker-design-would-love-your-thoughts-4f73",
+    "publishedAt": "2025-08-31T14:42:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey everyone, The idea behind it was to mix classic biker lifestyle elements (freedom, garage culture, skull artwork) with a clean streetwear style you can actually wear day-to-day. I put it on hoodies, sweatshirts, and tees, and the print came out super bold. Not trying to spam or anything—just really excited to finally put this out there. If you’re into...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdxgj2j6w30ljuy2d3qfv.png",
+    "video": null,
+    "author": "Alex Mathiew",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "javascript"
+    ],
+    "seoTitle": "Just dropped a new “Pasadena Garage” skull biker design – would love your thoughts",
+    "seoDescription": "Hey everyone, The idea behind it was to mix classic biker lifestyle elements (freedom, garage culture, skull artwork) with a clean streetwear style you can a..."
+  },
+  {
+    "title": "Phishing: The Complete Guide to Cyber Deception and Protection",
+    "url": "https://dev.to/pragyasapkota/phishing-the-complete-guide-to-cyber-deception-and-protection-ag5",
+    "publishedAt": "2025-08-31T14:24:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Phishing: the art of convincing you to hand over your keys while you hold the door open for the thief. No fishing rod required — just a convincing email and a dash of misplaced trust. Phishing is one of the oldest — and still one of the most effective — cybercrime techniques. Although the basic trick is simple (pretend to be someone trustworthy to get peo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkd4br2wylb068xoxqbh4.jpg",
+    "video": null,
+    "author": "Pragya Sapkota",
+    "tags": [
+      "phishing",
+      "webdev",
+      "cybersecurity",
+      "beginners"
+    ],
+    "seoTitle": "Phishing: The Complete Guide to Cyber Deception and Protection",
+    "seoDescription": "Phishing: the art of convincing you to hand over your keys while you hold the door open for the thief. No fishing rod required — just a convincing email and ..."
+  },
+  {
+    "title": "Meta is struggling to rein in its AI chatbots",
+    "url": "https://www.theverge.com/news/768465/meta-ai-chatbot-guidelines-for-minors",
+    "publishedAt": "2025-08-31T14:17:49.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Meta is changing some of the rules governing its chatbots two weeks after a Reuters investigation revealed disturbing ways in which they could, potentially, interact with minors. Now the company has told TechCrunch that its chatbots are being trained not to engage in conversations with minors around self-harm, suicide, or disordered eating, and to avoid i...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK043_VRG_Illo_N_Barclay_5_Meta.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Terrence O’Brien",
+    "tags": [],
+    "seoTitle": "Meta is struggling to rein in its AI chatbots",
+    "seoDescription": "Meta is changing some of the rules governing its chatbots two weeks after a Reuters investigation revealed disturbing ways in which they could, potentially, ..."
+  },
+  {
     "title": "iPhone 17 Pro Clear Case may feature redesign and possibly tinted options",
     "url": "https://9to5mac.com/2025/08/31/iphone-17-pro-clear-case-may-feature-redesign-and-possibly-tinted-options/",
     "publishedAt": "2025-08-31T14:07:35.000Z",
@@ -46,81 +131,6 @@
     ],
     "seoTitle": "Apple’s discontinued MagSafe Battery Pack doesn’t just stick to iPhones now",
     "seoDescription": "We all miss Apple’s MagSafe Battery Pack and want to see it return. In the meantime, the old magnetic battery accessory has resurfaced in an unlikely place. ..."
-  },
-  {
-    "title": "Compare design to website in one click",
-    "url": "https://dev.to/dren0r/compare-design-to-website-in-one-click-3kg",
-    "publishedAt": "2025-08-31T13:26:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hi, this is my first project. Hope you find it useful! Over.fig — a free Chrome extension that overlays your Figma semi-transparent design directly on the webpage for instant visual comparison. 🔧 How It Works: Paste your Figma link Pick a frame to overlay Compare instantly — your design floats right over your web page ✅ Key Features: Pixel-perfect accura...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp2z1vnnb80la4ef9va7t.png",
-    "video": null,
-    "author": "dren0r",
-    "tags": [
-      "webdev",
-      "figma",
-      "design",
-      "showdev"
-    ],
-    "seoTitle": "Compare design to website in one click",
-    "seoDescription": "Hi, this is my first project. Hope you find it useful! Over.fig — a free Chrome extension that overlays your Figma semi-transparent design directly on the we..."
-  },
-  {
-    "title": "The Browser is the New Terminal: A First Look at Iquipe Digital’s Revolutionary Web CLI",
-    "url": "https://dev.to/wildshark/the-browser-is-the-new-terminal-a-first-look-at-iquipe-digitals-revolutionary-web-cli-h13",
-    "publishedAt": "2025-08-31T13:24:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In today's fast-paced development landscape, the need for immediate, secure access to server resources is paramount. Traditional methods often require setting up SSH clients, managing credentials, and navigating complex terminal environments. Iquipe Digital recognized this friction point and engineered a solution that combines the power of a command-line ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhkktuz6qbyy3fgkcqoam.jpeg",
-    "video": null,
-    "author": "iQuipe Digital",
-    "tags": [
-      "php",
-      "developer",
-      "cloudcomputing",
-      "webdev"
-    ],
-    "seoTitle": "The Browser is the New Terminal: A First Look at Iquipe Digital’s Revolutionary Web CLI",
-    "seoDescription": "In today's fast-paced development landscape, the need for immediate, secure access to server resources is paramount. Traditional methods often require settin..."
-  },
-  {
-    "title": "Python Quiz — Closures & Loop Variables",
-    "url": "https://dev.to/mahmoudessam/python-quiz-closures-loop-variables-n9d",
-    "publishedAt": "2025-08-31T13:20:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "What is the output of this code and why 🤔? def make_counters(): counters = [] for i in range(3): def counter(): return i counters.append(counter) return counters a, b, c = make_counters() print(a(), b(), c()) Outputs: a. 0 1 2 b. 2 2 2 c. 0 0 0 d. 1 1 1 e. Raises an error This short snippet looks simple, but it probes a set of Python behaviors that commo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2Flinkedin-0A66C2%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite",
-    "video": null,
-    "author": "Mahmoud EL-kariouny",
-    "tags": [
-      "python",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Python Quiz — Closures & Loop Variables",
-    "seoDescription": "What is the output of this code and why 🤔? def make_counters(): counters = [] for i in range(3): def counter(): return i counters.append(counter) return cou..."
-  },
-  {
-    "title": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data",
-    "url": "https://dev.to/bennykillua/building-a-competitive-deal-hunter-agent-using-n8n-brightdata-real-time-web-data-42b6",
-    "publishedAt": "2025-08-31T13:15:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data and my first n8n workflow. Searching for deals manually can be time-consuming and frustrating. Most of the time, this costs us as we often miss out on the best prices and limited-time offers. This AI agent solves this problem by automating the deal-hunting process and providin...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F84psw7qcofir005xjw0b.png",
-    "video": null,
-    "author": "Benny",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data and my first n8n workflow. Searching for deals manually can be time-consuming..."
   },
   {
     "title": "iPhone just became a wireless dual-camera rig for pro video production",
@@ -584,28 +594,5 @@
     ],
     "seoTitle": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
     "seoDescription": "In this episode of the No Film School Podcast, GG Hawkins sits down with filmmaker Macon Blair to discuss his journey from scrappy DIY filmmaking in Virginia..."
-  },
-  {
-    "title": "Webb Captures the First-Ever Image of the Butterfly Nebula’s Hidden Heart",
-    "url": "https://petapixel.com/2025/08/29/webb-captures-the-first-ever-image-of-the-butterfly-nebulas-hidden-heart/",
-    "publishedAt": "2025-08-29T20:57:01.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-seen details of the nebula's heart. This is the first time scientists have seen the super-hot star powering the beautiful, bug-like nebula. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/webb-butterfly-nebula-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "News",
-      "Space",
-      "butterflynebula",
-      "esa",
-      "jameswebbspacetelescope",
-      "jwst",
-      "NASA",
-      "nebula"
-    ],
-    "seoTitle": "Webb Captures the First-Ever Image of the Butterfly Nebula’s Hidden Heart",
-    "seoDescription": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-se..."
   }
 ]
