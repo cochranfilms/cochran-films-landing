@@ -1,98 +1,98 @@
 [
   {
-    "title": "How We’re Turning Textideo into a One-Stop AI Video Creation Platform",
-    "url": "https://dev.to/juddiy/how-were-turning-textideo-into-a-one-stop-ai-video-creation-platform-1179",
-    "publishedAt": "2025-09-01T02:32:28.000Z",
+    "title": "JavaScript : A Simple “Hello World”",
+    "url": "https://dev.to/ibrohimbek-dev/javascript-a-simple-hello-world-eme",
+    "publishedAt": "2025-09-01T03:46:12.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "When I first launched Textideo, the idea was simple: let anyone generate videos with AI. But as the community grew, I realized that creators wanted more than just “text-to-video.” They needed a smoother workflow, more model choices, and a way to actually produce a finished story without jumping between different tools. That’s the journey we’ve been on — a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fet850s86gru407sydm1r.png",
+    "summary": "JavaScript: A Simple “Hello World” This tradition is a rite of passage. It’s your first step into a larger universe, testing that your tools are working and that you understand the basic syntax of a new language. For us, that language is JavaScript — the language of the web. What is JavaScript? Your First JavaScript Program Open your browser (Chrome, Fire...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhl8qlq5t69hl54f86ch4.jpg",
     "video": null,
-    "author": "Juddiy",
+    "author": "Ibrohimbek Alisherov",
     "tags": [
+      "coding",
+      "programming",
       "webdev",
-      "ai",
-      "beginners",
-      "discuss"
+      "uz"
     ],
-    "seoTitle": "How We’re Turning Textideo into a One-Stop AI Video Creation Platform",
-    "seoDescription": "When I first launched Textideo, the idea was simple: let anyone generate videos with AI. But as the community grew, I realized that creators wanted more than..."
+    "seoTitle": "JavaScript : A Simple “Hello World”",
+    "seoDescription": "JavaScript: A Simple “Hello World” This tradition is a rite of passage. It’s your first step into a larger universe, testing that your tools are working and ..."
   },
   {
-    "title": "From Iron Man to n8n: Creating a JARVIS-Like AI Assistant",
-    "url": "https://dev.to/victor_lakra_e1910abe17fc/from-iron-man-to-n8n-creating-a-jarvis-like-ai-assistant-37hj",
-    "publishedAt": "2025-09-01T02:29:31.000Z",
+    "title": "n8n: The noob is on the loose",
+    "url": "https://dev.to/annavi11arrea1/n8n-the-noob-is-on-the-loose-2d43",
+    "publishedAt": "2025-09-01T03:37:10.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a JARVIS-inspired AI Agent workflow in n8n that acts as a smart assistant capable of handling two core tasks: Fetching the latest news using a dedicated news_agent workflow. Analyzing Crunchbase startups/companies based on keyword-driven queries via the analyze_startup...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4l37i5ie4u4xwfjinszy.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data My journey consisted of several ideas. But here is the most creative one: Digital art of the people. This takes random comments from videos on TikTok and YouTube, combines them into a string to be used as a prompt for image generation, it then outputs the created image with an...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5xazyo13zfg1dey40c3c.png",
     "video": null,
-    "author": "VICTOR LAKRA",
+    "author": "Anna Villarreal",
     "tags": [
       "devchallenge",
       "n8nbrightdatachallenge",
       "ai",
       "webdev"
     ],
-    "seoTitle": "From Iron Man to n8n: Creating a JARVIS-Like AI Assistant",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built a JARVIS-inspired AI Agent workflow in n8n that acts as a smart assis..."
+    "seoTitle": "n8n: The noob is on the loose",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data My journey consisted of several ideas. But here is the most creative one: Dig..."
   },
   {
-    "title": "Stop Building, Start Shipping: The Minimal Startup Toolkit",
-    "url": "https://dev.to/arielf/stop-building-start-shipping-the-minimal-startup-toolkit-4dhc",
-    "publishedAt": "2025-09-01T01:55:47.000Z",
+    "title": "Improve customer service data with this case study",
+    "url": "https://dev.to/dipti_moryani_08e62702314/improve-customer-service-data-with-this-case-study-3gl1",
+    "publishedAt": "2025-09-01T03:33:13.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Essential, simple, cost effective startup tools. As someone who's built multiple startups and watched countless others struggle with the same decisions, I'm consistently amazed by how many founders waste precious runway building infrastructure instead of products. You're not Google. You don't need to build your own authentication system, payment processor...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiq96dwuxzzklzb8hq50r.png",
+    "summary": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
     "video": null,
-    "author": "Ariel Frischer",
+    "author": "Dipti Moryani",
     "tags": [
       "webdev",
       "programming",
-      "productivity",
-      "startup"
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "Stop Building, Start Shipping: The Minimal Startup Toolkit",
-    "seoDescription": "Essential, simple, cost effective startup tools. As someone who's built multiple startups and watched countless others struggle with the same decisions, I'm ..."
+    "seoTitle": "Improve customer service data with this case study",
+    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners"
   },
   {
-    "title": "Ceylon Journey Partner - Real-Time AI Travel Partner for Sri Lanka",
-    "url": "https://dev.to/anfathhifans/ceylon-journey-partner-real-time-ai-travel-partner-for-sri-lanka-4083",
-    "publishedAt": "2025-09-01T01:44:20.000Z",
+    "title": "Improve customer service data",
+    "url": "https://dev.to/dipti_moryani_08e62702314/improve-customer-service-data-13jm",
+    "publishedAt": "2025-09-01T03:32:59.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built Ceylon Journey Partner – Real-Time AI Travel for Sri Lanka, an AI-powered travel planning workflow that creates a personalized itinerary for tourists visiting Sri Lanka. The workflow solves the common problem of overwhelming travel research by automating the process of...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftbbdg79c6ojpwvt0kclb.png",
+    "summary": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
     "video": null,
-    "author": "Anfath Hifans",
+    "author": "Dipti Moryani",
     "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
+      "webdev",
+      "programming",
       "ai",
-      "webdev"
+      "beginners"
     ],
-    "seoTitle": "Ceylon Journey Partner - Real-Time AI Travel Partner for Sri Lanka",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built Ceylon Journey Partner – Real-Time AI Travel for Sri Lanka, an AI-pow..."
+    "seoTitle": "Improve customer service data",
+    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners"
   },
   {
-    "title": "Resume of the day: the skills that employers in tech are looking for rn",
-    "url": "https://dev.to/stemonitis/resume-of-the-day-the-skills-that-employers-in-tech-are-looking-for-rn-3a62",
-    "publishedAt": "2025-09-01T01:37:48.000Z",
+    "title": "Improving Customer Service with Automated Call Center Data Insights",
+    "url": "https://dev.to/dipti_moryani_08e62702314/improving-customer-service-with-automated-call-center-data-insights-1ncg",
+    "publishedAt": "2025-09-01T03:32:32.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I’ve built an AI-powered workflow that helps you identify which tech skills are in demand right now. Here’s how it works: The Bright Data API node fetches five newly posted software job listings from LinkedIn (within the past 24 hours). These postings are then passed to an AI ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcs0iovs2bdifrhsch7od.png",
+    "summary": "Improving Customer Service with Automated Call Center Data Insights Call center operations generate large amounts of data every day, but without an efficient way to collect, integrate, and analyze it, valuable insights can be lost. For this company, delays in reporting and inconsistencies in data accuracy meant missed opportunities to improve customer exp...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr0ahnks1i268uo5nwazo.png",
     "video": null,
-    "author": "Stemonitis",
+    "author": "Dipti Moryani",
     "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
+      "webdev",
+      "programming",
       "ai",
-      "webdev"
+      "beginners"
     ],
-    "seoTitle": "Resume of the day: the skills that employers in tech are looking for rn",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I’ve built an AI-powered workflow that helps you identify which tech skills a..."
+    "seoTitle": "Improving Customer Service with Automated Call Center Data Insights",
+    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Call center operations generate large amounts of data every day, but without an efficient..."
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
