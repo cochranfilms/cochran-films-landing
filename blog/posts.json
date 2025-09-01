@@ -1,41 +1,130 @@
 [
   {
+    "title": "Building Tools to Solve My Own Developer Struggles 🚀",
+    "url": "https://dev.to/respect17/building-tools-to-solve-my-own-developer-struggles-487i",
+    "publishedAt": "2025-09-01T14:13:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Like many developers, I’ve had days where I felt overwhelmed by information and struggled with staying focused on learning or deep work. Instead of just complaining about it, I decided to build small tools to solve my own problems — and it’s been one of the most rewarding parts of my journey so far. I found myself jumping across multiple sites every day j...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd07mfxena3lts3rwbqkw.png",
+    "video": null,
+    "author": "Kudzai Murimi",
+    "tags": [
+      "productivity",
+      "discuss",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Building Tools to Solve My Own Developer Struggles 🚀",
+    "seoDescription": "Like many developers, I’ve had days where I felt overwhelmed by information and struggled with staying focused on learning or deep work. Instead of just comp..."
+  },
+  {
+    "title": "Here’s everything new Apple TV+ has coming in September",
+    "url": "https://9to5mac.com/2025/09/01/heres-everything-new-apple-tv-has-coming-in-september/",
+    "publishedAt": "2025-09-01T14:02:04.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple TV+ has been having its best year ever, and shows no signs of letting up. The fall lineup on Apple TV+ is easily the streamer’s strongest to date, and it all kicks off in September. Major returning series like Slow Horses and The Morning Show are big highlights, but Apple also has two movies and an intriguing new crime thriller series premiering. He...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-plus-tvos26-screensaver-03.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Here’s everything new Apple TV+ has coming in September",
+    "seoDescription": "Apple TV+ has been having its best year ever, and shows no signs of letting up. The fall lineup on Apple TV+ is easily the streamer’s strongest to date, and ..."
+  },
+  {
+    "title": "From Lag to Live: Architecting a Real-Time Inventory System",
+    "url": "https://dev.to/thebigwealth89/bringing-the-backend-to-life-with-real-time-updates-328p",
+    "publishedAt": "2025-09-01T13:53:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "My reservation system was now reliable and resilient, but it had one major flaw: it was silent. If another user reserved an item, my inventory would update correctly in the backend, but everyone else viewing the page would still see the old, stale number. To create a truly dynamic experience, I needed to push updates to users the moment they happened. Thi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmn22i0fvp5u1me4tcabz.png",
+    "video": null,
+    "author": "Dabira olaoluwa ",
+    "tags": [
+      "node",
+      "webdev",
+      "javascript",
+      "architecture"
+    ],
+    "seoTitle": "From Lag to Live: Architecting a Real-Time Inventory System",
+    "seoDescription": "My reservation system was now reliable and resilient, but it had one major flaw: it was silent. If another user reserved an item, my inventory would update c..."
+  },
+  {
     "title": "Octarine finally made kubernetes feel sane now here’s what I want in 2.0",
-    "url": "https://dev.to/dev_tips/octarine-finally-made-kubernetes-feel-sane-now-heres-what-i-want-in-20-2kjl",
-    "publishedAt": "2025-09-01T13:23:39.000Z",
+    "url": "https://dev.to/dev_tips/octarine-finally-made-kubernetes-feel-sane-now-heres-what-i-want-in-20-4d7",
+    "publishedAt": "2025-09-01T13:52:35.000Z",
     "source": "dev.to",
     "category": "web",
     "summary": "How kubernetes 1.22 made my cluster survivable and what i’m hoping for in 2.0 The Octarine release (Kubernetes 1.22) dropped, and for once it didn’t feel like playing Russian roulette with my cluster. Instead, it felt like Gandalf walked in, waved a staff, and said: “your CRDs shall not break.” If you’ve ever patched Kubernetes mid-project, you know the v...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2AR-m_nTw1Nh36v5Bdh2Wrzg.jpeg",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AR-m_nTw1Nh36v5Bdh2Wrzg.jpeg",
     "video": null,
     "author": "<devtips/>",
     "tags": [
       "webdev",
       "programming",
-      "kubernetes",
-      "ai"
+      "ai",
+      "kubernetes"
     ],
     "seoTitle": "Octarine finally made kubernetes feel sane now here’s what I want in 2.0",
     "seoDescription": "How kubernetes 1.22 made my cluster survivable and what i’m hoping for in 2.0 The Octarine release (Kubernetes 1.22) dropped, and for once it didn’t feel lik..."
   },
   {
-    "title": "Wow nice",
-    "url": "https://dev.to/masterdevsabith/wow-nice-f4h",
-    "publishedAt": "2025-09-01T13:15:28.000Z",
+    "title": "The 5 personalities of a tech lead which one keeps you alive (and which one burns you out)?",
+    "url": "https://dev.to/dev_tips/the-5-personalities-of-a-tech-lead-which-one-keeps-you-alive-and-which-one-burns-you-out-19bl",
+    "publishedAt": "2025-09-01T13:39:47.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Why existing React color pickers frustrated me (and what I built instead) Özer Gökalpsezer ・ Aug 31 #webdev #react #typescript #tailwindcss",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1599006%2Ffc237a50-1877-4c37-b59a-fe3b24f1fc23.jpeg",
+    "summary": "Nobody tells you what a tech lead actually does until you’re already drowning in meetings, reviewing half the team’s PRs, and getting paged at 2AM because prod is on fire. Congratulations, you just unlocked the hardest role in engineering. No tutorial. No manual. Just vibes and Jira tickets. The truth? Being a tech lead isn’t one role at all it’s five. On...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2AD5tqQyQdioupOvkx09GeLA.jpeg",
     "video": null,
-    "author": "Muhammed Sabith",
+    "author": "<devtips/>",
     "tags": [
       "webdev",
-      "react",
-      "typescript",
-      "tailwindcss"
+      "programming",
+      "learning",
+      "ai"
     ],
-    "seoTitle": "Wow nice",
-    "seoDescription": "Why existing React color pickers frustrated me (and what I built instead) Özer Gökalpsezer ・ Aug 31 #webdev #react #typescript #tailwindcss"
+    "seoTitle": "The 5 personalities of a tech lead which one keeps you alive (and which one burns you out)?",
+    "seoDescription": "Nobody tells you what a tech lead actually does until you’re already drowning in meetings, reviewing half the team’s PRs, and getting paged at 2AM because pr..."
+  },
+  {
+    "title": "You’re learning wrong (and that’s why you’re stuck as a mid dev)",
+    "url": "https://dev.to/dev_tips/youre-learning-wrong-and-thats-why-youre-stuck-as-a-mid-dev-3kcl",
+    "publishedAt": "2025-09-01T13:30:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Stop bingeing tutorials. Start learning like an engineer. I once spent three straight weeks grinding through a React course. Twenty hours of video. Dozens of example projects. By the end, I could barely explain how a single hook worked without Googling. That was my rock bottom moment the kind of “wtf am I even doing?” dev crisis you don’t forget. Here’s t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1155%2F1%2AusHMeRab2ETzq2IANiG5mg.png",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "development",
+      "devops"
+    ],
+    "seoTitle": "You’re learning wrong (and that’s why you’re stuck as a mid dev)",
+    "seoDescription": "Stop bingeing tutorials. Start learning like an engineer. I once spent three straight weeks grinding through a React course. Twenty hours of video. Dozens of..."
+  },
+  {
+    "title": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
+    "url": "https://9to5mac.com/2025/09/01/end-of-an-era-as-the-last-11-inch-macbook-air-is-now-officially-obsolete/",
+    "publishedAt": "2025-09-01T13:29:58.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The smallest of Apple’s MacBooks had long proved a popular choice with many, for two different reasons … more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/End-of-an-era-as-the-last-11-inch-MacBook-is-now-officially-obsolete.jpeg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
+    "seoDescription": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The s..."
   },
   {
     "title": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
@@ -140,25 +229,6 @@
     "seoDescription": "Like in previous years, Apple is dropping the price of the MLS Season Pass service as the year progresses. The annual sub is now just $29 for the rest of the..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/raullzn/-4bpb",
-    "publishedAt": "2025-09-01T12:53:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "7 Git Best Practices Every Developer Should Know 🚀 Flud ・ Aug 19 #webdev #programming #tutorial #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3440255%2F4f389151-e20d-47fb-aa63-428e7a9e62aa.png",
-    "video": null,
-    "author": "RaulLzn",
-    "tags": [
-      "webdev",
-      "programming",
-      "tutorial",
-      "productivity"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "7 Git Best Practices Every Developer Should Know 🚀 Flud ・ Aug 19 #webdev #programming #tutorial #productivity"
-  },
-  {
     "title": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
     "url": "https://9to5mac.com/2025/09/01/apples-stance-on-strong-encryption-gets-the-support-of-the-ftc-in-us-privacy-u-turn/",
     "publishedAt": "2025-09-01T12:35:53.000Z",
@@ -173,80 +243,6 @@
     ],
     "seoTitle": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
     "seoDescription": "Apple’s commitment to end-to-end encryption is so strong that it withdrew a key privacy feature from the UK market rather than be forced to compromise it glo..."
-  },
-  {
-    "title": "AI Faceless List Builder Review: What I Wish I Knew Before Buying",
-    "url": "https://dev.to/revuuit/ai-faceless-list-builder-review-what-i-wish-i-knew-before-buying-2j1",
-    "publishedAt": "2025-09-01T12:35:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "AI Faceless List Builder Review: This $17.97 system teaches introverts and privacy-focused entrepreneurs how to build profitable email lists and earn affiliate commissions without showing their face, creating personal brands, or posting daily content. It includes AI-powered templates, done-for-you campaigns, and step-by-step training for complete beginner...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F78gp6ncoxyrhpr3i7mf8.jpeg",
-    "video": null,
-    "author": "Brajendra Dobriyal",
-    "tags": [
-      "webdev",
-      "ai"
-    ],
-    "seoTitle": "AI Faceless List Builder Review: What I Wish I Knew Before Buying",
-    "seoDescription": "AI Faceless List Builder Review: This $17.97 system teaches introverts and privacy-focused entrepreneurs how to build profitable email lists and earn affilia..."
-  },
-  {
-    "title": "your honest opinion no this please :)",
-    "url": "https://dev.to/sulimanbenhalim/your-honest-opinion-no-this-please--4f5n",
-    "publishedAt": "2025-09-01T12:31:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Scriptura - What is that? sulimanbenhalim ・ Sep 1 #programming #webdev #productivity #discuss",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3473103%2Ff7683616-4864-414e-927c-c8cf75c47a64.jpeg",
-    "video": null,
-    "author": "sulimanbenhalim",
-    "tags": [
-      "programming",
-      "webdev",
-      "productivity",
-      "discuss"
-    ],
-    "seoTitle": "your honest opinion no this please :)",
-    "seoDescription": "Scriptura - What is that? sulimanbenhalim ・ Sep 1 #programming #webdev #productivity #discuss"
-  },
-  {
-    "title": "Faizan Cheema",
-    "url": "https://dev.to/faizancheema893/-am1",
-    "publishedAt": "2025-09-01T12:30:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "How I Became a Full Stack Web Developer — My Journey as Faizan Cheema Faizan Cheema ・ Sep 1 #webdev #javascript #react #node",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3473179%2F5b17d700-417d-4e64-b9b5-8cfa2da43275.JPEG",
-    "video": null,
-    "author": "Faizan Cheema",
-    "tags": [
-      "webdev",
-      "javascript",
-      "react",
-      "node"
-    ],
-    "seoTitle": "Faizan Cheema",
-    "seoDescription": "How I Became a Full Stack Web Developer — My Journey as Faizan Cheema Faizan Cheema ・ Sep 1 #webdev #javascript #react #node"
-  },
-  {
-    "title": "The Rise of Answer Engine Optimization",
-    "url": "https://dev.to/qwegle_insights/the-rise-of-answer-engine-optimization-4d10",
-    "publishedAt": "2025-09-01T12:24:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When someone searches online - whether they’re typing into Google, asking Alexa, or speaking into their phone’s voice assistant - they aren’t looking for a webpage. They’re looking for an answer. A specific, useful, immediate answer. That shift in behavior has quietly rewritten the rules of search. And it's exactly why Answer engine optimization is becomi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9715kf13ydcgjggs7jk8.jpeg",
-    "video": null,
-    "author": "Qwegle Tech",
-    "tags": [
-      "seo",
-      "webdev",
-      "aeo",
-      "qwegle"
-    ],
-    "seoTitle": "The Rise of Answer Engine Optimization",
-    "seoDescription": "When someone searches online - whether they’re typing into Google, asking Alexa, or speaking into their phone’s voice assistant - they aren’t looking for a w..."
   },
   {
     "title": "Labor Day Apple deals: Save on M4 MacBook Air/Pro, iPad, AirPods, accessories, more",
