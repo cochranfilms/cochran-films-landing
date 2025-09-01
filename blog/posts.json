@@ -1,5 +1,75 @@
 [
   {
+    "title": "Dica Java: Variáveis de Ambiente #010",
+    "url": "https://dev.to/oigorrudel/dica-java-variaveis-de-ambiente-010-5ckk",
+    "publishedAt": "2025-09-01T23:00:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Aposto que você já fez a definição de properties dos seus projetos Spring como no exemplo abaixo: application.my-variable=${MY_VARIABLE:haha} spring.application.name=env-variables-ex Temos uma propriedade customizada e uma default do Spring. A customizada com um ternário: se for informada uma variável de ambiente, se não um valor default. A default com va...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2jwvxutjuyc9c5gwruqv.png",
+    "video": null,
+    "author": "Igor Rudel",
+    "tags": [
+      "java",
+      "webdev",
+      "programming",
+      "tip"
+    ],
+    "seoTitle": "Dica Java: Variáveis de Ambiente #010",
+    "seoDescription": "Aposto que você já fez a definição de properties dos seus projetos Spring como no exemplo abaixo: application.my-variable=${MY_VARIABLE:haha} spring.applicat..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/ayomide_osho_be743bacaf96/-516d",
+    "publishedAt": "2025-09-01T22:48:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data Benny ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F608386%2Fcec26f41-9540-4c32-87cf-e1fb1216269f.jpg",
+    "video": null,
+    "author": "Ayomide Osho",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data Benny ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev"
+  },
+  {
+    "title": "WhatsApp Status is getting a Close Friends feature",
+    "url": "https://9to5mac.com/2025/09/01/whatsapp-status-is-getting-a-close-friends-feature/",
+    "publishedAt": "2025-09-01T22:24:36.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "While most U.S. users have never used—or even heard of—WhatsApp Status Updates, Meta recently revealed that the tab is now used by 1.5 billion people per day worldwide. And soon, WhatsApp will take a page from Instagram by adding a Close Friends feature. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-glass.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "WhatsApp Status is getting a Close Friends feature",
+    "seoDescription": "While most U.S. users have never used—or even heard of—WhatsApp Status Updates, Meta recently revealed that the tab is now used by 1.5 billion people per day..."
+  },
+  {
+    "title": "Rumor: AirPods Pro 3 features may not all arrive at launch",
+    "url": "https://9to5mac.com/2025/09/01/airpods-pro-3-sensors-live-translation/",
+    "publishedAt": "2025-09-01T22:17:48.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "While we expect Apple to unveil AirPods Pro 3 alongside iPhone 17 and Apple Watch Series 11 next week, there’s one new feature that may not be ready for showtime. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/airpods-pro-3.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Rumor: AirPods Pro 3 features may not all arrive at launch",
+    "seoDescription": "While we expect Apple to unveil AirPods Pro 3 alongside iPhone 17 and Apple Watch Series 11 next week, there’s one new feature that may not be ready for show..."
+  },
+  {
     "title": "You can try Apple’s lightning-fast video captioning model right from your browser",
     "url": "https://9to5mac.com/2025/09/01/you-can-try-apples-lightning-fast-video-captioning-model-right-from-your-browser/",
     "publishedAt": "2025-09-01T21:41:35.000Z",
@@ -28,25 +98,6 @@
     "tags": [],
     "seoTitle": "The best Labor Day TV sales",
     "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
-  },
-  {
-    "title": "Python en la construcción de redes neuronales sobre brujería: un enfoque experimental",
-    "url": "https://dev.to/jaime_smith_cfd7d9641239c/python-en-la-construccion-de-redes-neuronales-sobre-brujeria-un-enfoque-experimental-307i",
-    "publishedAt": "2025-09-01T20:31:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En la intersección entre la ciencia de datos y las tradiciones Python para Python es un lenguaje versátil, accesible y con un ecosistema de TensorFlow, PyTorch o Keras permiten entrenar modelos Por ejemplo, un modelo de red neuronal podría entrenarse para Brujeria en Chicago, -- A continuación, presentamos un ejemplo básico de cómo estructurar un Keras. E...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8rq946a0n2bm4uo3zbyo.png",
-    "video": null,
-    "author": "Jaime Smith",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python en la construcción de redes neuronales sobre brujería: un enfoque experimental",
-    "seoDescription": "En la intersección entre la ciencia de datos y las tradiciones Python para Python es un lenguaje versátil, accesible y con un ecosistema de TensorFlow, PyTor..."
   },
   {
     "title": "The 28 best Labor Day deals you still can grab for $100 or less",
@@ -563,68 +614,5 @@
     ],
     "seoTitle": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
     "seoDescription": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The s..."
-  },
-  {
-    "title": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
-    "url": "https://www.macrumors.com/2025/09/01/apple-previews-new-store-with-unified-counter/",
-    "publishedAt": "2025-09-01T13:15:13.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple has previewed its third retail location in India, Apple Hebbal. The new store is located at Phoenix Mall of Asia in Bengaluru. Apple Hebbal spans approximately 8,000 square feet and is staffed by 70 employees representing 15 states across India, according to Apple. It joins Apple BKC in Mumbai and Apple Saket in Delhi. Apple Hebbal features a unifie...",
-    "image": "https://images.macrumors.com/article-new/2025/09/Apple-Hebbal-India-media-preview-Genius-Bar-and-Apple-Pickup.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "India",
-      "Retail"
-    ],
-    "seoTitle": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
-    "seoDescription": "Apple has previewed its third retail location in India, Apple Hebbal. The new store is located at Phoenix Mall of Asia in Bengaluru. Apple Hebbal spans appro..."
-  },
-  {
-    "title": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
-    "url": "https://petapixel.com/2025/09/01/novachips-new-cfexpress-for-sony-cameras-is-cheaper-than-an-sd-card/",
-    "publishedAt": "2025-09-01T13:01:26.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just $140, which it says is less than some V60 and many V90 SD cards, but packs more than double the speed and nearly twice the storage capacity. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Novachips-New-CFexpress-For-Sony-Cameras-is-Cheaper-Than-an-SD-Card.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Equipment",
-      "News",
-      "cfexpress",
-      "cfexpresstypea",
-      "memorycard",
-      "novachips",
-      "sdcard",
-      "Sony"
-    ],
-    "seoTitle": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
-    "seoDescription": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just..."
-  },
-  {
-    "title": "Viltrox Has Joined the L-Mount Alliance",
-    "url": "https://petapixel.com/2025/09/01/viltrox-has-joined-the-l-mount-alliance/",
-    "publishedAt": "2025-09-01T13:00:53.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for the standard. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Viltrox-Has-Joined-the-L-Mount-Alliance.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Equipment",
-      "News",
-      "astrodesign",
-      "blackmagicdesign",
-      "dji",
-      "leica",
-      "leicalmount",
-      "leitz"
-    ],
-    "seoTitle": "Viltrox Has Joined the L-Mount Alliance",
-    "seoDescription": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for ..."
   }
 ]
