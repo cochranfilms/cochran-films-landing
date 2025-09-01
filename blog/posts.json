@@ -1,79 +1,112 @@
 [
   {
-    "title": "How Docker Powers Automation and Speed in Modern DevOps",
-    "url": "https://dev.to/vishal_more_02990955c9358/how-docker-powers-automation-and-speed-in-modern-devops-1aok",
-    "publishedAt": "2025-09-01T07:13:19.000Z",
+    "title": "Day-88 Memory Management in Java",
+    "url": "https://dev.to/tamilselvan1812/day-88-memory-management-in-java-3jd5",
+    "publishedAt": "2025-09-01T08:06:49.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Read More: How Docker Powers Automation and Speed in Modern DevOps Automation with Docker One of Docker’s biggest strengths is automation. Traditionally, developers faced the challenge of setting up consistent environments across development, testing, and production. A single mismatch in configurations often led to deployment failures. Docker solves this ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff93p02ra475cib8lnqt2.png",
+    "summary": "Memory management is one of the most important concepts in Java. As developers, we often create objects, call methods, and manage data without worrying about where everything is stored. That’s because Java takes care of memory allocation and deallocation using its own memory model and the Garbage Collector (GC). It stores Objects, arrays, wrapper class ob...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2g5lfpl1mrfj0g8slx3w.png",
     "video": null,
-    "author": "vishal more",
+    "author": "Tamilselvan K",
+    "tags": [
+      "webdev",
+      "programming",
+      "java",
+      "sql"
+    ],
+    "seoTitle": "Day-88 Memory Management in Java",
+    "seoDescription": "Memory management is one of the most important concepts in Java. As developers, we often create objects, call methods, and manage data without worrying about..."
+  },
+  {
+    "title": "How React Developers Help with Cloud-First Applications",
+    "url": "https://dev.to/jatin_sharma_43ece94a15eb/how-react-developers-help-with-cloud-first-applications-kkd",
+    "publishedAt": "2025-09-01T08:05:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "With a \"digital-first\" world perspective, both large enterprises and small startups are racing to build cloud-first applications. As noted by Gartner, more than 85% of organisations will utilise a cloud-first principle, and a cloud-first strategy is no longer simply moving infrastructure to the cloud. A cloud-first strategy is also about building customer...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi9ymqmpr0mujpfku7kcx.png",
+    "video": null,
+    "author": "Jatin Sharma",
+    "tags": [
+      "webdev",
+      "react",
+      "cloud",
+      "devchallenge"
+    ],
+    "seoTitle": "How React Developers Help with Cloud-First Applications",
+    "seoDescription": "With a \"digital-first\" world perspective, both large enterprises and small startups are racing to build cloud-first applications. As noted by Gartner, more t..."
+  },
+  {
+    "title": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
+    "url": "https://www.theverge.com/games-review/767993/hell-is-us-review-ps5-xbox-steam",
+    "publishedAt": "2025-09-01T08:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The opening hours of Hell Is Us are brilliantly confusing. The game tasks you with getting up to speed on a complicated civil war between the Palomists and Sabinians. A deluge of proper nouns is unleashed: Lymbic weaponry, Guardian Detectors, and more. But the clearest way the game communicates that you should feel utterly dumbfounded is through the crypt...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/HiU_GameplayReveal_Screenshot_07.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Lewis Gordon",
+    "tags": [],
+    "seoTitle": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
+    "seoDescription": "The opening hours of Hell Is Us are brilliantly confusing. The game tasks you with getting up to speed on a complicated civil war between the Palomists and S..."
+  },
+  {
+    "title": "Post Title",
+    "url": "https://dev.to/abduls_desk_5a6086c62cee/post-title-efa",
+    "publishedAt": "2025-09-01T07:33:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Here's the post content that will be displaying there",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/...",
+    "video": null,
+    "author": "Abdul's Desk",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Post Title",
+    "seoDescription": "Here's the post content that will be displaying there"
+  },
+  {
+    "title": "Wan 2.2 Series Now Available on SiliconFlow：Generate Stable, Realistic and Cinematic Videos",
+    "url": "https://dev.to/siliconflow/wan-22-series-now-available-on-siliconflowgenerate-stable-realistic-and-cinematic-videos-4e3h",
+    "publishedAt": "2025-09-01T07:30:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "SiliconFlow is excited to bring the Wan 2.2 series to our platform — a major upgrade to Wan's visual generative models, featuring significantly improved performance and superior visual quality. We provide two models from this series: Wan2.2-T2V-A14B and Wan2.2-I2V-A14B. Designed to power the next wave of creative AI applications from concept art to commer...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffjbkwuye4kqgynp2mqam.png",
+    "video": null,
+    "author": "SiliconFlow",
     "tags": [
       "webdev",
       "programming",
       "ai",
+      "productivity"
+    ],
+    "seoTitle": "Wan 2.2 Series Now Available on SiliconFlow：Generate Stable, Realistic and Cinematic Videos",
+    "seoDescription": "SiliconFlow is excited to bring the Wan 2.2 series to our platform — a major upgrade to Wan's visual generative models, featuring significantly improved perf..."
+  },
+  {
+    "title": "React Fundamentals: What It Is, Why We Use It, and How to Get Started",
+    "url": "https://dev.to/mendoncamaria/react-fundamentals-what-it-is-why-we-use-it-and-how-to-get-started-p8a",
+    "publishedAt": "2025-09-01T07:30:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey there! If you've been following along with our series, you've already seen the roadmap for our journey into the world of React. We've talked about the \"why\" and the \"what,\" and now it's time to get our hands dirty. In this article, we're making the exciting leap from theory to practice. We'll start with a simple, jargon-free explanation of what React ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fybalzt7rzhyr7yxr7cau.png",
+    "video": null,
+    "author": "Maria Mendonca",
+    "tags": [
+      "webdev",
+      "javascript",
+      "react",
       "beginners"
     ],
-    "seoTitle": "How Docker Powers Automation and Speed in Modern DevOps",
-    "seoDescription": "Read More: How Docker Powers Automation and Speed in Modern DevOps Automation with Docker One of Docker’s biggest strengths is automation. Traditionally, dev..."
-  },
-  {
-    "title": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons)",
-    "url": "https://dev.to/anchildress1/underfoot-the-chatpot-for-hidden-places-and-why-i-dont-do-hackathons-2684",
-    "publishedAt": "2025-09-01T07:00:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Underfoot is a chatbot that finds locals-only, off-the-map places you won’t see on Yelp or TripAdvisor. You give it a location and intent (music, coffee, hiking, spider farms…) and it returns unique results with a “Stonewalker” rating. Each query also adds anonymous “whispers”...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4q3prh5o7iq2ytk5f2m2.png",
-    "video": null,
-    "author": "Ashley Childress",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons)",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Underfoot is a chatbot that finds locals-only, off-the-map places you won’t s..."
-  },
-  {
-    "title": "BrightMentions: Building a 24/7 Brand Monitoring AI Agent with n8n and Bright Data",
-    "url": "https://dev.to/mehdi/brightmentions-building-a-247-brand-monitoring-ai-agent-with-n8n-and-bright-data-3gg",
-    "publishedAt": "2025-09-01T06:55:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent Brand and Keyword Mention Monitoring Agent that runs every 2 hours, searching the web for brand mentions and delivering curated reports directly to your inbox. It's essentially a tireless assistant that can process hundreds of posts while you sleep, filt...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0fhc7sliu28s6eoms5zm.png",
-    "video": null,
-    "author": "Mehdi Amrane",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "BrightMentions: Building a 24/7 Brand Monitoring AI Agent with n8n and Bright Data",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent Brand and Keyword Mention Monitoring Agent that runs e..."
-  },
-  {
-    "title": "Automating Healthcare Workflows: Onco-Assist",
-    "url": "https://dev.to/hargun_kaur_d5af086aff62f/automating-healthcare-workflows-onco-assist-phe",
-    "publishedAt": "2025-09-01T06:54:54.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data When technology meets personal need, innovation becomes deeply meaningful. This project wasn’t just a hackathon build or an experiment in automation — it started from my own mother’s case. Managing her medical reports, prescriptions, test results, and hospital bills was overwh...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff25j3c9u255hn6qszq22.png",
-    "video": null,
-    "author": "Hargun Kaur",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Automating Healthcare Workflows: Onco-Assist",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data When technology meets personal need, innovation becomes deeply meaningful. Th..."
+    "seoTitle": "React Fundamentals: What It Is, Why We Use It, and How to Get Started",
+    "seoDescription": "Hey there! If you've been following along with our series, you've already seen the roadmap for our journey into the world of React. We've talked about the \"w..."
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
@@ -558,36 +591,5 @@
     ],
     "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
     "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
-  },
-  {
-    "title": "Discounty adds some bite to cozy life sims",
-    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew Webster",
-    "tags": [],
-    "seoTitle": "Discounty adds some bite to cozy life sims",
-    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
-  },
-  {
-    "title": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "url": "https://www.macrumors.com/2025/08/30/top-stories-apple-awe-dropping-iphone-event/",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iPhone models, some new accessories, new Apple Watch models, and perhaps a few more announcements. Apple has plenty more announcements in the pipeline beyond next month's event, however, including a hos...",
-    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-30.jpg",
-    "video": null,
-    "author": "MacRumors Staff",
-    "tags": [
-      "Featured",
-      "Top Stories"
-    ],
-    "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
   }
 ]
