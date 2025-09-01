@@ -1,5 +1,235 @@
 [
   {
+    "title": "Octarine finally made kubernetes feel sane now here’s what I want in 2.0",
+    "url": "https://dev.to/dev_tips/octarine-finally-made-kubernetes-feel-sane-now-heres-what-i-want-in-20-2kjl",
+    "publishedAt": "2025-09-01T13:23:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How kubernetes 1.22 made my cluster survivable and what i’m hoping for in 2.0 The Octarine release (Kubernetes 1.22) dropped, and for once it didn’t feel like playing Russian roulette with my cluster. Instead, it felt like Gandalf walked in, waved a staff, and said: “your CRDs shall not break.” If you’ve ever patched Kubernetes mid-project, you know the v...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1050%2F1%2AR-m_nTw1Nh36v5Bdh2Wrzg.jpeg",
+    "video": null,
+    "author": "<devtips/>",
+    "tags": [
+      "webdev",
+      "programming",
+      "kubernetes",
+      "ai"
+    ],
+    "seoTitle": "Octarine finally made kubernetes feel sane now here’s what I want in 2.0",
+    "seoDescription": "How kubernetes 1.22 made my cluster survivable and what i’m hoping for in 2.0 The Octarine release (Kubernetes 1.22) dropped, and for once it didn’t feel lik..."
+  },
+  {
+    "title": "Wow nice",
+    "url": "https://dev.to/masterdevsabith/wow-nice-f4h",
+    "publishedAt": "2025-09-01T13:15:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why existing React color pickers frustrated me (and what I built instead) Özer Gökalpsezer ・ Aug 31 #webdev #react #typescript #tailwindcss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1599006%2Ffc237a50-1877-4c37-b59a-fe3b24f1fc23.jpeg",
+    "video": null,
+    "author": "Muhammed Sabith",
+    "tags": [
+      "webdev",
+      "react",
+      "typescript",
+      "tailwindcss"
+    ],
+    "seoTitle": "Wow nice",
+    "seoDescription": "Why existing React color pickers frustrated me (and what I built instead) Özer Gökalpsezer ・ Aug 31 #webdev #react #typescript #tailwindcss"
+  },
+  {
+    "title": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
+    "url": "https://www.macrumors.com/2025/09/01/apple-previews-new-store-with-unified-counter/",
+    "publishedAt": "2025-09-01T13:15:13.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple has previewed its third retail location in India, Apple Hebbal, debuting a new combined Genius Bar and Pickup counter layout. The new store is located at Phoenix Mall of Asia in Bengaluru. Apple Hebbal spans approximately 8,000 square feet and is staffed by 70 employees representing 15 states across India, according to Apple. It joins Apple BKC in M...",
+    "image": "https://images.macrumors.com/article-new/2025/09/Apple-Hebbal-India-media-preview-Genius-Bar-and-Apple-Pickup.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "India",
+      "Retail"
+    ],
+    "seoTitle": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
+    "seoDescription": "Apple has previewed its third retail location in India, Apple Hebbal, debuting a new combined Genius Bar and Pickup counter layout. The new store is located ..."
+  },
+  {
+    "title": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
+    "url": "https://petapixel.com/2025/09/01/novachips-new-cfexpress-for-sony-cameras-is-cheaper-than-an-sd-card/",
+    "publishedAt": "2025-09-01T13:01:26.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just $140, which it says is less than some V60 and many V90 SD cards, but packs more than double the speed and nearly twice the storage capacity. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Novachips-New-CFexpress-For-Sony-Cameras-is-Cheaper-Than-an-SD-Card.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "News",
+      "cfexpress",
+      "cfexpresstypea",
+      "memorycard",
+      "novachips",
+      "sdcard",
+      "Sony"
+    ],
+    "seoTitle": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
+    "seoDescription": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just..."
+  },
+  {
+    "title": "Viltrox Has Joined the L-Mount Alliance",
+    "url": "https://petapixel.com/2025/09/01/viltrox-has-joined-the-l-mount-alliance/",
+    "publishedAt": "2025-09-01T13:00:53.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for the standard. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Viltrox-Has-Joined-the-L-Mount-Alliance.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "News",
+      "astrodesign",
+      "blackmagicdesign",
+      "dji",
+      "leica",
+      "leicalmount",
+      "leitz"
+    ],
+    "seoTitle": "Viltrox Has Joined the L-Mount Alliance",
+    "seoDescription": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for ..."
+  },
+  {
+    "title": "Viltrox AF 56mm f/1.2 Pro Promises Gorgeous Bokeh for Under $600",
+    "url": "https://petapixel.com/2025/09/01/viltrox-af-56mm-f-1-2-pro-promises-gorgeous-bokeh-for-under-600/",
+    "publishedAt": "2025-09-01T13:00:02.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Viltrox's new AF 56mm f/1.2 Pro lens for Sony E, Fujifilm X, and Nikon Z APS-C mirrorless cameras promises professional performance and silky-smooth bokeh for a relatively affordable price of just $580. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/DSC8273.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "56mmf12",
+      "apsc",
+      "emount",
+      "portraitprime",
+      "viltrox",
+      "viltroxaf56mmf12pro"
+    ],
+    "seoTitle": "Viltrox AF 56mm f/1.2 Pro Promises Gorgeous Bokeh for Under $600",
+    "seoDescription": "Viltrox's new AF 56mm f/1.2 Pro lens for Sony E, Fujifilm X, and Nikon Z APS-C mirrorless cameras promises professional performance and silky-smooth bokeh fo..."
+  },
+  {
+    "title": "MLS Season Pass price drops to $29 for rest of 2025",
+    "url": "https://9to5mac.com/2025/09/01/mls-season-pass-price-drop-rest-of-2025/",
+    "publishedAt": "2025-09-01T13:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Like in previous years, Apple is dropping the price of the MLS Season Pass service as the year progresses. The annual sub is now just $29 for the rest of the 2025 season. That price is further discounted to $25 for Apple TV+ subscribers. The price change affects the 2025 season pass only, the monthly plan price remains the same. The price will return to i...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-tv-mls-season-pass-price-drop.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "MLS Season Pass price drops to $29 for rest of 2025",
+    "seoDescription": "Like in previous years, Apple is dropping the price of the MLS Season Pass service as the year progresses. The annual sub is now just $29 for the rest of the..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/raullzn/-4bpb",
+    "publishedAt": "2025-09-01T12:53:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "7 Git Best Practices Every Developer Should Know 🚀 Flud ・ Aug 19 #webdev #programming #tutorial #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3440255%2F4f389151-e20d-47fb-aa63-428e7a9e62aa.png",
+    "video": null,
+    "author": "RaulLzn",
+    "tags": [
+      "webdev",
+      "programming",
+      "tutorial",
+      "productivity"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "7 Git Best Practices Every Developer Should Know 🚀 Flud ・ Aug 19 #webdev #programming #tutorial #productivity"
+  },
+  {
+    "title": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
+    "url": "https://9to5mac.com/2025/09/01/apples-stance-on-strong-encryption-gets-the-support-of-the-ftc-in-us-privacy-u-turn/",
+    "publishedAt": "2025-09-01T12:35:53.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple’s commitment to end-to-end encryption is so strong that it withdrew a key privacy feature from the UK market rather than be forced to compromise it globally. The company also faced pressure on this front from the EU’s Digital Services Act (DSA). In a surprising twist, the White House came out in support of strong encryption, and the Federal Trade Co...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apples-stance-on-strong-encryption-gets-the-support-of-the-FTC.webp?w=1500",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
+    "seoDescription": "Apple’s commitment to end-to-end encryption is so strong that it withdrew a key privacy feature from the UK market rather than be forced to compromise it glo..."
+  },
+  {
+    "title": "AI Faceless List Builder Review: What I Wish I Knew Before Buying",
+    "url": "https://dev.to/revuuit/ai-faceless-list-builder-review-what-i-wish-i-knew-before-buying-2j1",
+    "publishedAt": "2025-09-01T12:35:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "AI Faceless List Builder Review: This $17.97 system teaches introverts and privacy-focused entrepreneurs how to build profitable email lists and earn affiliate commissions without showing their face, creating personal brands, or posting daily content. It includes AI-powered templates, done-for-you campaigns, and step-by-step training for complete beginner...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F78gp6ncoxyrhpr3i7mf8.jpeg",
+    "video": null,
+    "author": "Brajendra Dobriyal",
+    "tags": [
+      "webdev",
+      "ai"
+    ],
+    "seoTitle": "AI Faceless List Builder Review: What I Wish I Knew Before Buying",
+    "seoDescription": "AI Faceless List Builder Review: This $17.97 system teaches introverts and privacy-focused entrepreneurs how to build profitable email lists and earn affilia..."
+  },
+  {
+    "title": "your honest opinion no this please :)",
+    "url": "https://dev.to/sulimanbenhalim/your-honest-opinion-no-this-please--4f5n",
+    "publishedAt": "2025-09-01T12:31:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Scriptura - What is that? sulimanbenhalim ・ Sep 1 #programming #webdev #productivity #discuss",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3473103%2Ff7683616-4864-414e-927c-c8cf75c47a64.jpeg",
+    "video": null,
+    "author": "sulimanbenhalim",
+    "tags": [
+      "programming",
+      "webdev",
+      "productivity",
+      "discuss"
+    ],
+    "seoTitle": "your honest opinion no this please :)",
+    "seoDescription": "Scriptura - What is that? sulimanbenhalim ・ Sep 1 #programming #webdev #productivity #discuss"
+  },
+  {
+    "title": "Faizan Cheema",
+    "url": "https://dev.to/faizancheema893/-am1",
+    "publishedAt": "2025-09-01T12:30:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "How I Became a Full Stack Web Developer — My Journey as Faizan Cheema Faizan Cheema ・ Sep 1 #webdev #javascript #react #node",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3473179%2F5b17d700-417d-4e64-b9b5-8cfa2da43275.JPEG",
+    "video": null,
+    "author": "Faizan Cheema",
+    "tags": [
+      "webdev",
+      "javascript",
+      "react",
+      "node"
+    ],
+    "seoTitle": "Faizan Cheema",
+    "seoDescription": "How I Became a Full Stack Web Developer — My Journey as Faizan Cheema Faizan Cheema ・ Sep 1 #webdev #javascript #react #node"
+  },
+  {
     "title": "The Rise of Answer Engine Optimization",
     "url": "https://dev.to/qwegle_insights/the-rise-of-answer-engine-optimization-4d10",
     "publishedAt": "2025-09-01T12:24:10.000Z",
@@ -19,25 +249,6 @@
     "seoDescription": "When someone searches online - whether they’re typing into Google, asking Alexa, or speaking into their phone’s voice assistant - they aren’t looking for a w..."
   },
   {
-    "title": "Uterine Fibroid Treatment Market Drivers: Rising Prevalence, Awareness, and Technological Advancements",
-    "url": "https://dev.to/suhani123/uterine-fibroid-treatment-market-drivers-rising-prevalence-awareness-and-technological-5e74",
-    "publishedAt": "2025-09-01T12:19:01.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The uterine fibroid treatment market is experiencing significant growth due to a combination of medical, technological, and socio-economic factors. Uterine fibroids, benign tumors affecting millions of women worldwide, create an increasing need for effective diagnosis, treatment, and management. Several key drivers are shaping the market, enhancing access...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgq8507urdumr75wse8e9.jpg",
-    "video": null,
-    "author": "Suhani Sharma",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Uterine Fibroid Treatment Market Drivers: Rising Prevalence, Awareness, and Technological Advancements",
-    "seoDescription": "The uterine fibroid treatment market is experiencing significant growth due to a combination of medical, technological, and socio-economic factors. Uterine f..."
-  },
-  {
     "title": "Labor Day Apple deals: Save on M4 MacBook Air/Pro, iPad, AirPods, accessories, more",
     "url": "https://9to5mac.com/2025/09/01/labor-day-apple-deals-2/",
     "publishedAt": "2025-09-01T12:02:28.000Z",
@@ -52,44 +263,6 @@
     ],
     "seoTitle": "Labor Day Apple deals: Save on M4 MacBook Air/Pro, iPad, AirPods, accessories, more",
     "seoDescription": "Labor Day has arrived and we are tracking a sizable collection of notable discounts over at 9to5Toys across both Apple’s current lineup and some previous-gen..."
-  },
-  {
-    "title": "Master 301 Redirect URLs: Fix Broken Links & Boost SEO Fast",
-    "url": "https://dev.to/serveravatar/master-301-redirect-urls-fix-broken-links-boost-seo-fast-1g4e",
-    "publishedAt": "2025-09-01T11:58:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Have you ever wondered why some websites seamlessly guide visitors to the right pages while others leave them stranded on frustrating 404 error pages? The secret lies in mastering 301 redirect URLs – a powerful tool that can transform your website’s user experience and supercharge your SEO performance. Think of a 301 redirect as a digital moving notice. W...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkymxqrws0udpdm3eao7r.png",
-    "video": null,
-    "author": "Dishang Soni",
-    "tags": [
-      "seo",
-      "301redirects",
-      "webdev",
-      "brokenlinks"
-    ],
-    "seoTitle": "Master 301 Redirect URLs: Fix Broken Links & Boost SEO Fast",
-    "seoDescription": "Have you ever wondered why some websites seamlessly guide visitors to the right pages while others leave them stranded on frustrating 404 error pages? The se..."
-  },
-  {
-    "title": "Change the Thickness of hr Tag using CSS",
-    "url": "https://dev.to/dhanush9952/change-the-thickness-of-hr-tag-using-css-3h8k",
-    "publishedAt": "2025-09-01T11:49:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction The tag in HTML is used to create a simple horizontal line that separates different sections on a webpage. By default, browsers show this line with a thin thickness (usually 1 to 2 pixels) and a basic color. In modern web design, you might want to change this style so that it fits better with your website's overall look. This post will teach ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4v7a0zt8pxj7lto98qbd.png",
-    "video": null,
-    "author": "Dhanush",
-    "tags": [
-      "html",
-      "css",
-      "webdev",
-      "frontend"
-    ],
-    "seoTitle": "Change the Thickness of hr Tag using CSS",
-    "seoDescription": "Introduction The tag in HTML is used to create a simple horizontal line that separates different sections on a webpage. By default, browsers show this line w..."
   },
   {
     "title": "Kuo reiterates Touch ID in the iPhone Fold; unlikely to be in-display",
@@ -445,146 +618,5 @@
     "tags": [],
     "seoTitle": "Meta is struggling to rein in its AI chatbots",
     "seoDescription": "Meta is changing some of the rules governing its chatbots two weeks after a Reuters investigation revealed disturbing ways in which they could, potentially, ..."
-  },
-  {
-    "title": "iPhone 17 Pro Clear Case may feature redesign and possibly tinted options",
-    "url": "https://9to5mac.com/2025/08/31/iphone-17-pro-clear-case-may-feature-redesign-and-possibly-tinted-options/",
-    "publishedAt": "2025-08-31T14:07:35.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple will unveil the iPhone 17 lineup in just a few days. Before that happens, leaker Majin Bu has provided new details about a third case option from Apple with some unexpected changes. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-orange-concept.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 Pro Clear Case may feature redesign and possibly tinted options",
-    "seoDescription": "Apple will unveil the iPhone 17 lineup in just a few days. Before that happens, leaker Majin Bu has provided new details about a third case option from Apple..."
-  },
-  {
-    "title": "The case for Series 11e: Here’s why the next Apple Watch SE could have a new name",
-    "url": "https://9to5mac.com/2025/08/31/apple-watch-se-3-new-naming-possibility-series-11e/",
-    "publishedAt": "2025-08-31T13:53:31.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is likely going to introduce a new at its Awe Dropping event in just over a week. While we’ve been referring to this device as Apple Watch SE 3 for quite some time now, we’re yet to ask: will it actually be called that? more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/apple-watch-apple-store.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "The case for Series 11e: Here’s why the next Apple Watch SE could have a new name",
-    "seoDescription": "Apple is likely going to introduce a new at its Awe Dropping event in just over a week. While we’ve been referring to this device as Apple Watch SE 3 for qui..."
-  },
-  {
-    "title": "Apple’s discontinued MagSafe Battery Pack doesn’t just stick to iPhones now",
-    "url": "https://9to5mac.com/2025/08/31/apple-magsafe-battery-pack-pixel-10-pro/",
-    "publishedAt": "2025-08-31T13:29:43.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "We all miss Apple’s MagSafe Battery Pack and want to see it return. In the meantime, the old magnetic battery accessory has resurfaced in an unlikely place. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/05/magsafe-battery-pack.png?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple’s discontinued MagSafe Battery Pack doesn’t just stick to iPhones now",
-    "seoDescription": "We all miss Apple’s MagSafe Battery Pack and want to see it return. In the meantime, the old magnetic battery accessory has resurfaced in an unlikely place. ..."
-  },
-  {
-    "title": "iPhone just became a wireless dual-camera rig for pro video production",
-    "url": "https://9to5mac.com/2025/08/31/iphone-wireless-dual-camera-rodecaster-video-update/",
-    "publishedAt": "2025-08-31T12:44:50.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "RODE is rolling out a major firmware update for the this week that turns the iPhone into a powerful wireless camera source. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-duo.webp?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone just became a wireless dual-camera rig for pro video production",
-    "seoDescription": "RODE is rolling out a major firmware update for the this week that turns the iPhone into a powerful wireless camera source. more…"
-  },
-  {
-    "title": "Why Are There No Digital Photo Albums?",
-    "url": "https://petapixel.com/2025/08/31/why-are-there-no-digital-photo-albums/",
-    "publishedAt": "2025-08-31T12:01:12.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "It is hard for anyone to deny the positive effect that the transition from film to digital has had on photography. The sheer number of photographs taken each year has increased exponentially in the digital age, particularly now that cameras are included on nearly every cell phone. But we have lost one aspect of photography: the photo album. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Why-Are-There-No-Digital-Photo-Albums.jpg",
-    "video": null,
-    "author": "Salvadore Ragusa",
-    "tags": [
-      "Opinion",
-      "opinion",
-      "photoalbum",
-      "photosharing"
-    ],
-    "seoTitle": "Why Are There No Digital Photo Albums?",
-    "seoDescription": "It is hard for anyone to deny the positive effect that the transition from film to digital has had on photography. The sheer number of photographs taken each..."
-  },
-  {
-    "title": "AI agents are science fiction not yet ready for primetime",
-    "url": "https://www.theverge.com/the-stepback-newsletter/767376/ai-agents-jarvis-what-can-they-do",
-    "publishedAt": "2025-08-31T12:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on all things AI, follow Hayden Field. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started It all started with J.A.R.V.I.S. Yes, that J.A.R.V.I.S. The one from the Marvel movies. Well, maybe it didn...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/JARVIS.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Hayden Field",
-    "tags": [],
-    "seoTitle": "AI agents are science fiction not yet ready for primetime",
-    "seoDescription": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on all things AI, follow Hayden Field. The Stepback..."
-  },
-  {
-    "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
-    "url": "https://smashingmagazine.com/2025/08/desktop-wallpaper-calendars-september-2025/",
-    "publishedAt": "2025-08-31T08:00:00.000Z",
-    "source": "smashingmagazine.com",
-    "category": "web",
-    "summary": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your September just a bit more colorful. Enjoy!",
-    "image": "http://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/77eaabbb-9743-45b6-99f3-f35a5584275f/sept-17-funny-cats-preview-opt.png",
-    "video": null,
-    "author": "hello@smashingmagazine.com (Cosima Mielke)",
-    "tags": [],
-    "seoTitle": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
-    "seoDescription": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your Septe..."
-  },
-  {
-    "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
-    "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
-    "publishedAt": "2025-08-30T21:54:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or receive calls for hours, while DownDetector’s tracker peaked in the afternoon at around 3:30PM ET with more than 20,000 reports. Some customers report their service has continued to function throughou...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25594448/STK066_VERIZON_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Richard Lawler",
-    "tags": [],
-    "seoTitle": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
-    "seoDescription": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or ..."
-  },
-  {
-    "title": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
-    "url": "https://9to5mac.com/2025/08/30/indie-app-spotlight-profit-investment-portfolio-tracker-for-iphone/",
-    "publishedAt": "2025-08-30T19:30:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would like your app featured, get in contact. If you’re someone who invests, things can easily become messy, and you can end up with a wide variety of brokerage accounts for varying purposes. Profit makes trac...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Profit-Indie-App-Spotlight.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Indie App Spotlight: ‘Profit’ is an excellent investment tracker for iPhone, iPad, and Mac",
-    "seoDescription": "Welcome to Indie App Spotlight. This is a weekly 9to5Mac series where we showcase the latest apps in the indie app world. If you’re a developer and would lik..."
   }
 ]
