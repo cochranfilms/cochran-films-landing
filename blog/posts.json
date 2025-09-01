@@ -1,5 +1,149 @@
 [
   {
+    "title": "🚀 I Just Launched My New Developer Portfolio",
+    "url": "https://dev.to/member_5687c261/i-just-launched-my-new-developer-portfolio-453f",
+    "publishedAt": "2025-09-01T19:05:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey everyone 👋, I’m Abir Biswas, a web designer & developer currently pursuing my B.Tech in CSE (AI). Dark Mode VS Light Mode I designed my portfolio to support both dark and light themes, because as developers we know the “dark mode vs light mode” debate never ends 😅. 🌙 Dark Mode: Sleek, modern, and great for late-night browsing. ☀️ Light Mode: Clean,...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F144f79oylcvj1qny55vp.png",
+    "video": null,
+    "author": "member_5687c261",
+    "tags": [
+      "webdev",
+      "portfolio",
+      "frontend",
+      "nextjs"
+    ],
+    "seoTitle": "🚀 I Just Launched My New Developer Portfolio",
+    "seoDescription": "Hey everyone 👋, I’m Abir Biswas, a web designer & developer currently pursuing my B.Tech in CSE (AI). Dark Mode VS Light Mode I designed my portfolio to sup..."
+  },
+  {
+    "title": "The Secret Weapon: AI as a \"Meta-Tool\" and Firebase Studio",
+    "url": "https://dev.to/progressiveprogrammer/the-secret-weapon-ai-as-a-meta-tool-and-firebase-studio-2phb",
+    "publishedAt": "2025-09-01T19:02:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "You've heard about using AI for code completion and debugging. That's table stakes now. My approach was different. I didn't just use AI to help my users; I used AI to help me build the application itself. This is where tools like Firebase Studio became an absolute game-changer. Think of it as a meta-tool. I used AI to: Accelerate my boilerplate: From sett...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1dihqmi79hwca6j9emy9.png",
+    "video": null,
+    "author": "Aman Jaswal",
+    "tags": [
+      "vibecoding",
+      "firebase",
+      "webdev",
+      "ai"
+    ],
+    "seoTitle": "The Secret Weapon: AI as a \"Meta-Tool\" and Firebase Studio",
+    "seoDescription": "You've heard about using AI for code completion and debugging. That's table stakes now. My approach was different. I didn't just use AI to help my users; I u..."
+  },
+  {
+    "title": "Use `chan os.Signal` to Manage OS Signals in Go",
+    "url": "https://dev.to/leapcell/use-chan-ossignal-to-manage-os-signals-in-go-2na6",
+    "publishedAt": "2025-09-01T18:50:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "chan os.Signal is a channel used to receive signals sent by the operating system. This is very useful when you need to gracefully handle system signals (such as the interrupt signal SIGINT or the termination signal SIGTERM), for example, safely shutting down the program, releasing resources, or performing cleanup operations when receiving these signals. o...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F311v2bfy1pymkk0xr5gf.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Use `chan os.Signal` to Manage OS Signals in Go",
+    "seoDescription": "chan os.Signal is a channel used to receive signals sent by the operating system. This is very useful when you need to gracefully handle system signals (such..."
+  },
+  {
+    "title": "The 89 best Labor Day sales happening now",
+    "url": "https://www.theverge.com/tech/756227/best-labor-day-sales-deals-2025",
+    "publishedAt": "2025-09-01T18:47:36.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment for some, at least there is always a great selection of deals to combat the post-summer blues. Lucky for you, we’ve gone ahead and rounded up the best discounts you can get on a variety of Verge-approved gadgets and goods, from...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257912_labor_day_deals__CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The 89 best Labor Day sales happening now",
+    "seoDescription": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment for some, at least there is..."
+  },
+  {
+    "title": "Python-Based Predictive Analytics for Laser Hair Removal Outcomes",
+    "url": "https://dev.to/carmen_lopezlopeza_31258/python-based-predictive-analytics-for-laser-hair-removal-outcomes-351e",
+    "publishedAt": "2025-09-01T18:26:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Laser hair removal is one of the most requested aesthetic procedures By using Python's ecosystem of libraries for data science and machine In major urban areas where competition is high, such as Laser Hair , predictive analytics can be the differentiating Unlike purely medical treatments, aesthetic procedures often come with Personalizing out...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Feowxnkc9itksq9n34you.png",
+    "video": null,
+    "author": "carmen lopez lopeza",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python-Based Predictive Analytics for Laser Hair Removal Outcomes",
+    "seoDescription": "Introduction Laser hair removal is one of the most requested aesthetic procedures By using Python's ecosystem of libraries for data science and machine In ma..."
+  },
+  {
+    "title": "No Cloud, No Limits: Top Free AI Image Generators for Self-Hosting",
+    "url": "https://dev.to/lightningdev123/no-cloud-no-limits-top-free-ai-image-generators-for-self-hosting-3je0",
+    "publishedAt": "2025-09-01T18:25:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "If you’ve ever felt limited by subscription fees or cloud service restrictions while experimenting with AI image generation, self-hosting might be the solution you’ve been looking for. The open-source community has produced a range of powerful tools that can run on your own hardware, giving you full creative control without ongoing costs. Whether you’re a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdro6h865w4haj1b12b4x.png",
+    "video": null,
+    "author": "Lightning Developer",
+    "tags": [
+      "ai",
+      "webdev",
+      "pinggy",
+      "devops"
+    ],
+    "seoTitle": "No Cloud, No Limits: Top Free AI Image Generators for Self-Hosting",
+    "seoDescription": "If you’ve ever felt limited by subscription fees or cloud service restrictions while experimenting with AI image generation, self-hosting might be the soluti..."
+  },
+  {
+    "title": "Python for Automating Mesotherapy Data Analysis",
+    "url": "https://dev.to/cristian_holquis_09836ff1/python-for-automating-mesotherapy-data-analysis-1j3a",
+    "publishedAt": "2025-09-01T18:24:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Mesotherapy has grown in popularity as a non-invasive treatment for cosmetic and medical purposes, ranging from skin rejuvenation to fat reduction. As more patients explore these treatments, clinics face the challenge of handling an increasing amount of data: patient demographics, treatment history, product combinations, outcomes, and follow-up notes. Man...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj241shs2rb1ox7pyknum.png",
+    "video": null,
+    "author": "cristian holquis",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Python for Automating Mesotherapy Data Analysis",
+    "seoDescription": "Mesotherapy has grown in popularity as a non-invasive treatment for cosmetic and medical purposes, ranging from skin rejuvenation to fat reduction. As more p..."
+  },
+  {
+    "title": "Security Bite: My favorite privacy features in iOS 26",
+    "url": "https://9to5mac.com/2025/09/01/security-bite-my-favorite-privacy-features-in-ios-26/",
+    "publishedAt": "2025-09-01T18:20:22.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we do. Our unique integrated approach to management and security combines state-of-the-art Apple-specific security solutions for fully automated Hardening & Compliance, Next Generation EDR, AI-powered Z...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Untitled-design-1.png?w=1600",
+    "video": null,
+    "author": "Arin Waichulis",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Security Bite: My favorite privacy features in iOS 26",
+    "seoDescription": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we..."
+  },
+  {
     "title": "How to Deploy a Django App to Production in 2025",
     "url": "https://dev.to/piko/how-to-deploy-a-django-app-to-production-in-2025-5df6",
     "publishedAt": "2025-09-01T18:13:59.000Z",
@@ -38,41 +182,20 @@
     "seoDescription": "AI-assisted coding tools like Claude Code, ChatGPT, and GitHub Copilot are a godsend. I use them every day — for boilerplate, bug fixes, fast explorations, e..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/waffosops/-4979",
-    "publishedAt": "2025-09-01T18:07:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Implementing Sematic HTML Effectively Mark Ndekerio Murage ・ Sep 1",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3460420%2Ffabd6795-6791-4aaf-808b-da8145e925ea.jpg",
+    "title": "MagSafe Monday: UAG’s Metropolis Wallet blends Kevlar toughness with everyday utility",
+    "url": "https://9to5mac.com/2025/09/01/uag-metropolis-wallet/",
+    "publishedAt": "2025-09-01T18:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "MagSafe wallets are probably the category of MagSafe that makes the most sense to me day to day. I am always going to carry a wallet, so might as well kill 2 birds with 1 stone. The is one of the better designed ones I’ve come across from a quality standpoint, so let’s dive into what all it offers. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/bradley.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Mark Ndekerio Murage ",
+    "author": "Bradley C",
     "tags": [
-      "html",
-      "webdev",
-      "a11y"
+      "News"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Implementing Sematic HTML Effectively Mark Ndekerio Murage ・ Sep 1"
-  },
-  {
-    "title": "Qwen Code v0.0.8 Major Release: Deep Integration with VS Code",
-    "url": "https://dev.to/lamri_abdellahramdane_15/qwen-code-v008-major-release-deep-integration-with-vs-code-if4",
-    "publishedAt": "2025-09-01T17:48:48.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Qwen Code v0.0.8: Deep VS Code Integration + One-Click Setup with ServBay Last week, the Alibaba Tongyi Qianwen team released Qwen Code v0.0.8. The flagship feature of this update is its deep integration with VS Code, transforming how developers interact with AI in their editor. Imagine getting real-time suggestions and inline diffs perfectly matched to y...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpi4zy857o9g0066696ht.png",
-    "video": null,
-    "author": "Lamri Abdellah Ramdane",
-    "tags": [
-      "webdev",
-      "programming",
-      "llm",
-      "coding"
-    ],
-    "seoTitle": "Qwen Code v0.0.8 Major Release: Deep Integration with VS Code",
-    "seoDescription": "Qwen Code v0.0.8: Deep VS Code Integration + One-Click Setup with ServBay Last week, the Alibaba Tongyi Qianwen team released Qwen Code v0.0.8. The flagship ..."
+    "seoTitle": "MagSafe Monday: UAG’s Metropolis Wallet blends Kevlar toughness with everyday utility",
+    "seoDescription": "MagSafe wallets are probably the category of MagSafe that makes the most sense to me day to day. I am always going to carry a wallet, so might as well kill 2..."
   },
   {
     "title": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
@@ -89,43 +212,6 @@
     ],
     "seoTitle": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
     "seoDescription": "As well as a refreshed new look for system components like buttons and tabbars, the Liquid Glass redesign of iOS 26 also extends to app icons. For the first ..."
-  },
-  {
-    "title": "Restic vs Rclone vs Rsync: Choosing the Right Tool for Backups",
-    "url": "https://dev.to/lovestaco/restic-vs-rclone-vs-rsync-choosing-the-right-tool-for-backups-gn9",
-    "publishedAt": "2025-09-01T17:43:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Backups are easy to ignore — until disaster strikes. Whether it’s accidental deletion, disk corruption, or formatting the wrong drive insi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
-    "video": null,
-    "author": "Athreya aka Maneshwar",
-    "tags": [
-      "programming",
-      "webdev",
-      "devops"
-    ],
-    "seoTitle": "Restic vs Rclone vs Rsync: Choosing the Right Tool for Backups",
-    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
-  },
-  {
-    "title": "\"Boost Your Financial Flexibility: Purchase Verified Cash App Accounts\"",
-    "url": "https://dev.to/pvazoneusa54212/boost-your-financial-flexibility-purchase-verified-cash-app-accounts-4g4g",
-    "publishedAt": "2025-09-01T17:40:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Steps To Verify Your Cash App Account Required Information Full legal name Open your Cash App on your smartphone. Buying Verified Cash App Accounts From PvaZoneUSA Video Player 00:00 Where To Buy What To Look For Ensuring Account Authenticity Verification Tips Avoiding Scams When buying verified Cash App accounts, legal considerations are crucial. You nee...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi6lnc3e3vkx2upiz9hlv.png",
-    "video": null,
-    "author": "pvazoneusa",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "\"Boost Your Financial Flexibility: Purchase Verified Cash App Accounts\"",
-    "seoDescription": "Steps To Verify Your Cash App Account Required Information Full legal name Open your Cash App on your smartphone. Buying Verified Cash App Accounts From PvaZ..."
   },
   {
     "title": "Apple isn’t done patching a discontinued iPhone thanks to EU radiation drama",
@@ -564,83 +650,5 @@
     ],
     "seoTitle": "MLS Season Pass price drops to $29 for rest of 2025",
     "seoDescription": "Like in previous years, Apple is dropping the price of the MLS Season Pass service as the year progresses. The annual sub is now just $29 for the rest of the..."
-  },
-  {
-    "title": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
-    "url": "https://9to5mac.com/2025/09/01/apples-stance-on-strong-encryption-gets-the-support-of-the-ftc-in-us-privacy-u-turn/",
-    "publishedAt": "2025-09-01T12:35:53.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s commitment to end-to-end encryption is so strong that it withdrew a key privacy feature from the UK market rather than be forced to compromise it globally. The company also faced pressure on this front from the EU’s Digital Services Act (DSA). In a surprising twist, the White House came out in support of strong encryption, and the Federal Trade Co...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apples-stance-on-strong-encryption-gets-the-support-of-the-FTC.webp?w=1500",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple’s stance on strong encryption gets the support of the FTC in US privacy U-turn",
-    "seoDescription": "Apple’s commitment to end-to-end encryption is so strong that it withdrew a key privacy feature from the UK market rather than be forced to compromise it glo..."
-  },
-  {
-    "title": "Labor Day Apple deals: Save on M4 MacBook Air/Pro, iPad, AirPods, accessories, more",
-    "url": "https://9to5mac.com/2025/09/01/labor-day-apple-deals-2/",
-    "publishedAt": "2025-09-01T12:02:28.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Labor Day has arrived and we are tracking a sizable collection of notable discounts over at 9to5Toys across both Apple’s current lineup and some previous-gen gear. There is as much as $300 off just about all of the most popular M4 MacBook Pro models and $200 in savings on M4 MacBook Air, alongside discounts across the M3 iPad Air and iPad mini 7 lineups. ...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Best-Apple-Labor-Day-deals.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Justin Kahn",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Labor Day Apple deals: Save on M4 MacBook Air/Pro, iPad, AirPods, accessories, more",
-    "seoDescription": "Labor Day has arrived and we are tracking a sizable collection of notable discounts over at 9to5Toys across both Apple’s current lineup and some previous-gen..."
-  },
-  {
-    "title": "Kuo reiterates Touch ID in the iPhone Fold; unlikely to be in-display",
-    "url": "https://9to5mac.com/2025/09/01/kuo-reiterates-touch-id-in-the-iphone-fold-unlikely-to-be-in-display/",
-    "publishedAt": "2025-09-01T11:42:11.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple analyst Ming-Chi Kuo said back in March that he expected the iPhone Fold to have Touch ID on the side button rather than using Face ID. He has today reiterated this. While there have been some suggestions that Apple might use an in-display ultrasonic Touch ID sensor, Kuo says this is “unlikely” … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/iphone-fold-02.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Kuo reiterates Touch ID in the iPhone Fold; unlikely to be in-display",
-    "seoDescription": "Apple analyst Ming-Chi Kuo said back in March that he expected the iPhone Fold to have Touch ID on the side button rather than using Face ID. He has today re..."
-  },
-  {
-    "title": "Is AI the end of software engineering or the next step in its evolution?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/767973/vibe-coding-ai-future-end-evolution",
-    "publishedAt": "2025-09-01T11:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The first time I used ChatGPT to code, back in early 2023, I was reminded of \"The Monkey's Paw,\" a classic horror story about an accursed talisman that grants wishes, but always by the most malevolent path - the desired outcome arrives after exacting a brutal cost elsewhere first. With the same humorless literalness, ChatGPT would implement the change I'd...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257871_How_coders_use_AI__CVirginia_STILL0.gif?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheon Han",
-    "tags": [],
-    "seoTitle": "Is AI the end of software engineering or the next step in its evolution?",
-    "seoDescription": "The first time I used ChatGPT to code, back in early 2023, I was reminded of \"The Monkey's Paw,\" a classic horror story about an accursed talisman that grant..."
-  },
-  {
-    "title": "Latest Apple Store design combines Genius Bar and Pickup in one counter",
-    "url": "https://9to5mac.com/2025/09/01/latest-apple-store-design-combines-genius-bar-and-pickup-in-one-counter/",
-    "publishedAt": "2025-09-01T10:57:44.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A dedicated Pickup counter has been one of the most notable changes in Apple store designs over the last few years, giving a faster service to those customers who have ordered a product for in-store collection. First launched in 2021, the very latest Apple store design has combined this with the Genius Bar in a single counter … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Latest-Apple-Store-design-combines-Genius-Bar-and-Pickup-in-one-counter.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Latest Apple Store design combines Genius Bar and Pickup in one counter",
-    "seoDescription": "A dedicated Pickup counter has been one of the most notable changes in Apple store designs over the last few years, giving a faster service to those customer..."
   }
 ]
