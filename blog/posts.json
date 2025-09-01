@@ -1,41 +1,39 @@
 [
   {
-    "title": "Day-88 Memory Management in Java",
-    "url": "https://dev.to/tamilselvan1812/day-88-memory-management-in-java-3jd5",
-    "publishedAt": "2025-09-01T08:06:49.000Z",
+    "title": "How Customer Journey Optimisation Improves Retention and ROI in 2025",
+    "url": "https://dev.to/aravindh_ramu_a8b26e63c48/how-customer-journey-optimisation-improves-retention-and-roi-in-2025-1p73",
+    "publishedAt": "2025-09-01T08:58:18.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Memory management is one of the most important concepts in Java. As developers, we often create objects, call methods, and manage data without worrying about where everything is stored. That’s because Java takes care of memory allocation and deallocation using its own memory model and the Garbage Collector (GC). It stores Objects, arrays, wrapper class ob...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2g5lfpl1mrfj0g8slx3w.png",
+    "summary": "*The Shift from Acquisition to Retention In today’s competitive market, customer journey optimisation (CJO) has become a crucial strategy for sustainable growth. Businesses no longer thrive solely on acquiring new customers; instead, the focus has shifted to keeping existing ones engaged and loyal. By mapping customer touchpoints and understanding motivat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhvzim7upa93mvv7cj0wy.png",
     "video": null,
-    "author": "Tamilselvan K",
+    "author": "Aravindh Ramu",
     "tags": [
-      "webdev",
       "programming",
-      "java",
-      "sql"
+      "webdev"
     ],
-    "seoTitle": "Day-88 Memory Management in Java",
-    "seoDescription": "Memory management is one of the most important concepts in Java. As developers, we often create objects, call methods, and manage data without worrying about..."
+    "seoTitle": "How Customer Journey Optimisation Improves Retention and ROI in 2025",
+    "seoDescription": "*The Shift from Acquisition to Retention In today’s competitive market, customer journey optimisation (CJO) has become a crucial strategy for sustainable gro..."
   },
   {
-    "title": "How React Developers Help with Cloud-First Applications",
-    "url": "https://dev.to/jatin_sharma_43ece94a15eb/how-react-developers-help-with-cloud-first-applications-kkd",
-    "publishedAt": "2025-09-01T08:05:45.000Z",
+    "title": "Combining useful JS basics",
+    "url": "https://dev.to/swarnaliroy94/combining-useful-js-basics-29pb",
+    "publishedAt": "2025-09-01T08:36:41.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "With a \"digital-first\" world perspective, both large enterprises and small startups are racing to build cloud-first applications. As noted by Gartner, more than 85% of organisations will utilise a cloud-first principle, and a cloud-first strategy is no longer simply moving infrastructure to the cloud. A cloud-first strategy is also about building customer...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi9ymqmpr0mujpfku7kcx.png",
+    "summary": "Understanding map(), filter(), Set, and the Spread Operator in JavaScript Swarnali Roy ・ Sep 1 #programming #javascript #webdev #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F670691%2Ffe5df924-f595-46c7-9276-9b930738d172.jpg",
     "video": null,
-    "author": "Jatin Sharma",
+    "author": "Swarnali Roy",
     "tags": [
+      "programming",
+      "javascript",
       "webdev",
-      "react",
-      "cloud",
-      "devchallenge"
+      "beginners"
     ],
-    "seoTitle": "How React Developers Help with Cloud-First Applications",
-    "seoDescription": "With a \"digital-first\" world perspective, both large enterprises and small startups are racing to build cloud-first applications. As noted by Gartner, more t..."
+    "seoTitle": "Combining useful JS basics",
+    "seoDescription": "Understanding map(), filter(), Set, and the Spread Operator in JavaScript Swarnali Roy ・ Sep 1 #programming #javascript #webdev #beginners"
   },
   {
     "title": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
@@ -50,63 +48,6 @@
     "tags": [],
     "seoTitle": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
     "seoDescription": "The opening hours of Hell Is Us are brilliantly confusing. The game tasks you with getting up to speed on a complicated civil war between the Palomists and S..."
-  },
-  {
-    "title": "Post Title",
-    "url": "https://dev.to/abduls_desk_5a6086c62cee/post-title-efa",
-    "publishedAt": "2025-09-01T07:33:03.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Here's the post content that will be displaying there",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/...",
-    "video": null,
-    "author": "Abdul's Desk",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Post Title",
-    "seoDescription": "Here's the post content that will be displaying there"
-  },
-  {
-    "title": "Wan 2.2 Series Now Available on SiliconFlow：Generate Stable, Realistic and Cinematic Videos",
-    "url": "https://dev.to/siliconflow/wan-22-series-now-available-on-siliconflowgenerate-stable-realistic-and-cinematic-videos-4e3h",
-    "publishedAt": "2025-09-01T07:30:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "SiliconFlow is excited to bring the Wan 2.2 series to our platform — a major upgrade to Wan's visual generative models, featuring significantly improved performance and superior visual quality. We provide two models from this series: Wan2.2-T2V-A14B and Wan2.2-I2V-A14B. Designed to power the next wave of creative AI applications from concept art to commer...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffjbkwuye4kqgynp2mqam.png",
-    "video": null,
-    "author": "SiliconFlow",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "productivity"
-    ],
-    "seoTitle": "Wan 2.2 Series Now Available on SiliconFlow：Generate Stable, Realistic and Cinematic Videos",
-    "seoDescription": "SiliconFlow is excited to bring the Wan 2.2 series to our platform — a major upgrade to Wan's visual generative models, featuring significantly improved perf..."
-  },
-  {
-    "title": "React Fundamentals: What It Is, Why We Use It, and How to Get Started",
-    "url": "https://dev.to/mendoncamaria/react-fundamentals-what-it-is-why-we-use-it-and-how-to-get-started-p8a",
-    "publishedAt": "2025-09-01T07:30:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey there! If you've been following along with our series, you've already seen the roadmap for our journey into the world of React. We've talked about the \"why\" and the \"what,\" and now it's time to get our hands dirty. In this article, we're making the exciting leap from theory to practice. We'll start with a simple, jargon-free explanation of what React ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fybalzt7rzhyr7yxr7cau.png",
-    "video": null,
-    "author": "Maria Mendonca",
-    "tags": [
-      "webdev",
-      "javascript",
-      "react",
-      "beginners"
-    ],
-    "seoTitle": "React Fundamentals: What It Is, Why We Use It, and How to Get Started",
-    "seoDescription": "Hey there! If you've been following along with our series, you've already seen the roadmap for our journey into the world of React. We've talked about the \"w..."
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
@@ -591,5 +532,52 @@
     ],
     "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
     "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
+  },
+  {
+    "title": "Discounty adds some bite to cozy life sims",
+    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
+    "publishedAt": "2025-08-30T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Webster",
+    "tags": [],
+    "seoTitle": "Discounty adds some bite to cozy life sims",
+    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
+  },
+  {
+    "title": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
+    "url": "https://www.macrumors.com/2025/08/30/top-stories-apple-awe-dropping-iphone-event/",
+    "publishedAt": "2025-08-30T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iPhone models, some new accessories, new Apple Watch models, and perhaps a few more announcements. Apple has plenty more announcements in the pipeline beyond next month's event, however, including a hos...",
+    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-30.jpg",
+    "video": null,
+    "author": "MacRumors Staff",
+    "tags": [
+      "Featured",
+      "Top Stories"
+    ],
+    "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
+    "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
+  },
+  {
+    "title": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
+    "url": "https://9to5mac.com/2025/08/30/sap-updates-privileges-with-new-tools-for-managing-admin-rights-on-macos/",
+    "publishedAt": "2025-08-30T13:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work ...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-at-Work-Liquid-Glass-light.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
+    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional g..."
   }
 ]
