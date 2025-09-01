@@ -1,22 +1,205 @@
 [
   {
-    "title": "Python para automatizar consultas sobre compatibilidad amorosa",
-    "url": "https://dev.to/angelyn_muoz_15bb8aeac13/python-para-automatizar-consultas-sobre-compatibilidad-amorosa-3o65",
-    "publishedAt": "2025-09-01T17:05:23.000Z",
+    "title": "How to Deploy a Django App to Production in 2025",
+    "url": "https://dev.to/piko/how-to-deploy-a-django-app-to-production-in-2025-5df6",
+    "publishedAt": "2025-09-01T18:13:59.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "En la actualidad, los chatbots y las aplicaciones de inteligencia artificial están revolucionando la forma en que las personas buscan respuestas a sus inquietudes emocionales. Uno de los usos más interesantes que se le puede dar a Python es la automatización de consultas relacionadas con la compatibilidad amorosa. Este tipo de sistemas no pretenden reempl...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F865g6b9fbphwpqx8vkpy.png",
+    "summary": "From Localhost to Live: The Essential Django Deployment Guide You've done it. You’ve built a Django app, and it’s running beautifully on your local machine with its virtual environment and all dependencies installed. Now comes the big question: how do you get this thing ready for the world to see? Deploying a Django app isn't just about copying files to a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.youtube.com%2Fvi%2F99tjYN1wihg%2Fmaxresdefault.jpg",
     "video": null,
-    "author": "angelyn Muñoz",
+    "author": "Piko",
+    "tags": [
+      "django",
+      "devops",
+      "webdev",
+      "python"
+    ],
+    "seoTitle": "How to Deploy a Django App to Production in 2025",
+    "seoDescription": "From Localhost to Live: The Essential Django Deployment Guide You've done it. You’ve built a Django app, and it’s running beautifully on your local machine w..."
+  },
+  {
+    "title": "Vibe coding: Because who doesn’t love surprise technical debt!?",
+    "url": "https://dev.to/coderabbitai/vibe-coding-because-who-doesnt-love-surprise-technical-debt-3c3b",
+    "publishedAt": "2025-09-01T18:13:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "AI-assisted coding tools like Claude Code, ChatGPT, and GitHub Copilot are a godsend. I use them every day — for boilerplate, bug fixes, fast explorations, even documentation. I'm all in on AI as a productivity booster and creative accelerator. But they’re causing a shift in how we write software — and it’s not all good. That’s because we’ve reached the s...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fuf15axn7cq9es2yj1x11.png",
+    "video": null,
+    "author": "Arindam Majumder ",
+    "tags": [
+      "ai",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Vibe coding: Because who doesn’t love surprise technical debt!?",
+    "seoDescription": "AI-assisted coding tools like Claude Code, ChatGPT, and GitHub Copilot are a godsend. I use them every day — for boilerplate, bug fixes, fast explorations, e..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/waffosops/-4979",
+    "publishedAt": "2025-09-01T18:07:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Implementing Sematic HTML Effectively Mark Ndekerio Murage ・ Sep 1",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3460420%2Ffabd6795-6791-4aaf-808b-da8145e925ea.jpg",
+    "video": null,
+    "author": "Mark Ndekerio Murage ",
+    "tags": [
+      "html",
+      "webdev",
+      "a11y"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Implementing Sematic HTML Effectively Mark Ndekerio Murage ・ Sep 1"
+  },
+  {
+    "title": "Qwen Code v0.0.8 Major Release: Deep Integration with VS Code",
+    "url": "https://dev.to/lamri_abdellahramdane_15/qwen-code-v008-major-release-deep-integration-with-vs-code-if4",
+    "publishedAt": "2025-09-01T17:48:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Qwen Code v0.0.8: Deep VS Code Integration + One-Click Setup with ServBay Last week, the Alibaba Tongyi Qianwen team released Qwen Code v0.0.8. The flagship feature of this update is its deep integration with VS Code, transforming how developers interact with AI in their editor. Imagine getting real-time suggestions and inline diffs perfectly matched to y...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpi4zy857o9g0066696ht.png",
+    "video": null,
+    "author": "Lamri Abdellah Ramdane",
     "tags": [
       "webdev",
       "programming",
+      "llm",
+      "coding"
+    ],
+    "seoTitle": "Qwen Code v0.0.8 Major Release: Deep Integration with VS Code",
+    "seoDescription": "Qwen Code v0.0.8: Deep VS Code Integration + One-Click Setup with ServBay Last week, the Alibaba Tongyi Qianwen team released Qwen Code v0.0.8. The flagship ..."
+  },
+  {
+    "title": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
+    "url": "https://9to5mac.com/2025/09/01/new-ios-26-iphone-apps-icons-compared/",
+    "publishedAt": "2025-09-01T17:46:58.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "As well as a refreshed new look for system components like buttons and tabbars, the Liquid Glass redesign of iOS 26 also extends to app icons. For the first time since iOS 7, Apple has redrawn all of the system apps with new artwork. That means a whole new look is coming to your iPhone home screen this fall. In this post, we share a side-by-side of the iO...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/ios26-icons.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
+    "seoDescription": "As well as a refreshed new look for system components like buttons and tabbars, the Liquid Glass redesign of iOS 26 also extends to app icons. For the first ..."
+  },
+  {
+    "title": "Restic vs Rclone vs Rsync: Choosing the Right Tool for Backups",
+    "url": "https://dev.to/lovestaco/restic-vs-rclone-vs-rsync-choosing-the-right-tool-for-backups-gn9",
+    "publishedAt": "2025-09-01T17:43:29.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Backups are easy to ignore — until disaster strikes. Whether it’s accidental deletion, disk corruption, or formatting the wrong drive insi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "Athreya aka Maneshwar",
+    "tags": [
+      "programming",
+      "webdev",
+      "devops"
+    ],
+    "seoTitle": "Restic vs Rclone vs Rsync: Choosing the Right Tool for Backups",
+    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
+  },
+  {
+    "title": "\"Boost Your Financial Flexibility: Purchase Verified Cash App Accounts\"",
+    "url": "https://dev.to/pvazoneusa54212/boost-your-financial-flexibility-purchase-verified-cash-app-accounts-4g4g",
+    "publishedAt": "2025-09-01T17:40:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Steps To Verify Your Cash App Account Required Information Full legal name Open your Cash App on your smartphone. Buying Verified Cash App Accounts From PvaZoneUSA Video Player 00:00 Where To Buy What To Look For Ensuring Account Authenticity Verification Tips Avoiding Scams When buying verified Cash App accounts, legal considerations are crucial. You nee...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi6lnc3e3vkx2upiz9hlv.png",
+    "video": null,
+    "author": "pvazoneusa",
+    "tags": [
+      "webdev",
       "javascript",
+      "programming",
       "ai"
     ],
-    "seoTitle": "Python para automatizar consultas sobre compatibilidad amorosa",
-    "seoDescription": "En la actualidad, los chatbots y las aplicaciones de inteligencia artificial están revolucionando la forma en que las personas buscan respuestas a sus inquie..."
+    "seoTitle": "\"Boost Your Financial Flexibility: Purchase Verified Cash App Accounts\"",
+    "seoDescription": "Steps To Verify Your Cash App Account Required Information Full legal name Open your Cash App on your smartphone. Buying Verified Cash App Accounts From PvaZ..."
+  },
+  {
+    "title": "Apple isn’t done patching a discontinued iPhone thanks to EU radiation drama",
+    "url": "https://9to5mac.com/2025/09/01/iphone-12-radiation-eu-software-update/",
+    "publishedAt": "2025-09-01T17:34:09.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Stop us if you’ve heard this one before. Apple is preparing a software update for an iPhone from 2020 to address a years-old health complaint only raised in one market. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iPhone-12-mini.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple isn’t done patching a discontinued iPhone thanks to EU radiation drama",
+    "seoDescription": "Stop us if you’ve heard this one before. Apple is preparing a software update for an iPhone from 2020 to address a years-old health complaint only raised in ..."
+  },
+  {
+    "title": "What Makes a Great Self-Tape Audition",
+    "url": "https://nofilmschool.com/self-tape-audition",
+    "publishedAt": "2025-09-01T17:30:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Did you all watch David Corenswet's Superman audition tape yet? In the audition, he delivers part of the now-famous \"interview\" scene opposite his wife, and the performance was strong enough to win him the role. And his set-up was simple and straightforward, allowing him to really shine. It got me thinking about the immense pressure actors feel in these s...",
+    "image": "https://nofilmschool.com/media-library/what-makes-a-great-self-tape-audition.png?id=61540238&width=980",
+    "video": "https://www.youtube.com/embed/Hpp1TfGXo_U?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Casting directors",
+      "Audition",
+      "Self tape",
+      "Superman",
+      "Casting"
+    ],
+    "seoTitle": "What Makes a Great Self-Tape Audition",
+    "seoDescription": "Did you all watch David Corenswet's Superman audition tape yet? In the audition, he delivers part of the now-famous \"interview\" scene opposite his wife, and ..."
+  },
+  {
+    "title": "5 Best MacGuffins in Movies",
+    "url": "https://nofilmschool.com/best-macguffins-in-movies",
+    "publishedAt": "2025-09-01T17:20:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "A MacGuffin is the object everyone in a movie wants but doesn't really matter to the audience. Sometimes we don't even know what the MacGuffin is, and that's okay. Either way, it's the thing that drives the plot and motivates characters — and sometimes, that thing becomes even more iconic than the movies they're in. We put together five of our favorite Ma...",
+    "image": "https://nofilmschool.com/media-library/citizen-kane.jpg?id=34059992&width=980",
+    "video": "https://www.youtube.com/embed/s7EdQ4FqbhY?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Macguffins",
+      "Plot devices",
+      "Screenwriting",
+      "Macguffin"
+    ],
+    "seoTitle": "5 Best MacGuffins in Movies",
+    "seoDescription": "A MacGuffin is the object everyone in a movie wants but doesn't really matter to the audience. Sometimes we don't even know what the MacGuffin is, and that's..."
+  },
+  {
+    "title": "Alfred Hitchcock’s Best Screenplays You Can Read Today",
+    "url": "https://nofilmschool.com/alfred-hitchcock-screenplays",
+    "publishedAt": "2025-09-01T17:10:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply understood how to work with writers and bring the best out of their stories. And he was constantly pushing the envelope. Today, I want to bring you an assortment of the screenplays he chose to direct tha...",
+    "image": "https://nofilmschool.com/media-library/read-some-alfred-hitchcock-screenplays.png?id=34061348&width=980",
+    "video": "https://www.youtube.com/embed/lj1z8M7bfgM?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Script download",
+      "Screenplay download",
+      "Alfred hitchcock",
+      "Alfred hitchcock"
+    ],
+    "seoTitle": "Alfred Hitchcock’s Best Screenplays You Can Read Today",
+    "seoDescription": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply und..."
   },
   {
     "title": "Break Free From Closed Autofocus Ecosystems With This New Phase-Detection Technology",
@@ -76,44 +259,6 @@
     ],
     "seoTitle": "Why the 'Deadpool 2' Director Left 'Jurassic World Rebirth'",
     "seoDescription": "David Leitch and Kelly McCormick, who are married, are also the principals behind stunt-spectacular film company 87North. They produced the John Wick series,..."
-  },
-  {
-    "title": "We asked CodeRabbit to talk to us like your disappointed mom & it did!",
-    "url": "https://dev.to/coderabbitai/we-asked-coderabbit-to-talk-to-us-like-your-disappointed-mom-it-did-4a38",
-    "publishedAt": "2025-09-01T16:44:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Have you truly lived before an AI reviewer has told you, “I ran this locally and my laptop filed for workers’ comp?” We doubt it. Welcome to CodeRabbit’s Tone Customization, a feature we added because we know exactly what developers want most: to be roasted by AI. After all, what’s even the point of having robots review your code, if they’re not going to ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnhk40cmuymxokogjbx0k.png",
-    "video": null,
-    "author": "Arindam Majumder ",
-    "tags": [
-      "ai",
-      "webdev",
-      "programming",
-      "beginners"
-    ],
-    "seoTitle": "We asked CodeRabbit to talk to us like your disappointed mom & it did!",
-    "seoDescription": "Have you truly lived before an AI reviewer has told you, “I ran this locally and my laptop filed for workers’ comp?” We doubt it. Welcome to CodeRabbit’s Ton..."
-  },
-  {
-    "title": "Python en la creación de chatbots sobre amarres sentimentales",
-    "url": "https://dev.to/rafael_ramirez_233e181cf9/python-en-la-creacion-de-chatbots-sobre-amarres-sentimentales-46p2",
-    "publishedAt": "2025-09-01T16:43:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "La intersección entre la tecnología y la espiritualidad es un fenómeno cada vez más evidente en el mundo digital. La automatización y la inteligencia artificial no solo se utilizan en áreas como las finanzas, la salud o el comercio electrónico, sino que también están transformando sectores que tradicionalmente se consideraban alejados de la tecnología, co...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9g3xhsehfrf07vp0wp3o.png",
-    "video": null,
-    "author": "RAFAEL RAMIREZ",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python en la creación de chatbots sobre amarres sentimentales",
-    "seoDescription": "La intersección entre la tecnología y la espiritualidad es un fenómeno cada vez más evidente en el mundo digital. La automatización y la inteligencia artific..."
   },
   {
     "title": "5 Movies to Watch on Labor Day",
@@ -497,135 +642,5 @@
     ],
     "seoTitle": "Latest Apple Store design combines Genius Bar and Pickup in one counter",
     "seoDescription": "A dedicated Pickup counter has been one of the most notable changes in Apple store designs over the last few years, giving a faster service to those customer..."
-  },
-  {
-    "title": "Foldable iPhone Under-Screen Touch ID Rumor Dismissed by Analyst",
-    "url": "https://www.macrumors.com/2025/09/01/foldable-iphone-under-screen-touch-id-dismissed/",
-    "publishedAt": "2025-09-01T10:49:05.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple analyst Ming-Chi Kuo is standing by his prediction that Apple's first foldable iPhone will feature Touch ID integrated into the side button rather than an under-display fingerprint sensor. In a post on X (Twitter) today, Kuo referenced his March forecast for the rumored 2026 device: \"Six months ago, I predicted the foldable iPhone would use side-but...",
-    "image": "https://images.macrumors.com/article-new/2025/08/Apple-Foldable-Thumb.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Foldable iPhone",
-      "Ming-Chi Kuo"
-    ],
-    "seoTitle": "Foldable iPhone Under-Screen Touch ID Rumor Dismissed by Analyst",
-    "seoDescription": "Apple analyst Ming-Chi Kuo is standing by his prediction that Apple's first foldable iPhone will feature Touch ID integrated into the side button rather than..."
-  },
-  {
-    "title": "Silksong is only $19.99",
-    "url": "https://www.theverge.com/news/768524/hollow-knight-silksong-pricing-release-timing",
-    "publishedAt": "2025-09-01T09:37:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Hollow Knight: Silksong, Team Cherry’s sequel to Hollow Knight that has been in development for seven years, is releasing later this week for just $19.99. Silksong’s highly-anticipated launch on September 4th comes with a modest $5 bump over Hollow Knight’s original $14.99 price tag. While Team Cherry could have charged more for Silksong, it’s essentially...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/videoframe_50042.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tom Warren",
-    "tags": [],
-    "seoTitle": "Silksong is only $19.99",
-    "seoDescription": "Hollow Knight: Silksong, Team Cherry’s sequel to Hollow Knight that has been in development for seven years, is releasing later this week for just $19.99. Si..."
-  },
-  {
-    "title": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
-    "url": "https://www.theverge.com/games-review/767993/hell-is-us-review-ps5-xbox-steam",
-    "publishedAt": "2025-09-01T08:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The opening hours of Hell Is Us are brilliantly confusing. The game tasks you with getting up to speed on a complicated civil war between the Palomists and Sabinians. A deluge of proper nouns is unleashed: Lymbic weaponry, Guardian Detectors, and more. But the clearest way the game communicates that you should feel utterly dumbfounded is through the crypt...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/HiU_GameplayReveal_Screenshot_07.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Lewis Gordon",
-    "tags": [],
-    "seoTitle": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
-    "seoDescription": "The opening hours of Hell Is Us are brilliantly confusing. The game tasks you with getting up to speed on a complicated civil war between the Palomists and S..."
-  },
-  {
-    "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
-    "url": "https://www.macrumors.com/2025/08/31/apple-preparing-ios-18-7/",
-    "publishedAt": "2025-08-31T23:35:06.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is preparing to release iOS 18.7 for compatible iPhone models, according to evidence of the update in the MacRumors visitor logs. We expect iOS 18.7 to be released in September, alongside iOS 26. The update will likely include fixes for security vulnerabilities, but little else. not compatible with iOS 26. iOS 26 is compatible with the iPhone 11 and...",
-    "image": "https://images.macrumors.com/article-new/2025/01/iOS-18-on-iPhone-Arrow-Down.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "iOS 18",
-      "iOS 26"
-    ],
-    "seoTitle": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
-    "seoDescription": "Apple is preparing to release iOS 18.7 for compatible iPhone models, according to evidence of the update in the MacRumors visitor logs. We expect iOS 18.7 to..."
-  },
-  {
-    "title": "Apple Pencil Pro Rolling Out in Apple's Refurbished Store at a Discount",
-    "url": "https://www.macrumors.com/2025/08/31/refurbished-apple-pencil-pro/",
-    "publishedAt": "2025-08-31T23:05:22.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Over the past month, the Apple Pencil Pro has been rolling out in Apple's online refurbished store, for the first time since the accessory launched in May 2024. The certified refurbished Apple Pencil Pro is available at a roughly 15% discount compared to brand new, which is typical for Apple's refurbished products. Australia, Belgium, China, Germany, Irel...",
-    "image": "https://images.macrumors.com/article-new/2024/05/Apple-Pencil-Pro.jpeg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Apple Pencil",
-      "Apple Refurbished Products"
-    ],
-    "seoTitle": "Apple Pencil Pro Rolling Out in Apple's Refurbished Store at a Discount",
-    "seoDescription": "Over the past month, the Apple Pencil Pro has been rolling out in Apple's online refurbished store, for the first time since the accessory launched in May 20..."
-  },
-  {
-    "title": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
-    "url": "https://www.macrumors.com/2025/08/31/next-carplay-ultra-vehicle-report/",
-    "publishedAt": "2025-08-31T21:46:49.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Hyundai's upcoming IONIQ 3 electric vehicle will support Apple's CarPlay Ultra system, according to the BBC publication Top Gear. Here is what Top Gear's Paul Horrell reported last week: The Ioniq 3 will be digital-forward. For a start it can run Apple's CarPlay Ultra if the driver wants. Even without the Apple skin, the interface allows more configuratio...",
-    "image": "https://images.macrumors.com/article-new/2025/05/CarPlay-Ultra-Climate-Controls.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "CarPlay",
-      "CarPlay Ultra"
-    ],
-    "seoTitle": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
-    "seoDescription": "Hyundai's upcoming IONIQ 3 electric vehicle will support Apple's CarPlay Ultra system, according to the BBC publication Top Gear. Here is what Top Gear's Pau..."
-  },
-  {
-    "title": "Chatbots can be manipulated through flattery and peer pressure",
-    "url": "https://www.theverge.com/news/768508/chatbots-are-susceptible-to-flattery-and-peer-pressure",
-    "publishedAt": "2025-08-31T21:06:24.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Generally, AI chatbots are not supposed to do things like call you names or tell you how to make controlled substances. But, just like a person, with the right psychological tactics, it seems like at least some LLMs can be convinced to break their own rules. Researchers from the University of Pennsylvania deployed tactics described by psychology professor...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Chatbots can be manipulated through flattery and peer pressure",
-    "seoDescription": "Generally, AI chatbots are not supposed to do things like call you names or tell you how to make controlled substances. But, just like a person, with the rig..."
-  },
-  {
-    "title": "Think 'The Social Network' Has a Hero? Think Again",
-    "url": "https://nofilmschool.com/the-social-network-no-heroes",
-    "publishedAt": "2025-08-31T21:00:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The Social Network is one of the most critically acclaimed David Fincher movies. Yet, this dramatic depiction of the founding of Facebook and the conflicts surrounding it, based on the book \"Accidental Billionaires,\" is arguably an anomaly in classical narratives. The Social Network is not your usual good versus evil story. While screenwriter Aaron Sorkin...",
-    "image": "https://nofilmschool.com/media-library/think-the-social-network-has-a-hero-think-again.jpg?id=61538366&width=980",
-    "video": "https://www.youtube.com/embed/lB95KLmpLR4?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "The social network",
-      "Villains",
-      "Antiheroes",
-      "Characters",
-      "Character analysis"
-    ],
-    "seoTitle": "Think 'The Social Network' Has a Hero? Think Again",
-    "seoDescription": "The Social Network is one of the most critically acclaimed David Fincher movies. Yet, this dramatic depiction of the founding of Facebook and the conflicts s..."
   }
 ]
