@@ -1,5 +1,173 @@
 [
   {
+    "title": "Complete Lead Generation & Cold Email Automation Agent",
+    "url": "https://dev.to/deepesh_tolani_3fefa9d872/complete-lead-generation-cold-email-automation-agent-1g39",
+    "publishedAt": "2025-09-01T01:05:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent lead generation automation that transforms neighborhood searches into qualified prospects with personalized cold email campaigns. This AI agent solves the time-consuming problem of manual prospecting by automating the entire pipeline from lead discovery ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "Deepesh Tolani",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Complete Lead Generation & Cold Email Automation Agent",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent lead generation automation that transforms neighborhoo..."
+  },
+  {
+    "title": "learning from this great article so I can improve my infra layer :D",
+    "url": "https://dev.to/idanielmatt/learning-from-this-great-article-so-i-can-improve-my-infra-layer-d-1bb2",
+    "publishedAt": "2025-09-01T00:46:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Path To A Clean(er) React Architecture - API Layer & Fetch Functions Johannes Kettmann ・ Apr 26 '24 #react #javascript #webdev #frontend",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F140139%2F5881453b-c3cb-4812-a9e8-4c41db313b70.jpg",
+    "video": null,
+    "author": "José Daniel García",
+    "tags": [
+      "react",
+      "javascript",
+      "webdev",
+      "frontend"
+    ],
+    "seoTitle": "learning from this great article so I can improve my infra layer :D",
+    "seoDescription": "Path To A Clean(er) React Architecture - API Layer & Fetch Functions Johannes Kettmann ・ Apr 26 '24 #react #javascript #webdev #frontend"
+  },
+  {
+    "title": "Tuning Go's GOGC: A Practical Guide with Real-World Examples",
+    "url": "https://dev.to/jones_charles_ad50858dbc0/tuning-gos-gogc-a-practical-guide-with-real-world-examples-4a00",
+    "publishedAt": "2025-09-01T00:41:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction: Why GOGC Matters Hey Go devs! If you’re building high-performance backend services with Go, you’ve probably noticed how its garbage collection (GC) can make or break your app’s performance under load. Enter GOGC, the environment variable that lets you fine-tune how often Go’s garbage collector runs. Think of it like adjusting the tempo of a ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0tnwlkkma2vwyb0a9m9i.png",
+    "video": null,
+    "author": "Jones Charles",
+    "tags": [
+      "go",
+      "performance",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "Tuning Go's GOGC: A Practical Guide with Real-World Examples",
+    "seoDescription": "Introduction: Why GOGC Matters Hey Go devs! If you’re building high-performance backend services with Go, you’ve probably noticed how its garbage collection ..."
+  },
+  {
+    "title": "Refactoring 033 - Strip Annotations",
+    "url": "https://dev.to/mcsee/refactoring-033-strip-annotations-46mi",
+    "publishedAt": "2025-09-01T00:07:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Clean up your code by removing unnecessary annotations TL;DR: Make your code simpler and more maintainable by removing redundant or unused annotations. Obsolete comments Cluttered code Lower readability Maintenance overhead Unnecessary metadata Overengineered solutions Metaprogramming Hidden design decisions To-dos Code Smell 151 - Commented Code Maxi Con...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F366059%2F1d8942bc-727d-4d1e-bc50-30ff073a34fc.jpeg",
+    "video": null,
+    "author": "Maxi Contieri",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners",
+      "productivity"
+    ],
+    "seoTitle": "Refactoring 033 - Strip Annotations",
+    "seoDescription": "Clean up your code by removing unnecessary annotations TL;DR: Make your code simpler and more maintainable by removing redundant or unused annotations. Obsol..."
+  },
+  {
+    "title": "Reviews Tracker AI Agent",
+    "url": "https://dev.to/msniezynski/reviews-tracker-ai-agent-25ki",
+    "publishedAt": "2025-08-31T23:50:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data This AI agent provides observability for app store reviews and delivers valuable insights. It analyzes the sentiment of each review and stores reviews in external data storage. It allows you to send Slack notifications, so you can get notified about any new reviews. This can b...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj05vn3ppzesszh6dwr0w.png",
+    "video": null,
+    "author": "Michał Śnieżyński",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Reviews Tracker AI Agent",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data This AI agent provides observability for app store reviews and delivers valua..."
+  },
+  {
+    "title": "BrightData Research Assistant 🧠🤖",
+    "url": "https://dev.to/nikhilraikwar/brightdata-research-assistant-56pm",
+    "publishedAt": "2025-08-31T23:44:58.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Research Assistant (@BrightDataResearch_bot) is an AI-powered research bot designed to instantly fetch, process, and summarize information from across the web. Leveraging Bright Data’s world-class web scraping infrastructure, n8n’s automation platform, and advanced ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fquq88k4rz3magzj8x69x.png",
+    "video": null,
+    "author": "Nikhil Raikwar ",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "BrightData Research Assistant 🧠🤖",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data BrightData Research Assistant (@BrightDataResearch_bot) is an AI-powered rese..."
+  },
+  {
+    "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
+    "url": "https://www.macrumors.com/2025/08/31/apple-preparing-ios-18-7/",
+    "publishedAt": "2025-08-31T23:35:06.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is preparing to release iOS 18.7 for compatible iPhone models, according to evidence of the update in the MacRumors visitor logs. We expect iOS 18.7 to be released in September, alongside iOS 26. The update will likely include fixes for security vulnerabilities, but little else. not compatible with iOS 26. iOS 26 is compatible with the iPhone 11 and...",
+    "image": "https://images.macrumors.com/article-new/2025/01/iOS-18-on-iPhone-Arrow-Down.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "iOS 18",
+      "iOS 26"
+    ],
+    "seoTitle": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
+    "seoDescription": "Apple is preparing to release iOS 18.7 for compatible iPhone models, according to evidence of the update in the MacRumors visitor logs. We expect iOS 18.7 to..."
+  },
+  {
+    "title": "Go Coding Official Standards and Best Practices",
+    "url": "https://dev.to/leapcell/go-coding-official-standards-and-best-practices-284k",
+    "publishedAt": "2025-08-31T23:31:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Go is known for its simplicity and consistency, and the official documentation provides complete guidance on coding conventions. This article summarizes the core coding standards and best practices of Go, based on official documents such as Effective Go and Code Review Comments. Go provides automated tools for code formatting, eliminating the need to manu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6e6w59p0n210lqckrrf4.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "programming",
+      "webdev",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "Go Coding Official Standards and Best Practices",
+    "seoDescription": "Go is known for its simplicity and consistency, and the official documentation provides complete guidance on coding conventions. This article summarizes the ..."
+  },
+  {
+    "title": "ASP.NET Core show/hide password",
+    "url": "https://dev.to/karenpayneoregon/aspnet-core-showhide-password-i4f",
+    "publishedAt": "2025-08-31T23:20:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Learn how to give clients the ability to show/hide password inputs. Some people must see what they are typing, not be in a position where someone is shoulder surfing to see what they are typing. Checkboxes will not be used for the provided demonstrations; instead, a button with an image will be used. The following example is in the project Mo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftoj37ji54geqjks479nx.png",
+    "video": null,
+    "author": "Karen Payne",
+    "tags": [
+      "webdev",
+      "frontend",
+      "dotnetcore"
+    ],
+    "seoTitle": "ASP.NET Core show/hide password",
+    "seoDescription": "Introduction Learn how to give clients the ability to show/hide password inputs. Some people must see what they are typing, not be in a position where someon..."
+  },
+  {
     "title": "Apple Pencil Pro Rolling Out in Apple's Refurbished Store at a Discount",
     "url": "https://www.macrumors.com/2025/08/31/refurbished-apple-pencil-pro/",
     "publishedAt": "2025-08-31T23:05:22.000Z",
@@ -17,63 +185,6 @@
     "seoDescription": "Over the past month, the Apple Pencil Pro has been rolling out in Apple's online refurbished store, for the first time since the accessory launched in May 20..."
   },
   {
-    "title": "Social media drama analizer / monitor",
-    "url": "https://dev.to/simonhryszko/social-media-drama-analizer-monitor-5cfg",
-    "publishedAt": "2025-08-31T22:07:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built telegram bot what could help with alerting that your (or any) brand have troubles in social media (currently only on x) Feel free to chat with bot, but try not break it; it's not too stable unfortunetly: https://t.me/brand_crisis_checker_bot I splitted it into multiple...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo73k9r4t5melwt7qxuzk.png",
-    "video": null,
-    "author": "simon hryszko",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Social media drama analizer / monitor",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built telegram bot what could help with alerting that your (or any) brand h..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/asem_algably_8de47fab2ee3/-1021",
-    "publishedAt": "2025-08-31T21:55:51.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F461127%2F034233c4-ba6e-473c-8a8d-783831764a10.jpeg",
-    "video": null,
-    "author": "Asem algably",
-    "tags": [
-      "cloud",
-      "devops",
-      "opensource",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Every Developer Needs to Self-Host Jonas Scholz ・ Apr 25 #cloud #devops #opensource #webdev"
-  },
-  {
-    "title": "Virtual Machines vs. Docker: A Beginner-Friendly Guide",
-    "url": "https://dev.to/emmanuel_sofs/virtual-machines-vs-docker-a-beginner-friendly-guide-58h9",
-    "publishedAt": "2025-08-31T21:52:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "If you’ve ever wondered why people keep talking about virtual machines and Docker containers, you’re not alone. Both are powerful technologies for running applications, but they work in different ways. Let’s break it down in simple terms. Virtualization is the process of running a “virtual” version of a computer inside your actual computer. This magic is ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffylboyaij5tv0ul5zuyz.png",
-    "video": null,
-    "author": "Emmanuel sofuwa",
-    "tags": [
-      "docker",
-      "virtualmachine",
-      "devops",
-      "webdev"
-    ],
-    "seoTitle": "Virtual Machines vs. Docker: A Beginner-Friendly Guide",
-    "seoDescription": "If you’ve ever wondered why people keep talking about virtual machines and Docker containers, you’re not alone. Both are powerful technologies for running ap..."
-  },
-  {
     "title": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
     "url": "https://www.macrumors.com/2025/08/31/next-carplay-ultra-vehicle-report/",
     "publishedAt": "2025-08-31T21:46:49.000Z",
@@ -89,44 +200,6 @@
     ],
     "seoTitle": "Next Vehicle With CarPlay Ultra Named in Report as Rollout Continues",
     "seoDescription": "Hyundai's upcoming IONIQ 3 electric vehicle will support Apple's CarPlay Ultra system, according to the BBC publication Top Gear. Here is what Top Gear's Pau..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/iscander01/-m46",
-    "publishedAt": "2025-08-31T21:13:53.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "WYKRA: Web You Know, Real-time Analysis Olga Braginskaya ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1050562%2Fe109cfc9-05e8-418b-baf0-7300b94453d5.jpg",
-    "video": null,
-    "author": "Alexander Bro",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "WYKRA: Web You Know, Real-time Analysis Olga Braginskaya ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev"
-  },
-  {
-    "title": "I built an AI Agent That reveals Wall Street Sentiment in seconds",
-    "url": "https://dev.to/indika_wimalasuriya/i-built-an-ai-agent-that-reveals-wall-street-sentiment-in-seconds-4ma2",
-    "publishedAt": "2025-08-31T21:08:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data What I Built I built an AI agent that aggregates and analyzes sentiment from: All online sources Major US stock market news sites X.com user posts It delivers a consolidated Wall Street sentiment report in seconds. The agent scans trending trader discussions, financial headlin...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3qenq70zm2z31w4vbj6b.png",
-    "video": null,
-    "author": "Indika_Wimalasuriya",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "I built an AI Agent That reveals Wall Street Sentiment in seconds",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data What I Built I built an AI agent that aggregates and analyzes sentiment from:..."
   },
   {
     "title": "Chatbots can be manipulated through flattery and peer pressure",
@@ -530,66 +603,5 @@
     ],
     "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
     "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
-  },
-  {
-    "title": "The 20 best Labor Day deals you can grab for $100 or less",
-    "url": "https://www.theverge.com/tech/767824/best-labor-day-sales-cheap-tech-deals-under-100-2025",
-    "publishedAt": "2025-08-30T14:37:17.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoor gear to back-to-school essentials like the latest MacBook Air, we rounded up a guide of almost 100 deals we think are worth your time and money. But we get it. In times of tariffs and inflation, spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623451/DSCF0036.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "The 20 best Labor Day deals you can grab for $100 or less",
-    "seoDescription": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoo..."
-  },
-  {
-    "title": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "url": "https://9to5mac.com/2025/08/30/apple-ipad-a16-vs-ipad-air-m3-comparison-which-is-better-value/",
-    "publishedAt": "2025-08-30T13:46:40.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making it a rather interesting debate. With current deals, theres only $150 between these two iPads, which really begs the question: should you pay more for the , or save some money with the base iPad? more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/M2-iPad-Air-graphic.png?w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
-  },
-  {
-    "title": "Discounty adds some bite to cozy life sims",
-    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew Webster",
-    "tags": [],
-    "seoTitle": "Discounty adds some bite to cozy life sims",
-    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
-  },
-  {
-    "title": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "url": "https://www.macrumors.com/2025/08/30/top-stories-apple-awe-dropping-iphone-event/",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iPhone models, some new accessories, new Apple Watch models, and perhaps a few more announcements. Apple has plenty more announcements in the pipeline beyond next month's event, however, including a hos...",
-    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-30.jpg",
-    "video": null,
-    "author": "MacRumors Staff",
-    "tags": [
-      "Featured",
-      "Top Stories"
-    ],
-    "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
   }
 ]
