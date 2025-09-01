@@ -1,39 +1,35 @@
 [
   {
-    "title": "How Customer Journey Optimisation Improves Retention and ROI in 2025",
-    "url": "https://dev.to/aravindh_ramu_a8b26e63c48/how-customer-journey-optimisation-improves-retention-and-roi-in-2025-1p73",
-    "publishedAt": "2025-09-01T08:58:18.000Z",
-    "source": "dev.to",
+    "title": "Silksong is only $19.99",
+    "url": "https://www.theverge.com/news/768524/hollow-knight-silksong-pricing-release-timing",
+    "publishedAt": "2025-09-01T09:37:20.000Z",
+    "source": "theverge.com",
     "category": "web",
-    "summary": "*The Shift from Acquisition to Retention In today’s competitive market, customer journey optimisation (CJO) has become a crucial strategy for sustainable growth. Businesses no longer thrive solely on acquiring new customers; instead, the focus has shifted to keeping existing ones engaged and loyal. By mapping customer touchpoints and understanding motivat...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhvzim7upa93mvv7cj0wy.png",
+    "summary": "Hollow Knight: Silksong, Team Cherry’s sequel to Hollow Knight that has been in development for seven years, is releasing later this week for just $19.99. Silksong’s highly-anticipated launch on September 4th comes with a modest $5 bump over Hollow Knight’s original $14.99 price tag. While Team Cherry could have charged more for Silksong, it’s essentially...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/videoframe_50042.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Aravindh Ramu",
-    "tags": [
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "How Customer Journey Optimisation Improves Retention and ROI in 2025",
-    "seoDescription": "*The Shift from Acquisition to Retention In today’s competitive market, customer journey optimisation (CJO) has become a crucial strategy for sustainable gro..."
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Silksong is only $19.99",
+    "seoDescription": "Hollow Knight: Silksong, Team Cherry’s sequel to Hollow Knight that has been in development for seven years, is releasing later this week for just $19.99. Si..."
   },
   {
-    "title": "Combining useful JS basics",
-    "url": "https://dev.to/swarnaliroy94/combining-useful-js-basics-29pb",
-    "publishedAt": "2025-09-01T08:36:41.000Z",
+    "title": "Browser Storage Explained: LocalStorage vs SessionStorage vs IndexedDB vs Cookies",
+    "url": "https://dev.to/arnavsharma2711/browser-storage-explained-localstorage-vs-sessionstorage-vs-indexeddb-vs-cookies-283k",
+    "publishedAt": "2025-09-01T09:19:03.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Understanding map(), filter(), Set, and the Spread Operator in JavaScript Swarnali Roy ・ Sep 1 #programming #javascript #webdev #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F670691%2Ffe5df924-f595-46c7-9276-9b930738d172.jpg",
+    "summary": "When building modern web applications, storing data in the browser is essential for improving user experience, reducing server load, and enabling offline capabilities. But with multiple storage options available—LocalStorage, SessionStorage, IndexedDB, and Cookies—it’s easy to get confused about which one to use and when. Let’s break them down with a clea...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsruw34nt5lchjoqrs576.png",
     "video": null,
-    "author": "Swarnali Roy",
+    "author": "Arnav Sharma",
     "tags": [
-      "programming",
       "javascript",
       "webdev",
-      "beginners"
+      "database"
     ],
-    "seoTitle": "Combining useful JS basics",
-    "seoDescription": "Understanding map(), filter(), Set, and the Spread Operator in JavaScript Swarnali Roy ・ Sep 1 #programming #javascript #webdev #beginners"
+    "seoTitle": "Browser Storage Explained: LocalStorage vs SessionStorage vs IndexedDB vs Cookies",
+    "seoDescription": "When building modern web applications, storing data in the browser is essential for improving user experience, reducing server load, and enabling offline cap..."
   },
   {
     "title": "Hell Is Us is a cryptic and ambitious meditation on the horrors of war",
