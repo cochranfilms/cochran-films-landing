@@ -1,5 +1,128 @@
 [
   {
+    "title": "Business Logic Goes Out The Window — The Rangefinder Window, That Is",
+    "url": "https://petapixel.com/2025/09/01/business-logic-goes-out-the-window-the-rangefinder-window-that-is/",
+    "publishedAt": "2025-09-01T16:00:45.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "I rediscovered an old love while writing an article about using M lenses on my Panasonic S5 IIx. My old love? Rangefinder cameras. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/business-logic-guest-article.jpg",
+    "video": null,
+    "author": "Joel Wolfson",
+    "tags": [
+      "Inspiration",
+      "Miscellaneous",
+      "joelwolfson",
+      "LeicaM11",
+      "thoughts"
+    ],
+    "seoTitle": "Business Logic Goes Out The Window — The Rangefinder Window, That Is",
+    "seoDescription": "I rediscovered an old love while writing an article about using M lenses on my Panasonic S5 IIx. My old love? Rangefinder cameras. [Read More]"
+  },
+  {
+    "title": "Apple Slashes 2025 MLS Season Pass to as Low as $25",
+    "url": "https://www.macrumors.com/2025/09/01/apple-slashes-2025-mls-season-pass-price/",
+    "publishedAt": "2025-09-01T15:56:46.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple has significantly discounted the MLS Season Pass for the remainder of the 2025 season, offering the annual subscription at $29, or $25 for Apple TV+ subscribers, down from the regular $99 price. The reduced rate covers the rest of the current MLS season and playoffs, including access to every match live and on demand, with separate English and Spani...",
+    "image": "https://images.macrumors.com/article-new/2022/11/apple-tv-mls-season-pass.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "Apple TV Plus",
+      "MLS Season Pass"
+    ],
+    "seoTitle": "Apple Slashes 2025 MLS Season Pass to as Low as $25",
+    "seoDescription": "Apple has significantly discounted the MLS Season Pass for the remainder of the 2025 season, offering the annual subscription at $29, or $25 for Apple TV+ su..."
+  },
+  {
+    "title": "Report: Apple Demands Suppliers Switch to Robotics for Manufacturing",
+    "url": "https://www.macrumors.com/2025/09/01/apple-demanding-suppliers-switch-to-robotics/",
+    "publishedAt": "2025-09-01T15:45:27.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is significantly accelerating the rollout of automation and robotics across its manufacturing supply chain, DigiTimes reports. While Apple has advocated for increased automation in supplier facilities for over two years, sources familiar with the matter say that Apple now requires automation as a standard prerequisite for awarding manufacturing cont...",
+    "image": "https://images.macrumors.com/article-new/2022/05/apple-china-iphone-factory.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "DigiTimes"
+    ],
+    "seoTitle": "Report: Apple Demands Suppliers Switch to Robotics for Manufacturing",
+    "seoDescription": "Apple is significantly accelerating the rollout of automation and robotics across its manufacturing supply chain, DigiTimes reports. While Apple has advocate..."
+  },
+  {
+    "title": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
+    "url": "https://9to5mac.com/2025/09/01/iphone-17-pro-apple-not-so-clear-case/",
+    "publishedAt": "2025-09-01T15:44:46.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/not-so-clear-case.webp?w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
+    "seoDescription": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…"
+  },
+  {
+    "title": "Encypher : Secure Your React State with Encrypted localStorage and sessionStorage",
+    "url": "https://dev.to/sreehari_sj_1d3d883c0f6b/encypher-secure-your-react-state-with-encrypted-localstorage-and-sessionstorage-5937",
+    "publishedAt": "2025-09-01T15:42:16.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "As developers, we often store user preferences, tokens, and other sensitive data in the browser. But how secure is your localStorage or sessionStorage? Enter Encypher – a lightweight React hook that brings AES-GCM encryption to your front-end state management with an easy useState-like API. Let’s dive in! React makes state management easy, but storing dat...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv62buofeoqt7cv47qakn.png",
+    "video": null,
+    "author": "Sreehari S J",
+    "tags": [
+      "react",
+      "webdev",
+      "javascript",
+      "npm"
+    ],
+    "seoTitle": "Encypher : Secure Your React State with Encrypted localStorage and sessionStorage",
+    "seoDescription": "As developers, we often store user preferences, tokens, and other sensitive data in the browser. But how secure is your localStorage or sessionStorage? Enter..."
+  },
+  {
+    "title": "iPhone 17 isn’t the only big Apple moment this September",
+    "url": "https://9to5mac.com/2025/09/01/apple-september-2025-dates-iphone-17-ios-26/",
+    "publishedAt": "2025-09-01T15:29:07.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are several key dates to anticipate for Apple fans, even beyond the major iPhone 17 event set for September 9. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/awe-dropping-event.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
+    "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
+  },
+  {
+    "title": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
+    "url": "https://www.macrumors.com/2025/09/01/nearly-70-of-users-plan-to-upgrade-to-iphone-17/",
+    "publishedAt": "2025-09-01T15:24:53.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Apple's expected unveiling of the devices at its September 9 keynote. Smartphone price comparison platform SellCell surveyed over 2,000 U.S.-based ‌iPhone‌ users in August to assess upgrade interest and...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "iPhone 17",
+      "iPhone 17 Air",
+      "iPhone 17 Pro",
+      "SellCell"
+    ],
+    "seoTitle": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
+    "seoDescription": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Ap..."
+  },
+  {
     "title": "Review: $399 Beosound A1 Portable Speaker Shows Why Bang & Olufsen Commands a Premium",
     "url": "https://www.macrumors.com/review/bang-and-olufsen-a1-beosound-speaker-review/",
     "publishedAt": "2025-09-01T15:06:38.000Z",
@@ -14,61 +137,6 @@
     ],
     "seoTitle": "Review: $399 Beosound A1 Portable Speaker Shows Why Bang & Olufsen Commands a Premium",
     "seoDescription": "Bang & Olufsen recently released the third generation of its award-winning Beosound A1 portable Bluetooth speaker, and after playing with it for a good month..."
-  },
-  {
-    "title": "Turn Your Photos into String Art with Code and Creativity 🎨🧵",
-    "url": "https://dev.to/_a4789b89e909d6bcb171e/turn-your-photos-into-string-art-with-code-and-creativity-acb",
-    "publishedAt": "2025-09-01T14:58:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Have you ever wondered how art and code can merge into something unique? Instead of spending days hammering and weaving, I built a small tool that generates patterns automatically. You just upload an image, adjust a few parameters like nail count and line density, and instantly preview the result. 👉 Try it here: https://stringartgenerator.art/#string-art...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fser8yezwmfvy2v9nm4sp.jpg",
-    "video": null,
-    "author": "蛙嘟嘟",
-    "tags": [
-      "webdev",
-      "devops"
-    ],
-    "seoTitle": "Turn Your Photos into String Art with Code and Creativity 🎨🧵",
-    "seoDescription": "Have you ever wondered how art and code can merge into something unique? Instead of spending days hammering and weaving, I built a small tool that generates ..."
-  },
-  {
-    "title": "Python Code for Analyzing Microneedling Before-and-After Photos",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/python-code-for-analyzing-microneedling-before-and-after-photos-4bfk",
-    "publishedAt": "2025-09-01T14:49:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the age of digital transformation, patients and practitioners are no longer satisfied with relying solely on subjective perception when evaluating aesthetic treatments. They want evidence—clear, data-driven proof that procedures are working. One of the treatments where this kind of objective evaluation has become highly relevant is microneedling. Micro...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2cwtdkmd8wk3plp88pl4.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python Code for Analyzing Microneedling Before-and-After Photos",
-    "seoDescription": "In the age of digital transformation, patients and practitioners are no longer satisfied with relying solely on subjective perception when evaluating aesthet..."
-  },
-  {
-    "title": "🚀 Web Workers in Angular: Boost App Performance by Offloading Heavy Tasks",
-    "url": "https://dev.to/rohit_singh_ee84e64941db7/web-workers-in-angular-boost-app-performance-by-offloading-heavy-tasks-202p",
-    "publishedAt": "2025-09-01T14:48:15.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When we build Angular applications, performance is one of the top priorities. No user likes a frozen screen or unresponsive UI, especially in data-heavy applications. But when you perform CPU-intensive tasks—like parsing a huge JSON, encrypting data, or running mathematical calculations—the main thread gets blocked. This leads to: So how do we solve this?...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
-    "video": null,
-    "author": "ROHIT SINGH",
-    "tags": [
-      "webdev",
-      "angular",
-      "javascript",
-      "coding"
-    ],
-    "seoTitle": "🚀 Web Workers in Angular: Boost App Performance by Offloading Heavy Tasks",
-    "seoDescription": "When we build Angular applications, performance is one of the top priorities. No user likes a frozen screen or unresponsive UI, especially in data-heavy appl..."
   },
   {
     "title": "The time picker in iPhone alarms has a bizarre hidden design element",
@@ -543,68 +611,5 @@
     ],
     "seoTitle": "Apple Says 11-Inch MacBook Air and Two Other Macs Are Now Obsolete",
     "seoDescription": "Apple today added three Macs to the obsolete products list on its website, including the final model of the MacBook Air with a smaller 11-inch display. The t..."
-  },
-  {
-    "title": "Apple just released a new AI chatbot to help retail employees sell iPhones",
-    "url": "https://9to5mac.com/2025/08/31/apple-new-ai-chatbot-for-support-employees/",
-    "publishedAt": "2025-08-31T17:58:59.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "After implementing an AI chatbot in the Apple Support app to help customers a few weeks ago, the company is taking their AI chatbot push a step further. With Asa, Apple retail employees will now be able to ask questions and learn more about Apple products to improve their sales abilities. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/04/One-in-seven-iPhones-now-made-in-India.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple just released a new AI chatbot to help retail employees sell iPhones",
-    "seoDescription": "After implementing an AI chatbot in the Apple Support app to help customers a few weeks ago, the company is taking their AI chatbot push a step further. With..."
-  },
-  {
-    "title": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
-    "url": "https://www.macrumors.com/2025/08/31/apple-hints-at-esim-only-iphone-17/",
-    "publishedAt": "2025-08-31T15:52:44.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Another hint has surfaced that Apple is preparing to eliminate the physical SIM card tray from iPhones in more countries this year. In particular, a source familiar with the matter has informed MacRumors that retail employees at Apple Authorized Resellers in the EU are required to complete a training course related to iPhones with eSIM support by Friday, ...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iPhone-eSIM-Feature.jpeg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Featured",
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro"
-    ],
-    "seoTitle": "Apple Hints at iPhone 17 Models Lacking SIM Card Slot in More Countries",
-    "seoDescription": "Another hint has surfaced that Apple is preparing to eliminate the physical SIM card tray from iPhones in more countries this year. In particular, a source f..."
-  },
-  {
-    "title": "The Verge’s favorite gifts for book lovers",
-    "url": "https://www.theverge.com/tech/761931/book-lovers-gadgets-tech-gift-guide-ideas-unique-holiday",
-    "publishedAt": "2025-08-31T15:00:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "What do you gift somebody who loves books? The obvious answer is \"a book,\" but since true bibliophiles are probably sitting on a stack already, it's worth getting a little more creative. Luckily for you, many of us at The Verge are big bookworms ourselves, which is why we rounded up a bunch of clever, useful gifts our staff can vouch for. Below, you'll fi...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257888_book_lovers_guide_CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "The Verge’s favorite gifts for book lovers",
-    "seoDescription": "What do you gift somebody who loves books? The obvious answer is \"a book,\" but since true bibliophiles are probably sitting on a stack already, it's worth ge..."
-  },
-  {
-    "title": "Meta is struggling to rein in its AI chatbots",
-    "url": "https://www.theverge.com/news/768465/meta-ai-chatbot-guidelines-for-minors",
-    "publishedAt": "2025-08-31T14:17:49.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Meta is changing some of the rules governing its chatbots two weeks after a Reuters investigation revealed disturbing ways in which they could, potentially, interact with minors. Now the company has told TechCrunch that its chatbots are being trained not to engage in conversations with minors around self-harm, suicide, or disordered eating, and to avoid i...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK043_VRG_Illo_N_Barclay_5_Meta.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "Meta is struggling to rein in its AI chatbots",
-    "seoDescription": "Meta is changing some of the rules governing its chatbots two weeks after a Reuters investigation revealed disturbing ways in which they could, potentially, ..."
   }
 ]
