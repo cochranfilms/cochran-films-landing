@@ -1,5 +1,81 @@
 [
   {
+    "title": "Job Hunter AI: Next-Gen Job Search with n8n Agent and Amazon Bedrock",
+    "url": "https://dev.to/aws-builders/job-hunter-ai-next-gen-job-search-with-n8n-agent-and-amazon-bedrock-mhe",
+    "publishedAt": "2025-09-01T05:13:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Job Hunter AI is a revolutionary job search automation workflow that combines the power of Amazon Bedrock Chat Model with n8n AI Agent Node and Amazon Nova Premier - AWS's latest multimodal AI model. This cutting-edge system automatically: 🔍 Scrapes job listings from LinkedIn...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnkikkw1otywni75af73e.png",
+    "video": null,
+    "author": "Vivek V.",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Job Hunter AI: Next-Gen Job Search with n8n Agent and Amazon Bedrock",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Job Hunter AI is a revolutionary job search automation workflow that combines..."
+  },
+  {
+    "title": "Best AI Web App Builders",
+    "url": "https://dev.to/pimjo/best-ai-web-app-builders-5a83",
+    "publishedAt": "2025-09-01T05:01:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "11+ Best AI Web App Builders in 2025 Building a web app used to mean days of setup, boilerplate, and debugging. But in 2025, AI web app builders flipped the workflow. These tools take a plain prompt and generate production-ready projects, frontend, backend, database, and even deployment in minutes. Example prompt: Generate a Next.js SaaS app with user aut...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6szys53gyf66f4pr1mj1.png",
+    "video": null,
+    "author": "Vinish Bhaskar",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners",
+      "productivity"
+    ],
+    "seoTitle": "Best AI Web App Builders",
+    "seoDescription": "11+ Best AI Web App Builders in 2025 Building a web app used to mean days of setup, boilerplate, and debugging. But in 2025, AI web app builders flipped the ..."
+  },
+  {
+    "title": "14Forge: League of Legends Analytics Platform Built with n8n AI Agents and BrightData Web Scraping",
+    "url": "https://dev.to/ryoto_miyake/14forge-league-of-legends-analytics-platform-built-with-n8n-ai-agents-and-brightdata-web-scraping-573o",
+    "publishedAt": "2025-09-01T04:45:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "14Forge - LoL Performance Analytics Platform This is a submission for the AI Agents Challenge powered by n8n and Bright Data A revolutionary League of Legends analytics platform featuring unique 14-Minute Analysis™ technology, powered by n8n AI Agents and BrightData web scraping. Every League of Legends player faces three critical challenges: \"Why did I l...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjtt4i61abr3zqv0a6akv.png",
+    "video": null,
+    "author": "ryoto miyake",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "14Forge: League of Legends Analytics Platform Built with n8n AI Agents and BrightData Web Scraping",
+    "seoDescription": "14Forge - LoL Performance Analytics Platform This is a submission for the AI Agents Challenge powered by n8n and Bright Data A revolutionary League of Legend..."
+  },
+  {
+    "title": "Sales-Ready Company Research Automation using n8n & Bright Data",
+    "url": "https://dev.to/himanshi_tolani_4d8c47c84/sales-ready-company-research-automation-using-n8n-bright-data-fbn",
+    "publishedAt": "2025-09-01T04:34:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an AI-powered sales research automation that creates detailed company research documents in under 12-15 minutes. Current Problem - Sales reps are spending 2+ hours manually researching each prospect before calls, often missing crucial information or showing up unprepar...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "Himanshi Tolani",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Sales-Ready Company Research Automation using n8n & Bright Data",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an AI-powered sales research automation that creates detailed company..."
+  },
+  {
     "title": "JavaScript : A Simple “Hello World”",
     "url": "https://dev.to/ibrohimbek-dev/javascript-a-simple-hello-world-eme",
     "publishedAt": "2025-09-01T03:46:12.000Z",
@@ -17,82 +93,6 @@
     ],
     "seoTitle": "JavaScript : A Simple “Hello World”",
     "seoDescription": "JavaScript: A Simple “Hello World” This tradition is a rite of passage. It’s your first step into a larger universe, testing that your tools are working and ..."
-  },
-  {
-    "title": "n8n: The noob is on the loose",
-    "url": "https://dev.to/annavi11arrea1/n8n-the-noob-is-on-the-loose-2d43",
-    "publishedAt": "2025-09-01T03:37:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data My journey consisted of several ideas. But here is the most creative one: Digital art of the people. This takes random comments from videos on TikTok and YouTube, combines them into a string to be used as a prompt for image generation, it then outputs the created image with an...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5xazyo13zfg1dey40c3c.png",
-    "video": null,
-    "author": "Anna Villarreal",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "n8n: The noob is on the loose",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data My journey consisted of several ideas. But here is the most creative one: Dig..."
-  },
-  {
-    "title": "Improve customer service data with this case study",
-    "url": "https://dev.to/dipti_moryani_08e62702314/improve-customer-service-data-with-this-case-study-3gl1",
-    "publishedAt": "2025-09-01T03:33:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
-    "video": null,
-    "author": "Dipti Moryani",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Improve customer service data with this case study",
-    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners"
-  },
-  {
-    "title": "Improve customer service data",
-    "url": "https://dev.to/dipti_moryani_08e62702314/improve-customer-service-data-13jm",
-    "publishedAt": "2025-09-01T03:32:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
-    "video": null,
-    "author": "Dipti Moryani",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Improve customer service data",
-    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Dipti Moryani ・ Sep 1 #webdev #programming #ai #beginners"
-  },
-  {
-    "title": "Improving Customer Service with Automated Call Center Data Insights",
-    "url": "https://dev.to/dipti_moryani_08e62702314/improving-customer-service-with-automated-call-center-data-insights-1ncg",
-    "publishedAt": "2025-09-01T03:32:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Improving Customer Service with Automated Call Center Data Insights Call center operations generate large amounts of data every day, but without an efficient way to collect, integrate, and analyze it, valuable insights can be lost. For this company, delays in reporting and inconsistencies in data accuracy meant missed opportunities to improve customer exp...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr0ahnks1i268uo5nwazo.png",
-    "video": null,
-    "author": "Dipti Moryani",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Improving Customer Service with Automated Call Center Data Insights",
-    "seoDescription": "Improving Customer Service with Automated Call Center Data Insights Call center operations generate large amounts of data every day, but without an efficient..."
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
