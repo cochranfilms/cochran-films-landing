@@ -1,155 +1,79 @@
 [
   {
-    "title": "AI Job Matching Agent That Reads Your Resume (n8n + Bright Data Challenge)",
-    "url": "https://dev.to/vika2210/ai-job-matching-agent-that-reads-your-resume-n8n-bright-data-challenge-12hf",
-    "publishedAt": "2025-09-01T06:16:33.000Z",
+    "title": "How Docker Powers Automation and Speed in Modern DevOps",
+    "url": "https://dev.to/vishal_more_02990955c9358/how-docker-powers-automation-and-speed-in-modern-devops-1aok",
+    "publishedAt": "2025-09-01T07:13:19.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data 👋 Hey everyone! This is my submission to the n8n + Bright Data AI Agent Challenge — and unlike most generic agents that just search jobs by title, mine does one thing differently: 💡 It reads your actual resume, builds a smart profile (persona), and then finds matching jobs —...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frynz88wp652jn4qexstg.png",
+    "summary": "Read More: How Docker Powers Automation and Speed in Modern DevOps Automation with Docker One of Docker’s biggest strengths is automation. Traditionally, developers faced the challenge of setting up consistent environments across development, testing, and production. A single mismatch in configurations often led to deployment failures. Docker solves this ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff93p02ra475cib8lnqt2.png",
     "video": null,
-    "author": "vika2210",
-    "tags": [
-      "webdev",
-      "javascript",
-      "ai",
-      "career"
-    ],
-    "seoTitle": "AI Job Matching Agent That Reads Your Resume (n8n + Bright Data Challenge)",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data 👋 Hey everyone! This is my submission to the n8n + Bright Data AI Agent Chal..."
-  },
-  {
-    "title": "We built Meku to help devs go from idea to production-ready React + Tailwind apps in minutes. Excited to be part of the future of AI web app builders - your feedback means a lot 🚀",
-    "url": "https://dev.to/meku/we-built-meku-to-help-devs-go-from-idea-to-production-ready-react-tailwind-apps-in-minutes-3kih",
-    "publishedAt": "2025-09-01T06:16:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "11+ Best AI Web App Builders in 2025 Vinish Bhaskar for Pimjo ・ Sep 1 #webdev #programming #beginners #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F11188%2Fa96d2f1a-4362-4d7c-861a-0c0fe7968662.png",
-    "video": null,
-    "author": "Meku",
+    "author": "vishal more",
     "tags": [
       "webdev",
       "programming",
-      "beginners",
-      "productivity"
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "We built Meku to help devs go from idea to production-ready React + Tailwind apps in minutes. Excited to be part of the future of AI web app builders - your feedback means a lot 🚀",
-    "seoDescription": "11+ Best AI Web App Builders in 2025 Vinish Bhaskar for Pimjo ・ Sep 1 #webdev #programming #beginners #productivity"
+    "seoTitle": "How Docker Powers Automation and Speed in Modern DevOps",
+    "seoDescription": "Read More: How Docker Powers Automation and Speed in Modern DevOps Automation with Docker One of Docker’s biggest strengths is automation. Traditionally, dev..."
   },
   {
-    "title": "Catch up on your favorite Youtube&Tiktok videos",
-    "url": "https://dev.to/waptik/catch-up-on-your-favorite-youtubetiktok-videos-lng",
-    "publishedAt": "2025-09-01T06:13:36.000Z",
+    "title": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons)",
+    "url": "https://dev.to/anchildress1/underfoot-the-chatpot-for-hidden-places-and-why-i-dont-do-hackathons-2684",
+    "publishedAt": "2025-09-01T07:00:38.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I have subscribed to some amazing youtube channels from my country Ghana which i always look forward to watching their videos daily. Most times, i just want to forward the video links somewhere to get a summary and have a before-taste of since most of their videos are often mo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbxexv1p44nddgsegc4fj.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Underfoot is a chatbot that finds locals-only, off-the-map places you won’t see on Yelp or TripAdvisor. You give it a location and intent (music, coffee, hiking, spider farms…) and it returns unique results with a “Stonewalker” rating. Each query also adds anonymous “whispers”...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4q3prh5o7iq2ytk5f2m2.png",
     "video": null,
-    "author": "Stephane Mensah",
+    "author": "Ashley Childress",
     "tags": [
       "devchallenge",
       "n8nbrightdatachallenge",
       "ai",
       "webdev"
     ],
-    "seoTitle": "Catch up on your favorite Youtube&Tiktok videos",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I have subscribed to some amazing youtube channels from my country Ghana whic..."
+    "seoTitle": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons)",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Underfoot is a chatbot that finds locals-only, off-the-map places you won’t s..."
   },
   {
-    "title": "What Technology Will Replace AI in the Future?",
-    "url": "https://dev.to/jahangir_/what-technology-will-replace-ai-in-the-future-1ll3",
-    "publishedAt": "2025-09-01T06:01:02.000Z",
+    "title": "BrightMentions: Building a 24/7 Brand Monitoring AI Agent with n8n and Bright Data",
+    "url": "https://dev.to/mehdi/brightmentions-building-a-247-brand-monitoring-ai-agent-with-n8n-and-bright-data-3gg",
+    "publishedAt": "2025-09-01T06:55:41.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "What Technology Will Replace AI in the Future?** Artificial Intelligence (AI) has become the cornerstone of modern innovation. From ChatGPT writing code to autonomous vehicles navigating roads, AI dominates almost every conversation about technology. But history teaches us something important: no technology lasts forever as the ultimate solution. Just as ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdccuqoecopax5l912k66.jpeg",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent Brand and Keyword Mention Monitoring Agent that runs every 2 hours, searching the web for brand mentions and delivering curated reports directly to your inbox. It's essentially a tireless assistant that can process hundreds of posts while you sleep, filt...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0fhc7sliu28s6eoms5zm.png",
     "video": null,
-    "author": "Jahangir",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "What Technology Will Replace AI in the Future?",
-    "seoDescription": "What Technology Will Replace AI in the Future?** Artificial Intelligence (AI) has become the cornerstone of modern innovation. From ChatGPT writing code to a..."
-  },
-  {
-    "title": "The Daily Gist: Never miss the best of Reddit again. Powered by Bright Data.",
-    "url": "https://dev.to/dhanushreddy29/the-daily-gist-never-miss-the-best-of-reddit-again-powered-by-bright-data-5238",
-    "publishedAt": "2025-09-01T05:24:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The Daily Gist is an n8n workflow that creates a 10- to 15-minute video summary of a subreddit's top posts. To do this, it uses the subreddit's RSS feed. The following video is an example generated by my n8n workflow for the subreddit r/ArtificialInteligence n8n Workflow Githu...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs3orcg0e8s5ofgdj8dk1.png",
-    "video": null,
-    "author": "Dhanush Reddy",
+    "author": "Mehdi Amrane",
     "tags": [
       "devchallenge",
       "n8nbrightdatachallenge",
       "ai",
       "webdev"
     ],
-    "seoTitle": "The Daily Gist: Never miss the best of Reddit again. Powered by Bright Data.",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The Daily Gist is an n8n workflow that creates a 10- to 15-minute video summa..."
+    "seoTitle": "BrightMentions: Building a 24/7 Brand Monitoring AI Agent with n8n and Bright Data",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an intelligent Brand and Keyword Mention Monitoring Agent that runs e..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/naik_sejal/-42m9",
-    "publishedAt": "2025-09-01T05:22:26.000Z",
+    "title": "Automating Healthcare Workflows: Onco-Assist",
+    "url": "https://dev.to/hargun_kaur_d5af086aff62f/automating-healthcare-workflows-onco-assist-phe",
+    "publishedAt": "2025-09-01T06:54:54.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data When technology meets personal need, innovation becomes deeply meaningful. This project wasn’t just a hackathon build or an experiment in automation — it started from my own mother’s case. Managing her medical reports, prescriptions, test results, and hospital bills was overwh...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff25j3c9u255hn6qszq22.png",
     "video": null,
-    "author": "Sejal",
+    "author": "Hargun Kaur",
     "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "learning"
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
-  },
-  {
-    "title": "Why i Ditched Agile and take this new approach",
-    "url": "https://dev.to/pranesh_patel/why-i-ditched-agile-and-take-this-new-approach-4mek",
-    "publishedAt": "2025-09-01T05:21:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Pranesh patel",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "learning"
-    ],
-    "seoTitle": "Why i Ditched Agile and take this new approach",
-    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
-  },
-  {
-    "title": "Why i ditched Agile?",
-    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/why-i-ditched-agile-d59",
-    "publishedAt": "2025-09-01T05:20:19.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Bhavy K",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "learning"
-    ],
-    "seoTitle": "Why i ditched Agile?",
-    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
+    "seoTitle": "Automating Healthcare Workflows: Onco-Assist",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data When technology meets personal need, innovation becomes deeply meaningful. Th..."
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
@@ -604,5 +528,66 @@
     ],
     "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
     "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
+  },
+  {
+    "title": "The 20 best Labor Day deals you can grab for $100 or less",
+    "url": "https://www.theverge.com/tech/767824/best-labor-day-sales-cheap-tech-deals-under-100-2025",
+    "publishedAt": "2025-08-30T14:37:17.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoor gear to back-to-school essentials like the latest MacBook Air, we rounded up a guide of almost 100 deals we think are worth your time and money. But we get it. In times of tariffs and inflation, spe...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623451/DSCF0036.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sheena Vasani",
+    "tags": [],
+    "seoTitle": "The 20 best Labor Day deals you can grab for $100 or less",
+    "seoDescription": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoo..."
+  },
+  {
+    "title": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
+    "url": "https://9to5mac.com/2025/08/30/apple-ipad-a16-vs-ipad-air-m3-comparison-which-is-better-value/",
+    "publishedAt": "2025-08-30T13:46:40.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making it a rather interesting debate. With current deals, theres only $150 between these two iPads, which really begs the question: should you pay more for the , or save some money with the base iPad? more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/M2-iPad-Air-graphic.png?w=1600",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
+    "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
+  },
+  {
+    "title": "Discounty adds some bite to cozy life sims",
+    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
+    "publishedAt": "2025-08-30T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Webster",
+    "tags": [],
+    "seoTitle": "Discounty adds some bite to cozy life sims",
+    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
+  },
+  {
+    "title": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
+    "url": "https://www.macrumors.com/2025/08/30/top-stories-apple-awe-dropping-iphone-event/",
+    "publishedAt": "2025-08-30T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iPhone models, some new accessories, new Apple Watch models, and perhaps a few more announcements. Apple has plenty more announcements in the pipeline beyond next month's event, however, including a hos...",
+    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-30.jpg",
+    "video": null,
+    "author": "MacRumors Staff",
+    "tags": [
+      "Featured",
+      "Top Stories"
+    ],
+    "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
+    "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
   }
 ]
