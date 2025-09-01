@@ -1,5 +1,21 @@
 [
   {
+    "title": "You can try Apple’s lightning-fast video captioning model right from your browser",
+    "url": "https://9to5mac.com/2025/09/01/you-can-try-apples-lightning-fast-video-captioning-model-right-from-your-browser/",
+    "publishedAt": "2025-09-01T21:41:35.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few months ago, Apple released FastVLM, a Visual Language Model (VLM) that offered near-instant high-resolution image processing. Now, you can take it for a spin, provided you have an Apple Silicon-powered Mac. Here’s how. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/Apple-Intelligence-Liquid-Glass.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "You can try Apple’s lightning-fast video captioning model right from your browser",
+    "seoDescription": "A few months ago, Apple released FastVLM, a Visual Language Model (VLM) that offered near-instant high-resolution image processing. Now, you can take it for ..."
+  },
+  {
     "title": "The best Labor Day TV sales",
     "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
     "publishedAt": "2025-09-01T20:47:17.000Z",
@@ -47,25 +63,6 @@
     "seoDescription": "Labor Day has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. We’ve put together an expansive guide detai..."
   },
   {
-    "title": "Semantic HTML",
-    "url": "https://dev.to/estherngaire/semantic-html-4108",
-    "publishedAt": "2025-09-01T20:07:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction Semantic HTML is a way of writing code that helps computers and people understand the meaning and the structure of a web page, making it easier for search engines and assistive technologies to understand. Semantic HTML helps improve accessibility, better SEO, enhance user experience, improve code readability, improve performance etc. It uses ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
-    "video": null,
-    "author": "Estherngaire",
-    "tags": [
-      "webdev",
-      "a11y",
-      "html",
-      "programming"
-    ],
-    "seoTitle": "Semantic HTML",
-    "seoDescription": "Introduction Semantic HTML is a way of writing code that helps computers and people understand the meaning and the structure of a web page, making it easier ..."
-  },
-  {
     "title": "As Apple pushes for automation upgrades, supply chain partners face higher costs",
     "url": "https://9to5mac.com/2025/09/01/as-apple-pushes-for-automation-upgrades-supply-chain-partners-face-higher-costs/",
     "publishedAt": "2025-09-01T20:06:22.000Z",
@@ -97,25 +94,6 @@
     ],
     "seoTitle": "What It Really Means to Be an “Uncompromising Filmmaker”",
     "seoDescription": "Two years ago, I wrapped I Live Here Now, a deeply beautiful and intricate psychological horror film about a woman who confronts her traumas in a strange, de..."
-  },
-  {
-    "title": "UNLOCKING THE WEB:HOW SEMANTIC HTML SUPERCHARGES SEO AND ACCESSIBILITY",
-    "url": "https://dev.to/ica/unlocking-the-webhow-semantic-html-supercharges-seo-and-accessibility-2j8i",
-    "publishedAt": "2025-09-01T19:31:44.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "INTRODUCTION 1.Content understanding and prioritisation:Tags such as header, main and footer clearly define the purpose and role of different content blocks for easy identification by the search engine crawlers and indexing of the most important part of a page. 2.Enhanced relevance for keywords:The use of semantic elements with relevant tags enables a sea...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7zx7p6bakfbeg19ijjwi.jpg",
-    "video": null,
-    "author": "Irene Osano",
-    "tags": [
-      "webdev",
-      "a11y",
-      "seo",
-      "technicalwriting"
-    ],
-    "seoTitle": "UNLOCKING THE WEB:HOW SEMANTIC HTML SUPERCHARGES SEO AND ACCESSIBILITY",
-    "seoDescription": "INTRODUCTION 1.Content understanding and prioritisation:Tags such as header, main and footer clearly define the purpose and role of different content blocks ..."
   },
   {
     "title": "These three features would make Apple’s rumored AI smart glasses a huge winner",
@@ -167,44 +145,6 @@
     ],
     "seoTitle": "9to5Mac Daily: September 1, 2025 – CarPlay Ultra rumors, more",
     "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "🚀 I Just Launched My New Developer Portfolio",
-    "url": "https://dev.to/member_5687c261/i-just-launched-my-new-developer-portfolio-453f",
-    "publishedAt": "2025-09-01T19:05:47.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey everyone 👋, I’m Abir Biswas, a web designer & developer currently pursuing my B.Tech in CSE (AI). Dark Mode VS Light Mode I designed my portfolio to support both dark and light themes, because as developers we know the “dark mode vs light mode” debate never ends 😅. 🌙 Dark Mode: Sleek, modern, and great for late-night browsing. ☀️ Light Mode: Clean,...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F144f79oylcvj1qny55vp.png",
-    "video": null,
-    "author": "member_5687c261",
-    "tags": [
-      "webdev",
-      "portfolio",
-      "frontend",
-      "nextjs"
-    ],
-    "seoTitle": "🚀 I Just Launched My New Developer Portfolio",
-    "seoDescription": "Hey everyone 👋, I’m Abir Biswas, a web designer & developer currently pursuing my B.Tech in CSE (AI). Dark Mode VS Light Mode I designed my portfolio to sup..."
-  },
-  {
-    "title": "The Secret Weapon: AI as a \"Meta-Tool\" and Firebase Studio",
-    "url": "https://dev.to/progressiveprogrammer/the-secret-weapon-ai-as-a-meta-tool-and-firebase-studio-2phb",
-    "publishedAt": "2025-09-01T19:02:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You've heard about using AI for code completion and debugging. That's table stakes now. My approach was different. I didn't just use AI to help my users; I used AI to help me build the application itself. This is where tools like Firebase Studio became an absolute game-changer. Think of it as a meta-tool. I used AI to: Accelerate my boilerplate: From sett...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1dihqmi79hwca6j9emy9.png",
-    "video": null,
-    "author": "Aman Jaswal",
-    "tags": [
-      "vibecoding",
-      "firebase",
-      "webdev",
-      "ai"
-    ],
-    "seoTitle": "The Secret Weapon: AI as a \"Meta-Tool\" and Firebase Studio",
-    "seoDescription": "You've heard about using AI for code completion and debugging. That's table stakes now. My approach was different. I didn't just use AI to help my users; I u..."
   },
   {
     "title": "The 95 best Labor Day sales happening now",
@@ -623,5 +563,68 @@
     ],
     "seoTitle": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
     "seoDescription": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The s..."
+  },
+  {
+    "title": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
+    "url": "https://www.macrumors.com/2025/09/01/apple-previews-new-store-with-unified-counter/",
+    "publishedAt": "2025-09-01T13:15:13.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple has previewed its third retail location in India, Apple Hebbal. The new store is located at Phoenix Mall of Asia in Bengaluru. Apple Hebbal spans approximately 8,000 square feet and is staffed by 70 employees representing 15 states across India, according to Apple. It joins Apple BKC in Mumbai and Apple Saket in Delhi. Apple Hebbal features a unifie...",
+    "image": "https://images.macrumors.com/article-new/2025/09/Apple-Hebbal-India-media-preview-Genius-Bar-and-Apple-Pickup.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "India",
+      "Retail"
+    ],
+    "seoTitle": "Apple Previews New Store With Unified Genius Bar and Pickup Counter",
+    "seoDescription": "Apple has previewed its third retail location in India, Apple Hebbal. The new store is located at Phoenix Mall of Asia in Bengaluru. Apple Hebbal spans appro..."
+  },
+  {
+    "title": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
+    "url": "https://petapixel.com/2025/09/01/novachips-new-cfexpress-for-sony-cameras-is-cheaper-than-an-sd-card/",
+    "publishedAt": "2025-09-01T13:01:26.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just $140, which it says is less than some V60 and many V90 SD cards, but packs more than double the speed and nearly twice the storage capacity. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Novachips-New-CFexpress-For-Sony-Cameras-is-Cheaper-Than-an-SD-Card.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "News",
+      "cfexpress",
+      "cfexpresstypea",
+      "memorycard",
+      "novachips",
+      "sdcard",
+      "Sony"
+    ],
+    "seoTitle": "Novachips’ New CFexpress For Sony Cameras is Cheaper Than an SD Card",
+    "seoDescription": "Novachips, a South Korean-based memory manufacturer, announced that its new 400GB CFexpress Type A memory card -- the type used by Sony cameras -- costs just..."
+  },
+  {
+    "title": "Viltrox Has Joined the L-Mount Alliance",
+    "url": "https://petapixel.com/2025/09/01/viltrox-has-joined-the-l-mount-alliance/",
+    "publishedAt": "2025-09-01T13:00:53.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for the standard. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Viltrox-Has-Joined-the-L-Mount-Alliance.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Equipment",
+      "News",
+      "astrodesign",
+      "blackmagicdesign",
+      "dji",
+      "leica",
+      "leicalmount",
+      "leitz"
+    ],
+    "seoTitle": "Viltrox Has Joined the L-Mount Alliance",
+    "seoDescription": "Optics and camera technology manufacturer Viltrox has, alongside Leica, announced that it has joined the L-mount alliance and will develop future lenses for ..."
   }
 ]
