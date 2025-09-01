@@ -1,98 +1,155 @@
 [
   {
-    "title": "Job Hunter AI: Next-Gen Job Search with n8n Agent and Amazon Bedrock",
-    "url": "https://dev.to/aws-builders/job-hunter-ai-next-gen-job-search-with-n8n-agent-and-amazon-bedrock-mhe",
-    "publishedAt": "2025-09-01T05:13:57.000Z",
+    "title": "AI Job Matching Agent That Reads Your Resume (n8n + Bright Data Challenge)",
+    "url": "https://dev.to/vika2210/ai-job-matching-agent-that-reads-your-resume-n8n-bright-data-challenge-12hf",
+    "publishedAt": "2025-09-01T06:16:33.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Job Hunter AI is a revolutionary job search automation workflow that combines the power of Amazon Bedrock Chat Model with n8n AI Agent Node and Amazon Nova Premier - AWS's latest multimodal AI model. This cutting-edge system automatically: 🔍 Scrapes job listings from LinkedIn...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnkikkw1otywni75af73e.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data 👋 Hey everyone! This is my submission to the n8n + Bright Data AI Agent Challenge — and unlike most generic agents that just search jobs by title, mine does one thing differently: 💡 It reads your actual resume, builds a smart profile (persona), and then finds matching jobs —...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frynz88wp652jn4qexstg.png",
     "video": null,
-    "author": "Vivek V.",
+    "author": "vika2210",
     "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
+      "webdev",
+      "javascript",
       "ai",
-      "webdev"
+      "career"
     ],
-    "seoTitle": "Job Hunter AI: Next-Gen Job Search with n8n Agent and Amazon Bedrock",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data Job Hunter AI is a revolutionary job search automation workflow that combines..."
+    "seoTitle": "AI Job Matching Agent That Reads Your Resume (n8n + Bright Data Challenge)",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data 👋 Hey everyone! This is my submission to the n8n + Bright Data AI Agent Chal..."
   },
   {
-    "title": "Best AI Web App Builders",
-    "url": "https://dev.to/pimjo/best-ai-web-app-builders-5a83",
-    "publishedAt": "2025-09-01T05:01:13.000Z",
+    "title": "We built Meku to help devs go from idea to production-ready React + Tailwind apps in minutes. Excited to be part of the future of AI web app builders - your feedback means a lot 🚀",
+    "url": "https://dev.to/meku/we-built-meku-to-help-devs-go-from-idea-to-production-ready-react-tailwind-apps-in-minutes-3kih",
+    "publishedAt": "2025-09-01T06:16:20.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "11+ Best AI Web App Builders in 2025 Building a web app used to mean days of setup, boilerplate, and debugging. But in 2025, AI web app builders flipped the workflow. These tools take a plain prompt and generate production-ready projects, frontend, backend, database, and even deployment in minutes. Example prompt: Generate a Next.js SaaS app with user aut...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6szys53gyf66f4pr1mj1.png",
+    "summary": "11+ Best AI Web App Builders in 2025 Vinish Bhaskar for Pimjo ・ Sep 1 #webdev #programming #beginners #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F11188%2Fa96d2f1a-4362-4d7c-861a-0c0fe7968662.png",
     "video": null,
-    "author": "Vinish Bhaskar",
+    "author": "Meku",
     "tags": [
       "webdev",
       "programming",
       "beginners",
       "productivity"
     ],
-    "seoTitle": "Best AI Web App Builders",
-    "seoDescription": "11+ Best AI Web App Builders in 2025 Building a web app used to mean days of setup, boilerplate, and debugging. But in 2025, AI web app builders flipped the ..."
+    "seoTitle": "We built Meku to help devs go from idea to production-ready React + Tailwind apps in minutes. Excited to be part of the future of AI web app builders - your feedback means a lot 🚀",
+    "seoDescription": "11+ Best AI Web App Builders in 2025 Vinish Bhaskar for Pimjo ・ Sep 1 #webdev #programming #beginners #productivity"
   },
   {
-    "title": "14Forge: League of Legends Analytics Platform Built with n8n AI Agents and BrightData Web Scraping",
-    "url": "https://dev.to/ryoto_miyake/14forge-league-of-legends-analytics-platform-built-with-n8n-ai-agents-and-brightdata-web-scraping-573o",
-    "publishedAt": "2025-09-01T04:45:51.000Z",
+    "title": "Catch up on your favorite Youtube&Tiktok videos",
+    "url": "https://dev.to/waptik/catch-up-on-your-favorite-youtubetiktok-videos-lng",
+    "publishedAt": "2025-09-01T06:13:36.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "14Forge - LoL Performance Analytics Platform This is a submission for the AI Agents Challenge powered by n8n and Bright Data A revolutionary League of Legends analytics platform featuring unique 14-Minute Analysis™ technology, powered by n8n AI Agents and BrightData web scraping. Every League of Legends player faces three critical challenges: \"Why did I l...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjtt4i61abr3zqv0a6akv.png",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I have subscribed to some amazing youtube channels from my country Ghana which i always look forward to watching their videos daily. Most times, i just want to forward the video links somewhere to get a summary and have a before-taste of since most of their videos are often mo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbxexv1p44nddgsegc4fj.png",
     "video": null,
-    "author": "ryoto miyake",
+    "author": "Stephane Mensah",
     "tags": [
       "devchallenge",
       "n8nbrightdatachallenge",
       "ai",
       "webdev"
     ],
-    "seoTitle": "14Forge: League of Legends Analytics Platform Built with n8n AI Agents and BrightData Web Scraping",
-    "seoDescription": "14Forge - LoL Performance Analytics Platform This is a submission for the AI Agents Challenge powered by n8n and Bright Data A revolutionary League of Legend..."
+    "seoTitle": "Catch up on your favorite Youtube&Tiktok videos",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I have subscribed to some amazing youtube channels from my country Ghana whic..."
   },
   {
-    "title": "Sales-Ready Company Research Automation using n8n & Bright Data",
-    "url": "https://dev.to/himanshi_tolani_4d8c47c84/sales-ready-company-research-automation-using-n8n-bright-data-fbn",
-    "publishedAt": "2025-09-01T04:34:59.000Z",
+    "title": "What Technology Will Replace AI in the Future?",
+    "url": "https://dev.to/jahangir_/what-technology-will-replace-ai-in-the-future-1ll3",
+    "publishedAt": "2025-09-01T06:01:02.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an AI-powered sales research automation that creates detailed company research documents in under 12-15 minutes. Current Problem - Sales reps are spending 2+ hours manually researching each prospect before calls, often missing crucial information or showing up unprepar...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "summary": "What Technology Will Replace AI in the Future?** Artificial Intelligence (AI) has become the cornerstone of modern innovation. From ChatGPT writing code to autonomous vehicles navigating roads, AI dominates almost every conversation about technology. But history teaches us something important: no technology lasts forever as the ultimate solution. Just as ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdccuqoecopax5l912k66.jpeg",
     "video": null,
-    "author": "Himanshi Tolani",
+    "author": "Jahangir",
     "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Sales-Ready Company Research Automation using n8n & Bright Data",
-    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data I built an AI-powered sales research automation that creates detailed company..."
-  },
-  {
-    "title": "JavaScript : A Simple “Hello World”",
-    "url": "https://dev.to/ibrohimbek-dev/javascript-a-simple-hello-world-eme",
-    "publishedAt": "2025-09-01T03:46:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "JavaScript: A Simple “Hello World” This tradition is a rite of passage. It’s your first step into a larger universe, testing that your tools are working and that you understand the basic syntax of a new language. For us, that language is JavaScript — the language of the web. What is JavaScript? Your First JavaScript Program Open your browser (Chrome, Fire...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhl8qlq5t69hl54f86ch4.jpg",
-    "video": null,
-    "author": "Ibrohimbek Alisherov",
-    "tags": [
-      "coding",
-      "programming",
       "webdev",
-      "uz"
+      "programming",
+      "javascript",
+      "ai"
     ],
-    "seoTitle": "JavaScript : A Simple “Hello World”",
-    "seoDescription": "JavaScript: A Simple “Hello World” This tradition is a rite of passage. It’s your first step into a larger universe, testing that your tools are working and ..."
+    "seoTitle": "What Technology Will Replace AI in the Future?",
+    "seoDescription": "What Technology Will Replace AI in the Future?** Artificial Intelligence (AI) has become the cornerstone of modern innovation. From ChatGPT writing code to a..."
+  },
+  {
+    "title": "The Daily Gist: Never miss the best of Reddit again. Powered by Bright Data.",
+    "url": "https://dev.to/dhanushreddy29/the-daily-gist-never-miss-the-best-of-reddit-again-powered-by-bright-data-5238",
+    "publishedAt": "2025-09-01T05:24:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The Daily Gist is an n8n workflow that creates a 10- to 15-minute video summary of a subreddit's top posts. To do this, it uses the subreddit's RSS feed. The following video is an example generated by my n8n workflow for the subreddit r/ArtificialInteligence n8n Workflow Githu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs3orcg0e8s5ofgdj8dk1.png",
+    "video": null,
+    "author": "Dhanush Reddy",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "The Daily Gist: Never miss the best of Reddit again. Powered by Bright Data.",
+    "seoDescription": "This is a submission for the AI Agents Challenge powered by n8n and Bright Data The Daily Gist is an n8n workflow that creates a 10- to 15-minute video summa..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/naik_sejal/-42m9",
+    "publishedAt": "2025-09-01T05:22:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Sejal",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
+  },
+  {
+    "title": "Why i Ditched Agile and take this new approach",
+    "url": "https://dev.to/pranesh_patel/why-i-ditched-agile-and-take-this-new-approach-4mek",
+    "publishedAt": "2025-09-01T05:21:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Pranesh patel",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "Why i Ditched Agile and take this new approach",
+    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
+  },
+  {
+    "title": "Why i ditched Agile?",
+    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/why-i-ditched-agile-d59",
+    "publishedAt": "2025-09-01T05:20:19.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Bhavy K",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "Why i ditched Agile?",
+    "seoDescription": "Why I Ditched Agile and My Dev Team's Productivity Jumped 40% Pratham naik for Teamcamp ・ Sep 1 #webdev #productivity #devops #learning"
   },
   {
     "title": "Apple Preparing iOS 18.7 for iPhones as iOS 26 Release Date Nears",
@@ -547,49 +604,5 @@
     ],
     "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
     "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
-  },
-  {
-    "title": "The 20 best Labor Day deals you can grab for $100 or less",
-    "url": "https://www.theverge.com/tech/767824/best-labor-day-sales-cheap-tech-deals-under-100-2025",
-    "publishedAt": "2025-08-30T14:37:17.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoor gear to back-to-school essentials like the latest MacBook Air, we rounded up a guide of almost 100 deals we think are worth your time and money. But we get it. In times of tariffs and inflation, spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623451/DSCF0036.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "The 20 best Labor Day deals you can grab for $100 or less",
-    "seoDescription": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoo..."
-  },
-  {
-    "title": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "url": "https://9to5mac.com/2025/08/30/apple-ipad-a16-vs-ipad-air-m3-comparison-which-is-better-value/",
-    "publishedAt": "2025-08-30T13:46:40.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making it a rather interesting debate. With current deals, theres only $150 between these two iPads, which really begs the question: should you pay more for the , or save some money with the base iPad? more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/M2-iPad-Air-graphic.png?w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
-  },
-  {
-    "title": "Discounty adds some bite to cozy life sims",
-    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew Webster",
-    "tags": [],
-    "seoTitle": "Discounty adds some bite to cozy life sims",
-    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
   }
 ]
