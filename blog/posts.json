@@ -1,79 +1,98 @@
 [
   {
-    "title": "The End of Legacy Code? AI Refactoring at Scale",
-    "url": "https://dev.to/dct_technology/the-end-of-legacy-code-ai-refactoring-at-scale-2d1k",
-    "publishedAt": "2025-09-02T05:30:58.000Z",
+    "title": "Inference as a Service: Simplifying AI Model Deployment and Predictions",
+    "url": "https://dev.to/cyfutureai/inference-as-a-service-simplifying-ai-model-deployment-and-predictions-35pm",
+    "publishedAt": "2025-09-02T07:01:00.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Every developer has faced it: staring at a spaghetti mess of code written years ago, often by someone who’s no longer around. It works (kind of), but every time you touch it, something else breaks. Legacy code isn’t just an inconvenience—it’s a roadblock for innovation. But what if AI could finally change that? What if refactoring at scale wasn’t a dream ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn961a77znfoxbovnsgqr.png",
+    "summary": "Artificial Intelligence (AI) has become a cornerstone of modern technology across industries. However, deploying AI models for real-world applications often involves complex infrastructure and technical challenges. This is where Inference as a Service (IaaS) steps in, offering a cloud-based approach that simplifies the process of running AI models to gene...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8c1hhur3ipl1qw1xidg2.png",
     "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
+    "author": "Cyfuture AI",
     "tags": [
       "ai",
-      "refactoring",
-      "webdev",
-      "softwareengineering"
+      "gpu",
+      "cloud",
+      "webdev"
     ],
-    "seoTitle": "The End of Legacy Code? AI Refactoring at Scale",
-    "seoDescription": "Every developer has faced it: staring at a spaghetti mess of code written years ago, often by someone who’s no longer around. It works (kind of), but every t..."
+    "seoTitle": "Inference as a Service: Simplifying AI Model Deployment and Predictions",
+    "seoDescription": "Artificial Intelligence (AI) has become a cornerstone of modern technology across industries. However, deploying AI models for real-world applications often ..."
   },
   {
-    "title": "The Pull Request That Changed How I Think About Code",
-    "url": "https://dev.to/leena_malhotra_355340d89c/the-pull-request-that-changed-how-i-think-about-code-54fg",
-    "publishedAt": "2025-09-02T05:18:22.000Z",
+    "title": "Web API `Result` or `AggregatedGenericResultMessage.Web` how it works.",
+    "url": "https://dev.to/iamrzr/web-api-result-or-aggregatedgenericresultmessageweb-how-it-works-4e4f",
+    "publishedAt": "2025-09-02T06:52:36.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "The diff was 847 lines. Green additions everywhere, a few red deletions, and what looked like a complete rewrite of our user authentication system. I'd spent three weeks crafting what I considered a masterpiece of modern software engineering—elegant abstractions, design patterns applied with surgical precision, and enough architectural sophistication to m...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftpwhr5drbaahs4eqqwmd.png",
+    "summary": "Web Result is based on the simple implementation of Result(AggregatedGenericResultMessage). The entire implementation is like a wrapper to be used within a web project, which will be able to an easy-to-understand, structured, and filtered response as needed to be returned to the client. Everything can start by inheriting the methods from ResultBaseApiCont...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
     "video": null,
-    "author": "Leena Malhotra",
+    "author": "RzR",
+    "tags": [
+      "api",
+      "dotnet",
+      "productivity",
+      "webdev"
+    ],
+    "seoTitle": "Web API `Result` or `AggregatedGenericResultMessage.Web` how it works.",
+    "seoDescription": "Web Result is based on the simple implementation of Result(AggregatedGenericResultMessage). The entire implementation is like a wrapper to be used within a w..."
+  },
+  {
+    "title": "I Hate Dark Mode !!!!!!!",
+    "url": "https://dev.to/masterdevsabith/i-hate-dark-mode--jn7",
+    "publishedAt": "2025-09-02T06:50:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why is it so hard to implement a simple feature such as light and dark mode into next js, I tried next-themes all to found out that it is not working I hate THIS !!!!!!!!!!!!",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04lq8lj51wcd3e4i2xv9.webp",
+    "video": null,
+    "author": "Muhammed Sabith",
+    "tags": [
+      "discuss",
+      "webdev",
+      "javascript",
+      "tailwindcss"
+    ],
+    "seoTitle": "I Hate Dark Mode !!!!!!!",
+    "seoDescription": "Why is it so hard to implement a simple feature such as light and dark mode into next js, I tried next-themes all to found out that it is not working I hate ..."
+  },
+  {
+    "title": "HubSpot + BoldSign Integration: Make Contract Signing Easier",
+    "url": "https://dev.to/boldsign/hubspot-boldsign-integration-make-contract-signing-easier-30oa",
+    "publishedAt": "2025-09-02T06:49:10.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We’re excited to share the new HubSpot + BoldSign integration! This tool brings easy document signing right into your HubSpot CRM. No more switching between apps—now you can send, track, and manage signed documents all in one place. This saves time, cuts down on mistakes, and makes your work smoother. Here’s how the integration works and why teams are lov...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fboldsign.com%2Fwp-content%2Fuploads%2F2025%2F08%2FConnect-BoldSign.png",
+    "video": null,
+    "author": "Dhinesh Sekar",
+    "tags": [
+      "esignature",
+      "webdev",
+      "hubspot",
+      "integration"
+    ],
+    "seoTitle": "HubSpot + BoldSign Integration: Make Contract Signing Easier",
+    "seoDescription": "We’re excited to share the new HubSpot + BoldSign integration! This tool brings easy document signing right into your HubSpot CRM. No more switching between ..."
+  },
+  {
+    "title": "Python Uncovered: How Its Interpreter and Modes Power Faster Coding",
+    "url": "https://dev.to/vishal_more_02990955c9358/python-uncovered-how-its-interpreter-and-modes-power-faster-coding-541b",
+    "publishedAt": "2025-09-02T06:48:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The secret lies in its interpreter and the different modes it offers. Understanding these will not only make you a better Python programmer but also help you write and debug code more efficiently. Read More: Python Uncovered: How Its Interpreter and Modes Power Faster Coding What Is the Python Interpreter? The Python interpreter is the engine that execute...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkeo4ccy7o9s71orfbvck.png",
+    "video": null,
+    "author": "vishal more",
     "tags": [
       "webdev",
       "programming",
       "ai",
-      "discuss"
+      "beginners"
     ],
-    "seoTitle": "The Pull Request That Changed How I Think About Code",
-    "seoDescription": "The diff was 847 lines. Green additions everywhere, a few red deletions, and what looked like a complete rewrite of our user authentication system. I'd spent..."
-  },
-  {
-    "title": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
-    "url": "https://dev.to/yuktisays/mastering-access-tokens-refresh-tokens-from-origins-to-modern-authentication-5e3i",
-    "publishedAt": "2025-09-02T04:48:14.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you’re building for web or mobile, securing access is essential. And when it comes to handling authentication securely, Access Tokens and Refresh Tokens are at the heart of modern systems. In this articl...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzusga6fp4llhxdnhi84l.webp",
-    "video": null,
-    "author": "Yukti Sahu",
-    "tags": [
-      "webdev",
-      "programming",
-      "node",
-      "javascript"
-    ],
-    "seoTitle": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
-    "seoDescription": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you..."
-  },
-  {
-    "title": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
-    "url": "https://dev.to/naik_sejal/3-mistakes-that-killing-dev-agencies-and-how-to-solve-them-mention-in-this-article-5ei9",
-    "publishedAt": "2025-09-02T04:35:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Sejal",
-    "tags": [
-      "devchallenge",
-      "webdev",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
-    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
+    "seoTitle": "Python Uncovered: How Its Interpreter and Modes Power Faster Coding",
+    "seoDescription": "The secret lies in its interpreter and the different modes it offers. Understanding these will not only make you a better Python programmer but also help you..."
   },
   {
     "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
@@ -601,24 +620,5 @@
     ],
     "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
     "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
-  },
-  {
-    "title": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "url": "https://www.macrumors.com/2025/09/01/nearly-70-of-users-plan-to-upgrade-to-iphone-17/",
-    "publishedAt": "2025-09-01T15:24:53.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Apple's expected unveiling of the devices at its September 9 keynote. Smartphone price comparison platform SellCell surveyed over 2,000 U.S.-based ‌iPhone‌ users in August to assess upgrade interest and...",
-    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "SellCell"
-    ],
-    "seoTitle": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "seoDescription": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Ap..."
   }
 ]
