@@ -1,97 +1,70 @@
 [
   {
-    "title": "SDK vs API: Simple Guide for Developers",
-    "url": "https://dev.to/keploy/sdk-vs-api-simple-guide-for-developers-22f8",
-    "publishedAt": "2025-09-02T07:56:33.000Z",
+    "title": "Beancount is Personal Finance for Developers",
+    "url": "https://dev.to/paulsc/beancount-is-personal-finance-for-developers-5fad",
+    "publishedAt": "2025-09-02T09:14:46.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "APIs (Application Programming Interfaces) and SDKs (Software Development Kits) are vital components of modern software development. APIs enable applications to communicate and exchange data, while SDKs typically provide a comprehensive toolchain, libraries, and documentation to build features as robust as possible, or even an entire application. This guid...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxl79kgiv1oqcirm4ubvl.webp",
+    "summary": "Over the years, I have made multiple attempts at using software for tracking household finances, each one abandoned after an initial period of excitement. About 13 years ago, I was scrapping the Chase Bank mobile website to display a running total of monthly expenses and estimated available “discretionary cash” at the end of the month. I ran this periodic...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkj879ejjpvl6ql5vx4lb.webp",
     "video": null,
-    "author": "keploy",
+    "author": "Paul",
     "tags": [
-      "sdk",
-      "api",
-      "webdev",
-      "keploy"
+      "python",
+      "webdev"
     ],
-    "seoTitle": "SDK vs API: Simple Guide for Developers",
-    "seoDescription": "APIs (Application Programming Interfaces) and SDKs (Software Development Kits) are vital components of modern software development. APIs enable applications ..."
+    "seoTitle": "Beancount is Personal Finance for Developers",
+    "seoDescription": "Over the years, I have made multiple attempts at using software for tracking household finances, each one abandoned after an initial period of excitement. Ab..."
   },
   {
-    "title": "Discovering Premium Companionship Services in Guwahati",
-    "url": "https://dev.to/digitalmarketing99/discovering-premium-companionship-services-in-guwahati-33kh",
-    "publishedAt": "2025-09-02T07:37:01.000Z",
+    "title": "Google Play Games is about to show people what you play",
+    "url": "https://www.theverge.com/news/768886/google-play-games-update-player-profile-stats",
+    "publishedAt": "2025-09-02T08:58:50.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The update starts rolling out globally in September. Google is updating user profiles for its Play Games service on Android devices to display gaming stats, achievements, and social features. The changes include a suite of new capabilities for “showcasing and tracking your game progress and stats, new ways to build your gaming community, and allowing you ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/acastro_STK460_googlePlay_04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "Google Play Games is about to show people what you play",
+    "seoDescription": "The update starts rolling out globally in September. Google is updating user profiles for its Play Games service on Android devices to display gaming stats, ..."
+  },
+  {
+    "title": "The Future of Web Development: ReactJS Training Trends",
+    "url": "https://dev.to/vytcdccourse2_2441d35ccb6/exploring-the-impact-of-blockchain-technology-on-digital-marketing-33k6",
+    "publishedAt": "2025-09-02T08:29:31.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Guwahati, the vibrant capital of Assam, is a city where tradition meets modernity along the banks of the Brahmaputra River. Known for its cultural landmarks, bustling markets, and scenic beauty, it attracts tourists, business travelers, and locals seeking unique experiences. Among th e array of services available, Guwahati call girls and Guwahati escort s...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3t2ekcfid0otk27q85qs.jpg",
+    "summary": "ou must have wondered what was in store for web development. With the advancement in technology, so do the skills that were required to be on top of the game. One such exciting advancement in the recent past is ReactJS. This JavaScript library is changing the way we build user interfaces. With it, a surge is created in demand for ReactJS training. [](http...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6iiwlbnfivj1jobxd3lg.jpeg",
     "video": null,
-    "author": "digitalmarketing99",
+    "author": "vytcdccourse2",
     "tags": [
       "webdev",
-      "javascript",
+      "react"
+    ],
+    "seoTitle": "The Future of Web Development: ReactJS Training Trends",
+    "seoDescription": "ou must have wondered what was in store for web development. With the advancement in technology, so do the skills that were required to be on top of the game..."
+  },
+  {
+    "title": "From Zero to WordPress: Build Your Site Locally with LocalWP – Part 1",
+    "url": "https://dev.to/pawic/build-your-first-website-part-1-wordpress-setup-with-localwp-2noa",
+    "publishedAt": "2025-09-02T08:25:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When people first start building a website, they often run into the same wall: Where do I even begin? Writing code from scratch feels intimidating, but relying on a website builder can feel limiting. Many end up stuck in between—the desire to create something online versus the technical hurdles that seem to block the way. This is where WordPress changes t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1cs2gj7kfu00rnns8pjc.png",
+    "video": null,
+    "author": "Pawinphat Charoenrat",
+    "tags": [
+      "webdev",
+      "wordpress",
+      "web",
       "programming"
     ],
-    "seoTitle": "Discovering Premium Companionship Services in Guwahati",
-    "seoDescription": "Guwahati, the vibrant capital of Assam, is a city where tradition meets modernity along the banks of the Brahmaputra River. Known for its cultural landmarks,..."
-  },
-  {
-    "title": "Inference as a Service: Simplifying AI Model Deployment and Predictions",
-    "url": "https://dev.to/cyfutureai/inference-as-a-service-simplifying-ai-model-deployment-and-predictions-35pm",
-    "publishedAt": "2025-09-02T07:01:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Artificial Intelligence (AI) has become a cornerstone of modern technology across industries. However, deploying AI models for real-world applications often involves complex infrastructure and technical challenges. This is where Inference as a Service (IaaS) steps in, offering a cloud-based approach that simplifies the process of running AI models to gene...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8c1hhur3ipl1qw1xidg2.png",
-    "video": null,
-    "author": "Cyfuture AI",
-    "tags": [
-      "ai",
-      "gpu",
-      "cloud",
-      "webdev"
-    ],
-    "seoTitle": "Inference as a Service: Simplifying AI Model Deployment and Predictions",
-    "seoDescription": "Artificial Intelligence (AI) has become a cornerstone of modern technology across industries. However, deploying AI models for real-world applications often ..."
-  },
-  {
-    "title": "Web API `Result` or `AggregatedGenericResultMessage.Web` how it works.",
-    "url": "https://dev.to/iamrzr/web-api-result-or-aggregatedgenericresultmessageweb-how-it-works-4e4f",
-    "publishedAt": "2025-09-02T06:52:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Web Result is based on the simple implementation of Result(AggregatedGenericResultMessage). The entire implementation is like a wrapper to be used within a web project, which will be able to an easy-to-understand, structured, and filtered response as needed to be returned to the client. Everything can start by inheriting the methods from ResultBaseApiCont...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
-    "video": null,
-    "author": "RzR",
-    "tags": [
-      "api",
-      "dotnet",
-      "productivity",
-      "webdev"
-    ],
-    "seoTitle": "Web API `Result` or `AggregatedGenericResultMessage.Web` how it works.",
-    "seoDescription": "Web Result is based on the simple implementation of Result(AggregatedGenericResultMessage). The entire implementation is like a wrapper to be used within a w..."
-  },
-  {
-    "title": "I Hate Dark Mode !!!!!!!",
-    "url": "https://dev.to/masterdevsabith/i-hate-dark-mode--jn7",
-    "publishedAt": "2025-09-02T06:50:22.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Why is it so hard to implement a simple feature such as light and dark mode into next js, I tried next-themes all to found out that it is not working I hate THIS !!!!!!!!!!!!",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04lq8lj51wcd3e4i2xv9.webp",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "discuss",
-      "webdev",
-      "javascript",
-      "tailwindcss"
-    ],
-    "seoTitle": "I Hate Dark Mode !!!!!!!",
-    "seoDescription": "Why is it so hard to implement a simple feature such as light and dark mode into next js, I tried next-themes all to found out that it is not working I hate ..."
+    "seoTitle": "From Zero to WordPress: Build Your Site Locally with LocalWP – Part 1",
+    "seoDescription": "When people first start building a website, they often run into the same wall: Where do I even begin? Writing code from scratch feels intimidating, but relyi..."
   },
   {
     "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
@@ -619,5 +592,24 @@
     ],
     "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
     "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
+  },
+  {
+    "title": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
+    "url": "https://www.macrumors.com/2025/09/01/nearly-70-of-users-plan-to-upgrade-to-iphone-17/",
+    "publishedAt": "2025-09-01T15:24:53.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Apple's expected unveiling of the devices at its September 9 keynote. Smartphone price comparison platform SellCell surveyed over 2,000 U.S.-based ‌iPhone‌ users in August to assess upgrade interest and...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "iPhone 17",
+      "iPhone 17 Air",
+      "iPhone 17 Pro",
+      "SellCell"
+    ],
+    "seoTitle": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
+    "seoDescription": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Ap..."
   }
 ]
