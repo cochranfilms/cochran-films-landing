@@ -1,5 +1,57 @@
 [
   {
+    "title": "The tyranny of google page speed insights",
+    "url": "https://dev.to/street-air-5461/the-tyranny-of-google-page-speed-insights-54b",
+    "publishedAt": "2025-09-02T00:54:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "\"All good but why is the page speed insights score so low?\" The phrase that web developers just hate to hear. The last week I have spent trying to find a balance between having a SPA (Single Page Application) that loads once and then can be used, with one that is also SEO and crawler friendly, has deep links, and also has good page speed insight scores. O...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fos1h3l7qv81zq53vi4py.png",
+    "video": null,
+    "author": "Justin",
+    "tags": [
+      "webdev",
+      "astro"
+    ],
+    "seoTitle": "The tyranny of google page speed insights",
+    "seoDescription": "\"All good but why is the page speed insights score so low?\" The phrase that web developers just hate to hear. The last week I have spent trying to find a bal..."
+  },
+  {
+    "title": "This Macintosh programming book library will take you back, even if you weren’t there for it",
+    "url": "https://9to5mac.com/2025/09/01/this-macintosh-programming-book-library-will-take-you-back-even-if-you-werent-there-for-it/",
+    "publishedAt": "2025-09-02T00:53:32.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Over the weekend, Daring Fireball’s John Gruber linked to a fantastic collection of early Macintosh programming books (via Michael Tsai). It is a carefully assembled catalog of more than 150 books from as early as 1983, covering everything from AppleSoft BASIC, to gaming programming for the Mac. Even if you weren’t around for any of that, believe me: this...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/01/Macintosh-40th-anniversary.webp?w=1200",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "This Macintosh programming book library will take you back, even if you weren’t there for it",
+    "seoDescription": "Over the weekend, Daring Fireball’s John Gruber linked to a fantastic collection of early Macintosh programming books (via Michael Tsai). It is a carefully a..."
+  },
+  {
+    "title": "Don't judge this version of the submission, but it was driving me insane that I didn't have time to actually finish the post that I had already spent so much time organizing and writing this past week. This is that version, check out how it really went!",
+    "url": "https://dev.to/anchildress1/dont-judge-this-version-of-the-submission-but-it-was-driving-me-insane-that-i-didnt-have-time-to-56o6",
+    "publishedAt": "2025-09-01T23:41:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons) Ashley Childress ・ Sep 1 #devchallenge #n8nbrightdatachallenge #ai #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3224358%2F7f675c78-6aa0-466a-a5a7-c3e35440d53a.png",
+    "video": null,
+    "author": "Ashley Childress",
+    "tags": [
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
+    ],
+    "seoTitle": "Don't judge this version of the submission, but it was driving me insane that I didn't have time to actually finish the post that I had already spent so much time organizing and writing this past week. This is that version, check out how it really went!",
+    "seoDescription": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons) Ashley Childress ・ Sep 1 #devchallenge #n8nbrightdatachallenge #ai #webdev"
+  },
+  {
     "title": "Dica Java: Variáveis de Ambiente #010",
     "url": "https://dev.to/oigorrudel/dica-java-variaveis-de-ambiente-010-5ckk",
     "publishedAt": "2025-09-01T23:00:28.000Z",
@@ -566,53 +618,5 @@
     ],
     "seoTitle": "Review: $399 Beosound A1 Portable Speaker Shows Why Bang & Olufsen Commands a Premium",
     "seoDescription": "Bang & Olufsen recently released the third generation of its award-winning Beosound A1 portable Bluetooth speaker, and after playing with it for a good month..."
-  },
-  {
-    "title": "The time picker in iPhone alarms has a bizarre hidden design element",
-    "url": "https://9to5mac.com/2025/09/01/the-time-picker-in-iphone-alarms-has-a-bizarre-hidden-design-element/",
-    "publishedAt": "2025-09-01T14:15:26.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "We wouldn’t think many aspects of iPhone user interface design could be more straightforward than the time picker in the alarm function – but it appears we would be wrong … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/The-time-picker-in-iPhone-alarms-has-a-bizarre-hidden-design-element.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "The time picker in iPhone alarms has a bizarre hidden design element",
-    "seoDescription": "We wouldn’t think many aspects of iPhone user interface design could be more straightforward than the time picker in the alarm function – but it appears we w..."
-  },
-  {
-    "title": "Here’s everything new Apple TV+ has coming in September",
-    "url": "https://9to5mac.com/2025/09/01/heres-everything-new-apple-tv-has-coming-in-september/",
-    "publishedAt": "2025-09-01T14:02:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple TV+ has been having its best year ever, and shows no signs of letting up. The fall lineup on Apple TV+ is easily the streamer’s strongest to date, and it all kicks off in September. Major returning series like Slow Horses and The Morning Show are big highlights, but Apple also has two movies and an intriguing new crime thriller series premiering. He...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tv-plus-tvos26-screensaver-03.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Here’s everything new Apple TV+ has coming in September",
-    "seoDescription": "Apple TV+ has been having its best year ever, and shows no signs of letting up. The fall lineup on Apple TV+ is easily the streamer’s strongest to date, and ..."
-  },
-  {
-    "title": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
-    "url": "https://9to5mac.com/2025/09/01/end-of-an-era-as-the-last-11-inch-macbook-air-is-now-officially-obsolete/",
-    "publishedAt": "2025-09-01T13:29:58.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The smallest of Apple’s MacBooks had long proved a popular choice with many, for two different reasons … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/End-of-an-era-as-the-last-11-inch-MacBook-is-now-officially-obsolete.jpeg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "End of an era as the last 11-inch MacBook Air is now officially obsolete",
-    "seoDescription": "The last 11-inch MacBook Air model ever made has now been declared officially obsolete by Apple, some nine years after it was last sold by the company. The s..."
   }
 ]
