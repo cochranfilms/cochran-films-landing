@@ -1,5 +1,42 @@
 [
   {
+    "title": "SDK vs API: Simple Guide for Developers",
+    "url": "https://dev.to/keploy/sdk-vs-api-simple-guide-for-developers-22f8",
+    "publishedAt": "2025-09-02T07:56:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "APIs (Application Programming Interfaces) and SDKs (Software Development Kits) are vital components of modern software development. APIs enable applications to communicate and exchange data, while SDKs typically provide a comprehensive toolchain, libraries, and documentation to build features as robust as possible, or even an entire application. This guid...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxl79kgiv1oqcirm4ubvl.webp",
+    "video": null,
+    "author": "keploy",
+    "tags": [
+      "sdk",
+      "api",
+      "webdev",
+      "keploy"
+    ],
+    "seoTitle": "SDK vs API: Simple Guide for Developers",
+    "seoDescription": "APIs (Application Programming Interfaces) and SDKs (Software Development Kits) are vital components of modern software development. APIs enable applications ..."
+  },
+  {
+    "title": "Discovering Premium Companionship Services in Guwahati",
+    "url": "https://dev.to/digitalmarketing99/discovering-premium-companionship-services-in-guwahati-33kh",
+    "publishedAt": "2025-09-02T07:37:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Guwahati, the vibrant capital of Assam, is a city where tradition meets modernity along the banks of the Brahmaputra River. Known for its cultural landmarks, bustling markets, and scenic beauty, it attracts tourists, business travelers, and locals seeking unique experiences. Among th e array of services available, Guwahati call girls and Guwahati escort s...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3t2ekcfid0otk27q85qs.jpg",
+    "video": null,
+    "author": "digitalmarketing99",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming"
+    ],
+    "seoTitle": "Discovering Premium Companionship Services in Guwahati",
+    "seoDescription": "Guwahati, the vibrant capital of Assam, is a city where tradition meets modernity along the banks of the Brahmaputra River. Known for its cultural landmarks,..."
+  },
+  {
     "title": "Inference as a Service: Simplifying AI Model Deployment and Predictions",
     "url": "https://dev.to/cyfutureai/inference-as-a-service-simplifying-ai-model-deployment-and-predictions-35pm",
     "publishedAt": "2025-09-02T07:01:00.000Z",
@@ -55,44 +92,6 @@
     ],
     "seoTitle": "I Hate Dark Mode !!!!!!!",
     "seoDescription": "Why is it so hard to implement a simple feature such as light and dark mode into next js, I tried next-themes all to found out that it is not working I hate ..."
-  },
-  {
-    "title": "HubSpot + BoldSign Integration: Make Contract Signing Easier",
-    "url": "https://dev.to/boldsign/hubspot-boldsign-integration-make-contract-signing-easier-30oa",
-    "publishedAt": "2025-09-02T06:49:10.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "We’re excited to share the new HubSpot + BoldSign integration! This tool brings easy document signing right into your HubSpot CRM. No more switching between apps—now you can send, track, and manage signed documents all in one place. This saves time, cuts down on mistakes, and makes your work smoother. Here’s how the integration works and why teams are lov...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fboldsign.com%2Fwp-content%2Fuploads%2F2025%2F08%2FConnect-BoldSign.png",
-    "video": null,
-    "author": "Dhinesh Sekar",
-    "tags": [
-      "esignature",
-      "webdev",
-      "hubspot",
-      "integration"
-    ],
-    "seoTitle": "HubSpot + BoldSign Integration: Make Contract Signing Easier",
-    "seoDescription": "We’re excited to share the new HubSpot + BoldSign integration! This tool brings easy document signing right into your HubSpot CRM. No more switching between ..."
-  },
-  {
-    "title": "Python Uncovered: How Its Interpreter and Modes Power Faster Coding",
-    "url": "https://dev.to/vishal_more_02990955c9358/python-uncovered-how-its-interpreter-and-modes-power-faster-coding-541b",
-    "publishedAt": "2025-09-02T06:48:38.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The secret lies in its interpreter and the different modes it offers. Understanding these will not only make you a better Python programmer but also help you write and debug code more efficiently. Read More: Python Uncovered: How Its Interpreter and Modes Power Faster Coding What Is the Python Interpreter? The Python interpreter is the engine that execute...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkeo4ccy7o9s71orfbvck.png",
-    "video": null,
-    "author": "vishal more",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Python Uncovered: How Its Interpreter and Modes Power Faster Coding",
-    "seoDescription": "The secret lies in its interpreter and the different modes it offers. Understanding these will not only make you a better Python programmer but also help you..."
   },
   {
     "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
