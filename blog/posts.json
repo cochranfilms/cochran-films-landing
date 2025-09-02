@@ -1,5 +1,21 @@
 [
   {
+    "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
+    "url": "https://9to5mac.com/2025/09/01/stolen-luggage-at-lax-recovered-thanks-to-apple-airtag/",
+    "publishedAt": "2025-09-02T01:29:13.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "An Apple helped a West Hollywood man recover his stolen suitcase after landing at Los Angeles International Airport last week. Here’s what happened. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/02/airtag-in-case.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Stolen luggage at LAX recovered thanks to Apple AirTag",
+    "seoDescription": "An Apple helped a West Hollywood man recover his stolen suitcase after landing at Los Angeles International Airport last week. Here’s what happened. more…"
+  },
+  {
     "title": "The tyranny of google page speed insights",
     "url": "https://dev.to/street-air-5461/the-tyranny-of-google-page-speed-insights-54b",
     "publishedAt": "2025-09-02T00:54:22.000Z",
@@ -69,25 +85,6 @@
     ],
     "seoTitle": "Dica Java: Variáveis de Ambiente #010",
     "seoDescription": "Aposto que você já fez a definição de properties dos seus projetos Spring como no exemplo abaixo: application.my-variable=${MY_VARIABLE:haha} spring.applicat..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/ayomide_osho_be743bacaf96/-516d",
-    "publishedAt": "2025-09-01T22:48:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data Benny ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F608386%2Fcec26f41-9540-4c32-87cf-e1fb1216269f.jpg",
-    "video": null,
-    "author": "Ayomide Osho",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Building a Competitive 'Deal Hunter' Agent Using n8n + BrightData Real-Time Web Data Benny ・ Aug 31 #devchallenge #n8nbrightdatachallenge #ai #webdev"
   },
   {
     "title": "WhatsApp Status is getting a Close Friends feature",
