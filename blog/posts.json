@@ -1,5 +1,100 @@
 [
   {
+    "title": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
+    "url": "https://dev.to/yuktisays/mastering-access-tokens-refresh-tokens-from-origins-to-modern-authentication-5e3i",
+    "publishedAt": "2025-09-02T04:48:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you’re building for web or mobile, securing access is essential. And when it comes to handling authentication securely, Access Tokens and Refresh Tokens are at the heart of modern systems. In this articl...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzusga6fp4llhxdnhi84l.webp",
+    "video": null,
+    "author": "Yukti Sahu",
+    "tags": [
+      "webdev",
+      "programming",
+      "node",
+      "javascript"
+    ],
+    "seoTitle": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
+    "seoDescription": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you..."
+  },
+  {
+    "title": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
+    "url": "https://dev.to/naik_sejal/3-mistakes-that-killing-dev-agencies-and-how-to-solve-them-mention-in-this-article-5ei9",
+    "publishedAt": "2025-09-02T04:35:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Sejal",
+    "tags": [
+      "devchallenge",
+      "webdev",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
+    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/-46da",
+    "publishedAt": "2025-09-02T04:33:20.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Bhavy K",
+    "tags": [
+      "devchallenge",
+      "webdev",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
+  },
+  {
+    "title": "After Audit 100 Dev agencies we find this 3 Mistakes which killing Dev agencies and also mention solutions",
+    "url": "https://dev.to/pratham_naik_project_manager/after-audit-100-dev-agencies-we-find-this-3-mistakes-which-killing-dev-agencies-and-also-mention-4e21",
+    "publishedAt": "2025-09-02T04:32:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "devchallenge",
+      "webdev",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "After Audit 100 Dev agencies we find this 3 Mistakes which killing Dev agencies and also mention solutions",
+    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
+  },
+  {
+    "title": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them",
+    "url": "https://dev.to/teamcamp/we-audited-100-dev-agencies-the-3-mistakes-killing-89-of-them-3go1",
+    "publishedAt": "2025-09-02T04:31:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "After spending six months deep-diving into the operations of 100 development agencies, I discovered something shocking. 89% of them were making the same three critical mistakes. These aren't minor issues or nice-to-have improvements. These are agency killers that drain profits, burn out teams, and lose clients faster than a memory leak crashes a server. T...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpz6p2skeadrvxb9w77kc.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "devchallenge",
+      "webdev",
+      "devops",
+      "productivity"
+    ],
+    "seoTitle": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them",
+    "seoDescription": "After spending six months deep-diving into the operations of 100 development agencies, I discovered something shocking. 89% of them were making the same thre..."
+  },
+  {
     "title": "check out this case study!!",
     "url": "https://dev.to/dipti_moryani_08e62702314/check-out-this-case-study-4j0o",
     "publishedAt": "2025-09-02T03:59:30.000Z",
@@ -57,25 +152,6 @@
     "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
   },
   {
-    "title": "10 Best Practices For Smart Contract Coding",
-    "url": "https://dev.to/metana/10-best-practices-for-smart-contract-coding-415f",
-    "publishedAt": "2025-09-02T03:06:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Solidity, the language powering Ethereum smart contracts, offers immense potential for building decentralized applications (dApps). However, the unique blockchain environment demands a different approach to coding compared to traditional programming. Navigating gas costs, security vulnerabilities, and efficient state management is crucial for crafting rob...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmetana-website-rpd-3cgq.ue1.rapydapps.cloud%2Fwp-content%2Fuploads%2F2024%2F01%2FCopyright-amico-1024x1024.png",
-    "video": null,
-    "author": "Metana",
-    "tags": [
-      "smartcontract",
-      "coding",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "10 Best Practices For Smart Contract Coding",
-    "seoDescription": "Solidity, the language powering Ethereum smart contracts, offers immense potential for building decentralized applications (dApps). However, the unique block..."
-  },
-  {
     "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
     "url": "https://9to5mac.com/2025/09/01/stolen-luggage-at-lax-recovered-thanks-to-apple-airtag/",
     "publishedAt": "2025-09-02T01:29:13.000Z",
@@ -90,23 +166,6 @@
     ],
     "seoTitle": "Stolen luggage at LAX recovered thanks to Apple AirTag",
     "seoDescription": "An Apple helped a West Hollywood man recover his stolen suitcase after landing at Los Angeles International Airport last week. Here’s what happened. more…"
-  },
-  {
-    "title": "The tyranny of google page speed insights",
-    "url": "https://dev.to/street-air-5461/the-tyranny-of-google-page-speed-insights-54b",
-    "publishedAt": "2025-09-02T00:54:22.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "\"All good but why is the page speed insights score so low?\" The phrase that web developers just hate to hear. The last week I have spent trying to find a balance between having a SPA (Single Page Application) that loads once and then can be used, with one that is also SEO and crawler friendly, has deep links, and also has good page speed insight scores. O...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fos1h3l7qv81zq53vi4py.png",
-    "video": null,
-    "author": "Justin",
-    "tags": [
-      "webdev",
-      "astro"
-    ],
-    "seoTitle": "The tyranny of google page speed insights",
-    "seoDescription": "\"All good but why is the page speed insights score so low?\" The phrase that web developers just hate to hear. The last week I have spent trying to find a bal..."
   },
   {
     "title": "This Macintosh programming book library will take you back, even if you weren’t there for it",
@@ -570,53 +629,5 @@
     ],
     "seoTitle": "Apple Slashes 2025 MLS Season Pass to as Low as $25",
     "seoDescription": "Apple has significantly discounted the MLS Season Pass for the remainder of the 2025 season, offering the annual subscription at $29, or $25 for Apple TV+ su..."
-  },
-  {
-    "title": "Report: Apple Demands Suppliers Switch to Robotics for Manufacturing",
-    "url": "https://www.macrumors.com/2025/09/01/apple-demanding-suppliers-switch-to-robotics/",
-    "publishedAt": "2025-09-01T15:45:27.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple is significantly accelerating the rollout of automation and robotics across its manufacturing supply chain, DigiTimes reports. While Apple has advocated for increased automation in supplier facilities for over two years, sources familiar with the matter say that Apple now requires automation as a standard prerequisite for awarding manufacturing cont...",
-    "image": "https://images.macrumors.com/article-new/2022/05/apple-china-iphone-factory.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "DigiTimes"
-    ],
-    "seoTitle": "Report: Apple Demands Suppliers Switch to Robotics for Manufacturing",
-    "seoDescription": "Apple is significantly accelerating the rollout of automation and robotics across its manufacturing supply chain, DigiTimes reports. While Apple has advocate..."
-  },
-  {
-    "title": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
-    "url": "https://9to5mac.com/2025/09/01/iphone-17-pro-apple-not-so-clear-case/",
-    "publishedAt": "2025-09-01T15:44:46.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/not-so-clear-case.webp?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
-    "seoDescription": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…"
-  },
-  {
-    "title": "iPhone 17 isn’t the only big Apple moment this September",
-    "url": "https://9to5mac.com/2025/09/01/apple-september-2025-dates-iphone-17-ios-26/",
-    "publishedAt": "2025-09-01T15:29:07.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are several key dates to anticipate for Apple fans, even beyond the major iPhone 17 event set for September 9. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/awe-dropping-event.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
-    "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
   }
 ]
