@@ -1,5 +1,81 @@
 [
   {
+    "title": "check out this case study!!",
+    "url": "https://dev.to/dipti_moryani_08e62702314/check-out-this-case-study-4j0o",
+    "publishedAt": "2025-09-02T03:59:30.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "IT Vendor Spend Analysis Dipti Moryani ・ Sep 2 #webdev #programming #ai #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
+    "video": null,
+    "author": "Dipti Moryani",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "check out this case study!!",
+    "seoDescription": "IT Vendor Spend Analysis Dipti Moryani ・ Sep 2 #webdev #programming #ai #beginners"
+  },
+  {
+    "title": "IT Vendor Spend Analysis",
+    "url": "https://dev.to/dipti_moryani_08e62702314/it-vendor-spend-analysis-43a2",
+    "publishedAt": "2025-09-02T03:59:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Cut Waste. Control Costs. Gain Clarity. We helped a leading food manufacturing company take control of their IT vendor spend with a customized analytics dashboard built for transparency and action. The challenge? Rising monthly expenses and no clear visibility into where the money was going. A tailored dashboard that gave the finance and procurement teams...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhycwv2ryfenr1blbqzfz.png",
+    "video": null,
+    "author": "Dipti Moryani",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "IT Vendor Spend Analysis",
+    "seoDescription": "Cut Waste. Control Costs. Gain Clarity. We helped a leading food manufacturing company take control of their IT vendor spend with a customized analytics dash..."
+  },
+  {
+    "title": "Critical Risk: Seeyon OA Arbitrary Password Reset Vulnerability",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/critical-risk-seeyon-oa-arbitrary-password-reset-vulnerability-22ee",
+    "publishedAt": "2025-09-02T03:19:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. Seeyon OA is a widely used enterprise Office Automation (OA) platform th...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fun3zfwvf4ao13meohw10.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "webdev",
+      "vulnerabilities",
+      "cybersecurity",
+      "safeline"
+    ],
+    "seoTitle": "Critical Risk: Seeyon OA Arbitrary Password Reset Vulnerability",
+    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
+  },
+  {
+    "title": "10 Best Practices For Smart Contract Coding",
+    "url": "https://dev.to/metana/10-best-practices-for-smart-contract-coding-415f",
+    "publishedAt": "2025-09-02T03:06:02.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Solidity, the language powering Ethereum smart contracts, offers immense potential for building decentralized applications (dApps). However, the unique blockchain environment demands a different approach to coding compared to traditional programming. Navigating gas costs, security vulnerabilities, and efficient state management is crucial for crafting rob...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmetana-website-rpd-3cgq.ue1.rapydapps.cloud%2Fwp-content%2Fuploads%2F2024%2F01%2FCopyright-amico-1024x1024.png",
+    "video": null,
+    "author": "Metana",
+    "tags": [
+      "smartcontract",
+      "coding",
+      "programming",
+      "webdev"
+    ],
+    "seoTitle": "10 Best Practices For Smart Contract Coding",
+    "seoDescription": "Solidity, the language powering Ethereum smart contracts, offers immense potential for building decentralized applications (dApps). However, the unique block..."
+  },
+  {
     "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
     "url": "https://9to5mac.com/2025/09/01/stolen-luggage-at-lax-recovered-thanks-to-apple-airtag/",
     "publishedAt": "2025-09-02T01:29:13.000Z",
@@ -47,44 +123,6 @@
     ],
     "seoTitle": "This Macintosh programming book library will take you back, even if you weren’t there for it",
     "seoDescription": "Over the weekend, Daring Fireball’s John Gruber linked to a fantastic collection of early Macintosh programming books (via Michael Tsai). It is a carefully a..."
-  },
-  {
-    "title": "Don't judge this version of the submission, but it was driving me insane that I didn't have time to actually finish the post that I had already spent so much time organizing and writing this past week. This is that version, check out how it really went!",
-    "url": "https://dev.to/anchildress1/dont-judge-this-version-of-the-submission-but-it-was-driving-me-insane-that-i-didnt-have-time-to-56o6",
-    "publishedAt": "2025-09-01T23:41:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons) Ashley Childress ・ Sep 1 #devchallenge #n8nbrightdatachallenge #ai #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3224358%2F7f675c78-6aa0-466a-a5a7-c3e35440d53a.png",
-    "video": null,
-    "author": "Ashley Childress",
-    "tags": [
-      "devchallenge",
-      "n8nbrightdatachallenge",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "Don't judge this version of the submission, but it was driving me insane that I didn't have time to actually finish the post that I had already spent so much time organizing and writing this past week. This is that version, check out how it really went!",
-    "seoDescription": "Underfoot: The ChatPot for Hidden Places (and Why I Don’t Do Hackathons) Ashley Childress ・ Sep 1 #devchallenge #n8nbrightdatachallenge #ai #webdev"
-  },
-  {
-    "title": "Dica Java: Variáveis de Ambiente #010",
-    "url": "https://dev.to/oigorrudel/dica-java-variaveis-de-ambiente-010-5ckk",
-    "publishedAt": "2025-09-01T23:00:28.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Aposto que você já fez a definição de properties dos seus projetos Spring como no exemplo abaixo: application.my-variable=${MY_VARIABLE:haha} spring.application.name=env-variables-ex Temos uma propriedade customizada e uma default do Spring. A customizada com um ternário: se for informada uma variável de ambiente, se não um valor default. A default com va...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2jwvxutjuyc9c5gwruqv.png",
-    "video": null,
-    "author": "Igor Rudel",
-    "tags": [
-      "java",
-      "webdev",
-      "programming",
-      "tip"
-    ],
-    "seoTitle": "Dica Java: Variáveis de Ambiente #010",
-    "seoDescription": "Aposto que você já fez a definição de properties dos seus projetos Spring como no exemplo abaixo: application.my-variable=${MY_VARIABLE:haha} spring.applicat..."
   },
   {
     "title": "WhatsApp Status is getting a Close Friends feature",
@@ -580,40 +618,5 @@
     ],
     "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
     "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
-  },
-  {
-    "title": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "url": "https://www.macrumors.com/2025/09/01/nearly-70-of-users-plan-to-upgrade-to-iphone-17/",
-    "publishedAt": "2025-09-01T15:24:53.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Apple's expected unveiling of the devices at its September 9 keynote. Smartphone price comparison platform SellCell surveyed over 2,000 U.S.-based ‌iPhone‌ users in August to assess upgrade interest and...",
-    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "SellCell"
-    ],
-    "seoTitle": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "seoDescription": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Ap..."
-  },
-  {
-    "title": "Review: $399 Beosound A1 Portable Speaker Shows Why Bang & Olufsen Commands a Premium",
-    "url": "https://www.macrumors.com/review/bang-and-olufsen-a1-beosound-speaker-review/",
-    "publishedAt": "2025-09-01T15:06:38.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Bang & Olufsen recently released the third generation of its award-winning Beosound A1 portable Bluetooth speaker, and after playing with it for a good month, I'm scrambling to come up with negatives. Sure, at $399 it's pricey, and this ultraportable unit from B&O is unashamedly pitched at the premium end of the Bluetooth speaker market, but the Danish hi...",
-    "image": "https://images.macrumors.com/article-new/2025/05/beoplay-a1-speaker-3rd-gen-1.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Bang &amp; Olufsen"
-    ],
-    "seoTitle": "Review: $399 Beosound A1 Portable Speaker Shows Why Bang & Olufsen Commands a Premium",
-    "seoDescription": "Bang & Olufsen recently released the third generation of its award-winning Beosound A1 portable Bluetooth speaker, and after playing with it for a good month..."
   }
 ]
