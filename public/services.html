@@ -832,6 +832,92 @@
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
     }
+    
+    /* Portfolio preview gallery (Airtable-backed) */
+    .services-portfolio-section {
+      margin-top: 80px;
+    }
+    .services-portfolio-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .services-portfolio-title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .services-portfolio-subtitle {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.2);
+      background: rgba(15,23,42,0.5);
+      box-shadow: var(--shadow-sm);
+      aspect-ratio: 16 / 9;
+      cursor: pointer;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-overlay {
+      position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: space-between;
+      padding: 10px 12px; background: linear-gradient(to top, rgba(2,6,23,0.75), rgba(2,6,23,0)); opacity: 0; transition: var(--transition-fast);
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 0; }
+    .gallery-play-btn { width: 36px; height: 36px; border-radius: 50%; background: var(--brand-gold); color: #000; display: grid; place-items: center; box-shadow: var(--glow-gold); }
+    .gallery-info { margin-left: 8px; color: var(--text-secondary); font-size: 12px; }
+    .gallery-info h4 { margin: 0; font-size: 13px; color: var(--text-primary); font-weight: 700; }
+    
+    /* Elevated card presentation */
+    .cf-card { border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(148,163,184,0.18); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: box-shadow .2s ease, border-color .2s ease; }
+    .cf-card:hover { transform: none; border-color: rgba(148,163,184,0.22); box-shadow: 0 12px 32px rgba(0,0,0,0.26); }
+    .cf-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: rgba(2,6,23,0.6); }
+    .cf-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transform: none; transition: none; }
+    .cf-card:hover .cf-thumb img { transform: none; filter: none; }
+    .cf-chip { position: absolute; top: 10px; left: 10px; padding: 6px 10px; font-size: 12px; border-radius: 999px; background: rgba(2,6,23,0.7); color: var(--text-secondary); border: 1px solid rgba(148,163,184,0.25); backdrop-filter: blur(6px); }
+    .cf-badge { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-gold), #ffd166); color: #0a0a0a; box-shadow: var(--glow-gold); }
+    .cf-action { position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,178,0,0.9); color: #0a0a0a; opacity: 0.85; transform: none; transition: none; box-shadow: var(--glow-gold); }
+    .cf-card:hover .cf-action { opacity: 0.85; transform: none; }
+    .cf-body { padding: 12px 14px 14px; }
+    .cf-title { margin: 0 0 6px; font-size: 15px; line-height: 1.35; font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em; }
+    .cf-sub { margin: 0 0 10px; color: var(--text-secondary); font-size: 12px; }
+    .cf-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--text-muted); }
+    .cf-pill { padding: 4px 8px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.25); background: rgba(15,23,42,0.5); color: var(--text-secondary); max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cf-date { color: var(--text-muted); }
+    
+    /* Skeletons */
+    .cf-skel { border-radius: 16px; overflow: hidden; border: 1px solid rgba(148,163,184,0.15); background: rgba(2,6,23,0.5); }
+    .cf-skel-top { aspect-ratio: 16/9; background: linear-gradient(90deg, rgba(30,41,59,0.6) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.6) 75%); background-size: 400% 100%; animation: shimmer 1.6s infinite; }
+    .cf-skel-body { padding: 12px 14px 16px; }
+    .cf-skel-line { height: 10px; border-radius: 6px; background: linear-gradient(90deg, rgba(30,41,59,0.6) 25%, rgba(51,65,85,0.6) 50%, rgba(30,41,59,0.6) 75%); background-size: 400% 100%; animation: shimmer 1.6s infinite; margin-bottom: 8px; }
+    .cf-skel-line.lg { height: 14px; border-radius: 8px; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* Masonry layout for Photography */
+    .masonry-grid { column-count: 4; column-gap: 14px; }
+    .masonry-item { break-inside: avoid; margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(148,163,184,0.2); background: rgba(15,23,42,0.5); }
+    .masonry-item img { width: 100%; height: auto; display: block; object-fit: contain; background: rgba(2,6,23,0.6); }
+    @media (max-width: 1200px) { .masonry-grid { column-count: 3; } }
+    @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+    @media (max-width: 520px) { .masonry-grid { column-count: 1; } }
   </style>
 </head>
 <body>
@@ -967,6 +1053,45 @@
           <p class="service-description">
             Build Your Website in Just 2 DAYS — With Expert Support Every Step of the Way. Join our in-person Website Workshop in Atlanta.
           </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Airtable-powered portfolio previews -->
+    <section id="portfolio-previews" class="section services-portfolio-section">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <h2 class="section-title">Recent Work</h2>
+        <p class="section-subtitle">Live previews populated from our Airtable portfolio.</p>
+      </div>
+      
+      <div class="services-portfolio-group" style="display:grid; gap:26px;">
+        <div>
+          <div class="services-portfolio-header">
+            <h3 class="services-portfolio-title"><i class="fas fa-video" style="color: var(--brand-gold);"></i> Video Production</h3>
+            <p class="services-portfolio-subtitle">Rotates daily</p>
+          </div>
+          <div class="gallery-grid" id="videoProductionGridServices"></div>
+        </div>
+        <div>
+          <div class="services-portfolio-header">
+            <h3 class="services-portfolio-title"><i class="fas fa-code" style="color: var(--brand-gold);"></i> Web Development</h3>
+            <p class="services-portfolio-subtitle">Live links where available</p>
+          </div>
+          <div class="gallery-grid" id="webDevelopmentGridServices"></div>
+        </div>
+        <div>
+          <div class="services-portfolio-header">
+            <h3 class="services-portfolio-title"><i class="fas fa-camera" style="color: var(--brand-gold);"></i> Photography</h3>
+            <p class="services-portfolio-subtitle">Tap to view</p>
+          </div>
+          <div class="masonry-grid" id="photographyGridServices"></div>
+        </div>
+        <div>
+          <div class="services-portfolio-header">
+            <h3 class="services-portfolio-title"><i class="fas fa-palette" style="color: var(--brand-gold);"></i> Brand Development</h3>
+            <p class="services-portfolio-subtitle">Identity systems and assets</p>
+          </div>
+          <div class="gallery-grid" id="brandDevelopmentGridServices"></div>
         </div>
       </div>
     </section>
@@ -1275,6 +1400,7 @@
         initializeServicePackageBuilder();
         await initializeStripeAndConfig();
         updateStripeCartDisplay(); // Initialize cart display
+        initializeServicesPortfolioGrids();
       });
     } else {
       (async () => {
@@ -1282,6 +1408,7 @@
         initializeServicePackageBuilder();
         await initializeStripeAndConfig();
         updateStripeCartDisplay(); // Initialize cart display
+        initializeServicesPortfolioGrids();
       })();
     }
 
@@ -2889,6 +3016,121 @@
     
     // Make testCart globally available
     window.testCart = testCart;
+    
+    // ===============================
+    // Airtable previews on Services
+    // ===============================
+    // Minimal renderer so airtable-cms can delegate to it
+    window.portfolioSlideshow = window.portfolioSlideshow || {};
+    window.portfolioSlideshow.populateGrid = function(gridId, items) {
+      const grid = document.getElementById(gridId);
+      if (!grid) return;
+      const placeholder = 'data:image/svg+xml;base64,' + btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="#0b1220"/></svg>`);
+      // Skeletons while we render
+      if (!Array.isArray(items) || items.length === 0) {
+        grid.innerHTML = new Array(6).fill(0).map(() => `
+          <div class="cf-skel">
+            <div class="cf-skel-top"></div>
+            <div class="cf-skel-body">
+              <div class="cf-skel-line lg" style="width:70%"></div>
+              <div class="cf-skel-line" style="width:45%"></div>
+            </div>
+          </div>
+        `).join('');
+        return;
+      }
+      const isPhotoGrid = gridId.toLowerCase().includes('photo');
+      if (isPhotoGrid) {
+        // Photography: image-only masonry tiles, preserve ratios
+        grid.innerHTML = items.map((it) => {
+          const img = (window.airtableCMS && window.airtableCMS.resolveThumbnailSrc ? window.airtableCMS.resolveThumbnailSrc(it) : (it['image_url'] || it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail)) || placeholder;
+          const alt = it.Title || 'Photo';
+          return `
+            <div class="masonry-item">
+              <img src="${img}" alt="${alt}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'" />
+            </div>
+          `;
+        }).join('');
+        Array.from(grid.querySelectorAll('.masonry-item img')).forEach((el) => {
+          el.addEventListener('click', () => {
+            if (window.airtableCMS && window.airtableCMS.openImageModal) {
+              window.airtableCMS.openImageModal(el.src, el.alt || '');
+            }
+          });
+        });
+        return;
+      }
+      grid.innerHTML = items.map((it) => {
+        const img = (window.airtableCMS && window.airtableCMS.resolveThumbnailSrc ? window.airtableCMS.resolveThumbnailSrc(it) : (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail)) || placeholder;
+        const isVideo = !!it.playbackUrl || (it.ServiceCategory === 'Video Production');
+        const isWeb = it.ServiceCategory === 'Web Development' && !!it.URL;
+        const icon = isVideo ? 'play' : (isWeb ? 'external-link-alt' : 'eye');
+        const title = it.Title || it.title || '';
+        const sub = it.Description || it['Tech Stack'] || it.Client || '';
+        const date = (it.UploadDate || '').split('T')[0] || '';
+        const featured = it['Is Featured'] === true || it['Is Featured'] === 'true';
+        const chip = (it.RealCategory && it.RealCategory !== 'Video Production') ? it.RealCategory : (it.ServiceCategory || it.Category || '');
+        return `
+          <div class="cf-card" data-service-category="${chip}" ${isVideo && it.playbackUrl ? `data-playback-url="${it.playbackUrl}"` : ''}>
+            <div class="cf-thumb">
+              <img src="${img}" alt="${title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fit=crop'">
+              ${chip ? `<span class="cf-chip">${chip}</span>` : ''}
+              ${featured ? `<span class="cf-badge" title="Featured"><i class="fas fa-star"></i></span>` : ''}
+              <div class="cf-action"><i class="fas fa-${icon}"></i></div>
+            </div>
+            <div class="cf-body">
+              <h4 class="cf-title">${title}</h4>
+              ${sub ? `<p class="cf-sub">${sub}</p>` : ''}
+              <div class="cf-meta">
+                ${it.Client ? `<span class="cf-pill"><i class=\"fas fa-user\"></i> ${it.Client}</span>` : `${it['Tech Stack'] ? `<span class=\"cf-pill\"><i class=\"fas fa-code\"></i> ${it['Tech Stack']}</span>` : '<span></span>'}`}
+                ${date ? `<span class="cf-date">${date}</span>` : '<span></span>'}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      // Click handlers
+      Array.from(grid.children).forEach((el, idx) => {
+        const it = items[idx];
+        el.addEventListener('click', () => {
+          if ((it.playbackUrl || el.dataset.playbackUrl) && window.airtableCMS && window.airtableCMS.openVideoPopup) {
+            const data = {
+              title: it.Title || '',
+              description: it.Description || '',
+              videoUrl: it.playbackUrl || el.dataset.playbackUrl,
+              playbackUrl: it.playbackUrl || el.dataset.playbackUrl,
+              category: it.ServiceCategory || it.Category || 'Video Production',
+              realCategory: it.RealCategory || '',
+              role: it.Role || '',
+              client: it.Client || '',
+              timeline: it.Timeline || ''
+            };
+            window.airtableCMS.openVideoPopup(data);
+          } else if (it.URL) {
+            window.open(it.URL, '_blank');
+          } else if (window.airtableCMS && window.airtableCMS.openImageModal) {
+            const src = (it['Thumbnail Image'] || it.thumbnailUrl || it.Image || it.image || it.thumbnail || placeholder);
+            window.airtableCMS.openImageModal(src, it.Title || '');
+          }
+        });
+      });
+    };
+    
+    function initializeServicesPortfolioGrids() {
+      const tryInit = (attempt = 0) => {
+        if (window.airtableCMS && typeof window.airtableCMS.loadPortfolioItems === 'function') {
+          window.airtableCMS.loadPortfolioItems('Video Production', 'videoProductionGridServices', 6);
+          window.airtableCMS.loadPortfolioItems('Web Development', 'webDevelopmentGridServices', 6);
+          window.airtableCMS.loadPortfolioItems('Photography', 'photographyGridServices', 6);
+          window.airtableCMS.loadPortfolioItems('Brand Development', 'brandDevelopmentGridServices', 6);
+          return;
+        }
+        if (attempt < 15) {
+          setTimeout(() => tryInit(attempt + 1), 200);
+        }
+      };
+      tryInit();
+    }
   </script>
 </body>
 </html>
