@@ -1,5 +1,143 @@
 [
   {
+    "title": "Literally Everything You Need to Know About System Design",
+    "url": "https://dev.to/zorous/literally-everything-you-need-to-know-about-system-design-3a8",
+    "publishedAt": "2025-09-02T13:10:51.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Whether you're a software engineer, system architect, or a student, system design is a crucial skill for building robust, scalable, and reliable applications. It's the art of creating a blueprint for a software system that meets specific requirements. This guide will walk you through the fundamental principles, common architectures, and essential concepts...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa1ov4f65q6xcfso9pnjk.png",
+    "video": null,
+    "author": "Oussama Belhadi",
+    "tags": [
+      "systemdesign",
+      "webdev",
+      "architecture",
+      "networking"
+    ],
+    "seoTitle": "Literally Everything You Need to Know About System Design",
+    "seoDescription": "Whether you're a software engineer, system architect, or a student, system design is a crucial skill for building robust, scalable, and reliable applications..."
+  },
+  {
+    "title": "How to Configure monitoring for compute services",
+    "url": "https://dev.to/subair09/how-to-configure-monitoring-for-compute-services-24p2",
+    "publishedAt": "2025-09-02T13:09:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Monitoring compute services is a critical aspect of ensuring the performance, availability, and reliability of cloud-based infrastructure. As organizations increasingly rely on virtual machines and cloud applications, proactive monitoring provides valuable insights into system health, detects anomalies, and minimizes downtime. This project fo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbwk66ruzyqg7usigq2f5.PNG",
+    "video": null,
+    "author": "SUBAIR NURUDEEN ADEWALE",
+    "tags": [
+      "azure",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "How to Configure monitoring for compute services",
+    "seoDescription": "Introduction Monitoring compute services is a critical aspect of ensuring the performance, availability, and reliability of cloud-based infrastructure. As or..."
+  },
+  {
+    "title": "My favorite cooking gadget is getting a big upgrade",
+    "url": "https://www.theverge.com/news/768614/thermomix-tm7-us-release-price-specs-launch-date",
+    "publishedAt": "2025-09-02T13:05:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Thermomix TM7 is the next generation of one the most versatile cooking appliances you can buy. I’ve owned a Thermomix TM6 for about five years, and I use it multiple times a day for everything from making smoothies in the morning to steaming veggies for dinner, whipping up a sauce, or cooking some rice. It’s the most versatile smart gadget in my kitch...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Thermomix_TM7-Lifestyle_Photo_TM7InYourKitchen_72.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "My favorite cooking gadget is getting a big upgrade",
+    "seoDescription": "The Thermomix TM7 is the next generation of one the most versatile cooking appliances you can buy. I’ve owned a Thermomix TM6 for about five years, and I use..."
+  },
+  {
+    "title": "Canon Teases Brand New EOS Cinema Camera",
+    "url": "https://petapixel.com/2025/09/02/canon-teases-brand-new-eos-cinema-camera/",
+    "publishedAt": "2025-09-02T13:03:28.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Canon is teasing a new camera announcement on September 9. Initial indications point toward a video-centric camera model. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/canon-teaser-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "Canon",
+      "canoneoscinema",
+      "canonvideo",
+      "eoscinema",
+      "hybrid",
+      "hybridcamera"
+    ],
+    "seoTitle": "Canon Teases Brand New EOS Cinema Camera",
+    "seoDescription": "Canon is teasing a new camera announcement on September 9. Initial indications point toward a video-centric camera model. [Read More]"
+  },
+  {
+    "title": "Difference Between Two Live Clock Codes in JavaScript",
+    "url": "https://dev.to/megha_m/difference-between-two-live-clock-codes-in-javascript-1hen",
+    "publishedAt": "2025-09-02T12:50:48.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey guys! I recently tried two different versions of a live clock. Both of them work perfectly, but they look and behave a little differently. Let’s check out the differences. Code 1 – Styled and Semantic Clock In this version, I used the element along with a datetime attribute for accessibility. I also added some CSS to make it look modern and profession...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs70rff0ertqk0d5i8i5t.png",
+    "video": null,
+    "author": "Megha M",
+    "tags": [
+      "liveclock",
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "Difference Between Two Live Clock Codes in JavaScript",
+    "seoDescription": "Hey guys! I recently tried two different versions of a live clock. Both of them work perfectly, but they look and behave a little differently. Let’s check ou..."
+  },
+  {
+    "title": "Samsung’s trifold might be launching pretty soon",
+    "url": "https://www.theverge.com/news/768918/samsungs-trifold-might-be-launching-pretty-soon",
+    "publishedAt": "2025-09-02T12:38:26.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "This concept trifold was previously shown off by Samsung Display. We know officially that Samsung is planning to launch its first trifold phone this year, and recent rumors suggest that might mean either this month or next. Just don’t expect it to appear at this week’s Unpacked event, which promises products ranging from “premium AI tablets to the newest ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/DSC09909_processed.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Samsung’s trifold might be launching pretty soon",
+    "seoDescription": "This concept trifold was previously shown off by Samsung Display. We know officially that Samsung is planning to launch its first trifold phone this year, an..."
+  },
+  {
+    "title": "The Excitement of Satta Matka: Results, Tips, and Strategic Insights",
+    "url": "https://dev.to/digitalmarketing99/the-excitement-of-satta-matka-results-tips-and-strategic-insights-2oe0",
+    "publishedAt": "2025-09-02T12:30:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Satta Matka, a game deeply rooted in India’s gambling heritage, continues to captivate players with its thrilling blend of luck and strategy. Keywords like milan night matka results, rajdhani night satta tips, sat tamatka business guessing, and kalyan night matka chart highlight the vibrant markets and tools that define this iconic lottery game in 2025. E...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Folppfl8s42n3zxhcqf76.webp",
+    "video": null,
+    "author": "digitalmarketing99",
+    "tags": [
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "The Excitement of Satta Matka: Results, Tips, and Strategic Insights",
+    "seoDescription": "Satta Matka, a game deeply rooted in India’s gambling heritage, continues to captivate players with its thrilling blend of luck and strategy. Keywords like m..."
+  },
+  {
+    "title": "Dolby Vision 2 goes beyond HDR with more AI and &#8216;authentic motion&#8217; smoothing",
+    "url": "https://www.theverge.com/news/768842/dolby-vision-2-launch-content-intelligence-tone-mapping",
+    "publishedAt": "2025-09-02T12:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "More than 10 years after the launch of Dolby Vision, the next generation of the HDR format is here, and it aims to do more than just optimize tone and brightness level for different scenes. The new version, called Dolby Vision 2, has new “Content Intelligence” tools that use AI to automatically optimize your TV based on what you’re watching, where you’re ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/dolby-vision-2.png?quality=90&#038;strip=all&#038;crop=11.95454479703,0,85.432527797395,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Dolby Vision 2 goes beyond HDR with more AI and &#8216;authentic motion&#8217; smoothing",
+    "seoDescription": "More than 10 years after the launch of Dolby Vision, the next generation of the HDR format is here, and it aims to do more than just optimize tone and bright..."
+  },
+  {
     "title": "J.Crew’s AI-Generated Fashion Images Look a Lot Like Real Photos",
     "url": "https://petapixel.com/2025/09/02/j-crews-ai-generated-fashion-images-look-a-lot-like-real-photos/",
     "publishedAt": "2025-09-02T12:24:51.000Z",
@@ -21,44 +159,6 @@
     ],
     "seoTitle": "J.Crew’s AI-Generated Fashion Images Look a Lot Like Real Photos",
     "seoDescription": "The clothing brand J.Crew has been accused of AI-generating a series of pictures which, at first glance, look as if they were taken by an actual photographer..."
-  },
-  {
-    "title": "Choose Flowers for Every Beautiful Moment by Flowers Mart UAE",
-    "url": "https://dev.to/danish_ali_25c87013b463c9/choose-flowers-for-every-beautiful-moment-by-flowers-mart-uae-p1j",
-    "publishedAt": "2025-09-02T11:58:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Flowers Mart is not a nearest flower shop by any means but an epitome of creativity, elegance, and sentimental moments. We are superior at capturing the best nature has to offer and turning them into works of art that bring smiles to the faces of everyone who gets them. Our breathtaking collections have made us a renowned name as one of the best florists ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5ljf3wngg851eo6qh8pn.webp",
-    "video": null,
-    "author": "Danish Ali",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Choose Flowers for Every Beautiful Moment by Flowers Mart UAE",
-    "seoDescription": "Flowers Mart is not a nearest flower shop by any means but an epitome of creativity, elegance, and sentimental moments. We are superior at capturing the best..."
-  },
-  {
-    "title": "How to Select the Right Crypto Arbitrage Trading Bot Development Service Provider?",
-    "url": "https://dev.to/tomhardy/how-to-select-the-right-crypto-arbitrage-trading-bot-development-service-provider-2k03",
-    "publishedAt": "2025-09-02T11:58:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction In the fast-paced world of cryptocurrency trading, arbitrage bot has become essential tools for both bot businesses and individual traders. These automated systems capitalize on the price differences in exchanges, offering profitable opportunities in real time. However, the success of such a bot depends a lot on choosing the right crypto arbi...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F06pelliytmm23n0mmlhb.jpg",
-    "video": null,
-    "author": "Tom Hardy S",
-    "tags": [
-      "webdev",
-      "blockchain",
-      "tradingbot",
-      "arbitrage"
-    ],
-    "seoTitle": "How to Select the Right Crypto Arbitrage Trading Bot Development Service Provider?",
-    "seoDescription": "Introduction In the fast-paced world of cryptocurrency trading, arbitrage bot has become essential tools for both bot businesses and individual traders. Thes..."
   },
   {
     "title": "AirPods Pro 3 Said to Gain Two Health Sensors, But Translation Delayed",
@@ -503,118 +603,5 @@
     ],
     "seoTitle": "5 Best MacGuffins in Movies",
     "seoDescription": "A MacGuffin is the object everyone in a movie wants but doesn't really matter to the audience. Sometimes we don't even know what the MacGuffin is, and that's..."
-  },
-  {
-    "title": "Alfred Hitchcock’s Best Screenplays You Can Read Today",
-    "url": "https://nofilmschool.com/alfred-hitchcock-screenplays",
-    "publishedAt": "2025-09-01T17:10:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply understood how to work with writers and bring the best out of their stories. And he was constantly pushing the envelope. Today, I want to bring you an assortment of the screenplays he chose to direct tha...",
-    "image": "https://nofilmschool.com/media-library/read-some-alfred-hitchcock-screenplays.png?id=34061348&width=980",
-    "video": "https://www.youtube.com/embed/lj1z8M7bfgM?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Script download",
-      "Screenplay download",
-      "Alfred hitchcock",
-      "Alfred hitchcock"
-    ],
-    "seoTitle": "Alfred Hitchcock’s Best Screenplays You Can Read Today",
-    "seoDescription": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply und..."
-  },
-  {
-    "title": "Break Free From Closed Autofocus Ecosystems With This New Phase-Detection Technology",
-    "url": "https://nofilmschool.com/tilta-phase-detection-autofocus",
-    "publishedAt": "2025-09-01T17:00:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Are you ready for a new era of imaging? Well, good. That’s great to hear! Tilta has news that should be quite appealing to you. The company has announced that it is ready to unveil its latest AF solution as it aims to merge phase-detection autofocus technology with the precision control ecosystem of its Nucleus-M II Wireless Control System. Let’s look at ...",
-    "image": "https://nofilmschool.com/media-library/tilta-phase-detection-autofocus.jpg?id=61540094&width=980",
-    "video": "https://www.youtube.com/embed/gzq62HLWeEI?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Phase-detection autofocus",
-      "Autofocus adapter",
-      "Tilta",
-      "Autofocus",
-      "Tilta phase-detection autofocus"
-    ],
-    "seoTitle": "Break Free From Closed Autofocus Ecosystems With This New Phase-Detection Technology",
-    "seoDescription": "Are you ready for a new era of imaging? Well, good. That’s great to hear! Tilta has news that should be quite appealing to you. The company has announced tha..."
-  },
-  {
-    "title": "Meet a 17-Year-Old Photographer Revealing the Hidden Side of Wildlife",
-    "url": "https://petapixel.com/2025/09/01/meet-the-17-year-old-wildlife-photographer-revealing-the-hidden-side-of-nature/",
-    "publishedAt": "2025-09-01T17:00:03.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "While many teenagers are absorbed in screens, Denat Lahi spends his nights and early mornings tracking foxes and pine martens. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Spotlight-Denat-Lahi-PetaPixel-BG-3-Panel.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Inspiration",
-      "Spotlight",
-      "denatlahi",
-      "lahi",
-      "spotlight",
-      "wildlife"
-    ],
-    "seoTitle": "Meet a 17-Year-Old Photographer Revealing the Hidden Side of Wildlife",
-    "seoDescription": "While many teenagers are absorbed in screens, Denat Lahi spends his nights and early mornings tracking foxes and pine martens. [Read More]"
-  },
-  {
-    "title": "Why the 'Deadpool 2' Director Left 'Jurassic World Rebirth'",
-    "url": "https://nofilmschool.com/why-the-deadpool-2-director-left-jurassic-world-rebirth",
-    "publishedAt": "2025-09-01T16:50:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "David Leitch and Kelly McCormick, who are married, are also the principals behind stunt-spectacular film company 87North. They produced the John Wick series, Nobody and its sequel Nobody 2, Bullet Train, Violent Night, The Fall Guy, and more. They're a production company with a very specific approach to storytelling, and you know exactly what you're getti...",
-    "image": "https://nofilmschool.com/media-library/why-the-deadpool-2-director-left-jurassic-world-rebirth.jpg?id=61540210&width=980",
-    "video": "https://www.youtube.com/embed/-5X2pt95cIo?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Jurassic world: rebirth",
-      "David leitch",
-      "Kelly mccormick"
-    ],
-    "seoTitle": "Why the 'Deadpool 2' Director Left 'Jurassic World Rebirth'",
-    "seoDescription": "David Leitch and Kelly McCormick, who are married, are also the principals behind stunt-spectacular film company 87North. They produced the John Wick series,..."
-  },
-  {
-    "title": "5 Movies to Watch on Labor Day",
-    "url": "https://nofilmschool.com/movies-to-watch-labor-day",
-    "publishedAt": "2025-09-01T16:40:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Labor Day is all about barbecues and back to school, the last gasp of summer vacation before we all head into the busyness of fall. There's something cinematic about that bittersweet end-of-summer feeling that filmmakers have been mining for decades. A time of transition is perfect story fodder. We’ve got five movies set during Labor Day you can watch to ...",
-    "image": "https://nofilmschool.com/media-library/stand-by-me.png?id=61522859&width=980",
-    "video": "https://www.youtube.com/embed/QOQL3Xi8dPE?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Labor day",
-      "Best movies"
-    ],
-    "seoTitle": "5 Movies to Watch on Labor Day",
-    "seoDescription": "Labor Day is all about barbecues and back to school, the last gasp of summer vacation before we all head into the busyness of fall. There's something cinemat..."
-  },
-  {
-    "title": "Writing An Adaptation? This Checklist Will Help",
-    "url": "https://nofilmschool.com/adaptation-checklist",
-    "publishedAt": "2025-09-01T16:28:14.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "As a screenwriter, I can tell you that writing an adapted screenplay is no easy feat. You have to seek out the heart and soul of the source material and then be merciless when it comes to bending and tweaking it so it can fit the big screen. Sometimes, you can get lost doing that. That's why I created this checklist for writers to use when creating an ada...",
-    "image": "https://nofilmschool.com/media-library/writing-an-adaptation-this-checklist-will-help.jpg?id=34048299&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Adaptation",
-      "Screenwriting checklist",
-      "Adapted screenplay"
-    ],
-    "seoTitle": "Writing An Adaptation? This Checklist Will Help",
-    "seoDescription": "As a screenwriter, I can tell you that writing an adapted screenplay is no easy feat. You have to seek out the heart and soul of the source material and then..."
   }
 ]
