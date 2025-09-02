@@ -1,12 +1,44 @@
+const AIRTABLE_CONFIG = require('../../../../airtable.config.js');
+
 export async function GET() {
-  const baseId = 'appk9HCj1kWzK1JzQ';
-  const tableName = 'Imported table';
+  const baseId = AIRTABLE_CONFIG.BASES['Brand Development'];
+  const tableName = AIRTABLE_CONFIG.TABLE_NAME;
   const apiKey = process.env.AIRTABLE_API_KEY_BRAND || process.env.AIRTABLE_API_KEY || process.env.AIRTABLE_TOKEN;
+  
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: 'Airtable API key not configured' }), { status: 500 });
+    return new Response(JSON.stringify({ error: 'Airtable API key not configured' }), { 
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
-  const resp = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`,( { headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' } }));
-  const text = await resp.text();
-  if (!resp.ok) return new Response(text, { status: resp.status });
-  return new Response(text, { headers: { 'content-type': 'application/json', 'cache-control': 's-maxage=600, stale-while-revalidate=86400' } });
+
+  try {
+    const resp = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`, {
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!resp.ok) {
+      return new Response(JSON.stringify({ error: 'Failed to fetch from Airtable' }), {
+        status: resp.status,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    const data = await resp.json();
+    return new Response(JSON.stringify(data), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 's-maxage=300, stale-while-revalidate=600'
+      }
+    });
+  } catch (error) {
+    console.error('Brand Development API error:', error);
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 }
