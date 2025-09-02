@@ -1,22 +1,94 @@
 [
   {
-    "title": "FERARITOTO",
-    "url": "https://dev.to/ferraritotolink/feraritoto-383d",
-    "publishedAt": "2025-09-02T10:12:56.000Z",
+    "title": "TransUnion data breach hits millions, but Gmail security reports are false",
+    "url": "https://9to5mac.com/2025/09/02/transunion-data-breach-hits-millions-but-gmail-security-reports-are-false/",
+    "publishedAt": "2025-09-02T10:57:12.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A TransUnion data breach has exposed sensitive personal information for millions of US consumers, including dates of birth and social security numbers. However, reports of a major Gmail security problem affecting all 2.5 billion users are false, though loosely based on a far more contained incident back in June … more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/TransUnion-data-breach-hits-millions-but-Gmail-security-reports-are-false.webp?w=1500",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "TransUnion data breach hits millions, but Gmail security reports are false",
+    "seoDescription": "A TransUnion data breach has exposed sensitive personal information for millions of US consumers, including dates of birth and social security numbers. Howev..."
+  },
+  {
+    "title": "SaaS Performance Optimization: Speed, Reliability, and Scaling",
+    "url": "https://dev.to/aditya_c90047909cf234c949/saas-performance-optimization-speed-reliability-and-scaling-26k2",
+    "publishedAt": "2025-09-02T10:45:26.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "LINK MASUK : [https://www.vaagooye.com/] Kalau lagi suntuk butuh hiburan, Bukan hanya soal menang, LINK DI SINI : https://www.vaagooye.com/",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fck3evmihd2bt48sc270y.jpg",
+    "summary": "Read More: SaaS Performance Optimization: Speed, Reliability, and Scaling This guide explores three pillars of SaaS performance optimization—speed, reliability, and scaling—and how you can strengthen each to ensure long-term success. Speed: The Foundation of User Experience Speed is the first thing users notice. A slow-loading app discourages engagement a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx2xxqzf0sy79bbpn7rf8.png",
     "video": null,
-    "author": "Ferraritotolink",
+    "author": "aditya",
     "tags": [
       "webdev",
       "programming",
-      "javascript",
-      "ai"
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "FERARITOTO",
-    "seoDescription": "LINK MASUK : [https://www.vaagooye.com/] Kalau lagi suntuk butuh hiburan, Bukan hanya soal menang, LINK DI SINI : https://www.vaagooye.com/"
+    "seoTitle": "SaaS Performance Optimization: Speed, Reliability, and Scaling",
+    "seoDescription": "Read More: SaaS Performance Optimization: Speed, Reliability, and Scaling This guide explores three pillars of SaaS performance optimization—speed, reliabili..."
+  },
+  {
+    "title": "Understanding API Gateways in Modern Microservices Architecture day 42 of system design basics",
+    "url": "https://dev.to/vincenttommi/understanding-api-gateways-in-modern-microservices-architecture-1f1e",
+    "publishedAt": "2025-09-02T10:40:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today's landscape of distributed systems, particularly those leveraging microservices architectures, an API Gateway serves as a critical component for managing and streamlining interactions between clients and backend services. Acting as a centralized entry point, it handles essential tasks such as authentication, rate limiting, request routing, and mo...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz9d3i6erpgn5p93sa6lm.png",
+    "video": null,
+    "author": "Vincent Tommi",
+    "tags": [
+      "programming",
+      "webdev",
+      "beginners",
+      "distributedsystems"
+    ],
+    "seoTitle": "Understanding API Gateways in Modern Microservices Architecture day 42 of system design basics",
+    "seoDescription": "In today's landscape of distributed systems, particularly those leveraging microservices architectures, an API Gateway serves as a critical component for man..."
+  },
+  {
+    "title": "Apple to Curb iPhone 12 Radiation With EU-Wide Software Update",
+    "url": "https://www.macrumors.com/2025/09/02/eu-order-apple-software-update-iphone-12-radiation/",
+    "publishedAt": "2025-09-02T10:16:35.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple on Monday said it will issue a software update for iPhone 12 users throughout the European Union to reduce radiation levels, bringing them in line with the bloc's health standards. The update is equivalent to a September 2023 change Apple made in France to bring the iPhone 12 into compliance with a testing protocol used by the country's regulators. ...",
+    "image": "https://images.macrumors.com/article-new/2025/03/Purple-iPhone-12-Mini.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "European Commission",
+      "European Union"
+    ],
+    "seoTitle": "Apple to Curb iPhone 12 Radiation With EU-Wide Software Update",
+    "seoDescription": "Apple on Monday said it will issue a software update for iPhone 12 users throughout the European Union to reduce radiation levels, bringing them in line with..."
+  },
+  {
+    "title": "Woman Falls Off 300-Foot Tower While Taking Selfie After Bungee Jump",
+    "url": "https://petapixel.com/2025/09/02/woman-falls-off-300-foot-tower-while-taking-selfie-after-bungee-jump/",
+    "publishedAt": "2025-09-02T10:15:22.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "A woman in Russia slipped and fell to her death while taking a selfie next to her son atop a 300-foot tower. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/Woman-Dies-Selfie-Russian.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "deathbyselfie",
+      "russia",
+      "selficide",
+      "selfiedeath"
+    ],
+    "seoTitle": "Woman Falls Off 300-Foot Tower While Taking Selfie After Bungee Jump",
+    "seoDescription": "A woman in Russia slipped and fell to her death while taking a selfie next to her son atop a 300-foot tower. [Read More]"
   },
   {
     "title": "Apple @ Work Podcast: Legal Hold solves a key problem with macOS backups",
@@ -33,25 +105,6 @@
     ],
     "seoTitle": "Apple @ Work Podcast: Legal Hold solves a key problem with macOS backups",
     "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-g..."
-  },
-  {
-    "title": "How to implement Dark and Light mode in Next.js, No need of frustration. Here's a detailed simple tutorial",
-    "url": "https://dev.to/masterdevsabith/how-to-implement-dark-and-light-mode-in-nextjs-no-need-of-frustration-heres-a-detailed-simple-2823",
-    "publishedAt": "2025-09-02T09:31:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Dark-Light Mode in Next Js Muhammed Sabith ・ Sep 2 #webdev #javascript #programming #tutorial",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3454655%2F99a24e85-c529-4d5e-a029-d4647dc27dd4.png",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "tutorial"
-    ],
-    "seoTitle": "How to implement Dark and Light mode in Next.js, No need of frustration. Here's a detailed simple tutorial",
-    "seoDescription": "Dark-Light Mode in Next Js Muhammed Sabith ・ Sep 2 #webdev #javascript #programming #tutorial"
   },
   {
     "title": "Google Play Games is about to show people what you play",
@@ -561,56 +614,5 @@
     ],
     "seoTitle": "Report: Apple Demands Suppliers Switch to Robotics for Manufacturing",
     "seoDescription": "Apple is significantly accelerating the rollout of automation and robotics across its manufacturing supply chain, DigiTimes reports. While Apple has advocate..."
-  },
-  {
-    "title": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
-    "url": "https://9to5mac.com/2025/09/01/iphone-17-pro-apple-not-so-clear-case/",
-    "publishedAt": "2025-09-01T15:44:46.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/not-so-clear-case.webp?w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 Pro: Apple’s rumored not-so-clear case design shown in video",
-    "seoDescription": "Yesterday, leaker Majin Bu revealed that Apple’s iPhone 17 Pro Clear Case may not be so clear after all. A second source has now backed the claim. more…"
-  },
-  {
-    "title": "iPhone 17 isn’t the only big Apple moment this September",
-    "url": "https://9to5mac.com/2025/09/01/apple-september-2025-dates-iphone-17-ios-26/",
-    "publishedAt": "2025-09-01T15:29:07.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are several key dates to anticipate for Apple fans, even beyond the major iPhone 17 event set for September 9. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/awe-dropping-event.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 isn’t the only big Apple moment this September",
-    "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
-  },
-  {
-    "title": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "url": "https://www.macrumors.com/2025/09/01/nearly-70-of-users-plan-to-upgrade-to-iphone-17/",
-    "publishedAt": "2025-09-01T15:24:53.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Apple's expected unveiling of the devices at its September 9 keynote. Smartphone price comparison platform SellCell surveyed over 2,000 U.S.-based ‌iPhone‌ users in August to assess upgrade interest and...",
-    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-on-Desk-Centered-1.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "SellCell"
-    ],
-    "seoTitle": "Survey: Nearly 70% of Users Plan to Upgrade to iPhone 17",
-    "seoDescription": "A new survey has found that nearly seven in ten iPhone owners in the United States plan to upgrade to an iPhone 17 model, signaling strong demand ahead of Ap..."
   }
 ]
