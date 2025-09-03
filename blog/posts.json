@@ -1,5 +1,62 @@
 [
   {
+    "title": "Why Firebase Feels Like Magic For Developers",
+    "url": "https://dev.to/thekarlesi/-3dp3",
+    "publishedAt": "2025-09-03T04:09:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why Firebase Feels Like Magic for Developers Esimit Karlgusta ・ Sep 3 #webdev #firebase #programming #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F358200%2Fff1e72e8-75a5-4c8b-ace4-a1cadccc4713.jpg",
+    "video": null,
+    "author": "Esimit Karlgusta",
+    "tags": [
+      "webdev",
+      "firebase",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "Why Firebase Feels Like Magic For Developers",
+    "seoDescription": "Why Firebase Feels Like Magic for Developers Esimit Karlgusta ・ Sep 3 #webdev #firebase #programming #beginners"
+  },
+  {
+    "title": "Day 13 – Multi-agent Chaos in AI Pipelines (ProblemMap No.13)",
+    "url": "https://dev.to/onestardao/day-13-multi-agent-chaos-in-ai-pipelines-problemmap-no13-33fa",
+    "publishedAt": "2025-09-03T03:50:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Symptom semantic contamination. answers drift, citations don’t match, and retrieval coverage mutates depending on which agent touched the index first. Two agents ingest the same document concurrently → their traces overwrite each other. Retrieval results differ depending on run order, even with identical queries. Citations point to spans that only one age...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6wwrwanr4ueyz915uknm.png",
+    "video": null,
+    "author": "PSBigBig",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "tutorial"
+    ],
+    "seoTitle": "Day 13 – Multi-agent Chaos in AI Pipelines (ProblemMap No.13)",
+    "seoDescription": "Symptom semantic contamination. answers drift, citations don’t match, and retrieval coverage mutates depending on which agent touched the index first. Two ag..."
+  },
+  {
+    "title": "Best Twitter Proxies for Web Scraping in 2025: Fix 403 Forbidden & IP Bans",
+    "url": "https://dev.to/nstproxy_official/best-twitter-proxies-for-web-scraping-in-2025-fix-403-forbidden-ip-bans-4kfe",
+    "publishedAt": "2025-09-03T03:43:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Even though Twitter's (or now X's) user numbers have been declining the past few years, it still had 335.7M monthly users in 2024. And when that amount of people generate conversations, people want to start scraping it. As you can imagine, X doesn't necessarily like this. Shadowbans from switching accounts too quickly. Data limits that block you from scra...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyowowo9l7zx5aaleq1o4.png",
+    "video": null,
+    "author": "Fancy-Nstproxy",
+    "tags": [
+      "webdev",
+      "twitter",
+      "tutorial",
+      "proxxy"
+    ],
+    "seoTitle": "Best Twitter Proxies for Web Scraping in 2025: Fix 403 Forbidden & IP Bans",
+    "seoDescription": "Even though Twitter's (or now X's) user numbers have been declining the past few years, it still had 335.7M monthly users in 2024. And when that amount of pe..."
+  },
+  {
     "title": "Disney will pay $10 million to settle FTC claim it used cartoons to collect YouTube data on kids",
     "url": "https://www.theverge.com/policy/769771/disney-ftc-coppa-settlement-kids-data",
     "publishedAt": "2025-09-03T02:01:35.000Z",
@@ -58,25 +115,6 @@
     "seoDescription": "In a new test, Meta is letting select users keep watching Instagram Reels as a floating window on their devices even after they close the app. Here’s what it..."
   },
   {
-    "title": "Socket Programming in Go",
-    "url": "https://dev.to/leapcell/socket-programming-in-go-458o",
-    "publishedAt": "2025-09-02T22:35:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Socket programming refers to the process of developing applications using the Socket interface in network programming. A Socket is a fundamental concept in network communication. It is an abstract data structure used to describe an endpoint in a network. A Socket contains information such as an IP address, port number, and protocol type, and it is used to...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fo7sf49dkapqgi5vwft0g.png",
-    "video": null,
-    "author": "Leapcell",
-    "tags": [
-      "webdev",
-      "programming",
-      "backend",
-      "go"
-    ],
-    "seoTitle": "Socket Programming in Go",
-    "seoDescription": "Socket programming refers to the process of developing applications using the Socket interface in network programming. A Socket is a fundamental concept in n..."
-  },
-  {
     "title": "One Week Until iPhone 17: Here's What We Know",
     "url": "https://www.macrumors.com/guide/apple-iphone-17-rumors/",
     "publishedAt": "2025-09-02T22:29:15.000Z",
@@ -91,24 +129,6 @@
     ],
     "seoTitle": "One Week Until iPhone 17: Here's What We Know",
     "seoDescription": "Apple will introduce four new iPhones next week, and the standard iPhone 17 will arguably be the least interesting of the bunch. It's not going to get the su..."
-  },
-  {
-    "title": "🚀 Warren Buffett’s Formula",
-    "url": "https://dev.to/microestimates/warren-buffetts-formula-252g",
-    "publishedAt": "2025-09-02T22:20:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🚀 Warren Buffett’s Secret Formula – Now Automated for Your Stock Picks Spent hours valuing stocks with spreadsheets? This AI tool applies Buffett’s intrinsic value method in seconds — for free. 💰 Why investors are hooked: Try it now: Enter any ticker (AAPL, TSLA, etc.) Customize for dividends/growth/risk Get a Buffett-grade valuation 💡 “Saved me 10 hou...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsyb7jn7uivakmsqkhha1.png",
-    "video": null,
-    "author": "Martin Adams",
-    "tags": [
-      "web3",
-      "ai",
-      "webdev"
-    ],
-    "seoTitle": "🚀 Warren Buffett’s Formula",
-    "seoDescription": "🚀 Warren Buffett’s Secret Formula – Now Automated for Your Stock Picks Spent hours valuing stocks with spreadsheets? This AI tool applies Buffett’s intrinsi..."
   },
   {
     "title": "9to5Mac Daily: September 2, 2025 – New AirPods Pro health features?",
@@ -599,21 +619,5 @@
     ],
     "seoTitle": "Apple Loses Robotics AI Researcher to Meta",
     "seoDescription": "Apple's lead artificial intelligence researcher for robotics is leaving the company for Meta, reports Bloomberg. Jian Zhang joined the Meta Robotics Studio o..."
-  },
-  {
-    "title": "With AirPods Pro 3, Apple sounds like it’s following a winning playbook",
-    "url": "https://9to5mac.com/2025/09/02/with-airpods-pro-3-apple-sounds-like-its-following-a-winning-playbook/",
-    "publishedAt": "2025-09-02T19:19:58.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "AirPods Pro 3 are almost here, and rumors indicate Apple plans to follow the highly successful proven playbook of AirPods Pro 2. Here’s what that means. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/airpods-pro-3-awe-dropping.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "With AirPods Pro 3, Apple sounds like it’s following a winning playbook",
-    "seoDescription": "AirPods Pro 3 are almost here, and rumors indicate Apple plans to follow the highly successful proven playbook of AirPods Pro 2. Here’s what that means. more…"
   }
 ]
