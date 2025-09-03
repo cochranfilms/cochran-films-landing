@@ -1,41 +1,60 @@
 [
   {
-    "title": "Mastering Java Full Stack Development in 2025: Tools, Skills, and Projects",
-    "url": "https://dev.to/vishal_more_02990955c9358/mastering-java-full-stack-development-in-2025-tools-skills-and-projects-26eo",
-    "publishedAt": "2025-09-03T06:08:51.000Z",
+    "title": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
+    "url": "https://dev.to/john_smith_9e289544c3646a/real-time-price-comparison-amazon-flipkart-meesho-scraping-133i",
+    "publishedAt": "2025-09-03T07:03:04.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Read More : Mastering Java Full Stack Development in 2025: Tools, Skills, and Projects What is a Java Full Stack Developer? A Java full stack developer handles both frontend and backend development. They design user interfaces, build server-side logic, work with databases, and manage APIs. Being full stack means you can create complete applications from s...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmzzfot77ozzm39qc9k71.png",
+    "summary": "Real-Time Price Comparison: Amazon, Flipkart & Meesho ScrapingIntroduction They needed a system to scrape product data across all three platforms with real-time frequency, aggregate it, and trigger alerts when a competitor dropped prices. By leveraging Web Scraping for Amazon E-Commerce Product Data and integrating tools to Extract Flipkart E-Commerce Pro...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz12sum5h2xwevpaia1uh.jpg",
     "video": null,
-    "author": "vishal more",
+    "author": "John Smith",
     "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
+      "websitescrape",
+      "meeshoproductdetails",
+      "flipkartscraperapi",
+      "webdev"
     ],
-    "seoTitle": "Mastering Java Full Stack Development in 2025: Tools, Skills, and Projects",
-    "seoDescription": "Read More : Mastering Java Full Stack Development in 2025: Tools, Skills, and Projects What is a Java Full Stack Developer? A Java full stack developer handl..."
+    "seoTitle": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
+    "seoDescription": "Real-Time Price Comparison: Amazon, Flipkart & Meesho ScrapingIntroduction They needed a system to scrape product data across all three platforms with real-t..."
   },
   {
-    "title": "The Hidden Impact of Silent Team Members",
-    "url": "https://dev.to/dct_technology/the-hidden-impact-of-silent-team-members-1h7d",
-    "publishedAt": "2025-09-03T05:42:26.000Z",
+    "title": "[Boost] Goodby to Manual QA",
+    "url": "https://dev.to/bill_xu/-1eme",
+    "publishedAt": "2025-09-03T06:41:01.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Ever been in a meeting where one person barely speaks, yet when they finally do, their point changes the whole direction? silent team member effect — often overlooked, but incredibly powerful. In fast-moving environments like web development, design, SEO, or IT consulting, not every voice is loud. But silence doesn’t equal absence. Sometimes, it hides unt...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fch4g6yzicou1lw27v8b2.png",
+    "summary": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude Bill ・ Sep 3 #testing #webdev #programming #ai",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3449849%2F1afbd24f-dbc5-4f89-b823-f798871eb3a4.jpg",
     "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
+    "author": "Bill",
     "tags": [
-      "teamwork",
+      "testing",
       "webdev",
       "programming",
-      "javascript"
+      "ai"
     ],
-    "seoTitle": "The Hidden Impact of Silent Team Members",
-    "seoDescription": "Ever been in a meeting where one person barely speaks, yet when they finally do, their point changes the whole direction? silent team member effect — often o..."
+    "seoTitle": "[Boost] Goodby to Manual QA",
+    "seoDescription": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude Bill ・ Sep 3 #testing #webdev #progr..."
+  },
+  {
+    "title": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude",
+    "url": "https://dev.to/bill_xu/goodbye-manual-qa-metagpts-user-agent-delivers-92-accurate-end-to-end-gui-testing-with-higher-4dek",
+    "publishedAt": "2025-09-03T06:39:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "MetaGPT’s User Agent achieves 0.92 test-case accuracy and higher human‑agreement consistency than Claude on end-to-end GUI testing, powered by the RealDevWorld framework and AppEvalPilot evaluator. Manual QA can’t keep up with AI‑generated apps. Backed by the RealDevWorld framework, MetaGPT’s User Agent delivers end‑to‑end GUI testing with: 0.92 test‑case...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyrqouim0zb0uoadt5eyw.JPEG",
+    "video": null,
+    "author": "Bill",
+    "tags": [
+      "testing",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude",
+    "seoDescription": "MetaGPT’s User Agent achieves 0.92 test-case accuracy and higher human‑agreement consistency than Claude on end-to-end GUI testing, powered by the RealDevWor..."
   },
   {
     "title": "14 Iconic Characters Who Deserve Their Own Spin-Off",
@@ -70,25 +89,6 @@
     ],
     "seoTitle": "7 Best Movie Prequels That Actually Lived Up to the Hype",
     "seoDescription": "For me, there are just so many films and TV series that have left me wanting more. Raise your hand if you’ve ever watched a movie and also wanted to know wha..."
-  },
-  {
-    "title": "89% Dev agencies use wrong pricing models so here is the ideal pricing model can follow",
-    "url": "https://dev.to/rajesh_patel/89-dev-agencies-use-wrong-pricing-models-so-here-is-the-ideal-pricing-model-can-follow-3e6o",
-    "publishedAt": "2025-09-03T04:58:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Study: 89% of Dev Agencies Use the Wrong Pricing Model (Data from 500+ Agencies) Pratham naik for Teamcamp ・ Sep 3 #webdev #devops #learning #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Rajesh Patel",
-    "tags": [
-      "webdev",
-      "devops",
-      "learning",
-      "productivity"
-    ],
-    "seoTitle": "89% Dev agencies use wrong pricing models so here is the ideal pricing model can follow",
-    "seoDescription": "Study: 89% of Dev Agencies Use the Wrong Pricing Model (Data from 500+ Agencies) Pratham naik for Teamcamp ・ Sep 3 #webdev #devops #learning #productivity"
   },
   {
     "title": "“Carpe Diem”: The Line That Refused to Stay in the Classroom",
