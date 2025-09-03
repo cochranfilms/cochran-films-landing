@@ -1,41 +1,186 @@
 [
   {
-    "title": "【Claude-Powerest-Manager_Enhancer】Efficient Claude Manager Script",
-    "url": "https://dev.to/f14xuanlv/claude-powerest-managerenhancer-efficient-claude-manager-script-23km",
-    "publishedAt": "2025-09-03T12:14:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "YouTube Demo Video Github Repo / Claude-Powerest-Manager_Enhancer Claude Powerest Manager & Enhancer Read this document in Chinese This is an extremely powerful Tampermonkey script designed to enhance your Claude experience in every way. It integrates two core modules: a comprehensive Conversation Manager and a real-time Chat Enhancer, giving you unpreced...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "title": "Beyond iPhone 17: Apple Rumored to Launch 10 Other Products in 2025",
+    "url": "https://www.macrumors.com/2025/09/03/beyond-iphone-17/",
+    "publishedAt": "2025-09-03T13:17:42.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "While the iPhone 17 series will take center stage at Apple's event next week, rumors suggest the company plans to release many other new products this year. Below, we have recapped 10 other Apple products that are expected to launch this year, with some likely to debut at the event and others to follow later. Apple Watch Ultra 3: A slightly larger display...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Awe-Dropping-Apple-Event-Feature.jpg",
     "video": null,
-    "author": "f14XuanLv",
+    "author": "Joe Rossignol",
     "tags": [
-      "ai",
-      "productivity",
-      "opensource",
-      "webdev"
+      "September 2025 Apple Event"
     ],
-    "seoTitle": "【Claude-Powerest-Manager_Enhancer】Efficient Claude Manager Script",
-    "seoDescription": "YouTube Demo Video Github Repo / Claude-Powerest-Manager_Enhancer Claude Powerest Manager & Enhancer Read this document in Chinese This is an extremely power..."
+    "seoTitle": "Beyond iPhone 17: Apple Rumored to Launch 10 Other Products in 2025",
+    "seoDescription": "While the iPhone 17 series will take center stage at Apple's event next week, rumors suggest the company plans to release many other new products this year. ..."
   },
   {
-    "title": "Laravel Cache Tip: Avoid Redundant has/missing Calls",
-    "url": "https://dev.to/tegos/laravel-cache-tip-avoid-redundant-hasmissing-calls-4hi1",
-    "publishedAt": "2025-09-03T12:14:03.000Z",
+    "title": "PROFESSIONAL BITCOIN RECOVERY EXPERT META TECH RECOVERY PRO",
+    "url": "https://dev.to/darryn_ivanex_efccfc1432e/professional-bitcoin-recovery-expert-meta-tech-recovery-pro-57l6",
+    "publishedAt": "2025-09-03T13:11:24.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "When working with Laravel's cache, I often see developers using a pattern that, while functional, creates unnecessary overhead. Let me show you a simple optimization that can improve both performance and memory usage. Here's a typical cache implementation I see frequently: public function getUserCount(): int { $cacheKey = 'user-count'; $cacheTtl = Carbon:...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyot6qlh6owqh7nle6x7i.png",
+    "summary": "The adage \"all that glitters is not gold\" proved a harsh reality I recently encountered. The digital realm of cryptocurrency investments and exchange platforms is not immune to deception. My pursuit of cryptocurrency investments led me to a seemingly legitimate site, complete with convincing investor testimonials touting successful withdrawals. Unbeknowns...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/...",
     "video": null,
-    "author": "Ivan Mykhavko",
+    "author": "Darryn Ivanex",
     "tags": [
-      "php",
-      "laravel",
       "webdev",
-      "performance"
+      "programming",
+      "javascript"
     ],
-    "seoTitle": "Laravel Cache Tip: Avoid Redundant has/missing Calls",
-    "seoDescription": "When working with Laravel's cache, I often see developers using a pattern that, while functional, creates unnecessary overhead. Let me show you a simple opti..."
+    "seoTitle": "PROFESSIONAL BITCOIN RECOVERY EXPERT META TECH RECOVERY PRO",
+    "seoDescription": "The adage \"all that glitters is not gold\" proved a harsh reality I recently encountered. The digital realm of cryptocurrency investments and exchange platfor..."
+  },
+  {
+    "title": "The Future of Content Creation Powered by Generative AI",
+    "url": "https://dev.to/vishal_more_02990955c9358/the-future-of-content-creation-powered-by-generative-ai-13fd",
+    "publishedAt": "2025-09-03T13:01:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Read More: The Future of Content Creation Powered by Generative AI What Is Generative AI? Generative AI is a type of artificial intelligence that can produce text, images, audio, and video with minimal human input. Unlike traditional tools, it learns from massive datasets to create content that feels original and contextually relevant. Whether you need a ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4agn7fs47qj7n9zuozr2.png",
+    "video": null,
+    "author": "vishal more",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "The Future of Content Creation Powered by Generative AI",
+    "seoDescription": "Read More: The Future of Content Creation Powered by Generative AI What Is Generative AI? Generative AI is a type of artificial intelligence that can produce..."
+  },
+  {
+    "title": "Netflix will let you make your own highlight clips",
+    "url": "https://www.theverge.com/news/769471/netflix-highlight-clips-moments-start-end",
+    "publishedAt": "2025-09-03T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Netflix will now let you create and share highlight clips of your favorite shows and movies right from the Netflix app on your phone. Last year, Netflix launched a feature that let you bookmark spots from shows and movies and save them to your account to watch again later or share with others. Starting today, Netflix is rolling out the ability for you set...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Product_Experience.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://volume.vox-cdn.com/embed/d2d54bf62?player_type=youtube&#038;loop=1&#038;placement=article&#038;tracking=article:rss",
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Netflix will let you make your own highlight clips",
+    "seoDescription": "Netflix will now let you create and share highlight clips of your favorite shows and movies right from the Netflix app on your phone. Last year, Netflix laun..."
+  },
+  {
+    "title": "Addigy teams up with SentinelOne for new Apple security suite with real time compliance and zero trust",
+    "url": "https://9to5mac.com/2025/09/03/addigy-teams-up-with-sentinelone-for-new-apple-security-suite-with-real-time-compliance-and-zero-trust/",
+    "publishedAt": "2025-09-03T13:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Addigy has long been known for its Apple device management service, but its new Security Suite aims to offer additional solutions for IT teams and managed service providers. By combining Addigy’s device management service platform with SentinelOne EDR and MDR, IT teams can have a single console for compliance, endpoint protection, and 24/7 threat defense ...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Addigy.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Addigy teams up with SentinelOne for new Apple security suite with real time compliance and zero trust",
+    "seoDescription": "Addigy has long been known for its Apple device management service, but its new Security Suite aims to offer additional solutions for IT teams and managed se..."
+  },
+  {
+    "title": "Const Assertions en TypeScript 🤔",
+    "url": "https://dev.to/duxtech/const-assertions-en-typescript-57jf",
+    "publishedAt": "2025-09-03T12:57:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Índice ¿Qué es una aserción de tipo en TypeScript? ¿Qué es una const assertion en TypeScript? Casos de uso de const assertions const assertions en primitivos const assertions en arreglos const assertions en objetos Conclusiones Referencias 1. ¿Qué es una aserción de tipo en TypeScript? TypeScript tiene la ventaja de proporcionarnos tipos de datos para nue...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2b3x96lvrtcl12isdcq3.gif",
+    "video": null,
+    "author": "Cristian Fernando ",
+    "tags": [
+      "webdev",
+      "typescript",
+      "spanish",
+      "programming"
+    ],
+    "seoTitle": "Const Assertions en TypeScript 🤔",
+    "seoDescription": "Índice ¿Qué es una aserción de tipo en TypeScript? ¿Qué es una const assertion en TypeScript? Casos de uso de const assertions const assertions en primitivos..."
+  },
+  {
+    "title": "The UK’s largest energy supplier has created its own EV charger",
+    "url": "https://www.theverge.com/news/769962/octopus-energy-octopus-charge-ev-charger",
+    "publishedAt": "2025-09-03T12:54:01.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The UK’s larger energy supplier, Octopus Energy, is launching its own EV charger. The Octopus Charge is designed to pair with the Intelligent Octopus Go tariff, which offers up cheaper electricity rates overnight for EV charging. Octopus Energy has designed and built its own EV charger and is backing it with a three-year warranty. There’s a £999 (about $1...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/image_1_3.width-800.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "The UK’s largest energy supplier has created its own EV charger",
+    "seoDescription": "The UK’s larger energy supplier, Octopus Energy, is launching its own EV charger. The Octopus Charge is designed to pair with the Intelligent Octopus Go tari..."
+  },
+  {
+    "title": "Rumor: iPhone 17 Pro to feature better thermals for improved battery life, display brightness, more",
+    "url": "https://9to5mac.com/2025/09/03/rumor-iphone-17-pro-to-feature-better-thermals-for-improved-battery-life-display-brightness-more/",
+    "publishedAt": "2025-09-03T12:47:11.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "We’re less than a week away from the launch of the iPhone 17 lineup, and a new rumor today sheds light on several more improvements Apple has up its sleeve. In a post on Weibo, the oft-reliable leaker Instant Digital says the iPhone 17 Pro and iPhone 17 Pro Max will feature notable updates to the display, battery life, and more. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-concept-liquid-glass.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Rumor: iPhone 17 Pro to feature better thermals for improved battery life, display brightness, more",
+    "seoDescription": "We’re less than a week away from the launch of the iPhone 17 lineup, and a new rumor today sheds light on several more improvements Apple has up its sleeve. ..."
+  },
+  {
+    "title": "Microsoft&#8217;s PowerToys are about to add two big missing Windows features",
+    "url": "https://www.theverge.com/news/770015/microsoft-windows-11-dark-light-theme-automatic-switch-powertoy",
+    "publishedAt": "2025-09-03T12:46:56.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Have you ever wanted Windows 11 to automatically switch between light and dark modes based on a schedule, or help you find keyboard shortcut conflicts? Well, Microsoft is about to solve both of these missing Windows features with PowerToys. The latest 0.94 release of PowerToys, the useful addons for Windows power users, includes a new shortcut conflicts f...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK109_WINDOWS_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Microsoft&#8217;s PowerToys are about to add two big missing Windows features",
+    "seoDescription": "Have you ever wanted Windows 11 to automatically switch between light and dark modes based on a schedule, or help you find keyboard shortcut conflicts? Well,..."
+  },
+  {
+    "title": "New iPhone 17 Pro Details: Brighter Display, Best Battery Life, and More",
+    "url": "https://www.macrumors.com/2025/09/03/new-iphone-17-pro-details/",
+    "publishedAt": "2025-09-03T12:33:55.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's iPhone 17 Pro and ‌iPhone 17 Pro‌ Max models will feature a number of significant display, thermal, and battery improvements, according to new late-stage rumors. According to the Weibo leaker known as \"Instant Digital,\" the ‌iPhone 17 Pro‌ models will feature displays with higher brightness, making it more suitable for use in direct sunlight for p...",
+    "image": "https://images.macrumors.com/article-new/2025/04/iPhone-17-Pro-3_4ths-Perspective-Aluminum-Camera-Module-1.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "Featured",
+      "iPhone 17 Pro",
+      "Instant Digital"
+    ],
+    "seoTitle": "New iPhone 17 Pro Details: Brighter Display, Best Battery Life, and More",
+    "seoDescription": "Apple's iPhone 17 Pro and ‌iPhone 17 Pro‌ Max models will feature a number of significant display, thermal, and battery improvements, according to new late-s..."
+  },
+  {
+    "title": "Why Decentralized Exchanges Could Outgrow Centralized Giants by 2030?",
+    "url": "https://dev.to/tomhardy/why-decentralized-exchanges-could-outgrow-centralized-giants-by-2030-32a3",
+    "publishedAt": "2025-09-03T12:27:31.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The crypto industry has developed rapidly in the last decade, dominating the centralized exchange business scenario. These platforms have played an important role in keeping millions of users on the ship in the digital asset economy. However, the tide is shifting. Decentralized exchanges (DEX) are receiving traction because traders want more control, tran...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fswja2cx2efnxjkk0wr3l.jpg",
+    "video": null,
+    "author": "Tom Hardy S",
+    "tags": [
+      "webdev",
+      "blockchain",
+      "decentralized",
+      "exchange"
+    ],
+    "seoTitle": "Why Decentralized Exchanges Could Outgrow Centralized Giants by 2030?",
+    "seoDescription": "The crypto industry has developed rapidly in the last decade, dominating the centralized exchange business scenario. These platforms have played an important..."
   },
   {
     "title": "Acer’s 16-inch Swift Air weighs less than the 13-inch MacBook Air",
@@ -106,25 +251,6 @@
     "seoDescription": "A photo exhibit of the English rock band Oasis will go on display tomorrow ahead of their upcoming shows in Los Angeles. [Read More]"
   },
   {
-    "title": "Driving Digital Success with Bluetick Creative",
-    "url": "https://dev.to/bluetick_creative_37236ba/driving-digital-success-with-bluetick-creative-224h",
-    "publishedAt": "2025-09-03T11:51:45.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "http://bluetickcreative.com/ Our Expertise 🎨 Branding That Speaks Volumes 📈 Digital Marketing for Growth 🛒 Simplifying E-Commerce ✍️ Content & Social Media Engagement Content is the heart of connection. Through engaging blogs, campaigns, and posts, we create authentic connections with your audience across platforms.",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F91lyml4m28y01p50rfqc.png",
-    "video": null,
-    "author": "Bluetick Creative",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "productivity"
-    ],
-    "seoTitle": "Driving Digital Success with Bluetick Creative",
-    "seoDescription": "http://bluetickcreative.com/ Our Expertise 🎨 Branding That Speaks Volumes 📈 Digital Marketing for Growth 🛒 Simplifying E-Commerce ✍️ Content & Social Medi..."
-  },
-  {
     "title": "Google’s Gemini smart home plans are about to make Siri look even dumber",
     "url": "https://9to5mac.com/2025/09/03/googles-gemini-smart-home-plans-are-about-to-make-siri-look-even-dumber/",
     "publishedAt": "2025-09-03T11:39:59.000Z",
@@ -139,24 +265,6 @@
     ],
     "seoTitle": "Google’s Gemini smart home plans are about to make Siri look even dumber",
     "seoDescription": "Apple is already under massive fire for falling behind in AI, and Google’s Gemini smart home plans are about to make that a whole lot worse. Not only is Siri..."
-  },
-  {
-    "title": "Best Satellite Internet for Boats: The Ultimate Guide",
-    "url": "https://dev.to/ubifi_llc/best-satellite-internet-for-boats-the-ultimate-guide-e8",
-    "publishedAt": "2025-09-03T11:28:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Cellular networks quickly lose coverage a few miles away from shore, leaving boaters exposed to dead zones that traditional connections simply can’t reach. Satellite internet, however, provides global access on almost any waterway—whether you’re coastal cruising, navigating vast oceans, or anchored in a remote cove. With the internet on board, sailors gai...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4mz165965kuehsxy9881.png",
-    "video": null,
-    "author": "UbiFi LLC",
-    "tags": [
-      "webdev",
-      "tutorial",
-      "intranet"
-    ],
-    "seoTitle": "Best Satellite Internet for Boats: The Ultimate Guide",
-    "seoDescription": "Cellular networks quickly lose coverage a few miles away from shore, leaving boaters exposed to dead zones that traditional connections simply can’t reach. S..."
   },
   {
     "title": "Samsung’s new party speakers are less subtle than ever",
@@ -230,7 +338,7 @@
     "source": "theverge.com",
     "category": "web",
     "summary": "LG’s FURON AI Agent powers the company’s smart home AI ambitions. | Image: LG The holy grail of the smart home is ambient computing - technology that disappears into the background, anticipating your needs without a word or a tap. Lights turn on as you walk in, doors unlock as you approach, coffee brews before you reach the kitchen. This is the proactive ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ImageExecutive-Corner-LGs-Vision-for-AI-Driven-Homes_4-600x322-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Executive-CornerOh-Sai-kee_3.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Jennifer Pattison Tuohy",
     "tags": [],
@@ -347,55 +455,13 @@
     "publishedAt": "2025-09-03T09:00:00.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "The Amadana 27ART0 P1. | Image: Acer Did you know Acer acquired a Japanese design firm called Amadana late last year that makes classy coffee gear, retro calculators, air purifiers, and all manner of minimalist low-fi tech? Neither did I till today — but it goes a long way to explaining why a few of Acer’s new monitors at IFA 2025 are leaping off the page...",
+    "summary": "Did you know that Acer acquired a Japanese design firm called Amadana late last year, which makes classy coffee gear, retro calculators, air purifiers, and all manner of minimalist lo-fi tech? Neither did I until today — but it goes a long way to explaining why a few of Acer’s new monitors at IFA 2025 are leaping off the page. Unfortunately for stateside ...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Acer-CE270U-Z_lifestyle-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Sean Hollister",
     "tags": [],
     "seoTitle": "Acer’s new Amadana and CE270 monitors are unusually, strikingly stylish",
-    "seoDescription": "The Amadana 27ART0 P1. | Image: Acer Did you know Acer acquired a Japanese design firm called Amadana late last year that makes classy coffee gear, retro cal..."
-  },
-  {
-    "title": "Acer&#8217;s 16-inch Air weighs even less than a 13-inch MacBook Air",
-    "url": "https://www.theverge.com/news/769784/acer-swift-air-16-amd-lightweight-macbook-ifa-2025-specs-price",
-    "publishedAt": "2025-09-03T09:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There are laptops out there with power adapters heavier than this entire 16-inch laptop. Acer is announcing a new Swift Air 16 at IFA 2025, and it’s an absolute featherweight of a 16-inch laptop. Weighing in at 2.18 pounds / 0.99kg with an IPS display or 2.43 pounds / 1.1kg with its optional OLED, the Swift Air is lighter than even a 13-inch MacBook Air. ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Swift-Air-16-SFA16-61M_lifestyle-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Antonio G. Di Benedetto",
-    "tags": [],
-    "seoTitle": "Acer&#8217;s 16-inch Air weighs even less than a 13-inch MacBook Air",
-    "seoDescription": "There are laptops out there with power adapters heavier than this entire 16-inch laptop. Acer is announcing a new Swift Air 16 at IFA 2025, and it’s an absol..."
-  },
-  {
-    "title": "My brief hands-on with Acer’s new convertible Chromebook has me cautiously optimistic",
-    "url": "https://www.theverge.com/hands-on/769834/acer-chromebook-plus-spin-514-2in1-mediatek-kompanio-ifa-2025-price-specs",
-    "publishedAt": "2025-09-03T09:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "I took the Spin 514 for an early spin, and I’m looking forward to testing it further. Acer's new Chromebook Plus Spin 514, announced at IFA 2025 in Berlin, is the company's first laptop to use the Arm-based MediaTek Kompanio Ultra 910 processor. That chip was used in the Lenovo Chromebook Plus 14 that launched earlier this summer, and it was key to delive...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257930_Acer_Chromebook_Plus_Spin_514_ADiBenedetto_0010_4a2d2b.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Antonio G. Di Benedetto",
-    "tags": [],
-    "seoTitle": "My brief hands-on with Acer’s new convertible Chromebook has me cautiously optimistic",
-    "seoDescription": "I took the Spin 514 for an early spin, and I’m looking forward to testing it further. Acer's new Chromebook Plus Spin 514, announced at IFA 2025 in Berlin, i..."
-  },
-  {
-    "title": "Google will reveal its Gemini smart home plans (and hardware) next month",
-    "url": "https://www.theverge.com/news/769848/google-teases-new-nest-cam-gemini-home",
-    "publishedAt": "2025-09-03T08:37:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "This sure does look exactly like every other Nest Cam out there. Google is overdue an update to its smart home setup, and now we know when it’ll come: October 1st. The company has teased some sort of launch or announcement for that day, promising that “Gemini is coming to Google Home.” The company announced Gemini for Home at last month’s Made by Google e...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/google-gemini-home-nest-cam-teaser.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Google will reveal its Gemini smart home plans (and hardware) next month",
-    "seoDescription": "This sure does look exactly like every other Nest Cam out there. Google is overdue an update to its smart home setup, and now we know when it’ll come: Octobe..."
+    "seoDescription": "Did you know that Acer acquired a Japanese design firm called Amadana late last year, which makes classy coffee gear, retro calculators, air purifiers, and a..."
   },
   {
     "title": "14 Iconic Characters Who Deserve Their Own Spin-Off",
@@ -529,86 +595,5 @@
     ],
     "seoTitle": "Court Allows Google-Apple Search Deal to Continue With Conditions",
     "seoDescription": "Google will not be barred from entering into search agreements with companies like Apple, the judge presiding over the antitrust case between Google and the ..."
-  },
-  {
-    "title": "Nikon’s Second Tariff-Induced Price Hike Hits Z Mirrorless Cameras Hard",
-    "url": "https://petapixel.com/2025/09/02/nikons-second-tariff-induced-price-hike-hits-z-mirrorless-cameras-hard/",
-    "publishedAt": "2025-09-02T21:10:52.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "When Nikon raised its prices in June because of U.S. tariff policy, Nikon's mirrorless Z series cameras escaped essentially unscathed. Unfortunately, with Nikon's second price adjustment, cameras have taken a big hit. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/nikon-price-increase-september-2025-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "Industry",
-      "News",
-      "costs",
-      "economy",
-      "nikon",
-      "nikonprices",
-      "priceincreases"
-    ],
-    "seoTitle": "Nikon’s Second Tariff-Induced Price Hike Hits Z Mirrorless Cameras Hard",
-    "seoDescription": "When Nikon raised its prices in June because of U.S. tariff policy, Nikon's mirrorless Z series cameras escaped essentially unscathed. Unfortunately, with Ni..."
-  },
-  {
-    "title": "The 15 Best Cinematic Sword Fights Of All Time",
-    "url": "https://nofilmschool.com/best-cinematic-sword-fights",
-    "publishedAt": "2025-09-02T21:06:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When I was a kid, I would unsheath my plastic sword and imagine epic battles I was having against all sorts of enemies, foreign and domestic. These fights were inspired by the movies I loved: swashbucklers where the good guys wielded steel. As I grew older, my love for those movies only grew stronger. Today, I want to go over fifteen fight scenes with swo...",
-    "image": "https://nofilmschool.com/media-library/the-15-best-cinematic-sword-fights-of-all-time.jpg?id=61241048&width=980",
-    "video": "https://www.youtube.com/embed/haef4EWbpsg?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Fight scenes",
-      "Action",
-      "Best movies",
-      "Sword and sandal"
-    ],
-    "seoTitle": "The 15 Best Cinematic Sword Fights Of All Time",
-    "seoDescription": "When I was a kid, I would unsheath my plastic sword and imagine epic battles I was having against all sorts of enemies, foreign and domestic. These fights we..."
-  },
-  {
-    "title": "DxO PhotoLab 9 Hands-On: Fast RAW Photo Editor Without a Subscription",
-    "url": "https://petapixel.com/2025/09/02/dxo-photolab-9-hands-on-fast-raw-photo-editor-without-a-subscription/",
-    "publishedAt": "2025-09-02T21:00:40.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "DxO PhotoLab 9, the latest version of its RAW photo editing software, is one of the more significant updates in recent memory, simply because it finally tackles masking in a meaningful way. But there’s also more to it than a single feature upgrade. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/dxopl9handsonfeatured.jpg",
-    "video": null,
-    "author": "Ted Kritsonis",
-    "tags": [
-      "News",
-      "Post-Processing",
-      "Software",
-      "ai",
-      "dxophotolab9",
-      "dxophotolab9review",
-      "handson",
-      "masking"
-    ],
-    "seoTitle": "DxO PhotoLab 9 Hands-On: Fast RAW Photo Editor Without a Subscription",
-    "seoDescription": "DxO PhotoLab 9, the latest version of its RAW photo editing software, is one of the more significant updates in recent memory, simply because it finally tack..."
-  },
-  {
-    "title": "JENNIE Beats Solo 4 gets launch date, as new Beats Solo and Studio Pro colors leak",
-    "url": "https://9to5mac.com/2025/09/02/jennie-beats-solo-4-gets-launch-date-as-new-beats-solo-and-studio-pro-colors-leak/",
-    "publishedAt": "2025-09-02T20:57:59.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Today, Apple announced the launch date for the Ruby Red Special-Edition JENNIE , which features a pair of attachable red bows and more custom-made features for fans of the K-pop superstar. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/beats-jennie.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "JENNIE Beats Solo 4 gets launch date, as new Beats Solo and Studio Pro colors leak",
-    "seoDescription": "Today, Apple announced the launch date for the Ruby Red Special-Edition JENNIE , which features a pair of attachable red bows and more custom-made features f..."
   }
 ]
