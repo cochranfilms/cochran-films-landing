@@ -1,41 +1,125 @@
 [
   {
-    "title": "React Recap, years later, thanks to Astro",
-    "url": "https://dev.to/ingosteinke/react-recap-years-later-thanks-to-astro-2b4a",
-    "publishedAt": "2025-09-03T15:11:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "While others are over React, like I was about five years ago, I decided to give React another chance after I discovered Astro, reviving my abondoned attempt of a reading list app side project back to learn how to use React 19 properly in 2025. MERN-Stack Setup: Building a Reading List Web App with Node, Preact, and Tailwind CSS Ingo Steinke, web developer...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F233697%2F5d5d1ac6-36d8-4af3-bf76-7994a444f367.png",
+    "title": "Instagram launches official iPad app, now available on App Store",
+    "url": "https://9to5mac.com/2025/09/03/instagram-launches-official-ipad-app-now-available-on-app-store/",
+    "publishedAt": "2025-09-03T16:15:48.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The day has finally arrived: Instagram for iPad is here. Though it seemed like it might never happen, the popular social media app finally has an official tablet version. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/instagram-ipad-app.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Ingo Steinke, web developer",
+    "author": "Ryan Christoffel",
     "tags": [
-      "webdev",
-      "astro",
-      "react",
-      "typescript"
+      "News"
     ],
-    "seoTitle": "React Recap, years later, thanks to Astro",
-    "seoDescription": "While others are over React, like I was about five years ago, I decided to give React another chance after I discovered Astro, reviving my abondoned attempt ..."
+    "seoTitle": "Instagram launches official iPad app, now available on App Store",
+    "seoDescription": "The day has finally arrived: Instagram for iPad is here. Though it seemed like it might never happen, the popular social media app finally has an official ta..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/davinceleecode/-1096",
-    "publishedAt": "2025-09-03T15:09:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A Love Letter to Vercel! Mahdi Jazini ・ Sep 2 #vercel #nextjs #webdev #programming",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F1840802%2Fe45e2029-e74a-4fe6-9901-d2c8757728e3.jpg",
+    "title": "Google's Gemini for Home Starts Rolling Out on October 1",
+    "url": "https://www.macrumors.com/2025/09/03/gemini-for-home-rolling-out-october-1/",
+    "publishedAt": "2025-09-03T16:07:08.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Google has confirmed that Gemini for Home, its generative AI-powered replacement for Google Assistant, will begin rolling out on October 1 through an early access program, marking a major upgrade to its smart home platform and highlighting Apple's slower progress in deploying similar AI technology for Siri. At the Made by Google 2025 event, the company an...",
+    "image": "https://images.macrumors.com/article-new/2024/03/google-gemini.jpg",
     "video": null,
-    "author": "davinceleecode",
+    "author": "Hartley Charlton",
     "tags": [
-      "vercel",
-      "nextjs",
-      "webdev",
-      "programming"
+      "Gemini",
+      "Google",
+      "Google Home"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "A Love Letter to Vercel! Mahdi Jazini ・ Sep 2 #vercel #nextjs #webdev #programming"
+    "seoTitle": "Google's Gemini for Home Starts Rolling Out on October 1",
+    "seoDescription": "Google has confirmed that Gemini for Home, its generative AI-powered replacement for Google Assistant, will begin rolling out on October 1 through an early a..."
+  },
+  {
+    "title": "Instagram is coming to iPad, 15 years later",
+    "url": "https://www.theverge.com/news/769460/instagram-ipad-app-launch-reels",
+    "publishedAt": "2025-09-03T16:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "After years of requests from users, Instagram will finally have a dedicated app for iPad. Beginning Wednesday, September 3rd, users will be able to download the new app built specifically for Apple’s tablet. But it will be slightly different than the mobile app users are accustomed to. Most significantly, the iPad app will open directly to a feed of Reels...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Reels-with-Comments-16_9.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Mia Sato",
+    "tags": [],
+    "seoTitle": "Instagram is coming to iPad, 15 years later",
+    "seoDescription": "After years of requests from users, Instagram will finally have a dedicated app for iPad. Beginning Wednesday, September 3rd, users will be able to download ..."
+  },
+  {
+    "title": "Deals: 512GB iPhone 16 Pro $340 off, M4 Max Mac Studio $300 off, Nomad sitewide sale, more",
+    "url": "https://9to5mac.com/2025/09/03/deals-iphone-16-pro-mac-studio-nomad-sitewide/",
+    "publishedAt": "2025-09-03T15:46:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Alongside ongoing $150 price drops on the M3 iPad Air lineup as well as Apple’s 24GB M4 Mac mini with the 1TB upgrade at $200 off, today’s 9to5Toys Lunch Break deals are starting with an exclusive sitewide sale event at Nomad. We have secured readers a chance to score 20% off everything Nomad sells, from its Find My Tracking Card and new new Tempo Apple W...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apple-deals-Mac-Studio-iPhone-Nomad.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Justin Kahn",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Deals: 512GB iPhone 16 Pro $340 off, M4 Max Mac Studio $300 off, Nomad sitewide sale, more",
+    "seoDescription": "Alongside ongoing $150 price drops on the M3 iPad Air lineup as well as Apple’s 24GB M4 Mac mini with the 1TB upgrade at $200 off, today’s 9to5Toys Lunch Bre..."
+  },
+  {
+    "title": "AirPods Pro 3 are coming, here’s every rumored new feature",
+    "url": "https://9to5mac.com/2025/09/03/airpods-pro-3-are-coming-heres-every-rumored-new-feature/",
+    "publishedAt": "2025-09-03T15:42:53.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "AirPods Pro 3 are almost here, with a launch at Apple’s September 9 event widely expected. Here’s every rumored new feature coming to AirPods Pro 3. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/airpods-heart-rate.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "AirPods Pro 3 are coming, here’s every rumored new feature",
+    "seoDescription": "AirPods Pro 3 are almost here, with a launch at Apple’s September 9 event widely expected. Here’s every rumored new feature coming to AirPods Pro 3. more…"
+  },
+  {
+    "title": "The Paper doesn&#8217;t hit its stride until it&#8217;s out of the office",
+    "url": "https://www.theverge.com/tv-reviews/769607/peacock-the-paper-review",
+    "publishedAt": "2025-09-03T15:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "When NBC's adaptation of The Office first debuted in 2005, the series was panned for being a pale and uninspired imitation of its English predecessor. It took an entire season for showrunner Greg Daniels to figure out how to infuse his take on The Office with a quirky, satirical energy calibrated to appeal to American audiences. But once he did, the comed...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ThePaperHeader.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "The Paper doesn&#8217;t hit its stride until it&#8217;s out of the office",
+    "seoDescription": "When NBC's adaptation of The Office first debuted in 2005, the series was panned for being a pale and uninspired imitation of its English predecessor. It too..."
+  },
+  {
+    "title": "Here are the best Kindle deals right now",
+    "url": "https://www.theverge.com/21539047/best-amazon-kindle-deals",
+    "publishedAt": "2025-09-03T15:27:11.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "When it comes to finding a device to read ebooks, you have a few options to choose from. You can always buy a tablet or use your phone, but those devices are multipurpose and can be used for a ton of things, like surfing the web or doom-scrolling on X or Bluesky. If you are looking for something to strictly read books, e-readers, while niche, are designed...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/Kindle-Paperwhite-2024-lifestyle.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sheena Vasani",
+    "tags": [],
+    "seoTitle": "Here are the best Kindle deals right now",
+    "seoDescription": "When it comes to finding a device to read ebooks, you have a few options to choose from. You can always buy a tablet or use your phone, but those devices are..."
+  },
+  {
+    "title": "Google&#8217;s best-ever 4K streamer is within $1 of its lowest price",
+    "url": "https://www.theverge.com/tech/769978/google-tv-streamer-4k-deal-sale",
+    "publishedAt": "2025-09-03T15:16:20.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Google’s TV Streamer 4K is on sale for $79.99 ($20 off). It’s rare to find a gadget that can handle two totally separate tasks very well, but Google’s TV Streamer 4K pulls it off. The 4K set top box allows you to stream your favorite TV shows and movies, and is also an impressive smart home hub, with support for Matter and a built-in Thread radio. It’s cu...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25562296/DSCF0064.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "Google&#8217;s best-ever 4K streamer is within $1 of its lowest price",
+    "seoDescription": "Google’s TV Streamer 4K is on sale for $79.99 ($20 off). It’s rare to find a gadget that can handle two totally separate tasks very well, but Google’s TV Str..."
   },
   {
     "title": "Camera Intelligence, Formerly Alice Camera, Pivots to AI",
@@ -61,7 +145,7 @@
     "seoDescription": "Camera Intelligence, which most will know by its former name, Alice Camera, is slightly adjusting its business model. Rather than focusing on Micro Four Thir..."
   },
   {
-    "title": "reMarkable announces Paper Pro Move: a palm-sized paper tablet that’s priced well",
+    "title": "reMarkable announces new Paper Pro Move: a palm-sized paper tablet that’s priced well",
     "url": "https://9to5mac.com/2025/09/03/new-remarkable-paper-pro-move-7-inch-paper-tablet-priced-well/",
     "publishedAt": "2025-09-03T14:59:33.000Z",
     "source": "9to5mac.com",
@@ -73,7 +157,7 @@
     "tags": [
       "News"
     ],
-    "seoTitle": "reMarkable announces Paper Pro Move: a palm-sized paper tablet that’s priced well",
+    "seoTitle": "reMarkable announces new Paper Pro Move: a palm-sized paper tablet that’s priced well",
     "seoDescription": "Today, reMarkable larger reMarkable Paper Pro. It’s designed for work on the go, and can easily be slipped in a jacket pocket, bag, or purse. more…"
   },
   {
@@ -119,7 +203,7 @@
     "source": "9to5mac.com",
     "category": "apple",
     "summary": "Apple’s “Awe dropping” event on Tuesday will finally solve the biggest mystery around the upcoming iPhone 17 Pro and iPhone 17 Pro Max. The fact that there’s any mystery at all less than a week before the iPhone event is exciting on its own. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-concept-liquid-glass.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/12/Do-you-care-whether-the-iPhone-17-Pro-uses-titanium-or-aluminum.webp?w=1500",
     "video": null,
     "author": "Zac Hall",
     "tags": [
@@ -480,20 +564,6 @@
     "seoDescription": "Apple is already under massive fire for falling behind in AI, and Google’s Gemini smart home plans are about to make that a whole lot worse. Not only is Siri..."
   },
   {
-    "title": "Samsung’s new party speakers are less subtle than ever",
-    "url": "https://www.theverge.com/news/769896/samsungs-new-party-speakers-are-less-subtle-than-ever",
-    "publishedAt": "2025-09-03T11:10:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The ST50F may have wheels, but can it do a kickflip? Samsung may be partly to blame for unleashing the party speaker upon the world — its Giga line launched over a decade ago — but in recent years its entrants to the field have been strangely restrained, with only small light strips along the sides. Not so with its two new Sound Towers, which add LED ligh...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Samsung-TVs-and-Displays-Sound-Tower-IFA-2025-All-New-Sound-Tower_dl2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Samsung’s new party speakers are less subtle than ever",
-    "seoDescription": "The ST50F may have wheels, but can it do a kickflip? Samsung may be partly to blame for unleashing the party speaker upon the world — its Giga line launched ..."
-  },
-  {
     "title": "Woman Freaked Out by Beautician Wearing Meta Video Glasses",
     "url": "https://petapixel.com/2025/09/03/woman-freaked-out-by-beautician-wearing-meta-video-glasses/",
     "publishedAt": "2025-09-03T11:09:59.000Z",
@@ -513,81 +583,5 @@
     ],
     "seoTitle": "Woman Freaked Out by Beautician Wearing Meta Video Glasses",
     "seoDescription": "Ever since the Ray-Ban Meta smart glasses arrived on the market, the elephant in the room has always been: what if someone uses them for clandestine recordin..."
-  },
-  {
-    "title": "Latest Apple store has a new way to blur the boundary between interior and exterior",
-    "url": "https://9to5mac.com/2025/09/03/latest-apple-store-has-a-new-way-to-blur-the-boundary-between-interior-and-exterior/",
-    "publishedAt": "2025-09-03T11:04:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "The latest Apple Store opens tomorrow, just a couple of days after the previous one, which saw the Genius Bar and Pickup counter integrated into a single area. Apple Koregaon Park Also adopts this approach, and both stores also take a new approach to blurring the line between the interior and exterior … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apple-Koregaon-Park-is-the-latest-Apple-store-to-open.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Latest Apple store has a new way to blur the boundary between interior and exterior",
-    "seoDescription": "The latest Apple Store opens tomorrow, just a couple of days after the previous one, which saw the Genius Bar and Pickup counter integrated into a single are..."
-  },
-  {
-    "title": "IFA 2025: the biggest tech and gadget announcements",
-    "url": "https://www.theverge.com/news/767912/ifa-2025-news-tech-gadgets-products-updates-highlights",
-    "publishedAt": "2025-09-03T11:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "IFA, the European tech trade show equivalent to CES in the US, is just around the corner. Companies are gearing up to showcase their latest innovations, bringing us the latest product announcements, feature demonstrations, and design concepts that will shape future consumer tech releases. IFA will open its doors between September 5th and 9th, but many of ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/IFA-hero-image-2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "IFA 2025: the biggest tech and gadget announcements",
-    "seoDescription": "IFA, the European tech trade show equivalent to CES in the US, is just around the corner. Companies are gearing up to showcase their latest innovations, brin..."
-  },
-  {
-    "title": "AI could bring us a smarter home — if we can trust it",
-    "url": "https://www.theverge.com/ifa-berlin/768739/ai-could-bring-us-a-smarter-home-ifa-2025",
-    "publishedAt": "2025-09-03T11:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "LG’s FURON AI Agent powers the company’s smart home AI ambitions. | Image: LG The holy grail of the smart home is ambient computing - technology that disappears into the background, anticipating your needs without a word or a tap. Lights turn on as you walk in, doors unlock as you approach, coffee brews before you reach the kitchen. This is the proactive ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Executive-CornerOh-Sai-kee_3.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "AI could bring us a smarter home — if we can trust it",
-    "seoDescription": "LG’s FURON AI Agent powers the company’s smart home AI ambitions. | Image: LG The holy grail of the smart home is ambient computing - technology that disappe..."
-  },
-  {
-    "title": "How to Install iOS 26 Public Beta 6 on Your iPhone",
-    "url": "https://www.macrumors.com/how-to/install-ios-26-public-beta-6-iphone/",
-    "publishedAt": "2025-09-03T10:49:09.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple has made available the sixth public beta of iOS 26, bringing a more stable version of the software to a wider audience following lengthy testing by developers. Keep reading to learn how to prepare your device for the beta software and how to install it. Signing up to get the ‌iOS 26 or ‌iPadOS 26 public beta is simple, and can be done by enrolling a...",
-    "image": "https://images.macrumors.com/article-new/2025/06/Apple-WWDC25-iOS-26-hero-250609.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "How to Install iOS 26 Public Beta 6 on Your iPhone",
-    "seoDescription": "Apple has made available the sixth public beta of iOS 26, bringing a more stable version of the software to a wider audience following lengthy testing by dev..."
-  },
-  {
-    "title": "New Opera Browser Features Aim to End Safari Tab Management Woes",
-    "url": "https://www.macrumors.com/2025/09/03/new-opera-browser-features-tab-management-ios/",
-    "publishedAt": "2025-09-03T10:18:46.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Opera is making a bold claim about fixing one of mobile browsing's most persistent annoyances: tab overload. The company's latest Opera One for iOS update introduces what it calls \"the most advanced tab management system\" on the platform, in what sounds like a concerted effort to target Safari and Chrome users drowning in dozens of open tabs. The Norwegia...",
-    "image": "https://images.macrumors.com/article-new/2025/09/opera-one-ios.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Opera Browser"
-    ],
-    "seoTitle": "New Opera Browser Features Aim to End Safari Tab Management Woes",
-    "seoDescription": "Opera is making a bold claim about fixing one of mobile browsing's most persistent annoyances: tab overload. The company's latest Opera One for iOS update in..."
   }
 ]
