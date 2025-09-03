@@ -1,5 +1,164 @@
 [
   {
+    "title": "【Claude-Powerest-Manager_Enhancer】Efficient Claude Manager Script",
+    "url": "https://dev.to/f14xuanlv/claude-powerest-managerenhancer-efficient-claude-manager-script-23km",
+    "publishedAt": "2025-09-03T12:14:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "YouTube Demo Video Github Repo / Claude-Powerest-Manager_Enhancer Claude Powerest Manager & Enhancer Read this document in Chinese This is an extremely powerful Tampermonkey script designed to enhance your Claude experience in every way. It integrates two core modules: a comprehensive Conversation Manager and a real-time Chat Enhancer, giving you unpreced...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
+    "video": null,
+    "author": "f14XuanLv",
+    "tags": [
+      "ai",
+      "productivity",
+      "opensource",
+      "webdev"
+    ],
+    "seoTitle": "【Claude-Powerest-Manager_Enhancer】Efficient Claude Manager Script",
+    "seoDescription": "YouTube Demo Video Github Repo / Claude-Powerest-Manager_Enhancer Claude Powerest Manager & Enhancer Read this document in Chinese This is an extremely power..."
+  },
+  {
+    "title": "Laravel Cache Tip: Avoid Redundant has/missing Calls",
+    "url": "https://dev.to/tegos/laravel-cache-tip-avoid-redundant-hasmissing-calls-4hi1",
+    "publishedAt": "2025-09-03T12:14:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When working with Laravel's cache, I often see developers using a pattern that, while functional, creates unnecessary overhead. Let me show you a simple optimization that can improve both performance and memory usage. Here's a typical cache implementation I see frequently: public function getUserCount(): int { $cacheKey = 'user-count'; $cacheTtl = Carbon:...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyot6qlh6owqh7nle6x7i.png",
+    "video": null,
+    "author": "Ivan Mykhavko",
+    "tags": [
+      "php",
+      "laravel",
+      "webdev",
+      "performance"
+    ],
+    "seoTitle": "Laravel Cache Tip: Avoid Redundant has/missing Calls",
+    "seoDescription": "When working with Laravel's cache, I often see developers using a pattern that, while functional, creates unnecessary overhead. Let me show you a simple opti..."
+  },
+  {
+    "title": "Acer’s 16-inch Swift Air weighs less than the 13-inch MacBook Air",
+    "url": "https://9to5mac.com/2025/09/03/acers-16-inch-swift-air-weighs-less-than-the-13-inch-macbook-air/",
+    "publishedAt": "2025-09-03T12:06:56.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A second Windows laptop has demonstrated that there is potential for the MacBook Air to be even lighter. Earlier this year, we saw a 14-inch Asus laptop come in lighter than the 13-inch MacBook Air, and now Acer has done the same with a 16-inch model. Interestingly, the Acer Swift Air 16 manages to be lighter than the MacBook Air despite being thicker, at...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Acers-16-inch-Swift-Air-weighs-less-than-13-inch-MacBook-Air.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Acer’s 16-inch Swift Air weighs less than the 13-inch MacBook Air",
+    "seoDescription": "A second Windows laptop has demonstrated that there is potential for the MacBook Air to be even lighter. Earlier this year, we saw a 14-inch Asus laptop come..."
+  },
+  {
+    "title": "Remarkable’s new digital notepad is smaller than a paperback",
+    "url": "https://www.theverge.com/news/769005/remarkable-paper-pro-move-e-note-notebook-stylus-tablet-e-ink",
+    "publishedAt": "2025-09-03T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Paper Pro Move is similar in size to the iPad Mini but about an inch narrower. | Image: Remarkable A year after Remarkable introduced its Paper Pro digital notebook with an 11.8-inch color E Ink screen, the company is following up with a smaller version that prioritizes portability. The new Remarkable Paper Pro Move feels like what you’d be left with ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/remarkable_paperpromove1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Liszewski",
+    "tags": [],
+    "seoTitle": "Remarkable’s new digital notepad is smaller than a paperback",
+    "seoDescription": "The Paper Pro Move is similar in size to the iPad Mini but about an inch narrower. | Image: Remarkable A year after Remarkable introduced its Paper Pro digit..."
+  },
+  {
+    "title": "Exclusive: Nomad now 20% off sitewide for 9to5 readers – New Apple Watch bands, Find My card, MagSafe stands, more",
+    "url": "https://9to5toys.com/2025/09/03/exclusive-nomad-sitewide-sale/",
+    "publishedAt": "2025-09-03T11:54:04.000Z",
+    "source": "9to5toys.com",
+    "category": "apple",
+    "summary": "Labor Day weekend might have already come and gone, but the big-time deals at Nomad are just starting now. We have now secured 9to5 readers a special code that will knock 20% off everything on the site, from its super-popular Find My Tracking Card and brand new Tempo Apple Watch bands through to iPhone/iPad cases, its premium MagSafe charging stations, an...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Nomad-sitewide-sale-exclusive.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "9to5Toys",
+    "tags": [
+      "Deals"
+    ],
+    "seoTitle": "Exclusive: Nomad now 20% off sitewide for 9to5 readers – New Apple Watch bands, Find My card, MagSafe stands, more",
+    "seoDescription": "Labor Day weekend might have already come and gone, but the big-time deals at Nomad are just starting now. We have now secured 9to5 readers a special code th..."
+  },
+  {
+    "title": "Oasis Photo Exhibition to Open Ahead of LA Shows",
+    "url": "https://petapixel.com/2025/09/03/oasis-photo-exhibition-to-open-ahead-of-la-shows/",
+    "publishedAt": "2025-09-03T11:52:09.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "A photo exhibit of the English rock band Oasis will go on display tomorrow ahead of their upcoming shows in Los Angeles. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/Oasis-Kevin-Cummins.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "losangeles",
+      "musicphotographer",
+      "musicphotography",
+      "oasis",
+      "photoexhibit",
+      "photoexhibition"
+    ],
+    "seoTitle": "Oasis Photo Exhibition to Open Ahead of LA Shows",
+    "seoDescription": "A photo exhibit of the English rock band Oasis will go on display tomorrow ahead of their upcoming shows in Los Angeles. [Read More]"
+  },
+  {
+    "title": "Driving Digital Success with Bluetick Creative",
+    "url": "https://dev.to/bluetick_creative_37236ba/driving-digital-success-with-bluetick-creative-224h",
+    "publishedAt": "2025-09-03T11:51:45.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "http://bluetickcreative.com/ Our Expertise 🎨 Branding That Speaks Volumes 📈 Digital Marketing for Growth 🛒 Simplifying E-Commerce ✍️ Content & Social Media Engagement Content is the heart of connection. Through engaging blogs, campaigns, and posts, we create authentic connections with your audience across platforms.",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F91lyml4m28y01p50rfqc.png",
+    "video": null,
+    "author": "Bluetick Creative",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "Driving Digital Success with Bluetick Creative",
+    "seoDescription": "http://bluetickcreative.com/ Our Expertise 🎨 Branding That Speaks Volumes 📈 Digital Marketing for Growth 🛒 Simplifying E-Commerce ✍️ Content & Social Medi..."
+  },
+  {
+    "title": "Google’s Gemini smart home plans are about to make Siri look even dumber",
+    "url": "https://9to5mac.com/2025/09/03/googles-gemini-smart-home-plans-are-about-to-make-siri-look-even-dumber/",
+    "publishedAt": "2025-09-03T11:39:59.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is already under massive fire for falling behind in AI, and Google’s Gemini smart home plans are about to make that a whole lot worse. Not only is Siri lagging dramatically behind generative AI chatbots in smartphone-based tasks, but Google is about to make Apple’s assistant look really dumb when it comes to smart homes … more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Googles-Gemini-smart-home-plans-really-pile-pressure-onto-Apple.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Google’s Gemini smart home plans are about to make Siri look even dumber",
+    "seoDescription": "Apple is already under massive fire for falling behind in AI, and Google’s Gemini smart home plans are about to make that a whole lot worse. Not only is Siri..."
+  },
+  {
+    "title": "Best Satellite Internet for Boats: The Ultimate Guide",
+    "url": "https://dev.to/ubifi_llc/best-satellite-internet-for-boats-the-ultimate-guide-e8",
+    "publishedAt": "2025-09-03T11:28:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Cellular networks quickly lose coverage a few miles away from shore, leaving boaters exposed to dead zones that traditional connections simply can’t reach. Satellite internet, however, provides global access on almost any waterway—whether you’re coastal cruising, navigating vast oceans, or anchored in a remote cove. With the internet on board, sailors gai...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4mz165965kuehsxy9881.png",
+    "video": null,
+    "author": "UbiFi LLC",
+    "tags": [
+      "webdev",
+      "tutorial",
+      "intranet"
+    ],
+    "seoTitle": "Best Satellite Internet for Boats: The Ultimate Guide",
+    "seoDescription": "Cellular networks quickly lose coverage a few miles away from shore, leaving boaters exposed to dead zones that traditional connections simply can’t reach. S..."
+  },
+  {
     "title": "Samsung’s new party speakers are less subtle than ever",
     "url": "https://www.theverge.com/news/769896/samsungs-new-party-speakers-are-less-subtle-than-ever",
     "publishedAt": "2025-09-03T11:10:20.000Z",
@@ -93,25 +252,6 @@
     ],
     "seoTitle": "How to Install iOS 26 Public Beta 6 on Your iPhone",
     "seoDescription": "Apple has made available the sixth public beta of iOS 26, bringing a more stable version of the software to a wider audience following lengthy testing by dev..."
-  },
-  {
-    "title": "How to Select the Perfect Stateroom on Disney Cruise Line +1-800-406-8495.",
-    "url": "https://dev.to/chilam_6a5a1a354cccf1c4cf/how-to-select-the-perfect-stateroom-on-disney-cruise-line-1-800-406-8495-34in",
-    "publishedAt": "2025-09-03T10:23:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Begin your journey to unparalleled magic and adventure for the whole family by exploring our official website. For a detailed look at our fleet, magical destinations, and exclusive offers, visit us at https://cruisebookusa.com/ ➡ For comprehensive assistance with Disney Cruise Line, our dedicated support team is available around the clock. Call +1-800-406...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbzftmtix1ljdb4xz0jfg.jpg",
-    "video": null,
-    "author": "CHILAM",
-    "tags": [
-      "workplace",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "How to Select the Perfect Stateroom on Disney Cruise Line +1-800-406-8495.",
-    "seoDescription": "Begin your journey to unparalleled magic and adventure for the whole family by exploring our official website. For a detailed look at our fleet, magical dest..."
   },
   {
     "title": "New Opera Browser Features Aim to End Safari Tab Management Woes",
@@ -256,20 +396,6 @@
     "tags": [],
     "seoTitle": "Google will reveal its Gemini smart home plans (and hardware) next month",
     "seoDescription": "This sure does look exactly like every other Nest Cam out there. Google is overdue an update to its smart home setup, and now we know when it’ll come: Octobe..."
-  },
-  {
-    "title": "Ooni’s newest pizza oven adds AI to your slice",
-    "url": "https://www.theverge.com/news/768542/ooni-volt-2-pizza-oven-ai-pizza-intelligence",
-    "publishedAt": "2025-09-03T08:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Cheese, red sauce, and a sprinkling of AI. Have you ever looked at your pizza oven and wished it was just a little bit smarter? Ooni has, and so its new Volt 2 comes loaded with “Pizza Intelligence,” an adaptive heating system designed to deliver a more even and consistent cooking temperature. The Volt 2 is an indoor oven, able to cook pizzas up to 13 inc...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Ooni-Volt-2-pizza-oven.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Ooni’s newest pizza oven adds AI to your slice",
-    "seoDescription": "Cheese, red sauce, and a sprinkling of AI. Have you ever looked at your pizza oven and wished it was just a little bit smarter? Ooni has, and so its new Volt..."
   },
   {
     "title": "14 Iconic Characters Who Deserve Their Own Spin-Off",
@@ -484,137 +610,5 @@
     ],
     "seoTitle": "JENNIE Beats Solo 4 gets launch date, as new Beats Solo and Studio Pro colors leak",
     "seoDescription": "Today, Apple announced the launch date for the Ruby Red Special-Edition JENNIE , which features a pair of attachable red bows and more custom-made features f..."
-  },
-  {
-    "title": "You’ll Want to Follow These Filmmakers on Letterboxd ASAP",
-    "url": "https://nofilmschool.com/best-filmmakers-on-letterboxd",
-    "publishedAt": "2025-09-02T20:54:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "I wrote the other week about how important I think having a Letterboxd is, and I stand by that. As an aspiring filmmaker, you should be tracking what you're watching and deciding why you do or don't like something. And you don't have to take my word for it; look at all the filmmakers who are already on Letterboxd. While many of them stay anonymous in orde...",
-    "image": "https://nofilmschool.com/media-library/letterboxd.webp?id=61545379&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Social media",
-      "Letterboxd",
-      "Directors"
-    ],
-    "seoTitle": "You’ll Want to Follow These Filmmakers on Letterboxd ASAP",
-    "seoDescription": "I wrote the other week about how important I think having a Letterboxd is, and I stand by that. As an aspiring filmmaker, you should be tracking what you're ..."
-  },
-  {
-    "title": "iPhone 17 and iPhone 17 Pro Prices Estimated Ahead of Apple Event Next Week",
-    "url": "https://www.macrumors.com/2025/09/02/iphone-17-price-estimates/",
-    "publishedAt": "2025-09-02T20:50:25.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Just one week before Apple is expected to unveil the iPhone 17 series, an analyst has shared new price estimates for the devices. Here are J.P. Morgan analyst Samik Chatterjee's price estimates for the iPhone 17 series in the United States, according to 9to5Mac: Model Starting Price Model Starting Price Change iPhone 16 $799 iPhone 17 $799 — iPhone 16 Plu...",
-    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-Iridescent-Feature-2.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "JPMorgan"
-    ],
-    "seoTitle": "iPhone 17 and iPhone 17 Pro Prices Estimated Ahead of Apple Event Next Week",
-    "seoDescription": "Just one week before Apple is expected to unveil the iPhone 17 series, an analyst has shared new price estimates for the devices. Here are J.P. Morgan analys..."
-  },
-  {
-    "title": "Apple Wallet has three new features for boarding passes in iOS 26",
-    "url": "https://9to5mac.com/2025/09/02/ios-26-gives-boarding-passes-three-new-features-for-your-next-flight/",
-    "publishedAt": "2025-09-02T20:49:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Using digital boarding passes on the iPhone has become common practice for many of us. But after years with no changes to the feature, iOS 26 is about to upgrade Apple Wallet’s boarding passes with several handy new features. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/apple-wallet-app-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple Wallet has three new features for boarding passes in iOS 26",
-    "seoDescription": "Using digital boarding passes on the iPhone has become common practice for many of us. But after years with no changes to the feature, iOS 26 is about to upg..."
-  },
-  {
-    "title": "This Sigma Lens Was Too Popular—Now It’s Getting a Major Overhaul",
-    "url": "https://nofilmschool.com/sigma-14mm-f1-4-dg-dn-art-price",
-    "publishedAt": "2025-09-02T20:46:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Following up on the news that Sigma was having trouble filling orders for its 200mm f/2 DG OS Sport, the company has now issued another new statement regarding this ultra-wide prime lens. Announced by Sigma, the company is changing the sales method for the Sigma 14mm F1.4 DG DN | Art due to the significant delays in delivery times. The company has also up...",
-    "image": "https://nofilmschool.com/media-library/sigma-14mm-f1-4-dg-art.jpg?id=61545107&width=980",
-    "video": "https://www.youtube.com/embed/kINZ2ZnUPe0?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Sigma",
-      "Sigma lens",
-      "Ultra wide lens",
-      "Sigma 14mm f1.4 dg | art"
-    ],
-    "seoTitle": "This Sigma Lens Was Too Popular—Now It’s Getting a Major Overhaul",
-    "seoDescription": "Following up on the news that Sigma was having trouble filling orders for its 200mm f/2 DG OS Sport, the company has now issued another new statement regardi..."
-  },
-  {
-    "title": "This Fast Portrait Prime is Set to Join Viltrox’s PRO Series of Affordable APS-C Lenses",
-    "url": "https://nofilmschool.com/viltrox-af-56mm-f1-2-pro",
-    "publishedAt": "2025-09-02T20:36:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Another new fast, cinematic, and affordable Viltrox prime lens is joining the company’s popular PRO series lineup. The new Viltrox AF 56mm F1.2 Pro is set to arrive here for Sony E and Fujifilm X mounts and should continue a trend of high-quality, yet still affordable, prime lenses that are great options for hybrid shooters and run-and-gun content creator...",
-    "image": "https://nofilmschool.com/media-library/viltrox-af-56mm-f1-2-pro.jpg?id=61545200&width=980",
-    "video": "https://www.youtube.com/embed/l_Yq-WxQ2eU?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Viltrox",
-      "Viltrox pro series",
-      "New lens",
-      "Prime lens",
-      "Viltrox af 56mm f1.2 pro"
-    ],
-    "seoTitle": "This Fast Portrait Prime is Set to Join Viltrox’s PRO Series of Affordable APS-C Lenses",
-    "seoDescription": "Another new fast, cinematic, and affordable Viltrox prime lens is joining the company’s popular PRO series lineup. The new Viltrox AF 56mm F1.2 Pro is set to..."
-  },
-  {
-    "title": "Apple Releases Sixth Public Betas of iOS 26 and More",
-    "url": "https://www.macrumors.com/2025/09/02/apple-releases-ios-26-public-beta-6/",
-    "publishedAt": "2025-09-02T20:34:39.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today released the sixth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September launch. The sixth public betas come a week after the fifth public betas, and the updates correspond with the ninth developer betas that were released earlier today. Public beta testers that have register...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Glass-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "Apple Releases Sixth Public Betas of iOS 26 and More",
-    "seoDescription": "Apple today released the sixth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September lau..."
-  },
-  {
-    "title": "Why 'KPop Demon Hunters' Stands Out on Netflix's Most-Watched List",
-    "url": "https://nofilmschool.com/why-kpop-demon-hunters-netflix-most-watched",
-    "publishedAt": "2025-09-02T20:24:28.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Netflix recently confirmed its most-watched movies of all time, and unless you've been living under a rock recently, you probably know what's in the top spot. KPop Demon Hunters officially became the most popular Netflix original movie of all time, with 236 million views and 393.3 million hours of total viewing time since its release in June. The film, di...",
-    "image": "https://nofilmschool.com/media-library/kpop-demon-hunters.jpg?id=61546527&width=980",
-    "video": "https://www.youtube.com/embed/AzCAwdp1uIQ?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Animated films",
-      "Netflix",
-      "Kpop demon hunters",
-      "Netflix originals"
-    ],
-    "seoTitle": "Why 'KPop Demon Hunters' Stands Out on Netflix's Most-Watched List",
-    "seoDescription": "Netflix recently confirmed its most-watched movies of all time, and unless you've been living under a rock recently, you probably know what's in the top spot..."
   }
 ]
