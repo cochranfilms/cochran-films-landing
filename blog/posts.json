@@ -1,41 +1,163 @@
 [
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/hadil/-577n",
-    "publishedAt": "2025-09-03T08:10:49.000Z",
+    "title": "NPM v/s NPX",
+    "url": "https://dev.to/anuradha9712/npm-vs-npx-1lj0",
+    "publishedAt": "2025-09-03T09:05:54.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #productivity #interview",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10682%2Fbc1a28a5-111a-4dd5-83ec-0d6fc5ccc93f.jpeg",
+    "summary": "Hello Developers!! While working on any of your projects you might have come across NPM. NPM stands for Node Package Manager and is a go to tool for managing NodeJS packages. It helps you install libraries, manage dependencies & even define scripts to automate tasks. Now switch to the term NPX which stands for Node Package Execute it comes with the NPM, w...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmc7wjeuh02b9fyrf8igu.png",
     "video": null,
-    "author": "Hadil Ben Abdallah",
+    "author": "Anuradha Aggarwal",
     "tags": [
       "webdev",
       "programming",
-      "productivity",
-      "interview"
+      "beginners",
+      "npm"
     ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #produ..."
+    "seoTitle": "NPM v/s NPX",
+    "seoDescription": "Hello Developers!! While working on any of your projects you might have come across NPM. NPM stands for Node Package Manager and is a go to tool for managing..."
   },
   {
-    "title": "Veo3 im: A Deep Dive into the Tech Behind AI-Powered Video Generation",
-    "url": "https://dev.to/juddiy/veo3-im-a-deep-dive-into-the-tech-behind-ai-powered-video-generation-479k",
-    "publishedAt": "2025-09-03T08:03:03.000Z",
+    "title": "Japan Published an AI-Generated Video of Mount Fuji Erupting",
+    "url": "https://petapixel.com/2025/09/03/japan-published-an-ai-generated-video-of-mount-fuji-erupting/",
+    "publishedAt": "2025-09-03T09:02:17.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "To teach its citizens about the dangers of a Mount Fuji eruption and the potential threat to the lives of 37 million Tokyo residents, Japan published a series of AI-generated video clips showing the volcano erupting. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/AI-Generated-Fuji-Eruption.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "News",
+      "aigenerated",
+      "aigeneratedvideo",
+      "aivideo",
+      "japan",
+      "mountfuji"
+    ],
+    "seoTitle": "Japan Published an AI-Generated Video of Mount Fuji Erupting",
+    "seoDescription": "To teach its citizens about the dangers of a Mount Fuji eruption and the potential threat to the lives of 37 million Tokyo residents, Japan published a serie..."
+  },
+  {
+    "title": "The PartyBox 720 is JBL’s largest battery-powered party speaker",
+    "url": "https://www.theverge.com/news/768543/jbl-partybox-720-grip-boombox-4-price-availability",
+    "publishedAt": "2025-09-03T09:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The PartyBox 720 can run on battery power, allowing you to blast music without being tied to an outlet. JBL has expanded its lineup of flashy Bluetooth speakers with three new models that let you blast tunes without being tied to a power source. The launch includes the new $1,099 PartyBox 720, which is JBL’s largest battery-powered speaker to date, weighi...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/JBL-PartyBox-720.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "The PartyBox 720 is JBL’s largest battery-powered party speaker",
+    "seoDescription": "The PartyBox 720 can run on battery power, allowing you to blast music without being tied to an outlet. JBL has expanded its lineup of flashy Bluetooth speak..."
+  },
+  {
+    "title": "Acer gives its 18-inch Predator Helios gaming laptop a 4K screen and top GPU",
+    "url": "https://www.theverge.com/news/769243/acer-gives-its-18-inch-predator-helios-gaming-laptop-a-4k-screen-and-top-gpu",
+    "publishedAt": "2025-09-03T09:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "It looks just like the current Predator Helios 18 laptop, but the new 18P model has a 4K screen and even higher-end graphics. Acer is refreshing some of its gaming laptops for IFA 2025, with a big new Predator Helios 18P AI at the high end and pair of more affordable Nitro V 16 models. The Predator Helios 18P will have up to an RTX 5090 GPU and Intel Core...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Predator-Helios-18-AI-PH18P-73_right-facing-logo_pinkbg.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Antonio G. Di Benedetto",
+    "tags": [],
+    "seoTitle": "Acer gives its 18-inch Predator Helios gaming laptop a 4K screen and top GPU",
+    "seoDescription": "It looks just like the current Predator Helios 18 laptop, but the new 18P model has a 4K screen and even higher-end graphics. Acer is refreshing some of its ..."
+  },
+  {
+    "title": "Acer’s new Amadana and CE270 monitors are unusually, strikingly stylish",
+    "url": "https://www.theverge.com/desktop-computers/769759/acer-amadana-ce270u-z-monitors-design",
+    "publishedAt": "2025-09-03T09:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Amadana 27ART0 P1. | Image: Acer Did you know Acer acquired a Japanese design firm called Amadana late last year that makes classy coffee gear, retro calculators, air purifiers, and all manner of minimalist low-fi tech? Neither did I till today — but it goes a long way to explaining why a few of Acer’s new monitors at IFA 2025 are leaping off the page...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Acer-CE270U-Z_lifestyle-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "Acer’s new Amadana and CE270 monitors are unusually, strikingly stylish",
+    "seoDescription": "The Amadana 27ART0 P1. | Image: Acer Did you know Acer acquired a Japanese design firm called Amadana late last year that makes classy coffee gear, retro cal..."
+  },
+  {
+    "title": "Acer&#8217;s 16-inch Air weighs even less than a 13-inch MacBook Air",
+    "url": "https://www.theverge.com/news/769784/acer-swift-air-16-amd-lightweight-macbook-ifa-2025-specs-price",
+    "publishedAt": "2025-09-03T09:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "There are laptops out there with power adapters heavier than this entire 16-inch laptop. Acer is announcing a new Swift Air 16 at IFA 2025, and it’s an absolute featherweight of a 16-inch laptop. Weighing in at 2.18 pounds / 0.99kg with an IPS display or 2.43 pounds / 1.1kg with its optional OLED, the Swift Air is lighter than even a 13-inch MacBook Air. ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Swift-Air-16-SFA16-61M_lifestyle-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Antonio G. Di Benedetto",
+    "tags": [],
+    "seoTitle": "Acer&#8217;s 16-inch Air weighs even less than a 13-inch MacBook Air",
+    "seoDescription": "There are laptops out there with power adapters heavier than this entire 16-inch laptop. Acer is announcing a new Swift Air 16 at IFA 2025, and it’s an absol..."
+  },
+  {
+    "title": "My brief hands-on with Acer’s new convertible Chromebook has me cautiously optimistic",
+    "url": "https://www.theverge.com/hands-on/769834/acer-chromebook-plus-spin-514-2in1-mediatek-kompanio-ifa-2025-price-specs",
+    "publishedAt": "2025-09-03T09:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "I took the Spin 514 for an early spin, and I’m looking forward to testing it further. Acer's new Chromebook Plus Spin 514, announced at IFA 2025 in Berlin, is the company's first laptop to use the Arm-based MediaTek Kompanio Ultra 910 processor. That chip was used in the Lenovo Chromebook Plus 14 that launched earlier this summer, and it was key to delive...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257930_Acer_Chromebook_Plus_Spin_514_ADiBenedetto_0010_4a2d2b.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Antonio G. Di Benedetto",
+    "tags": [],
+    "seoTitle": "My brief hands-on with Acer’s new convertible Chromebook has me cautiously optimistic",
+    "seoDescription": "I took the Spin 514 for an early spin, and I’m looking forward to testing it further. Acer's new Chromebook Plus Spin 514, announced at IFA 2025 in Berlin, i..."
+  },
+  {
+    "title": "Portfolio Design and Development",
+    "url": "https://dev.to/kaoria/portfolio-design-and-development-3bfe",
+    "publishedAt": "2025-09-03T08:52:34.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "In today’s content-driven world, the demand for high-quality videos keeps growing. Traditional video production, however, is often time-consuming and costly. As a developer and content creator, I’ve been looking for a solution that’s both efficient and controllable. Enter Veo3.im—an AI-powered video generation platform that abstracts complex video creatio...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Facm7r2f98o5d1posbd2o.jpeg",
+    "summary": "New portfolio: https://kaoriadesign.vercel.app",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj94woyckurkmji7wzbs0.png",
     "video": null,
-    "author": "Juddiy",
+    "author": "Kaori A",
     "tags": [
-      "tooling",
       "webdev",
-      "veo3",
-      "ai"
+      "javascript",
+      "figma",
+      "design"
     ],
-    "seoTitle": "Veo3 im: A Deep Dive into the Tech Behind AI-Powered Video Generation",
-    "seoDescription": "In today’s content-driven world, the demand for high-quality videos keeps growing. Traditional video production, however, is often time-consuming and costly...."
+    "seoTitle": "Portfolio Design and Development",
+    "seoDescription": "New portfolio: https://kaoriadesign.vercel.app"
+  },
+  {
+    "title": "Vacuum Deaerators Market Recent Developments",
+    "url": "https://dev.to/suhani123/vacuum-deaerators-market-recent-developments-3j6j",
+    "publishedAt": "2025-09-03T08:47:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The vacuum deaerators market, vital in industries like power generation, food and beverages, pharmaceuticals, and chemicals, is undergoing significant change. Recent developments highlight how manufacturers and stakeholders are innovating and restructuring strategies to align with modern industrial and environmental demands. Technological Advancements Sus...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcrehpjo5lqal47e3b2fr.webp",
+    "video": null,
+    "author": "Suhani Sharma",
+    "tags": [
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Vacuum Deaerators Market Recent Developments",
+    "seoDescription": "The vacuum deaerators market, vital in industries like power generation, food and beverages, pharmaceuticals, and chemicals, is undergoing significant change..."
+  },
+  {
+    "title": "Google will reveal its Gemini smart home plans (and hardware) next month",
+    "url": "https://www.theverge.com/news/769848/google-teases-new-nest-cam-gemini-home",
+    "publishedAt": "2025-09-03T08:37:13.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "This sure does look exactly like every other Nest Cam out there. Google is overdue an update to its smart home setup, and now we know when it’ll come: October 1st. The company has teased some sort of launch or announcement for that day, promising that “Gemini is coming to Google Home.” The company announced Gemini for Home at last month’s Made by Google e...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/google-gemini-home-nest-cam-teaser.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Google will reveal its Gemini smart home plans (and hardware) next month",
+    "seoDescription": "This sure does look exactly like every other Nest Cam out there. Google is overdue an update to its smart home setup, and now we know when it’ll come: Octobe..."
   },
   {
     "title": "Ooni’s newest pizza oven adds AI to your slice",
@@ -50,82 +172,6 @@
     "tags": [],
     "seoTitle": "Ooni’s newest pizza oven adds AI to your slice",
     "seoDescription": "Cheese, red sauce, and a sprinkling of AI. Have you ever looked at your pizza oven and wished it was just a little bit smarter? Ooni has, and so its new Volt..."
-  },
-  {
-    "title": "Why API tooling needs a reset (and what we're doing about it)",
-    "url": "https://dev.to/kiselitza/why-api-tooling-needs-a-reset-and-what-were-doing-about-it-3dn6",
-    "publishedAt": "2025-09-03T07:40:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Building and testing APIs feels all over the place nowadays. It's a pain, it wastes time, causes errors, and frustrates everyone involved. This post dives into why API tooling is such a headache, why the industry keeps making it worse, and how Voiden makes life easier for developers. Well, a lot of things, really. Let’s talk real-life examples: A retail a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04vzzjzp1m1cmkxz6260.png",
-    "video": null,
-    "author": "aldin",
-    "tags": [
-      "webdev",
-      "programming",
-      "api",
-      "productivity"
-    ],
-    "seoTitle": "Why API tooling needs a reset (and what we're doing about it)",
-    "seoDescription": "Building and testing APIs feels all over the place nowadays. It's a pain, it wastes time, causes errors, and frustrates everyone involved. This post dives in..."
-  },
-  {
-    "title": "REST API in RUST with ntex",
-    "url": "https://dev.to/0xle0ne/rest-api-in-rust-with-ntex-6a8",
-    "publishedAt": "2025-09-03T07:38:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey, today I wanted to share my knowledge on how to write a Rest API in Rust. It may be easier than you think! OpenAPI specifications and serve a Swagger UI. You can find the full code source on github. Before starting, make sure you have Rust installed. Let's start by initializing a new project using cargo init. cargo init my-rest-api cd my-rest-api That...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F25u2056st0vb4vylpyw4.png",
-    "video": null,
-    "author": "leone",
-    "tags": [
-      "webdev",
-      "programming",
-      "rust",
-      "tutorial"
-    ],
-    "seoTitle": "REST API in RUST with ntex",
-    "seoDescription": "Hey, today I wanted to share my knowledge on how to write a Rest API in Rust. It may be easier than you think! OpenAPI specifications and serve a Swagger UI...."
-  },
-  {
-    "title": "Memora — Adaptive AI Agents with Memory (No Fine-Tuning Required)",
-    "url": "https://dev.to/21bq1a4232/memora-adaptive-ai-agents-with-memory-no-fine-tuning-required-2g44",
-    "publishedAt": "2025-09-03T07:35:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Problem with Today’s AI Agents Large Language Models (LLMs) are powerful, but they don’t truly learn from experience. Fine-tuning can help, but it’s: Expensive Rigid Slow to iterate If we want truly adaptive agents, we need a better paradigm. The Idea: Memory-Augmented Reinforcement Learning Instead of retraining the model itself, Memora introduces me...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsischhg82polodyd4ju8.png",
-    "video": null,
-    "author": "Danda Pranav Krishna",
-    "tags": [
-      "ai",
-      "machinelearning",
-      "softwareengineering",
-      "webdev"
-    ],
-    "seoTitle": "Memora — Adaptive AI Agents with Memory (No Fine-Tuning Required)",
-    "seoDescription": "The Problem with Today’s AI Agents Large Language Models (LLMs) are powerful, but they don’t truly learn from experience. Fine-tuning can help, but it’s: Exp..."
-  },
-  {
-    "title": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
-    "url": "https://dev.to/john_smith_9e289544c3646a/real-time-price-comparison-amazon-flipkart-meesho-scraping-133i",
-    "publishedAt": "2025-09-03T07:03:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Real-Time Price Comparison: Amazon, Flipkart & Meesho ScrapingIntroduction They needed a system to scrape product data across all three platforms with real-time frequency, aggregate it, and trigger alerts when a competitor dropped prices. By leveraging Web Scraping for Amazon E-Commerce Product Data and integrating tools to Extract Flipkart E-Commerce Pro...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz12sum5h2xwevpaia1uh.jpg",
-    "video": null,
-    "author": "John Smith",
-    "tags": [
-      "websitescrape",
-      "meeshoproductdetails",
-      "flipkartscraperapi",
-      "webdev"
-    ],
-    "seoTitle": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
-    "seoDescription": "Real-Time Price Comparison: Amazon, Flipkart & Meesho ScrapingIntroduction They needed a system to scrape product data across all three platforms with real-t..."
   },
   {
     "title": "14 Iconic Characters Who Deserve Their Own Spin-Off",
@@ -287,34 +333,6 @@
     "seoDescription": "Following months of testimony for the remedies phase of the Google antitrust trial, Judge Amit Mehta just issued his decision, and it is largely beneficial t..."
   },
   {
-    "title": "US v. Google: all the news from the search antitrust showdown",
-    "url": "https://www.theverge.com/23869483/us-v-google-search-antitrust-case-updates",
-    "publishedAt": "2025-09-02T21:19:57.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "On August 5th, 2024, Judge Amit Mehta ruled in the case of United States of America v. Google, saying, “…the court reaches the following conclusion: Google is a monopolist, and it has acted as one to maintain its monopoly. It has violated Section 2 of the Sherman Act.” Nearly a year later, the judge has followed that up with a ruling on remedies for Googl...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23951561/VRG_Illo_STK179_L_Normand_SundarPichai_Neutral.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Verge Staff",
-    "tags": [],
-    "seoTitle": "US v. Google: all the news from the search antitrust showdown",
-    "seoDescription": "On August 5th, 2024, Judge Amit Mehta ruled in the case of United States of America v. Google, saying, “…the court reaches the following conclusion: Google i..."
-  },
-  {
-    "title": "The best deals on MacBooks right now",
-    "url": "https://www.theverge.com/22399419/apple-macbook-air-pro-mac-mini-imac-deals",
-    "publishedAt": "2025-09-02T21:19:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Apple’s latest 13-inch MacBook Air with an M4 chip is on sale starting at $799 ($200 off). Apple currently sells MacBooks equipped with its own M-series chips in a wide range of sizes and price points. It discontinued the M1 MacBook Air to make room for newer models, but some retailers are still selling the 2020 laptop starting at $599 ($50 off) at Walmar...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/257607_M4_MacBook_Air_ADiBenedetto_0177.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best deals on MacBooks right now",
-    "seoDescription": "Apple’s latest 13-inch MacBook Air with an M4 chip is on sale starting at $799 ($200 off). Apple currently sells MacBooks equipped with its own M-series chip..."
-  },
-  {
     "title": "Court Allows Google-Apple Search Deal to Continue With Conditions",
     "url": "https://www.macrumors.com/2025/09/02/apple-google-search-deal-green-light/",
     "publishedAt": "2025-09-02T21:16:22.000Z",
@@ -354,20 +372,6 @@
     "seoDescription": "When Nikon raised its prices in June because of U.S. tariff policy, Nikon's mirrorless Z series cameras escaped essentially unscathed. Unfortunately, with Ni..."
   },
   {
-    "title": "Google and Apple&#8217;s $20 billion search deal survives",
-    "url": "https://www.theverge.com/news/769599/google-apple-search-deal-us-doj-antitrust-case-remedies",
-    "publishedAt": "2025-09-02T21:10:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google will be able to keep making search deals like its $20 billion agreement to be the default option in Apple’s Safari browser, a federal district court judge ruled in the US v. Google antitrust case on Tuesday. Executives from both Apple and Firefox-made Mozilla have defended their search deals with Google, with Mozilla’s CFO testifying that Firefox m...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK093_Google_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jay Peters",
-    "tags": [],
-    "seoTitle": "Google and Apple&#8217;s $20 billion search deal survives",
-    "seoDescription": "Google will be able to keep making search deals like its $20 billion agreement to be the default option in Apple’s Safari browser, a federal district court j..."
-  },
-  {
     "title": "The 15 Best Cinematic Sword Fights Of All Time",
     "url": "https://nofilmschool.com/best-cinematic-sword-fights",
     "publishedAt": "2025-09-02T21:06:03.000Z",
@@ -385,20 +389,6 @@
     ],
     "seoTitle": "The 15 Best Cinematic Sword Fights Of All Time",
     "seoDescription": "When I was a kid, I would unsheath my plastic sword and imagine epic battles I was having against all sorts of enemies, foreign and domestic. These fights we..."
-  },
-  {
-    "title": "Amazon&#8217;s Lens Live AI shops for anything you can see",
-    "url": "https://www.theverge.com/news/769585/amazon-lens-live-ai-real-time-shopping",
-    "publishedAt": "2025-09-02T21:01:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Amazon will now let you shop for products by pointing your camera at them. On Thursday, the company announced Lens Live, a new feature that uses your camera to scan things in the environment around you, while surfacing matching product listings. This feature, which is only rolling out to the Amazon Shopping app on iOS for now, lets you pan your camera aro...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/amazon-lens-ai.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Amazon&#8217;s Lens Live AI shops for anything you can see",
-    "seoDescription": "Amazon will now let you shop for products by pointing your camera at them. On Thursday, the company announced Lens Live, a new feature that uses your camera ..."
   },
   {
     "title": "DxO PhotoLab 9 Hands-On: Fast RAW Photo Editor Without a Subscription",
@@ -438,20 +428,6 @@
     ],
     "seoTitle": "JENNIE Beats Solo 4 gets launch date, as new Beats Solo and Studio Pro colors leak",
     "seoDescription": "Today, Apple announced the launch date for the Ruby Red Special-Edition JENNIE , which features a pair of attachable red bows and more custom-made features f..."
-  },
-  {
-    "title": "Google gets to keep Chrome, judge rules in search antitrust case",
-    "url": "https://www.theverge.com/policy/717087/google-search-remedies-ruling-chrome",
-    "publishedAt": "2025-09-02T20:57:46.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google will not have to sell its Chrome browser in order to address its illegal monopoly in online search, DC District Court Judge Amit Mehta ruled on Tuesday. Over a year ago, Judge Mehta found that the search giant had violated the Sherman Antitrust Act; his ruling now determines what Google must do in response. Mehta declined to grant some of the more ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STKS487_ANTITRUST_2__STK093_GOOGLE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Lauren Feiner",
-    "tags": [],
-    "seoTitle": "Google gets to keep Chrome, judge rules in search antitrust case",
-    "seoDescription": "Google will not have to sell its Chrome browser in order to address its illegal monopoly in online search, DC District Court Judge Amit Mehta ruled on Tuesda..."
   },
   {
     "title": "You’ll Want to Follow These Filmmakers on Letterboxd ASAP",
@@ -567,20 +543,6 @@
     "seoDescription": "Apple today released the sixth public betas of iOS 26, iPadOS 26, macOS 26, and tvOS 26, allowing the public to test the updates ahead of their September lau..."
   },
   {
-    "title": "Silksong: all of the updates about the Hollow Knight sequel",
-    "url": "https://www.theverge.com/news/769489/hollow-knight-silksong-news-updates",
-    "publishedAt": "2025-09-02T20:24:36.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "A screenshot from Hollow Knight: Silksong. After years of development and pent-up anticipation from fans, Hollow Knight: Silksong, the full sequel to the indie classic Hollow Knight, will finally be released on September 4th. It will cost $19.99 and include new zones, more than 200 enemies, over 40 bosses, and an orchestral score from the composer of the ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/videoframe_50042.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Verge Staff",
-    "tags": [],
-    "seoTitle": "Silksong: all of the updates about the Hollow Knight sequel",
-    "seoDescription": "A screenshot from Hollow Knight: Silksong. After years of development and pent-up anticipation from fans, Hollow Knight: Silksong, the full sequel to the ind..."
-  },
-  {
     "title": "Why 'KPop Demon Hunters' Stands Out on Netflix's Most-Watched List",
     "url": "https://nofilmschool.com/why-kpop-demon-hunters-netflix-most-watched",
     "publishedAt": "2025-09-02T20:24:28.000Z",
@@ -621,5 +583,45 @@
     ],
     "seoTitle": "Fujifilm Cameras and Lenses Cost Up to 9% More After New Price Increase",
     "seoDescription": "As Fujifilm warned in mid-August, its prices have, in fact, increased in the United States as a result of the Trump administration's tariff policy. [Read More]"
+  },
+  {
+    "title": "What We Know So Far About '28 Years Later: The Bone Temple'",
+    "url": "https://nofilmschool.com/bone-temple-first-look",
+    "publishedAt": "2025-09-02T20:12:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Regardless of what you thought of 28 Years Later and its slightly more subdued mother/son storyline, the sequel is coming soon. At the end of the former film, Spike meets Sir Jimmy Crystal (Jack O’Connell) and his strange cult of \"Jimmies.\" 28 Years Later: The Bone Temple begins soon afterward, with Spike joining the cult. Inevitably, key characters will ...",
+    "image": "https://nofilmschool.com/media-library/ralph-fiennes-as-dr-kelson-28-years-later-the-bone-temple.jpg?id=61545767&width=980",
+    "video": "https://www.youtube.com/embed/ngEBGV9fgO8?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "28 years later",
+      "The bone temple",
+      "28 years later: the bone temple",
+      "Nia dacosta"
+    ],
+    "seoTitle": "What We Know So Far About '28 Years Later: The Bone Temple'",
+    "seoDescription": "Regardless of what you thought of 28 Years Later and its slightly more subdued mother/son storyline, the sequel is coming soon. At the end of the former film..."
+  },
+  {
+    "title": "Beats Working on New Colors for Solo Buds, Studio Pro, and Solo 4",
+    "url": "https://www.macrumors.com/2025/09/02/beats-new-color-options/",
+    "publishedAt": "2025-09-02T20:08:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's Beats brand will soon come out with new color options for several of its products, according to information discovered by MacRumors. The Beats Studio Pro headphones are set to be released in colors that Apple is referring to as dark slate and pink internally. It is worth noting that we've previously seen mentions of unreleased Sand Gray and Soft P...",
+    "image": "https://images.macrumors.com/article-new/2025/09/beatsstudiopro.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Apple",
+      "Rumors",
+      "Mac",
+      "iOS",
+      "iPhone",
+      "iPad"
+    ],
+    "seoTitle": "Beats Working on New Colors for Solo Buds, Studio Pro, and Solo 4",
+    "seoDescription": "Apple's Beats brand will soon come out with new color options for several of its products, according to information discovered by MacRumors. The Beats Studio..."
   }
 ]
