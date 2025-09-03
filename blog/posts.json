@@ -1,5 +1,109 @@
 [
   {
+    "title": "The best robot vacuum and mop to buy right now",
+    "url": "https://www.theverge.com/tech/625409/best-robot-vacuum-mops",
+    "publishedAt": "2025-09-03T22:03:47.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Robot vacuums that can both mop and sweep your floors have improved significantly in recent years. While they are still not as effective as good ol’ manual labor, if you run them regularly, they will help keep your floors cleaner with much less effort on your part. The difference is that newer “combo” robot vacuum and mop models are designed to actually s...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/257709_robot_vacuum_mops_buying_guide_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "The best robot vacuum and mop to buy right now",
+    "seoDescription": "Robot vacuums that can both mop and sweep your floors have improved significantly in recent years. While they are still not as effective as good ol’ manual l..."
+  },
+  {
+    "title": "Bank of America boosts Apple stock target on Google antitrust win",
+    "url": "https://9to5mac.com/2025/09/03/bank-of-america-boosts-apple-stock-target-on-google-antitrust-win/",
+    "publishedAt": "2025-09-03T21:51:41.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Just a few days ago, Bank of America reiterated its cautiously optimistic outlook on Apple’s stock market performance, with a $250 price target. Following yesterday’s ruling on the Google antitrust case, it has raised its projection. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/06/slack-imgs.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Bank of America boosts Apple stock target on Google antitrust win",
+    "seoDescription": "Just a few days ago, Bank of America reiterated its cautiously optimistic outlook on Apple’s stock market performance, with a $250 price target. Following ye..."
+  },
+  {
+    "title": "ASUS ProArt 6K Review: $1,299 Gets You a 32-Inch 6K Display",
+    "url": "https://www.macrumors.com/2025/09/03/asus-pro-art-6k-display/",
+    "publishedAt": "2025-09-03T21:44:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "ASUS recently came out with a new 32-inch 6K ProArt Display that's just $1,299, so we thought we'd check it out to see how it compares with the Studio Display and the Pro Display XDR from Apple. Subscribe to the MacRumors YouTube channel for more videos. At 32 inches, the ProArt 6K is larger than the 27-inch Studio Display, but it is on par in size with t...",
+    "image": null,
+    "video": "https://www.youtube.com/embed/FPMzum5znzg",
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "ASUS ProArt 6K Review: $1,299 Gets You a 32-Inch 6K Display",
+    "seoDescription": "ASUS recently came out with a new 32-inch 6K ProArt Display that's just $1,299, so we thought we'd check it out to see how it compares with the Studio Displa..."
+  },
+  {
+    "title": "A Complete Introduction to Go Testing",
+    "url": "https://dev.to/leapcell/a-complete-introduction-to-go-testing-2bkb",
+    "publishedAt": "2025-09-03T21:28:43.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In Go, test files are usually located in the same package as the source files being tested, and follow these naming conventions: Source file: xxx.go Test file: xxx_test.go Test file names must end with _test.go so that the Go toolchain can recognize and treat them as test files. Test functions must have the following signature: func TestXxx(t *testing.T) ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqvc6ok4rt2qse9fvjlqx.png",
+    "video": null,
+    "author": "Leapcell",
+    "tags": [
+      "webdev",
+      "programming",
+      "backend",
+      "go"
+    ],
+    "seoTitle": "A Complete Introduction to Go Testing",
+    "seoDescription": "In Go, test files are usually located in the same package as the source files being tested, and follow these naming conventions: Source file: xxx.go Test fil..."
+  },
+  {
+    "title": "Opera One for iOS has a new version, and it’s all about tab management (and a dash of AI)",
+    "url": "https://9to5mac.com/2025/09/03/opera-one-for-ios-has-a-new-version-and-its-all-about-tab-management-and-a-dash-of-ai/",
+    "publishedAt": "2025-09-03T21:25:03.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Today, Opera announced an update to Opera One, its iOS browser, with multiple improvements to tab viewing, searching, managing, and more. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/opera-one-tab-manager.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Opera One for iOS has a new version, and it’s all about tab management (and a dash of AI)",
+    "seoDescription": "Today, Opera announced an update to Opera One, its iOS browser, with multiple improvements to tab viewing, searching, managing, and more. Here are the detail..."
+  },
+  {
+    "title": "The Ultimate Beginner’s Guide to Bird Photography",
+    "url": "https://petapixel.com/2025/09/03/the-ultimate-beginners-guide-to-bird-photography/",
+    "publishedAt": "2025-09-03T21:13:23.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "While birds inhabit every environment from remote wilderness to urban parking lots, capturing their beauty and behavior demands technical … [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/08/Ben-Knoot-OM-SYSTEM-Featured-Image-3.jpg",
+    "video": null,
+    "author": "Michael Bonocore",
+    "tags": [
+      "Guides",
+      "Sponsored",
+      "Tips",
+      "Travel",
+      "animals",
+      "bird photography",
+      "birds",
+      "nature"
+    ],
+    "seoTitle": "The Ultimate Beginner’s Guide to Bird Photography",
+    "seoDescription": "While birds inhabit every environment from remote wilderness to urban parking lots, capturing their beauty and behavior demands technical … [Read More]"
+  },
+  {
     "title": "كريستيانو رونالدو يطلق حملة السياحة السعودية الجديدة تحت شعار \"I Came for Football, I Stayed for More\"",
     "url": "https://dev.to/legendhasan/krystynw-rwnldw-ytlq-hml-lsyh-lswdy-ljdyd-tht-shr-i-came-for-football-i-stayed-for-21fh",
     "publishedAt": "2025-09-03T21:01:11.000Z",
@@ -169,25 +273,6 @@
     "seoDescription": "Every month, JustWatch reports the most popular shows and movies among its users worldwide. Here’s a breakdown of what topped its Apple TV+ charts in August...."
   },
   {
-    "title": "IoT-Powered Wood Fence Monitoring Using Python Frameworks",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/iot-powered-wood-fence-monitoring-using-python-frameworks-1lil",
-    "publishedAt": "2025-09-03T20:35:21.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The Internet of Things (IoT) has dramatically changed the way we interact with our physical environments. From smart thermostats to advanced home security systems, IoT has been integrated into nearly every aspect of modern living. One area that is often overlooked, yet highly valuable, is wood fence monitoring. Wooden fences are not just aesthetic additio...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwu0eual85obxx9xxs2p5.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "IoT-Powered Wood Fence Monitoring Using Python Frameworks",
-    "seoDescription": "The Internet of Things (IoT) has dramatically changed the way we interact with our physical environments. From smart thermostats to advanced home security sy..."
-  },
-  {
     "title": "The 10 Best College Movies of All Time",
     "url": "https://nofilmschool.com/best-college-movies-all-time",
     "publishedAt": "2025-09-03T20:34:47.000Z",
@@ -235,25 +320,6 @@
     ],
     "seoTitle": "Google closer to powering new Siri and Apple’s AI search tool as Perplexity fades",
     "seoDescription": "While they’re not exactly tying the knot yet, Siri and Gemini are making plans to spend a lot more time together. That’s according to a new report that detai..."
-  },
-  {
-    "title": "Python Applications for Cost Optimization in Fence Companies",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/python-applications-for-cost-optimization-in-fence-companies-21cc",
-    "publishedAt": "2025-09-03T20:15:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The fencing industry, though traditional in nature, is going through a quiet but impactful digital transformation. From residential backyard fences to large-scale commercial installations, companies are realizing that technology can make their operations leaner, faster, and more profitable. Python, with its wide ecosystem of tools and libraries, is at the...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2d99p9g8qygvwi1l5py5.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Python Applications for Cost Optimization in Fence Companies",
-    "seoDescription": "The fencing industry, though traditional in nature, is going through a quiet but impactful digital transformation. From residential backyard fences to large-..."
   },
   {
     "title": "9to5Mac Daily: September 3, 2025 – Apple’s deal with Google is safe",
@@ -540,20 +606,6 @@
     "seoDescription": "It's been a tumultuous summer for Scale AI: Meta took a multibillion-dollar stake in the company, Mark Zuckerberg hired Scale CEO Alexandr Wang and other top..."
   },
   {
-    "title": "A PlayStation game is now the best-selling game on Xbox",
-    "url": "https://www.theverge.com/news/770311/playstation-game-helldivers-2-best-selling-game-on-xbox",
-    "publishedAt": "2025-09-03T17:52:37.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "If you ever doubted the “console wars” were over, here’s a new piece of data to consider: Helldivers 2, formerly console exclusive to Sony’s PS5, is currently the best-selling title on Xbox. In fact, it’s the first and third best-selling game, if you count its more premium edition, and it’s currently the ninth-most played game on the platform — mostly bea...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/helldivers2.jpg?quality=90&#038;strip=all&#038;crop=19.8,14.222222222222,73.4,85.777777777778",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "A PlayStation game is now the best-selling game on Xbox",
-    "seoDescription": "If you ever doubted the “console wars” were over, here’s a new piece of data to consider: Helldivers 2, formerly console exclusive to Sony’s PS5, is currentl..."
-  },
-  {
     "title": "The first iPhone with all-screen display could arrive next year: report",
     "url": "https://9to5mac.com/2025/09/03/the-first-iphone-with-all-screen-display-could-arrive-next-year-report/",
     "publishedAt": "2025-09-03T17:47:11.000Z",
@@ -568,58 +620,5 @@
     ],
     "seoTitle": "The first iPhone with all-screen display could arrive next year: report",
     "seoDescription": "The dream of an edge-to-edge iPhone display with no cutout could come true sooner than we thought. Per a new analyst report, next year’s iPhone Fold might be..."
-  },
-  {
-    "title": "New Eero Signal promises to keep you connected during internet outages",
-    "url": "https://9to5mac.com/2025/09/03/eero-signal-announcement-features/",
-    "publishedAt": "2025-09-03T17:24:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Eero has a new Eero Signal product that it says will let you “say goodbye to internet outages.” “Eero Signal delivers cellular backup whenever your wired internet connection goes down,” the company explains. It’s available in both 4G LTE and 5G RedCap versions. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/eero-signal.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New Eero Signal promises to keep you connected during internet outages",
-    "seoDescription": "Eero has a new Eero Signal product that it says will let you “say goodbye to internet outages.” “Eero Signal delivers cellular backup whenever your wired int..."
-  },
-  {
-    "title": "A Glossary of Filmmaking Terms Every Production Assistant Must Know",
-    "url": "https://nofilmschool.com/production-assistant-glossary",
-    "publishedAt": "2025-09-03T17:21:34.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When I started working in Los Angeles, I started as a PA on film and commercials sets, and then worked as an assistant, and now, somehow, I'm a writer. But I really liked my days as a set PA, running around, closing roads, carrying coffees, and just being enveloped by making movies and TV in Hollywood. Today, I wanted to put together a glossary that every...",
-    "image": "https://nofilmschool.com/media-library/a-glossary-of-filmmaking-terms-every-production-assistant-must-know.jpg?id=61540271&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Glossary",
-      "Film terms",
-      "Filmmaking",
-      "Production assistant",
-      "Production assistant"
-    ],
-    "seoTitle": "A Glossary of Filmmaking Terms Every Production Assistant Must Know",
-    "seoDescription": "When I started working in Los Angeles, I started as a PA on film and commercials sets, and then worked as an assistant, and now, somehow, I'm a writer. But I..."
-  },
-  {
-    "title": "What Are the 10 Best 'Game of Thrones' Episodes?",
-    "url": "https://nofilmschool.com/best-game-of-thrones-episodes",
-    "publishedAt": "2025-09-03T17:10:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Sunday nights used to mean something. My roommates and my friends would gather and make food. And we'd sit and watch Game of Thrones together and analyze all the characters and just escape into the fantasy realm. I really miss those sorts of gatherings for prestige television, and I really miss this TV show. Today, I want to go over the ten episodes of Ga...",
-    "image": "https://nofilmschool.com/media-library/what-are-the-10-best-game-of-thrones-episodes.jpg?id=61540295&width=980",
-    "video": "https://www.youtube.com/embed/btzq18TkaUc?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best tv",
-      "Game of thrones"
-    ],
-    "seoTitle": "What Are the 10 Best 'Game of Thrones' Episodes?",
-    "seoDescription": "Sunday nights used to mean something. My roommates and my friends would gather and make food. And we'd sit and watch Game of Thrones together and analyze all..."
   }
 ]
