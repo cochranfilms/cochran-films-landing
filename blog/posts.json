@@ -1,5 +1,509 @@
 [
   {
+    "title": "Kubernetes Claims in 2025: Stop Bleeding Resources 💸",
+    "url": "https://dev.to/aleksei_aleinikov/kubernetes-claims-in-2025-stop-bleeding-resources-143b",
+    "publishedAt": "2025-09-03T18:17:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Teams declare intent, the platform provisions under policy — faster delivery, lower costs. Examples: ComputeClaim, DomainClaim, DatabaseClaim 👉 https://levelup.gitconnected.com/kubernetes-claims-how-to-decouple-requests-from-infrastructure-in-2025-and-stop-bleeding-64314f668844",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5r3ozr86pihd1w554556.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "devops",
+      "webdev",
+      "programming",
+      "kubernetes"
+    ],
+    "seoTitle": "Kubernetes Claims in 2025: Stop Bleeding Resources 💸",
+    "seoDescription": "Teams declare intent, the platform provisions under policy — faster delivery, lower costs. Examples: ComputeClaim, DomainClaim, DatabaseClaim 👉 https://leve..."
+  },
+  {
+    "title": "Hollyland VenusLiv Air Is an All-in-One 4K Streaming Camera With a Fast Lens",
+    "url": "https://petapixel.com/2025/09/03/hollyland-venusliv-air-is-an-all-in-one-4k-streaming-camera-with-a-fast-lens/",
+    "publishedAt": "2025-09-03T18:17:25.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Hollyland, maker of many excellent audio/video products, announced a new all-in-one live streaming camera, the VenusLiv Air. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/hollyland-venusliv-air-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "4k",
+      "contentcreator",
+      "hollyland",
+      "hollylandvenuslivair",
+      "livestreaming",
+      "streaming"
+    ],
+    "seoTitle": "Hollyland VenusLiv Air Is an All-in-One 4K Streaming Camera With a Fast Lens",
+    "seoDescription": "Hollyland, maker of many excellent audio/video products, announced a new all-in-one live streaming camera, the VenusLiv Air. [Read More]"
+  },
+  {
+    "title": "Why mTLS in 2025 Is Just Hygiene (Not a Luxury) 🔐",
+    "url": "https://dev.to/aleksei_aleinikov/why-mtls-in-2025-is-just-hygiene-not-a-luxury-1g6o",
+    "publishedAt": "2025-09-03T18:16:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Microservices empower teams — but they also create chaos in service-to-service communication. In 2025, I don’t hard-wire retries, timeouts, and TLS configs into every service. Instead, I let Istio + mTLS handle it: In my guide I share 3 real scenarios you can copy right away: Canary release with traffic splitting & retries 🎯 Zero trust policy (only Profi...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjyngxfi0f2k0phnxujbo.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "devops",
+      "mtls",
+      "cloud",
+      "webdev"
+    ],
+    "seoTitle": "Why mTLS in 2025 Is Just Hygiene (Not a Luxury) 🔐",
+    "seoDescription": "Microservices empower teams — but they also create chaos in service-to-service communication. In 2025, I don’t hard-wire retries, timeouts, and TLS configs i..."
+  },
+  {
+    "title": "Angular + SSR in 2025: Faster First Paint, Fewer Flickers 🚀",
+    "url": "https://dev.to/aleksei_aleinikov/angular-ssr-in-2025-faster-first-paint-fewer-flickers-39lh",
+    "publishedAt": "2025-09-03T18:15:04.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I upgraded a production Angular app — and instantly felt the difference. In my new guide, I explain what really changed in 2025 and how to apply it in practice: 👉 Read the full field guide and see why this upgrade is worth it. https://javascript.plainenglish.io/angular-ssr-in-2025-how-to-ship-faster-first-paint-f4d969a47eb9",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9sx8hz4ro3bk8jpghrpt.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "angular",
+      "javascript",
+      "webdev",
+      "frontend"
+    ],
+    "seoTitle": "Angular + SSR in 2025: Faster First Paint, Fewer Flickers 🚀",
+    "seoDescription": "I upgraded a production Angular app — and instantly felt the difference. In my new guide, I explain what really changed in 2025 and how to apply it in practi..."
+  },
+  {
+    "title": "One Tool to Lint and Format: Why I Dropped Prettier in 2025 🛠️",
+    "url": "https://dev.to/aleksei_aleinikov/one-tool-to-lint-and-format-why-i-dropped-prettier-in-2025-50d2",
+    "publishedAt": "2025-09-03T18:14:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Two tools, two configs, endless friction. In 2025, I switched from ESLint + Prettier to ESLint Stylistic — and suddenly my diffs, CI logs, and dev loop got simpler. In this article, I explain: 👉 Read the full guide and see why eslint --fix is all you need in 2025. https://javascript.plainenglish.io/what-happened-when-i-let-eslint-handle-formatting-too-49...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3o6ljhrom8146yjym86u.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "javascript",
+      "eslint",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "One Tool to Lint and Format: Why I Dropped Prettier in 2025 🛠️",
+    "seoDescription": "Two tools, two configs, endless friction. In 2025, I switched from ESLint + Prettier to ESLint Stylistic — and suddenly my diffs, CI logs, and dev loop got s..."
+  },
+  {
+    "title": "Concurrency in Go: 5 Patterns You’ll Actually Use in 2025 ⚡",
+    "url": "https://dev.to/aleksei_aleinikov/concurrency-in-go-5-patterns-youll-actually-use-in-2025-2a9g",
+    "publishedAt": "2025-09-03T18:12:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Goroutines aren’t “magic” — real performance comes from disciplined patterns. In my new article, I share the 5 concurrency techniques I reach for in production Go services: 👉 Read the full guide and level up your Go concurrency design. https://levelup.gitconnected.com/top-5-concurrency-patterns-for-2025-build-faster-services-in-go-cc07f6a4c803",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmodewdy5v7gf3p4d1e90.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "go",
+      "backend",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Concurrency in Go: 5 Patterns You’ll Actually Use in 2025 ⚡",
+    "seoDescription": "Goroutines aren’t “magic” — real performance comes from disciplined patterns. In my new article, I share the 5 concurrency techniques I reach for in producti..."
+  },
+  {
+    "title": "FSD Architecture: The Truth Every Team Learns in 2025 🧩",
+    "url": "https://dev.to/aleksei_aleinikov/fsd-architecture-the-truth-every-team-learns-in-2025-53li",
+    "publishedAt": "2025-09-03T18:09:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A clean folder tree won’t save a messy system. In my new article, I explain what FSD actually gives you (order, onboarding, predictability) — and where it falls short: data flows, contracts, errors, and domain boundaries. You’ll see real-world examples where FSD alone failed, and the practical steps teams must take before and after adopting it. 👉 Read th...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5m4qwjr1udi9dg42ms8e.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "javascript",
+      "frontend",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "FSD Architecture: The Truth Every Team Learns in 2025 🧩",
+    "seoDescription": "A clean folder tree won’t save a messy system. In my new article, I explain what FSD actually gives you (order, onboarding, predictability) — and where it fa..."
+  },
+  {
+    "title": "AirPods Max get an elegant solution to their biggest design flaw",
+    "url": "https://9to5mac.com/2025/09/03/mophie-airpods-max-wireless-charging-stand/",
+    "publishedAt": "2025-09-03T18:09:30.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "My biggest complaint about over the years hasn’t been the steep price or which chip Apple put inside. It’s been the lack of wireless charging. Fortunately, an elegant solution to solve this problem has arrived. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/mophie-airpods-max-wireless-charging.webp?w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "AirPods Max get an elegant solution to their biggest design flaw",
+    "seoDescription": "My biggest complaint about over the years hasn’t been the steep price or which chip Apple put inside. It’s been the lack of wireless charging. Fortunately, a..."
+  },
+  {
+    "title": "Your App Isn’t Slow Because of React — It’s the 500 Extra Renders 🐢",
+    "url": "https://dev.to/aleksei_aleinikov/your-app-isnt-slow-because-of-react-its-the-500-extra-renders-3fgj",
+    "publishedAt": "2025-09-03T18:08:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Most performance issues don’t come from the framework — they come from tiny mistakes that pile up. In my new article, I cover 6 real culprits of sluggish apps in 2025 and how to fix them fast: 👉 Read the full guide and make your app feel smooth again — without a costly rewrite. https://javascript.plainenglish.io/6-real-reasons-your-app-is-slow-in-2025-an...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcvx1o2j1hq0mz4qe6kg6.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "react",
+      "javascript",
+      "webdev",
+      "frontend"
+    ],
+    "seoTitle": "Your App Isn’t Slow Because of React — It’s the 500 Extra Renders 🐢",
+    "seoDescription": "Most performance issues don’t come from the framework — they come from tiny mistakes that pile up. In my new article, I cover 6 real culprits of sluggish app..."
+  },
+  {
+    "title": "Anker&#8217;s power bank with dual USB-C retractable cables is a great deal at $25 off",
+    "url": "https://www.theverge.com/tech/770332/anker-laptop-charger-samsung-galaxy-buds-3-deal-sale",
+    "publishedAt": "2025-09-03T18:08:45.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Anker Laptop Power Bank can charge four devices at once. Anker’s Laptop Power Bank came to the rescue of my laptop and smartphone during a recent power outage. They were on the verge of dying, but its pair of retractable USB-C cables powered up my devices so I could keep working remotely. Since then, I carry it with me wherever I go, and it’s bailed m...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/thevergedealsroborocks8maxvultra-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sheena Vasani",
+    "tags": [],
+    "seoTitle": "Anker&#8217;s power bank with dual USB-C retractable cables is a great deal at $25 off",
+    "seoDescription": "The Anker Laptop Power Bank can charge four devices at once. Anker’s Laptop Power Bank came to the rescue of my laptop and smartphone during a recent power o..."
+  },
+  {
+    "title": "5 Shane Black Movies That Will Make You a Better Screenwriter",
+    "url": "https://nofilmschool.com/shane-black-films-teach",
+    "publishedAt": "2025-09-03T18:08:07.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Shane Black is an impressive genre-hopper. The writer/director has given us everything from the buddy cop classic that started it all (Lethal Weapon) to a Marvel entry (Iron Man 3), and he does it with a dark sense of humor that always takes stories in surprising directions. When you think of Shane Black, you probably think of grumpy, unwilling partnershi...",
+    "image": "https://nofilmschool.com/media-library/val-kilmer-and-robert-downey-jr-in-kiss-kiss-bang-bang.jpg?id=61519220&width=980",
+    "video": "https://www.youtube.com/embed/bKeW-MGu-qQ?rel=0",
+    "author": "Jo Light",
+    "tags": [
+      "Shane black",
+      "Best movies",
+      "Writing tips"
+    ],
+    "seoTitle": "5 Shane Black Movies That Will Make You a Better Screenwriter",
+    "seoDescription": "Shane Black is an impressive genre-hopper. The writer/director has given us everything from the buddy cop classic that started it all (Lethal Weapon) to a Ma..."
+  },
+  {
+    "title": "Why I Never Trust 200 Alone: Smarter API Testing in 2025 🚦",
+    "url": "https://dev.to/aleksei_aleinikov/why-i-never-trust-200-alone-smarter-api-testing-in-2025-2lk2",
+    "publishedAt": "2025-09-03T18:06:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A green 200 OK doesn’t always mean your API is healthy. In my new guide, I show how Postman + Newman help me catch hidden failures, contract regressions, and flaky flows — all automated from local runs to CI. Inside: 👉 Read the full blueprint and make your API tests honest, repeatable, and useful in production. https://javascript.plainenglish.io/why-i-ne...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4zvdnkcsumjaftcuj8e2.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "api",
+      "javascript",
+      "devops",
+      "webdev"
+    ],
+    "seoTitle": "Why I Never Trust 200 Alone: Smarter API Testing in 2025 🚦",
+    "seoDescription": "A green 200 OK doesn’t always mean your API is healthy. In my new guide, I show how Postman + Newman help me catch hidden failures, contract regressions, and..."
+  },
+  {
+    "title": "JavaScript Coercion Demystified: Stop the “Weird Bugs” in 2025 🪄",
+    "url": "https://dev.to/aleksei_aleinikov/javascript-coercion-demystified-stop-the-weird-bugs-in-2025-28ff",
+    "publishedAt": "2025-09-03T18:05:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Why does \"7\" + 6 give \"76\" but \"7\" * \"6\" gives 42? Hidden type conversions in JavaScript are everywhere — and they cause some of the most frustrating bugs. In my new article, I explain how coercion really works, with a compact mental model and 3 focused examples (numbers vs. strings, arrays, dates). Once you see the patterns, implicit conversions stop bei...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr4qkvuk3ivebwqfk4o2r.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "javascript",
+      "webdev",
+      "programming",
+      "beginners"
+    ],
+    "seoTitle": "JavaScript Coercion Demystified: Stop the “Weird Bugs” in 2025 🪄",
+    "seoDescription": "Why does \"7\" + 6 give \"76\" but \"7\" * \"6\" gives 42? Hidden type conversions in JavaScript are everywhere — and they cause some of the most frustrating bugs. I..."
+  },
+  {
+    "title": "Reliable on Paper, Fragile in Reality: 3 Tricks Teams Use in 2025 ⚡",
+    "url": "https://dev.to/aleksei_aleinikov/reliable-on-paper-fragile-in-reality-3-tricks-teams-use-in-2025-eb9",
+    "publishedAt": "2025-09-03T18:05:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Green dashboards don’t always mean happy users. In my new article, I reveal three common techniques teams use to “look reliable” without actually improving reliability — and what to do instead if you want resilience that users can feel. You’ll learn: 👉 Read the full guide and make your reliability metrics honest again. https://medium.com/codetodeploy/how...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fashh0qgwr2y10cg8uits.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "devops",
+      "monitoring",
+      "sre",
+      "webdev"
+    ],
+    "seoTitle": "Reliable on Paper, Fragile in Reality: 3 Tricks Teams Use in 2025 ⚡",
+    "seoDescription": "Green dashboards don’t always mean happy users. In my new article, I reveal three common techniques teams use to “look reliable” without actually improving r..."
+  },
+  {
+    "title": "Stop Flaky Go Tests in 2025: Meet synctest 🚀",
+    "url": "https://dev.to/aleksei_aleinikov/stop-flaky-go-tests-in-2025-meet-synctest-1599",
+    "publishedAt": "2025-09-03T18:02:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Ever fought with Go tests that randomly pass or fail because of goroutines, timers, and real time? In my new article, I explain how synctest creates a synthetic, fully controlled bubble for your tests — giving you deterministic, instant, and reliable results. You’ll see: 👉 Read the full guide and make concurrency testing in Go predictable again! https://...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8a1dyahdkh4hsgnkebg5.png",
+    "video": null,
+    "author": "Aleksei Aleinikov",
+    "tags": [
+      "go",
+      "testing",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Stop Flaky Go Tests in 2025: Meet synctest 🚀",
+    "seoDescription": "Ever fought with Go tests that randomly pass or fail because of goroutines, timers, and real time? In my new article, I explain how synctest creates a synthe..."
+  },
+  {
+    "title": "DxOMark Teams With Tecno to Launch World’s First Automated Imaging Lab",
+    "url": "https://petapixel.com/2025/09/03/dxomark-teams-with-tecno-to-launch-worlds-first-automated-imaging-lab/",
+    "publishedAt": "2025-09-03T18:02:13.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Tecno and DxOMark have launched the world’s first fully automated AI imaging lab, bringing faster, more precise, and inclusive smartphone camera testing. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/techno-dxomark-featured.jpg",
+    "video": null,
+    "author": "Kate Garibaldi",
+    "tags": [
+      "Industry",
+      "News",
+      "Software",
+      "Technology",
+      "ailab",
+      "aitechnology",
+      "dxomark",
+      "smartphone"
+    ],
+    "seoTitle": "DxOMark Teams With Tecno to Launch World’s First Automated Imaging Lab",
+    "seoDescription": "Tecno and DxOMark have launched the world’s first fully automated AI imaging lab, bringing faster, more precise, and inclusive smartphone camera testing. [Re..."
+  },
+  {
+    "title": "The Sasquatch 617 is a Tank-Like, Steel, Panoramic Film Camera",
+    "url": "https://petapixel.com/2025/09/03/the-sasquatch-617-is-a-tank-like-steel-panoramic-film-camera/",
+    "publishedAt": "2025-09-03T18:01:32.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The Sasquatch 617 is a large, robust, panoramic film camera that can capture four, 6x17 photos per roll of 120 film. Created by photographer Derek Chiang and industrial designer Ellie Kim, the Sasquatch 617 promises to be a panoramic camera unlike any other on the market. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/The-Sasquatch-617-is-a-120-Format-Stainless-Steel-Panoramic-Film-Camera.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Analog",
+      "Equipment",
+      "News",
+      "120format",
+      "3dprinted",
+      "analog",
+      "film",
+      "panoramic"
+    ],
+    "seoTitle": "The Sasquatch 617 is a Tank-Like, Steel, Panoramic Film Camera",
+    "seoDescription": "The Sasquatch 617 is a large, robust, panoramic film camera that can capture four, 6x17 photos per roll of 120 film. Created by photographer Derek Chiang and..."
+  },
+  {
+    "title": "More Pixel phones are getting Google’s new look for Android",
+    "url": "https://www.theverge.com/news/770174/google-pixel-drop-september-2025-material-3-expressive",
+    "publishedAt": "2025-09-03T18:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "This month’s Google Pixel drop includes a broader rollout of the company’s splashy UI revamp. Starting today, Google will bring its Material 3 Expressive design language to Pixel 6 devices and newer, in addition to the Pixel Tablet. Google first revealed the youthful new design language in May before launching it with its Android 16-equipped Pixel 10 phon...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/pixel-drop-material-3.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "More Pixel phones are getting Google’s new look for Android",
+    "seoDescription": "This month’s Google Pixel drop includes a broader rollout of the company’s splashy UI revamp. Starting today, Google will bring its Material 3 Expressive des..."
+  },
+  {
+    "title": "Pixel phones can now stream music for you and a friend at the same time",
+    "url": "https://www.theverge.com/news/770233/google-android-bluetooth-audio-le-multiple-headphones",
+    "publishedAt": "2025-09-03T18:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Pixel phones will now be able to stream audio to multiple headphones at once thanks to expanded Bluetooth LE Audio and Auracast support. If you have a Pixel 8 or newer, you’ll now be able to pair two headphones at a time. That means you can make your friend listen to the new Nourished by Time single with you on the bus, or catch up on Alien Earth with you...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/0.-Blog-header.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Terrence O’Brien",
+    "tags": [],
+    "seoTitle": "Pixel phones can now stream music for you and a friend at the same time",
+    "seoDescription": "Pixel phones will now be able to stream audio to multiple headphones at once thanks to expanded Bluetooth LE Audio and Auracast support. If you have a Pixel ..."
+  },
+  {
+    "title": "Scale AI still exists and it’s suing an ex-employee over corporate espionage",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/770410/scale-ai-corporate-espionage-data-labeling-mercor-meta",
+    "publishedAt": "2025-09-03T17:54:27.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "It's been a tumultuous summer for Scale AI: Meta took a multibillion-dollar stake in the company, Mark Zuckerberg hired Scale CEO Alexandr Wang and other top staff, and Scale laid off 14 percent of its workforce. Now the latest development is a lawsuit over corporate espionage in the AI industry. The AI data labeling company, which has provided training d...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STK453_PRIVACY_B_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Hayden Field",
+    "tags": [],
+    "seoTitle": "Scale AI still exists and it’s suing an ex-employee over corporate espionage",
+    "seoDescription": "It's been a tumultuous summer for Scale AI: Meta took a multibillion-dollar stake in the company, Mark Zuckerberg hired Scale CEO Alexandr Wang and other top..."
+  },
+  {
+    "title": "A PlayStation game is now the best-selling game on Xbox",
+    "url": "https://www.theverge.com/news/770311/playstation-game-helldivers-2-best-selling-game-on-xbox",
+    "publishedAt": "2025-09-03T17:52:37.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "If you ever doubted the “console wars” were over, here’s a new piece of data to consider: Helldivers 2, formerly console exclusive to Sony’s PS5, is currently the best-selling title on Xbox. In fact, it’s the first and third best-selling game, if you count its more premium edition, and it’s currently the ninth-most played game on the platform — mostly bea...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/helldivers2.jpg?quality=90&#038;strip=all&#038;crop=19.8,14.222222222222,73.4,85.777777777778",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "A PlayStation game is now the best-selling game on Xbox",
+    "seoDescription": "If you ever doubted the “console wars” were over, here’s a new piece of data to consider: Helldivers 2, formerly console exclusive to Sony’s PS5, is currentl..."
+  },
+  {
+    "title": "The first iPhone with all-screen display could arrive next year: report",
+    "url": "https://9to5mac.com/2025/09/03/the-first-iphone-with-all-screen-display-could-arrive-next-year-report/",
+    "publishedAt": "2025-09-03T17:47:11.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The dream of an edge-to-edge iPhone display with no cutout could come true sooner than we thought. Per a new analyst report, next year’s iPhone Fold might be the first iPhone to move camera components under the display, thus offering a truly all-screen design. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/iphone-fold-ios-26.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "The first iPhone with all-screen display could arrive next year: report",
+    "seoDescription": "The dream of an edge-to-edge iPhone display with no cutout could come true sooner than we thought. Per a new analyst report, next year’s iPhone Fold might be..."
+  },
+  {
+    "title": "Pornhub will only have to pay $5 million to settle CSAM, exploitation allegations",
+    "url": "https://www.theverge.com/news/770388/pornhub-ftc-settlement-csam-exploitation",
+    "publishedAt": "2025-09-03T17:42:26.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Pornhub has settled with the Federal Trade Commission and the state of Utah over claims it “inflicted grave harm on children.” As part of the proposed settlement, Pornhub and its parent company, Aylo, must pay $5 million to Utah and address the FTC’s allegations, which included: Allowing the dissemination of child sexual abuse material (CSAM) and nonconse...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK261_PORNHUB__A.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Pornhub will only have to pay $5 million to settle CSAM, exploitation allegations",
+    "seoDescription": "Pornhub has settled with the Federal Trade Commission and the state of Utah over claims it “inflicted grave harm on children.” As part of the proposed settle..."
+  },
+  {
+    "title": "Mophie adds wireless charging to the AirPods Max with a clever new stand",
+    "url": "https://www.theverge.com/news/770322/mophie-airpods-max-headphones-wireless-charging-stand",
+    "publishedAt": "2025-09-03T17:33:29.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The aptly-named Max Headphones Charging Stand is specifically designed for Apple’s flagship headphones. | Image: Mophie Mophie has announced a new wireless charger for Apple’s AirPods Max called the Max Headphones Charging Stand. The AirPods Max don’t support wireless charging, so Mophie’s new stand relies on a small dongle that stays connected to the hea...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/mophie1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Liszewski",
+    "tags": [],
+    "seoTitle": "Mophie adds wireless charging to the AirPods Max with a clever new stand",
+    "seoDescription": "The aptly-named Max Headphones Charging Stand is specifically designed for Apple’s flagship headphones. | Image: Mophie Mophie has announced a new wireless c..."
+  },
+  {
+    "title": "James Gunn’s Superman sequel is coming in 2027",
+    "url": "https://www.theverge.com/entertainment/770317/james-gunns-superman-sequel-is-coming-in-2027",
+    "publishedAt": "2025-09-03T17:31:50.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "James Gunn has been coy about his plans for a follow-up to this year’s excellent Superman movie, but the writer / director is finally sharing some concrete news about what’s next for the Man of Steel. Gunn announced in an Instagram post today that the Superman sequel will be titled Man of Tomorrow and hit theaters on July 9th, 2027. View this post on Inst...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/SPRMAN_VERT_TSR_2764x4096_DOM.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Charles Pulliam-Moore",
+    "tags": [],
+    "seoTitle": "James Gunn’s Superman sequel is coming in 2027",
+    "seoDescription": "James Gunn has been coy about his plans for a follow-up to this year’s excellent Superman movie, but the writer / director is finally sharing some concrete n..."
+  },
+  {
+    "title": "Major Amazon leak spoils the Philips Hue party",
+    "url": "https://www.theverge.com/news/770345/major-amazon-leak-spoils-the-philips-hue-party",
+    "publishedAt": "2025-09-03T17:25:52.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The unannounced Hue doorbell leaks early. The Philips Hue store on Amazon’s UK site is hosting a number of new products that have yet to be announced as the big IFA 2025 show gets under way in Berlin, Germany. We’re seeing that rumored Hue Doorbell, a new Hue Bridge Pro (in black), a new Essential lighting sub-brand, and something called MotionAware that ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Pasted-Graphic-3.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "Major Amazon leak spoils the Philips Hue party",
+    "seoDescription": "The unannounced Hue doorbell leaks early. The Philips Hue store on Amazon’s UK site is hosting a number of new products that have yet to be announced as the ..."
+  },
+  {
+    "title": "New Eero Signal promises to keep you connected during internet outages",
+    "url": "https://9to5mac.com/2025/09/03/eero-signal-announcement-features/",
+    "publishedAt": "2025-09-03T17:24:04.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Eero has a new Eero Signal product that it says will let you “say goodbye to internet outages.” “Eero Signal delivers cellular backup whenever your wired internet connection goes down,” the company explains. It’s available in both 4G LTE and 5G RedCap versions. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/eero-signal.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Chance Miller",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "New Eero Signal promises to keep you connected during internet outages",
+    "seoDescription": "Eero has a new Eero Signal product that it says will let you “say goodbye to internet outages.” “Eero Signal delivers cellular backup whenever your wired int..."
+  },
+  {
+    "title": "A Glossary of Filmmaking Terms Every Production Assistant Must Know",
+    "url": "https://nofilmschool.com/production-assistant-glossary",
+    "publishedAt": "2025-09-03T17:21:34.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When I started working in Los Angeles, I started as a PA on film and commercials sets, and then worked as an assistant, and now, somehow, I'm a writer. But I really liked my days as a set PA, running around, closing roads, carrying coffees, and just being enveloped by making movies and TV in Hollywood. Today, I wanted to put together a glossary that every...",
+    "image": "https://nofilmschool.com/media-library/a-glossary-of-filmmaking-terms-every-production-assistant-must-know.jpg?id=61540271&width=980",
+    "video": null,
+    "author": "Jason Hellerman",
+    "tags": [
+      "Glossary",
+      "Film terms",
+      "Filmmaking",
+      "Production assistant",
+      "Production assistant"
+    ],
+    "seoTitle": "A Glossary of Filmmaking Terms Every Production Assistant Must Know",
+    "seoDescription": "When I started working in Los Angeles, I started as a PA on film and commercials sets, and then worked as an assistant, and now, somehow, I'm a writer. But I..."
+  },
+  {
+    "title": "Amazon confirms Sophie Turner as Lara Croft in live-action Tomb Raider series",
+    "url": "https://www.theverge.com/news/770357/amazon-lara-croft-tomb-raider-sophie-turner-series",
+    "publishedAt": "2025-09-03T17:20:52.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Amazon announced today that its live-action Tomb Raider series will feature Game of Thrones star Sophie Turner as Lara Croft. Fleabag creator Phoebe Waller-Bridge will serve as the show’s creator, writer, executive producer, and co-showrunner, and filming will begin in January 2026, Variety reports. The show and Waller-Bridge’s involvement were officially...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/gettyimages-2204421552.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Amazon confirms Sophie Turner as Lara Croft in live-action Tomb Raider series",
+    "seoDescription": "Amazon announced today that its live-action Tomb Raider series will feature Game of Thrones star Sophie Turner as Lara Croft. Fleabag creator Phoebe Waller-B..."
+  },
+  {
     "title": "What Are the 10 Best Game of Thrones Episodes?",
     "url": "https://nofilmschool.com/best-game-of-thrones-episodes",
     "publishedAt": "2025-09-03T17:10:03.000Z",
@@ -117,25 +621,6 @@
     "seoDescription": "Set to join the ranks of several other top brands in the digital photo and video space, Viltrox is the latest lens manufacturing company to join the L-mount ..."
   },
   {
-    "title": "Check it out 😉",
-    "url": "https://dev.to/masterdevsabith/check-it-out-4efj",
-    "publishedAt": "2025-09-03T16:53:31.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Need support and suggestions for my site https://stackdevflow.com Sanjay Singh ・ Aug 31 #support #website #webdev #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3408068%2F85a05bf6-a200-433d-a551-42a059eac742.png",
-    "video": null,
-    "author": "Muhammed Sabith",
-    "tags": [
-      "support",
-      "website",
-      "webdev",
-      "productivity"
-    ],
-    "seoTitle": "Check it out 😉",
-    "seoDescription": "Need support and suggestions for my site https://stackdevflow.com Sanjay Singh ・ Aug 31 #support #website #webdev #productivity"
-  },
-  {
     "title": "10 John Cena Movies You Can’t Miss",
     "url": "https://nofilmschool.com/best-john-cena-movies",
     "publishedAt": "2025-09-03T16:49:14.000Z",
@@ -151,470 +636,5 @@
     ],
     "seoTitle": "10 John Cena Movies You Can’t Miss",
     "seoDescription": "The WWE has been feeding actors into Hollywood for a while, but I have to say my favorite is probably John Cena. He can do action, comedy, and everything in ..."
-  },
-  {
-    "title": "Roblox experiences are getting ESRB age ratings",
-    "url": "https://www.theverge.com/news/770305/roblox-esrb-age-ratings-iarc-age-estimation",
-    "publishedAt": "2025-09-03T16:43:32.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Roblox is going to start showing ESRB ratings alongside experiences to help users in the US better understand if an experience is appropriate for a user of a certain age. The new ratings will appear thanks to Roblox’s new partnership with the International Age Rating Coalition (IARC), which was announced today. As part of the partnership, players in other...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/STK146_Roblox_New.jpg.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jay Peters",
-    "tags": [],
-    "seoTitle": "Roblox experiences are getting ESRB age ratings",
-    "seoDescription": "Roblox is going to start showing ESRB ratings alongside experiences to help users in the US better understand if an experience is appropriate for a user of a..."
-  },
-  {
-    "title": "React Context APIs, State sharing and Zustand",
-    "url": "https://dev.to/rajusarkar/react-context-apis-state-sharing-and-zustand-13e6",
-    "publishedAt": "2025-09-03T16:42:15.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In React, we typically use props to pass data from a parent component to its children component. Props passing works well for small applications, but in larger application, props passing become a pain — especially when data needs to be accessed by deeply nested components. Lets imagine a scenario where you have three components — A, B(B is child of A), an...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd5bmhh501w6iv2ohbkwg.gif",
-    "video": null,
-    "author": "Raju Sarkar",
-    "tags": [
-      "webdev",
-      "react",
-      "javascript",
-      "programming"
-    ],
-    "seoTitle": "React Context APIs, State sharing and Zustand",
-    "seoDescription": "In React, we typically use props to pass data from a parent component to its children component. Props passing works well for small applications, but in larg..."
-  },
-  {
-    "title": "From 5D to R5 II: Canon’s EOS 5 Series Turns 20",
-    "url": "https://petapixel.com/2025/09/03/from-5d-to-r5-ii-canons-eos-5-series-turns-20/",
-    "publishedAt": "2025-09-03T16:29:02.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "The Canon EOS 5 Series celebrates its 20th birthday this year. The series, which launched with the original EOS 5D DSLR in 2005, continues to this day, with the most recent member being the excellent EOS R5 Mark II full-frame mirrorless camera. The 20th anniversary provides a great time to reflect and take a fresh look at all the Canon EOS 5 Series camera...",
-    "image": "https://petapixel.com/assets/uploads/2025/09/canon-5d-series-featured-rough.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "Features",
-      "Canon",
-      "canondslr",
-      "canoneos5d",
-      "canoneos5dii",
-      "canoneos5diii",
-      "canoneos5div"
-    ],
-    "seoTitle": "From 5D to R5 II: Canon’s EOS 5 Series Turns 20",
-    "seoDescription": "The Canon EOS 5 Series celebrates its 20th birthday this year. The series, which launched with the original EOS 5D DSLR in 2005, continues to this day, with ..."
-  },
-  {
-    "title": "Sports streaming hub Streameast ‘shut down’ in sting",
-    "url": "https://www.theverge.com/news/770275/sports-streaming-hub-streameast-shut-down-in-sting",
-    "publishedAt": "2025-09-03T16:25:43.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Some Streameast sites still appear to be live. Streameast, one of the largest sports piracy platforms in the world, has been shut down according to the Alliance for Creativity and Entertainment (ACE), an antipiracy group that counts NBC Universal, Netflix, and Disney among its members. ACE announced in a statement that it worked alongside Egyptian authori...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Streameast.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Sports streaming hub Streameast ‘shut down’ in sting",
-    "seoDescription": "Some Streameast sites still appear to be live. Streameast, one of the largest sports piracy platforms in the world, has been shut down according to the Allia..."
-  },
-  {
-    "title": "Instagram Finally Comes to iPad",
-    "url": "https://www.macrumors.com/2025/09/03/instagram-finally-comes-to-ipad/",
-    "publishedAt": "2025-09-03T16:24:29.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The Instagram app is expanding to the iPad at long last, with Instagram releasing a dedicated iPad app as of today. Instagram for ‌iPad‌ focuses on Reels, and when opening the app, it will go directly to the Reels page. Stories will be available at the top of the interface, with support for messaging as well. There is a dedicated Following tab that provid...",
-    "image": "https://images.macrumors.com/article-new/2025/09/instagram-ipad.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Instagram"
-    ],
-    "seoTitle": "Instagram Finally Comes to iPad",
-    "seoDescription": "The Instagram app is expanding to the iPad at long last, with Instagram releasing a dedicated iPad app as of today. Instagram for ‌iPad‌ focuses on Reels, an..."
-  },
-  {
-    "title": "Reverse proxy and service mesh built on top of Cloudflare's Pingora",
-    "url": "https://dev.to/sadoyan/reverse-proxy-and-service-mesh-built-on-top-of-cloudflares-pingora-2o13",
-    "publishedAt": "2025-09-03T16:22:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Aralez (Արալեզ), Reverse proxy and service mesh built on top of Cloudflare's Pingora What Aralez means ? Aralez = Արալեզ .Named after the legendary Armenian guardian spirit, winged dog-like creature, that descend upon fallen heroes to lick their wounds and resurrect them.. Built on Rust, on top of Cloudflare’s Pingora engine, Aralez delivers world-class p...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr8sdz7mbyntrm2ab7kx0.png",
-    "video": null,
-    "author": "Ara",
-    "tags": [
-      "rust",
-      "webdev",
-      "ingres",
-      "programming"
-    ],
-    "seoTitle": "Reverse proxy and service mesh built on top of Cloudflare's Pingora",
-    "seoDescription": "Aralez (Արալեզ), Reverse proxy and service mesh built on top of Cloudflare's Pingora What Aralez means ? Aralez = Արալեզ .Named after the legendary Armenian ..."
-  },
-  {
-    "title": "Why Constructors Are the Heart of Object Creation",
-    "url": "https://dev.to/manikandan_a8f99e0153ef77/why-constructors-are-the-heart-of-object-creation-fe7",
-    "publishedAt": "2025-09-03T16:21:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Constructors The constructor is called when an object of a class is created It can be used to set initial values for object attributes Constructors are called automatically with the new keyword Why do we need a constructor ? Avoids repetition By defining constructors as part of the class, the object's creation and initialization logic are kept within the ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkjumy3xfimti0x606fa3.jpg",
-    "video": null,
-    "author": "MANIKANDAN",
-    "tags": [
-      "java",
-      "programming",
-      "tfhdailystandup",
-      "webdev"
-    ],
-    "seoTitle": "Why Constructors Are the Heart of Object Creation",
-    "seoDescription": "Constructors The constructor is called when an object of a class is created It can be used to set initial values for object attributes Constructors are calle..."
-  },
-  {
-    "title": "Mophie Launches Max Charging Stand for Charging Multiple AirPods",
-    "url": "https://www.macrumors.com/2025/09/03/mophie-airpods-max-charging-stand/",
-    "publishedAt": "2025-09-03T16:20:32.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Mophie today announced the launch of the Max Charging Stand, a two-in-one charger that's designed for the USB-C AirPods Max and the AirPods or AirPods Pro. The Max Charging Stand holds the ‌AirPods Max‌ upright, with a magnetic USB-C charging dongle that connects to the USB-C port in the headphones. Mophie created the stand with the magnetic dongle to ens...",
-    "image": "https://images.macrumors.com/article-new/2025/09/mophie-airpods-max-charger.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Mophie"
-    ],
-    "seoTitle": "Mophie Launches Max Charging Stand for Charging Multiple AirPods",
-    "seoDescription": "Mophie today announced the launch of the Max Charging Stand, a two-in-one charger that's designed for the USB-C AirPods Max and the AirPods or AirPods Pro. T..."
-  },
-  {
-    "title": "Instagram launches official iPad app, now available on App Store",
-    "url": "https://9to5mac.com/2025/09/03/instagram-launches-official-ipad-app-now-available-on-app-store/",
-    "publishedAt": "2025-09-03T16:15:48.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "The day has finally arrived: Instagram for iPad is here. Though it seemed like it might never happen, the popular social media app now offers an official iPadOS version. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/instagram-ipad-app.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Instagram launches official iPad app, now available on App Store",
-    "seoDescription": "The day has finally arrived: Instagram for iPad is here. Though it seemed like it might never happen, the popular social media app now offers an official iPa..."
-  },
-  {
-    "title": "Google's Gemini for Home Starts Rolling Out on October 1",
-    "url": "https://www.macrumors.com/2025/09/03/gemini-for-home-rolling-out-october-1/",
-    "publishedAt": "2025-09-03T16:07:08.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Google has confirmed that Gemini for Home, its generative AI-powered replacement for Google Assistant, will begin rolling out on October 1 through an early access program, marking a major upgrade to its smart home platform and highlighting Apple's slower progress in deploying similar AI technology for Siri. At the Made by Google 2025 event, the company an...",
-    "image": "https://images.macrumors.com/article-new/2024/03/google-gemini.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Gemini",
-      "Google",
-      "Google Home"
-    ],
-    "seoTitle": "Google's Gemini for Home Starts Rolling Out on October 1",
-    "seoDescription": "Google has confirmed that Gemini for Home, its generative AI-powered replacement for Google Assistant, will begin rolling out on October 1 through an early a..."
-  },
-  {
-    "title": "Instagram is coming to iPad, 15 years later",
-    "url": "https://www.theverge.com/news/769460/instagram-ipad-app-launch-reels",
-    "publishedAt": "2025-09-03T16:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "After years of requests from users, Instagram will finally have a dedicated app for iPad. Beginning Wednesday, September 3rd, users will be able to download the new app built specifically for Apple’s tablet. But it will be slightly different than the mobile app users are accustomed to. Most significantly, the iPad app will open directly to a feed of Reels...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Reels-with-Comments-16_9.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Mia Sato",
-    "tags": [],
-    "seoTitle": "Instagram is coming to iPad, 15 years later",
-    "seoDescription": "After years of requests from users, Instagram will finally have a dedicated app for iPad. Beginning Wednesday, September 3rd, users will be able to download ..."
-  },
-  {
-    "title": "Deals: 512GB iPhone 16 Pro $340 off, M4 Max Mac Studio $300 off, Nomad sitewide sale, more",
-    "url": "https://9to5mac.com/2025/09/03/deals-iphone-16-pro-mac-studio-nomad-sitewide/",
-    "publishedAt": "2025-09-03T15:46:05.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Alongside ongoing $150 price drops on the M3 iPad Air lineup as well as Apple’s 24GB M4 Mac mini with the 1TB upgrade at $200 off, today’s 9to5Toys Lunch Break deals are starting with an exclusive sitewide sale event at Nomad. We have secured readers a chance to score 20% off everything Nomad sells, from its Find My Tracking Card and new new Tempo Apple W...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apple-deals-Mac-Studio-iPhone-Nomad.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Justin Kahn",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Deals: 512GB iPhone 16 Pro $340 off, M4 Max Mac Studio $300 off, Nomad sitewide sale, more",
-    "seoDescription": "Alongside ongoing $150 price drops on the M3 iPad Air lineup as well as Apple’s 24GB M4 Mac mini with the 1TB upgrade at $200 off, today’s 9to5Toys Lunch Bre..."
-  },
-  {
-    "title": "AirPods Pro 3 are coming, here’s every rumored new feature",
-    "url": "https://9to5mac.com/2025/09/03/airpods-pro-3-are-coming-heres-every-rumored-new-feature/",
-    "publishedAt": "2025-09-03T15:42:53.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "AirPods Pro 3 are almost here, with a launch at Apple’s September 9 event widely expected. Here’s every rumored new feature coming to AirPods Pro 3. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/airpods-heart-rate.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "AirPods Pro 3 are coming, here’s every rumored new feature",
-    "seoDescription": "AirPods Pro 3 are almost here, with a launch at Apple’s September 9 event widely expected. Here’s every rumored new feature coming to AirPods Pro 3. more…"
-  },
-  {
-    "title": "The Paper doesn&#8217;t hit its stride until it&#8217;s out of the office",
-    "url": "https://www.theverge.com/tv-reviews/769607/peacock-the-paper-review",
-    "publishedAt": "2025-09-03T15:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "When NBC's adaptation of The Office first debuted in 2005, the series was panned for being a pale and uninspired imitation of its English predecessor. It took an entire season for showrunner Greg Daniels to figure out how to infuse his take on The Office with a quirky, satirical energy calibrated to appeal to American audiences. But once he did, the comed...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ThePaperHeader.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "The Paper doesn&#8217;t hit its stride until it&#8217;s out of the office",
-    "seoDescription": "When NBC's adaptation of The Office first debuted in 2005, the series was panned for being a pale and uninspired imitation of its English predecessor. It too..."
-  },
-  {
-    "title": "Here are the best Kindle deals right now",
-    "url": "https://www.theverge.com/21539047/best-amazon-kindle-deals",
-    "publishedAt": "2025-09-03T15:27:11.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "When it comes to finding a device to read ebooks, you have a few options to choose from. You can always buy a tablet or use your phone, but those devices are multipurpose and can be used for a ton of things, like surfing the web or doom-scrolling on X or Bluesky. If you are looking for something to strictly read books, e-readers, while niche, are designed...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/Kindle-Paperwhite-2024-lifestyle.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "Here are the best Kindle deals right now",
-    "seoDescription": "When it comes to finding a device to read ebooks, you have a few options to choose from. You can always buy a tablet or use your phone, but those devices are..."
-  },
-  {
-    "title": "Google&#8217;s best-ever 4K streamer is within $1 of its lowest price",
-    "url": "https://www.theverge.com/tech/769978/google-tv-streamer-4k-deal-sale",
-    "publishedAt": "2025-09-03T15:16:20.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Google’s TV Streamer 4K is on sale for $79.99 ($20 off). It’s rare to find a gadget that can handle two totally separate tasks very well, but Google’s TV Streamer 4K pulls it off. The 4K set top box allows you to stream your favorite TV shows and movies, and is also an impressive smart home hub, with support for Matter and a built-in Thread radio. It’s cu...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25562296/DSCF0064.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "Google&#8217;s best-ever 4K streamer is within $1 of its lowest price",
-    "seoDescription": "Google’s TV Streamer 4K is on sale for $79.99 ($20 off). It’s rare to find a gadget that can handle two totally separate tasks very well, but Google’s TV Str..."
-  },
-  {
-    "title": "Camera Intelligence, Formerly Alice Camera, Pivots to AI",
-    "url": "https://petapixel.com/2025/09/03/camera-intelligence-formerly-alice-camera-pivots-to-ai/",
-    "publishedAt": "2025-09-03T15:06:37.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Camera Intelligence, which most will know by its former name, Alice Camera, is slightly adjusting its business model. Rather than focusing on Micro Four Thirds or the fact that control of its camera system is handled through an attached smartphone, Camera Intelligence is pivoting to AI. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/Camera-Intelligence-Formerly-Alice-Camera-Pivots-to-AI.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "Equipment",
-      "Mobile",
-      "News",
-      "Technology",
-      "ai",
-      "alicecamera",
-      "artificialintelligence",
-      "cameraintelligence"
-    ],
-    "seoTitle": "Camera Intelligence, Formerly Alice Camera, Pivots to AI",
-    "seoDescription": "Camera Intelligence, which most will know by its former name, Alice Camera, is slightly adjusting its business model. Rather than focusing on Micro Four Thir..."
-  },
-  {
-    "title": "reMarkable announces new Paper Pro Move: a palm-sized paper tablet that’s priced well",
-    "url": "https://9to5mac.com/2025/09/03/new-remarkable-paper-pro-move-7-inch-paper-tablet-priced-well/",
-    "publishedAt": "2025-09-03T14:59:33.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Today, reMarkable larger reMarkable Paper Pro. It’s designed for work on the go, and can easily be slipped in a jacket pocket, bag, or purse. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/reMarkable-Paper-Pro-Move-1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "reMarkable announces new Paper Pro Move: a palm-sized paper tablet that’s priced well",
-    "seoDescription": "Today, reMarkable larger reMarkable Paper Pro. It’s designed for work on the go, and can easily be slipped in a jacket pocket, bag, or purse. more…"
-  },
-  {
-    "title": "Streaming Cinematic 4K Video Is Insanely Easy With This New All-in-One Live Streaming Camera",
-    "url": "https://nofilmschool.com/venusliv-air-all-in-one-live-streaming-camera",
-    "publishedAt": "2025-09-03T14:56:10.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "If you’re looking to live stream video for whatever purposes they may be, you don’t need a lot of heavy-duty equipment or even a huge amount of technical know-how. It still helps if you want to stream high-quality video, but even that is getting easier. This new “All-in-One” live streaming camera from Hollyland can livestream and record up to 4K30p footag...",
-    "image": "https://nofilmschool.com/media-library/hollyland-venusliv-air-all-in-one-live-streaming-camera.jpg?id=61550665&width=980",
-    "video": "https://www.youtube.com/embed/ttJb0imcGy8?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Hollyland",
-      "Venusliv",
-      "Live streaming",
-      "Live streaming camera",
-      "Hollyland venusliv air all-in-one live streaming camera"
-    ],
-    "seoTitle": "Streaming Cinematic 4K Video Is Insanely Easy With This New All-in-One Live Streaming Camera",
-    "seoDescription": "If you’re looking to live stream video for whatever purposes they may be, you don’t need a lot of heavy-duty equipment or even a huge amount of technical kno..."
-  },
-  {
-    "title": "Two Apple Stores Open in India This Week Ahead of iPhone 17 Launch",
-    "url": "https://www.macrumors.com/2025/09/03/two-apple-stores-open-in-india-this-week/",
-    "publishedAt": "2025-09-03T14:55:20.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today previewed its fourth retail store in India, ahead of the location's grand opening on Thursday, September 4, at 1 p.m. local time. Apple Koregaon Park Apple Koregaon Park is the company's first store in Pune, and its second new location opening in India this week, after Apple Hebbal in Bengaluru. Apple Koregaon Park looks similar to Apple Hebba...",
-    "image": "https://images.macrumors.com/article-new/2025/09/Apple-Koregaon-Park.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Apple Store"
-    ],
-    "seoTitle": "Two Apple Stores Open in India This Week Ahead of iPhone 17 Launch",
-    "seoDescription": "Apple today previewed its fourth retail store in India, ahead of the location's grand opening on Thursday, September 4, at 1 p.m. local time. Apple Koregaon ..."
-  },
-  {
-    "title": "iPhone 17 event will finally solve the biggest mystery about 17 Pro and Pro Max",
-    "url": "https://9to5mac.com/2025/09/03/iphone-17-event-will-solve-biggest-17-pro-mystery/",
-    "publishedAt": "2025-09-03T14:50:46.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s “Awe dropping” event on Tuesday will finally solve the biggest mystery around the upcoming iPhone 17 Pro and iPhone 17 Pro Max. The fact that there’s any mystery at all less than a week before the iPhone event is exciting on its own. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/12/Do-you-care-whether-the-iPhone-17-Pro-uses-titanium-or-aluminum.webp?w=1500",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 event will finally solve the biggest mystery about 17 Pro and Pro Max",
-    "seoDescription": "Apple’s “Awe dropping” event on Tuesday will finally solve the biggest mystery around the upcoming iPhone 17 Pro and iPhone 17 Pro Max. The fact that there’s..."
-  },
-  {
-    "title": "reMarkable's New 'Paper Pro Move' Takes on iPad Mini",
-    "url": "https://www.macrumors.com/2025/09/03/remarkable-paper-pro-move-takes-on-ipad-mini/",
-    "publishedAt": "2025-09-03T14:45:04.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "reMarkable today unveiled the Paper Pro Move, a compact color E Ink tablet that brings its minimalist writing experience to a more portable form factor aimed at those seeking a focused alternative to full-featured tablets like the iPad mini. The Paper Pro Move features a 7.3-inch Canvas Color display based on E Ink Gallery 3 technology, offering improved ...",
-    "image": "https://images.macrumors.com/article-new/2025/09/remarkable-move.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "reMarkable"
-    ],
-    "seoTitle": "reMarkable's New 'Paper Pro Move' Takes on iPad Mini",
-    "seoDescription": "reMarkable today unveiled the Paper Pro Move, a compact color E Ink tablet that brings its minimalist writing experience to a more portable form factor aimed..."
-  },
-  {
-    "title": "Five new Apple products are the biggest September 9 launch ‘maybes’",
-    "url": "https://9to5mac.com/2025/09/03/five-new-apple-products-are-the-biggest-september-9-launch-maybes/",
-    "publishedAt": "2025-09-03T14:29:54.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple’s big September 9 launch event is just days away. We’re expecting the iPhone 17 lineup, Apple Watch Ultra 3 and Series 11, and AirPods Pro 3. But beyond these near-locks, what other new products might Apple launch? Here are the five biggest wildcards that could make an appearance based on rumors. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/Apple-trade-in-values-cut-for-iPhone-iPad-Mac-and-Apple-Watch.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Five new Apple products are the biggest September 9 launch ‘maybes’",
-    "seoDescription": "Apple’s big September 9 launch event is just days away. We’re expecting the iPhone 17 lineup, Apple Watch Ultra 3 and Series 11, and AirPods Pro 3. But beyon..."
-  },
-  {
-    "title": "Amazon Discounts Beats Pill, Solo Buds, Studio Pro, and More in New Sale",
-    "url": "https://www.macrumors.com/2025/09/03/amazon-discounts-new-beats/",
-    "publishedAt": "2025-09-03T14:25:12.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Amazon is discounting a collection of Beats headphones and speakers this week, including a low price on the Beats Pill and discounts on Beats Solo Buds, Studio Buds+, Solo 4, and Studio Pro. Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running. ...",
-    "image": "https://images.macrumors.com/article-new/2024/12/beats-headphones-blue.jpeg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Amazon Discounts Beats Pill, Solo Buds, Studio Pro, and More in New Sale",
-    "seoDescription": "Amazon is discounting a collection of Beats headphones and speakers this week, including a low price on the Beats Pill and discounts on Beats Solo Buds, Stud..."
-  },
-  {
-    "title": "Netflix Moments Feature Gets Major Update for Scene Sharing on iOS",
-    "url": "https://www.macrumors.com/2025/09/03/netflix-moments-update-scene-sharing-ios/",
-    "publishedAt": "2025-09-03T14:19:33.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Netflix today announced an update to its Moments feature that lets users save and share favorite scenes as standalone clips, available now in the streaming service's iOS app. The enhanced feature replaces the bookmark-style system and instead allows you to set both the start and end point when saving scenes, giving more precise control over which portions...",
-    "image": "https://images.macrumors.com/article-new/2025/09/netflix-clips.jpg",
-    "video": "https://www.youtube.com/embed/6NPkf3heUHY?si=EnGfn2A-tcGVweC2",
-    "author": "Tim Hardwick",
-    "tags": [
-      "Netflix"
-    ],
-    "seoTitle": "Netflix Moments Feature Gets Major Update for Scene Sharing on iOS",
-    "seoDescription": "Netflix today announced an update to its Moments feature that lets users save and share favorite scenes as standalone clips, available now in the streaming s..."
-  },
-  {
-    "title": "Apple Patents Next-Generation Taptic Engine",
-    "url": "https://www.macrumors.com/2025/09/03/apple-patents-next-generation-taptic-engine/",
-    "publishedAt": "2025-09-03T14:14:46.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple has been granted a patent for a shock-resistant haptic engine design that aims to significantly improve the durability of future iPhones, Apple Watches, and other devices. The iPhone 14 Pro's Taptic Engine (via iFixit). The patent is titled \"Electronic device having a shock-resistant haptic engine\" and was granted by the U.S. Patent and Trademark Of...",
-    "image": "https://images.macrumors.com/article-new/2023/02/iphone-14-pro-taptic-engine-via-ifixit.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Patent",
-      "Taptic Engine"
-    ],
-    "seoTitle": "Apple Patents Next-Generation Taptic Engine",
-    "seoDescription": "Apple has been granted a patent for a shock-resistant haptic engine design that aims to significantly improve the durability of future iPhones, Apple Watches..."
-  },
-  {
-    "title": "Why I love my Kenmore canister vacuum",
-    "url": "https://www.theverge.com/tech/769451/why-i-love-my-kenmore-canister-vacuum",
-    "publishedAt": "2025-09-03T14:01:12.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Emma Roth is a news writer here at The Verge, “and for me,” she explains, “that means every day is different. During the four years I’ve been here, I’ve covered breaking news and written about basically everything in the realm of tech, whether it’s streaming price hikes, the latest in AI chatbots, privacy issues surrounding age verification, and a whole l...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257929_Kenmore_love_ERoth_0001.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Why I love my Kenmore canister vacuum",
-    "seoDescription": "Emma Roth is a news writer here at The Verge, “and for me,” she explains, “that means every day is different. During the four years I’ve been here, I’ve cove..."
-  },
-  {
-    "title": "Just one word in the Google antitrust ruling was worth $20B a year to Apple",
-    "url": "https://9to5mac.com/2025/09/03/just-one-word-in-the-google-antitrust-ruling-was-worth-20b-a-year-to-apple/",
-    "publishedAt": "2025-09-03T13:44:04.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "For more than a year now, there have been debates about whether Google’s payment to Apple to be the default search engine in Safari would be outlawed. While it had seemed likely this would be the case, what we got was a compromise ruling. It turned out that the difference between Apple earning $20 billion a year and $0 hinged on a single word … more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Just-one-word-in-the-Google-antitrust-ruling-was-worth-20B-a-year-to-Apple.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Just one word in the Google antitrust ruling was worth $20B a year to Apple",
-    "seoDescription": "For more than a year now, there have been debates about whether Google’s payment to Apple to be the default search engine in Safari would be outlawed. While ..."
   }
 ]
