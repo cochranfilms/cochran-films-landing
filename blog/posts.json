@@ -1,5 +1,114 @@
 [
   {
+    "title": "[Boost]",
+    "url": "https://dev.to/hadil/-577n",
+    "publishedAt": "2025-09-03T08:10:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #productivity #interview",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10682%2Fbc1a28a5-111a-4dd5-83ec-0d6fc5ccc93f.jpeg",
+    "video": null,
+    "author": "Hadil Ben Abdallah",
+    "tags": [
+      "webdev",
+      "programming",
+      "productivity",
+      "interview"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "🚀 From DSA to Deployment: What a Real Full-Stack Job Interview Looks Like in 2025 Hadil Ben Abdallah for Final Round AI ・ Aug 25 #webdev #programming #produ..."
+  },
+  {
+    "title": "Veo3 im: A Deep Dive into the Tech Behind AI-Powered Video Generation",
+    "url": "https://dev.to/juddiy/veo3-im-a-deep-dive-into-the-tech-behind-ai-powered-video-generation-479k",
+    "publishedAt": "2025-09-03T08:03:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s content-driven world, the demand for high-quality videos keeps growing. Traditional video production, however, is often time-consuming and costly. As a developer and content creator, I’ve been looking for a solution that’s both efficient and controllable. Enter Veo3.im—an AI-powered video generation platform that abstracts complex video creatio...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Facm7r2f98o5d1posbd2o.jpeg",
+    "video": null,
+    "author": "Juddiy",
+    "tags": [
+      "tooling",
+      "webdev",
+      "veo3",
+      "ai"
+    ],
+    "seoTitle": "Veo3 im: A Deep Dive into the Tech Behind AI-Powered Video Generation",
+    "seoDescription": "In today’s content-driven world, the demand for high-quality videos keeps growing. Traditional video production, however, is often time-consuming and costly...."
+  },
+  {
+    "title": "Ooni’s newest pizza oven adds AI to your slice",
+    "url": "https://www.theverge.com/news/768542/ooni-volt-2-pizza-oven-ai-pizza-intelligence",
+    "publishedAt": "2025-09-03T08:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Cheese, red sauce, and a sprinkling of AI. Have you ever looked at your pizza oven and wished it was just a little bit smarter? Ooni has, and so its new Volt 2 comes loaded with “Pizza Intelligence,” an adaptive heating system designed to deliver a more even and consistent cooking temperature. The Volt 2 is an indoor oven, able to cook pizzas up to 13 inc...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Ooni-Volt-2-pizza-oven.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Ooni’s newest pizza oven adds AI to your slice",
+    "seoDescription": "Cheese, red sauce, and a sprinkling of AI. Have you ever looked at your pizza oven and wished it was just a little bit smarter? Ooni has, and so its new Volt..."
+  },
+  {
+    "title": "Why API tooling needs a reset (and what we're doing about it)",
+    "url": "https://dev.to/kiselitza/why-api-tooling-needs-a-reset-and-what-were-doing-about-it-3dn6",
+    "publishedAt": "2025-09-03T07:40:30.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Building and testing APIs feels all over the place nowadays. It's a pain, it wastes time, causes errors, and frustrates everyone involved. This post dives into why API tooling is such a headache, why the industry keeps making it worse, and how Voiden makes life easier for developers. Well, a lot of things, really. Let’s talk real-life examples: A retail a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F04vzzjzp1m1cmkxz6260.png",
+    "video": null,
+    "author": "aldin",
+    "tags": [
+      "webdev",
+      "programming",
+      "api",
+      "productivity"
+    ],
+    "seoTitle": "Why API tooling needs a reset (and what we're doing about it)",
+    "seoDescription": "Building and testing APIs feels all over the place nowadays. It's a pain, it wastes time, causes errors, and frustrates everyone involved. This post dives in..."
+  },
+  {
+    "title": "REST API in RUST with ntex",
+    "url": "https://dev.to/0xle0ne/rest-api-in-rust-with-ntex-6a8",
+    "publishedAt": "2025-09-03T07:38:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey, today I wanted to share my knowledge on how to write a Rest API in Rust. It may be easier than you think! OpenAPI specifications and serve a Swagger UI. You can find the full code source on github. Before starting, make sure you have Rust installed. Let's start by initializing a new project using cargo init. cargo init my-rest-api cd my-rest-api That...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F25u2056st0vb4vylpyw4.png",
+    "video": null,
+    "author": "leone",
+    "tags": [
+      "webdev",
+      "programming",
+      "rust",
+      "tutorial"
+    ],
+    "seoTitle": "REST API in RUST with ntex",
+    "seoDescription": "Hey, today I wanted to share my knowledge on how to write a Rest API in Rust. It may be easier than you think! OpenAPI specifications and serve a Swagger UI...."
+  },
+  {
+    "title": "Memora — Adaptive AI Agents with Memory (No Fine-Tuning Required)",
+    "url": "https://dev.to/21bq1a4232/memora-adaptive-ai-agents-with-memory-no-fine-tuning-required-2g44",
+    "publishedAt": "2025-09-03T07:35:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The Problem with Today’s AI Agents Large Language Models (LLMs) are powerful, but they don’t truly learn from experience. Fine-tuning can help, but it’s: Expensive Rigid Slow to iterate If we want truly adaptive agents, we need a better paradigm. The Idea: Memory-Augmented Reinforcement Learning Instead of retraining the model itself, Memora introduces me...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsischhg82polodyd4ju8.png",
+    "video": null,
+    "author": "Danda Pranav Krishna",
+    "tags": [
+      "ai",
+      "machinelearning",
+      "softwareengineering",
+      "webdev"
+    ],
+    "seoTitle": "Memora — Adaptive AI Agents with Memory (No Fine-Tuning Required)",
+    "seoDescription": "The Problem with Today’s AI Agents Large Language Models (LLMs) are powerful, but they don’t truly learn from experience. Fine-tuning can help, but it’s: Exp..."
+  },
+  {
     "title": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
     "url": "https://dev.to/john_smith_9e289544c3646a/real-time-price-comparison-amazon-flipkart-meesho-scraping-133i",
     "publishedAt": "2025-09-03T07:03:04.000Z",
@@ -17,44 +126,6 @@
     ],
     "seoTitle": "Real-Time Price Comparison: Amazon, Flipkart & Meesho Scraping",
     "seoDescription": "Real-Time Price Comparison: Amazon, Flipkart & Meesho ScrapingIntroduction They needed a system to scrape product data across all three platforms with real-t..."
-  },
-  {
-    "title": "[Boost] Goodby to Manual QA",
-    "url": "https://dev.to/bill_xu/-1eme",
-    "publishedAt": "2025-09-03T06:41:01.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude Bill ・ Sep 3 #testing #webdev #programming #ai",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3449849%2F1afbd24f-dbc5-4f89-b823-f798871eb3a4.jpg",
-    "video": null,
-    "author": "Bill",
-    "tags": [
-      "testing",
-      "webdev",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "[Boost] Goodby to Manual QA",
-    "seoDescription": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude Bill ・ Sep 3 #testing #webdev #progr..."
-  },
-  {
-    "title": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude",
-    "url": "https://dev.to/bill_xu/goodbye-manual-qa-metagpts-user-agent-delivers-92-accurate-end-to-end-gui-testing-with-higher-4dek",
-    "publishedAt": "2025-09-03T06:39:36.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "MetaGPT’s User Agent achieves 0.92 test-case accuracy and higher human‑agreement consistency than Claude on end-to-end GUI testing, powered by the RealDevWorld framework and AppEvalPilot evaluator. Manual QA can’t keep up with AI‑generated apps. Backed by the RealDevWorld framework, MetaGPT’s User Agent delivers end‑to‑end GUI testing with: 0.92 test‑case...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyrqouim0zb0uoadt5eyw.JPEG",
-    "video": null,
-    "author": "Bill",
-    "tags": [
-      "testing",
-      "webdev",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "Goodbye Manual QA: MetaGPT’s User Agent Delivers 92% Accurate End‑to‑End GUI Testing with Higher Consistency than Claude",
-    "seoDescription": "MetaGPT’s User Agent achieves 0.92 test-case accuracy and higher human‑agreement consistency than Claude on end-to-end GUI testing, powered by the RealDevWor..."
   },
   {
     "title": "14 Iconic Characters Who Deserve Their Own Spin-Off",
@@ -550,76 +621,5 @@
     ],
     "seoTitle": "Fujifilm Cameras and Lenses Cost Up to 9% More After New Price Increase",
     "seoDescription": "As Fujifilm warned in mid-August, its prices have, in fact, increased in the United States as a result of the Trump administration's tariff policy. [Read More]"
-  },
-  {
-    "title": "What We Know So Far About '28 Years Later: The Bone Temple'",
-    "url": "https://nofilmschool.com/bone-temple-first-look",
-    "publishedAt": "2025-09-02T20:12:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Regardless of what you thought of 28 Years Later and its slightly more subdued mother/son storyline, the sequel is coming soon. At the end of the former film, Spike meets Sir Jimmy Crystal (Jack O’Connell) and his strange cult of \"Jimmies.\" 28 Years Later: The Bone Temple begins soon afterward, with Spike joining the cult. Inevitably, key characters will ...",
-    "image": "https://nofilmschool.com/media-library/ralph-fiennes-as-dr-kelson-28-years-later-the-bone-temple.jpg?id=61545767&width=980",
-    "video": "https://www.youtube.com/embed/ngEBGV9fgO8?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "28 years later",
-      "The bone temple",
-      "28 years later: the bone temple",
-      "Nia dacosta"
-    ],
-    "seoTitle": "What We Know So Far About '28 Years Later: The Bone Temple'",
-    "seoDescription": "Regardless of what you thought of 28 Years Later and its slightly more subdued mother/son storyline, the sequel is coming soon. At the end of the former film..."
-  },
-  {
-    "title": "Beats Working on New Colors for Solo Buds, Studio Pro, and Solo 4",
-    "url": "https://www.macrumors.com/2025/09/02/beats-new-color-options/",
-    "publishedAt": "2025-09-02T20:08:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple's Beats brand will soon come out with new color options for several of its products, according to information discovered by MacRumors. The Beats Studio Pro headphones are set to be released in colors that Apple is referring to as dark slate and pink internally. It is worth noting that we've previously seen mentions of unreleased Sand Gray and Soft P...",
-    "image": "https://images.macrumors.com/article-new/2025/09/beatsstudiopro.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "Beats Working on New Colors for Solo Buds, Studio Pro, and Solo 4",
-    "seoDescription": "Apple's Beats brand will soon come out with new color options for several of its products, according to information discovered by MacRumors. The Beats Studio..."
-  },
-  {
-    "title": "The 2025 Summer Box Office Is Losing The Battle To Your Couch",
-    "url": "https://nofilmschool.com/2025-summer-box-office",
-    "publishedAt": "2025-09-02T20:00:23.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "That headline probably gave JD Vance a sensation in his pants, but it should worry most filmmakers and film lovers. I've been going to the movies every week this year and doing my part, but the numbers for the 2025 summer box office are in, and they're not pretty. Right now, we're seeing reports of only $3.6 billion in North America. That's a small drop f...",
-    "image": "https://nofilmschool.com/media-library/the-2025-summer-box-office-is-losing-the-battle-to-your-couch.jpg?id=61545633&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Streaming wars",
-      "Box office"
-    ],
-    "seoTitle": "The 2025 Summer Box Office Is Losing The Battle To Your Couch",
-    "seoDescription": "That headline probably gave JD Vance a sensation in his pants, but it should worry most filmmakers and film lovers. I've been going to the movies every week ..."
-  },
-  {
-    "title": "How the Democrats keep copying the MAGA influencer playbook (and failing)",
-    "url": "https://www.theverge.com/regulator-newsletter/769232/democrats-chorus-influencer-program-regulator",
-    "publishedAt": "2025-09-02T20:00:02.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Hello and welcome to Regulator. Today, I will attempt to regulate my own apoplexy. Recently, Wired published an article revealing the existence of a secret Democrat influencer incubator that trained liberal and progressive content creators to push coordinated messaging across their shared social media platforms and paid them handsomely to do so. The fallo...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257928_democrat_influence_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tina Nguyen",
-    "tags": [],
-    "seoTitle": "How the Democrats keep copying the MAGA influencer playbook (and failing)",
-    "seoDescription": "Hello and welcome to Regulator. Today, I will attempt to regulate my own apoplexy. Recently, Wired published an article revealing the existence of a secret D..."
   }
 ]
