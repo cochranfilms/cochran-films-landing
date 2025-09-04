@@ -1,39 +1,41 @@
 [
   {
-    "title": "Streams and memory usage",
-    "url": "https://dev.to/igor_grieder/streams-and-memory-usage-11jc",
-    "publishedAt": "2025-09-04T00:57:15.000Z",
+    "title": "Yonyou U8 Cloud RCE: File Upload Bypass Confirmed",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/yonyou-u8-cloud-rce-flaw-file-upload-bypass-security-advisory-36ki",
+    "publishedAt": "2025-09-04T03:08:52.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "I'm writing this short article because recently I came across a big problem that we sometimes make: using a lot of memory. To give more context, I was investigating why an Azure Function was constantly restarting the k8s pod in production, causing a massive delay in the processing of some key financial data for the application users. After seeing the logs...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxopuv2q2q55g57zvah3l.png",
+    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. On August 29, 2025, Yonyou Security Center disclosed a critical vulnerab...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjrqewqjuyflzxsnffjig.png",
     "video": null,
-    "author": "Igor Grieder",
+    "author": "Sharon",
     "tags": [
+      "rce",
+      "cybersecurity",
       "webdev",
-      "csharp"
+      "safeline"
     ],
-    "seoTitle": "Streams and memory usage",
-    "seoDescription": "I'm writing this short article because recently I came across a big problem that we sometimes make: using a lot of memory. To give more context, I was invest..."
+    "seoTitle": "Yonyou U8 Cloud RCE: File Upload Bypass Confirmed",
+    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
   },
   {
-    "title": "🚀 Announcing polyfront-scaffold: Scaffold React & Angular Apps in Minutes",
-    "url": "https://dev.to/nirmalsamaranayaka/announcing-polyfront-scaffold-scaffold-react-angular-apps-in-minutes-3h04",
-    "publishedAt": "2025-09-04T00:19:14.000Z",
+    "title": "Check out this guide!!",
+    "url": "https://dev.to/dipti_m_2e7ba36c478d1a48a/check-out-this-guide-4m98",
+    "publishedAt": "2025-09-04T03:06:56.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/Webpack) and Angular applications in minutes, with ready-to-use presets for UI, state management, testing, and more. polyfront-scaffold generates production-ready frontend projects with opinionated but ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flubkjre9rtgwxrxr8plq.png",
+    "summary": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3268117%2F1ab4dce0-9706-4bf9-bcd5-576b0833c02b.png",
     "video": null,
-    "author": "Nirmal Samaranayaka",
+    "author": "Dipti M",
     "tags": [
       "webdev",
-      "javascript",
-      "react",
-      "programming"
+      "programming",
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "🚀 Announcing polyfront-scaffold: Scaffold React & Angular Apps in Minutes",
-    "seoDescription": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/We..."
+    "seoTitle": "Check out this guide!!",
+    "seoDescription": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners"
   },
   {
     "title": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
