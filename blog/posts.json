@@ -1,22 +1,208 @@
 [
   {
-    "title": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
-    "url": "https://dev.to/yuktisays/mastering-mongodb-aggregation-pipelines-a-developers-complete-guide-55lo",
-    "publishedAt": "2025-09-04T11:05:14.000Z",
+    "title": "What Actually is DevOps? Scope, Importance, and Its Role in IT",
+    "url": "https://dev.to/umaid777/what-actually-is-devops-scope-importance-and-its-role-in-it-54o9",
+    "publishedAt": "2025-09-04T12:26:41.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, when I moved to MongoDB, I mostly used it for simple things — insert, find, update, delete. I only knew a few operators like $set, $...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwrl806ybfyneocc9aa30.png",
+    "summary": "If you’ve been around the tech industry, you’ve probably heard the buzzword “DevOps” a lot. Some say it’s about tools like Docker, Jenkins, and Kubernetes. Others confuse it with system administration or automation. The truth? DevOps is much more than just tools. And the lack of clarity around what DevOps really is often creates confusion for beginners an...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1iuz17pk0hf7o5k70jlt.png",
     "video": null,
-    "author": "Yukti Sahu",
+    "author": "Umaid Hashmi",
+    "tags": [
+      "webdev",
+      "devops",
+      "cloud",
+      "beginners"
+    ],
+    "seoTitle": "What Actually is DevOps? Scope, Importance, and Its Role in IT",
+    "seoDescription": "If you’ve been around the tech industry, you’ve probably heard the buzzword “DevOps” a lot. Some say it’s about tools like Docker, Jenkins, and Kubernetes. O..."
+  },
+  {
+    "title": "The Browser Company, maker of Arc and Dia, is being acquired",
+    "url": "https://www.theverge.com/web/770947/browser-company-arc-dia-acquired-atlassian",
+    "publishedAt": "2025-09-04T12:20:15.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Dia’s simplicity is neat, but its AI integration is the point. Mike Cannon-Brookes, the CEO of enterprise software giant Atlassian, was one of the first users of the Arc browser. Over the last several years, he has been a prolific bug reporter and feature requester. Now he'll own the thing: Atlassian is acquiring The Browser Company, the New York-based st...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Image-1600x901-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "David Pierce",
+    "tags": [],
+    "seoTitle": "The Browser Company, maker of Arc and Dia, is being acquired",
+    "seoDescription": "Dia’s simplicity is neat, but its AI integration is the point. Mike Cannon-Brookes, the CEO of enterprise software giant Atlassian, was one of the first user..."
+  },
+  {
+    "title": "Master Data Analytics and Artificial Intelligence in Hyderabad – Future Careers Begin Here",
+    "url": "https://dev.to/gayatri_pujari_1e061dabe5/master-data-analytics-and-artificial-intelligence-in-hyderabad-future-careers-begin-here-2ln",
+    "publishedAt": "2025-09-04T12:20:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Data Analytics & AI Course in Hyderabad | Future Skills at TechSaavvy Enroll in Data Analytics and AI training in Hyderabad with TechSaavvy Akademy. Learn big data, machine learning, and predictive analytics with job-ready skills.…Read More → Data Analytics and AI Training in Hyderabad – Your Ticket to the Fastest-Growing Career Every business today is po...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5pi5tc7c6s7y2sb20wau.webp",
+    "video": null,
+    "author": "Gayatri pujari",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "productivity"
+    ],
+    "seoTitle": "Master Data Analytics and Artificial Intelligence in Hyderabad – Future Careers Begin Here",
+    "seoDescription": "Data Analytics & AI Course in Hyderabad | Future Skills at TechSaavvy Enroll in Data Analytics and AI training in Hyderabad with TechSaavvy Akademy. Learn bi..."
+  },
+  {
+    "title": "25 Virtual Team Building Activities for Remote Teams",
+    "url": "https://dev.to/devmakasana/25-virtual-team-building-activities-for-remote-teams-57n4",
+    "publishedAt": "2025-09-04T12:19:25.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "25 Virtual Team Building Activities for Remote Teams Kruti for Teamcamp ・ Sep 4 #webdev #beginners #productivity #devops",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Sanjay M.",
+    "tags": [
+      "webdev",
+      "beginners",
+      "productivity",
+      "devops"
+    ],
+    "seoTitle": "25 Virtual Team Building Activities for Remote Teams",
+    "seoDescription": "25 Virtual Team Building Activities for Remote Teams Kruti for Teamcamp ・ Sep 4 #webdev #beginners #productivity #devops"
+  },
+  {
+    "title": "This high-end Miele outdoor grill will cook for you",
+    "url": "https://www.theverge.com/news/770810/miele-dreams-outdoor-kitchen-smart-grill-launch",
+    "publishedAt": "2025-09-04T12:17:10.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "If the Miele Dreams grill is sorting dinner for you, that means there’s more time for socializing with friends and family. Luxury appliance manufacturer Miele is entering the outdoor cooking market with its new exterior kitchen range, which provides customizable modules and smart grilling capabilities. The “Dreams” modular outdoor kitchen introduced at IF...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/2025-069_03.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "This high-end Miele outdoor grill will cook for you",
+    "seoDescription": "If the Miele Dreams grill is sorting dinner for you, that means there’s more time for socializing with friends and family. Luxury appliance manufacturer Miel..."
+  },
+  {
+    "title": "Apple CEO Tim Cook Invited Back to White House for Tech Event",
+    "url": "https://www.macrumors.com/2025/09/04/tim-cook-invited-back-to-white-house/",
+    "publishedAt": "2025-09-04T12:14:25.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple CEO Tim Cook has been invited to an event for tech leaders at the White House today in the newly renovated Rose Garden, according to The Hill. Cook is among more than two dozen technology executives invited to the White House by President Donald Trump for the first event to be held on the redesigned Rose Garden patio. The dinner will follow a separa...",
+    "image": "https://images.macrumors.com/article-new/2025/08/Trump-Gift.jpg",
+    "video": null,
+    "author": "Hartley Charlton",
+    "tags": [
+      "Donald Trump",
+      "Tim Cook",
+      "United States"
+    ],
+    "seoTitle": "Apple CEO Tim Cook Invited Back to White House for Tech Event",
+    "seoDescription": "Apple CEO Tim Cook has been invited to an event for tech leaders at the White House today in the newly renovated Rose Garden, according to The Hill. Cook is ..."
+  },
+  {
+    "title": "FERRARITOTO",
+    "url": "https://dev.to/yanto_beceng_e90cbbf528e1/ferraritoto-7jf",
+    "publishedAt": "2025-09-04T12:01:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Click me !!! FerrariToto adalah platform game online keluarga dengan tampilan modern, fitur mudah digunakan, serta permainan aman yang dapat dinikmati semua kalangan. Hiburan praktis untuk semua generasi dalam satu tempat. LINK RESMI FERRARITOTO https://www.ferraritoto.com/",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc1jfcf4scmrws9vw9iop.png",
+    "video": null,
+    "author": "Ferraritoto",
     "tags": [
       "webdev",
       "programming",
       "javascript",
-      "mongodb"
+      "ai"
     ],
-    "seoTitle": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
-    "seoDescription": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and eve..."
+    "seoTitle": "FERRARITOTO",
+    "seoDescription": "Click me !!! FerrariToto adalah platform game online keluarga dengan tampilan modern, fitur mudah digunakan, serta permainan aman yang dapat dinikmati semua ..."
+  },
+  {
+    "title": "The big iPhone 17 Air question: will Apple’s new design phone carry a premium price tag?",
+    "url": "https://9to5mac.com/2025/09/04/iphone-17-air-price-how-much-new-design/",
+    "publishedAt": "2025-09-04T11:42:09.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Next week, Apple will announce the new lineup of iPhone. The big change is the discontinuation of the , instead introducing a new thin form factor design model. This is widely expected to be branded as the iPhone 17 Air. It will feature the thinnest chassis of an iPhone ever, measuring about 5.5mm at its thinnest point. The tradeoff to achieve the strikin...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/Heres-how-thin-the-iPhone-17-Air-is-expected-to-be-with-the-camera-bar.webp?w=1500",
+    "video": null,
+    "author": "Benjamin Mayo",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "The big iPhone 17 Air question: will Apple’s new design phone carry a premium price tag?",
+    "seoDescription": "Next week, Apple will announce the new lineup of iPhone. The big change is the discontinuation of the , instead introducing a new thin form factor design mod..."
+  },
+  {
+    "title": "Paramount Plus annual plans half-price for limited time, from $30",
+    "url": "https://9to5mac.com/2025/09/04/paramount-plus-annual-plans-half-price-for-limited-time-from-30/",
+    "publishedAt": "2025-09-04T11:39:02.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "With Apple TV+ and other streaming services increasing their prices this year, there’s some rare good news from Paramount. For a limited period, you can get one of two annual plans for half price … more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Paramount-Plus-annual-plans-half-price-for-limited-time-from-30.jpg?quality=82&#038;strip=all&#038;w=1500",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Paramount Plus annual plans half-price for limited time, from $30",
+    "seoDescription": "With Apple TV+ and other streaming services increasing their prices this year, there’s some rare good news from Paramount. For a limited period, you can get ..."
+  },
+  {
+    "title": "Building Smarter Data Centers with Digital Twins: Developer’s Guide",
+    "url": "https://dev.to/reetielubana/building-smarter-data-centers-with-digital-twins-developers-guide-3fjf",
+    "publishedAt": "2025-09-04T11:34:55.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Data centers are the backbone of our digital world. From cloud storage to AI workloads, everything we do online runs through them. But as demand grows, so does the need to design, build, and manage data centers more efficiently. That’s where digital twins come in. For developers, this shift opens new opportunities: working with real-time data, 3D models, ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy9n6tdpm3r6q2qcpu527.png",
+    "video": null,
+    "author": "Reetie Lubana",
+    "tags": [
+      "webdev",
+      "discuss",
+      "news",
+      "cybersecurity"
+    ],
+    "seoTitle": "Building Smarter Data Centers with Digital Twins: Developer’s Guide",
+    "seoDescription": "Data centers are the backbone of our digital world. From cloud storage to AI workloads, everything we do online runs through them. But as demand grows, so do..."
+  },
+  {
+    "title": "Galaxy Tab S11 revives 11-inch size as S Pen ditches Bluetooth, copies iPad placement",
+    "url": "https://9to5google.com/2025/09/04/samsung-galaxy-tab-s11-s-pen-changes/",
+    "publishedAt": "2025-09-04T11:25:49.000Z",
+    "source": "9to5google.com",
+    "category": "apple",
+    "summary": "Samsung’s new Galaxy Tab S11 has arrived with updated specs, the return of an 11-inch size, and some big S Pen changes. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/galaxy-tab-s11-2.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "9to5Google",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Galaxy Tab S11 revives 11-inch size as S Pen ditches Bluetooth, copies iPad placement",
+    "seoDescription": "Samsung’s new Galaxy Tab S11 has arrived with updated specs, the return of an 11-inch size, and some big S Pen changes. more…"
+  },
+  {
+    "title": "Major Philips Hue launch turns bulbs into motion sensors, adds smart doorbell, more",
+    "url": "https://9to5mac.com/2025/09/04/major-philips-hue-launch-turns-bulbs-into-motion-sensors-adds-smart-doorbell-more/",
+    "publishedAt": "2025-09-04T11:20:06.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "We’ve known for some time that there was major news on the way from Philips Hue, and the company has now announced all of the details. One of the headline features is a new Bridge Pro which turns your existing smart bulbs into motion sensors. Bulbs also get more affordable, light strips get brighter, and there’s support for Matter-over-Thread. Finally, th...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Major-Philips-Hue-launch-turns-bulbs-into-motion-sensors-adds-smart-doorbell-more.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ben Lovejoy",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Major Philips Hue launch turns bulbs into motion sensors, adds smart doorbell, more",
+    "seoDescription": "We’ve known for some time that there was major news on the way from Philips Hue, and the company has now announced all of the details. One of the headline fe..."
   },
   {
     "title": "This Battered Leica Could Be Yours for $500,000",
@@ -58,44 +244,6 @@
     ],
     "seoTitle": "Base iPhone 17 Pro Could Cost $200 More But With Doubled Storage",
     "seoDescription": "Apple will maintain its entry-level pricing for the standard iPhone 17 this year, but the iPhone 17 Pro and iPhone 17 Pro Max are set to get price hikes, alb..."
-  },
-  {
-    "title": "Docker to Kubernetes 30 day Migration path for developers",
-    "url": "https://dev.to/pranesh_patel/docker-to-kubernetes-30-day-migration-path-for-developers-4jfd",
-    "publishedAt": "2025-09-04T10:26:49.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know Pratham naik for Teamcamp ・ Sep 4 #webdev #devops #tutorial #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Pranesh patel",
-    "tags": [
-      "webdev",
-      "devops",
-      "tutorial",
-      "learning"
-    ],
-    "seoTitle": "Docker to Kubernetes 30 day Migration path for developers",
-    "seoDescription": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know Pratham naik for Teamcamp ・ Sep 4 #webdev #devops #tutorial #learning"
-  },
-  {
-    "title": "Christopher Spence: Canadian Author of The Skin I’m In and True Blue, Award-Winning Filmmaker, and Education Leader",
-    "url": "https://dev.to/ade_ola_4bba64690c5ba6a65/christopher-spence-canadian-author-of-the-skin-im-in-and-true-blue-award-winning-filmmaker-and-4nkd",
-    "publishedAt": "2025-09-04T10:23:50.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Few individuals seamlessly bridge the worlds of education, literature, and film as effectively as Dr. Christopher Spence. A former professional athlete, award-winning educator, PhD scholar, and prolific author, Spence’s career reflects a unique fusion of storytelling, leadership, and social impact. His official website, ChristopherSpence.website From Athl...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foeo8m8i9m5jnz89gedwj.jpeg",
-    "video": null,
-    "author": "Christopher Spence",
-    "tags": [
-      "webdev",
-      "learning",
-      "news",
-      "devchallenge"
-    ],
-    "seoTitle": "Christopher Spence: Canadian Author of The Skin I’m In and True Blue, Award-Winning Filmmaker, and Education Leader",
-    "seoDescription": "Few individuals seamlessly bridge the worlds of education, literature, and film as effectively as Dr. Christopher Spence. A former professional athlete, awar..."
   },
   {
     "title": "Microsoft open-sources its 6502 version of BASIC from 1976",
@@ -159,7 +307,7 @@
     "publishedAt": "2025-09-04T10:00:00.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the wraps off a trio of robot mowers, with its premium RockMow Z1 featuring an all-wheel drive system to handle steep slopes of up to 80 percent, or around 38.66 degrees. In addition to sporting independ...",
+    "summary": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the wraps off a trio of robot lawnmowers, with its premium RockMow Z1 featuring an all-wheel drive system to handle steep slopes of up to 80 percent, or around 38.66 degrees. In addition to sporting inde...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/RockMowZ1_6256037.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Emma Roth",
@@ -168,7 +316,7 @@
     "seoDescription": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the..."
   },
   {
-    "title": "iPhone 17 Air to Start at $1,099 With 256GB Storage, 1TB for $1,499",
+    "title": "iPhone 17 Air Could Start at $1,099 With 256GB Storage, 1TB for $1,499",
     "url": "https://www.macrumors.com/2025/09/04/iphone-17-air-price-1099-256gb-base-storage/",
     "publishedAt": "2025-09-04T09:54:53.000Z",
     "source": "macrumors.com",
@@ -179,12 +327,10 @@
     "author": "Tim Hardwick",
     "tags": [
       "Featured",
-      "iPhone 17",
       "iPhone 17 Air",
-      "iPhone 17 Pro",
       "TrendForce"
     ],
-    "seoTitle": "iPhone 17 Air to Start at $1,099 With 256GB Storage, 1TB for $1,499",
+    "seoTitle": "iPhone 17 Air Could Start at $1,099 With 256GB Storage, 1TB for $1,499",
     "seoDescription": "Apple's upcoming iPhone 17 Air will have a $1,099 starting price providing 256GB of base storage and will max out at $1,499 with a 1TB option, according to t..."
   },
   {
@@ -249,34 +395,6 @@
     ],
     "seoTitle": "Innovative Australian Photography Festival Announces Closure",
     "seoDescription": "PHOTO Australia, an ambitious photography festival that displayed large-scale prints in public spaces, has announced it is permanently closing. [Read More]"
-  },
-  {
-    "title": "Anker stuffed its awesome Nebula X1 projector into a party speaker",
-    "url": "https://www.theverge.com/news/765735/anker-nebula-x1-pro-party-speaker-price-specs",
-    "publishedAt": "2025-09-04T08:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The Soundcore Nebula X1 Pro is a party on wheels. | Image: Anker Anker took its portable and incredibly bright Nebula X1 projector and jammed it into a 30 x 17 x 13.5-inch box with a 160W subwoofer to create the Soundcore Nebula X1 Pro. The resulting Google TV party projector — announced at IFA 2025 — weighs 72.4 pounds, so Anker also gave it a retractabl...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/X1-Pro-Hero-Image.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Thomas Ricker",
-    "tags": [],
-    "seoTitle": "Anker stuffed its awesome Nebula X1 projector into a party speaker",
-    "seoDescription": "The Soundcore Nebula X1 Pro is a party on wheels. | Image: Anker Anker took its portable and incredibly bright Nebula X1 projector and jammed it into a 30 x ..."
-  },
-  {
-    "title": "Anker’s fastest power bank launches alongside new Prime family",
-    "url": "https://www.theverge.com/news/765778/anker-fastest-power-bank-launches-new-prime-family",
-    "publishedAt": "2025-09-04T08:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Starting from the left: the Prime docking station, power bank, power bank with base, wall charger, and 3-in-1 bedside charger. | Image: Anker Just one week after EcoFlow launched the fastest 99Wh power bank yet, Anker is firing back at IFA 2025 with a souped-up portable battery of its own. Anker’s Prime Power Bank (26k, 300W) supports 250W of input, or up...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/prime-family.001.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Thomas Ricker",
-    "tags": [],
-    "seoTitle": "Anker’s fastest power bank launches alongside new Prime family",
-    "seoDescription": "Starting from the left: the Prime docking station, power bank, power bank with base, wall charger, and 3-in-1 bedside charger. | Image: Anker Just one week a..."
   },
   {
     "title": "‘AI Image’ of Luigi Mangione Modeling a Shirt Appears on Shein Website",
@@ -495,127 +613,5 @@
     ],
     "seoTitle": "AirPods Pro 3 Coming Next Week With Multiple New Features",
     "seoDescription": "There's less than a week to go until Apple's \"Awe Dropping\" event, and there's a good chance that Apple will introduce an updated version of the AirPods Pro...."
-  },
-  {
-    "title": "How to Hold a Successful Table Read",
-    "url": "https://nofilmschool.com/how-to-table-read",
-    "publishedAt": "2025-09-03T22:54:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "For any screenwriter, our goal is to eventually have your work staged in some way. Obviously, the best version would be a full production, either for a film or TV show. But if your work is in early stages and you’re just looking to get an idea of how your work will stand up, consider putting together a table read. I’ve been fortunate enough to have my wor...",
-    "image": "https://nofilmschool.com/media-library/how-to-hold-a-successful-table-read.jpg?id=61553686&width=980",
-    "video": "https://www.youtube.com/embed/MqfSr8Gu9zI?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Screenwriting advice",
-      "Actors",
-      "Table read"
-    ],
-    "seoTitle": "How to Hold a Successful Table Read",
-    "seoDescription": "For any screenwriter, our goal is to eventually have your work staged in some way. Obviously, the best version would be a full production, either for a film ..."
-  },
-  {
-    "title": "10 Movies with Amazing Dialogue",
-    "url": "https://nofilmschool.com/writing-dialogue",
-    "publishedAt": "2025-09-03T22:45:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Certain movies elevate dialogue from mere exposition to a work of art. Exceptional dialogue can carry a plot when nothing else is going on in a story. The best dialogue emerges when characters have conflicting desires in every scene, creating natural tension through conversation rather than action. It can also give us naked, raw moments of emotion. It’s c...",
-    "image": "https://nofilmschool.com/media-library/glengarry-glen-ross.webp?id=61553679&width=980",
-    "video": "https://www.youtube.com/embed/6MUcuqbGTxc?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Dialogue",
-      "Best movies"
-    ],
-    "seoTitle": "10 Movies with Amazing Dialogue",
-    "seoDescription": "Certain movies elevate dialogue from mere exposition to a work of art. Exceptional dialogue can carry a plot when nothing else is going on in a story. The be..."
-  },
-  {
-    "title": "WSJ explores the niche markets benefiting from the Apple Vision Pro",
-    "url": "https://9to5mac.com/2025/09/03/wsj-explores-the-niche-markets-benefiting-from-the-apple-vision-pro/",
-    "publishedAt": "2025-09-03T22:44:11.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "By now, you probably know it by heart: the steep price tag and lack of apps have irreparably doomed the first Apple Vision Pro. But that doesn’t mean it’s not doing well in niche markets and uses, per a new WSJ report. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/04/Vision-Pro.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "WSJ explores the niche markets benefiting from the Apple Vision Pro",
-    "seoDescription": "By now, you probably know it by heart: the steep price tag and lack of apps have irreparably doomed the first Apple Vision Pro. But that doesn’t mean it’s no..."
-  },
-  {
-    "title": "Apple Releases Safari Technology Preview 227 With Bug Fixes and Performance Improvements",
-    "url": "https://www.macrumors.com/2025/09/03/apple-releases-safari-technology-preview-227/",
-    "publishedAt": "2025-09-03T22:33:27.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple today released a new update for Safari Technology Preview, the experimental browser that was first introduced in March 2016. Apple designed ‌Safari Technology Preview‌ to allow users to test features that are planned for future release versions of the Safari browser. ‌Safari Technology Preview‌ 227 includes fixes and updates for Accessibility, Anima...",
-    "image": "https://images.macrumors.com/article-new/2024/07/Safari-Technology-Preview-Updated-Feature-1.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Blurb",
-      "Safari Technology Preview"
-    ],
-    "seoTitle": "Apple Releases Safari Technology Preview 227 With Bug Fixes and Performance Improvements",
-    "seoDescription": "Apple today released a new update for Safari Technology Preview, the experimental browser that was first introduced in March 2016. Apple designed ‌Safari Tec..."
-  },
-  {
-    "title": "Which Stephen King Character Was Based on Clint Eastwood?",
-    "url": "https://nofilmschool.com/stephen-king-character-clint-eastwood",
-    "publishedAt": "2025-09-03T22:33:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Stephen King is one of the most prolific writers of all time. He has so many stories and so many characters, I suppose it should not be a shock that one of them is based on the actor Clint Eastwood. But it's not like a throwaway guy...it's someone who has their own series and has appeared in eight novels. Let's dive in. Stephen King And Clint Eastwood The...",
-    "image": "https://nofilmschool.com/media-library/which-stephen-king-character-was-based-on-clint-eastwood.jpg?id=61551844&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Clint eastwood",
-      "The dark tower",
-      "Stephen king",
-      "Characters"
-    ],
-    "seoTitle": "Which Stephen King Character Was Based on Clint Eastwood?",
-    "seoDescription": "Stephen King is one of the most prolific writers of all time. He has so many stories and so many characters, I suppose it should not be a shock that one of t..."
-  },
-  {
-    "title": "Paul Thomas Anderson Has 5 Movies He Wants You To Watch",
-    "url": "https://nofilmschool.com/paul-thomas-anderson-5-movies-he-wants-you-to-watch",
-    "publishedAt": "2025-09-03T22:19:23.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Paul Thomas Anderson is such a joyous filmmaker. I am so happy when he has a new movie come out, because his passion for the big screen is contagious. One Battle After Another, his newest film, will be shown in 70MM all over the country, and he really thinks you should see the movie that way. It stars Leonardo DiCaprio and is loosely inspired by the Thoma...",
-    "image": "https://nofilmschool.com/media-library/paul-thomas-anderson-has-5-movies-he-wants-you-to-watch.webp?id=61551829&width=980",
-    "video": "https://www.youtube.com/embed/kDvqRVhQ9UU?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "70mm",
-      "One battle after another",
-      "Paul thomas anderson",
-      "Paul thomas anderson"
-    ],
-    "seoTitle": "Paul Thomas Anderson Has 5 Movies He Wants You To Watch",
-    "seoDescription": "Paul Thomas Anderson is such a joyous filmmaker. I am so happy when he has a new movie come out, because his passion for the big screen is contagious. One Ba..."
-  },
-  {
-    "title": "Reflecting on Apple’s attempts at a fourth flagship iPhone: Will the 17 Air do better?",
-    "url": "https://9to5mac.com/2025/09/03/iphone-17-air-next-week-will-it-perform-better-than-previous-attempts/",
-    "publishedAt": "2025-09-03T22:17:17.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "At next week’s ‘Awe Dropping’ Apple Event, Apple will release the iPhone 17 lineup. One of the most noteworthy models this year will be an entirely new one: the iPhone 17 Air. It’s going to be an ultra-thin iPhone, and it’s set to replace theentirely. That being said, will this third attempt at making a fourth iPhone model actually pan out this time? more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/04/iphone-17-air-desert-titanium.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Reflecting on Apple’s attempts at a fourth flagship iPhone: Will the 17 Air do better?",
-    "seoDescription": "At next week’s ‘Awe Dropping’ Apple Event, Apple will release the iPhone 17 lineup. One of the most noteworthy models this year will be an entirely new one: ..."
   }
 ]
