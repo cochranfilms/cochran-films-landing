@@ -1,41 +1,200 @@
 [
   {
-    "title": "Deploy a Dockerized Django App on AWS (EC2 + Nginx + Gunicorn + RDS + S3) — A Beginner-Friendly Guide",
-    "url": "https://dev.to/tech_2e11d899e5893ff/deploy-a-dockerized-django-app-on-aws-ec2-nginx-gunicorn-rds-s3-a-beginner-friendly-1502",
-    "publishedAt": "2025-09-04T08:47:03.000Z",
+    "title": "Christopher Spence: Canadian Educator, PhD, and Former Director of Education for Toronto and Hamilton-Wentworth School Boards",
+    "url": "https://dev.to/ade_ola_4bba64690c5ba6a65/christopher-spence-canadian-educator-phd-and-former-director-of-education-for-toronto-and-1p2",
+    "publishedAt": "2025-09-04T10:13:59.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "This process only for run project on IP Address without domain but it not support other device (like mobile,tablet etc.) No prior DevOps experience needed—just follow the steps. Step 0 — Prerequisites EC2 Ubuntu 22.04 LTS instance with public IP. Security group allowing: SSH 22 → your IP HTTP 80 → 0.0.0.0/0 HTTPS 443 → 0.0.0.0/0 (optional) Key pair .pem f...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0vqc332qec0w9v22kplw.jpeg",
+    "summary": "Few individuals have left as profound an impact on Canadian education as Dr. Christopher Spence. From the classrooms of Lawrence Heights Middle School to the executive offices of two of Ontario’s largest school boards, Spence’s career spans decades of innovation, leadership, and dedication. He is not only an award-winning educator and administrator, but a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fma629adqhzh16bfw0gdm.jpeg",
     "video": null,
-    "author": "Techpointby",
+    "author": "Christopher Spence",
     "tags": [
       "webdev",
-      "docker",
-      "beginners",
-      "python"
+      "tutorial",
+      "career",
+      "security"
     ],
-    "seoTitle": "Deploy a Dockerized Django App on AWS (EC2 + Nginx + Gunicorn + RDS + S3) — A Beginner-Friendly Guide",
-    "seoDescription": "This process only for run project on IP Address without domain but it not support other device (like mobile,tablet etc.) No prior DevOps experience needed—ju..."
+    "seoTitle": "Christopher Spence: Canadian Educator, PhD, and Former Director of Education for Toronto and Hamilton-Wentworth School Boards",
+    "seoDescription": "Few individuals have left as profound an impact on Canadian education as Dr. Christopher Spence. From the classrooms of Lawrence Heights Middle School to the..."
   },
   {
-    "title": "The Role of HTML Fonts in Shaping Web Design",
-    "url": "https://dev.to/vishal_more_02990955c9358/the-role-of-html-fonts-in-shaping-web-design-1387",
-    "publishedAt": "2025-09-04T08:39:07.000Z",
+    "title": "Huawei’s second trifold adds stylus support and purple pleather",
+    "url": "https://www.theverge.com/news/771122/huaweis-second-trifold-adds-stylus-support-and-purple-pleather",
+    "publishedAt": "2025-09-04T10:04:24.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Huawei has announced the Mate XTs, its second-generation trifold phone, which is available to order now in China. It’s only a minor upgrade on the first edition, but comes with new colors, stylus support, and a slightly lower price tag. The biggest addition is the ability to use a stylus on the folding screen, though otherwise the 10.2-inch display — whic...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/huawei-mate-xts-purple.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Huawei’s second trifold adds stylus support and purple pleather",
+    "seoDescription": "Huawei has announced the Mate XTs, its second-generation trifold phone, which is available to order now in China. It’s only a minor upgrade on the first edit..."
+  },
+  {
+    "title": "Roborock&#8217;s Curv 2 Pro can drop its mop pads to keep your carpets dry",
+    "url": "https://www.theverge.com/news/770274/robovac-qrevo-curv-2-pro-suction-boost",
+    "publishedAt": "2025-09-04T10:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Roborock is launching an updated Qrevo Curv robot vacuum that offers an impressive 25,000 Pa of suction power — topping the 18,500 Pa available with last year’s model. That’s not all that’s new with the Qrevo Curv 2 Pro, either, as the newly announced robovac comes with a dual-spinning mop system that automatically detaches before passing over carpets, he...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/QrevoC2Pro_38218449.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Roborock&#8217;s Curv 2 Pro can drop its mop pads to keep your carpets dry",
+    "seoDescription": "Roborock is launching an updated Qrevo Curv robot vacuum that offers an impressive 25,000 Pa of suction power — topping the 18,500 Pa available with last yea..."
+  },
+  {
+    "title": "Roborock graduates from vacuuming your house to mowing your lawn",
+    "url": "https://www.theverge.com/news/770725/roborock-robot-lawnmowers-launch-rockmow-z1",
+    "publishedAt": "2025-09-04T10:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the wraps off a trio of robot mowers, with its premium RockMow Z1 featuring an all-wheel drive system to handle steep slopes of up to 80 percent, or around 38.66 degrees. In addition to sporting independ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/RockMowZ1_6256037.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Roborock graduates from vacuuming your house to mowing your lawn",
+    "seoDescription": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the..."
+  },
+  {
+    "title": "iPhone 17 Air to Start at $1,099 With 256GB Storage, 1TB for $1,499",
+    "url": "https://www.macrumors.com/2025/09/04/iphone-17-air-price-1099-256gb-base-storage/",
+    "publishedAt": "2025-09-04T09:54:53.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple's upcoming iPhone 17 Air will have a $1,099 starting price providing 256GB of base storage and will max out at $1,499 with a 1TB option, according to the latest TrendForce report. The market research company expects the regular iPhone 17 model to have the same $799 starting price and 128GB base storage as last year's iPhone 16, while both the iPhone...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-AIR-Loud-Feature.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Featured",
+      "iPhone 17",
+      "iPhone 17 Air",
+      "iPhone 17 Pro",
+      "TrendForce"
+    ],
+    "seoTitle": "iPhone 17 Air to Start at $1,099 With 256GB Storage, 1TB for $1,499",
+    "seoDescription": "Apple's upcoming iPhone 17 Air will have a $1,099 starting price providing 256GB of base storage and will max out at $1,499 with a 1TB option, according to t..."
+  },
+  {
+    "title": "The Top 10 AI Tools Every Programmer Needs in 2025",
+    "url": "https://dev.to/eleanor_fairfax_5ce95399d/the-top-10-ai-tools-every-programmer-needs-in-2025-2me0",
+    "publishedAt": "2025-09-04T09:51:35.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Read More: The Role of HTML Fonts in Shaping Web Design Why Fonts Matter in Web Design Fonts are more than just text styles. The right font can: Enhance readability: Clear, well-chosen fonts make it easy for visitors to consume your content. Create brand identity: Fonts convey emotions — bold fonts feel strong, while cursive ones feel elegant. Guide user ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmusbd8q9v80qg2pt2a3f.png",
+    "summary": "We’re entering a turning point in the history of software development. Artificial intelligence is no longer just a sidekick—it’s becoming the central force behind modern development workflows. According to GitHub’s 2024 developer survey, more than 92% of programmers already use AI coding tools in their daily work. Developers leveraging AI complete tasks 5...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.echoapi.com%2Fupload%2Fuser%2F218821375908265984%2Flogo%2F70f4ddb6-475d-47c7-830a-98d3bd28c282.png",
     "video": null,
-    "author": "vishal more",
+    "author": "Mason Carter",
     "tags": [
-      "webdev",
-      "programming",
       "ai",
-      "beginners"
+      "programming",
+      "webdev",
+      "devtools"
     ],
-    "seoTitle": "The Role of HTML Fonts in Shaping Web Design",
-    "seoDescription": "Read More: The Role of HTML Fonts in Shaping Web Design Why Fonts Matter in Web Design Fonts are more than just text styles. The right font can: Enhance read..."
+    "seoTitle": "The Top 10 AI Tools Every Programmer Needs in 2025",
+    "seoDescription": "We’re entering a turning point in the history of software development. Artificial intelligence is no longer just a sidekick—it’s becoming the central force b..."
+  },
+  {
+    "title": "A Detailed Guide to Filing Taxes for eCommerce Business",
+    "url": "https://dev.to/gappgroup/a-detailed-guide-to-filing-taxes-for-ecommerce-business-15k5",
+    "publishedAt": "2025-09-04T09:36:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Filing taxes for an eCommerce business includes reporting your income, paying federal and state taxes, and handling sales tax obligations in the states where you have a presence. Keep accurate records of all sales, expenses, and deductions. Use accounting or tax software to make calculations easier, and consult a professional if needed to ensure complianc...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr4y2voie8zg15k0k4353.webp",
+    "video": null,
+    "author": "Gapp Group",
+    "tags": [
+      "tutorial",
+      "webdev"
+    ],
+    "seoTitle": "A Detailed Guide to Filing Taxes for eCommerce Business",
+    "seoDescription": "Filing taxes for an eCommerce business includes reporting your income, paying federal and state taxes, and handling sales tax obligations in the states where..."
+  },
+  {
+    "title": "Upgrade Umbraco 13 to 16: Localization",
+    "url": "https://dev.to/luukpeters/upgrade-umbraco-13-to-16-localization-133n",
+    "publishedAt": "2025-09-04T09:35:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "This is part three in a series of blogs about common tasks you'll encounter when updating Umbraco 13 to 16. In this part, we'll look into updating localization to work with Umbraco 16. First, we'll cover updating backoffice localization, then we'll cover changes to localization in C# code, and finally, I'll briefly touch on using localization in Umbraco b...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1wftmod7ou4rp30u3bth.png",
+    "video": null,
+    "author": "Luuk Peters",
+    "tags": [
+      "umbraco",
+      "webdev"
+    ],
+    "seoTitle": "Upgrade Umbraco 13 to 16: Localization",
+    "seoDescription": "This is part three in a series of blogs about common tasks you'll encounter when updating Umbraco 13 to 16. In this part, we'll look into updating localizati..."
+  },
+  {
+    "title": "Samsung’s Galaxy S25 FE and Tab S11 are thinner, lighter, and otherwise about the same",
+    "url": "https://www.theverge.com/phones/768658/samsung-galaxy-s25-fe-tab-s11-ultra",
+    "publishedAt": "2025-09-04T09:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "If you've been eagerly awaiting Samsung's long-teased trifold phone or Project Moohan XR headset, the company's IFA launches may feel a little prosaic: an affordable spinoff of its flagship phone line, and a pair of Android tablets. The Galaxy S25 FE and Tab S11 series may not be Samsung's most exciting launches of the year, but they're the bread-and-butt...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/samsung-galaxy-s25-fe-tab-s11-04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Samsung’s Galaxy S25 FE and Tab S11 are thinner, lighter, and otherwise about the same",
+    "seoDescription": "If you've been eagerly awaiting Samsung's long-teased trifold phone or Project Moohan XR headset, the company's IFA launches may feel a little prosaic: an af..."
+  },
+  {
+    "title": "Samsung takes another stab at an FE phone",
+    "url": "https://www.theverge.com/news/770776/samsung-galaxy-s25-fe-tab-s11-ultra-price",
+    "publishedAt": "2025-09-04T09:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Take your pick from four color options. I’ve never been quite sure what to call the category Samsung’s Galaxy FE belongs to. Upper midrange? Midrange plus? Low flagship? Whatever we’re calling it, Samsung is bringing the concept back again this year in the Galaxy S25 FE, which continues to stand for Fan Edition. It’s still $650 like the S24 FE before it a...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257934_S25_FE_CVirginia.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Allison Johnson",
+    "tags": [],
+    "seoTitle": "Samsung takes another stab at an FE phone",
+    "seoDescription": "Take your pick from four color options. I’ve never been quite sure what to call the category Samsung’s Galaxy FE belongs to. Upper midrange? Midrange plus? L..."
+  },
+  {
+    "title": "The newest Samsung SmartThings hub ditches Z-Wave",
+    "url": "https://www.theverge.com/ifa-berlin/770837/the-newest-samsung-smartthings-hub-ditches-z-wave",
+    "publishedAt": "2025-09-04T09:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Aeotec announced its Smart Home Hub 2 at the IFA tech show this week, marking the end of an era. The hub, produced in partnership with Samsung, is the fourth generation to support the SmartThings home automation platform, and the first without a Z-Wave radio. The Smart Home Hub 2 has twice the performance of its predecessor, according to a press release f...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Screenshot-2025-09-04-at-12.40.29%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "The newest Samsung SmartThings hub ditches Z-Wave",
+    "seoDescription": "Aeotec announced its Smart Home Hub 2 at the IFA tech show this week, marking the end of an era. The hub, produced in partnership with Samsung, is the fourth..."
+  },
+  {
+    "title": "Innovative Australian Photography Festival Announces Closure",
+    "url": "https://petapixel.com/2025/09/04/innovative-australian-photography-festival-announces-closure/",
+    "publishedAt": "2025-09-04T09:21:18.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "PHOTO Australia, an ambitious photography festival that displayed large-scale prints in public spaces, has announced it is permanently closing. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/Melbourne.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "Industry",
+      "News",
+      "australianphotography",
+      "canceled",
+      "photoaustralia",
+      "photofestival"
+    ],
+    "seoTitle": "Innovative Australian Photography Festival Announces Closure",
+    "seoDescription": "PHOTO Australia, an ambitious photography festival that displayed large-scale prints in public spaces, has announced it is permanently closing. [Read More]"
   },
   {
     "title": "Anker stuffed its awesome Nebula X1 projector into a party speaker",
@@ -94,20 +253,6 @@
     "seoDescription": "An hour of direct sunlight can fully recharge the new Eufycam S4. | Image: Eufy Eufy, Anker’s smart home brand, has announced a new outdoor security solution..."
   },
   {
-    "title": "Eufy built a stairlift for its robovacs",
-    "url": "https://www.theverge.com/ifa-berlin/769976/eufy-marswalker-stair-climbing-robotic-vacuum-price-specs-release-date",
-    "publishedAt": "2025-09-04T08:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Eufy’s MarsWalker can transport a robot vacuum up and down stairs. Who needs legs? Eufy, Anker’s smart home brand, believes it has solved the problem of how a single robot vacuum can clean multiple floors in your home. Its new MarsWalker robot is equipped with four arms to carry a vacuum between levels, so you don’t have to lug it up the stairs yourself o...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": "https://volume.vox-cdn.com/embed/c0fe32c9f?player_type=youtube&#038;loop=1&#038;placement=article&#038;tracking=article:rss",
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "Eufy built a stairlift for its robovacs",
-    "seoDescription": "Eufy’s MarsWalker can transport a robot vacuum up and down stairs. Who needs legs? Eufy, Anker’s smart home brand, believes it has solved the problem of how ..."
-  },
-  {
     "title": "‘AI Image’ of Luigi Mangione Modeling a Shirt Appears on Shein Website",
     "url": "https://petapixel.com/2025/09/04/ai-image-of-luigi-mangione-modeling-a-shirt-appears-on-shein-website/",
     "publishedAt": "2025-09-04T08:20:02.000Z",
@@ -129,95 +274,6 @@
     ],
     "seoTitle": "‘AI Image’ of Luigi Mangione Modeling a Shirt Appears on Shein Website",
     "seoDescription": "An image of Luigi Mangione, the man accused of killing Healthcare CEO Brian Thompson, has appeared on the Shein website showing him modeling a shirt for the ..."
-  },
-  {
-    "title": "Aqara announces Apple-friendly doorbell, outdoor camera, video hub, and more",
-    "url": "https://www.theverge.com/news/771071/aqara-announces-apple-friendly-doorbell-outdoor-camera-video-hub-and-more",
-    "publishedAt": "2025-09-04T08:16:11.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Aqara’s smart home lineup announced at IFA. | Image: Aqara Aqara’s at IFA in Berlin where it just announced a slew of new smart home products, highlighted by a new wired doorbell camera, a video recording hub for Aqara cameras, and the company’s first battery-powered camera for outdoor use. The new Doorbell Camera G400 is only available for wired installa...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Aqara-Showcases-Next-Gen-Smart-Homes-Powered-by-Spatial-Intelligence-at-IFA-2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Thomas Ricker",
-    "tags": [],
-    "seoTitle": "Aqara announces Apple-friendly doorbell, outdoor camera, video hub, and more",
-    "seoDescription": "Aqara’s smart home lineup announced at IFA. | Image: Aqara Aqara’s at IFA in Berlin where it just announced a slew of new smart home products, highlighted by..."
-  },
-  {
-    "title": "Tired of Linkedin premium-i built my own search+ export tool to find HR's(1400+ people on waitlist)",
-    "url": "https://dev.to/kashish_gupta_dfe7902f109/tired-of-linkedin-premium-i-built-my-own-search-export-tool-to-find-hrs1400-people-on-waitlist-1dbf",
-    "publishedAt": "2025-09-04T08:00:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Built this solution for myself to find HR contacts by Simply entering company name, role, and location, and it pulls their LinkedIn profiles, contact details, and exports everything into a spreadsheet. Figured it might help others, especially those early in their careers who can't justify the 1500 Rs per month Premium cost. i have put up a waitlist on the...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2b7lerjgvs7w74nopvea.png",
-    "video": null,
-    "author": "Kashish Gupta",
-    "tags": [
-      "webdev",
-      "programming",
-      "saas",
-      "javascript"
-    ],
-    "seoTitle": "Tired of Linkedin premium-i built my own search+ export tool to find HR's(1400+ people on waitlist)",
-    "seoDescription": "Built this solution for myself to find HR contacts by Simply entering company name, role, and location, and it pulls their LinkedIn profiles, contact details..."
-  },
-  {
-    "title": "Belkin’s cheap wired earbuds give you ANC without battery anxieties",
-    "url": "https://www.theverge.com/news/768621/belkin-soundform-earbuds-anc-price-launch",
-    "publishedAt": "2025-09-04T08:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Belkin is launching four new affordable earbuds, including a wired option that provides active noise cancellation (ANC) for users who don’t want to worry about battery life. The SoundForm USB-C Wired Earbuds with ANC will be available sometime in October for $34.99, according to Belkin’s press release, and come in white or black. They feature a 4-foot-lon...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/SAP165-SoundForm-USB-C-Wired-Earbuds-with-ANC-19.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "Belkin’s cheap wired earbuds give you ANC without battery anxieties",
-    "seoDescription": "Belkin is launching four new affordable earbuds, including a wired option that provides active noise cancellation (ANC) for users who don’t want to worry abo..."
-  },
-  {
-    "title": "This Belkin Qi2 charging puck comes with a kickstand and cooling",
-    "url": "https://www.theverge.com/news/770539/belkin-ultracharge-magnetic-charger-qi2-availability",
-    "publishedAt": "2025-09-04T08:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The UltraCharge is a 3-in-1 grip, stand, and charger. Belkin has announced new charging accessories at the IFA tech show in Berlin, Germany, including a wireless charging puck that doubles as a kickstand for your devices. The UltraCharge Magnetic Charger features a collapsible ring-shaped stand on the back that can either be used to prop up your phone, al...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257932_Belkin_charger_lede_art_backdrop_CVirginia.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "This Belkin Qi2 charging puck comes with a kickstand and cooling",
-    "seoDescription": "The UltraCharge is a 3-in-1 grip, stand, and charger. Belkin has announced new charging accessories at the IFA tech show in Berlin, Germany, including a wire..."
-  },
-  {
-    "title": "Philips Hue responds to cheaper competitors with major product overhaul",
-    "url": "https://www.theverge.com/smart-home/768554/philips-hue-essentials-smart-lighting-cheaper-support-matter-thread",
-    "publishedAt": "2025-09-04T07:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "All the new Hue Essentials line white and color ambiance LED bulbs cost $25 each, or as low as $15 each, if you buy a multipack. Philips Hue has announced the biggest revamp of its smart lighting line in years, introducing lower-cost lights, support for Matter over Thread, and a new generation of brighter light strips. The update includes the launch of a ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6099.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "Philips Hue responds to cheaper competitors with major product overhaul",
-    "seoDescription": "All the new Hue Essentials line white and color ambiance LED bulbs cost $25 each, or as low as $15 each, if you buy a multipack. Philips Hue has announced th..."
-  },
-  {
-    "title": "Inside Philips Hue’s plans to make all your lights motion sensors",
-    "url": "https://www.theverge.com/smart-home/768585/philips-hue-motion-aware-rf-sensing-lights-motion-ivani",
-    "publishedAt": "2025-09-04T07:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The Hue Bridge Pro, Philips Hue’s first new Zigbee hub in a decade, is the brains behind its new motion-sensing technology. Philips Hue has announced that its smart light bulbs - both new and existing models - are being upgraded to feature built-in motion sensing. The new feature, called Hue MotionAware, uses radio-frequency (RF) sensing to detect changes...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6100.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "Inside Philips Hue’s plans to make all your lights motion sensors",
-    "seoDescription": "The Hue Bridge Pro, Philips Hue’s first new Zigbee hub in a decade, is the brains behind its new motion-sensing technology. Philips Hue has announced that it..."
   },
   {
     "title": "Aqara Unveils HomeKit-Compatible Doorbell Camera G400 and Matter Hub M200",
@@ -551,60 +607,5 @@
     ],
     "seoTitle": "Bank of America boosts Apple stock target on Google antitrust win",
     "seoDescription": "Just a few days ago, Bank of America reiterated its cautiously optimistic outlook on Apple’s stock market performance, with a $250 price target. Following ye..."
-  },
-  {
-    "title": "ASUS ProArt 6K Review: $1,399 Gets You a 32-Inch 6K Display",
-    "url": "https://www.macrumors.com/2025/09/03/asus-pro-art-6k-display/",
-    "publishedAt": "2025-09-03T21:44:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "ASUS recently came out with a new 32-inch 6K ProArt Display that's priced at $1,399, so we thought we'd check it out to see how it compares with the Studio Display and the Pro Display XDR from Apple. Subscribe to the MacRumors YouTube channel for more videos. At 32 inches, the ProArt 6K is larger than the 27-inch Studio Display, but it is on par in size w...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/FPMzum5znzg",
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "ASUS ProArt 6K Review: $1,399 Gets You a 32-Inch 6K Display",
-    "seoDescription": "ASUS recently came out with a new 32-inch 6K ProArt Display that's priced at $1,399, so we thought we'd check it out to see how it compares with the Studio D..."
-  },
-  {
-    "title": "Opera One for iOS has a new version, and it’s all about tab management (and a dash of AI)",
-    "url": "https://9to5mac.com/2025/09/03/opera-one-for-ios-has-a-new-version-and-its-all-about-tab-management-and-a-dash-of-ai/",
-    "publishedAt": "2025-09-03T21:25:03.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Today, Opera announced an update to Opera One, its iOS browser, with multiple improvements to tab viewing, searching, managing, and more. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/opera-one-tab-manager.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Opera One for iOS has a new version, and it’s all about tab management (and a dash of AI)",
-    "seoDescription": "Today, Opera announced an update to Opera One, its iOS browser, with multiple improvements to tab viewing, searching, managing, and more. Here are the detail..."
-  },
-  {
-    "title": "The Ultimate Beginner’s Guide to Bird Photography",
-    "url": "https://petapixel.com/2025/09/03/the-ultimate-beginners-guide-to-bird-photography/",
-    "publishedAt": "2025-09-03T21:13:23.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "While birds inhabit every environment from remote wilderness to urban parking lots, capturing their beauty and behavior demands technical … [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Ben-Knoot-OM-SYSTEM-Featured-Image-3.jpg",
-    "video": null,
-    "author": "Michael Bonocore",
-    "tags": [
-      "Guides",
-      "Sponsored",
-      "Tips",
-      "Travel",
-      "animals",
-      "bird photography",
-      "birds",
-      "nature"
-    ],
-    "seoTitle": "The Ultimate Beginner’s Guide to Bird Photography",
-    "seoDescription": "While birds inhabit every environment from remote wilderness to urban parking lots, capturing their beauty and behavior demands technical … [Read More]"
   }
 ]
