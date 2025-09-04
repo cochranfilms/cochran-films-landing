@@ -36,44 +36,6 @@
     "seoDescription": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/We..."
   },
   {
-    "title": "Vue School Certification: My Experience, Tips, and Final Thoughts",
-    "url": "https://dev.to/aletorres1102/vue-school-certification-my-experience-tips-and-final-thoughts-5cf5",
-    "publishedAt": "2025-09-03T23:53:45.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "If you are about to take the Vue School certification issued by certificates.dev, or still deciding whether it’s worth it, here I share some advice, my experience, recommendations, and finally a conclusion. The last 4 years of my career have been all about Vue.js, combined with Python or Golang. Although I’ve also worked with React.js, I never really got ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fiatgrp7qbbk80cc61tqp.png",
-    "video": null,
-    "author": "Alejandro Torres",
-    "tags": [
-      "vue",
-      "javascript",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "Vue School Certification: My Experience, Tips, and Final Thoughts",
-    "seoDescription": "If you are about to take the Vue School certification issued by certificates.dev, or still deciding whether it’s worth it, here I share some advice, my exper..."
-  },
-  {
-    "title": "_01_ Descomplicando Docker - O que é Docker",
-    "url": "https://dev.to/lim4mik3/01-descomplicando-docker-o-que-e-docker-4eoj",
-    "publishedAt": "2025-09-03T23:44:53.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Salveee, Devs! Como cês tão, tudo certo? Bem-vindos a bordo! Quem fala aqui é o *Lim4 Mik3. Hoje a gente dá início a uma mini-série sobre Docker: vamos entender essa ferramenta, revisar alguns fundamentos, colocar a mão na massa e, no final, fazer o deploy de uma aplicação usando Docker e AWS! O objetivo para essa mini-série é além de compartilhar o conhe...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F108nox7yk1dne0isgymy.png",
-    "video": null,
-    "author": "Leonardo Oliveira",
-    "tags": [
-      "devops",
-      "docker",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "_01_ Descomplicando Docker - O que é Docker",
-    "seoDescription": "Salveee, Devs! Como cês tão, tudo certo? Bem-vindos a bordo! Quem fala aqui é o *Lim4 Mik3. Hoje a gente dá início a uma mini-série sobre Docker: vamos enten..."
-  },
-  {
     "title": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
     "url": "https://9to5mac.com/2025/09/03/apple-macbook-air-vs-macbook-pro-comparison-september-2025/",
     "publishedAt": "2025-09-03T23:43:40.000Z",
@@ -122,23 +84,22 @@
     "seoDescription": "There's less than a week to go until Apple's \"Awe Dropping\" event, and there's a good chance that Apple will introduce an updated version of the AirPods Pro...."
   },
   {
-    "title": "Sistemas IoT para el monitoreo inteligente de jardines botánicos",
-    "url": "https://dev.to/carmen_lopezlopeza_31258/sistemas-iot-para-el-monitoreo-inteligente-de-jardines-botanicos-3c3m",
-    "publishedAt": "2025-09-03T22:55:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En los últimos años, la tecnología IoT (Internet of Things) se ha convertido en una herramienta esencial para la gestión de espacios verdes, invernaderos y jardines botánicos. Estos sistemas permiten no solo automatizar tareas de riego y control de temperatura, sino también optimizar recursos, garantizar el bienestar de las plantas y ofrecer experiencias ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F16bar1bohlc0mp2cm32v.png",
-    "video": null,
-    "author": "carmen lopez lopeza",
+    "title": "How to Hold a Successful Table Read",
+    "url": "https://nofilmschool.com/how-to-table-read",
+    "publishedAt": "2025-09-03T22:54:04.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "For any screenwriter, our goal is to eventually have your work staged in some way. Obviously, the best version would be a full production, either for a film or TV show. But if your work is in early stages and you’re just looking to get an idea of how your work will stand up, consider putting together a table read. I’ve been fortunate enough to have my wor...",
+    "image": "https://nofilmschool.com/media-library/how-to-hold-a-successful-table-read.jpg?id=61553686&width=980",
+    "video": "https://www.youtube.com/embed/MqfSr8Gu9zI?rel=0",
+    "author": "Jo Light",
     "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
+      "Screenwriting advice",
+      "Actors",
+      "Table read"
     ],
-    "seoTitle": "Sistemas IoT para el monitoreo inteligente de jardines botánicos",
-    "seoDescription": "En los últimos años, la tecnología IoT (Internet of Things) se ha convertido en una herramienta esencial para la gestión de espacios verdes, invernaderos y j..."
+    "seoTitle": "How to Hold a Successful Table Read",
+    "seoDescription": "For any screenwriter, our goal is to eventually have your work staged in some way. Obviously, the best version would be a full production, either for a film ..."
   },
   {
     "title": "10 Movies with Amazing Dialogue",
@@ -361,6 +322,25 @@
     ],
     "seoTitle": "This Is Why Everyone and Their Mom Loves 'KPop Demon Hunters'",
     "seoDescription": "Look, almost every filmmaker in Hollywood is chasing the same thing: the four-quadrant blockbuster. It's the movie that gets your teenage niece, your cynical..."
+  },
+  {
+    "title": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
+    "url": "https://nofilmschool.com/hohem-isteady-v3-ultra",
+    "publishedAt": "2025-09-03T20:53:00.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking technology with touchscreen target selection, a detachable touchscreen remote, real-time live feed monitoring, and other native tracking features, this new AI-powered smartphone gimbal is about to kick th...",
+    "image": "https://nofilmschool.com/media-library/hohem-isteady-v3-ultra.jpg?id=61551194&width=980",
+    "video": "https://www.youtube.com/embed/t_wUhI1i7DY?rel=0",
+    "author": "Sponsored Content",
+    "tags": [
+      "Hohem",
+      "Isteady",
+      "Smartphone gimbal",
+      "Hohem isteady v3 ultra"
+    ],
+    "seoTitle": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
+    "seoDescription": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking tech..."
   },
   {
     "title": "ON1 Photo RAW 2026 Has Major AI Masking Improvements",
@@ -621,5 +601,19 @@
     ],
     "seoTitle": "Astropad's 'Fresh Coat' Screen Protector Cuts iPhone Reflections by 75% Without Color Loss",
     "seoDescription": "Astropad today announced the launch of Fresh Coat, a new anti-reflective screen protector that's designed to make the iPhone easier to see outdoors and under..."
+  },
+  {
+    "title": "007 First Light looks like a hit, man",
+    "url": "https://www.theverge.com/news/770509/007-first-light-state-of-play-september-2025",
+    "publishedAt": "2025-09-03T18:59:54.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "IO Interactive, developers of the much-beloved Hitman series, showed off its latest title, 007 First Light during a special September State of Play. In it, instead of a bald Agent 47, you play a youthful and immaculately coiffed James Bond — and that’s pretty much the biggest distinction between the two games. Watch the thirty minute stream here. As in Hi...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/image-1_5bc5e1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/pwRpK8eoLLE?rel=0",
+    "author": "Ash Parrish",
+    "tags": [],
+    "seoTitle": "007 First Light looks like a hit, man",
+    "seoDescription": "IO Interactive, developers of the much-beloved Hitman series, showed off its latest title, 007 First Light during a special September State of Play. In it, i..."
   }
 ]
