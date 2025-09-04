@@ -1,41 +1,133 @@
 [
   {
-    "title": "JavaScript sprintf implementation",
-    "url": "https://dev.to/coding_afsu_c40bf94732011/javascript-sprintf-implementation-58i6",
-    "publishedAt": "2025-09-04T04:11:26.000Z",
+    "title": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
+    "url": "https://dev.to/dct_technology/from-data-lakes-to-data-mesh-the-next-evolution-in-data-architecture-5f2k",
+    "publishedAt": "2025-09-04T05:10:41.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "JavaScript sprintf implementation Indian Modassir ・ Aug 9 #node #printfy #javascript #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3422766%2F7c5845cd-65ac-4547-a461-ea366fe4f422.jpg",
+    "summary": "For years, organizations relied on data warehouses and later data lakes to manage the growing flood of information. These solutions worked—until they didn’t. With businesses generating more data than ever, the challenges of scaling, maintaining, and extracting real value from these massive lakes are becoming obvious. And that’s where the Data Mesh revolut...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpd5kj70x32ybcigie0dy.png",
     "video": null,
-    "author": "Coding Afsu",
+    "author": "DCT Technology Pvt. Ltd.",
     "tags": [
-      "node",
-      "printfy",
-      "javascript",
-      "webdev"
+      "datamesh",
+      "vectordatabase",
+      "webdev",
+      "programming"
     ],
-    "seoTitle": "JavaScript sprintf implementation",
-    "seoDescription": "JavaScript sprintf implementation Indian Modassir ・ Aug 9 #node #printfy #javascript #webdev"
+    "seoTitle": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
+    "seoDescription": "For years, organizations relied on data warehouses and later data lakes to manage the growing flood of information. These solutions worked—until they didn’t...."
   },
   {
-    "title": "Best PHP Path library to provide same facilities of nodejs path",
-    "url": "https://dev.to/coding_afsu_c40bf94732011/best-php-path-library-to-provide-same-facilities-of-nodejs-path-1k48",
-    "publishedAt": "2025-09-04T04:09:53.000Z",
+    "title": "The Docker layer strategy that saved sprint",
+    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/the-docker-layer-strategy-that-saved-sprint-5h3l",
+    "publishedAt": "2025-09-04T05:09:05.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "PHP Path Indian Modassir ・ Aug 8 #path #filesystem #php #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3422766%2F7c5845cd-65ac-4547-a461-ea366fe4f422.jpg",
+    "summary": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #programming",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
     "video": null,
-    "author": "Coding Afsu",
+    "author": "Bhavy K",
     "tags": [
-      "path",
-      "filesystem",
-      "php",
+      "webdev",
+      "productivity",
+      "devops",
+      "programming"
+    ],
+    "seoTitle": "The Docker layer strategy that saved sprint",
+    "seoDescription": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #..."
+  },
+  {
+    "title": "From 47 to 3 Minutes to build : the Docker layer strategy that saved sprint",
+    "url": "https://dev.to/pratham_naik_project_manager/from-47-to-3-minutes-to-build-the-docker-layer-strategy-that-saved-sprint-2g45",
+    "publishedAt": "2025-09-04T05:08:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #programming",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "programming"
+    ],
+    "seoTitle": "From 47 to 3 Minutes to build : the Docker layer strategy that saved sprint",
+    "seoDescription": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #..."
+  },
+  {
+    "title": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint",
+    "url": "https://dev.to/teamcamp/from-47-minute-builds-to-3-minutes-the-docker-layer-caching-strategy-that-saved-our-sprint-5f5a",
+    "publishedAt": "2025-09-04T05:07:33.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Build times kill developer productivity. Nothing frustrates engineers more than waiting nearly an hour for code to compile while client deadlines loom overhead. Last month, our team faced exactly this nightmare scenario. Our Docker builds averaged 47 minutes, turning simple feature deployments into day-long ordeals. Developers lost focus during long build...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbp4503w1hkiwuzuyc8ne.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "programming"
+    ],
+    "seoTitle": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint",
+    "seoDescription": "Build times kill developer productivity. Nothing frustrates engineers more than waiting nearly an hour for code to compile while client deadlines loom overhe..."
+  },
+  {
+    "title": "5 Absolutely Free Web Tools Every Developer Should Bookmark",
+    "url": "https://dev.to/web_dev-usman/5-absolutely-free-web-tools-every-developer-should-bookmark-38jn",
+    "publishedAt": "2025-09-04T05:03:09.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Five underrated tools that will save you time, level up your workflow, and won’t cost you a single penny. Let me introduce you to five websites that you probably haven’t heard of yet, but trust me, they’re incredibly helpful for anyone involved in programming and web development. Best of all? They’re completely free to use. By the time you’re done reading...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbpmf8nliox6c0wojmbe7.png",
+    "video": null,
+    "author": "Muhammad Usman",
+    "tags": [
+      "webdev",
+      "tooling",
+      "frontend",
+      "softwaredevelopment"
+    ],
+    "seoTitle": "5 Absolutely Free Web Tools Every Developer Should Bookmark",
+    "seoDescription": "Five underrated tools that will save you time, level up your workflow, and won’t cost you a single penny. Let me introduce you to five websites that you prob..."
+  },
+  {
+    "title": "The Lone Wolf Developer: Asset or Liability?",
+    "url": "https://dev.to/dct_technology/the-lone-wolf-developer-asset-or-liability-48no",
+    "publishedAt": "2025-09-04T04:57:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every tech team has (or has had) one — the lone wolf developer. But here’s the question: Is the lone wolf an asset that boosts productivity, or a liability that risks team harmony? Let’s dive into both sides of the story. Speed & Focus: Without distractions, they can build features fast. Innovation: Many great open-source projects started from solo passio...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Focdyadwyn4t63bxswoaa.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "webdev",
+      "softwareengineering",
+      "developerlife",
+      "teamculture"
+    ],
+    "seoTitle": "The Lone Wolf Developer: Asset or Liability?",
+    "seoDescription": "Every tech team has (or has had) one — the lone wolf developer. But here’s the question: Is the lone wolf an asset that boosts productivity, or a liability t..."
+  },
+  {
+    "title": "Used TV Buyers in Dubai with Best Price",
+    "url": "https://dev.to/get_quote_25efe7bbfa6bbd4/used-tv-buyers-in-dubai-with-best-price-2mb0",
+    "publishedAt": "2025-09-04T04:45:14.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Are you looking to sell your used TV in Dubai and get the best price for it? You’ve come to the right place! At Used TV Buyers in Dubai, we make it fast, easy, and hassle-free to sell your old or used television — whether it's an LED, LCD, Smart TV, 4K, or OLED. {% embed %}",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqs8wt9xcdhspm9aci84u.jpg",
+    "video": null,
+    "author": "Get Quote",
+    "tags": [
       "webdev"
     ],
-    "seoTitle": "Best PHP Path library to provide same facilities of nodejs path",
-    "seoDescription": "PHP Path Indian Modassir ・ Aug 8 #path #filesystem #php #webdev"
+    "seoTitle": "Used TV Buyers in Dubai with Best Price",
+    "seoDescription": "Are you looking to sell your used TV in Dubai and get the best price for it? You’ve come to the right place! At Used TV Buyers in Dubai, we make it fast, eas..."
   },
   {
     "title": "Nikon Further Embraces Analog Heritage With a Silver Zf and Film Grain Feature",
@@ -60,7 +152,7 @@
     "seoDescription": "Nikon has announced a new silver edition of its full-frame Zf camera. The company says that it combines a \"timeless design inspired by an iconic Nikon film c..."
   },
   {
-    "title": "Tim Cook expected at White House back at the White House for Trump AI event",
+    "title": "Tim Cook expected back at the White House for Trump AI event",
     "url": "https://9to5mac.com/2025/09/03/tim-cook-monthly-white-house-visit-ai/",
     "publishedAt": "2025-09-04T03:31:35.000Z",
     "source": "9to5mac.com",
@@ -72,46 +164,8 @@
     "tags": [
       "News"
     ],
-    "seoTitle": "Tim Cook expected at White House back at the White House for Trump AI event",
+    "seoTitle": "Tim Cook expected back at the White House for Trump AI event",
     "seoDescription": "Where will Tim Cook be on the Thursday before the iPhone 17 event? Back at the White House, it seems. more…"
-  },
-  {
-    "title": "Yonyou U8 Cloud RCE: File Upload Bypass Confirmed",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/yonyou-u8-cloud-rce-flaw-file-upload-bypass-security-advisory-36ki",
-    "publishedAt": "2025-09-04T03:08:52.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. On August 29, 2025, Yonyou Security Center disclosed a critical vulnerab...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjrqewqjuyflzxsnffjig.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "rce",
-      "cybersecurity",
-      "webdev",
-      "safeline"
-    ],
-    "seoTitle": "Yonyou U8 Cloud RCE: File Upload Bypass Confirmed",
-    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
-  },
-  {
-    "title": "Check out this guide!!",
-    "url": "https://dev.to/dipti_m_2e7ba36c478d1a48a/check-out-this-guide-4m98",
-    "publishedAt": "2025-09-04T03:06:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3268117%2F1ab4dce0-9706-4bf9-bcd5-576b0833c02b.png",
-    "video": null,
-    "author": "Dipti M",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Check out this guide!!",
-    "seoDescription": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners"
   },
   {
     "title": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
@@ -569,60 +623,5 @@
     "tags": [],
     "seoTitle": "Switzerland releases its own AI model trained on public data",
     "seoDescription": "Switzerland launched an open-source model called Apertus on Monday as an alternative to proprietary models like OpenAI’s ChatGPT or Anthropic’s Claude, repor..."
-  },
-  {
-    "title": "Google closer to powering new Siri and Apple’s AI search tool as Perplexity fades",
-    "url": "https://9to5mac.com/2025/09/03/google-closer-to-powering-new-siri-and-apples-ai-search-tool-as-perplexity-fades/",
-    "publishedAt": "2025-09-03T20:21:47.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "While they’re not exactly tying the knot yet, Siri and Gemini are making plans to spend a lot more time together. That’s according to a new report that details the current state of Apple’s delayed effort to upgrade Siri for the modern era. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/Apple-categorically-denies-Siri-vaporware-claims-and-offers-a-better-explanation.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Google closer to powering new Siri and Apple’s AI search tool as Perplexity fades",
-    "seoDescription": "While they’re not exactly tying the knot yet, Siri and Gemini are making plans to spend a lot more time together. That’s according to a new report that detai..."
-  },
-  {
-    "title": "9to5Mac Daily: September 3, 2025 – Apple’s deal with Google is safe",
-    "url": "https://9to5mac.com/2025/09/03/daily-september-3-2025/",
-    "publishedAt": "2025-09-03T19:58:33.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by Backblaze: Never lose a file again. Use code “9to5daily” at checkout for 10% off or try for free. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: September 3, 2025 – Apple’s deal with Google is safe",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Canon Sold More DSLRs in 2024 Than Fujifilm Sold Total Digital Cameras",
-    "url": "https://petapixel.com/2025/09/03/canon-sold-more-dslrs-in-2024-than-fujifilm-sold-total-digital-cameras/",
-    "publishedAt": "2025-09-03T19:43:09.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Although photographers buy many more mirrorless interchangeable lens cameras than DSLRs, Canon still sells a surprising amount of its old EF-mount DSLR cameras. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/canon-rebel-t8i-dslr-sales-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Industry",
-      "News",
-      "camerasales",
-      "Canon",
-      "data",
-      "dslr",
-      "dslrvsmirrorless",
-      "industry"
-    ],
-    "seoTitle": "Canon Sold More DSLRs in 2024 Than Fujifilm Sold Total Digital Cameras",
-    "seoDescription": "Although photographers buy many more mirrorless interchangeable lens cameras than DSLRs, Canon still sells a surprising amount of its old EF-mount DSLR camer..."
   }
 ]
