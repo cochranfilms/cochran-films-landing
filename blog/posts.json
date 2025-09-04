@@ -1,22 +1,137 @@
 [
   {
-    "title": "Why managed backup services are critical to modern development",
-    "url": "https://dev.to/rootstack/why-managed-backup-services-are-critical-to-modern-development-4hnl",
-    "publishedAt": "2025-09-04T17:06:18.000Z",
+    "title": "Stardew Valley’s creator is in Silksong",
+    "url": "https://www.theverge.com/news/771772/hollow-knight-silksong-stardew-valley-eric-barone-concernedape",
+    "publishedAt": "2025-09-04T18:11:02.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Hollow Knight: Silksong, the sequel to the indie smash hit Hollow Knight, is finally out, and according to Silksong’s credits, the game features the voice of Eric Barone, the creator of another indie smash hit, Stardew Valley. (You may also know Barone by the name ConcernedApe, which he goes by online.) You can see Barone’s name listed under the “Addition...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Gz5YPWwXwAAzfjW-2.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "Stardew Valley’s creator is in Silksong",
+    "seoDescription": "Hollow Knight: Silksong, the sequel to the indie smash hit Hollow Knight, is finally out, and according to Silksong’s credits, the game features the voice of..."
+  },
+  {
+    "title": "iOS 26 adds seven brand new iPhone ringtones, listen here",
+    "url": "https://9to5mac.com/2025/09/04/ios-26-adds-seven-brand-new-iphone-ringtones-listen-here/",
+    "publishedAt": "2025-09-04T18:10:28.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "The iPhone’s default ringtone is highly recognizable, but in iOS 26 Apple has a lot of alternate options coming. There are seven brand new ringtones, most of which are remixed versions of the familiar default. Listen to all of the new iPhone ringtones below. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/ios-26-phone-app.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iOS 26 adds seven brand new iPhone ringtones, listen here",
+    "seoDescription": "The iPhone’s default ringtone is highly recognizable, but in iOS 26 Apple has a lot of alternate options coming. There are seven brand new ringtones, most of..."
+  },
+  {
+    "title": "Stop Copying ObjectIDs: Use Slugify in Your Node.js API (E-Commerce)",
+    "url": "https://dev.to/dorcie-dee/stop-copying-objectids-use-slugify-in-your-nodejs-api-e-commerce-3n1g",
+    "publishedAt": "2025-09-04T17:54:24.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "In today’s fast-paced development world, where continuous integration and deployment are the norm, data is the most valuable asset a team possesses. From source code to container images, from configuration files to user data, everything must remain secure, accessible, and recoverable at all times. Despite this, many organizations still treat backup as an ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdsv09850r7u6qlqdn3a6.png",
+    "summary": "I used to spend extra time copying database ObjectIDs when testing my endpoints. I'd be creating categories, products, and all kinds of CRUD operations, only to dig through the database for IDs every time. Then I discovered slugify, a small Node.js package that makes URLs readable, SEO-friendly, and much easier to test. Suddenly, instead of typing /catego...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmxsszeaqufy566up64sx.png",
     "video": null,
-    "author": "Rootstack",
+    "author": "Dorcas Nyamekye Quaye",
     "tags": [
-      "itservices",
-      "backup",
+      "backenddevelopment",
+      "node",
       "webdev",
-      "softwaredevelopment"
+      "api"
     ],
-    "seoTitle": "Why managed backup services are critical to modern development",
-    "seoDescription": "In today’s fast-paced development world, where continuous integration and deployment are the norm, data is the most valuable asset a team possesses. From sou..."
+    "seoTitle": "Stop Copying ObjectIDs: Use Slugify in Your Node.js API (E-Commerce)",
+    "seoDescription": "I used to spend extra time copying database ObjectIDs when testing my endpoints. I'd be creating categories, products, and all kinds of CRUD operations, only..."
+  },
+  {
+    "title": "Apple’s Wallet app just made it easier to ‘pay later’ for purchases",
+    "url": "https://9to5mac.com/2025/09/04/apples-wallet-app-just-made-it-easier-to-pay-later-for-purchases/",
+    "publishedAt": "2025-09-04T17:45:05.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Ever since Apple Pay Later was abruptly discontinued last year, Apple has been steadily adding third-party ‘pay later’ services as alternatives. And now thanks to an Apple Wallet update, those options are easier to find and use than ever before. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/11/apple-wallet-app-icon.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple’s Wallet app just made it easier to ‘pay later’ for purchases",
+    "seoDescription": "Ever since Apple Pay Later was abruptly discontinued last year, Apple has been steadily adding third-party ‘pay later’ services as alternatives. And now than..."
+  },
+  {
+    "title": "Sony Takes Up to 40% Off Headphones, TVs, Cameras, and More",
+    "url": "https://www.macrumors.com/2025/09/04/sony-40-off-headphones-tvs/",
+    "publishedAt": "2025-09-04T17:43:49.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Sony is hosting a big sale with up to 40 percent in savings on the company's best headphones, speakers, sound bars, TVs, photography equipment, and more. Buying select headphones and earbuds together during this sale will also net you extra bundle savings. Note: MacRumors is an affiliate partner with Sony. When you click a link and make a purchase, we may...",
+    "image": "https://images.macrumors.com/article-new/2025/09/sony-headphones-blue.jpeg",
+    "video": null,
+    "author": "Mitchel Broussard",
+    "tags": [
+      "Deals"
+    ],
+    "seoTitle": "Sony Takes Up to 40% Off Headphones, TVs, Cameras, and More",
+    "seoDescription": "Sony is hosting a big sale with up to 40 percent in savings on the company's best headphones, speakers, sound bars, TVs, photography equipment, and more. Buy..."
+  },
+  {
+    "title": "After ‘Misleading’ Beta Announcement, DxO Makes Good on its Fuji X-Trans Promise",
+    "url": "https://petapixel.com/2025/09/04/after-misleading-beta-announcement-dxo-makes-good-on-its-fuji-x-trans-promise/",
+    "publishedAt": "2025-09-04T17:24:51.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Earlier this year, PetaPixel reported that DxO PureRAW's Beta support for Fujifilm X-Trans was misleading, leading the company to acknowledge the poor communication surrounding the highly anticipated support. Now, five months later, DxO may have made up for its mistake, as X-Trans support is complete and looks excellent. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/After-Misleading-Beta-Announcement-DxO-Makes-Good-on-its-Fuji-X-Trans-Promise.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Features",
+      "Software",
+      "adobecameraraw",
+      "dxo",
+      "dxopureraw",
+      "photoediting",
+      "PureRAW",
+      "raw"
+    ],
+    "seoTitle": "After ‘Misleading’ Beta Announcement, DxO Makes Good on its Fuji X-Trans Promise",
+    "seoDescription": "Earlier this year, PetaPixel reported that DxO PureRAW's Beta support for Fujifilm X-Trans was misleading, leading the company to acknowledge the poor commun..."
+  },
+  {
+    "title": "Apple Watch SE 3 Coming Soon: What to Expect",
+    "url": "https://www.macrumors.com/guide/apple-watch-se-3-rumors/",
+    "publishedAt": "2025-09-04T17:17:25.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "We don't have too much longer to wait until Apple's \"Awe Dropping\" September event, which will see the unveiling of new iPhones and new Apple Watch models, including the Apple Watch SE. The ‌Apple Watch SE‌ is overdue for an update, and there could be some useful changes coming to Apple's most affordable watch. Design Apple could update the ‌Apple Watch S...",
+    "image": "https://images.macrumors.com/article-new/2025/04/apple-watch-se-orange.jpeg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Featured"
+    ],
+    "seoTitle": "Apple Watch SE 3 Coming Soon: What to Expect",
+    "seoDescription": "We don't have too much longer to wait until Apple's \"Awe Dropping\" September event, which will see the unveiling of new iPhones and new Apple Watch models, i..."
+  },
+  {
+    "title": "I tested 15 cases for the Switch 2 and these are the best",
+    "url": "https://www.theverge.com/reviews/691319/best-switch-2-cases",
+    "publishedAt": "2025-09-04T17:13:35.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to put your hard-earned Switch 2 into a protective case. To me, it’s freeing. Using a case relieves me of the worry that it will accumulate tons of little scratches, or worse. I’ve tested several types ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257824_buying_guide_switch_2_case_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Cameron Faulkner",
+    "tags": [],
+    "seoTitle": "I tested 15 cases for the Switch 2 and these are the best",
+    "seoDescription": "Our picks include carrying cases and ones you can leave on during handheld and docked play. | Image: The Verge, Getty Images You might find it kind of sad to..."
   },
   {
     "title": "Philips Hue Line Gains Bridge Pro, New Bulbs, Updated Outdoor Lights and More",
@@ -142,25 +257,6 @@
     ],
     "seoTitle": "Panasonic Brings Autofocus to 4K Studio Cameras for the First Time",
     "seoDescription": "In gearing up for IBC 2025, where Panasonic plans to show off these innovations, the company has made two major announcements in the world of broadcast studi..."
-  },
-  {
-    "title": "Amarres de amor y análisis predictivo con pandas y Python",
-    "url": "https://dev.to/hector_cruz_68ebfda340685/amarres-de-amor-y-analisis-predictivo-con-pandas-y-python-mgh",
-    "publishedAt": "2025-09-04T16:19:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Cuando hablamos de amarres de amor, automáticamente pensamos en análisis de datos y la predicción. Este artículo no pretende reemplazar la tradición ni cuestionar las mostrar cómo Python y pandas pueden servir como apoyo que, en muchos - El amor es, por naturaleza, un terreno lleno de incertidumbre. Nadie crear modelos simbólicos que nos ayuden a detectar...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp13xr3cq3r9qq3r2nqrp.png",
-    "video": null,
-    "author": "hector cruz",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Amarres de amor y análisis predictivo con pandas y Python",
-    "seoDescription": "Cuando hablamos de amarres de amor, automáticamente pensamos en análisis de datos y la predicción. Este artículo no pretende reemplazar la tradición ni cuest..."
   },
   {
     "title": "Nikon Zf Gets a New Silver Look and Film Grain Update",
@@ -314,13 +410,13 @@
     "publishedAt": "2025-09-04T15:49:44.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "The doors to IFA 2025 at Messe Berlin don’t officially open to the public until tomorrow, but several companies have already announced new gadgets, tech, features, and upgrades as Europe’s largest consumer tech show gets underway. There’s a lot of news to stay on top of, and if you’re struggling to ingest it all, here are some of the best announcements fr...",
+    "summary": "The doors to IFA 2025 at Messe Berlin don't officially open to the public until tomorrow, but several companies have already announced new gadgets, tech, features, and upgrades as Europe's largest consumer tech show gets underway. There's a lot of news to stay on top of, and if you're struggling to ingest it all, here are some of the best announcements fr...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/gettyimages-2231726775.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Andrew Liszewski",
     "tags": [],
     "seoTitle": "The best stuff announced at IFA so far",
-    "seoDescription": "The doors to IFA 2025 at Messe Berlin don’t officially open to the public until tomorrow, but several companies have already announced new gadgets, tech, fea..."
+    "seoDescription": "The doors to IFA 2025 at Messe Berlin don't officially open to the public until tomorrow, but several companies have already announced new gadgets, tech, fea..."
   },
   {
     "title": "Adobe Premiere App Launching on iPhone and iPad Later This Month",
@@ -355,20 +451,6 @@
     "seoDescription": "Today’s 9to5Toys Lunch Break is ready to roll with Thursday’s most notable deals on Apple gear and accessories for it all. We have the first discount on a ne..."
   },
   {
-    "title": "The story behind YouTube’s NFL livestream",
-    "url": "https://www.theverge.com/lowpass-newsletter/771340/youtube-nfl-livestream-free",
-    "publishedAt": "2025-09-04T15:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "This year, football season kicks off with a twist: Following tonight's season opener, YouTube will stream the NFL's first Friday game of the season - a face-off between the Los Angeles Chargers and the Kansas City Chiefs broadcast live from São Paulo, Brazil - for free to a global audience this Friday. It's the first time YouTube has hosted such a high-ca...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Technical-rack-room-cropped.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Janko Roettgers",
-    "tags": [],
-    "seoTitle": "The story behind YouTube’s NFL livestream",
-    "seoDescription": "This year, football season kicks off with a twist: Following tonight's season opener, YouTube will stream the NFL's first Friday game of the season - a face-..."
-  },
-  {
     "title": "One of Apple Music’s best features is improving at the perfect time",
     "url": "https://9to5mac.com/2025/09/04/one-of-apple-musics-best-features-is-improving-at-the-perfect-time/",
     "publishedAt": "2025-09-04T15:15:14.000Z",
@@ -399,20 +481,6 @@
     ],
     "seoTitle": "Five brands could announce CarPlay Ultra availability as soon as iPhone 17 event day",
     "seoDescription": "iPhone 17 news will undoubtedly dominate technology headlines next week. Yet September 9 could also prove to be a turning point for Apple’s CarPlay Ultra. more…"
-  },
-  {
-    "title": "Jury orders Google to pay $425 million for violating user privacy",
-    "url": "https://www.theverge.com/news/771540/google-class-action-verdict-user-privacy-tracking",
-    "publishedAt": "2025-09-04T15:03:02.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "A federal jury in California has ordered Google to pay $425 million for violating user privacy by collecting the data of millions of people even after they disabled tracking, as reported earlier by Reuters. The decision stems from a class action lawsuit filed in July 2020, which accused Google of unlawfully accessing app activity data on users’ mobile pho...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK093_GOOGLE_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Jury orders Google to pay $425 million for violating user privacy",
-    "seoDescription": "A federal jury in California has ordered Google to pay $425 million for violating user privacy by collecting the data of millions of people even after they d..."
   },
   {
     "title": "Hands-on: Kuxiu’s new X40 Turbo brings Qi2.2 fast 25W charging to your iPhone",
@@ -556,71 +624,5 @@
     ],
     "seoTitle": "7Artisans Debuts Affordable AF 35mm f/1.8 for Full-Frame Sony Cameras",
     "seoDescription": "A new budget-friendly prime lens has arrived for Sony full-frame shooters, adding another option to the growing third-party market. 7Artisans' new AF 35mm f/..."
-  },
-  {
-    "title": "Get 20% Off Anker's Best Chargers, Hubs, and Portable Batteries With Our Exclusive Code",
-    "url": "https://www.macrumors.com/2025/09/04/anker-20-off-chargers-exclusive/",
-    "publishedAt": "2025-09-04T14:02:40.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "MacRumors readers can get 20 percent off a collection of Anker's best charging accessories this month. In order to get this deal, head to Anker's website and add an accessory to your cart, then enter the code Ankermacrumors2025 at checkout to see the discount. We're also tracking many similar deals on Anker accessories at Amazon. Note: MacRumors is an aff...",
-    "image": "https://images.macrumors.com/article-new/2025/07/anker-prime-day.jpeg",
-    "video": null,
-    "author": "Mitchel Broussard",
-    "tags": [
-      "Deals",
-      "Featured"
-    ],
-    "seoTitle": "Get 20% Off Anker's Best Chargers, Hubs, and Portable Batteries With Our Exclusive Code",
-    "seoDescription": "MacRumors readers can get 20 percent off a collection of Anker's best charging accessories this month. In order to get this deal, head to Anker's website and..."
-  },
-  {
-    "title": "iPhone 17: These new models may include more RAM and storage",
-    "url": "https://9to5mac.com/2025/09/04/iphone-17-these-new-models-may-include-more-ram-and-storage/",
-    "publishedAt": "2025-09-04T14:00:30.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "We’re only days away from Apple’s iPhone 17 event on September 9, and today TrendForce outlined its latest expectations for the new lineup—including RAM and storage upgrades for several models. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-lineup-mockup.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17: These new models may include more RAM and storage",
-    "seoDescription": "We’re only days away from Apple’s iPhone 17 event on September 9, and today TrendForce outlined its latest expectations for the new lineup—including RAM and ..."
-  },
-  {
-    "title": "Ecovacs Launches Deebot X11 Omnicyclone Robot Vacuum With Matter Integration",
-    "url": "https://www.macrumors.com/2025/09/04/ecovacs-x11-omnicyclone-robot/",
-    "publishedAt": "2025-09-04T14:00:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Ecovacs today announced the launch of its latest vacuuming and mopping robot, the Deebot X11 Omnicyclone. The HomeKit-compatible vacuum has several new features, including battery improvements, support for agentic AI and a 4WD climbing system that can cross higher room thresholds. The X11 includes PowerBoost GaN fast-charging technology, allowing the robo...",
-    "image": "https://images.macrumors.com/article-new/2025/09/ecovacs-x11-1.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Matter"
-    ],
-    "seoTitle": "Ecovacs Launches Deebot X11 Omnicyclone Robot Vacuum With Matter Integration",
-    "seoDescription": "Ecovacs today announced the launch of its latest vacuuming and mopping robot, the Deebot X11 Omnicyclone. The HomeKit-compatible vacuum has several new featu..."
-  },
-  {
-    "title": "Samsung Launches $1,200 Galaxy Tab S11 Ultra With Thin Design and Revamped S-Pen",
-    "url": "https://www.macrumors.com/2025/09/04/samsung-galaxy-tab-s11-ultra/",
-    "publishedAt": "2025-09-04T13:57:20.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Samsung today announced its newest tablet lineup, introducing the Galaxy Tab S11 and the Galaxy Tab S11 Ultra. We were able to take a quick look at the new tablet options prior to when Samsung launched them, giving us an early idea of how they compare to Apple's iPads. Subscribe to the MacRumors YouTube channel for more videos. The 14.6-inch Galaxy Tab S1...",
-    "image": null,
-    "video": "https://www.youtube.com/embed/t9EETUGVBOU?si=ZTLFpLSHx_SI9NWS",
-    "author": "Juli Clover",
-    "tags": [
-      "Featured",
-      "Samsung"
-    ],
-    "seoTitle": "Samsung Launches $1,200 Galaxy Tab S11 Ultra With Thin Design and Revamped S-Pen",
-    "seoDescription": "Samsung today announced its newest tablet lineup, introducing the Galaxy Tab S11 and the Galaxy Tab S11 Ultra. We were able to take a quick look at the new t..."
   }
 ]
