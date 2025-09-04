@@ -1,22 +1,191 @@
 [
   {
-    "title": "The DOM Explained: Where Markup Meets JavaScript",
-    "url": "https://dev.to/jocke_sjlin_4ca0d80beae0/the-dom-explained-where-markup-meets-javascript-3ohc",
-    "publishedAt": "2025-09-04T07:03:01.000Z",
+    "title": "Aqara announces Apple-friendly doorbell, outdoor camera, video hub, and more",
+    "url": "https://www.theverge.com/news/771071/aqara-announces-apple-friendly-doorbell-outdoor-camera-video-hub-and-more",
+    "publishedAt": "2025-09-04T08:16:11.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Aqara’s smart home lineup announced at IFA. | Image: Aqara Aqara’s at IFA in Berlin where it just announced a slew of new smart home products, highlighted by a new wired doorbell camera, a video recording hub for Aqara cameras, and the company’s first battery-powered camera for outdoor use. The new Doorbell Camera G400 is only available for wired installa...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Aqara-Showcases-Next-Gen-Smart-Homes-Powered-by-Spatial-Intelligence-at-IFA-2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "Aqara announces Apple-friendly doorbell, outdoor camera, video hub, and more",
+    "seoDescription": "Aqara’s smart home lineup announced at IFA. | Image: Aqara Aqara’s at IFA in Berlin where it just announced a slew of new smart home products, highlighted by..."
+  },
+  {
+    "title": "Tired of Linkedin premium-i built my own search+ export tool to find HR's(1400+ people on waitlist)",
+    "url": "https://dev.to/kashish_gupta_dfe7902f109/tired-of-linkedin-premium-i-built-my-own-search-export-tool-to-find-hrs1400-people-on-waitlist-1dbf",
+    "publishedAt": "2025-09-04T08:00:30.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "If you're a web developer, chances are you've at least heard of the DOM - Document Object Model. It might, however, be nothing more than an abstract concept at the back of your mind, yearning for clarification. That is what this article is hoping to achieve. So, on to the burning question: what exactly is the Document Object Model? Well, at the highest le...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fblpueav2cxcer19sfv8d.png",
+    "summary": "Built this solution for myself to find HR contacts by Simply entering company name, role, and location, and it pulls their LinkedIn profiles, contact details, and exports everything into a spreadsheet. Figured it might help others, especially those early in their careers who can't justify the 1500 Rs per month Premium cost. i have put up a waitlist on the...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2b7lerjgvs7w74nopvea.png",
     "video": null,
-    "author": "Jocke Sjölin",
+    "author": "Kashish Gupta",
     "tags": [
-      "dom",
       "webdev",
-      "javascript",
-      "programming"
+      "programming",
+      "saas",
+      "javascript"
     ],
-    "seoTitle": "The DOM Explained: Where Markup Meets JavaScript",
-    "seoDescription": "If you're a web developer, chances are you've at least heard of the DOM - Document Object Model. It might, however, be nothing more than an abstract concept ..."
+    "seoTitle": "Tired of Linkedin premium-i built my own search+ export tool to find HR's(1400+ people on waitlist)",
+    "seoDescription": "Built this solution for myself to find HR contacts by Simply entering company name, role, and location, and it pulls their LinkedIn profiles, contact details..."
+  },
+  {
+    "title": "Belkin’s cheap wired earbuds give you ANC without battery anxieties",
+    "url": "https://www.theverge.com/news/768621/belkin-soundform-earbuds-anc-price-launch",
+    "publishedAt": "2025-09-04T08:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Belkin is launching four new affordable earbuds, including a wired option that provides active noise cancellation (ANC) for users who don’t want to worry about battery life. The SoundForm USB-C Wired Earbuds with ANC will be available sometime in October for $34.99, according to Belkin’s press release, and come in white or black. They feature a 4-foot-lon...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/SAP165-SoundForm-USB-C-Wired-Earbuds-with-ANC-19.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "Belkin’s cheap wired earbuds give you ANC without battery anxieties",
+    "seoDescription": "Belkin is launching four new affordable earbuds, including a wired option that provides active noise cancellation (ANC) for users who don’t want to worry abo..."
+  },
+  {
+    "title": "This Belkin Qi2 charging puck comes with a kickstand and cooling",
+    "url": "https://www.theverge.com/news/770539/belkin-ultracharge-magnetic-charger-qi2-availability",
+    "publishedAt": "2025-09-04T08:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The UltraCharge is a 3-in-1 grip, stand, and charger. Belkin has announced new charging accessories at the IFA tech show in Berlin, Germany, including a wireless charging puck that doubles as a kickstand for your devices. The UltraCharge Magnetic Charger features a collapsible ring-shaped stand on the back that can either be used to prop up your phone, al...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257932_Belkin_charger_lede_art_backdrop_CVirginia.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "This Belkin Qi2 charging puck comes with a kickstand and cooling",
+    "seoDescription": "The UltraCharge is a 3-in-1 grip, stand, and charger. Belkin has announced new charging accessories at the IFA tech show in Berlin, Germany, including a wire..."
+  },
+  {
+    "title": "I Tried 25+ No-Code App Builders — These Ones Build Incredibly Real Apps",
+    "url": "https://dev.to/nitinfab/i-tried-25-no-code-app-builders-these-ones-build-incredibly-real-apps-c3h",
+    "publishedAt": "2025-09-04T07:38:24.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "We all know that ChatGPT, Claude, Gemini, and multiple AI website builders can help you build websites and simple apps just by writing a prompt. But when it comes to building complex apps, it’s not as easy as typing a prompt and getting exactly what you want. Why? First, AI chatbots can make mistakes. So if you don’t have programming experience, debugging...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzxdclnz7dog1biazfxgo.png",
+    "video": null,
+    "author": "Nitin Sharma",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners",
+      "ai"
+    ],
+    "seoTitle": "I Tried 25+ No-Code App Builders — These Ones Build Incredibly Real Apps",
+    "seoDescription": "We all know that ChatGPT, Claude, Gemini, and multiple AI website builders can help you build websites and simple apps just by writing a prompt. But when it ..."
+  },
+  {
+    "title": "Understanding Blazor compontent Lifecycle Methods in C#",
+    "url": "https://dev.to/shreyans_padmani/understanding-blazor-compontent-lifecycle-methods-in-c-5f5k",
+    "publishedAt": "2025-09-04T07:37:47.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Blazor provides lifecycle methods to manage component behavior during initialization, parameter updates, and rendering. Key methods include OnInitialized, OnParametersSet, and OnAfterRender. These help developers control data loading, respond to parameter changes, and interact with the DOM effectively, ensuring optimized and dynamic component execution. O...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fejwremfka50xf6f0zhiy.png",
+    "video": null,
+    "author": "Shreyans Padmani",
+    "tags": [
+      "blazor",
+      "dotnet",
+      "csharp",
+      "webdev"
+    ],
+    "seoTitle": "Understanding Blazor compontent Lifecycle Methods in C#",
+    "seoDescription": "Blazor provides lifecycle methods to manage component behavior during initialization, parameter updates, and rendering. Key methods include OnInitialized, On..."
+  },
+  {
+    "title": "Philips Hue responds to cheaper competitors with major product overhaul",
+    "url": "https://www.theverge.com/smart-home/768554/philips-hue-essentials-smart-lighting-cheaper-support-matter-thread",
+    "publishedAt": "2025-09-04T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "All the new Hue Essentials line white and color ambiance LED bulbs cost $25 each, or as low as $15 each, if you buy a multipack. Philips Hue has announced the biggest revamp of its smart lighting line in years, introducing lower-cost lights, support for Matter over Thread, and a new generation of brighter light strips. The update includes the launch of a ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6099.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "Philips Hue responds to cheaper competitors with major product overhaul",
+    "seoDescription": "All the new Hue Essentials line white and color ambiance LED bulbs cost $25 each, or as low as $15 each, if you buy a multipack. Philips Hue has announced th..."
+  },
+  {
+    "title": "Inside Philips Hue’s plans to make all your lights motion sensors",
+    "url": "https://www.theverge.com/smart-home/768585/philips-hue-motion-aware-rf-sensing-lights-motion-ivani",
+    "publishedAt": "2025-09-04T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Hue Bridge Pro, Philips Hue’s first new Zigbee hub in a decade, is the brains behind its new motion-sensing technology. Philips Hue has announced that its smart light bulbs - both new and existing models - are being upgraded to feature built-in motion sensing. The new feature, called Hue MotionAware, uses radio-frequency (RF) sensing to detect changes...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6100.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "Inside Philips Hue’s plans to make all your lights motion sensors",
+    "seoDescription": "The Hue Bridge Pro, Philips Hue’s first new Zigbee hub in a decade, is the brains behind its new motion-sensing technology. Philips Hue has announced that it..."
+  },
+  {
+    "title": "Your Sonos speakers can now control your Hue lights",
+    "url": "https://www.theverge.com/smart-home/768604/your-sonos-speakers-control-hue-lights",
+    "publishedAt": "2025-09-04T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Sonos’s built in voice controller moves beyond music control to smart lighting with a new partnership with Philips Hue. Hue is teaming up with Sonos to let you control your smart lights using its built-in voice assistant. As rumored, the new function, which launched at IFA 2025 this week, lets you turn your Hue lights on, off, and dim them, as well as con...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6113.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "Your Sonos speakers can now control your Hue lights",
+    "seoDescription": "Sonos’s built in voice controller moves beyond music control to smart lighting with a new partnership with Philips Hue. Hue is teaming up with Sonos to let y..."
+  },
+  {
+    "title": "Hue launches its first video doorbell",
+    "url": "https://www.theverge.com/news/769914/hue-video-doorbell-pricing-release-date",
+    "publishedAt": "2025-09-04T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "After a Philips Hue app update leaked a new Hue video doorbell in March, parent company Signify is making it official this week. The $169 Hue Secure video doorbell is arriving in October to complement Hue’s other Secure indoor and outdoor camera offerings. The Hue Secure video doorbell looks much like any other smart doorbell on the market, with a candy b...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/hue-secure-video-doorbell-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Hue launches its first video doorbell",
+    "seoDescription": "After a Philips Hue app update leaked a new Hue video doorbell in March, parent company Signify is making it official this week. The $169 Hue Secure video do..."
+  },
+  {
+    "title": "Philips Hue lights get bigger, brighter, and cheaper with a major product refresh",
+    "url": "https://www.theverge.com/ifa-berlin/769934/philips-hue-essentials-bridge-pro-light-strip-matter-ifa-launch",
+    "publishedAt": "2025-09-04T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Philips Hue’s new line of smart lights includes revamped light strips, such as the Hue Flux Ultra Bright Strip Light that can output 6,000 lumens. | Image: Hue Smart lighting company Philips Hue debuted a bunch of new products this week at the IFA tech show in Berlin, Germany, and most of them are available now. The launch, which is the biggest in the com...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/philips-hue-flux-ultra-bright-strip-light-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "Philips Hue lights get bigger, brighter, and cheaper with a major product refresh",
+    "seoDescription": "Philips Hue’s new line of smart lights includes revamped light strips, such as the Hue Flux Ultra Bright Strip Light that can output 6,000 lumens. | Image: H..."
+  },
+  {
+    "title": "B2B E-Commerce Data Scraping for Market Intelligence",
+    "url": "https://dev.to/john_smith_9e289544c3646a/b2b-e-commerce-data-scraping-for-market-intelligence-3437",
+    "publishedAt": "2025-09-04T07:28:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "B2B E-Commerce Data Scraping for Market Intelligence Introduction Top 10 B2B E-Commerce Marketplaces to Watch for Success in 2025 How Businesses Can Leverage B2B E-Commerce Data Scraping? info@productdatascrape.com https://www.productdatascrape.com.",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0qnw1pl6drooe8w4b9ip.webp",
+    "video": null,
+    "author": "John Smith",
+    "tags": [
+      "b2becommercedatascraping",
+      "ecommercedatasetscraping",
+      "extractingsupplierandbuyerdata",
+      "webdev"
+    ],
+    "seoTitle": "B2B E-Commerce Data Scraping for Market Intelligence",
+    "seoDescription": "B2B E-Commerce Data Scraping for Market Intelligence Introduction Top 10 B2B E-Commerce Marketplaces to Watch for Success in 2025 How Businesses Can Leverage..."
   },
   {
     "title": "Aqara Unveils HomeKit-Compatible Doorbell Camera G400 and Matter Hub M200",
@@ -54,63 +223,6 @@
     ],
     "seoTitle": "Scosche Launches MagicMount Qi2.2 25W Wireless Chargers for iPhone",
     "seoDescription": "Scosche today announced the launch of the MagicMount Charge Pro 25W series, introducing several wireless charger options that support the new Qi2.2 specifica..."
-  },
-  {
-    "title": "Help Emily Stay in School: An Urgent Call for Support",
-    "url": "https://dev.to/david_baker_5ad97f53cbb9c/help-emily-stay-in-school-an-urgent-call-for-support-9ab",
-    "publishedAt": "2025-09-04T06:44:18.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Education is often described as the key to a brighter future, but for many students, financial struggles can stand in the way of achieving their dreams. Today, I want to share the story of Emily — a hardworking and determined student who is facing the heartbreaking possibility of dropping out this semester. Emily’s school fees are due, and without $1,000,...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjjr4b4pbuewt0varb36k.jpg",
-    "video": null,
-    "author": "David Baker",
-    "tags": [
-      "deved",
-      "webdev",
-      "programming",
-      "ai"
-    ],
-    "seoTitle": "Help Emily Stay in School: An Urgent Call for Support",
-    "seoDescription": "Education is often described as the key to a brighter future, but for many students, financial struggles can stand in the way of achieving their dreams. Toda..."
-  },
-  {
-    "title": "An Explicit Approach to Async Reactivity",
-    "url": "https://dev.to/tobi_augenstein/an-explicit-approach-to-async-reactivity-45h9",
-    "publishedAt": "2025-09-04T06:14:06.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "One of the biggest pain points I've experienced with modern web frameworks is the combination of async logic and reactive bindings. Working with async code that only depends indirectly on outer reactive data is manageable, although even that can be cumbersome. But once you try to track reactive dependencies nested inside async calls… you'll probably want ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2783386%2F5d010cf7-2936-43e5-94a6-e7ef470faa15.jpg",
-    "video": null,
-    "author": "Tobias Augenstein",
-    "tags": [
-      "webdev",
-      "javascript",
-      "typescript",
-      "architecture"
-    ],
-    "seoTitle": "An Explicit Approach to Async Reactivity",
-    "seoDescription": "One of the biggest pain points I've experienced with modern web frameworks is the combination of async logic and reactive bindings. Working with async code t..."
-  },
-  {
-    "title": "# Day 14 — Symbolic Collapse (ProblemMap No.11)",
-    "url": "https://dev.to/onestardao/-day-14-symbolic-collapse-problemmap-no11-27eh",
-    "publishedAt": "2025-09-04T06:12:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Symptom Equations, operators, and table references collapse into prose. Retrieval looks close but not exact. The model explains confidently while citing the wrong row or a different formula. Root Your pipeline discards the symbolic channel during intake and embedding. LaTeX and table structure get flattened. Similar looking prose wins over exact symbolic ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4s10zex23mbremrxc18q.png",
-    "video": null,
-    "author": "PSBigBig",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "# Day 14 — Symbolic Collapse (ProblemMap No.11)",
-    "seoDescription": "Symptom Equations, operators, and table references collapse into prose. Retrieval looks close but not exact. The model explains confidently while citing the ..."
   },
   {
     "title": "Aukey&#8217;s new wireless charger gives you more freedom through the power of the orbs",
@@ -490,139 +602,5 @@
     ],
     "seoTitle": "The Ultimate Beginner’s Guide to Bird Photography",
     "seoDescription": "While birds inhabit every environment from remote wilderness to urban parking lots, capturing their beauty and behavior demands technical … [Read More]"
-  },
-  {
-    "title": "The best deals on 4K TVs",
-    "url": "https://www.theverge.com/22371561/best-4k-tv-deals-sale-lg-samsung-sony-tcl",
-    "publishedAt": "2025-09-03T21:01:01.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Hisense’s U65QF is currently on sale at Amazon starting at a cool $596.99 ($403 off). | Image: Sony Things are looking bright for those who want to nab a great TV in 2025 at a substantial discount. There’s usually a great deal happening on a mid- or high-end TV from LG, Sony, TCL, Hisense, or Amazon’s own Fire TV brand — even if the biggest discounts rema...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Hisense-55U65QF.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best deals on 4K TVs",
-    "seoDescription": "Hisense’s U65QF is currently on sale at Amazon starting at a cool $596.99 ($403 off). | Image: Sony Things are looking bright for those who want to nab a gre..."
-  },
-  {
-    "title": "This Is Why Everyone and Their Mom Loves 'KPop Demon Hunters'",
-    "url": "https://nofilmschool.com/kpop-demon-hunters-four-quadrants",
-    "publishedAt": "2025-09-03T21:00:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Look, almost every filmmaker in Hollywood is chasing the same thing: the four-quadrant blockbuster. It's the movie that gets your teenage niece, your cynical dad, your best friend, and her mom to pile into the SUV and sit their butts in the theaters. And these days, it's really hard to get that done. But then a movie like K-Pop: Demon Hunters comes along ...",
-    "image": "https://nofilmschool.com/media-library/how-kpop-demon-hunters-takes-advantage-of-all-four-quadrants.webp?id=61553474&width=980",
-    "video": "https://www.youtube.com/embed/AzCAwdp1uIQ?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Netflix",
-      "Netflix originals",
-      "Kpop demon hunters",
-      "Four quadrant film"
-    ],
-    "seoTitle": "This Is Why Everyone and Their Mom Loves 'KPop Demon Hunters'",
-    "seoDescription": "Look, almost every filmmaker in Hollywood is chasing the same thing: the four-quadrant blockbuster. It's the movie that gets your teenage niece, your cynical..."
-  },
-  {
-    "title": "ON1 Photo RAW 2026 Has Major AI Masking Improvements",
-    "url": "https://petapixel.com/2025/09/03/on1-photo-raw-2026-has-major-ai-masking-improvements/",
-    "publishedAt": "2025-09-03T20:51:58.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "ON1 Photo RAW 2026 is coming this fall with major upgrades, completely new tools, interface improvements, and filters. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/ON1-Photo-RAW-2026-PetaPixel-BG.jpg",
-    "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "News",
-      "Software",
-      "2026",
-      "on1",
-      "photoediting",
-      "postprocessing",
-      "raw"
-    ],
-    "seoTitle": "ON1 Photo RAW 2026 Has Major AI Masking Improvements",
-    "seoDescription": "ON1 Photo RAW 2026 is coming this fall with major upgrades, completely new tools, interface improvements, and filters. [Read More]"
-  },
-  {
-    "title": "Apple&#8217;s rumored AI search tool for Siri could rely on Google",
-    "url": "https://www.theverge.com/news/770712/apple-ai-search-tool-siri-google-gemini",
-    "publishedAt": "2025-09-03T20:47:46.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Apple is working on an AI-powered search feature for Siri – but it might need Google’s help to make it happen, according to a report from Bloomberg’s Mark Gurman. As noted by Gurman, Google is currently in the lead to help Apple revamp its voice assistant, which could involve using a custom Gemini model running on the iPhone maker’s servers. The new featu...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK071_APPLE_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Apple&#8217;s rumored AI search tool for Siri could rely on Google",
-    "seoDescription": "Apple is working on an AI-powered search feature for Siri – but it might need Google’s help to make it happen, according to a report from Bloomberg’s Mark Gu..."
-  },
-  {
-    "title": "CarPlay is about to get the Messages feature I’ve been waiting for",
-    "url": "https://9to5mac.com/2025/09/03/ios-26-will-fix-carplays-most-annoying-messages-problem/",
-    "publishedAt": "2025-09-03T20:45:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "It’s turning out to be a huge year for CarPlay, surprising many of us after years of middling updates. Among the host of new CarPlay features coming in iOS 26, there’s a key fix for what’s long been the most annoying Messages issue for me: the lack of tapbacks support. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/carplay-tapbacks-ios-26.jpeg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "CarPlay is about to get the Messages feature I’ve been waiting for",
-    "seoDescription": "It’s turning out to be a huge year for CarPlay, surprising many of us after years of middling updates. Among the host of new CarPlay features coming in iOS 2..."
-  },
-  {
-    "title": "Step Inside Westeros: The 'Game of Thrones' Scripts You Can Read Today",
-    "url": "https://nofilmschool.com/game-of-thrones-script-downlaod",
-    "publishedAt": "2025-09-03T20:45:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "We haven't had a TV show that moved culture the way Game of Thrones did when it came out. It was a behemoth that got everyone to sit down on Sunday nights to watch it live. There's a lot we can learn from a show like that, but I wanted to focus on the writing alone today, by presenting a few episodes for you to check out. Let's dive in. Read and Download ...",
-    "image": "https://nofilmschool.com/media-library/read-some-game-of-thrones-scripts.jpg?id=61540228&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Script download",
-      "Screenplay download",
-      "Game of thrones"
-    ],
-    "seoTitle": "Step Inside Westeros: The 'Game of Thrones' Scripts You Can Read Today",
-    "seoDescription": "We haven't had a TV show that moved culture the way Game of Thrones did when it came out. It was a behemoth that got everyone to sit down on Sunday nights to..."
-  },
-  {
-    "title": "LLM Siri With 'World Knowledge' Search Feature Coming in Early 2026",
-    "url": "https://www.macrumors.com/2025/09/03/llm-siri-with-search-early-2026/",
-    "publishedAt": "2025-09-03T20:42:27.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple plans to add an AI-powered web search tool to Siri next year, reports Bloomberg's Mark Gurman. The search tool will be an integrated ‌Siri‌ feature that will provide information on general search queries, similar to ChatGPT and Google's AI overviews for searches. Apple is calling the search feature World Knowledge Answers internally, and some Apple ...",
-    "image": "https://images.macrumors.com/article-new/2025/05/iPhone-Siri-Glow.jpeg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured",
-      "Siri"
-    ],
-    "seoTitle": "LLM Siri With 'World Knowledge' Search Feature Coming in Early 2026",
-    "seoDescription": "Apple plans to add an AI-powered web search tool to Siri next year, reports Bloomberg's Mark Gurman. The search tool will be an integrated ‌Siri‌ feature tha..."
-  },
-  {
-    "title": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
-    "url": "https://www.theverge.com/games/770667/i-tried-jsauxs-new-anti-glare-switch-2-screen-protector-and-it-revealed-a-glaring-bug",
-    "publishedAt": "2025-09-03T20:39:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to a Switch 2 screen protector that, ironically, is supposed to tame reflections. The protector in question is a pre-production sample of the Jsaux Obsidian AR screen protector, which is coming in Octob...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ob1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Cameron Faulkner",
-    "tags": [],
-    "seoTitle": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
-    "seoDescription": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to..."
   }
 ]
