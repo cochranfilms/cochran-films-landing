@@ -1,5 +1,186 @@
 [
   {
+    "title": "An Explicit Approach to Async Reactivity",
+    "url": "https://dev.to/tobi_augenstein/an-explicit-approach-to-async-reactivity-45h9",
+    "publishedAt": "2025-09-04T06:14:06.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "One of the biggest pain points I've experienced with modern web frameworks is the combination of async logic and reactive bindings. Working with async code that only depends indirectly on outer reactive data is manageable, although even that can be cumbersome. But once you try to track reactive dependencies nested inside async calls… you'll probably want ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2783386%2F5d010cf7-2936-43e5-94a6-e7ef470faa15.jpg",
+    "video": null,
+    "author": "Tobias Augenstein",
+    "tags": [
+      "webdev",
+      "javascript",
+      "typescript",
+      "architecture"
+    ],
+    "seoTitle": "An Explicit Approach to Async Reactivity",
+    "seoDescription": "One of the biggest pain points I've experienced with modern web frameworks is the combination of async logic and reactive bindings. Working with async code t..."
+  },
+  {
+    "title": "# Day 14 — Symbolic Collapse (ProblemMap No.11)",
+    "url": "https://dev.to/onestardao/-day-14-symbolic-collapse-problemmap-no11-27eh",
+    "publishedAt": "2025-09-04T06:12:27.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Symptom Equations, operators, and table references collapse into prose. Retrieval looks close but not exact. The model explains confidently while citing the wrong row or a different formula. Root Your pipeline discards the symbolic channel during intake and embedding. LaTeX and table structure get flattened. Similar looking prose wins over exact symbolic ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4s10zex23mbremrxc18q.png",
+    "video": null,
+    "author": "PSBigBig",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "# Day 14 — Symbolic Collapse (ProblemMap No.11)",
+    "seoDescription": "Symptom Equations, operators, and table references collapse into prose. Retrieval looks close but not exact. The model explains confidently while citing the ..."
+  },
+  {
+    "title": "Aukey&#8217;s new wireless charger gives you more freedom through the power of the orbs",
+    "url": "https://www.theverge.com/news/769300/aukey-magfusion-ark-wireless-charger-qi2-2",
+    "publishedAt": "2025-09-04T06:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The MagFusion Ark is available in multiple sizes with up to three removable wireless charging spheres. | Image: Aukey Aukey has announced a new modular charging solution called the MagFusion Ark. It combines a base station featuring up to three Qi2.2 charging pads with spherical power banks that each have their own Qi2.2-compatible pads. The spheres suppo...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/aukey_ark1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Liszewski",
+    "tags": [],
+    "seoTitle": "Aukey&#8217;s new wireless charger gives you more freedom through the power of the orbs",
+    "seoDescription": "The MagFusion Ark is available in multiple sizes with up to three removable wireless charging spheres. | Image: Aukey Aukey has announced a new modular charg..."
+  },
+  {
+    "title": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know",
+    "url": "https://dev.to/teamcamp/docker-to-kubernetes-the-30-day-migration-path-every-developer-should-know-1lo2",
+    "publishedAt": "2025-09-04T05:55:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "You are running your applications in Docker containers. Your team keeps growing. Your infrastructure demands keep scaling beyond what Docker Compose can handle efficiently. Sound familiar? You have hit the point where Kubernetes becomes not just an option, but a necessity.** The transition from Docker to Kubernetes doesn't need to be overwhelming. This 30...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi7tsy92atticww568cu0.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "devops",
+      "tutorial",
+      "learning"
+    ],
+    "seoTitle": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know",
+    "seoDescription": "You are running your applications in Docker containers. Your team keeps growing. Your infrastructure demands keep scaling beyond what Docker Compose can hand..."
+  },
+  {
+    "title": "Bestselling product Amazon.com",
+    "url": "https://dev.to/bestselling_amazon/bestselling-product-amazon-57e7",
+    "publishedAt": "2025-09-04T05:44:54.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Bestselling product Amazon USA Go AMAZON",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ksmouejjiyfpsuzloxx.jpg",
+    "video": null,
+    "author": "bestselling amazon ",
+    "tags": [
+      "aws",
+      "webdev",
+      "ai",
+      "blockchain"
+    ],
+    "seoTitle": "Bestselling product Amazon.com",
+    "seoDescription": "Bestselling product Amazon USA Go AMAZON"
+  },
+  {
+    "title": "Gareth Evans 6 Iconic Movies Ranked: From Brutal to Brilliant",
+    "url": "https://nofilmschool.com/gareth-evans-most-iconic-films",
+    "publishedAt": "2025-09-04T05:41:07.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Nobody shoots violence quite like Gareth Evans. When his movies punch, you feel every fractured bone, every desperate gasp, and every slam into concrete. He made The Raid: Redemption (2011), and suddenly the world remembered that action films could be both brutally physical and artistically composed. Instead of making noise for the sake of it, Evans build...",
+    "image": "https://nofilmschool.com/media-library/gareth-evans-movies-ranked.jpg?id=61538839&width=980",
+    "video": "https://www.youtube.com/embed/e6q6Y70dt-k?rel=0",
+    "author": "Vishal Wagh",
+    "tags": [
+      "Gareth evans",
+      "Best movies"
+    ],
+    "seoTitle": "Gareth Evans 6 Iconic Movies Ranked: From Brutal to Brilliant",
+    "seoDescription": "Nobody shoots violence quite like Gareth Evans. When his movies punch, you feel every fractured bone, every desperate gasp, and every slam into concrete. He ..."
+  },
+  {
+    "title": "AI Technology: A Game-Changer in the Digital Age",
+    "url": "https://dev.to/icode49/ai-technology-a-game-changer-in-the-digital-age-ice",
+    "publishedAt": "2025-09-04T05:37:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Technology has advanced at an unimaginable pace in the past 20 years. The most significant factor behind these advancements is Artificial Intelligence. From a mere trend, AI has become the foundation of global business transformations. AI is present in nearly every sector, whether it's self-driving cars or AI-powered health care. It can also be found with...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe719cirn9mib571zp6jx.png",
+    "video": null,
+    "author": "icode49",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "react"
+    ],
+    "seoTitle": "AI Technology: A Game-Changer in the Digital Age",
+    "seoDescription": "Technology has advanced at an unimaginable pace in the past 20 years. The most significant factor behind these advancements is Artificial Intelligence. From ..."
+  },
+  {
+    "title": "Ridley Scott’s 9 Best Films Across Five Decades",
+    "url": "https://nofilmschool.com/best-ridley-scott-films",
+    "publishedAt": "2025-09-04T05:31:07.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Whether you’re a cinephile or not, Ridley Scott needs no introduction. Throughout his 50-year filmmaking career, the extremely versatile Scott has directed nearly 30 films, reinventing genres by seamlessly blending them together. At the same time, his films challenge gender roles, often featuring strong and complex women, such as Ripley in Alien and the t...",
+    "image": "https://nofilmschool.com/media-library/russel-crowe-as-maximus-decimus-meridius.jpg?id=61553734&width=980",
+    "video": "https://www.youtube.com/embed/jQ5lPt9edzQ?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Ridley scott",
+      "Best movies"
+    ],
+    "seoTitle": "Ridley Scott’s 9 Best Films Across Five Decades",
+    "seoDescription": "Whether you’re a cinephile or not, Ridley Scott needs no introduction. Throughout his 50-year filmmaking career, the extremely versatile Scott has directed n..."
+  },
+  {
+    "title": "How Schools and Counties Can Cut E-Signature Costs by 80%",
+    "url": "https://dev.to/boldsign/how-schools-and-counties-can-cut-e-signature-costs-by-80-ojm",
+    "publishedAt": "2025-09-04T05:27:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Public schools and county governments in the United States face constant pressure to do more with less. Budget cuts at the federal level, rising operational costs, and increasing compliance demands leave administrators looking for ways to streamline operations without sacrificing quality or trust. One area with significant potential for cost savings and e...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fboldsign.com%2Fwp-content%2Fuploads%2F2025%2F09%2FBoldSign-vs-legacy-vendors.png",
+    "video": null,
+    "author": "Dhinesh Sekar",
+    "tags": [
+      "esignature",
+      "webdev",
+      "schools",
+      "counties"
+    ],
+    "seoTitle": "How Schools and Counties Can Cut E-Signature Costs by 80%",
+    "seoDescription": "Public schools and county governments in the United States face constant pressure to do more with less. Budget cuts at the federal level, rising operational ..."
+  },
+  {
+    "title": "The 7 Best Mike Flanagan Movies and Series of All Time",
+    "url": "https://nofilmschool.com/best-works-of-mike-flanagan",
+    "publishedAt": "2025-09-04T05:18:38.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "A huge name in the genre of horror, Mike Flanagan’s narratives rely on slow-burn suspense over visual scares or cliché horror tropes and are widely admired for their use of horror elements as visual metaphors for real-life struggles. By methodically building emotional and psychological tension, Mike Flanagan movies allow viewers to feel the dread in real ...",
+    "image": "https://nofilmschool.com/media-library/the-7-best-mike-flanagan-movies-and-series-of-all-time.jpg?id=61553974&width=980",
+    "video": "https://www.youtube.com/embed/Q_P8WCbhC6s?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Mike flanagan",
+      "Horror",
+      "Best movies",
+      "Mike flanagan"
+    ],
+    "seoTitle": "The 7 Best Mike Flanagan Movies and Series of All Time",
+    "seoDescription": "A huge name in the genre of horror, Mike Flanagan’s narratives rely on slow-burn suspense over visual scares or cliché horror tropes and are widely admired f..."
+  },
+  {
     "title": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
     "url": "https://dev.to/dct_technology/from-data-lakes-to-data-mesh-the-next-evolution-in-data-architecture-5f2k",
     "publishedAt": "2025-09-04T05:10:41.000Z",
@@ -17,117 +198,6 @@
     ],
     "seoTitle": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
     "seoDescription": "For years, organizations relied on data warehouses and later data lakes to manage the growing flood of information. These solutions worked—until they didn’t...."
-  },
-  {
-    "title": "The Docker layer strategy that saved sprint",
-    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/the-docker-layer-strategy-that-saved-sprint-5h3l",
-    "publishedAt": "2025-09-04T05:09:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #programming",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Bhavy K",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "programming"
-    ],
-    "seoTitle": "The Docker layer strategy that saved sprint",
-    "seoDescription": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #..."
-  },
-  {
-    "title": "From 47 to 3 Minutes to build : the Docker layer strategy that saved sprint",
-    "url": "https://dev.to/pratham_naik_project_manager/from-47-to-3-minutes-to-build-the-docker-layer-strategy-that-saved-sprint-2g45",
-    "publishedAt": "2025-09-04T05:08:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #programming",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "programming"
-    ],
-    "seoTitle": "From 47 to 3 Minutes to build : the Docker layer strategy that saved sprint",
-    "seoDescription": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint Pratham naik for Teamcamp ・ Sep 4 #webdev #productivity #devops #..."
-  },
-  {
-    "title": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint",
-    "url": "https://dev.to/teamcamp/from-47-minute-builds-to-3-minutes-the-docker-layer-caching-strategy-that-saved-our-sprint-5f5a",
-    "publishedAt": "2025-09-04T05:07:33.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Build times kill developer productivity. Nothing frustrates engineers more than waiting nearly an hour for code to compile while client deadlines loom overhead. Last month, our team faced exactly this nightmare scenario. Our Docker builds averaged 47 minutes, turning simple feature deployments into day-long ordeals. Developers lost focus during long build...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbp4503w1hkiwuzuyc8ne.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "programming"
-    ],
-    "seoTitle": "From 47-Minute Builds to 3 Minutes: The Docker Layer Caching Strategy That Saved Our Sprint",
-    "seoDescription": "Build times kill developer productivity. Nothing frustrates engineers more than waiting nearly an hour for code to compile while client deadlines loom overhe..."
-  },
-  {
-    "title": "5 Absolutely Free Web Tools Every Developer Should Bookmark",
-    "url": "https://dev.to/web_dev-usman/5-absolutely-free-web-tools-every-developer-should-bookmark-38jn",
-    "publishedAt": "2025-09-04T05:03:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Five underrated tools that will save you time, level up your workflow, and won’t cost you a single penny. Let me introduce you to five websites that you probably haven’t heard of yet, but trust me, they’re incredibly helpful for anyone involved in programming and web development. Best of all? They’re completely free to use. By the time you’re done reading...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbpmf8nliox6c0wojmbe7.png",
-    "video": null,
-    "author": "Muhammad Usman",
-    "tags": [
-      "webdev",
-      "tooling",
-      "frontend",
-      "softwaredevelopment"
-    ],
-    "seoTitle": "5 Absolutely Free Web Tools Every Developer Should Bookmark",
-    "seoDescription": "Five underrated tools that will save you time, level up your workflow, and won’t cost you a single penny. Let me introduce you to five websites that you prob..."
-  },
-  {
-    "title": "The Lone Wolf Developer: Asset or Liability?",
-    "url": "https://dev.to/dct_technology/the-lone-wolf-developer-asset-or-liability-48no",
-    "publishedAt": "2025-09-04T04:57:07.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Every tech team has (or has had) one — the lone wolf developer. But here’s the question: Is the lone wolf an asset that boosts productivity, or a liability that risks team harmony? Let’s dive into both sides of the story. Speed & Focus: Without distractions, they can build features fast. Innovation: Many great open-source projects started from solo passio...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Focdyadwyn4t63bxswoaa.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "webdev",
-      "softwareengineering",
-      "developerlife",
-      "teamculture"
-    ],
-    "seoTitle": "The Lone Wolf Developer: Asset or Liability?",
-    "seoDescription": "Every tech team has (or has had) one — the lone wolf developer. But here’s the question: Is the lone wolf an asset that boosts productivity, or a liability t..."
-  },
-  {
-    "title": "Used TV Buyers in Dubai with Best Price",
-    "url": "https://dev.to/get_quote_25efe7bbfa6bbd4/used-tv-buyers-in-dubai-with-best-price-2mb0",
-    "publishedAt": "2025-09-04T04:45:14.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Are you looking to sell your used TV in Dubai and get the best price for it? You’ve come to the right place! At Used TV Buyers in Dubai, we make it fast, easy, and hassle-free to sell your old or used television — whether it's an LED, LCD, Smart TV, 4K, or OLED. {% embed %}",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqs8wt9xcdhspm9aci84u.jpg",
-    "video": null,
-    "author": "Get Quote",
-    "tags": [
-      "webdev"
-    ],
-    "seoTitle": "Used TV Buyers in Dubai with Best Price",
-    "seoDescription": "Are you looking to sell your used TV in Dubai and get the best price for it? You’ve come to the right place! At Used TV Buyers in Dubai, we make it fast, eas..."
   },
   {
     "title": "Nikon Further Embraces Analog Heritage With a Silver Zf and Film Grain Feature",
@@ -166,6 +236,25 @@
     ],
     "seoTitle": "Tim Cook expected back at the White House for Trump AI event",
     "seoDescription": "Where will Tim Cook be on the Thursday before the iPhone 17 event? Back at the White House, it seems. more…"
+  },
+  {
+    "title": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
+    "url": "https://nofilmschool.com/hohem-isteady-v3-ultra",
+    "publishedAt": "2025-09-04T00:53:00.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking technology with touchscreen target selection, a detachable touchscreen remote, real-time live feed monitoring, and other native tracking features, this new AI-powered smartphone gimbal is about to kick th...",
+    "image": "https://nofilmschool.com/media-library/hohem-isteady-v3-ultra.jpg?id=61551194&width=980",
+    "video": "https://www.youtube.com/embed/t_wUhI1i7DY?rel=0",
+    "author": "Sponsored Content",
+    "tags": [
+      "Hohem",
+      "Isteady",
+      "Smartphone gimbal",
+      "Hohem isteady v3 ultra"
+    ],
+    "seoTitle": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
+    "seoDescription": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking tech..."
   },
   {
     "title": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
@@ -456,25 +545,6 @@
     "seoDescription": "Look, almost every filmmaker in Hollywood is chasing the same thing: the four-quadrant blockbuster. It's the movie that gets your teenage niece, your cynical..."
   },
   {
-    "title": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
-    "url": "https://nofilmschool.com/hohem-isteady-v3-ultra",
-    "publishedAt": "2025-09-03T20:53:00.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking technology with touchscreen target selection, a detachable touchscreen remote, real-time live feed monitoring, and other native tracking features, this new AI-powered smartphone gimbal is about to kick th...",
-    "image": "https://nofilmschool.com/media-library/hohem-isteady-v3-ultra.jpg?id=61551194&width=980",
-    "video": "https://www.youtube.com/embed/t_wUhI1i7DY?rel=0",
-    "author": "Sponsored Content",
-    "tags": [
-      "Hohem",
-      "Isteady",
-      "Smartphone gimbal",
-      "Hohem isteady v3 ultra"
-    ],
-    "seoTitle": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
-    "seoDescription": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking tech..."
-  },
-  {
     "title": "ON1 Photo RAW 2026 Has Major AI Masking Improvements",
     "url": "https://petapixel.com/2025/09/03/on1-photo-raw-2026-has-major-ai-masking-improvements/",
     "publishedAt": "2025-09-03T20:51:58.000Z",
@@ -560,68 +630,5 @@
     ],
     "seoTitle": "LLM Siri With 'World Knowledge' Search Feature Coming in Early 2026",
     "seoDescription": "Apple plans to add an AI-powered web search tool to Siri next year, reports Bloomberg's Mark Gurman. The search tool will be an integrated ‌Siri‌ feature tha..."
-  },
-  {
-    "title": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
-    "url": "https://www.theverge.com/games/770667/i-tried-jsauxs-new-anti-glare-switch-2-screen-protector-and-it-revealed-a-glaring-bug",
-    "publishedAt": "2025-09-03T20:39:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to a Switch 2 screen protector that, ironically, is supposed to tame reflections. The protector in question is a pre-production sample of the Jsaux Obsidian AR screen protector, which is coming in Octob...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ob1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Cameron Faulkner",
-    "tags": [],
-    "seoTitle": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
-    "seoDescription": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to..."
-  },
-  {
-    "title": "These were the most watched Apple TV+ movies and series in August",
-    "url": "https://9to5mac.com/2025/09/03/these-were-the-most-watched-apple-tv-movies-and-series-in-august/",
-    "publishedAt": "2025-09-03T20:38:01.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Every month, JustWatch reports the most popular shows and movies among its users worldwide. Here’s a breakdown of what topped its Apple TV+ charts in August. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-tv-plus-lg-logo.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "These were the most watched Apple TV+ movies and series in August",
-    "seoDescription": "Every month, JustWatch reports the most popular shows and movies among its users worldwide. Here’s a breakdown of what topped its Apple TV+ charts in August...."
-  },
-  {
-    "title": "The 10 Best College Movies of All Time",
-    "url": "https://nofilmschool.com/best-college-movies-all-time",
-    "publishedAt": "2025-09-03T20:34:47.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "College movies have been captivating audiences for decades. The genre can offer audiences a range of stories, from dirty comedies and courtroom dramas to romance, horror, and coming-of-age tales. So, if you're feeling nostalgic for your campus days or dreaming about dorm life, these films will help take you back. Here are 10 of our favorite college movies...",
-    "image": "https://nofilmschool.com/media-library/reese-witherspoon-in-legally-blonde.jpg?id=34057492&width=980",
-    "video": "https://www.youtube.com/embed/KWjtI6n5xWM?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Frat movies",
-      "College",
-      "College movies",
-      "Best movies"
-    ],
-    "seoTitle": "The 10 Best College Movies of All Time",
-    "seoDescription": "College movies have been captivating audiences for decades. The genre can offer audiences a range of stories, from dirty comedies and courtroom dramas to rom..."
-  },
-  {
-    "title": "Switzerland releases its own AI model trained on public data",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/770646/switzerland-ai-model-llm-open-apertus",
-    "publishedAt": "2025-09-03T20:32:37.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Switzerland launched an open-source model called Apertus on Monday as an alternative to proprietary models like OpenAI’s ChatGPT or Anthropic’s Claude, reports SWI as spotted by Engadget. The model’s source code, training data, model weights, and detailed development process are available on the AI model platform HuggingFace. Apertus, which is Latin for “...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/gettyimages-2225698490.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Elissa Welle",
-    "tags": [],
-    "seoTitle": "Switzerland releases its own AI model trained on public data",
-    "seoDescription": "Switzerland launched an open-source model called Apertus on Monday as an alternative to proprietary models like OpenAI’s ChatGPT or Anthropic’s Claude, repor..."
   }
 ]
