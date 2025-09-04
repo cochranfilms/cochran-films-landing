@@ -1,5 +1,189 @@
 [
   {
+    "title": "Why managed backup services are critical to modern development",
+    "url": "https://dev.to/rootstack/why-managed-backup-services-are-critical-to-modern-development-4hnl",
+    "publishedAt": "2025-09-04T17:06:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s fast-paced development world, where continuous integration and deployment are the norm, data is the most valuable asset a team possesses. From source code to container images, from configuration files to user data, everything must remain secure, accessible, and recoverable at all times. Despite this, many organizations still treat backup as an ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdsv09850r7u6qlqdn3a6.png",
+    "video": null,
+    "author": "Rootstack",
+    "tags": [
+      "itservices",
+      "backup",
+      "webdev",
+      "softwaredevelopment"
+    ],
+    "seoTitle": "Why managed backup services are critical to modern development",
+    "seoDescription": "In today’s fast-paced development world, where continuous integration and deployment are the norm, data is the most valuable asset a team possesses. From sou..."
+  },
+  {
+    "title": "Philips Hue Line Gains Bridge Pro, New Bulbs, Updated Outdoor Lights and More",
+    "url": "https://www.macrumors.com/2025/09/04/philips-hue-fall-2025-products/",
+    "publishedAt": "2025-09-04T17:03:26.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Signify today announced a range of new products that are coming out this fall, including an updated bridge, new light strips and bulbs, updated outdoor light options, and some new Hue Secure devices. The Hue Bridge Pro is an updated version of the Hue Bridge that enables support for up to 150 lights and 50 accessories, expanding the 50 light limit from th...",
+    "image": "https://images.macrumors.com/article-new/2025/09/philips-hue-permanent-lights.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Philips Hue"
+    ],
+    "seoTitle": "Philips Hue Line Gains Bridge Pro, New Bulbs, Updated Outdoor Lights and More",
+    "seoDescription": "Signify today announced a range of new products that are coming out this fall, including an updated bridge, new light strips and bulbs, updated outdoor light..."
+  },
+  {
+    "title": "The tech antitrust renaissance may already be over",
+    "url": "https://www.theverge.com/policy/771409/break-up-big-tech-movement-google-search-remedies-ruling",
+    "publishedAt": "2025-09-04T17:01:19.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Around six years ago, a new rallying cry rippled through Washington: \"Break Up Big Tech.\" It was a slogan emblazoned on campaign posters, uttered at congressional hearings, and beginning, it seemed, to echo through the halls of the nation's antitrust enforcers. Momentum in the legislatures eventually petered out, but the enforcers at the Justice Departmen...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK452_Google_Antitrust__Monopoly_Kristen_Radtke.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Lauren Feiner",
+    "tags": [],
+    "seoTitle": "The tech antitrust renaissance may already be over",
+    "seoDescription": "Around six years ago, a new rallying cry rippled through Washington: \"Break Up Big Tech.\" It was a slogan emblazoned on campaign posters, uttered at congress..."
+  },
+  {
+    "title": "You can now attach 10,000 character blogs to your Threads posts",
+    "url": "https://www.theverge.com/news/770391/meta-threads-text-dumps-attachments-10000-characters",
+    "publishedAt": "2025-09-04T17:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Meta is adding a new feature to let you add a bunch of extra text to Threads posts — no screenshots of text blocks required. Starting today, Meta is rolling out a tool that lets you attach up to 10,000 characters of text to Threads posts, giving you a way to build upon the 500-character text limit already available when making a post. It’s kind of a Threa...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24774110/STK156_Instagram_threads_1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jay Peters",
+    "tags": [],
+    "seoTitle": "You can now attach 10,000 character blogs to your Threads posts",
+    "seoDescription": "Meta is adding a new feature to let you add a bunch of extra text to Threads posts — no screenshots of text blocks required. Starting today, Meta is rolling ..."
+  },
+  {
+    "title": "How the Boss in 'The Paper' Differs From Michael Scott in 'The Office'",
+    "url": "https://nofilmschool.com/how-the-boss-in-the-paper-differs-from-michael-scott-in-the-office",
+    "publishedAt": "2025-09-04T16:50:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "When it comes to the greatest sitcom characters of all time, Michael Scott from The Office has to be near the top of the list. The boss of a Scranton paper company, who is inept but has a big heart, was perfectly embodied by Steve Carell, who knew just how to press the right buttons but also make Michael Scott incredibly likable and pitiful, in an engagin...",
+    "image": "https://nofilmschool.com/media-library/how-the-boss-in-the-paper-differs-from-michael-scott-in-the-office.jpg?id=61555692&width=980",
+    "video": "https://www.youtube.com/embed/c5v4LJJkvUU?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "The office",
+      "Greg daniels",
+      "Michael koman",
+      "The paper"
+    ],
+    "seoTitle": "How the Boss in 'The Paper' Differs From Michael Scott in 'The Office'",
+    "seoDescription": "When it comes to the greatest sitcom characters of all time, Michael Scott from The Office has to be near the top of the list. The boss of a Scranton paper c..."
+  },
+  {
+    "title": "Is Fujifilm’s New Broadcast Zoom the Perfect Lens for Virtual and Remote Production?",
+    "url": "https://nofilmschool.com/fujifilm-fujinon-la30-78-broadcast-lens",
+    "publishedAt": "2025-09-04T16:33:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "With an official title that’s quite a mouthful, the FUJINON LA30x7.8 is a new broadcast zoom lens with fast electronic flange back adjustment, a simple macro function, and compatibility with the MS-X1 Semi-Servo Kit and Blackmagic controls. Compared to the previous LA16x8 model, it should be quite an improvement with a longer zoom range, faster zoom speed...",
+    "image": "https://nofilmschool.com/media-library/fujinon-la30x7-8.png?id=61555666&width=980",
+    "video": "https://www.youtube.com/embed/K4A3EcU9D3c?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Fujifilm",
+      "Fujinon",
+      "Broadcast zoom lens",
+      "Fujinon la30x7.8"
+    ],
+    "seoTitle": "Is Fujifilm’s New Broadcast Zoom the Perfect Lens for Virtual and Remote Production?",
+    "seoDescription": "With an official title that’s quite a mouthful, the FUJINON LA30x7.8 is a new broadcast zoom lens with fast electronic flange back adjustment, a simple macro..."
+  },
+  {
+    "title": "Behold Cam-1 Is a Stylish AI-Powered Wildlife Camera Designed for Everyone",
+    "url": "https://petapixel.com/2025/09/04/behold-cam-1-is-a-stylish-ai-powered-wildlife-camera-designed-for-everyone/",
+    "publishedAt": "2025-09-04T16:31:00.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "The Behold Cam-1 is a stylish new wildlife camera that promises to make the traditional trail camera experience much more accessible. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/bungee1080.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "ai",
+      "camera",
+      "conservation",
+      "kickstarter",
+      "trailcamera",
+      "wildlife"
+    ],
+    "seoTitle": "Behold Cam-1 Is a Stylish AI-Powered Wildlife Camera Designed for Everyone",
+    "seoDescription": "The Behold Cam-1 is a stylish new wildlife camera that promises to make the traditional trail camera experience much more accessible. [Read More]"
+  },
+  {
+    "title": "Panasonic Brings Autofocus to 4K Studio Cameras for the First Time",
+    "url": "https://nofilmschool.com/panasonic-4k-studio-cameras",
+    "publishedAt": "2025-09-04T16:25:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "In gearing up for IBC 2025, where Panasonic plans to show off these innovations, the company has made two major announcements in the world of broadcast studio cameras. The first is that Panasonic is unveiling the AK-UBX100, a next-generation 4K box-style multi-purpose camera designed to give broadcasters, houses of worship, live event producers, and conte...",
+    "image": "https://nofilmschool.com/media-library/panasonic-ak-ubx100.jpg?id=61555529&width=980",
+    "video": null,
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Panasonic",
+      "Broadcast camera",
+      "4k studio camera",
+      "Autofocus",
+      "​panasonic ak-ubx100"
+    ],
+    "seoTitle": "Panasonic Brings Autofocus to 4K Studio Cameras for the First Time",
+    "seoDescription": "In gearing up for IBC 2025, where Panasonic plans to show off these innovations, the company has made two major announcements in the world of broadcast studi..."
+  },
+  {
+    "title": "Amarres de amor y análisis predictivo con pandas y Python",
+    "url": "https://dev.to/hector_cruz_68ebfda340685/amarres-de-amor-y-analisis-predictivo-con-pandas-y-python-mgh",
+    "publishedAt": "2025-09-04T16:19:29.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Cuando hablamos de amarres de amor, automáticamente pensamos en análisis de datos y la predicción. Este artículo no pretende reemplazar la tradición ni cuestionar las mostrar cómo Python y pandas pueden servir como apoyo que, en muchos - El amor es, por naturaleza, un terreno lleno de incertidumbre. Nadie crear modelos simbólicos que nos ayuden a detectar...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp13xr3cq3r9qq3r2nqrp.png",
+    "video": null,
+    "author": "hector cruz",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "Amarres de amor y análisis predictivo con pandas y Python",
+    "seoDescription": "Cuando hablamos de amarres de amor, automáticamente pensamos en análisis de datos y la predicción. Este artículo no pretende reemplazar la tradición ni cuest..."
+  },
+  {
+    "title": "Nikon Zf Gets a New Silver Look and Film Grain Update",
+    "url": "https://nofilmschool.com/nikon-zf-silver-edition",
+    "publishedAt": "2025-09-04T16:13:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "At this point, most folks in the film and video world know a thing or two about what makes a good camera a good camera. You have your usual mix of specs and features to consider, as well as your own personal preferences for looks, colors, and operability. Yet, while the aesthetics of a camera’s physical design might seem unimportant, you’d be surprised ho...",
+    "image": "https://nofilmschool.com/media-library/nikon-zf-silver-edition.jpg?id=61555407&width=980",
+    "video": "https://www.youtube.com/embed/egiV2uDRdBA?rel=0",
+    "author": "Jourdan Aldredge",
+    "tags": [
+      "Nikon",
+      "Nikon zf",
+      "Nikon camera",
+      "Film grain",
+      "Nikon film grain feature",
+      "Nikon zf silver edition"
+    ],
+    "seoTitle": "Nikon Zf Gets a New Silver Look and Film Grain Update",
+    "seoDescription": "At this point, most folks in the film and video world know a thing or two about what makes a good camera a good camera. You have your usual mix of specs and ..."
+  },
+  {
     "title": "Darth Vader&#8217;s lightsaber is up for auction",
     "url": "https://www.theverge.com/news/771642/darth-vader-lightsaber-propstore-auction-indiana-jones",
     "publishedAt": "2025-09-04T16:11:45.000Z",
@@ -86,13 +270,13 @@
     "publishedAt": "2025-09-04T16:00:00.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "A shot of the HushJet Purifier Compact snapped at IFA 2025. Dyson is launching a new air purifier that’s designed to look — but thankfully, not sound — like a jet engine. The Dyson HushJet Purifier Compact is launching in the US on September 30th for $349.99, featuring a new nozzle design that’s shaped to help the device blast jets of air at high speed, s...",
+    "summary": "A shot of the HushJet Purifier Compact taken at IFA 2025. | Photo: Jennifer Tuohy / The Verge Dyson is launching a new air purifier that’s designed to look — but thankfully, not sound — like a jet engine. The Dyson HushJet Purifier Compact is launching in the US on September 30th for $349.99, featuring a new nozzle design that’s shaped to help the device ...",
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_6296.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
     "author": "Jess Weatherbed",
     "tags": [],
     "seoTitle": "This Dyson air purifier shoots out fresh air like a jet engine",
-    "seoDescription": "A shot of the HushJet Purifier Compact snapped at IFA 2025. Dyson is launching a new air purifier that’s designed to look — but thankfully, not sound — like ..."
+    "seoDescription": "A shot of the HushJet Purifier Compact taken at IFA 2025. | Photo: Jennifer Tuohy / The Verge Dyson is launching a new air purifier that’s designed to look —..."
   },
   {
     "title": "Google Photos now lets you animate your camera roll with Veo 3 for free",
@@ -123,25 +307,6 @@
     ],
     "seoTitle": "If you’re upgrading wireless router, look for this brand new standard",
     "seoDescription": "If you’re planning to replace your wireless router with a new one and you have a smart home, there’s a new certification you’re going to want … more…"
-  },
-  {
-    "title": "Cómo usar Python para analizar compatibilidad en amarres de amor",
-    "url": "https://dev.to/takeo_sartorius_c68c5ebb0/como-usar-python-para-analizar-compatibilidad-en-amarres-de-amor-1532",
-    "publishedAt": "2025-09-04T15:50:21.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "El cruce entre tecnología y espiritualidad ha tomado cada vez más relevancia en los últimos años. La búsqueda de compatibilidad en el amor ha existido desde tiempos ancestrales: astrología, numerología, tarot y rituales forman parte de un conjunto de prácticas que buscan explicar o reforzar la conexión entre dos personas. Hoy en día, con el avance de la p...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnlbefexpfxi3inmejqca.png",
-    "video": null,
-    "author": "Takeo Sartorius",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Cómo usar Python para analizar compatibilidad en amarres de amor",
-    "seoDescription": "El cruce entre tecnología y espiritualidad ha tomado cada vez más relevancia en los últimos años. La búsqueda de compatibilidad en el amor ha existido desde ..."
   },
   {
     "title": "The best stuff announced at IFA so far",
@@ -204,44 +369,6 @@
     "seoDescription": "This year, football season kicks off with a twist: Following tonight's season opener, YouTube will stream the NFL's first Friday game of the season - a face-..."
   },
   {
-    "title": "From 20+ Years of Building Software to ShipDotnet 🚀",
-    "url": "https://dev.to/kedzior_io/from-20-years-of-building-software-to-shipdotnet-50b1",
-    "publishedAt": "2025-09-04T15:23:59.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Over the last two decades, I've worked on more projects than I can count. Each new one was an improvement over the last sometimes because I learned from mistakes, other times because new tools or patterns became available. But no matter how much experience I had, every project came with its own quirks. Different requirements, different client needs, diffe...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi94pcu7sgrb49ixbfnnx.png",
-    "video": null,
-    "author": "Artur Kedzior",
-    "tags": [
-      "webdev",
-      "javascript",
-      "dotnet",
-      "ai"
-    ],
-    "seoTitle": "From 20+ Years of Building Software to ShipDotnet 🚀",
-    "seoDescription": "Over the last two decades, I've worked on more projects than I can count. Each new one was an improvement over the last sometimes because I learned from mist..."
-  },
-  {
-    "title": "Aplicativos en Python para clasificar hierbas mágicas según vibración espiritual",
-    "url": "https://dev.to/jaime_smith_cfd7d9641239c/plicativos-en-python-para-clasificar-hierbas-magicas-segun-vibracion-espiritual-59pg",
-    "publishedAt": "2025-09-04T15:23:16.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "En la actualidad, la combinación de la espiritualidad con la tecnología Python para crear programas capaces de clasificar hierbas mágicas . Este enfoque permite tanto a investigadores de tradiciones místicas como Cada hierba, desde la albahaca hasta la ruda, se considera que posee una convertir esas cualidades subjetivas . En este sentido, lugares dedicad...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff65oehikhxrlsk01o5im.png",
-    "video": null,
-    "author": "Jaime Smith",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "Aplicativos en Python para clasificar hierbas mágicas según vibración espiritual",
-    "seoDescription": "En la actualidad, la combinación de la espiritualidad con la tecnología Python para crear programas capaces de clasificar hierbas mágicas . Este enfoque perm..."
-  },
-  {
     "title": "One of Apple Music’s best features is improving at the perfect time",
     "url": "https://9to5mac.com/2025/09/04/one-of-apple-musics-best-features-is-improving-at-the-perfect-time/",
     "publishedAt": "2025-09-04T15:15:14.000Z",
@@ -274,25 +401,6 @@
     "seoDescription": "iPhone 17 news will undoubtedly dominate technology headlines next week. Yet September 9 could also prove to be a turning point for Apple’s CarPlay Ultra. more…"
   },
   {
-    "title": "📌 Share Data Between Components in Angular: Best Practices & Different Approaches",
-    "url": "https://dev.to/rohit_singh_ee84e64941db7/share-data-between-components-in-angular-best-practices-different-approaches-427b",
-    "publishedAt": "2025-09-04T15:12:09.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When building Angular applications, one common challenge developers face is sharing data between components. Sometimes you need to pass data from parent to child, sometimes from child to parent, and in many cases between unrelated components. In this article, we’ll explore different approaches to share data in Angular, along with best practices to keep yo...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
-    "video": null,
-    "author": "ROHIT SINGH",
-    "tags": [
-      "webdev",
-      "angular",
-      "typescript",
-      "frontend"
-    ],
-    "seoTitle": "📌 Share Data Between Components in Angular: Best Practices & Different Approaches",
-    "seoDescription": "When building Angular applications, one common challenge developers face is sharing data between components. Sometimes you need to pass data from parent to c..."
-  },
-  {
     "title": "Jury orders Google to pay $425 million for violating user privacy",
     "url": "https://www.theverge.com/news/771540/google-class-action-verdict-user-privacy-tracking",
     "publishedAt": "2025-09-04T15:03:02.000Z",
@@ -305,34 +413,6 @@
     "tags": [],
     "seoTitle": "Jury orders Google to pay $425 million for violating user privacy",
     "seoDescription": "A federal jury in California has ordered Google to pay $425 million for violating user privacy by collecting the data of millions of people even after they d..."
-  },
-  {
-    "title": "Welcome to Optimizer, our relentless quest to live a smarter, healthier life",
-    "url": "https://www.theverge.com/optimizer-newsletter/769130/optimizer-newsletter-gadgets-apps-wearable-health",
-    "publishedAt": "2025-09-04T15:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Every year, I sit in these fancy amphitheaters and watch the biggest names in tech promise how their latest phone, smartwatch, app, chatbot, or doohickey will make our lives better. This calendar app? It's going to make you more efficient. This smartwatch? Get ready for six-pack abs and a sub-four-hour marathon time. AI on your phone will give you so much...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Optimizer-Site-Post.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Victoria Song",
-    "tags": [],
-    "seoTitle": "Welcome to Optimizer, our relentless quest to live a smarter, healthier life",
-    "seoDescription": "Every year, I sit in these fancy amphitheaters and watch the biggest names in tech promise how their latest phone, smartwatch, app, chatbot, or doohickey wil..."
-  },
-  {
-    "title": "SwitchBot launches three AI-powered smart home products — including a pair of robots",
-    "url": "https://www.theverge.com/ifa-berlin/770534/switchbot-ai-hub-eink-frame-robot-pet",
-    "publishedAt": "2025-09-04T15:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Niko and Noa are AI-powered pets. It was inevitable that AI would be everywhere at IFA this year, but the smart home is where we’re really seeing action. SwitchBot, known for its quirky and clever home gadgets, launched three new AI-powered products this week: a smart home AI Hub, a colorful E Ink AI Art Frame, and two animated AI pets named Niko and Noa....",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Niko-Noa.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "SwitchBot launches three AI-powered smart home products — including a pair of robots",
-    "seoDescription": "Niko and Noa are AI-powered pets. It was inevitable that AI would be everywhere at IFA this year, but the smart home is where we’re really seeing action. Swi..."
   },
   {
     "title": "Hands-on: Kuxiu’s new X40 Turbo brings Qi2.2 fast 25W charging to your iPhone",
@@ -542,73 +622,5 @@
     ],
     "seoTitle": "Samsung Launches $1,200 Galaxy Tab S11 Ultra With Thin Design and Revamped S-Pen",
     "seoDescription": "Samsung today announced its newest tablet lineup, introducing the Galaxy Tab S11 and the Galaxy Tab S11 Ultra. We were able to take a quick look at the new t..."
-  },
-  {
-    "title": "Samsung's Next Galaxy Models Look a Lot More Like the iPhone 17",
-    "url": "https://www.macrumors.com/2025/09/04/next-galaxy-models-look-a-lot-like-iphone-17/",
-    "publishedAt": "2025-09-04T13:38:51.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Samsung's upcoming Galaxy S26 models may adopt key design elements from the iPhone 17 lineup, according to new dummy units shared by reliable leaker and journalist Sonny Dickson. An image posted on X by Dickson shows three mock devices that are believed to represent the Galaxy S26, S26 Edge, and S26 Ultra. The images reveal that Samsung is moving ahead wi...",
-    "image": "https://images.macrumors.com/article-new/2025/09/s26-dummy.jpeg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Samsung",
-      "Sonny Dickson"
-    ],
-    "seoTitle": "Samsung's Next Galaxy Models Look a Lot More Like the iPhone 17",
-    "seoDescription": "Samsung's upcoming Galaxy S26 models may adopt key design elements from the iPhone 17 lineup, according to new dummy units shared by reliable leaker and jour..."
-  },
-  {
-    "title": "Adobe Premiere video editor coming to iPhone as a free app",
-    "url": "https://9to5mac.com/2025/09/04/adobe-premiere-video-editor-coming-to-iphone-as-a-free-app/",
-    "publishedAt": "2025-09-04T13:35:08.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Adobe Premiere Pro users will be happy to hear there’s an iPhone app launching later this month, which the company is promising will be closer to the capabilities of its desktop app than the cut-down Premiere Rush app. The company will also be hoping to attract those who are newer to video editing on iPhone, in order to create a potential new market for t...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Adobe-Premiere-video-editor-coming-to-iPhone-as-a-free-app.webp?w=1400",
-    "video": null,
-    "author": "Ben Lovejoy",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Adobe Premiere video editor coming to iPhone as a free app",
-    "seoDescription": "Adobe Premiere Pro users will be happy to hear there’s an iPhone app launching later this month, which the company is promising will be closer to the capabil..."
-  },
-  {
-    "title": "New Report Lists RAM Amounts in iPhone 17 and iPhone 17 Pro Models",
-    "url": "https://www.macrumors.com/2025/09/04/iphone-17-ram-amounts-trendforce/",
-    "publishedAt": "2025-09-04T13:10:31.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Three out of four iPhone 17 models will feature more RAM than the equivalent iPhone 16 models, according to a new report that aligns with previous rumors. The all-new iPhone 17 Air, the iPhone 17 Pro, and the iPhone 17 Pro Max will each be equipped with 12GB of RAM, according to Taiwanese market intelligence firm TrendForce, which cited \"current market in...",
-    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-in-Hand-Feature-Lowgo.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "iPhone 17",
-      "iPhone 17 Air",
-      "iPhone 17 Pro",
-      "TrendForce"
-    ],
-    "seoTitle": "New Report Lists RAM Amounts in iPhone 17 and iPhone 17 Pro Models",
-    "seoDescription": "Three out of four iPhone 17 models will feature more RAM than the equivalent iPhone 16 models, according to a new report that aligns with previous rumors. Th..."
-  },
-  {
-    "title": "Apple highlights Brazilian study on domestic App Store performance",
-    "url": "https://9to5mac.com/2025/09/04/apple-highlights-brazilian-study-on-domestic-app-store-performance/",
-    "publishedAt": "2025-09-04T13:04:13.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "As the App Store faces increasing regulatory pressure in Brazil, a study highlighted by Apple today shows that iOS apps generated R$63.8 million ($11.7 million) in the country last year, with most of that revenue incurring no commission. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/app-store-brazil.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple highlights Brazilian study on domestic App Store performance",
-    "seoDescription": "As the App Store faces increasing regulatory pressure in Brazil, a study highlighted by Apple today shows that iOS apps generated R$63.8 million ($11.7 milli..."
   }
 ]
