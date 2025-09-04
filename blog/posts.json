@@ -1,88 +1,312 @@
 [
   {
-    "title": "What Actually is DevOps? Scope, Importance, and Its Role in IT",
-    "url": "https://dev.to/umaid777/what-actually-is-devops-scope-importance-and-its-role-in-it-54o9",
-    "publishedAt": "2025-09-04T12:26:41.000Z",
+    "title": "[Boost]",
+    "url": "https://dev.to/arindam_1729/-3ee9",
+    "publishedAt": "2025-09-04T13:15:48.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "If you’ve been around the tech industry, you’ve probably heard the buzzword “DevOps” a lot. Some say it’s about tools like Docker, Jenkins, and Kubernetes. Others confuse it with system administration or automation. The truth? DevOps is much more than just tools. And the lack of clarity around what DevOps really is often creates confusion for beginners an...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1iuz17pk0hf7o5k70jlt.png",
+    "summary": "Vibe coding: Because who doesn’t love surprise technical debt!? Arindam Majumder for CodeRabbit ・ Sep 1 #ai #webdev #programming #javascript",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F7167%2F9b656965-41ba-427a-a32a-6538e0b145f2.jpeg",
     "video": null,
-    "author": "Umaid Hashmi",
+    "author": "Arindam Majumder ",
+    "tags": [
+      "ai",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Vibe coding: Because who doesn’t love surprise technical debt!? Arindam Majumder for CodeRabbit ・ Sep 1 #ai #webdev #programming #javascript"
+  },
+  {
+    "title": "New Report Lists RAM Amounts in iPhone 17 and iPhone 17 Pro Models",
+    "url": "https://www.macrumors.com/2025/09/04/iphone-17-ram-amounts-trendforce/",
+    "publishedAt": "2025-09-04T13:10:31.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Three out of four iPhone 17 models will feature more RAM than the equivalent iPhone 16 models, according to a new report that aligns with previous rumors. The all-new iPhone 17 Air, the iPhone 17 Pro, and the iPhone 17 Pro Max will each be equipped with 12GB of RAM, according to Taiwanese market intelligence firm TrendForce, which cited \"current market in...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-in-Hand-Feature-Lowgo.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "iPhone 17",
+      "iPhone 17 Air",
+      "iPhone 17 Pro",
+      "TrendForce"
+    ],
+    "seoTitle": "New Report Lists RAM Amounts in iPhone 17 and iPhone 17 Pro Models",
+    "seoDescription": "Three out of four iPhone 17 models will feature more RAM than the equivalent iPhone 16 models, according to a new report that aligns with previous rumors. Th..."
+  },
+  {
+    "title": "Apple highlights Brazilian study on domestic App Store performance",
+    "url": "https://9to5mac.com/2025/09/04/apple-highlights-brazilian-study-on-domestic-app-store-performance/",
+    "publishedAt": "2025-09-04T13:04:13.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "As the App Store faces increasing regulatory pressure in Brazil, a study highlighted by Apple today shows that iOS apps generated R$63.8 million ($11.7 million) in the country last year, with most of that revenue incurring no commission. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/app-store-brazil.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple highlights Brazilian study on domestic App Store performance",
+    "seoDescription": "As the App Store faces increasing regulatory pressure in Brazil, a study highlighted by Apple today shows that iOS apps generated R$63.8 million ($11.7 milli..."
+  },
+  {
+    "title": "Top Satellite Internet Options for RVers Working Remotely",
+    "url": "https://dev.to/ubifi_llc/top-satellite-internet-options-for-rvers-working-remotely-2kh1",
+    "publishedAt": "2025-09-04T13:03:36.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Top Satellite Internet Options for RVers Working Remotely | Ubifi Working remotely while traveling in an RV has become more popular. Whether you are a digital nomad or a remote employee, staying connected on the road is essential for productivity. Satellite internet provides a reliable solution for RVers who travel to rural or off-grid areas where cellula...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F22jcymoni1hfsx32b6yv.png",
+    "video": null,
+    "author": "UbiFi LLC",
     "tags": [
       "webdev",
-      "devops",
-      "cloud",
-      "beginners"
+      "tutorial"
     ],
-    "seoTitle": "What Actually is DevOps? Scope, Importance, and Its Role in IT",
-    "seoDescription": "If you’ve been around the tech industry, you’ve probably heard the buzzword “DevOps” a lot. Some say it’s about tools like Docker, Jenkins, and Kubernetes. O..."
+    "seoTitle": "Top Satellite Internet Options for RVers Working Remotely",
+    "seoDescription": "Top Satellite Internet Options for RVers Working Remotely | Ubifi Working remotely while traveling in an RV has become more popular. Whether you are a digita..."
   },
   {
-    "title": "The Browser Company, maker of Arc and Dia, is being acquired",
-    "url": "https://www.theverge.com/web/770947/browser-company-arc-dia-acquired-atlassian",
-    "publishedAt": "2025-09-04T12:20:15.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Dia’s simplicity is neat, but its AI integration is the point. Mike Cannon-Brookes, the CEO of enterprise software giant Atlassian, was one of the first users of the Arc browser. Over the last several years, he has been a prolific bug reporter and feature requester. Now he'll own the thing: Atlassian is acquiring The Browser Company, the New York-based st...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Image-1600x901-1.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "David Pierce",
-    "tags": [],
-    "seoTitle": "The Browser Company, maker of Arc and Dia, is being acquired",
-    "seoDescription": "Dia’s simplicity is neat, but its AI integration is the point. Mike Cannon-Brookes, the CEO of enterprise software giant Atlassian, was one of the first user..."
-  },
-  {
-    "title": "Master Data Analytics and Artificial Intelligence in Hyderabad – Future Careers Begin Here",
-    "url": "https://dev.to/gayatri_pujari_1e061dabe5/master-data-analytics-and-artificial-intelligence-in-hyderabad-future-careers-begin-here-2ln",
-    "publishedAt": "2025-09-04T12:20:14.000Z",
+    "title": "9 Practical Online Resources to Learn Coding in 2025 📚👨‍💻",
+    "url": "https://dev.to/madza/9-practical-online-resources-to-learn-coding-in-2025-30m3",
+    "publishedAt": "2025-09-04T13:02:46.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Data Analytics & AI Course in Hyderabad | Future Skills at TechSaavvy Enroll in Data Analytics and AI training in Hyderabad with TechSaavvy Akademy. Learn big data, machine learning, and predictive analytics with job-ready skills.…Read More → Data Analytics and AI Training in Hyderabad – Your Ticket to the Fastest-Growing Career Every business today is po...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5pi5tc7c6s7y2sb20wau.webp",
+    "summary": "Learning to code has never been more accessible than it is now. Thanks to innovative web apps and online platforms, mastering programming has become achievable for learners at every skill level. These modern tools break down complex ideas into interactive experiences, helping you build your coding skills faster and with greater confidence. Nevertheless, t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F30bc7dk1nnkhp9gt1m5k.png",
     "video": null,
-    "author": "Gayatri pujari",
+    "author": "Madza",
+    "tags": [
+      "coding",
+      "webdev",
+      "learning",
+      "career"
+    ],
+    "seoTitle": "9 Practical Online Resources to Learn Coding in 2025 📚👨‍💻",
+    "seoDescription": "Learning to code has never been more accessible than it is now. Thanks to innovative web apps and online platforms, mastering programming has become achievab..."
+  },
+  {
+    "title": "Here’s how the Pixel’s AI zoom compares to a real 100x lens",
+    "url": "https://www.theverge.com/tech/769360/google-pixel-10-pro-res-zoom-100x-sample-photos-nikon-coolpix-p1100",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Optical zoom takes on generative AI. In case you missed it last week among other big news items, Google shipped a phone camera with a zoom feature that uses generative AI. That's right: the Pixel 10 Pro comes with AI right inside the camera app that cleans up otherwise crappy digital zoom images all the way up to 100x. It's a what-is-a-photo nightmare, bu...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/DSC01389.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Allison Johnson",
+    "tags": [],
+    "seoTitle": "Here’s how the Pixel’s AI zoom compares to a real 100x lens",
+    "seoDescription": "Optical zoom takes on generative AI. In case you missed it last week among other big news items, Google shipped a phone camera with a zoom feature that uses ..."
+  },
+  {
+    "title": "Here is Lego’s $1,000 Death Star, the most expensive Lego set ever",
+    "url": "https://www.theverge.com/news/770770/lego-ucs-death-star-price-release-date",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Eight years after breaking every record with an $800, 7,541-piece Star Wars Millennium Falcon, the Lego Group is introducing its first $1,000 set. It’s an intricately detailed Death Star nearly two feet tall (52.3cm), a foot and a half wide (48cm) and over a foot (38.3cm) deep, with enough compartments to re-enact nearly every iconic Death Star scene from...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/lego-death-star-4k.jpg?quality=90&#038;strip=all&#038;crop=5.4,10.045662100457,85.4,84.170471841705",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "Here is Lego’s $1,000 Death Star, the most expensive Lego set ever",
+    "seoDescription": "Eight years after breaking every record with an $800, 7,541-piece Star Wars Millennium Falcon, the Lego Group is introducing its first $1,000 set. It’s an in..."
+  },
+  {
+    "title": "Strava’s refreshed Apple Watch app adds Live Segments",
+    "url": "https://www.theverge.com/news/771048/stravas-refreshed-apple-watch-app-adds-live-segments",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Apple Watch is getting an improved Strava interface and Live Segment support. | Photo by Thomas Ricker / The Verge Strava is bringing what it calls a “cleaner and more intuitive” experience to the Apple Watch along with Live Segments. The changes are meant to address growing demand from athletes turning to Apple’s wearable, according to Strava: In 2024, S...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/strava-apple-watch-segment.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "Strava’s refreshed Apple Watch app adds Live Segments",
+    "seoDescription": "Apple Watch is getting an improved Strava interface and Live Segment support. | Photo by Thomas Ricker / The Verge Strava is bringing what it calls a “cleane..."
+  },
+  {
+    "title": "LinkedIn takes on hiring scams with recruiter verification",
+    "url": "https://www.theverge.com/news/771210/linkedin-recruiter-executive-verification-mandatory",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "LinkedIn is trying to help put a stop to recruitment scams by requiring anyone with a recruitment-related job title to verify their place of employment. Executives will have to go through the same process, while company page verification is now rolling out more widely too. Existing recruiters won’t need to go through verification immediately, but anyone w...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/gettyimages-2194086272.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "LinkedIn takes on hiring scams with recruiter verification",
+    "seoDescription": "LinkedIn is trying to help put a stop to recruitment scams by requiring anyone with a recruitment-related job title to verify their place of employment. Exec..."
+  },
+  {
+    "title": "Adobe’s Premiere video editor is coming to iPhone for free",
+    "url": "https://www.theverge.com/news/771236/adobe-premiere-iphone-ios-video-editor-android",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Adobe is bringing its video editor Premiere to iPhone, promising “pro-level” editing on the go for free. The app will launch later this month, with an Android version also under development. The Premiere app features a familiar multi-track timeline, with support for an unlimited number of video, audio, and text layers. There’s automatic captioning, 4K HDR...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/adobe-premier-ios-mobile-launch.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Adobe’s Premiere video editor is coming to iPhone for free",
+    "seoDescription": "Adobe is bringing its video editor Premiere to iPhone, promising “pro-level” editing on the go for free. The app will launch later this month, with an Androi..."
+  },
+  {
+    "title": "Nvidia’s RTX 5080 upgrade for GeForce Now arrives on September 10th",
+    "url": "https://www.theverge.com/news/771273/nvidia-geforce-now-rtx-5080-upgrade-release-date",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Nvidia announced last month that it’s planning to upgrade its GeForce Now cloud gaming service to RTX 5080 GPUs. Now, we have a date for that upgrade: September 10th. The upgrade will allow GeForce Now subscribers to rent what’s effectively an RTX 5080 in the cloud, with a huge 48GB of memory and DLSS 4 support. Nvidia’s RTX 5080 upgrade for GeForce Now w...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/gfn-thursday-8-21-nv-blog-1280x680-logo.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tom Warren",
+    "tags": [],
+    "seoTitle": "Nvidia’s RTX 5080 upgrade for GeForce Now arrives on September 10th",
+    "seoDescription": "Nvidia announced last month that it’s planning to upgrade its GeForce Now cloud gaming service to RTX 5080 GPUs. Now, we have a date for that upgrade: Septem..."
+  },
+  {
+    "title": "Satechi Launches OntheGo Travel Bluetooth Keyboard and Mouse",
+    "url": "https://www.macrumors.com/2025/09/04/satechi-launches-onthego-travel-bluetooth-keyboard-and-mouse/",
+    "publishedAt": "2025-09-04T13:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Satechi today announced the launch of a new travel-friendly mouse and keyboard setup designed for smartphones and tablets. The OntheGo Bluetooth Keyboard with Stand and OntheGo Bluetooth Mouse have been developed to be used when flying, at a coffee shop, in coworking spaces, when commuting, and more. The OntheGo Bluetooth Keyboard has a protective cover t...",
+    "image": "https://images.macrumors.com/article-new/2025/09/satechi-onthego-keyboard-mouse.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Satechi"
+    ],
+    "seoTitle": "Satechi Launches OntheGo Travel Bluetooth Keyboard and Mouse",
+    "seoDescription": "Satechi today announced the launch of a new travel-friendly mouse and keyboard setup designed for smartphones and tablets. The OntheGo Bluetooth Keyboard wit..."
+  },
+  {
+    "title": "iPhone 17 colors leak points to vibrant orange for Pro",
+    "url": "https://9to5mac.com/2025/09/04/iphone-17-colors/",
+    "publishedAt": "2025-09-04T12:58:26.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "We’re five days out from Apple’s iPhone 17 event, which means the last-minute leaks are more likely to be accurate. That’s good news for fans of the rumored orange iPhone… more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/iphone-17-pro-orange-concept.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 colors leak points to vibrant orange for Pro",
+    "seoDescription": "We’re five days out from Apple’s iPhone 17 event, which means the last-minute leaks are more likely to be accurate. That’s good news for fans of the rumored ..."
+  },
+  {
+    "title": "7 Problems Solved by Custom Software Development Services",
+    "url": "https://dev.to/theo_blogs/7-problems-solved-by-custom-software-development-services-5bka",
+    "publishedAt": "2025-09-04T12:54:20.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "07 Real-World Problems Solved by Custom Software Development Services Every business faces unique challenges, yet most off-the-shelf software is built with a “one-size-fits-all” mindset. While these ready-made tools may seem cost-effective at first, they often fail to address the deeper issues that companies deal with daily—such as scalability, integratio...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0wsqwv1678uqt3kc5aem.png",
+    "video": null,
+    "author": "Theo_Blogs",
     "tags": [
       "webdev",
       "programming",
-      "ai",
-      "productivity"
+      "javascript",
+      "ai"
     ],
-    "seoTitle": "Master Data Analytics and Artificial Intelligence in Hyderabad – Future Careers Begin Here",
-    "seoDescription": "Data Analytics & AI Course in Hyderabad | Future Skills at TechSaavvy Enroll in Data Analytics and AI training in Hyderabad with TechSaavvy Akademy. Learn bi..."
+    "seoTitle": "7 Problems Solved by Custom Software Development Services",
+    "seoDescription": "07 Real-World Problems Solved by Custom Software Development Services Every business faces unique challenges, yet most off-the-shelf software is built with a..."
   },
   {
-    "title": "25 Virtual Team Building Activities for Remote Teams",
-    "url": "https://dev.to/devmakasana/25-virtual-team-building-activities-for-remote-teams-57n4",
-    "publishedAt": "2025-09-04T12:19:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "25 Virtual Team Building Activities for Remote Teams Kruti for Teamcamp ・ Sep 4 #webdev #beginners #productivity #devops",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Sanjay M.",
-    "tags": [
-      "webdev",
-      "beginners",
-      "productivity",
-      "devops"
-    ],
-    "seoTitle": "25 Virtual Team Building Activities for Remote Teams",
-    "seoDescription": "25 Virtual Team Building Activities for Remote Teams Kruti for Teamcamp ・ Sep 4 #webdev #beginners #productivity #devops"
-  },
-  {
-    "title": "This high-end Miele outdoor grill will cook for you",
-    "url": "https://www.theverge.com/news/770810/miele-dreams-outdoor-kitchen-smart-grill-launch",
-    "publishedAt": "2025-09-04T12:17:10.000Z",
+    "title": "TCL’s fun little PlayCube projector is a Google TV concept no more",
+    "url": "https://www.theverge.com/news/766615/tcls-fun-little-playcube-projector-is-a-google-tv-concept-no-more",
+    "publishedAt": "2025-09-04T12:53:24.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "If the Miele Dreams grill is sorting dinner for you, that means there’s more time for socializing with friends and family. Luxury appliance manufacturer Miele is entering the outdoor cooking market with its new exterior kitchen range, which provides customizable modules and smart grilling capabilities. The “Dreams” modular outdoor kitchen introduced at IF...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/2025-069_03.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
+    "summary": "PlayCube is a cross between a Rubik’s cube and TARS. | Image: TCL TCL is not a brand that typically elicits desire from me, yet here I am, looking at its IFA 2025 announcement of the PlayCube, wondering how a projector that pays homage to both a Rubik’s cube and TARS can fit into my life. The all-in-one Google TV projector with up to three hours of batter...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/13.jpg.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/II4r89aWjIQ?rel=0&#038;start=3",
+    "author": "Thomas Ricker",
     "tags": [],
-    "seoTitle": "This high-end Miele outdoor grill will cook for you",
-    "seoDescription": "If the Miele Dreams grill is sorting dinner for you, that means there’s more time for socializing with friends and family. Luxury appliance manufacturer Miel..."
+    "seoTitle": "TCL’s fun little PlayCube projector is a Google TV concept no more",
+    "seoDescription": "PlayCube is a cross between a Rubik’s cube and TARS. | Image: TCL TCL is not a brand that typically elicits desire from me, yet here I am, looking at its IFA..."
+  },
+  {
+    "title": "Ng-News 25/35: @for tracking strategies, Future of Angular at Angular Space",
+    "url": "https://dev.to/this-is-angular/ng-news-2535-for-tracking-strategies-future-of-angular-at-angular-space-4cnn",
+    "publishedAt": "2025-09-04T12:50:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "No big releases this time, but lots of quality content: track tracking strategies demystified, Angular Digest launches, Michael Small dives into Signal Forms on Angular Space, and a new UI library lands. 📌 Tracking Strategies Matthieu Riegler is a member of the Angular team and one of his main responsibilities is improving the documentation. According to...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fjeanmeche.github.io%2Fangular-for-tracking%2Fog.png",
+    "video": null,
+    "author": "ng-news",
+    "tags": [
+      "angular",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Ng-News 25/35: @for tracking strategies, Future of Angular at Angular Space",
+    "seoDescription": "No big releases this time, but lots of quality content: track tracking strategies demystified, Angular Digest launches, Michael Small dives into Signal Forms..."
+  },
+  {
+    "title": "Stephen Shore’s Photos Reveal Glamor and Nostalgia of 1960s New York",
+    "url": "https://petapixel.com/2025/09/04/stephen-shores-photos-reveal-glamor-and-nostalgia-of-1960s-new-york/",
+    "publishedAt": "2025-09-04T12:37:15.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Stephen Shore is most famous for his instantly recognizable photos of Andy Warhol and his superstars at the Factory in New York, but before that he was a literal child wandering the streets with a camera. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/Stephen-Shore-Early-Work.jpg",
+    "video": null,
+    "author": "Matt Growcoot",
+    "tags": [
+      "Analog",
+      "Features",
+      "Spotlight",
+      "1960s",
+      "andywarhol",
+      "leica",
+      "newyork",
+      "stephenshore"
+    ],
+    "seoTitle": "Stephen Shore’s Photos Reveal Glamor and Nostalgia of 1960s New York",
+    "seoDescription": "Stephen Shore is most famous for his instantly recognizable photos of Andy Warhol and his superstars at the Factory in New York, but before that he was a lit..."
+  },
+  {
+    "title": "Samsung’s Galaxy S26 series may ape the iPhone 17’s biggest design change",
+    "url": "https://www.theverge.com/news/771261/samsungs-galaxy-s26-series-may-ape-the-iphone-17s-biggest-design-change",
+    "publishedAt": "2025-09-04T12:36:29.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "These could be the rough shapes of the Galaxy S26, S26 Edge, and S26 Ultra. At least one phone in Samsung’s upcoming Galaxy S26 range may look a little different to what we were expecting, and a lot more like Apple’s iPhone 17 series. That’s going by a photo of dummy phones shared by leaker and journalist Sonny Dickson, who has a pretty good track record ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/samsung-galaxy-s26-dummy-leak-sonny-dickson.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Dominic Preston",
+    "tags": [],
+    "seoTitle": "Samsung’s Galaxy S26 series may ape the iPhone 17’s biggest design change",
+    "seoDescription": "These could be the rough shapes of the Galaxy S26, S26 Edge, and S26 Ultra. At least one phone in Samsung’s upcoming Galaxy S26 range may look a little diffe..."
+  },
+  {
+    "title": "How Wikipedia survives while the rest of the internet breaks",
+    "url": "https://www.theverge.com/cs/features/717322/wikipedia-attacks-neutrality-history-jimmy-wales",
+    "publishedAt": "2025-09-04T12:30:04.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "When armies invade, hurricanes form, or governments fall, a Wikipedia editor will typically update the relevant articles seconds after the news breaks. So quick are editors to change “is” to “was” in cases of notable deaths that they are said to have the fastest past tense in the West. So it was unusual, according to one longtime editor who was watching t...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257817_WIKIPEDIA.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Josh Dzieza",
+    "tags": [],
+    "seoTitle": "How Wikipedia survives while the rest of the internet breaks",
+    "seoDescription": "When armies invade, hurricanes form, or governments fall, a Wikipedia editor will typically update the relevant articles seconds after the news breaks. So qu..."
   },
   {
     "title": "Apple CEO Tim Cook Invited Back to White House for Tech Event",
@@ -101,25 +325,6 @@
     ],
     "seoTitle": "Apple CEO Tim Cook Invited Back to White House for Tech Event",
     "seoDescription": "Apple CEO Tim Cook has been invited to an event for tech leaders at the White House today in the newly renovated Rose Garden, according to The Hill. Cook is ..."
-  },
-  {
-    "title": "FERRARITOTO",
-    "url": "https://dev.to/yanto_beceng_e90cbbf528e1/ferraritoto-7jf",
-    "publishedAt": "2025-09-04T12:01:47.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Click me !!! FerrariToto adalah platform game online keluarga dengan tampilan modern, fitur mudah digunakan, serta permainan aman yang dapat dinikmati semua kalangan. Hiburan praktis untuk semua generasi dalam satu tempat. LINK RESMI FERRARITOTO https://www.ferraritoto.com/",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc1jfcf4scmrws9vw9iop.png",
-    "video": null,
-    "author": "Ferraritoto",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "FERRARITOTO",
-    "seoDescription": "Click me !!! FerrariToto adalah platform game online keluarga dengan tampilan modern, fitur mudah digunakan, serta permainan aman yang dapat dinikmati semua ..."
   },
   {
     "title": "The big iPhone 17 Air question: will Apple’s new design phone carry a premium price tag?",
@@ -152,25 +357,6 @@
     ],
     "seoTitle": "Paramount Plus annual plans half-price for limited time, from $30",
     "seoDescription": "With Apple TV+ and other streaming services increasing their prices this year, there’s some rare good news from Paramount. For a limited period, you can get ..."
-  },
-  {
-    "title": "Building Smarter Data Centers with Digital Twins: Developer’s Guide",
-    "url": "https://dev.to/reetielubana/building-smarter-data-centers-with-digital-twins-developers-guide-3fjf",
-    "publishedAt": "2025-09-04T11:34:55.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Data centers are the backbone of our digital world. From cloud storage to AI workloads, everything we do online runs through them. But as demand grows, so does the need to design, build, and manage data centers more efficiently. That’s where digital twins come in. For developers, this shift opens new opportunities: working with real-time data, 3D models, ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy9n6tdpm3r6q2qcpu527.png",
-    "video": null,
-    "author": "Reetie Lubana",
-    "tags": [
-      "webdev",
-      "discuss",
-      "news",
-      "cybersecurity"
-    ],
-    "seoTitle": "Building Smarter Data Centers with Digital Twins: Developer’s Guide",
-    "seoDescription": "Data centers are the backbone of our digital world. From cloud storage to AI workloads, everything we do online runs through them. But as demand grows, so do..."
   },
   {
     "title": "Galaxy Tab S11 revives 11-inch size as S Pen ditches Bluetooth, copies iPad placement",
@@ -246,76 +432,6 @@
     "seoDescription": "Apple will maintain its entry-level pricing for the standard iPhone 17 this year, but the iPhone 17 Pro and iPhone 17 Pro Max are set to get price hikes, alb..."
   },
   {
-    "title": "Microsoft open-sources its 6502 version of BASIC from 1976",
-    "url": "https://www.theverge.com/news/771120/microsoft-6502-basic-open-source-release",
-    "publishedAt": "2025-09-04T10:18:23.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "After years of unofficial copies of Microsoft’s 6502 BASIC floating around on the internet, the software giant has released the code under an open-source license. 6502 BASIC was one of Microsoft’s first pieces of software, adapted in 1976 by Microsoft cofounder Bill Gates and early employee Ric Weiland to run on the 6502 CPU that powered the Apple II, Ata...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/microsoftlogo_959e1c.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Tom Warren",
-    "tags": [],
-    "seoTitle": "Microsoft open-sources its 6502 version of BASIC from 1976",
-    "seoDescription": "After years of unofficial copies of Microsoft’s 6502 BASIC floating around on the internet, the software giant has released the code under an open-source lic..."
-  },
-  {
-    "title": "IFA 2025: the biggest tech and gadget announcements",
-    "url": "https://www.theverge.com/news/767912/ifa-2025-news-tech-gadgets-products-updates-highlights",
-    "publishedAt": "2025-09-04T10:16:01.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "IFA, the European tech trade show equivalent to CES in the US, is just around the corner. Companies are gearing up to showcase their latest innovations, bringing us the latest product announcements, feature demonstrations, and design concepts that will shape future consumer tech releases. IFA will open its doors between September 5th and 9th, but many of ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/IFA-hero-image-2025.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jess Weatherbed",
-    "tags": [],
-    "seoTitle": "IFA 2025: the biggest tech and gadget announcements",
-    "seoDescription": "IFA, the European tech trade show equivalent to CES in the US, is just around the corner. Companies are gearing up to showcase their latest innovations, brin..."
-  },
-  {
-    "title": "Huawei’s second trifold adds stylus support and purple pleather",
-    "url": "https://www.theverge.com/news/771122/huaweis-second-trifold-adds-stylus-support-and-purple-pleather",
-    "publishedAt": "2025-09-04T10:04:24.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Huawei has announced the Mate XTs, its second-generation trifold phone, which is available to order now in China. It’s only a minor upgrade on the first edition, but comes with new colors, stylus support, and a slightly lower price tag. The biggest addition is the ability to use a stylus on the folding screen, though otherwise the 10.2-inch display — whic...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/huawei-mate-xts-purple.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Huawei’s second trifold adds stylus support and purple pleather",
-    "seoDescription": "Huawei has announced the Mate XTs, its second-generation trifold phone, which is available to order now in China. It’s only a minor upgrade on the first edit..."
-  },
-  {
-    "title": "Roborock&#8217;s Curv 2 Pro can drop its mop pads to keep your carpets dry",
-    "url": "https://www.theverge.com/news/770274/robovac-qrevo-curv-2-pro-suction-boost",
-    "publishedAt": "2025-09-04T10:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Roborock is launching an updated Qrevo Curv robot vacuum that offers an impressive 25,000 Pa of suction power — topping the 18,500 Pa available with last year’s model. That’s not all that’s new with the Qrevo Curv 2 Pro, either, as the newly announced robovac comes with a dual-spinning mop system that automatically detaches before passing over carpets, he...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/QrevoC2Pro_38218449.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Roborock&#8217;s Curv 2 Pro can drop its mop pads to keep your carpets dry",
-    "seoDescription": "Roborock is launching an updated Qrevo Curv robot vacuum that offers an impressive 25,000 Pa of suction power — topping the 18,500 Pa available with last yea..."
-  },
-  {
-    "title": "Roborock graduates from vacuuming your house to mowing your lawn",
-    "url": "https://www.theverge.com/news/770725/roborock-robot-lawnmowers-launch-rockmow-z1",
-    "publishedAt": "2025-09-04T10:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the wraps off a trio of robot lawnmowers, with its premium RockMow Z1 featuring an all-wheel drive system to handle steep slopes of up to 80 percent, or around 38.66 degrees. In addition to sporting inde...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/RockMowZ1_6256037.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Roborock graduates from vacuuming your house to mowing your lawn",
-    "seoDescription": "Roborock, a company best known for its robovacs, is entering a new product category: robot lawnmowers. During the IFA 2025 tech conference, Roborock took the..."
-  },
-  {
     "title": "iPhone 17 Air Could Start at $1,099 With 256GB Storage, 1TB for $1,499",
     "url": "https://www.macrumors.com/2025/09/04/iphone-17-air-price-1099-256gb-base-storage/",
     "publishedAt": "2025-09-04T09:54:53.000Z",
@@ -332,48 +448,6 @@
     ],
     "seoTitle": "iPhone 17 Air Could Start at $1,099 With 256GB Storage, 1TB for $1,499",
     "seoDescription": "Apple's upcoming iPhone 17 Air will have a $1,099 starting price providing 256GB of base storage and will max out at $1,499 with a 1TB option, according to t..."
-  },
-  {
-    "title": "Samsung’s Galaxy S25 FE and Tab S11 are thinner, lighter, and otherwise about the same",
-    "url": "https://www.theverge.com/phones/768658/samsung-galaxy-s25-fe-tab-s11-ultra",
-    "publishedAt": "2025-09-04T09:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "If you've been eagerly awaiting Samsung's long-teased trifold phone or Project Moohan XR headset, the company's IFA launches may feel a little prosaic: an affordable spinoff of its flagship phone line, and a pair of Android tablets. The Galaxy S25 FE and Tab S11 series may not be Samsung's most exciting launches of the year, but they're the bread-and-butt...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/samsung-galaxy-s25-fe-tab-s11-04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Dominic Preston",
-    "tags": [],
-    "seoTitle": "Samsung’s Galaxy S25 FE and Tab S11 are thinner, lighter, and otherwise about the same",
-    "seoDescription": "If you've been eagerly awaiting Samsung's long-teased trifold phone or Project Moohan XR headset, the company's IFA launches may feel a little prosaic: an af..."
-  },
-  {
-    "title": "Samsung takes another stab at an FE phone",
-    "url": "https://www.theverge.com/news/770776/samsung-galaxy-s25-fe-tab-s11-ultra-price",
-    "publishedAt": "2025-09-04T09:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Take your pick from four color options. I’ve never been quite sure what to call the category Samsung’s Galaxy FE belongs to. Upper midrange? Midrange plus? Low flagship? Whatever we’re calling it, Samsung is bringing the concept back again this year in the Galaxy S25 FE, which continues to stand for Fan Edition. It’s still $650 like the S24 FE before it a...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257934_S25_FE_CVirginia.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Allison Johnson",
-    "tags": [],
-    "seoTitle": "Samsung takes another stab at an FE phone",
-    "seoDescription": "Take your pick from four color options. I’ve never been quite sure what to call the category Samsung’s Galaxy FE belongs to. Upper midrange? Midrange plus? L..."
-  },
-  {
-    "title": "The newest Samsung SmartThings hub ditches Z-Wave",
-    "url": "https://www.theverge.com/ifa-berlin/770837/the-newest-samsung-smartthings-hub-ditches-z-wave",
-    "publishedAt": "2025-09-04T09:30:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Aeotec announced its Smart Home Hub 2 at the IFA tech show this week, marking the end of an era. The hub, produced in partnership with Samsung, is the fourth generation to support the SmartThings home automation platform, and the first without a Z-Wave radio. The Smart Home Hub 2 has twice the performance of its predecessor, according to a press release f...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Screenshot-2025-09-04-at-12.40.29%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "The newest Samsung SmartThings hub ditches Z-Wave",
-    "seoDescription": "Aeotec announced its Smart Home Hub 2 at the IFA tech show this week, marking the end of an era. The hub, produced in partnership with Samsung, is the fourth..."
   },
   {
     "title": "Innovative Australian Photography Festival Announces Closure",
@@ -546,72 +620,5 @@
     ],
     "seoTitle": "Tim Cook expected back at the White House for Trump AI event",
     "seoDescription": "Where will Tim Cook be on the Thursday before the iPhone 17 event? Back at the White House, it seems. more…"
-  },
-  {
-    "title": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
-    "url": "https://nofilmschool.com/hohem-isteady-v3-ultra",
-    "publishedAt": "2025-09-04T00:53:00.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking technology with touchscreen target selection, a detachable touchscreen remote, real-time live feed monitoring, and other native tracking features, this new AI-powered smartphone gimbal is about to kick th...",
-    "image": "https://nofilmschool.com/media-library/hohem-isteady-v3-ultra.jpg?id=61551194&width=980",
-    "video": "https://www.youtube.com/embed/t_wUhI1i7DY?rel=0",
-    "author": "Sponsored Content",
-    "tags": [
-      "Hohem",
-      "Isteady",
-      "Smartphone gimbal",
-      "Hohem isteady v3 ultra"
-    ],
-    "seoTitle": "Bring Breakthrough AI Tracking to Your Smartphone Gimbal Game With the New Hohem iSteady V3 Ultra",
-    "seoDescription": "The world of smartphone video recording is about to get a major boost as Hohem has unveiled its new iSteady V3 Ultra. Featuring breakthrough AI tracking tech..."
-  },
-  {
-    "title": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
-    "url": "https://9to5mac.com/2025/09/03/apple-macbook-air-vs-macbook-pro-comparison-september-2025/",
-    "publishedAt": "2025-09-03T23:43:40.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "MacBooks are great computers, but there’s a number of different varieties to think about. Between last gen hardware and all of the current models available now, it can feel like there’s a lot of options. Today, we’ll be breaking down which is right for you, depending on your budget and what you need it for. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/03/m4-macbook-air-sleeve.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "MacBook Air vs MacBook Pro: Which one makes the most sense to buy right now?",
-    "seoDescription": "MacBooks are great computers, but there’s a number of different varieties to think about. Between last gen hardware and all of the current models available n..."
-  },
-  {
-    "title": "Netflix now lets you (almost) easily share clips of your favorite shows",
-    "url": "https://9to5mac.com/2025/09/03/netflix-now-lets-you-almost-easily-share-clips-of-your-favorite-shows/",
-    "publishedAt": "2025-09-03T23:20:02.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "The Netflix app now lets you select the start and end points of a clip, so you can share it outside the app. Here’s how it works. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/netflix-clip.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Netflix now lets you (almost) easily share clips of your favorite shows",
-    "seoDescription": "The Netflix app now lets you select the start and end points of a clip, so you can share it outside the app. Here’s how it works. more…"
-  },
-  {
-    "title": "AirPods Pro 3 Coming Next Week With Multiple New Features",
-    "url": "https://www.macrumors.com/guide/airpods-pro-3-rumors/",
-    "publishedAt": "2025-09-03T22:56:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "There's less than a week to go until Apple's \"Awe Dropping\" event, and there's a good chance that Apple will introduce an updated version of the AirPods Pro. The AirPods Pro 3 are rumored to include new health features, an updated design, and more. Design Changes Rumors suggest the ‌AirPods Pro 3‌ will have a new design, though it's unclear what exactly w...",
-    "image": "https://images.macrumors.com/article-new/2025/04/AirPods-Pro-3-Mock-Feature.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "AirPods Pro 3 Coming Next Week With Multiple New Features",
-    "seoDescription": "There's less than a week to go until Apple's \"Awe Dropping\" event, and there's a good chance that Apple will introduce an updated version of the AirPods Pro...."
   }
 ]
