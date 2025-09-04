@@ -1,5 +1,80 @@
 [
   {
+    "title": "The DOM Explained: Where Markup Meets JavaScript",
+    "url": "https://dev.to/jocke_sjlin_4ca0d80beae0/the-dom-explained-where-markup-meets-javascript-3ohc",
+    "publishedAt": "2025-09-04T07:03:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "If you're a web developer, chances are you've at least heard of the DOM - Document Object Model. It might, however, be nothing more than an abstract concept at the back of your mind, yearning for clarification. That is what this article is hoping to achieve. So, on to the burning question: what exactly is the Document Object Model? Well, at the highest le...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fblpueav2cxcer19sfv8d.png",
+    "video": null,
+    "author": "Jocke Sjölin",
+    "tags": [
+      "dom",
+      "webdev",
+      "javascript",
+      "programming"
+    ],
+    "seoTitle": "The DOM Explained: Where Markup Meets JavaScript",
+    "seoDescription": "If you're a web developer, chances are you've at least heard of the DOM - Document Object Model. It might, however, be nothing more than an abstract concept ..."
+  },
+  {
+    "title": "Aqara Unveils HomeKit-Compatible Doorbell Camera G400 and Matter Hub M200",
+    "url": "https://www.macrumors.com/2025/09/04/aqara-ifa-2025-products/",
+    "publishedAt": "2025-09-04T07:01:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Smart home accessory company Aqara today announced several new HomeKit and Matter-compatible products, including the Doorbell Camera G400, the Hub M200, and a selection of plugs and accessories for the European and UK markets. The Doorbell Camera G400 is a wired camera with a 2K sensor and head-to-toe coverage for people approaching a door. It integrates ...",
+    "image": "https://images.macrumors.com/article-new/2025/09/aqara-ifa-lineup.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Aqara"
+    ],
+    "seoTitle": "Aqara Unveils HomeKit-Compatible Doorbell Camera G400 and Matter Hub M200",
+    "seoDescription": "Smart home accessory company Aqara today announced several new HomeKit and Matter-compatible products, including the Doorbell Camera G400, the Hub M200, and ..."
+  },
+  {
+    "title": "Scosche Launches MagicMount Qi2.2 25W Wireless Chargers for iPhone",
+    "url": "https://www.macrumors.com/2025/09/04/scosche-25w-qi-chargers/",
+    "publishedAt": "2025-09-04T07:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Scosche today announced the launch of the MagicMount Charge Pro 25W series, introducing several wireless charger options that support the new Qi2.2 specification. With Qi2.2 accessories, compatible iPhone models can charge at up to 25W, a wireless charging speed that is comparable to the MagSafe 2 25W charging speeds supported by the iPhone 16 models. Sta...",
+    "image": "https://images.macrumors.com/article-new/2025/09/scosche-25w-qi-charger.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Apple",
+      "Rumors",
+      "Mac",
+      "iOS",
+      "iPhone",
+      "iPad"
+    ],
+    "seoTitle": "Scosche Launches MagicMount Qi2.2 25W Wireless Chargers for iPhone",
+    "seoDescription": "Scosche today announced the launch of the MagicMount Charge Pro 25W series, introducing several wireless charger options that support the new Qi2.2 specifica..."
+  },
+  {
+    "title": "Help Emily Stay in School: An Urgent Call for Support",
+    "url": "https://dev.to/david_baker_5ad97f53cbb9c/help-emily-stay-in-school-an-urgent-call-for-support-9ab",
+    "publishedAt": "2025-09-04T06:44:18.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Education is often described as the key to a brighter future, but for many students, financial struggles can stand in the way of achieving their dreams. Today, I want to share the story of Emily — a hardworking and determined student who is facing the heartbreaking possibility of dropping out this semester. Emily’s school fees are due, and without $1,000,...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjjr4b4pbuewt0varb36k.jpg",
+    "video": null,
+    "author": "David Baker",
+    "tags": [
+      "deved",
+      "webdev",
+      "programming",
+      "ai"
+    ],
+    "seoTitle": "Help Emily Stay in School: An Urgent Call for Support",
+    "seoDescription": "Education is often described as the key to a brighter future, but for many students, financial struggles can stand in the way of achieving their dreams. Toda..."
+  },
+  {
     "title": "An Explicit Approach to Async Reactivity",
     "url": "https://dev.to/tobi_augenstein/an-explicit-approach-to-async-reactivity-45h9",
     "publishedAt": "2025-09-04T06:14:06.000Z",
@@ -52,44 +127,6 @@
     "seoDescription": "The MagFusion Ark is available in multiple sizes with up to three removable wireless charging spheres. | Image: Aukey Aukey has announced a new modular charg..."
   },
   {
-    "title": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know",
-    "url": "https://dev.to/teamcamp/docker-to-kubernetes-the-30-day-migration-path-every-developer-should-know-1lo2",
-    "publishedAt": "2025-09-04T05:55:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You are running your applications in Docker containers. Your team keeps growing. Your infrastructure demands keep scaling beyond what Docker Compose can handle efficiently. Sound familiar? You have hit the point where Kubernetes becomes not just an option, but a necessity.** The transition from Docker to Kubernetes doesn't need to be overwhelming. This 30...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi7tsy92atticww568cu0.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "devops",
-      "tutorial",
-      "learning"
-    ],
-    "seoTitle": "Docker to Kubernetes: The 30-Day Migration Path Every Developer Should Know",
-    "seoDescription": "You are running your applications in Docker containers. Your team keeps growing. Your infrastructure demands keep scaling beyond what Docker Compose can hand..."
-  },
-  {
-    "title": "Bestselling product Amazon.com",
-    "url": "https://dev.to/bestselling_amazon/bestselling-product-amazon-57e7",
-    "publishedAt": "2025-09-04T05:44:54.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Bestselling product Amazon USA Go AMAZON",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ksmouejjiyfpsuzloxx.jpg",
-    "video": null,
-    "author": "bestselling amazon ",
-    "tags": [
-      "aws",
-      "webdev",
-      "ai",
-      "blockchain"
-    ],
-    "seoTitle": "Bestselling product Amazon.com",
-    "seoDescription": "Bestselling product Amazon USA Go AMAZON"
-  },
-  {
     "title": "Gareth Evans 6 Iconic Movies Ranked: From Brutal to Brilliant",
     "url": "https://nofilmschool.com/gareth-evans-most-iconic-films",
     "publishedAt": "2025-09-04T05:41:07.000Z",
@@ -105,25 +142,6 @@
     ],
     "seoTitle": "Gareth Evans 6 Iconic Movies Ranked: From Brutal to Brilliant",
     "seoDescription": "Nobody shoots violence quite like Gareth Evans. When his movies punch, you feel every fractured bone, every desperate gasp, and every slam into concrete. He ..."
-  },
-  {
-    "title": "AI Technology: A Game-Changer in the Digital Age",
-    "url": "https://dev.to/icode49/ai-technology-a-game-changer-in-the-digital-age-ice",
-    "publishedAt": "2025-09-04T05:37:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Technology has advanced at an unimaginable pace in the past 20 years. The most significant factor behind these advancements is Artificial Intelligence. From a mere trend, AI has become the foundation of global business transformations. AI is present in nearly every sector, whether it's self-driving cars or AI-powered health care. It can also be found with...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe719cirn9mib571zp6jx.png",
-    "video": null,
-    "author": "icode49",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "react"
-    ],
-    "seoTitle": "AI Technology: A Game-Changer in the Digital Age",
-    "seoDescription": "Technology has advanced at an unimaginable pace in the past 20 years. The most significant factor behind these advancements is Artificial Intelligence. From ..."
   },
   {
     "title": "Ridley Scott’s 9 Best Films Across Five Decades",
@@ -143,25 +161,6 @@
     "seoDescription": "Whether you’re a cinephile or not, Ridley Scott needs no introduction. Throughout his 50-year filmmaking career, the extremely versatile Scott has directed n..."
   },
   {
-    "title": "How Schools and Counties Can Cut E-Signature Costs by 80%",
-    "url": "https://dev.to/boldsign/how-schools-and-counties-can-cut-e-signature-costs-by-80-ojm",
-    "publishedAt": "2025-09-04T05:27:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Public schools and county governments in the United States face constant pressure to do more with less. Budget cuts at the federal level, rising operational costs, and increasing compliance demands leave administrators looking for ways to streamline operations without sacrificing quality or trust. One area with significant potential for cost savings and e...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fboldsign.com%2Fwp-content%2Fuploads%2F2025%2F09%2FBoldSign-vs-legacy-vendors.png",
-    "video": null,
-    "author": "Dhinesh Sekar",
-    "tags": [
-      "esignature",
-      "webdev",
-      "schools",
-      "counties"
-    ],
-    "seoTitle": "How Schools and Counties Can Cut E-Signature Costs by 80%",
-    "seoDescription": "Public schools and county governments in the United States face constant pressure to do more with less. Budget cuts at the federal level, rising operational ..."
-  },
-  {
     "title": "The 7 Best Mike Flanagan Movies and Series of All Time",
     "url": "https://nofilmschool.com/best-works-of-mike-flanagan",
     "publishedAt": "2025-09-04T05:18:38.000Z",
@@ -179,25 +178,6 @@
     ],
     "seoTitle": "The 7 Best Mike Flanagan Movies and Series of All Time",
     "seoDescription": "A huge name in the genre of horror, Mike Flanagan’s narratives rely on slow-burn suspense over visual scares or cliché horror tropes and are widely admired f..."
-  },
-  {
-    "title": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
-    "url": "https://dev.to/dct_technology/from-data-lakes-to-data-mesh-the-next-evolution-in-data-architecture-5f2k",
-    "publishedAt": "2025-09-04T05:10:41.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "For years, organizations relied on data warehouses and later data lakes to manage the growing flood of information. These solutions worked—until they didn’t. With businesses generating more data than ever, the challenges of scaling, maintaining, and extracting real value from these massive lakes are becoming obvious. And that’s where the Data Mesh revolut...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpd5kj70x32ybcigie0dy.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "datamesh",
-      "vectordatabase",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "From Data Lakes to Data Mesh: The Next Evolution in Data Architecture",
-    "seoDescription": "For years, organizations relied on data warehouses and later data lakes to manage the growing flood of information. These solutions worked—until they didn’t...."
   },
   {
     "title": "Nikon Further Embraces Analog Heritage With a Silver Zf and Film Grain Feature",
@@ -630,5 +610,19 @@
     ],
     "seoTitle": "LLM Siri With 'World Knowledge' Search Feature Coming in Early 2026",
     "seoDescription": "Apple plans to add an AI-powered web search tool to Siri next year, reports Bloomberg's Mark Gurman. The search tool will be an integrated ‌Siri‌ feature tha..."
+  },
+  {
+    "title": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
+    "url": "https://www.theverge.com/games/770667/i-tried-jsauxs-new-anti-glare-switch-2-screen-protector-and-it-revealed-a-glaring-bug",
+    "publishedAt": "2025-09-03T20:39:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to a Switch 2 screen protector that, ironically, is supposed to tame reflections. The protector in question is a pre-production sample of the Jsaux Obsidian AR screen protector, which is coming in Octob...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ob1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Cameron Faulkner",
+    "tags": [],
+    "seoTitle": "I tried Jsaux’s new anti-glare Switch 2 screen protector, and it revealed a glaring bug",
+    "seoDescription": "Testing this anti-glare screen protector revealed a very dead cockroach in my ceiling. I have a dead cockroach in my ceiling, and I only noticed it thanks to..."
   }
 ]
