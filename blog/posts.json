@@ -1,5 +1,43 @@
 [
   {
+    "title": "ZenFlow — Fully Vibe-Coded by Someone Who Knows Nothing About Web Dev",
+    "url": "https://dev.to/wydoinn/zenflow-fully-vibe-coded-by-someone-who-knows-nothing-about-web-dev-1ajc",
+    "publishedAt": "2025-09-05T03:33:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey y’all 👋, I just dropped my first App project: ZenFlow — a minimalist daily planner that runs both in the browser and as a macOS desktop app via Tauri 2. And here’s the wild part: I literally don’t know a dime about web dev. No formal training, no roadmap, just vibes and curiosity. If I can do this, anyone can. Daily Planner → Pages like Today, Calend...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1naodfp9qeqs0zcrohn2.png",
+    "video": null,
+    "author": "Santhosh",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "vibecoding"
+    ],
+    "seoTitle": "ZenFlow — Fully Vibe-Coded by Someone Who Knows Nothing About Web Dev",
+    "seoDescription": "Hey y’all 👋, I just dropped my first App project: ZenFlow — a minimalist daily planner that runs both in the browser and as a macOS desktop app via Tauri 2...."
+  },
+  {
+    "title": "SafeLine WAF: The Open-Source Firewall Powering 300K+ Deployments",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/safeline-waf-the-open-source-firewall-powering-300k-deployments-285g",
+    "publishedAt": "2025-09-05T03:27:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Web security often feels like an arms race — and in that race, SafeLine WAF has quickly become the go-to choice for developers and enterprises across the world. With 300,000+ deployments worldwide, SafeLine has earned a reputation as one of the most effective free and open-source WAFs available today. I first came across SafeLine back in 2020. Even then, ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm72vwluqycgbhsmiyklu.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "safeline",
+      "waf",
+      "webdev",
+      "beginners"
+    ],
+    "seoTitle": "SafeLine WAF: The Open-Source Firewall Powering 300K+ Deployments",
+    "seoDescription": "Web security often feels like an arms race — and in that race, SafeLine WAF has quickly become the go-to choice for developers and enterprises across the wor..."
+  },
+  {
     "title": "At White House dinner, Tim Cook praises Trump’s ‘leadership and focus on innovation’",
     "url": "https://9to5mac.com/2025/09/04/at-white-house-dinner-tim-cook-praises-trumps-leadership-and-focus-on-innovation/",
     "publishedAt": "2025-09-05T03:02:50.000Z",
@@ -100,25 +138,6 @@
     ],
     "seoTitle": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
     "seoDescription": "When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, wh..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/toddhgardner/-1klm",
-    "publishedAt": "2025-09-05T00:59:03.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Your Wildcard SSL Setup is a Security Nightmare (And You Don't Even Know It) Todd H. Gardner for CertKit • SSL Certificate Management ・ Sep 5 #security #webdev #dns #devops",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F11531%2F17006d9e-6dfe-4851-b669-06354f9a870d.png",
-    "video": null,
-    "author": "Todd H. Gardner",
-    "tags": [
-      "security",
-      "webdev",
-      "dns",
-      "devops"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Your Wildcard SSL Setup is a Security Nightmare (And You Don't Even Know It) Todd H. Gardner for CertKit • SSL Certificate Management ・ Sep 5 #security #webd..."
   },
   {
     "title": "5 Screenwriting Rules You Can Definitely Break",
@@ -613,23 +632,5 @@
     "tags": [],
     "seoTitle": "Samsung’s ultra-thin Galaxy S25 Edge is $400 off right now",
     "seoDescription": "Despite its slimmer frame, the Galaxy S25 Edge still offers all-day battery life. If you’ve ever wished your phone didn’t protrude so much while in your pock..."
-  },
-  {
-    "title": "Why James Cameron Is Still Defending ‘Avatar’",
-    "url": "https://nofilmschool.com/james-cameron-motion-capture-credit",
-    "publishedAt": "2025-09-04T19:52:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Look, when James Cameron gets salty about something, it’s usually a good idea to pay attention. The man doesn't just make movies; he bends technology, physics, and studio budgets to his will to get what’s in his head onto the screen. He’s earned the right to be a little ticked off. And right now, he’s ticked off about something that should be obvious, but...",
-    "image": "https://nofilmschool.com/media-library/why-james-cameron-is-still-defending-avatar-and-why-you-should-care.webp?id=61557462&width=980",
-    "video": "https://www.youtube.com/embed/x_qm280q2e0?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Avatar",
-      "Motion capture",
-      "James cameron"
-    ],
-    "seoTitle": "Why James Cameron Is Still Defending ‘Avatar’",
-    "seoDescription": "Look, when James Cameron gets salty about something, it’s usually a good idea to pay attention. The man doesn't just make movies; he bends technology, physic..."
   }
 ]
