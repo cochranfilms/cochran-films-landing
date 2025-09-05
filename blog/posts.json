@@ -1,22 +1,113 @@
 [
   {
-    "title": "Modern Angular Animations: Ditch the DSL, Keep the Power",
-    "url": "https://dev.to/brianmtreese/modern-angular-animations-ditch-the-dsl-keep-the-power-76d",
-    "publishedAt": "2025-09-05T07:00:00.000Z",
+    "title": "UGreen Now Has a Range of Qi2 Wireless Chargers for iPhone and Android",
+    "url": "https://petapixel.com/2025/09/05/ugreen-now-has-a-range-of-qi2-wireless-chargers-for-iphone-and-android/",
+    "publishedAt": "2025-09-05T08:01:56.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "UGreen has announced its next-generation MagFlow series of wireless chargers. Using Qi2, which has 25W charging versus the 15W of the previous generation, these new accessories work with both new iPhone and Android devices. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/UGreen-Now-Has-a-Range-of-Qi2-Wireless-Chargers-for-iPhone-and-Android.jpg",
+    "video": null,
+    "author": "Jaron Schneider",
+    "tags": [
+      "Mobile",
+      "News",
+      "accessories",
+      "charging",
+      "iphone",
+      "iphone16",
+      "iphone17",
+      "mobile"
+    ],
+    "seoTitle": "UGreen Now Has a Range of Qi2 Wireless Chargers for iPhone and Android",
+    "seoDescription": "UGreen has announced its next-generation MagFlow series of wireless chargers. Using Qi2, which has 25W charging versus the 15W of the previous generation, th..."
+  },
+  {
+    "title": "Alogic Debuts $2,000 32-Inch 6K Display With Touch Support",
+    "url": "https://www.macrumors.com/2025/09/05/alogic-debuts-2000-32-inch-6k-display-with-touch-support/",
+    "publishedAt": "2025-09-05T08:00:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Alogic today announced a 6K display that supports touch-based input, with the company saying that it's the world's first 6K touchscreen that's compatible with the Mac. The Clarity 6K Touch with Fold Stand has a 32-inch 6K display with a touchscreen. The display has a 6016 x 3384 resolution, 60Hz refresh rate, 400 nits maximum brightness, and 99 percent Ad...",
+    "image": "https://images.macrumors.com/article-new/2025/09/alogic-clarity-touch-6k.jpg",
+    "video": null,
+    "author": "Juli Clover",
+    "tags": [
+      "Alogic"
+    ],
+    "seoTitle": "Alogic Debuts $2,000 32-Inch 6K Display With Touch Support",
+    "seoDescription": "Alogic today announced a 6K display that supports touch-based input, with the company saying that it's the world's first 6K touchscreen that's compatible wit..."
+  },
+  {
+    "title": "Go-Sail has released version v3.0.6",
+    "url": "https://dev.to/keepchen/go-sail-has-released-version-v306-3dk1",
+    "publishedAt": "2025-09-05T07:59:17.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Angular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the new enter and leave primitives plus real CSS. By the end, you’ll be able to build smooth enter/leave animations, chain effects in sequence, animate list items, and even add staggered effects, all with...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fbriantree.se%2Fassets%2Fimg%2Fcontent%2Fuploads%2F2025%2F09-04%2Fdemo-1.gif",
+    "summary": "I've been working on a series of optimizations for go-sail lately. Today, we've officially released version 3.0.6. Everyone is welcome to try it out. utils: Simplified and optimized redis lock code, support custom redis client (0166990) schedule: Support custom redis client (0166990) http: Adjusted timestamp field, fixed paginator JSON tag (0166990) other...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F64au4l5gw86mj164youh.png",
     "video": null,
-    "author": "Brian Treese",
+    "author": "Keepchen",
     "tags": [
-      "angular",
-      "webdev",
-      "css",
-      "frontend"
+      "gosail",
+      "go",
+      "programming",
+      "webdev"
     ],
-    "seoTitle": "Modern Angular Animations: Ditch the DSL, Keep the Power",
-    "seoDescription": "Angular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the ..."
+    "seoTitle": "Go-Sail has released version v3.0.6",
+    "seoDescription": "I've been working on a series of optimizations for go-sail lately. Today, we've officially released version 3.0.6. Everyone is welcome to try it out. utils: ..."
+  },
+  {
+    "title": "This robot lawnmower is designed to pick fruit and throw your dog a ball",
+    "url": "https://www.theverge.com/news/772045/nexlawn-master-x-series-concept-robot-lawnmower",
+    "publishedAt": "2025-09-05T07:30:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "It’s like a weird robotic dinosaur that can mow your lawn. Plenty of autonomous lawnmowers have been showcased or introduced at this year’s IFA event in Berlin, but only one of them comes equipped with a robotic arm. NexLawn, a sub-brand of MOVA that sits under its Dreame parent company, has announced the Master X Series Concept, which it describes as “th...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Master-X.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jess Weatherbed",
+    "tags": [],
+    "seoTitle": "This robot lawnmower is designed to pick fruit and throw your dog a ball",
+    "seoDescription": "It’s like a weird robotic dinosaur that can mow your lawn. Plenty of autonomous lawnmowers have been showcased or introduced at this year’s IFA event in Berl..."
+  },
+  {
+    "title": "Step-by-Step Guide: Securing and Testing Your Website with SafeLine WAF",
+    "url": "https://dev.to/sharon_42e16b8da44dabde6d/step-by-step-guide-securing-and-testing-your-website-with-safeline-waf-55ej",
+    "publishedAt": "2025-09-05T07:19:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction Before we get into configuration, make sure SafeLine WAF is already installed on your server. If not, check out the official installation guide first. Once it’s set up, you’ll be ready to protect your site from a wide range of web attacks. SafeLine is a Web Application Firewall (WAF) based on Nginx. It works as a reverse proxy for HTTP/HTTPS ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5gyw69x7vtevn5pz31ud.png",
+    "video": null,
+    "author": "Sharon",
+    "tags": [
+      "cybersecurity",
+      "safeline",
+      "waf",
+      "webdev"
+    ],
+    "seoTitle": "Step-by-Step Guide: Securing and Testing Your Website with SafeLine WAF",
+    "seoDescription": "Introduction Before we get into configuration, make sure SafeLine WAF is already installed on your server. If not, check out the official installation guide ..."
+  },
+  {
+    "title": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money",
+    "url": "https://dev.to/criocbet99s/cricbet99-login-bet-on-live-teen-patti-game-and-win-real-money-1i5",
+    "publishedAt": "2025-09-05T07:18:57.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money Why Play Live Teen Patti on Cricbet99?",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn21z6mf2616rfwmayfqh.jpg",
+    "video": null,
+    "author": "Piyush Sharma",
+    "tags": [
+      "blockchain",
+      "web3",
+      "webdev",
+      "programming"
+    ],
+    "seoTitle": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money",
+    "seoDescription": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money Why Play Live Teen Patti on Cricbet99?"
   },
   {
     "title": "Timekettle’s new translation earbuds are made for sharing",
@@ -31,101 +122,6 @@
     "tags": [],
     "seoTitle": "Timekettle’s new translation earbuds are made for sharing",
     "seoDescription": "The Timekettle W4 AI look like a supersized pair of wireless earbuds. | Image: Timekettle Timekettle has announced a new pair of real-time translation headph..."
-  },
-  {
-    "title": "Why I Chose SvelteKit for My PDF Annotation App?",
-    "url": "https://dev.to/lofifounder/why-i-chose-sveltekit-for-my-pdf-annotation-app-2pa2",
-    "publishedAt": "2025-09-05T06:59:46.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When I started building LeedPDF, my goal was simple: make working with PDFs feel less clunky and more natural. A tool where highlighting and sketching felt smooth, not like wrestling with old-school document viewers. Choosing the right framework mattered a lot because PDF rendering is already heavy. I didn’t want the framework itself to get in the way. Af...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fleed.my%2Flogo.png",
-    "video": null,
-    "author": "Rudi K. 🧠",
-    "tags": [
-      "svelte",
-      "webdev",
-      "opensource",
-      "programming"
-    ],
-    "seoTitle": "Why I Chose SvelteKit for My PDF Annotation App?",
-    "seoDescription": "When I started building LeedPDF, my goal was simple: make working with PDFs feel less clunky and more natural. A tool where highlighting and sketching felt s..."
-  },
-  {
-    "title": "Getting Started with Vibe Coding: Why It Matters",
-    "url": "https://dev.to/vishal_more_02990955c9358/getting-started-with-vibe-coding-why-it-matters-2ob3",
-    "publishedAt": "2025-09-05T06:52:19.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Read More: Getting Started with Vibe Coding: Why It Matters What Is Vibe Coding? At its core, vibe coding is about coding in a way that feels natural, fluid, and enjoyable. Instead of getting stuck on rigid rules or overcomplicated workflows, vibe coding encourages developers to: Stay in the flow state while writing code. Use intuitive tools that reduce d...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkvhkw1m1d8aq4blmp5qu.png",
-    "video": null,
-    "author": "vishal more",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Getting Started with Vibe Coding: Why It Matters",
-    "seoDescription": "Read More: Getting Started with Vibe Coding: Why It Matters What Is Vibe Coding? At its core, vibe coding is about coding in a way that feels natural, fluid,..."
-  },
-  {
-    "title": "medicine of AI CONSCIOUSNESS",
-    "url": "https://dev.to/hamed_firouzi_921facc8718/medicine-of-ai-consciousness-1opa",
-    "publishedAt": "2025-09-05T06:49:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Beyond the API Call: A Look at the Firouzi Codex, a New AI Processing Paradigm Hamed Firouzi ・ Sep 5 #ai #architecture #performance #webdev",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2629690%2F82ae621e-7e9e-40bd-a4a4-a7077c05581d.jpg",
-    "video": null,
-    "author": "Hamed Firouzi",
-    "tags": [
-      "ai",
-      "architecture",
-      "performance",
-      "webdev"
-    ],
-    "seoTitle": "medicine of AI CONSCIOUSNESS",
-    "seoDescription": "Beyond the API Call: A Look at the Firouzi Codex, a New AI Processing Paradigm Hamed Firouzi ・ Sep 5 #ai #architecture #performance #webdev"
-  },
-  {
-    "title": "White-Label Food Delivery App: Build Your Own Branded Platform with Ease",
-    "url": "https://dev.to/dm_marketing_0a32a3f193b4/white-label-food-delivery-app-build-your-own-branded-platform-with-ease-5d1a",
-    "publishedAt": "2025-09-05T06:45:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The food delivery industry has exploded in recent years, and it shows no signs of slowing down. With the rise of platforms like Uber Eats, DoorDash, and Zomato, people have grown accustomed to the convenience of ordering their favorite meals with just a few taps. But here’s the catch—building a food delivery empire from scratch is not only time-consuming ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhc8kws6guyws3m431k3s.jpg",
-    "video": null,
-    "author": "Hemant pandey",
-    "tags": [
-      "webdev",
-      "uber",
-      "clone",
-      "taxiappdevelopmet"
-    ],
-    "seoTitle": "White-Label Food Delivery App: Build Your Own Branded Platform with Ease",
-    "seoDescription": "The food delivery industry has exploded in recent years, and it shows no signs of slowing down. With the rise of platforms like Uber Eats, DoorDash, and Zoma..."
-  },
-  {
-    "title": "Your First React Component: JSX, Components, and the \"Hello, World\" Program",
-    "url": "https://dev.to/mendoncamaria/your-first-react-component-jsx-components-and-the-hello-world-program-2fkl",
-    "publishedAt": "2025-09-05T06:30:00.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! You now have a blank canvas, and this is where the real fun begins. In this article, we're going to take our first practical steps into the world of building UIs. We'll demystify JSX—the special syntax...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7pum1z1jy6axfv5obxxx.png",
-    "video": null,
-    "author": "Maria Mendonca",
-    "tags": [
-      "webdev",
-      "javascript",
-      "beginners",
-      "react"
-    ],
-    "seoTitle": "Your First React Component: JSX, Components, and the \"Hello, World\" Program",
-    "seoDescription": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! Y..."
   },
   {
     "title": "Legion Go 2 official: Lenovo’s new flagship handheld costs $1,099 — and up",
