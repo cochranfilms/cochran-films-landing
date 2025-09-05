@@ -1,5 +1,117 @@
 [
   {
+    "title": "Inside React Query: What’s Really Going On",
+    "url": "https://dev.to/mohamad_msalme_38f2508ea2/inside-react-query-whats-really-going-on-31md",
+    "publishedAt": "2025-09-05T20:04:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Know WHY — Let AI Handle the HOW 🤖 React Query isn’t just hooks. It’s a data orchestration engine. Treat it like hooks, and you’ll end up with duplicate fetches, stale state, and components re-rendering like they’re on espresso. Let’s go step by step inside React Query, show what each piece does, and why understanding it will make you a much stronger Rea...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F799daxmj4w0ksmwwtncq.png",
+    "video": null,
+    "author": "Mohamad Msalme",
+    "tags": [
+      "react",
+      "frontend",
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "Inside React Query: What’s Really Going On",
+    "seoDescription": "Know WHY — Let AI Handle the HOW 🤖 React Query isn’t just hooks. It’s a data orchestration engine. Treat it like hooks, and you’ll end up with duplicate fet..."
+  },
+  {
+    "title": "Running Machine Learning Models in the Browser Using onnxruntime-web",
+    "url": "https://dev.to/dinakajoy/running-machine-learning-models-in-the-browser-using-onnxruntime-web-3klc",
+    "publishedAt": "2025-09-05T19:54:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🚀 AI in the browser? Yes, it’s possible. Most machine learning models live on the backend, meaning every prediction requires a server call. But I wanted to run my model directly in the browser, because it will be faster, private, and without extra infrastructure. That’s exactly what I did using onnxruntime-web library Let me walk you through how I deploy...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fclfoowdeg9ho3vluwgpr.png",
+    "video": null,
+    "author": "Odinaka Joy",
+    "tags": [
+      "machinelearning",
+      "modelde",
+      "webdev",
+      "nextjs"
+    ],
+    "seoTitle": "Running Machine Learning Models in the Browser Using onnxruntime-web",
+    "seoDescription": "🚀 AI in the browser? Yes, it’s possible. Most machine learning models live on the backend, meaning every prediction requires a server call. But I wanted to ..."
+  },
+  {
+    "title": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
+    "url": "https://nofilmschool.com/tamron-zoom-lens-sony-mirrorless-cameras",
+    "publishedAt": "2025-09-05T19:44:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have great news for you. There are some awesome saving opportunities currently out there for Tamron lenses, with many being ideal options to pair with one of your favorite Sony E-mount cameras. In our latest...",
+    "image": "https://nofilmschool.com/media-library/find-the-perfect-zoom-lens-for-your-sony-mirrorless-cameras-with-these-tamron-discounts.png?id=61560658&width=980",
+    "video": null,
+    "author": "NFS Staff",
+    "tags": [
+      "Filmmaker deals",
+      "Filmmaking deals of the week",
+      "Deals",
+      "Tamron",
+      "Tamron lenses",
+      "Filmmaking deals of the week"
+    ],
+    "seoTitle": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
+    "seoDescription": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have gr..."
+  },
+  {
+    "title": "Spike Lee's 'Highest 2 Lowest' Takes a Hard Stance on AI",
+    "url": "https://nofilmschool.com/spike-lee-ai-highest-lowest",
+    "publishedAt": "2025-09-05T19:34:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "It's always a pleasure to listen to Spike Lee talk about his films. And that's why I was so excited he has a new one that debuts on AppleTV today, Highest 2 Lowest. It's a reimagining of Akira Kurosawa's 1963 classic High and Low, and it's clear from the jump that this is a project Spike is passionate about. He spoke to USA Today about the movie and its m...",
+    "image": "https://nofilmschool.com/media-library/spike-lee-ai.webp?id=61560138&width=980",
+    "video": "https://www.youtube.com/embed/Sh8yqcozfn8?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Ai",
+      "Highest 2 lowest",
+      "Spike lee"
+    ],
+    "seoTitle": "Spike Lee's 'Highest 2 Lowest' Takes a Hard Stance on AI",
+    "seoDescription": "It's always a pleasure to listen to Spike Lee talk about his films. And that's why I was so excited he has a new one that debuts on AppleTV today, Highest 2 ..."
+  },
+  {
+    "title": "Apple’s big India push is paying off in billions",
+    "url": "https://9to5mac.com/2025/09/05/apples-big-india-push-is-paying-off-in-billions/",
+    "publishedAt": "2025-09-05T19:29:48.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "For the last few months, there’s been no lack of news involving Apple and India, from retail to production and everything in between. Now, according to Bloomberg, Tim Cook’s newest bet is starting to pay off. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/iPhone-prices-cut-in-India.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple’s big India push is paying off in billions",
+    "seoDescription": "For the last few months, there’s been no lack of news involving Apple and India, from retail to production and everything in between. Now, according to Bloom..."
+  },
+  {
+    "title": "Mustache Man: The Best Burt Reynolds Roles",
+    "url": "https://nofilmschool.com/best-burt-reynolds-movies",
+    "publishedAt": "2025-09-05T19:24:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "I wish I could grow a mustache like Burt Reynolds. The guy was the epitome of cool for so long in Hollywood, and he embodied some iconic roles that have never faded. Today, I want to go through some of my favorite Burt Reynolds roles and talk about why I love them so much. Let's dive in. 1. Lewis Medlock in 'Deliverance' (1972) I know this is a really fam...",
+    "image": "https://nofilmschool.com/media-library/mustache-man-the-best-burt-reynolds-roles.jpg?id=61560637&width=980",
+    "video": "https://www.youtube.com/embed/sckWeXMLsac?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Acting",
+      "Actor",
+      "Burt reynolds"
+    ],
+    "seoTitle": "Mustache Man: The Best Burt Reynolds Roles",
+    "seoDescription": "I wish I could grow a mustache like Burt Reynolds. The guy was the epitome of cool for so long in Hollywood, and he embodied some iconic roles that have neve..."
+  },
+  {
     "title": "They're Using AI to Restore 'The Magnificent Ambersons'",
     "url": "https://nofilmschool.com/ai-restore-the-magnificent-ambersons",
     "publishedAt": "2025-09-05T19:09:45.000Z",
@@ -31,6 +143,22 @@
     "tags": [],
     "seoTitle": "Showrunner wants to use generative AI to recreate lost footage from an Orson Welles classic",
     "seoDescription": "Showrunner — the startup that wants to “revolutionize” the entertainment industry by charging people to prompt up AI-generated videos featuring copyrighted I..."
+  },
+  {
+    "title": "HomeKit Weekly: ULTRALOQ’s new Bolt NFC is built for Apple Home Key",
+    "url": "https://9to5mac.com/2025/09/05/ultraloq-bolt-nfc/",
+    "publishedAt": "2025-09-05T19:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Home Key has been one of my favorite HomeKit features since it launched a few years ago. You never have to dig for keys; you can still get in when your phone battery is dead, and in my experience, it works instantly every time. There is no app to launch or waiting for a Bluetooth connection. The brings all of that convenience to more homes at a very reaso...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-Home.png?w=1600",
+    "video": null,
+    "author": "Bradley C",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "HomeKit Weekly: ULTRALOQ’s new Bolt NFC is built for Apple Home Key",
+    "seoDescription": "Home Key has been one of my favorite HomeKit features since it launched a few years ago. You never have to dig for keys; you can still get in when your phone..."
   },
   {
     "title": "Five Ways iOS 26 Improves Your iPhone's Battery",
@@ -501,127 +629,5 @@
     ],
     "seoTitle": "The Luminar Neo Plugin Easily Fits Into Your Existing Photo Editing Workflow",
     "seoDescription": "We put Luminar Neo to the test, not as a standalone app, but as a plugin designed to enhance your existing editing photography workflow. [Read More]"
-  },
-  {
-    "title": "Samsung&#8217;s Galaxy S26 Edge might look like an iPhone 17 Pro",
-    "url": "https://www.theverge.com/news/772769/samsung-galaxy-s26-edge-render-leak-iphone-17-pro",
-    "publishedAt": "2025-09-05T15:52:29.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The rumor mill just churned up a purported render of Samsung’s Galaxy S26 Edge, and it only adds to speculation that the super-slim phone will look like the upcoming iPhone 17 Pro. The renders, shared with Android Headlines by reliable leaker OnLeaks, show a device with slim bezels and a prominent rear camera bar housing a pair of lenses. Based on the ren...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/galaxy-s26-edge-render.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Emma Roth",
-    "tags": [],
-    "seoTitle": "Samsung&#8217;s Galaxy S26 Edge might look like an iPhone 17 Pro",
-    "seoDescription": "The rumor mill just churned up a purported render of Samsung’s Galaxy S26 Edge, and it only adds to speculation that the super-slim phone will look like the ..."
-  },
-  {
-    "title": "Tarantino's Trick for Learning to Write Dialogue",
-    "url": "https://nofilmschool.com/tarantino-write-dialogue",
-    "publishedAt": "2025-09-05T15:51:46.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "If you're a writer, you know we're all aspiring toward great dialogue. Dialogue that's tense, exciting, melodic, and full of subtext, or maybe punchy and raw. Many will point to writer/director Quentin Tarantino as an aspirational example, especially because his films have some of the most tense and heavy dialogue scenes in cinema. A few years back, Taran...",
-    "image": "https://nofilmschool.com/media-library/master-the-three-point-lighting-setup-and-lighting-techniques.jpg?id=34052230&width=980",
-    "video": "https://www.youtube.com/embed/fFlX-fsPWwQ?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Screenwriting advice",
-      "Dialogue",
-      "Writing dialogue",
-      "Writing advice",
-      "Quentin tarantino",
-      "Quentin tarantino"
-    ],
-    "seoTitle": "Tarantino's Trick for Learning to Write Dialogue",
-    "seoDescription": "If you're a writer, you know we're all aspiring toward great dialogue. Dialogue that's tense, exciting, melodic, and full of subtext, or maybe punchy and raw..."
-  },
-  {
-    "title": "Deals: 24GB Mac mini $100 off, iPhone 15/16 Pro up to $730 off, 25W MagSafe gear, and more",
-    "url": "https://9to5mac.com/2025/09/05/deals-24gb-mac-mini-iphone-25w-magsafe-gear/",
-    "publishedAt": "2025-09-05T15:45:23.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Your Friday edition 9to5Toys Lunch Break deal roundup is now ready to go. Firstly, we want to remind folks that today is your last chance to get in on our exclusive Nomad sale – you can score 20% off anything on the site including new releases using the special promo code you’ll find right here. On top of that, we have $100 off the most affordable 24GB Ma...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Apple-deals-iPhone-17-iPad-Air-Mac-mini.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Justin Kahn",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Deals: 24GB Mac mini $100 off, iPhone 15/16 Pro up to $730 off, 25W MagSafe gear, and more",
-    "seoDescription": "Your Friday edition 9to5Toys Lunch Break deal roundup is now ready to go. Firstly, we want to remind folks that today is your last chance to get in on our ex..."
-  },
-  {
-    "title": "Vision Pro and HomePod Mini Rumored to Come in These New Colors",
-    "url": "https://www.macrumors.com/2025/09/05/new-homepod-mini-vision-pro-colors-rumored/",
-    "publishedAt": "2025-09-05T15:40:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "In a report outlining his expectations for Apple's event next week, Bloomberg's Mark Gurman revealed potential new Vision Pro and HomePod mini color options. Vision Pro in Space Black concept For the Vision Pro, he said Apple has considered a Space Black color option. For the HomePod mini, he said Apple has tested new colors, including Red. The current Vi...",
-    "image": "https://images.macrumors.com/article-new/2025/04/Midnight-Vision-Pro-Mock-Feature.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Vision Pro",
-      "HomePod mini"
-    ],
-    "seoTitle": "Vision Pro and HomePod Mini Rumored to Come in These New Colors",
-    "seoDescription": "In a report outlining his expectations for Apple's event next week, Bloomberg's Mark Gurman revealed potential new Vision Pro and HomePod mini color options...."
-  },
-  {
-    "title": "Apple’s next HomePod mini is almost here, with bigger upgrades than we thought",
-    "url": "https://9to5mac.com/2025/09/05/apples-next-homepod-mini-is-almost-here-with-bigger-upgrades-than-we-thought/",
-    "publishedAt": "2025-09-05T15:35:35.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple has two new Home products launching this fall: an upgraded Apple TV 4K, and the next-gen HomePod mini 2. Based on a new report, Apple’s new HomePod mini could be a much bigger upgrade than we were expecting. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/homepod-mini-apple-intelligence.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple’s next HomePod mini is almost here, with bigger upgrades than we thought",
-    "seoDescription": "Apple has two new Home products launching this fall: an upgraded Apple TV 4K, and the next-gen HomePod mini 2. Based on a new report, Apple’s new HomePod min..."
-  },
-  {
-    "title": "9to5Mac Daily: September 5, 2025 – iPhone 17 rumors, AI departures",
-    "url": "https://9to5mac.com/2025/09/05/daily-september-5-2025/",
-    "publishedAt": "2025-09-05T15:25:19.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by Backblaze: Never lose a file again. Use code “9to5daily” at checkout for 10% off or try for free. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: September 5, 2025 – iPhone 17 rumors, AI departures",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "New Apple TV, HomePod Mini, and More Reportedly 'Coming Soon' With These New Features",
-    "url": "https://www.macrumors.com/2025/09/05/new-apple-tv-homepod-mini-more-coming-soon/",
-    "publishedAt": "2025-09-05T15:09:09.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Bloomberg's Mark Gurman today outlined his expectations for Apple's event on Tuesday, September 9, with his report offering in-depth details about the iPhone 17 series, a trio of new Apple Watch models, and third-generation AirPods Pro. The final section of his report listed even more products that are \"also coming soon,\" including updated versions of the...",
-    "image": "https://images.macrumors.com/article-new/2025/01/HomePod-mini-and-Apple-TV.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Apple TV",
-      "Vision Pro",
-      "Featured",
-      "HomePod mini",
-      "iPad Pro",
-      "AirTag",
-      "Mark Gurman"
-    ],
-    "seoTitle": "New Apple TV, HomePod Mini, and More Reportedly 'Coming Soon' With These New Features",
-    "seoDescription": "Bloomberg's Mark Gurman today outlined his expectations for Apple's event on Tuesday, September 9, with his report offering in-depth details about the iPhone..."
   }
 ]
