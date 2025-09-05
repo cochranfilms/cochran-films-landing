@@ -1,21 +1,131 @@
 [
   {
-    "title": "Top 10 Free Frontend UI Libraries & Frameworks for Developers in 2025",
-    "url": "https://dev.to/therealmrmumba/top-10-free-frontend-ui-libraries-frameworks-for-developers-in-2025-3h20",
-    "publishedAt": "2025-09-05T06:18:24.000Z",
+    "title": "Modern Angular Animations: Ditch the DSL, Keep the Power",
+    "url": "https://dev.to/brianmtreese/modern-angular-animations-ditch-the-dsl-keep-the-power-76d",
+    "publishedAt": "2025-09-05T07:00:00.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "If you’re like me, building beautiful, responsive web apps can sometimes feel like reinventing the wheel. I’ve spent countless hours tweaking CSS, figuring out grids, and hunting for reusable components and honestly, it gets tiring. That’s where frontend UI libraries come to the rescue. Over the years, I’ve tried and tested a bunch of frameworks, and some...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff1ykzfkbf073cjzqqi3h.png",
+    "summary": "Angular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the new enter and leave primitives plus real CSS. By the end, you’ll be able to build smooth enter/leave animations, chain effects in sequence, animate list items, and even add staggered effects, all with...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fbriantree.se%2Fassets%2Fimg%2Fcontent%2Fuploads%2F2025%2F09-04%2Fdemo-1.gif",
     "video": null,
-    "author": "Emmanuel Mumba",
+    "author": "Brian Treese",
+    "tags": [
+      "angular",
+      "webdev",
+      "css",
+      "frontend"
+    ],
+    "seoTitle": "Modern Angular Animations: Ditch the DSL, Keep the Power",
+    "seoDescription": "Angular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the ..."
+  },
+  {
+    "title": "Timekettle’s new translation earbuds are made for sharing",
+    "url": "https://www.theverge.com/news/771665/timekettle-w4-ai-interpreter-wireless-earbuds-bone-conduction",
+    "publishedAt": "2025-09-05T07:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Timekettle W4 AI look like a supersized pair of wireless earbuds. | Image: Timekettle Timekettle has announced a new pair of real-time translation headphones called the W4 AI Interpreter Earbuds. They use bone conduction technology that helps improve accuracy in loud environments. Available now for $349 in navy blue and sandy gold color options, the e...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/timekettle1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Liszewski",
+    "tags": [],
+    "seoTitle": "Timekettle’s new translation earbuds are made for sharing",
+    "seoDescription": "The Timekettle W4 AI look like a supersized pair of wireless earbuds. | Image: Timekettle Timekettle has announced a new pair of real-time translation headph..."
+  },
+  {
+    "title": "Why I Chose SvelteKit for My PDF Annotation App?",
+    "url": "https://dev.to/lofifounder/why-i-chose-sveltekit-for-my-pdf-annotation-app-2pa2",
+    "publishedAt": "2025-09-05T06:59:46.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When I started building LeedPDF, my goal was simple: make working with PDFs feel less clunky and more natural. A tool where highlighting and sketching felt smooth, not like wrestling with old-school document viewers. Choosing the right framework mattered a lot because PDF rendering is already heavy. I didn’t want the framework itself to get in the way. Af...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fleed.my%2Flogo.png",
+    "video": null,
+    "author": "Rudi K. 🧠",
+    "tags": [
+      "svelte",
+      "webdev",
+      "opensource",
+      "programming"
+    ],
+    "seoTitle": "Why I Chose SvelteKit for My PDF Annotation App?",
+    "seoDescription": "When I started building LeedPDF, my goal was simple: make working with PDFs feel less clunky and more natural. A tool where highlighting and sketching felt s..."
+  },
+  {
+    "title": "Getting Started with Vibe Coding: Why It Matters",
+    "url": "https://dev.to/vishal_more_02990955c9358/getting-started-with-vibe-coding-why-it-matters-2ob3",
+    "publishedAt": "2025-09-05T06:52:19.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Read More: Getting Started with Vibe Coding: Why It Matters What Is Vibe Coding? At its core, vibe coding is about coding in a way that feels natural, fluid, and enjoyable. Instead of getting stuck on rigid rules or overcomplicated workflows, vibe coding encourages developers to: Stay in the flow state while writing code. Use intuitive tools that reduce d...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkvhkw1m1d8aq4blmp5qu.png",
+    "video": null,
+    "author": "vishal more",
     "tags": [
       "webdev",
       "programming",
-      "javascript"
+      "ai",
+      "beginners"
     ],
-    "seoTitle": "Top 10 Free Frontend UI Libraries & Frameworks for Developers in 2025",
-    "seoDescription": "If you’re like me, building beautiful, responsive web apps can sometimes feel like reinventing the wheel. I’ve spent countless hours tweaking CSS, figuring o..."
+    "seoTitle": "Getting Started with Vibe Coding: Why It Matters",
+    "seoDescription": "Read More: Getting Started with Vibe Coding: Why It Matters What Is Vibe Coding? At its core, vibe coding is about coding in a way that feels natural, fluid,..."
+  },
+  {
+    "title": "medicine of AI CONSCIOUSNESS",
+    "url": "https://dev.to/hamed_firouzi_921facc8718/medicine-of-ai-consciousness-1opa",
+    "publishedAt": "2025-09-05T06:49:17.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Beyond the API Call: A Look at the Firouzi Codex, a New AI Processing Paradigm Hamed Firouzi ・ Sep 5 #ai #architecture #performance #webdev",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F2629690%2F82ae621e-7e9e-40bd-a4a4-a7077c05581d.jpg",
+    "video": null,
+    "author": "Hamed Firouzi",
+    "tags": [
+      "ai",
+      "architecture",
+      "performance",
+      "webdev"
+    ],
+    "seoTitle": "medicine of AI CONSCIOUSNESS",
+    "seoDescription": "Beyond the API Call: A Look at the Firouzi Codex, a New AI Processing Paradigm Hamed Firouzi ・ Sep 5 #ai #architecture #performance #webdev"
+  },
+  {
+    "title": "White-Label Food Delivery App: Build Your Own Branded Platform with Ease",
+    "url": "https://dev.to/dm_marketing_0a32a3f193b4/white-label-food-delivery-app-build-your-own-branded-platform-with-ease-5d1a",
+    "publishedAt": "2025-09-05T06:45:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The food delivery industry has exploded in recent years, and it shows no signs of slowing down. With the rise of platforms like Uber Eats, DoorDash, and Zomato, people have grown accustomed to the convenience of ordering their favorite meals with just a few taps. But here’s the catch—building a food delivery empire from scratch is not only time-consuming ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhc8kws6guyws3m431k3s.jpg",
+    "video": null,
+    "author": "Hemant pandey",
+    "tags": [
+      "webdev",
+      "uber",
+      "clone",
+      "taxiappdevelopmet"
+    ],
+    "seoTitle": "White-Label Food Delivery App: Build Your Own Branded Platform with Ease",
+    "seoDescription": "The food delivery industry has exploded in recent years, and it shows no signs of slowing down. With the rise of platforms like Uber Eats, DoorDash, and Zoma..."
+  },
+  {
+    "title": "Your First React Component: JSX, Components, and the \"Hello, World\" Program",
+    "url": "https://dev.to/mendoncamaria/your-first-react-component-jsx-components-and-the-hello-world-program-2fkl",
+    "publishedAt": "2025-09-05T06:30:00.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! You now have a blank canvas, and this is where the real fun begins. In this article, we're going to take our first practical steps into the world of building UIs. We'll demystify JSX—the special syntax...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7pum1z1jy6axfv5obxxx.png",
+    "video": null,
+    "author": "Maria Mendonca",
+    "tags": [
+      "webdev",
+      "javascript",
+      "beginners",
+      "react"
+    ],
+    "seoTitle": "Your First React Component: JSX, Components, and the \"Hello, World\" Program",
+    "seoDescription": "Hey there! If you've been following along, you've successfully completed the first and most important step: setting up your React project. Congratulations! Y..."
   },
   {
     "title": "Legion Go 2 official: Lenovo’s new flagship handheld costs $1,099 — and up",
@@ -86,100 +196,6 @@
     "tags": [],
     "seoTitle": "Better get used to your smart lights having built-in microphones",
     "seoDescription": "Lepro TB1-Pro AI table lamp. | Image: Lepro We’re all used to having our lights respond to verbal commands at this point. But normally, there’s a middleman p..."
-  },
-  {
-    "title": "Avoid \"String or binary data would be truncated\" or how to save safe strings.",
-    "url": "https://dev.to/iamrzr/avoid-string-or-binary-data-would-be-truncated-or-how-to-save-safe-strings-549k",
-    "publishedAt": "2025-09-05T05:58:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In the current reality almost everyone and everyday interact with data and executing base CRUD operations. The most common exception met is: “String or binary data would be truncated” or in other words… “The maximum allowed field/property length was exceeded and the operation can’t be finished”. This error happens when the length of string data exceeds th...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fassets.dev.to%2Fassets%2Fgithub-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg",
-    "video": null,
-    "author": "RzR",
-    "tags": [
-      "csharp",
-      "webdev",
-      "development",
-      "dotnet"
-    ],
-    "seoTitle": "Avoid \"String or binary data would be truncated\" or how to save safe strings.",
-    "seoDescription": "In the current reality almost everyone and everyday interact with data and executing base CRUD operations. The most common exception met is: “String or binar..."
-  },
-  {
-    "title": "Catch ‘Em All: Hunting Accessibility Bugs Like a Champion with Manual Testing",
-    "url": "https://dev.to/laura-wissiak/catch-em-all-hunting-accessibility-bugs-like-a-champion-with-manual-testing-5a8h",
-    "publishedAt": "2025-09-05T05:51:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "There will come a point on your path to becoming an A11y Master when you will need to add manual testing to your team. Of course, getting proficient in testing with multiple assistive tech types would be like tapping into the power of Arceus, but you don't need to face legendary battles straight away to evolve your testing skills: A lot of assistive tech ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhri70q96shol3s4zez4j.png",
-    "video": null,
-    "author": "Laura Wissiak, CPACC",
-    "tags": [
-      "a11y",
-      "testing",
-      "webdev"
-    ],
-    "seoTitle": "Catch ‘Em All: Hunting Accessibility Bugs Like a Champion with Manual Testing",
-    "seoDescription": "There will come a point on your path to becoming an A11y Master when you will need to add manual testing to your team. Of course, getting proficient in testi..."
-  },
-  {
-    "title": "The Growing Potential of GPU as a Service in Modern Computing",
-    "url": "https://dev.to/cyfutureai/the-growing-potential-of-gpu-as-a-service-in-modern-computing-534j",
-    "publishedAt": "2025-09-05T05:46:25.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In recent years, the demand for advanced computing capabilities has skyrocketed across industries. From artificial intelligence (AI) to big data analytics, high-performance gaming, scientific simulations, and cloud computing, organizations increasingly rely on high-powered processing resources. While CPUs continue to play an essential role, they often fal...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkm9vvsdaek2h7vg26g9a.png",
-    "video": null,
-    "author": "Cyfuture AI",
-    "tags": [
-      "gpu",
-      "ai",
-      "cloud",
-      "webdev"
-    ],
-    "seoTitle": "The Growing Potential of GPU as a Service in Modern Computing",
-    "seoDescription": "In recent years, the demand for advanced computing capabilities has skyrocketed across industries. From artificial intelligence (AI) to big data analytics, h..."
-  },
-  {
-    "title": "30-Second Git Commits: The Micro-Habit That Saved Me 10 Hours Per Week",
-    "url": "https://dev.to/teamcamp/30-second-git-commits-the-micro-habit-that-saved-me-10-hours-per-week-4p85",
-    "publishedAt": "2025-09-05T05:43:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "You stare at your terminal. The cursor blinks constantly. Your code works perfectly, but now you need a commit message. Five minutes pass. You delete what you wrote. Start again. Sound familiar? You are not alone bro!. Most developers spend 10-15 minutes per day just crafting commit messages. Thats over an hour per week on something that should take secon...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F127igchcxavcwt8wqfxj.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "webdev",
-      "git",
-      "githubactions",
-      "devdiscuss"
-    ],
-    "seoTitle": "30-Second Git Commits: The Micro-Habit That Saved Me 10 Hours Per Week",
-    "seoDescription": "You stare at your terminal. The cursor blinks constantly. Your code works perfectly, but now you need a commit message. Five minutes pass. You delete what yo..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/mrdubey/-2ioc",
-    "publishedAt": "2025-09-05T05:37:58.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Architecting UltraNews: Building a Real-Time News Intelligence Platform That Scales Yash Dubey ・ Sep 5 #webdev #programming #javascript #ai",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3480945%2Fe8610656-7b6b-4ab9-abef-9ced45a00d02.png",
-    "video": null,
-    "author": "Yash Dubey",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Architecting UltraNews: Building a Real-Time News Intelligence Platform That Scales Yash Dubey ・ Sep 5 #webdev #programming #javascript #ai"
   },
   {
     "title": "Friends Close, Enemies Closer: The Most Famous Lesson From 'The Godfather'",
@@ -599,19 +615,5 @@
     ],
     "seoTitle": "These New Games Were Added to Apple Arcade Today",
     "seoDescription": "Three more games were added to Apple Arcade today, including new NFL and Jeopardy! titles. Just in time for the start of the upcoming NFL season today, NFL R..."
-  },
-  {
-    "title": "Here are the best Apple Watch deals available right now",
-    "url": "https://www.theverge.com/21289209/best-apple-watch-deals",
-    "publishedAt": "2025-09-04T21:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The second-gen Apple Watch SE remains a gateway smartwatch if there ever was one. | Photo: Amelia Holowaty Krales / The Verge At the end of last year, Apple launched its latest smartwatch, introducing the Apple Watch Series 10 alongside a black rendition of the Apple Watch Ultra 2. Each wearable has its own pros and cons, as does the second-gen Apple Watc...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24049860/226292_Apple_Watch_SE_PHO_akrales_0047.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandon Widder",
-    "tags": [],
-    "seoTitle": "Here are the best Apple Watch deals available right now",
-    "seoDescription": "The second-gen Apple Watch SE remains a gateway smartwatch if there ever was one. | Photo: Amelia Holowaty Krales / The Verge At the end of last year, Apple ..."
   }
 ]
