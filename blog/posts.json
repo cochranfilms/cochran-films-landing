@@ -1,5 +1,75 @@
 [
   {
+    "title": "Apple hit with patent lawsuit over ‘Hey Siri’ and virtual keyboard features",
+    "url": "https://9to5mac.com/2025/09/04/apple-hit-with-patent-lawsuit-over-hey-siri-and-virtual-keyboard-features/",
+    "publishedAt": "2025-09-05T02:20:08.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Once part of Nuance Communications (which powered Siri‘s speech recognition in its early years), Cerence is now a subsidiary that, according to its website, works with bringing “conversational AI to the automotive world and beyond.” Today, Cerence filed a lawsuit against Apple, accusing it of infringing multiple patents. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/Apple-ordered-to-pay-patent-troll-Optis-502M-despite-threat-to-leave-UK-market.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple hit with patent lawsuit over ‘Hey Siri’ and virtual keyboard features",
+    "seoDescription": "Once part of Nuance Communications (which powered Siri‘s speech recognition in its early years), Cerence is now a subsidiary that, according to its website, ..."
+  },
+  {
+    "title": "CarPlay in iOS 26 enables ‘video in the car’, but there’s a catch",
+    "url": "https://9to5mac.com/2025/09/04/carplay-video-ios-26/",
+    "publishedAt": "2025-09-05T02:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple is making a major U-turn with CarPlay after a decade of not allowing video playback. Starting with iOS 26, Apple will allow apps to display video through the CarPlay screen while parked. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/06/Apple-WWDC25-iOS-26-CarPlay-Dark-mode-250609_big.jpg.large_2x.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "CarPlay in iOS 26 enables ‘video in the car’, but there’s a catch",
+    "seoDescription": "Apple is making a major U-turn with CarPlay after a decade of not allowing video playback. Starting with iOS 26, Apple will allow apps to display video throu..."
+  },
+  {
+    "title": "How to Create a virtual network in Azure.",
+    "url": "https://dev.to/onyemuche/how-to-create-a-virtual-network-in-azure-55fh",
+    "publishedAt": "2025-09-05T01:39:29.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "A Virtual Network (VNet) is a logically isolated network(a network segment intentionally separated from other networks, including the public internet, to improve security and performance by containing threats and controlling traffic flow)in the cloud that lets you securely connect and manage your resources, just like a traditional on-premises network. Azu...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8ucxn8yiqn3wy9yrk9uc.png",
+    "video": null,
+    "author": "EMMANUEL",
+    "tags": [
+      "webdev",
+      "cloudcomputing",
+      "microsoft",
+      "programming"
+    ],
+    "seoTitle": "How to Create a virtual network in Azure.",
+    "seoDescription": "A Virtual Network (VNet) is a logically isolated network(a network segment intentionally separated from other networks, including the public internet, to imp..."
+  },
+  {
+    "title": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
+    "url": "https://dev.to/yuktisays/mastering-mongodb-aggregation-pipelines-a-developers-complete-guide-1ecd",
+    "publishedAt": "2025-09-05T01:19:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, when I moved to MongoDB, I mostly used it for simple things — insert, find, update, delete. I only knew a few operators like $set, $or, $in. Honestly, I thought MongoDB was just about basic CRUD. But re...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwrl806ybfyneocc9aa30.png",
+    "video": null,
+    "author": "Yukti Sahu",
+    "tags": [
+      "ai",
+      "webdev",
+      "beginners",
+      "node"
+    ],
+    "seoTitle": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
+    "seoDescription": "When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, wh..."
+  },
+  {
     "title": "[Boost]",
     "url": "https://dev.to/toddhgardner/-1klm",
     "publishedAt": "2025-09-05T00:59:03.000Z",
@@ -565,76 +635,5 @@
     ],
     "seoTitle": "The ‘Wuthering Heights’ Trailer Is More Risqué Than You’d Expect",
     "seoDescription": "Emerald Fennell does not do anything lightly. She's a force of nature who directs big, bold movies. And they are noisy and loud, and get people to the theate..."
-  },
-  {
-    "title": "Rumor Replay: iPhone Fold, AirPods Pro 3 features, and more",
-    "url": "https://9to5mac.com/2025/09/04/rumor-replay-iphone-fold-breakthroughs-airpods-pro-3-features-and-more/",
-    "publishedAt": "2025-09-04T19:30:23.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "This is Rumor Replay, a weekly column at 9to5Mac offering a quick rundown of the most recent Apple product rumors, with analysis and commentary. Today: iPhone Fold rumors, iPhone 17 Pro thermals and case curiosity, AirPods Pro 3 features, and more. Here are this week’s Apple rumors. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/iphone-fold-mockup-rr.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Rumor Replay: iPhone Fold, AirPods Pro 3 features, and more",
-    "seoDescription": "This is Rumor Replay, a weekly column at 9to5Mac offering a quick rundown of the most recent Apple product rumors, with analysis and commentary. Today: iPhon..."
-  },
-  {
-    "title": "Anker's New Prime Chargers Feature Smart Displays Showing Real-Time Charging Stats",
-    "url": "https://www.macrumors.com/2025/09/04/anker-prime-chargers/",
-    "publishedAt": "2025-09-04T19:27:42.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Anker Innovations today introduced several upcoming products under its Anker, Eufy, and Soundcore brands. The new Anker Prime lineup features a series of charging options equipped with the AnkerSense View, a smart display that provides details like real-time charging speed and temperature. The Prime line includes Anker's first charger with a 300W maximum ...",
-    "image": "https://images.macrumors.com/article-new/2025/09/anker-charger-main.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Anker"
-    ],
-    "seoTitle": "Anker's New Prime Chargers Feature Smart Displays Showing Real-Time Charging Stats",
-    "seoDescription": "Anker Innovations today introduced several upcoming products under its Anker, Eufy, and Soundcore brands. The new Anker Prime lineup features a series of cha..."
-  },
-  {
-    "title": "iPhone event preview, Google deal continues, new Siri plans",
-    "url": "https://9to5mac.com/2025/09/04/happy-hour-554/",
-    "publishedAt": "2025-09-04T19:24:05.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Benjamin and Chance get hyped for next week’s awe-dropping event with a breakdown of what we expect, and some intriguing hanging questions. In other news, the Google search deal escapes the jaws of antitrust unscathed, and we have more details about the upcoming Siri revamp. And in Happy Hour Plus, they discuss the Google Pixel’s 100x zoom features and de...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/02/9to5mac-happy-hour-lead1.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone event preview, Google deal continues, new Siri plans",
-    "seoDescription": "Benjamin and Chance get hyped for next week’s awe-dropping event with a breakdown of what we expect, and some intriguing hanging questions. In other news, th..."
-  },
-  {
-    "title": "Adobe’s Chrome Extension Makes Stealing Watermarked Photos Easy",
-    "url": "https://petapixel.com/2025/09/04/adobes-chrome-extension-makes-stealing-watermarked-photos-easy/",
-    "publishedAt": "2025-09-04T19:16:19.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Adobe has an official Chrome Acrobat extension designed and marketed for viewing, editing, and filling PDF files inside Google’s popular web browser. However, as a photographer discovered, the extension enables some far-reaching Adobe Express integration that makes removing watermarks from photos an AI-assisted cakewalk. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/adobe-express-chrome-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "News",
-      "adobe",
-      "adobeacrobat",
-      "adobexpress",
-      "ai",
-      "chrome",
-      "copyright",
-      "express"
-    ],
-    "seoTitle": "Adobe’s Chrome Extension Makes Stealing Watermarked Photos Easy",
-    "seoDescription": "Adobe has an official Chrome Acrobat extension designed and marketed for viewing, editing, and filling PDF files inside Google’s popular web browser. However..."
   }
 ]
