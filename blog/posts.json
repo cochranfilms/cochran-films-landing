@@ -1,22 +1,22 @@
 [
   {
-    "title": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
-    "url": "https://dev.to/yuktisays/mastering-access-tokens-refresh-tokens-from-origins-to-modern-authentication-5e3i",
-    "publishedAt": "2025-09-02T04:48:14.000Z",
+    "title": "Super WhatsApp Agent 🤖📱",
+    "url": "https://dev.to/amira_adel_e032821d5c75c5/super-whatsapp-agent-4mo4",
+    "publishedAt": "2025-08-31T11:06:34.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you're building for web or mobile, securing access is essential. And when it comes to handling authentication securely, Access Tokens and Refresh Tokens are at the heart of modern systems. In this articl...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzusga6fp4llhxdnhi84l.webp",
+    "summary": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with n8n, Bright Data, and OpenAI. 🧠 What the Agent Can Do You can type a question like \"What’s new with n8n?\" The Orchestrator routes it to the Search Agent. The Search Agent uses Bright Data + Google/W...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5616t5mk4z4c9rx9ntt6.jpg",
     "video": null,
-    "author": "Yukti Sahu",
+    "author": "Amira Adel",
     "tags": [
-      "webdev",
-      "programming",
-      "node",
-      "javascript"
+      "devchallenge",
+      "n8nbrightdatachallenge",
+      "ai",
+      "webdev"
     ],
-    "seoTitle": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication",
-    "seoDescription": "Mastering Access Tokens & Refresh Tokens: From Origins to Modern Authentication Authentication is at the core of almost every modern application. Whether you..."
+    "seoTitle": "Super WhatsApp Agent 🤖📱",
+    "seoDescription": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with..."
   },
   {
     "title": "Prevent Sensitive Data Exposure in React.js",
@@ -550,615 +550,68 @@
     "seoDescription": "The pilot episode of Hacks is a masterclass in television writing that brilliantly establishes its central characters and the conflict that drives the series..."
   },
   {
-    "title": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
-    "url": "https://dev.to/naik_sejal/3-mistakes-that-killing-dev-agencies-and-how-to-solve-them-mention-in-this-article-5ei9",
-    "publishedAt": "2025-09-02T04:35:08.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Sejal",
-    "tags": [
-      "devchallenge",
-      "webdev",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "3 Mistakes that killing Dev Agencies and how to solve them mention in this Article",
-    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/-46da",
-    "publishedAt": "2025-09-02T04:33:20.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Bhavy K",
-    "tags": [
-      "devchallenge",
-      "webdev",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
-  },
-  {
-    "title": "After Audit 100 Dev agencies we find this 3 Mistakes which killing Dev agencies and also mention solutions",
-    "url": "https://dev.to/pratham_naik_project_manager/after-audit-100-dev-agencies-we-find-this-3-mistakes-which-killing-dev-agencies-and-also-mention-4e21",
-    "publishedAt": "2025-09-02T04:32:32.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "devchallenge",
-      "webdev",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "After Audit 100 Dev agencies we find this 3 Mistakes which killing Dev agencies and also mention solutions",
-    "seoDescription": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them Pratham naik for Teamcamp ・ Sep 2 #devchallenge #webdev #devops #productivity"
-  },
-  {
-    "title": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them",
-    "url": "https://dev.to/teamcamp/we-audited-100-dev-agencies-the-3-mistakes-killing-89-of-them-3go1",
-    "publishedAt": "2025-09-02T04:31:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "After spending six months deep-diving into the operations of 100 development agencies, I discovered something shocking. 89% of them were making the same three critical mistakes. These aren't minor issues or nice-to-have improvements. These are agency killers that drain profits, burn out teams, and lose clients faster than a memory leak crashes a server. T...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpz6p2skeadrvxb9w77kc.png",
-    "video": null,
-    "author": "Pratham naik",
-    "tags": [
-      "devchallenge",
-      "webdev",
-      "devops",
-      "productivity"
-    ],
-    "seoTitle": "We Audited 100 Dev Agencies: The 3 Mistakes Killing 89% of Them",
-    "seoDescription": "After spending six months deep-diving into the operations of 100 development agencies, I discovered something shocking. 89% of them were making the same thre..."
-  },
-  {
-    "title": "check out this case study!!",
-    "url": "https://dev.to/dipti_moryani_08e62702314/check-out-this-case-study-4j0o",
-    "publishedAt": "2025-09-02T03:59:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "IT Vendor Spend Analysis Dipti Moryani ・ Sep 2 #webdev #programming #ai #beginners",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3399622%2F2f2a63d8-c37d-4d44-8407-bbd451ca712d.png",
-    "video": null,
-    "author": "Dipti Moryani",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "check out this case study!!",
-    "seoDescription": "IT Vendor Spend Analysis Dipti Moryani ・ Sep 2 #webdev #programming #ai #beginners"
-  },
-  {
-    "title": "IT Vendor Spend Analysis",
-    "url": "https://dev.to/dipti_moryani_08e62702314/it-vendor-spend-analysis-43a2",
-    "publishedAt": "2025-09-02T03:59:03.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Cut Waste. Control Costs. Gain Clarity. We helped a leading food manufacturing company take control of their IT vendor spend with a customized analytics dashboard built for transparency and action. The challenge? Rising monthly expenses and no clear visibility into where the money was going. A tailored dashboard that gave the finance and procurement teams...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhycwv2ryfenr1blbqzfz.png",
-    "video": null,
-    "author": "Dipti Moryani",
-    "tags": [
-      "webdev",
-      "programming",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "IT Vendor Spend Analysis",
-    "seoDescription": "Cut Waste. Control Costs. Gain Clarity. We helped a leading food manufacturing company take control of their IT vendor spend with a customized analytics dash..."
-  },
-  {
-    "title": "Critical Risk: Seeyon OA Arbitrary Password Reset Vulnerability",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/critical-risk-seeyon-oa-arbitrary-password-reset-vulnerability-22ee",
-    "publishedAt": "2025-09-02T03:19:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency response center monitors and responds to RCE and authentication vulnerabilities across the stack to help developers stay safe. Seeyon OA is a widely used enterprise Office Automation (OA) platform th...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fun3zfwvf4ao13meohw10.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "webdev",
-      "vulnerabilities",
-      "cybersecurity",
-      "safeline"
-    ],
-    "seoTitle": "Critical Risk: Seeyon OA Arbitrary Password Reset Vulnerability",
-    "seoDescription": "> About Author SafeLine, an open-source Web Application Firewall built for real-world threats. While SafeLine focuses on HTTP-layer protection, our emergency..."
-  },
-  {
-    "title": "Stolen luggage at LAX recovered thanks to Apple AirTag",
-    "url": "https://9to5mac.com/2025/09/01/stolen-luggage-at-lax-recovered-thanks-to-apple-airtag/",
-    "publishedAt": "2025-09-02T01:29:13.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "An Apple helped a West Hollywood man recover his stolen suitcase after landing at Los Angeles International Airport last week. Here’s what happened. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/02/airtag-in-case.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Stolen luggage at LAX recovered thanks to Apple AirTag",
-    "seoDescription": "An Apple helped a West Hollywood man recover his stolen suitcase after landing at Los Angeles International Airport last week. Here’s what happened. more…"
-  },
-  {
-    "title": "This Macintosh programming book library will take you back, even if you weren’t there for it",
-    "url": "https://9to5mac.com/2025/09/01/this-macintosh-programming-book-library-will-take-you-back-even-if-you-werent-there-for-it/",
-    "publishedAt": "2025-09-02T00:53:32.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Over the weekend, Daring Fireball’s John Gruber linked to a fantastic collection of early Macintosh programming books (via Michael Tsai). It is a carefully assembled catalog of more than 150 books from as early as 1983, covering everything from AppleSoft BASIC, to gaming programming for the Mac. Even if you weren’t around for any of that, believe me: this...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/01/Macintosh-40th-anniversary.webp?w=1200",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "This Macintosh programming book library will take you back, even if you weren’t there for it",
-    "seoDescription": "Over the weekend, Daring Fireball’s John Gruber linked to a fantastic collection of early Macintosh programming books (via Michael Tsai). It is a carefully a..."
-  },
-  {
-    "title": "WhatsApp Status is getting a Close Friends feature",
-    "url": "https://9to5mac.com/2025/09/01/whatsapp-status-is-getting-a-close-friends-feature/",
-    "publishedAt": "2025-09-01T22:24:36.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "While most U.S. users have never used—or even heard of—WhatsApp Status Updates, Meta recently revealed that the tab is now used by 1.5 billion people per day worldwide. And soon, WhatsApp will take a page from Instagram by adding a Close Friends feature. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/whatsapp-glass.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "WhatsApp Status is getting a Close Friends feature",
-    "seoDescription": "While most U.S. users have never used—or even heard of—WhatsApp Status Updates, Meta recently revealed that the tab is now used by 1.5 billion people per day..."
-  },
-  {
-    "title": "Rumor: AirPods Pro 3 features may not all arrive at launch",
-    "url": "https://9to5mac.com/2025/09/01/airpods-pro-3-sensors-live-translation/",
-    "publishedAt": "2025-09-01T22:17:48.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "While we expect Apple to unveil AirPods Pro 3 alongside iPhone 17 and Apple Watch Series 11 next week, there’s one new feature that may not be ready for showtime. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/airpods-pro-3.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Rumor: AirPods Pro 3 features may not all arrive at launch",
-    "seoDescription": "While we expect Apple to unveil AirPods Pro 3 alongside iPhone 17 and Apple Watch Series 11 next week, there’s one new feature that may not be ready for show..."
-  },
-  {
-    "title": "You can try Apple’s lightning-fast video captioning model right from your browser",
-    "url": "https://9to5mac.com/2025/09/01/you-can-try-apples-lightning-fast-video-captioning-model-right-from-your-browser/",
-    "publishedAt": "2025-09-01T21:41:35.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A few months ago, Apple released FastVLM, a Visual Language Model (VLM) that offered near-instant high-resolution image processing. Now, you can take it for a spin, provided you have an Apple Silicon-powered Mac. Here’s how. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/Apple-Intelligence-Liquid-Glass.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "You can try Apple’s lightning-fast video captioning model right from your browser",
-    "seoDescription": "A few months ago, Apple released FastVLM, a Visual Language Model (VLM) that offered near-instant high-resolution image processing. Now, you can take it for ..."
-  },
-  {
-    "title": "The best Labor Day TV sales",
-    "url": "https://www.theverge.com/tech/767635/best-labor-day-tv-deal-sale",
-    "publishedAt": "2025-09-01T20:47:17.000Z",
+    "title": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/762594/fable-showrunner-edwatch-saatchi-interview",
+    "publishedAt": "2025-08-29T20:07:22.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to get a deal on a fancy, new TV. The US holiday is happening just before the start of the 2025-2026 NFL season, the World Cup qualifiers, and the lead-up to the MLB post-season games. This sports trifecta...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/QM6K_98.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. Even though Story Studio snagged an Emmy for one of its three animated features, a general lack of public interest in VR movies led Meta to shutter Oculus Story Studio back in 2017. The VR era has come...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Exit-Valley.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Brandt Ranj",
+    "author": "Charles Pulliam-Moore",
     "tags": [],
-    "seoTitle": "The best Labor Day TV sales",
-    "seoDescription": "Yes, even this 98-inch mode is discounted. | Image: TCL Labor Day weekend marks the unofficial end of summer, which is a bit sad, but it’s a great time to ge..."
+    "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
+    "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
   },
   {
-    "title": "The 28 best Labor Day deals you still can grab for $100 or less",
-    "url": "https://www.theverge.com/tech/767824/best-labor-day-sales-cheap-tech-deals-under-100-2025",
-    "publishedAt": "2025-09-01T20:17:05.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Labor Day has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. We’ve put together an expansive guide detailing nearly 100 deals we think are worth the money — including everything from big-screen OLED TVs to back-to-school essentials like the latest MacBook Air — but we also recognize that spending a coup...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/Anker-Laptop-Power-Bank-Retractable.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sheena Vasani",
-    "tags": [],
-    "seoTitle": "The 28 best Labor Day deals you still can grab for $100 or less",
-    "seoDescription": "Labor Day has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. We’ve put together an expansive guide detai..."
-  },
-  {
-    "title": "As Apple pushes for automation upgrades, supply chain partners face higher costs",
-    "url": "https://9to5mac.com/2025/09/01/as-apple-pushes-for-automation-upgrades-supply-chain-partners-face-higher-costs/",
-    "publishedAt": "2025-09-01T20:06:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "As Apple moves to diversify its manufacturing operations, it appears to be leaning on suppliers to shoulder the costs of automating their assembly lines. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/06/iPhone-recycling-robot-Daisy.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "As Apple pushes for automation upgrades, supply chain partners face higher costs",
-    "seoDescription": "As Apple moves to diversify its manufacturing operations, it appears to be leaning on suppliers to shoulder the costs of automating their assembly lines. Her..."
-  },
-  {
-    "title": "What It Really Means to Be an “Uncompromising Filmmaker”",
-    "url": "https://nofilmschool.com/what-it-really-means-to-be-an-uncompromising-filmmaker",
-    "publishedAt": "2025-09-01T19:50:03.000Z",
+    "title": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "url": "https://nofilmschool.com/most-realistic-firefights",
+    "publishedAt": "2025-08-29T19:57:04.000Z",
     "source": "nofilmschool.com",
     "category": "production",
-    "summary": "Two years ago, I wrapped I Live Here Now, a deeply beautiful and intricate psychological horror film about a woman who confronts her traumas in a strange, derelict hotel. It was my first feature as a director of photography, as well as the first feature for my director, Julie Pacino. In the delirious minutes after wrap, while everyone danced, cried, and p...",
-    "image": "https://nofilmschool.com/media-library/what-it-really-means-to-be-an-uncompromising-filmmaker.jpg?id=61540379&width=980",
-    "video": null,
-    "author": "Aron Meinhardt",
-    "tags": [
-      "Vision",
-      "Cinematography advice"
-    ],
-    "seoTitle": "What It Really Means to Be an “Uncompromising Filmmaker”",
-    "seoDescription": "Two years ago, I wrapped I Live Here Now, a deeply beautiful and intricate psychological horror film about a woman who confronts her traumas in a strange, de..."
-  },
-  {
-    "title": "These three features would make Apple’s rumored AI smart glasses a huge winner",
-    "url": "https://9to5mac.com/2025/09/01/three-ways-apples-smart-glasses-could-beat-meta/",
-    "publishedAt": "2025-09-01T19:17:01.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is reportedly launching its own AI smart glasses next year, per a Bloomberg report. While Apple is very much so late to the category, I do think there are a number of great value adds Apple could bring to the table – which I’ll be outlining here. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/05/apple-glasses-light.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "These three features would make Apple’s rumored AI smart glasses a huge winner",
-    "seoDescription": "Apple is reportedly launching its own AI smart glasses next year, per a Bloomberg report. While Apple is very much so late to the category, I do think there ..."
-  },
-  {
-    "title": "Switching the Gap: The Gadget Solution for Actor Training",
-    "url": "https://nofilmschool.com/switching-the-gap-the-gadget-solution-for-actor-training",
-    "publishedAt": "2025-09-01T19:12:26.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "\"What's the difference between acting for the stage and acting for the camera?\" your theater school acting teacher invariably asks on Day 1 of your Acting for the Camera class. Fair question. Unfair paradigm. Framing the course in this way plants a seed in the actor, an insidious idea that their characters must behave differently in different mediums and ...",
-    "image": "https://nofilmschool.com/media-library/switching-the-gap-the-gadget-solution-for-actor-training.jpg?id=61540310&width=980",
-    "video": null,
-    "author": "Patrick Sabongui",
-    "tags": [
-      "Acting",
-      "Acting advice",
-      "Acting tips",
-      "Acting"
-    ],
-    "seoTitle": "Switching the Gap: The Gadget Solution for Actor Training",
-    "seoDescription": "\"What's the difference between acting for the stage and acting for the camera?\" your theater school acting teacher invariably asks on Day 1 of your Acting fo..."
-  },
-  {
-    "title": "9to5Mac Daily: September 1, 2025 – CarPlay Ultra rumors, more",
-    "url": "https://9to5mac.com/2025/09/01/daily-september-1-2025/",
-    "publishedAt": "2025-09-01T19:11:56.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by Backblaze: Never lose a file again. Use code “9to5daily” at checkout for 10% off or try for free. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: September 1, 2025 – CarPlay Ultra rumors, more",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "The 95 best Labor Day sales happening now",
-    "url": "https://www.theverge.com/tech/756227/best-labor-day-sales-deals-2025",
-    "publishedAt": "2025-09-01T18:47:36.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment for some, at least there is always a great selection of deals to combat the post-summer blues. Lucky for you, we’ve gone ahead and rounded up the best discounts you can get on a variety of Verge-approved gadgets and goods, from...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257912_labor_day_deals__CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The 95 best Labor Day sales happening now",
-    "seoDescription": "Labor Day marks the unofficial end of summer, and while the prospect of cooler weather and shorter days can be a tough adjustment for some, at least there is..."
-  },
-  {
-    "title": "Security Bite: My favorite privacy features in iOS 26",
-    "url": "https://9to5mac.com/2025/09/01/security-bite-my-favorite-privacy-features-in-ios-26/",
-    "publishedAt": "2025-09-01T18:20:22.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we do. Our unique integrated approach to management and security combines state-of-the-art Apple-specific security solutions for fully automated Hardening & Compliance, Next Generation EDR, AI-powered Z...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Untitled-design-1.png?w=1600",
-    "video": null,
-    "author": "Arin Waichulis",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Security Bite: My favorite privacy features in iOS 26",
-    "seoDescription": "9to5Mac Security Bite is exclusively brought to you by Mosyle, the only Apple Unified Platform. Making Apple devices work-ready and enterprise-safe is all we..."
-  },
-  {
-    "title": "A Massive List of Fall 2025 Grants, Labs & Fellowships",
-    "url": "https://nofilmschool.com/a-massive-list-of-fall-2025-grants-labs-fellowships",
-    "publishedAt": "2025-09-01T18:00:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "If, like all of Hollywood, you took a long August break, we’re here to help you get back on the horse. Our fall list includes deadlines for TV writing opportunities as well as labs, fellowships, and financial support for docs and narratives in all stages of production. While the chaos of our current administration has unfortunately impacted grantmaking, n...",
-    "image": "https://nofilmschool.com/media-library/a-massive-list-of-fall-2025-grants-labs-fellowships.jpg?id=61540275&width=980",
-    "video": null,
-    "author": "Laura Moss",
-    "tags": [
-      "Grants",
-      "Fellowships",
-      "Labs",
-      "Contests",
-      "Funding"
-    ],
-    "seoTitle": "A Massive List of Fall 2025 Grants, Labs & Fellowships",
-    "seoDescription": "If, like all of Hollywood, you took a long August break, we’re here to help you get back on the horse. Our fall list includes deadlines for TV writing opport..."
-  },
-  {
-    "title": "MagSafe Monday: UAG’s Metropolis Wallet blends Kevlar toughness with everyday utility",
-    "url": "https://9to5mac.com/2025/09/01/uag-metropolis-wallet/",
-    "publishedAt": "2025-09-01T18:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "MagSafe wallets are probably the category of MagSafe that makes the most sense to me day to day. I am always going to carry a wallet, so might as well kill 2 birds with 1 stone. The is one of the better designed ones I’ve come across from a quality standpoint, so let’s dive into what all it offers. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/bradley.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Bradley C",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "MagSafe Monday: UAG’s Metropolis Wallet blends Kevlar toughness with everyday utility",
-    "seoDescription": "MagSafe wallets are probably the category of MagSafe that makes the most sense to me day to day. I am always going to carry a wallet, so might as well kill 2..."
-  },
-  {
-    "title": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
-    "url": "https://9to5mac.com/2025/09/01/new-ios-26-iphone-apps-icons-compared/",
-    "publishedAt": "2025-09-01T17:46:58.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "As well as a refreshed new look for system components like buttons and tabbars, the Liquid Glass redesign of iOS 26 also extends to app icons. For the first time since iOS 7, Apple has redrawn all of the system apps with new artwork. That means a whole new look is coming to your iPhone home screen this fall. In this post, we share a side-by-side of the iO...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/ios26-icons.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Benjamin Mayo",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "New iOS 26 icons: Here’s all the new app icons coming to your iPhone home screen",
-    "seoDescription": "As well as a refreshed new look for system components like buttons and tabbars, the Liquid Glass redesign of iOS 26 also extends to app icons. For the first ..."
-  },
-  {
-    "title": "Apple isn’t done patching a discontinued iPhone thanks to EU radiation drama",
-    "url": "https://9to5mac.com/2025/09/01/iphone-12-radiation-eu-software-update/",
-    "publishedAt": "2025-09-01T17:34:09.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Stop us if you’ve heard this one before. Apple is preparing a software update for an iPhone from 2020 to address a years-old health complaint only raised in one market. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iPhone-12-mini.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Zac Hall",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple isn’t done patching a discontinued iPhone thanks to EU radiation drama",
-    "seoDescription": "Stop us if you’ve heard this one before. Apple is preparing a software update for an iPhone from 2020 to address a years-old health complaint only raised in ..."
-  },
-  {
-    "title": "What Makes a Great Self-Tape Audition",
-    "url": "https://nofilmschool.com/self-tape-audition",
-    "publishedAt": "2025-09-01T17:30:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Did you all watch David Corenswet's Superman audition tape yet? In the audition, he delivers part of the now-famous \"interview\" scene opposite his wife, and the performance was strong enough to win him the role. And his set-up was simple and straightforward, allowing him to really shine. It got me thinking about the immense pressure actors feel in these s...",
-    "image": "https://nofilmschool.com/media-library/what-makes-a-great-self-tape-audition.png?id=61540238&width=980",
-    "video": "https://www.youtube.com/embed/Hpp1TfGXo_U?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Casting directors",
-      "Audition",
-      "Self tape",
-      "Superman",
-      "Casting"
-    ],
-    "seoTitle": "What Makes a Great Self-Tape Audition",
-    "seoDescription": "Did you all watch David Corenswet's Superman audition tape yet? In the audition, he delivers part of the now-famous \"interview\" scene opposite his wife, and ..."
-  },
-  {
-    "title": "5 Best MacGuffins in Movies",
-    "url": "https://nofilmschool.com/best-macguffins-in-movies",
-    "publishedAt": "2025-09-01T17:20:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "A MacGuffin is the object everyone in a movie wants but doesn't really matter to the audience. Sometimes we don't even know what the MacGuffin is, and that's okay. Either way, it's the thing that drives the plot and motivates characters — and sometimes, that thing becomes even more iconic than the movies they're in. We put together five of our favorite Ma...",
-    "image": "https://nofilmschool.com/media-library/citizen-kane.jpg?id=34059992&width=980",
-    "video": "https://www.youtube.com/embed/s7EdQ4FqbhY?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Macguffins",
-      "Plot devices",
-      "Screenwriting",
-      "Macguffin"
-    ],
-    "seoTitle": "5 Best MacGuffins in Movies",
-    "seoDescription": "A MacGuffin is the object everyone in a movie wants but doesn't really matter to the audience. Sometimes we don't even know what the MacGuffin is, and that's..."
-  },
-  {
-    "title": "Alfred Hitchcock’s Best Screenplays You Can Read Today",
-    "url": "https://nofilmschool.com/alfred-hitchcock-screenplays",
-    "publishedAt": "2025-09-01T17:10:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply understood how to work with writers and bring the best out of their stories. And he was constantly pushing the envelope. Today, I want to bring you an assortment of the screenplays he chose to direct tha...",
-    "image": "https://nofilmschool.com/media-library/read-some-alfred-hitchcock-screenplays.png?id=34061348&width=980",
-    "video": "https://www.youtube.com/embed/lj1z8M7bfgM?rel=0",
+    "summary": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies that earned the respect of military veterans, firearms experts, and film critics alike. They have highly accurate and visceral scenes that pop off the screen. Some of them are disturbing or scary, but...",
+    "image": "https://nofilmschool.com/media-library/what-are-the-most-realistic-firefights-ever-filmed-by-hollywood.jpg?id=61536059&width=980",
+    "video": "https://www.youtube.com/embed/UDYVy954biU?rel=0",
     "author": "Jason Hellerman",
     "tags": [
-      "Script download",
-      "Screenplay download",
-      "Alfred hitchcock",
-      "Alfred hitchcock"
+      "Best movies",
+      "Action",
+      "Firefights"
     ],
-    "seoTitle": "Alfred Hitchcock's Best Screenplays You Can Read Today",
-    "seoDescription": "When I am going over my list of favorite directors, Alfred Hitchcock is right at the top. The guy was not only the master of suspense, but he also deeply und..."
+    "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
+    "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
   },
   {
-    "title": "Break Free From Closed Autofocus Ecosystems With This New Phase-Detection Technology",
-    "url": "https://nofilmschool.com/tilta-phase-detection-autofocus",
-    "publishedAt": "2025-09-01T17:00:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Are you ready for a new era of imaging? Well, good. That's great to hear! Tilta has news that should be quite appealing to you. The company has announced that it is ready to unveil its latest AF solution as it aims to merge phase-detection autofocus technology with the precision control ecosystem of its Nucleus-M II Wireless Control System. Let's look at ...",
-    "image": "https://nofilmschool.com/media-library/tilta-phase-detection-autofocus.jpg?id=61540094&width=980",
-    "video": "https://www.youtube.com/embed/gzq62HLWeEI?rel=0",
-    "author": "Jourdan Aldredge",
-    "tags": [
-      "Phase-detection autofocus",
-      "Autofocus adapter",
-      "Tilta",
-      "Autofocus",
-      "Tilta phase-detection autofocus"
-    ],
-    "seoTitle": "Break Free From Closed Autofocus Ecosystems With This New Phase-Detection Technology",
-    "seoDescription": "Are you ready for a new era of imaging? Well, good. That's great to hear! Tilta has news that should be quite appealing to you. The company has announced tha..."
-  },
-  {
-    "title": "Meet a 17-Year-Old Photographer Revealing the Hidden Side of Wildlife",
-    "url": "https://petapixel.com/2025/09/01/meet-the-17-year-old-wildlife-photographer-revealing-the-hidden-side-of-nature/",
-    "publishedAt": "2025-09-01T17:00:03.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "While many teenagers are absorbed in screens, Denat Lahi spends his nights and early mornings tracking foxes and pine martens. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/Spotlight-Denat-Lahi-PetaPixel-BG-3-Panel.jpg",
+    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
+    "publishedAt": "2025-08-29T19:53:06.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Kate Garibaldi",
-    "tags": [
-      "Inspiration",
-      "Spotlight",
-      "denatlahi",
-      "lahi",
-      "spotlight",
-      "wildlife"
-    ],
-    "seoTitle": "Meet a 17-Year-Old Photographer Revealing the Hidden Side of Wildlife",
-    "seoDescription": "While many teenagers are absorbed in screens, Denat Lahi spends his nights and early mornings tracking foxes and pine martens. [Read More]"
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
+    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
   },
   {
-    "title": "Why the 'Deadpool 2' Director Left 'Jurassic World Rebirth'",
-    "url": "https://nofilmschool.com/why-the-deadpool-2-director-left-jurassic-world-rebirth",
-    "publishedAt": "2025-09-01T16:50:02.000Z",
+    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
+    "publishedAt": "2025-08-29T19:44:15.000Z",
     "source": "nofilmschool.com",
     "category": "production",
-    "summary": "David Leitch and Kelly McCormick, who are married, are also the principals behind stunt-spectacular film company 87North. They produced the John Wick series, Nobody and its sequel Nobody 2, Bullet Train, Violent Night, The Fall Guy, and more. They're a production company with a very specific approach to storytelling, and you know exactly what you're getti...",
-    "image": "https://nofilmschool.com/media-library/why-the-deadpool-2-director-left-jurassic-world-rebirth.jpg?id=61540210&width=980",
-    "video": "https://www.youtube.com/embed/-5X2pt95cIo?rel=0",
+    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
+    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
+    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
     "author": "Jo Light",
     "tags": [
-      "Jurassic world: rebirth",
-      "David leitch",
-      "Kelly mccormick"
+      "The roses",
+      "Comedy",
+      "Remake",
+      "Adaptation"
     ],
-    "seoTitle": "Why the 'Deadpool 2' Director Left 'Jurassic World Rebirth'",
-    "seoDescription": "David Leitch and Kelly McCormick, who are married, are also the principals behind stunt-spectacular film company 87North. They produced the John Wick series,..."
-  },
-  {
-    "title": "5 Movies to Watch on Labor Day",
-    "url": "https://nofilmschool.com/movies-to-watch-labor-day",
-    "publishedAt": "2025-09-01T16:40:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Labor Day is all about barbecues and back to school, the last gasp of summer vacation before we all head into the busyness of fall. There's something cinematic about that bittersweet end-of-summer feeling that filmmakers have been mining for decades. A time of transition is perfect story fodder. We've got five movies set during Labor Day you can watch to ...",
-    "image": "https://nofilmschool.com/media-library/stand-by-me.png?id=61522859&width=980",
-    "video": "https://www.youtube.com/embed/QOQL3Xi8dPE?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Labor day",
-      "Best movies"
-    ],
-    "seoTitle": "5 Movies to Watch on Labor Day",
-    "seoDescription": "Labor Day is all about barbecues and back to school, the last gasp of summer vacation before we all head into the busyness of fall. There's something cinemat..."
-  },
-  {
-    "title": "Writing An Adaptation? This Checklist Will Help",
-    "url": "https://nofilmschool.com/adaptation-checklist",
-    "publishedAt": "2025-09-01T16:28:14.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "As a screenwriter, I can tell you that writing an adapted screenplay is no easy feat. You have to seek out the heart and soul of the source material and then be merciless when it comes to bending and tweaking it so it can fit the big screen. Sometimes, you can get lost doing that. That's why I created this checklist for writers to use when creating an ada...",
-    "image": "https://nofilmschool.com/media-library/writing-an-adaptation-this-checklist-will-help.jpg?id=34048299&width=980",
-    "video": null,
-    "author": "Jason Hellerman",
-    "tags": [
-      "Adaptation",
-      "Screenwriting checklist",
-      "Adapted screenplay"
-    ],
-    "seoTitle": "Writing An Adaptation? This Checklist Will Help",
-    "seoDescription": "As a screenwriter, I can tell you that writing an adapted screenplay is no easy feat. You have to seek out the heart and soul of the source material and then..."
-  },
-  {
-    "title": "Business Logic Goes Out The Window — The Rangefinder Window, That Is",
-    "url": "https://petapixel.com/2025/09/01/business-logic-goes-out-the-window-the-rangefinder-window-that-is/",
-    "publishedAt": "2025-09-01T16:00:45.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "I rediscovered an old love while writing an article about using M lenses on my Panasonic S5 IIx. My old love? Rangefinder cameras. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/business-logic-guest-article.jpg",
-    "video": null,
-    "author": "Joel Wolfson",
-    "tags": [
-      "Inspiration",
-      "Miscellaneous",
-      "joelwolfson",
-      "LeicaM11",
-      "thoughts"
-    ],
-    "seoTitle": "Business Logic Goes Out The Window — The Rangefinder Window, That Is",
-    "seoDescription": "I rediscovered an old love while writing an article about using M lenses on my Panasonic S5 IIx. My old love? Rangefinder cameras. [Read More]"
-  },
-  {
-    "title": "Apple Slashes 2025 MLS Season Pass to as Low as $25",
-    "url": "https://www.macrumors.com/2025/09/01/apple-slashes-2025-mls-season-pass-price/",
-    "publishedAt": "2025-09-01T15:56:46.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Apple has significantly discounted the MLS Season Pass for the remainder of the 2025 season, offering the annual subscription at $29, or $25 for Apple TV+ subscribers, down from the regular $99 price. The reduced rate covers the rest of the current MLS season and playoffs, including access to every match live and on demand, with separate English and Spani...",
-    "image": "https://images.macrumors.com/article-new/2022/11/apple-tv-mls-season-pass.jpg",
-    "video": null,
-    "author": "Hartley Charlton",
-    "tags": [
-      "Apple TV Plus",
-      "MLS Season Pass"
-    ],
-    "seoTitle": "Apple Slashes 2025 MLS Season Pass to as Low as $25",
-    "seoDescription": "Apple has significantly discounted the MLS Season Pass for the remainder of the 2025 season, offering the annual subscription at $29, or $25 for Apple TV+ su..."
+    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
+    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
   }
 ]

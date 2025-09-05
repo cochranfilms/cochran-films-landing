@@ -271,7 +271,7 @@ class AirtableCMS {
       'Video Production': 'appjQxcRoClnZzghj', // Portfolio CSV
       'Web Development': 'appV5l9kZ5vAxcz4e',  // Web CSV  
       'Photography': 'appP1uFoRWjxPkQ5b',      // Photos CSV
-      'Brand Development': 'appk9HCj1kWzK1JzQ'  // Brand Development - Updated to match config
+      'Brand Development': 'app9HS0yNn6uyFmJF'  // Brand Development
     };
     
     // Table names (these are typically the sheet names in your Airtable)
@@ -704,49 +704,16 @@ class AirtableCMS {
       return this.transformAirtableData(data.records || [], category);
       
     } catch (error) {
-      console.error(`❌ Failed to load ${category} data from API:`, error);
-      
-      // FALLBACK: Try direct Airtable API call (client-side)
-      try {
-        console.log(`🔄 Attempting direct Airtable API call for ${category}...`);
-        
-        // Use a public token or environment variable if available
-        // Note: In production, this should use a read-only token
-        const directApiKey = window.AIRTABLE_PUBLIC_TOKEN || 'patYourPublicTokenHere';
-        
-        if (directApiKey && directApiKey !== 'patYourPublicTokenHere') {
-          const directResponse = await fetch(`https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`, {
-            headers: {
-              'Authorization': `Bearer ${directApiKey}`,
-              'Content-Type': 'application/json'
-            }
-          });
-          
-          if (directResponse.ok) {
-            const directData = await directResponse.json();
-            console.log(`✅ Successfully loaded ${category} data directly from Airtable`);
-            
-            // Cache the successful response
-            const cacheTTL = this.getCategoryCacheTTL(category);
-            this.cache.set(category, directData, cacheTTL);
-            
-            return this.transformAirtableData(directData.records || [], category);
-          }
-        }
-      } catch (directError) {
-        console.error(`❌ Direct Airtable API call also failed for ${category}:`, directError);
-      }
+      console.error(`❌ Failed to load ${category} data:`, error);
       
       // Try to serve stale cache if available (graceful degradation)
       const staleCache = this.getStaleCache(category);
       if (staleCache) {
-        console.log(`📦 Using stale cache for ${category}`);
         return this.transformAirtableData(staleCache.data.records || [], category);
       }
       
-      // Final fallback: return empty array instead of throwing
-      console.warn(`⚠️ All fallbacks failed for ${category}, returning empty data`);
-      return [];
+      // Rethrow to allow global fallback to CSV
+      throw error;
     }
   }
 
