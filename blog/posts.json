@@ -1,5 +1,94 @@
 [
   {
+    "title": "Create 3D Explosion Animations with HT for Web",
+    "url": "https://dev.to/hightopo/create-3d-explosion-animations-with-ht-for-web-2c0h",
+    "publishedAt": "2025-09-05T09:11:56.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In 3D environments, model part explosion effects serve as a common and practical visual technique widely used in product design presentations, mechanical motion simulation, and architectural visualization, among other fields. Hightopo Software (HT) uses its 3D visualization engine “HT for Web” to present product model components in a dynamic, separated ma...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxx2cuiqqw198ckfw2jsk.gif",
+    "video": null,
+    "author": "Hightopo",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "productivity"
+    ],
+    "seoTitle": "Create 3D Explosion Animations with HT for Web",
+    "seoDescription": "In 3D environments, model part explosion effects serve as a common and practical visual technique widely used in product design presentations, mechanical mot..."
+  },
+  {
+    "title": "Honda’s Prelude returns as a 200-horsepower fake-shifting hybrid",
+    "url": "https://www.theverge.com/news/772274/honda-prelude-fake-shifting-sound-hyrbid",
+    "publishedAt": "2025-09-05T09:02:04.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Oh my! | Image: Honda Honda is bringing back the sporty Prelude as a technology-packed 200-horsepower hybrid to tug at nostalgia strings. It’s the first new Prelude in 25 years and the front-wheel-drive-coup antidote to crossover SUVs. Pricing hasn’t been announced but in Japan it starts at just under 6.18 million yen (around $41,600), according to Nikkei...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/21-2026-Honda-Prelude.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": "https://www.youtube.com/embed/Yyyia5w6cTs?rel=0",
+    "author": "Thomas Ricker",
+    "tags": [],
+    "seoTitle": "Honda’s Prelude returns as a 200-horsepower fake-shifting hybrid",
+    "seoDescription": "Oh my! | Image: Honda Honda is bringing back the sporty Prelude as a technology-packed 200-horsepower hybrid to tug at nostalgia strings. It’s the first new ..."
+  },
+  {
+    "title": "Simplify Validation in Golang— No Struct Tags, No Reflection, TypeSafety: Meet GoValidator",
+    "url": "https://dev.to/rezakhademix/simplify-validation-in-golang-no-struct-tags-no-reflection-typesafety-meet-govalidator-2e53",
+    "publishedAt": "2025-09-05T08:44:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Validation in Go often means wrestling with reflection-heavy libraries or juggling struct tags. GoValidator takes a fresh, minimalist approach—delivering precise validation without those complications. GoValidator is a Go library designed for simplicity, speed, and ease of use. No struct tags: you don’t need to clutter your code with metadata. No reflecti...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F933mes7hlw3ctwrvfihf.png",
+    "video": null,
+    "author": "Reza Khademi",
+    "tags": [
+      "webdev",
+      "programming",
+      "go"
+    ],
+    "seoTitle": "Simplify Validation in Golang— No Struct Tags, No Reflection, TypeSafety: Meet GoValidator",
+    "seoDescription": "Validation in Go often means wrestling with reflection-heavy libraries or juggling struct tags. GoValidator takes a fresh, minimalist approach—delivering pre..."
+  },
+  {
+    "title": "Check out this guide on Applying GARCH Models",
+    "url": "https://dev.to/dipti_m_2e7ba36c478d1a48a/check-out-this-guide-on-applying-garch-models-3639",
+    "publishedAt": "2025-09-05T08:42:49.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3268117%2F1ab4dce0-9706-4bf9-bcd5-576b0833c02b.png",
+    "video": null,
+    "author": "Dipti M",
+    "tags": [
+      "webdev",
+      "programming",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Check out this guide on Applying GARCH Models",
+    "seoDescription": "Applying GARCH Models to Time Series Data Dipti M ・ Sep 4 #webdev #programming #ai #beginners"
+  },
+  {
+    "title": "Embedded Linux: The Easy Way – Hands-On for Beginners",
+    "url": "https://dev.to/sunil_kumar_6b049853125f8/embedded-linux-the-easy-way-hands-on-for-beginners-4ng4",
+    "publishedAt": "2025-09-05T08:37:29.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Embedded Linux powers a wide range of modern devices, from industrial systems to IoT applications. This course is designed to help you get started quickly, with step-by-step guidance and practical exercises. You will explore: No prior experience with embedded Linux is required — basic Linux knowledge is helpful but not mandatory. By the end of this course...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fidex0lk1n7zmnwzzk5u5.jpg",
+    "video": null,
+    "author": "sunil kumar",
+    "tags": [
+      "udemy",
+      "linux",
+      "torizon",
+      "webdev"
+    ],
+    "seoTitle": "Embedded Linux: The Easy Way – Hands-On for Beginners",
+    "seoDescription": "Embedded Linux powers a wide range of modern devices, from industrial systems to IoT applications. This course is designed to help you get started quickly, w..."
+  },
+  {
     "title": "UGreen Now Has a Range of Qi2 Wireless Chargers for iPhone and Android",
     "url": "https://petapixel.com/2025/09/05/ugreen-now-has-a-range-of-qi2-wireless-chargers-for-iphone-and-android/",
     "publishedAt": "2025-09-05T08:01:56.000Z",
@@ -39,25 +128,6 @@
     "seoDescription": "Alogic today announced a 6K display that supports touch-based input, with the company saying that it's the world's first 6K touchscreen that's compatible wit..."
   },
   {
-    "title": "Go-Sail has released version v3.0.6",
-    "url": "https://dev.to/keepchen/go-sail-has-released-version-v306-3dk1",
-    "publishedAt": "2025-09-05T07:59:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I've been working on a series of optimizations for go-sail lately. Today, we've officially released version 3.0.6. Everyone is welcome to try it out. utils: Simplified and optimized redis lock code, support custom redis client (0166990) schedule: Support custom redis client (0166990) http: Adjusted timestamp field, fixed paginator JSON tag (0166990) other...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F64au4l5gw86mj164youh.png",
-    "video": null,
-    "author": "Keepchen",
-    "tags": [
-      "gosail",
-      "go",
-      "programming",
-      "webdev"
-    ],
-    "seoTitle": "Go-Sail has released version v3.0.6",
-    "seoDescription": "I've been working on a series of optimizations for go-sail lately. Today, we've officially released version 3.0.6. Everyone is welcome to try it out. utils: ..."
-  },
-  {
     "title": "This robot lawnmower is designed to pick fruit and throw your dog a ball",
     "url": "https://www.theverge.com/news/772045/nexlawn-master-x-series-concept-robot-lawnmower",
     "publishedAt": "2025-09-05T07:30:00.000Z",
@@ -70,44 +140,6 @@
     "tags": [],
     "seoTitle": "This robot lawnmower is designed to pick fruit and throw your dog a ball",
     "seoDescription": "It’s like a weird robotic dinosaur that can mow your lawn. Plenty of autonomous lawnmowers have been showcased or introduced at this year’s IFA event in Berl..."
-  },
-  {
-    "title": "Step-by-Step Guide: Securing and Testing Your Website with SafeLine WAF",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/step-by-step-guide-securing-and-testing-your-website-with-safeline-waf-55ej",
-    "publishedAt": "2025-09-05T07:19:56.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction Before we get into configuration, make sure SafeLine WAF is already installed on your server. If not, check out the official installation guide first. Once it’s set up, you’ll be ready to protect your site from a wide range of web attacks. SafeLine is a Web Application Firewall (WAF) based on Nginx. It works as a reverse proxy for HTTP/HTTPS ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5gyw69x7vtevn5pz31ud.png",
-    "video": null,
-    "author": "Sharon",
-    "tags": [
-      "cybersecurity",
-      "safeline",
-      "waf",
-      "webdev"
-    ],
-    "seoTitle": "Step-by-Step Guide: Securing and Testing Your Website with SafeLine WAF",
-    "seoDescription": "Introduction Before we get into configuration, make sure SafeLine WAF is already installed on your server. If not, check out the official installation guide ..."
-  },
-  {
-    "title": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money",
-    "url": "https://dev.to/criocbet99s/cricbet99-login-bet-on-live-teen-patti-game-and-win-real-money-1i5",
-    "publishedAt": "2025-09-05T07:18:57.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money Why Play Live Teen Patti on Cricbet99?",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fn21z6mf2616rfwmayfqh.jpg",
-    "video": null,
-    "author": "Piyush Sharma",
-    "tags": [
-      "blockchain",
-      "web3",
-      "webdev",
-      "programming"
-    ],
-    "seoTitle": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money",
-    "seoDescription": "Cricbet99 Login: Bet on Live Teen Patti Game and Win Real Money Why Play Live Teen Patti on Cricbet99?"
   },
   {
     "title": "Timekettle’s new translation earbuds are made for sharing",
@@ -543,20 +575,6 @@
     "seoDescription": "Aukey today introduced the MagFusion Ark, a modular wireless charger that supports the faster Qi2.2 specification. The MagFusion Ark can charge an iPhone at ..."
   },
   {
-    "title": "Tech companies pledge to ready Americans for an AI-dominated world",
-    "url": "https://www.theverge.com/policy/772084/amazon-google-microsoft-white-house-ai-education",
-    "publishedAt": "2025-09-04T21:28:57.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Amazon, Google, and Microsoft are among the companies committing to help prepare Americans for a world dominated by AI technology at a White House event on AI education Thursday. First Lady Melania Trump hosted a meeting of the White House’s AI education task force where several CEOs touted their commitments. President Donald Trump is expected to host tec...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK483_EDUCATION_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Lauren Feiner",
-    "tags": [],
-    "seoTitle": "Tech companies pledge to ready Americans for an AI-dominated world",
-    "seoDescription": "Amazon, Google, and Microsoft are among the companies committing to help prepare Americans for a world dominated by AI technology at a White House event on A..."
-  },
-  {
     "title": "3 Lessons From the Steamy 'I Really Love My Husband' Trailer",
     "url": "https://nofilmschool.com/i-really-love-my-husband-trailer",
     "publishedAt": "2025-09-04T21:26:23.000Z",
@@ -595,21 +613,5 @@
     ],
     "seoTitle": "Incredible Footage Shows a ‘Volnado’",
     "seoDescription": "During a livestream from the United States Geological Survey's (USGS) V3cam at Kīlauea volcano in Hawaii, the stationary camera caught sight of an incredible..."
-  },
-  {
-    "title": "These New Games Were Added to Apple Arcade Today",
-    "url": "https://www.macrumors.com/2025/09/04/apple-arcade-gets-three-more-games/",
-    "publishedAt": "2025-09-04T21:00:59.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Three more games were added to Apple Arcade today, including new NFL and Jeopardy! titles. Just in time for the start of the upcoming NFL season today, NFL Retro Bowl '26 features authentic NFL players and rosters with retro styling. In this year's version of the game, there is a new Retro Bowl Championship Leaderboard that tasks players with competing ag...",
-    "image": "https://images.macrumors.com/article-new/2025/08/Apple-Arcade-NFL-Retro-26.jpg",
-    "video": null,
-    "author": "Joe Rossignol",
-    "tags": [
-      "Apple Arcade"
-    ],
-    "seoTitle": "These New Games Were Added to Apple Arcade Today",
-    "seoDescription": "Three more games were added to Apple Arcade today, including new NFL and Jeopardy! titles. Just in time for the start of the upcoming NFL season today, NFL R..."
   }
 ]
