@@ -1,11 +1,30 @@
 [
   {
+    "title": "Inside React Query: What's Really Going On",
+    "url": "https://dev.to/mohamad_msalme_38f2508ea2/inside-react-query-whats-really-going-on-31md",
+    "publishedAt": "2025-09-05T20:04:08.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Know WHY — Let AI Handle the HOW 🤖 React Query isn't just hooks. It's a data orchestration engine. Treat it like hooks, and you'll end up with duplicate fetches, stale state, and components re-rendering like they're on espresso. Let's go step by step inside React Query, show what each piece does, and why understanding it will make you a much stronger Rea...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F799daxmj4w0ksmwwtncq.png",
+    "video": null,
+    "author": "Mohamad Msalme",
+    "tags": [
+      "react",
+      "frontend",
+      "webdev",
+      "javascript"
+    ],
+    "seoTitle": "Inside React Query: What's Really Going On",
+    "seoDescription": "Know WHY — Let AI Handle the HOW 🤖 React Query isn't just hooks. It's a data orchestration engine. Treat it like hooks, and you'll end up with duplicate fet..."
+  },
+  {
     "title": "Super WhatsApp Agent 🤖📱",
     "url": "https://dev.to/amira_adel_e032821d5c75c5/super-whatsapp-agent-4mo4",
     "publishedAt": "2025-08-31T11:06:34.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with n8n, Bright Data, and OpenAI. 🧠 What the Agent Can Do You can type a question like \"What’s new with n8n?\" The Orchestrator routes it to the Search Agent. The Search Agent uses Bright Data + Google/W...",
+    "summary": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with n8n, Bright Data, and OpenAI. 🧠 What the Agent Can Do You can type a question like \"What's new with n8n?\" The Orchestrator routes it to the Search Agent. The Search Agent uses Bright Data + Google/W...",
     "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5616t5mk4z4c9rx9ntt6.jpg",
     "video": null,
     "author": "Amira Adel",
@@ -19,482 +38,435 @@
     "seoDescription": "🎥 Demo Video https://youtu.be/aNxPuhJyGa8 🚀 Super WhatsApp Agent – Project Overview Super WhatsApp Agent is an intelligent multi-modal assistant built with..."
   },
   {
-    "title": "Prevent Sensitive Data Exposure in React.js",
-    "url": "https://dev.to/pentest_testing_corp/prevent-sensitive-data-exposure-in-reactjs-3c7h",
-    "publishedAt": "2025-08-31T11:01:07.000Z",
+    "title": "Running Machine Learning Models in the Browser Using onnxruntime-web",
+    "url": "https://dev.to/dinakajoy/running-machine-learning-models-in-the-browser-using-onnxruntime-web-3klc",
+    "publishedAt": "2025-09-05T19:54:13.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Why this matters (fast TL;DR) Sensitive data exposure in React often happens in the browser bundle—API keys, tokens, stack traces, or logs shipped to users. Below are concise patterns to avoid leaks and ship safely. Secrets baked into the bundle (.env misuse) Tokens in localStorage or query strings Verbose error overlays & stack traces in production Conso...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6xta58t9929ib31w17fe.jpg",
+    "summary": "🚀 AI in the browser? Yes, it’s possible. Most machine learning models live on the backend, meaning every prediction requires a server call. But I wanted to run my model directly in the browser, because it will be faster, private, and without extra infrastructure. That’s exactly what I did using onnxruntime-web library Let me walk you through how I deploy...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fclfoowdeg9ho3vluwgpr.png",
     "video": null,
-    "author": "Pentest Testing Corp",
+    "author": "Odinaka Joy",
     "tags": [
-      "cybersecurity",
-      "vulnerabilities",
-      "react",
-      "webdev"
+      "machinelearning",
+      "modelde",
+      "webdev",
+      "nextjs"
     ],
-    "seoTitle": "Prevent Sensitive Data Exposure in React.js",
-    "seoDescription": "Why this matters (fast TL;DR) Sensitive data exposure in React often happens in the browser bundle—API keys, tokens, stack traces, or logs shipped to users. ..."
+    "seoTitle": "Running Machine Learning Models in the Browser Using onnxruntime-web",
+    "seoDescription": "🚀 AI in the browser? Yes, it’s possible. Most machine learning models live on the backend, meaning every prediction requires a server call. But I wanted to ..."
   },
   {
-    "title": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
-    "url": "https://dev.to/hr21don/can-you-recognize-a-deepfake-heres-what-you-need-to-know-3jp4",
-    "publishedAt": "2025-08-31T10:42:43.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, sunds or pictures that look real which makes someone say or do things they never did. You've probably seen some of these recently in the news. For instance, a 53-year-old French woman, known as Anne, ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgt7s9877vyd1ed4g2ke4.png",
-    "video": null,
-    "author": "Helitha Rupasinghe",
-    "tags": [
-      "deepfake",
-      "ai",
-      "product",
-      "webdev"
-    ],
-    "seoTitle": "Can You Recognize a Deepfake? Here’s What You Need to Know!",
-    "seoDescription": "Let's discuss what deepfakes are, recognize common scams, and learning detection techniques, you can stay one step ahead. Deepfakes are AI-generated videos, ..."
-  },
-  {
-    "title": "🎙️ Building Your Own Live Audio Waveform in React Native",
-    "url": "https://dev.to/toshiya_matsumoto_ac94abe/building-your-own-live-audio-waveform-in-react-native-4e49",
-    "publishedAt": "2025-08-31T09:46:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "🚀 Motivation There aren’t many (if any!) well-known libraries out there for live audio recording data visualization with a waveform in React Native. So… why not just build one yourself? 😉 Pretty neat, right? Let’s dive in. Here’s the setup I used: `react-native`: 0.79.5 `expo`: 53.0.17 `expo-av`: 15.1.7 `react-native-svg`: 15.12.1 👉 Run it with: npx ex...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F938yepunba048103nlr8.gif",
-    "video": null,
-    "author": "Toshiya Matsumoto",
-    "tags": [
-      "reactnative",
-      "mobile",
-      "ios",
-      "webdev"
-    ],
-    "seoTitle": "🎙️ Building Your Own Live Audio Waveform in React Native",
-    "seoDescription": "🚀 Motivation There aren’t many (if any!) well-known libraries out there for live audio recording data visualization with a waveform in React Native. So… why..."
-  },
-  {
-    "title": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
-    "url": "https://smashingmagazine.com/2025/08/desktop-wallpaper-calendars-september-2025/",
-    "publishedAt": "2025-08-31T08:00:00.000Z",
-    "source": "smashingmagazine.com",
-    "category": "web",
-    "summary": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your September just a bit more colorful. Enjoy!",
-    "image": "http://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/77eaabbb-9743-45b6-99f3-f35a5584275f/sept-17-funny-cats-preview-opt.png",
-    "video": null,
-    "author": "hello@smashingmagazine.com (Cosima Mielke)",
-    "tags": [],
-    "seoTitle": "A Breeze Of Inspiration In September (2025 Wallpapers Edition)",
-    "seoDescription": "Could there be a better way to welcome the new month than with a new collection of desktop wallpapers? We’ve got some eye-catching designs to make your Septe..."
-  },
-  {
-    "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
-    "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
-    "publishedAt": "2025-08-30T21:54:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or receive calls for hours, while DownDetector’s tracker peaked in the afternoon at around 3:30PM ET with more than 20,000 reports. Some customers report their service has continued to function throughou...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25594448/STK066_VERIZON_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Richard Lawler",
-    "tags": [],
-    "seoTitle": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
-    "seoDescription": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or ..."
-  },
-  {
-    "title": "11 Al Pacino Movies That Define Great Acting",
-    "url": "https://nofilmschool.com/best-al-pacino-movies",
-    "publishedAt": "2025-08-30T18:30:03.000Z",
+    "title": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
+    "url": "https://nofilmschool.com/tamron-zoom-lens-sony-mirrorless-cameras",
+    "publishedAt": "2025-09-05T19:44:03.000Z",
     "source": "nofilmschool.com",
     "category": "production",
-    "summary": "There are actors who chase roles, and then there’s Al Pacino—who made the roles chase him. For over five decades, he’s delivered performances that feel less like acting and more like watching a man throw his soul onto the screen. Whether he’s whispering like a coiled serpent or erupting like a human fireball, Pacino’s presence demands your attention. His ...",
-    "image": "https://nofilmschool.com/media-library/11-al-pacino-movies-that-define-great-acting.webp?id=61538299&width=980",
-    "video": "https://www.youtube.com/embed/VDre1MOah0c?rel=0",
-    "author": "Vishal Wagh",
+    "summary": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have great news for you. There are some awesome saving opportunities currently out there for Tamron lenses, with many being ideal options to pair with one of your favorite Sony E-mount cameras. In our latest...",
+    "image": "https://nofilmschool.com/media-library/find-the-perfect-zoom-lens-for-your-sony-mirrorless-cameras-with-these-tamron-discounts.png?id=61560658&width=980",
+    "video": null,
+    "author": "NFS Staff",
     "tags": [
-      "Al pacino",
-      "Best movies"
+      "Filmmaker deals",
+      "Filmmaking deals of the week",
+      "Deals",
+      "Tamron",
+      "Tamron lenses",
+      "Filmmaking deals of the week"
     ],
-    "seoTitle": "11 Al Pacino Movies That Define Great Acting",
-    "seoDescription": "There are actors who chase roles, and then there’s Al Pacino—who made the roles chase him. For over five decades, he’s delivered performances that feel less ..."
+    "seoTitle": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
+    "seoDescription": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have gr..."
   },
   {
-    "title": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
-    "url": "https://nofilmschool.com/top-mistakes-in-the-shawshank-redemption",
-    "publishedAt": "2025-08-30T17:42:16.000Z",
+    "title": "Spike Lee's 'Highest 2 Lowest' Takes a Hard Stance on AI",
+    "url": "https://nofilmschool.com/spike-lee-ai-highest-lowest",
+    "publishedAt": "2025-09-05T19:34:03.000Z",
     "source": "nofilmschool.com",
     "category": "production",
-    "summary": "It’s crazy how films completely immerse us in them, and we miss out even on the most obvious flaws on screen. I like to believe that that's what magic feels like. While normal cinephiles move on after the experience, nerds like me rewatch those movies over and over again, like our lives depend on it, until the minor mistakes feel blinding. So, don’t mind ...",
-    "image": "https://nofilmschool.com/media-library/tim-robbins-as-andy.jpg?id=61536121&width=980",
-    "video": null,
-    "author": "Sreenidhi Podder",
+    "summary": "It's always a pleasure to listen to Spike Lee talk about his films. And that's why I was so excited he has a new one that debuts on AppleTV today, Highest 2 Lowest. It's a reimagining of Akira Kurosawa's 1963 classic High and Low, and it's clear from the jump that this is a project Spike is passionate about. He spoke to USA Today about the movie and its m...",
+    "image": "https://nofilmschool.com/media-library/spike-lee-ai.webp?id=61560138&width=980",
+    "video": "https://www.youtube.com/embed/Sh8yqcozfn8?rel=0",
+    "author": "Jason Hellerman",
     "tags": [
-      "The shawshank redemption",
-      "Frank darabont",
-      "Movie mistakes"
+      "Ai",
+      "Highest 2 lowest",
+      "Spike lee"
     ],
-    "seoTitle": "Things That Might Spoil ‘The Shawshank Redemption’ Just a Little Bit for You",
-    "seoDescription": "It’s crazy how films completely immerse us in them, and we miss out even on the most obvious flaws on screen. I like to believe that that's what magic feels ..."
+    "seoTitle": "Spike Lee's 'Highest 2 Lowest' Takes a Hard Stance on AI",
+    "seoDescription": "It's always a pleasure to listen to Spike Lee talk about his films. And that's why I was so excited he has a new one that debuts on AppleTV today, Highest 2 ..."
   },
   {
-    "title": "No, a Windows update probably didn’t brick your SSD",
-    "url": "https://www.theverge.com/news/768431/windows-update-didnt-brick-your-ssd",
-    "publishedAt": "2025-08-30T16:57:19.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Phison controllers to fail. Tech influencers on YouTube and TikTok were quick to jump on the reports of corrupted data and disappearing drives, laying the blame squarely at Microsoft’s feet. We’re not s...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK109_WINDOWS_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Terrence O’Brien",
-    "tags": [],
-    "seoTitle": "No, a Windows update probably didn’t brick your SSD",
-    "seoDescription": "For the last week or two, reports have been circulating that recent Windows 11 updates (specifically KB5063878 and KB5062660) were causing some SSDs using Ph..."
-  },
-  {
-    "title": "It’s time for Apple to revive one of its discontinued iPad accessories",
-    "url": "https://9to5mac.com/2025/08/30/its-time-for-apple-to-revive-one-of-its-discontinued-ipad-accessories/",
-    "publishedAt": "2025-08-30T15:18:00.000Z",
+    "title": "Apple’s big India push is paying off in billions",
+    "url": "https://9to5mac.com/2025/09/05/apples-big-india-push-is-paying-off-in-billions/",
+    "publishedAt": "2025-09-05T19:29:48.000Z",
     "source": "9to5mac.com",
     "category": "apple",
-    "summary": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essentially served as the same product. Nowadays, after the introduction of trackpad support in iPadOS and the , everything is unnecessarily convoluted – with each iPad model having a slightly different Magi...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2018/11/2018-iPad-Pro-Smart-Keyboard-Folio-on-Desk1.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "summary": "For the last few months, there’s been no lack of news involving Apple and India, from retail to production and everything in between. Now, according to Bloomberg, Tim Cook’s newest bet is starting to pay off. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/iPhone-prices-cut-in-India.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Michael Burkhardt",
+    "author": "Marcus Mendes",
     "tags": [
       "News"
     ],
-    "seoTitle": "It’s time for Apple to revive one of its discontinued iPad accessories",
-    "seoDescription": "A few years ago, Apple used to have a much simpler iPad keyboard lineup. It just offered a Smart Keyboard for each of their iPad models, and they all essenti..."
+    "seoTitle": "Apple’s big India push is paying off in billions",
+    "seoDescription": "For the last few months, there’s been no lack of news involving Apple and India, from retail to production and everything in between. Now, according to Bloom..."
   },
   {
-    "title": "The 20 best Labor Day deals you can grab for $100 or less",
-    "url": "https://www.theverge.com/tech/767824/best-labor-day-sales-cheap-tech-deals-under-100-2025",
-    "publishedAt": "2025-08-30T14:37:17.000Z",
+    "title": "Mustache Man: The Best Burt Reynolds Roles",
+    "url": "https://nofilmschool.com/best-burt-reynolds-movies",
+    "publishedAt": "2025-09-05T19:24:03.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "I wish I could grow a mustache like Burt Reynolds. The guy was the epitome of cool for so long in Hollywood, and he embodied some iconic roles that have never faded. Today, I want to go through some of my favorite Burt Reynolds roles and talk about why I love them so much. Let's dive in. 1. Lewis Medlock in 'Deliverance' (1972) I know this is a really fam...",
+    "image": "https://nofilmschool.com/media-library/mustache-man-the-best-burt-reynolds-roles.jpg?id=61560637&width=980",
+    "video": "https://www.youtube.com/embed/sckWeXMLsac?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Best movies",
+      "Acting",
+      "Actor",
+      "Burt reynolds"
+    ],
+    "seoTitle": "Mustache Man: The Best Burt Reynolds Roles",
+    "seoDescription": "I wish I could grow a mustache like Burt Reynolds. The guy was the epitome of cool for so long in Hollywood, and he embodied some iconic roles that have neve..."
+  },
+  {
+    "title": "They're Using AI to Restore 'The Magnificent Ambersons'",
+    "url": "https://nofilmschool.com/ai-restore-the-magnificent-ambersons",
+    "publishedAt": "2025-09-05T19:09:45.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Orson Welles is a legendary filmmaker who helped shape Hollywood as we know it today. While many remember him for Citizen Kane, his second feature, The Magnificent Ambersons, is also incredibly important. And many think it could be as crucial as Kane, if we were able to see the movie as Welles originally intended. See, RKO chopped 43 minutes from the movi...",
+    "image": "https://nofilmschool.com/media-library/ai-to-restore-the-magnificent-ambersons.jpg?id=61559873&width=980",
+    "video": "https://www.youtube.com/embed/a8B5lCOBUis?rel=0",
+    "author": "Jason Hellerman",
+    "tags": [
+      "Ai",
+      "The magnificent ambersons",
+      "Showrunner",
+      "Orson welles"
+    ],
+    "seoTitle": "They're Using AI to Restore 'The Magnificent Ambersons'",
+    "seoDescription": "Orson Welles is a legendary filmmaker who helped shape Hollywood as we know it today. While many remember him for Citizen Kane, his second feature, The Magni..."
+  },
+  {
+    "title": "Showrunner wants to use generative AI to recreate lost footage from an Orson Welles classic",
+    "url": "https://www.theverge.com/entertainment/772635/showrunner-orson-welles-the-magnificent-ambersons",
+    "publishedAt": "2025-09-05T19:00:28.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoor gear to back-to-school essentials like the latest MacBook Air, we rounded up a guide of almost 100 deals we think are worth your time and money. But we get it. In times of tariffs and inflation, spe...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25623451/DSCF0036.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "Showrunner — the startup that wants to “revolutionize” the entertainment industry by charging people to prompt up AI-generated videos featuring copyrighted IP — is working on a new project to restore an Orson Welles classic. On Friday, Showrunner announced that it has designed a new generative AI model that is meant to help recreate lost footage from The ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/ShowrunnerAmbersonsHeader.png?quality=90&#038;strip=all&#038;crop=0,0,89.0921875,100",
     "video": null,
-    "author": "Sheena Vasani",
+    "author": "Charles Pulliam-Moore",
     "tags": [],
-    "seoTitle": "The 20 best Labor Day deals you can grab for $100 or less",
-    "seoDescription": "Labor Day weekend has finally arrived, and after a week of early discounts trickling in, the sales are now in full swing. From big-screen OLED TVs and outdoo..."
+    "seoTitle": "Showrunner wants to use generative AI to recreate lost footage from an Orson Welles classic",
+    "seoDescription": "Showrunner — the startup that wants to “revolutionize” the entertainment industry by charging people to prompt up AI-generated videos featuring copyrighted I..."
   },
   {
-    "title": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "url": "https://9to5mac.com/2025/08/30/apple-ipad-a16-vs-ipad-air-m3-comparison-which-is-better-value/",
-    "publishedAt": "2025-08-30T13:46:40.000Z",
+    "title": "HomeKit Weekly: ULTRALOQ’s new Bolt NFC is built for Apple Home Key",
+    "url": "https://9to5mac.com/2025/09/05/ultraloq-bolt-nfc/",
+    "publishedAt": "2025-09-05T19:00:00.000Z",
     "source": "9to5mac.com",
     "category": "apple",
-    "summary": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making it a rather interesting debate. With current deals, theres only $150 between these two iPads, which really begs the question: should you pay more for the , or save some money with the base iPad? more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/M2-iPad-Air-graphic.png?w=1600",
-    "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPad vs iPad Air: With a $150 price gap, is the Air still worth the premium?",
-    "seoDescription": "Apple has two great, affordable iPads that most people consider: the , and the iPad Air. Over time, these iPads have always been relatively similar, making i..."
-  },
-  {
-    "title": "Discounty adds some bite to cozy life sims",
-    "url": "https://www.theverge.com/games-review/768145/discounty-review-switch-ps5-xbox-steam",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysteries or evolving relationships. At their best, these games merge busywork with exploration and storytelling, in a way that makes them hard to step away from. Discounty, from developer Crinkle Cut Games, ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/DISC-6.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Andrew Webster",
-    "tags": [],
-    "seoTitle": "Discounty adds some bite to cozy life sims",
-    "seoDescription": "There's a pleasing rhythm to cozy life sims. The virtual days pass, filled with chores of tending crops or running a business, punctuated by strange mysterie..."
-  },
-  {
-    "title": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "url": "https://www.macrumors.com/2025/08/30/top-stories-apple-awe-dropping-iphone-event/",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iPhone models, some new accessories, new Apple Watch models, and perhaps a few more announcements. Apple has plenty more announcements in the pipeline beyond next month's event, however, including a hos...",
-    "image": "https://images.macrumors.com/article-new/2025/08/top-stories-2025-08-30.jpg",
-    "video": null,
-    "author": "MacRumors Staff",
-    "tags": [
-      "Featured",
-      "Top Stories"
-    ],
-    "seoTitle": "Top Stories: Apple's 'Awe Dropping' iPhone Event on September 9",
-    "seoDescription": "It's finally official! As expected, Apple will be holding its annual flagship iPhone event on Tuesday, September 9, and we're expecting to see several new iP..."
-  },
-  {
-    "title": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
-    "url": "https://9to5mac.com/2025/08/30/sap-updates-privileges-with-new-tools-for-managing-admin-rights-on-macos/",
-    "publishedAt": "2025-08-30T13:00:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional grade platform all the solutions necessary to seamlessly and automatically deploy, manage & protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work ...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-at-Work-Liquid-Glass-light.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "summary": "Home Key has been one of my favorite HomeKit features since it launched a few years ago. You never have to dig for keys; you can still get in when your phone battery is dead, and in my experience, it works instantly every time. There is no app to launch or waiting for a Bluetooth connection. The brings all of that convenience to more homes at a very reaso...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-Home.png?w=1600",
     "video": null,
     "author": "Bradley C",
     "tags": [
       "News"
     ],
-    "seoTitle": "Apple @ Work: SAP updates Privileges with new tools for managing admin rights on macOS",
-    "seoDescription": "Apple @ Work is exclusively brought to you by Mosyle, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional g..."
+    "seoTitle": "HomeKit Weekly: ULTRALOQ’s new Bolt NFC is built for Apple Home Key",
+    "seoDescription": "Home Key has been one of my favorite HomeKit features since it launched a few years ago. You never have to dig for keys; you can still get in when your phone..."
   },
   {
-    "title": "On the Path to Being a Great Photographer? There’s Something You Should Know",
-    "url": "https://petapixel.com/2025/08/30/on-the-path-to-being-a-great-photographer-theres-something-you-should-know/",
-    "publishedAt": "2025-08-30T12:01:22.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefore, modifying your actions can improve your photography. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/07/creativity-6-1600x840.jpg",
+    "title": "Five Ways iOS 26 Improves Your iPhone's Battery",
+    "url": "https://www.macrumors.com/guide/ios-26-battery-improvements/",
+    "publishedAt": "2025-09-05T18:44:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple made several battery-related changes in iOS 26, introducing features that make it easier to tell which apps are draining battery and new ways to extend battery life. Battery Design Changes Apple updated the Battery section of the Settings app in ‌iOS 26‌, and the new design provides a more in-depth look at how iPhone usage impacts battery and how mu...",
+    "image": "https://images.macrumors.com/article-new/2025/08/iOS-26-Battery-Glass-Feature.jpg",
     "video": null,
-    "author": "Ivor Rackham",
+    "author": "Juli Clover",
     "tags": [
-      "Educational",
-      "Inspiration",
-      "creativity",
-      "education"
+      "Featured",
+      "iOS 26"
     ],
-    "seoTitle": "On the Path to Being a Great Photographer? There’s Something You Should Know",
-    "seoDescription": "All great photographers in the past and present have had creativity at their core. There are proven links between personality traits and creativity. Therefor..."
+    "seoTitle": "Five Ways iOS 26 Improves Your iPhone's Battery",
+    "seoDescription": "Apple made several battery-related changes in iOS 26, introducing features that make it easier to tell which apps are draining battery and new ways to extend..."
   },
   {
-    "title": "Why do Waymos keep loitering in front of my house?",
-    "url": "https://www.theverge.com/google-waymo/766002/waymo-la-loiter-parking-robotaxi-ai-public-space",
-    "publishedAt": "2025-08-30T12:00:00.000Z",
+    "title": "A Deep Dive into CDNs, DNS, and Your Server Setup",
+    "url": "https://dev.to/lovestaco/a-deep-dive-into-cdns-dns-and-your-ovh-setup-4g35",
+    "publishedAt": "2025-09-05T18:40:07.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! Running a self-hosted application like GitLab offers incredible control and flexibility. However, as your user base grows or distributes g...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3r4pdfy80ak87wyf2c35.png",
+    "video": null,
+    "author": "Athreya aka Maneshwar",
+    "tags": [
+      "webdev",
+      "programming",
+      "beginners",
+      "devops"
+    ],
+    "seoTitle": "A Deep Dive into CDNs, DNS, and Your Server Setup",
+    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
+  },
+  {
+    "title": "iPhone 17 Pro will drop titanium for aluminum, and this might be why",
+    "url": "https://9to5mac.com/2025/09/05/iphone-17-pro-will-drop-titanium-for-aluminum-and-this-might-be-why/",
+    "publishedAt": "2025-09-05T18:29:06.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Among the various rumors about Apple’s new iPhone 17 lineup, one of the most curious centers on design materials. Apple will reportedly drop titanium from the iPhone 17 Pro and Pro Max in favor of aluminum, and now we might finally know why. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/Titanium-iPhone-15-Pro.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "iPhone 17 Pro will drop titanium for aluminum, and this might be why",
+    "seoDescription": "Among the various rumors about Apple’s new iPhone 17 lineup, one of the most curious centers on design materials. Apple will reportedly drop titanium from th..."
+  },
+  {
+    "title": "I tested 30 smart locks, and these are the best",
+    "url": "https://www.theverge.com/23393163/best-smart-door-lock",
+    "publishedAt": "2025-09-05T18:23:34.000Z",
     "source": "theverge.com",
     "category": "web",
-    "summary": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home!\" she says, calling to her parents, Lisa Delgin and Zach Tucker. It is by no means the first time a Waymo has come \"home\" to this particular spot. Last year, a Waymo robotaxi dropped Delgin and Tucke...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKS518_WAYMO_TAXI_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary": "A smart lock is an easy solution to some common problems. Locked yourself out? Need to let a friend in to water the plants? Your latchkey kid lost their key? Hands are full, and it’s raining cats and dogs? A smart lock solves all of these problems and more. One of the best smart home upgrades you can make, a smart lock gives you remote control over access...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/257776_Smart_lock_buying_guide_CVirginia3.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Rachel Kraus",
+    "author": "Jennifer Pattison Tuohy",
     "tags": [],
-    "seoTitle": "Why do Waymos keep loitering in front of my house?",
-    "seoDescription": "When a Waymo pulls up and parks in front of her home on a residential street in West Los Angeles, 10-year-old Morgan rushes to the window. \"The Waymo is home..."
+    "seoTitle": "I tested 30 smart locks, and these are the best",
+    "seoDescription": "A smart lock is an easy solution to some common problems. Locked yourself out? Need to let a friend in to water the plants? Your latchkey kid lost their key?..."
   },
   {
-    "title": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
-    "url": "https://nofilmschool.com/pulp-fiction-briefcase-mystery",
-    "publishedAt": "2025-08-30T05:20:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious to know, asks him, “We happy?” And us? We lean forward, just as desperate to peek inside. In that instant, Tarantino transforms a simple prop into one of the most famous mysteries in cinema history. W...",
-    "image": "https://nofilmschool.com/media-library/whats-in-pulp-fictions-briefcase-nothing-and-everything.jpg?id=61536518&width=980",
-    "video": "https://www.youtube.com/embed/qY2Vx8-yOsQ?rel=0",
-    "author": "Vishal Wagh",
-    "tags": [
-      "Pulp fiction",
-      "Props"
-    ],
-    "seoTitle": "What’s in Pulp Fiction’s Briefcase? Nothing and Everything",
-    "seoDescription": "Vincent Vega (John Travolta) flips open a battered briefcase, and suddenly his face glows as if lit by divine revelation. Jules (Samuel L. Jackson), curious ..."
-  },
-  {
-    "title": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
-    "url": "https://nofilmschool.com/godfather-vito-michael-scenes",
-    "publishedAt": "2025-08-30T05:10:02.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In a film about family, power, and legacy, The Godfather (1972) gives us only three scenes where Vito and Michael Corleone share the screen—yet these fleeting moments define the entire saga. It’s not the hugs, arguments, or long father-son talks that push Michael toward his eventual fate. It’s the silences. The looks. The weight of words that don’t need r...",
-    "image": "https://nofilmschool.com/media-library/vito-and-michael-corleones-3-defining-scenes-in-the-godfather.jpg?id=61532067&width=980",
-    "video": "https://www.youtube.com/embed/HCu9vOpwMp0?rel=0",
-    "author": "Vishal Wagh",
-    "tags": [
-      "The godfather",
-      "Film analysis"
-    ],
-    "seoTitle": "Vito and Michael Corleone’s 3 Defining Scenes in The Godfather",
-    "seoDescription": "In a film about family, power, and legacy, The Godfather (1972) gives us only three scenes where Vito and Michael Corleone share the screen—yet these fleetin..."
-  },
-  {
-    "title": "The Unexpected Story Behind Joker’s Lip-Licking in 'The Dark Knight'",
-    "url": "https://nofilmschool.com/heath-ledger-joker-lip-lick",
-    "publishedAt": "2025-08-30T05:00:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Do you believe that even the seemingly worst things happen for the best? It was during the filming of a particular Netflix original anthology. It was peak monsoon, and I still don’t understand why nobody accounted for the rain. Naturally, the rain literally pissed on our schedule; we barely finished filming. Months later, as I sat next to the DP, watching...",
-    "image": "https://nofilmschool.com/media-library/the-unexpected-story-behind-jokers-lip-licking-in-the-dark-knight.jpg?id=61536445&width=980",
-    "video": "https://www.youtube.com/embed/lNLmk7CPtOw?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "The dark knight",
-      "Heath ledger as the joker",
-      "The joker"
-    ],
-    "seoTitle": "The Unexpected Story Behind Joker’s Lip-Licking in 'The Dark Knight'",
-    "seoDescription": "Do you believe that even the seemingly worst things happen for the best? It was during the filming of a particular Netflix original anthology. It was peak mo..."
-  },
-  {
-    "title": "8 Movies That Predicted the Future — And Got It Right",
-    "url": "https://nofilmschool.com/movies-that-predicted-the-future",
-    "publishedAt": "2025-08-30T04:51:08.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and their needs, or else you might turn it into a fantasy. Because there’s no real point of reference, world-building for a story set far ahead in the future can be more challenging than recreating a historic...",
-    "image": "https://nofilmschool.com/media-library/8-movies-that-predicted-the-future-and-got-it-right.jpg?id=61536391&width=980",
-    "video": "https://www.youtube.com/embed/oR_e9y-bka0?rel=0",
-    "author": "Sreenidhi Podder",
-    "tags": [
-      "Futuristic movies",
-      "Best movies"
-    ],
-    "seoTitle": "8 Movies That Predicted the Future — And Got It Right",
-    "seoDescription": "From my own experience, building a futuristic world is not about wild imagination. Rather, it’s about predicting the psychological change in mankind and thei..."
-  },
-  {
-    "title": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
-    "url": "https://9to5mac.com/2025/08/29/macbook-pro-m4-first-worthy-apple-silicon-upgrade/",
-    "publishedAt": "2025-08-30T02:00:56.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it worth upgrading to, even if you already have an older . more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/MacBook-Pro-14.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "title": "The best laptop deals you can get right now",
+    "url": "https://www.theverge.com/good-deals/23161948/apple-macbook-lenovo-acer-deal-sale",
+    "publishedAt": "2025-09-05T18:15:13.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by Vjeran Pavic / The Verge If you want a great laptop, you’re going to have to fork over a ton of money, right? Not necessarily. There are dozens of good laptops on the market at various price points. ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Microsoft-Surface-Laptop-7th-Edition.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "video": null,
-    "author": "Michael Burkhardt",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "M4 MacBook Pro: One of the first worthy upgrades for Apple Silicon Mac users",
-    "seoDescription": "Last October, Apple announced the . On the surface, it looks like yet another MacBook Pro spec bump. However, there are a number of key features that make it..."
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The best laptop deals you can get right now",
+    "seoDescription": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by..."
   },
   {
-    "title": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
-    "url": "https://9to5mac.com/2025/08/29/in-a-new-filing-apple-fights-back-against-courts-indefensible-epic-games-ruling/",
-    "publishedAt": "2025-08-30T01:11:36.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse Judge Yvonne Gonzalez Rogers’ 2021 decision, or vacate the new injunction and assign a new judge to the case. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/07/Epic-Games-accuses-Apple-of-delaying-its-game-store-launch.webp?w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "In a new filing, Apple fights back against court’s ‘indefensible’ Epic Games ruling",
-    "seoDescription": "Earlier this evening, Apple filed a reply brief with the Court of Appeals for the Ninth Circuit, arguing multiple points why the court should either reverse ..."
-  },
-  {
-    "title": "Apple Says App Store Changes Go Too Far in New Epic Games Appeal Filing",
-    "url": "https://www.macrumors.com/2025/08/29/apple-app-store-epic-games-appeal-filing/",
-    "publishedAt": "2025-08-30T00:00:14.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The court order that required Apple to collect no fees from developers who link to purchases outside of the App Store is unconstitutional, Apple said today in a reply brief directed at Epic Games and filed with the Ninth Circuit Court of Appeals. Apple argues that it has been stripped of its rights to be compensated for its intellectual property in a ruli...",
-    "image": "https://images.macrumors.com/article-new/2022/01/iOS-App-Store-General-Feature-Black.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "App Store",
-      "Epic Games",
-      "Epic Games vs. Apple",
-      "Apple Lawsuits"
-    ],
-    "seoTitle": "Apple Says App Store Changes Go Too Far in New Epic Games Appeal Filing",
-    "seoDescription": "The court order that required Apple to collect no fees from developers who link to purchases outside of the App Store is unconstitutional, Apple said today i..."
-  },
-  {
-    "title": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
-    "url": "https://petapixel.com/2025/08/29/appeals-court-rules-trumps-sweeping-global-tariffs-are-illegal/",
-    "publishedAt": "2025-08-29T23:57:20.000Z",
+    "title": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
+    "url": "https://petapixel.com/2025/09/05/nikon-suspends-c2pa-functionality-on-the-z6-iii-due-to-authentication-issue/",
+    "publishedAt": "2025-09-05T18:00:26.000Z",
     "source": "petapixel.com",
     "category": "photography",
-    "summary": "The U.S. Court of Appeals for the Federal Circuit has upheld a lower court's ruling that the law President Donald Trump has been using to enact his widespread tariff policy does not actually grant him that power, setting up a final appeal to the Supreme Court. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/04/Trumps-Plan-for-a-24-Tariff-on-Japan-Likely-to-Impact-Camera-and-Lens-Prices.jpg",
+    "summary": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/nikon-z6-iii-authenticity-suspended.jpg",
     "video": null,
-    "author": "Jaron Schneider",
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "C2PA",
+      "contentauthenticity",
+      "nikon",
+      "nikonauthenticityservice",
+      "nikonz6iii"
+    ],
+    "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
+    "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
+  },
+  {
+    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
+    "publishedAt": "2025-09-05T17:44:21.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
+    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Apple",
+      "Rumors",
+      "Mac",
+      "iOS",
+      "iPhone",
+      "iPad"
+    ],
+    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
+  },
+  {
+    "title": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
+    "url": "https://petapixel.com/2025/09/05/influential-sister-photographers-were-hidden-in-geronimos-eye-for-a-century/",
+    "publishedAt": "2025-09-05T17:34:33.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri. Over 100 years later, a conservator at the Library of Congress noticed a hidden detail in the portrait: the photographer sisters reflected in the warrior's left eye. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/geronimo-eye-portrait-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
     "tags": [
       "Culture",
-      "Law",
       "News",
-      "appeal",
-      "appealscourt",
-      "donaldtrump",
-      "law",
-      "ruling"
+      "20thcentury",
+      "gerhardsisters",
+      "geronimo",
+      "historicalfriday",
+      "history",
+      "libraryofcongress"
     ],
-    "seoTitle": "Appeals Court Rules Trump’s Sweeping Global Tariffs Are Illegal",
-    "seoDescription": "The U.S. Court of Appeals for the Federal Circuit has upheld a lower court's ruling that the law President Donald Trump has been using to enact his widesprea..."
+    "seoTitle": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
+    "seoDescription": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri...."
   },
   {
-    "title": "10 Days Until the iPhone 17 Pro: All the Rumors",
-    "url": "https://www.macrumors.com/guide/iphone-17-pro-rumors/",
-    "publishedAt": "2025-08-29T22:11:02.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "The all-new iPhone 17 Air will likely be the standout device at Apple's September \"Awe Dropping\" event, but the iPhone 17 Pro isn't exactly getting left behind. There are design updates and new features coming, and we've outlined everything we know so far below. Design and Colors The ‌iPhone 17 Pro‌ models will come in the same two sizes as the iPhone 16 ...",
-    "image": "https://images.macrumors.com/article-new/2025/08/iPhone-17-Pro-Feature-Dual.jpg",
-    "video": null,
-    "author": "Juli Clover",
-    "tags": [
-      "Featured"
-    ],
-    "seoTitle": "10 Days Until the iPhone 17 Pro: All the Rumors",
-    "seoDescription": "The all-new iPhone 17 Air will likely be the standout device at Apple's September \"Awe Dropping\" event, but the iPhone 17 Pro isn't exactly getting left behi..."
-  },
-  {
-    "title": "iPhone’s Crash Detection feature saves teen who fell asleep behind the wheel",
-    "url": "https://9to5mac.com/2025/08/29/iphones-crash-detection-feature-saves-teen-who-fell-asleep-behind-the-wheel/",
-    "publishedAt": "2025-08-29T21:15:38.000Z",
+    "title": "Apple launching 8+ new products next week, here’s what’s coming",
+    "url": "https://9to5mac.com/2025/09/05/new-apple-products-iphone-17-soon/",
+    "publishedAt": "2025-09-05T17:14:00.000Z",
     "source": "9to5mac.com",
     "category": "apple",
-    "summary": "This is probably not the first time you’ve read about an iPhone automatically calling 911 following a serious car crash, but stories like this never cease to impress. Watch the video below. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/crash-detection.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "summary": "Apple is set to announce a slew of new products on Tuesday as part of its “Awe dropping” special. We’re expecting the new iPhone 17 lineup, new Apple Watches, and more. Head below for all the rumors of what to expect. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tim-cook-iphone-15-launch.jpg?quality=82&#038;strip=all&#038;w=1600",
     "video": null,
-    "author": "Marcus Mendes",
+    "author": "Chance Miller",
     "tags": [
       "News"
     ],
-    "seoTitle": "iPhone’s Crash Detection feature saves teen who fell asleep behind the wheel",
-    "seoDescription": "This is probably not the first time you’ve read about an iPhone automatically calling 911 following a serious car crash, but stories like this never cease to..."
+    "seoTitle": "Apple launching 8+ new products next week, here’s what’s coming",
+    "seoDescription": "Apple is set to announce a slew of new products on Tuesday as part of its “Awe dropping” special. We’re expecting the new iPhone 17 lineup, new Apple Watches..."
   },
   {
-    "title": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
-    "url": "https://nofilmschool.com/macon-blair-the-toxic-avenger",
-    "publishedAt": "2025-08-29T21:00:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In this episode of the No Film School Podcast, GG Hawkins sits down with filmmaker Macon Blair to discuss his journey from scrappy DIY filmmaking in Virginia to directing the 2025 reimagining of the cult classic The Toxic Avenger. The film hits theaters today, and Blair shares how he balanced homage and originality, kept the humor grounded in absurdity, a...",
-    "image": "https://nofilmschool.com/media-library/how-macon-blair-reinvented-the-cult-classic-the-toxic-avenger.jpg?id=61536345&width=980",
-    "video": "https://playlist.megaphone.fm?e=NFS6833473745",
-    "author": "NFS Staff",
+    "title": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
+    "url": "https://9to5toys.com/2025/09/05/best-ifa-2025-reveals/",
+    "publishedAt": "2025-09-05T17:13:19.000Z",
+    "source": "9to5toys.com",
+    "category": "apple",
+    "summary": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play fetch with your dog, the latest Qi2.2 25W MagSafe tech, modular charging stations, flagship headphones, the latest in gaming handhelds, Gemini smart TVs, and new tablets have all surfaced over the las...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Best-of-IFA-2025.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "9to5Toys",
     "tags": [
-      "No film school podcast",
-      "Podcast",
-      "Interviews",
-      "Macon blair",
-      "The toxic avenger"
+      "Deals"
     ],
-    "seoTitle": "How Macon Blair Reinvented the Cult Classic 'The Toxic Avenger'",
-    "seoDescription": "In this episode of the No Film School Podcast, GG Hawkins sits down with filmmaker Macon Blair to discuss his journey from scrappy DIY filmmaking in Virginia..."
+    "seoTitle": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
+    "seoDescription": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play ..."
   },
   {
-    "title": "Webb Captures the First-Ever Image of the Butterfly Nebula’s Hidden Heart",
-    "url": "https://petapixel.com/2025/08/29/webb-captures-the-first-ever-image-of-the-butterfly-nebulas-hidden-heart/",
-    "publishedAt": "2025-08-29T20:57:01.000Z",
+    "title": "The best Nintendo Switch controllers to buy right now",
+    "url": "https://www.theverge.com/23350899/nintendo-switch-controllers-best-wireless-joy-con-gamepad",
+    "publishedAt": "2025-09-05T17:08:29.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The Nintendo Switch 2 is here, but we’re not going to forget about the original Switch. We’ve still got love for the console and its many millions of owners, so we’ll keep recommending the best controllers for the Switch right here. If you’re considering getting a Switch 2 in the future, all of the controllers below will work on the newer console. Now, yo...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25490155/247143_Buying_Guide_Switch_Controllers_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Quentyn Kennemer",
+    "tags": [],
+    "seoTitle": "The best Nintendo Switch controllers to buy right now",
+    "seoDescription": "The Nintendo Switch 2 is here, but we’re not going to forget about the original Switch. We’ve still got love for the console and its many millions of owners,..."
+  },
+  {
+    "title": "Apple Watch Ultra 3: Here’s every new feature expected next week",
+    "url": "https://9to5mac.com/2025/09/05/apple-watch-ultra-3-heres-every-new-feature-expected-next-week/",
+    "publishedAt": "2025-09-05T17:04:24.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "Apple Watch Ultra 3 is almost here, with an unveiling expected at Apple’s September 9 event. Here’s every new feature rumored for the long-awaited Apple Watch Ultra 3. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/Apple-Watch-Ultra-3.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple Watch Ultra 3: Here’s every new feature expected next week",
+    "seoDescription": "Apple Watch Ultra 3 is almost here, with an unveiling expected at Apple’s September 9 event. Here’s every new feature rumored for the long-awaited Apple Watc..."
+  },
+  {
+    "title": "The Lenovo Legion Go 2 will get Xbox-flavored Windows in spring 2026",
+    "url": "https://www.theverge.com/news/772853/the-lenovo-legion-go-2-will-get-xbox-flavored-windows-in-spring-2026",
+    "publishedAt": "2025-09-05T16:54:30.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The just-fully-announced Legion Go 2 will be the first handheld outside of Asus that’s confirmed to get the new Xbox full-screen experience (FSE). Lenovo spokesperson Jeff Witt tells me buyers will be able to manually switch the handheld to Xbox FSE after it’s ready in the spring 2026 time frame, months after the Legion Go 2’s launch next month. Asus will...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257842_Lenovo_Legion_Go_2_IFA2025_ADiBenedetto_0010.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Sean Hollister",
+    "tags": [],
+    "seoTitle": "The Lenovo Legion Go 2 will get Xbox-flavored Windows in spring 2026",
+    "seoDescription": "The just-fully-announced Legion Go 2 will be the first handheld outside of Asus that’s confirmed to get the new Xbox full-screen experience (FSE). Lenovo spo..."
+  },
+  {
+    "title": "Google fined $3.5 billion by EU for ad tech abuse",
+    "url": "https://www.theverge.com/news/772848/google-ad-tech-eu-antitrust-fine",
+    "publishedAt": "2025-09-05T16:51:29.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The European Commission has waged a €2.95 billion (~$3.5 billion) fine against Google for “abusing its dominant position” in advertising technology. In its announcement, the Commission claims that Google’s alleged anticompetitive practices have increased costs for advertisers and publishers, potentially raising prices for consumers as a result. The Commis...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK450_STK093_GOOGLE_EU_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Emma Roth",
+    "tags": [],
+    "seoTitle": "Google fined $3.5 billion by EU for ad tech abuse",
+    "seoDescription": "The European Commission has waged a €2.95 billion (~$3.5 billion) fine against Google for “abusing its dominant position” in advertising technology. In its a..."
+  },
+  {
+    "title": "iPhone 17 Pro's Biggest Design Mystery is Finally Solved",
+    "url": "https://www.macrumors.com/2025/09/05/iphone-17-pro-biggest-mystery-solved/",
+    "publishedAt": "2025-09-05T16:33:26.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is set to unveil the iPhone 17 series in just four days from now, and the biggest design mystery surrounding the Pro models has finally been solved. In a report outlining his expectations for Apple's event next week, Bloomberg's Mark Gurman said the iPhone 17 Pro models will have \"a new cutout area on the bottom two-thirds of the phone that doubles ...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Pro-in-Hand-Feature-Lowgo.jpg",
+    "video": null,
+    "author": "Joe Rossignol",
+    "tags": [
+      "iPhone 17 Pro"
+    ],
+    "seoTitle": "iPhone 17 Pro's Biggest Design Mystery is Finally Solved",
+    "seoDescription": "Apple is set to unveil the iPhone 17 series in just four days from now, and the biggest design mystery surrounding the Pro models has finally been solved. In..."
+  },
+  {
+    "title": "NASA Perseverance Rover Photographs Rock on Mars That Looks Like a Turtle",
+    "url": "https://petapixel.com/2025/09/05/nasa-perseverance-rover-photographs-rock-on-mars-that-looks-like-a-turtle/",
+    "publishedAt": "2025-09-05T16:32:58.000Z",
     "source": "petapixel.com",
     "category": "photography",
-    "summary": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-seen details of the nebula's heart. This is the first time scientists have seen the super-hot star powering the beautiful, bug-like nebula. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/08/webb-butterfly-nebula-featured.jpg",
+    "summary": "NASA's Mars Perseverance Rover has been exploring Jezero Crater on Mars since it landed on the planet on February 18, 2021. Since then, it has made many remarkable discoveries and captured hundreds of thousands of incredible photos. A recent photo shows a close-up of a Martian rock, it looks a lot like a turtle. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/nasa-perseverance-rover-aug-21-2025-turtle-rock-featured.jpg",
     "video": null,
     "author": "Jeremy Gray",
     "tags": [
       "News",
       "Space",
-      "butterflynebula",
-      "esa",
-      "jameswebbspacetelescope",
-      "jwst",
+      "mars",
       "NASA",
-      "nebula"
+      "perseverance",
+      "perseverancerover",
+      "rover",
+      "science"
     ],
-    "seoTitle": "Webb Captures the First-Ever Image of the Butterfly Nebula’s Hidden Heart",
-    "seoDescription": "The NASA/ESA/CSA James Webb Space Telescope (JWST) peered at the Butterfly Nebula using its Mid-InfraRed Instrument (MIRI) camera, uncovering never-before-se..."
+    "seoTitle": "NASA Perseverance Rover Photographs Rock on Mars That Looks Like a Turtle",
+    "seoDescription": "NASA's Mars Perseverance Rover has been exploring Jezero Crater on Mars since it landed on the planet on February 18, 2021. Since then, it has made many rema..."
+  },
+  {
+    "title": "The best stuff announced at IFA so far",
+    "url": "https://www.theverge.com/news/769573/ifa-2025-smart-home-lights-power-bank-robot-vacuum-ai-headphones",
+    "publishedAt": "2025-09-05T16:32:44.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The doors to IFA 2025 in Berlin, Germany, have officially opened and new gadgets, tech, features, and upgrades continue to pour out of Europe's largest consumer tech show. There's a lot of news to stay on top of, and if you're struggling to ingest it all, here are some of the best announcements from the show so far including innovative new robovacs, more ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257842_Lenovo_ThinkBook_VertiFlex_Concept_IFA2025_ADiBenedetto_0012.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Andrew Liszewski",
+    "tags": [],
+    "seoTitle": "The best stuff announced at IFA so far",
+    "seoDescription": "The doors to IFA 2025 in Berlin, Germany, have officially opened and new gadgets, tech, features, and upgrades continue to pour out of Europe's largest consu..."
   },
   {
     "title": "Native ISO: Is 800 Really What You Should Be Filming At?",
@@ -514,104 +486,5 @@
     ],
     "seoTitle": "Native ISO: Is 800 Really What You Should Be Filming At?",
     "seoDescription": "In today's day of digital cinematography, most filmmakers will default to the recommended ISO settings set forth by the camera's manufacturer — but is this a..."
-  },
-  {
-    "title": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
-    "url": "https://9to5mac.com/2025/08/29/daily-august-29-2025/",
-    "publishedAt": "2025-08-29T20:32:56.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by BMX: Check out BMX’s SolidSafe™ power bank, built with cutting-edge solid-state battery technology that eliminates...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: August 29, 2025 – New Powerbeats Fit teaser, more",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "Read the 'Hacks' Pilot And Learn Character and Worldbuilding",
-    "url": "https://nofilmschool.com/hacks-pilot-script",
-    "publishedAt": "2025-08-29T20:17:22.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "The pilot episode of Hacks is a masterclass in television writing that brilliantly establishes its central characters and the conflict that drives the series. It was written by creators Lucia Aniello, Paul W. Downs, and Jen Statsky. Today, I want to look at what makes this pilot so successful and let you read it yourself. As always, this is for educationa...",
-    "image": "https://nofilmschool.com/media-library/read-the-hacks-pilot-and-learn-character-and-worldbuilding.webp?id=61536114&width=980",
-    "video": "https://www.youtube.com/embed/zFtJWuo7IrM?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Script download",
-      "Screenplay download",
-      "Hacks"
-    ],
-    "seoTitle": "Read the 'Hacks' Pilot And Learn Character and Worldbuilding",
-    "seoDescription": "The pilot episode of Hacks is a masterclass in television writing that brilliantly establishes its central characters and the conflict that drives the series..."
-  },
-  {
-    "title": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/762594/fable-showrunner-edwatch-saatchi-interview",
-    "publishedAt": "2025-08-29T20:07:22.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. Even though Story Studio snagged an Emmy for one of its three animated features, a general lack of public interest in VR movies led Meta to shutter Oculus Story Studio back in 2017. The VR era has come...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Exit-Valley.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Charles Pulliam-Moore",
-    "tags": [],
-    "seoTitle": "Showrunner wants to turn you into a happy little content prompter for the &#8216;Netflix of AI&#8217;",
-    "seoDescription": "As one of the cofounders behind Oculus Story Studio, Edward Saatchi knows how hard it can be to sell people on new tech that bills itself as revolutionary. E..."
-  },
-  {
-    "title": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
-    "url": "https://nofilmschool.com/most-realistic-firefights",
-    "publishedAt": "2025-08-29T19:57:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies that earned the respect of military veterans, firearms experts, and film critics alike. They have highly accurate and visceral scenes that pop off the screen. Some of them are disturbing or scary, but...",
-    "image": "https://nofilmschool.com/media-library/what-are-the-most-realistic-firefights-ever-filmed-by-hollywood.jpg?id=61536059&width=980",
-    "video": "https://www.youtube.com/embed/UDYVy954biU?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Best movies",
-      "Action",
-      "Firefights"
-    ],
-    "seoTitle": "What Are The Most Realistic Firefights Ever Filmed by Hollywood?",
-    "seoDescription": "In the explosive world of action cinema, there are a handful of films that transcended the typical Hollywood spectacle and got really real. These are movies ..."
-  },
-  {
-    "title": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "url": "https://www.theverge.com/news/768245/tiktok-is-now-letting-everyone-dm-each-other-with-voice-memos-and-pictures",
-    "publishedAt": "2025-08-29T19:53:06.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messaging feature! It told TechCrunch that over the next few weeks, all users should see voice messages and image sharing options arrive in their DMs. (They won’t show up for accounts that can’t DM to begin ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK051_VRG_Illo_N_Barclay_2_tiktok.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Sean Hollister",
-    "tags": [],
-    "seoTitle": "TikTok is now letting everyone DM each other with voice memos and pictures",
-    "seoDescription": "Every platform wants to be the place you hang with friends — even Spotify as of this week — so it’s apparently time for TikTok to shore up its direct messagi..."
-  },
-  {
-    "title": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "url": "https://nofilmschool.com/why-it-matters-that-the-roses-is-not-a-straight-remake",
-    "publishedAt": "2025-08-29T19:44:15.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Roses as potential material for a remake. \"I decided I didn't want to remake it, but I would reimagine it as, basically, a story about contemporary marriage,\" McNamara told RogerEbert.com. It's an entirel...",
-    "image": "https://nofilmschool.com/media-library/benedict-cumberbatch-olivia-colman-in-the-roses.png?id=61534759&width=980",
-    "video": "https://www.youtube.com/embed/XkgMaS5gbaA?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "The roses",
-      "Comedy",
-      "Remake",
-      "Adaptation"
-    ],
-    "seoTitle": "Why It Matters that 'The Roses' Is Not a Straight Remake",
-    "seoDescription": "When screenwriter Tony McNamara was approached about Benedict Cumberbatch and Olivia Colman's desire to work together, the studio pitched The War of the Rose..."
   }
 ]
