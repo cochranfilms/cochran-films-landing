@@ -1,41 +1,193 @@
 [
   {
-    "title": "ZenFlow — Fully Vibe-Coded by Someone Who Knows Nothing About Web Dev",
-    "url": "https://dev.to/wydoinn/zenflow-fully-vibe-coded-by-someone-who-knows-nothing-about-web-dev-1ajc",
-    "publishedAt": "2025-09-05T03:33:17.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hey y’all 👋, I just dropped my first App project: ZenFlow — a minimalist daily planner that runs both in the browser and as a macOS desktop app via Tauri 2. And here’s the wild part: I literally don’t know a dime about web dev. No formal training, no roadmap, just vibes and curiosity. If I can do this, anyone can. Daily Planner → Pages like Today, Calend...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1naodfp9qeqs0zcrohn2.png",
-    "video": null,
-    "author": "Santhosh",
+    "title": "All 9 ‘The Conjuring’ Universe Movies Ranked",
+    "url": "https://nofilmschool.com/the-conjuring-universe-movies-ranked",
+    "publishedAt": "2025-09-05T05:05:06.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "James Wan revitalized the genre with The Conjuring (2013), one of the most popular film franchises in the horror genre that remains at the top of the binge-watch list for most horror lovers. By emphasizing family, faith, and resilience, The Conjuring franchise blends horror and humanity, like your morning coffee: dark, bitter, and sure to get your heart p...",
+    "image": "https://nofilmschool.com/media-library/all-the-conjuring-universe-movies-ranked.jpg?id=61558131&width=980",
+    "video": "https://www.youtube.com/embed/pzD9zGcUNrw?rel=0",
+    "author": "Sreenidhi Podder",
     "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "vibecoding"
+      "The conjuring",
+      "Horror",
+      "Horror movies",
+      "Best movies"
     ],
-    "seoTitle": "ZenFlow — Fully Vibe-Coded by Someone Who Knows Nothing About Web Dev",
-    "seoDescription": "Hey y’all 👋, I just dropped my first App project: ZenFlow — a minimalist daily planner that runs both in the browser and as a macOS desktop app via Tauri 2...."
+    "seoTitle": "All 9 ‘The Conjuring’ Universe Movies Ranked",
+    "seoDescription": "James Wan revitalized the genre with The Conjuring (2013), one of the most popular film franchises in the horror genre that remains at the top of the binge-w..."
   },
   {
-    "title": "SafeLine WAF: The Open-Source Firewall Powering 300K+ Deployments",
-    "url": "https://dev.to/sharon_42e16b8da44dabde6d/safeline-waf-the-open-source-firewall-powering-300k-deployments-285g",
-    "publishedAt": "2025-09-05T03:27:59.000Z",
+    "title": "5 Best Makoto Shinkai Films That Will Stay With You Forever",
+    "url": "https://nofilmschool.com/best-makoto-shinkai-movies",
+    "publishedAt": "2025-09-05T04:52:15.000Z",
+    "source": "nofilmschool.com",
+    "category": "production",
+    "summary": "Breathtaking illustrations, poetic and introspective storytelling, and stories that often revolve around themes of love, longing, and human connection, Makoto Shinkai needs no introduction for animation lovers. With a knack for capturing the small, seemingly ordinary moments and details of life, his films are sensitive to the ephemeral nature of life and ...",
+    "image": "https://nofilmschool.com/media-library/a-still-from-your-name.jpg?id=61540614&width=980",
+    "video": "https://www.youtube.com/embed/xU47nhruN-Q?rel=0",
+    "author": "Sreenidhi Podder",
+    "tags": [
+      "Makoto shinkai",
+      "Japanese animation",
+      "Animation",
+      "Best movies"
+    ],
+    "seoTitle": "5 Best Makoto Shinkai Films That Will Stay With You Forever",
+    "seoDescription": "Breathtaking illustrations, poetic and introspective storytelling, and stories that often revolve around themes of love, longing, and human connection, Makot..."
+  },
+  {
+    "title": "The Trade-Off Between Strong Consistency and High Availability",
+    "url": "https://dev.to/dct_technology/the-trade-off-between-strong-consistency-and-high-availability-513",
+    "publishedAt": "2025-09-05T04:44:56.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Web security often feels like an arms race — and in that race, SafeLine WAF has quickly become the go-to choice for developers and enterprises across the world. With 300,000+ deployments worldwide, SafeLine has earned a reputation as one of the most effective free and open-source WAFs available today. I first came across SafeLine back in 2020. Even then, ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm72vwluqycgbhsmiyklu.png",
+    "summary": "Imagine you’re building a mission-critical app — maybe a payment system, or a messaging app that millions rely on daily. Now comes the big dilemma: Do you prioritize absolute accuracy of data (strong consistency), or do you make sure the system is always up and running (high availability)? This isn’t just a technical decision. It’s a trade-off that shapes...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4e1ilvlbvqjjyvrgowbs.png",
     "video": null,
-    "author": "Sharon",
+    "author": "DCT Technology Pvt. Ltd.",
     "tags": [
-      "safeline",
-      "waf",
       "webdev",
+      "distributedsystems",
+      "databasedesign",
+      "cloudcomputing"
+    ],
+    "seoTitle": "The Trade-Off Between Strong Consistency and High Availability",
+    "seoDescription": "Imagine you’re building a mission-critical app — maybe a payment system, or a messaging app that millions rely on daily. Now comes the big dilemma: Do you pr..."
+  },
+  {
+    "title": "Weekly code review system in Just 15 minute",
+    "url": "https://dev.to/nikhil_sachapara/weekly-code-review-system-in-just-15-minute-1ecj",
+    "publishedAt": "2025-09-05T04:37:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "nikhil sachapara",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "Weekly code review system in Just 15 minute",
+    "seoDescription": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning"
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/bhavy_k_5a3b6c88887b58c92/-2g3b",
+    "publishedAt": "2025-09-05T04:36:03.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Bhavy K",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning"
+  },
+  {
+    "title": "15 Minutes Friday Code review Habit to 3x your development speed",
+    "url": "https://dev.to/pratham_naik_project_manager/15-minutes-friday-code-review-habit-to-3x-your-development-speed-4ndn",
+    "publishedAt": "2025-09-05T04:35:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "15 Minutes Friday Code review Habit to 3x your development speed",
+    "seoDescription": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed Pratham naik for Teamcamp ・ Sep 5 #webdev #productivity #devops #learning"
+  },
+  {
+    "title": "Day 15 — Symbolic collapse (No.11): when math, logic, and tables turn into “nice prose” — and how to stop it",
+    "url": "https://dev.to/onestardao/day-15-symbolic-collapse-no11-when-math-logic-and-tables-turn-into-nice-prose-and-how-40h2",
+    "publishedAt": "2025-09-05T04:34:59.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "TL;DR No.11 · Symbolic collapse. the fix is not a reranker band-aid after the fact. you must preserve the symbol channel end-to-end and gate outputs before generation with acceptance targets. LaTeX/MathML gets stripped or rasterized at ingest. only the surrounding prose remains. tokenizers normalize or drop operators (≤, ≈, ∼, ≠), or reduce them to ASCII ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6rrew31b8km3qvc92e3g.png",
+    "video": null,
+    "author": "PSBigBig",
+    "tags": [
+      "webdev",
+      "javascript",
+      "ai",
       "beginners"
     ],
-    "seoTitle": "SafeLine WAF: The Open-Source Firewall Powering 300K+ Deployments",
-    "seoDescription": "Web security often feels like an arms race — and in that race, SafeLine WAF has quickly become the go-to choice for developers and enterprises across the wor..."
+    "seoTitle": "Day 15 — Symbolic collapse (No.11): when math, logic, and tables turn into “nice prose” — and how to stop it",
+    "seoDescription": "TL;DR No.11 · Symbolic collapse. the fix is not a reranker band-aid after the fact. you must preserve the symbol channel end-to-end and gate outputs before g..."
+  },
+  {
+    "title": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed",
+    "url": "https://dev.to/teamcamp/weekly-code-reviews-how-a-15-minute-friday-habit-can-3x-your-development-speed-1l96",
+    "publishedAt": "2025-09-05T04:34:52.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Most developers treat code reviews as a chore. You rush through them. You focus only on catching bugs. You rarely learn from them. But what if I told you that spending just 15 minutes every Friday reviewing your own week's code could triple your development speed? Sound impossible? right? but you are wrong, Let me share how this simple habit transformed m...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzc9jmiwus8npmf3j9j68.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "learning"
+    ],
+    "seoTitle": "Weekly Code Reviews: How a 15-Minute Friday Habit Can 3x Your Development Speed",
+    "seoDescription": "Most developers treat code reviews as a chore. You rush through them. You focus only on catching bugs. You rarely learn from them. But what if I told you tha..."
+  },
+  {
+    "title": "The Four Point framework, which I use in every AI project I run, whether it’s coding, content, business strategy, or learning, and I wish every CEO would use. It’s not just theory; this is the backbone behind my books, projects, and success.",
+    "url": "https://dev.to/jaideepparashar/the-four-point-framework-i-use-in-every-ai-project-i-run-whether-its-coding-content-business-53d8",
+    "publishedAt": "2025-09-05T04:26:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The Prompt Engineering Framework Every CEO Should USE Jaideep Parashar ・ Sep 5 #ai #webdev #machinelearning #programming",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F3391551%2Fb884abd7-f906-4094-afe5-256359f658f3.jpeg",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "machinelearning",
+      "programming"
+    ],
+    "seoTitle": "The Four Point framework, which I use in every AI project I run, whether it’s coding, content, business strategy, or learning, and I wish every CEO would use. It’s not just theory; this is the backbone behind my books, projects, and success.",
+    "seoDescription": "The Prompt Engineering Framework Every CEO Should USE Jaideep Parashar ・ Sep 5 #ai #webdev #machinelearning #programming"
+  },
+  {
+    "title": "The Prompt Engineering Framework Every CEO Should USE",
+    "url": "https://dev.to/jaideepparashar/the-prompt-engineering-framework-every-ceo-should-use-4f9h",
+    "publishedAt": "2025-09-05T04:21:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "After publishing 40+ AI books, running the ReThynk AI Lab, and helping businesses adopt AI, I’ve learned one thing: Random prompts = random results. That’s why I use the same 4-part framework in every AI project I run — whether it’s coding, content, business strategy, or learning, and I wish every CEO should use. Here it is. The 4-Part Prompt Engineering ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdgxk47upy31oxluwbmce.png",
+    "video": null,
+    "author": "Jaideep Parashar",
+    "tags": [
+      "ai",
+      "webdev",
+      "machinelearning",
+      "programming"
+    ],
+    "seoTitle": "The Prompt Engineering Framework Every CEO Should USE",
+    "seoDescription": "After publishing 40+ AI books, running the ReThynk AI Lab, and helping businesses adopt AI, I’ve learned one thing: Random prompts = random results. That’s w..."
   },
   {
     "title": "At White House dinner, Tim Cook praises Trump’s ‘leadership and focus on innovation’",
@@ -100,44 +252,6 @@
     ],
     "seoTitle": "CarPlay in iOS 26 enables ‘video in the car’, but there’s a catch",
     "seoDescription": "Apple is making a major U-turn with CarPlay after a decade of not allowing video playback. Starting with iOS 26, Apple will allow apps to display video throu..."
-  },
-  {
-    "title": "How to Create a virtual network in Azure.",
-    "url": "https://dev.to/onyemuche/how-to-create-a-virtual-network-in-azure-55fh",
-    "publishedAt": "2025-09-05T01:39:29.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "A Virtual Network (VNet) is a logically isolated network(a network segment intentionally separated from other networks, including the public internet, to improve security and performance by containing threats and controlling traffic flow)in the cloud that lets you securely connect and manage your resources, just like a traditional on-premises network. Azu...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8ucxn8yiqn3wy9yrk9uc.png",
-    "video": null,
-    "author": "EMMANUEL",
-    "tags": [
-      "webdev",
-      "cloudcomputing",
-      "microsoft",
-      "programming"
-    ],
-    "seoTitle": "How to Create a virtual network in Azure.",
-    "seoDescription": "A Virtual Network (VNet) is a logically isolated network(a network segment intentionally separated from other networks, including the public internet, to imp..."
-  },
-  {
-    "title": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
-    "url": "https://dev.to/yuktisays/mastering-mongodb-aggregation-pipelines-a-developers-complete-guide-1ecd",
-    "publishedAt": "2025-09-05T01:19:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, when I moved to MongoDB, I mostly used it for simple things — insert, find, update, delete. I only knew a few operators like $set, $or, $in. Honestly, I thought MongoDB was just about basic CRUD. But re...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwrl806ybfyneocc9aa30.png",
-    "video": null,
-    "author": "Yukti Sahu",
-    "tags": [
-      "ai",
-      "webdev",
-      "beginners",
-      "node"
-    ],
-    "seoTitle": "Mastering MongoDB Aggregation Pipelines: A Developer’s Complete Guide",
-    "seoDescription": "When I started coding, I first learned SQL. I wrote queries with WHERE, HAVING, and even did JOIN across tables to find relationships and insights. Later, wh..."
   },
   {
     "title": "5 Screenwriting Rules You Can Definitely Break",
@@ -524,113 +638,5 @@
     ],
     "seoTitle": "Apple’s winning AI strategy might come down to three simple words, per CNBC",
     "seoDescription": "Earlier this week, Apple received good news when a judge ruled that its lucrative search deal with Google could continue. And per CNBC, the ruling offers App..."
-  },
-  {
-    "title": "9to5Mac Daily: September 4, 2025 – Instagram for iPad, more",
-    "url": "https://9to5mac.com/2025/09/04/daily-september-4-2025/",
-    "publishedAt": "2025-09-04T20:15:41.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players. Sponsored by Backblaze: Never lose a file again. Use code “9to5daily” at checkout for 10% off or try for free. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Seth Kurkowski",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "9to5Mac Daily: September 4, 2025 – Instagram for iPad, more",
-    "seoDescription": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, o..."
-  },
-  {
-    "title": "You Can Light a Whole Movie with Just These Lights",
-    "url": "https://nofilmschool.com/light-almost-whole-film-tubes",
-    "publishedAt": "2025-09-04T20:10:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Could you light almost a whole movie with just Nanlite PavoTube II 30C RGB LED Tube Lights? That’s what cinematographer Spenser Sakurai did on his last project. In his newest in-depth behind-the-scenes video, Sakurai describes how he used the LEDs in creative ways, complete with various setups and specific advice. According to him, the tube lights became ...",
-    "image": "https://nofilmschool.com/media-library/spenser-sakurai-holds-a-tube-light.png?id=61527347&width=980",
-    "video": "https://www.youtube.com/embed/RGg7-ejFeyM?rel=0",
-    "author": "Jo Light",
-    "tags": [
-      "Lighting",
-      "Nanlite",
-      "Tube lights",
-      "Led lighting",
-      "Indie film",
-      "Cinematography techniques",
-      "Lighting techniques",
-      "Cinematography"
-    ],
-    "seoTitle": "You Can Light a Whole Movie with Just These Lights",
-    "seoDescription": "Could you light almost a whole movie with just Nanlite PavoTube II 30C RGB LED Tube Lights? That’s what cinematographer Spenser Sakurai did on his last proje..."
-  },
-  {
-    "title": "Audiio’s New Elements 2.0 Promises Significantly Better Quality Stems",
-    "url": "https://petapixel.com/2025/09/04/audiios-new-elements-2-0-promises-significantly-better-quality-stems/",
-    "publishedAt": "2025-09-04T20:06:29.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Audiio, a music licensing platform in the same vein as Epidemic Sound and MusicBed, announced an integration with AudioShake, an industry-leading sound-separation technology that can break any track into a broad variety of instrument stems even if the original music had never been multi-tracked. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/Audiio-Can-Generate-High-Quality-Stems-Even-If-the-Music-Was-Never-Multi-Tracked.jpg",
-    "video": null,
-    "author": "Jaron Schneider",
-    "tags": [
-      "News",
-      "Software",
-      "ai",
-      "artificialintelligence",
-      "audiio",
-      "audioshake",
-      "licensing",
-      "music"
-    ],
-    "seoTitle": "Audiio’s New Elements 2.0 Promises Significantly Better Quality Stems",
-    "seoDescription": "Audiio, a music licensing platform in the same vein as Epidemic Sound and MusicBed, announced an integration with AudioShake, an industry-leading sound-separ..."
-  },
-  {
-    "title": "The new Street Fighter movie Hadokens into theaters in October 2026",
-    "url": "https://www.theverge.com/news/771977/street-fighter-movie-release-date-cast",
-    "publishedAt": "2025-09-04T20:04:04.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Ryu in Street Fighter 6. The new Street Fighter movie, which has been in the works since 2023, now has a cast and a release date. The film hits theaters on October 16th, 2026, and the cast includes some big names like Jason Momoa, 50 Cent, Orville Peck, and Eric André, according to a series of posts from an X account for the movie. Here is the cast reveal...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/SF6_-_Outfit_2_Ryu_2_png_jpgcopy.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jay Peters",
-    "tags": [],
-    "seoTitle": "The new Street Fighter movie Hadokens into theaters in October 2026",
-    "seoDescription": "Ryu in Street Fighter 6. The new Street Fighter movie, which has been in the works since 2023, now has a cast and a release date. The film hits theaters on O..."
-  },
-  {
-    "title": "The Best Sammo Hung Martial Arts Movies You Must See",
-    "url": "https://nofilmschool.com/martial-arts",
-    "publishedAt": "2025-09-04T20:00:04.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "Last month, I saw a bunch of movies on the Criterion Channel that caught my eye. They were starring an actor named Sammo Hung, a guy whom I had heard about in my martial arts movie love, but I was embarrassed that I had only seen a few of them. Well, I sat down and spent a month watching these films, and I got obsessed with the action and with him as an a...",
-    "image": "https://nofilmschool.com/media-library/the-best-sammo-hung-martial-arts-movies-you-must-see.jpg?id=61557642&width=980",
-    "video": "https://www.youtube.com/embed/hehs_ZJkVcI?rel=0",
-    "author": "Jason Hellerman",
-    "tags": [
-      "Martial arts movies",
-      "Best movies",
-      "Sammo hung"
-    ],
-    "seoTitle": "The Best Sammo Hung Martial Arts Movies You Must See",
-    "seoDescription": "Last month, I saw a bunch of movies on the Criterion Channel that caught my eye. They were starring an actor named Sammo Hung, a guy whom I had heard about i..."
-  },
-  {
-    "title": "Samsung’s ultra-thin Galaxy S25 Edge is $400 off right now",
-    "url": "https://www.theverge.com/tech/771869/samsung-galaxy-s25-edge-8bitdo-pro-3-controller-deal-sale",
-    "publishedAt": "2025-09-04T19:55:19.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "Despite its slimmer frame, the Galaxy S25 Edge still offers all-day battery life. If you’ve ever wished your phone didn’t protrude so much while in your pocket, then the Samsung Galaxy S25 Edge might be made for you. Samsung’s ultra-slim Android phone features the same 6.7-inch OLED display as the Galaxy S25 Plus, but the device’s 5.8mm thick design makes...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257789_Samsung_Galaxy_S25_Edge_review_AJohnson_0003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandon Russell",
-    "tags": [],
-    "seoTitle": "Samsung’s ultra-thin Galaxy S25 Edge is $400 off right now",
-    "seoDescription": "Despite its slimmer frame, the Galaxy S25 Edge still offers all-day battery life. If you’ve ever wished your phone didn’t protrude so much while in your pock..."
   }
 ]
