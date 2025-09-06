@@ -38,25 +38,6 @@
     "seoDescription": "Introduction If you’re a developer building a modern web application, having the right Next.js admin template saves you weeks of setup time. The Modernize Fr..."
   },
   {
-    "title": "[Boost]",
-    "url": "https://dev.to/raheelshan/-d5g",
-    "publishedAt": "2025-09-06T07:27:13.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Taming Laravel Blade with Fully Typed Views, Autocomplete, and Type Safety Raheel Shan ・ Sep 4 #webdev #programming #laravel #learning",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F605559%2F6c4cc957-0c22-48fe-a1de-aa790e2cd394.jpg",
-    "video": null,
-    "author": "Raheel Shan",
-    "tags": [
-      "webdev",
-      "programming",
-      "laravel",
-      "learning"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "Taming Laravel Blade with Fully Typed Views, Autocomplete, and Type Safety Raheel Shan ・ Sep 4 #webdev #programming #laravel #learning"
-  },
-  {
     "title": "First look: Dyson’s Spot+Scrub Ai robot seeks out stains",
     "url": "https://www.theverge.com/ifa-berlin/772423/dyson-spot-scrub-ai-robot-vacuum-mop-multifunction-dock-first-look",
     "publishedAt": "2025-09-06T07:00:00.000Z",
@@ -619,5 +600,26 @@
     ],
     "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
     "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
+  },
+  {
+    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
+    "publishedAt": "2025-09-05T17:44:21.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
+    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Apple",
+      "Rumors",
+      "Mac",
+      "iOS",
+      "iPhone",
+      "iPad"
+    ],
+    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
   }
 ]
