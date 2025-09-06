@@ -1,5 +1,54 @@
 [
   {
+    "title": "Deploying A Dockerized Golang App To AWS App Runner",
+    "url": "https://dev.to/aws-builders/deploying-a-dockerized-golang-app-to-aws-app-runner-1hnn",
+    "publishedAt": "2025-09-06T00:24:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "AWS App Runner is a fully managed container application service offered by Amazon Web Services (AWS). It is designed to simplify the process of building, deploying, and scaling containerized web applications and API services. In this demo, we will deploy a containerised golang app with a mongodb database running on EC2, to AWS AppRunner. To begin, we will...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj5uij0xnrxzfaqy0gw77.png",
+    "video": null,
+    "author": "Dickson Victor",
+    "tags": [
+      "webdev",
+      "apprunner",
+      "docker",
+      "go"
+    ],
+    "seoTitle": "Deploying A Dockerized Golang App To AWS App Runner",
+    "seoDescription": "AWS App Runner is a fully managed container application service offered by Amazon Web Services (AWS). It is designed to simplify the process of building, dep..."
+  },
+  {
+    "title": "The best robot vacuums we&#8217;ve tested for 2025",
+    "url": "https://www.theverge.com/22997597/best-robot-vacuum-cleaner",
+    "publishedAt": "2025-09-05T23:38:27.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "Robot vacuums are impressive devices that will clean your floors well and — thanks to bigger batteries and better robot brains — rarely get tired of doing their job. Over the last few years, they have gone from being utilitarian devices that sweep your floor to full-fledged home robots that can vacuum and mop your home and then trundle off to clean themse...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/257605_best_budget_robot_vacuums_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Jennifer Pattison Tuohy",
+    "tags": [],
+    "seoTitle": "The best robot vacuums we&#8217;ve tested for 2025",
+    "seoDescription": "Robot vacuums are impressive devices that will clean your floors well and — thanks to bigger batteries and better robot brains — rarely get tired of doing th..."
+  },
+  {
+    "title": "Two authors accuse Apple of illegally training AI models on pirated books",
+    "url": "https://9to5mac.com/2025/09/05/two-authors-accuse-apple-of-illegally-training-ai-models-on-pirated-books/",
+    "publishedAt": "2025-09-05T23:16:58.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A new proposed class action suit was filed in the federal court in Northern California today, accusing Apple of illegally using books to train its AI models. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/apple-intelligence-liquid-glass-shattered.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Two authors accuse Apple of illegally training AI models on pirated books",
+    "seoDescription": "A new proposed class action suit was filed in the federal court in Northern California today, accusing Apple of illegally using books to train its AI models...."
+  },
+  {
     "title": "Silicon Valley’s most powerful alliance just got stronger",
     "url": "https://www.theverge.com/command-line-newsletter/773260/google-apple-search-deal-money-ai",
     "publishedAt": "2025-09-05T23:05:54.000Z",
@@ -30,25 +79,6 @@
     ],
     "seoTitle": "Cinematographer Shawn Seifert Talks Solidifying His Visual Style",
     "seoDescription": "With Sean McNamara's latest film, Bau: Artist at War, earning rave reviews across the festival circuit, much of the praise has been directed at the gorgeous ..."
-  },
-  {
-    "title": "Hetzner Alternatives for 2025 (DigitalOcean, Linode, Vultr, OVHcloud)",
-    "url": "https://dev.to/alakkadshaw/hetzner-alternatives-for-2025-digitalocean-linode-vultr-ovhcloud-5936",
-    "publishedAt": "2025-09-05T22:48:30.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "In this article we are going to look at Hetzner alternatives for 2025. Before that here is a quick refresher on the options and which one you should choose DigitalOcean: Predictable pricing, easy to use and has managed Dev stacks (managed DB) with good developer experience Linode (Akamai): Best balance of price / performance with clear pricing with large ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw3kd7ziao8aerwvqv1rq.png",
-    "video": null,
-    "author": "alakkadshaw",
-    "tags": [
-      "webdev",
-      "cloud",
-      "devops",
-      "programming"
-    ],
-    "seoTitle": "Hetzner Alternatives for 2025 (DigitalOcean, Linode, Vultr, OVHcloud)",
-    "seoDescription": "In this article we are going to look at Hetzner alternatives for 2025. Before that here is a quick refresher on the options and which one you should choose D..."
   },
   {
     "title": "10 of the Greatest Movies Set in Prison",
@@ -104,25 +134,6 @@
     "seoDescription": "Flashbacks sometimes get a bad rap in screenwriting circles. You'll hear advice to avoid them completely if you're just getting started. There's some value t..."
   },
   {
-    "title": "Event Bubbling and Capturing in JavaScript: The Complete Guide",
-    "url": "https://dev.to/ishanbagchi/event-bubbling-and-capturing-in-javascript-the-complete-guide-14bh",
-    "publishedAt": "2025-09-05T22:27:04.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Click a button inside a div inside a section, and suddenly JavaScript has a choice to make: which element should handle the event first? That journey, where an event travels through layers of the DOM before and after reaching its target, is called event propagation. If you’re writing modern JavaScript, understanding this flow isn’t optional. It’s the diff...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft0br4kthq3imcetpk9w0.png",
-    "video": null,
-    "author": "Ishan Bagchi",
-    "tags": [
-      "webdev",
-      "javascript",
-      "react",
-      "programming"
-    ],
-    "seoTitle": "Event Bubbling and Capturing in JavaScript: The Complete Guide",
-    "seoDescription": "Click a button inside a div inside a section, and suddenly JavaScript has a choice to make: which element should handle the event first? That journey, where ..."
-  },
-  {
     "title": "75 Thriller Movie Prompts to Spark Your Next Screenplay",
     "url": "https://nofilmschool.com/thriller-movie-prompts",
     "publishedAt": "2025-09-05T22:20:13.000Z",
@@ -140,44 +151,6 @@
     ],
     "seoTitle": "75 Thriller Movie Prompts to Spark Your Next Screenplay",
     "seoDescription": "For screenwriters staring at a blank page or filmmakers searching for their next breakout project, the pressure to craft something good has never been greate..."
-  },
-  {
-    "title": "AI Fish",
-    "url": "https://dev.to/mikaeel_jacobs_23b3d29555/ai-fish-4m17",
-    "publishedAt": "2025-09-05T21:56:34.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "#Golden Fish",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpcenyk3wcwyo48xd0nhi.jpg",
-    "video": null,
-    "author": "Mikaeel Jacobs",
-    "tags": [
-      "webdev",
-      "ai",
-      "tutorial",
-      "javascript"
-    ],
-    "seoTitle": "AI Fish",
-    "seoDescription": "#Golden Fish"
-  },
-  {
-    "title": "Luxury Fashion Branding: Secrets Behind Iconic Designer Labels",
-    "url": "https://dev.to/my_style_6639c5ab291292c0/luxury-fashion-branding-secrets-behind-iconic-designer-labels-4dk1",
-    "publishedAt": "2025-09-05T21:48:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Luxury fashion branding is more than just an emblem or a name—it's the careful art of making a long-lasting effect in the minds of clients. From the streets of Paris to the runways of Milan, luxury fashion branding has constantly been about growing exclusivity, splendor, and being given as genuine. Iconic clothier labels like Chanel, Gucci, and Louis Vuit...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2b97b4eheho2b5dq9gj6.png",
-    "video": null,
-    "author": "My Style",
-    "tags": [
-      "webdev",
-      "ai",
-      "beginners",
-      "productivity"
-    ],
-    "seoTitle": "Luxury Fashion Branding: Secrets Behind Iconic Designer Labels",
-    "seoDescription": "Luxury fashion branding is more than just an emblem or a name—it's the careful art of making a long-lasting effect in the minds of clients. From the streets ..."
   },
   {
     "title": "Stellar New Webb Image Shows the Destructive Power of Infant Stars",
@@ -638,5 +611,21 @@
     ],
     "seoTitle": "Apple launching 8+ new products next week, here’s what’s coming",
     "seoDescription": "Apple is set to announce a slew of new products on Tuesday as part of its “Awe dropping” special. We’re expecting the new iPhone 17 lineup, new Apple Watches..."
+  },
+  {
+    "title": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
+    "url": "https://9to5toys.com/2025/09/05/best-ifa-2025-reveals/",
+    "publishedAt": "2025-09-05T17:13:19.000Z",
+    "source": "9to5toys.com",
+    "category": "apple",
+    "summary": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play fetch with your dog, the latest Qi2.2 25W MagSafe tech, modular charging stations, flagship headphones, the latest in gaming handhelds, Gemini smart TVs, and new tablets have all surfaced over the las...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Best-of-IFA-2025.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "9to5Toys",
+    "tags": [
+      "Deals"
+    ],
+    "seoTitle": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
+    "seoDescription": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play ..."
   }
 ]
