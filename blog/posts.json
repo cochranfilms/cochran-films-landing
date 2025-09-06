@@ -1,22 +1,55 @@
 [
   {
-    "title": "..",
-    "url": "https://dev.to/bala11/-16g8",
-    "publishedAt": "2025-09-06T10:58:49.000Z",
+    "title": "Microfrontends: Guide to Modern Frontend Architecture",
+    "url": "https://dev.to/mcheremnov/microfrontends-guide-to-modern-frontend-architecture-4bc8",
+    "publishedAt": "2025-09-06T12:20:58.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Deploying A Dockerized Golang App To AWS App Runner Dickson Victor for AWS Community Builders ・ Sep 6 #webdev #apprunner #docker #go",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F2794%2F88da75b6-aadd-4ea1-8083-ae2dfca8be94.png",
+    "summary": "Microfrontends represent an architectural approach where a frontend application is decomposed into smaller, independent applications that work together to form a cohesive user experience. Each microfrontend is owned by a different team and can be developed, tested, and deployed independently. Think of it as having multiple mini-applications that combine t...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fomvrrhgw0jzzd3gnugzz.png",
     "video": null,
-    "author": "BALAJI K",
+    "author": "Maksym",
     "tags": [
+      "react",
+      "microservices",
       "webdev",
-      "apprunner",
-      "docker",
-      "go"
+      "javascript"
     ],
-    "seoTitle": "..",
-    "seoDescription": "Deploying A Dockerized Golang App To AWS App Runner Dickson Victor for AWS Community Builders ・ Sep 6 #webdev #apprunner #docker #go"
+    "seoTitle": "Microfrontends: Guide to Modern Frontend Architecture",
+    "seoDescription": "Microfrontends represent an architectural approach where a frontend application is decomposed into smaller, independent applications that work together to fo..."
+  },
+  {
+    "title": "MAGA populists call for holy war against Big Tech",
+    "url": "https://www.theverge.com/politics/773154/maga-tech-right-ai-natcon",
+    "publishedAt": "2025-09-06T12:00:00.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "If you wanted a sense of the current relationship between the tech right and the populists, you had to be sitting in Breakout Room C on the first day of NatCon 5, the annual gathering of the MAGA right's powerhouses. At the end of the afternoon panel on the culture wars (\"The Need for Heroism\"), Geoffrey Miller was handed the mic and started berating one ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257938_tech_right_vs_religious_right_2_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Tina Nguyen",
+    "tags": [],
+    "seoTitle": "MAGA populists call for holy war against Big Tech",
+    "seoDescription": "If you wanted a sense of the current relationship between the tech right and the populists, you had to be sitting in Breakout Room C on the first day of NatC..."
+  },
+  {
+    "title": "Get ready for Tuesday’s Apple Event with these ‘awe dropping’ bingo sheets and wallpapers",
+    "url": "https://9to5mac.com/2025/09/06/apple-awe-dropping-event-wallpapers-and-bingo/",
+    "publishedAt": "2025-09-06T12:00:00.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "We’re just three days away from Apple’s “Awe dropping” event, where they are expected to announce the iPhone 17 lineup, Apple Watch Ultra 3, and more. For some extra fun before and during the event, check out these wallpapers and bingo sheets! more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/AweDroppingHeader.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Dylan McDonald",
+    "tags": [
+      "News",
+      "Apple",
+      "Apple Event",
+      "Wallpapers"
+    ],
+    "seoTitle": "Get ready for Tuesday’s Apple Event with these ‘awe dropping’ bingo sheets and wallpapers",
+    "seoDescription": "We’re just three days away from Apple’s “Awe dropping” event, where they are expected to announce the iPhone 17 lineup, Apple Watch Ultra 3, and more. For so..."
   },
   {
     "title": "First look: Dyson’s Spot+Scrub Ai robot seeks out stains",
@@ -581,49 +614,5 @@
     ],
     "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
     "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
-  },
-  {
-    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
-    "publishedAt": "2025-09-05T17:44:21.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
-    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
-  },
-  {
-    "title": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
-    "url": "https://petapixel.com/2025/09/05/influential-sister-photographers-were-hidden-in-geronimos-eye-for-a-century/",
-    "publishedAt": "2025-09-05T17:34:33.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri. Over 100 years later, a conservator at the Library of Congress noticed a hidden detail in the portrait: the photographer sisters reflected in the warrior's left eye. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/geronimo-eye-portrait-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Culture",
-      "News",
-      "20thcentury",
-      "gerhardsisters",
-      "geronimo",
-      "historicalfriday",
-      "history",
-      "libraryofcongress"
-    ],
-    "seoTitle": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
-    "seoDescription": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri...."
   }
 ]
