@@ -1,5 +1,24 @@
 [
   {
+    "title": "[Boost]",
+    "url": "https://dev.to/raheelshan/-d5g",
+    "publishedAt": "2025-09-06T07:27:13.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Taming Laravel Blade with Fully Typed Views, Autocomplete, and Type Safety Raheel Shan ・ Sep 4 #webdev #programming #laravel #learning",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F605559%2F6c4cc957-0c22-48fe-a1de-aa790e2cd394.jpg",
+    "video": null,
+    "author": "Raheel Shan",
+    "tags": [
+      "webdev",
+      "programming",
+      "laravel",
+      "learning"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "Taming Laravel Blade with Fully Typed Views, Autocomplete, and Type Safety Raheel Shan ・ Sep 4 #webdev #programming #laravel #learning"
+  },
+  {
     "title": "First look: Dyson’s Spot+Scrub Ai robot seeks out stains",
     "url": "https://www.theverge.com/ifa-berlin/772423/dyson-spot-scrub-ai-robot-vacuum-mop-multifunction-dock-first-look",
     "publishedAt": "2025-09-06T07:00:00.000Z",
@@ -31,82 +50,6 @@
     ],
     "seoTitle": "Why Hire an SEO Company in Chicago for Growth?",
     "seoDescription": "Chicago’s digital marketplace is fast-paced and fiercely competitive. Whether you run a restaurant, law firm, or e-commerce business, ranking on Google’s fir..."
-  },
-  {
-    "title": "The Cost of Losing Senior Engineers in a Team",
-    "url": "https://dev.to/dct_technology/the-cost-of-losing-senior-engineers-in-a-team-315c",
-    "publishedAt": "2025-09-06T05:28:53.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine this: your top senior engineer suddenly resigns. The team feels the shock immediately—but the real cost often goes unnoticed until deadlines slip, bugs pile up, and morale drops. Losing a senior engineer isn’t just about filling an empty seat—it’s about losing years of context, mentorship, and problem-solving wisdom that can’t be replaced overnigh...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4wpgab22fmb5nbfd86jb.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "webdev",
-      "teamculture",
-      "leadership",
-      "productivity"
-    ],
-    "seoTitle": "The Cost of Losing Senior Engineers in a Team",
-    "seoDescription": "Imagine this: your top senior engineer suddenly resigns. The team feels the shock immediately—but the real cost often goes unnoticed until deadlines slip, bu..."
-  },
-  {
-    "title": "5G and Edge: How They’re Changing System Design",
-    "url": "https://dev.to/dct_technology/5g-and-edge-how-theyre-changing-system-design-2cgm",
-    "publishedAt": "2025-09-06T05:21:05.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Imagine your app responding faster than your thoughts. That’s not science fiction anymore—this is what 5G + Edge Computing are making possible. The future of system design is being rewritten. But how does this impact developers, designers, and IT consultants like us? Let’s dive in. Most people think of 5G as only higher speed. But it’s much more than that...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxj4p5e7v9pky71qzuepy.png",
-    "video": null,
-    "author": "DCT Technology Pvt. Ltd.",
-    "tags": [
-      "webdev",
-      "5g",
-      "systemdesign",
-      "edgecomputing"
-    ],
-    "seoTitle": "5G and Edge: How They’re Changing System Design",
-    "seoDescription": "Imagine your app responding faster than your thoughts. That’s not science fiction anymore—this is what 5G + Edge Computing are making possible. The future of..."
-  },
-  {
-    "title": "[Boost]",
-    "url": "https://dev.to/aryan_panwala/-2db3",
-    "publishedAt": "2025-09-06T05:12:12.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "Aryan Panwala",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "development"
-    ],
-    "seoTitle": "[Boost]",
-    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
-  },
-  {
-    "title": "2 Minutes Rule for Technical Debt cleanup",
-    "url": "https://dev.to/nikhil_sachapara/2-minutes-rule-for-technical-debt-cleanup-4ba1",
-    "publishedAt": "2025-09-06T05:11:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
-    "video": null,
-    "author": "nikhil sachapara",
-    "tags": [
-      "webdev",
-      "productivity",
-      "devops",
-      "development"
-    ],
-    "seoTitle": "2 Minutes Rule for Technical Debt cleanup",
-    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
   },
   {
     "title": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
@@ -621,5 +564,62 @@
     "tags": [],
     "seoTitle": "I tested 30 smart locks, and these are the best",
     "seoDescription": "A smart lock is an easy solution to some common problems. Locked yourself out? Need to let a friend in to water the plants? Your latchkey kid lost their key?..."
+  },
+  {
+    "title": "The best laptop deals you can get right now",
+    "url": "https://www.theverge.com/good-deals/23161948/apple-macbook-lenovo-acer-deal-sale",
+    "publishedAt": "2025-09-05T18:15:13.000Z",
+    "source": "theverge.com",
+    "category": "web",
+    "summary": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by Vjeran Pavic / The Verge If you want a great laptop, you’re going to have to fork over a ton of money, right? Not necessarily. There are dozens of good laptops on the market at various price points. ...",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Microsoft-Surface-Laptop-7th-Edition.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "video": null,
+    "author": "Brandt Ranj",
+    "tags": [],
+    "seoTitle": "The best laptop deals you can get right now",
+    "seoDescription": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by..."
+  },
+  {
+    "title": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
+    "url": "https://petapixel.com/2025/09/05/nikon-suspends-c2pa-functionality-on-the-z6-iii-due-to-authentication-issue/",
+    "publishedAt": "2025-09-05T18:00:26.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/nikon-z6-iii-authenticity-suspended.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Equipment",
+      "News",
+      "C2PA",
+      "contentauthenticity",
+      "nikon",
+      "nikonauthenticityservice",
+      "nikonz6iii"
+    ],
+    "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
+    "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
+  },
+  {
+    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
+    "publishedAt": "2025-09-05T17:44:21.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
+    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
+    "video": null,
+    "author": "Tim Hardwick",
+    "tags": [
+      "Apple",
+      "Rumors",
+      "Mac",
+      "iOS",
+      "iPhone",
+      "iPad"
+    ],
+    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
+    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
   }
 ]
