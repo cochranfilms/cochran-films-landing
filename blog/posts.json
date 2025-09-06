@@ -1,5 +1,85 @@
 [
   {
+    "title": "AI PCs Set to Dominate by 2029 as Demand Skyrockets",
+    "url": "https://dev.to/6haz_games_f5157b46c5254f/ai-pcs-set-to-dominate-by-2029-as-demand-skyrockets-2lc1",
+    "publishedAt": "2025-09-06T16:38:35.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "According to Gartner, AI-powered PCs are on the rise, expected to account for 31% of the global PC market by the end of 2025, and skyrocketing to 55% by 2026. This surge is driven by increasing adoption of AI technology across various industries, fueling digital transformation. As a result, we are witnessing a significant shift in both enterprise demand a...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnnh0ckvqtjm0qz2xbeec.jpg",
+    "video": null,
+    "author": "6Haz games",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "AI PCs Set to Dominate by 2029 as Demand Skyrockets",
+    "seoDescription": "According to Gartner, AI-powered PCs are on the rise, expected to account for 31% of the global PC market by the end of 2025, and skyrocketing to 55% by 2026..."
+  },
+  {
+    "title": "Dependency Injection in Angular: A Complete Guide with Use Cases",
+    "url": "https://dev.to/rohit_singh_ee84e64941db7/dependency-injection-in-angular-a-complete-guide-with-use-cases-3ec8",
+    "publishedAt": "2025-09-06T16:22:40.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When building scalable applications in Angular, one of the core concepts you’ll use daily is Dependency Injection (DI). It simplifies how your components and services interact by removing the responsibility of creating and managing dependencies. In this blog, we’ll explore: What Dependency Injection is in Angular How Angular’s DI system works Different wa...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
+    "video": null,
+    "author": "ROHIT SINGH",
+    "tags": [
+      "angular",
+      "webdev",
+      "programming",
+      "javascript"
+    ],
+    "seoTitle": "Dependency Injection in Angular: A Complete Guide with Use Cases",
+    "seoDescription": "When building scalable applications in Angular, one of the core concepts you’ll use daily is Dependency Injection (DI). It simplifies how your components and..."
+  },
+  {
+    "title": "5 Lesser Known Ways to Use JSON Web Tokens",
+    "url": "https://dev.to/shrsv/5-lesser-known-ways-to-use-json-web-tokens-45nl",
+    "publishedAt": "2025-09-06T16:17:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello, I'm Shrijith Venkatramana. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! JSON Web Tokens (JWT) provide a compact way to securely transmit information between parties. They consist of three parts: a h...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6vfb5qlih4676z47kbt6.png",
+    "video": null,
+    "author": "Shrijith Venkatramana",
+    "tags": [
+      "programming",
+      "webdev",
+      "beginners",
+      "productivity"
+    ],
+    "seoTitle": "5 Lesser Known Ways to Use JSON Web Tokens",
+    "seoDescription": "Hello, I'm Shrijith Venkatramana. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competi..."
+  },
+  {
+    "title": "Nick Ut Speaks Out After Netflix Buys Doc Challenging ‘Napalm Girl’ Photo Credit",
+    "url": "https://petapixel.com/2025/09/06/nick-ut-speaks-out-after-netflix-buys-doc-challenging-napalm-girl-photo-credit/",
+    "publishedAt": "2025-09-06T16:17:24.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Photographer Nick Ut was honored last night at Visa pour l'Image, the International Festival of Photojournalism, in France. The honor came just days after the news broke that Netflix acquired The Stringer, the explosive documentary that alleges Ut did not capture \"The Terror of War,\" one of the most famous photos in history. Ut received a lengthy ovation ...",
+    "image": "https://petapixel.com/assets/uploads/2025/01/The-Terror-of-War.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Industry",
+      "News",
+      "ap",
+      "associatedpress",
+      "documentary",
+      "napalmgirl",
+      "nguyenthanhnghe",
+      "nickut"
+    ],
+    "seoTitle": "Nick Ut Speaks Out After Netflix Buys Doc Challenging ‘Napalm Girl’ Photo Credit",
+    "seoDescription": "Photographer Nick Ut was honored last night at Visa pour l'Image, the International Festival of Photojournalism, in France. The honor came just days after th..."
+  },
+  {
     "title": "Pocket Scion is a synth you play with plants",
     "url": "https://www.theverge.com/news/773352/pocket-scion-synth-mushroom-music",
     "publishedAt": "2025-09-06T16:00:00.000Z",
@@ -30,25 +110,6 @@
     "seoDescription": "While Mac and iPhone users have powerful devices, the real challenge is automatically tying everything together. Moving files, syncing calendars, posting acr..."
   },
   {
-    "title": "Is JavaScript Compiled or Interpreted? A Deep Dive",
-    "url": "https://dev.to/avijitsri16/is-javascript-compiled-or-interpreted-a-deep-dive-439g",
-    "publishedAt": "2025-09-06T15:27:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "To really get the answer of this question, let's see the process behind How code is executed from beginning to end? Deep Dive Of Architecture of V-8 Engine: Understanding the diagram: Parsing: This phase itself combines two steps: Lexical Analysis: In this phase, code is converted into tokens; Syntax Analysis: In this phase, the tokens are used and is con...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgbfg4h46kaj3j19zdtid.png",
-    "video": null,
-    "author": "Avijit",
-    "tags": [
-      "webdev",
-      "javascript",
-      "programming",
-      "frontend"
-    ],
-    "seoTitle": "Is JavaScript Compiled or Interpreted? A Deep Dive",
-    "seoDescription": "To really get the answer of this question, let's see the process behind How code is executed from beginning to end? Deep Dive Of Architecture of V-8 Engine: ..."
-  },
-  {
     "title": "Park Chan-wook&#8217;s No Other Choice is as bleak as it is hilarious",
     "url": "https://www.theverge.com/movie-reviews/773376/tiff-2025-no-other-choice-man-in-my-basement-reviews",
     "publishedAt": "2025-09-06T15:00:00.000Z",
@@ -61,24 +122,6 @@
     "tags": [],
     "seoTitle": "Park Chan-wook&#8217;s No Other Choice is as bleak as it is hilarious",
     "seoDescription": "No Other Choice. At my second day at TIFF 2025, the longest line I saw wasn't for a movie: it was for the Criterion Closet. The space is housed in a van so t..."
-  },
-  {
-    "title": "Case Study: Digital Parking App for Ohrid",
-    "url": "https://dev.to/thomas_graphics_3e9688a64/case-study-digital-parking-app-for-ohrid-4k7l",
-    "publishedAt": "2025-09-06T14:58:02.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Case Study: Digital Parking App for Ohrid 1. Project Overview Project: Parking App (Digital Payment Solution for Ohrid) Role: UI/UX Designer & Developer Tools: Figma, VS Code, GitHub Timeline: ~2 months (with additional iterations during delays) Context: This project started as a personal frustration: constantly re-entering my license plate and SMS number...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F25yfql4zceqvkfwy9gp0.png",
-    "video": null,
-    "author": "Thomas Graphics",
-    "tags": [
-      "webdev",
-      "design",
-      "web"
-    ],
-    "seoTitle": "Case Study: Digital Parking App for Ohrid",
-    "seoDescription": "Case Study: Digital Parking App for Ohrid 1. Project Overview Project: Parking App (Digital Payment Solution for Ohrid) Role: UI/UX Designer & Developer Tool..."
   },
   {
     "title": "New Apple Card offer allows users to earn boosted cash back with Uber and Uber Eats",
@@ -558,48 +601,5 @@
     ],
     "seoTitle": "Apple is making the movies Hollywood won’t, and it’s paying off big",
     "seoDescription": "’Think different’ was an iconic Apple ad campaign, and it might just be the best way to summarize the company’s new Apple TV+ strategy for movies. Here’s why..."
-  },
-  {
-    "title": "How to Photograph Challenging Products Like Eyewear and Jewelry",
-    "url": "https://petapixel.com/2025/09/05/how-to-photograph-challenging-products-like-eyewear-and-jewelry/",
-    "publishedAt": "2025-09-05T20:26:59.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "In e-commerce, photography isn’t just a picture—it’s the customer’s only connection to the product. A shopper can’t hold the glasses, feel the texture of the frame, or judge the true glossiness of the metal. When the image doesn’t reflect reality, the result is disappointment, higher return rates, and ultimately, a loss of trust in the brand. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/gusev-guest-post-jewelry-eyewear-7.jpg",
-    "video": null,
-    "author": "Alexander Gusev",
-    "tags": [
-      "Lighting",
-      "Post-Processing",
-      "Tips",
-      "commercial",
-      "lighting",
-      "macro",
-      "productphotography"
-    ],
-    "seoTitle": "How to Photograph Challenging Products Like Eyewear and Jewelry",
-    "seoDescription": "In e-commerce, photography isn’t just a picture—it’s the customer’s only connection to the product. A shopper can’t hold the glasses, feel the texture of the..."
-  },
-  {
-    "title": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
-    "url": "https://nofilmschool.com/tamron-zoom-lens-sony-mirrorless-cameras",
-    "publishedAt": "2025-09-05T19:44:03.000Z",
-    "source": "nofilmschool.com",
-    "category": "production",
-    "summary": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have great news for you. There are some awesome saving opportunities currently out there for Tamron lenses, with many being ideal options to pair with one of your favorite Sony E-mount cameras. In our latest...",
-    "image": "https://nofilmschool.com/media-library/find-the-perfect-zoom-lens-for-your-sony-mirrorless-cameras-with-these-tamron-discounts.png?id=61560658&width=980",
-    "video": null,
-    "author": "NFS Staff",
-    "tags": [
-      "Filmmaker deals",
-      "Filmmaking deals of the week",
-      "Deals",
-      "Tamron",
-      "Tamron lenses",
-      "Filmmaking deals of the week"
-    ],
-    "seoTitle": "Find the Perfect Zoom Lens for Your Sony Mirrorless Cameras With These Tamron Discounts",
-    "seoDescription": "If you're looking for a solid kit zoom lens to strap to a Sony mirrorless camera that is both powerful, yet still lightweight and affordable, then we have gr..."
   }
 ]
