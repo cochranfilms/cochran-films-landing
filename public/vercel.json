@@ -6,11 +6,5 @@
     "api/wave/create-invoice.js": {
       "maxDuration": 10
     }
-  },
-  "env": {
-    "AIRTABLE_API_KEY": "@airtable_api_key",
-    "AIRTABLE_BASE_PORTFOLIO": "@airtable_base_portfolio",
-    "WAVE_API_KEY": "@wave_api_key",
-    "WAVE_BUSINESS_ID": "@wave_business_id"
   }
 }
