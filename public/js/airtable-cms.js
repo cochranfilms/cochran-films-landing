@@ -48,10 +48,12 @@
       grid.innerHTML = list.map(it => {
         const thumb = (it['Thumbnail Image']||'').trim() || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
         const isPhotoOnly = (it.ServiceCategory||it.Category)==='Photography' && !it.playbackUrl;
+        const videoUrl = it.playbackUrl || '';
+        
         if (isPhotoOnly){
           return `<div class="portfolio-item photo-only" data-category="${it.Category||''}" data-title="${it.Title||''}" data-src="${thumb}"><div class="portfolio-thumbnail"><img src="${thumb}" alt="${it.Title||'Photo'}" loading="lazy" /></div></div>`;
         }
-        return `<div class="portfolio-item" data-category="${it.Category||''}" data-title="${it.Title||''}">
+        return `<div class="portfolio-item" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}">
           <div class="portfolio-thumbnail">
             <img src="${thumb}" alt="${it.Title||''}" loading="lazy" />
             <div class="portfolio-play"><i class="fa-solid fa-play"></i></div>

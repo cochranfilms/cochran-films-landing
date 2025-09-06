@@ -34,12 +34,12 @@ export default async function handler(req, res) {
       Title: record.fields.Title || '',
       Description: record.fields.Description || '',
       Category: record.fields.Category || 'Video Production',
-      'Thumbnail Image': record.fields['Thumbnail Image']?.[0]?.url || '',
+      'Thumbnail Image': record.fields.thumbnailUrl || record.fields['Thumbnail Image'] || '',
       playbackUrl: record.fields.playbackUrl || '',
-      UploadDate: record.fields.UploadDate || '',
-      URL: record.fields.URL || '',
-      ServiceCategory: record.fields.ServiceCategory || record.fields.Category || 'Video Production',
-      'Is Featured': record.fields['Is Featured'] || false
+      UploadDate: record.fields['UploadDate'] || record.fields['Created Date'] || '',
+      URL: record.fields['Portfolio (Item)'] || '',
+      ServiceCategory: record.fields.Category || 'Video Production',
+      'Is Featured': record.fields['Is Featured'] === 'true' || false
     }));
 
     // Set CORS headers
