@@ -1,41 +1,22 @@
 [
   {
-    "title": "From Static to Smart: How to Power Your Web App with Dynamic Content Using APIs",
-    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/from-static-to-smart-how-to-power-your-web-app-with-dynamic-content-using-apis-154l",
-    "publishedAt": "2025-09-06T08:50:31.000Z",
+    "title": "..",
+    "url": "https://dev.to/bala11/-16g8",
+    "publishedAt": "2025-09-06T10:58:49.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "Ever visited a website that felt outdated or... just flat? That was me a year ago, scrolling through a travel blog with hard-coded articles from 2018. No real-time updates, no interactive content, no personalization—just digital dust. Meanwhile, Netflix was feeding me customized recommendations, Spotify knew my music mood before I did, and news apps were ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faqkxefs0plud0yme0c2p.jpg",
+    "summary": "Deploying A Dockerized Golang App To AWS App Runner Dickson Victor for AWS Community Builders ・ Sep 6 #webdev #apprunner #docker #go",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F2794%2F88da75b6-aadd-4ea1-8083-ae2dfca8be94.png",
     "video": null,
-    "author": "Okoye Ndidiamaka",
-    "tags": [
-      "api",
-      "webdev",
-      "dynamiccontent",
-      "techtips"
-    ],
-    "seoTitle": "From Static to Smart: How to Power Your Web App with Dynamic Content Using APIs",
-    "seoDescription": "Ever visited a website that felt outdated or... just flat? That was me a year ago, scrolling through a travel blog with hard-coded articles from 2018. No rea..."
-  },
-  {
-    "title": "Modernize Open Source Next.js Admin Dashboard Template",
-    "url": "https://dev.to/vaibhavg/modernize-open-source-nextjs-admin-dashboard-template-om1",
-    "publishedAt": "2025-09-06T08:43:23.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Introduction If you’re a developer building a modern web application, having the right Next.js admin template saves you weeks of setup time. The Modernize Free Next.js Admin Template is designed to give developers a ready-to-use dashboard with clean code, performance optimization, and responsive design. This open-source template is available on GitHub, ma...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm2w76f0iijgyq9g6k4mi.png",
-    "video": null,
-    "author": "Vaibhav Gupta",
+    "author": "BALAJI K",
     "tags": [
       "webdev",
-      "javascript",
-      "programming",
-      "opensource"
+      "apprunner",
+      "docker",
+      "go"
     ],
-    "seoTitle": "Modernize Open Source Next.js Admin Dashboard Template",
-    "seoDescription": "Introduction If you’re a developer building a modern web application, having the right Next.js admin template saves you weeks of setup time. The Modernize Fr..."
+    "seoTitle": "..",
+    "seoDescription": "Deploying A Dockerized Golang App To AWS App Runner Dickson Victor for AWS Community Builders ・ Sep 6 #webdev #apprunner #docker #go"
   },
   {
     "title": "First look: Dyson’s Spot+Scrub Ai robot seeks out stains",
@@ -621,5 +602,28 @@
     ],
     "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
     "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
+  },
+  {
+    "title": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
+    "url": "https://petapixel.com/2025/09/05/influential-sister-photographers-were-hidden-in-geronimos-eye-for-a-century/",
+    "publishedAt": "2025-09-05T17:34:33.000Z",
+    "source": "petapixel.com",
+    "category": "photography",
+    "summary": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri. Over 100 years later, a conservator at the Library of Congress noticed a hidden detail in the portrait: the photographer sisters reflected in the warrior's left eye. [Read More]",
+    "image": "https://petapixel.com/assets/uploads/2025/09/geronimo-eye-portrait-featured.jpg",
+    "video": null,
+    "author": "Jeremy Gray",
+    "tags": [
+      "Culture",
+      "News",
+      "20thcentury",
+      "gerhardsisters",
+      "geronimo",
+      "historicalfriday",
+      "history",
+      "libraryofcongress"
+    ],
+    "seoTitle": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
+    "seoDescription": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri...."
   }
 ]
