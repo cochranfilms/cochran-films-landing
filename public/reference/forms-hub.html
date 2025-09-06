@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work With Us — Cochran Films</title>
+  <meta name="description" content="Choose the service that fits your needs: Website Development, Discovery Call, B2B Connect, or Media Services." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
+  <style>
+    :root {
+      --brand-indigo: #6366f1; --brand-emerald: #10b981; --brand-gold: #FFB200;
+      --dark-900: #0f172a; --dark-950: #020617;
+      --text-primary: #f8fafc; --text-secondary: #cbd5e1; --text-muted: #94a3b8;
+      --card-border: 1px solid rgba(99,102,241,0.22); --backdrop: blur(12px);
+      --radius-lg: 18px; --radius-md: 12px; --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; height:100%; background:#0b1222; color:var(--text-primary); font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .ai-background { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    #neuralCanvas { width:100%; height:100%; display:block; }
+    .wrapper { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+    .top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 16px; border-radius:12px; background: rgba(15,23,42,0.65); border: var(--card-border); backdrop-filter: var(--backdrop); }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.5px; font-family:'Poppins', sans-serif; text-transform:uppercase; color:var(--brand-gold); }
+    .logo { width:40px; height:40px; border-radius:11px; background:#fff; display:grid; place-items:center; }
+    .logo img { width:74%; height:74%; object-fit:contain; }
+    .back-link { color:#0a0a0a; background:#ffffff; border:1px solid rgba(148,163,184,0.25); border-radius:999px; padding:10px 14px; text-decoration:none; font-weight:800; box-shadow:0 4px 14px rgba(0,0,0,0.15); }
+
+    .hero { margin-top:24px; padding:26px; border-radius:18px; border:var(--card-border); background: rgba(15,23,42,0.55); box-shadow: var(--shadow-lg); }
+    .title { margin: 0 0 8px; font-size: clamp(28px, 5.5vw, 48px); line-height:1.06; font-weight:900; letter-spacing:-0.02em; background: linear-gradient(135deg, #fff, #dbeafe 40%, #fde68a 85%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-shadow: 0 6px 30px rgba(99,102,241,0.15); }
+    .subtitle { color:var(--text-secondary); font-size: clamp(15px, 2.4vw, 18px); max-width: 900px; line-height:1.7; }
+
+    .accordion { margin-top: 20px; display:grid; gap:12px; }
+    .acc-item { border: var(--card-border); border-radius: 14px; background: rgba(15,23,42,0.65); backdrop-filter: var(--backdrop); overflow:hidden; }
+    .acc-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 18px; cursor:pointer; }
+    .acc-title { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:.02em; color:#ffffff; }
+    .acc-title .icon { display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(255,178,0,0.25)); color:#ffd166; }
+    .acc-head .hint { color:#cbd5e1; font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .acc-body { grid-template-rows: 0fr; display:grid; transition: all 300ms cubic-bezier(.4,0,.2,1); overflow:hidden; }
+    .acc-body.open { grid-template-rows: 1fr; }
+    .acc-inner { overflow:hidden; padding: 0 18px 0; }
+    .acc-body.open .acc-inner { padding: 18px; }
+
+    label { display:block; font-weight:700; color:#e5e7eb; margin: 2px 2px 8px; font-size:13px; letter-spacing:.04em; text-transform:uppercase; }
+    .input, select, textarea { width:100%; padding:14px 16px; border-radius:10px; background: rgba(0,0,0,0.4); border:1px solid rgba(255,178,0,0.3); color:#ffffff; outline:none; transition: all 180ms cubic-bezier(.4,0,.2,1); font-size:15px; font-weight:600; backdrop-filter: blur(15px); }
+    .input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.62); }
+    select option { background:#0f162c; color:#e5e7eb; }
+    .grid { display:grid; gap:14px; grid-template-columns: repeat(12,1fr); }
+    .col-6 { grid-column: span 6; } .col-12 { grid-column: span 12; }
+    @media (max-width:820px){ .col-6 { grid-column: span 12; } }
+    .btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:14px; font-weight:900; letter-spacing:.02em; cursor:pointer; transition: all 180ms cubic-bezier(.4,0,.2,1); border:0; }
+    .btn-primary { background: linear-gradient(135deg, var(--brand-gold), #ffd166); color:#0a0a0a; box-shadow: 0 0 40px rgba(255,178,0,0.35); }
+    .btn-ghost { background: transparent; color: var(--text-secondary); border:1px solid rgba(148,163,184,0.22); font-weight:800; }
+    .success { display:none; padding:18px; margin-top:10px; border-radius:12px; border:1px solid rgba(16,185,129,0.35); background: rgba(16,185,129,0.12); color:#ecfdf5; font-weight:700; }
+    .success.show { display:block; }
+
+    /* Checkbox Styles */
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+    .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkmark {
+      height: 20px;
+      width: 20px;
+      background-color: #0f162c;
+      border: 1px solid rgba(148,163,184,0.25);
+      border-radius: 4px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .checkbox-label input:checked ~ .checkmark {
+      background-color: #6366f1;
+      border-color: #6366f1;
+    }
+    .checkmark:after {
+      content: "";
+      display: none;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    .checkbox-label input:checked ~ .checkmark:after {
+      display: block;
+    }
+    .label-text {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="ai-background" aria-hidden="true"><canvas id="neuralCanvas"></canvas></div>
+  <div class="wrapper">
+    <header class="top" role="banner">
+      <div class="brand">
+        <div class="logo"><img src="https://static.wixstatic.com/media/aeef42_af70013becbb4aa2b08179f9eba48dbc~mv2.png" alt="Cochran Films logo" width="40" height="40" decoding="async"></div>
+        Cochran Films
+      </div>
+      <nav>
+        <a class="back-link" href="./index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1 class="title">Work With Us</h1>
+      <p class="subtitle">Select the service that fits your needs. Each section expands into a focused form. We’ll follow up within 24–48 hours.</p>
+    </section>
+
+    <section class="accordion" id="formsAccordion">
+      <!-- 1) Website Development & Maintenance -->
+      <div class="acc-item" id="acc-web">
+        <div class="acc-head" data-target="webBody">
+          <div class="acc-title"><span class="icon"><i class="fa-solid fa-code"></i></span> Website Development & Maintenance</div>
+          <div class="hint">Instant project intake</div>
+        </div>
+        <div class="acc-body" id="webBody">
+          <div class="acc-inner">
+            <form id="webForm" novalidate>
+              <div class="grid">
+                <div class="col-6"><label for="web_full_name">Full Name *</label><input class="input" id="web_full_name" type="text" required></div>
+                <div class="col-6"><label for="web_email">Email *</label><input class="input" id="web_email" type="email" required></div>
+                <div class="col-6"><label for="web_phone">Phone *</label><input class="input" id="web_phone" type="tel" required></div>
+                <div class="col-6"><label for="web_business_name">Business Name</label><input class="input" id="web_business_name" type="text"></div>
+                <div class="col-6"><label for="web_has_website">Do you currently have a website? *</label><select id="web_has_website" class="input" required><option value="" disabled selected>Select an option</option><option>Yes</option><option>No</option></select></div>
+                <div class="col-6"><label for="web_website_url">Current Website URL</label><input class="input" id="web_website_url" type="url" placeholder="https://example.com"></div>
+                <div class="col-6"><label for="web_project_type">Project Type *</label><select id="web_project_type" class="input" required><option value="" disabled selected>Select one</option><option>New Website</option><option>Redesign / Refresh</option><option>Monthly Maintenance</option><option>E‑commerce Build</option></select></div>
+                <div class="col-6"><label for="web_timeline">Ideal Timeline *</label><select id="web_timeline" class="input" required><option value="" disabled selected>Select one</option><option>ASAP (0–2 weeks)</option><option>2–6 weeks</option><option>6–12 weeks</option><option>Flexible</option></select></div>
+                <div class="col-6"><label for="web_budget_range">Budget Range *</label><select id="web_budget_range" class="input" required><option value="" disabled selected>Select one</option><option>$2k–$5k</option><option>$5k–$10k</option><option>$10k–$25k</option><option>$25k+</option><option>Not sure yet</option></select></div>
+                <div class="col-6"><label for="web_cms">Preferred Platform</label><select id="web_cms" class="input"><option>No preference</option><option>Wix</option><option>WordPress</option><option>Webflow</option><option>Custom (HTML/JS)</option></select></div>
+                <div class="col-12"><label for="web_goals">Primary Goals</label><input class="input" id="web_goals" placeholder="Brand Refresh, Increase Conversions, Speed & SEO..."></div>
+                <div class="col-12"><label for="web_services">Services Interested In</label><input class="input" id="web_services" placeholder="Web Design, Web Development, E‑commerce, SEO..."></div>
+                <div class="col-6"><label for="web_content_status">Content Status</label><select id="web_content_status" class="input"><option>Need help creating content</option><option>Have some content</option><option>All content is ready</option></select></div>
+                <div class="col-6"><label for="web_city">City / Location</label><input class="input" id="web_city" type="text" placeholder="Atlanta, GA"></div>
+                <div class="col-6"><label for="web_referral">How did you hear about us?</label><select id="web_referral" class="input"><option>Instagram</option><option>YouTube</option><option>Google</option><option>Referral</option><option>Returning Client</option><option>Other</option></select></div>
+                <div class="col-12"><label for="web_pages_features">Pages / Features</label><textarea id="web_pages_features" rows="4" placeholder="e.g., Home, About, Services, Blog, Contact, E‑commerce, Booking, Member Area…"></textarea></div>
+                <div class="col-12"><label for="web_notes">Anything else we should know?</label><textarea id="web_notes" rows="4" placeholder="Tell us about your brand, audience, and what success looks like."></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your project and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my project and relevant web development insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important project updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="web_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
+                <!-- Privacy Policy & Legal Disclosures -->
+                <div class="col-12">
+                  <div style="background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Privacy & Communication Details</h3>
+                    
+                    <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                      <p style="margin: 0 0 12px;"><strong>Message Types & Frequency:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Project updates, relevant insights, and service announcements (typically 2-4 times per month)</li>
+                        <li><strong>Phone Calls:</strong> Important project updates and consultations (as needed, typically 1-2 times per project)</li>
+                        <li><strong>Text Messages:</strong> Urgent updates and quick questions (minimal, only when necessary)</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Types of Messages You Can Expect:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard notifications about your purchases or relationship with our business</li>
+                        <li>Answering your questions and conversational messaging</li>
+                        <li>Promoting our products/services</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Rates & Charges:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard messaging rates may apply for text messages</li>
+                        <li>No additional charges from Cochran Films for any communications</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Opt-Out Instructions:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Reply with "UNSUBSCRIBE" or click unsubscribe link in any email</li>
+                        <li><strong>Phone:</strong> Call (404) 907-1918 and request to be removed from call list</li>
+                        <li><strong>Text:</strong> Reply "STOP" to any text message</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Data Protection:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Your mobile opt-in information is never shared with third parties</li>
+                        <li>All data is stored securely and used only for project-related communications</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="border-top: 1px solid rgba(99,102,241,0.22); padding-top: 16px;">
+                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">By submitting this form, you consent to receive communications as specified above.</p>
+                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.cochranfilms.com/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📄 Privacy Policy</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <a href="mailto:info@cochranfilms.com" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📧 Contact Us</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <span style="color: #94a3b8; font-size: 12px;">📞 (404) 907-1918</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="web_submit"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button><a class="btn btn-ghost" href="./index.html"><i class="fa-solid fa-house"></i> Cancel</a></div>
+                <div class="col-12"><div class="success" id="web_success"><i class="fa-solid fa-circle-check"></i> Thanks! Your inquiry has been captured.</div></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Discovery Call -->
+      <div class="acc-item" id="acc-discovery">
+        <div class="acc-head" data-target="discoveryBody">
+          <div class="acc-title"><span class="icon"><i class="fa-solid fa-handshake-angle"></i></span> Discovery Call</div>
+          <div class="hint">15–30 min call</div>
+        </div>
+        <div class="acc-body" id="discoveryBody">
+          <div class="acc-inner">
+            <form id="discoveryForm" novalidate>
+              <div class="grid">
+                <div class="col-6"><label for="dc_email">Email *</label><input class="input" id="dc_email" type="email" required></div>
+                <div class="col-6"><label for="dc_name">Full Name *</label><input class="input" id="dc_name" type="text" required></div>
+                <div class="col-6"><label for="dc_business">Business Name</label><input class="input" id="dc_business" type="text"></div>
+                <div class="col-6"><label for="dc_phone">Phone Number *</label><input class="input" id="dc_phone" type="tel" required></div>
+                <div class="col-6"><label for="dc_date">Preferred Date *</label><input class="input" id="dc_date" type="date" required></div>
+                <div class="col-6"><label for="dc_time">Time *</label><input class="input" id="dc_time" type="time" required></div>
+                <div class="col-6"><label for="dc_tz">Time Zone *</label>
+                  <select id="dc_tz" class="input" required>
+                    <option value="" disabled selected>Choose</option>
+                    <option>America/New_York</option><option>America/Chicago</option><option>America/Denver</option><option>America/Los_Angeles</option><option>America/Phoenix</option>
+                    <option>Europe/London</option><option>Europe/Paris</option><option>Asia/Tokyo</option><option>Australia/Sydney</option><option>Africa/Johannesburg</option>
+                    <option>Asia/Dubai</option><option>Asia/Hong_Kong</option><option>Asia/Shanghai</option><option>America/Sao_Paulo</option><option>America/Mexico_City</option><option>America/Toronto</option>
+                  </select>
+                </div>
+                <div class="col-12"><label for="dc_stage">What stage are you in? *</label>
+                  <select id="dc_stage" class="input" required>
+                    <option value="" disabled selected>Select</option>
+                    <option>Just getting started</option><option>Rebranding</option><option>Need a refresh</option><option>Expanding my reach</option><option>Not sure yet</option>
+                  </select>
+                </div>
+                <div class="col-12"><label for="dc_help">What do you need help with? *</label><input class="input" id="dc_help" placeholder="Logo, Website, Content Strategy, Social Media, Email/Backend, All of the above..." required></div>
+                <div class="col-12"><label for="dc_goal">Biggest Goal *</label><textarea id="dc_goal" rows="4" required placeholder="I want my brand to stand out in a crowded market..."></textarea></div>
+                <div class="col-12"><label for="dc_notes">Anything else?</label><textarea id="dc_notes" rows="3"></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your discovery call and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my discovery call and relevant brand insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="dc_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
+                <!-- Privacy Policy & Legal Disclosures -->
+                <div class="col-12">
+                  <div style="background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Privacy & Communication Details</h3>
+                    
+                    <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                      <p style="margin: 0 0 12px;"><strong>Message Types & Frequency:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Discovery call details, relevant insights, and service announcements (typically 2-4 times per month)</li>
+                        <li><strong>Phone Calls:</strong> Important updates and consultations (as needed, typically 1-2 times per project)</li>
+                        <li><strong>Text Messages:</strong> Urgent updates and quick questions (minimal, only when necessary)</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Types of Messages You Can Expect:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard notifications about your purchases or relationship with our business</li>
+                        <li>Answering your questions and conversational messaging</li>
+                        <li>Promoting our products/services</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Rates & Charges:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard messaging rates may apply for text messages</li>
+                        <li>No additional charges from Cochran Films for any communications</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Opt-Out Instructions:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Reply with "UNSUBSCRIBE" or click unsubscribe link in any email</li>
+                        <li><strong>Phone:</strong> Call (404) 907-1918 and request to be removed from call list</li>
+                        <li><strong>Text:</strong> Reply "STOP" to any text message</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Data Protection:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Your mobile opt-in information is never shared with third parties</li>
+                        <li>All data is stored securely and used only for project-related communications</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="border-top: 1px solid rgba(99,102,241,0.22); padding-top: 16px;">
+                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">By submitting this form, you consent to receive communications as specified above.</p>
+                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.cochranfilms.com/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📄 Privacy Policy</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <a href="mailto:info@cochranfilms.com" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📧 Contact Us</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <span style="color: #94a3b8; font-size: 12px;">📞 (404) 907-1918</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="dc_submit"><i class="fa-solid fa-phone"></i> Request Call</button></div>
+                <div class="col-12"><div class="success" id="dc_success"><i class="fa-solid fa-circle-check"></i> Thanks! We'll send scheduling details.</div></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3) B2B Connect -->
+      <div class="acc-item" id="acc-b2b">
+        <div class="acc-head" data-target="b2bBody">
+          <div class="acc-title"><span class="icon"><i class="fa-solid fa-briefcase"></i></span> Let’s Connect — Business to Business</div>
+          <div class="hint">Partnerships & collabs</div>
+        </div>
+        <div class="acc-body" id="b2bBody">
+          <div class="acc-inner">
+            <form id="b2bForm" novalidate>
+              <div class="grid">
+                <div class="col-6"><label for="b2b_email">Email *</label><input class="input" id="b2b_email" type="email" required></div>
+                <div class="col-6"><label for="b2b_name">Full Name *</label><input class="input" id="b2b_name" type="text" required></div>
+                <div class="col-6"><label for="b2b_phone">Phone Number</label><input class="input" id="b2b_phone" type="tel"></div>
+                <div class="col-6"><label for="b2b_business">Business Name *</label><input class="input" id="b2b_business" type="text" required></div>
+                <div class="col-12"><label for="b2b_desc">What does your business do? *</label><textarea id="b2b_desc" rows="3" required></textarea></div>
+                <div class="col-12"><label for="b2b_link">Website or Social Link</label><input class="input" id="b2b_link" type="url" placeholder="https://..."></div>
+                <div class="col-12"><label for="b2b_goal">What are you hoping to achieve?</label><select id="b2b_goal" class="input"><option>Discuss collaboration</option><option>Content creation help</option><option>Branding/web development</option><option>Join networking opportunities</option><option>Other</option></select></div>
+                <div class="col-6"><label for="b2b_date">Preferred Date *</label><input class="input" id="b2b_date" type="date" required></div>
+                <div class="col-6"><label for="b2b_time">Time *</label><input class="input" id="b2b_time" type="time" required></div>
+                <div class="col-12"><label for="b2b_tz">Time Zone *</label><select id="b2b_tz" class="input" required><option value="" disabled selected>Choose</option><option>America/New_York</option><option>America/Chicago</option><option>America/Denver</option><option>America/Los_Angeles</option><option>America/Phoenix</option><option>Europe/London</option><option>Europe/Paris</option><option>Asia/Tokyo</option><option>Australia/Sydney</option><option>Asia/Kolkata</option><option>Asia/Karachi</option><option>Africa/Lagos</option><option>Africa/Johannesburg</option><option>Asia/Dubai</option><option>Asia/Singapore</option><option>Asia/Hong_Kong</option><option>Asia/Shanghai</option><option>America/Sao_Paulo</option><option>America/Mexico_City</option><option>America/Toronto</option></select></div>
+                <div class="col-12"><label for="b2b_notes">Anything you’d like to add?</label><textarea id="b2b_notes" rows="3"></textarea></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on our business collaboration and share relevant opportunities. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about our collaboration and business opportunities</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="b2b_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
+                <!-- Privacy Policy & Legal Disclosures -->
+                <div class="col-12">
+                  <div style="background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Privacy & Communication Details</h3>
+                    
+                    <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                      <p style="margin: 0 0 12px;"><strong>Message Types & Frequency:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Business collaboration updates, relevant opportunities, and service announcements (typically 2-4 times per month)</li>
+                        <li><strong>Phone Calls:</strong> Important updates and consultations (as needed, typically 1-2 times per project)</li>
+                        <li><strong>Text Messages:</strong> Urgent updates and quick questions (minimal, only when necessary)</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Types of Messages You Can Expect:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard notifications about your purchases or relationship with our business</li>
+                        <li>Answering your questions and conversational messaging</li>
+                        <li>Promoting our products/services</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Rates & Charges:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard messaging rates may apply for text messages</li>
+                        <li>No additional charges from Cochran Films for any communications</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Opt-Out Instructions:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Reply with "UNSUBSCRIBE" or click unsubscribe link in any email</li>
+                        <li><strong>Phone:</strong> Call (404) 907-1918 and request to be removed from call list</li>
+                        <li><strong>Text:</strong> Reply "STOP" to any text message</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Data Protection:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Your mobile opt-in information is never shared with third parties</li>
+                        <li>All data is stored securely and used only for project-related communications</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="border-top: 1px solid rgba(99,102,241,0.22); padding-top: 16px;">
+                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">By submitting this form, you consent to receive communications as specified above.</p>
+                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.cochranfilms.com/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📄 Privacy Policy</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <a href="mailto:info@cochranfilms.com" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📧 Contact Us</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <span style="color: #94a3b8; font-size: 12px;">📞 (404) 907-1918</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="b2b_submit"><i class="fa-solid fa-paper-plane"></i> Send</button></div>
+                <div class="col-12"><div class="success" id="b2b_success"><i class="fa-solid fa-circle-check"></i> Thanks! We’ll be in touch.</div></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4) Book Media Services -->
+      <div class="acc-item" id="acc-media">
+        <div class="acc-head" data-target="mediaBody">
+          <div class="acc-title"><span class="icon"><i class="fa-solid fa-video"></i></span> Book Media Services</div>
+          <div class="hint">Video / Photo / Printing</div>
+        </div>
+        <div class="acc-body" id="mediaBody">
+          <div class="acc-inner">
+            <form id="mediaForm" novalidate>
+              <div class="grid">
+                <div class="col-6"><label for="ms_email">Email *</label><input class="input" id="ms_email" type="email" required></div>
+                <div class="col-6"><label for="ms_name">Full Name *</label><input class="input" id="ms_name" type="text" required></div>
+                <div class="col-6"><label for="ms_phone">Phone Number *</label><input class="input" id="ms_phone" type="tel" required></div>
+                <div class="col-12"><label for="ms_service">What type of media services? *</label><select id="ms_service" class="input" required><option value="" disabled selected>Select</option><option>Videography</option><option>Photography</option><option>On-Site Photo Printing</option><option>Total Media Package</option><option>Not Sure</option></select></div>
+                <div class="col-12"><label for="ms_project_type">What type of event or project? *</label><input class="input" id="ms_project_type" required placeholder="Brand Commercial, Corporate Event, Birthday, Promo Video, Product Launch, etc."></div>
+                <div class="col-6"><label for="ms_date">Event / Project Date(s) *</label><input class="input" id="ms_date" type="date" required></div>
+                <div class="col-6"><label for="ms_location">Project Location *</label><input class="input" id="ms_location" required placeholder="City + Address or Venue"></div>
+                <div class="col-12"><label for="ms_vision">Tell us more about your vision *</label><textarea id="ms_vision" rows="4" required placeholder="Themes, ideas, goals, inspirations..."></textarea></div>
+                <div class="col-12"><label for="ms_referral">How did you hear about Cochran Films? *</label><select id="ms_referral" class="input" required><option>Google</option><option>Instagram</option><option>Facebook</option><option>Threads</option><option>Referral</option><option>Returning Client</option><option>Other</option></select></div>
+                
+                <!-- Opt-in Section -->
+                <div class="col-12">
+                  <div style="background: rgba(255,178,0,0.06); border: 1px solid rgba(255,178,0,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Communication Preferences</h3>
+                    <p style="margin: 0 0 16px; color: #cbd5e1; font-size: 13px; line-height: 1.5;">We'd love to keep you updated on your media project and share relevant insights. Please let us know how you'd like to hear from us:</p>
+                    
+                    <div style="display: grid; gap: 12px;">
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_email" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">Email updates about my media project and relevant insights</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_calls">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Phone calls for important project updates and consultations</span>
+                      </label>
+                      
+                      <label class="checkbox-label">
+                        <input type="checkbox" id="ms_opt_texts">
+                        <span class="checkmark"></span>
+                        <span class="label-text">Text messages for urgent updates and quick questions</span>
+                      </label>
+                    </div>
+                    
+                    <p style="margin: 16px 0 0; color: #94a3b8; font-size: 11px; line-height: 1.4; font-style: italic;">You can change these preferences anytime. We respect your privacy and will never spam you.</p>
+                  </div>
+                </div>
+                
+                <!-- Privacy Policy & Legal Disclosures -->
+                <div class="col-12">
+                  <div style="background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.22); border-radius: 12px; padding: 20px; margin: 16px 0;">
+                    <h3 style="margin: 0 0 16px; color: #ffffff; font-size: 16px; font-weight: 800;">Privacy & Communication Details</h3>
+                    
+                    <div style="color: #cbd5e1; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+                      <p style="margin: 0 0 12px;"><strong>Message Types & Frequency:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Media project updates, relevant insights, and service announcements (typically 2-4 times per month)</li>
+                        <li><strong>Phone Calls:</strong> Important project updates and consultations (as needed, typically 1-2 times per project)</li>
+                        <li><strong>Text Messages:</strong> Urgent updates and quick questions (minimal, only when necessary)</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Types of Messages You Can Expect:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard notifications about your purchases or relationship with our business</li>
+                        <li>Answering your questions and conversational messaging</li>
+                        <li>Promoting our products/services</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Rates & Charges:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Standard messaging rates may apply for text messages</li>
+                        <li>No additional charges from Cochran Films for any communications</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Opt-Out Instructions:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li><strong>Email:</strong> Reply with "UNSUBSCRIBE" or click unsubscribe link in any email</li>
+                        <li><strong>Phone:</strong> Call (404) 907-1918 and request to be removed from call list</li>
+                        <li><strong>Text:</strong> Reply "STOP" to any text message</li>
+                      </ul>
+                      
+                      <p style="margin: 0 0 12px;"><strong>Data Protection:</strong></p>
+                      <ul style="margin: 0 0 12px; padding-left: 20px;">
+                        <li>Your mobile opt-in information is never shared with third parties</li>
+                        <li>All data is stored securely and used only for project-related communications</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="border-top: 1px solid rgba(99,102,241,0.22); padding-top: 16px;">
+                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">By submitting this form, you consent to receive communications as specified above.</p>
+                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://www.cochranfilms.com/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📄 Privacy Policy</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <a href="mailto:info@cochranfilms.com" style="color: #93c5fd; text-decoration: none; font-size: 12px; font-weight: 600;">📧 Contact Us</a>
+                        <span style="color: #94a3b8; font-size: 12px;">•</span>
+                        <span style="color: #94a3b8; font-size: 12px;">📞 (404) 907-1918</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 btn-row"><button class="btn btn-primary" type="submit" id="ms_submit"><i class="fa-solid fa-paper-plane"></i> Send</button></div>
+                <div class="col-12"><div class="success" id="ms_success"><i class="fa-solid fa-circle-check"></i> Thanks! We’ll reach out within 24 hours.</div></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // EmailJS Init
+    (function(){
+      const KEY = 'p4pF3OWvh-DXtae4c';
+      function tryInit(){ try { if (typeof emailjs!=='undefined'&&emailjs.init){ emailjs.init(KEY); return true; } } catch(_){} return false; }
+      if (!tryInit()) window.addEventListener('load', tryInit);
+    })();
+
+    // Accordion toggle
+    document.querySelectorAll('.acc-head').forEach(h => {
+      h.addEventListener('click', () => {
+        const id = h.getAttribute('data-target');
+        const body = document.getElementById(id);
+        body.classList.toggle('open');
+      });
+    });
+
+    // Website form submit (template: web-development)
+    document.getElementById('webForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault(); const f = e.currentTarget; if (!f.checkValidity()){ f.reportValidity(); return; }
+      const btn = document.getElementById('web_submit'); const txt = btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p = {
+        user_name: document.getElementById('web_full_name').value.trim(),
+        user_email: document.getElementById('web_email').value.trim(),
+        phone: document.getElementById('web_phone').value.trim(),
+        business_name: document.getElementById('web_business_name').value.trim(),
+        has_website: document.getElementById('web_has_website').value,
+        website_url: document.getElementById('web_website_url').value.trim(),
+        project_type: document.getElementById('web_project_type').value,
+        timeline: document.getElementById('web_timeline').value,
+        budget_range: document.getElementById('web_budget_range').value,
+        cms: document.getElementById('web_cms').value,
+        goals: document.getElementById('web_goals').value.trim(),
+        services: document.getElementById('web_services').value.trim(),
+        content_status: document.getElementById('web_content_status').value,
+        city: document.getElementById('web_city').value.trim(),
+        referral: document.getElementById('web_referral').value,
+        pages_features: document.getElementById('web_pages_features').value.trim(),
+        notes: document.getElementById('web_notes').value.trim(),
+        opt_email: document.getElementById('web_opt_email').checked,
+        opt_calls: document.getElementById('web_opt_calls').checked,
+        opt_texts: document.getElementById('web_opt_texts').checked,
+        consent: 'Yes', submitted_at: new Date().toISOString()
+      };
+      try { await emailjs.send('service_t11yvru','web-development',p); document.getElementById('web_success').classList.add('show'); f.reset(); }
+      catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
+      finally { btn.disabled=false; btn.innerHTML=txt; }
+    });
+
+    // Discovery Call (placeholder template id — update later)
+    document.getElementById('discoveryForm')?.addEventListener('submit', async (e)=>{
+      e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
+      const btn=document.getElementById('dc_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p={ 
+        user_email: document.getElementById('dc_email').value.trim(), 
+        user_name: document.getElementById('dc_name').value.trim(), 
+        phone: document.getElementById('dc_phone').value.trim(), 
+        business_name: document.getElementById('dc_business').value.trim(), 
+        preferred_date: document.getElementById('dc_date').value, 
+        preferred_time: document.getElementById('dc_time').value, 
+        timezone: document.getElementById('dc_tz').value, 
+        brand_stage: document.getElementById('dc_stage').value, 
+        help_needed: document.getElementById('dc_help').value.trim(), 
+        biggest_goal: document.getElementById('dc_goal').value.trim(), 
+        notes: document.getElementById('dc_notes').value.trim(),
+        opt_email: document.getElementById('dc_opt_email').checked,
+        opt_calls: document.getElementById('dc_opt_calls').checked,
+        opt_texts: document.getElementById('dc_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
+      try { await emailjs.send('service_t11yvru','Discovery-Call',p); document.getElementById('dc_success').classList.add('show'); f.reset(); }
+      catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
+      finally{ btn.disabled=false; btn.innerHTML=txt; }
+    });
+
+    // B2B Connect (placeholder template id — update later)
+    document.getElementById('b2bForm')?.addEventListener('submit', async (e)=>{
+      e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
+      const btn=document.getElementById('b2b_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p={ 
+        user_email: document.getElementById('b2b_email').value.trim(), 
+        user_name: document.getElementById('b2b_name').value.trim(), 
+        phone: document.getElementById('b2b_phone').value.trim(), 
+        business_name: document.getElementById('b2b_business').value.trim(), 
+        business_desc: document.getElementById('b2b_desc').value.trim(), 
+        link: document.getElementById('b2b_link').value.trim(), 
+        goal: document.getElementById('b2b_goal').value, 
+        preferred_date: document.getElementById('b2b_date').value, 
+        preferred_time: document.getElementById('b2b_time').value, 
+        timezone: document.getElementById('b2b_tz').value, 
+        notes: document.getElementById('b2b_notes').value.trim(),
+        opt_email: document.getElementById('b2b_opt_email').checked,
+        opt_calls: document.getElementById('b2b_opt_calls').checked,
+        opt_texts: document.getElementById('b2b_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
+      try { await emailjs.send('service_t11yvru','b2b-business',p); document.getElementById('b2b_success').classList.add('show'); f.reset(); }
+      catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
+      finally{ btn.disabled=false; btn.innerHTML=txt; }
+    });
+
+    // Media Services (placeholder template id — update later)
+    document.getElementById('mediaForm')?.addEventListener('submit', async (e)=>{
+      e.preventDefault(); const f=e.currentTarget; if(!f.checkValidity()){ f.reportValidity(); return; }
+      const btn=document.getElementById('ms_submit'); const txt=btn.innerHTML; btn.disabled=true; btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      const p={ 
+        user_email: document.getElementById('ms_email').value.trim(), 
+        user_name: document.getElementById('ms_name').value.trim(), 
+        phone: document.getElementById('ms_phone').value.trim(), 
+        service_type: document.getElementById('ms_service').value, 
+        project_type: document.getElementById('ms_project_type').value.trim(), 
+        event_date: document.getElementById('ms_date').value, 
+        location: document.getElementById('ms_location').value.trim(), 
+        vision: document.getElementById('ms_vision').value.trim(), 
+        referral: document.getElementById('ms_referral').value,
+        opt_email: document.getElementById('ms_opt_email').checked,
+        opt_calls: document.getElementById('ms_opt_calls').checked,
+        opt_texts: document.getElementById('ms_opt_texts').checked,
+        submitted_at: new Date().toISOString() 
+      };
+      try { await emailjs.send('service_t11yvru','media-production',p); document.getElementById('ms_success').classList.add('show'); f.reset(); }
+      catch(err){ console.error(err); alert('Could not submit right now. Please try again.'); }
+      finally{ btn.disabled=false; btn.innerHTML=txt; }
+    });
+
+    // AI Background
+    class AINeuralBackground { constructor(){ this.c=document.getElementById('neuralCanvas'); this.x=this.c.getContext('2d'); this.p=[]; this.l=[]; this.rm=matchMedia('(prefers-reduced-motion: reduce)').matches; this.init(); } init(){ this.resize(); this.make(); this.links(); addEventListener('resize',()=>{ this.resize(); this.links(); }); if(!this.rm) this.tick(); } resize(){ this.c.width=innerWidth; this.c.height=innerHeight; }
+      make(){ this.p=[]; for(let i=0;i<90;i++){ this.p.push({x:Math.random()*this.c.width,y:Math.random()*this.c.height,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,s:Math.random()*2+1,c:this.col(),u:Math.random()*Math.PI*2}); }}
+      links(){ this.l=[]; const d=120; for(let i=0;i<this.p.length;i++){ for(let j=i+1;j<this.p.length;j++){ const a=this.p[i],b=this.p[j],dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy); if(dist<d) this.l.push({i,j,t:1-dist/d,u:Math.random()*Math.PI*2}); } } }
+      col(){ const cs=['rgba(6,182,212,0.6)','rgba(20,184,166,0.6)','rgba(124,58,237,0.6)','rgba(99,102,241,0.6)','rgba(255,178,0,0.6)']; return cs[Math.floor(Math.random()*cs.length)]; }
+      up(){ this.p.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; if(p.x<=0||p.x>=this.c.width) p.vx*=-1; if(p.y<=0||p.y>=this.c.height) p.vy*=-1; p.u+=.02; p.vx*=.995; p.vy*=.995; }); }
+      draw(){ this.x.fillStyle='rgba(2,6,23,0.12)'; this.x.fillRect(0,0,this.c.width,this.c.height); this.l.forEach(L=>{ const a=this.p[L.i],b=this.p[L.j],al=.25+Math.sin(L.u)*.18; this.x.strokeStyle=`rgba(99,102,241,${al*L.t})`; this.x.lineWidth=1*L.t; this.x.beginPath(); this.x.moveTo(a.x,a.y); this.x.lineTo(b.x,b.y); this.x.stroke(); L.u+=.01; }); this.p.forEach(p=>{ const al=.6+Math.sin(p.u)*.4; this.x.fillStyle=p.c.replace('0.6)',`${al})`); this.x.beginPath(); this.x.arc(p.x,p.y,p.s,0,Math.PI*2); this.x.fill(); }); }
+      tick(){ this.up(); this.draw(); requestAnimationFrame(()=>this.tick()); }
+    }
+    if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>new AINeuralBackground()); else new AINeuralBackground();
+  </script>
+  
+  <!-- User Preferences Management -->
+  <script src="js/user-preferences-manager.js"></script>
+</body>
+</html>
+
+
