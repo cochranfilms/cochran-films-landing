@@ -1,5 +1,62 @@
 [
   {
+    "title": "The Cost of Losing Senior Engineers in a Team",
+    "url": "https://dev.to/dct_technology/the-cost-of-losing-senior-engineers-in-a-team-315c",
+    "publishedAt": "2025-09-06T05:28:53.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine this: your top senior engineer suddenly resigns. The team feels the shock immediately—but the real cost often goes unnoticed until deadlines slip, bugs pile up, and morale drops. Losing a senior engineer isn’t just about filling an empty seat—it’s about losing years of context, mentorship, and problem-solving wisdom that can’t be replaced overnigh...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4wpgab22fmb5nbfd86jb.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "webdev",
+      "teamculture",
+      "leadership",
+      "productivity"
+    ],
+    "seoTitle": "The Cost of Losing Senior Engineers in a Team",
+    "seoDescription": "Imagine this: your top senior engineer suddenly resigns. The team feels the shock immediately—but the real cost often goes unnoticed until deadlines slip, bu..."
+  },
+  {
+    "title": "5G and Edge: How They’re Changing System Design",
+    "url": "https://dev.to/dct_technology/5g-and-edge-how-theyre-changing-system-design-2cgm",
+    "publishedAt": "2025-09-06T05:21:05.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Imagine your app responding faster than your thoughts. That’s not science fiction anymore—this is what 5G + Edge Computing are making possible. The future of system design is being rewritten. But how does this impact developers, designers, and IT consultants like us? Let’s dive in. Most people think of 5G as only higher speed. But it’s much more than that...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxj4p5e7v9pky71qzuepy.png",
+    "video": null,
+    "author": "DCT Technology Pvt. Ltd.",
+    "tags": [
+      "webdev",
+      "5g",
+      "systemdesign",
+      "edgecomputing"
+    ],
+    "seoTitle": "5G and Edge: How They’re Changing System Design",
+    "seoDescription": "Imagine your app responding faster than your thoughts. That’s not science fiction anymore—this is what 5G + Edge Computing are making possible. The future of..."
+  },
+  {
+    "title": "[Boost]",
+    "url": "https://dev.to/aryan_panwala/-2db3",
+    "publishedAt": "2025-09-06T05:12:12.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Aryan Panwala",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "development"
+    ],
+    "seoTitle": "[Boost]",
+    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
+  },
+  {
     "title": "2 Minutes Rule for Technical Debt cleanup",
     "url": "https://dev.to/nikhil_sachapara/2-minutes-rule-for-technical-debt-cleanup-4ba1",
     "publishedAt": "2025-09-06T05:11:26.000Z",
@@ -95,25 +152,6 @@
     "seoDescription": "When I first started experimenting with CI/CD, Jenkins was one of the names that kept popping up. At first, I thought it was “old school” and that maybe newe..."
   },
   {
-    "title": "Day 16 · Bootstrap ordering (No 14) why jobs fire before the system is ready, and how to stop zombie runs at the door",
-    "url": "https://dev.to/onestardao/day-16-bootstrap-ordering-no-14-why-jobs-fire-before-the-system-is-ready-and-how-to-stop-219g",
-    "publishedAt": "2025-09-06T03:46:39.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Symptom looks fine in staging. then prod rolls and you see ghosts webhooks arrive before vector stores hydrate. first searches return empty even though data was uploaded agents call tools before secrets or policies load. 401 then silent retries queues scale while migrations are mid-flight. partial writes. compensations everywhere canary passes locally the...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxvd0dbon7v3ma75u6lez.png",
-    "video": null,
-    "author": "PSBigBig",
-    "tags": [
-      "webdev",
-      "javascript",
-      "ai",
-      "beginners"
-    ],
-    "seoTitle": "Day 16 · Bootstrap ordering (No 14) why jobs fire before the system is ready, and how to stop zombie runs at the door",
-    "seoDescription": "Symptom looks fine in staging. then prod rolls and you see ghosts webhooks arrive before vector stores hydrate. first searches return empty even though data ..."
-  },
-  {
     "title": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
     "url": "https://9to5mac.com/2025/09/05/jon-prosser-iphone-17-pro-leak-video/",
     "publishedAt": "2025-09-06T02:55:59.000Z",
@@ -128,25 +166,6 @@
     ],
     "seoTitle": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
     "seoDescription": "While Apple’s iPhone 17 event kicks off in just a few days, this preview footage could almost be mistaken for the real thing. more…"
-  },
-  {
-    "title": "Scaffold React & Angular Apps in Minutes — Meet polyfront scaffold 🚀",
-    "url": "https://dev.to/nirmalsamaranayaka/scaffold-react-angular-apps-in-minutes-meet-polyfront-scaffold-160i",
-    "publishedAt": "2025-09-06T02:32:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/Webpack) and Angular applications in minutes, with ready-to-use presets for UI, state management, testing, and more. polyfront-scaffold generates production-ready frontend projects with opinionated but ...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flubkjre9rtgwxrxr8plq.png",
-    "video": null,
-    "author": "Nirmal Samaranayaka",
-    "tags": [
-      "beginners",
-      "angular",
-      "frontend",
-      "webdev"
-    ],
-    "seoTitle": "Scaffold React & Angular Apps in Minutes — Meet polyfront scaffold 🚀",
-    "seoDescription": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/We..."
   },
   {
     "title": "The best robot vacuums we&#8217;ve tested for 2025",
@@ -615,21 +634,5 @@
     ],
     "seoTitle": "Five Ways iOS 26 Improves Your iPhone's Battery",
     "seoDescription": "Apple made several battery-related changes in iOS 26, introducing features that make it easier to tell which apps are draining battery and new ways to extend..."
-  },
-  {
-    "title": "iPhone 17 Pro will drop titanium for aluminum, and this might be why",
-    "url": "https://9to5mac.com/2025/09/05/iphone-17-pro-will-drop-titanium-for-aluminum-and-this-might-be-why/",
-    "publishedAt": "2025-09-05T18:29:06.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Among the various rumors about Apple’s new iPhone 17 lineup, one of the most curious centers on design materials. Apple will reportedly drop titanium from the iPhone 17 Pro and Pro Max in favor of aluminum, and now we might finally know why. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/Titanium-iPhone-15-Pro.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "iPhone 17 Pro will drop titanium for aluminum, and this might be why",
-    "seoDescription": "Among the various rumors about Apple’s new iPhone 17 lineup, one of the most curious centers on design materials. Apple will reportedly drop titanium from th..."
   }
 ]
