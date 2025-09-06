@@ -1,78 +1,76 @@
 [
   {
-    "title": "Consistent Hashing Explained: Scaling Distributed Systems Without Chaos day 46 of system design basics",
-    "url": "https://dev.to/vincenttommi/consistent-hashing-explained-scaling-distributed-systems-without-chaos-day-46-of-system-design-2768",
-    "publishedAt": "2025-09-06T18:08:41.000Z",
+    "title": "How to Actually Hit $10K MRR in 2025 (No BS, Just What Works)",
+    "url": "https://dev.to/shayy/how-to-actually-hit-10k-mrr-in-2025-no-bs-just-what-works-204k",
+    "publishedAt": "2025-09-06T19:03:50.000Z",
     "source": "dev.to",
     "category": "web",
-    "summary": "In a distributed system where servers are frequently added or removed, efficiently routing requests becomes a major challenge. A common approach is to hash the request and assign it to a server using: Hash(key) mod N where N is the number of servers. The problem? This method is tightly coupled to N. Any change (adding or removing a server) triggers massiv...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fez4av15hmu0igbxqc88q.png",
+    "summary": "I've grown two SaaS products to decent MRR. But I've had many that failed, and it took a long time to get to the ones that actually worked. If I were starting over in 2025, clean slate, zero dollars in the bank, no existing audience, this is exactly how I'd push to $10K MRR. Just the practical steps I wish I'd followed earlier, based on what actually work...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsxzr88187iq734kawa4l.png",
     "video": null,
-    "author": "Vincent Tommi",
-    "tags": [
-      "programming",
-      "systemdesign",
-      "discuss",
-      "webdev"
-    ],
-    "seoTitle": "Consistent Hashing Explained: Scaling Distributed Systems Without Chaos day 46 of system design basics",
-    "seoDescription": "In a distributed system where servers are frequently added or removed, efficiently routing requests becomes a major challenge. A common approach is to hash t..."
-  },
-  {
-    "title": "Ever Wonder How Your Email Actually Gets Sent? Meet the SMTP Server!",
-    "url": "https://dev.to/lovestaco/ever-wonder-how-your-email-actually-gets-sent-meet-the-smtp-server-515p",
-    "publishedAt": "2025-09-06T17:38:27.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! We've all hit that \"send\" button countless times, but have you ever stopped to think about the intricate journey your email takes before l...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft2lj821d300cj0unx43o.png",
-    "video": null,
-    "author": "Athreya aka Maneshwar",
+    "author": "Shayan",
     "tags": [
       "webdev",
       "programming",
-      "smtp",
-      "beginners"
-    ],
-    "seoTitle": "Ever Wonder How Your Email Actually Gets Sent? Meet the SMTP Server!",
-    "seoDescription": "Hello, I'm Maneshwar. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing..."
-  },
-  {
-    "title": "Amazon Great sale",
-    "url": "https://dev.to/bestselling_amazon/amazon-great-sale-5cg1",
-    "publishedAt": "2025-09-06T17:38:11.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "BUY NOW",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2tzngni1tu5bj7l4tx0l.jpg",
-    "video": null,
-    "author": "bestselling amazon ",
-    "tags": [
-      "amazonsale",
-      "amazonsaledate",
-      "webdev"
-    ],
-    "seoTitle": "Amazon Great sale",
-    "seoDescription": "BUY NOW"
-  },
-  {
-    "title": "First bloc of Jeffrey Epstein documents released by House; Epstein victims due to testify",
-    "url": "https://dev.to/fun_hog_bf1572464a4aac0de/first-bloc-of-jeffrey-epstein-documents-released-by-house-epstein-victims-due-to-testify-11d5",
-    "publishedAt": "2025-09-06T17:21:52.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "WASHINGTON — The House Oversight Committee released thousands of pages of documents from the government's investigation of Jeffrey Epstein as the fight over the disgraced financier and sex offender's files reignited after lawmakers returned to Washington. In its first tranche of documents, the committee said it released 33,295 pages of files that it recei...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnmvo4am19vxrn842nnmp.PNG",
-    "video": null,
-    "author": "FUN HOG",
-    "tags": [
-      "webdev",
-      "beginners",
-      "tutorial",
+      "javascript",
       "ai"
     ],
-    "seoTitle": "First bloc of Jeffrey Epstein documents released by House; Epstein victims due to testify",
-    "seoDescription": "WASHINGTON — The House Oversight Committee released thousands of pages of documents from the government's investigation of Jeffrey Epstein as the fight over ..."
+    "seoTitle": "How to Actually Hit $10K MRR in 2025 (No BS, Just What Works)",
+    "seoDescription": "I've grown two SaaS products to decent MRR. But I've had many that failed, and it took a long time to get to the ones that actually worked. If I were startin..."
+  },
+  {
+    "title": "Buy Aged Ticketmaster Accounts – Verified, High-Quality & Fast Delivery",
+    "url": "https://dev.to/anyagoldner423/buy-aged-ticketmaster-accounts-verified-high-quality-fast-delivery-1fci",
+    "publishedAt": "2025-09-06T18:48:38.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Hello! 👋 SmmTopItWorld@gmail.com What Are Aged Ticketmaster Accounts? Faster access to ticket queues Better chances at limited-edition tickets Fewer security checks or captchas They’re especially useful during high-demand events like world tours, sports finals, or exclusive product drops. Why Buy Aged Ticketmaster Accounts in 2025? 🎤 Event Enthusiasts –...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnquezv2j7umdfmfd73vk.png",
+    "video": null,
+    "author": "Buy Aged Ticketmaster Accounts",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "beginners"
+    ],
+    "seoTitle": "Buy Aged Ticketmaster Accounts – Verified, High-Quality & Fast Delivery",
+    "seoDescription": "Hello! 👋 SmmTopItWorld@gmail.com What Are Aged Ticketmaster Accounts? Faster access to ticket queues Better chances at limited-edition tickets Fewer securit..."
+  },
+  {
+    "title": "Advanced Monitoring Systems: How Automated Fences Use AI and IoT",
+    "url": "https://dev.to/emily_johnson_dev/advanced-monitoring-systems-how-automated-fences-use-ai-and-iot-2bok",
+    "publishedAt": "2025-09-06T18:46:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In today’s fast-paced, security-driven world, automated fences are no longer just physical barriers — they’ve become intelligent security systems powered by Artificial Intelligence (AI) and the Internet of Things (IoT). These technologies are transforming how homeowners, businesses, and industrial facilities monitor and protect their perimeters. For prope...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgz3iozoemkxonpdpq4zl.png",
+    "video": null,
+    "author": "Emily Johnson",
+    "tags": [
+      "webdev",
+      "dotnet",
+      "programming",
+      "iot"
+    ],
+    "seoTitle": "Advanced Monitoring Systems: How Automated Fences Use AI and IoT",
+    "seoDescription": "In today’s fast-paced, security-driven world, automated fences are no longer just physical barriers — they’ve become intelligent security systems powered by ..."
+  },
+  {
+    "title": "Apple could reintroduce iPhone mini thanks to this recent lineup change, here’s how",
+    "url": "https://9to5mac.com/2025/09/06/apple-reintroduce-iphone-mini-new-budget-model/",
+    "publishedAt": "2025-09-06T18:28:59.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "In 2020, Apple surprised a lot of people by re-entering a neglected segment of the smartphone market: small phones. With , Apple did something fairly special, by squeezing all of the same technologies of the iPhone 12 into a 5.4-inch form factor. Unfortunately, it didn’t live for too long, but thanks to a recent lineup change, a new window might’ve opened...",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2023/11/iPhone-15-hugely-popular-in-South-Korea-–-while-Japanese-buyers-seek-out-used-iPhone-13-minis.jpg.webp?w=1500",
+    "video": null,
+    "author": "Michael Burkhardt",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "Apple could reintroduce iPhone mini thanks to this recent lineup change, here’s how",
+    "seoDescription": "In 2020, Apple surprised a lot of people by re-entering a neglected segment of the smartphone market: small phones. With , Apple did something fairly special..."
   },
   {
     "title": "iPhone 17 Pro pre-order and release aren’t the only big Apple moments this September",
@@ -89,63 +87,6 @@
     ],
     "seoTitle": "iPhone 17 Pro pre-order and release aren’t the only big Apple moments this September",
     "seoDescription": "September has officially arrived, and with the new month comes the end of summer and the beginning of a busy fall for Apple. In the weeks ahead, there are se..."
-  },
-  {
-    "title": "AI PCs Set to Dominate by 2029 as Demand Skyrockets",
-    "url": "https://dev.to/6haz_games_f5157b46c5254f/ai-pcs-set-to-dominate-by-2029-as-demand-skyrockets-2lc1",
-    "publishedAt": "2025-09-06T16:38:35.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "According to Gartner, AI-powered PCs are on the rise, expected to account for 31% of the global PC market by the end of 2025, and skyrocketing to 55% by 2026. This surge is driven by increasing adoption of AI technology across various industries, fueling digital transformation. As a result, we are witnessing a significant shift in both enterprise demand a...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnnh0ckvqtjm0qz2xbeec.jpg",
-    "video": null,
-    "author": "6Haz games",
-    "tags": [
-      "webdev",
-      "programming",
-      "javascript",
-      "ai"
-    ],
-    "seoTitle": "AI PCs Set to Dominate by 2029 as Demand Skyrockets",
-    "seoDescription": "According to Gartner, AI-powered PCs are on the rise, expected to account for 31% of the global PC market by the end of 2025, and skyrocketing to 55% by 2026..."
-  },
-  {
-    "title": "Dependency Injection in Angular: A Complete Guide with Use Cases",
-    "url": "https://dev.to/rohit_singh_ee84e64941db7/dependency-injection-in-angular-a-complete-guide-with-use-cases-3ec8",
-    "publishedAt": "2025-09-06T16:22:40.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "When building scalable applications in Angular, one of the core concepts you’ll use daily is Dependency Injection (DI). It simplifies how your components and services interact by removing the responsibility of creating and managing dependencies. In this blog, we’ll explore: What Dependency Injection is in Angular How Angular’s DI system works Different wa...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A2400%2F1%2AhuH45ks-6laHlsrgySBVUQ.jpeg",
-    "video": null,
-    "author": "ROHIT SINGH",
-    "tags": [
-      "angular",
-      "webdev",
-      "programming",
-      "javascript"
-    ],
-    "seoTitle": "Dependency Injection in Angular: A Complete Guide with Use Cases",
-    "seoDescription": "When building scalable applications in Angular, one of the core concepts you’ll use daily is Dependency Injection (DI). It simplifies how your components and..."
-  },
-  {
-    "title": "5 Lesser Known Ways to Use JSON Web Tokens",
-    "url": "https://dev.to/shrsv/5-lesser-known-ways-to-use-json-web-tokens-45nl",
-    "publishedAt": "2025-09-06T16:17:26.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Hello, I'm Shrijith Venkatramana. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competitive pricing -- built for small teams. Do check it out and give it a try! JSON Web Tokens (JWT) provide a compact way to securely transmit information between parties. They consist of three parts: a h...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6vfb5qlih4676z47kbt6.png",
-    "video": null,
-    "author": "Shrijith Venkatramana",
-    "tags": [
-      "programming",
-      "webdev",
-      "beginners",
-      "productivity"
-    ],
-    "seoTitle": "5 Lesser Known Ways to Use JSON Web Tokens",
-    "seoDescription": "Hello, I'm Shrijith Venkatramana. I’m building LiveReview, a private AI code review tool that runs on your LLM key (OpenAI, Gemini, etc.) with highly competi..."
   },
   {
     "title": "Nick Ut Speaks Out After Netflix Buys Doc Challenging ‘Napalm Girl’ Photo Credit",
@@ -611,5 +552,54 @@
     ],
     "seoTitle": "M-Box Adds Automated Agitation to the Lab-Box Film Development System",
     "seoDescription": "Designed for use with the Lab-Box system, the M-Box promises to streamline film development by automating the agitation process. [Read More]"
+  },
+  {
+    "title": "Awe Dropping: Everything Coming at the September 9 Apple Event",
+    "url": "https://www.macrumors.com/guide/september-2025-apple-event-what-to-expect/",
+    "publishedAt": "2025-09-05T21:02:00.000Z",
+    "source": "macrumors.com",
+    "category": "apple",
+    "summary": "Apple is holding its annual iPhone-centric event on Tuesday, September 9 at 10:00 a.m. Pacific Time. This is the biggest Apple event of the year, and we'll see Apple unveiling new iPhones, new Apple Watches, the AirPods Pro 3, and possibly some other surprises. Subscribe to the MacRumors YouTube channel for more videos. We've highlighted everything that w...",
+    "image": "https://images.macrumors.com/article-new/2025/07/iPhone-17-Air-Thumb-2-Blue-Electric-Boogaloo.jpg",
+    "video": "https://www.youtube.com/embed/h9xVh9zBXPk",
+    "author": "Juli Clover",
+    "tags": [
+      "Featured",
+      "September 2025 Apple Event"
+    ],
+    "seoTitle": "Awe Dropping: Everything Coming at the September 9 Apple Event",
+    "seoDescription": "Apple is holding its annual iPhone-centric event on Tuesday, September 9 at 10:00 a.m. Pacific Time. This is the biggest Apple event of the year, and we'll s..."
+  },
+  {
+    "title": "US Customs asks court to toss Masimo lawsuit in Apple Watch dispute",
+    "url": "https://9to5mac.com/2025/09/05/us-customs-asks-court-to-toss-masimo-lawsuit-in-apple-watch-dispute/",
+    "publishedAt": "2025-09-05T20:51:16.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "A few days ago, Masimo sued U.S. Customs over its decision to let Apple resume selling the Apple Watch in the United States with the blood oxygen feature enabled. Now, the government agency has responded with a motion to dismiss the lawsuit. Here are the details. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-watch-ultra-blood-oxygen-sensor.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Marcus Mendes",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "US Customs asks court to toss Masimo lawsuit in Apple Watch dispute",
+    "seoDescription": "A few days ago, Masimo sued U.S. Customs over its decision to let Apple resume selling the Apple Watch in the United States with the blood oxygen feature ena..."
+  },
+  {
+    "title": "tvOS 26 adds new feature that makes AirPlay speakers better than ever",
+    "url": "https://9to5mac.com/2025/09/05/tvos-26-adds-new-feature-that-makes-airplay-speakers-better-than-ever/",
+    "publishedAt": "2025-09-05T20:39:02.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "tvOS 26 is the next major update for Apple TV 4K and Apple TV HD users. Joining the Liquid Glass design, new screensavers, and FaceTime upgrades, tvOS 26 introduces a new feature that could make AirPlay speakers an asset in your home theater setup. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/tvos-26-airplay-speakers.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Ryan Christoffel",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "tvOS 26 adds new feature that makes AirPlay speakers better than ever",
+    "seoDescription": "tvOS 26 is the next major update for Apple TV 4K and Apple TV HD users. Joining the Liquid Glass design, new screensavers, and FaceTime upgrades, tvOS 26 int..."
   }
 ]
