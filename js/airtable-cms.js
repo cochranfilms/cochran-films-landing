@@ -23,8 +23,21 @@
   function render(items){
     if (!Array.isArray(items) || items.length === 0) return;
     const byCat = items.reduce((acc, it)=>{
-      const c = it.ServiceCategory || it.Category || 'Video Production';
-      (acc[c] ||= []).push(it);
+      const originalCategory = it.ServiceCategory || it.Category || 'Video Production';
+      
+      // Map Airtable categories to portfolio sections
+      let mappedCategory = 'Video Production'; // default
+      if (['Corporate', 'Commercials', 'Shorts', 'Education', 'Live Broadcast', 'Events', 'Podcasts'].includes(originalCategory)) {
+        mappedCategory = 'Video Production';
+      } else if (['Web Development', 'Web', 'Website'].includes(originalCategory)) {
+        mappedCategory = 'Web Development';
+      } else if (['Photography', 'Photo', 'Photos'].includes(originalCategory)) {
+        mappedCategory = 'Photography';
+      } else if (['Brand Development', 'Brand', 'Branding'].includes(originalCategory)) {
+        mappedCategory = 'Brand Development';
+      }
+      
+      (acc[mappedCategory] ||= []).push(it);
       return acc;
     }, {});
 
