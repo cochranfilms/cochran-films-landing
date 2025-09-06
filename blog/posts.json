@@ -1,5 +1,100 @@
 [
   {
+    "title": "2 Minutes Rule for Technical Debt cleanup",
+    "url": "https://dev.to/nikhil_sachapara/2-minutes-rule-for-technical-debt-cleanup-4ba1",
+    "publishedAt": "2025-09-06T05:11:26.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "nikhil sachapara",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "development"
+    ],
+    "seoTitle": "2 Minutes Rule for Technical Debt cleanup",
+    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
+  },
+  {
+    "title": "2 Minute Rule for Technical Debt Cleanup",
+    "url": "https://dev.to/naik_sejal/2-minute-rule-for-technical-debt-cleanup-3bih",
+    "publishedAt": "2025-09-06T05:10:34.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Sejal",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "development"
+    ],
+    "seoTitle": "2 Minute Rule for Technical Debt Cleanup",
+    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
+  },
+  {
+    "title": "2-minute rule for technical debt cleanup",
+    "url": "https://dev.to/pratham_naik_project_manager/2-minute-rule-for-technical-debt-cleanup-4o8k",
+    "publishedAt": "2025-09-06T05:07:44.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #development",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F10233%2Fa214d929-4a86-43e3-8a25-ba25c166bdae.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "development"
+    ],
+    "seoTitle": "2-minute rule for technical debt cleanup",
+    "seoDescription": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints Pratham naik for Teamcamp ・ Sep 6 #webdev #productivity #devops #dev..."
+  },
+  {
+    "title": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints",
+    "url": "https://dev.to/teamcamp/the-2-minute-rule-for-technical-debt-cleanup-why-small-daily-fixes-beat-monthly-sprints-24ea",
+    "publishedAt": "2025-09-06T05:04:32.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Every developer has seen that technical debt meme showing a house of cards ready to collapse. You know the one. It perfectly captures your codebase on Friday afternoon when you are staring at months of accumulated shortcuts and \"temporary\" fixes. But what if you could prevent that collapse with just 2 minutes a day? The answer lies in a simple productivit...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3x75dwqmj6ytgouyqmdh.png",
+    "video": null,
+    "author": "Pratham naik",
+    "tags": [
+      "webdev",
+      "productivity",
+      "devops",
+      "development"
+    ],
+    "seoTitle": "The 2-Minute Rule for Technical Debt Cleanup: Why Small Daily Fixes Beat Monthly Sprints",
+    "seoDescription": "Every developer has seen that technical debt meme showing a house of cards ready to collapse. You know the one. It perfectly captures your codebase on Friday..."
+  },
+  {
+    "title": "How to Set Up a Jenkins CI/CD Pipeline (Step-by-Step Guide)",
+    "url": "https://dev.to/therealmrmumba/how-to-set-up-a-jenkins-cicd-pipeline-step-by-step-guide-5eme",
+    "publishedAt": "2025-09-06T04:17:22.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "When I first started experimenting with CI/CD, Jenkins was one of the names that kept popping up. At first, I thought it was “old school” and that maybe newer tools like GitHub Actions or GitLab CI/CD had fully replaced it. But after setting it up on a few projects, I realized why so many teams from scrappy startups to big enterprises still rely on Jenkin...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1uklcvtwcdea8v0a3cab.png",
+    "video": null,
+    "author": "Emmanuel Mumba",
+    "tags": [
+      "webdev",
+      "programming",
+      "javascript",
+      "ai"
+    ],
+    "seoTitle": "How to Set Up a Jenkins CI/CD Pipeline (Step-by-Step Guide)",
+    "seoDescription": "When I first started experimenting with CI/CD, Jenkins was one of the names that kept popping up. At first, I thought it was “old school” and that maybe newe..."
+  },
+  {
     "title": "Day 16 · Bootstrap ordering (No 14) why jobs fire before the system is ready, and how to stop zombie runs at the door",
     "url": "https://dev.to/onestardao/day-16-bootstrap-ordering-no-14-why-jobs-fire-before-the-system-is-ready-and-how-to-stop-219g",
     "publishedAt": "2025-09-06T03:46:39.000Z",
@@ -52,25 +147,6 @@
     ],
     "seoTitle": "Scaffold React & Angular Apps in Minutes — Meet polyfront scaffold 🚀",
     "seoDescription": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/We..."
-  },
-  {
-    "title": "Deploying A Dockerized Golang App To AWS App Runner",
-    "url": "https://dev.to/aws-builders/deploying-a-dockerized-golang-app-to-aws-app-runner-1hnn",
-    "publishedAt": "2025-09-06T00:24:37.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "AWS App Runner is a fully managed container application service offered by Amazon Web Services (AWS). It is designed to simplify the process of building, deploying, and scaling containerized web applications and API services. In this demo, we will deploy a containerised golang app with a mongodb database running on EC2, to AWS AppRunner. To begin, we will...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj5uij0xnrxzfaqy0gw77.png",
-    "video": null,
-    "author": "Dickson Victor",
-    "tags": [
-      "webdev",
-      "apprunner",
-      "docker",
-      "go"
-    ],
-    "seoTitle": "Deploying A Dockerized Golang App To AWS App Runner",
-    "seoDescription": "AWS App Runner is a fully managed container application service offered by Amazon Web Services (AWS). It is designed to simplify the process of building, dep..."
   },
   {
     "title": "The best robot vacuums we&#8217;ve tested for 2025",
@@ -555,76 +631,5 @@
     ],
     "seoTitle": "iPhone 17 Pro will drop titanium for aluminum, and this might be why",
     "seoDescription": "Among the various rumors about Apple’s new iPhone 17 lineup, one of the most curious centers on design materials. Apple will reportedly drop titanium from th..."
-  },
-  {
-    "title": "I tested 30 smart locks, and these are the best",
-    "url": "https://www.theverge.com/23393163/best-smart-door-lock",
-    "publishedAt": "2025-09-05T18:23:34.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "A smart lock is an easy solution to some common problems. Locked yourself out? Need to let a friend in to water the plants? Your latchkey kid lost their key? Hands are full, and it’s raining cats and dogs? A smart lock solves all of these problems and more. One of the best smart home upgrades you can make, a smart lock gives you remote control over access...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/257776_Smart_lock_buying_guide_CVirginia3.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Jennifer Pattison Tuohy",
-    "tags": [],
-    "seoTitle": "I tested 30 smart locks, and these are the best",
-    "seoDescription": "A smart lock is an easy solution to some common problems. Locked yourself out? Need to let a friend in to water the plants? Your latchkey kid lost their key?..."
-  },
-  {
-    "title": "The best laptop deals you can get right now",
-    "url": "https://www.theverge.com/good-deals/23161948/apple-macbook-lenovo-acer-deal-sale",
-    "publishedAt": "2025-09-05T18:15:13.000Z",
-    "source": "theverge.com",
-    "category": "web",
-    "summary": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by Vjeran Pavic / The Verge If you want a great laptop, you’re going to have to fork over a ton of money, right? Not necessarily. There are dozens of good laptops on the market at various price points. ...",
-    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/Microsoft-Surface-Laptop-7th-Edition.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "video": null,
-    "author": "Brandt Ranj",
-    "tags": [],
-    "seoTitle": "The best laptop deals you can get right now",
-    "seoDescription": "The 13.8-inch Surface Laptop is Microsoft’s closest rival to the MacBook Air, using Qualcomm’s Snapdragon X chipsets for exceptional battery life. | Photo by..."
-  },
-  {
-    "title": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
-    "url": "https://petapixel.com/2025/09/05/nikon-suspends-c2pa-functionality-on-the-z6-iii-due-to-authentication-issue/",
-    "publishedAt": "2025-09-05T18:00:26.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/nikon-z6-iii-authenticity-suspended.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Equipment",
-      "News",
-      "C2PA",
-      "contentauthenticity",
-      "nikon",
-      "nikonauthenticityservice",
-      "nikonz6iii"
-    ],
-    "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
-    "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
-  },
-  {
-    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
-    "publishedAt": "2025-09-05T17:44:21.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
-    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
   }
 ]
