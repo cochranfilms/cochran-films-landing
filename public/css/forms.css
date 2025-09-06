@@ -1,0 +1,307 @@
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  backdrop-filter: var(--backdrop);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+  box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
+  border: 0;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.form-submit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Toolkit Form Styles */
+.toolkit-form input:focus,
+.toolkit-form select:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+  box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
+  transform: translateY(-1px);
+}
+
+.toolkit-form input:hover,
+.toolkit-form select:hover {
+  border-color: rgba(99,102,241,0.5);
+  background: rgba(15,23,42,0.8);
+}
+
+.toolkit-submit:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 32px rgba(255,178,0,0.3);
+}
+
+/* ================================
+   Book Our Services (module styles)
+   Matches index2.html visual system
+================================ */
+.book-services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.book-services-section .section-header { text-align: center; margin-bottom: 40px; }
+.book-services-section .section-title { margin-bottom: 10px; }
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.booking-info h3,
+.booking-info h4 {
+  color: var(--text-primary);
+  margin: 0 0 10px;
+}
+
+.benefits-list { list-style: none; padding: 0; margin: 10px 0 20px; color: var(--text-primary); }
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.contact-info p { color: var(--text-primary); margin: 6px 0; }
+
+.booking-form-container .booking-form,
+.contact-form-container .contact-form {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  backdrop-filter: var(--backdrop);
+  box-shadow: var(--shadow-md);
+}
+
+.booking-form h3,
+.contact-form h3 {
+  margin: 0 0 16px;
+  color: var(--text-primary);
+}
+
+.booking-form .form-row,
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.booking-form .form-group,
+.contact-form .form-group {
+  margin-bottom: 16px;
+}
+
+.booking-form label,
+.contact-form label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(99,102,241,0.3);
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: var(--transition-fast);
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus,
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+  box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
+}
+
+.booking-form textarea,
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
+  border: 0;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 2px solid rgba(255,255,255,0.3);
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.secondary-button:hover {
+  border-color: var(--brand-gold);
+  color: var(--brand-gold);
+  transform: translateY(-2px);
+}
+
+/* Contact section layout polishing */
+.contact-section .contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-section .contact-item {
+  display: flex;
+  gap: 12px;
+  margin: 14px 0;
+  color: var(--text-primary);
+}
+
+.contact-section .contact-details h4 {
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+/* Visual refinement for checklist on left */
+.benefits-list { list-style: none; padding-left: 0; }
+.benefits-list li { position: relative; padding-left: 26px; }
+.benefits-list li::before {
+  content: '\2713';
+  position: absolute; left: 0; top: 0; line-height: 1.2; color: var(--brand-gold);
+}
+
+/* Select dropdown look */
+.booking-form select { appearance: none; background-image: linear-gradient(135deg, rgba(255,178,0,0.15), rgba(99,102,241,0.10)); background-repeat: no-repeat; }
+
+.contact-section .social-links { margin-top: 12px; }
+.contact-section .social-links h3 { color: var(--text-primary); margin: 8px 0; }
+
+/* Social links in contact section aligned with footer style */
+.contact-section .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.contact-section .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.2);
+  color: var(--text-secondary);
+  text-decoration: none;
+  background: rgba(15,23,42,0.5);
+  transition: var(--transition-fast);
+}
+
+.contact-section .social-link:hover {
+  border-color: rgba(148,163,184,0.4);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .booking-container,
+  .contact-section .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .booking-form .form-row,
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 30px 20px;
+  }
+}
