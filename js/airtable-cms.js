@@ -29,7 +29,7 @@
       let mappedCategory = 'Video Production'; // default
       if (['Corporate', 'Commercials', 'Shorts', 'Education', 'Live Broadcast', 'Events', 'Podcasts'].includes(originalCategory)) {
         mappedCategory = 'Video Production';
-      } else if (['Web Development', 'Web', 'Website'].includes(originalCategory)) {
+      } else if (['Web Development', 'Web', 'Website', 'E-Commerce', 'Media Services', 'Education', 'Marketing', 'Internal Tools'].includes(originalCategory)) {
         mappedCategory = 'Web Development';
       } else if (['Photography', 'Photo', 'Photos'].includes(originalCategory)) {
         mappedCategory = 'Photography';
@@ -70,10 +70,26 @@
 
   async function fetchFromAPI(){
     try{
-      const res = await fetch('/api/airtable/portfolio');
-      if (!res.ok) throw new Error('HTTP '+res.status);
-      const data = await res.json();
-      render(data);
+      // Fetch both portfolio and web data
+      const [portfolioRes, webRes] = await Promise.all([
+        fetch('/api/airtable/portfolio'),
+        fetch('/api/airtable/web')
+      ]);
+      
+      let portfolioItems = [];
+      let webItems = [];
+      
+      if (portfolioRes.ok) {
+        portfolioItems = await portfolioRes.json();
+      }
+      
+      if (webRes.ok) {
+        webItems = await webRes.json();
+      }
+      
+      // Combine both datasets
+      const allItems = [...portfolioItems, ...webItems];
+      render(allItems);
     }catch(e){
       console.warn('Airtable API not available, portfolio will remain minimal until backend is added.', e);
     }

@@ -3,6 +3,9 @@
     "api/airtable/portfolio.js": {
       "maxDuration": 10
     },
+    "api/airtable/web.js": {
+      "maxDuration": 10
+    },
     "api/wave/create-invoice.js": {
       "maxDuration": 10
     }
