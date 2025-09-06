@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Cancelled - Cochran Films</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand-gold: #FFB200;
+      --brand-indigo: #6366f1;
+      --brand-red: #ef4444;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(2,6,23,0.95) 100%);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cancel-container {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .cancel-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-red), #dc2626);
+      display: grid;
+      place-items: center;
+      font-size: 48px;
+      color: white;
+      box-shadow: 0 0 40px rgba(239, 68, 68, 0.3);
+    }
+
+    .cancel-title {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff, var(--brand-red));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cancel-message {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .help-section {
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .help-section h3 {
+      color: var(--brand-gold);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .help-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .help-section li {
+      color: var(--text-secondary);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .help-section li:last-child {
+      border-bottom: none;
+    }
+
+    .help-section li i {
+      color: var(--brand-gold);
+      font-size: 16px;
+      width: 20px;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 2px solid rgba(99,102,241,0.3);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brand-gold);
+      color: var(--brand-gold);
+      transform: translateY(-2px);
+    }
+
+    .btn-retry {
+      background: linear-gradient(135deg, var(--brand-indigo), #4f46e5);
+      color: white;
+    }
+
+    .btn-retry:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .cancel-container {
+        padding: 40px 20px;
+      }
+      
+      .cancel-title {
+        font-size: 28px;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cancel-container">
+    <div class="cancel-icon">
+      <i class="fas fa-times-circle"></i>
+    </div>
+    
+    <h1 class="cancel-title">Payment Cancelled</h1>
+    
+    <p class="cancel-message">
+      No worries! Your payment was cancelled and no charges were made. We're here to help if you have any questions or would like to try again.
+    </p>
+    
+    <div class="help-section">
+      <h3>Need Help?</h3>
+      <ul>
+        <li>
+          <i class="fas fa-phone"></i>
+          <span>Call us at (470) 420-2169 for immediate assistance</span>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span>Email us at info@cochranfilms.com</span>
+        </li>
+        <li>
+          <i class="fas fa-comments"></i>
+          <span>We can discuss payment options that work for you</span>
+        </li>
+        <li>
+          <i class="fas fa-calendar"></i>
+          <span>Schedule a free consultation call</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="action-buttons">
+      <a href="/home.html" class="btn btn-primary">
+        <i class="fas fa-home"></i>
+        Return Home
+      </a>
+      <a href="/services.html" class="btn btn-retry">
+        <i class="fas fa-redo"></i>
+        Try Again
+      </a>
+      <a href="mailto:info@cochranfilms.com" class="btn btn-secondary">
+        <i class="fas fa-envelope"></i>
+        Contact Us
+      </a>
+    </div>
+  </div>
+</body>
+</html>
