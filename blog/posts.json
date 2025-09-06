@@ -1,5 +1,43 @@
 [
   {
+    "title": "Post The Place With Quote",
+    "url": "https://dev.to/amrut_ff4f0a0d098cbc94e3b/post-the-place-with-quote-5412",
+    "publishedAt": "2025-09-06T19:29:01.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "🌍 Spot Quote A simple web app where people can share the places they’ve visited and highlight an item they loved there — with its price, image, rating, and description. 📍 Post a place you’ve visited 🛍️ Add an item with: 💰 Price 🖼️ Image ⭐ Rating 📝 Description 🖼️ Clean, responsive UI to browse shared posts 💡 Why I Built It I wanted to practice buil...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvr04iu7l3tktsm3ow7ij.png",
+    "video": null,
+    "author": "Amrut",
+    "tags": [
+      "webdev",
+      "react",
+      "website",
+      "learning"
+    ],
+    "seoTitle": "Post The Place With Quote",
+    "seoDescription": "🌍 Spot Quote A simple web app where people can share the places they’ve visited and highlight an item they loved there — with its price, image, rating, and ..."
+  },
+  {
+    "title": "Laravel Blade, But Smarter: Autocomplete and DTO Discipline with ViewModels and Strict Access",
+    "url": "https://dev.to/raheelshan/laravel-blade-but-smarter-autocomplete-and-dto-discipline-with-viewmodels-and-strict-access-pj1",
+    "publishedAt": "2025-09-06T19:28:28.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "In the last three articles of this series, we explored how to bring discipline and type safety into Laravel Blade views: 1. Structuring Blade data with ViewModels. 2. Enabling Autocomplete in Blade partials. 3. Making Blade fully typed with View Validation and Type-Safety. Now, let’s take the next logical step: using DTOs (Data Transfer Objects) to strict...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdyt5na8sd6oh9kvrmb14.png",
+    "video": null,
+    "author": "Raheel Shan",
+    "tags": [
+      "webdev",
+      "programming",
+      "laravel",
+      "learning"
+    ],
+    "seoTitle": "Laravel Blade, But Smarter: Autocomplete and DTO Discipline with ViewModels and Strict Access",
+    "seoDescription": "In the last three articles of this series, we explored how to bring discipline and type safety into Laravel Blade views: 1. Structuring Blade data with ViewM..."
+  },
+  {
     "title": "How to Actually Hit $10K MRR in 2025 (No BS, Just What Works)",
     "url": "https://dev.to/shayy/how-to-actually-hit-10k-mrr-in-2025-no-bs-just-what-works-204k",
     "publishedAt": "2025-09-06T19:03:50.000Z",
@@ -569,37 +607,5 @@
     ],
     "seoTitle": "Awe Dropping: Everything Coming at the September 9 Apple Event",
     "seoDescription": "Apple is holding its annual iPhone-centric event on Tuesday, September 9 at 10:00 a.m. Pacific Time. This is the biggest Apple event of the year, and we'll s..."
-  },
-  {
-    "title": "US Customs asks court to toss Masimo lawsuit in Apple Watch dispute",
-    "url": "https://9to5mac.com/2025/09/05/us-customs-asks-court-to-toss-masimo-lawsuit-in-apple-watch-dispute/",
-    "publishedAt": "2025-09-05T20:51:16.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "A few days ago, Masimo sued U.S. Customs over its decision to let Apple resume selling the Apple Watch in the United States with the blood oxygen feature enabled. Now, the government agency has responded with a motion to dismiss the lawsuit. Here are the details. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/apple-watch-ultra-blood-oxygen-sensor.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Marcus Mendes",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "US Customs asks court to toss Masimo lawsuit in Apple Watch dispute",
-    "seoDescription": "A few days ago, Masimo sued U.S. Customs over its decision to let Apple resume selling the Apple Watch in the United States with the blood oxygen feature ena..."
-  },
-  {
-    "title": "tvOS 26 adds new feature that makes AirPlay speakers better than ever",
-    "url": "https://9to5mac.com/2025/09/05/tvos-26-adds-new-feature-that-makes-airplay-speakers-better-than-ever/",
-    "publishedAt": "2025-09-05T20:39:02.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "tvOS 26 is the next major update for Apple TV 4K and Apple TV HD users. Joining the Liquid Glass design, new screensavers, and FaceTime upgrades, tvOS 26 introduces a new feature that could make AirPlay speakers an asset in your home theater setup. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/tvos-26-airplay-speakers.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Ryan Christoffel",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "tvOS 26 adds new feature that makes AirPlay speakers better than ever",
-    "seoDescription": "tvOS 26 is the next major update for Apple TV 4K and Apple TV HD users. Joining the Liquid Glass design, new screensavers, and FaceTime upgrades, tvOS 26 int..."
   }
 ]
