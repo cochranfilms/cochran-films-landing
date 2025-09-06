@@ -1,5 +1,24 @@
 [
   {
+    "title": "Day 16 · Bootstrap ordering (No 14) why jobs fire before the system is ready, and how to stop zombie runs at the door",
+    "url": "https://dev.to/onestardao/day-16-bootstrap-ordering-no-14-why-jobs-fire-before-the-system-is-ready-and-how-to-stop-219g",
+    "publishedAt": "2025-09-06T03:46:39.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Symptom looks fine in staging. then prod rolls and you see ghosts webhooks arrive before vector stores hydrate. first searches return empty even though data was uploaded agents call tools before secrets or policies load. 401 then silent retries queues scale while migrations are mid-flight. partial writes. compensations everywhere canary passes locally the...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxvd0dbon7v3ma75u6lez.png",
+    "video": null,
+    "author": "PSBigBig",
+    "tags": [
+      "webdev",
+      "javascript",
+      "ai",
+      "beginners"
+    ],
+    "seoTitle": "Day 16 · Bootstrap ordering (No 14) why jobs fire before the system is ready, and how to stop zombie runs at the door",
+    "seoDescription": "Symptom looks fine in staging. then prod rolls and you see ghosts webhooks arrive before vector stores hydrate. first searches return empty even though data ..."
+  },
+  {
     "title": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
     "url": "https://9to5mac.com/2025/09/05/jon-prosser-iphone-17-pro-leak-video/",
     "publishedAt": "2025-09-06T02:55:59.000Z",
@@ -607,28 +626,5 @@
     ],
     "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
     "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
-  },
-  {
-    "title": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
-    "url": "https://petapixel.com/2025/09/05/influential-sister-photographers-were-hidden-in-geronimos-eye-for-a-century/",
-    "publishedAt": "2025-09-05T17:34:33.000Z",
-    "source": "petapixel.com",
-    "category": "photography",
-    "summary": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri. Over 100 years later, a conservator at the Library of Congress noticed a hidden detail in the portrait: the photographer sisters reflected in the warrior's left eye. [Read More]",
-    "image": "https://petapixel.com/assets/uploads/2025/09/geronimo-eye-portrait-featured.jpg",
-    "video": null,
-    "author": "Jeremy Gray",
-    "tags": [
-      "Culture",
-      "News",
-      "20thcentury",
-      "gerhardsisters",
-      "geronimo",
-      "historicalfriday",
-      "history",
-      "libraryofcongress"
-    ],
-    "seoTitle": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
-    "seoDescription": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri...."
   }
 ]
