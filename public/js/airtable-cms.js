@@ -80,7 +80,7 @@
       const role = it.Role || '';
       const timeline = it.Timeline || '';
       
-      return `<div class="portfolio-item ${isWebProject ? 'web-project' : ''}" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}" data-description="${it.Description||''}">
+      return `<div class="portfolio-item ${isWebProject ? 'web-project' : ''}" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}" data-url="${it.URL || ''}" data-description="${it.Description||''}">
         <div class="portfolio-thumbnail">
           <img src="${thumb}" alt="${it.Title||''}" loading="lazy" />
           <div class="portfolio-play"><i class="fa-solid fa-${isWebProject ? 'external-link-alt' : 'play'}"></i></div>
@@ -233,13 +233,23 @@
       if (!portfolioItem) return;
 
       const videoUrl = portfolioItem.dataset.video;
-      if (!videoUrl) return;
+      const projectUrl = portfolioItem.dataset.url;
+      
+      // Check if this is a web project with a URL
+      if (projectUrl && !videoUrl) {
+        // Navigate to the web project URL
+        window.open(projectUrl, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      
+      // Handle video projects
+      if (videoUrl) {
+        const title = portfolioItem.dataset.title;
+        const category = portfolioItem.dataset.category;
+        const description = portfolioItem.dataset.description;
 
-      const title = portfolioItem.dataset.title;
-      const category = portfolioItem.dataset.category;
-      const description = portfolioItem.dataset.description;
-
-      showVideoPopup(title, category, videoUrl, description);
+        showVideoPopup(title, category, videoUrl, description);
+      }
     });
   }
 

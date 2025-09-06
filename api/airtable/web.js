@@ -28,21 +28,30 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     // Transform Airtable records to expected format
-    const webItems = data.records.map(record => ({
-      Title: record.fields.Title || '',
-      Description: record.fields.Description || '',
-      Category: record.fields.Category || 'Web Development',
-      'Thumbnail Image': record.fields['Thumbnail Image'] || '',
-      URL: record.fields.URL || '',
-      'Tech Stack': record.fields['Tech Stack'] || '',
-      Role: record.fields.Role || '',
-      'Client/Company': record.fields['Client/Company'] || '',
-      Timeline: record.fields.Timeline || '',
-      Challenges: record.fields.Challenges || '',
-      Results: record.fields.Results || '',
-      'Is Featured': record.fields['Is Featured'] === 'TRUE' || false,
-      UploadDate: record.fields.UploadDate || ''
-    }));
+    const webItems = data.records.map(record => {
+      let thumbnailUrl = record.fields['Thumbnail Image'] || '';
+      
+      // Convert GitHub blob URLs to raw URLs for proper image display
+      if (thumbnailUrl.includes('github.com') && thumbnailUrl.includes('/blob/')) {
+        thumbnailUrl = thumbnailUrl.replace('/blob/', '/raw/');
+      }
+      
+      return {
+        Title: record.fields.Title || '',
+        Description: record.fields.Description || '',
+        Category: record.fields.Category || 'Web Development',
+        'Thumbnail Image': thumbnailUrl,
+        URL: record.fields.URL || '',
+        'Tech Stack': record.fields['Tech Stack'] || '',
+        Role: record.fields.Role || '',
+        'Client/Company': record.fields['Client/Company'] || '',
+        Timeline: record.fields.Timeline || '',
+        Challenges: record.fields.Challenges || '',
+        Results: record.fields.Results || '',
+        'Is Featured': record.fields['Is Featured'] === 'TRUE' || false,
+        UploadDate: record.fields.UploadDate || ''
+      };
+    });
 
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
