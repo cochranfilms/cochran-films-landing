@@ -53,15 +53,25 @@
         if (isPhotoOnly){
           return `<div class="portfolio-item photo-only" data-category="${it.Category||''}" data-title="${it.Title||''}" data-src="${thumb}"><div class="portfolio-thumbnail"><img src="${thumb}" alt="${it.Title||'Photo'}" loading="lazy" /></div></div>`;
         }
-        return `<div class="portfolio-item" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}">
+        // Check if this is a web development project
+        const isWebProject = ['E-Commerce', 'Media Services', 'Education', 'Marketing', 'Internal Tools', 'Web Development'].includes(it.Category);
+        const techStack = it['Tech Stack'] || '';
+        const role = it.Role || '';
+        const timeline = it.Timeline || '';
+        
+        return `<div class="portfolio-item ${isWebProject ? 'web-project' : ''}" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}">
           <div class="portfolio-thumbnail">
             <img src="${thumb}" alt="${it.Title||''}" loading="lazy" />
-            <div class="portfolio-play"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-play"><i class="fa-solid fa-${isWebProject ? 'external-link-alt' : 'play'}"></i></div>
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category"><i class="fa-solid fa-tag"></i>${it.Category||''}</div>
             <h3 class="portfolio-title">${it.Title||''}</h3>
             <p class="portfolio-description">${it.Description||''}</p>
+            ${isWebProject && techStack ? `<div class="portfolio-tech"><i class="fa-solid fa-code"></i><span>${techStack.substring(0, 100)}${techStack.length > 100 ? '...' : ''}</span></div>` : ''}
+            ${isWebProject && role ? `<div class="portfolio-role"><i class="fa-solid fa-user"></i><span>${role.substring(0, 80)}${role.length > 80 ? '...' : ''}</span></div>` : ''}
+            ${isWebProject && timeline ? `<div class="portfolio-timeline"><i class="fa-solid fa-clock"></i><span>${timeline}</span></div>` : ''}
+            ${it.URL ? `<div class="portfolio-link"><a href="${it.URL}" target="_blank" rel="noopener"><i class="fa-solid fa-external-link-alt"></i> View Project</a></div>` : ''}
           </div>
         </div>`;
       }).join('');

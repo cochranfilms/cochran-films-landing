@@ -759,3 +759,57 @@ html {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Web Development Project Styles */
+.portfolio-item.web-project {
+  border: 2px solid rgba(99, 102, 241, 0.1);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.02), rgba(139, 92, 246, 0.02));
+}
+
+.portfolio-item.web-project:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.portfolio-tech,
+.portfolio-role,
+.portfolio-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 8px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.portfolio-tech i,
+.portfolio-role i,
+.portfolio-timeline i {
+  color: var(--brand-indigo);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.portfolio-link {
+  margin-top: 12px;
+}
+
+.portfolio-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--brand-indigo), var(--brand-purple));
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.portfolio-link a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
