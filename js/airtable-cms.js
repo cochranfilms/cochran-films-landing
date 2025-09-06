@@ -72,7 +72,17 @@
       const videoUrl = it.playbackUrl || '';
       
       if (isPhotoOnly){
-        return `<div class="portfolio-item photo-only" data-category="${it.Category||''}" data-title="${it.Title||''}" data-src="${thumb}"><div class="portfolio-thumbnail"><img src="${thumb}" alt="${it.Title||'Photo'}" loading="lazy" /></div></div>`;
+        return `<div class="portfolio-item photo-only" data-category="${it.Category||''}" data-title="${it.Title||''}" data-imageUrl="${it.imageUrl || it['Thumbnail Image'] || ''}" data-description="${it.Description||''}">
+          <div class="portfolio-thumbnail">
+            <img src="${thumb}" alt="${it.Title||'Photo'}" loading="lazy" />
+            <div class="portfolio-play"><i class="fa-solid fa-expand"></i></div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category"><i class="fa-solid fa-tag"></i>${it.Category||''}</div>
+            <h3 class="portfolio-title">${it.Title||''}</h3>
+            <p class="portfolio-description">${it.Description||''}</p>
+          </div>
+        </div>`;
       }
       // Check if this is a web development project
       const isWebProject = ['E-Commerce', 'Media Services', 'Education', 'Marketing', 'Internal Tools', 'Web Development'].includes(it.Category);
@@ -122,14 +132,16 @@
 
   async function fetchFromAPI(){
     try{
-      // Fetch both portfolio and web data
-      const [portfolioRes, webRes] = await Promise.all([
+      // Fetch portfolio, web, and photos data
+      const [portfolioRes, webRes, photosRes] = await Promise.all([
         fetch('/api/airtable/portfolio'),
-        fetch('/api/airtable/web')
+        fetch('/api/airtable/web'),
+        fetch('/api/airtable/photos')
       ]);
       
       let portfolioItems = [];
       let webItems = [];
+      let photoItems = [];
       
       if (portfolioRes.ok) {
         portfolioItems = await portfolioRes.json();
@@ -139,8 +151,12 @@
         webItems = await webRes.json();
       }
       
-      // Combine both datasets
-      const allItems = [...portfolioItems, ...webItems];
+      if (photosRes.ok) {
+        photoItems = await photosRes.json();
+      }
+      
+      // Combine all datasets
+      const allItems = [...portfolioItems, ...webItems, ...photoItems];
       render(allItems);
     }catch(e){
       console.warn('Airtable API not available, portfolio will remain minimal until backend is added.', e);
@@ -227,6 +243,76 @@
     }
   }
 
+  // Photo lightbox functionality
+  function createPhotoLightbox() {
+    const lightbox = document.createElement('div');
+    lightbox.id = 'photo-lightbox';
+    lightbox.className = 'photo-lightbox-overlay';
+    lightbox.innerHTML = `
+      <div class="photo-lightbox-content">
+        <button class="photo-lightbox-close" aria-label="Close photo">
+          <i class="fa-solid fa-times"></i>
+        </button>
+        <div class="photo-lightbox-image-container">
+          <img class="photo-lightbox-image" src="" alt="" />
+        </div>
+        <div class="photo-lightbox-info">
+          <h3 class="photo-lightbox-title"></h3>
+          <p class="photo-lightbox-description"></p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    return lightbox;
+  }
+
+  function showPhotoLightbox(imageUrl, title, description) {
+    let lightbox = document.getElementById('photo-lightbox');
+    if (!lightbox) {
+      lightbox = createPhotoLightbox();
+    }
+
+    // Update content
+    const img = lightbox.querySelector('.photo-lightbox-image');
+    const titleEl = lightbox.querySelector('.photo-lightbox-title');
+    const descEl = lightbox.querySelector('.photo-lightbox-description');
+
+    img.src = imageUrl;
+    img.alt = title;
+    titleEl.textContent = title;
+    descEl.textContent = description;
+
+    // Show lightbox
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Close handlers
+    const closeBtn = lightbox.querySelector('.photo-lightbox-close');
+    const overlay = lightbox;
+
+    closeBtn.onclick = () => hidePhotoLightbox();
+    overlay.onclick = (e) => {
+      if (e.target === overlay) hidePhotoLightbox();
+    };
+
+    // ESC key handler
+    const escHandler = (e) => {
+      if (e.key === 'Escape') {
+        hidePhotoLightbox();
+        document.removeEventListener('keydown', escHandler);
+      }
+    };
+    document.addEventListener('keydown', escHandler);
+  }
+
+  function hidePhotoLightbox() {
+    const lightbox = document.getElementById('photo-lightbox');
+    if (lightbox) {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
   function initializeVideoHandlers() {
     document.addEventListener('click', (e) => {
       const portfolioItem = e.target.closest('.portfolio-item');
@@ -234,6 +320,16 @@
 
       const videoUrl = portfolioItem.dataset.video;
       const projectUrl = portfolioItem.dataset.url;
+      const imageUrl = portfolioItem.dataset.imageUrl;
+      const isPhotoOnly = portfolioItem.classList.contains('photo-only');
+      
+      // Check if this is a photo
+      if (isPhotoOnly && imageUrl) {
+        const title = portfolioItem.dataset.title;
+        const description = portfolioItem.dataset.description || '';
+        showPhotoLightbox(imageUrl, title, description);
+        return;
+      }
       
       // Check if this is a web project with a URL
       if (projectUrl && !videoUrl) {

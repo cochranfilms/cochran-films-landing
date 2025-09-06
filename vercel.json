@@ -6,6 +6,9 @@
     "api/airtable/web.js": {
       "maxDuration": 10
     },
+    "api/airtable/photos.js": {
+      "maxDuration": 10
+    },
     "api/wave/create-invoice.js": {
       "maxDuration": 10
     }
