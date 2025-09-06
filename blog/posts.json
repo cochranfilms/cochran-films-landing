@@ -1,5 +1,40 @@
 [
   {
+    "title": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
+    "url": "https://9to5mac.com/2025/09/05/jon-prosser-iphone-17-pro-leak-video/",
+    "publishedAt": "2025-09-06T02:55:59.000Z",
+    "source": "9to5mac.com",
+    "category": "apple",
+    "summary": "While Apple’s iPhone 17 event kicks off in just a few days, this preview footage could almost be mistaken for the real thing. more…",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/08/iphone-17-event-how-to-watch.jpg?quality=82&#038;strip=all&#038;w=1600",
+    "video": null,
+    "author": "Zac Hall",
+    "tags": [
+      "News"
+    ],
+    "seoTitle": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
+    "seoDescription": "While Apple’s iPhone 17 event kicks off in just a few days, this preview footage could almost be mistaken for the real thing. more…"
+  },
+  {
+    "title": "Scaffold React & Angular Apps in Minutes — Meet polyfront scaffold 🚀",
+    "url": "https://dev.to/nirmalsamaranayaka/scaffold-react-angular-apps-in-minutes-meet-polyfront-scaffold-160i",
+    "publishedAt": "2025-09-06T02:32:37.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/Webpack) and Angular applications in minutes, with ready-to-use presets for UI, state management, testing, and more. polyfront-scaffold generates production-ready frontend projects with opinionated but ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flubkjre9rtgwxrxr8plq.png",
+    "video": null,
+    "author": "Nirmal Samaranayaka",
+    "tags": [
+      "beginners",
+      "angular",
+      "frontend",
+      "webdev"
+    ],
+    "seoTitle": "Scaffold React & Angular Apps in Minutes — Meet polyfront scaffold 🚀",
+    "seoDescription": "I’m excited to share my new open-source CLI tool: polyfront-scaffold! After weeks of building and testing, this tool helps you scaffold modern React (Vite/We..."
+  },
+  {
     "title": "Deploying A Dockerized Golang App To AWS App Runner",
     "url": "https://dev.to/aws-builders/deploying-a-dockerized-golang-app-to-aws-app-runner-1hnn",
     "publishedAt": "2025-09-06T00:24:37.000Z",
@@ -595,37 +630,5 @@
     ],
     "seoTitle": "Influential Sister Photographers Were Hidden in Geronimo’s Eye for a Century",
     "seoDescription": "Way back in 1904, the Gerhard Sisters captured a portrait of famed Apache warrior, Geronimo, during the Louisiana Purchase Exposition in St. Louis, Missouri...."
-  },
-  {
-    "title": "Apple launching 8+ new products next week, here’s what’s coming",
-    "url": "https://9to5mac.com/2025/09/05/new-apple-products-iphone-17-soon/",
-    "publishedAt": "2025-09-05T17:14:00.000Z",
-    "source": "9to5mac.com",
-    "category": "apple",
-    "summary": "Apple is set to announce a slew of new products on Tuesday as part of its “Awe dropping” special. We’re expecting the new iPhone 17 lineup, new Apple Watches, and more. Head below for all the rumors of what to expect. more…",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-tim-cook-iphone-15-launch.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "Chance Miller",
-    "tags": [
-      "News"
-    ],
-    "seoTitle": "Apple launching 8+ new products next week, here’s what’s coming",
-    "seoDescription": "Apple is set to announce a slew of new products on Tuesday as part of its “Awe dropping” special. We’re expecting the new iPhone 17 lineup, new Apple Watches..."
-  },
-  {
-    "title": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
-    "url": "https://9to5toys.com/2025/09/05/best-ifa-2025-reveals/",
-    "publishedAt": "2025-09-05T17:13:19.000Z",
-    "source": "9to5toys.com",
-    "category": "apple",
-    "summary": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play fetch with your dog, the latest Qi2.2 25W MagSafe tech, modular charging stations, flagship headphones, the latest in gaming handhelds, Gemini smart TVs, and new tablets have all surfaced over the las...",
-    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/Best-of-IFA-2025.jpg?quality=82&#038;strip=all&#038;w=1600",
-    "video": null,
-    "author": "9to5Toys",
-    "tags": [
-      "Deals"
-    ],
-    "seoTitle": "Best of IFA 2025: All of the wild concepts, gadgets, and new releases in tech from this year’s show",
-    "seoDescription": "IFA 2025 is now in full swing with all the latest in consumer tech, wild concepts, and more. Robots for your robots that climb stairs, lawn mowers that play ..."
   }
 ]
