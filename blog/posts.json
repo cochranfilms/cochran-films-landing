@@ -1,5 +1,43 @@
 [
   {
+    "title": "From Static to Smart: How to Power Your Web App with Dynamic Content Using APIs",
+    "url": "https://dev.to/okoye_ndidiamaka_5e3b7d30/from-static-to-smart-how-to-power-your-web-app-with-dynamic-content-using-apis-154l",
+    "publishedAt": "2025-09-06T08:50:31.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Ever visited a website that felt outdated or... just flat? That was me a year ago, scrolling through a travel blog with hard-coded articles from 2018. No real-time updates, no interactive content, no personalization—just digital dust. Meanwhile, Netflix was feeding me customized recommendations, Spotify knew my music mood before I did, and news apps were ...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Faqkxefs0plud0yme0c2p.jpg",
+    "video": null,
+    "author": "Okoye Ndidiamaka",
+    "tags": [
+      "api",
+      "webdev",
+      "dynamiccontent",
+      "techtips"
+    ],
+    "seoTitle": "From Static to Smart: How to Power Your Web App with Dynamic Content Using APIs",
+    "seoDescription": "Ever visited a website that felt outdated or... just flat? That was me a year ago, scrolling through a travel blog with hard-coded articles from 2018. No rea..."
+  },
+  {
+    "title": "Modernize Open Source Next.js Admin Dashboard Template",
+    "url": "https://dev.to/vaibhavg/modernize-open-source-nextjs-admin-dashboard-template-om1",
+    "publishedAt": "2025-09-06T08:43:23.000Z",
+    "source": "dev.to",
+    "category": "web",
+    "summary": "Introduction If you’re a developer building a modern web application, having the right Next.js admin template saves you weeks of setup time. The Modernize Free Next.js Admin Template is designed to give developers a ready-to-use dashboard with clean code, performance optimization, and responsive design. This open-source template is available on GitHub, ma...",
+    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm2w76f0iijgyq9g6k4mi.png",
+    "video": null,
+    "author": "Vaibhav Gupta",
+    "tags": [
+      "webdev",
+      "javascript",
+      "programming",
+      "opensource"
+    ],
+    "seoTitle": "Modernize Open Source Next.js Admin Dashboard Template",
+    "seoDescription": "Introduction If you’re a developer building a modern web application, having the right Next.js admin template saves you weeks of setup time. The Modernize Fr..."
+  },
+  {
     "title": "[Boost]",
     "url": "https://dev.to/raheelshan/-d5g",
     "publishedAt": "2025-09-06T07:27:13.000Z",
@@ -31,25 +69,6 @@
     "tags": [],
     "seoTitle": "First look: Dyson’s Spot+Scrub Ai robot seeks out stains",
     "seoDescription": "The Dyson Spot+Scrub Ai is the first robot vacuum mop from the company and the first to use a multifunctional dock. The Dyson Spot+Scrub Ai Robot is the comp..."
-  },
-  {
-    "title": "Why Hire an SEO Company in Chicago for Growth?",
-    "url": "https://dev.to/digitalmarketing360/why-hire-an-seo-company-in-chicago-for-growth-3d3d",
-    "publishedAt": "2025-09-06T06:36:42.000Z",
-    "source": "dev.to",
-    "category": "web",
-    "summary": "Chicago’s digital marketplace is fast-paced and fiercely competitive. Whether you run a restaurant, law firm, or e-commerce business, ranking on Google’s first page often determines your success. While some companies attempt to manage search engine optimization (SEO) themselves, the reality is that algorithms, competition, and strategies are constantly ev...",
-    "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv1aljuhrikiuhof0f7sc.PNG",
-    "video": null,
-    "author": "Digital Marketing 360",
-    "tags": [
-      "webdev",
-      "digitalmarketing",
-      "seocompanyinchicago",
-      "digitalmarketingchicago"
-    ],
-    "seoTitle": "Why Hire an SEO Company in Chicago for Growth?",
-    "seoDescription": "Chicago’s digital marketplace is fast-paced and fiercely competitive. Whether you run a restaurant, law firm, or e-commerce business, ranking on Google’s fir..."
   },
   {
     "title": "This iPhone 17 Pro mock event looks like Apple’s keynote leaked early",
@@ -600,26 +619,5 @@
     ],
     "seoTitle": "Nikon Suspends C2PA Functionality on the Z6 III Due to Authentication Issue",
     "seoDescription": "In response to a flaw with the Nikon Z6 III's C2PA functionality, Nikon has suspended its Nikon Authenticity Service. [Read More]"
-  },
-  {
-    "title": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "url": "https://www.macrumors.com/2025/09/05/case-makers-reveal-iphone-17-designs/",
-    "publishedAt": "2025-09-05T17:44:21.000Z",
-    "source": "macrumors.com",
-    "category": "apple",
-    "summary": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly identical case cutouts several days before Apple's \"Awe dropping\" iPhone event. MacRumors readers have contacted us about the cases, many of which prominently feature space for the rumored camera bar...",
-    "image": "https://images.macrumors.com/article-new/2025/09/nudient-iphone-17-cases.jpg",
-    "video": null,
-    "author": "Tim Hardwick",
-    "tags": [
-      "Apple",
-      "Rumors",
-      "Mac",
-      "iOS",
-      "iPhone",
-      "iPad"
-    ],
-    "seoTitle": "How Do Case Makers Reveal iPhone 17 Designs Before Apple?",
-    "seoDescription": "Several third-party case manufacturers are banking on leaked iPhone 17 designs, with companies like Spigen, Dbrand, Nudient, and Pitaka all showcasing nearly..."
   }
 ]
