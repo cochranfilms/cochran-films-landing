@@ -28,15 +28,29 @@ export default async function handler(req, res) {
     const data = await response.json();
     
     // Transform Airtable records to expected format
-    const photoItems = data.records.map(record => ({
-      Title: record.fields.Title || 'Untitled Photo',
-      Description: record.fields.Description || '',
-      Category: 'Photography',
-      'Thumbnail Image': record.fields.image_url || '',
-      imageUrl: record.fields.image_url || '',
-      UploadDate: record.fields.UploadDate || '',
-      ServiceCategory: 'Photography'
-    }));
+    const photoItems = data.records.map(record => {
+      const imageUrl = record.fields.image_url || '';
+      let title = record.fields.Title || '';
+      
+      // Generate title from filename if no title provided
+      if (!title && imageUrl) {
+        const filename = imageUrl.split('/').pop().split('.')[0];
+        // Clean up filename and make it title case
+        title = filename
+          .replace(/[-_]/g, ' ')
+          .replace(/\b\w/g, l => l.toUpperCase());
+      }
+      
+      return {
+        Title: title || 'Untitled Photo',
+        Description: record.fields.Description || '',
+        Category: 'Photography',
+        'Thumbnail Image': imageUrl,
+        imageUrl: imageUrl,
+        UploadDate: record.fields.UploadDate || '',
+        ServiceCategory: 'Photography'
+      };
+    });
 
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
