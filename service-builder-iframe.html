@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cochran Films - Service Package Builder</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/service-builder.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Iframe-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .iframe-container {
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .iframe-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        
+        .iframe-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .iframe-header p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin: 0;
+        }
+        
+        .iframe-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+        
+        .iframe-footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .iframe-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments for iframe */
+        @media (max-width: 768px) {
+            .iframe-container {
+                padding: 10px;
+            }
+            
+            .iframe-header h1 {
+                font-size: 2rem;
+            }
+            
+            .iframe-header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <div class="iframe-header">
+            <h1>Service Package Builder</h1>
+            <p>Build your perfect service package with Cochran Films</p>
+        </div>
+        
+        <!-- Service Package Builder Content -->
+        <div class="service-builder-container">
+            <div class="service-builder-header">
+                <h2>Choose Your Services</h2>
+                <p>Select the services you need and build your custom package</p>
+            </div>
+            
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="website">
+                    <i class="fas fa-globe"></i>
+                    Website
+                </button>
+                <button class="tab-btn" data-category="photography">
+                    <i class="fas fa-camera"></i>
+                    Photography
+                </button>
+                <button class="tab-btn" data-category="videography">
+                    <i class="fas fa-video"></i>
+                    Videography
+                </button>
+                <button class="tab-btn" data-category="branding">
+                    <i class="fas fa-palette"></i>
+                    Branding
+                </button>
+                <button class="tab-btn" data-category="printing">
+                    <i class="fas fa-print"></i>
+                    Printing
+                </button>
+                <button class="tab-btn" data-category="retainer">
+                    <i class="fas fa-clock"></i>
+                    Retainer
+                </button>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="services-grid" id="servicesGrid">
+                <!-- Website Services -->
+                <div class="service-item" data-category="website" data-service="starter-site">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Starter Site</h3>
+                    <p>Perfect for small businesses getting started online</p>
+                    <div class="service-price">$2,500</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="website" data-service="business-pro-site">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business Pro Site</h3>
+                    <p>Professional website with advanced features</p>
+                    <div class="service-price">$5,000</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="website" data-service="brand-builder-site">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Brand Builder Site</h3>
+                    <p>Complete brand identity with website</p>
+                    <div class="service-price">$7,500</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <!-- Photography Services -->
+                <div class="service-item" data-category="photography" data-service="flash-start">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Flash Start</h3>
+                    <p>Quick photography session for immediate needs</p>
+                    <div class="service-price">$500</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="photography" data-service="prime-exposure">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Prime Exposure</h3>
+                    <p>Professional photography with editing</p>
+                    <div class="service-price">$1,200</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="photography" data-service="legacy-capture">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Legacy Capture</h3>
+                    <p>Premium photography experience</p>
+                    <div class="service-price">$2,000</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <!-- Videography Services -->
+                <div class="service-item" data-category="videography" data-service="hourly-video">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hourly Video</h3>
+                    <p>Flexible video production by the hour</p>
+                    <div class="service-price">$150/hr</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="videography" data-service="event-video-2hr">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <h3>Event Video (2hr)</h3>
+                    <p>Professional event coverage</p>
+                    <div class="service-price">$800</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="videography" data-service="commercial-basic">
+                    <div class="service-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Commercial Basic</h3>
+                    <p>Simple commercial video production</p>
+                    <div class="service-price">$3,000</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <!-- Branding Services -->
+                <div class="service-item" data-category="branding" data-service="logo-design">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Logo Design</h3>
+                    <p>Professional logo creation</p>
+                    <div class="service-price">$800</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="branding" data-service="ignite-brand">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Ignite Brand</h3>
+                    <p>Complete brand identity package</p>
+                    <div class="service-price">$2,500</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="branding" data-service="transform-brand">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Transform Brand</h3>
+                    <p>Complete brand transformation</p>
+                    <div class="service-price">$5,000</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <!-- Printing Services -->
+                <div class="service-item" data-category="printing" data-service="quick-print-4x6">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Quick Print 4x6</h3>
+                    <p>Fast 4x6 photo printing</p>
+                    <div class="service-price">$0.50 each</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="printing" data-service="signature-snap-4x6">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Signature Snap 4x6</h3>
+                    <p>Premium 4x6 photo printing</p>
+                    <div class="service-price">$1.00 each</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="printing" data-service="legacy-lab-4x6">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Legacy Lab 4x6</h3>
+                    <p>Professional lab quality printing</p>
+                    <div class="service-price">$2.00 each</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <!-- Retainer Services -->
+                <div class="service-item" data-category="retainer" data-service="fast-frame-monthly">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Fast Frame Monthly</h3>
+                    <p>Monthly video content creation</p>
+                    <div class="service-price">$2,000/month</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="retainer" data-service="cinematic-spotlight">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Cinematic Spotlight</h3>
+                    <p>Premium monthly video production</p>
+                    <div class="service-price">$5,000/month</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+                
+                <div class="service-item" data-category="retainer" data-service="masterpiece-collection">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Masterpiece Collection</h3>
+                    <p>Ultimate monthly creative package</p>
+                    <div class="service-price">$10,000/month</div>
+                    <button class="add-service-btn">Add to Package</button>
+                </div>
+            </div>
+            
+            <!-- Package Summary -->
+            <div class="package-summary" id="packageSummary">
+                <h3>Your Package</h3>
+                <div class="package-items" id="packageItems">
+                    <p class="empty-message">No services selected yet</p>
+                </div>
+                <div class="package-total">
+                    <strong>Total: $<span id="packageTotal">0</span></strong>
+                </div>
+                <button class="get-quote-btn" id="getQuoteBtn" disabled>Get Quote</button>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container" id="contactFormContainer" style="display: none;">
+                <h3>Get Your Quote</h3>
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="clientName">Full Name *</label>
+                        <input type="text" id="clientName" name="clientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientEmail">Email *</label>
+                        <input type="email" id="clientEmail" name="clientEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">Phone</label>
+                        <input type="tel" id="clientPhone" name="clientPhone">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDetails">Project Details</label>
+                        <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="over-50k">Over $50,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Project Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select Timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-month">Within 1 Month</option>
+                            <option value="2-3-months">2-3 Months</option>
+                            <option value="3-6-months">3-6 Months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-quote-btn">Submit Quote Request</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="iframe-footer">
+            <p>Powered by <a href="https://cochranfilms.com" target="_blank">Cochran Films</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Service Package Builder Logic
+        class ServicePackageBuilder {
+            constructor() {
+                this.selectedServices = [];
+                this.totalPrice = 0;
+                this.init();
+            }
+            
+            init() {
+                this.setupEventListeners();
+                this.updatePackageSummary();
+            }
+            
+            setupEventListeners() {
+                // Category tab switching
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const category = e.currentTarget.dataset.category;
+                        this.switchCategory(category);
+                    });
+                });
+                
+                // Add service buttons
+                document.querySelectorAll('.add-service-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const serviceItem = e.currentTarget.closest('.service-item');
+                        const serviceId = serviceItem.dataset.service;
+                        const serviceName = serviceItem.querySelector('h3').textContent;
+                        const servicePrice = this.extractPrice(serviceItem.querySelector('.service-price').textContent);
+                        
+                        this.addService(serviceId, serviceName, servicePrice);
+                    });
+                });
+                
+                // Get quote button
+                document.getElementById('getQuoteBtn').addEventListener('click', () => {
+                    this.showContactForm();
+                });
+                
+                // Form submission
+                document.getElementById('quoteForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.submitQuote();
+                });
+            }
+            
+            switchCategory(category) {
+                // Update active tab
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector(`[data-category="${category}"]`).classList.add('active');
+                
+                // Show/hide services
+                document.querySelectorAll('.service-item').forEach(item => {
+                    if (item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+            
+            addService(serviceId, serviceName, servicePrice) {
+                const existingService = this.selectedServices.find(s => s.id === serviceId);
+                
+                if (existingService) {
+                    existingService.quantity += 1;
+                } else {
+                    this.selectedServices.push({
+                        id: serviceId,
+                        name: serviceName,
+                        price: servicePrice,
+                        quantity: 1
+                    });
+                }
+                
+                this.updatePackageSummary();
+            }
+            
+            removeService(serviceId) {
+                this.selectedServices = this.selectedServices.filter(s => s.id !== serviceId);
+                this.updatePackageSummary();
+            }
+            
+            updatePackageSummary() {
+                const packageItems = document.getElementById('packageItems');
+                const packageTotal = document.getElementById('packageTotal');
+                const getQuoteBtn = document.getElementById('getQuoteBtn');
+                
+                if (this.selectedServices.length === 0) {
+                    packageItems.innerHTML = '<p class="empty-message">No services selected yet</p>';
+                    this.totalPrice = 0;
+                    getQuoteBtn.disabled = true;
+                } else {
+                    packageItems.innerHTML = this.selectedServices.map(service => `
+                        <div class="package-item">
+                            <div class="package-item-info">
+                                <span class="package-item-name">${service.name}</span>
+                                <span class="package-item-quantity">x${service.quantity}</span>
+                            </div>
+                            <div class="package-item-price">$${(service.price * service.quantity).toLocaleString()}</div>
+                            <button class="remove-service-btn" onclick="serviceBuilder.removeService('${service.id}')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    `).join('');
+                    
+                    this.totalPrice = this.selectedServices.reduce((total, service) => {
+                        return total + (service.price * service.quantity);
+                    }, 0);
+                    
+                    getQuoteBtn.disabled = false;
+                }
+                
+                packageTotal.textContent = this.totalPrice.toLocaleString();
+            }
+            
+            showContactForm() {
+                document.getElementById('contactFormContainer').style.display = 'block';
+                document.getElementById('contactFormContainer').scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            submitQuote() {
+                const formData = new FormData(document.getElementById('quoteForm'));
+                const quoteData = {
+                    services: this.selectedServices,
+                    total: this.totalPrice,
+                    client: Object.fromEntries(formData.entries())
+                };
+                
+                // Send to parent window if in iframe
+                if (window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'COCHRAN_QUOTE_SUBMITTED',
+                        data: quoteData
+                    }, '*');
+                }
+                
+                // Show success message
+                alert('Thank you! Your quote request has been submitted. We\'ll contact you within 24 hours.');
+                
+                // Reset form
+                document.getElementById('quoteForm').reset();
+                this.selectedServices = [];
+                this.updatePackageSummary();
+                document.getElementById('contactFormContainer').style.display = 'none';
+            }
+            
+            extractPrice(priceText) {
+                // Extract numeric value from price text
+                const match = priceText.match(/[\d,]+/);
+                return match ? parseInt(match[0].replace(/,/g, '')) : 0;
+            }
+        }
+        
+        // Initialize the service builder
+        const serviceBuilder = new ServicePackageBuilder();
+        
+        // Handle messages from parent window
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'COCHRAN_RESET_BUILDER') {
+                serviceBuilder.selectedServices = [];
+                serviceBuilder.updatePackageSummary();
+                document.getElementById('contactFormContainer').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
