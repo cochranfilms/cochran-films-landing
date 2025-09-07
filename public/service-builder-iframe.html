@@ -88,282 +88,330 @@
         <div class="service-builder-container">
             <div class="service-builder-header">
                 <h2>Choose Your Services</h2>
-                <p>Select the services you need and build your custom package</p>
+                <p>Drag services to the package area or click to add them</p>
             </div>
             
             <!-- Category Tabs -->
             <div class="category-tabs">
-                <button class="tab-btn active" data-category="website">
+                <button class="category-tab active" data-category="website">
                     <i class="fas fa-globe"></i>
                     Website
                 </button>
-                <button class="tab-btn" data-category="photography">
+                <button class="category-tab" data-category="photography">
                     <i class="fas fa-camera"></i>
                     Photography
                 </button>
-                <button class="tab-btn" data-category="videography">
+                <button class="category-tab" data-category="videography">
                     <i class="fas fa-video"></i>
                     Videography
                 </button>
-                <button class="tab-btn" data-category="branding">
+                <button class="category-tab" data-category="branding">
                     <i class="fas fa-palette"></i>
                     Branding
                 </button>
-                <button class="tab-btn" data-category="printing">
+                <button class="category-tab" data-category="printing">
                     <i class="fas fa-print"></i>
                     Printing
                 </button>
-                <button class="tab-btn" data-category="retainer">
+                <button class="category-tab" data-category="retainer">
                     <i class="fas fa-clock"></i>
                     Retainer
                 </button>
             </div>
             
-            <!-- Services Grid -->
-            <div class="services-grid" id="servicesGrid">
-                <!-- Website Services -->
-                <div class="service-item" data-category="website" data-service="starter-site">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
+            <!-- Service Items Grid -->
+            <div class="service-items" id="serviceItems">
+                <!-- Website Category -->
+                <div class="service-section-header" data-category="website">Main Services</div>
+                
+                <!-- Website Development Packages -->
+                <div class="service-item" data-category="website" draggable="true" data-service="starter-site">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Starter Site</h4>
+                            <p>1-page scroll layout (Home + Contact), Mobile-friendly design</p>
+                        </div>
                     </div>
-                    <h3>Starter Site</h3>
-                    <p>Perfect for small businesses getting started online</p>
+                    <div class="service-price">$750</div>
+                </div>
+                
+                <div class="service-item" data-category="website" draggable="true" data-service="business-pro-site">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Business Pro Site</h4>
+                            <p>3-5 fully designed pages, Custom layout, Blog setup (optional)</p>
+                        </div>
+                    </div>
+                    <div class="service-price">$1,250</div>
+                </div>
+                
+                <div class="service-item" data-category="website" draggable="true" data-service="brand-builder-site">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Brand Builder Site</h4>
+                            <p>6-10 page fully branded website, E-commerce integration</p>
+                        </div>
+                    </div>
                     <div class="service-price">$2,500</div>
-                    <button class="add-service-btn">Add to Package</button>
                 </div>
                 
-                <div class="service-item" data-category="website" data-service="business-pro-site">
-                    <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
+                <!-- Photography Category -->
+                <div class="service-section-header" data-category="photography">Main Services</div>
+                
+                <div class="service-item" data-category="photography" draggable="true" data-service="flash-start">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Flash Start</h4>
+                            <p>1 Hour Photography, Unlimited Digital Photos, Light Photo Editing</p>
+                        </div>
                     </div>
-                    <h3>Business Pro Site</h3>
-                    <p>Professional website with advanced features</p>
-                    <div class="service-price">$5,000</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$350</div>
                 </div>
                 
-                <div class="service-item" data-category="website" data-service="brand-builder-site">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
+                <div class="service-item" data-category="photography" draggable="true" data-service="prime-exposure">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Prime Exposure</h4>
+                            <p>2 Hours Photography, Full Photo Editing, Download Access</p>
+                        </div>
                     </div>
-                    <h3>Brand Builder Site</h3>
-                    <p>Complete brand identity with website</p>
-                    <div class="service-price">$7,500</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$600</div>
                 </div>
                 
-                <!-- Photography Services -->
-                <div class="service-item" data-category="photography" data-service="flash-start">
-                    <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
+                <div class="service-item" data-category="photography" draggable="true" data-service="legacy-capture">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Legacy Capture</h4>
+                            <p>3 Hours Photography, Advanced Editing & Color Grading</p>
+                        </div>
                     </div>
-                    <h3>Flash Start</h3>
-                    <p>Quick photography session for immediate needs</p>
+                    <div class="service-price">$900</div>
+                </div>
+                
+                <!-- Videography Category -->
+                <div class="service-section-header" data-category="videography">Main Services</div>
+                
+                <div class="service-item" data-category="videography" draggable="true" data-service="hourly-video">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Hourly Video Service</h4>
+                            <p>Professional video production hourly rate</p>
+                        </div>
+                    </div>
+                    <div class="service-price">$250</div>
+                </div>
+                
+                <div class="service-item" data-category="videography" draggable="true" data-service="event-video-2hr">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Event Video + 60 Sec Recap</h4>
+                            <p>2 Hours filming with professional 60-second recap video</p>
+                        </div>
+                    </div>
                     <div class="service-price">$500</div>
-                    <button class="add-service-btn">Add to Package</button>
                 </div>
                 
-                <div class="service-item" data-category="photography" data-service="prime-exposure">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
+                <div class="service-item" data-category="videography" draggable="true" data-service="commercial-basic">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Basic Commercial Shoot</h4>
+                            <p>Single Camera, 3 Hours</p>
+                        </div>
                     </div>
-                    <h3>Prime Exposure</h3>
-                    <p>Professional photography with editing</p>
-                    <div class="service-price">$1,200</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$750</div>
                 </div>
                 
-                <div class="service-item" data-category="photography" data-service="legacy-capture">
-                    <div class="service-icon">
-                        <i class="fas fa-crown"></i>
+                <!-- Branding Category -->
+                <div class="service-section-header" data-category="branding">Main Services</div>
+                
+                <div class="service-item" data-category="branding" draggable="true" data-service="logo-design">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Logo Design</h4>
+                            <p>Color palette & fonts</p>
+                        </div>
                     </div>
-                    <h3>Legacy Capture</h3>
-                    <p>Premium photography experience</p>
-                    <div class="service-price">$2,000</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$250</div>
                 </div>
                 
-                <!-- Videography Services -->
-                <div class="service-item" data-category="videography" data-service="hourly-video">
-                    <div class="service-icon">
-                        <i class="fas fa-clock"></i>
+                <div class="service-item" data-category="branding" draggable="true" data-service="ignite-brand">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Ignite Package</h4>
+                            <p>2 Branded Graphics</p>
+                        </div>
                     </div>
-                    <h3>Hourly Video</h3>
-                    <p>Flexible video production by the hour</p>
-                    <div class="service-price">$150/hr</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$900</div>
                 </div>
                 
-                <div class="service-item" data-category="videography" data-service="event-video-2hr">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar"></i>
+                <div class="service-item" data-category="branding" draggable="true" data-service="transform-brand">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Transform Package</h4>
+                            <p>2 Promotional Videos</p>
+                        </div>
                     </div>
-                    <h3>Event Video (2hr)</h3>
-                    <p>Professional event coverage</p>
+                    <div class="service-price">$3,500</div>
+                </div>
+                
+                <!-- Printing Category -->
+                <div class="service-section-header" data-category="printing">Main Services</div>
+                
+                <div class="service-item" data-category="printing" draggable="true" data-service="quick-print-4x6">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Quick Print Booth (4x6)</h4>
+                            <p>4x6 Prints</p>
+                        </div>
+                    </div>
+                    <div class="service-price">$500</div>
+                </div>
+                
+                <div class="service-item" data-category="printing" draggable="true" data-service="signature-snap-4x6">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Signature Snap Station (4x6)</h4>
+                            <p>Table Setup & Lighting</p>
+                        </div>
+                    </div>
                     <div class="service-price">$800</div>
-                    <button class="add-service-btn">Add to Package</button>
                 </div>
                 
-                <div class="service-item" data-category="videography" data-service="commercial-basic">
-                    <div class="service-icon">
-                        <i class="fas fa-tv"></i>
+                <div class="service-item" data-category="printing" draggable="true" data-service="legacy-lab-4x6">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Legacy Lab Experience (4x6)</h4>
+                            <p>Real-time photo review</p>
+                        </div>
                     </div>
-                    <h3>Commercial Basic</h3>
-                    <p>Simple commercial video production</p>
-                    <div class="service-price">$3,000</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$1,100</div>
                 </div>
                 
-                <!-- Branding Services -->
-                <div class="service-item" data-category="branding" data-service="logo-design">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Logo Design</h3>
-                    <p>Professional logo creation</p>
-                    <div class="service-price">$800</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
+                <!-- Retainer Category -->
+                <div class="service-section-header" data-category="retainer">Main Services</div>
                 
-                <div class="service-item" data-category="branding" data-service="ignite-brand">
-                    <div class="service-icon">
-                        <i class="fas fa-fire"></i>
+                <div class="service-item" data-category="retainer" draggable="true" data-service="fast-frame-monthly">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Fast Frame (1 Month)</h4>
+                            <p>4 Videos OR 3 Podcasts</p>
+                        </div>
                     </div>
-                    <h3>Ignite Brand</h3>
-                    <p>Complete brand identity package</p>
                     <div class="service-price">$2,500</div>
-                    <button class="add-service-btn">Add to Package</button>
                 </div>
                 
-                <div class="service-item" data-category="branding" data-service="transform-brand">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
+                <div class="service-item" data-category="retainer" draggable="true" data-service="cinematic-spotlight">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Cinematic Spotlight (2 Months)</h4>
+                            <p>6 Videos OR 5 Podcasts</p>
+                        </div>
                     </div>
-                    <h3>Transform Brand</h3>
-                    <p>Complete brand transformation</p>
-                    <div class="service-price">$5,000</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$4,800</div>
                 </div>
                 
-                <!-- Printing Services -->
-                <div class="service-item" data-category="printing" data-service="quick-print-4x6">
-                    <div class="service-icon">
-                        <i class="fas fa-print"></i>
+                <div class="service-item" data-category="retainer" draggable="true" data-service="masterpiece-collection">
+                    <div class="service-item-header">
+                        <div class="service-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>Masterpiece Collection (3 Months)</h4>
+                            <p>9 Videos OR 7 Podcasts</p>
+                        </div>
                     </div>
-                    <h3>Quick Print 4x6</h3>
-                    <p>Fast 4x6 photo printing</p>
-                    <div class="service-price">$0.50 each</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
-                
-                <div class="service-item" data-category="printing" data-service="signature-snap-4x6">
-                    <div class="service-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Signature Snap 4x6</h3>
-                    <p>Premium 4x6 photo printing</p>
-                    <div class="service-price">$1.00 each</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
-                
-                <div class="service-item" data-category="printing" data-service="legacy-lab-4x6">
-                    <div class="service-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <h3>Legacy Lab 4x6</h3>
-                    <p>Professional lab quality printing</p>
-                    <div class="service-price">$2.00 each</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
-                
-                <!-- Retainer Services -->
-                <div class="service-item" data-category="retainer" data-service="fast-frame-monthly">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Fast Frame Monthly</h3>
-                    <p>Monthly video content creation</p>
-                    <div class="service-price">$2,000/month</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
-                
-                <div class="service-item" data-category="retainer" data-service="cinematic-spotlight">
-                    <div class="service-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Cinematic Spotlight</h3>
-                    <p>Premium monthly video production</p>
-                    <div class="service-price">$5,000/month</div>
-                    <button class="add-service-btn">Add to Package</button>
-                </div>
-                
-                <div class="service-item" data-category="retainer" data-service="masterpiece-collection">
-                    <div class="service-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Masterpiece Collection</h3>
-                    <p>Ultimate monthly creative package</p>
-                    <div class="service-price">$10,000/month</div>
-                    <button class="add-service-btn">Add to Package</button>
+                    <div class="service-price">$7,000</div>
                 </div>
             </div>
             
-            <!-- Package Summary -->
-            <div class="package-summary" id="packageSummary">
-                <h3>Your Package</h3>
-                <div class="package-items" id="packageItems">
-                    <p class="empty-message">No services selected yet</p>
+            <!-- Package Dropzone -->
+            <div class="package-dropzone" id="packageDropzone">
+                <div class="dropzone-placeholder">
+                    <div class="dropzone-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <p>Drag services here to start building your package</p>
                 </div>
-                <div class="package-total">
-                    <strong>Total: $<span id="packageTotal">0</span></strong>
-                </div>
-                <button class="get-quote-btn" id="getQuoteBtn" disabled>Get Quote</button>
             </div>
             
-            <!-- Contact Form -->
-            <div class="contact-form-container" id="contactFormContainer" style="display: none;">
-                <h3>Get Your Quote</h3>
-                <form id="quoteForm">
-                    <div class="form-group">
-                        <label for="clientName">Full Name *</label>
-                        <input type="text" id="clientName" name="clientName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="clientEmail">Email *</label>
-                        <input type="email" id="clientEmail" name="clientEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="clientPhone">Phone</label>
-                        <input type="tel" id="clientPhone" name="clientPhone">
-                    </div>
-                    <div class="form-group">
-                        <label for="projectDetails">Project Details</label>
-                        <textarea id="projectDetails" name="projectDetails" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget Range</label>
-                        <select id="budget" name="budget">
-                            <option value="">Select Budget Range</option>
-                            <option value="under-5k">Under $5,000</option>
-                            <option value="5k-10k">$5,000 - $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="over-50k">Over $50,000</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="timeline">Project Timeline</label>
-                        <select id="timeline" name="timeline">
-                            <option value="">Select Timeline</option>
-                            <option value="asap">ASAP</option>
-                            <option value="1-month">Within 1 Month</option>
-                            <option value="2-3-months">2-3 Months</option>
-                            <option value="3-6-months">3-6 Months</option>
-                            <option value="flexible">Flexible</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-quote-btn">Submit Quote Request</button>
-                </form>
+            <!-- Selected Services -->
+            <div class="selected-services" id="selectedServices" style="display: none;">
+                <!-- Selected services will be added here -->
+            </div>
+            
+            <!-- Quote Summary -->
+            <div class="quote-summary" id="quoteSummary" style="display: none;">
+                <div class="quote-header">
+                    <h3>Package Summary</h3>
+                    <button class="clear-package-btn" id="clearPackage">
+                        <i class="fas fa-trash"></i>
+                        Clear Package
+                    </button>
+                </div>
+                
+                <div class="quote-breakdown" id="quoteBreakdown">
+                    <!-- Quote breakdown will be added here -->
+                </div>
+                
+                <div class="quote-total">
+                    <span>Total: $<span id="quoteTotal">0.00</span></span>
+                </div>
+                
+                <button class="generate-invoice-btn" id="generateInvoice">
+                    <i class="fas fa-file-invoice"></i>
+                    Generate Project Request
+                </button>
             </div>
         </div>
         
@@ -372,174 +420,6 @@
         </div>
     </div>
 
-    <script>
-        // Service Package Builder Logic
-        class ServicePackageBuilder {
-            constructor() {
-                this.selectedServices = [];
-                this.totalPrice = 0;
-                this.init();
-            }
-            
-            init() {
-                this.setupEventListeners();
-                this.updatePackageSummary();
-            }
-            
-            setupEventListeners() {
-                // Category tab switching
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const category = e.currentTarget.dataset.category;
-                        this.switchCategory(category);
-                    });
-                });
-                
-                // Add service buttons
-                document.querySelectorAll('.add-service-btn').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const serviceItem = e.currentTarget.closest('.service-item');
-                        const serviceId = serviceItem.dataset.service;
-                        const serviceName = serviceItem.querySelector('h3').textContent;
-                        const servicePrice = this.extractPrice(serviceItem.querySelector('.service-price').textContent);
-                        
-                        this.addService(serviceId, serviceName, servicePrice);
-                    });
-                });
-                
-                // Get quote button
-                document.getElementById('getQuoteBtn').addEventListener('click', () => {
-                    this.showContactForm();
-                });
-                
-                // Form submission
-                document.getElementById('quoteForm').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    this.submitQuote();
-                });
-            }
-            
-            switchCategory(category) {
-                // Update active tab
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                document.querySelector(`[data-category="${category}"]`).classList.add('active');
-                
-                // Show/hide services
-                document.querySelectorAll('.service-item').forEach(item => {
-                    if (item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-            
-            addService(serviceId, serviceName, servicePrice) {
-                const existingService = this.selectedServices.find(s => s.id === serviceId);
-                
-                if (existingService) {
-                    existingService.quantity += 1;
-                } else {
-                    this.selectedServices.push({
-                        id: serviceId,
-                        name: serviceName,
-                        price: servicePrice,
-                        quantity: 1
-                    });
-                }
-                
-                this.updatePackageSummary();
-            }
-            
-            removeService(serviceId) {
-                this.selectedServices = this.selectedServices.filter(s => s.id !== serviceId);
-                this.updatePackageSummary();
-            }
-            
-            updatePackageSummary() {
-                const packageItems = document.getElementById('packageItems');
-                const packageTotal = document.getElementById('packageTotal');
-                const getQuoteBtn = document.getElementById('getQuoteBtn');
-                
-                if (this.selectedServices.length === 0) {
-                    packageItems.innerHTML = '<p class="empty-message">No services selected yet</p>';
-                    this.totalPrice = 0;
-                    getQuoteBtn.disabled = true;
-                } else {
-                    packageItems.innerHTML = this.selectedServices.map(service => `
-                        <div class="package-item">
-                            <div class="package-item-info">
-                                <span class="package-item-name">${service.name}</span>
-                                <span class="package-item-quantity">x${service.quantity}</span>
-                            </div>
-                            <div class="package-item-price">$${(service.price * service.quantity).toLocaleString()}</div>
-                            <button class="remove-service-btn" onclick="serviceBuilder.removeService('${service.id}')">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    `).join('');
-                    
-                    this.totalPrice = this.selectedServices.reduce((total, service) => {
-                        return total + (service.price * service.quantity);
-                    }, 0);
-                    
-                    getQuoteBtn.disabled = false;
-                }
-                
-                packageTotal.textContent = this.totalPrice.toLocaleString();
-            }
-            
-            showContactForm() {
-                document.getElementById('contactFormContainer').style.display = 'block';
-                document.getElementById('contactFormContainer').scrollIntoView({ behavior: 'smooth' });
-            }
-            
-            submitQuote() {
-                const formData = new FormData(document.getElementById('quoteForm'));
-                const quoteData = {
-                    services: this.selectedServices,
-                    total: this.totalPrice,
-                    client: Object.fromEntries(formData.entries())
-                };
-                
-                // Send to parent window if in iframe
-                if (window.parent !== window) {
-                    window.parent.postMessage({
-                        type: 'COCHRAN_QUOTE_SUBMITTED',
-                        data: quoteData
-                    }, '*');
-                }
-                
-                // Show success message
-                alert('Thank you! Your quote request has been submitted. We\'ll contact you within 24 hours.');
-                
-                // Reset form
-                document.getElementById('quoteForm').reset();
-                this.selectedServices = [];
-                this.updatePackageSummary();
-                document.getElementById('contactFormContainer').style.display = 'none';
-            }
-            
-            extractPrice(priceText) {
-                // Extract numeric value from price text
-                const match = priceText.match(/[\d,]+/);
-                return match ? parseInt(match[0].replace(/,/g, '')) : 0;
-            }
-        }
-        
-        // Initialize the service builder
-        const serviceBuilder = new ServicePackageBuilder();
-        
-        // Handle messages from parent window
-        window.addEventListener('message', (event) => {
-            if (event.data.type === 'COCHRAN_RESET_BUILDER') {
-                serviceBuilder.selectedServices = [];
-                serviceBuilder.updatePackageSummary();
-                document.getElementById('contactFormContainer').style.display = 'none';
-            }
-        });
-    </script>
+    <script src="js/service-builder-iframe.js"></script>
 </body>
 </html>
