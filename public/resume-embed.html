@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cody Cochran - Interactive Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .resume-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 107, 107, 0.5)); }
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            color: #b8c5d6;
+            margin-bottom: 1rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .link-btn {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .link-btn:hover::before {
+            left: 100%;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, #ff6b6b, #4ecdc4);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover::before {
+            transform: scaleX(1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title i {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e0e6ed;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .experience-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.2);
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-company {
+            font-size: 1.1rem;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-date {
+            font-size: 0.9rem;
+            color: #b8c5d6;
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-description li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #e0e6ed;
+        }
+
+        .job-description li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.2);
+        }
+
+        .skill-category h4 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .education-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .degree {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+        }
+
+        .school {
+            font-size: 1.1rem;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .details {
+            color: #b8c5d6;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.2);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .portfolio-title {
+            color: #4ecdc4;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-link {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            color: #ff6b6b;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00d4ff;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
+        }
+
+        .tech-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 1rem;
+            }
+            
+            .name {
+                font-size: 2.5rem;
+            }
+            
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .typing-effect {
+            overflow: hidden;
+            border-right: 2px solid #00d4ff;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00d4ff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="top: 20%; left: 80%; animation-delay: 1s;"></div>
+        <div class="floating-element" style="top: 60%; left: 20%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="top: 80%; left: 70%; animation-delay: 3s;"></div>
+        <div class="floating-element" style="top: 40%; left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="resume-container">
+        <div class="tech-badge">
+            <i class="fas fa-code"></i> AI-Powered Resume
+        </div>
+
+        <div class="header">
+            <h1 class="name typing-effect">Cody Cochran</h1>
+            <div class="contact-info">
+                ATLANTA, GEORGIA, UNITED STATES<br>
+                INFO@COCHRANFILMS.COM | 470-420-2169
+            </div>
+            <div class="links">
+                <a href="https://landing.cochranfilms.com" class="link-btn" target="_blank">
+                    <i class="fas fa-rocket"></i> Landing Page
+                </a>
+                <a href="https://pitch.cochranfilms.com" class="link-btn" target="_blank">
+                    <i class="fas fa-presentation"></i> Pitch Deck
+                </a>
+                <a href="https://www.cochranfilms.com" class="link-btn" target="_blank">
+                    <i class="fas fa-globe"></i> Main Website
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user-tie"></i> Resume Summary
+            </h2>
+            <p class="summary">
+                Visionary entrepreneur and multimedia professional with expertise in film production, videography education, and app development. Founder of Cochran Films and Course Creator Academy, empowering creatives through high-quality production services and videography education in Atlanta's vibrant creative community. Skilled in leading-edge multimedia technology, leadership excellence, and innovative app design, including developing platforms to enhance client engagement and creativity.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i> Industry Experience
+            </h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="job-title">CEO: Cochran Films</div>
+                    <div class="job-company">Atlanta, GA | December 2024 - Present</div>
+                    <ul class="job-description">
+                        <li>Oversee all aspects of film production and client projects, ensuring high-quality deliverables</li>
+                        <li>Build and maintain client relationships through tailored media solutions</li>
+                        <li>Lead a talented team of videographers and editors, fostering a creative and collaborative environment</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Founder: CLC Collective</div>
+                    <div class="job-company">Atlanta, GA | November 2024 - Present</div>
+                    <ul class="job-description">
+                        <li>Established a dynamic media powerhouse dedicated to elevating stories and empowering creatives</li>
+                        <li>Coordinated strategic partnerships to enhance service offerings across multiple brands</li>
+                        <li>Oversaw operations for Cochran Films and Course Creator Academy as part of the collective's portfolio</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Founder & Educator: Course Creator Academy</div>
+                    <div class="job-company">Atlanta, GA | August 2024 - Present</div>
+                    <ul class="job-description">
+                        <li>Established an educational platform empowering creators with videography and film skills</li>
+                        <li>Delivered in-person and online classes tailored for beginner and intermediate creatives</li>
+                        <li>Created comprehensive courses, providing students with technical and practical expertise</li>
+                        <li>Developed a mobile app for course access and creative learning</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Co-Owner: Back in FX</div>
+                    <div class="job-company">Douglasville, GA | January 2020 - December 2024</div>
+                    <ul class="job-description">
+                        <li>Designed and managed the company's website to enhance client interaction</li>
+                        <li>Created invoices and quotes tailored to client needs</li>
+                        <li>Spearheaded business promotion both online and offline</li>
+                        <li>Produced, edited, and filmed client content with industry-standard equipment</li>
+                        <li>Ensured proper management of production equipment for seamless operations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Director of Photography: iHeart Podcast</div>
+                    <div class="job-company">Atlanta, GA | August 2023 - April 2024</div>
+                    <ul class="job-description">
+                        <li>Captured podcast episodes for the iHeart team in various locations</li>
+                        <li>Designed and implemented lighting setups for multiple environments</li>
+                        <li>Operated advanced audio and video equipment during One Music Fest</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Videographer: Andre Dickens Mayoral Campaign</div>
+                    <div class="job-company">Atlanta, GA | July 2021 - January 2022</div>
+                    <ul class="job-description">
+                        <li>Filmed and edited promotional videos for campaign outreach</li>
+                        <li>Documented Mayoral race events, creating a comprehensive content archive</li>
+                        <li>Collaborated with campaign staff to produce impactful media</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Documentary Filmmaker: Rogue Society Mini Documentary</div>
+                    <div class="job-company">Douglasville, GA | August 2023 - September 2023</div>
+                    <ul class="job-description">
+                        <li>Led lighting, audio, camera operation, and editing for a short-form documentary highlighting the Rogue Society clothing brand</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i> Education
+            </h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Digital Cinematography</div>
+                <div class="school">Full Sail University | Winter Park, FL</div>
+                <div class="details">2024 | GPA: 3.6</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-certificate"></i> Certifications
+            </h2>
+            <div class="certifications">
+                <div class="cert-item">
+                    <strong>Disney's Approach to Leadership Excellence</strong><br>
+                    Disney Institute | 2023
+                </div>
+                <div class="cert-item">
+                    <strong>Disney's Approach to Leadership Excellence</strong><br>
+                    Disney Institute | 2022
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-tools"></i> Skills & Tools
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-video"></i> Multimedia Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Sony FX6</span>
+                        <span class="skill-tag">Sony FX3</span>
+                        <span class="skill-tag">GODOX Lighting</span>
+                        <span class="skill-tag">DJI Equipment</span>
+                        <span class="skill-tag">RODE Audio</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-desktop"></i> Software</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Final Cut Pro</span>
+                        <span class="skill-tag">Adobe Premiere</span>
+                        <span class="skill-tag">Adobe Photoshop</span>
+                        <span class="skill-tag">Dreamweaver</span>
+                        <span class="skill-tag">Illustrator CS6</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Trello</span>
+                        <span class="skill-tag">Wix Collections</span>
+                        <span class="skill-tag">WaveApps</span>
+                        <span class="skill-tag">MailChimp</span>
+                        <span class="skill-tag">Postmark</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-robot"></i> AI Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ChatGPT</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">Replit</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">Midjourney</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-code"></i> Developer Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Xcode</span>
+                        <span class="skill-tag">AppStoreConnect</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">WaveApps Developer</span>
+                        <span class="skill-tag">Auth0</span>
+                        <span class="skill-tag">Cloudinary</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-laptop-code"></i> Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JSON</span>
+                        <span class="skill-tag">API Integration</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-star"></i> Specialties</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Directing</span>
+                        <span class="skill-tag">Cinematography</span>
+                        <span class="skill-tag">Film Editing</span>
+                        <span class="skill-tag">Lighting Design</span>
+                        <span class="skill-tag">Audio Engineering</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">Mobile App Development</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4><i class="fas fa-users"></i> Leadership</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Project Leadership</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Client Relations</span>
+                        <span class="skill-tag">Creative Direction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-folder-open"></i> Portfolio & Projects
+            </h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-title">Cochran Films Portfolio</div>
+                    <a href="https://www.cochranfilms.com" class="portfolio-link" target="_blank">
+                        CochranFilms.com
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-title">Course Creator Academy</div>
+                    <a href="https://coursecratoracademy.org" class="portfolio-link" target="_blank">
+                        CourseCreatorAcademy.org
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-title">Additional Work</div>
+                    <div style="color: #b8c5d6;">Available Upon Request</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Intersection Observer for smooth animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Add floating elements dynamically
+        function createFloatingElement() {
+            const element = document.createElement('div');
+            element.className = 'floating-element';
+            element.style.left = Math.random() * 100 + '%';
+            element.style.top = Math.random() * 100 + '%';
+            element.style.animationDelay = Math.random() * 6 + 's';
+            document.querySelector('.floating-elements').appendChild(element);
+        }
+
+        // Create more floating elements
+        for (let i = 0; i < 10; i++) {
+            createFloatingElement();
+        }
+
+        // Add hover effects to skill tags
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(2deg)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add typing effect to name
+        setTimeout(() => {
+            document.querySelector('.name').classList.remove('typing-effect');
+        }, 3500);
+    </script>
+</body>
+</html>
