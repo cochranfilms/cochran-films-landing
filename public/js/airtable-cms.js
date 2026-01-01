@@ -69,6 +69,7 @@
     grid.innerHTML = pageItems.map(it => {
       const thumb = (it['Thumbnail Image']||'').trim() || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=320&h=200&fit=crop&crop=center';
       const isPhotoOnly = (it.ServiceCategory||it.Category)==='Photography' && !it.playbackUrl;
+      const isBrandDevelopment = (it.ServiceCategory||it.Category)==='Brand Development';
       const videoUrl = it.playbackUrl || '';
       
       if (isPhotoOnly){
@@ -84,6 +85,33 @@
           </div>
         </div>`;
       }
+      
+      // Handle Brand Development items
+      if (isBrandDevelopment) {
+        const hasImageOnly = !videoUrl && !it.URL && thumb;
+        const techStack = it['Tech Stack'] || '';
+        const role = it.Role || '';
+        const timeline = it.Timeline || '';
+        const clientCompany = it['Client/Company'] || '';
+        
+        return `<div class="portfolio-item brand-development" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}" data-url="${it.URL || ''}" data-imageUrl="${it.imageUrl || it['Thumbnail Image'] || ''}" data-description="${it.Description||''}">
+          <div class="portfolio-thumbnail">
+            <img src="${thumb}" alt="${it.Title||''}" loading="lazy" />
+            <div class="portfolio-play"><i class="fa-solid fa-${hasImageOnly ? 'expand' : (it.URL ? 'external-link-alt' : 'play')}"></i></div>
+          </div>
+          <div class="portfolio-content">
+            <div class="portfolio-category"><i class="fa-solid fa-palette"></i>${it.Category||''}</div>
+            <h3 class="portfolio-title">${it.Title||''}</h3>
+            <p class="portfolio-description">${it.Description||''}</p>
+            ${clientCompany ? `<div class="portfolio-role"><i class="fa-solid fa-building"></i><span>${clientCompany}</span></div>` : ''}
+            ${techStack ? `<div class="portfolio-tech"><i class="fa-solid fa-palette"></i><span>${techStack.substring(0, 100)}${techStack.length > 100 ? '...' : ''}</span></div>` : ''}
+            ${role ? `<div class="portfolio-role"><i class="fa-solid fa-user"></i><span>${role.substring(0, 80)}${role.length > 80 ? '...' : ''}</span></div>` : ''}
+            ${timeline ? `<div class="portfolio-timeline"><i class="fa-solid fa-clock"></i><span>${timeline}</span></div>` : ''}
+            ${it.URL ? `<div class="portfolio-link"><a href="${it.URL}" target="_blank" rel="noopener"><i class="fa-solid fa-external-link-alt"></i> View Project</a></div>` : ''}
+          </div>
+        </div>`;
+      }
+      
       // Check if this is a web development project
       const isWebProject = ['E-Commerce', 'Media Services', 'Education', 'Marketing', 'Internal Tools', 'Web Development'].includes(it.Category);
       const techStack = it['Tech Stack'] || '';
@@ -132,16 +160,18 @@
 
   async function fetchFromAPI(){
     try{
-      // Fetch portfolio, web, and photos data
-      const [portfolioRes, webRes, photosRes] = await Promise.all([
+      // Fetch portfolio, web, photos, and brand data
+      const [portfolioRes, webRes, photosRes, brandRes] = await Promise.all([
         fetch('/api/airtable/portfolio'),
         fetch('/api/airtable/web'),
-        fetch('/api/airtable/photos')
+        fetch('/api/airtable/photos'),
+        fetch('/api/airtable/brand')
       ]);
       
       let portfolioItems = [];
       let webItems = [];
       let photoItems = [];
+      let brandItems = [];
       
       if (portfolioRes.ok) {
         portfolioItems = await portfolioRes.json();
@@ -155,8 +185,12 @@
         photoItems = await photosRes.json();
       }
       
+      if (brandRes.ok) {
+        brandItems = await brandRes.json();
+      }
+      
       // Combine all datasets
-      const allItems = [...portfolioItems, ...webItems, ...photoItems];
+      const allItems = [...portfolioItems, ...webItems, ...photoItems, ...brandItems];
       render(allItems);
     }catch(e){
       console.warn('Airtable API not available, portfolio will remain minimal until backend is added.', e);
@@ -322,18 +356,19 @@
       const projectUrl = portfolioItem.dataset.url;
       const imageUrl = portfolioItem.dataset.imageUrl;
       const isPhotoOnly = portfolioItem.classList.contains('photo-only');
+      const isBrandDevelopment = portfolioItem.classList.contains('brand-development');
       
-      // Check if this is a photo
-      if (isPhotoOnly && imageUrl) {
+      // Check if this is a photo or brand item with image only
+      if ((isPhotoOnly || (isBrandDevelopment && !videoUrl && !projectUrl)) && imageUrl) {
         const title = portfolioItem.dataset.title;
         const description = portfolioItem.dataset.description || '';
         showPhotoLightbox(imageUrl, title, description);
         return;
       }
       
-      // Check if this is a web project with a URL
+      // Check if this is a web project or brand project with a URL
       if (projectUrl && !videoUrl) {
-        // Navigate to the web project URL
+        // Navigate to the project URL
         window.open(projectUrl, '_blank', 'noopener,noreferrer');
         return;
       }

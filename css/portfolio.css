@@ -2,9 +2,14 @@
    PORTFOLIO STYLES - PREMIUM REDESIGN
    ======================================== */
 
+/* ========================================
+   PORTFOLIO STYLES - 2026 PREMIUM DESIGN
+   Stunning, Engaging, Irresistible
+   ======================================== */
+
 /* Portfolio Section */
 .portfolio-section {
-  padding: 6rem 0;
+  padding: var(--space-4xl) 0;
   background: transparent;
   position: relative;
 }
@@ -13,7 +18,7 @@
 .portfolio-content {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: var(--space-4xl);
 }
 
 /* Premium Category Section */
@@ -122,15 +127,18 @@
   margin-bottom: 40px;
 }
 
-/* Premium Portfolio Item */
+/* Premium Portfolio Item - Enhanced 2026 */
 .portfolio-item {
   position: relative;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   aspect-ratio: 16/9;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: var(--backdrop);
 }
 
 .portfolio-item::before {
@@ -140,20 +148,34 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--brand-gold), var(--brand-indigo), #ff6b6b);
+  background: var(--gradient-brand);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity var(--transition);
+  z-index: 2;
+}
+
+.portfolio-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,178,0,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .portfolio-item:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255,178,0,0.3);
-  box-shadow: 
-    0 20px 40px rgba(0,0,0,0.3),
-    0 0 120px rgba(255,178,0,0.1);
+  transform: translateY(-12px) scale(1.02);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-xl), var(--glow-gold);
 }
 
 .portfolio-item:hover::before {
+  opacity: 1;
+}
+
+.portfolio-item:hover::after {
   opacity: 1;
 }
 
@@ -161,11 +183,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Premium Item Media */
