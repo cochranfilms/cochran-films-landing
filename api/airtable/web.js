@@ -49,7 +49,9 @@ export default async function handler(req, res) {
         Challenges: record.fields.Challenges || '',
         Results: record.fields.Results || '',
         'Is Featured': record.fields['Is Featured'] === 'TRUE' || false,
-        UploadDate: record.fields.UploadDate || ''
+        UploadDate: record.fields.UploadDate || '',
+        // Include ALL fields for comprehensive display
+        _allFields: record.fields
       };
     });
 

@@ -88,8 +88,13 @@ export default async function handler(req, res) {
               Results: record.fields['Results/Impact'] || 
                       record.fields.Results || 
                       record.fields.Impact || '',
+              'Services Provided': record.fields['Services Provided'] || '',
+              'Deliverables': record.fields.Deliverables || '',
+              'Industry': record.fields.Industry || '',
               'Is Featured': record.fields['Is Featured'] === 'TRUE' || record.fields['Is Featured'] === true || false,
-              UploadDate: record.fields.UploadDate || record.fields['Created Date'] || ''
+              UploadDate: record.fields.UploadDate || record.fields['Created Date'] || '',
+              // Include ALL fields for comprehensive display
+              _allFields: record.fields
             };
           });
           

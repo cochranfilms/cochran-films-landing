@@ -39,7 +39,15 @@ export default async function handler(req, res) {
       UploadDate: record.fields['UploadDate'] || record.fields['Created Date'] || '',
       URL: record.fields['Portfolio (Item)'] || '',
       ServiceCategory: record.fields.Category || 'Video Production',
-      'Is Featured': record.fields['Is Featured'] === 'true' || false
+      'Is Featured': record.fields['Is Featured'] === 'true' || false,
+      'Client/Company': record.fields['Client/Company'] || record.fields.Client || '',
+      Role: record.fields.Role || '',
+      Timeline: record.fields.Timeline || '',
+      'Tech Stack': record.fields['Tech Stack'] || '',
+      Challenges: record.fields.Challenges || '',
+      Results: record.fields.Results || '',
+      // Include ALL fields for comprehensive display
+      _allFields: record.fields
     }));
 
     // Set CORS headers

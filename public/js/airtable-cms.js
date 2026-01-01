@@ -86,7 +86,7 @@
         </div>`;
       }
       
-      // Handle Brand Development items
+      // Handle Brand Development items - ENHANCED with ALL fields
       if (isBrandDevelopment) {
         const hasImageOnly = !videoUrl && !it.URL && thumb;
         const hasVideo = !!videoUrl;
@@ -95,6 +95,17 @@
         const role = it.Role || '';
         const timeline = it.Timeline || '';
         const clientCompany = it['Client/Company'] || '';
+        const servicesProvided = it['Services Provided'] || '';
+        const deliverables = it['Deliverables'] || '';
+        const industry = it['Industry'] || '';
+        const results = it['Results'] || '';
+        const challenges = it['Challenges'] || '';
+        const isFeatured = it['Is Featured'] || false;
+        
+        // Parse services if it's a string with dashes or bullets
+        const servicesList = servicesProvided 
+          ? servicesProvided.split(/[-•\n]/).filter(s => s.trim()).map(s => s.trim())
+          : [];
         
         // Determine icon based on content type
         let iconClass = 'expand';
@@ -104,20 +115,106 @@
           iconClass = 'external-link-alt';
         }
         
-        return `<div class="portfolio-item brand-development" data-category="${it.Category||''}" data-title="${(it.Title||'').replace(/"/g, '&quot;')}" data-video="${(videoUrl||'').replace(/"/g, '&quot;')}" data-url="${(it.URL || '').replace(/"/g, '&quot;')}" data-imageUrl="${(it.imageUrl || it['Thumbnail Image'] || '').replace(/"/g, '&quot;')}" data-description="${(it.Description||'').replace(/"/g, '&quot;')}">
-          <div class="portfolio-thumbnail">
+        // Build metadata items
+        const metadataItems = [];
+        if (clientCompany) metadataItems.push({ label: 'Client', value: clientCompany, icon: 'building' });
+        if (industry) metadataItems.push({ label: 'Industry', value: industry, icon: 'industry' });
+        if (timeline) metadataItems.push({ label: 'Timeline', value: timeline, icon: 'clock' });
+        if (role) metadataItems.push({ label: 'Role', value: role, icon: 'user' });
+        
+        return `<div class="portfolio-item brand-development portfolio-item-enhanced" data-category="${it.Category||''}" data-title="${(it.Title||'').replace(/"/g, '&quot;')}" data-video="${(videoUrl||'').replace(/"/g, '&quot;')}" data-url="${(it.URL || '').replace(/"/g, '&quot;')}" data-imageUrl="${(it.imageUrl || it['Thumbnail Image'] || '').replace(/"/g, '&quot;')}" data-description="${(it.Description||'').replace(/"/g, '&quot;')}">
+          ${isFeatured ? '<div class="portfolio-featured-badge"><i class="fa-solid fa-star"></i> Featured</div>' : ''}
+          <div class="portfolio-thumbnail-enhanced">
             <img src="${thumb}" alt="${(it.Title||'').replace(/"/g, '&quot;')}" loading="lazy" />
             <div class="portfolio-play"><i class="fa-solid fa-${iconClass}"></i></div>
+            ${hasVideo ? '<div class="portfolio-video-badge"><i class="fa-solid fa-play"></i> Video</div>' : ''}
           </div>
-          <div class="portfolio-content">
-            <div class="portfolio-category"><i class="fa-solid fa-palette"></i>${it.Category||''}</div>
-            <h3 class="portfolio-title">${it.Title||''}</h3>
-            <p class="portfolio-description">${it.Description||''}</p>
-            ${clientCompany ? `<div class="portfolio-role"><i class="fa-solid fa-building"></i><span>${clientCompany}</span></div>` : ''}
-            ${techStack ? `<div class="portfolio-tech"><i class="fa-solid fa-palette"></i><span>${techStack.substring(0, 100)}${techStack.length > 100 ? '...' : ''}</span></div>` : ''}
-            ${role ? `<div class="portfolio-role"><i class="fa-solid fa-user"></i><span>${role.substring(0, 80)}${role.length > 80 ? '...' : ''}</span></div>` : ''}
-            ${timeline ? `<div class="portfolio-timeline"><i class="fa-solid fa-clock"></i><span>${timeline}</span></div>` : ''}
-            ${it.URL ? `<div class="portfolio-link"><a href="${it.URL}" target="_blank" rel="noopener"><i class="fa-solid fa-external-link-alt"></i> View Project</a></div>` : ''}
+          <div class="portfolio-content-enhanced">
+            <div class="portfolio-category-enhanced">
+              <i class="fa-solid fa-palette"></i>${it.Category||''}
+            </div>
+            ${industry ? `<div class="portfolio-industry-badge"><i class="fa-solid fa-industry"></i> ${industry}</div>` : ''}
+            <h3 class="portfolio-title-enhanced">${it.Title||''}</h3>
+            <p class="portfolio-description-enhanced">${it.Description||''}</p>
+            
+            ${metadataItems.length > 0 ? `
+              <div class="portfolio-metadata-grid">
+                ${metadataItems.map(item => `
+                  <div class="portfolio-meta-item">
+                    <div class="portfolio-meta-label">${item.label}</div>
+                    <div class="portfolio-meta-value">
+                      <i class="fa-solid fa-${item.icon}"></i>
+                      <span>${item.value}</span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            ` : ''}
+            
+            ${(servicesList.length > 0 || deliverables || results || challenges || techStack) ? `
+              <div class="portfolio-details-toggle" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('active');">
+                <span><i class="fa-solid fa-chevron-down"></i> View Full Details</span>
+              </div>
+              <div class="portfolio-details-expanded">
+                <div class="portfolio-details-content">
+                  ${servicesList.length > 0 ? `
+                    <div class="portfolio-detail-section">
+                      <div class="portfolio-detail-section-title"><i class="fa-solid fa-list-check"></i> Services Provided</div>
+                      <ul class="portfolio-services-list">
+                        ${servicesList.map(service => `<li>${service}</li>`).join('')}
+                      </ul>
+                    </div>
+                  ` : ''}
+                  
+                  ${deliverables ? `
+                    <div class="portfolio-detail-section">
+                      <div class="portfolio-detail-section-title"><i class="fa-solid fa-box"></i> Deliverables</div>
+                      <div class="portfolio-detail-section-content">${deliverables}</div>
+                    </div>
+                  ` : ''}
+                  
+                  ${techStack ? `
+                    <div class="portfolio-detail-section">
+                      <div class="portfolio-detail-section-title"><i class="fa-solid fa-code"></i> Tech Stack</div>
+                      <div class="portfolio-tech-tags">
+                        ${techStack.split(',').map(tech => `<span class="portfolio-tech-tag">${tech.trim()}</span>`).join('')}
+                      </div>
+                    </div>
+                  ` : ''}
+                  
+                  ${results ? `
+                    <div class="portfolio-detail-section">
+                      <div class="portfolio-detail-section-title"><i class="fa-solid fa-chart-line"></i> Results & Impact</div>
+                      <div class="portfolio-detail-section-content">${results}</div>
+                    </div>
+                  ` : ''}
+                  
+                  ${challenges ? `
+                    <div class="portfolio-detail-section">
+                      <div class="portfolio-detail-section-title"><i class="fa-solid fa-lightbulb"></i> Challenges</div>
+                      <div class="portfolio-detail-section-content">${challenges}</div>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            ` : ''}
+            
+            <div class="portfolio-actions-enhanced">
+              ${hasVideo ? `
+                <button class="portfolio-action-btn portfolio-action-btn-primary" onclick="event.stopPropagation(); const item = this.closest('.portfolio-item'); const video = item.dataset.video; if(video) { const title = item.dataset.title; const category = item.dataset.category; const desc = item.dataset.description; if(typeof showVideoPopup === 'function') showVideoPopup(title, category, video, desc); }">
+                  <i class="fa-solid fa-play"></i> Watch Video
+                </button>
+              ` : ''}
+              ${hasUrl ? `
+                <a href="${it.URL}" target="_blank" rel="noopener" class="portfolio-action-btn portfolio-action-btn-secondary" onclick="event.stopPropagation();">
+                  <i class="fa-solid fa-external-link-alt"></i> View Project
+                </a>
+              ` : hasImageOnly ? `
+                <button class="portfolio-action-btn portfolio-action-btn-secondary" onclick="event.stopPropagation(); const item = this.closest('.portfolio-item'); const img = item.dataset.imageurl; const title = item.dataset.title; const desc = item.dataset.description; if(typeof showPhotoLightbox === 'function') showPhotoLightbox(img, title, desc);">
+                  <i class="fa-solid fa-expand"></i> View Image
+                </button>
+              ` : ''}
+            </div>
           </div>
         </div>`;
       }
