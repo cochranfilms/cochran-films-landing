@@ -37,7 +37,28 @@ export default async function handler(req, res) {
           
           // Transform Airtable records to expected format
           brandItems = data.records.map(record => {
-            let thumbnailUrl = record.fields['Thumbnail Image'] || record.fields.thumbnailUrl || record.fields.imageUrl || '';
+            // Handle thumbnail - check multiple possible field names
+            let thumbnailUrl = record.fields['Thumbnail / Cover...'] || 
+                              record.fields['Thumbnail Image'] || 
+                              record.fields['Thumbnail'] ||
+                              record.fields.thumbnailUrl || 
+                              record.fields.imageUrl || 
+                              record.fields['Logo URL'] || '';
+            
+            // Handle video URLs - check multiple possible field names
+            let videoUrl = record.fields['Video URLs'] || 
+                          record.fields['Video URL'] ||
+                          record.fields.playbackUrl || 
+                          record.fields['YouTube URL'] || '';
+            
+            // Extract YouTube video ID if it's a full URL
+            if (videoUrl && videoUrl.includes('youtu.be/')) {
+              videoUrl = videoUrl.split('youtu.be/')[1].split('?')[0];
+              videoUrl = `https://www.youtube.com/embed/${videoUrl}`;
+            } else if (videoUrl && videoUrl.includes('youtube.com/watch?v=')) {
+              videoUrl = videoUrl.split('v=')[1].split('&')[0];
+              videoUrl = `https://www.youtube.com/embed/${videoUrl}`;
+            }
             
             // Convert GitHub blob URLs to raw URLs for proper image display
             if (thumbnailUrl.includes('github.com') && thumbnailUrl.includes('/blob/')) {
@@ -51,14 +72,22 @@ export default async function handler(req, res) {
               ServiceCategory: 'Brand Development',
               'Thumbnail Image': thumbnailUrl,
               imageUrl: thumbnailUrl,
-              URL: record.fields.URL || record.fields['Portfolio URL'] || '',
-              playbackUrl: record.fields.playbackUrl || record.fields['Video URL'] || '',
+              URL: record.fields['Project URL'] || 
+                   record.fields.URL || 
+                   record.fields['Portfolio URL'] || 
+                   record.fields['Website URL'] || '',
+              playbackUrl: videoUrl,
               'Tech Stack': record.fields['Tech Stack'] || '',
               Role: record.fields.Role || '',
-              'Client/Company': record.fields['Client/Company'] || record.fields.Client || '',
+              'Client/Company': record.fields['Client/Brand Name'] || 
+                               record.fields['Client/Company'] || 
+                               record.fields.Client || 
+                               record.fields['Brand Name'] || '',
               Timeline: record.fields.Timeline || '',
               Challenges: record.fields.Challenges || '',
-              Results: record.fields.Results || '',
+              Results: record.fields['Results/Impact'] || 
+                      record.fields.Results || 
+                      record.fields.Impact || '',
               'Is Featured': record.fields['Is Featured'] === 'TRUE' || record.fields['Is Featured'] === true || false,
               UploadDate: record.fields.UploadDate || record.fields['Created Date'] || ''
             };

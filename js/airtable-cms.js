@@ -89,15 +89,25 @@
       // Handle Brand Development items
       if (isBrandDevelopment) {
         const hasImageOnly = !videoUrl && !it.URL && thumb;
+        const hasVideo = !!videoUrl;
+        const hasUrl = !!it.URL;
         const techStack = it['Tech Stack'] || '';
         const role = it.Role || '';
         const timeline = it.Timeline || '';
         const clientCompany = it['Client/Company'] || '';
         
-        return `<div class="portfolio-item brand-development" data-category="${it.Category||''}" data-title="${it.Title||''}" data-video="${videoUrl}" data-url="${it.URL || ''}" data-imageUrl="${it.imageUrl || it['Thumbnail Image'] || ''}" data-description="${it.Description||''}">
+        // Determine icon based on content type
+        let iconClass = 'expand';
+        if (hasVideo) {
+          iconClass = 'play';
+        } else if (hasUrl) {
+          iconClass = 'external-link-alt';
+        }
+        
+        return `<div class="portfolio-item brand-development" data-category="${it.Category||''}" data-title="${(it.Title||'').replace(/"/g, '&quot;')}" data-video="${(videoUrl||'').replace(/"/g, '&quot;')}" data-url="${(it.URL || '').replace(/"/g, '&quot;')}" data-imageUrl="${(it.imageUrl || it['Thumbnail Image'] || '').replace(/"/g, '&quot;')}" data-description="${(it.Description||'').replace(/"/g, '&quot;')}">
           <div class="portfolio-thumbnail">
-            <img src="${thumb}" alt="${it.Title||''}" loading="lazy" />
-            <div class="portfolio-play"><i class="fa-solid fa-${hasImageOnly ? 'expand' : (it.URL ? 'external-link-alt' : 'play')}"></i></div>
+            <img src="${thumb}" alt="${(it.Title||'').replace(/"/g, '&quot;')}" loading="lazy" />
+            <div class="portfolio-play"><i class="fa-solid fa-${iconClass}"></i></div>
           </div>
           <div class="portfolio-content">
             <div class="portfolio-category"><i class="fa-solid fa-palette"></i>${it.Category||''}</div>
@@ -213,10 +223,7 @@
         </div>
         <div class="video-popup-body">
           <div class="video-popup-player">
-            <video controls autoplay>
-              <source src="" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="video-container-embed"></div>
           </div>
           <div class="video-popup-description"></div>
         </div>
@@ -237,9 +244,43 @@
     popup.querySelector('.video-popup-category').innerHTML = `<i class="fa-solid fa-tag"></i>${category}`;
     popup.querySelector('.video-popup-description').textContent = description;
     
-    const video = popup.querySelector('video');
-    video.src = videoUrl;
-    video.load();
+    const container = popup.querySelector('.video-container-embed');
+    
+    // Check if it's a YouTube URL
+    const isYouTube = videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be');
+    
+    if (isYouTube) {
+      // Extract video ID
+      let videoId = '';
+      if (videoUrl.includes('youtube.com/embed/')) {
+        videoId = videoUrl.split('youtube.com/embed/')[1].split('?')[0];
+      } else if (videoUrl.includes('youtu.be/')) {
+        videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+      } else if (videoUrl.includes('youtube.com/watch?v=')) {
+        videoId = videoUrl.split('v=')[1].split('&')[0];
+      }
+      
+      // Create YouTube iframe
+      container.innerHTML = `
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"
+        ></iframe>
+      `;
+    } else {
+      // Regular video element
+      container.innerHTML = `
+        <video controls autoplay style="width: 100%; height: 100%; border-radius: 12px;">
+          <source src="${videoUrl}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+    }
 
     // Show popup
     popup.style.display = 'flex';
@@ -270,10 +311,18 @@
       popup.style.display = 'none';
       document.body.style.overflow = '';
       
-      // Stop video
+      // Stop video or remove iframe
       const video = popup.querySelector('video');
-      video.pause();
-      video.currentTime = 0;
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+      
+      // Clear iframe content to stop YouTube playback
+      const container = popup.querySelector('.video-container-embed');
+      if (container) {
+        container.innerHTML = '';
+      }
     }
   }
 
@@ -358,15 +407,58 @@
       const isPhotoOnly = portfolioItem.classList.contains('photo-only');
       const isBrandDevelopment = portfolioItem.classList.contains('brand-development');
       
-      // Check if this is a photo or brand item with image only
-      if ((isPhotoOnly || (isBrandDevelopment && !videoUrl && !projectUrl)) && imageUrl) {
+      // Handle brand development items first
+      if (isBrandDevelopment) {
+        // If it has a video URL, show video popup
+        if (videoUrl) {
+          const title = portfolioItem.dataset.title;
+          const category = portfolioItem.dataset.category;
+          const description = portfolioItem.dataset.description || '';
+          
+          // Handle YouTube embed URLs
+          let finalVideoUrl = videoUrl;
+          if (videoUrl.includes('youtube.com/embed/')) {
+            finalVideoUrl = videoUrl;
+          } else if (videoUrl.includes('youtu.be/') || videoUrl.includes('youtube.com/watch?v=')) {
+            let videoId = '';
+            if (videoUrl.includes('youtu.be/')) {
+              videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+            } else {
+              videoId = videoUrl.split('v=')[1].split('&')[0];
+            }
+            finalVideoUrl = `https://www.youtube.com/embed/${videoId}`;
+          }
+          
+          showVideoPopup(title, category, finalVideoUrl, description);
+          return;
+        }
+        
+        // If it has a project URL, open it
+        if (projectUrl) {
+          window.open(projectUrl, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        
+        // If it only has an image, show lightbox
+        if (imageUrl) {
+          const title = portfolioItem.dataset.title;
+          const description = portfolioItem.dataset.description || '';
+          showPhotoLightbox(imageUrl, title, description);
+          return;
+        }
+        
+        return;
+      }
+      
+      // Check if this is a photo with image only
+      if (isPhotoOnly && imageUrl) {
         const title = portfolioItem.dataset.title;
         const description = portfolioItem.dataset.description || '';
         showPhotoLightbox(imageUrl, title, description);
         return;
       }
       
-      // Check if this is a web project or brand project with a URL
+      // Check if this is a web project with a URL
       if (projectUrl && !videoUrl) {
         // Navigate to the project URL
         window.open(projectUrl, '_blank', 'noopener,noreferrer');
@@ -377,7 +469,7 @@
       if (videoUrl) {
         const title = portfolioItem.dataset.title;
         const category = portfolioItem.dataset.category;
-        const description = portfolioItem.dataset.description;
+        const description = portfolioItem.dataset.description || '';
 
         showVideoPopup(title, category, videoUrl, description);
       }
