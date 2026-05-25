@@ -12,5 +12,8 @@
     "api/wave/create-invoice.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/resume", "destination": "/resume.html" }
+  ]
 }

@@ -1,97 +1,1842 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Meet Cody Cochran</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:title" content="Meet Cody Cochran - Media Specialist & Full-Stack Developer">
-  <meta property="og:description" content="Media and IT specialist from Atlanta, Georgia. Specializing in full-stack development, IT support, and creative production with fast turnaround times.">
-  <meta property="og:image" content="OG_Image.png">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="">
-  <meta property="twitter:title" content="Meet Cody Cochran - Media Specialist & Full-Stack Developer">
-  <meta property="twitter:description" content="Media and IT specialist from Atlanta, Georgia. Specializing in full-stack development, IT support, and creative production with fast turnaround times.">
-  <meta property="twitter:image" content="OG_Image.png">
+  <meta charset="utf-8" />
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cody Cochran | Resume 2026</title>
+  <meta name="description" content="Resume for Cody Cochran, multimedia entrepreneur, community leader, and platform builder based in Atlanta, Georgia." />
+  <link rel="canonical" href="https://landing.cochranfilms.com/resume" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cody Cochran | Resume 2026" />
+  <meta property="og:description" content="Multimedia entrepreneur, community leader, platform builder, and founder of Cochran Films." />
+  <meta property="og:url" content="https://landing.cochranfilms.com/resume" />
+  <meta property="og:image" content="https://landing.cochranfilms.com/Cart_Banner_Image.png" />
+  <meta property="og:image:secure_url" content="https://landing.cochranfilms.com/Cart_Banner_Image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="576" />
+  <meta property="og:image:alt" content="Cochran Films creative powerhouse banner" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cody Cochran | Resume 2026" />
+  <meta name="twitter:description" content="Multimedia entrepreneur, community leader, platform builder, and founder of Cochran Films." />
+  <meta name="twitter:image" content="https://landing.cochranfilms.com/Cart_Banner_Image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; background:#fdfdfd; }
-    header { background:#FFB200; color:#000; padding:40px 20px; text-align:center; }
-    header h1 { margin:0; font-size:2.2em; }
-    section { max-width:900px; margin:40px auto; padding:0 20px; }
-    h2 { color:#FFB200; border-bottom:2px solid #FFB200; padding-bottom:5px; }
-    p { line-height:1.6; }
-    .highlight { border:1px solid #000; padding:15px; margin:20px 0; background:#fff; }
-    .highlight strong { display:block; margin-bottom:5px; }
-    .timeline { border-collapse: collapse; width:100%; margin-top:20px; }
-    .timeline th, .timeline td { border:1px solid #ccc; padding:10px; text-align:left; }
-    .timeline th { background:#FFB200; color:#000; }
-    footer { text-align:center; padding:20px; background:#000; color:#fff; }
-    a { color:#FFB200; text-decoration:none; font-weight:bold; }
-    a:hover { text-decoration:underline; }
+    :root {
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-gold: #FFB200;
+      --brand-blue: #0066CC;
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.72);
+      --card-border: 1px solid rgba(99,102,241,0.22);
+      --backdrop: blur(16px);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --glow-gold: 0 0 40px rgba(255,178,0,0.30);
+      --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(99,102,241,0.16), transparent 60%),
+        radial-gradient(900px 500px at 100% 10%, rgba(255,178,0,0.10), transparent 60%),
+        linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(2,6,23,1) 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.08) 1px, transparent 1px);
+      background-size: 84px 84px;
+      mask-image: radial-gradient(circle at center, black 0%, transparent 76%);
+    }
+
+    a { color: inherit; }
+
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 112px;
+      position: relative;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--brand-gold);
+      background: rgba(255,178,0,0.1);
+      border-color: rgba(255,178,0,0.3);
+      box-shadow: inset 0 0 0 1px rgba(255,178,0,0.12), 0 10px 24px rgba(255,178,0,0.10);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      color: #0a0a0a;
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: var(--glow-gold);
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 112px 0 70px;
+      text-align: center;
+    }
+
+    .resume-hero {
+      margin-bottom: 28px;
+    }
+
+    .top-banner {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      margin: 0 0 28px 50%;
+      transform: translateX(-50%);
+      border-top: 1px solid rgba(99,102,241,0.22);
+      border-bottom: 1px solid rgba(99,102,241,0.22);
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      background: rgba(2,6,23,0.72);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .top-banner img {
+      width: 100%;
+      min-height: 220px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      opacity: .9;
+    }
+
+    .hero-card,
+    .logo-strip,
+    .content-card,
+    .side-card,
+    .portfolio-section {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: var(--radius-lg);
+      backdrop-filter: var(--backdrop);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+      gap: 34px;
+      align-items: stretch;
+      padding: clamp(30px, 5vw, 56px);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      top: -130px;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      border: 48px solid rgba(255,178,0,0.08);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--brand-gold);
+      box-shadow: 0 0 20px rgba(255,178,0,0.75);
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(46px, 8vw, 86px);
+      line-height: .92;
+      letter-spacing: -0.055em;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #fff, #dbeafe 44%, #fde68a 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-title {
+      display: block;
+      margin-top: 16px;
+      color: var(--brand-gold);
+      font-weight: 800;
+      letter-spacing: .08em;
+      line-height: 1.6;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .summary {
+      margin: 28px 0 0;
+      color: var(--text-secondary);
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.75;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .summary strong {
+      color: var(--text-primary);
+      font-weight: 800;
+    }
+
+    .contact-card {
+      position: relative;
+      z-index: 1;
+      min-height: 100%;
+      overflow: hidden;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-left: 1px solid rgba(99,102,241,0.24);
+      border-radius: 20px;
+      background: rgba(2,6,23,0.38);
+    }
+
+    .contact-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      border: 0;
+      border-radius: 0;
+      object-fit: cover;
+      object-position: center top;
+      opacity: .42;
+      filter: saturate(.92) contrast(1.08);
+      box-shadow: none;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(2,6,23,0.18) 0%, rgba(2,6,23,0.54) 52%, rgba(2,6,23,0.94) 100%),
+        linear-gradient(90deg, rgba(15,23,42,0.48), transparent 42%);
+    }
+
+    .contact-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border: 1px solid rgba(255,178,0,0.18);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .contact-list {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 12px;
+      padding: 28px;
+      justify-items: center;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .contact-list i {
+      color: var(--brand-gold);
+      width: 18px;
+      text-align: center;
+    }
+
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      justify-content: center;
+    }
+
+    .tag,
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(255,178,0,0.28);
+      background: rgba(255,178,0,0.10);
+      color: #fde68a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      padding: 8px 12px;
+      text-transform: uppercase;
+    }
+
+    .logo-strip {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .logo-item {
+      min-height: 150px;
+      padding: 24px 18px 18px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 14px;
+      background: rgba(2,6,23,0.32);
+      border-right: 1px solid rgba(99,102,241,0.16);
+    }
+
+    .logo-item:last-child { border-right: 0; }
+
+    .logo-item img {
+      width: 100%;
+      height: 74px;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 24px rgba(0,0,0,0.42));
+    }
+
+    .logo-item.logo-tall img {
+      height: 86px;
+    }
+
+    .logo-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .content-card,
+    .side-card {
+      padding: clamp(24px, 4vw, 40px);
+    }
+
+    .section-label,
+    .side-section-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin: 36px 0 22px;
+    }
+
+    .section-label:first-child,
+    .side-section-label:first-child {
+      margin-top: 0;
+    }
+
+    .section-label::after,
+    .side-section-label::after {
+      content: "";
+      height: 1px;
+      flex: 0 1 120px;
+      background: linear-gradient(90deg, rgba(255,178,0,0.46), transparent);
+    }
+
+    .section-label::before,
+    .side-section-label::before {
+      content: "";
+      height: 1px;
+      flex: 0 1 120px;
+      background: linear-gradient(270deg, rgba(255,178,0,0.46), transparent);
+    }
+
+    .exp-item {
+      position: relative;
+      padding: 0 0 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(99,102,241,0.16);
+    }
+
+    .exp-item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .exp-item::before {
+      content: none;
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--brand-gold);
+      box-shadow: 0 0 22px rgba(255,178,0,0.7);
+    }
+
+    .exp-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .exp-role {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .exp-dates {
+      flex-shrink: 0;
+      border-radius: 999px;
+      background: rgba(99,102,241,0.14);
+      border: 1px solid rgba(99,102,241,0.28);
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      white-space: nowrap;
+    }
+
+    .exp-company,
+    .exp-company a,
+    .platform-url {
+      color: #fde68a;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .exp-company a:hover,
+    .platform-url:hover,
+    .footer-link:hover {
+      color: var(--brand-gold);
+    }
+
+    .exp-location {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .exp-bullets li {
+      position: relative;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      padding-left: 0;
+    }
+
+    .exp-bullets li::before {
+      content: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--brand-gold);
+      font-weight: 900;
+    }
+
+    .platform-badge,
+    .gpa-badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(16,185,129,0.28);
+      background: rgba(16,185,129,0.12);
+      color: #a7f3d0;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      margin-left: 8px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    .side-card {
+      position: sticky;
+      top: 104px;
+    }
+
+    .edu-block,
+    .cert-item,
+    .platform-item,
+    .skill-category {
+      margin-bottom: 18px;
+    }
+
+    .edu-degree,
+    .platform-name,
+    .campaign-card-title,
+    .skill-category-name {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .edu-school {
+      color: #fde68a;
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
+    .edu-meta,
+    .cert-issuer,
+    .platform-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.55;
+      margin-top: 4px;
+    }
+
+    .cert-name {
+      color: var(--text-secondary);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .platform-item {
+      border-left: 0;
+      border-top: 2px solid rgba(255,178,0,0.55);
+      padding: 14px 0 0;
+    }
+
+    .campaign-card {
+      display: block;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,178,0,0.30);
+      background: linear-gradient(135deg, rgba(255,178,0,0.14), rgba(99,102,241,0.12));
+      padding: 18px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .campaign-card:hover {
+      border-color: rgba(255,178,0,0.58);
+      box-shadow: 0 18px 40px rgba(255,178,0,0.10);
+      transform: translateY(-2px);
+    }
+
+    .campaign-card-stat {
+      color: var(--brand-gold);
+      font-family: 'Poppins', sans-serif;
+      font-size: 34px;
+      font-weight: 900;
+      margin-top: 4px;
+    }
+
+    .campaign-card-desc {
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    .campaign-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fde68a;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .10em;
+      margin-top: 16px;
+      text-transform: uppercase;
+    }
+
+    .skill-category-name {
+      color: var(--brand-gold);
+      font-size: 12px;
+      letter-spacing: .10em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-pill {
+      background: rgba(15,23,42,0.70);
+      border-color: rgba(99,102,241,0.26);
+      color: var(--text-secondary);
+      font-size: 11px;
+      padding: 7px 10px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .portfolio-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      padding: clamp(26px, 4vw, 42px);
+    }
+
+    .portfolio-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(2,6,23,0.92), rgba(15,23,42,0.72)),
+        url("assets/resume-portfolio/portfolio-highlight-1.gif") center / cover;
+      opacity: .72;
+      z-index: 0;
+    }
+
+    .portfolio-section::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 340px;
+      height: 340px;
+      border-radius: 999px;
+      border: 48px solid rgba(255,178,0,0.08);
+      z-index: 0;
+    }
+
+    .portfolio-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .portfolio-header {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(320px, 1.15fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .portfolio-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .portfolio-kicker {
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(36px, 6vw, 66px);
+      line-height: .95;
+      letter-spacing: -0.045em;
+      margin: 0 0 20px;
+      max-width: 560px;
+    }
+
+    .portfolio-title span {
+      background: linear-gradient(135deg, #fff, #dbeafe 44%, #fde68a 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .portfolio-lede {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .portfolio-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+      justify-content: center;
+    }
+
+    .portfolio-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,178,0,0.34);
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      box-shadow: var(--glow-gold);
+      color: #0a0a0a;
+      font-weight: 900;
+      padding: 13px 18px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .portfolio-button.secondary {
+      background: rgba(15,23,42,0.74);
+      box-shadow: none;
+      color: #fde68a;
+    }
+
+    .portfolio-button:hover {
+      filter: brightness(1.05);
+      transform: translateY(-2px);
+    }
+
+    .portfolio-feature {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+      border: 1px solid rgba(255,178,0,0.26);
+      border-radius: 24px;
+      background: rgba(2,6,23,0.64);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.45);
+    }
+
+    .portfolio-feature img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      display: block;
+      object-fit: cover;
+      opacity: .88;
+    }
+
+    .feature-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      max-width: calc(100% - 40px);
+      text-align: center;
+      border: 1px solid rgba(255,178,0,0.28);
+      border-radius: 18px;
+      background: rgba(2,6,23,0.78);
+      backdrop-filter: blur(14px);
+      color: var(--text-primary);
+      padding: 16px 18px;
+    }
+
+    .feature-badge strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .feature-badge span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .portfolio-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .portfolio-stat {
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 18px;
+      background: rgba(2,6,23,0.56);
+      padding: 18px;
+    }
+
+    .portfolio-stat strong {
+      display: block;
+      color: var(--brand-gold);
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-stat span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .portfolio-card {
+      overflow: hidden;
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 20px;
+      background: rgba(2,6,23,0.58);
+      transition: var(--transition-fast);
+    }
+
+    .portfolio-card:hover {
+      border-color: rgba(255,178,0,0.42);
+      transform: translateY(-3px);
+    }
+
+    .portfolio-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: rgba(2,6,23,0.86);
+    }
+
+    .portfolio-video iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .portfolio-card-body {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .portfolio-card-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 7px;
+    }
+
+    .portfolio-card-meta {
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-card-copy {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .creator-portfolio {
+      margin-top: 28px;
+    }
+
+    .creator-banner {
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
+      border: 1px solid rgba(37,99,235,0.36);
+      border-radius: 26px;
+      background: rgba(2,6,23,0.7);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.45);
+      margin-bottom: 28px;
+    }
+
+    .creator-banner-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: .82;
+    }
+
+    .creator-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(2,6,23,0.92) 0%, rgba(2,6,23,0.60) 48%, rgba(2,6,23,0.18) 100%),
+        linear-gradient(180deg, rgba(2,6,23,0.12) 0%, rgba(2,6,23,0.82) 100%);
+    }
+
+    .creator-banner-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(28px, 5vw, 54px);
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+    }
+
+    .creator-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(34px, 4.9vw, 60px);
+      line-height: .95;
+      letter-spacing: -0.05em;
+      margin: 0 0 18px;
+    }
+
+    .creator-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .creator-title span {
+      color: #3b82f6;
+    }
+
+    .creator-logo-inline {
+      display: block;
+      width: min(100%, 240px);
+      max-height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 14px rgba(255,255,255,0.32));
+      margin: 0 auto 18px;
+      opacity: .9;
+    }
+
+    .creator-copy {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .creator-platform-panel {
+      border: 1px solid rgba(59,130,246,0.30);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(37,99,235,0.14), rgba(255,178,0,0.08)),
+        rgba(2,6,23,0.58);
+      box-shadow: 0 22px 55px rgba(0,0,0,0.32);
+      margin: 28px 0;
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .creator-platform-label {
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .creator-platform-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin: 0 0 14px;
+    }
+
+    .creator-platform-copy {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 auto 22px;
+      max-width: 960px;
+    }
+
+    .creator-platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .creator-platform-item {
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 18px;
+      background: rgba(2,6,23,0.52);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .creator-platform-item strong {
+      display: block;
+      color: #93c5fd;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .creator-platform-item span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+      .nav-container {
+        justify-content: center;
+        height: auto;
+        min-height: 118px;
+        padding: 14px 20px;
+      }
+
+      .nav-logo {
+        position: static;
+      }
+
+      .hero-card,
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        border-left: 0;
+        border-top: 1px solid rgba(99,102,241,0.24);
+        min-height: 420px;
+      }
+
+      .side-card {
+        position: static;
+      }
+
+      .logo-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .portfolio-header,
+      .portfolio-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .creator-platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .creator-banner,
+      .creator-banner-content {
+        min-height: 500px;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 28px, 1180px);
+        padding-top: 132px;
+      }
+
+      .nav-menu {
+        gap: 4px;
+      }
+
+      .nav-link {
+        font-size: 13px;
+        padding: 9px 10px;
+      }
+
+      .logo-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .logo-item {
+        min-height: 132px;
+      }
+
+      .exp-header {
+        flex-direction: column;
+      }
+
+      .exp-dates {
+        white-space: normal;
+      }
+
+      .footer {
+        padding: 22px 0;
+      }
+
+      .portfolio-feature,
+      .portfolio-feature img {
+        min-height: 260px;
+      }
+
+      .portfolio-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .creator-platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creator-banner,
+      .creator-banner-content {
+        min-height: 420px;
+      }
+
+      .creator-title {
+        font-size: clamp(30px, 10vw, 44px);
+      }
+
+      .creator-title-line {
+        white-space: normal;
+      }
+
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Meet Cody Cochran</h1>
-    <p>Media Specialist • IT Systems • Full-Stack Developer</p>
-  </header>
+  <nav class="nav-wrapper" role="navigation" aria-label="Resume page navigation">
+    <div class="nav-container">
+      <a href="/resume" class="nav-logo" aria-label="Cochran Films resume page">
+        <img src="CF_Logo_White2025.png" alt="Cochran Films logo" onerror="this.src='Logo.png'" />
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#intro" class="nav-link active">Intro</a></li>
+        <li><a href="#portfolio-highlights" class="nav-link">Portfolio</a></li>
+        <li><a href="#brand-portfolio" class="nav-link">Brands</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#creator-collective" class="nav-link">Creator Collective</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m Cody Cochran, a media and IT specialist from Atlanta, Georgia. With over five years of professional, and over 10 years of personal experience in film and media, I specialize in blending full-stack development, IT support, and creative production to help businesses and entrepreneurs thrive.</p>
-    <p>I graduated from Full Sail University in July 2024 with a 3.6 GPA in Digital Cinematography. From building websites as a teenager to working with major brands like Disney and iHeart, I’ve grown into a professional who creates luxury websites, compelling films, and integrated business systems — all with some of the fastest turnaround times in Atlanta.</p>
+  <main class="page">
+    <section class="top-banner" aria-label="Cochran Films banner">
+      <img src="CF_LinkedIn_Banner2025.png" alt="Cochran Films Atlanta-based web and media experts banner">
+    </section>
 
-    <div class="highlight">
-      <strong>🎓 Education</strong> Full Sail University, Digital Cinematography, GPA 3.6 (2024)
-    </div>
-    <div class="highlight">
-      <strong>⚡ Media Turnaround</strong> 24–72 hours for video & photo projects
-    </div>
-    <div class="highlight">
-      <strong>💻 Web Turnaround</strong> 2–3 weeks for complete websites
-    </div>
-    <div class="highlight">
-      <strong>🛠️ Core Skills</strong> Film Production • Web Development • IT Systems • Marketing Integration
-    </div>
-    <div class="highlight">
-      <strong>🏆 Certifications</strong> Disney's Approach to Leadership Excellence | Disney Institute | 2023<br>Disney's Approach to Leadership Excellence | Disney Institute | 2022
-    </div>
-    <div class="highlight">
-      <strong>⭐ Specialties</strong> Directing, Cinematography, Film Editing, Lighting Design, Audio Engineering, Web Development.
-    </div>
-  </section>
-add 
-  <section>
-    <h2>Portfolio</h2>
-    <p>Explore some of my work:</p>
-    <ul>
-      <li>🎬 <a href="https://landing.cochranfilms.com" target="_blank">Video Portfolio</a></li>
-      <li>📸 <a href="https://www.cochranfilms.com/photography" target="_blank">Photography Portfolio</a></li>
-    </ul>
-  </section>
+    <section class="resume-hero" id="intro" aria-labelledby="resume-title">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <div class="eyebrow">Resume 2026</div>
+          <h1 id="resume-title">Cody <span>Cochran</span></h1>
+          <span class="hero-title">Multimedia Entrepreneur · Community Leader · Platform Builder</span>
+          <p class="summary">
+            Visionary entrepreneur and multimedia professional with deep expertise in <strong>film production, videography education, platform development, and B2B media agency services</strong>. Founder of Cochran Films and the Course Creator Academy ecosystem, operating as <strong>Creator Collective</strong>, empowering creatives through high-quality production, education, and cloud-based workflow tools across Atlanta's vibrant creative community. Builder of multiple digital platforms including <strong>DJs Need Luv 2</strong> and <strong>Bizzi Cloud</strong>. Skilled in leading-edge multimedia technology, leadership excellence, innovative app design, and scalable SaaS development.
+          </p>
 
-  <section>
-    <h2>My Journey</h2>
-    <table class="timeline">
-      <tr><th>Year / Age</th><th>Milestone</th></tr>
-      <tr><td>Age 12–13</td><td>Learned HTML via Adobe Dreamweaver, began repairing computers & building websites.</td></tr>
-      <tr><td>Age 16–17</td><td>Picked up a camera full-time, transitioned from photography to videography.</td></tr>
-      <tr><td>2020</td><td>Co-founded Back in FX with Monisha Haynes; secured work with iHeart, Disney, and Southern Company.</td></tr>
-      <tr><td>2021–2022</td><td>Worked on Mayor Andre Dickens’ winning campaign.</td></tr>
-      <tr><td>2022–2024</td><td>Earned Digital Cinematography degree at Full Sail University.</td></tr>
-      <tr><td>2024</td><td>Pivoted into system design & full-stack media integration.</td></tr>
-      <tr><td>2025</td><td>Launched Course Creator Academy; developed advanced business systems for clients.</td></tr>
-      <tr><td>Today</td><td>Full-stack developer & media producer helping businesses and entrepreneurs build impactful systems.</td></tr>
-    </table>
-  </section>
+          <div class="tags-row" aria-label="Professional focus areas">
+            <span class="tag">Film Production</span>
+            <span class="tag">Videography Education</span>
+            <span class="tag">Platform Development</span>
+            <span class="tag">B2B Agency</span>
+            <span class="tag">Brand Strategy</span>
+            <span class="tag">SaaS &amp; Cloud</span>
+            <span class="tag">Campaign Strategy</span>
+            <span class="tag">Community Leadership</span>
+          </div>
+        </div>
 
-  <footer>
-    <p>© 2025 Cody Cochran | Atlanta, GA</p>
-  </footer>
+        <aside class="contact-card" aria-label="Contact information">
+          <img class="contact-photo" src="Graduate.jpg" alt="Cody Cochran graduation portrait" />
+          <div class="contact-list">
+            <a href="mailto:info@cochranfilms.com"><i class="fa-solid fa-envelope"></i> info@cochranfilms.com</a>
+            <a href="tel:4704202169"><i class="fa-solid fa-phone"></i> (470) 420-2169</a>
+            <span><i class="fa-solid fa-location-dot"></i> Atlanta, Georgia</span>
+            <a href="https://cochranfilms.studio" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> cochranfilms.studio</a>
+            <a href="https://www.linkedin.com/in/codycochran" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio-highlights" aria-labelledby="portfolio-highlights-title">
+      <div class="portfolio-inner">
+        <div class="portfolio-header">
+          <div class="portfolio-copy">
+            <div class="portfolio-kicker">Portfolio Highlights</div>
+            <h2 class="portfolio-title" id="portfolio-highlights-title">Impactful Visuals, <span>Built With Strategy</span></h2>
+            <p class="portfolio-lede">
+              Witness the artistry behind impactful visuals. This selected work spans compelling corporate narratives and electrifying live events, redefining production excellence and strategic engagement across short films, corporate videos, educational content, and event coverage.
+            </p>
+            <div class="portfolio-actions">
+              <a class="portfolio-button" href="assets/resume-portfolio/Portfolio-Highlights.pptx" download>
+                Download Deck <i class="fa-solid fa-download"></i>
+              </a>
+              <a class="portfolio-button secondary" href="https://cochranfilms.com/" target="_blank" rel="noopener">
+                View Site Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-feature">
+            <img src="assets/resume-portfolio/portfolio-highlight-2.png" alt="Cinematic production camera in a colorful studio environment">
+            <div class="feature-badge">
+              <strong>Production Excellence</strong>
+              <span>Every project is crafted with attention to detail, visual polish, and strategic alignment with client goals.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-stats" aria-label="Portfolio capabilities">
+          <div class="portfolio-stat">
+            <strong>100+</strong>
+            <span>Delighted clients served across Atlanta and beyond.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>500+</strong>
+            <span>Successful projects delivered across production, education, and campaigns.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>24/7</strong>
+            <span>Support available around the clock for every client.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>B2B</strong>
+            <span>Media systems designed for businesses, founders, nonprofits, and creative teams.</span>
+          </div>
+        </div>
+
+        <div class="portfolio-gallery" aria-label="Playable portfolio videos">
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/o1q-o-Mb3hc?rel=0" title="Live Interview Storytelling" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Event Coverage</div>
+              <div class="portfolio-card-title">Live Interview Storytelling</div>
+              <p class="portfolio-card-copy">Field-ready production built for community events, creator conversations, and branded moments that need authentic energy.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/nCkw3w3RaYE?rel=0" title="Black Business Campaign Media" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Campaign Content</div>
+              <div class="portfolio-card-title">Black Business Campaign Media</div>
+              <p class="portfolio-card-copy">High-impact campaign visuals designed to move audiences, strengthen community engagement, and support measurable goals.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/cWOiRbn8BZc?rel=0" title="Russell Center Family Matters" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Corporate Narrative</div>
+              <div class="portfolio-card-title">Russell Center Family Matters</div>
+              <p class="portfolio-card-copy">Narrative-driven production using location, motion, and pacing to give organizations a polished visual identity.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/wygvyWjEAXU?rel=0" title="Community Event Documentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Conference Production</div>
+              <div class="portfolio-card-title">Community Event Documentation</div>
+              <p class="portfolio-card-copy">Professional capture for conferences, panels, and partner events where clean coverage and fast storytelling matter.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip" id="brand-portfolio" aria-label="Brand portfolio">
+      <div class="logo-item">
+        <img src="Logo.png" alt="Cochran Films logo">
+        <span class="logo-label">Cochran Films</span>
+      </div>
+      <div class="logo-item">
+        <img src="Course-Creator-Academy-Logo.png" alt="Course Creator Academy logo">
+        <span class="logo-label">Course Creator Academy</span>
+      </div>
+      <div class="logo-item">
+        <img src="Creator-Collective-Logo.png" alt="Creator Collective logo">
+        <span class="logo-label">Creator Collective</span>
+      </div>
+      <div class="logo-item logo-tall">
+        <img src="Bizzi-Cloud-Logo.png" alt="Bizzi Cloud logo">
+        <span class="logo-label">Bizzi Cloud</span>
+      </div>
+      <div class="logo-item logo-tall">
+        <img src="DJs-Logo.png" alt="DJs Need Luv 2 logo">
+        <span class="logo-label">DJs Need Luv 2</span>
+      </div>
+      <div class="logo-item">
+        <img src="Shawnta-Logo.png" alt="Shawnta Hooks logo">
+        <span class="logo-label">Shawnta Hooks</span>
+      </div>
+    </section>
+
+    <div class="resume-grid" id="experience">
+      <section class="content-card" aria-label="Industry experience">
+        <div class="section-label">Industry Experience</div>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">CEO &amp; Founder</div>
+            <div class="exp-dates">Dec 2024 – Present</div>
+          </div>
+          <div class="exp-company"><a href="https://cochranfilms.studio" target="_blank" rel="noopener">Cochran Films LLC</a></div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Oversee all aspects of film production and client projects, ensuring premium-quality deliverables across corporate, commercial, and documentary verticals.</li>
+            <li>Build and maintain long-term client relationships through tailored media solutions and strategic storytelling.</li>
+            <li>Lead a team of videographers, editors, and creative professionals, fostering a high-output, collaborative studio culture.</li>
+            <li>Direct business development, brand positioning, and market expansion for the Cochran Films brand.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Founder &amp; CEO — Course Creator Academy <span class="platform-badge">DBA: Creator Collective</span></div>
+            <div class="exp-dates">Aug 2024 – Present</div>
+          </div>
+          <div class="exp-company">
+            <a href="https://coursecreatoracademy.org" target="_blank" rel="noopener">coursecreatoracademy.org</a>
+            &nbsp;·&nbsp;
+            <a href="https://www.creatorcollective.media" target="_blank" rel="noopener">creatorcollective.media</a>
+          </div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Established an educational platform and media brand empowering creators with videography, cinematography, and film production skills through in-person and online courses.</li>
+            <li>Operates as <strong>Creator Collective</strong>, a full-service B2B media agency offering production, brand storytelling, content strategy, and campaign services to businesses and organizations.</li>
+            <li>Developed a mobile app for course access, community engagement, and creative learning resource delivery.</li>
+            <li>Built and launched <strong>DJs Need Luv 2</strong> (djsneedluv2.com), a dedicated digital platform connecting DJs with opportunities, bookings, and a creator-focused community.</li>
+            <li>Architected and launched <strong>Bizzi Cloud</strong> (bizzicloud.io), an all-in-one cloud storage and workflow platform purpose-built for creative professionals and production teams.</li>
+            <li>Secured and executed campaign support for The RICE Way Challenge, contributing to approximately $75,000 raised toward a $100,000 community fundraising goal for Black-owned businesses.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Founder — CLC Collective</div>
+            <div class="exp-dates">Nov 2024 – Present</div>
+          </div>
+          <div class="exp-company">CLC Collective</div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Established a media powerhouse umbrella organization dedicated to elevating stories and empowering creatives across multiple brand verticals.</li>
+            <li>Oversees Cochran Films and Course Creator Academy/Creator Collective as part of the collective's portfolio.</li>
+            <li>Coordinated strategic partnerships to enhance service offerings and expand market reach across brands.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Co-Owner &amp; Media Director</div>
+            <div class="exp-dates">Jan 2020 – Dec 2024</div>
+          </div>
+          <div class="exp-company">Back in FX</div>
+          <div class="exp-location">Douglasville, GA</div>
+          <ul class="exp-bullets">
+            <li>Produced, directed, and edited client content using industry-standard Sony FX-series cameras, GODOX lighting, and DJI aerial systems.</li>
+            <li>Designed and managed the company website, digital marketing funnel, and client-facing brand assets.</li>
+            <li>Created invoices, proposals, and client quotes; managed full production lifecycle from brief to delivery.</li>
+            <li>Spearheaded online and offline business promotion, growing brand visibility across the metro Atlanta market.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Director of Photography</div>
+            <div class="exp-dates">Aug 2023 – Apr 2024</div>
+          </div>
+          <div class="exp-company">iHeart Podcast — Storytime with Legendary Jerry</div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Captured podcast episodes across multiple locations for the iHeart Radio network.</li>
+            <li>Designed and implemented custom lighting setups for varying production environments.</li>
+            <li>Operated advanced audio and video equipment during One Music Fest coverage.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Documentary Filmmaker</div>
+            <div class="exp-dates">Aug – Sep 2023</div>
+          </div>
+          <div class="exp-company">Rogue Society Mini Documentary</div>
+          <div class="exp-location">Douglasville, GA</div>
+          <ul class="exp-bullets">
+            <li>Led all production departments, lighting, audio, camera operation, and editing, for a short-form documentary highlighting the Rogue Society clothing brand.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Videographer</div>
+            <div class="exp-dates">Jul 2021 – Jan 2022</div>
+          </div>
+          <div class="exp-company">Andre Dickens Mayoral Campaign</div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Filmed and edited promotional videos driving campaign outreach and voter engagement.</li>
+            <li>Documented Mayoral race events, building a comprehensive content archive for the campaign team.</li>
+            <li>Collaborated with campaign staff to produce media that moved audiences and built momentum.</li>
+          </ul>
+        </article>
+
+        <div class="section-label">Campaign &amp; Brand Highlights</div>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Social Campaign Strategist &amp; Content Builder</div>
+            <div class="exp-dates">Ongoing</div>
+          </div>
+          <div class="exp-company">Russell Innovation Center for Entrepreneurs (RICE)</div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Contributed to promotional execution for The RICE Way Challenge, a community-centered fundraising initiative supporting Black-owned businesses, helping move the campaign toward a $75,000 milestone of a $100,000 goal.</li>
+            <li>Operated in a storytelling-driven campaign environment where messaging consistency and audience connection drove performance.</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Campaign Strategist — Development Phase</div>
+            <div class="exp-dates">Ongoing</div>
+          </div>
+          <div class="exp-company">Inner Audit System with Shawntá Hooks</div>
+          <div class="exp-location">Atlanta, GA</div>
+          <ul class="exp-bullets">
+            <li>Supporting launch positioning of a performance regulation system for high performers, shaping messaging, digital presentation, audience education, and campaign structure for rollout.</li>
+          </ul>
+        </article>
+      </section>
+
+      <aside class="side-card" aria-label="Resume details">
+        <div class="side-section-label">Education</div>
+        <div class="edu-block">
+          <div class="edu-degree">B.S. in Digital Cinematography</div>
+          <div class="edu-school">Full Sail University</div>
+          <div class="edu-meta">Winter Park, FL · 2024</div>
+          <span class="gpa-badge">GPA 3.6</span>
+        </div>
+
+        <div class="side-section-label">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-name">Disney's Approach to Leadership Excellence</div>
+          <div class="cert-issuer">Disney Institute · 2022 &amp; 2023</div>
+        </div>
+
+        <div class="side-section-label">Platforms Built</div>
+        <div class="platform-item">
+          <div class="platform-name">Creator Collective</div>
+          <a class="platform-url" href="https://www.creatorcollective.media" target="_blank" rel="noopener">creatorcollective.media</a>
+          <div class="platform-desc">Creator community &amp; B2B media agency. Opportunities, education, collaboration, and campaign services.</div>
+        </div>
+        <div class="platform-item">
+          <div class="platform-name">Course Creator Academy Agency</div>
+          <a class="platform-url" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">coursecreatoracademy.org</a>
+          <div class="platform-desc">B2B videography education &amp; production agency for businesses and organizations.</div>
+        </div>
+        <div class="platform-item">
+          <div class="platform-name">DJs Need Luv 2</div>
+          <a class="platform-url" href="https://djsneedluv2.com" target="_blank" rel="noopener">djsneedluv2.com</a>
+          <div class="platform-desc">Digital platform connecting DJs with bookings, resources, and creator community tools.</div>
+        </div>
+        <div class="platform-item">
+          <div class="platform-name">Bizzi Cloud</div>
+          <a class="platform-url" href="https://www.bizzicloud.io" target="_blank" rel="noopener">bizzicloud.io</a>
+          <div class="platform-desc">All-in-one cloud storage &amp; workflow platform built for creative professionals and production teams.</div>
+        </div>
+        <div class="platform-item">
+          <div class="platform-name">Cochran Films Studio</div>
+          <a class="platform-url" href="https://cochranfilms.studio" target="_blank" rel="noopener">cochranfilms.studio</a>
+          <div class="platform-desc">Full-service film production studio portfolio and client hub.</div>
+        </div>
+
+        <div class="side-section-label">Campaign Impact</div>
+        <a class="campaign-card" href="https://thericeway.org/" target="_blank" rel="noopener">
+          <div class="campaign-card-title">The RICE Way Challenge</div>
+          <div class="campaign-card-stat">$75K</div>
+          <div class="campaign-card-desc">Raised toward $100K goal supporting Black-owned businesses through community storytelling and campaign strategy.</div>
+          <div class="campaign-card-link">View Official Page <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        </a>
+
+        <div class="side-section-label">Core Skills</div>
+        <div class="skill-category">
+          <div class="skill-category-name">Production &amp; Camera</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Sony FX6 / FX3</span>
+            <span class="skill-pill">GODOX Lighting</span>
+            <span class="skill-pill">DJI Aerial</span>
+            <span class="skill-pill">RODE Audio</span>
+            <span class="skill-pill">Directing</span>
+            <span class="skill-pill">Cinematography</span>
+            <span class="skill-pill">Lighting Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-name">Software</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Final Cut Pro</span>
+            <span class="skill-pill">Adobe Premiere</span>
+            <span class="skill-pill">Photoshop</span>
+            <span class="skill-pill">Illustrator</span>
+            <span class="skill-pill">Dreamweaver</span>
+            <span class="skill-pill">MailChimp</span>
+            <span class="skill-pill">Trello</span>
+            <span class="skill-pill">WaveApps</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-name">Developer &amp; AI Tools</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Xcode</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">Auth0</span>
+            <span class="skill-pill">Cloudinary</span>
+            <span class="skill-pill">OpenAI</span>
+            <span class="skill-pill">Cursor</span>
+            <span class="skill-pill">Replit</span>
+            <span class="skill-pill">ChatGPT</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-name">Business &amp; Strategy</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Campaign Strategy</span>
+            <span class="skill-pill">Brand Storytelling</span>
+            <span class="skill-pill">Content Planning</span>
+            <span class="skill-pill">B2B Agency Ops</span>
+            <span class="skill-pill">Team Leadership</span>
+            <span class="skill-pill">Platform Launch</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="portfolio-section creator-portfolio" id="creator-collective" aria-labelledby="creator-collective-title">
+      <div class="portfolio-inner">
+        <div class="creator-banner">
+          <img class="creator-banner-bg" src="IMG_87072.png" alt="Creator Collective production team creating branded video content">
+          <div class="creator-banner-content">
+            <img class="creator-logo-inline" src="CC-Logo-White.png" alt="Creator Collective">
+            <h2 class="creator-title" id="creator-collective-title">
+              <span class="creator-title-line">Film, Content,</span>
+              <span class="creator-title-line">and <span>Brand Education</span></span>
+            </h2>
+            <p class="creator-copy">
+              Through a partnership and co-ownership role with Creator Collective, Cody helps ambitious entrepreneurs in the media space build real production skills, stronger brands, and repeatable content systems across videography, photography, editing, and business-focused creative education.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-stats" aria-label="Creator Collective focus areas">
+          <div class="portfolio-stat">
+            <strong>Film</strong>
+            <span>Hands-on production guidance for creators learning how to plan, shoot, light, and tell stronger stories.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>Content</strong>
+            <span>Education built around consistent content creation, audience trust, and platform-ready delivery.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>Brand</strong>
+            <span>Strategic coaching for entrepreneurs turning creative skills into clear offers and recognizable positioning.</span>
+          </div>
+          <div class="portfolio-stat">
+            <strong>Platform</strong>
+            <span>A business and media growth ecosystem helping creators learn, organize, find opportunities, and build stronger careers.</span>
+          </div>
+        </div>
+
+        <div class="creator-platform-panel">
+          <div class="creator-platform-label">Full Creator Ecosystem</div>
+          <h3 class="creator-platform-title">More than a community.<br>A platform for creative growth.</h3>
+          <p class="creator-platform-copy">
+            Creator Collective helps creators make more money, get more organized, access better opportunities, and operate with the confidence of a real creative business. It blends education, networking, business tools, brand development, marketplace potential, and premium media agency support into one ecosystem for ambitious videographers, photographers, editors, DJs, podcasters, and creative entrepreneurs.
+          </p>
+          <div class="creator-platform-grid" aria-label="Creator Collective platform benefits">
+            <div class="creator-platform-item">
+              <strong>Learn</strong>
+              <span>Practical training across production, editing, content creation, pricing, client communication, and business growth.</span>
+            </div>
+            <div class="creator-platform-item">
+              <strong>Earn</strong>
+              <span>Access to real gigs, brand work, business requests, local opportunities, and marketplace-style creator matching.</span>
+            </div>
+            <div class="creator-platform-item">
+              <strong>Operate</strong>
+              <span>Tools and workflows for project organization, job listings, client intake, invoices, requests, and admin systems.</span>
+            </div>
+            <div class="creator-platform-item">
+              <strong>Scale</strong>
+              <span>Brand development, safer client workflows, templates, resources, and agency-level support for serious creators.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-gallery" aria-label="Creator Collective portfolio videos">
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/3-msojt4yuk?rel=0" title="80% Of Videography Basics In 20 Minutes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Videography Education</div>
+              <div class="portfolio-card-title">80% Of Videography Basics In 20 Minutes</div>
+              <p class="portfolio-card-copy">A practical entry point for creators who want to understand the core fundamentals behind stronger video production.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/wgXzEdZtyRM?rel=0" title="SD FIRST, SHOOT SECOND" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Production Workflow</div>
+              <div class="portfolio-card-title">SD FIRST, SHOOT SECOND</div>
+              <p class="portfolio-card-copy">A workflow-focused lesson for media entrepreneurs learning how to protect footage and think like professionals on set.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/SeQh75iUSIc?rel=0" title="STAY FOCUSED, NOT DISTRACTED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Creative Mindset</div>
+              <div class="portfolio-card-title">STAY FOCUSED, NOT DISTRACTED</div>
+              <p class="portfolio-card-copy">Brand and mindset education for ambitious creators balancing creativity, consistency, and business growth.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/eImA5EvDyEw?rel=0" title="The Smile Campaign" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta">Campaign Storytelling</div>
+              <div class="portfolio-card-title">The Smile Campaign</div>
+              <p class="portfolio-card-copy">A campaign-driven example of how Creator Collective blends message, visuals, and emotional clarity for audience connection.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a class="footer-link" href="https://cochranfilms.studio" target="_blank" rel="noopener">cochranfilms.studio</a>
+        <a class="footer-link" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">coursecreatoracademy.org</a>
+        <a class="footer-link" href="https://www.creatorcollective.media" target="_blank" rel="noopener">creatorcollective.media</a>
+        <a class="footer-link" href="https://djsneedluv2.com" target="_blank" rel="noopener">djsneedluv2.com</a>
+        <a class="footer-link" href="https://www.bizzicloud.io" target="_blank" rel="noopener">bizzicloud.io</a>
+      </div>
+      <div class="footer-note">Cody Cochran · Atlanta, GA · 2026</div>
+    </footer>
+  </main>
+  <script>
+    const resumeNavLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+    const resumeSections = resumeNavLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    function setActiveResumeNav(sectionId) {
+      resumeNavLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
+      });
+    }
+
+    resumeNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const targetId = link.getAttribute('href').slice(1);
+        setActiveResumeNav(targetId);
+      });
+    });
+
+    const resumeObserver = new IntersectionObserver((entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry) {
+        setActiveResumeNav(visibleEntry.target.id);
+      }
+    }, {
+      rootMargin: '-35% 0px -50% 0px',
+      threshold: [0.15, 0.35, 0.6]
+    });
+
+    resumeSections.forEach((section) => resumeObserver.observe(section));
+  </script>
 </body>
 </html>
