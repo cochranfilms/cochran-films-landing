@@ -179,7 +179,7 @@
       z-index: 2;
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 112px 0 70px;
+      padding: 112px 0 34px;
       text-align: center;
     }
 
@@ -1083,27 +1083,154 @@
     }
 
     .footer {
-      margin-top: 28px;
-      padding: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      margin-top: 18px;
+      padding: clamp(24px, 4vw, 38px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      gap: 28px;
+      align-items: stretch;
+      border: 1px solid rgba(255,178,0,0.22);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(2,6,23,0.92), rgba(15,23,42,0.76)),
+        radial-gradient(circle at 8% 0%, rgba(255,178,0,0.16), transparent 34%),
+        radial-gradient(circle at 100% 20%, rgba(99,102,241,0.20), transparent 36%);
+      box-shadow: var(--shadow-lg);
       color: var(--text-muted);
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(90deg, black, transparent 72%);
+      opacity: .58;
+    }
+
+    .footer-brand,
+    .footer-action-panel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-brand {
+      display: grid;
+      justify-items: start;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .footer-mark {
+      width: 112px;
+      height: auto;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,0.35));
+    }
+
+    .footer-kicker {
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .footer-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1.04;
+      margin: 0;
+      max-width: 680px;
+    }
+
+    .footer-copy {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .footer-action-panel {
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 16px;
+      background: rgba(2,6,23,0.46);
+      padding: clamp(18px, 3vw, 26px);
+      text-align: center;
+    }
+
+    .footer-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255,178,0,0.42);
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--brand-gold), #fde68a);
+      color: #0f172a;
+      font-weight: 950;
+      letter-spacing: .08em;
+      padding: 14px 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 18px 42px rgba(255,178,0,0.16);
+      transition: var(--transition-fast);
+    }
+
+    .footer-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 52px rgba(255,178,0,0.22);
     }
 
     .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
     }
 
     .footer-link {
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px;
+      background: rgba(15,23,42,0.54);
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .04em;
+      padding: 11px 12px;
       text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      border-color: rgba(255,178,0,0.32);
+      background: rgba(255,178,0,0.10);
+      transform: translateY(-1px);
+    }
+
+    .footer-link:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    .footer-note {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .10em;
+      text-transform: uppercase;
     }
 
     .portfolio-section {
@@ -1540,7 +1667,7 @@
     .brand-showcase-stack {
       display: grid;
       gap: 28px;
-      margin: 28px 0;
+      margin: 28px 0 0;
     }
 
     .brand-showcase-section {
@@ -1912,6 +2039,15 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .footer {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        justify-items: center;
+        text-align: center;
+      }
+
       .creator-platform-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -1955,7 +2091,11 @@
       }
 
       .footer {
-        padding: 22px 0;
+        padding: 22px;
+      }
+
+      .footer-links {
+        grid-template-columns: 1fr;
       }
 
       .portfolio-feature,
@@ -2702,15 +2842,28 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="footer-links">
-        <a class="footer-link" href="https://cochranfilms.studio" target="_blank" rel="noopener">cochranfilms.studio</a>
-        <a class="footer-link" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">coursecreatoracademy.org</a>
-        <a class="footer-link" href="https://www.creatorcollective.media" target="_blank" rel="noopener">creatorcollective.media</a>
-        <a class="footer-link" href="https://djsneedluv2.com" target="_blank" rel="noopener">djsneedluv2.com</a>
-        <a class="footer-link" href="https://www.bizzicloud.io" target="_blank" rel="noopener">bizzicloud.io</a>
+    <footer class="footer" aria-label="Cochran Films resume footer">
+      <div class="footer-brand">
+        <img class="footer-mark" src="CF_Logo_White2025.png" alt="Cochran Films logo" onerror="this.src='Logo.png'">
+        <div class="footer-kicker">Available for brand partnerships, campaigns, and production systems</div>
+        <h2 class="footer-title">Built for brands that need strategy, polish, and production that performs.</h2>
+        <p class="footer-copy">
+          Cochran Films partners with founders, agencies, nonprofits, civic leaders, and creative teams to produce media, education, and digital systems that make every brand moment feel intentional.
+        </p>
+        <div class="footer-note">Cody Cochran · Atlanta, GA · 2026</div>
       </div>
-      <div class="footer-note">Cody Cochran · Atlanta, GA · 2026</div>
+      <div class="footer-action-panel">
+        <a class="footer-cta" href="https://coursecreatoracademy.org/" target="_blank" rel="noopener">
+          Start a Brand Conversation <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <div class="footer-links">
+          <a class="footer-link" href="https://cochranfilms.studio" target="_blank" rel="noopener">Cochran Films</a>
+          <a class="footer-link" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">Course Creator Academy</a>
+          <a class="footer-link" href="https://www.creatorcollective.media" target="_blank" rel="noopener">Creator Collective</a>
+          <a class="footer-link" href="https://djsneedluv2.com" target="_blank" rel="noopener">DJs Need Luv 2</a>
+          <a class="footer-link" href="https://www.bizzicloud.io" target="_blank" rel="noopener">Bizzi Cloud</a>
+        </div>
+      </div>
     </footer>
   </main>
 
