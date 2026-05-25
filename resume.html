@@ -1330,6 +1330,307 @@
       line-height: 1.5;
     }
 
+    .creator-platform-panel .portfolio-gallery {
+      margin-top: 24px;
+    }
+
+    .hero-card,
+    .logo-strip,
+    .content-card,
+    .side-card,
+    .mayor-card,
+    .campaign-card,
+    .portfolio-stat,
+    .portfolio-card,
+    .creator-platform-panel,
+    .creator-platform-item,
+    .brand-showcase-section,
+    .brand-showcase-card,
+    .brand-video-card,
+    .brand-social-card {
+      background-image:
+        linear-gradient(135deg, rgba(2,6,23,0.88), rgba(15,23,42,0.68)),
+        url("assets/resume-portfolio/portfolio-highlight-1.gif");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .brand-showcase-stack {
+      display: grid;
+      gap: 28px;
+      margin: 28px 0;
+    }
+
+    .brand-showcase-section {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(99,102,241,0.24);
+      border-radius: 26px;
+      box-shadow: var(--shadow-lg);
+      padding: clamp(24px, 4vw, 40px);
+    }
+
+    .brand-showcase-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,178,0,0.18), transparent 34%),
+        radial-gradient(circle at 82% 12%, rgba(99,102,241,0.16), transparent 36%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .brand-showcase-section.purple::before {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(168,85,247,0.20), transparent 34%),
+        radial-gradient(circle at 82% 12%, rgba(236,72,153,0.18), transparent 36%);
+    }
+
+    .brand-showcase-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-showcase-header {
+      max-width: 900px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255,178,0,0.32);
+      border-radius: 999px;
+      background: rgba(255,178,0,0.10);
+      color: #fde68a;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      padding: 10px 16px;
+      text-transform: uppercase;
+    }
+
+    .brand-showcase-section.purple .brand-pill {
+      border-color: rgba(236,72,153,0.34);
+      background: rgba(168,85,247,0.12);
+      color: #f5d0fe;
+    }
+
+    .brand-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin: 22px 0 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo-badge {
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,178,0,0.30);
+      border-radius: 24px;
+      background: rgba(2,6,23,0.60);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.28);
+      padding: 12px;
+    }
+
+    .brand-logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-showcase-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: .98;
+      letter-spacing: -0.045em;
+      margin: 0;
+    }
+
+    .brand-showcase-title span {
+      background: linear-gradient(135deg, #fff, #dbeafe 44%, #fde68a 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .brand-showcase-section.purple .brand-showcase-title span {
+      background: linear-gradient(135deg, #fff, #f5d0fe 44%, #fb7185 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .brand-showcase-lede {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.75;
+      margin: 0 auto;
+      max-width: 760px;
+    }
+
+    .brand-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .brand-showcase-card {
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 20px;
+      padding: 22px;
+      text-align: left;
+    }
+
+    .brand-showcase-card h4 {
+      color: var(--brand-gold);
+      font-family: 'Poppins', sans-serif;
+      font-size: 21px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .brand-showcase-section.purple .brand-showcase-card h4 {
+      color: #f0abfc;
+    }
+
+    .brand-showcase-card p,
+    .brand-showcase-card li {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .brand-showcase-card p {
+      margin: 0 0 14px;
+    }
+
+    .brand-check-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .brand-check-list li {
+      position: relative;
+      display: block;
+      min-height: 30px;
+      padding-left: 42px;
+      line-height: 1.55;
+    }
+
+    .brand-check-icon {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(255,178,0,0.14);
+      color: var(--brand-gold);
+      flex-shrink: 0;
+    }
+
+    .brand-check-icon i {
+      display: block;
+      color: currentColor;
+      font-size: 12px;
+      line-height: 1;
+      transform: translateY(0);
+    }
+
+    .brand-check-text {
+      display: block;
+      min-width: 0;
+      padding-top: 0;
+      line-height: 1.55;
+    }
+
+    .brand-showcase-section.purple .brand-check-icon {
+      background: rgba(168,85,247,0.16);
+      color: #f0abfc;
+    }
+
+    .brand-video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .brand-video-card {
+      overflow: hidden;
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 20px;
+    }
+
+    .brand-video-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      border-top: 1px solid rgba(99,102,241,0.18);
+      padding: 14px 16px;
+      align-items: center;
+    }
+
+    .brand-video-meta strong {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    .brand-video-meta span {
+      color: var(--brand-gold);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-showcase-section.purple .brand-video-meta span {
+      color: #f0abfc;
+    }
+
+    .brand-social-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .brand-social-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(236,72,153,0.26);
+      border-radius: 14px;
+      color: #f5d0fe;
+      font-weight: 900;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .brand-social-card:hover {
+      border-color: rgba(236,72,153,0.48);
+      transform: translateY(-2px);
+    }
+
     @media (max-width: 980px) {
       .nav-container {
         justify-content: center;
@@ -1368,7 +1669,9 @@
       }
 
       .portfolio-header,
-      .portfolio-gallery {
+      .portfolio-gallery,
+      .brand-showcase-grid,
+      .brand-video-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1467,6 +1770,7 @@
         <li><a href="#brand-portfolio" class="nav-link">Brands</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#creator-collective" class="nav-link">Creator Collective</a></li>
+        <li><a href="#featured-work" class="nav-link">Featured Work</a></li>
       </ul>
     </div>
   </nav>
@@ -1972,7 +2276,6 @@
               <span>Brand development, safer client workflows, templates, resources, and agency-level support for serious creators.</span>
             </div>
           </div>
-        </div>
 
         <div class="portfolio-gallery" aria-label="Creator Collective portfolio videos">
           <article class="portfolio-card">
@@ -2019,6 +2322,149 @@
             </div>
           </article>
         </div>
+        </div>
+
+        <div class="brand-showcase-stack" id="featured-work" aria-label="Featured brand and strategic partner case studies">
+          <section class="brand-showcase-section" aria-labelledby="ceven-skin-title">
+            <div class="brand-showcase-inner">
+              <div class="brand-showcase-header">
+                <div class="brand-pill"><i class="fa-solid fa-fire"></i> Featured Brand</div>
+                <div class="brand-title-row">
+                  <div class="brand-logo-badge">
+                    <img src="CevinKIDSlogo.avif" alt="Ceven Skin Kids Fresh logo">
+                  </div>
+                  <h3 class="brand-showcase-title" id="ceven-skin-title">Featured Brand: <span>Ceven Skin®</span></h3>
+                </div>
+                <p class="brand-showcase-lede">
+                  We have built brands from scratch, including our own. Cochran Films designs and executes complete brand ecosystems with purpose, clarity, and action.
+                </p>
+              </div>
+
+              <div class="brand-showcase-grid">
+                <article class="brand-showcase-card">
+                  <h4>Case Study: Kids Fresh Face Wash Commercial</h4>
+                  <p>
+                    Our Brand Building service goes beyond logos and websites. We craft the visual stories that define how audiences connect with a product. Ceven Skin® trusted the team to produce a broadcast-quality commercial for their Kids Fresh Face Toner &amp; Wash, directing the process from ideation through delivery.
+                  </p>
+                  <ul class="brand-check-list">
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Creative direction and concept development</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Full scriptwriting and storyboarding</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">On-location casting with real kids</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Professional cinematography and lighting setup</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Voiceover, music licensing, and post-production</span></li>
+                  </ul>
+                </article>
+
+                <article class="brand-showcase-card">
+                  <h4>Our Approach</h4>
+                  <p>
+                    Whether a brand is launching a skincare line or scaling an existing product, Cochran Films handles the strategy and visuals needed to make the brand look polished, purposeful, and professional.
+                  </p>
+                  <ul class="brand-check-list">
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Full-funnel strategy:</strong> Awareness, interest, decision, and action with a measurable next step at every touchpoint.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Conversion-focused design:</strong> Visuals tailored to turn viewers into customers.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Retention marketing support:</strong> Creative systems that help keep customers coming back.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Omnichannel execution:</strong> Consistent message across web, email, social, and print.</span></li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="brand-video-grid" aria-label="Ceven Skin commercial videos">
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/mWd3DjyPGR0?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Ceven Skin 60s Commercial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>60s Commercial</strong><span>Ceven Skin®</span></div>
+                </article>
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/UUw6X6_2Skk?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Ceven Skin 30s Commercial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>30s Commercial</strong><span>Ceven Skin®</span></div>
+                </article>
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/TFqKD9GWmjc?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Ceven Skin 15s Commercial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>15s Commercial</strong><span>Ceven Skin®</span></div>
+                </article>
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/q2eNInNmtx4?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Ceven Skin behind the scenes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>Behind The Scenes</strong><span>Ceven Skin®</span></div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="brand-showcase-section purple" aria-labelledby="dj-popo-title">
+            <div class="brand-showcase-inner">
+              <div class="brand-showcase-header">
+                <div class="brand-pill"><i class="fa-solid fa-music"></i> Strategic Partner</div>
+                <div class="brand-title-row">
+                  <div class="brand-logo-badge">
+                    <img src="DJ_logo.png" alt="Scratch Master DJ POPO logo">
+                  </div>
+                  <h3 class="brand-showcase-title" id="dj-popo-title"><span>Scratch Master DJ POPO</span></h3>
+                </div>
+                <p class="brand-showcase-lede">
+                  We helped Scratch Master DJ POPO elevate his live production with enhanced engagement strategies, enabling him to showcase his work professionally on YouTube and other platforms.
+                </p>
+              </div>
+
+              <div class="brand-showcase-grid">
+                <article class="brand-showcase-card">
+                  <h4>Case Study: Live Production Enhancement</h4>
+                  <p>
+                    Live Production transforms DJ performances into engaging, shareable content that builds audiences across multiple platforms. Scratch Master DJ POPO trusted the team to enhance his live DJ sets with professional production quality and strategic engagement tactics.
+                  </p>
+                  <ul class="brand-check-list">
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Live production setup and technical direction</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Audience engagement strategy and implementation</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Multi-camera setup and professional cinematography</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Audio enhancement and sound quality optimization</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text">Content strategy for YouTube and social media</span></li>
+                  </ul>
+                </article>
+
+                <article class="brand-showcase-card">
+                  <h4>Our Live Production Approach</h4>
+                  <p>
+                    Whether serving DJs, musicians, or live performers, Cochran Films builds production systems that make shows look and sound professional while increasing audience engagement and long-term content value.
+                  </p>
+                  <ul class="brand-check-list">
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Engagement-focused production:</strong> Every element designed to maximize audience interaction and retention.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Multi-platform content:</strong> Optimize live performances for YouTube, Instagram, TikTok, and more.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Professional quality:</strong> Broadcast-standard production that elevates the brand and performance.</span></li>
+                    <li><span class="brand-check-icon"><i class="fa-solid fa-check"></i></span><span class="brand-check-text"><strong>Content strategy:</strong> Transform live shows into evergreen content that continues to engage audiences.</span></li>
+                  </ul>
+                </article>
+              </div>
+
+              <div class="brand-video-grid" aria-label="Scratch Master DJ POPO videos">
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/yj_0M9Z12Zs?start=3782&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Scratch Master DJ POPO live DJ performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>Live DJ Performance</strong><span>DJ POPO</span></div>
+                </article>
+                <article class="brand-video-card">
+                  <div class="portfolio-video">
+                    <iframe src="https://www.youtube.com/embed/gGkZ-Pv1sCY?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Scratch Master DJ POPO DJ set highlights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <div class="brand-video-meta"><strong>DJ Set Highlights</strong><span>DJ POPO</span></div>
+                </article>
+              </div>
+
+              <div class="brand-social-row" aria-label="Scratch Master DJ POPO social links">
+                <a class="brand-social-card" href="https://www.instagram.com/djpopo01" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a class="brand-social-card" href="https://www.facebook.com/hperel88/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
       </div>
     </section>
 
@@ -2108,7 +2554,7 @@
 
       detectContentZones() {
         this.contentZones = [];
-        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .creator-platform-card');
+        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card');
 
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
@@ -2160,11 +2606,11 @@
         }, { passive: true });
 
         document.addEventListener('mouseover', (e) => {
-          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-card');
+          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card');
         });
 
         document.addEventListener('mouseout', (e) => {
-          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-card')) {
+          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card')) {
             this.hoveredElement = null;
           }
         });
