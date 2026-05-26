@@ -2843,6 +2843,7 @@
     .re-slideshow,
     .creator-platform-panel,
     .creator-platform-item,
+    .shawnta-portfolio-section,
     .brand-showcase-section,
     .brand-showcase-card,
     .brand-video-card,
@@ -2858,6 +2859,150 @@
       display: grid;
       gap: 28px;
       margin: 28px 0 0;
+    }
+
+    .shawnta-portfolio-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      border: 1px solid rgba(244,114,182,0.28);
+      border-radius: 26px;
+      box-shadow: var(--shadow-lg);
+      padding: clamp(24px, 4vw, 40px);
+      background: rgba(15,23,42,0.55);
+    }
+
+    .shawnta-portfolio-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 14% 12%, rgba(244,114,182,0.16), transparent 34%),
+        radial-gradient(circle at 88% 18%, rgba(255,178,0,0.12), transparent 36%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .shawnta-portfolio-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .shawnta-portfolio-header {
+      max-width: 920px;
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+
+    .shawnta-portfolio-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(244,114,182,0.34);
+      border-radius: 999px;
+      background: rgba(244,114,182,0.10);
+      color: #fbcfe8;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      padding: 10px 16px;
+      text-transform: uppercase;
+    }
+
+    .shawnta-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin: 20px 0 12px;
+      flex-wrap: wrap;
+    }
+
+    .shawnta-logo-badge {
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(244,114,182,0.32);
+      border-radius: 24px;
+      background: rgba(2,6,23,0.60);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.28);
+      padding: 10px;
+    }
+
+    .shawnta-logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .shawnta-portfolio-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(30px, 4.6vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+
+    .shawnta-portfolio-title span {
+      background: linear-gradient(135deg, #fff, #fbcfe8 42%, #fde68a 92%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .shawnta-portfolio-lede {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.75;
+      margin: 0 auto;
+      max-width: 820px;
+    }
+
+    .shawnta-deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .shawnta-deliverables span {
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 999px;
+      background: rgba(2,6,23,0.55);
+      color: #e2e8f0;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      padding: 8px 12px;
+      text-transform: uppercase;
+    }
+
+    .sh-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+      align-items: stretch;
+    }
+
+    .sh-gallery figure {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+      border-radius: 0;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .sh-gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center center;
     }
 
     .brand-showcase-section {
@@ -3154,6 +3299,7 @@
     .portfolio-card,
     .creator-platform-panel,
     .creator-platform-item,
+    .shawnta-portfolio-section,
     .brand-showcase-section,
     .brand-showcase-card,
     .brand-video-card,
@@ -3372,6 +3518,17 @@
         height: 44px;
       }
 
+      .sh-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+    }
+
+    @media (max-width: 640px) {
+      .sh-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
@@ -3447,8 +3604,8 @@
               Witness the artistry behind impactful visuals. This selected work spans compelling corporate narratives and electrifying live events, redefining production excellence and strategic engagement across short films, corporate videos, educational content, and event coverage.
             </p>
             <div class="portfolio-actions">
-              <a class="portfolio-button" href="assets/resume-portfolio/Portfolio-Highlights.pptx" download>
-                Download Deck <i class="fa-solid fa-download"></i>
+              <a class="portfolio-button" href="https://coursecreatoracademy.org/#card-szcpw6d1tonq3aq" target="_blank" rel="noopener">
+                Book a Strategy <i class="fa-solid fa-calendar-check"></i>
               </a>
               <a class="portfolio-button secondary" href="https://cochranfilms.com/" target="_blank" rel="noopener">
                 View Site Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -3688,7 +3845,7 @@
             <div class="exp-role">Campaign Strategist — Development Phase</div>
             <div class="exp-dates">Ongoing</div>
           </div>
-          <div class="exp-company">Inner Audit System with Shawntá Hooks</div>
+          <div class="exp-company">Inner Audit System with Shawntà Hooks</div>
           <div class="exp-location">Atlanta, GA</div>
           <ul class="exp-bullets">
             <li>Supporting launch positioning of a performance regulation system for high performers, shaping messaging, digital presentation, audience education, and campaign structure for rollout.</li>
@@ -4309,6 +4466,45 @@
               </div>
             </div>
           </section>
+
+          <section class="shawnta-portfolio-section" id="shawnta-hooks-portfolio" aria-labelledby="shawnta-hooks-title">
+            <div class="shawnta-portfolio-inner">
+              <div class="shawnta-portfolio-header">
+                <div class="shawnta-portfolio-pill"><i class="fa-solid fa-camera"></i> Client Brand Photography</div>
+                <div class="shawnta-title-row">
+                  <div class="shawnta-logo-badge">
+                    <img src="Shawnta-Logo.png" alt="Shawntà Hooks logo">
+                  </div>
+                  <h3 class="shawnta-portfolio-title" id="shawnta-hooks-title"><span>Shawntà Hooks</span></h3>
+                </div>
+                <p class="shawnta-portfolio-lede">
+                  Cochran Films captured this professional photo set for Shawntà Hooks to use across her business brand, graphics, flyers, business cards, and marketing materials with a polished, versatile visual library.
+                </p>
+                <div class="shawnta-deliverables" aria-label="Shawntà Hooks deliverable uses">
+                  <span>Business Graphics</span>
+                  <span>Flyers</span>
+                  <span>Business Cards</span>
+                  <span>Brand Marketing</span>
+                  <span>Professional Portraits</span>
+                </div>
+              </div>
+
+              <div class="sh-gallery" aria-label="Shawntà Hooks professional brand photography gallery">
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-01.jpg" alt="Shawntà Hooks professional brand portrait"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-02.jpg" alt="Shawntà Hooks brand photography"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-03.jpg" alt="Shawntà Hooks professional headshot"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-04.jpg" alt="Shawntà Hooks editorial portrait photography"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-05.jpg" alt="Shawntà Hooks lifestyle brand photo"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-06.png" alt="Shawntà Hooks graphic-ready brand portrait"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-07.jpg" alt="Shawntà Hooks marketing portrait"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-08.png" alt="Shawntà Hooks flyer-ready brand photo"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-09.png" alt="Shawntà Hooks promotional brand photography"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-10.jpg" alt="Shawntà Hooks business card portrait"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-11.jpg" alt="Shawntà Hooks professional studio portrait"></figure>
+                <figure><img loading="lazy" decoding="async" src="assets/shawnta-hooks/shawnta-12.jpg" alt="Shawntà Hooks brand campaign portrait"></figure>
+              </div>
+            </div>
+          </section>
         </div>
 
       </div>
@@ -4474,7 +4670,7 @@
 
       detectContentZones() {
         this.contentZones = [];
-        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
+        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
 
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
@@ -4526,11 +4722,11 @@
         }, { passive: true });
 
         document.addEventListener('mouseover', (e) => {
-          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
+          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
         });
 
         document.addEventListener('mouseout', (e) => {
-          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card')) {
+          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card')) {
             this.hoveredElement = null;
           }
         });
@@ -4887,6 +5083,56 @@
         closePortraitFallback();
       }
     });
+
+    function alignShGalleryRows() {
+      const gallery = document.querySelector('.sh-gallery');
+      if (!gallery) return;
+
+      const figures = Array.from(gallery.querySelectorAll('figure'));
+      const columns = getComputedStyle(gallery).gridTemplateColumns.split(' ').filter(Boolean).length || 4;
+
+      for (let i = 0; i < figures.length; i += columns) {
+        const rowFigures = figures.slice(i, i + columns);
+        const imgs = rowFigures.map((figure) => figure.querySelector('img')).filter(Boolean);
+
+        imgs.forEach((img) => {
+          img.style.height = '';
+          img.style.maxHeight = '';
+        });
+
+        const heights = imgs.map((img) => img.getBoundingClientRect().height);
+        const maxHeight = Math.max(...heights, 0);
+        if (!maxHeight) continue;
+
+        imgs.forEach((img) => {
+          img.style.height = `${maxHeight}px`;
+          img.style.maxHeight = `${maxHeight}px`;
+          img.style.width = '100%';
+          img.style.objectFit = 'cover';
+          img.style.objectPosition = 'center center';
+        });
+      }
+    }
+
+    let shGalleryAlignFrame = 0;
+    function scheduleShGalleryAlign() {
+      cancelAnimationFrame(shGalleryAlignFrame);
+      shGalleryAlignFrame = requestAnimationFrame(alignShGalleryRows);
+    }
+
+    const shGallery = document.querySelector('.sh-gallery');
+    if (shGallery) {
+      shGallery.querySelectorAll('img').forEach((img) => {
+        if (img.complete) {
+          scheduleShGalleryAlign();
+        } else {
+          img.addEventListener('load', scheduleShGalleryAlign, { once: true });
+        }
+      });
+      window.addEventListener('resize', scheduleShGalleryAlign);
+      window.addEventListener('load', scheduleShGalleryAlign);
+      scheduleShGalleryAlign();
+    }
   </script>
 </body>
 </html>
