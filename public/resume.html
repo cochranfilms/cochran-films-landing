@@ -1961,6 +1961,610 @@
       margin: 0;
     }
 
+    .real-estate-section {
+      position: relative;
+      overflow: visible;
+      margin-top: 28px;
+      padding: clamp(28px, 4vw, 44px);
+      background:
+        linear-gradient(135deg, rgba(2,6,23,0.96), rgba(15,23,42,0.88)),
+        radial-gradient(circle at 12% 0%, rgba(16,185,129,0.14), transparent 34%),
+        radial-gradient(circle at 88% 18%, rgba(255,178,0,0.10), transparent 36%);
+      isolation: isolate;
+    }
+
+    .real-estate-section.portfolio-section {
+      overflow: visible;
+    }
+
+    .real-estate-section.portfolio-section::before,
+    .real-estate-section.portfolio-section::after {
+      content: none;
+      display: none;
+    }
+
+    .real-estate-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .re-header {
+      max-width: 920px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .re-kicker {
+      color: #6ee7b7;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .re-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+
+    .re-title span {
+      color: #34d399;
+    }
+
+    .re-lede {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0 auto;
+      max-width: 820px;
+    }
+
+    .re-promise-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .re-promise-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 10px;
+      align-content: center;
+      min-height: 148px;
+      border: 1px solid rgba(16,185,129,0.34);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(6,78,59,0.42), rgba(15,23,42,0.72)),
+        radial-gradient(circle at 100% 0%, rgba(255,178,0,0.12), transparent 38%);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+      padding: 22px 24px;
+      text-align: center;
+    }
+
+    .re-promise-card.turnaround {
+      border-color: rgba(255,178,0,0.34);
+      background:
+        linear-gradient(135deg, rgba(120,53,15,0.34), rgba(15,23,42,0.72)),
+        radial-gradient(circle at 0% 0%, rgba(255,178,0,0.16), transparent 40%);
+    }
+
+    .re-promise-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      border-radius: 14px;
+      background: rgba(16,185,129,0.16);
+      color: #6ee7b7;
+      font-size: 22px;
+    }
+
+    .re-promise-card.turnaround .re-promise-icon {
+      background: rgba(255,178,0,0.14);
+      color: #fde68a;
+    }
+
+    .re-promise-card strong {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .re-promise-card span {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .re-showcase-grid {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .re-video-panel {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      width: 100%;
+      min-width: 0;
+      min-height: 100%;
+      border: 1px solid rgba(16,185,129,0.28);
+      border-radius: 18px;
+      background: #020617;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.34);
+    }
+
+    .re-video-bg {
+      position: relative;
+      overflow: hidden;
+      min-height: 0;
+      background: #020617;
+    }
+
+    .re-video-bg::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 42%;
+      background: linear-gradient(180deg, transparent, rgba(2,6,23,0.55));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .re-video-bg video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      background: #020617;
+    }
+
+    .re-video-meta {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex: 0 0 auto;
+      border-top: 1px solid rgba(16,185,129,0.28);
+      background: rgba(2,6,23,0.88);
+      backdrop-filter: blur(12px);
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .re-video-meta strong {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .re-video-tag {
+      display: block;
+      color: #6ee7b7;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .re-video-badge {
+      color: #fde68a;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+
+    .re-blueprint-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      min-width: 0;
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(255,178,0,0.28);
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(15,23,42,0.84), rgba(2,6,23,0.72)),
+        radial-gradient(circle at 50% 0%, rgba(255,178,0,0.10), transparent 42%);
+      padding: 16px 18px 14px;
+      text-align: left;
+    }
+
+    .re-blueprint-header {
+      flex: 0 0 auto;
+    }
+
+    .re-blueprint-picker {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      min-height: 0;
+      margin-top: auto;
+    }
+
+    .re-blueprint-label {
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .re-blueprint-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    .re-blueprint-copy {
+      color: var(--text-secondary);
+      font-size: 12px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .re-blueprint-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .re-blueprint-thumb {
+      margin: 0;
+      padding: 0;
+      border: 2px solid rgba(255,178,0,0.18);
+      border-radius: 10px;
+      background: #f8fafc;
+      cursor: pointer;
+      overflow: hidden;
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .re-blueprint-thumb:hover {
+      border-color: rgba(255,178,0,0.42);
+      transform: translateY(-1px);
+    }
+
+    .re-blueprint-thumb.is-active {
+      border-color: var(--brand-gold);
+      box-shadow:
+        0 0 0 1px rgba(255,178,0,0.45),
+        0 0 0 4px rgba(255,178,0,0.12),
+        0 10px 24px rgba(255,178,0,0.16);
+    }
+
+    .re-blueprint-thumb img {
+      width: 100%;
+      height: auto;
+      min-height: 72px;
+      max-height: 96px;
+      display: block;
+      object-fit: contain;
+      padding: 5px;
+      pointer-events: none;
+    }
+
+    .re-blueprint-preview {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,178,0,0.26);
+      border-radius: 12px;
+      background: #f8fafc;
+      padding: 8px 10px;
+      overflow: hidden;
+    }
+
+    .re-blueprint-preview img {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .re-service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .re-service-card {
+      border: 1px solid rgba(99,102,241,0.22);
+      border-radius: 16px;
+      background: rgba(15,23,42,0.58);
+      padding: 20px 18px;
+      text-align: center;
+    }
+
+    .re-service-card i {
+      color: #6ee7b7;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .re-service-card h3 {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      margin: 0 0 10px;
+    }
+
+    .re-service-card p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .re-gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .re-gallery-head h3 {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 0 0 6px;
+    }
+
+    .re-gallery-head p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .re-gallery-count {
+      color: #6ee7b7;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .re-slideshow {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(2,6,23,0.62);
+      box-shadow: 0 22px 54px rgba(0,0,0,0.32);
+    }
+
+    .re-slideshow-stage {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #020617;
+      overflow: hidden;
+    }
+
+    .re-slide {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 420ms ease, visibility 420ms ease;
+    }
+
+    .re-slide.is-active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .re-slide img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .re-slide.is-blueprint img {
+      object-fit: contain;
+      background: #f8fafc;
+      padding: 18px;
+    }
+
+    .re-slide-caption {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      background: rgba(2,6,23,0.78);
+      backdrop-filter: blur(10px);
+      color: #e2e8f0;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .10em;
+      padding: 7px 11px;
+      text-transform: uppercase;
+    }
+
+    .re-slideshow-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      background: rgba(2,6,23,0.72);
+      backdrop-filter: blur(10px);
+      color: #f8fafc;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .re-slideshow-nav:hover {
+      background: rgba(16,185,129,0.22);
+      border-color: rgba(16,185,129,0.42);
+      transform: translateY(-50%) scale(1.04);
+    }
+
+    .re-slideshow-prev { left: 14px; }
+    .re-slideshow-next { right: 14px; }
+
+    .re-slideshow-footer {
+      display: grid;
+      gap: 10px;
+      padding: 12px 14px 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15,23,42,0.55);
+    }
+
+    .re-slideshow-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .re-slideshow-counter {
+      color: #6ee7b7;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .re-slideshow-hint {
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    .re-slideshow-thumbs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,178,0,0.45) transparent;
+    }
+
+    .re-slideshow-thumb {
+      flex: 0 0 76px;
+      width: 76px;
+      height: 50px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 0;
+      background: #0f172a;
+      opacity: 0.58;
+      cursor: pointer;
+      transition: opacity 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .re-slideshow-thumb:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .re-slideshow-thumb.is-active {
+      border-color: var(--brand-gold);
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(255,178,0,0.22);
+    }
+
+    .re-slideshow-thumb img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .re-slideshow-thumb.is-blueprint img {
+      object-fit: contain;
+      background: #f8fafc;
+    }
+
+    .re-gallery-wrap {
+      margin-top: 0;
+      width: 100%;
+    }
+
+    .re-deliverables {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .re-deliverable {
+      border: 1px solid rgba(16,185,129,0.22);
+      border-radius: 14px;
+      background: rgba(2,6,23,0.52);
+      padding: 14px;
+      text-align: center;
+    }
+
+    .re-deliverable strong {
+      display: block;
+      color: #6ee7b7;
+      font-size: 12px;
+      letter-spacing: .10em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .re-deliverable span {
+      color: var(--text-secondary);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
     .creator-portfolio {
       margin-top: 28px;
       padding-bottom: clamp(16px, 2vw, 24px);
@@ -2123,6 +2727,12 @@
     .campaign-card,
     .portfolio-stat,
     .portfolio-card,
+    .real-estate-section,
+    .re-promise-card,
+    .re-video-panel,
+    .re-blueprint-panel,
+    .re-service-card,
+    .re-slideshow,
     .creator-platform-panel,
     .creator-platform-item,
     .brand-showcase-section,
@@ -2431,6 +3041,7 @@
     .mayor-card,
     .campaign-card,
     .portfolio-section,
+    .real-estate-section,
     .portfolio-stat,
     .portfolio-card,
     .creator-platform-panel,
@@ -2530,6 +3141,29 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .re-showcase-grid,
+      .re-promise-row,
+      .re-service-grid,
+      .re-deliverables {
+        grid-template-columns: 1fr;
+      }
+
+      .re-showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .re-blueprint-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .re-blueprint-thumb img {
+        max-height: 88px;
+      }
+
+      .re-slideshow-stage {
+        aspect-ratio: 4 / 3;
+      }
+
       .creator-banner,
       .creator-banner-content {
         min-height: 500px;
@@ -2619,6 +3253,17 @@
         font-size: clamp(28px, 9vw, 40px);
       }
 
+      .re-slideshow-nav {
+        width: 36px;
+        height: 36px;
+      }
+
+      .re-slideshow-thumb {
+        flex: 0 0 64px;
+        width: 64px;
+        height: 44px;
+      }
+
     }
   </style>
 </head>
@@ -2637,6 +3282,7 @@
         <li><a href="#portfolio-highlights" class="nav-link">Portfolio</a></li>
         <li><a href="#brand-portfolio" class="nav-link">Brands</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#real-estate-content" class="nav-link">Real Estate</a></li>
         <li><a href="#creator-collective" class="nav-link">Creator Collective</a></li>
         <li><a href="#featured-work" class="nav-link">Featured Work</a></li>
       </ul>
@@ -3104,6 +3750,201 @@
       </aside>
     </div>
 
+    <section class="portfolio-section real-estate-section" id="real-estate-content" aria-labelledby="real-estate-title">
+      <div class="real-estate-inner">
+        <div class="re-header">
+          <div class="re-kicker">Real Estate Content</div>
+          <h2 class="re-title" id="real-estate-title">Showcase properties with <span>precision, polish,</span> and speed.</h2>
+          <p class="re-lede">
+            Cochran Films delivers premium real estate photography and video built to help buyers envision the lifestyle inside every listing. From bright interior coverage and curb-appeal exteriors to detail-driven amenity shots, we capture the full story of the property with the same attention to detail we bring to every production.
+          </p>
+        </div>
+
+        <div class="re-promise-row" aria-label="Real estate service promises">
+          <article class="re-promise-card">
+            <div class="re-promise-icon"><i class="fa-solid fa-draw-polygon"></i></div>
+            <strong>Property Blueprints</strong>
+            <span>We capture and deliver clean 2D floor plan blueprints so agents, buyers, and investors can understand layout, flow, and spatial value at a glance.</span>
+          </article>
+          <article class="re-promise-card turnaround">
+            <div class="re-promise-icon"><i class="fa-solid fa-bolt"></i></div>
+            <strong>24 Hour Turnaround</strong>
+            <span>Listings move fast. Cochran Films delivers polished photo and video assets within 24 hours so your property can go to market without losing momentum.</span>
+          </article>
+        </div>
+
+        <div class="re-showcase-grid">
+          <article class="re-video-panel" aria-label="6225 Waterton Way property reel">
+            <div class="re-video-bg">
+              <video controls playsinline preload="metadata" poster="assets/real-estate/exterior-01.jpg">
+                <source src="https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7" type="video/mp4">
+                Your browser does not support embedded video playback.
+              </video>
+            </div>
+            <div class="re-video-meta">
+              <strong>6225 Waterton Way</strong>
+              <span class="re-video-tag">Property Walkthrough Reel</span>
+              <span class="re-video-badge"><i class="fa-solid fa-film"></i> Cinematic Listing Media</span>
+            </div>
+          </article>
+
+          <aside class="re-blueprint-panel" id="re-blueprint-panel" aria-label="Property blueprint deliverables">
+            <div class="re-blueprint-header">
+              <div class="re-blueprint-label">Blueprint Deliverable</div>
+              <h3 class="re-blueprint-title">We capture blueprints of the property.</h3>
+              <p class="re-blueprint-copy">
+                Every listing receives layout documentation that strengthens buyer confidence, supports pricing conversations, and gives your marketing package a more complete, professional edge.
+              </p>
+            </div>
+            <div class="re-blueprint-picker">
+              <div class="re-blueprint-grid" role="tablist" aria-label="Select blueprint view">
+                <button type="button" class="re-blueprint-thumb is-active" role="tab" aria-selected="true" data-blueprint-src="assets/real-estate/blueprint-01.jpg" data-blueprint-alt="2D floor plan blueprint for 6225 Waterton Way level one">
+                  <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="">
+                </button>
+                <button type="button" class="re-blueprint-thumb" role="tab" aria-selected="false" data-blueprint-src="assets/real-estate/blueprint-02.jpg" data-blueprint-alt="2D floor plan blueprint for 6225 Waterton Way level two">
+                  <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-02.jpg" alt="">
+                </button>
+                <button type="button" class="re-blueprint-thumb" role="tab" aria-selected="false" data-blueprint-src="assets/real-estate/blueprint-03.jpg" data-blueprint-alt="2D floor plan blueprint alternate view for 6225 Waterton Way">
+                  <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-03.jpg" alt="">
+                </button>
+              </div>
+              <div class="re-blueprint-preview" role="tabpanel" aria-live="polite">
+                <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="2D floor plan blueprint for 6225 Waterton Way level one" data-blueprint-preview>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="re-service-grid" aria-label="Real estate photography categories">
+          <article class="re-service-card">
+            <i class="fa-solid fa-couch"></i>
+            <h3>Interior Spaces</h3>
+            <p>Bright, welcoming interiors that highlight room scale, natural light, and the best features of every space with professional composition.</p>
+          </article>
+          <article class="re-service-card">
+            <i class="fa-solid fa-house-chimney"></i>
+            <h3>Exterior Views</h3>
+            <p>Stunning exterior photography that captures curb appeal, architectural character, and the full presence of the property in its setting.</p>
+          </article>
+          <article class="re-service-card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Detail Shots</h3>
+            <p>Close-up photography of finishes, amenities, and signature features that make each listing feel memorable and market-ready.</p>
+          </article>
+        </div>
+
+        <div class="re-gallery-wrap">
+          <div class="re-gallery-head">
+            <div>
+              <h3>Listing Photo Slideshow</h3>
+              <p>Browse interior, exterior, detail, and blueprint coverage in one polished presentation built for MLS, social, and brochure use.</p>
+            </div>
+            <span class="re-gallery-count">16 Assets</span>
+          </div>
+          <div class="re-slideshow" id="re-listing-slideshow" aria-label="6225 Waterton Way listing photo slideshow">
+            <div class="re-slideshow-stage">
+              <button type="button" class="re-slideshow-nav re-slideshow-prev" aria-label="Previous photo">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+              <figure class="re-slide is-active" data-label="Exterior">
+                <img loading="eager" decoding="async" src="assets/real-estate/interior-01.jpg" alt="Exterior front view of 6225 Waterton Way">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide is-blueprint" data-label="Blueprint">
+                <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="Property blueprint floor plan">
+                <figcaption class="re-slide-caption">Blueprint</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Exterior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/exterior-01.jpg" alt="Exterior architectural view of 6225 Waterton Way">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Interior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/interior-02.jpg" alt="Kitchen interior photography">
+                <figcaption class="re-slide-caption">Interior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Exterior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/exterior-02.jpg" alt="Exterior architectural view">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Detail">
+                <img loading="lazy" decoding="async" src="assets/real-estate/detail-01.jpg" alt="Detail shot of property finish">
+                <figcaption class="re-slide-caption">Detail</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Exterior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/gallery-01.jpg" alt="Aerial neighborhood context view">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Interior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/interior-03.jpg" alt="Bedroom interior with natural light">
+                <figcaption class="re-slide-caption">Interior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Exterior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/exterior-03.jpg" alt="Property exterior landscaping view">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Detail">
+                <img loading="lazy" decoding="async" src="assets/real-estate/detail-02.jpg" alt="Amenity detail photography">
+                <figcaption class="re-slide-caption">Detail</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Interior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/interior-04.jpg" alt="Dining area interior photography">
+                <figcaption class="re-slide-caption">Interior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Interior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/interior-05.jpg" alt="Secondary living space interior">
+                <figcaption class="re-slide-caption">Interior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Exterior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/exterior-04.jpg" alt="Evening exterior property view">
+                <figcaption class="re-slide-caption">Exterior</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Detail">
+                <img loading="lazy" decoding="async" src="assets/real-estate/detail-03.jpg" alt="Architectural detail close-up">
+                <figcaption class="re-slide-caption">Detail</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Detail">
+                <img loading="lazy" decoding="async" src="assets/real-estate/gallery-02.jpg" alt="Property room detail composition">
+                <figcaption class="re-slide-caption">Detail</figcaption>
+              </figure>
+              <figure class="re-slide" data-label="Interior">
+                <img loading="lazy" decoding="async" src="assets/real-estate/gallery-03.jpg" alt="Additional property interior angle">
+                <figcaption class="re-slide-caption">Interior</figcaption>
+              </figure>
+              <button type="button" class="re-slideshow-nav re-slideshow-next" aria-label="Next photo">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="re-slideshow-footer">
+              <div class="re-slideshow-meta">
+                <span class="re-slideshow-counter"><span data-slideshow-current>1</span> / <span data-slideshow-total>16</span></span>
+                <span class="re-slideshow-hint">Use arrows or thumbnails to browse listing coverage</span>
+              </div>
+              <div class="re-slideshow-thumbs" aria-label="Listing photo thumbnails"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="re-deliverables" aria-label="Real estate media deliverables">
+          <div class="re-deliverable">
+            <strong>MLS-Ready Photos</strong>
+            <span>Polished stills optimized for listings, brochures, and digital ads.</span>
+          </div>
+          <div class="re-deliverable">
+            <strong>Walkthrough Video</strong>
+            <span>Cinematic reel content that brings the full property experience to life.</span>
+          </div>
+          <div class="re-deliverable">
+            <strong>2D Blueprints</strong>
+            <span>Floor plan visuals that help buyers understand layout instantly.</span>
+          </div>
+          <div class="re-deliverable">
+            <strong>24 Hour Delivery</strong>
+            <span>Fast turnaround designed for agents who need to launch quickly.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="portfolio-section creator-portfolio" id="creator-collective" aria-labelledby="creator-collective-title">
       <div class="portfolio-inner">
         <div class="creator-banner">
@@ -3515,7 +4356,7 @@
 
       detectContentZones() {
         this.contentZones = [];
-        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
+        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
 
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
@@ -3567,11 +4408,11 @@
         }, { passive: true });
 
         document.addEventListener('mouseover', (e) => {
-          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
+          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card');
         });
 
         document.addEventListener('mouseout', (e) => {
-          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card')) {
+          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .seo-context-card')) {
             this.hoveredElement = null;
           }
         });
@@ -3771,6 +4612,101 @@
     });
 
     resumeSections.forEach((section) => resumeObserver.observe(section));
+
+    const listingSlideshow = document.getElementById('re-listing-slideshow');
+    if (listingSlideshow) {
+      const slides = Array.from(listingSlideshow.querySelectorAll('.re-slide'));
+      const thumbsContainer = listingSlideshow.querySelector('.re-slideshow-thumbs');
+      const prevButton = listingSlideshow.querySelector('.re-slideshow-prev');
+      const nextButton = listingSlideshow.querySelector('.re-slideshow-next');
+      const currentLabel = listingSlideshow.querySelector('[data-slideshow-current]');
+      const totalLabel = listingSlideshow.querySelector('[data-slideshow-total]');
+      let activeIndex = 0;
+
+      if (totalLabel) {
+        totalLabel.textContent = String(slides.length);
+      }
+
+      slides.forEach((slide, index) => {
+        const image = slide.querySelector('img');
+        const thumb = document.createElement('button');
+        thumb.type = 'button';
+        thumb.className = 're-slideshow-thumb' + (slide.classList.contains('is-blueprint') ? ' is-blueprint' : '');
+        thumb.setAttribute('aria-label', `Show photo ${index + 1}`);
+        if (index === 0) {
+          thumb.classList.add('is-active');
+        }
+
+        if (image) {
+          const thumbImage = document.createElement('img');
+          thumbImage.src = image.getAttribute('src');
+          thumbImage.alt = '';
+          thumbImage.loading = 'lazy';
+          thumbImage.decoding = 'async';
+          thumb.appendChild(thumbImage);
+        }
+
+        thumb.addEventListener('click', () => goToSlide(index));
+        thumbsContainer.appendChild(thumb);
+      });
+
+      const thumbs = Array.from(listingSlideshow.querySelectorAll('.re-slideshow-thumb'));
+
+      function goToSlide(index) {
+        activeIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          slide.classList.toggle('is-active', slideIndex === activeIndex);
+        });
+        thumbs.forEach((thumb, thumbIndex) => {
+          thumb.classList.toggle('is-active', thumbIndex === activeIndex);
+          if (thumbIndex === activeIndex) {
+            thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        });
+        if (currentLabel) {
+          currentLabel.textContent = String(activeIndex + 1);
+        }
+      }
+
+      prevButton?.addEventListener('click', () => goToSlide(activeIndex - 1));
+      nextButton?.addEventListener('click', () => goToSlide(activeIndex + 1));
+
+      listingSlideshow.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          goToSlide(activeIndex - 1);
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          goToSlide(activeIndex + 1);
+        }
+      });
+
+      listingSlideshow.setAttribute('tabindex', '0');
+    }
+
+    const blueprintPanel = document.getElementById('re-blueprint-panel');
+    if (blueprintPanel) {
+      const blueprintThumbs = Array.from(blueprintPanel.querySelectorAll('.re-blueprint-thumb'));
+      const blueprintPreview = blueprintPanel.querySelector('[data-blueprint-preview]');
+
+      function selectBlueprint(thumb) {
+        blueprintThumbs.forEach((button) => {
+          const isActive = button === thumb;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        if (blueprintPreview) {
+          blueprintPreview.src = thumb.dataset.blueprintSrc;
+          blueprintPreview.alt = thumb.dataset.blueprintAlt || 'Property blueprint floor plan';
+        }
+      }
+
+      blueprintThumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => selectBlueprint(thumb));
+      });
+    }
   </script>
 </body>
 </html>
