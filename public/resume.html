@@ -2101,8 +2101,8 @@
     .re-video-panel {
       position: relative;
       overflow: hidden;
-      display: grid;
-      grid-template-rows: 1fr auto;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       min-width: 0;
       min-height: 100%;
@@ -2114,32 +2114,119 @@
 
     .re-video-bg {
       position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
       overflow: hidden;
-      min-height: 0;
+      flex: 0 0 auto;
       background: #020617;
     }
 
-    .re-video-bg::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 42%;
-      background: linear-gradient(180deg, transparent, rgba(2,6,23,0.55));
-      pointer-events: none;
-      z-index: 1;
+    .re-portrait-fs-shell {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
-    .re-video-bg video {
-      position: absolute;
-      inset: 0;
+    .re-video-frame {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: 0;
+      background: #020617;
+    }
+
+    .re-reel-video {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
       object-position: center;
       background: #020617;
+    }
+
+    .re-reel-expand-btn {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      z-index: 3;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      background: rgba(2,6,23,0.78);
+      backdrop-filter: blur(8px);
+      color: #f8fafc;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .re-reel-expand-btn:hover {
+      background: rgba(16,185,129,0.28);
+      border-color: rgba(16,185,129,0.45);
+      transform: scale(1.04);
+    }
+
+    .re-portrait-fs-shell:fullscreen,
+    .re-portrait-fs-shell:-webkit-full-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    .re-portrait-fs-shell:fullscreen .re-video-frame,
+    .re-portrait-fs-shell:-webkit-full-screen .re-video-frame {
+      height: min(100vh, 100%);
+      width: min(calc(100vh * 9 / 16), 100vw);
+      max-height: 100vh;
+      max-width: 100vw;
+      border-radius: 0;
+    }
+
+    .re-portrait-fs-shell:fullscreen .re-reel-video,
+    .re-portrait-fs-shell:-webkit-full-screen .re-reel-video {
+      object-fit: contain;
+    }
+
+    .re-portrait-fs-shell:fullscreen .re-reel-expand-btn,
+    .re-portrait-fs-shell:-webkit-full-screen .re-reel-expand-btn {
+      bottom: 16px;
+      right: 16px;
+    }
+
+    body.re-reel-fs-open {
+      overflow: hidden;
+    }
+
+    .re-reel-video.is-portrait-fullscreen {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 10001;
+      width: min(100vw, calc(100vh * 9 / 16));
+      height: min(100vh, calc(100vw * 16 / 9));
+      max-width: 100vw;
+      max-height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      background: #000;
+      border-radius: 0;
+    }
+
+    body.re-reel-fs-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: #000;
     }
 
     .re-video-meta {
@@ -2154,8 +2241,29 @@
       border-top: 1px solid rgba(16,185,129,0.28);
       background: rgba(2,6,23,0.88);
       backdrop-filter: blur(12px);
-      padding: 14px 12px;
+      padding: 16px 12px 18px;
       text-align: center;
+    }
+
+    .re-video-doodle {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      padding: 4px 12px 12px;
+      background: #020617;
+    }
+
+    .re-video-doodle img {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center bottom;
+      opacity: 0.92;
     }
 
     .re-video-meta strong {
@@ -3776,15 +3884,25 @@
         <div class="re-showcase-grid">
           <article class="re-video-panel" aria-label="6225 Waterton Way property reel">
             <div class="re-video-bg">
-              <video controls playsinline preload="metadata" poster="assets/real-estate/exterior-01.jpg">
-                <source src="https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7" type="video/mp4">
-                Your browser does not support embedded video playback.
-              </video>
+              <div class="re-portrait-fs-shell" id="re-portrait-fs-shell">
+                <div class="re-video-frame">
+                  <video class="re-reel-video" id="re-property-reel" controls playsinline preload="metadata" controlsList="nofullscreen" poster="assets/real-estate/exterior-01.jpg">
+                    <source src="https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7" type="video/mp4">
+                    Your browser does not support embedded video playback.
+                  </video>
+                  <button type="button" class="re-reel-expand-btn" id="re-reel-expand-btn" aria-label="Open vertical fullscreen">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="re-video-meta">
               <strong>6225 Waterton Way</strong>
               <span class="re-video-tag">Property Walkthrough Reel</span>
               <span class="re-video-badge"><i class="fa-solid fa-film"></i> Cinematic Listing Media</span>
+            </div>
+            <div class="re-video-doodle" aria-hidden="true">
+              <img src="assets/doodle.png" alt="" loading="lazy" decoding="async">
             </div>
           </article>
 
@@ -4707,6 +4825,68 @@
         thumb.addEventListener('click', () => selectBlueprint(thumb));
       });
     }
+
+    const propertyReel = document.getElementById('re-property-reel');
+    const portraitFsShell = document.getElementById('re-portrait-fs-shell');
+    const reelExpandBtn = document.getElementById('re-reel-expand-btn');
+
+    function closePortraitFallback() {
+      if (!propertyReel) return;
+      propertyReel.classList.remove('is-portrait-fullscreen');
+      document.body.classList.remove('re-reel-fs-open');
+    }
+
+    async function openPortraitFullscreen() {
+      if (!propertyReel || !portraitFsShell) return;
+
+      if (document.fullscreenElement === portraitFsShell || document.webkitFullscreenElement === portraitFsShell) {
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+        return;
+      }
+
+      try {
+        if (portraitFsShell.requestFullscreen) {
+          await portraitFsShell.requestFullscreen();
+        } else if (portraitFsShell.webkitRequestFullscreen) {
+          portraitFsShell.webkitRequestFullscreen();
+        } else {
+          throw new Error('Fullscreen API unavailable');
+        }
+      } catch (error) {
+        propertyReel.classList.add('is-portrait-fullscreen');
+        document.body.classList.add('re-reel-fs-open');
+      }
+    }
+
+    reelExpandBtn?.addEventListener('click', openPortraitFullscreen);
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        closePortraitFallback();
+      }
+    });
+
+    document.addEventListener('webkitfullscreenchange', () => {
+      if (!document.webkitFullscreenElement) {
+        closePortraitFallback();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && propertyReel?.classList.contains('is-portrait-fullscreen')) {
+        closePortraitFallback();
+      }
+    });
+
+    propertyReel?.addEventListener('click', (event) => {
+      if (propertyReel.classList.contains('is-portrait-fullscreen') && event.target === propertyReel) {
+        closePortraitFallback();
+      }
+    });
   </script>
 </body>
 </html>
