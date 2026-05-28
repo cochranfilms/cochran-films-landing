@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cody Cochran Resume 2026 | Atlanta Film Producer, Brand Strategist & Platform Builder</title>
   <meta name="description" content="Official 2026 resume and portfolio for Cody Cochran, Atlanta-based founder of Cochran Films, Creator Collective, Bizzi Cloud, and DJs Need Luv 2. Explore film production, brand storytelling, civic event media, creator education, and digital platform work." />
@@ -1961,6 +1962,214 @@
       margin: 0;
     }
 
+    .iheart-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid rgba(196,18,48,0.32);
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(2,6,23,0.96), rgba(15,23,42,0.90)),
+        radial-gradient(circle at 10% 0%, rgba(196,18,48,0.18), transparent 38%),
+        radial-gradient(circle at 92% 16%, rgba(255,178,0,0.10), transparent 34%);
+      box-shadow: var(--shadow-lg);
+      isolation: isolate;
+    }
+
+    .iheart-section.portfolio-section::before,
+    .iheart-section.portfolio-section::after {
+      content: none;
+      display: none;
+    }
+
+    .iheart-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .iheart-header {
+      max-width: 940px;
+      margin: 0 auto 26px;
+      text-align: center;
+    }
+
+    .iheart-kicker {
+      color: #fda4af;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .iheart-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 0 0 14px;
+    }
+
+    .iheart-logo-wrap {
+      width: clamp(120px, 16vw, 168px);
+      padding: 10px 14px;
+      border: 1px solid rgba(196,18,48,0.36);
+      border-radius: 18px;
+      background: rgba(2,6,23,0.72);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.32);
+    }
+
+    .iheart-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .iheart-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(30px, 4.6vw, 52px);
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      margin: 0;
+      max-width: 640px;
+      text-align: left;
+    }
+
+    .iheart-title span {
+      color: #fb7185;
+    }
+
+    .iheart-lede {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0 auto;
+      max-width: 820px;
+    }
+
+    .iheart-showcase-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .iheart-video-panel {
+      display: grid;
+      gap: 14px;
+      border: 1px solid rgba(196,18,48,0.28);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(76,5,25,0.42), rgba(15,23,42,0.78)),
+        radial-gradient(circle at 100% 0%, rgba(255,178,0,0.10), transparent 40%);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+      padding: 18px;
+    }
+
+    .iheart-video-panel .portfolio-video {
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .iheart-episode-meta strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .iheart-episode-meta span {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .iheart-story-panel {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 20px;
+      background: rgba(2,6,23,0.62);
+      padding: 22px;
+    }
+
+    .iheart-story-panel h3 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .iheart-story-panel p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .iheart-story-panel .iheart-tagline {
+      color: #fecdd3;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .iheart-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .iheart-feature-card {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      justify-items: center;
+      text-align: center;
+      min-height: 132px;
+      border: 1px solid rgba(196,18,48,0.26);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(76,5,25,0.34), rgba(15,23,42,0.72)),
+        radial-gradient(circle at 100% 0%, rgba(255,178,0,0.08), transparent 42%);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.24);
+      padding: 18px 20px;
+    }
+
+    .iheart-feature-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(196,18,48,0.22);
+      color: #fecdd3;
+      font-size: 16px;
+    }
+
+    .iheart-feature-card strong {
+      color: var(--text-primary);
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .iheart-feature-card span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
     .real-estate-section {
       position: relative;
       overflow: visible;
@@ -3294,6 +3503,7 @@
     .mayor-card,
     .campaign-card,
     .portfolio-section,
+    .iheart-section,
     .real-estate-section,
     .portfolio-stat,
     .portfolio-card,
@@ -3393,6 +3603,20 @@
 
       .creator-platform-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .iheart-showcase-grid,
+      .iheart-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .iheart-title-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .iheart-title {
+        text-align: center;
       }
 
       .re-showcase-grid,
@@ -3547,6 +3771,7 @@
         <li><a href="#portfolio-highlights" class="nav-link">Portfolio</a></li>
         <li><a href="#brand-portfolio" class="nav-link">Brands</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#iheart-storytime" class="nav-link">iHeart Radio</a></li>
         <li><a href="#real-estate-content" class="nav-link">Real Estate</a></li>
         <li><a href="#creator-collective" class="nav-link">Creator Collective</a></li>
         <li><a href="#featured-work" class="nav-link">Featured Work</a></li>
@@ -4014,6 +4239,64 @@
         </article>
       </aside>
     </div>
+
+    <section class="portfolio-section iheart-section" id="iheart-storytime" aria-labelledby="iheart-storytime-title">
+      <div class="iheart-inner">
+        <div class="iheart-header">
+          <div class="iheart-kicker">iHeart Radio · Production Partner</div>
+          <div class="iheart-title-row">
+            <div class="iheart-logo-wrap">
+              <img src="assets/iHeartRadio_SemiStacked_Logo_color_white.png" alt="iHeartRadio logo">
+            </div>
+            <h2 class="iheart-title" id="iheart-storytime-title">Storytime with the <span>Legendary Jerry</span></h2>
+          </div>
+          <p class="iheart-lede">
+            Cochran Films handled production for this iHeart Radio podcast, capturing true stories and interviews from the golden age of Hip Hop culture—narrated by Atlanta insider Jerry Clark and built around the city’s undeniable influence on the genre.
+          </p>
+        </div>
+
+        <div class="iheart-showcase-grid">
+          <article class="iheart-video-panel" aria-label="Featured episode: T-Pain interview">
+            <div class="portfolio-video">
+              <iframe src="https://www.youtube.com/embed/uqSH6vU-G3c?start=19&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Storytime with the Legendary Jerry — T-Pain interview at his home (Episode 1)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="iheart-episode-meta">
+              <strong>Episode Highlight · T-Pain at Home</strong>
+              <span>Episode 1 features an in-home interview with T-Pain—one of many legendary conversations Cochran Films helped bring to life for iHeart Radio and Jerry Clark’s audience.</span>
+            </div>
+          </article>
+
+          <aside class="iheart-story-panel" aria-label="About Storytime with the Legendary Jerry">
+            <p class="iheart-tagline">Atlanta influences everything.</p>
+            <h3>The show</h3>
+            <p>
+              <em>Storytime with the Legendary Jerry</em> is filled with true stories and interviews from the golden age of Hip Hop culture, narrated by someone who witnessed it firsthand from Atlanta. The podcast celebrates the culture by focusing on the sensational role Atlanta has played in shaping the industry.
+            </p>
+            <p>
+              Each week, Jerry sits down with a guest to swap stories that shaped Hip Hop—the music, the business, the grind, and the culture. The series stands out by highlighting both Atlanta-based and worldwide creatives, with a clear through-line: the South’s impact on Hip Hop culture.
+            </p>
+          </aside>
+        </div>
+
+        <div class="iheart-feature-grid" aria-label="Storytime with the Legendary Jerry focus areas">
+          <article class="iheart-feature-card">
+            <div class="iheart-feature-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <strong>Legendary Interviews</strong>
+            <span>Long-form conversations with Hip Hop icons, shot with broadcast-ready polish for iHeart Radio audiences.</span>
+          </article>
+          <article class="iheart-feature-card">
+            <div class="iheart-feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <strong>Atlanta &amp; the South</strong>
+            <span>A distinct editorial lens on how Atlanta and the South helped define Hip Hop culture worldwide.</span>
+          </article>
+          <article class="iheart-feature-card">
+            <div class="iheart-feature-icon"><i class="fa-solid fa-film"></i></div>
+            <strong>Cochran Films Production</strong>
+            <span>On-location shooting, interview coverage, and cinematic delivery built to match premium podcast standards.</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="portfolio-section real-estate-section" id="real-estate-content" aria-labelledby="real-estate-title">
       <div class="real-estate-inner">
@@ -4670,7 +4953,7 @@
 
       detectContentZones() {
         this.contentZones = [];
-        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
+        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
 
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
@@ -4722,11 +5005,11 @@
         }, { passive: true });
 
         document.addEventListener('mouseover', (e) => {
-          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
+          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
         });
 
         document.addEventListener('mouseout', (e) => {
-          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card')) {
+          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card')) {
             this.hoveredElement = null;
           }
         });
