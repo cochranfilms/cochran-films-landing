@@ -2170,6 +2170,553 @@
       line-height: 1.6;
     }
 
+    .kbl-section {
+      --kbl-slime: #7ECB00;
+      --kbl-slime-bright: #A8F020;
+      --kbl-cream: #0A0C0A;
+      --kbl-surface: #161A16;
+      --kbl-ink: #EEF2E8;
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid rgba(126, 203, 0, 0.32);
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(10, 12, 10, 0.97), rgba(15, 23, 42, 0.88)),
+        radial-gradient(circle at 8% 0%, rgba(126, 203, 0, 0.16), transparent 38%),
+        radial-gradient(circle at 92% 14%, rgba(168, 240, 32, 0.08), transparent 34%);
+      box-shadow: var(--shadow-lg);
+      isolation: isolate;
+    }
+
+    .kbl-section.portfolio-section::before,
+    .kbl-section.portfolio-section::after {
+      content: none;
+      display: none;
+    }
+
+    .kbl-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .kbl-deco {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.14;
+      z-index: 0;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+    }
+
+    .kbl-deco--scissor {
+      width: clamp(72px, 10vw, 110px);
+      top: 12px;
+      right: 4%;
+      transform: rotate(-18deg);
+    }
+
+    .kbl-deco--scissor-alt {
+      width: clamp(56px, 8vw, 84px);
+      bottom: 8%;
+      left: 2%;
+      transform: rotate(24deg);
+    }
+
+    .kbl-header {
+      max-width: 940px;
+      margin: 0 auto 26px;
+      text-align: center;
+    }
+
+    .kbl-kicker {
+      color: var(--kbl-slime-bright);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .kbl-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 0 0 14px;
+    }
+
+    .kbl-logo-wrap {
+      width: clamp(108px, 14vw, 148px);
+      padding: 10px 12px;
+      border: 1px solid rgba(126, 203, 0, 0.36);
+      border-radius: 18px;
+      background: rgba(10, 12, 10, 0.82);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    .kbl-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .kbl-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4.4vw, 50px);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      margin: 0;
+      max-width: 620px;
+      text-align: left;
+    }
+
+    .kbl-title span {
+      color: var(--kbl-slime);
+    }
+
+    .kbl-lede {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0 auto;
+      max-width: 820px;
+    }
+
+    .kbl-showcase-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .kbl-hero-panel {
+      display: grid;
+      gap: 14px;
+      border: 1px solid rgba(126, 203, 0, 0.28);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(22, 26, 22, 0.72), rgba(15, 23, 42, 0.78)),
+        radial-gradient(circle at 100% 0%, rgba(126, 203, 0, 0.12), transparent 42%);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+      padding: 16px;
+      position: relative;
+    }
+
+    .kbl-browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px 12px 0 0;
+      background: rgba(10, 12, 10, 0.92);
+      border: 1px solid rgba(126, 203, 0, 0.18);
+      border-bottom: 0;
+    }
+
+    .kbl-browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .kbl-browser-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(238, 242, 232, 0.22);
+    }
+
+    .kbl-browser-dots span:first-child { background: rgba(126, 203, 0, 0.55); }
+
+    .kbl-browser-url {
+      flex: 1;
+      text-align: center;
+      color: rgba(238, 242, 232, 0.72);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .kbl-hero-frame {
+      position: relative;
+      border-radius: 0 0 14px 14px;
+      overflow: hidden;
+      border: 1px solid rgba(126, 203, 0, 0.22);
+      aspect-ratio: 16 / 10;
+      min-height: 260px;
+      background: var(--kbl-cream);
+    }
+
+    .kbl-hero-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    .kbl-hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 20px;
+      background: linear-gradient(180deg, rgba(10, 12, 10, 0.15) 0%, rgba(10, 12, 10, 0.55) 48%, rgba(10, 12, 10, 0.82) 100%);
+    }
+
+    .kbl-hero-eyebrow {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .kbl-hero-headline {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(22px, 3.4vw, 34px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 0;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+      max-width: 520px;
+    }
+
+    .kbl-hero-headline em {
+      font-style: normal;
+      color: var(--kbl-slime-bright);
+    }
+
+    .kbl-hero-sub {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 460px;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .kbl-hero-meta {
+      text-align: center;
+    }
+
+    .kbl-hero-meta strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .kbl-hero-meta span {
+      display: block;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 52ch;
+      margin-inline: auto;
+    }
+
+    .kbl-hero-meta span a {
+      color: var(--kbl-slime-bright);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .kbl-btn-primary,
+    .kbl-btn-primary:hover,
+    .kbl-btn-primary:focus-visible {
+      color: var(--kbl-cream);
+      text-decoration: none;
+    }
+
+    .kbl-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      justify-content: center;
+    }
+
+    .kbl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .kbl-btn:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+
+    .kbl-btn-primary {
+      background: linear-gradient(180deg, var(--kbl-slime-bright) 0%, var(--kbl-slime) 100%);
+      color: var(--kbl-cream);
+      box-shadow: 0 6px 18px rgba(126, 203, 0, 0.35);
+    }
+
+    .kbl-btn-secondary {
+      border: 1px solid rgba(126, 203, 0, 0.35);
+      background: rgba(10, 12, 10, 0.55);
+      color: var(--kbl-ink);
+    }
+
+    .kbl-story-panel {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      border: 1px solid rgba(126, 203, 0, 0.2);
+      border-radius: 20px;
+      background: rgba(10, 12, 10, 0.62);
+      padding: 22px;
+    }
+
+    .kbl-story-panel .kbl-tagline {
+      color: var(--kbl-slime-bright);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .kbl-story-panel h3 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .kbl-story-panel p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .kbl-hours-card {
+      display: grid;
+      gap: 14px;
+      padding: 18px 18px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(126, 203, 0, 0.28);
+      background:
+        linear-gradient(160deg, rgba(22, 26, 22, 0.92), rgba(10, 12, 10, 0.88));
+      box-shadow: inset 0 1px 0 rgba(168, 240, 32, 0.08);
+    }
+
+    .kbl-hours-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(126, 203, 0, 0.2);
+    }
+
+    .kbl-hours-head i {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(126, 203, 0, 0.2);
+      color: var(--kbl-slime-bright);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .kbl-hours-card h4 {
+      margin: 0;
+      color: var(--kbl-slime);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .kbl-hours-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .kbl-hours-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(126, 203, 0, 0.14);
+      background: rgba(10, 12, 10, 0.5);
+    }
+
+    .kbl-hours-item-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(126, 203, 0, 0.16);
+      color: var(--kbl-slime-bright);
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .kbl-hours-item-body {
+      flex: 1;
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .kbl-hours-label {
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .kbl-hours-days {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .kbl-hours-time {
+      color: var(--kbl-ink);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+
+    .kbl-hours-note {
+      color: var(--kbl-slime-bright);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .kbl-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .kbl-feature-card {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      justify-items: center;
+      text-align: center;
+      min-height: 132px;
+      border: 1px solid rgba(126, 203, 0, 0.26);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(22, 26, 22, 0.42), rgba(15, 23, 42, 0.72)),
+        radial-gradient(circle at 100% 0%, rgba(126, 203, 0, 0.08), transparent 42%);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+      padding: 18px 20px;
+    }
+
+    .kbl-feature-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(126, 203, 0, 0.22);
+      color: var(--kbl-slime-bright);
+      font-size: 16px;
+    }
+
+    .kbl-feature-card strong {
+      color: var(--text-primary);
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .kbl-feature-card span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .kbl-services-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .kbl-service-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(126, 203, 0, 0.28);
+      background: rgba(22, 26, 22, 0.65);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .kbl-service-pill em {
+      font-style: normal;
+      color: var(--kbl-slime-bright);
+      font-weight: 800;
+    }
+
+    .kbl-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .kbl-gallery figure {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(126, 203, 0, 0.22);
+      aspect-ratio: 4 / 5;
+      background: var(--kbl-cream);
+    }
+
+    .kbl-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .kbl-gallery figure:hover img {
+      transform: scale(1.04);
+    }
+
     .real-estate-section {
       position: relative;
       overflow: visible;
@@ -3504,6 +4051,7 @@
     .campaign-card,
     .portfolio-section,
     .iheart-section,
+    .kbl-section,
     .real-estate-section,
     .portfolio-stat,
     .portfolio-card,
@@ -3606,8 +4154,20 @@
       }
 
       .iheart-showcase-grid,
-      .iheart-feature-grid {
+      .iheart-feature-grid,
+      .kbl-showcase-grid,
+      .kbl-feature-grid,
+      .kbl-gallery {
         grid-template-columns: 1fr;
+      }
+
+      .kbl-title-row {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .kbl-title {
+        text-align: center;
       }
 
       .iheart-title-row {
@@ -3772,6 +4332,7 @@
         <li><a href="/resume#brand-portfolio" class="nav-link">Brands</a></li>
         <li><a href="/resume#experience" class="nav-link">Experience</a></li>
         <li><a href="/resume#iheart-storytime" class="nav-link">iHeart Radio</a></li>
+        <li><a href="/resume#kuts-by-lee" class="nav-link">Kuts By Lee</a></li>
         <li><a href="/resume#real-estate-content" class="nav-link">Real Estate</a></li>
         <li><a href="/resume#creator-collective" class="nav-link">Creator Collective</a></li>
         <li><a href="/resume#featured-work" class="nav-link">Featured Work</a></li>
@@ -4294,6 +4855,123 @@
             <strong>Cochran Films Production</strong>
             <span>On-location shooting, interview coverage, and cinematic delivery built to match premium podcast standards.</span>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section kbl-section" id="kuts-by-lee" aria-labelledby="kuts-by-lee-title">
+      <img class="kbl-deco kbl-deco--scissor" src="assets/kuts-by-lee/Scissor.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="kbl-deco kbl-deco--scissor-alt" src="assets/kuts-by-lee/S-Scissor.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <div class="kbl-inner">
+        <div class="kbl-header">
+          <div class="kbl-kicker">Client Landing Page · Web Design &amp; Development</div>
+          <div class="kbl-title-row">
+            <div class="kbl-logo-wrap">
+              <img src="assets/kuts-by-lee/logo.png" alt="Kuts By Lee logo">
+            </div>
+            <h2 class="kbl-title" id="kuts-by-lee-title">Sharp kuts online for a <span>Douglasville barber.</span></h2>
+          </div>
+          <p class="kbl-lede">
+            Designed and built the live marketing site for <strong>Kuts By Lee</strong> — a licensed barber in Douglasville &amp; Douglas County, GA. The landing page pairs local SEO, service pricing, gallery proof, and Calendly booking with a bold barbershop brand that reads clean on mobile and desktop.
+          </p>
+        </div>
+
+        <div class="kbl-showcase-grid">
+          <article class="kbl-hero-panel" aria-label="Kuts By Lee homepage hero preview">
+            <div class="kbl-browser-bar" aria-hidden="true">
+              <div class="kbl-browser-dots"><span></span><span></span><span></span></div>
+              <div class="kbl-browser-url">kutsbylee.com</div>
+            </div>
+            <div class="kbl-hero-frame">
+              <img src="assets/kuts-by-lee/hero-banner.png" alt="Kuts By Lee hero banner — barber in Douglasville, GA; fades, line-ups, and house calls" loading="lazy" decoding="async">
+              <div class="kbl-hero-overlay">
+                <p class="kbl-hero-eyebrow">Douglasville, GA · Barber · In-Shop &amp; House Calls</p>
+                <h3 class="kbl-hero-headline">Sharp Kuts. <em>House Calls.</em> On Your Time.</h3>
+                <p class="kbl-hero-sub">Licensed barber with 5+ years behind the chair — in-shop Monday–Saturday, house calls Mon &amp; Tue.</p>
+              </div>
+            </div>
+            <div class="kbl-hero-meta">
+              <strong>Homepage hero &amp; conversion path</strong>
+              <span>Full-width hero imagery, slime-green CTAs, and direct paths to book online or call — mirroring the live experience at <a href="https://kutsbylee.com/" target="_blank" rel="noopener noreferrer">kutsbylee.com</a>.</span>
+              <div class="kbl-hero-actions">
+                <a class="kbl-btn kbl-btn-primary" href="https://kutsbylee.com/" target="_blank" rel="noopener noreferrer">View Live Site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="kbl-btn kbl-btn-secondary" href="https://kutsbylee.com/#book" target="_blank" rel="noopener noreferrer">Book a Kut</a>
+              </div>
+            </div>
+          </article>
+
+          <aside class="kbl-story-panel" aria-label="About Kuts By Lee">
+            <p class="kbl-tagline">Meet Lee · Douglas County</p>
+            <h3>Local barber brand, built to book.</h3>
+            <p>
+              With 5+ years of professional experience, Lee specializes in fades, skin fades, specialty kuts, shape-ups, beard line-ups, and clean razor finishes for clients in Douglasville, Douglas County, and west-metro Atlanta. The site makes in-shop and house-call booking obvious from the first scroll.
+            </p>
+            <p>
+              I structured the page around how clients actually search — Douglasville barber, fade, line-up, and mobile house calls — with schema markup, service pricing, reviews, and a contact funnel that keeps response time front and center.
+            </p>
+            <div class="kbl-hours-card">
+              <div class="kbl-hours-head">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <h4>Hours &amp; Availability</h4>
+              </div>
+              <div class="kbl-hours-grid">
+                <div class="kbl-hours-item">
+                  <div class="kbl-hours-item-icon" aria-hidden="true"><i class="fa-solid fa-store"></i></div>
+                  <div class="kbl-hours-item-body">
+                    <span class="kbl-hours-label">In-Shop</span>
+                    <span class="kbl-hours-days">Monday – Saturday</span>
+                    <span class="kbl-hours-time">12:00 PM – 8:00 PM</span>
+                  </div>
+                </div>
+                <div class="kbl-hours-item">
+                  <div class="kbl-hours-item-icon" aria-hidden="true"><i class="fa-solid fa-car-side"></i></div>
+                  <div class="kbl-hours-item-body">
+                    <span class="kbl-hours-label">House Calls</span>
+                    <span class="kbl-hours-days">Monday &amp; Tuesday</span>
+                    <span class="kbl-hours-note">+$20 travel fee · Douglas County</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="kbl-feature-grid" aria-label="Kuts By Lee site capabilities">
+          <article class="kbl-feature-card">
+            <div class="kbl-feature-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <strong>Local SEO &amp; Schema</strong>
+            <span>LocalBusiness, services, reviews, and Douglas County geo signals so the site ranks for barber searches near Douglasville.</span>
+          </article>
+          <article class="kbl-feature-card">
+            <div class="kbl-feature-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+            <strong>Online Booking</strong>
+            <span>Calendly embed and clear service menu — fades, line-ups, combos, and house-call add-ons with transparent pricing.</span>
+          </article>
+          <article class="kbl-feature-card">
+            <div class="kbl-feature-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+            <strong>Mobile-First UX</strong>
+            <span>Dark barbershop palette, slime accent system, and touch-friendly CTAs built for clients booking from their phone.</span>
+          </article>
+        </div>
+
+        <div class="kbl-services-row" aria-label="Featured services and pricing">
+          <span class="kbl-service-pill">Kuts <em>$30</em></span>
+          <span class="kbl-service-pill">Specialty Kuts <em>$35</em></span>
+          <span class="kbl-service-pill">Line-Up <em>$20</em></span>
+          <span class="kbl-service-pill">Kut + Beard <em>$35</em></span>
+          <span class="kbl-service-pill">House Call <em>+$20</em></span>
+        </div>
+
+        <div class="kbl-gallery" aria-label="Portfolio cuts from Kuts By Lee">
+          <figure>
+            <img src="assets/kuts-by-lee/g1.jpg" alt="360 waves and line-up by Kuts By Lee barber in Douglasville, GA" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="assets/kuts-by-lee/g4.jpg" alt="Precision line-up and edge work — Douglas County barber" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="assets/kuts-by-lee/g5.jpg" alt="Fresh professional haircut by Kuts By Lee" loading="lazy" decoding="async">
+          </figure>
         </div>
       </div>
     </section>
@@ -4953,7 +5631,7 @@
 
       detectContentZones() {
         this.contentZones = [];
-        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
+        const elements = document.querySelectorAll('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-section, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .kbl-section, .kbl-feature-card, .kbl-hero-panel, .kbl-gallery figure, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
 
         elements.forEach((el) => {
           const rect = el.getBoundingClientRect();
@@ -5005,11 +5683,11 @@
         }, { passive: true });
 
         document.addEventListener('mouseover', (e) => {
-          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
+          this.hoveredElement = e.target.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .kbl-section, .kbl-feature-card, .kbl-hero-panel, .kbl-gallery figure, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card');
         });
 
         document.addEventListener('mouseout', (e) => {
-          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card')) {
+          if (!e.relatedTarget || !e.relatedTarget.closest('.hero-card, .logo-item, .content-card, .operator-feature-card, .side-card, .mayor-card, .mayor-impact-item, .portfolio-card, .stat-card, .iheart-section, .iheart-feature-card, .iheart-video-panel, .kbl-section, .kbl-feature-card, .kbl-hero-panel, .kbl-gallery figure, .real-estate-section, .re-promise-card, .re-video-panel, .re-blueprint-panel, .re-service-card, .re-slideshow, .creator-platform-panel, .creator-platform-item, .brand-showcase-section, .brand-showcase-card, .brand-video-card, .brand-social-card, .shawnta-portfolio-section, .sh-gallery figure, .seo-context-card')) {
             this.hoveredElement = null;
           }
         });
