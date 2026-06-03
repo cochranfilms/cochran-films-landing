@@ -32,19 +32,19 @@
   <meta property="og:title" content="Cochran Films 2026 | Atlanta Video Production & Full-Stack Creative Agency" />
   <meta property="og:description" content="Atlanta's full-stack creative agency for cinematic video production, photography, web development, real estate media, and white-label services — production, code, and platforms built as one stack." />
   <meta property="og:url" content="https://cochranfilms.com/" />
-  <meta property="og:image" content="https://cochranfilms.com/Cart_Banner_Image.png" />
-  <meta property="og:image:secure_url" content="https://cochranfilms.com/Cart_Banner_Image.png" />
+  <meta property="og:image" content="https://cochranfilms.com/assets/OG-Image.png" />
+  <meta property="og:image:secure_url" content="https://cochranfilms.com/assets/OG-Image.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1024" />
-  <meta property="og:image:height" content="576" />
-  <meta property="og:image:alt" content="Cochran Films — Atlanta full-stack creative agency for video production and web development" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cochran Films — Stories That Tell Themselves. Atlanta full-stack creative agency for video production, photography, and web development." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@cochranfilmsllc" />
   <meta name="twitter:creator" content="@cochranfilmsllc" />
   <meta name="twitter:title" content="Cochran Films 2026 | Atlanta Video Production & Creative Agency" />
   <meta name="twitter:description" content="Book Atlanta video production, photography, web development, and white-label creative services from Cochran Films — production, code, and platforms in one stack." />
-  <meta name="twitter:image" content="https://cochranfilms.com/Cart_Banner_Image.png" />
-  <meta name="twitter:image:alt" content="Cochran Films — Atlanta full-stack creative agency for video production and web development" />
+  <meta name="twitter:image" content="https://cochranfilms.com/assets/OG-Image.png" />
+  <meta name="twitter:image:alt" content="Cochran Films — Stories That Tell Themselves. Atlanta full-stack creative agency for video production, photography, and web development." />
   <link rel="icon" type="image/png" href="C_Logo.png" />
   <link rel="apple-touch-icon" href="C_Logo.png" />
   <script type="application/ld+json">
@@ -67,7 +67,7 @@
         "legalName": "Cochran Films LLC",
         "url": "https://cochranfilms.com/",
         "logo": "https://cochranfilms.com/CF_Logo_White2025.png",
-        "image": "https://cochranfilms.com/Cart_Banner_Image.png",
+        "image": "https://cochranfilms.com/assets/OG-Image.png",
         "email": "info@cochranfilms.com",
         "telephone": "+1-470-420-2169",
         "founder": {
@@ -170,9 +170,9 @@
         "about": { "@id": "https://cochranfilms.com/#organization" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://cochranfilms.com/Cart_Banner_Image.png",
-          "width": 1024,
-          "height": 576
+          "url": "https://cochranfilms.com/assets/OG-Image.png",
+          "width": 1200,
+          "height": 630
         }
       }
     ]
@@ -4408,12 +4408,22 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       :root {
-        --nav-height: 70px;
+        --nav-height: 56px;
+        --section-gap: 24px;
+        --mobile-gutter: 16px;
+        --mobile-bleed: calc(-1 * var(--mobile-gutter));
+        --mobile-bleed-width: calc(100% + (2 * var(--mobile-gutter)));
+      }
+
+      .nav-wrapper {
+        padding-top: max(10px, env(safe-area-inset-top, 0px));
       }
 
       .nav-container {
         height: var(--nav-height);
-        padding: 0 16px;
+        min-height: var(--nav-height);
+        padding: 6px var(--mobile-gutter);
+        align-items: center;
       }
 
       .nav-menu {
@@ -4421,19 +4431,25 @@
       }
 
       .mobile-menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: var(--mobile-gutter);
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
       }
 
       .nav-menu.show {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: var(--nav-height);
+        top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px)));
         left: 0;
         right: 0;
         bottom: 0;
         margin: 0;
-        padding: 16px 16px calc(24px + env(safe-area-inset-bottom));
+        padding: 16px var(--mobile-gutter) calc(24px + env(safe-area-inset-bottom));
         gap: 6px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
@@ -4459,22 +4475,184 @@
         overflow: hidden;
       }
 
+      .nav-logo {
+        left: var(--mobile-gutter);
+      }
+
       .nav-logo img {
-        max-width: min(180px, 42vw);
-        height: auto;
+        height: 32px;
+        width: auto;
+        max-width: min(128px, 34vw);
       }
 
       .wrapper {
-        padding: 0 16px 40px;
+        padding: 0 var(--mobile-gutter) 32px;
       }
 
       .section {
-        margin-top: 32px;
-        padding: 28px 0;
+        margin-top: 24px;
+        padding: 20px 0;
+      }
+
+      /* Full-bleed sections: edge-to-edge within wrapper, not 100vw */
+      .hero-banner,
+      .hero-social-proof,
+      .marquee-logos,
+      .marquee,
+      .marquee-services,
+      .services-showcase-section,
+      .service-builder-section,
+      .book-section,
+      .iheart-section,
+      .real-estate-section {
+        width: var(--mobile-bleed-width);
+        max-width: var(--mobile-bleed-width);
+        margin-left: var(--mobile-bleed);
+        margin-right: var(--mobile-bleed);
+        transform: none;
+      }
+
+      .hero-banner {
+        margin-top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px)));
+        min-height: min(50vh, 360px);
+      }
+
+      .hero-banner-content {
+        min-height: min(50vh, 360px);
+        padding: 22px 16px;
+      }
+
+      .hero-social-proof {
+        padding: 14px 12px;
+        margin-top: 12px;
+      }
+
+      .marquee-logos .tracks,
+      .marquee .tracks {
+        padding: 12px 0;
+      }
+
+      .logo-pill {
+        height: 34px;
+      }
+
+      .logo-pill img {
+        max-width: min(120px, 22vw);
+      }
+
+      .hero-value-section {
+        margin-top: 20px;
+      }
+
+      .hero-value-head {
+        margin-bottom: 18px;
+      }
+
+      .hero-value-title {
+        font-size: clamp(22px, 6vw, 28px);
+      }
+
+      .hero-value-sub {
+        font-size: 14px;
+      }
+
+      .hero-value-props {
+        max-width: 100%;
+        gap: 12px;
+      }
+
+      .hero-value-card {
+        padding: 16px 14px;
+        border-radius: 18px;
+      }
+
+      .hero-value-icon-wrap {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-radius: 14px;
+      }
+
+      .hero-value-card h3 {
+        font-size: 16px;
+        min-height: 0;
+        margin-bottom: 8px;
+      }
+
+      .hero-value-card p {
+        font-size: 13px;
+        line-height: 1.55;
       }
 
       .services-showcase-section {
-        padding: 48px 16px;
+        padding: 32px 12px;
+        margin-top: var(--section-gap);
+      }
+
+      .services-showcase-head {
+        margin-bottom: 22px;
+      }
+
+      .services-showcase-title {
+        font-size: clamp(24px, 6.5vw, 32px);
+      }
+
+      .services-showcase-lede {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .services-bento {
+        gap: 10px;
+      }
+
+      .svc-tile {
+        padding: 16px;
+        min-height: 0;
+        border-radius: 16px;
+        gap: 8px;
+      }
+
+      .svc-tile h3 {
+        font-size: 17px;
+      }
+
+      .svc-tile p {
+        font-size: 14px;
+        line-height: 1.55;
+        max-width: none;
+      }
+
+      .svc-tile-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        border-radius: 12px;
+      }
+
+      .svc-tile--featured {
+        padding: 18px 16px;
+      }
+
+      .svc-tile--featured h3 {
+        font-size: 19px;
+        max-width: none;
+      }
+
+      .svc-tile--featured p {
+        font-size: 14px;
+        max-width: none;
+      }
+
+      .svc-tile--featured .svc-tile-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+      }
+
+      .svc-tile-video-frame {
+        border-radius: 10px;
       }
 
       .services-bento {
@@ -4515,7 +4693,17 @@
 
       .iheart-section,
       .real-estate-section {
-        padding: 56px 16px;
+        padding: 32px 12px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .iheart-header {
+        margin-bottom: 22px;
+      }
+
+      .iheart-title {
+        font-size: clamp(22px, 6vw, 28px);
       }
 
       .iheart-pillar {
@@ -4554,18 +4742,46 @@
 
       .kbl-hero-frame,
       .sp-hero-frame {
-        min-height: 320px;
+        min-height: 0;
         height: auto;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 16 / 10;
+        max-height: 220px;
       }
 
       .lp-portfolio-hero {
-        padding: 24px;
+        padding: 16px;
+        border-radius: 18px;
+        gap: 14px;
+      }
+
+      .lp-portfolio-lede {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .lp-portfolio-kicker {
+        font-size: 10px;
+        margin-bottom: 10px;
       }
 
       .book-section {
-        margin-top: 32px;
-        padding: 44px 16px;
+        margin-top: var(--section-gap);
+        padding: 32px 12px;
+      }
+
+      .book-section-info {
+        padding: 16px 14px;
+        border-radius: 18px;
+        gap: 12px;
+      }
+
+      .book-section-title {
+        font-size: clamp(24px, 7vw, 32px);
+      }
+
+      .book-section-lede {
+        font-size: 14px;
+        line-height: 1.6;
       }
 
       .book-section-grid,
@@ -4594,15 +4810,6 @@
         justify-content: center;
       }
 
-      .hero-banner-content {
-        min-height: clamp(360px, 58vh, 520px);
-        padding: clamp(28px, 5vw, 48px) 18px;
-      }
-
-      .hero-banner {
-        min-height: clamp(360px, 58vh, 520px);
-      }
-
       .hero-social-proof-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
@@ -4622,7 +4829,17 @@
       }
 
       .about-card {
-        padding: 24px 20px;
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .about-card h3 {
+        font-size: 17px;
+      }
+
+      .about-card p {
+        font-size: 14px;
+        line-height: 1.55;
       }
 
       .lp-portfolio-nav {
@@ -4688,6 +4905,30 @@
         max-width: none;
       }
 
+      .sp-hero-meta {
+        padding: 14px 12px;
+        border-radius: 12px;
+      }
+
+      .sp-hero-meta strong {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      .sp-hero-meta span {
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .re-title {
+        font-size: clamp(22px, 6.5vw, 28px);
+      }
+
+      .re-blueprint-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
       .footer-brand img {
         max-width: min(200px, 55vw);
         height: auto;
@@ -4706,10 +4947,24 @@
     }
 
     @media (max-width: 480px) {
+      :root {
+        --nav-height: 52px;
+      }
+
+      .nav-logo img {
+        height: 28px;
+        max-width: min(112px, 32vw);
+      }
+
+      .hero-banner,
+      .hero-banner-content {
+        min-height: min(46vh, 300px);
+      }
+
       .hero-banner-content {
         align-items: center;
         text-align: center;
-        padding: 48px 20px;
+        padding: 18px 14px;
       }
 
       .hero-banner .hero-title,
@@ -4727,11 +4982,15 @@
       }
 
       .hero-title {
-        font-size: clamp(32px, 10vw, 48px);
+        font-size: clamp(24px, 8.5vw, 34px);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(14px, 4vw, 16px);
       }
 
       .section-title {
-        font-size: clamp(28px, 8vw, 40px);
+        font-size: clamp(22px, 7vw, 32px);
       }
 
       .lp-portfolio-stats {
@@ -6198,12 +6457,24 @@
 
     @media (max-width: 768px) {
       .service-builder-section {
-        padding: 36px 16px;
+        padding: 32px 12px;
+        margin-bottom: var(--section-gap);
       }
 
       .service-builder-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
+        gap: 1rem;
+      }
+
+      .package-builder,
+      .service-catalog {
+        padding: 16px 14px;
+        border-radius: 16px;
+      }
+
+      .package-dropzone {
+        padding: 20px 14px;
+        min-height: 120px;
       }
 
       .package-builder {
