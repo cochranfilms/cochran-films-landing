@@ -13,6 +13,9 @@
       "maxDuration": 10
     }
   },
+  "redirects": [
+    { "source": "/resume.html", "destination": "/resume", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/resume", "destination": "/resume.html" }
   ]
