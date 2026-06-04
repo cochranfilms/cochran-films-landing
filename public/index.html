@@ -9921,10 +9921,20 @@
             })
           });
           
-          const result = await response.json();
+          const raw = await response.text();
+          let result = {};
+          try {
+            result = raw ? JSON.parse(raw) : {};
+          } catch (parseError) {
+            throw new Error(
+              raw && raw.length < 300
+                ? raw
+                : `Server error (${response.status}). Check Vercel function logs.`
+            );
+          }
           
           if (!response.ok) {
-            throw new Error(result.error || 'Unable to create invoice. Please try again.');
+            throw new Error(result.error || `Unable to create invoice (${response.status}).`);
           }
           
           console.log('Stripe invoice created:', result.invoiceId);

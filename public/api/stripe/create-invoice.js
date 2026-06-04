@@ -1,4 +1,4 @@
-import Stripe from 'stripe';
+const Stripe = require('stripe');
 
 const DEFAULT_DAYS_UNTIL_DUE = 30;
 
@@ -184,9 +184,20 @@ export default async function handler(req, res) {
     }
 
     const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id);
-    const sent = await stripe.invoices.sendInvoice(finalized.id);
+
+    let sent = finalized;
+    try {
+      sent = await stripe.invoices.sendInvoice(finalized.id);
+    } catch (sendError) {
+      console.warn('Stripe sendInvoice skipped:', sendError.message);
+    }
 
     const invoiceUrl = sent.hosted_invoice_url || finalized.hosted_invoice_url;
+    if (!invoiceUrl) {
+      return res.status(500).json({
+        error: 'Invoice was created but no payment link is available. Check Stripe Dashboard.',
+      });
+    }
     const projectDate = date
       ? new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
       : new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });

@@ -58,7 +58,7 @@ HTML to paste: `docs/emailjs-service-package-invoice-template.html`
 
 - Vercel project **Root Directory** should be `public` for the landing site.
 - API route: `public/api/stripe/create-invoice.js`
-- Run `npm install` at repo root so Vercel installs the `stripe` package.
+- `public/package.json` includes the `stripe` dependency (required when Vercel Root Directory is `public`).
 
 ---
 
