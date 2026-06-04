@@ -3898,6 +3898,13 @@
       grid-column: 1 / -1;
     }
 
+    .book-form-email-row .form-hint {
+      margin: 10px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-secondary, #94a3b8);
+    }
+
     .form-group {
       margin-bottom: 24px;
     }
@@ -8587,13 +8594,19 @@
             <form id="bookingForm">
               <div class="book-form-grid">
                 <div class="form-group">
-                  <label for="name" class="form-label">Full Name</label>
-                  <input type="text" id="name" name="name" class="form-input" autocomplete="name" required>
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" autocomplete="given-name" placeholder="Ben" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input type="email" id="email" name="email" class="form-input" autocomplete="email" required>
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" autocomplete="family-name" placeholder="Johnson" required>
+                </div>
+
+                <div class="form-group form-group-full book-form-email-row">
+                  <label for="contactEmail" class="form-label">Email Address</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+                  <p class="form-hint">We&apos;ll reply to this address — please use a valid email you check regularly.</p>
                 </div>
 
                 <div class="form-group form-group-full">
@@ -8869,6 +8882,36 @@
         return;
       }
 
+      const firstName = String(data.firstName || '').trim();
+      const lastName = String(data.lastName || '').trim();
+      const email = String(data.email || '').trim();
+      const fullName = [firstName, lastName].filter(Boolean).join(' ');
+
+      if (!firstName || !lastName) {
+        showPlatformNotice({
+          title: 'Name required',
+          subtitle: 'Please enter your first and last name.',
+          items: [],
+          buttonText: 'OK',
+          iconClass: 'fa-solid fa-circle-exclamation',
+          variant: 'error'
+        });
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailPattern.test(email)) {
+        showPlatformNotice({
+          title: 'Valid email required',
+          subtitle: 'Please enter a valid email address (for example: you@example.com).',
+          items: [],
+          buttonText: 'OK',
+          iconClass: 'fa-solid fa-circle-exclamation',
+          variant: 'error'
+        });
+        return;
+      }
+
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
@@ -8879,8 +8922,10 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            name: data.name,
-            email: data.email,
+            name: fullName,
+            firstName,
+            lastName,
+            email,
             service: data.service,
             message: data.message
           })

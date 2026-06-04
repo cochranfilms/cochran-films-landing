@@ -98,10 +98,16 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, service, message } = req.body || {};
+    const { name, firstName, lastName, email, service, message } = req.body || {};
 
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
-      return res.status(400).json({ error: 'Name, email, and project details are required.' });
+    const customerFirst = String(firstName || '').trim();
+    const customerLast = String(lastName || '').trim();
+    const customerName =
+      String(name || '').trim() ||
+      [customerFirst, customerLast].filter(Boolean).join(' ');
+
+    if (!customerName || !email?.trim() || !message?.trim()) {
+      return res.status(400).json({ error: 'First name, last name, email, and project details are required.' });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -122,7 +128,9 @@ export default async function handler(req, res) {
     const projectDetailsText = message.trim();
 
     const baseParams = {
-      customer_name: name.trim(),
+      customer_name: customerName,
+      customer_first_name: customerFirst,
+      customer_last_name: customerLast,
       customer_email: email.trim(),
       service_interest: serviceLabel,
       project_details_html: projectDetailsHtml,

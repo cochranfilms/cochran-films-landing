@@ -41,7 +41,7 @@ Cochran Films — {{email_heading}}
 
 ## Template variables
 
-`to_email`, `reply_to`, `email_heading`, `email_intro`, `customer_name`, `customer_email`, `service_interest`, `inquiry_id`, `submitted_date`, `project_details_html`, `project_details`
+`to_email`, `reply_to`, `email_heading`, `email_intro`, `customer_name`, `customer_first_name`, `customer_last_name`, `customer_email`, `service_interest`, `inquiry_id`, `submitted_date`, `project_details_html`, `project_details`
 
 For project details HTML use **`{{{project_details_html}}}`** (triple braces).
 
