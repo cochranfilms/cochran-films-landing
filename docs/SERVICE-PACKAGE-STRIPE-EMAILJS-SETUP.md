@@ -47,8 +47,10 @@ HTML to paste: `docs/emailjs-service-package-invoice-template.html`
 
 ## Stripe Dashboard checklist
 
-1. **Settings → Customer emails** — enable invoice emails if you want Stripe’s own message in addition to EmailJS.
-2. **Settings → Business details** — logo, support email, and address appear on invoices.
+1. **Disable Stripe invoice emails** (so clients only get your EmailJS template):
+   - **Settings → Customer emails** — turn **off** any option like *“Send emails when invoices are finalized”* or *“Invoice emails”* (wording varies).
+   - The API **does not** call `sendInvoice`; if Stripe still emails, it is from this Dashboard setting.
+2. **Settings → Business details** — logo, support email, and address still appear on the **hosted invoice page** (payment link).
 3. Use **test mode** keys in Preview deployments; **live** keys in Production.
 4. Invoicing must be enabled on your Stripe account (default for most businesses).
 

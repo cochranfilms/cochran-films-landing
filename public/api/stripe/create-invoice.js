@@ -27,7 +27,7 @@ function escapeHtml(value) {
 
 function buildServicesHtml(services) {
   if (!Array.isArray(services) || services.length === 0) {
-    return '<tr><td colspan="3" style="padding:12px;color:#94a3b8;">No line items</td></tr>';
+    return '<tr><td colspan="3" style="padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;">No line items</td></tr>';
   }
   return services
     .map((service) => {
@@ -36,9 +36,9 @@ function buildServicesHtml(services) {
       const lineTotal = unitPrice * qty;
       const qtyLabel = qty > 1 ? ` &times; ${qty}` : '';
       return `<tr>
-        <td style="padding:14px 12px;border-bottom:1px solid rgba(148,163,184,0.15);color:#f8fafc;font-size:15px;font-weight:600;">${escapeHtml(service.name)}${qtyLabel}</td>
-        <td style="padding:14px 12px;border-bottom:1px solid rgba(148,163,184,0.15);color:#94a3b8;font-size:13px;">${escapeHtml(service.duration || '')}</td>
-        <td style="padding:14px 12px;border-bottom:1px solid rgba(148,163,184,0.15);color:#FFB200;font-size:15px;font-weight:700;text-align:right;white-space:nowrap;">$${lineTotal.toFixed(2)}</td>
+        <td width="42%" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;line-height:1.4;">${escapeHtml(service.name)}${qtyLabel}</td>
+        <td width="38%" bgcolor="#ffffff" style="padding:14px 12px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#6b7280;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.45;">${escapeHtml(service.duration || '')}</td>
+        <td width="20%" align="right" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;">$${lineTotal.toFixed(2)}</td>
       </tr>`;
     })
     .join('');
@@ -183,16 +183,13 @@ export default async function handler(req, res) {
       });
     }
 
-    const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id);
+    // Finalize only — do NOT call sendInvoice (Stripe would email the customer).
+    // Clients receive the branded EmailJS message with the hosted invoice link.
+    const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id, {
+      auto_advance: false,
+    });
 
-    let sent = finalized;
-    try {
-      sent = await stripe.invoices.sendInvoice(finalized.id);
-    } catch (sendError) {
-      console.warn('Stripe sendInvoice skipped:', sendError.message);
-    }
-
-    const invoiceUrl = sent.hosted_invoice_url || finalized.hosted_invoice_url;
+    const invoiceUrl = finalized.hosted_invoice_url;
     if (!invoiceUrl) {
       return res.status(500).json({
         error: 'Invoice was created but no payment link is available. Check Stripe Dashboard.',
