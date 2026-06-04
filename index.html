@@ -1476,6 +1476,261 @@
       margin: 0;
     }
 
+    /* Creator Collective — Film, Content, and Brand Education (from resume) */
+    .lp-creator-edu-section {
+      margin: clamp(32px, 4vw, 48px) 0;
+      scroll-margin-top: 110px;
+    }
+
+    .lp-creator-edu-section .creator-banner {
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
+      border: 1px solid rgba(37, 99, 235, 0.36);
+      border-radius: 26px;
+      background: rgba(2, 6, 23, 0.7);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+      margin-bottom: 28px;
+    }
+
+    .lp-creator-edu-section .creator-banner-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.82;
+    }
+
+    .lp-creator-edu-section .creator-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(2, 6, 23, 0.92) 0%, rgba(2, 6, 23, 0.60) 48%, rgba(2, 6, 23, 0.18) 100%),
+        linear-gradient(180deg, rgba(2, 6, 23, 0.12) 0%, rgba(2, 6, 23, 0.82) 100%);
+    }
+
+    .lp-creator-edu-section .creator-banner-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(28px, 5vw, 54px);
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+    }
+
+    .lp-creator-edu-section .creator-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(34px, 4.9vw, 60px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin: 0 0 18px;
+      color: var(--text-primary);
+    }
+
+    .lp-creator-edu-section .creator-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .lp-creator-edu-section .creator-title span {
+      color: #3b82f6;
+    }
+
+    .lp-creator-edu-section .creator-logo-inline {
+      display: block;
+      width: min(100%, 280px);
+      max-height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.32));
+      margin: 0 auto 18px;
+      opacity: 0.95;
+    }
+
+    .lp-creator-edu-section .creator-copy {
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .lp-creator-edu-section .lp-creator-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .lp-creator-edu-section .lp-creator-stat {
+      border: 1px solid rgba(99, 102, 241, 0.22);
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.56);
+      padding: 18px;
+    }
+
+    .lp-creator-edu-section .lp-creator-stat strong {
+      display: block;
+      color: var(--brand-gold);
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .lp-creator-edu-section .lp-creator-stat span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .lp-creator-edu-section .creator-platform-panel {
+      border: 1px solid rgba(59, 130, 246, 0.30);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(255, 178, 0, 0.08)),
+        rgba(2, 6, 23, 0.58);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.32);
+      margin: 28px 0;
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .lp-creator-edu-section .creator-platform-label {
+      color: var(--brand-gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .lp-creator-edu-section .creator-platform-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin: 0 0 14px;
+    }
+
+    .lp-creator-edu-section .creator-platform-copy {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0 auto 22px;
+      max-width: 960px;
+    }
+
+    .lp-creator-edu-section .creator-platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .lp-creator-edu-section .creator-platform-item {
+      border: 1px solid rgba(99, 102, 241, 0.22);
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.52);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .lp-creator-edu-section .creator-platform-item strong {
+      display: block;
+      color: #93c5fd;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .lp-creator-edu-section .creator-platform-item span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .lp-creator-edu-section .lp-creator-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .lp-creator-edu-section .lp-creator-card {
+      overflow: hidden;
+      border: 1px solid rgba(99, 102, 241, 0.22);
+      border-radius: 20px;
+      background: rgba(2, 6, 23, 0.58);
+      transition: var(--transition-fast);
+    }
+
+    .lp-creator-edu-section .lp-creator-card:hover {
+      border-color: rgba(255, 178, 0, 0.42);
+      transform: translateY(-3px);
+    }
+
+    .lp-creator-edu-section .lp-creator-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: rgba(2, 6, 23, 0.86);
+    }
+
+    .lp-creator-edu-section .lp-creator-video iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .lp-creator-edu-section .lp-creator-card-body {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .lp-creator-edu-section .lp-creator-card-meta {
+      color: var(--brand-gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+    }
+
+    .lp-creator-edu-section .lp-creator-card-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 7px;
+    }
+
+    .lp-creator-edu-section .lp-creator-card-copy {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .lp-creator-edu-section .lp-creator-footer-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
     /* iHeart Radio — full-bleed portfolio feature */
     .iheart-section {
       position: relative;
@@ -4838,6 +5093,20 @@
         white-space: normal;
       }
 
+      .lp-creator-edu-section .creator-title-line {
+        white-space: normal;
+      }
+
+      .lp-creator-edu-section .creator-banner,
+      .lp-creator-edu-section .creator-banner-content {
+        min-height: 420px;
+      }
+
+      .lp-creator-edu-section .lp-creator-stats,
+      .lp-creator-edu-section .creator-platform-grid {
+        grid-template-columns: 1fr;
+      }
+
       .lp-portfolio-hero,
       .iheart-showcase,
       .iheart-pillars,
@@ -5322,6 +5591,20 @@
     }
 
     @media (max-width: 900px) {
+      .lp-creator-edu-section .lp-creator-stats,
+      .lp-creator-edu-section .creator-platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .lp-creator-edu-section .lp-creator-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .lp-creator-edu-section .creator-banner,
+      .lp-creator-edu-section .creator-banner-content {
+        min-height: 500px;
+      }
+
       .lp-portfolio-stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -8032,6 +8315,7 @@
 
         <nav class="lp-portfolio-nav" aria-label="Portfolio categories">
           <a href="#portfolio-production"><i class="fa-solid fa-video"></i> Video Production</a>
+          <a href="#portfolio-creator-collective"><i class="fa-solid fa-graduation-cap"></i> Creator Education</a>
           <a href="#portfolio-iheart"><i class="fa-solid fa-podcast"></i> iHeart Radio</a>
           <a href="#portfolio-web"><i class="fa-solid fa-code"></i> Web &amp; Platforms</a>
           <a href="#portfolio-realestate"><i class="fa-solid fa-house"></i> Real Estate</a>
@@ -8086,6 +8370,124 @@
             </article>
           </div>
         </div>
+
+        <section class="lp-creator-edu-section" id="portfolio-creator-collective" aria-labelledby="lp-creator-edu-title">
+          <div class="creator-banner">
+            <picture>
+              <source srcset="assets/creator-collective/Landing-Banner.webp" type="image/webp">
+              <img class="creator-banner-bg" src="assets/creator-collective/Landing-Banner.jpeg" alt="Creator Collective production team creating branded video content" loading="lazy" decoding="async">
+            </picture>
+            <div class="creator-banner-content">
+              <picture>
+                <source srcset="Creator-Collective-Logo.webp" type="image/webp">
+                <img class="creator-logo-inline" src="Creator-Collective-Logo.webp" alt="Creator Collective">
+              </picture>
+              <h3 class="creator-title" id="lp-creator-edu-title">
+                <span class="creator-title-line">Film, Content,</span>
+                <span class="creator-title-line">and <span>Brand Education</span></span>
+              </h3>
+              <p class="creator-copy">
+                Through a partnership and co-ownership role with Creator Collective, Cody helps ambitious entrepreneurs in the media space build real production skills, stronger brands, and repeatable content systems across videography, photography, editing, and business-focused creative education.
+              </p>
+            </div>
+          </div>
+
+          <div class="lp-creator-stats" aria-label="Creator Collective focus areas">
+            <div class="lp-creator-stat">
+              <strong>Film</strong>
+              <span>Hands-on production guidance for creators learning how to plan, shoot, light, and tell stronger stories.</span>
+            </div>
+            <div class="lp-creator-stat">
+              <strong>Content</strong>
+              <span>Education built around consistent content creation, audience trust, and platform-ready delivery.</span>
+            </div>
+            <div class="lp-creator-stat">
+              <strong>Brand</strong>
+              <span>Strategic coaching for entrepreneurs turning creative skills into clear offers and recognizable positioning.</span>
+            </div>
+            <div class="lp-creator-stat">
+              <strong>Platform</strong>
+              <span>A business and media growth ecosystem helping creators learn, organize, find opportunities, and build stronger careers.</span>
+            </div>
+          </div>
+
+          <div class="creator-platform-panel">
+            <div class="creator-platform-label">Full Creator Ecosystem</div>
+            <h4 class="creator-platform-title">More than a community.<br>A platform for creative growth.</h4>
+            <p class="creator-platform-copy">
+              Creator Collective helps creators make more money, get more organized, access better opportunities, and operate with the confidence of a real creative business. It blends education, networking, business tools, brand development, marketplace potential, and premium media agency support into one ecosystem for ambitious videographers, photographers, editors, DJs, podcasters, and creative entrepreneurs.
+            </p>
+            <div class="creator-platform-grid" aria-label="Creator Collective platform benefits">
+              <div class="creator-platform-item">
+                <strong>Learn</strong>
+                <span>Practical training across production, editing, content creation, pricing, client communication, and business growth.</span>
+              </div>
+              <div class="creator-platform-item">
+                <strong>Earn</strong>
+                <span>Access to real gigs, brand work, business requests, local opportunities, and marketplace-style creator matching.</span>
+              </div>
+              <div class="creator-platform-item">
+                <strong>Operate</strong>
+                <span>Tools and workflows for project organization, job listings, client intake, invoices, requests, and admin systems.</span>
+              </div>
+              <div class="creator-platform-item">
+                <strong>Scale</strong>
+                <span>Brand development, safer client workflows, templates, resources, and agency-level support for serious creators.</span>
+              </div>
+            </div>
+
+            <div class="lp-creator-gallery" aria-label="Creator Collective portfolio videos">
+              <article class="lp-creator-card">
+                <div class="lp-creator-video">
+                  <iframe src="https://www.youtube.com/embed/3-msojt4yuk?rel=0" title="80% Of Videography Basics In 20 Minutes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="lp-creator-card-body">
+                  <div class="lp-creator-card-meta">Videography Education</div>
+                  <div class="lp-creator-card-title">80% Of Videography Basics In 20 Minutes</div>
+                  <p class="lp-creator-card-copy">A practical entry point for creators who want to understand the core fundamentals behind stronger video production.</p>
+                </div>
+              </article>
+
+              <article class="lp-creator-card">
+                <div class="lp-creator-video">
+                  <iframe src="https://www.youtube.com/embed/wgXzEdZtyRM?rel=0" title="SD FIRST, SHOOT SECOND" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="lp-creator-card-body">
+                  <div class="lp-creator-card-meta">Production Workflow</div>
+                  <div class="lp-creator-card-title">SD FIRST, SHOOT SECOND</div>
+                  <p class="lp-creator-card-copy">A workflow-focused lesson for media entrepreneurs learning how to protect footage and think like professionals on set.</p>
+                </div>
+              </article>
+
+              <article class="lp-creator-card">
+                <div class="lp-creator-video">
+                  <iframe src="https://www.youtube.com/embed/SeQh75iUSIc?rel=0" title="STAY FOCUSED, NOT DISTRACTED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="lp-creator-card-body">
+                  <div class="lp-creator-card-meta">Creative Mindset</div>
+                  <div class="lp-creator-card-title">STAY FOCUSED, NOT DISTRACTED</div>
+                  <p class="lp-creator-card-copy">Brand and mindset education for ambitious creators balancing creativity, consistency, and business growth.</p>
+                </div>
+              </article>
+
+              <article class="lp-creator-card">
+                <div class="lp-creator-video">
+                  <iframe src="https://www.youtube.com/embed/eImA5EvDyEw?rel=0" title="The Smile Campaign" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="lp-creator-card-body">
+                  <div class="lp-creator-card-meta">Campaign Storytelling</div>
+                  <div class="lp-creator-card-title">The Smile Campaign</div>
+                  <p class="lp-creator-card-copy">A campaign-driven example of how Creator Collective blends message, visuals, and emotional clarity for audience connection.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="lp-creator-footer-cta">
+            <a href="https://www.creatorcollective.media/" target="_blank" rel="noopener noreferrer" class="hero-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Creator Collective</a>
+            <a href="/resume#creator-collective" class="lp-portfolio-btn-secondary">Full Case Study on Resume</a>
+          </div>
+        </section>
 
         <section class="iheart-section" id="portfolio-iheart" aria-labelledby="lp-iheart-title">
           <div class="iheart-section-inner">
