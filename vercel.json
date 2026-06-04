@@ -1,22 +1,57 @@
 {
+  "version": 2,
   "functions": {
-    "api/airtable/portfolio.js": {
-      "maxDuration": 10
+    "api/github/file/[filename].js": {
+      "maxDuration": 30
     },
-    "api/airtable/web.js": {
-      "maxDuration": 10
+    "api/github/info.js": {
+      "maxDuration": 30
     },
-    "api/airtable/photos.js": {
-      "maxDuration": 10
+    "api/users.js": {
+      "maxDuration": 30
     },
-    "api/wave/create-invoice.js": {
-      "maxDuration": 10
+    "api/jobs-data.js": {
+      "maxDuration": 30
+    },
+    "api/update-job-status.js": {
+      "maxDuration": 30
+    },
+    "api/dropdown-options.js": {
+      "maxDuration": 30
+    },
+    "api/update-users.js": {
+      "maxDuration": 30
+    },
+    "api/delete-pdf.js": {
+      "maxDuration": 30
+    },
+    "api/notifications.js": {
+      "maxDuration": 30
+    },
+    "api/contracts.js": {
+      "maxDuration": 30
+    },
+    "api/firebase.js": {
+      "maxDuration": 30
+    },
+    "api/health.js": {
+      "maxDuration": 30
     }
   },
-  "redirects": [
-    { "source": "/resume.html", "destination": "/resume", "permanent": true }
-  ],
   "rewrites": [
-    { "source": "/resume", "destination": "/resume.html" }
-  ]
+    { "source": "/admin-dashboard", "destination": "/admin-dashboard.html" },
+    { "source": "/user-portal", "destination": "/user-portal.html" },
+    { "source": "/contract", "destination": "/contract.html" },
+    { "source": "/resume", "destination": "/resume.html" },
+    { "source": "/admin", "destination": "/admin-dashboard.html" },
+    { "source": "/backend", "destination": "/backend.html" },
+    { "source": "/read-me", "destination": "/Read-Me.html" },
+    { "source": "/Read-Me", "destination": "/Read-Me.html" },
+    { "source": "/read-me.html", "destination": "/Read-Me.html" },
+    { "source": "/Read-Me.html", "destination": "/Read-Me.html" },
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
