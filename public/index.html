@@ -9895,64 +9895,67 @@
       window.removeServiceFromPackage = removeServiceFromPackage;
       window.validateAndSendProject = validateAndSendProject;
       
-      function sendToEmailJS(invoiceData) {
-        // Enhanced project request handling with email integration
-        const submitBtn = document.querySelector('.btn-primary');
-        const originalText = submitBtn.innerHTML;
+      async function sendToEmailJS(invoiceData) {
+        const modal = document.querySelector('.modal-overlay.active');
+        const submitBtn = modal ? modal.querySelector('.btn-primary') : document.querySelector('.btn-primary');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
         
-        // Temporarily disable button to prevent double-clicking during processing
-        if (submitBtn.disabled) return; // Already processing this request
+        if (submitBtn?.disabled) return;
         
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Request...';
-        submitBtn.disabled = true;
+        if (submitBtn) {
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Invoice...';
+          submitBtn.disabled = true;
+        }
         
-        // Prepare enhanced service details
-        const serviceDetails = invoiceData.services.map(s => {
-          let serviceDetail = `- ${s.name}: $${s.price}`;
-          return serviceDetail;
-        }).join('\n');
-        
-        // Prepare customer information
-        const customerInfo = invoiceData.customer || {};
-        const customerName = customerInfo.name || 'Unknown Customer';
-        const customerEmail = customerInfo.email || 'No email provided';
-        const customerPhone = customerInfo.phone || 'No phone provided';
-        
-        // Send project request via EmailJS
-        emailjs.send('service_t11yvru', 'template_aluwel1', {
-          service: 'Project Generation',
-          name: customerName,
-          email: customerEmail,
-          phone: customerPhone,
-          notes: `Invoice #${invoiceData.invoiceNumber}\n\nCustomer Details:\nName: ${customerName}\nEmail: ${customerEmail}\nPhone: ${customerPhone}\n\nServices:\n${serviceDetails}\n\nSubtotal: $${invoiceData.subtotal.toFixed(2)}\nTotal: $${invoiceData.total.toFixed(2)}\n\nGenerated: ${new Date(invoiceData.date).toLocaleString()}`,
-          invoice_number: invoiceData.invoiceNumber,
-          total_amount: `$${invoiceData.total.toFixed(2)}`,
-          title: 'Service Package Request'
-        })
-        .then(function(response) {
-          console.log('Project request sent successfully');
-          // Show prominent success modal
-          showSuccessModal();
+        try {
+          const response = await fetch('/api/stripe/create-invoice', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              customer: invoiceData.customer,
+              services: invoiceData.services,
+              invoiceNumber: invoiceData.invoiceNumber,
+              subtotal: invoiceData.subtotal,
+              total: invoiceData.total,
+              date: invoiceData.date
+            })
+          });
           
-          // Clear package after successful project submission
+          const result = await response.json();
+          
+          if (!response.ok) {
+            throw new Error(result.error || 'Unable to create invoice. Please try again.');
+          }
+          
+          console.log('Stripe invoice created:', result.invoiceId);
+          showSuccessModal(result.invoiceUrl, result.emailWarning);
           clearPackage();
-        })
-        .catch(function(error) {
-          console.error('EmailJS error:', error);
-          
-          // Show prominent success modal even on error (fail gracefully)
-          showSuccessModal();
-          
-          // Clear package after project submission
-          clearPackage();
-        });
+        } catch (error) {
+          console.error('Invoice submission error:', error);
+          showNotification(error.message || 'Unable to create invoice. Please contact us directly.', 'error');
+          if (submitBtn) {
+            submitBtn.innerHTML = originalText || '<i class="fas fa-paper-plane"></i> Send Your Project';
+            submitBtn.disabled = false;
+          }
+        }
       }
       
       // Show prominent success modal for project submission
-      function showSuccessModal() {
+      function showSuccessModal(invoiceUrl, emailWarning) {
         // Close any existing invoice/project modal first
         const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
         existingModals.forEach(modal => modal.remove());
+        
+        const safeInvoiceUrl = invoiceUrl && /^https:\/\/(invoice\.stripe\.com|pay\.stripe\.com)\//i.test(invoiceUrl) ? invoiceUrl : '';
+        const invoiceLinkHtml = safeInvoiceUrl
+          ? `<div class="success-detail-item">
+              <i class="fas fa-file-invoice-dollar"></i>
+              <span><a href="${safeInvoiceUrl}" target="_blank" rel="noopener noreferrer" style="color:var(--brand-gold);font-weight:700;">View your Stripe invoice</a></span>
+            </div>`
+          : '';
+        const emailNote = emailWarning
+          ? `<p style="margin:12px 0 0;font-size:13px;color:var(--text-muted);">${emailWarning}</p>`
+          : '';
         
         const modal = document.createElement('div');
         modal.className = 'modal-overlay active success-modal-overlay';
@@ -9962,19 +9965,20 @@
               <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
               </div>
-              <h2>✅ Request Submitted!</h2>
-              <p>Thank you for reaching out. We'll review your request and get back to you within 24 hours.</p>
+              <h2>✅ Invoice Created!</h2>
+              <p>Your project package and Stripe invoice have been sent to your email.${emailNote}</p>
             </div>
             
             <div class="success-modal-body">
               <div class="success-details">
-                <div class="success-detail-item">
-                  <i class="fas fa-clock"></i>
-                  <span>Response time: Within 24 hours</span>
-                </div>
+                ${invoiceLinkHtml}
                 <div class="success-detail-item">
                   <i class="fas fa-envelope"></i>
-                  <span>We'll contact you via email</span>
+                  <span>Check your inbox for package details &amp; payment link</span>
+                </div>
+                <div class="success-detail-item">
+                  <i class="fas fa-clock"></i>
+                  <span>We'll follow up within 24 hours to kick off your project</span>
                 </div>
                 <div class="success-detail-item">
                   <i class="fas fa-phone"></i>

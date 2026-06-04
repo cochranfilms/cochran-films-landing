@@ -9,8 +9,8 @@
     "api/airtable/photos.js": {
       "maxDuration": 10
     },
-    "api/wave/create-invoice.js": {
-      "maxDuration": 10
+    "api/stripe/create-invoice.js": {
+      "maxDuration": 30
     }
   },
   "rewrites": [

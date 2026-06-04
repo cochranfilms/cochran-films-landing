@@ -1,0 +1,142 @@
+<!--
+  Cochran Films — Service Package Builder + Stripe Invoice Email
+  Paste this into EmailJS → Email Templates → Content (HTML)
+
+  Template variables (must match exactly):
+  {{email_heading}}, {{customer_name}}, {{customer_email}}, {{customer_phone}},
+  {{invoice_number}}, {{project_date}}, {{services_html}}, {{total_amount}},
+  {{invoice_url}}
+
+  EmailJS template settings:
+  - To Email: {{to_email}}
+  - From Name: Cochran Films
+  - Reply To: {{reply_to}}  (or {{customer_email}})
+  - Subject (recommended):
+    Your Cochran Films Project Package & Invoice #{{invoice_number}}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cochran Films — Project Package</title>
+</head>
+<body style="margin:0;padding:0;background-color:#020617;font-family:Inter,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#020617;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#0f172a;border:1px solid rgba(99,102,241,0.25);border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.45);">
+          <!-- Header -->
+          <tr>
+            <td style="padding:28px 32px 20px;text-align:center;background:linear-gradient(135deg,rgba(99,102,241,0.12) 0%,rgba(255,178,0,0.08) 100%);border-bottom:1px solid rgba(148,163,184,0.12);">
+              <img src="https://cochranfilms.com/CF_Logo_White2025.png" alt="Cochran Films" width="180" style="display:block;margin:0 auto 16px;max-width:180px;height:auto;" />
+              <p style="margin:0;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#94a3b8;font-weight:600;">Service Package Builder</p>
+              <h1 style="margin:12px 0 0;font-size:24px;line-height:1.3;color:#FFB200;font-weight:800;">{{email_heading}}</h1>
+            </td>
+          </tr>
+
+          <!-- Greeting -->
+          <tr>
+            <td style="padding:28px 32px 8px;">
+              <p style="margin:0 0 12px;font-size:16px;line-height:1.6;color:#f8fafc;">Prepared for <strong style="color:#ffffff;">{{customer_name}}</strong></p>
+              <p style="margin:0;font-size:15px;line-height:1.65;color:#cbd5e1;">
+                Your Cochran Films service package is ready. The Stripe invoice below can be viewed and paid securely. Selected services are listed in this email.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Invoice meta -->
+          <tr>
+            <td style="padding:8px 32px 20px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:rgba(2,6,23,0.55);border:1px solid rgba(148,163,184,0.15);border-radius:12px;">
+                <tr>
+                  <td style="padding:16px 18px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.08em;padding-bottom:4px;">Invoice</td>
+                        <td align="right" style="font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.08em;padding-bottom:4px;">Date</td>
+                      </tr>
+                      <tr>
+                        <td style="font-size:16px;color:#f8fafc;font-weight:700;">#{{invoice_number}}</td>
+                        <td align="right" style="font-size:16px;color:#f8fafc;font-weight:600;">{{project_date}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Line items -->
+          <tr>
+            <td style="padding:0 32px 8px;">
+              <h2 style="margin:0 0 12px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#94a3b8;font-weight:700;">Your Package</h2>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid rgba(148,163,184,0.15);border-radius:12px;overflow:hidden;">
+                <thead>
+                  <tr style="background:rgba(99,102,241,0.12);">
+                    <th align="left" style="padding:12px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;font-weight:700;">Service</th>
+                    <th align="left" style="padding:12px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;font-weight:700;">Details</th>
+                    <th align="right" style="padding:12px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;font-weight:700;">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{{services_html}}}
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Total -->
+          <tr>
+            <td style="padding:16px 32px 24px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="right" style="padding-top:8px;border-top:2px solid rgba(255,178,0,0.35);">
+                    <span style="font-size:14px;color:#94a3b8;margin-right:12px;vertical-align:middle;">Total</span>
+                    <span style="font-size:28px;font-weight:800;color:#FFB200;vertical-align:middle;">{{total_amount}}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td style="padding:0 32px 28px;text-align:center;">
+              <a href="{{invoice_url}}" style="display:inline-block;padding:16px 32px;background:#FFB200;color:#020617;font-size:15px;font-weight:800;text-decoration:none;border-radius:12px;letter-spacing:0.04em;text-transform:uppercase;box-shadow:0 8px 24px rgba(255,178,0,0.35);">View &amp; Pay Invoice</a>
+              <p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#64748b;">
+                Or copy this link:<br />
+                <a href="{{invoice_url}}" style="color:#6366f1;word-break:break-all;">{{invoice_url}}</a>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Contact -->
+          <tr>
+            <td style="padding:20px 32px 28px;border-top:1px solid rgba(148,163,184,0.12);background:rgba(2,6,23,0.4);">
+              <p style="margin:0 0 8px;font-size:13px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">Contact on file</p>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:#cbd5e1;">
+                <strong style="color:#f8fafc;">{{customer_name}}</strong><br />
+                {{customer_email}}<br />
+                {{customer_phone}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;text-align:center;background:#020617;border-top:1px solid rgba(148,163,184,0.1);">
+              <p style="margin:0 0 6px;font-size:13px;color:#64748b;">Cochran Films — Atlanta's Full-Stack Media Partner</p>
+              <p style="margin:0;font-size:12px;color:#475569;">
+                <a href="https://www.cochranfilms.com" style="color:#6366f1;text-decoration:none;">cochranfilms.com</a>
+                &nbsp;·&nbsp;
+                <a href="https://landing.cochranfilms.com" style="color:#6366f1;text-decoration:none;">landing.cochranfilms.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
