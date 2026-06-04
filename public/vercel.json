@@ -11,6 +11,9 @@
     },
     "api/stripe/create-invoice.js": {
       "maxDuration": 30
+    },
+    "api/contact/send-inquiry.js": {
+      "maxDuration": 15
     }
   },
   "rewrites": [

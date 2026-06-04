@@ -1,4 +1,6 @@
-# Service Package Builder — Stripe + EmailJS Setup
+# Service Package Builder — Stripe + EmailJS
+
+> **Contact form (bottom of site):** see [EMAILJS-CONTACT-INQUIRY-SETUP.md](./EMAILJS-CONTACT-INQUIRY-SETUP.md) — uses `EMAILJS_CONTACT_TEMPLATE_ID`.
 
 ## Flow
 

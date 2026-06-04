@@ -3730,6 +3730,8 @@
     .book-section-info {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       gap: 18px;
       padding: clamp(24px, 3vw, 36px);
       border-radius: 24px;
@@ -3743,7 +3745,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      align-self: flex-start;
+      align-self: center;
       padding: 8px 14px;
       border-radius: 999px;
       border: 1px solid rgba(255, 178, 0, 0.28);
@@ -3795,10 +3797,13 @@
     .book-trust-list li {
       display: flex;
       align-items: flex-start;
+      justify-content: center;
       gap: 12px;
       color: var(--text-secondary);
       font-size: 15px;
       line-height: 1.55;
+      text-align: left;
+      max-width: 100%;
     }
 
     .book-trust-list i {
@@ -3810,9 +3815,11 @@
     .book-contact-chips {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       margin-top: auto;
       padding-top: 8px;
+      width: 100%;
     }
 
     .book-contact-chip {
@@ -3949,26 +3956,6 @@
     .book-form-submit-row {
       margin-top: 24px;
       margin-bottom: 0;
-    }
-
-    .toolkit-form input:focus,
-    .toolkit-form select:focus {
-      outline: none;
-      border-color: var(--brand-gold);
-      box-shadow: 0 0 0 3px rgba(255,178,0,0.2);
-      transform: translateY(-1px);
-    }
-
-    .toolkit-form input:hover,
-    .toolkit-form select:hover {
-      border-color: rgba(99,102,241,0.5);
-      background: rgba(15,23,42,0.8);
-    }
-
-    .toolkit-submit:hover {
-      transform: translateY(-3px);
-      filter: brightness(1.05);
-      box-shadow: 0 8px 32px rgba(255,178,0,0.3);
     }
 
     .hero-value-section {
@@ -4217,119 +4204,6 @@
       .hero-value-card:hover {
         transform: none;
       }
-    }
-
-    .hero-toolkit:hover {
-      border-color: rgba(255,178,0,0.5);
-      box-shadow: 0 25px 80px rgba(0,0,0,0.5);
-    }
-
-    .hero-toolkit {
-      margin: 28px 0;
-      padding: clamp(20px, 4vw, 32px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 178, 0, 0.3);
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.9));
-      backdrop-filter: blur(20px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-    }
-
-    .hero-toolkit-head {
-      text-align: center;
-      margin-bottom: clamp(20px, 4vw, 32px);
-    }
-
-    .hero-toolkit-icon {
-      width: clamp(64px, 14vw, 80px);
-      height: clamp(64px, 14vw, 80px);
-      margin: 0 auto 16px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(255, 178, 0, 0.3), rgba(99, 102, 241, 0.3));
-      display: grid;
-      place-items: center;
-      font-size: clamp(24px, 5vw, 32px);
-      color: var(--brand-gold);
-    }
-
-    .hero-toolkit-title {
-      margin: 0 0 12px;
-      font-size: clamp(22px, 5vw, 28px);
-      font-weight: 800;
-      color: var(--text-primary);
-    }
-
-    .hero-toolkit-lede {
-      margin: 0 auto;
-      color: var(--text-secondary);
-      font-size: clamp(14px, 2vw, 16px);
-      line-height: 1.6;
-      max-width: 600px;
-    }
-
-    .toolkit-form {
-      max-width: 500px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .toolkit-form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .toolkit-form input,
-    .toolkit-form select {
-      width: 100%;
-      padding: 16px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      color: var(--text-primary);
-      font-size: 16px;
-      transition: var(--transition-fast);
-      box-sizing: border-box;
-    }
-
-    .toolkit-form input[type="email"],
-    .toolkit-form select {
-      margin-bottom: 20px;
-    }
-
-    .toolkit-submit {
-      width: 100%;
-      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
-      color: #0a0a0a;
-      border: 0;
-      padding: 18px 32px;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: 16px;
-      cursor: pointer;
-      transition: var(--transition-fast);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      min-height: 48px;
-    }
-
-    .toolkit-submit:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    .hero-toolkit-foot {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .hero-toolkit-foot p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 14px;
     }
 
     /* Footer */
@@ -4646,10 +4520,6 @@
 
       .footer-tagline {
         max-width: none;
-      }
-
-      .toolkit-form-row {
-        grid-template-columns: 1fr;
       }
 
       .about-grid {
@@ -5100,7 +4970,7 @@
       }
 
       .book-kicker {
-        align-self: flex-start;
+        align-self: center;
       }
 
       .book-section-title {
@@ -5254,16 +5124,6 @@
 
       .footer-legal a {
         font-size: 12px;
-      }
-
-      .hero-toolkit {
-        margin: 20px 0;
-        padding: 18px 14px;
-        border-radius: 16px;
-      }
-
-      .hero-toolkit-title {
-        font-size: clamp(20px, 5.5vw, 24px);
       }
 
       .iheart-footer-cta .hero-cta,
@@ -5583,10 +5443,6 @@
       .real-estate-section {
         padding-left: 12px;
         padding-right: 12px;
-      }
-
-      .hero-toolkit {
-        padding: 16px 12px;
       }
 
       .package-dropzone {
@@ -7289,47 +7145,6 @@
         </div>
       </section>
 
-      <!-- Production Toolkit Download Section -->
-      <div class="hero-toolkit">
-        <div class="hero-toolkit-head">
-          <div class="hero-toolkit-icon">
-            <i class="fas fa-toolbox"></i>
-          </div>
-          <h2 class="hero-toolkit-title">FREE Production Toolkit 2025</h2>
-          <p class="hero-toolkit-lede">
-            Get instant access to our comprehensive production toolkit including AI-powered editing presets, color grading LUTs, 
-            project templates, and workflow automation scripts. Valued at $497 - completely free for creators.
-          </p>
-        </div>
-        
-        <form id="toolkitForm" class="toolkit-form">
-          <div class="toolkit-form-row">
-            <input type="text" id="toolkitFirstName" name="firstName" placeholder="First Name" required>
-            <input type="text" id="toolkitLastName" name="lastName" placeholder="Last Name" required>
-          </div>
-          <input type="email" id="toolkitEmail" name="email" placeholder="Email Address" required>
-          <select id="toolkitInterest" name="interest" required>
-            <option value="">What's your primary focus?</option>
-            <option value="video-production">Video Production</option>
-            <option value="photography">Photography</option>
-            <option value="web-development">Web Development</option>
-            <option value="brand-development">Brand Development</option>
-            <option value="content-creation">Content Creation</option>
-          </select>
-          <button type="submit" class="toolkit-submit">
-            <i class="fas fa-download"></i>
-            Download Free Toolkit
-          </button>
-        </form>
-        
-        <div class="hero-toolkit-foot">
-          <p>
-            <i class="fas fa-shield-alt"></i> 
-            We respect your privacy. No spam, ever.
-          </p>
-        </div>
-      </div>
-
       <!-- Enhanced CTA Section -->
       <div class="hero-cta-section" style="margin-top: 24px;">
         <p style="margin: 0; color: var(--text-muted); font-size: 14px; font-weight: 600;">
@@ -8791,6 +8606,7 @@
                     <option value="web-development">Web Development</option>
                     <option value="brand-development">Brand Development</option>
                     <option value="white-label">White-Label Services</option>
+                    <option value="strategy-session">Strategy Session</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -9030,59 +8846,91 @@
       overlay.querySelector('.cf-notice-btn').focus();
     }
 
-    // Form submission
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    // Contact form — EmailJS via server API
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      showPlatformNotice({
-        title: 'Message Sent!',
-        subtitle: 'Thank you for reaching out. We\'ll review your inquiry and get back to you soon.',
-        items: [
-          'Average response time: within 2 hours',
-          'We\'ll contact you via email at the address you provided',
-          'Questions? Call us at (470) 420-2169'
-        ],
-        buttonText: 'Perfect, Thanks!',
-        iconClass: 'fa-solid fa-paper-plane',
-        variant: 'success'
-      });
-      this.reset();
-      console.log('Booking inquiry submitted:', data);
-    });
 
-    // Production Toolkit Form submission
-    document.getElementById('toolkitForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
+      const form = this;
+      const submitBtn = form.querySelector('.form-submit');
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+      const formData = new FormData(form);
       const data = Object.fromEntries(formData);
-      
-      showPlatformNotice({
-        title: 'Production Toolkit 2025 Unlocked!',
-        subtitle: 'Thank you for downloading. Here\'s what you\'ll receive immediately:',
-        items: [
-          'AI-powered editing presets for Premiere Pro & DaVinci Resolve',
-          'Professional color grading LUTs (Rec.709 & HDR)',
-          'Project templates for commercials, documentaries & events',
-          'Workflow automation scripts',
-          '2025 production trends guide',
-          'Exclusive access to our creator community'
-        ],
-        followUp: '<strong>Check your inbox</strong> Your download link arrives within 5 minutes. You\'ll also get weekly production tips, early access to new tools, and creator-only discounts.<br><br>Welcome to the Cochran Films family!',
-        buttonText: 'Awesome, Thanks!',
-        iconClass: 'fa-solid fa-toolbox'
-      });
-      
-      // Reset form
-      this.reset();
-      
-      // Track download (you can integrate with analytics here)
-      console.log('Toolkit downloaded by:', data);
+
+      if (!data.service) {
+        showPlatformNotice({
+          title: 'Select a service',
+          subtitle: 'Please choose a service interest before sending your message.',
+          items: [],
+          buttonText: 'OK',
+          iconClass: 'fa-solid fa-circle-exclamation',
+          variant: 'error'
+        });
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+      }
+
+      try {
+        const response = await fetch('/api/contact/send-inquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            service: data.service,
+            message: data.message
+          })
+        });
+
+        const raw = await response.text();
+        let result = {};
+        try {
+          result = raw ? JSON.parse(raw) : {};
+        } catch (parseError) {
+          throw new Error(raw && raw.length < 300 ? raw : `Server error (${response.status}).`);
+        }
+
+        if (!response.ok) {
+          throw new Error(result.error || 'Unable to send message. Please try again.');
+        }
+
+        showPlatformNotice({
+          title: 'Message Sent!',
+          subtitle: 'Thank you for reaching out. Check your inbox for a confirmation — we\'ll respond within 24 hours.',
+          items: [
+            'We\'ll reply to the email address you provided',
+            'Average response time: within 24 hours',
+            'Questions? Call us at (470) 420-2169'
+          ],
+          buttonText: 'Perfect, Thanks!',
+          iconClass: 'fa-solid fa-paper-plane',
+          variant: 'success'
+        });
+        form.reset();
+        console.log('Contact inquiry sent:', result.inquiryId);
+      } catch (error) {
+        console.error('Contact form error:', error);
+        showPlatformNotice({
+          title: 'Could not send message',
+          subtitle: error.message || 'Please try again or email info@cochranfilms.com directly.',
+          items: [
+            'Email: info@cochranfilms.com',
+            'Phone: (470) 420-2169'
+          ],
+          buttonText: 'OK',
+          iconClass: 'fa-solid fa-circle-exclamation',
+          variant: 'error'
+        });
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml || '<i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message';
+        }
+      }
     });
 
     // Navigation scroll effect
