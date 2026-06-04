@@ -5961,6 +5961,65 @@
       letter-spacing: -0.01em;
     }
 
+    .service-item--hourly {
+      min-height: 248px;
+    }
+
+    .service-hours-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem;
+      margin-top: 0.85rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .service-hours-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .service-hours-select {
+      flex: 1;
+      min-width: 0;
+      max-width: 140px;
+      margin-left: auto;
+      padding: 0.45rem 2rem 0.45rem 0.65rem;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background-color: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(255, 178, 0, 0.35);
+      border-radius: 8px;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23FFB200' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.55rem center;
+    }
+
+    .service-hours-select:hover,
+    .service-hours-select:focus {
+      border-color: var(--brand-gold);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 178, 0, 0.2);
+    }
+
+    .service-item--hourly .service-price .price-sub {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      letter-spacing: 0;
+    }
+
     .service-icon {
       width: 46px;
       height: 46px;
@@ -9257,7 +9316,7 @@
         'legacy-capture': { name: 'Legacy Capture', price: 900, duration: '3 hours coverage', icon: 'fas fa-award', category: 'photography' },
 
         // Videography — Hourly & Add-ons
-        'hourly-video': { name: 'General Hourly Rate', price: 250, duration: 'Per hour', icon: 'fas fa-clock', category: 'videography' },
+        'hourly-video': { name: 'General Hourly Rate', price: 250, hourly: true, hourlyRate: 250, maxHours: 16, duration: 'Per hour', icon: 'fas fa-clock', category: 'videography' },
         'raw-files': { name: 'Raw Files (Additional)', price: 300, duration: 'Full project files', icon: 'fas fa-file-video', category: 'videography' },
 
         // Events
@@ -9276,8 +9335,8 @@
         'podcast-1hr': { name: '1 Hour Podcast + Edits (2 Cams)', price: 750, duration: '1 hour', icon: 'fas fa-podcast', category: 'videography' },
         'podcast-2hr': { name: '2 Hour Podcast + Edits (2 Cams)', price: 1000, duration: '2 hours', icon: 'fas fa-microphone', category: 'videography' },
         'podcast-3hr': { name: '3 Hour Podcast + Edits (2 Cams)', price: 1500, duration: '3 hours', icon: 'fas fa-headphones', category: 'videography' },
-        'podcast-shoot-only': { name: 'Podcast Shoot Only', price: 250, duration: 'Per hour', icon: 'fas fa-camera-retro', category: 'videography' },
-        'podcast-extra-camera': { name: 'Podcast Extra Camera', price: 100, duration: 'Per hour', icon: 'fas fa-video', category: 'videography' },
+        'podcast-shoot-only': { name: 'Podcast Shoot Only', price: 250, hourly: true, hourlyRate: 250, maxHours: 12, duration: 'Per hour', icon: 'fas fa-camera-retro', category: 'videography' },
+        'podcast-extra-camera': { name: 'Podcast Extra Camera', price: 100, hourly: true, hourlyRate: 100, maxHours: 12, duration: 'Per hour', icon: 'fas fa-video', category: 'videography' },
 
         // Commercials
         'commercial-basic': { name: 'Basic Shoot (No Direction)', price: 750, duration: 'Single camera, 3 hrs', icon: 'fas fa-ad', category: 'videography' },
@@ -9325,6 +9384,59 @@
           return parts.slice(0, 1);
         }
         return parts.slice(0, 4);
+      }
+
+      const DEFAULT_MAX_HOURLY = 16;
+
+      function isHourlyService(serviceId) {
+        return Boolean(serviceData[serviceId]?.hourly);
+      }
+
+      function getHoursFromServiceCard(serviceId) {
+        const item = document.querySelector(`.service-item[data-service="${serviceId}"]`);
+        const select = item?.querySelector('.service-hours-select');
+        const max = serviceData[serviceId]?.maxHours || DEFAULT_MAX_HOURLY;
+        const hours = parseInt(select?.value, 10) || 1;
+        return Math.min(Math.max(1, hours), max);
+      }
+
+      function formatHourlyDuration(hours, rate) {
+        return `${hours} hour${hours !== 1 ? 's' : ''} @ $${rate}/hr`;
+      }
+
+      function updateHourlyCardPriceDisplay(item, serviceId) {
+        const data = serviceData[serviceId];
+        if (!data?.hourly || !item) return;
+        const hours = getHoursFromServiceCard(serviceId);
+        const priceEl = item.querySelector('.service-price');
+        if (!priceEl) return;
+        const total = data.hourlyRate * hours;
+        if (hours === 1) {
+          priceEl.innerHTML = `$${data.hourlyRate}<span class="price-sub">/hr</span>`;
+        } else {
+          priceEl.innerHTML = `$${total.toLocaleString()}<span class="price-sub">${hours} hrs × $${data.hourlyRate}/hr</span>`;
+        }
+      }
+
+      function buildHoursSelectOptions(maxHours) {
+        const max = maxHours || DEFAULT_MAX_HOURLY;
+        return Array.from({ length: max }, (_, i) => {
+          const h = i + 1;
+          return `<option value="${h}">${h} hour${h === 1 ? '' : 's'}</option>`;
+        }).join('');
+      }
+
+      function parseDropServicePayload(raw) {
+        if (!raw) return { serviceId: null, hours: null };
+        try {
+          const parsed = JSON.parse(raw);
+          if (parsed && parsed.id) {
+            return { serviceId: parsed.id, hours: parsed.hours };
+          }
+        } catch (err) {
+          /* plain service id */
+        }
+        return { serviceId: raw, hours: null };
       }
 
       function formatServiceCatalogCards() {
@@ -9378,12 +9490,48 @@
           });
           body.appendChild(list);
 
+          if (data.hourly) {
+            item.classList.add('service-item--hourly');
+            const hoursRow = document.createElement('div');
+            hoursRow.className = 'service-hours-row';
+            const selectId = `hours-select-${key}`;
+            hoursRow.innerHTML = `
+              <label class="service-hours-label" for="${selectId}">Hours</label>
+              <select id="${selectId}" class="service-hours-select" data-service-hours="${key}" aria-label="Number of hours for ${title}">
+                ${buildHoursSelectOptions(data.maxHours)}
+              </select>
+            `;
+            body.appendChild(hoursRow);
+            updateHourlyCardPriceDisplay(item, key);
+          }
+
           info.remove();
           item.dataset.formatted = 'true';
         });
       }
 
       formatServiceCatalogCards();
+
+      const serviceItemsEl = document.getElementById('serviceItems');
+      if (serviceItemsEl) {
+        serviceItemsEl.addEventListener('change', (e) => {
+          const select = e.target.closest('.service-hours-select');
+          if (!select) return;
+          e.stopPropagation();
+          const serviceId = select.dataset.serviceHours;
+          const item = select.closest('.service-item');
+          if (item) updateHourlyCardPriceDisplay(item, serviceId);
+          if (selectedServicesList.some((s) => s.id === serviceId)) {
+            addServiceToPackage(serviceId);
+            showNotification('Hours updated in your package', 'info');
+          }
+        });
+        serviceItemsEl.addEventListener('click', (e) => {
+          if (e.target.closest('.service-hours-select, .service-hours-row, .service-hours-label')) {
+            e.stopPropagation();
+          }
+        });
+      }
       
       // Function to filter services by category
       function filterServicesByCategory(category) {
@@ -9492,11 +9640,20 @@
       let isDragging = false;
       
       function handleDragStart(e) {
-        console.log('Drag started for service:', e.target.dataset.service);
+        if (e.target.closest('.service-hours-select')) {
+          e.preventDefault();
+          return;
+        }
         const serviceItem = e.target.closest('.service-item');
+        const serviceId = serviceItem.dataset.service;
+        console.log('Drag started for service:', serviceId);
         serviceItem.classList.add('dragging');
         isDragging = true;
-        e.dataTransfer.setData('text/plain', serviceItem.dataset.service);
+        let payload = serviceId;
+        if (isHourlyService(serviceId)) {
+          payload = JSON.stringify({ id: serviceId, hours: getHoursFromServiceCard(serviceId) });
+        }
+        e.dataTransfer.setData('text/plain', payload);
         e.dataTransfer.effectAllowed = 'copy';
       }
       
@@ -9538,12 +9695,12 @@
           packageDropzone.classList.remove('drag-over');
         }
         
-        const serviceId = e.dataTransfer.getData('text/plain');
-        console.log('Dropped service ID:', serviceId);
+        const { serviceId, hours } = parseDropServicePayload(e.dataTransfer.getData('text/plain'));
+        console.log('Dropped service ID:', serviceId, hours);
         
         if (serviceId) {
           console.log('Adding service directly to package:', serviceId);
-          addServiceToPackage(serviceId);
+          addServiceToPackage(serviceId, { hours });
           const label = serviceData[serviceId]?.name || 'Service';
           showNotification(`${label} added — keep building your package!`, 'success');
         } else {
@@ -9658,8 +9815,8 @@
                   <i class="${service.icon}"></i>
                 </div>
                 <div class="selected-service-details">
-                  <h5>${service.name}${service.quantity > 1 ? ` × ${service.quantity}` : ''}</h5>
-                  <p>${service.duration} · $${service.price.toLocaleString()}${service.quantity > 1 ? ' each' : ''}</p>
+                  <h5>${service.name}${service.isHourly ? ` — ${service.quantity} hr${service.quantity !== 1 ? 's' : ''}` : service.quantity > 1 ? ` × ${service.quantity}` : ''}</h5>
+                  <p>${service.duration} · $${(service.price * service.quantity).toLocaleString()}${service.isHourly ? ' total' : service.quantity > 1 ? ' each' : ''}</p>
                 </div>
               </div>
               <button type="button" class="remove-service" onclick="removeServiceFromPackage('${service.id}')" aria-label="Remove ${service.name} from package">
@@ -9679,22 +9836,40 @@
         });
       }
       
-      function addServiceToPackage(serviceId) {
+      function addServiceToPackage(serviceId, options = {}) {
         const service = serviceData[serviceId];
         if (!service) return;
-        
-        const existingService = selectedServicesList.find(s => s.id === serviceId);
+
+        const isHourly = Boolean(service.hourly);
+        const hours = isHourly
+          ? Math.min(
+              Math.max(1, options.hours ?? getHoursFromServiceCard(serviceId)),
+              service.maxHours || DEFAULT_MAX_HOURLY
+            )
+          : 1;
+        const unitPrice = isHourly ? service.hourlyRate : service.price;
+        const duration = isHourly ? formatHourlyDuration(hours, service.hourlyRate) : service.duration;
+
+        const existingService = selectedServicesList.find((s) => s.id === serviceId);
         if (existingService) {
-          existingService.quantity++;
+          if (isHourly) {
+            existingService.quantity = hours;
+            existingService.price = unitPrice;
+            existingService.duration = duration;
+            existingService.isHourly = true;
+          } else {
+            existingService.quantity++;
+          }
         } else {
           selectedServicesList.push({
             id: serviceId,
             name: service.name,
-            price: service.price,
-            duration: service.duration,
+            price: unitPrice,
+            duration,
             icon: service.icon,
             category: service.category,
-            quantity: 1
+            quantity: isHourly ? hours : 1,
+            isHourly,
           });
         }
 
@@ -9723,7 +9898,7 @@
         const breakdown = document.getElementById('quoteBreakdown');
         const lineItems = selectedServicesList.map((service) => `
           <div class="quote-item">
-            <span class="quote-item-label">${service.name}${service.quantity > 1 ? ` × ${service.quantity}` : ''}</span>
+            <span class="quote-item-label">${service.name}${service.isHourly ? ` (${service.quantity} hrs)` : service.quantity > 1 ? ` × ${service.quantity}` : ''}</span>
             <span class="quote-item-value">$${(service.price * service.quantity).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
           </div>
         `).join('');
@@ -10068,6 +10243,10 @@
         
         console.log('Service item found:', serviceItem);
         
+        if (e.target.closest('.service-hours-select, .service-hours-row, .service-hours-label')) {
+          return;
+        }
+
         const serviceId = serviceItem.dataset.service;
         console.log('Service ID:', serviceId);
         
