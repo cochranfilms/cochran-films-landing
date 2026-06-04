@@ -8,6 +8,8 @@
   {{customer_name}}, {{customer_first_name}}, {{customer_last_name}},
   {{customer_email}}, {{service_interest}},
   {{inquiry_id}}, {{submitted_date}}, {{project_details_html}}
+  {{cta_label}}, {{cta_url}}, {{cta_subtext}}
+  (Admin: Reply to name + mailto. Client: Explore Our Services + site URL.)
 
   Settings:
   - To Email: {{to_email}}
@@ -146,12 +148,12 @@
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
                 <tr>
                   <td align="center" bgcolor="#111827" style="background-color:#111827;">
-                    <a href="mailto:{{customer_email}}?subject=Re:%20Cochran%20Films%20Inquiry%20{{inquiry_id}}" target="_blank" style="display:inline-block;padding:14px 32px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;">Reply to {{customer_name}}</a>
+                    <a href="{{cta_url}}" target="_blank" style="display:inline-block;padding:14px 32px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;">{{cta_label}}</a>
                   </td>
                 </tr>
               </table>
               <p style="margin:16px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;">
-                Average response time: within 24 hours
+                {{cta_subtext}}
               </p>
             </td>
           </tr>

@@ -140,11 +140,16 @@ export default async function handler(req, res) {
       reply_to: email.trim(),
     };
 
+    const replyMailto = `mailto:${encodeURIComponent(email.trim())}?subject=${encodeURIComponent(`Re: Cochran Films Inquiry ${inquiryId}`)}`;
+
     await sendEmail(templateId, {
       ...baseParams,
       to_email: notifyEmail,
       email_heading: 'New Project Inquiry',
       email_intro: 'A new message was submitted through the Cochran Films contact form.',
+      cta_label: `Reply to ${customerName}`,
+      cta_url: replyMailto,
+      cta_subtext: 'Average response time: within 24 hours',
     });
 
     const sendClientCopy = process.env.EMAILJS_CONTACT_SEND_CLIENT_COPY !== 'false';
@@ -155,6 +160,9 @@ export default async function handler(req, res) {
           to_email: email.trim(),
           email_heading: 'We Received Your Message',
           email_intro: 'Thank you for contacting Cochran Films. We have your inquiry and will respond within 24 hours.',
+          cta_label: 'Explore Our Services',
+          cta_url: 'https://www.cochranfilms.com/#services',
+          cta_subtext: 'Questions? Call (470) 420-2169 or email info@cochranfilms.com',
         });
       } catch (clientError) {
         console.error('Client confirmation email failed:', clientError);
