@@ -1169,6 +1169,7 @@
     .lp-portfolio-shell {
       display: grid;
       gap: 32px;
+      --lp-portfolio-gap: 32px;
     }
 
     .lp-portfolio-hero {
@@ -1480,7 +1481,7 @@
     .lp-creator-edu-section {
       position: relative;
       width: 100vw;
-      margin: clamp(28px, 4vw, 44px) calc(50% - 50vw);
+      margin: clamp(28px, 4vw, 44px) calc(50% - 50vw) 0;
       scroll-margin-top: 110px;
       padding: clamp(44px, 6vw, 72px) clamp(20px, 4vw, 48px);
       overflow: hidden;
@@ -1492,6 +1493,14 @@
         radial-gradient(720px 380px at 92% 18%, rgba(255, 178, 0, 0.1), transparent 55%),
         linear-gradient(180deg, rgba(2, 6, 23, 0.98) 0%, rgba(15, 23, 42, 0.96) 48%, rgba(2, 6, 23, 0.98) 100%);
       box-shadow: inset 0 1px 0 rgba(147, 197, 253, 0.08);
+    }
+
+    .lp-creator-edu-section:has(+ .iheart-section) {
+      border-bottom: none;
+    }
+
+    .lp-portfolio-shell > .lp-creator-edu-section + .iheart-section {
+      margin-top: calc(-1 * var(--lp-portfolio-gap, 32px));
     }
 
     .lp-creator-edu-section::before {
@@ -1821,7 +1830,7 @@
     .iheart-section {
       position: relative;
       width: 100vw;
-      margin: clamp(24px, 3vw, 36px) calc(50% - 50vw);
+      margin: 0 calc(50% - 50vw) clamp(24px, 3vw, 36px);
       scroll-margin-top: 110px;
       padding: clamp(48px, 6vw, 72px) clamp(20px, 4vw, 48px);
       overflow: hidden;
@@ -5207,6 +5216,19 @@
       .iheart-section,
       .real-estate-section {
         padding: 32px 12px;
+      }
+
+      .lp-portfolio-shell > .lp-creator-edu-section {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+
+      .lp-portfolio-shell > .lp-creator-edu-section + .iheart-section {
+        margin-top: calc(-1 * var(--lp-portfolio-gap, 32px));
+        margin-bottom: 20px;
+      }
+
+      .real-estate-section {
         margin-top: 20px;
         margin-bottom: 20px;
       }
