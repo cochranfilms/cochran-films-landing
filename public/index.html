@@ -47,6 +47,11 @@
   <meta name="twitter:image:alt" content="Cochran Films — Stories That Tell Themselves. Atlanta full-stack creative agency for video production, photography, and web development." />
   <link rel="icon" type="image/png" href="C_Logo.png" />
   <link rel="apple-touch-icon" href="C_Logo.png" />
+  <link rel="preload" as="image" href="about-header.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="Logo.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/scrolling-banner/iHeartRadio.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/scrolling-banner/Braves.webp" type="image/webp">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -450,6 +455,12 @@
       inset: 0;
     }
 
+    .hero-banner-media picture {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
     .hero-banner-media img {
       width: 100%;
       height: 100%;
@@ -633,6 +644,10 @@
       object-fit: contain;
       opacity: 1;
       transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .logo-pill picture {
+      display: contents;
     }
 
     .logo-pill:hover img {
@@ -1164,7 +1179,7 @@
       border: 1px solid rgba(255,178,0,0.22);
       background:
         linear-gradient(135deg, rgba(2,6,23,0.92), rgba(15,23,42,0.78)),
-        url("assets/resume-portfolio/portfolio-highlight-1.gif") center / cover;
+        url("assets/resume-portfolio/portfolio-highlight-1.webp") center / cover;
       box-shadow: var(--shadow-lg);
       overflow: hidden;
       position: relative;
@@ -4531,6 +4546,10 @@
       .marquee .tracks {
         padding: 12px 0;
       }
+      .marquee-logos .tracks {
+        animation: scroll 10s linear infinite;
+      }
+
 
       .logo-pill {
         height: 34px;
@@ -6522,6 +6541,28 @@
       }
     }
   </style>
+
+  <script>
+  (function () {
+    var paths = [
+      "assets/resume-portfolio/portfolio-highlight-2.webp",
+      "assets/kuts-by-lee/barber-bg3.webp",
+      "assets/creator-collective/Landing-Banner.webp",
+      "assets/course-creator-academy/hero-banner.webp",
+      "assets/real-estate/interior-01.webp",
+      "assets/real-estate/exterior-01.webp"
+    ];
+    function warm() {
+      paths.forEach(function (p) { var i = new Image(); i.decoding = "async"; i.src = p; });
+      document.querySelectorAll("picture source[type='image/webp']").forEach(function (s) {
+        var i = new Image(); i.decoding = "async"; i.src = s.getAttribute("srcset");
+      });
+    }
+    warm();
+    document.addEventListener("DOMContentLoaded", warm);
+  })();
+  </script>
+
 </head>
 <body>
   <!-- AI Neural Network Background -->
@@ -6533,7 +6574,7 @@
   <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="nav-logo" aria-label="Cochran Films home">
-        <img src="Logo.png" alt="Cochran Films" width="220" height="52" decoding="async">
+        <picture><source srcset="Logo.webp" type="image/webp"><img loading="eager" src="Logo.png" alt="Cochran Films" width="220" height="52" decoding="async"></picture>
       </a>
       
       <ul class="nav-menu" id="site-nav-menu">
@@ -6571,7 +6612,7 @@
     <section id="home" class="section hero">
       <div class="hero-banner" aria-label="Cochran Films hero banner">
         <div class="hero-banner-media">
-          <img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" loading="eager" decoding="async">
+          <picture><source srcset="about-header.webp" type="image/webp"><img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" fetchpriority="high" loading="eager" decoding="sync" width="1600" height="1107"></picture>
         </div>
         <div class="hero-banner-overlay" aria-hidden="true"></div>
         <div class="hero-banner-content">
@@ -6595,25 +6636,25 @@
       <!-- Partner logo marquee — full-bleed under hero -->
       <section class="marquee marquee-logos" aria-label="Brands and partners Cochran Films has worked with">
         <div class="tracks" aria-hidden="true">
-          <span class="logo-pill"><img src="assets/scrolling-banner/Andre-Dickens.png" alt="Andre Dickens for Atlanta" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/iHeartRadio.png" alt="iHeartRadio" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Braves.png" alt="Atlanta Braves" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Georgia-Power.png" alt="Georgia Power" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Douglasville.png" alt="Douglasville, Georgia" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/DCPR.png" alt="Douglas County Parks and Recreation" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/stagewing.png" alt="Stage Wing" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/bizzi-byte-logo.png" alt="Bizzi Byte" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/DJs-Logo.png" alt="DJs Need Luv 2" loading="lazy" decoding="async"></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Andre-Dickens.webp" type="image/webp"><img src="assets/scrolling-banner/Andre-Dickens.png" alt="Andre Dickens for Atlanta" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/iHeartRadio.webp" type="image/webp"><img src="assets/scrolling-banner/iHeartRadio.png" alt="iHeartRadio" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Braves.webp" type="image/webp"><img src="assets/scrolling-banner/Braves.png" alt="Atlanta Braves" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Georgia-Power.webp" type="image/webp"><img src="assets/scrolling-banner/Georgia-Power.png" alt="Georgia Power" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Douglasville.webp" type="image/webp"><img src="assets/scrolling-banner/Douglasville.png" alt="Douglasville, Georgia" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/DCPR.webp" type="image/webp"><img src="assets/scrolling-banner/DCPR.png" alt="Douglas County Parks and Recreation" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/stagewing.webp" type="image/webp"><img src="assets/scrolling-banner/stagewing.png" alt="Stage Wing" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/bizzi-byte-logo.webp" type="image/webp"><img src="assets/scrolling-banner/bizzi-byte-logo.png" alt="Bizzi Byte" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/DJs-Logo.webp" type="image/webp"><img src="assets/scrolling-banner/DJs-Logo.png" alt="DJs Need Luv 2" loading="eager" decoding="async"></picture></span>
           <!-- Duplicate for seamless scroll -->
-          <span class="logo-pill"><img src="assets/scrolling-banner/Andre-Dickens.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/iHeartRadio.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Braves.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Georgia-Power.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/Douglasville.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/DCPR.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/stagewing.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/bizzi-byte-logo.png" alt="" loading="lazy" decoding="async"></span>
-          <span class="logo-pill"><img src="assets/scrolling-banner/DJs-Logo.png" alt="" loading="lazy" decoding="async"></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Andre-Dickens.webp" type="image/webp"><img src="assets/scrolling-banner/Andre-Dickens.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/iHeartRadio.webp" type="image/webp"><img src="assets/scrolling-banner/iHeartRadio.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Braves.webp" type="image/webp"><img src="assets/scrolling-banner/Braves.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Georgia-Power.webp" type="image/webp"><img src="assets/scrolling-banner/Georgia-Power.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/Douglasville.webp" type="image/webp"><img src="assets/scrolling-banner/Douglasville.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/DCPR.webp" type="image/webp"><img src="assets/scrolling-banner/DCPR.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/stagewing.webp" type="image/webp"><img src="assets/scrolling-banner/stagewing.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/bizzi-byte-logo.webp" type="image/webp"><img src="assets/scrolling-banner/bizzi-byte-logo.png" alt="" loading="eager" decoding="async"></picture></span>
+          <span class="logo-pill"><picture><source srcset="assets/scrolling-banner/DJs-Logo.webp" type="image/webp"><img src="assets/scrolling-banner/DJs-Logo.png" alt="" loading="eager" decoding="async"></picture></span>
         </div>
       </section>
 
@@ -7549,7 +7590,7 @@
             </div>
           </div>
           <div class="lp-portfolio-feature">
-            <img src="assets/resume-portfolio/portfolio-highlight-2.png" alt="Cinematic production camera in a colorful studio environment" loading="lazy" decoding="async">
+            <picture><source srcset="assets/resume-portfolio/portfolio-highlight-2.webp" type="image/webp"><img src="assets/resume-portfolio/portfolio-highlight-2.png" alt="Cinematic production camera in a colorful studio environment" loading="eager" decoding="async"></picture>
             <div class="lp-portfolio-feature-badge">
               <strong>Production Excellence</strong>
               <span>Every project is crafted with attention to detail, visual polish, and strategic alignment with client goals.</span>
@@ -7638,7 +7679,7 @@
             <header class="iheart-header">
               <div class="iheart-kicker">iHeart Radio · Production Partner</div>
               <div class="iheart-title-row">
-                <img class="iheart-logo" src="assets/iHeartRadio_SemiStacked_Logo_color_white.png" alt="iHeartRadio logo" loading="lazy" decoding="async">
+                <picture><source srcset="assets/iHeartRadio_SemiStacked_Logo_color_white.webp" type="image/webp"><img class="iheart-logo" src="assets/iHeartRadio_SemiStacked_Logo_color_white.png" alt="iHeartRadio logo" loading="eager" decoding="async"></picture>
                 <h3 class="iheart-title" id="lp-iheart-title">Storytime with the <span>Legendary Jerry</span></h3>
               </div>
               <p class="iheart-lede">
@@ -7705,7 +7746,7 @@
                   <div class="sp-browser-url">kutsbylee.com</div>
                 </div>
                 <div class="sp-hero-frame">
-                  <img src="assets/kuts-by-lee/barber-bg3.png" alt="Kuts By Lee — barber in Douglasville, GA; fades, line-ups, and house calls" loading="lazy" decoding="async">
+                  <picture><source srcset="assets/kuts-by-lee/barber-bg3.webp" type="image/webp"><img src="assets/kuts-by-lee/barber-bg3.png" alt="Kuts By Lee — barber in Douglasville, GA; fades, line-ups, and house calls" loading="eager" decoding="async"></picture>
                   <div class="sp-hero-overlay">
                     <p class="sp-hero-eyebrow">Douglasville, GA · Barber · In-Shop &amp; House Calls</p>
                     <h3 class="sp-hero-headline">Sharp Kuts. <em>House Calls.</em> On Your Time.</h3>
@@ -7725,7 +7766,7 @@
             <aside class="sp-story-panel" aria-label="Kuts By Lee case study">
               <span class="sp-story-kicker">Local Business</span>
               <div class="sp-logo-wrap">
-                <img src="assets/kuts-by-lee/logo.png" alt="Kuts By Lee logo" loading="lazy" decoding="async">
+                <picture><source srcset="assets/kuts-by-lee/logo.webp" type="image/webp"><img src="assets/kuts-by-lee/logo.png" alt="Kuts By Lee logo" loading="eager" decoding="async"></picture>
               </div>
               <h4>Sharp kuts online for<br>a Douglasville barber.</h4>
               <p>Designed and built the live marketing site for <strong>Kuts By Lee</strong> — pairing local SEO, service pricing, gallery proof, and Calendly booking with a bold barbershop brand that reads clean on mobile and desktop.</p>
@@ -7745,7 +7786,7 @@
                   <div class="sp-browser-url">creatorcollective.media</div>
                 </div>
                 <div class="sp-hero-frame">
-                  <img src="assets/creator-collective/Landing-Banner.jpeg" alt="Creator Collective — creators collaborating on set" loading="lazy" decoding="async">
+                  <picture><source srcset="assets/creator-collective/Landing-Banner.webp" type="image/webp"><img src="assets/creator-collective/Landing-Banner.jpeg" alt="Creator Collective — creators collaborating on set" loading="eager" decoding="async"></picture>
                   <div class="sp-hero-overlay">
                     <div class="sp-hero-cta-row">
                       <a class="sp-btn sp-btn-primary" href="https://www.creatorcollective.media/#pricing" target="_blank" rel="noopener noreferrer">View membership</a>
@@ -7763,7 +7804,7 @@
             <aside class="sp-story-panel" aria-label="Creator Collective case study">
               <span class="sp-story-kicker">Creator Platform</span>
               <div class="sp-logo-wrap">
-                <img src="Creator-Collective-Logo.png" alt="Creator Collective logo" loading="lazy" decoding="async">
+                <picture><source srcset="Creator-Collective-Logo.webp" type="image/webp"><img src="Creator-Collective-Logo.png" alt="Creator Collective logo" loading="eager" decoding="async"></picture>
               </div>
               <h4>More than a community — a platform for creative growth.</h4>
               <p>Built the live creator ecosystem for <strong>Creator Collective</strong> — blending paid gigs, pro assets, courses, marketplace tools, and B2B media agency services into one membership platform for videographers, photographers, editors, and creative entrepreneurs nationwide.</p>
@@ -7807,7 +7848,7 @@
             <aside class="sp-story-panel" aria-label="Bizzi Cloud case study">
               <span class="sp-story-kicker">SaaS Platform</span>
               <div class="sp-logo-wrap">
-                <img src="Bizzi-Cloud-Logo.png" alt="Bizzi Cloud logo" loading="lazy" decoding="async">
+                <picture><source srcset="Bizzi-Cloud-Logo.webp" type="image/webp"><img src="Bizzi-Cloud-Logo.png" alt="Bizzi Cloud logo" loading="eager" decoding="async"></picture>
               </div>
               <h4>One cloud platform for the entire creative pipeline.</h4>
               <p>Architected and launched <strong>Bizzi Cloud</strong> — an all-in-one cloud storage and workflow platform purpose-built for videographers, photographers, creators, and production teams who need storage, review, galleries, and delivery in one place.</p>
@@ -7827,7 +7868,7 @@
                   <div class="sp-browser-url">coursecreatoracademy.org</div>
                 </div>
                 <div class="sp-hero-frame">
-                  <img src="assets/course-creator-academy/hero-banner.png" alt="Course Creator Academy — Name your price, we build your creative team" loading="lazy" decoding="async">
+                  <picture><source srcset="assets/course-creator-academy/hero-banner.webp" type="image/webp"><img src="assets/course-creator-academy/hero-banner.png" alt="Course Creator Academy — Name your price, we build your creative team" loading="eager" decoding="async"></picture>
                   <div class="sp-hero-overlay">
                     <div class="sp-hero-cta-row">
                       <a class="sp-btn sp-btn-primary" href="https://coursecreatoracademy.org/" target="_blank" rel="noopener noreferrer">Request a Creator Quote</a>
@@ -7845,7 +7886,7 @@
             <aside class="sp-story-panel" aria-label="Course Creator Academy case study">
               <span class="sp-story-kicker">B2B Agency</span>
               <div class="sp-logo-wrap">
-                <img src="Course-Creator-Academy-Logo.png" alt="Course Creator Academy logo" loading="lazy" decoding="async">
+                <picture><source srcset="Course-Creator-Academy-Logo.webp" type="image/webp"><img src="Course-Creator-Academy-Logo.png" alt="Course Creator Academy logo" loading="eager" decoding="async"></picture>
               </div>
               <h4>Name your price.<br>We build the creative team.</h4>
               <p>Built the B2B agency experience for <strong>Course Creator Academy</strong> — powered by Creator Collective. Businesses name their budget and creative need; we match vetted videographers, photographers, editors, designers, and social creators with agency-backed direction. No minimums. Professional results within your range.</p>
@@ -7887,7 +7928,7 @@
                     <div class="re-video-bg">
                       <div class="re-portrait-fs-shell" id="re-portrait-fs-shell">
                         <div class="re-video-frame">
-                          <video class="re-reel-video" id="re-property-reel" controls playsinline preload="metadata" controlsList="nofullscreen" poster="assets/real-estate/exterior-01.jpg">
+                          <video class="re-reel-video" id="re-property-reel" controls playsinline preload="metadata" controlsList="nofullscreen" poster="assets/real-estate/exterior-01.webp">
                             <source src="https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7" type="video/mp4">
                             Your browser does not support embedded video playback.
                           </video>
@@ -7903,7 +7944,7 @@
                       <span class="re-video-badge"><i class="fa-solid fa-film"></i> Cinematic Listing Media</span>
                     </div>
                     <div class="re-video-doodle" aria-hidden="true">
-                      <img src="assets/doodle.png" alt="" loading="lazy" decoding="async">
+                      <picture><source srcset="assets/doodle.webp" type="image/webp"><img src="assets/doodle.png" alt="" loading="eager" decoding="async"></picture>
                     </div>
                   </article>
         
@@ -7918,17 +7959,17 @@
                     <div class="re-blueprint-picker">
                       <div class="re-blueprint-grid" role="tablist" aria-label="Select blueprint view">
                         <button type="button" class="re-blueprint-thumb is-active" role="tab" aria-selected="true" data-blueprint-src="assets/real-estate/blueprint-01.jpg" data-blueprint-alt="2D floor plan blueprint for 6225 Waterton Way level one">
-                          <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="">
+                          <picture><source srcset="assets/real-estate/blueprint-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt=""></picture>
                         </button>
                         <button type="button" class="re-blueprint-thumb" role="tab" aria-selected="false" data-blueprint-src="assets/real-estate/blueprint-02.jpg" data-blueprint-alt="2D floor plan blueprint for 6225 Waterton Way level two">
-                          <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-02.jpg" alt="">
+                          <picture><source srcset="assets/real-estate/blueprint-02.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/blueprint-02.jpg" alt=""></picture>
                         </button>
                         <button type="button" class="re-blueprint-thumb" role="tab" aria-selected="false" data-blueprint-src="assets/real-estate/blueprint-03.jpg" data-blueprint-alt="2D floor plan blueprint alternate view for 6225 Waterton Way">
-                          <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-03.jpg" alt="">
+                          <picture><source srcset="assets/real-estate/blueprint-03.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/blueprint-03.jpg" alt=""></picture>
                         </button>
                       </div>
                       <div class="re-blueprint-preview" role="tabpanel" aria-live="polite">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="2D floor plan blueprint for 6225 Waterton Way level one" data-blueprint-preview>
+                        <picture><source srcset="assets/real-estate/blueprint-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="2D floor plan blueprint for 6225 Waterton Way level one" data-blueprint-preview></picture>
                       </div>
                     </div>
                   </aside>
@@ -7966,67 +8007,67 @@
                         <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
                       </button>
                       <figure class="re-slide is-active" data-label="Exterior">
-                        <img loading="eager" decoding="async" src="assets/real-estate/interior-01.jpg" alt="Exterior front view of 6225 Waterton Way">
+                        <picture><source srcset="assets/real-estate/interior-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/interior-01.jpg" alt="Exterior front view of 6225 Waterton Way"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide is-blueprint" data-label="Blueprint">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="Property blueprint floor plan">
+                        <picture><source srcset="assets/real-estate/blueprint-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/blueprint-01.jpg" alt="Property blueprint floor plan"></picture>
                         <figcaption class="re-slide-caption">Blueprint</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Exterior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/exterior-01.jpg" alt="Exterior architectural view of 6225 Waterton Way">
+                        <picture><source srcset="assets/real-estate/exterior-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/exterior-01.jpg" alt="Exterior architectural view of 6225 Waterton Way"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Interior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/interior-02.jpg" alt="Kitchen interior photography">
+                        <picture><source srcset="assets/real-estate/interior-02.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/interior-02.jpg" alt="Kitchen interior photography"></picture>
                         <figcaption class="re-slide-caption">Interior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Exterior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/exterior-02.jpg" alt="Exterior architectural view">
+                        <picture><source srcset="assets/real-estate/exterior-02.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/exterior-02.jpg" alt="Exterior architectural view"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Detail">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/detail-01.jpg" alt="Detail shot of property finish">
+                        <picture><source srcset="assets/real-estate/detail-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/detail-01.jpg" alt="Detail shot of property finish"></picture>
                         <figcaption class="re-slide-caption">Detail</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Exterior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/gallery-01.jpg" alt="Aerial neighborhood context view">
+                        <picture><source srcset="assets/real-estate/gallery-01.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/gallery-01.jpg" alt="Aerial neighborhood context view"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Interior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/interior-03.jpg" alt="Bedroom interior with natural light">
+                        <picture><source srcset="assets/real-estate/interior-03.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/interior-03.jpg" alt="Bedroom interior with natural light"></picture>
                         <figcaption class="re-slide-caption">Interior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Exterior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/exterior-03.jpg" alt="Property exterior landscaping view">
+                        <picture><source srcset="assets/real-estate/exterior-03.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/exterior-03.jpg" alt="Property exterior landscaping view"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Detail">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/detail-02.jpg" alt="Amenity detail photography">
+                        <picture><source srcset="assets/real-estate/detail-02.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/detail-02.jpg" alt="Amenity detail photography"></picture>
                         <figcaption class="re-slide-caption">Detail</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Interior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/interior-04.jpg" alt="Dining area interior photography">
+                        <picture><source srcset="assets/real-estate/interior-04.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/interior-04.jpg" alt="Dining area interior photography"></picture>
                         <figcaption class="re-slide-caption">Interior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Interior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/interior-05.jpg" alt="Secondary living space interior">
+                        <picture><source srcset="assets/real-estate/interior-05.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/interior-05.jpg" alt="Secondary living space interior"></picture>
                         <figcaption class="re-slide-caption">Interior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Exterior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/exterior-04.jpg" alt="Evening exterior property view">
+                        <picture><source srcset="assets/real-estate/exterior-04.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/exterior-04.jpg" alt="Evening exterior property view"></picture>
                         <figcaption class="re-slide-caption">Exterior</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Detail">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/detail-03.jpg" alt="Architectural detail close-up">
+                        <picture><source srcset="assets/real-estate/detail-03.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/detail-03.jpg" alt="Architectural detail close-up"></picture>
                         <figcaption class="re-slide-caption">Detail</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Detail">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/gallery-02.jpg" alt="Property room detail composition">
+                        <picture><source srcset="assets/real-estate/gallery-02.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/gallery-02.jpg" alt="Property room detail composition"></picture>
                         <figcaption class="re-slide-caption">Detail</figcaption>
                       </figure>
                       <figure class="re-slide" data-label="Interior">
-                        <img loading="lazy" decoding="async" src="assets/real-estate/gallery-03.jpg" alt="Additional property interior angle">
+                        <picture><source srcset="assets/real-estate/gallery-03.webp" type="image/webp"><img loading="eager" decoding="async" src="assets/real-estate/gallery-03.jpg" alt="Additional property interior angle"></picture>
                         <figcaption class="re-slide-caption">Interior</figcaption>
                       </figure>
                       <button type="button" class="re-slideshow-nav re-slideshow-next" aria-label="Next photo">
@@ -8189,7 +8230,7 @@
         <div class="footer-brand-col">
           <div class="footer-logo">
             <a href="#home" aria-label="Cochran Films home">
-              <img src="Logo.png" alt="Cochran Films — cinematic production and full-stack creative agency" width="300" height="68" loading="lazy" decoding="async">
+              <picture><source srcset="Logo.webp" type="image/webp"><img src="Logo.png" alt="Cochran Films — cinematic production and full-stack creative agency" width="300" height="68" loading="eager" decoding="async"></picture>
             </a>
           </div>
           <p class="footer-tagline">Atlanta's full-stack creative agency — cinematic production, modern engineering, and creator-ready systems built as one stack.</p>
@@ -9588,9 +9629,10 @@
 
           if (image) {
             const thumbImage = document.createElement('img');
-            thumbImage.src = image.getAttribute('src');
+            const webpSource = slide.querySelector('picture source[type="image/webp"]');
+            thumbImage.src = webpSource ? webpSource.getAttribute('srcset') : image.getAttribute('src');
             thumbImage.alt = '';
-            thumbImage.loading = 'lazy';
+            thumbImage.loading = 'eager';
             thumbImage.decoding = 'async';
             thumb.appendChild(thumbImage);
           }
