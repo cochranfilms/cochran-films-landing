@@ -7088,6 +7088,65 @@
       margin-top: 0;
     }
 
+    .service-section-header--sub {
+      margin-top: 1.75rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: #93c5fd;
+      border-left-color: #60a5fa;
+    }
+
+    .service-item[data-subcategory="white-label"] {
+      background: linear-gradient(152deg, #163a47 0%, #0f2830 52%, #0c1f26 100%);
+      border: 1px solid rgba(45, 212, 191, 0.34);
+    }
+
+    .service-item[data-subcategory="white-label"]:hover {
+      border-color: rgba(45, 212, 191, 0.55);
+      box-shadow: 0 14px 36px rgba(13, 148, 136, 0.18);
+    }
+
+    .service-item[data-subcategory="white-label"] .service-icon {
+      background: linear-gradient(135deg, rgba(45, 212, 191, 0.22), rgba(20, 184, 166, 0.12));
+      color: #5eead4;
+    }
+
+    .service-item--featured {
+      border-color: rgba(255, 178, 0, 0.55) !important;
+      box-shadow: 0 0 0 1px rgba(255, 178, 0, 0.2), 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .service-item-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .service-item[data-subcategory="white-label"]::after {
+      content: "Agency partner";
+      color: rgba(94, 234, 212, 0.5);
+    }
+
+    .service-item[data-subcategory="white-label"] .service-price .price-sub {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(148, 163, 184, 0.95);
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
     .service-section-header.hidden {
       display: none !important;
     }
@@ -9042,6 +9101,42 @@
               <div class="service-price">$2,500</div>
             </div>
 
+            <div class="service-section-header service-section-header--sub" data-category="website">White-Label Services</div>
+
+            <div class="service-item" data-category="website" data-subcategory="white-label" draggable="true" data-service="white-label-launch">
+              <div class="service-item-header">
+                <div class="service-icon"><i class="fas fa-users-gear"></i></div>
+                <div class="service-info">
+                  <h4>White-Label Launch System</h4>
+                  <p>3-page white-label website + landing funnel, lead capture + calendar booking, baseline analytics + essential automations, SEO foundations + performance pass, agency handoff kit (no Cochran Films branding on deliverables), setup + first month today (then auto-renews monthly)</p>
+                </div>
+              </div>
+              <div class="service-price">$2,699</div>
+            </div>
+
+            <div class="service-item service-item--featured" data-category="website" data-subcategory="white-label" draggable="true" data-service="white-label-growth">
+              <span class="service-item-badge" aria-hidden="true">Most Popular</span>
+              <div class="service-item-header">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="service-info">
+                  <h4>White-Label Growth System</h4>
+                  <p>Everything in Launch, CMS/blog + gated member area, CRM pipeline + email automations, advanced analytics + reporting, white-label client portal access, setup + first month today (then auto-renews monthly)</p>
+                </div>
+              </div>
+              <div class="service-price">$4,849</div>
+            </div>
+
+            <div class="service-item" data-category="website" data-subcategory="white-label" draggable="true" data-service="white-label-domination">
+              <div class="service-item-header">
+                <div class="service-icon"><i class="fas fa-crown"></i></div>
+                <div class="service-info">
+                  <h4>White-Label Domination System</h4>
+                  <p>Everything in Growth, SaaS-lite features + subscription billing setup, custom dashboards + API integrations, priority support SLA (24hr response), quarterly account strategy review, setup + first month today (then auto-renews monthly)</p>
+                </div>
+              </div>
+              <div class="service-price">$9,199</div>
+            </div>
+
             <!-- Photography Category -->
             <div class="service-section-header" data-category="photography">Photography Packages</div>
 
@@ -10914,6 +11009,9 @@
         'starter-site': { name: 'Starter Site', price: 750, duration: '1-page scroll layout', icon: 'fas fa-laptop-code', category: 'website' },
         'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: '3–5 fully designed pages', icon: 'fas fa-globe', category: 'website' },
         'brand-builder-site': { name: 'Brand Builder Site', price: 2500, duration: '6–10 page branded website', icon: 'fas fa-rocket', category: 'website' },
+        'white-label-launch': { name: 'White-Label Launch System', price: 2699, setupFee: 2500, monthlyFee: 199, duration: '$2,500 setup + $199/mo', icon: 'fas fa-users-gear', category: 'website', subcategory: 'white-label' },
+        'white-label-growth': { name: 'White-Label Growth System', price: 4849, setupFee: 4500, monthlyFee: 349, duration: '$4,500 setup + $349/mo', icon: 'fas fa-chart-line', category: 'website', subcategory: 'white-label', featured: true },
+        'white-label-domination': { name: 'White-Label Domination System', price: 9199, setupFee: 8500, monthlyFee: 699, duration: '$8,500 setup + $699/mo', icon: 'fas fa-crown', category: 'website', subcategory: 'white-label' },
 
         // Photography Packages
         'flash-start': { name: 'Flash Start', price: 350, duration: '1 hour coverage', icon: 'fas fa-camera', category: 'photography' },
@@ -11086,7 +11184,7 @@
       }
 
       const CATEGORY_SEARCH_ALIASES = {
-        website: ['website', 'websites', 'web', 'site', 'sites', 'landing', 'homepage', 'page', 'pages', 'develop', 'development', 'seo', 'blog', 'ecommerce'],
+        website: ['website', 'websites', 'web', 'site', 'sites', 'landing', 'homepage', 'page', 'pages', 'develop', 'development', 'seo', 'blog', 'ecommerce', 'white label', 'white-label', 'agency', 'reseller', 'partner', 'launch system', 'growth system', 'domination', 'crm', 'funnel', 'saas'],
         photography: ['photography', 'photographer', 'photo', 'photos', 'shoot', 'camera', 'gallery', 'coverage', 'portrait', 'wedding', 'event photos', 'digital photos'],
         videography: ['video', 'videography', 'videos', 'film', 'filming', 'filmmaker', 'event', 'events', 'podcast', 'podcasts', 'commercial', 'commercials', 'production', 'recap', 'live', 'edit', 'editing', 'raw files', 'hourly', 'camera', 'broadcast'],
         branding: ['brand', 'branding', 'logo', 'identity', 'strategy', 'social', 'ignite', 'collaborate', 'transform', 'crm'],
@@ -11127,6 +11225,9 @@
           ...(features || []),
           data.hourly ? 'hourly rate per hour' : '',
           data.price != null ? `$${data.price}` : '',
+          data.setupFee != null ? `$${data.setupFee} setup` : '',
+          data.monthlyFee != null ? `$${data.monthlyFee} month monthly mo` : '',
+          data.subcategory === 'white-label' ? 'white label agency partner reseller' : '',
           data.hourlyRate != null ? `$${data.hourlyRate} hr hour` : '',
         ].join(' '));
       }
@@ -11214,6 +11315,12 @@
             list.appendChild(li);
           });
           body.appendChild(list);
+
+          const priceEl = item.querySelector('.service-price');
+          if (priceEl && data.setupFee != null && data.monthlyFee != null) {
+            const firstInvoice = Number(data.price) || Number(data.setupFee) + Number(data.monthlyFee);
+            priceEl.innerHTML = `$${firstInvoice.toLocaleString()}<span class="price-sub">first invoice</span><span class="price-sub">$${Number(data.setupFee).toLocaleString()} setup + $${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
+          }
 
           if (data.hourly) {
             item.classList.add('service-item--hourly');
