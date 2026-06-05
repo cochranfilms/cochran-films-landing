@@ -269,8 +269,9 @@ async function createRetainerSubscription(stripe, {
   };
 
   if (useFutureAnchor) {
-    // First renewal one month after the chosen start date (first invoice is created manually below).
-    subscriptionParams.billing_cycle_anchor = addMonthsUnix(billingAnchorUnix, 1);
+    // Trial through the first service month; first period is invoiced manually below.
+    // Renewals begin one month after the chosen billing start date (avoids billing_cycle_anchor limits).
+    subscriptionParams.trial_end = addMonthsUnix(billingAnchorUnix, 1);
   } else {
     subscriptionParams.expand = ['latest_invoice'];
   }
@@ -320,9 +321,10 @@ async function createRetainerSubscription(stripe, {
   const paymentDueDate = invoice.due_date
     ? formatDateFromUnix(invoice.due_date)
     : formatLongDate(new Date(Date.now() + daysUntilDue * 86400000));
-  const nextBillingDate = subscription.current_period_end
-    ? formatDateFromUnix(subscription.current_period_end)
-    : '';
+  const nextBillingUnix = useFutureAnchor
+    ? subscription.trial_end || subscription.current_period_end
+    : subscription.current_period_end;
+  const nextBillingDate = nextBillingUnix ? formatDateFromUnix(nextBillingUnix) : '';
   const servicesHtml = buildServicesHtml(normalizedServices);
   const stripeInvoiceNumber = invoice.number || '';
   const commitmentTerm = formatCommitmentTerm(commitmentMonths);
