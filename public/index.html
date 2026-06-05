@@ -6349,6 +6349,37 @@
       font-size: 0.75rem;
     }
 
+    .catalog-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .catalog-search-wrap i {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .catalog-search {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .catalog-search::placeholder {
+      color: var(--text-muted);
+    }
+
     .service-item::after {
       content: "Add to package";
       position: absolute;
@@ -8399,6 +8430,10 @@
             <h3>Service Catalog</h3>
             <p>Tap any card to add it instantly—drag is optional. Switch tabs to browse categories.</p>
             <p class="catalog-tip"><i class="fas fa-hand-pointer" aria-hidden="true"></i> No account needed to build your invoice</p>
+            <label class="catalog-search-wrap" for="catalogSearch">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input type="search" id="catalogSearch" class="catalog-search" placeholder="Search services…" autocomplete="off" aria-label="Search service catalog">
+            </label>
           </div>
           
           <div class="service-categories">
@@ -10288,7 +10323,9 @@
     }
 
     // Service Package Builder System
-    function initializeServicePackageBuilder() {
+    const SPB_STORAGE_KEY = 'cf-spb-draft-v1';
+
+    async function initializeServicePackageBuilder() {
       const serviceItems = document.querySelectorAll('.service-item');
       const packageDropzone = document.getElementById('packageDropzone');
       const selectedServices = document.getElementById('selectedServices');
@@ -10297,23 +10334,18 @@
       const generateInvoiceBtn = document.getElementById('generateInvoice');
       const clearPackageBtn = document.getElementById('clearPackage');
       const quoteEmptyHint = document.getElementById('quoteEmptyHint');
+      const catalogSearch = document.getElementById('catalogSearch');
       
       let selectedServicesList = [];
       let currentCategory = 'website';
       let lastAddedServiceId = null;
+      let catalogSearchQuery = '';
       
       const dropzoneEmpty = document.getElementById('dropzoneEmpty');
       const dropzoneAddMore = document.getElementById('dropzoneAddMore');
       const packageServiceCount = document.getElementById('packageServiceCount');
-      console.log('Initializing Service Package Builder...');
-      console.log('Found elements:', {
-        serviceItems: serviceItems.length,
-        packageDropzone: !!packageDropzone,
-        categoryTabs: categoryTabs.length
-      });
-      
-      // Service data — synced with 2026 pricing guide
-      const serviceData = {
+
+      const fallbackServiceData = {
         // Website Development Packages
         'starter-site': { name: 'Starter Site', price: 750, duration: '1-page scroll layout', icon: 'fas fa-laptop-code', category: 'website' },
         'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: '3–5 fully designed pages', icon: 'fas fa-globe', category: 'website' },
@@ -10381,6 +10413,47 @@
         'print-extra-staff': { name: 'Extra Staff Member', price: 100, duration: 'From $100/hr', icon: 'fas fa-user-plus', category: 'printing' },
         'print-rush-setup': { name: 'Rush Setup / Breakdown', price: 50, duration: 'From $50–$100', icon: 'fas fa-truck-fast', category: 'printing' }
       };
+
+      let serviceData = { ...fallbackServiceData };
+      try {
+        const catalogRes = await fetch('/data/services-catalog.json', { cache: 'no-store' });
+        if (catalogRes.ok) {
+          const catalogJson = await catalogRes.json();
+          if (catalogJson && typeof catalogJson === 'object' && Object.keys(catalogJson).length > 0) {
+            serviceData = catalogJson;
+          }
+        }
+      } catch (_) {
+        /* use fallback catalog */
+      }
+
+      function savePackageDraft() {
+        try {
+          localStorage.setItem(SPB_STORAGE_KEY, JSON.stringify({
+            services: selectedServicesList,
+            savedAt: Date.now(),
+          }));
+        } catch (_) { /* storage unavailable */ }
+      }
+
+      function restorePackageDraft() {
+        try {
+          const raw = localStorage.getItem(SPB_STORAGE_KEY);
+          if (!raw) return;
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed?.services) || parsed.services.length === 0) return;
+          const maxAge = 7 * 24 * 60 * 60 * 1000;
+          if (Date.now() - (parsed.savedAt || 0) > maxAge) {
+            localStorage.removeItem(SPB_STORAGE_KEY);
+            return;
+          }
+          selectedServicesList = parsed.services.filter((s) => s?.id && serviceData[s.id]);
+          if (selectedServicesList.length > 0) {
+            updatePackageDisplay();
+            updateQuoteSummary();
+          }
+        } catch (_) { /* ignore corrupt draft */ }
+      }
 
       function parseServiceFeatures(rawText) {
         if (!rawText) return [];
@@ -10542,107 +10615,68 @@
         });
       }
       
-      // Function to filter services by category
-      function filterServicesByCategory(category) {
-        console.log('=== FILTERING BY CATEGORY ===');
-        console.log('Selected category:', category);
-        let visibleCount = 0;
-        let hiddenCount = 0;
-        
-        // Get all service items and section headers
-        const allItems = document.querySelectorAll('.service-item, .service-section-header');
-        console.log(`Found ${allItems.length} total items to filter`);
-        
-        allItems.forEach((item, index) => {
-          const itemCategory = item.dataset.category;
-          const itemService = item.dataset.service || 'header';
-          
-          // Show item only if it matches the selected category
-          const shouldShow = category === 'all' || itemCategory === category;
-          
-          console.log(`Item ${index}: ${itemService} (category: ${itemCategory}) - Should show: ${shouldShow}`);
-          
-          if (shouldShow) {
-            // Force show the item
-            item.style.display = 'block';
-            item.style.visibility = 'visible';
-            item.style.opacity = '1';
-            item.classList.remove('hidden');
-            
-            if (item.classList.contains('service-item')) {
-              visibleCount++;
-              console.log(`✅ SHOWING: ${item.dataset.service} (category: ${itemCategory})`);
-            } else {
-              console.log(`✅ SHOWING section header for category: ${itemCategory}`);
-            }
-          } else {
-            // Force hide the item
-            item.style.display = 'none';
-            item.style.visibility = 'hidden';
-            item.style.opacity = '0';
-            item.classList.add('hidden');
-            
-            if (item.classList.contains('service-item')) {
-              hiddenCount++;
-              console.log(`❌ HIDING: ${item.dataset.service} (category: ${itemCategory})`);
-            } else {
-              console.log(`❌ HIDING section header for category: ${itemCategory}`);
-            }
-          }
-        });
-        
-        console.log(`=== FILTERING COMPLETE ===`);
-        console.log(`Category: ${category}`);
-        console.log(`Visible services: ${visibleCount}`);
-        console.log(`Hidden services: ${hiddenCount}`);
-        console.log(`Total items processed: ${allItems.length}`);
-        
-        // Reinitialize listeners after filtering
-        setTimeout(() => {
-          initializeServiceListeners();
-        }, 10);
+      function serviceMatchesSearch(item) {
+        if (!catalogSearchQuery) return true;
+        const q = catalogSearchQuery.toLowerCase();
+        const id = item.dataset.service || '';
+        const def = serviceData[id];
+        const haystack = [
+          item.textContent,
+          def?.name,
+          def?.duration,
+          def?.category,
+        ]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        return haystack.includes(q);
       }
 
-      // Category tab functionality
-      categoryTabs.forEach(tab => {
-        console.log('Adding click listener to tab:', tab.dataset.category);
+      function filterServicesByCategory(category) {
+        const allItems = document.querySelectorAll('.service-item, .service-section-header');
+
+        allItems.forEach((item) => {
+          const itemCategory = item.dataset.category;
+          const categoryMatch = category === 'all' || itemCategory === category;
+          const isServiceItem = item.classList.contains('service-item');
+          const searchMatch = !isServiceItem || serviceMatchesSearch(item);
+          const shouldShow = categoryMatch && searchMatch;
+
+          item.style.display = shouldShow ? 'block' : 'none';
+          item.style.visibility = shouldShow ? 'visible' : 'hidden';
+          item.style.opacity = shouldShow ? '1' : '0';
+          item.classList.toggle('hidden', !shouldShow);
+        });
+
+        setTimeout(() => initializeServiceListeners(), 10);
+      }
+
+      if (catalogSearch) {
+        catalogSearch.addEventListener('input', () => {
+          catalogSearchQuery = catalogSearch.value.trim();
+          filterServicesByCategory(currentCategory);
+        });
+      }
+
+      categoryTabs.forEach((tab) => {
         tab.addEventListener('click', (e) => {
           e.preventDefault();
           const category = tab.dataset.category;
-          console.log('=== CATEGORY TAB CLICKED ===');
-          console.log('Category tab clicked:', category);
-          console.log('Tab element:', tab);
           currentCategory = category;
-          
-          // Update active tab
-          categoryTabs.forEach(t => t.classList.remove('active'));
+          categoryTabs.forEach((t) => t.classList.remove('active'));
           tab.classList.add('active');
-          console.log('Set active tab to:', category);
-          
-          // Filter services
-          console.log('Calling filterServicesByCategory with:', category);
           filterServicesByCategory(category);
         });
       });
-      
-      // Initialize with default category after a brief delay to ensure DOM is ready
+
       setTimeout(() => {
-        console.log('=== INITIALIZING CATEGORY FILTER ===');
-        console.log('Initial category:', currentCategory);
-        
-        // Make sure the correct tab is active
-        categoryTabs.forEach(t => t.classList.remove('active'));
+        categoryTabs.forEach((t) => t.classList.remove('active'));
         const activeTab = document.querySelector(`[data-category="${currentCategory}"]`);
         if (activeTab) {
           activeTab.classList.add('active');
-          console.log('Set initial active tab to:', currentCategory);
-        } else {
-          console.log('No active tab found for category:', currentCategory);
         }
-        
-        // Force initial filtering
-        console.log('Running initial category filter...');
         filterServicesByCategory(currentCategory);
+        restorePackageDraft();
       }, 200);
       
       // Drag and drop event handlers
@@ -10903,14 +10937,15 @@
         lastAddedServiceId = serviceId;
         updatePackageDisplay();
         updateQuoteSummary();
+        savePackageDraft();
       }
       
       function removeServiceFromPackage(serviceId) {
-        console.log('Removing service:', serviceId);
         selectedServicesList = selectedServicesList.filter(s => s.id !== serviceId);
         lastAddedServiceId = null;
         updatePackageDisplay();
         updateQuoteSummary();
+        savePackageDraft();
         showNotification('Service removed from package', 'info');
       }
       
@@ -10953,6 +10988,9 @@
       function clearPackage() {
         selectedServicesList = [];
         lastAddedServiceId = null;
+        try {
+          localStorage.removeItem(SPB_STORAGE_KEY);
+        } catch (_) { /* ignore */ }
         updatePackageDisplay();
         updateQuoteSummary();
       }
@@ -11023,6 +11061,16 @@
                 <div class="form-group">
                   <label for="customerPhone">Phone <span style="font-weight:500;opacity:0.7">(optional)</span></label>
                   <input type="tel" id="customerPhone" autocomplete="tel" placeholder="For scheduling follow-up">
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">Project type <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <input type="text" id="projectType" placeholder="e.g. Wedding, brand film, podcast">
+                </div>
+
+                <div class="form-group">
+                  <label for="eventDate">Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <input type="date" id="eventDate">
                 </div>
               </div>
             </div>
@@ -11128,8 +11176,9 @@
           email: customerEmail,
           phone: customerPhone
         };
-        
-        // Send the project with customer information
+        invoiceData.projectType = document.getElementById('projectType')?.value?.trim() || '';
+        invoiceData.eventDate = document.getElementById('eventDate')?.value?.trim() || '';
+
         sendToEmailJS(invoiceData);
       }
       
@@ -11152,14 +11201,19 @@
         try {
           const response = await fetch('/api/stripe/create-invoice', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Idempotency-Key': invoiceData.invoiceNumber,
+            },
             body: JSON.stringify({
               customer: invoiceData.customer,
               services: invoiceData.services,
               invoiceNumber: invoiceData.invoiceNumber,
               subtotal: invoiceData.subtotal,
               total: invoiceData.total,
-              date: invoiceData.date
+              date: invoiceData.date,
+              projectType: invoiceData.projectType,
+              eventDate: invoiceData.eventDate,
             })
           });
           
@@ -11179,8 +11233,10 @@
             throw new Error(result.error || `Unable to create invoice (${response.status}).`);
           }
           
-          console.log('Stripe invoice created:', result.invoiceId);
-          showSuccessModal(result.invoiceUrl, result.emailWarning);
+          showSuccessModal(result.invoiceUrl, result.emailWarning, result.paymentDueDate);
+          try {
+            localStorage.removeItem(SPB_STORAGE_KEY);
+          } catch (_) { /* ignore */ }
           clearPackage();
         } catch (error) {
           console.error('Invoice submission error:', error);
@@ -11193,7 +11249,7 @@
       }
       
       // Show prominent success modal for project submission
-      function showSuccessModal(invoiceUrl, emailWarning) {
+      function showSuccessModal(invoiceUrl, emailWarning, paymentDueDate) {
         // Close any existing invoice/project modal first
         const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
         existingModals.forEach(modal => modal.remove());
@@ -11207,6 +11263,12 @@
           : '';
         const emailNote = emailWarning
           ? `<p style="margin:12px 0 0;font-size:13px;color:var(--text-muted);">${emailWarning}</p>`
+          : '';
+        const dueNote = paymentDueDate
+          ? `<div class="success-detail-item"><i class="fas fa-calendar-check"></i><span>Payment due by ${paymentDueDate}</span></div>`
+          : '';
+        const copyBtnHtml = safeInvoiceUrl
+          ? `<button type="button" class="btn-secondary success-copy-link" style="margin-top:12px;"><i class="fas fa-link"></i> Copy payment link</button>`
           : '';
         
         const modal = document.createElement('div');
@@ -11224,6 +11286,7 @@
             <div class="success-modal-body">
               <div class="success-details">
                 ${invoiceLinkHtml}
+                ${dueNote}
                 <div class="success-detail-item">
                   <i class="fas fa-envelope"></i>
                   <span>Check your inbox for package details &amp; payment link</span>
@@ -11240,6 +11303,7 @@
             </div>
             
             <div class="success-modal-actions">
+              ${copyBtnHtml}
               <button class="btn-primary success-btn" onclick="handleAwesomeClick()">
                 <i class="fas fa-thumbs-up"></i>
                 Awesome, Thanks!
@@ -11249,6 +11313,18 @@
         `;
         
         document.body.appendChild(modal);
+
+        const copyBtn = modal.querySelector('.success-copy-link');
+        if (copyBtn && safeInvoiceUrl) {
+          copyBtn.addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(safeInvoiceUrl);
+              showNotification('Payment link copied', 'success');
+            } catch (_) {
+              showNotification('Could not copy — use the link above', 'info');
+            }
+          });
+        }
         
         // Auto-close after 8 seconds
         setTimeout(() => {
@@ -11586,12 +11662,12 @@
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
-        initializeServicePackageBuilder();
+        initializeServicePackageBuilder().catch(() => {});
         initializeRealEstatePortfolio();
         initializeShowcaseReveal();
       });
     } else {
-      initializeServicePackageBuilder();
+      initializeServicePackageBuilder().catch(() => {});
       initializeRealEstatePortfolio();
       initializeShowcaseReveal();
     }

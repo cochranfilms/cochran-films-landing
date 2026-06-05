@@ -1,0 +1,47 @@
+<!--
+  Cochran Films — Client: Invoice Overdue (EmailJS)
+  Env: EMAILJS_PACKAGE_OVERDUE_CLIENT_TEMPLATE_ID
+  Subject: Invoice overdue — Cochran Films Invoice #{{invoice_number}}
+  To: {{to_email}}
+  Reply To: info@cochranfilms.com
+
+  Variables: to_email, reply_to, email_heading, email_intro, customer_name, customer_email,
+  customer_phone, invoice_number, stripe_invoice_number, total_amount, due_date, invoice_url,
+  services_list, cta_label, cta_url, cta_subtext
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Invoice Overdue</title></head>
+<body style="margin:0;padding:0;background:#fffbeb;">
+  <table role="presentation" width="100%"><tr><td align="center" style="padding:40px 16px;">
+    <table role="presentation" width="600" style="max-width:600px;width:100%;background:#fff;border:2px solid #fbbf24;">
+      <tr><td bgcolor="#78350f" style="padding:0;border-top:3px solid #FFB200;">
+        <table width="100%"><tr><td align="center" style="padding:32px;">
+          <img src="https://cochranfilms.com/CF_Logo_White2025.png" alt="Cochran Films" width="180" style="display:block;margin:0 auto 20px;border:0;" />
+          <h1 style="margin:0;font:bold 22px Arial,sans-serif;color:#fff;">{{email_heading}}</h1>
+        </td></tr></table>
+      </td></tr>
+      <tr><td style="padding:32px 40px;">
+        <p style="margin:0 0 16px;font:15px/1.7 Arial,sans-serif;color:#4b5563;">Hi {{customer_name}},</p>
+        <p style="margin:0 0 20px;font:15px/1.7 Arial,sans-serif;color:#4b5563;">{{email_intro}}</p>
+        <table width="100%" style="background:#fffbeb;border:1px solid #fde68a;"><tr><td style="padding:20px 24px;">
+          <p style="margin:0 0 6px;font:bold 11px Arial,sans-serif;color:#92400e;text-transform:uppercase;">Balance due</p>
+          <p style="margin:0;font:bold 32px Arial,sans-serif;color:#111827;">{{total_amount}}</p>
+          <p style="margin:12px 0 0;font:14px Arial,sans-serif;color:#374151;">Invoice #{{invoice_number}} · Was due {{due_date}}</p>
+        </td></tr></table>
+        <p style="margin:20px 0 0;font:13px Arial,sans-serif;color:#6b7280;white-space:pre-line;">{{services_list}}</p>
+        <p style="margin:16px 0 0;font:13px Arial,sans-serif;color:#6b7280;">Please complete payment at your earliest convenience so we can reserve your production dates.</p>
+      </td></tr>
+      <tr><td align="center" style="padding:8px 40px 36px;">
+        <a href="{{cta_url}}" style="display:inline-block;padding:15px 40px;background:#111827;color:#fff;font:bold 13px Arial,sans-serif;text-decoration:none;text-transform:uppercase;">{{cta_label}}</a>
+        <p style="margin:14px 0 0;font:12px Arial,sans-serif;color:#9ca3af;">{{cta_subtext}}</p>
+        <p style="margin:10px 0 0;font:11px Arial,sans-serif;"><a href="{{invoice_url}}" style="color:#4f46e5;word-break:break-all;">{{invoice_url}}</a></p>
+      </td></tr>
+      <tr><td bgcolor="#111827" align="center" style="padding:24px;">
+        <p style="margin:0;font:bold 14px Arial,sans-serif;color:#fff;">Cochran Films</p>
+        <p style="margin:8px 0 0;font:12px Arial,sans-serif;color:#9ca3af;">Atlanta, GA · <a href="https://www.cochranfilms.com" style="color:#FFB200;text-decoration:none;">www.cochranfilms.com</a></p>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>

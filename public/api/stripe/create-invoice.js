@@ -1,96 +1,17 @@
-const Stripe = require('stripe');
+import Stripe from 'stripe';
+import {
+  PACKAGE_SOURCE,
+  buildAdminMailto,
+  buildServicesHtml,
+  buildServicesText,
+  claimDedupeKey,
+  releaseDedupeKey,
+  sendEmailJs,
+  setCors,
+  validateServicesPayload,
+} from './stripe-package-shared.js';
 
 const DEFAULT_DAYS_UNTIL_DUE = 30;
-
-function setCors(req, res) {
-  const allowed = (process.env.ALLOWED_ORIGINS || 'https://landing.cochranfilms.com,https://www.cochranfilms.com,https://cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000')
-    .split(',')
-    .map((o) => o.trim())
-    .filter(Boolean);
-  const origin = req.headers.origin;
-  if (origin && allowed.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  } else if (!origin) {
-    res.setHeader('Access-Control-Allow-Origin', allowed[0] || '*');
-  }
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-}
-
-function escapeHtml(value) {
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function buildServicesHtml(services) {
-  if (!Array.isArray(services) || services.length === 0) {
-    return '<tr><td colspan="3" style="padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;">No line items</td></tr>';
-  }
-  return services
-    .map((service) => {
-      const qty = Math.max(1, Number(service.quantity) || 1);
-      const unitPrice = Number(service.price) || 0;
-      const lineTotal = unitPrice * qty;
-      const qtyLabel = qty > 1 ? ` &times; ${qty}` : '';
-      return `<tr>
-        <td width="42%" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;line-height:1.4;">${escapeHtml(service.name)}${qtyLabel}</td>
-        <td width="38%" bgcolor="#ffffff" style="padding:14px 12px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#6b7280;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.45;">${escapeHtml(service.duration || '')}</td>
-        <td width="20%" align="right" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;">$${lineTotal.toFixed(2)}</td>
-      </tr>`;
-    })
-    .join('');
-}
-
-function buildServicesText(services) {
-  return services
-    .map((service) => {
-      const qty = Math.max(1, Number(service.quantity) || 1);
-      const unitPrice = Number(service.price) || 0;
-      const lineTotal = unitPrice * qty;
-      const qtyLabel = qty > 1 ? ` (×${qty})` : '';
-      return `- ${service.name}${qtyLabel}: $${lineTotal.toFixed(2)}`;
-    })
-    .join('\n');
-}
-
-async function sendPackageEmail(templateParams) {
-  const serviceId = process.env.EMAILJS_SERVICE_ID;
-  const templateId = process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
-  const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-  const privateKey = process.env.EMAILJS_PRIVATE_KEY;
-
-  if (!serviceId || !templateId || !publicKey) {
-    console.warn('EmailJS package template not configured — skipping branded email');
-    return { skipped: true };
-  }
-
-  const body = {
-    service_id: serviceId,
-    template_id: templateId,
-    user_id: publicKey,
-    template_params: templateParams,
-  };
-
-  if (privateKey) {
-    body.accessToken = privateKey;
-  }
-
-  const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-
-  if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`EmailJS failed (${response.status}): ${text}`);
-  }
-
-  return { ok: true };
-}
 
 export default async function handler(req, res) {
   setCors(req, res);
@@ -110,14 +31,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { customer, services, invoiceNumber, total, date } = req.body || {};
+    const { customer, services, invoiceNumber, total, date, projectType, eventDate } = req.body || {};
 
     if (!customer?.email || !customer?.name) {
       return res.status(400).json({ error: 'Customer name and email are required.' });
-    }
-
-    if (!Array.isArray(services) || services.length === 0) {
-      return res.status(400).json({ error: 'At least one service is required.' });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -125,14 +42,33 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'A valid email address is required.' });
     }
 
-    const stripe = new Stripe(stripeSecret);
-    const daysUntilDue = Number(process.env.STRIPE_INVOICE_DAYS_UNTIL_DUE) || DEFAULT_DAYS_UNTIL_DUE;
+    const validation = validateServicesPayload(services);
+    if (!validation.ok) {
+      return res.status(400).json({ error: validation.error });
+    }
+
+    const normalizedServices = validation.services;
+    const computedTotal = validation.computedTotal;
+    const clientTotal = Number(total);
+    if (clientTotal > 0 && Math.abs(clientTotal - computedTotal) > 0.02) {
+      return res.status(400).json({ error: 'Package total does not match catalog pricing. Please refresh and try again.' });
+    }
+    const invoiceTotal = computedTotal;
+
     const refNumber = invoiceNumber || `CF-${Date.now()}`;
-    const computedTotal = services.reduce((sum, s) => {
-      const qty = Math.max(1, Number(s.quantity) || 1);
-      return sum + (Number(s.price) || 0) * qty;
-    }, 0);
-    const invoiceTotal = Number(total) > 0 ? Number(total) : computedTotal;
+    const idempotencyKey = req.headers['x-idempotency-key'] || refNumber;
+    const dedupeKey = `invoice:create:${idempotencyKey}`;
+    const claimed = await claimDedupeKey(dedupeKey);
+    if (!claimed) {
+      return res.status(409).json({
+        error: 'This invoice request was already submitted. Check your email for the payment link.',
+      });
+    }
+
+    let stripe;
+    try {
+      stripe = new Stripe(stripeSecret);
+    const daysUntilDue = Number(process.env.STRIPE_INVOICE_DAYS_UNTIL_DUE) || DEFAULT_DAYS_UNTIL_DUE;
 
     const existingCustomers = await stripe.customers.list({
       email: customer.email.trim().toLowerCase(),
@@ -154,6 +90,10 @@ export default async function handler(req, res) {
       });
     }
 
+    const servicesText = buildServicesText(normalizedServices);
+    const servicesTextTruncated =
+      servicesText.length > 450 ? `${servicesText.slice(0, 447)}...` : servicesText;
+
     const draftInvoice = await stripe.invoices.create({
       customer: stripeCustomer.id,
       collection_method: 'send_invoice',
@@ -161,12 +101,18 @@ export default async function handler(req, res) {
       auto_advance: false,
       metadata: {
         invoice_number: refNumber,
-        source: 'cochran-films-landing-service-builder',
+        source: PACKAGE_SOURCE,
+        customer_name: customer.name.trim(),
+        customer_email: customer.email.trim(),
+        customer_phone: customer.phone?.trim() || 'Not provided',
+        services_list: servicesTextTruncated,
+        project_type: projectType?.trim() || '',
+        event_date: eventDate?.trim() || '',
       },
       description: `Cochran Films service package — ${refNumber}`,
     });
 
-    for (const service of services) {
+    for (const service of normalizedServices) {
       const qty = Math.max(1, Number(service.quantity) || 1);
       const unitPrice = Number(service.price) || 0;
       const amountCents = Math.round(unitPrice * 100);
@@ -183,24 +129,36 @@ export default async function handler(req, res) {
       });
     }
 
-    // Finalize only — do NOT call sendInvoice (Stripe would email the customer).
-    // Clients receive the branded EmailJS message with the hosted invoice link.
     const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id, {
       auto_advance: false,
     });
 
     const invoiceUrl = finalized.hosted_invoice_url;
     if (!invoiceUrl) {
+      await releaseDedupeKey(dedupeKey);
       return res.status(500).json({
         error: 'Invoice was created but no payment link is available. Check Stripe Dashboard.',
       });
     }
+
     const projectDate = date
       ? new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
       : new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-    const servicesHtml = buildServicesHtml(services);
-    const servicesText = buildServicesText(services);
+    const dueDate = new Date();
+    dueDate.setDate(dueDate.getDate() + daysUntilDue);
+    const paymentDueDate = dueDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+
+    const servicesHtml = buildServicesHtml(normalizedServices);
+    const stripeInvoiceNumber = finalized.number || '';
+
+    const clientTemplateId = process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
+    const adminTemplateId =
+      process.env.EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID || process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
 
     const clientEmailParams = {
       to_email: customer.email.trim(),
@@ -208,18 +166,20 @@ export default async function handler(req, res) {
       customer_email: customer.email.trim(),
       customer_phone: customer.phone?.trim() || 'Not provided',
       invoice_number: refNumber,
+      stripe_invoice_number: stripeInvoiceNumber,
       total_amount: `$${invoiceTotal.toFixed(2)}`,
       invoice_url: invoiceUrl,
       services_html: servicesHtml,
       services_list: servicesText,
       project_date: projectDate,
+      payment_due_date: paymentDueDate,
       email_heading: 'Your Project Package Is Ready',
       reply_to: customer.email.trim(),
     };
 
     let emailWarning = null;
     try {
-      await sendPackageEmail(clientEmailParams);
+      await sendEmailJs(clientTemplateId, clientEmailParams);
     } catch (emailError) {
       console.error('Client EmailJS error:', emailError);
       emailWarning = 'Invoice created; branded summary email could not be sent.';
@@ -228,25 +188,35 @@ export default async function handler(req, res) {
     const adminEmail = process.env.EMAILJS_ADMIN_EMAIL;
     if (adminEmail) {
       try {
-        await sendPackageEmail({
+        await sendEmailJs(adminTemplateId, {
           ...clientEmailParams,
           to_email: adminEmail,
           email_heading: 'New Service Package Request',
+          email_intro: `New package from ${customer.name.trim()} — payment pending.`,
+          cta_label: `Reply to ${customer.name.trim()}`,
+          cta_url: buildAdminMailto(customer.name.trim(), customer.email.trim(), refNumber),
+          cta_subtext: 'Invoice created — payment pending',
+          dashboard_hint: 'View in Stripe Dashboard → Invoices',
         });
       } catch (adminError) {
         console.error('Admin EmailJS error:', adminError);
       }
     }
 
-    return res.status(200).json({
-      success: true,
-      invoiceId: finalized.id,
-      invoiceNumber: refNumber,
-      invoiceUrl,
-      stripeInvoiceNumber: finalized.number,
-      total: invoiceTotal,
-      emailWarning,
-    });
+      return res.status(200).json({
+        success: true,
+        invoiceId: finalized.id,
+        invoiceNumber: refNumber,
+        invoiceUrl,
+        stripeInvoiceNumber,
+        total: invoiceTotal,
+        paymentDueDate,
+        emailWarning,
+      });
+    } catch (innerError) {
+      await releaseDedupeKey(dedupeKey);
+      throw innerError;
+    }
   } catch (error) {
     console.error('Stripe invoice error:', error);
     const message =

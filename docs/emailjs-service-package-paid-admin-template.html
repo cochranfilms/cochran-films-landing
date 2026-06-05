@@ -1,0 +1,29 @@
+<!--
+  Cochran Films — Admin: Payment Received (EmailJS)
+  Env: EMAILJS_PACKAGE_PAID_ADMIN_TEMPLATE_ID
+  Subject: PAID — {{customer_name}} · {{total_amount}} · Invoice #{{invoice_number}}
+  To: {{to_email}}  Reply To: {{customer_email}}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>PAID — Service Package</title></head>
+<body style="margin:0;padding:0;background:#ecfdf5;">
+  <table role="presentation" width="100%"><tr><td align="center" style="padding:32px 16px;">
+    <table role="presentation" width="600" style="max-width:600px;width:100%;background:#fff;border:2px solid #10b981;">
+      <tr><td bgcolor="#065f46" style="padding:28px 32px;">
+        <h1 style="margin:0;font:bold 22px Arial,sans-serif;color:#fff;">{{email_heading}}</h1>
+        <p style="margin:12px 0 0;font:15px/1.6 Arial,sans-serif;color:#d1fae5;">{{email_intro}}</p>
+      </td></tr>
+      <tr><td style="padding:28px 32px;">
+        <p style="margin:0;font:bold 20px Arial,sans-serif;color:#111827;">{{customer_name}}</p>
+        <p style="margin:8px 0 0;font:14px Arial,sans-serif;">{{customer_email}} · {{customer_phone}}</p>
+        <p style="margin:20px 0;font:bold 28px Arial,sans-serif;color:#059669;">{{total_amount}} paid</p>
+        <p style="margin:0;font:14px Arial,sans-serif;color:#374151;">Ref <strong>{{invoice_number}}</strong> · Stripe <strong>{{stripe_invoice_number}}</strong> · Paid {{payment_date}}</p>
+        <p style="margin:16px 0 0;font:13px Arial,sans-serif;white-space:pre-line;color:#6b7280;">{{services_list}}</p>
+        <p style="margin:20px 0 0;"><a href="{{cta_url}}" style="display:inline-block;padding:12px 28px;background:#111827;color:#fff;font:bold 13px Arial,sans-serif;text-decoration:none;">{{cta_label}}</a></p>
+        <p style="margin:8px 0 0;font:12px Arial,sans-serif;color:#9ca3af;">{{cta_subtext}}</p>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>

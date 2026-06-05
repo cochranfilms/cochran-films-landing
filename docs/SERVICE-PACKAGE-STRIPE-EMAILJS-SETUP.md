@@ -1,86 +1,117 @@
 # Service Package Builder — Stripe + EmailJS
 
-> **Contact form (bottom of site):** see [EMAILJS-CONTACT-INQUIRY-SETUP.md](./EMAILJS-CONTACT-INQUIRY-SETUP.md) — uses `EMAILJS_CONTACT_TEMPLATE_ID`.
+> **Production site:** [https://www.cochranfilms.com](https://www.cochranfilms.com)  
+> **Contact form:** [EMAILJS-CONTACT-INQUIRY-SETUP.md](./EMAILJS-CONTACT-INQUIRY-SETUP.md)
 
 ## Flow
 
-1. Visitor builds a package on the landing page and clicks **Create Project Request**.
-2. They enter name, email, and phone.
-3. `POST /api/stripe/create-invoice` creates a **real Stripe Invoice**, finalizes it, and calls `sendInvoice` (Stripe emails the client from your Stripe account).
-4. The same API sends your branded **EmailJS** summary with line items and the hosted invoice link.
-5. You see the invoice in **Stripe Dashboard → Invoices**.
+1. Visitor builds a package on the site and clicks **Create My Invoice**.
+2. They enter name, email, and optional phone / project details.
+3. `POST /api/stripe/create-invoice` validates prices against `data/services-catalog.json`, creates a Stripe invoice, finalizes it (no `sendInvoice`), and sends branded EmailJS emails.
+4. Client pays via the Stripe hosted invoice link.
+5. Stripe webhooks → client/admin emails: **paid**, **payment failed**, **overdue** (when configured).
 
 ---
 
-## Vercel environment variables (all)
+## Stripe webhook (required for payment emails)
 
-Set these in the **cochran-films-landing** Vercel project (Production + Preview if you test there).
+| Setting | Value |
+|---------|--------|
+| **Endpoint URL (Live)** | `https://www.cochranfilms.com/api/stripe/webhook` |
+| **Events** | `invoice.paid`, `invoice.payment_failed`, `invoice.overdue` (subscribe to all three for full client lifecycle emails) |
+| **Signing secret** | `STRIPE_WEBHOOK_SECRET` (`whsec_...` — separate for Test vs Live) |
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `STRIPE_SECRET_KEY` | **Yes** | Secret key (`sk_live_...` or `sk_test_...`) |
-| `STRIPE_PUBLISHABLE_KEY` | No | Only needed for future Stripe.js on the client |
-| `STRIPE_WEBHOOK_SECRET` | No | For `invoice.paid` webhooks later (`whsec_...`) |
+Use Stripe CLI for local testing:
+
+```bash
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+```
+
+**Dashboard:** Disable automatic Stripe invoice emails to customers (Settings → Customer emails). You send branded EmailJS on create and on paid via webhook.
+
+**Idempotency** uses in-memory dedupe in the API (no KV required). Fine for low volume; duplicate webhook retries on the same warm instance are still suppressed. Cold starts may reset the cache.
+
+---
+
+## Vercel environment variables
+
+Set in the **cochran-films-landing** project. Root Directory: `public`.
+
+### Stripe
+
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `STRIPE_SECRET_KEY` | Yes | `sk_live_...` (prod) / `sk_test_...` (preview) |
+| `STRIPE_WEBHOOK_SECRET` | Yes | From webhook endpoint (`whsec_...`) |
 | `STRIPE_INVOICE_DAYS_UNTIL_DUE` | No | Default `30` |
-| `EMAILJS_SERVICE_ID` | **Yes** | e.g. `service_t11yvru` |
-| `EMAILJS_PUBLIC_KEY` | **Yes** | Public key from EmailJS |
-| `EMAILJS_PRIVATE_KEY` | **Yes** | Private key (server-side send) |
-| `EMAILJS_PACKAGE_TEMPLATE_ID` | **Yes** | New template ID after you create it |
-| `EMAILJS_ADMIN_EMAIL` | No | Your email for a copy of each submission |
-| `ALLOWED_ORIGINS` | No | Comma-separated site origins for CORS |
 
-### Recommended email subject (EmailJS template settings)
+### EmailJS
 
-```
-Your Cochran Films Project Package & Invoice #{{invoice_number}}
-```
+| Variable | Required | Purpose |
+|----------|----------|---------|
+| `EMAILJS_SERVICE_ID` | Yes | |
+| `EMAILJS_PUBLIC_KEY` | Yes | |
+| `EMAILJS_PRIVATE_KEY` | Yes | Server-side send |
+| `EMAILJS_PACKAGE_TEMPLATE_ID` | Yes | Client — invoice created |
+| `EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID` | Yes | Admin — new package (pending payment) |
+| `EMAILJS_PACKAGE_PAID_ADMIN_TEMPLATE_ID` | Yes | Admin — `invoice.paid` |
+| `EMAILJS_PACKAGE_PAID_CLIENT_TEMPLATE_ID` | Yes | Client — `invoice.paid` |
+| `EMAILJS_PACKAGE_PAYMENT_FAILED_CLIENT_TEMPLATE_ID` | Yes | Client — `invoice.payment_failed` |
+| `EMAILJS_PACKAGE_OVERDUE_CLIENT_TEMPLATE_ID` | Yes | Client — `invoice.overdue` |
+| `EMAILJS_ADMIN_EMAIL` | Yes | Admin inbox for package + paid notifications |
 
-### Template variables (must exist in EmailJS)
+### Site / CORS
 
-`to_email`, `reply_to`, `email_heading`, `customer_name`, `customer_email`, `customer_phone`, `invoice_number`, `project_date`, `services_html`, `services_list`, `total_amount`, `invoice_url`
-
-- **To Email:** `{{to_email}}`
-- **Reply To:** `{{customer_email}}` or `{{reply_to}}`
-- For HTML line items use **triple braces:** `{{{services_html}}}` inside the services table `<tbody>`.
-
-HTML to paste: `docs/emailjs-service-package-invoice-template.html`
-
----
-
-## Stripe Dashboard checklist
-
-1. **Disable Stripe invoice emails** (so clients only get your EmailJS template):
-   - **Settings → Customer emails** — turn **off** any option like *“Send emails when invoices are finalized”* or *“Invoice emails”* (wording varies).
-   - The API **does not** call `sendInvoice`; if Stripe still emails, it is from this Dashboard setting.
-2. **Settings → Business details** — logo, support email, and address still appear on the **hosted invoice page** (payment link).
-3. Use **test mode** keys in Preview deployments; **live** keys in Production.
-4. Invoicing must be enabled on your Stripe account (default for most businesses).
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `ALLOWED_ORIGINS` | No | Default includes `https://www.cochranfilms.com` |
+| `SITE_URL` | No | Default `https://www.cochranfilms.com` (paid client CTA) |
 
 ---
 
-## Deploy notes
+## EmailJS templates (paste from `docs/`)
 
-- Vercel project **Root Directory** should be `public` for the landing site.
-- API route: `public/api/stripe/create-invoice.js`
-- `public/package.json` includes the `stripe` dependency (required when Vercel Root Directory is `public`).
+| Template | HTML file | Subject |
+|----------|-----------|---------|
+| Client package | `emailjs-service-package-invoice-template.html` | `Your Cochran Films Project Package & Invoice #{{invoice_number}}` |
+| Admin new package | `emailjs-service-package-admin-template.html` | `New Service Package — {{customer_name}} · {{total_amount}} · #{{invoice_number}}` |
+| Admin paid | `emailjs-service-package-paid-admin-template.html` | `PAID — {{customer_name}} · {{total_amount}} · Invoice #{{invoice_number}}` |
+| Client paid | `emailjs-service-package-paid-client-template.html` | `Payment received — Cochran Films Invoice #{{invoice_number}}` |
+| Client payment failed | `emailjs-service-package-payment-failed-client-template.html` | `Payment failed — Cochran Films Invoice #{{invoice_number}}` |
+| Client overdue | `emailjs-service-package-invoice-overdue-client-template.html` | `Invoice overdue — Cochran Films Invoice #{{invoice_number}}` |
+
+**Client failed / overdue template variables:** `to_email`, `reply_to`, `email_heading`, `email_intro`, `customer_name`, `customer_email`, `customer_phone`, `invoice_number`, `stripe_invoice_number`, `total_amount`, `due_date`, `invoice_url`, `services_list`, `cta_label`, `cta_url`, `cta_subtext`
+
+Use triple braces for HTML line items where applicable: `{{{services_html}}}`.
+
+---
+
+## API routes
+
+| Route | File |
+|-------|------|
+| `POST /api/stripe/create-invoice` | `public/api/stripe/create-invoice.js` |
+| `POST /api/stripe/webhook` | `public/api/stripe/webhook.js` |
+| Catalog (client + server) | `public/data/services-catalog.json` |
 
 ---
 
 ## Local test
 
 ```bash
-npm install
-# Add vars to .env.local in Vercel CLI or export them, then:
+cd public && npm install
 vercel dev
 ```
 
-POST body example:
+Example POST (include service `id` from catalog):
 
 ```json
 {
   "customer": { "name": "Jane Doe", "email": "jane@example.com", "phone": "555-0100" },
-  "services": [{ "name": "Brand Builder Site", "price": 2500, "duration": "6–10 pages", "quantity": 1 }],
+  "services": [{ "id": "brand-builder-site", "name": "Brand Builder Site", "price": 2500, "duration": "6–10 pages", "quantity": 1 }],
   "invoiceNumber": "CF-TEST-001",
   "total": 2500
 }
 ```
+
+Send header `X-Idempotency-Key: CF-TEST-001` to avoid duplicate submissions.

@@ -1,0 +1,45 @@
+<!--
+  Cochran Films — Admin: New Service Package (EmailJS)
+  Env: EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID
+  Subject: New Service Package — {{customer_name}} · {{total_amount}} · #{{invoice_number}}
+  To: {{to_email}}  Reply To: {{customer_email}}
+
+  Variables: to_email, reply_to, email_heading, email_intro, customer_name, customer_email,
+  customer_phone, invoice_number, stripe_invoice_number, project_date, payment_due_date,
+  services_html ({{{services_html}}}), services_list, total_amount, invoice_url,
+  cta_label, cta_url, cta_subtext, dashboard_hint
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Admin — New Package</title></head>
+<body style="margin:0;padding:0;background:#f3f4f6;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding:32px 16px;">
+    <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#fff;border:1px solid #e2e8f0;">
+      <tr><td bgcolor="#111827" style="padding:28px 32px;border-top:3px solid #FFB200;">
+        <p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#9ca3af;">Internal — new package</p>
+        <h1 style="margin:0;font:bold 22px Arial,sans-serif;color:#fff;">{{email_heading}}</h1>
+        <p style="margin:14px 0 0;font:15px/1.6 Arial,sans-serif;color:#d1d5db;">{{email_intro}}</p>
+      </td></tr>
+      <tr><td style="padding:28px 32px;">
+        <p style="margin:0 0 4px;font:bold 11px Arial,sans-serif;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;">Client</p>
+        <p style="margin:0;font:bold 20px Arial,sans-serif;color:#111827;">{{customer_name}}</p>
+        <p style="margin:8px 0 0;font:14px Arial,sans-serif;"><a href="mailto:{{customer_email}}" style="color:#4f46e5;">{{customer_email}}</a> · {{customer_phone}}</p>
+        <table role="presentation" width="100%" style="margin:24px 0;border:1px solid #e2e8f0;"><tr>
+          <td style="padding:16px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Ref #</p><p style="margin:0;font:bold 16px Arial,sans-serif;">{{invoice_number}}</p></td>
+          <td style="padding:16px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Stripe #</p><p style="margin:0;font:bold 16px Arial,sans-serif;">{{stripe_invoice_number}}</p></td>
+          <td style="padding:16px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Total</p><p style="margin:0;font:bold 16px Arial,sans-serif;">{{total_amount}}</p></td>
+        </tr></table>
+        <p style="margin:0 0 12px;font:bold 11px Arial,sans-serif;color:#6b7280;text-transform:uppercase;">Services</p>
+        <table role="presentation" width="100%" style="border:1px solid #e2e8f0;"><tbody>{{{services_html}}}</tbody></table>
+        <p style="margin:16px 0 0;font:13px Arial,sans-serif;color:#6b7280;white-space:pre-line;">{{services_list}}</p>
+      </td></tr>
+      <tr><td align="center" style="padding:8px 32px 32px;">
+        <a href="{{cta_url}}" style="display:inline-block;padding:14px 32px;background:#111827;color:#fff;font:bold 13px Arial,sans-serif;text-decoration:none;text-transform:uppercase;">{{cta_label}}</a>
+        <p style="margin:12px 0 0;font:12px Arial,sans-serif;color:#9ca3af;">{{cta_subtext}}</p>
+        <p style="margin:16px 0 0;font:12px Arial,sans-serif;"><a href="{{invoice_url}}" style="color:#4f46e5;">Hosted invoice (client pay link)</a></p>
+        <p style="margin:8px 0 0;font:11px Arial,sans-serif;color:#9ca3af;">{{dashboard_hint}}</p>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>

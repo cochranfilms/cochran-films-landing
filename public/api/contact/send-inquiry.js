@@ -10,7 +10,7 @@ const SERVICE_LABELS = {
 };
 
 function setCors(req, res) {
-  const allowed = (process.env.ALLOWED_ORIGINS || 'https://landing.cochranfilms.com,https://www.cochranfilms.com,https://cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000')
+  const allowed = (process.env.ALLOWED_ORIGINS || 'https://www.cochranfilms.com,https://cochranfilms.com,https://landing.cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000')
     .split(',')
     .map((o) => o.trim())
     .filter(Boolean);
