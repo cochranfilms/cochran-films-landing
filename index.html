@@ -6656,37 +6656,45 @@
       display: block;
     }
 
-    .invoice-create-modal .invoice-date-field::after {
-      content: '';
-      position: absolute;
-      right: 1.15rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1.35rem;
-      height: 1.35rem;
-      pointer-events: none;
-      background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
-      opacity: 0.92;
-    }
-
     .invoice-create-modal .form-group input[type="date"] {
       color-scheme: light;
       width: 100%;
-      padding-right: 3rem;
+      padding-right: 3.25rem;
       color: rgba(255, 255, 255, 0.95);
+      cursor: pointer;
     }
 
-    .invoice-create-modal .invoice-date-field input[type="date"] {
-      position: relative;
+    .invoice-create-modal .invoice-date-picker-btn {
+      position: absolute;
+      right: 0.45rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.75rem;
+      height: 2.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.92);
+      cursor: pointer;
+      z-index: 2;
+      font-size: 1.1rem;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .invoice-create-modal .invoice-date-picker-btn:hover,
+    .invoice-create-modal .invoice-date-picker-btn:focus-visible {
+      color: var(--brand-gold);
+      background: rgba(255, 178, 0, 0.1);
+      outline: none;
     }
 
     .invoice-create-modal .form-group input[type="date"]::-webkit-calendar-picker-indicator {
-      width: 2.75rem;
-      height: 2.75rem;
-      margin: 0 0.15rem 0 0;
-      padding: 0;
-      opacity: 0;
-      cursor: pointer;
+      display: none;
+      -webkit-appearance: none;
+      appearance: none;
     }
 
     .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit,
@@ -11403,6 +11411,9 @@
                   <label for="eventDate">Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span></label>
                   <span class="invoice-date-field">
                     <input type="date" id="eventDate" aria-label="Event or shoot date">
+                    <button type="button" class="invoice-date-picker-btn" aria-label="Open calendar">
+                      <i class="fas fa-calendar" aria-hidden="true"></i>
+                    </button>
                   </span>
                 </div>
               </div>
@@ -11471,6 +11482,26 @@
           }
         };
         document.addEventListener('keydown', onEscape);
+
+        const eventDateInput = modal.querySelector('#eventDate');
+        const datePickerBtn = modal.querySelector('.invoice-date-picker-btn');
+        const openEventDatePicker = () => {
+          if (!eventDateInput) return;
+          if (typeof eventDateInput.showPicker === 'function') {
+            try {
+              eventDateInput.showPicker();
+              return;
+            } catch (_) { /* fall through to focus */ }
+          }
+          eventDateInput.focus();
+        };
+        datePickerBtn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          openEventDatePicker();
+        });
+        eventDateInput?.addEventListener('click', () => {
+          openEventDatePicker();
+        });
 
         modal.querySelector('.modal-submit-invoice')?.addEventListener('click', () => {
           validateAndSendProject(invoiceData);
