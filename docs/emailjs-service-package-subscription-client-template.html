@@ -2,7 +2,7 @@
   Cochran Films — Client: Retainer Subscription Started (EmailJS)
   Env: EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID
 
-  Subject: Your Cochran Films retainer — {{subscription_name}} · #{{invoice_number}}
+  Subject: Your Cochran Films Monthly Retainer — {{subscription_name}} · Invoice #{{invoice_number}}
   To: {{to_email}}  Reply To: info@cochranfilms.com
 
   Variables: to_email, reply_to, email_heading, email_intro, billing_note, customer_name,
@@ -17,11 +17,29 @@
 <body style="margin:0;padding:0;background:#f3f4f6;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding:32px 16px;">
     <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#fff;border:1px solid #e2e8f0;">
-      <tr><td bgcolor="#111827" style="padding:28px 32px;border-top:3px solid #FFB200;">
-        <p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#9ca3af;">Monthly retainer</p>
-        <h1 style="margin:0;font:bold 22px Arial,sans-serif;color:#fff;">{{email_heading}}</h1>
-        <p style="margin:14px 0 0;font:15px/1.6 Arial,sans-serif;color:#d1d5db;">{{email_intro}}</p>
-      </td></tr>
+      <tr>
+        <td bgcolor="#111827" style="background-color:#111827;padding:0;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td height="3" bgcolor="#FFB200" style="background-color:#FFB200;font-size:0;line-height:3px;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:36px 32px 28px;">
+                <img src="https://cochranfilms.com/CF_Logo_White2025.png" alt="Cochran Films" width="190" style="display:block;margin:0 auto 22px;border:0;max-width:190px;height:auto;" />
+                <p style="margin:0 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic;color:#9ca3af;letter-spacing:0.02em;">
+                  Monthly retainer
+                </p>
+                <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.35;font-weight:bold;color:#ffffff;">
+                  {{email_heading}}
+                </h1>
+                <p style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#d1d5db;">
+                  {{email_intro}}
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
       <tr><td style="padding:28px 32px;">
         <table role="presentation" width="100%" style="margin:0 0 20px;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;"><tr><td style="padding:16px 18px;">
           <p style="margin:0;font:14px/1.55 Arial,sans-serif;color:#92400e;">{{billing_note}}</p>

@@ -1,8 +1,10 @@
 const Stripe = require('stripe');
 const {
   PACKAGE_SOURCE,
+  buildRetainerBillingNote,
   buildServicesHtml,
   claimDedupeKey,
+  formatCommitmentTerm,
   formatUsdFromCents,
   readRawBody,
   sendEmailJs,
@@ -38,7 +40,22 @@ async function resolveInvoiceContext(stripe, invoice) {
     console.warn('Could not re-fetch invoice:', err.message);
   }
 
-  const meta = fullInvoice.metadata || {};
+  let meta = { ...(fullInvoice.metadata || {}) };
+  const subscriptionId =
+    typeof fullInvoice.subscription === 'string'
+      ? fullInvoice.subscription
+      : fullInvoice.subscription?.id;
+  if (subscriptionId && (!meta.source || !meta.invoice_number)) {
+    try {
+      const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+      if (subscription.metadata?.source === PACKAGE_SOURCE) {
+        meta = { ...subscription.metadata, ...meta };
+      }
+    } catch (err) {
+      console.warn('Could not load subscription metadata for invoice:', err.message);
+    }
+  }
+
   const customerEmail =
     meta.customer_email ||
     (typeof fullInvoice.customer === 'object' ? fullInvoice.customer?.email : null) ||
@@ -195,6 +212,75 @@ async function handleInvoicePaymentFailed(stripe, invoice) {
   }
 }
 
+async function handleSubscriptionRenewalFinalized(stripe, invoice) {
+  if (invoice.billing_reason !== 'subscription_cycle') {
+    return { skipped: true, reason: 'not_renewal' };
+  }
+
+  const subscriptionId =
+    typeof invoice.subscription === 'string' ? invoice.subscription : invoice.subscription?.id;
+  if (!subscriptionId) {
+    return { skipped: true, reason: 'no_subscription' };
+  }
+
+  const dedupeKey = `webhook:invoice.finalized:${invoice.id}`;
+  const claimed = await claimDedupeKey(dedupeKey);
+  if (!claimed) {
+    return { skipped: true, reason: 'duplicate' };
+  }
+
+  let subscription;
+  try {
+    subscription = await stripe.subscriptions.retrieve(subscriptionId);
+  } catch (err) {
+    console.warn('Could not load subscription for renewal email:', err.message);
+    return { skipped: true, reason: 'subscription_lookup_failed' };
+  }
+
+  if (subscription.metadata?.source !== PACKAGE_SOURCE) {
+    return { skipped: true, reason: 'source_mismatch' };
+  }
+
+  const templateId = process.env.EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID;
+  if (!templateId) {
+    return { ok: true, skipped: true, reason: 'template_not_configured' };
+  }
+
+  const ctx = await resolveInvoiceContext(stripe, invoice);
+  if (!ctx.customerEmail) {
+    return { ok: true, skipped: true, reason: 'no_customer_email' };
+  }
+
+  const commitmentMonths = Number(subscription.metadata?.commitment_months) || 1;
+  const subscriptionName =
+    subscription.metadata?.subscription_name || ctx.refNumber || 'Monthly retainer';
+  const nextBillingDate = subscription.current_period_end
+    ? formatDateFromUnix(subscription.current_period_end)
+    : '';
+
+  try {
+    await sendEmailJs(templateId, {
+      ...ctx.baseParams,
+      to_email: ctx.customerEmail,
+      subscription_id: subscription.id,
+      subscription_name: subscriptionName,
+      commitment_term: formatCommitmentTerm(commitmentMonths),
+      next_billing_date: nextBillingDate,
+      billing_note: buildRetainerBillingNote(commitmentMonths),
+      payment_due_date: ctx.dueDate,
+      email_heading: 'Your Retainer Invoice Is Ready',
+      email_intro: `Your monthly retainer invoice for ${subscriptionName} is ready (${ctx.totalAmount}). Pay by ${ctx.dueDate} to keep your content package active.`,
+      cta_label: 'View invoice & pay',
+      cta_url: ctx.invoiceUrl || ctx.siteUrl,
+      cta_subtext: 'Monthly retainer · Secure checkout via Stripe',
+    });
+    return { ok: true, results: ['client_subscription_renewal'] };
+  } catch (err) {
+    console.error('Subscription renewal EmailJS error:', err);
+    return { ok: false, error: 'email_send_failed' };
+  }
+}
+
 async function handleInvoiceOverdue(stripe, invoice) {
   if (invoice.metadata?.source !== PACKAGE_SOURCE) {
     return { skipped: true, reason: 'source_mismatch' };
@@ -269,6 +355,10 @@ export default async function handler(req, res) {
       }
       case 'invoice.overdue': {
         const outcome = await handleInvoiceOverdue(stripe, event.data.object);
+        return res.status(200).json({ received: true, type: event.type, ...outcome });
+      }
+      case 'invoice.finalized': {
+        const outcome = await handleSubscriptionRenewalFinalized(stripe, event.data.object);
         return res.status(200).json({ received: true, type: event.type, ...outcome });
       }
       default:

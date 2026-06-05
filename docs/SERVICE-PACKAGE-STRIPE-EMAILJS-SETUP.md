@@ -79,6 +79,8 @@ Set in the **cochran-films-landing** project. Root Directory: `public`.
 | Client paid | `emailjs-service-package-paid-client-template.html` | `Payment received — Cochran Films Invoice #{{invoice_number}}` |
 | Client payment failed | `emailjs-service-package-payment-failed-client-template.html` | `Payment failed — Cochran Films Invoice #{{invoice_number}}` |
 | Client overdue | `emailjs-service-package-invoice-overdue-client-template.html` | `Invoice overdue — Cochran Films Invoice #{{invoice_number}}` |
+| Client subscription started | `emailjs-service-package-subscription-client-template.html` | `Your Cochran Films Monthly Retainer — {{subscription_name}} · Invoice #{{invoice_number}}` |
+| Admin subscription started | `emailjs-service-package-subscription-admin-template.html` | `New Retainer Subscription — {{customer_name}} · {{subscription_name}} · #{{invoice_number}}` |
 
 **Client failed / overdue template variables:** `to_email`, `reply_to`, `email_heading`, `email_intro`, `customer_name`, `customer_email`, `customer_phone`, `invoice_number`, `stripe_invoice_number`, `total_amount`, `due_date`, `invoice_url`, `services_list`, `cta_label`, `cta_url`, `cta_subtext`
 
@@ -179,25 +181,17 @@ One-time package emails still use `EMAILJS_PACKAGE_TEMPLATE_ID` / `EMAILJS_PACKA
    - `customer.subscription.deleted`
    - `invoice.finalized` (subscription renewal invoices)
 
-### Code changes needed (not built yet)
+### Subscription flow (implemented)
 
-1. Add to `services-catalog.json` per retainer:
-   ```json
-   "fast-frame-monthly": {
-     "name": "Fast Frame (1 Month)",
-     "price": 2500,
-     "category": "retainer",
-     "billing": { "type": "subscription", "interval": "month", "intervalCount": 1, "stripePriceId": "price_xxx" }
-   }
-   ```
-2. In `create-invoice.js`, if cart contains only retainer subscription items → `stripe.subscriptions.create(...)` instead of a one-off invoice.
-3. Store `subscription_id` in invoice/subscription metadata (`invoice_number`, `source`).
-4. Extend `webhook.js` to send EmailJS on **subscription renewal** `invoice.finalized` (not only first package create).
-5. UI copy on retainer cards: “Billed monthly on the same date” + optional **billing start date** in the invoice modal.
+1. `services-catalog.json` — each retainer has `billing.type: "subscription"` and `envPriceKey`.
+2. `create-invoice.js` — retainer-only carts call `stripe.subscriptions.create()` with `collection_method: send_invoice`, `cancel_at` for the commitment term, and optional future **billing start date** (invoice modal date field).
+3. Subscription + first invoice metadata include `invoice_number`, `source`, `subscription_id`, `catalog_id`.
+4. `webhook.js` — `invoice.finalized` with `billing_reason: subscription_cycle` sends the subscription client EmailJS template for renewals.
+5. Builder UI — retainer-only checkout copy, client-side validation (one retainer, no mixed cart).
 
-### Manual workaround (no code)
+### Manual fallback
 
-Until subscriptions are implemented: create the first invoice in the builder, then in Stripe Dashboard → **Subscriptions → Create** using the same customer, monthly price, and **billing cycle anchor** set to the paid date. Cancel after the committed term (1/2/3 months).
+If API subscription create fails, you can still create a subscription in Stripe Dashboard using the monthly Price ID and the same customer.
 
 ### Env vars (when subscriptions ship)
 

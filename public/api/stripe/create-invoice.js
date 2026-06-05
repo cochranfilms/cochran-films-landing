@@ -1,12 +1,19 @@
 const Stripe = require('stripe');
 const {
   PACKAGE_SOURCE,
+  addMonthsUnix,
+  analyzePackageServices,
   buildAdminMailto,
+  buildRetainerBillingNote,
   buildServicesHtml,
   buildServicesText,
   cacheInvoiceCreateResult,
   claimDedupeKey,
+  formatCommitmentTerm,
+  formatDateFromUnix,
+  formatLongDate,
   getCachedInvoiceCreateResult,
+  parseBillingAnchorUnix,
   releaseDedupeKey,
   sendEmailJs,
   setCors,
@@ -14,6 +21,358 @@ const {
 } = require('./stripe-package-shared');
 
 const DEFAULT_DAYS_UNTIL_DUE = 30;
+
+async function ensureStripeCustomer(stripe, customer) {
+  const existingCustomers = await stripe.customers.list({
+    email: customer.email.trim().toLowerCase(),
+    limit: 1,
+  });
+
+  let stripeCustomer = existingCustomers.data[0];
+  if (!stripeCustomer) {
+    stripeCustomer = await stripe.customers.create({
+      email: customer.email.trim(),
+      name: customer.name.trim(),
+      phone: customer.phone?.trim() || undefined,
+      metadata: { source: 'service-package-builder' },
+    });
+  } else if (customer.name || customer.phone) {
+    stripeCustomer = await stripe.customers.update(stripeCustomer.id, {
+      name: customer.name?.trim() || stripeCustomer.name,
+      phone: customer.phone?.trim() || stripeCustomer.phone,
+    });
+  }
+
+  return stripeCustomer;
+}
+
+async function sendPackageEmails({
+  clientTemplateId,
+  adminTemplateId,
+  clientEmailParams,
+  customer,
+  refNumber,
+  isSubscription,
+}) {
+  let emailWarning = null;
+  try {
+    await sendEmailJs(clientTemplateId, clientEmailParams);
+  } catch (emailError) {
+    console.error('Client EmailJS error:', emailError);
+    emailWarning = isSubscription
+      ? 'Subscription created; branded summary email could not be sent.'
+      : 'Invoice created; branded summary email could not be sent.';
+  }
+
+  let adminEmailWarning = null;
+  const adminEmail = process.env.EMAILJS_ADMIN_EMAIL;
+  if (!adminEmail) {
+    console.warn('EMAILJS_ADMIN_EMAIL is not configured — admin notification skipped');
+    adminEmailWarning = 'Admin notification email is not configured on the server.';
+  } else {
+    try {
+      const adminResult = await sendEmailJs(adminTemplateId, {
+        ...clientEmailParams,
+        to_email: adminEmail,
+        reply_to: customer.email.trim(),
+        email_heading: isSubscription ? 'New Retainer Subscription' : 'New Service Package Request',
+        email_intro: isSubscription
+          ? `New retainer from ${customer.name.trim()} — first invoice pending.`
+          : `New package from ${customer.name.trim()} — payment pending.`,
+        cta_label: `Reply to ${customer.name.trim()}`,
+        cta_url: buildAdminMailto(customer.name.trim(), customer.email.trim(), refNumber),
+        cta_subtext: isSubscription ? 'Subscription created — first invoice pending' : 'Invoice created — payment pending',
+        dashboard_hint: isSubscription
+          ? 'View in Stripe Dashboard → Subscriptions'
+          : 'View in Stripe Dashboard → Invoices',
+      });
+      if (adminResult?.skipped) {
+        adminEmailWarning = 'Admin notification could not be sent (EmailJS not fully configured).';
+      }
+    } catch (adminError) {
+      console.error('Admin EmailJS error:', adminError);
+      adminEmailWarning = isSubscription
+        ? 'Subscription created; admin notification email could not be sent.'
+        : 'Invoice created; admin notification email could not be sent.';
+    }
+  }
+
+  return { emailWarning, adminEmailWarning };
+}
+
+async function createOneTimeInvoice(stripe, {
+  customer,
+  normalizedServices,
+  refNumber,
+  invoiceTotal,
+  daysUntilDue,
+  projectType,
+  eventDate,
+  date,
+}) {
+  const stripeCustomer = await ensureStripeCustomer(stripe, customer);
+  const servicesText = buildServicesText(normalizedServices);
+  const servicesTextTruncated =
+    servicesText.length > 450 ? `${servicesText.slice(0, 447)}...` : servicesText;
+
+  const draftInvoice = await stripe.invoices.create({
+    customer: stripeCustomer.id,
+    collection_method: 'send_invoice',
+    days_until_due: daysUntilDue,
+    auto_advance: false,
+    metadata: {
+      invoice_number: refNumber,
+      source: PACKAGE_SOURCE,
+      customer_name: customer.name.trim(),
+      customer_email: customer.email.trim(),
+      customer_phone: customer.phone?.trim() || 'Not provided',
+      services_list: servicesTextTruncated,
+      project_type: projectType?.trim() || '',
+      event_date: eventDate?.trim() || '',
+    },
+    description: `Cochran Films service package — ${refNumber}`,
+  });
+
+  for (const service of normalizedServices) {
+    const qty = Math.max(1, Number(service.quantity) || 1);
+    const unitPrice = Number(service.price) || 0;
+    const amountCents = Math.round(unitPrice * 100);
+
+    await stripe.invoiceItems.create({
+      customer: stripeCustomer.id,
+      invoice: draftInvoice.id,
+      description: service.duration ? `${service.name} — ${service.duration}` : service.name,
+      quantity: qty,
+      unit_amount: amountCents,
+      currency: 'usd',
+    });
+  }
+
+  const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id, {
+    auto_advance: false,
+  });
+
+  const invoiceUrl = finalized.hosted_invoice_url;
+  if (!invoiceUrl) {
+    return { error: 'Invoice was created but no payment link is available. Check Stripe Dashboard.' };
+  }
+
+  const projectDate = formatLongDate(date);
+  const dueDate = new Date();
+  dueDate.setDate(dueDate.getDate() + daysUntilDue);
+  const paymentDueDate = formatLongDate(dueDate);
+  const servicesHtml = buildServicesHtml(normalizedServices);
+  const stripeInvoiceNumber = finalized.number || '';
+
+  const clientTemplateId = process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
+  const adminTemplateId =
+    process.env.EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID || process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
+
+  const clientEmailParams = {
+    to_email: customer.email.trim(),
+    customer_name: customer.name.trim(),
+    customer_email: customer.email.trim(),
+    customer_phone: customer.phone?.trim() || 'Not provided',
+    invoice_number: refNumber,
+    stripe_invoice_number: stripeInvoiceNumber,
+    total_amount: `$${invoiceTotal.toFixed(2)}`,
+    invoice_url: invoiceUrl,
+    services_html: servicesHtml,
+    services_list: servicesText,
+    project_date: projectDate,
+    payment_due_date: paymentDueDate,
+    email_heading: 'Your Project Package Is Ready',
+    email_intro:
+      'Thank you for choosing Cochran Films. Your custom service package is summarized below. When you are ready, use the button to open your secure invoice and complete payment.',
+    reply_to: customer.email.trim(),
+    cta_label: 'View invoice & pay',
+    cta_url: invoiceUrl,
+    cta_subtext: 'Secure checkout · Stripe',
+  };
+
+  const { emailWarning, adminEmailWarning } = await sendPackageEmails({
+    clientTemplateId,
+    adminTemplateId,
+    clientEmailParams,
+    customer,
+    refNumber,
+    isSubscription: false,
+  });
+
+  return {
+    success: true,
+    billingMode: 'one_time',
+    invoiceId: finalized.id,
+    invoiceNumber: refNumber,
+    invoiceUrl,
+    stripeInvoiceNumber,
+    total: invoiceTotal,
+    paymentDueDate,
+    emailWarning,
+    adminEmailWarning,
+  };
+}
+
+async function createRetainerSubscription(stripe, {
+  customer,
+  normalizedServices,
+  refNumber,
+  invoiceTotal,
+  daysUntilDue,
+  projectType,
+  eventDate,
+  date,
+  billingStartDate,
+  packageAnalysis,
+}) {
+  const stripeCustomer = await ensureStripeCustomer(stripe, customer);
+  const { catalog, priceId, commitmentMonths, line } = packageAnalysis;
+
+  const servicesText = buildServicesText(normalizedServices);
+  const servicesTextTruncated =
+    servicesText.length > 450 ? `${servicesText.slice(0, 447)}...` : servicesText;
+
+  const nowUnix = Math.floor(Date.now() / 1000);
+  const billingAnchorUnix = parseBillingAnchorUnix({ billingStartDate, eventDate, date });
+  const useFutureAnchor = billingAnchorUnix > nowUnix + 3600;
+  const cancelAt = addMonthsUnix(useFutureAnchor ? billingAnchorUnix : nowUnix, commitmentMonths);
+
+  const subscriptionParams = {
+    customer: stripeCustomer.id,
+    items: [{ price: priceId }],
+    collection_method: 'send_invoice',
+    days_until_due: daysUntilDue,
+    proration_behavior: 'none',
+    cancel_at: cancelAt,
+    metadata: {
+      invoice_number: refNumber,
+      source: PACKAGE_SOURCE,
+      customer_name: customer.name.trim(),
+      customer_email: customer.email.trim(),
+      customer_phone: customer.phone?.trim() || 'Not provided',
+      services_list: servicesTextTruncated,
+      project_type: projectType?.trim() || '',
+      event_date: eventDate?.trim() || '',
+      catalog_id: line.id,
+      subscription_name: catalog.name,
+      commitment_months: String(commitmentMonths),
+      billing_mode: 'subscription',
+    },
+    expand: ['latest_invoice'],
+  };
+
+  if (useFutureAnchor) {
+    subscriptionParams.billing_cycle_anchor = billingAnchorUnix;
+  }
+
+  const subscription = await stripe.subscriptions.create(subscriptionParams);
+
+  let invoice = subscription.latest_invoice;
+  if (typeof invoice === 'string') {
+    invoice = await stripe.invoices.retrieve(invoice);
+  }
+
+  if (invoice?.id) {
+    await stripe.invoices.update(invoice.id, {
+      metadata: {
+        invoice_number: refNumber,
+        source: PACKAGE_SOURCE,
+        customer_name: customer.name.trim(),
+        customer_email: customer.email.trim(),
+        customer_phone: customer.phone?.trim() || 'Not provided',
+        services_list: servicesTextTruncated,
+        project_type: projectType?.trim() || '',
+        event_date: eventDate?.trim() || '',
+        subscription_id: subscription.id,
+        catalog_id: line.id,
+        subscription_name: catalog.name,
+        commitment_months: String(commitmentMonths),
+        billing_mode: 'subscription',
+      },
+    });
+    invoice = await stripe.invoices.retrieve(invoice.id);
+  }
+
+  const invoiceUrl = invoice?.hosted_invoice_url;
+  if (!invoiceUrl) {
+    return {
+      error:
+        'Subscription was created but no payment link is available yet. Check Stripe Dashboard or your email shortly.',
+    };
+  }
+
+  const projectDate = formatLongDate(billingStartDate || eventDate || date);
+  const paymentDueDate = invoice.due_date
+    ? formatDateFromUnix(invoice.due_date)
+    : formatLongDate(new Date(Date.now() + daysUntilDue * 86400000));
+  const nextBillingDate = subscription.current_period_end
+    ? formatDateFromUnix(subscription.current_period_end)
+    : '';
+  const servicesHtml = buildServicesHtml(normalizedServices);
+  const stripeInvoiceNumber = invoice.number || '';
+  const commitmentTerm = formatCommitmentTerm(commitmentMonths);
+  const billingNote = buildRetainerBillingNote(commitmentMonths);
+
+  const clientTemplateId =
+    process.env.EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID ||
+    process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
+  const adminTemplateId =
+    process.env.EMAILJS_PACKAGE_SUBSCRIPTION_ADMIN_TEMPLATE_ID ||
+    process.env.EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID ||
+    clientTemplateId;
+
+  const clientEmailParams = {
+    to_email: customer.email.trim(),
+    customer_name: customer.name.trim(),
+    customer_email: customer.email.trim(),
+    customer_phone: customer.phone?.trim() || 'Not provided',
+    invoice_number: refNumber,
+    stripe_invoice_number: stripeInvoiceNumber,
+    subscription_id: subscription.id,
+    subscription_name: catalog.name,
+    commitment_term: commitmentTerm,
+    next_billing_date: nextBillingDate,
+    billing_note: billingNote,
+    total_amount: `$${invoiceTotal.toFixed(2)}`,
+    invoice_url: invoiceUrl,
+    services_html: servicesHtml,
+    services_list: servicesText,
+    project_date: projectDate,
+    payment_due_date: paymentDueDate,
+    email_heading: 'Your Monthly Retainer Is Ready',
+    email_intro:
+      'Thank you for choosing Cochran Films. Your monthly content retainer is summarized below. Open your secure invoice to activate your package — you will be billed on the same date each month through your commitment term.',
+    reply_to: customer.email.trim(),
+    cta_label: 'View invoice & pay',
+    cta_url: invoiceUrl,
+    cta_subtext: 'Monthly retainer · Secure checkout via Stripe',
+  };
+
+  const { emailWarning, adminEmailWarning } = await sendPackageEmails({
+    clientTemplateId,
+    adminTemplateId,
+    clientEmailParams,
+    customer,
+    refNumber,
+    isSubscription: true,
+  });
+
+  return {
+    success: true,
+    billingMode: 'subscription',
+    subscriptionId: subscription.id,
+    invoiceId: invoice.id,
+    invoiceNumber: refNumber,
+    invoiceUrl,
+    stripeInvoiceNumber,
+    total: invoiceTotal,
+    paymentDueDate,
+    nextBillingDate,
+    commitmentTerm,
+    emailWarning,
+    adminEmailWarning,
+  };
+}
 
 export default async function handler(req, res) {
   setCors(req, res);
@@ -33,7 +392,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { customer, services, invoiceNumber, total, date, projectType, eventDate } = req.body || {};
+    const { customer, services, invoiceNumber, total, date, projectType, eventDate, billingStartDate } =
+      req.body || {};
 
     if (!customer?.email || !customer?.name) {
       return res.status(400).json({ error: 'Customer name and email are required.' });
@@ -57,6 +417,11 @@ export default async function handler(req, res) {
     }
     const invoiceTotal = computedTotal;
 
+    const packageAnalysis = analyzePackageServices(normalizedServices);
+    if (packageAnalysis.ok === false) {
+      return res.status(400).json({ error: packageAnalysis.error });
+    }
+
     const refNumber = invoiceNumber || `CF-${Date.now()}`;
     const idempotencyKey = req.headers['x-idempotency-key'] || refNumber;
     const dedupeKey = `invoice:create:${idempotencyKey}`;
@@ -77,164 +442,37 @@ export default async function handler(req, res) {
       stripe = new Stripe(stripeSecret);
       const daysUntilDue = Number(process.env.STRIPE_INVOICE_DAYS_UNTIL_DUE) || DEFAULT_DAYS_UNTIL_DUE;
 
-      const existingCustomers = await stripe.customers.list({
-      email: customer.email.trim().toLowerCase(),
-      limit: 1,
-    });
+      const successPayload =
+        packageAnalysis.mode === 'subscription'
+          ? await createRetainerSubscription(stripe, {
+              customer,
+              normalizedServices,
+              refNumber,
+              invoiceTotal,
+              daysUntilDue,
+              projectType,
+              eventDate,
+              date,
+              billingStartDate,
+              packageAnalysis,
+            })
+          : await createOneTimeInvoice(stripe, {
+              customer,
+              normalizedServices,
+              refNumber,
+              invoiceTotal,
+              daysUntilDue,
+              projectType,
+              eventDate,
+              date,
+            });
 
-    let stripeCustomer = existingCustomers.data[0];
-    if (!stripeCustomer) {
-      stripeCustomer = await stripe.customers.create({
-        email: customer.email.trim(),
-        name: customer.name.trim(),
-        phone: customer.phone?.trim() || undefined,
-        metadata: { source: 'service-package-builder' },
-      });
-    } else if (customer.name || customer.phone) {
-      stripeCustomer = await stripe.customers.update(stripeCustomer.id, {
-        name: customer.name?.trim() || stripeCustomer.name,
-        phone: customer.phone?.trim() || stripeCustomer.phone,
-      });
-    }
-
-    const servicesText = buildServicesText(normalizedServices);
-    const servicesTextTruncated =
-      servicesText.length > 450 ? `${servicesText.slice(0, 447)}...` : servicesText;
-
-    const draftInvoice = await stripe.invoices.create({
-      customer: stripeCustomer.id,
-      collection_method: 'send_invoice',
-      days_until_due: daysUntilDue,
-      auto_advance: false,
-      metadata: {
-        invoice_number: refNumber,
-        source: PACKAGE_SOURCE,
-        customer_name: customer.name.trim(),
-        customer_email: customer.email.trim(),
-        customer_phone: customer.phone?.trim() || 'Not provided',
-        services_list: servicesTextTruncated,
-        project_type: projectType?.trim() || '',
-        event_date: eventDate?.trim() || '',
-      },
-      description: `Cochran Films service package — ${refNumber}`,
-    });
-
-    for (const service of normalizedServices) {
-      const qty = Math.max(1, Number(service.quantity) || 1);
-      const unitPrice = Number(service.price) || 0;
-      const amountCents = Math.round(unitPrice * 100);
-
-      await stripe.invoiceItems.create({
-        customer: stripeCustomer.id,
-        invoice: draftInvoice.id,
-        description: service.duration
-          ? `${service.name} — ${service.duration}`
-          : service.name,
-        quantity: qty,
-        unit_amount: amountCents,
-        currency: 'usd',
-      });
-    }
-
-    const finalized = await stripe.invoices.finalizeInvoice(draftInvoice.id, {
-      auto_advance: false,
-    });
-
-    const invoiceUrl = finalized.hosted_invoice_url;
-    if (!invoiceUrl) {
-      await releaseDedupeKey(dedupeKey);
-      return res.status(500).json({
-        error: 'Invoice was created but no payment link is available. Check Stripe Dashboard.',
-      });
-    }
-
-    const projectDate = date
-      ? new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-      : new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-    const dueDate = new Date();
-    dueDate.setDate(dueDate.getDate() + daysUntilDue);
-    const paymentDueDate = dueDate.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-
-    const servicesHtml = buildServicesHtml(normalizedServices);
-    const stripeInvoiceNumber = finalized.number || '';
-
-    const clientTemplateId = process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
-    const adminTemplateId =
-      process.env.EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID || process.env.EMAILJS_PACKAGE_TEMPLATE_ID;
-
-    const clientEmailParams = {
-      to_email: customer.email.trim(),
-      customer_name: customer.name.trim(),
-      customer_email: customer.email.trim(),
-      customer_phone: customer.phone?.trim() || 'Not provided',
-      invoice_number: refNumber,
-      stripe_invoice_number: stripeInvoiceNumber,
-      total_amount: `$${invoiceTotal.toFixed(2)}`,
-      invoice_url: invoiceUrl,
-      services_html: servicesHtml,
-      services_list: servicesText,
-      project_date: projectDate,
-      payment_due_date: paymentDueDate,
-      email_heading: 'Your Project Package Is Ready',
-      email_intro:
-        'Thank you for choosing Cochran Films. Your custom service package is summarized below. When you are ready, use the button to open your secure invoice and complete payment.',
-      reply_to: customer.email.trim(),
-    };
-
-    let emailWarning = null;
-    try {
-      await sendEmailJs(clientTemplateId, clientEmailParams);
-    } catch (emailError) {
-      console.error('Client EmailJS error:', emailError);
-      emailWarning = 'Invoice created; branded summary email could not be sent.';
-    }
-
-    let adminEmailWarning = null;
-    const adminEmail = process.env.EMAILJS_ADMIN_EMAIL;
-    if (!adminEmail) {
-      console.warn('EMAILJS_ADMIN_EMAIL is not configured — admin notification skipped');
-      adminEmailWarning = 'Admin notification email is not configured on the server.';
-    } else {
-      try {
-        const adminResult = await sendEmailJs(adminTemplateId, {
-          ...clientEmailParams,
-          to_email: adminEmail,
-          reply_to: customer.email.trim(),
-          email_heading: 'New Service Package Request',
-          email_intro: `New package from ${customer.name.trim()} — payment pending.`,
-          cta_label: `Reply to ${customer.name.trim()}`,
-          cta_url: buildAdminMailto(customer.name.trim(), customer.email.trim(), refNumber),
-          cta_subtext: 'Invoice created — payment pending',
-          dashboard_hint: 'View in Stripe Dashboard → Invoices',
-        });
-        if (adminResult?.skipped) {
-          adminEmailWarning = 'Admin notification could not be sent (EmailJS not fully configured).';
-        }
-      } catch (adminError) {
-        console.error('Admin EmailJS error:', adminError);
-        adminEmailWarning = 'Invoice created; admin notification email could not be sent.';
+      if (successPayload.error) {
+        await releaseDedupeKey(dedupeKey);
+        return res.status(500).json({ error: successPayload.error });
       }
-    }
-
-      const successPayload = {
-        success: true,
-        invoiceId: finalized.id,
-        invoiceNumber: refNumber,
-        invoiceUrl,
-        stripeInvoiceNumber,
-        total: invoiceTotal,
-        paymentDueDate,
-        emailWarning,
-        adminEmailWarning,
-      };
 
       cacheInvoiceCreateResult(dedupeKey, successPayload);
-
       return res.status(200).json(successPayload);
     } catch (innerError) {
       await releaseDedupeKey(dedupeKey);

@@ -68,6 +68,114 @@ function getServiceCatalog() {
   return serviceCatalog;
 }
 
+function formatLongDate(value) {
+  const d = value ? new Date(value) : new Date();
+  if (Number.isNaN(d.getTime())) {
+    return new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function formatDateFromUnix(unixSeconds) {
+  return formatLongDate(unixSeconds ? unixSeconds * 1000 : Date.now());
+}
+
+function formatCommitmentTerm(months) {
+  const n = Number(months) || 1;
+  return n === 1 ? '1 month' : `${n} months`;
+}
+
+function resolveStripePriceId(catalogDef) {
+  const key = catalogDef?.billing?.envPriceKey;
+  if (!key) return null;
+  const priceId = process.env[key];
+  if (!priceId || priceId.includes('price_xxx')) return null;
+  return priceId;
+}
+
+function parseBillingAnchorUnix({ billingStartDate, eventDate, date } = {}) {
+  const raw = billingStartDate || eventDate || date;
+  const nowUnix = Math.floor(Date.now() / 1000);
+  if (!raw) return nowUnix;
+
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return nowUnix;
+
+  d.setHours(12, 0, 0, 0);
+  const anchor = Math.floor(d.getTime() / 1000);
+  if (anchor < nowUnix - 86400) return nowUnix;
+  return anchor;
+}
+
+function addMonthsUnix(unixSeconds, months) {
+  const d = new Date(unixSeconds * 1000);
+  d.setMonth(d.getMonth() + Number(months) || 0);
+  return Math.floor(d.getTime() / 1000);
+}
+
+function analyzePackageServices(normalizedServices) {
+  const catalog = getServiceCatalog();
+  const subscriptionLines = [];
+  const otherLines = [];
+
+  for (const line of normalizedServices) {
+    const def = catalog[line.id];
+    if (def?.billing?.type === 'subscription') {
+      subscriptionLines.push({ ...line, catalog: def });
+    } else {
+      otherLines.push(line);
+    }
+  }
+
+  if (subscriptionLines.length === 0) {
+    return { mode: 'one_time' };
+  }
+
+  if (otherLines.length > 0) {
+    return {
+      ok: false,
+      error:
+        'Monthly retainers must be checked out alone. Remove other services from your package, or choose one-time services only.',
+    };
+  }
+
+  if (subscriptionLines.length > 1) {
+    return {
+      ok: false,
+      error: 'Please select only one monthly retainer package per checkout.',
+    };
+  }
+
+  const line = subscriptionLines[0];
+  if (line.quantity !== 1) {
+    return {
+      ok: false,
+      error: `${line.name} must be purchased as a single retainer package.`,
+    };
+  }
+
+  const priceId = resolveStripePriceId(line.catalog);
+  if (!priceId) {
+    return {
+      ok: false,
+      error: 'Retainer billing is not configured on the server. Please contact Cochran Films.',
+    };
+  }
+
+  return {
+    mode: 'subscription',
+    line,
+    catalog: line.catalog,
+    priceId,
+    commitmentMonths: Number(line.catalog.billing.commitmentMonths) || 1,
+  };
+}
+
+function buildRetainerBillingNote(commitmentMonths) {
+  const term = formatCommitmentTerm(commitmentMonths);
+  return `Billed monthly on the same date each month for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
+}
+
 function validateServicesPayload(services) {
   if (!Array.isArray(services) || services.length === 0) {
     return { ok: false, error: 'At least one service is required.' };
@@ -108,6 +216,9 @@ function validateServicesPayload(services) {
         quantity: qty,
       });
     } else {
+      if (def.billing?.type === 'subscription' && qty !== 1) {
+        return { ok: false, error: `${def.name} must be purchased as a single retainer package.` };
+      }
       if (unitPrice !== Number(def.price)) {
         return { ok: false, error: `Invalid price for ${def.name}.` };
       }
@@ -229,8 +340,15 @@ module.exports = {
   DEFAULT_ALLOWED_ORIGINS,
   setCors,
   formatUsdFromCents,
+  formatLongDate,
+  formatDateFromUnix,
+  formatCommitmentTerm,
   buildServicesHtml,
   buildServicesText,
+  analyzePackageServices,
+  buildRetainerBillingNote,
+  parseBillingAnchorUnix,
+  addMonthsUnix,
   validateServicesPayload,
   sendEmailJs,
   buildAdminMailto,

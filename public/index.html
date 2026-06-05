@@ -11651,10 +11651,34 @@
         updateQuoteSummary();
       }
       
+      function isRetainerOnlyPackage(services) {
+        return (
+          Array.isArray(services) &&
+          services.length > 0 &&
+          services.every((service) => service.category === 'retainer')
+        );
+      }
+
       function generateInvoice() {
         if (selectedServicesList.length === 0) {
           showNotification('Add at least one service from the catalog to create your invoice.', 'error');
           document.getElementById('serviceItems')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+
+        if (
+          selectedServicesList.some((service) => service.category === 'retainer') &&
+          !isRetainerOnlyPackage(selectedServicesList)
+        ) {
+          showNotification(
+            'Monthly retainers must be checked out alone. Remove other services or keep only one retainer package.',
+            'error'
+          );
+          return;
+        }
+
+        if (selectedServicesList.filter((service) => service.category === 'retainer').length > 1) {
+          showNotification('Please select only one monthly retainer package per checkout.', 'error');
           return;
         }
 
@@ -11682,6 +11706,19 @@
 
         const prefill = getBuilderPrefill();
         const totalLabel = `$${invoiceData.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        const isRetainerCheckout = isRetainerOnlyPackage(invoiceData.services);
+        const modalTitle = isRetainerCheckout
+          ? 'Start Your Monthly Retainer'
+          : 'Create Your Cochran Films Invoice';
+        const modalIntro = isRetainerCheckout
+          ? 'Enter your details below. We&apos;ll email your retainer summary and first monthly invoice—usually within a minute. You&apos;ll be billed on the same date each month through your commitment term.'
+          : 'Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.';
+        const eventDateLabel = isRetainerCheckout
+          ? 'Billing start date <span style="font-weight:500;opacity:0.7">(optional)</span>'
+          : 'Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span>';
+        const submitLabel = isRetainerCheckout
+          ? '<i class="fas fa-repeat"></i> Start Retainer &amp; Email Me'
+          : '<i class="fas fa-file-invoice-dollar"></i> Create Invoice &amp; Email Me';
 
         const modal = document.createElement('div');
         modal.className = 'modal-overlay active invoice-create-modal';
@@ -11697,8 +11734,8 @@
               <div class="modal-icon">
                 <i class="fas fa-file-invoice-dollar"></i>
               </div>
-              <h2 id="invoice-modal-title">Create Your Cochran Films Invoice</h2>
-              <p>Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.</p>
+              <h2 id="invoice-modal-title">${modalTitle}</h2>
+              <p>${modalIntro}</p>
             </div>
 
             <div class="contact-form-section">
@@ -11727,9 +11764,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="eventDate">Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <label for="eventDate">${eventDateLabel}</label>
                   <span class="invoice-date-field">
-                    <input type="date" id="eventDate" aria-label="Event or shoot date">
+                    <input type="date" id="eventDate" aria-label="${isRetainerCheckout ? 'Billing start date' : 'Event or shoot date'}">
                     <button type="button" class="invoice-date-picker-btn" aria-label="Open calendar">
                       <i class="fas fa-calendar" aria-hidden="true"></i>
                     </button>
@@ -11769,8 +11806,7 @@
 
             <div class="form-actions">
               <button type="button" class="btn-primary modal-submit-invoice">
-                <i class="fas fa-file-invoice-dollar"></i>
-                Create Invoice &amp; Email Me
+                ${submitLabel}
               </button>
               <button type="button" class="btn-secondary modal-cancel">
                 Cancel
@@ -11930,7 +11966,7 @@
           }
 
           const emailNotes = [result.emailWarning, result.adminEmailWarning].filter(Boolean).join(' ');
-          showSuccessModal(result.invoiceUrl, emailNotes || null, result.paymentDueDate);
+          showSuccessModal(result.invoiceUrl, emailNotes || null, result.paymentDueDate, result);
           try {
             localStorage.removeItem(SPB_STORAGE_KEY);
           } catch (_) { /* ignore */ }
@@ -11948,7 +11984,8 @@
       }
       
       // Show prominent success modal for project submission
-      function showSuccessModal(invoiceUrl, emailWarning, paymentDueDate) {
+      function showSuccessModal(invoiceUrl, emailWarning, paymentDueDate, result = {}) {
+        const isRetainer = result.billingMode === 'subscription';
         // Close any existing invoice/project modal first
         const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
         existingModals.forEach(modal => modal.remove());
@@ -11966,6 +12003,14 @@
         const dueNote = paymentDueDate
           ? `<div class="success-detail-item"><i class="fas fa-calendar-check"></i><span>Payment due by ${paymentDueDate}</span></div>`
           : '';
+        const renewalNote =
+          isRetainer && result.nextBillingDate
+            ? `<div class="success-detail-item"><i class="fas fa-repeat"></i><span>Next billing date: ${result.nextBillingDate}</span></div>`
+            : '';
+        const commitmentNote =
+          isRetainer && result.commitmentTerm
+            ? `<div class="success-detail-item"><i class="fas fa-calendar-alt"></i><span>Commitment term: ${result.commitmentTerm}</span></div>`
+            : '';
         const copyBtnHtml = safeInvoiceUrl
           ? `<button type="button" class="btn-secondary success-copy-link" style="margin-top:12px;"><i class="fas fa-link"></i> Copy payment link</button>`
           : '';
@@ -11978,17 +12023,27 @@
               <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
               </div>
-              <h2>✅ Invoice Created!</h2>
-              <p>Your project package summary and payment link have been sent to your email.${emailNote}</p>
+              <h2>${isRetainer ? '✅ Retainer Started!' : '✅ Invoice Created!'}</h2>
+              <p>${
+                isRetainer
+                  ? 'Your monthly retainer summary and first invoice have been sent to your email.'
+                  : 'Your project package summary and payment link have been sent to your email.'
+              }${emailNote}</p>
             </div>
             
             <div class="success-modal-body">
               <div class="success-details">
                 ${invoiceLinkHtml}
                 ${dueNote}
+                ${renewalNote}
+                ${commitmentNote}
                 <div class="success-detail-item">
                   <i class="fas fa-envelope"></i>
-                  <span>Check your inbox for package details &amp; payment link</span>
+                  <span>${
+                    isRetainer
+                      ? 'Check your inbox for retainer details &amp; first monthly invoice'
+                      : 'Check your inbox for package details &amp; payment link'
+                  }</span>
                 </div>
                 <div class="success-detail-item">
                   <i class="fas fa-clock"></i>
