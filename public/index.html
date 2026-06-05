@@ -6014,6 +6014,19 @@
         border-radius: 18px 18px 0 0;
       }
 
+      .invoice-create-modal.active {
+        padding: 0;
+      }
+
+      .invoice-create-modal .modal-content {
+        max-width: 100%;
+        border-radius: 18px 18px 0 0;
+      }
+
+      .invoice-create-modal__inner {
+        padding: 1.65rem 1.25rem 1.25rem;
+      }
+
       .invoice-preview-collapsible summary {
         font-size: 0.82rem;
         padding: 0.75rem 0.85rem;
@@ -6470,6 +6483,241 @@
       font-size: 0.85rem;
       color: var(--text-muted);
       line-height: 1.5;
+    }
+
+    /* Create invoice modal — centered, modern */
+    .invoice-create-modal {
+      padding: 1.25rem;
+    }
+
+    .invoice-create-modal .modal-content {
+      max-width: 520px;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 178, 0, 0.22);
+      background: linear-gradient(168deg, rgba(22, 28, 42, 0.98) 0%, rgba(8, 11, 18, 0.99) 55%, rgba(12, 16, 26, 1) 100%);
+      box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    }
+
+    .invoice-create-modal__accent {
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, var(--brand-gold) 35%, #ffd166 50%, var(--brand-gold) 65%, transparent 100%);
+    }
+
+    .invoice-create-modal__inner {
+      padding: 2rem 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .invoice-create-modal .modal-icon {
+      width: 72px;
+      height: 72px;
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow:
+        0 0 0 4px rgba(255, 178, 0, 0.12),
+        var(--glow-gold);
+    }
+
+    .invoice-create-modal .modal-header h2 {
+      font-size: clamp(1.35rem, 4vw, 1.55rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 0.65rem;
+    }
+
+    .invoice-create-modal .modal-header p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 34ch;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .invoice-create-modal .contact-form-section {
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-align: center;
+    }
+
+    .invoice-create-modal .contact-form-section h3 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      margin: 0 0 0.65rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-trust-line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      margin: 0 auto 1.35rem;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 178, 0, 0.07);
+      border: 1px solid rgba(255, 178, 0, 0.18);
+      border-radius: 999px;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-trust-line i {
+      color: var(--brand-gold);
+      font-size: 0.7rem;
+    }
+
+    .invoice-create-modal .contact-form-section .contact-form {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      text-align: center;
+    }
+
+    .invoice-create-modal .form-group {
+      margin-bottom: 1.1rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .form-group label {
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.45rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .invoice-create-modal .form-group label span {
+      font-weight: 500;
+      opacity: 0.55;
+      font-size: 0.75rem;
+    }
+
+    .invoice-create-modal .form-group input {
+      text-align: center;
+      padding: 0.85rem 1rem;
+      min-height: 48px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .invoice-create-modal .form-group input::placeholder {
+      text-align: center;
+      opacity: 0.45;
+    }
+
+    .invoice-create-modal .form-group input:focus {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 178, 0, 0.55);
+      box-shadow: 0 0 0 3px rgba(255, 178, 0, 0.12);
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible {
+      margin: 1.35rem 0 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible summary {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 0.9rem 1rem;
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible .invoice-details {
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .invoice-create-modal .item-details h4,
+    .invoice-create-modal .item-details p {
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-total .total-line {
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .invoice-create-modal .form-actions {
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-top: 1.5rem;
+      padding-top: 0.25rem;
+    }
+
+    .invoice-create-modal .form-actions .btn-primary,
+    .invoice-create-modal .form-actions .btn-secondary {
+      width: 100%;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    .invoice-create-modal .form-actions .btn-primary {
+      order: -1;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .invoice-create-modal .modal-close {
+      top: 0.85rem;
+      right: 0.85rem;
+      width: 36px;
+      height: 36px;
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (min-width: 480px) {
+      .invoice-create-modal .form-actions {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .invoice-create-modal .form-actions .btn-primary,
+      .invoice-create-modal .form-actions .btn-secondary {
+        flex: 1;
+        width: auto;
+      }
+
+      .invoice-create-modal .form-actions .btn-primary {
+        order: 1;
+      }
     }
 
     .service-builder-grid {
@@ -11028,13 +11276,15 @@
         const totalLabel = `$${invoiceData.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
         const modal = document.createElement('div');
-        modal.className = 'modal-overlay active';
+        modal.className = 'modal-overlay active invoice-create-modal';
         modal.setAttribute('role', 'dialog');
         modal.setAttribute('aria-modal', 'true');
         modal.setAttribute('aria-labelledby', 'invoice-modal-title');
         modal.innerHTML = `
-          <div class="modal-content">
+          <div class="modal-content invoice-create-modal__panel">
+            <div class="invoice-create-modal__accent" aria-hidden="true"></div>
             <button type="button" class="modal-close" aria-label="Close">&times;</button>
+            <div class="invoice-create-modal__inner">
             <div class="modal-header">
               <div class="modal-icon">
                 <i class="fas fa-file-invoice-dollar"></i>
@@ -11045,7 +11295,7 @@
 
             <div class="contact-form-section">
               <h3>Your details</h3>
-              <p class="modal-trust-line"><i class="fas fa-lock" aria-hidden="true"></i> Secure checkout via Stripe. No spam—just your invoice.</p>
+              <p class="modal-trust-line"><i class="fas fa-lock" aria-hidden="true"></i> Secure checkout via Stripe · No spam</p>
 
               <div class="contact-form">
                 <div class="form-group">
@@ -11105,14 +11355,14 @@
             </details>
 
             <div class="form-actions">
-              <button type="button" class="btn-secondary modal-cancel">
-                <i class="fas fa-times"></i>
-                Cancel
-              </button>
               <button type="button" class="btn-primary modal-submit-invoice">
                 <i class="fas fa-file-invoice-dollar"></i>
                 Create Invoice &amp; Email Me
               </button>
+              <button type="button" class="btn-secondary modal-cancel">
+                Cancel
+              </button>
+            </div>
             </div>
           </div>
         `;
