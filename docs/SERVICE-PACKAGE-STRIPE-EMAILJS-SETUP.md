@@ -200,3 +200,41 @@ If API subscription create fails, you can still create a subscription in Stripe 
 | `STRIPE_PRICE_FAST_FRAME` | Monthly price ID |
 | `STRIPE_PRICE_CINEMATIC_SPOTLIGHT` | Monthly price ID |
 | `STRIPE_PRICE_MASTERPIECE` | Monthly price ID |
+
+---
+
+## White-label packages — setup invoice + monthly subscription
+
+White-label Launch / Growth / Domination use the same subscription checkout path as retainers, with a **split billing model**:
+
+| Package | First invoice (setup) | Monthly renewal |
+|---------|----------------------|-----------------|
+| Launch | $2,500 | $199/mo |
+| Growth | $4,500 | $349/mo |
+| Domination | $8,500 | $699/mo |
+
+### Catalog
+
+Each white-label item has `billing.type: "subscription"`, `billing.model: "setup_then_monthly"`, and `envPriceKey`. Catalog `price` equals `setupFee` (first invoice amount).
+
+### Stripe setup
+
+```bash
+npm run stripe:setup-white-label
+```
+
+| Variable | Monthly price |
+|----------|---------------|
+| `STRIPE_PRICE_WHITE_LABEL_LAUNCH` | $199/mo |
+| `STRIPE_PRICE_WHITE_LABEL_GROWTH` | $349/mo |
+| `STRIPE_PRICE_WHITE_LABEL_DOMINATION` | $699/mo |
+
+Copy Price IDs to **Vercel** env alongside retainer keys.
+
+### Checkout flow
+
+1. Client selects one white-label package only (package lock — same as retainers).
+2. `create-invoice.js` creates a Stripe subscription at the **monthly** Price ID with `trial_end` one month out.
+3. A **manual setup invoice** is finalized immediately for the setup fee.
+4. Monthly renewals auto-generate after the first month; `invoice.finalized` webhook sends renewal emails (same templates as retainers).
+5. Reuses `EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID` / `EMAILJS_PACKAGE_SUBSCRIPTION_ADMIN_TEMPLATE_ID`.

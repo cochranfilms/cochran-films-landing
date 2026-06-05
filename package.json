@@ -11,7 +11,8 @@
     "cleanup-tests:list": "node scripts/cleanup-tests.js --list",
     "cleanup-tests:apply": "node scripts/cleanup-tests.js --apply",
     "e2e-check": "node scripts/e2e-check.js",
-    "stripe:setup-retainers": "node scripts/stripe-setup-retainer-products.js"
+    "stripe:setup-retainers": "node scripts/stripe-setup-retainer-products.js",
+    "stripe:setup-white-label": "node scripts/stripe-setup-white-label-products.js"
   },
   "keywords": [
     "contract",

@@ -93,6 +93,17 @@ function resolveStripePriceId(catalogDef) {
   return priceId;
 }
 
+function isSetupThenMonthlyBilling(catalogDef) {
+  return catalogDef?.billing?.type === 'subscription' && catalogDef.billing.model === 'setup_then_monthly';
+}
+
+function getSubscriptionCheckoutPrice(def) {
+  if (isSetupThenMonthlyBilling(def)) {
+    return Number(def.setupFee ?? def.price);
+  }
+  return Number(def.price);
+}
+
 function parseBillingAnchorUnix({ billingStartDate, eventDate, date } = {}) {
   const raw = billingStartDate || eventDate || date;
   const nowUnix = Math.floor(Date.now() / 1000);
@@ -135,14 +146,14 @@ function analyzePackageServices(normalizedServices) {
     return {
       ok: false,
       error:
-        'Monthly retainers must be checked out alone. Remove other services from your package, or choose one-time services only.',
+        'Subscription packages must be checked out alone. Remove other services from your package, or choose one-time services only.',
     };
   }
 
   if (subscriptionLines.length > 1) {
     return {
       ok: false,
-      error: 'Please select only one monthly retainer package per checkout.',
+      error: 'Please select only one subscription package per checkout.',
     };
   }
 
@@ -150,7 +161,7 @@ function analyzePackageServices(normalizedServices) {
   if (line.quantity !== 1) {
     return {
       ok: false,
-      error: `${line.name} must be purchased as a single retainer package.`,
+      error: `${line.name} must be purchased as a single subscription package.`,
     };
   }
 
@@ -158,16 +169,21 @@ function analyzePackageServices(normalizedServices) {
   if (!priceId) {
     return {
       ok: false,
-      error: 'Retainer billing is not configured on the server. Please contact Cochran Films.',
+      error: 'Subscription billing is not configured on the server. Please contact Cochran Films.',
     };
   }
 
+  const setupThenMonthly = isSetupThenMonthlyBilling(line.catalog);
+
   return {
     mode: 'subscription',
+    billingModel: setupThenMonthly ? 'setup_then_monthly' : 'retainer_monthly',
     line,
     catalog: line.catalog,
     priceId,
-    commitmentMonths: Number(line.catalog.billing.commitmentMonths) || 1,
+    commitmentMonths: setupThenMonthly ? null : Number(line.catalog.billing.commitmentMonths) || 1,
+    setupFee: setupThenMonthly ? Number(line.catalog.setupFee) : null,
+    monthlyFee: setupThenMonthly ? Number(line.catalog.monthlyFee) : null,
   };
 }
 
@@ -177,6 +193,14 @@ function buildRetainerBillingNote(commitmentMonths, billingStartLabel) {
     return `Your retainer begins ${billingStartLabel}. Pay your first invoice by that date; renewals bill monthly on the same date for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
   }
   return `Billed monthly on the same date each month for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
+}
+
+function buildSetupThenMonthlyBillingNote(monthlyFee, billingStartLabel) {
+  const monthlyLabel = `$${Number(monthlyFee).toLocaleString('en-US')}/mo`;
+  if (billingStartLabel) {
+    return `Your white-label plan begins ${billingStartLabel}. Pay your setup invoice by that date; monthly renewals of ${monthlyLabel} begin one month later on the same date.`;
+  }
+  return `Pay your setup invoice to activate your plan. Monthly renewals of ${monthlyLabel} bill on the same date each month after your first service month.`;
 }
 
 async function createRetainerFirstInvoice(stripe, {
@@ -293,16 +317,17 @@ function validateServicesPayload(services) {
       });
     } else {
       if (def.billing?.type === 'subscription' && qty !== 1) {
-        return { ok: false, error: `${def.name} must be purchased as a single retainer package.` };
+        return { ok: false, error: `${def.name} must be purchased as a single subscription package.` };
       }
-      if (unitPrice !== Number(def.price)) {
+      const expectedPrice = getSubscriptionCheckoutPrice(def);
+      if (unitPrice !== expectedPrice) {
         return { ok: false, error: `Invalid price for ${def.name}.` };
       }
-      computedTotal += def.price * qty;
+      computedTotal += expectedPrice * qty;
       normalized.push({
         id,
         name: def.name,
-        price: def.price,
+        price: expectedPrice,
         duration: line.duration || def.duration,
         quantity: qty,
       });
@@ -423,6 +448,9 @@ module.exports = {
   buildServicesText,
   analyzePackageServices,
   buildRetainerBillingNote,
+  buildSetupThenMonthlyBillingNote,
+  getSubscriptionCheckoutPrice,
+  isSetupThenMonthlyBilling,
   createRetainerFirstInvoice,
   ensureSubscriptionInvoiceReady,
   parseBillingAnchorUnix,

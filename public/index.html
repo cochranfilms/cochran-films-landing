@@ -7099,6 +7099,8 @@
     .service-item[data-subcategory="white-label"] {
       background: linear-gradient(152deg, #163a47 0%, #0f2830 52%, #0c1f26 100%);
       border: 1px solid rgba(45, 212, 191, 0.34);
+      min-height: 300px;
+      padding: 1.1rem 1.05rem 1rem;
     }
 
     .service-item[data-subcategory="white-label"]:hover {
@@ -7111,40 +7113,101 @@
       color: #5eead4;
     }
 
+    .service-item[data-subcategory="white-label"]::after {
+      display: none;
+    }
+
+    .service-item[data-subcategory="white-label"] .service-item-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.55rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .service-item-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem;
+      width: 100%;
+    }
+
+    .service-item-title--white-label {
+      min-height: unset;
+      display: block;
+      width: 100%;
+      padding-right: 0;
+      line-height: 1.2;
+    }
+
+    .service-title-eyebrow {
+      display: block;
+      margin-bottom: 0.28rem;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5eead4;
+      line-height: 1.2;
+    }
+
+    .service-item-title--white-label .service-title-main {
+      display: block;
+      font-size: 1.02rem;
+      line-height: 1.22;
+      color: #f8fafc;
+    }
+
+
     .service-item--featured {
       border-color: rgba(255, 178, 0, 0.55) !important;
       box-shadow: 0 0 0 1px rgba(255, 178, 0, 0.2), 0 16px 40px rgba(0, 0, 0, 0.28);
     }
 
-    .service-item-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 2;
-      padding: 4px 10px;
+    .service-item[data-subcategory="white-label"] .service-item-badge {
+      position: relative;
+      top: auto;
+      right: auto;
+      flex-shrink: 0;
+      padding: 5px 10px;
       border-radius: 999px;
       background: linear-gradient(135deg, #f59e0b, #ef4444);
       color: #fff;
-      font-size: 0.62rem;
+      font-size: 0.58rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      line-height: 1.2;
+      line-height: 1.15;
+      white-space: nowrap;
     }
 
-    .service-item[data-subcategory="white-label"]::after {
-      content: "Agency partner";
-      color: rgba(94, 234, 212, 0.5);
+    .service-item[data-subcategory="white-label"] .service-item-body {
+      min-height: 108px;
+      gap: 0.45rem;
+    }
+
+    .service-item[data-subcategory="white-label"] .service-price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      padding-top: 0.85rem;
+    }
+
+    .service-item[data-subcategory="white-label"] .service-price .price-amount {
+      font-size: 1.28rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
     .service-item[data-subcategory="white-label"] .service-price .price-sub {
       display: block;
-      margin-top: 4px;
-      font-size: 0.68rem;
+      margin-top: 0;
+      font-size: 0.66rem;
       font-weight: 600;
-      color: rgba(148, 163, 184, 0.95);
-      letter-spacing: 0.02em;
-      text-transform: none;
+      color: rgba(148, 163, 184, 0.92);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .service-section-header.hidden {
@@ -7287,6 +7350,16 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       line-height: 1.35;
+    }
+
+    .service-item[data-subcategory="white-label"] .service-tagline {
+      margin: 0 0 0.15rem;
+      color: rgba(148, 163, 184, 0.95);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      line-height: 1.4;
     }
 
     .service-features {
@@ -9108,22 +9181,21 @@
                 <div class="service-icon"><i class="fas fa-users-gear"></i></div>
                 <div class="service-info">
                   <h4>White-Label Launch System</h4>
-                  <p>3-page white-label website + landing funnel, lead capture + calendar booking, baseline analytics + essential automations, SEO foundations + performance pass, agency handoff kit (no Cochran Films branding on deliverables), setup + first month today (then auto-renews monthly)</p>
+                  <p>3-page white-label website + landing funnel, lead capture + calendar booking, baseline analytics + essential automations, SEO foundations + performance pass, agency handoff kit (no Cochran Films branding on deliverables)</p>
                 </div>
               </div>
-              <div class="service-price">$2,699</div>
+              <div class="service-price">$2,500</div>
             </div>
 
             <div class="service-item service-item--featured" data-category="website" data-subcategory="white-label" draggable="true" data-service="white-label-growth">
-              <span class="service-item-badge" aria-hidden="true">Most Popular</span>
               <div class="service-item-header">
                 <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                 <div class="service-info">
                   <h4>White-Label Growth System</h4>
-                  <p>Everything in Launch, CMS/blog + gated member area, CRM pipeline + email automations, advanced analytics + reporting, white-label client portal access, setup + first month today (then auto-renews monthly)</p>
+                  <p>Everything in Launch, CMS/blog + gated member area, CRM pipeline + email automations, advanced analytics + reporting, white-label client portal access</p>
                 </div>
               </div>
-              <div class="service-price">$4,849</div>
+              <div class="service-price">$4,500</div>
             </div>
 
             <div class="service-item" data-category="website" data-subcategory="white-label" draggable="true" data-service="white-label-domination">
@@ -9131,10 +9203,10 @@
                 <div class="service-icon"><i class="fas fa-crown"></i></div>
                 <div class="service-info">
                   <h4>White-Label Domination System</h4>
-                  <p>Everything in Growth, SaaS-lite features + subscription billing setup, custom dashboards + API integrations, priority support SLA (24hr response), quarterly account strategy review, setup + first month today (then auto-renews monthly)</p>
+                  <p>Everything in Growth, SaaS-lite features + subscription billing setup, custom dashboards + API integrations, priority support SLA (24hr response), quarterly account strategy review</p>
                 </div>
               </div>
-              <div class="service-price">$9,199</div>
+              <div class="service-price">$8,500</div>
             </div>
 
             <!-- Photography Category -->
@@ -9614,7 +9686,7 @@
                 <h3>Your Package &amp; Invoice</h3>
                 <p id="packageBuilderHint">Services you add appear here with live pricing—when you&apos;re ready, create your invoice below.</p>
                 <p class="package-retainer-lock-hint is-hidden" id="packageRetainerLockHint" role="status">
-                  Retainer checkout is locked to this package only. Clear your package or refresh the page to start a different invoice or retainer.
+                  Subscription checkout is locked to this package only. Clear your package or refresh the page to start a different invoice or plan.
                 </p>
               </div>
               <div class="package-count-badge" id="packageServiceCount" aria-live="polite" title="Services in your package">
@@ -11009,9 +11081,9 @@
         'starter-site': { name: 'Starter Site', price: 750, duration: '1-page scroll layout', icon: 'fas fa-laptop-code', category: 'website' },
         'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: '3–5 fully designed pages', icon: 'fas fa-globe', category: 'website' },
         'brand-builder-site': { name: 'Brand Builder Site', price: 2500, duration: '6–10 page branded website', icon: 'fas fa-rocket', category: 'website' },
-        'white-label-launch': { name: 'White-Label Launch System', price: 2699, setupFee: 2500, monthlyFee: 199, duration: '$2,500 setup + $199/mo', icon: 'fas fa-users-gear', category: 'website', subcategory: 'white-label' },
-        'white-label-growth': { name: 'White-Label Growth System', price: 4849, setupFee: 4500, monthlyFee: 349, duration: '$4,500 setup + $349/mo', icon: 'fas fa-chart-line', category: 'website', subcategory: 'white-label', featured: true },
-        'white-label-domination': { name: 'White-Label Domination System', price: 9199, setupFee: 8500, monthlyFee: 699, duration: '$8,500 setup + $699/mo', icon: 'fas fa-crown', category: 'website', subcategory: 'white-label' },
+        'white-label-launch': { name: 'White-Label Launch System', price: 2500, setupFee: 2500, monthlyFee: 199, duration: 'Agency partner · setup + monthly', icon: 'fas fa-users-gear', category: 'website', subcategory: 'white-label', billing: { type: 'subscription', interval: 'month', model: 'setup_then_monthly', envPriceKey: 'STRIPE_PRICE_WHITE_LABEL_LAUNCH' } },
+        'white-label-growth': { name: 'White-Label Growth System', price: 4500, setupFee: 4500, monthlyFee: 349, duration: 'Agency partner · setup + monthly', icon: 'fas fa-chart-line', category: 'website', subcategory: 'white-label', featured: true, billing: { type: 'subscription', interval: 'month', model: 'setup_then_monthly', envPriceKey: 'STRIPE_PRICE_WHITE_LABEL_GROWTH' } },
+        'white-label-domination': { name: 'White-Label Domination System', price: 8500, setupFee: 8500, monthlyFee: 699, duration: 'Agency partner · setup + monthly', icon: 'fas fa-crown', category: 'website', subcategory: 'white-label', billing: { type: 'subscription', interval: 'month', model: 'setup_then_monthly', envPriceKey: 'STRIPE_PRICE_WHITE_LABEL_DOMINATION' } },
 
         // Photography Packages
         'flash-start': { name: 'Flash Start', price: 350, duration: '1 hour coverage', icon: 'fas fa-camera', category: 'photography' },
@@ -11279,18 +11351,50 @@
 
           const description = info.querySelector('p')?.textContent || '';
           const title = info.querySelector('h4')?.textContent?.trim() || data.name;
-          const features = parseServiceFeatures(description);
+          const isWhiteLabel =
+            data.subcategory === 'white-label' || item.dataset.subcategory === 'white-label';
+          let features = parseServiceFeatures(description);
           const icon = header.querySelector('.service-icon');
+          const existingBadge = item.querySelector('.service-item-badge');
 
-          header.innerHTML = '';
-          if (icon) {
-            header.appendChild(icon);
+          if (isWhiteLabel) {
+            item.classList.add('service-item--white-label');
+            features = features.filter(
+              (feature) => !/setup \+ first month|auto-renews monthly/i.test(feature)
+            );
           }
 
-          const titleEl = document.createElement('h4');
-          titleEl.className = 'service-item-title';
-          applyServiceCardTitle(titleEl, title);
-          header.appendChild(titleEl);
+          header.innerHTML = '';
+
+          if (isWhiteLabel) {
+            const headerTop = document.createElement('div');
+            headerTop.className = 'service-item-header-top';
+            if (icon) headerTop.appendChild(icon);
+            if (data.featured || item.classList.contains('service-item--featured')) {
+              const badge = existingBadge || document.createElement('span');
+              if (!existingBadge) {
+                badge.className = 'service-item-badge';
+                badge.setAttribute('aria-hidden', 'true');
+                badge.textContent = 'Most Popular';
+              }
+              headerTop.appendChild(badge);
+            }
+            header.appendChild(headerTop);
+
+            const titleEl = document.createElement('h4');
+            titleEl.className = 'service-item-title service-item-title--white-label';
+            const shortName = title.replace(/^White-Label\s+/i, '').trim();
+            titleEl.innerHTML = `<span class="service-title-eyebrow">White-Label</span><span class="service-title-main">${shortName}</span>`;
+            header.appendChild(titleEl);
+          } else {
+            if (existingBadge) existingBadge.remove();
+            if (icon) header.appendChild(icon);
+
+            const titleEl = document.createElement('h4');
+            titleEl.className = 'service-item-title';
+            applyServiceCardTitle(titleEl, title);
+            header.appendChild(titleEl);
+          }
 
           let body = item.querySelector('.service-item-body');
           if (!body) {
@@ -11303,8 +11407,14 @@
           body.replaceChildren();
 
           const tagline = document.createElement('p');
-          tagline.className = 'service-tagline';
-          tagline.textContent = data.duration;
+          tagline.className = isWhiteLabel
+            ? 'service-tagline service-tagline--white-label'
+            : 'service-tagline';
+          if (isWhiteLabel && data.setupFee != null && data.monthlyFee != null) {
+            tagline.textContent = `$${Number(data.monthlyFee).toLocaleString()}/mo after setup`;
+          } else {
+            tagline.textContent = data.duration;
+          }
           body.appendChild(tagline);
 
           const list = document.createElement('ul');
@@ -11318,8 +11428,13 @@
 
           const priceEl = item.querySelector('.service-price');
           if (priceEl && data.setupFee != null && data.monthlyFee != null) {
-            const firstInvoice = Number(data.price) || Number(data.setupFee) + Number(data.monthlyFee);
-            priceEl.innerHTML = `$${firstInvoice.toLocaleString()}<span class="price-sub">first invoice</span><span class="price-sub">$${Number(data.setupFee).toLocaleString()} setup + $${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
+            const setupAmount = Number(data.setupFee) || Number(data.price);
+            const firstInvoice = Number(data.price) || setupAmount;
+            if (isWhiteLabel) {
+              priceEl.innerHTML = `<span class="price-amount">$${setupAmount.toLocaleString()}</span><span class="price-sub">setup fee</span>`;
+            } else {
+              priceEl.innerHTML = `$${firstInvoice.toLocaleString()}<span class="price-sub">first invoice</span><span class="price-sub">$${Number(data.setupFee).toLocaleString()} setup + $${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
+            }
           }
 
           if (data.hourly) {
@@ -11603,18 +11718,19 @@
       }
       
       function syncCatalogSelectedState() {
-        const retainerLocked = isRetainerOnlyPackage(selectedServicesList);
-        const hasNonRetainer =
-          selectedServicesList.length > 0 && selectedServicesList.some((service) => service.category !== 'retainer');
+        const subscriptionLocked = isSubscriptionOnlyPackage(selectedServicesList);
+        const hasNonSubscription =
+          selectedServicesList.length > 0 &&
+          selectedServicesList.some((service) => !isSubscriptionCatalogService(service.id));
 
         document.querySelectorAll('.service-item[data-service]').forEach((item) => {
           const serviceId = item.dataset.service;
           const inPackage = selectedServicesList.some((service) => service.id === serviceId);
-          const isRetainerItem = serviceData[serviceId]?.category === 'retainer';
+          const isSubscriptionItem = isSubscriptionCatalogService(serviceId);
           const blocked =
             Boolean(getServiceAddBlockReason(serviceId)) ||
-            (retainerLocked && inPackage) ||
-            (hasNonRetainer && isRetainerItem);
+            (subscriptionLocked && inPackage) ||
+            (hasNonSubscription && isSubscriptionItem);
 
           item.classList.toggle('in-package', inPackage);
           item.classList.toggle('add-blocked', blocked);
@@ -11634,12 +11750,34 @@
         }
       }
 
-      function isRetainerOnlyPackage(services) {
+      function isSubscriptionCatalogService(serviceId) {
+        return serviceData[serviceId]?.billing?.type === 'subscription';
+      }
+
+      function isSubscriptionOnlyPackage(services) {
         return (
           Array.isArray(services) &&
           services.length > 0 &&
-          services.every((service) => service.category === 'retainer')
+          services.every((service) => isSubscriptionCatalogService(service.id))
         );
+      }
+
+      function isRetainerOnlyPackage(services) {
+        return (
+          isSubscriptionOnlyPackage(services) &&
+          services.every((service) => serviceData[service.id]?.category === 'retainer')
+        );
+      }
+
+      function isWhiteLabelOnlyPackage(services) {
+        return (
+          isSubscriptionOnlyPackage(services) &&
+          services.every((service) => serviceData[service.id]?.billing?.model === 'setup_then_monthly')
+        );
+      }
+
+      function packageHasSubscription(services = selectedServicesList) {
+        return services.some((service) => isSubscriptionCatalogService(service.id));
       }
 
       function packageHasRetainer(services = selectedServicesList) {
@@ -11650,19 +11788,19 @@
         const service = serviceData[serviceId];
         if (!service) return 'Unknown service.';
 
-        const isRetainer = service.category === 'retainer';
+        const isSubscription = isSubscriptionCatalogService(serviceId);
         const inPackage = selectedServicesList.some((s) => s.id === serviceId);
-        const hasRetainer = packageHasRetainer();
+        const hasSubscription = packageHasSubscription();
 
-        if (hasRetainer) {
+        if (hasSubscription) {
           if (inPackage) {
-            return 'This retainer is already in your checkout.';
+            return 'This subscription package is already in your checkout.';
           }
-          return 'Retainer checkouts are limited to one package. Clear your package or refresh the page to start another invoice.';
+          return 'Subscription checkouts are limited to one package. Clear your package or refresh the page to start another invoice.';
         }
 
-        if (selectedServicesList.length > 0 && isRetainer) {
-          return 'Monthly retainers must be checked out alone. Clear your package first, then select your retainer.';
+        if (selectedServicesList.length > 0 && isSubscription) {
+          return 'Subscription packages must be checked out alone. Clear your package first, then select your plan.';
         }
 
         return null;
@@ -11670,20 +11808,25 @@
 
       function updateGenerateInvoiceButtonLabel() {
         if (!generateInvoiceBtn) return;
+        const isWhiteLabel = isWhiteLabelOnlyPackage(selectedServicesList);
         const isRetainer = isRetainerOnlyPackage(selectedServicesList);
-        const iconClass = isRetainer ? 'fa-repeat' : 'fa-file-invoice-dollar';
-        const label = isRetainer ? 'Start My Retainer' : 'Create My Invoice';
+        const iconClass = isWhiteLabel || isRetainer ? 'fa-repeat' : 'fa-file-invoice-dollar';
+        const label = isWhiteLabel
+          ? 'Start White-Label Plan'
+          : isRetainer
+            ? 'Start My Retainer'
+            : 'Create My Invoice';
         generateInvoiceBtn.innerHTML = `<i class="fas ${iconClass}"></i> ${label}`;
       }
 
       function updatePackageDisplay() {
         const count = selectedServicesList.length;
-        const retainerLocked = isRetainerOnlyPackage(selectedServicesList);
+        const subscriptionLocked = isSubscriptionOnlyPackage(selectedServicesList);
         const packageBuilderHint = document.getElementById('packageBuilderHint');
         const packageRetainerLockHint = document.getElementById('packageRetainerLockHint');
 
         if (packageDropzone) {
-          packageDropzone.classList.toggle('retainer-locked', retainerLocked);
+          packageDropzone.classList.toggle('retainer-locked', subscriptionLocked);
           packageDropzone.classList.toggle('has-items', count > 0);
           packageDropzone.setAttribute(
             'aria-label',
@@ -11720,7 +11863,7 @@
         }
 
         dropzoneEmpty?.classList.add('is-hidden');
-        if (retainerLocked) {
+        if (subscriptionLocked) {
           dropzoneAddMore?.classList.add('is-hidden');
           if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'true');
           if (packageBuilderHint) packageBuilderHint.hidden = true;
@@ -11885,19 +12028,16 @@
           return;
         }
 
-        if (
-          selectedServicesList.some((service) => service.category === 'retainer') &&
-          !isRetainerOnlyPackage(selectedServicesList)
-        ) {
+        if (packageHasSubscription(selectedServicesList) && !isSubscriptionOnlyPackage(selectedServicesList)) {
           showNotification(
-            'Monthly retainers must be checked out alone. Remove other services or keep only one retainer package.',
+            'Subscription packages must be checked out alone. Remove other services or keep only one subscription plan.',
             'error'
           );
           return;
         }
 
-        if (selectedServicesList.filter((service) => service.category === 'retainer').length > 1) {
-          showNotification('Please select only one monthly retainer package per checkout.', 'error');
+        if (selectedServicesList.filter((service) => isSubscriptionCatalogService(service.id)).length > 1) {
+          showNotification('Please select only one subscription package per checkout.', 'error');
           return;
         }
 
@@ -11925,19 +12065,27 @@
 
         const prefill = getBuilderPrefill();
         const totalLabel = `$${invoiceData.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        const isSubscriptionCheckout = isSubscriptionOnlyPackage(invoiceData.services);
+        const isWhiteLabelCheckout = isWhiteLabelOnlyPackage(invoiceData.services);
         const isRetainerCheckout = isRetainerOnlyPackage(invoiceData.services);
-        const modalTitle = isRetainerCheckout
-          ? 'Start Your Monthly Retainer'
-          : 'Create Your Cochran Films Invoice';
-        const modalIntro = isRetainerCheckout
-          ? 'Enter your details below. We&apos;ll email your retainer summary and first monthly invoice—usually within a minute. You&apos;ll be billed on the same date each month through your commitment term.'
-          : 'Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.';
-        const eventDateLabel = isRetainerCheckout
+        const modalTitle = isWhiteLabelCheckout
+          ? 'Start Your White-Label Plan'
+          : isRetainerCheckout
+            ? 'Start Your Monthly Retainer'
+            : 'Create Your Cochran Films Invoice';
+        const modalIntro = isWhiteLabelCheckout
+          ? 'Enter your details below. We&apos;ll email your plan summary and setup invoice—usually within a minute. After setup is paid, monthly renewals bill automatically on the same date each month.'
+          : isRetainerCheckout
+            ? 'Enter your details below. We&apos;ll email your retainer summary and first monthly invoice—usually within a minute. You&apos;ll be billed on the same date each month through your commitment term.'
+            : 'Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.';
+        const eventDateLabel = isSubscriptionCheckout
           ? 'Billing start date <span style="font-weight:500;opacity:0.7">(optional)</span>'
           : 'Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span>';
-        const submitLabel = isRetainerCheckout
-          ? '<i class="fas fa-repeat"></i> Start Retainer &amp; Email Me'
-          : '<i class="fas fa-file-invoice-dollar"></i> Create Invoice &amp; Email Me';
+        const submitLabel = isWhiteLabelCheckout
+          ? '<i class="fas fa-repeat"></i> Start Plan &amp; Email Me'
+          : isRetainerCheckout
+            ? '<i class="fas fa-repeat"></i> Start Retainer &amp; Email Me'
+            : '<i class="fas fa-file-invoice-dollar"></i> Create Invoice &amp; Email Me';
 
         const modal = document.createElement('div');
         modal.className = 'modal-overlay active invoice-create-modal';
@@ -12204,7 +12352,9 @@
       
       // Show prominent success modal for project submission
       function showSuccessModal(invoiceUrl, emailWarning, paymentDueDate, result = {}) {
-        const isRetainer = result.billingMode === 'subscription';
+        const isSubscription = result.billingMode === 'subscription';
+        const isWhiteLabelSuccess = result.subscriptionModel === 'setup_then_monthly';
+        const isRetainer = isSubscription && !isWhiteLabelSuccess;
         // Close any existing invoice/project modal first
         const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
         existingModals.forEach(modal => modal.remove());
@@ -12242,11 +12392,13 @@
               <div class="success-icon">
                 <i class="fas fa-check-circle"></i>
               </div>
-              <h2>${isRetainer ? '✅ Retainer Started!' : '✅ Invoice Created!'}</h2>
+              <h2>${isWhiteLabelSuccess ? '✅ White-Label Plan Started!' : isRetainer ? '✅ Retainer Started!' : '✅ Invoice Created!'}</h2>
               <p>${
-                isRetainer
-                  ? 'Your monthly retainer summary and first invoice have been sent to your email.'
-                  : 'Your project package summary and payment link have been sent to your email.'
+                isWhiteLabelSuccess
+                  ? 'Your white-label plan summary and setup invoice have been sent to your email.'
+                  : isRetainer
+                    ? 'Your monthly retainer summary and first invoice have been sent to your email.'
+                    : 'Your project package summary and payment link have been sent to your email.'
               }${emailNote}</p>
             </div>
             
@@ -12259,9 +12411,11 @@
                 <div class="success-detail-item">
                   <i class="fas fa-envelope"></i>
                   <span>${
-                    isRetainer
-                      ? 'Check your inbox for retainer details &amp; first monthly invoice'
-                      : 'Check your inbox for package details &amp; payment link'
+                    isWhiteLabelSuccess
+                      ? 'Check your inbox for plan details &amp; setup invoice'
+                      : isRetainer
+                        ? 'Check your inbox for retainer details &amp; first monthly invoice'
+                        : 'Check your inbox for package details &amp; payment link'
                   }</span>
                 </div>
                 <div class="success-detail-item">

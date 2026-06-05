@@ -5,6 +5,7 @@ const {
   analyzePackageServices,
   buildAdminMailto,
   buildRetainerBillingNote,
+  buildSetupThenMonthlyBillingNote,
   buildServicesHtml,
   buildServicesText,
   createRetainerFirstInvoice,
@@ -77,9 +78,9 @@ async function sendPackageEmails({
         ...clientEmailParams,
         to_email: adminEmail,
         reply_to: customer.email.trim(),
-        email_heading: isSubscription ? 'New Retainer Subscription' : 'New Service Package Request',
+        email_heading: isSubscription ? 'New Subscription Checkout' : 'New Service Package Request',
         email_intro: isSubscription
-          ? `New retainer from ${customer.name.trim()} — first invoice pending.`
+          ? `New subscription from ${customer.name.trim()} — first invoice pending.`
           : `New package from ${customer.name.trim()} — payment pending.`,
         cta_label: `Reply to ${customer.name.trim()}`,
         cta_url: buildAdminMailto(customer.name.trim(), customer.email.trim(), refNumber),
@@ -228,7 +229,16 @@ async function createRetainerSubscription(stripe, {
   packageAnalysis,
 }) {
   const stripeCustomer = await ensureStripeCustomer(stripe, customer);
-  const { catalog, priceId, commitmentMonths, line } = packageAnalysis;
+  const {
+    catalog,
+    priceId,
+    commitmentMonths,
+    line,
+    billingModel,
+    setupFee,
+    monthlyFee,
+  } = packageAnalysis;
+  const isSetupThenMonthly = billingModel === 'setup_then_monthly';
 
   const servicesText = buildServicesText(normalizedServices);
   const servicesTextTruncated =
@@ -240,7 +250,8 @@ async function createRetainerSubscription(stripe, {
   const billingStartLabel = useFutureAnchor
     ? formatLongDate(billingStartDate || eventDate || date)
     : null;
-  const cancelAt = addMonthsUnix(useFutureAnchor ? billingAnchorUnix : nowUnix, commitmentMonths);
+  const serviceAnchorUnix = useFutureAnchor ? billingAnchorUnix : nowUnix;
+  const useManualFirstInvoice = isSetupThenMonthly || useFutureAnchor;
 
   const subscriptionMetadata = {
     invoice_number: refNumber,
@@ -253,8 +264,14 @@ async function createRetainerSubscription(stripe, {
     event_date: eventDate?.trim() || '',
     catalog_id: line.id,
     subscription_name: catalog.name,
-    commitment_months: String(commitmentMonths),
     billing_mode: 'subscription',
+    subscription_model: billingModel,
+    ...(isSetupThenMonthly
+      ? {
+          setup_fee: String(setupFee),
+          monthly_fee: String(monthlyFee),
+        }
+      : { commitment_months: String(commitmentMonths) }),
     ...(billingStartLabel ? { billing_start_date: billingStartLabel } : {}),
   };
 
@@ -264,14 +281,16 @@ async function createRetainerSubscription(stripe, {
     collection_method: 'send_invoice',
     days_until_due: daysUntilDue,
     proration_behavior: 'none',
-    cancel_at: cancelAt,
     metadata: subscriptionMetadata,
   };
 
-  if (useFutureAnchor) {
-    // Trial through the first service month; first period is invoiced manually below.
-    // Renewals begin one month after the chosen billing start date (avoids billing_cycle_anchor limits).
-    subscriptionParams.trial_end = addMonthsUnix(billingAnchorUnix, 1);
+  if (!isSetupThenMonthly) {
+    subscriptionParams.cancel_at = addMonthsUnix(serviceAnchorUnix, commitmentMonths);
+  }
+
+  if (useManualFirstInvoice) {
+    // Setup + future-start plans: manual first invoice, then monthly renewals after trial_end.
+    subscriptionParams.trial_end = addMonthsUnix(serviceAnchorUnix, 1);
   } else {
     subscriptionParams.expand = ['latest_invoice'];
   }
@@ -281,26 +300,38 @@ async function createRetainerSubscription(stripe, {
   const invoiceMetadata = {
     ...subscriptionMetadata,
     subscription_id: subscription.id,
-    invoice_role: useFutureAnchor ? 'retainer_first_period' : 'subscription_initial',
+    invoice_role: isSetupThenMonthly
+      ? 'white_label_setup'
+      : useFutureAnchor
+        ? 'retainer_first_period'
+        : 'subscription_initial',
   };
 
   let invoice;
   let invoiceError = null;
 
-  if (useFutureAnchor) {
-    const daysUntilFirstDue = Math.max(1, Math.ceil((billingAnchorUnix - nowUnix) / 86400));
+  if (useManualFirstInvoice) {
+    const firstAmount = isSetupThenMonthly ? setupFee : Number(line.price);
+    const firstDescription = isSetupThenMonthly ? 'one-time setup fee' : line.duration;
+    const daysUntilFirstDue = useFutureAnchor
+      ? Math.max(1, Math.ceil((billingAnchorUnix - nowUnix) / 86400))
+      : daysUntilDue;
     try {
       invoice = await createRetainerFirstInvoice(stripe, {
         customerId: stripeCustomer.id,
         catalogName: catalog.name,
-        lineDescription: line.duration,
-        amountCents: Math.round(Number(line.price) * 100),
+        lineDescription: firstDescription,
+        amountCents: Math.round(Number(firstAmount) * 100),
         refNumber,
         daysUntilDue: daysUntilFirstDue,
         metadata: invoiceMetadata,
       });
     } catch (err) {
-      invoiceError = err.message || 'Could not create the first retainer invoice.';
+      invoiceError =
+        err.message ||
+        (isSetupThenMonthly
+          ? 'Could not create the setup invoice.'
+          : 'Could not create the first retainer invoice.');
     }
   } else {
     const result = await ensureSubscriptionInvoiceReady(stripe, subscription, invoiceMetadata);
@@ -328,8 +359,10 @@ async function createRetainerSubscription(stripe, {
   const nextBillingDate = nextBillingUnix ? formatDateFromUnix(nextBillingUnix) : '';
   const servicesHtml = buildServicesHtml(normalizedServices);
   const stripeInvoiceNumber = invoice.number || '';
-  const commitmentTerm = formatCommitmentTerm(commitmentMonths);
-  const billingNote = buildRetainerBillingNote(commitmentMonths, billingStartLabel);
+  const commitmentTerm = isSetupThenMonthly ? '' : formatCommitmentTerm(commitmentMonths);
+  const billingNote = isSetupThenMonthly
+    ? buildSetupThenMonthlyBillingNote(monthlyFee, billingStartLabel)
+    : buildRetainerBillingNote(commitmentMonths, billingStartLabel);
 
   const clientTemplateId =
     process.env.EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID ||
@@ -357,14 +390,26 @@ async function createRetainerSubscription(stripe, {
     services_list: servicesText,
     project_date: projectDate,
     payment_due_date: paymentDueDate,
-    email_heading: useFutureAnchor ? 'Your Retainer Is Scheduled' : 'Your Monthly Retainer Is Ready',
-    email_intro: useFutureAnchor
-      ? `Thank you for choosing Cochran Films. Your retainer begins ${billingStartLabel}. Your first monthly invoice is below — pay by ${paymentDueDate} to secure your package. Renewals will bill on the same date each month through your commitment term.`
-      : 'Thank you for choosing Cochran Films. Your monthly content retainer is summarized below. Open your secure invoice to activate your package — you will be billed on the same date each month through your commitment term.',
+    email_heading: isSetupThenMonthly
+      ? useFutureAnchor
+        ? 'Your White-Label Plan Is Scheduled'
+        : 'Your White-Label Plan Is Ready'
+      : useFutureAnchor
+        ? 'Your Retainer Is Scheduled'
+        : 'Your Monthly Retainer Is Ready',
+    email_intro: isSetupThenMonthly
+      ? useFutureAnchor
+        ? `Thank you for choosing Cochran Films. Your white-label plan begins ${billingStartLabel}. Your setup invoice is below — pay by ${paymentDueDate} to secure your package. Monthly renewals of $${Number(monthlyFee).toLocaleString('en-US')}/mo begin one month after your start date.`
+        : `Thank you for choosing Cochran Films. Your white-label plan is summarized below. Open your secure setup invoice to activate your package — monthly renewals of $${Number(monthlyFee).toLocaleString('en-US')}/mo begin one month after setup is paid.`
+      : useFutureAnchor
+        ? `Thank you for choosing Cochran Films. Your retainer begins ${billingStartLabel}. Your first monthly invoice is below — pay by ${paymentDueDate} to secure your package. Renewals will bill on the same date each month through your commitment term.`
+        : 'Thank you for choosing Cochran Films. Your monthly content retainer is summarized below. Open your secure invoice to activate your package — you will be billed on the same date each month through your commitment term.',
     reply_to: customer.email.trim(),
     cta_label: 'View invoice & pay',
     cta_url: invoiceUrl,
-    cta_subtext: 'Monthly retainer · Secure checkout via Stripe',
+    cta_subtext: isSetupThenMonthly
+      ? 'White-label plan · Secure checkout via Stripe'
+      : 'Monthly retainer · Secure checkout via Stripe',
   };
 
   const { emailWarning, adminEmailWarning } = await sendPackageEmails({
@@ -379,6 +424,7 @@ async function createRetainerSubscription(stripe, {
   return {
     success: true,
     billingMode: 'subscription',
+    subscriptionModel: billingModel,
     subscriptionId: subscription.id,
     invoiceId: invoice.id,
     invoiceNumber: refNumber,
