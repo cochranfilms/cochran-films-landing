@@ -5908,8 +5908,10 @@
       }
 
       .service-items {
-        flex: 0 1 auto;
-        min-height: 0;
+        flex: 1 1 auto;
+        min-height: 200px;
+        max-height: min(50vh, 480px);
+        overflow-y: auto;
       }
 
       .package-dropzone {
@@ -6859,6 +6861,13 @@
       flex-direction: column;
       height: 100%;
       min-height: 0;
+      max-height: min(calc(100vh - 9rem), 880px);
+      overflow: hidden;
+    }
+
+    .catalog-header,
+    .service-categories {
+      flex-shrink: 0;
     }
 
     .catalog-header {
@@ -6951,12 +6960,15 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      padding: 4px 6px 4px 0;
+      padding: 4px 6px 8px 0;
       box-sizing: border-box;
       flex: 1 1 auto;
-      min-height: 280px;
-      max-height: none;
+      min-height: 220px;
+      max-height: min(56vh, 620px);
+      overflow-x: hidden;
       overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
       width: 100%;
       align-items: stretch;
       align-content: start;
@@ -8368,6 +8380,11 @@
     @media (max-width: 1100px) {
       .service-items {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-height: min(52vh, 560px);
+      }
+
+      .service-catalog {
+        max-height: min(calc(100vh - 8rem), 820px);
       }
 
       .service-builder-grid {
@@ -8397,6 +8414,11 @@
         padding: 16px 14px;
         border-radius: 16px;
         height: auto;
+        max-height: none;
+      }
+
+      .service-catalog {
+        overflow: hidden;
       }
 
       .package-dropzone {
@@ -8424,8 +8446,9 @@
       
       .service-items {
         grid-template-columns: 1fr;
-        max-height: min(52vh, 440px);
-        flex: 0 1 auto;
+        max-height: min(50vh, 480px);
+        flex: 1 1 auto;
+        min-height: 200px;
       }
 
       .service-item {
