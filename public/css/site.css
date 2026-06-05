@@ -8650,69 +8650,202 @@
 }
 .checkout-empty a { color: var(--brand-gold); font-weight: 700; }
 
-/* Privacy policy */
+/* Page opening hero — below nav, above main content */
+.page-opening-hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-banner--page .hero-title {
+  font-size: clamp(28px, 5vw, 52px);
+}
+
+.page-opening-hero .marquee-logos {
+  margin-top: 0;
+}
+
+/* Opening hero replaces duplicate in-page headers */
+body.page-pricing .service-builder-section .spb-hero {
+  display: none;
+}
+body.page-portfolio .lp-portfolio-hero {
+  display: none;
+}
+
+/* Privacy policy — professional layout */
 .legal-page {
-  min-height: calc(100vh - 120px);
-  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem) 4rem;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem) 4rem;
 }
 .legal-shell {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
-.legal-card {
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+.legal-toc {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+}
+.legal-toc nav {
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.88));
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+}
+.legal-toc-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+}
+.legal-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.legal-toc a {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  border-radius: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.legal-toc a:hover {
+  background: rgba(99, 102, 241, 0.14);
+  color: #fff;
+}
+.legal-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.9));
   border: 1px solid rgba(99, 102, 241, 0.28);
   border-radius: 20px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
 }
-.legal-card h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  margin: 0 0 0.5rem;
+.legal-card-head {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
-.legal-updated { color: var(--text-muted, #94a3b8); font-size: 0.9rem; margin-bottom: 1.5rem; }
-.legal-card h2 {
-  font-size: 1.15rem;
-  margin: 1.75rem 0 0.75rem;
+.legal-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+}
+.legal-intro {
+  color: #e2e8f0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.legal-section {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.25rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.38);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+.legal-section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+.legal-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 178, 0, 0.12);
+  border: 1px solid rgba(255, 178, 0, 0.28);
   color: var(--brand-gold);
+  flex-shrink: 0;
 }
-.legal-card p, .legal-card li {
+.legal-section h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+}
+.legal-section p, .legal-section li {
   color: #cbd5e1;
   line-height: 1.65;
   font-size: 0.95rem;
 }
-.legal-card ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
-.legal-card a { color: #93c5fd; }
-
-/* Pricing page — extra clearance below fixed nav */
-body.page-pricing .service-builder-section {
-  padding-top: clamp(96px, calc(var(--nav-height) + 56px), 132px);
-  scroll-margin-top: calc(var(--nav-height) + 20px);
+.legal-section ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
 }
-
-/* Page closing CTA — hero banner + partner logos above footer */
-.page-closing-cta {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  margin-top: clamp(48px, 6vw, 80px);
+.legal-section a { color: #93c5fd; }
+.legal-contact-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(255, 178, 0, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.32);
+  text-align: center;
 }
-
-.hero-banner--closing {
-  margin: 0 0 0 50%;
-  min-height: clamp(300px, 46vh, 500px);
-  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.28);
+.legal-contact-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #fff;
 }
-
-.hero-banner--closing .hero-banner-content {
-  min-height: clamp(300px, 46vh, 500px);
-  padding: clamp(40px, 5vw, 64px) clamp(24px, 6vw, 88px);
+.legal-contact-card p {
+  margin: 0 0 1rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
 }
-
-.hero-banner--closing .hero-title {
-  font-size: clamp(28px, 5vw, 48px);
+.legal-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
 }
-
-.page-closing-cta .marquee-logos {
-  margin-top: 0;
+.legal-contact-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.legal-contact-actions .legal-btn-primary {
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
+}
+.legal-contact-actions .legal-btn-secondary {
+  border: 1px solid rgba(255, 178, 0, 0.34);
+  color: #fde68a;
+  background: rgba(15, 23, 42, 0.72);
+}
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; }
+  .legal-toc { position: static; }
+  .legal-toc nav { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+  .legal-toc-title { width: 100%; margin-bottom: 0.35rem; }
+  .legal-toc ul { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .legal-toc a { padding: 0.35rem 0.6rem; font-size: 0.8rem; }
 }

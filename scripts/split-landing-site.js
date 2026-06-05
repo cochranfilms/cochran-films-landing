@@ -119,71 +119,204 @@ const checkoutCss = `
 }
 .checkout-empty a { color: var(--brand-gold); font-weight: 700; }
 
-/* Privacy policy */
+/* Page opening hero — below nav, above main content */
+.page-opening-hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-banner--page .hero-title {
+  font-size: clamp(28px, 5vw, 52px);
+}
+
+.page-opening-hero .marquee-logos {
+  margin-top: 0;
+}
+
+/* Opening hero replaces duplicate in-page headers */
+body.page-pricing .service-builder-section .spb-hero {
+  display: none;
+}
+body.page-portfolio .lp-portfolio-hero {
+  display: none;
+}
+
+/* Privacy policy — professional layout */
 .legal-page {
-  min-height: calc(100vh - 120px);
-  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem) 4rem;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem) 4rem;
 }
 .legal-shell {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
 }
-.legal-card {
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+}
+.legal-toc {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+}
+.legal-toc nav {
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.88));
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+}
+.legal-toc-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+}
+.legal-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.legal-toc a {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  border-radius: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.legal-toc a:hover {
+  background: rgba(99, 102, 241, 0.14);
+  color: #fff;
+}
+.legal-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.9));
   border: 1px solid rgba(99, 102, 241, 0.28);
   border-radius: 20px;
   padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
 }
-.legal-card h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  margin: 0 0 0.5rem;
+.legal-card-head {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
-.legal-updated { color: var(--text-muted, #94a3b8); font-size: 0.9rem; margin-bottom: 1.5rem; }
-.legal-card h2 {
-  font-size: 1.15rem;
-  margin: 1.75rem 0 0.75rem;
+.legal-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+}
+.legal-intro {
+  color: #e2e8f0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.legal-section {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1.25rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.38);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+.legal-section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+.legal-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 178, 0, 0.12);
+  border: 1px solid rgba(255, 178, 0, 0.28);
   color: var(--brand-gold);
+  flex-shrink: 0;
 }
-.legal-card p, .legal-card li {
+.legal-section h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+}
+.legal-section p, .legal-section li {
   color: #cbd5e1;
   line-height: 1.65;
   font-size: 0.95rem;
 }
-.legal-card ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
-.legal-card a { color: #93c5fd; }
-
-/* Pricing page — extra clearance below fixed nav */
-body.page-pricing .service-builder-section {
-  padding-top: clamp(96px, calc(var(--nav-height) + 56px), 132px);
-  scroll-margin-top: calc(var(--nav-height) + 20px);
+.legal-section ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
 }
-
-/* Page closing CTA — hero banner + partner logos above footer */
-.page-closing-cta {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  margin-top: clamp(48px, 6vw, 80px);
+.legal-section a { color: #93c5fd; }
+.legal-contact-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(255, 178, 0, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.32);
+  text-align: center;
 }
-
-.hero-banner--closing {
-  margin: 0 0 0 50%;
-  min-height: clamp(300px, 46vh, 500px);
-  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.28);
+.legal-contact-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #fff;
 }
-
-.hero-banner--closing .hero-banner-content {
-  min-height: clamp(300px, 46vh, 500px);
-  padding: clamp(40px, 5vw, 64px) clamp(24px, 6vw, 88px);
+.legal-contact-card p {
+  margin: 0 0 1rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
 }
-
-.hero-banner--closing .hero-title {
-  font-size: clamp(28px, 5vw, 48px);
+.legal-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
 }
-
-.page-closing-cta .marquee-logos {
-  margin-top: 0;
+.legal-contact-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.legal-contact-actions .legal-btn-primary {
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
+}
+.legal-contact-actions .legal-btn-secondary {
+  border: 1px solid rgba(255, 178, 0, 0.34);
+  color: #fde68a;
+  background: rgba(15, 23, 42, 0.72);
+}
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; }
+  .legal-toc { position: static; }
+  .legal-toc nav { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+  .legal-toc-title { width: 100%; margin-bottom: 0.35rem; }
+  .legal-toc ul { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .legal-toc a { padding: 0.35rem 0.6rem; font-size: 0.8rem; }
 }
 `;
 
@@ -233,16 +366,8 @@ const LOGO_MARQUEE = `      <section class="marquee marquee-logos" aria-label="B
         </div>
       </section>`;
 
-const PAGE_CLOSING_CTAS = {
-  home: {
-    aria: 'Start your project with Cochran Films',
-    kicker: 'Atlanta · Full-Stack Creative Agency',
-    title: 'READY TO BUILD YOUR NEXT PROJECT?',
-    subtitle:
-      'From cinematic production to production-grade websites — Cochran Films delivers the full media stack your brand needs to look premium and convert.',
-    primary: { href: '/pricing', label: 'Build Your Package', icon: 'fas fa-rocket' },
-    secondary: { href: '/contact', label: 'Talk to Our Team', icon: 'fa-solid fa-envelope' },
-  },
+const PAGE_OPENING_HEROS = {
+  home: null,
   services: {
     aria: 'Book Cochran Films services',
     kicker: 'What We Do',
@@ -253,11 +378,11 @@ const PAGE_CLOSING_CTAS = {
     secondary: { href: '/portfolio', label: 'See Our Work', icon: 'fa-solid fa-images' },
   },
   pricing: {
-    aria: 'Complete your service package',
+    aria: 'Service Package Builder',
     kicker: 'Book with Cochran Films',
-    title: 'INVOICE READY IN MINUTES',
+    title: 'SERVICE PACKAGE BUILDER',
     subtitle:
-      'Add services above, review your live total, and create a Stripe invoice — we&apos;ll email your payment link and follow up within 24 hours.',
+      'Create your own invoice in minutes — pick services, see live pricing, and we&apos;ll email you a Stripe payment link.',
     primary: { href: '#serviceBuilder', label: 'Start Building', icon: 'fa-solid fa-hand-pointer' },
     secondary: { href: '/contact', label: 'Questions? Contact Us', icon: 'fa-solid fa-message' },
   },
@@ -280,13 +405,13 @@ const PAGE_CLOSING_CTAS = {
     secondary: { href: 'tel:+14704202169', label: 'Call (470) 420-2169', icon: 'fa-solid fa-phone' },
   },
   privacy: {
-    aria: 'Contact Cochran Films',
-    kicker: 'Cochran Films LLC',
-    title: 'QUESTIONS ABOUT YOUR DATA?',
+    aria: 'Cochran Films Privacy Policy',
+    kicker: 'Legal &amp; Trust',
+    title: 'PRIVACY POLICY',
     subtitle:
-      'We&apos;re happy to clarify how we collect, use, and protect your information — reach out anytime about privacy or project inquiries.',
-    primary: { href: '/contact', label: 'Contact Us', icon: 'fa-solid fa-envelope' },
-    secondary: { href: '/pricing', label: 'View Services &amp; Pricing', icon: 'fas fa-file-invoice-dollar' },
+      'Transparent practices for how Cochran Films LLC collects, uses, and protects your information across our website, forms, and payment flows.',
+    primary: { href: '#legal-content', label: 'Read Full Policy', icon: 'fa-solid fa-shield-halved' },
+    secondary: { href: '/contact', label: 'Contact Us', icon: 'fa-solid fa-envelope' },
   },
   checkout: {
     aria: 'Continue with Cochran Films',
@@ -299,19 +424,20 @@ const PAGE_CLOSING_CTAS = {
   },
 };
 
-function buildPageClosingCta(pageKey) {
-  const c = PAGE_CLOSING_CTAS[pageKey];
+function buildPageOpeningHero(pageKey) {
+  const c = PAGE_OPENING_HEROS[pageKey];
   if (!c) return '';
+  const headingTag = pageKey === 'home' ? 'h1' : 'h1';
   return `
-  <section class="page-closing-cta" aria-label="${c.aria}">
-    <div class="hero-banner hero-banner--closing" aria-label="${c.aria}">
+  <section class="page-opening-hero" aria-label="${c.aria}">
+    <div class="hero-banner hero-banner--page" aria-label="${c.aria}">
       <div class="hero-banner-media">
-        <picture><source srcset="about-header.webp" type="image/webp"><img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" loading="lazy" decoding="async" width="1600" height="1107"></picture>
+        <picture><source srcset="about-header.webp" type="image/webp"><img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" loading="eager" decoding="async" width="1600" height="1107"></picture>
       </div>
       <div class="hero-banner-overlay" aria-hidden="true"></div>
       <div class="hero-banner-content">
         <div class="hero-banner-kicker">${c.kicker}</div>
-        <h2 class="hero-title">${c.title}</h2>
+        <${headingTag} class="hero-title">${c.title}</${headingTag}>
         <p class="hero-subtitle">${c.subtitle}</p>
         <div class="hero-banner-actions">
           <a href="${c.primary.href}" class="hero-cta"><i class="${c.primary.icon}" aria-hidden="true"></i> ${c.primary.label}</a>
@@ -493,49 +619,106 @@ const bodyOpen = `  <!-- AI Neural Network Background -->
 
 `;
 
-const privacyBody = `  <main class="legal-page" id="privacy-policy">
+const privacyBody = `  <main class="legal-page" id="privacy-policy-content">
     <div class="legal-shell">
-      <article class="legal-card">
-        <h1>Privacy Policy</h1>
-        <p class="legal-updated">Last updated: June 4, 2026</p>
-        <p>Cochran Films LLC ("Cochran Films," "we," "us," or "our") respects your privacy. This policy explains how we collect, use, and protect information when you visit <a href="https://www.cochranfilms.com/">cochranfilms.com</a>, submit inquiries, or purchase services.</p>
+      <div class="legal-layout">
+        <aside class="legal-toc" aria-label="Table of contents">
+          <nav>
+            <p class="legal-toc-title">On this page</p>
+            <ul>
+              <li><a href="#legal-overview">Overview</a></li>
+              <li><a href="#legal-collect">Information We Collect</a></li>
+              <li><a href="#legal-use">How We Use Data</a></li>
+              <li><a href="#legal-consent">Communications</a></li>
+              <li><a href="#legal-payments">Payments</a></li>
+              <li><a href="#legal-sharing">Data Sharing</a></li>
+              <li><a href="#legal-security">Security</a></li>
+              <li><a href="#legal-rights">Your Rights</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <article class="legal-card" id="legal-content">
+          <header class="legal-card-head" id="legal-overview">
+            <p class="legal-updated"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Last updated: June 4, 2026</p>
+            <p class="legal-intro">Cochran Films LLC (&quot;Cochran Films,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy. This policy explains how we collect, use, and protect information when you visit <a href="https://www.cochranfilms.com/">cochranfilms.com</a>, submit inquiries, or purchase services.</p>
+          </header>
 
-        <h2>Information We Collect</h2>
-        <p>We may collect your name, email address, phone number, business details, project requirements, billing information processed through Stripe, and communications you send through our contact or service package forms.</p>
+          <section class="legal-section" id="legal-collect">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
+              <h2>Information We Collect</h2>
+            </div>
+            <p>We may collect your name, email address, phone number, business details, project requirements, billing information processed through Stripe, and communications you send through our contact or service package forms.</p>
+          </section>
 
-        <h2>How We Use Your Information</h2>
-        <ul>
-          <li>Respond to inquiries and deliver contracted creative, production, and technology services</li>
-          <li>Send project updates, invoices, payment links, and service-related announcements</li>
-          <li>Improve our website, client experience, and internal operations</li>
-          <li>Comply with legal, tax, and accounting obligations</li>
-        </ul>
+          <section class="legal-section" id="legal-use">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span>
+              <h2>How We Use Your Information</h2>
+            </div>
+            <ul>
+              <li>Respond to inquiries and deliver contracted creative, production, and technology services</li>
+              <li>Send project updates, invoices, payment links, and service-related announcements</li>
+              <li>Improve our website, client experience, and internal operations</li>
+              <li>Comply with legal, tax, and accounting obligations</li>
+            </ul>
+          </section>
 
-        <h2>Communications &amp; Consent</h2>
-        <p>When you submit a form or start a project, you may receive email, phone, or text communications related to your request. Typical email frequency is 2–4 messages per month for active marketing updates; project communications are sent as needed.</p>
-        <ul>
-          <li><strong>Email opt-out:</strong> Reply "UNSUBSCRIBE" or use the unsubscribe link in any marketing email</li>
-          <li><strong>Text opt-out:</strong> Reply "STOP" to any text message</li>
-          <li><strong>Phone:</strong> Request removal by calling <a href="tel:+14704202169">(470) 420-2169</a></li>
-        </ul>
+          <section class="legal-section" id="legal-consent">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+              <h2>Communications &amp; Consent</h2>
+            </div>
+            <p>When you submit a form or start a project, you may receive email, phone, or text communications related to your request. Typical email frequency is 2–4 messages per month for active marketing updates; project communications are sent as needed.</p>
+            <ul>
+              <li><strong>Email opt-out:</strong> Reply &quot;UNSUBSCRIBE&quot; or use the unsubscribe link in any marketing email</li>
+              <li><strong>Text opt-out:</strong> Reply &quot;STOP&quot; to any text message</li>
+              <li><strong>Phone:</strong> Request removal by calling <a href="tel:+14704202169">(470) 420-2169</a></li>
+            </ul>
+          </section>
 
-        <h2>Payments</h2>
-        <p>Payments are processed by Stripe. We do not store full card numbers on our servers. Stripe's privacy practices are described at <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>.</p>
+          <section class="legal-section" id="legal-payments">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-credit-card"></i></span>
+              <h2>Payments</h2>
+            </div>
+            <p>Payments are processed by Stripe. We do not store full card numbers on our servers. Stripe&apos;s privacy practices are described at <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>.</p>
+          </section>
 
-        <h2>Data Sharing</h2>
-        <p>We do not sell your personal information. We share data only with trusted providers required to operate our business (for example: Stripe for payments, EmailJS or email delivery providers, hosting on Vercel, and analytics tools). Mobile opt-in data is never shared with third parties for their own marketing.</p>
+          <section class="legal-section" id="legal-sharing">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-share-nodes"></i></span>
+              <h2>Data Sharing</h2>
+            </div>
+            <p>We do not sell your personal information. We share data only with trusted providers required to operate our business (for example: Stripe for payments, EmailJS or email delivery providers, hosting on Vercel, and analytics tools). Mobile opt-in data is never shared with third parties for their own marketing.</p>
+          </section>
 
-        <h2>Data Security &amp; Retention</h2>
-        <p>We use industry-standard safeguards to protect client data. We retain information as long as needed to fulfill services, meet legal requirements, and resolve disputes.</p>
+          <section class="legal-section" id="legal-security">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></span>
+              <h2>Data Security &amp; Retention</h2>
+            </div>
+            <p>We use industry-standard safeguards to protect client data. We retain information as long as needed to fulfill services, meet legal requirements, and resolve disputes.</p>
+          </section>
 
-        <h2>Your Rights</h2>
-        <p>You may request access, correction, or deletion of your personal information by contacting <a href="mailto:info@cochranfilms.com">info@cochranfilms.com</a>. California and other state privacy rights may apply depending on your location.</p>
+          <section class="legal-section" id="legal-rights">
+            <div class="legal-section-head">
+              <span class="legal-section-icon" aria-hidden="true"><i class="fa-solid fa-user-shield"></i></span>
+              <h2>Your Rights</h2>
+            </div>
+            <p>You may request access, correction, or deletion of your personal information by contacting <a href="mailto:info@cochranfilms.com">info@cochranfilms.com</a>. California and other state privacy rights may apply depending on your location.</p>
+          </section>
 
-        <h2>Contact</h2>
-        <p>Cochran Films LLC · Atlanta, Georgia<br>
-        Email: <a href="mailto:info@cochranfilms.com">info@cochranfilms.com</a><br>
-        Phone: <a href="tel:+14704202169">(470) 420-2169</a></p>
-      </article>
+          <div class="legal-contact-card">
+            <h3>Questions about this policy?</h3>
+            <p>Cochran Films LLC · Atlanta, Georgia</p>
+            <div class="legal-contact-actions">
+              <a href="mailto:info@cochranfilms.com" class="legal-btn-primary"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@cochranfilms.com</a>
+              <a href="tel:+14704202169" class="legal-btn-secondary"><i class="fa-solid fa-phone" aria-hidden="true"></i> (470) 420-2169</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </main>`;
 
@@ -858,8 +1041,8 @@ function buildPage({ file, activeNav, headMeta, mainContent, scripts, wrapper = 
   return `${head}
 <body${bodyAttr}>
 ${bodyOpen}${buildNav(activeNav)}
+${buildPageOpeningHero(pageKey)}
 ${main}
-${buildPageClosingCta(pageKey)}
 ${buildFooter()}
 ${scriptTags}
 </body>
@@ -918,6 +1101,7 @@ const pages = [
   {
     file: 'portfolio.html',
     pageKey: 'portfolio',
+    bodyClass: 'page-portfolio',
     activeNav: 'portfolio',
     headMeta: {
       title: 'Portfolio | Cochran Films — Production, Web & Real Estate Media',

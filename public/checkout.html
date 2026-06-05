@@ -274,43 +274,16 @@
       </button>
     </div>
   </nav>
-  <main class="checkout-page" id="checkout">
-    <div class="checkout-shell">
-      <div id="checkoutContent" class="checkout-card" aria-live="polite">
-        <p class="checkout-kicker">Secure Checkout</p>
-        <h1 class="checkout-title">Complete Your Payment</h1>
-        <p class="checkout-lede">Your package summary and Stripe invoice link were also sent to your email. Pay instantly below or use the invoice link anytime.</p>
-        <div id="checkoutSummary" class="checkout-summary" hidden></div>
-        <div id="checkoutMeta" class="checkout-meta"></div>
-        <div class="checkout-actions">
-          <a id="checkoutPayBtn" class="btn-primary" href="#" rel="noopener noreferrer">
-            <i class="fas fa-lock" aria-hidden="true"></i> Pay Now Securely
-          </a>
-          <a id="checkoutInvoiceLink" class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Open Stripe Invoice
-          </a>
-          <a href="/pricing" class="btn-secondary">
-            <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Package Builder
-          </a>
-        </div>
-      </div>
-      <div id="checkoutEmpty" class="checkout-card checkout-empty" hidden>
-        <h1 class="checkout-title">No checkout session found</h1>
-        <p class="checkout-lede">Start by building a service package or open the payment link from your email.</p>
-        <p><a href="/pricing">Go to Service Package Builder</a> · <a href="/contact">Contact us</a></p>
-      </div>
-    </div>
-  </main>
 
-  <section class="page-closing-cta" aria-label="Continue with Cochran Films">
-    <div class="hero-banner hero-banner--closing" aria-label="Continue with Cochran Films">
+  <section class="page-opening-hero" aria-label="Continue with Cochran Films">
+    <div class="hero-banner hero-banner--page" aria-label="Continue with Cochran Films">
       <div class="hero-banner-media">
-        <picture><source srcset="about-header.webp" type="image/webp"><img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" loading="lazy" decoding="async" width="1600" height="1107"></picture>
+        <picture><source srcset="about-header.webp" type="image/webp"><img src="about-header.png" alt="Cody Cochran operating a cinema camera during a production" loading="eager" decoding="async" width="1600" height="1107"></picture>
       </div>
       <div class="hero-banner-overlay" aria-hidden="true"></div>
       <div class="hero-banner-content">
         <div class="hero-banner-kicker">Secure Checkout</div>
-        <h2 class="hero-title">TRUSTED BY ATLANTA BRANDS &amp; BEYOND</h2>
+        <h1 class="hero-title">TRUSTED BY ATLANTA BRANDS &amp; BEYOND</h1>
         <p class="hero-subtitle">Your payment is processed securely through Stripe. Explore more services or start your next project with Cochran Films anytime.</p>
         <div class="hero-banner-actions">
           <a href="/pricing" class="hero-cta"><i class="fas fa-plus" aria-hidden="true"></i> Build Another Package</a>
@@ -341,6 +314,33 @@
         </div>
       </section>
   </section>
+  <main class="checkout-page" id="checkout">
+    <div class="checkout-shell">
+      <div id="checkoutContent" class="checkout-card" aria-live="polite">
+        <p class="checkout-kicker">Secure Checkout</p>
+        <h1 class="checkout-title">Complete Your Payment</h1>
+        <p class="checkout-lede">Your package summary and Stripe invoice link were also sent to your email. Pay instantly below or use the invoice link anytime.</p>
+        <div id="checkoutSummary" class="checkout-summary" hidden></div>
+        <div id="checkoutMeta" class="checkout-meta"></div>
+        <div class="checkout-actions">
+          <a id="checkoutPayBtn" class="btn-primary" href="#" rel="noopener noreferrer">
+            <i class="fas fa-lock" aria-hidden="true"></i> Pay Now Securely
+          </a>
+          <a id="checkoutInvoiceLink" class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Open Stripe Invoice
+          </a>
+          <a href="/pricing" class="btn-secondary">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Package Builder
+          </a>
+        </div>
+      </div>
+      <div id="checkoutEmpty" class="checkout-card checkout-empty" hidden>
+        <h1 class="checkout-title">No checkout session found</h1>
+        <p class="checkout-lede">Start by building a service package or open the payment link from your email.</p>
+        <p><a href="/pricing">Go to Service Package Builder</a> · <a href="/contact">Contact us</a></p>
+      </div>
+    </div>
+  </main>
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="footer-shell">
