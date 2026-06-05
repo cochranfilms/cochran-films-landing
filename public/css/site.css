@@ -8683,3 +8683,36 @@
 }
 .legal-card ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
 .legal-card a { color: #93c5fd; }
+
+/* Pricing page — extra clearance below fixed nav */
+body.page-pricing .service-builder-section {
+  padding-top: clamp(96px, calc(var(--nav-height) + 56px), 132px);
+  scroll-margin-top: calc(var(--nav-height) + 20px);
+}
+
+/* Page closing CTA — hero banner + partner logos above footer */
+.page-closing-cta {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: clamp(48px, 6vw, 80px);
+}
+
+.hero-banner--closing {
+  margin: 0 0 0 50%;
+  min-height: clamp(300px, 46vh, 500px);
+  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.28);
+}
+
+.hero-banner--closing .hero-banner-content {
+  min-height: clamp(300px, 46vh, 500px);
+  padding: clamp(40px, 5vw, 64px) clamp(24px, 6vw, 88px);
+}
+
+.hero-banner--closing .hero-title {
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+.page-closing-cta .marquee-logos {
+  margin-top: 0;
+}
