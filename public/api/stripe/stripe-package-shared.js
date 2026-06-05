@@ -1,17 +1,11 @@
-import { readFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+const serviceCatalog = require('../../data/services-catalog.json');
 
-export const PACKAGE_SOURCE = 'cochran-films-landing-service-builder';
+const PACKAGE_SOURCE = 'cochran-films-landing-service-builder';
 
-export const DEFAULT_ALLOWED_ORIGINS =
+const DEFAULT_ALLOWED_ORIGINS =
   'https://www.cochranfilms.com,https://cochranfilms.com,https://landing.cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-let catalogCache = null;
-
-export function setCors(req, res) {
+function setCors(req, res) {
   const allowed = (process.env.ALLOWED_ORIGINS || DEFAULT_ALLOWED_ORIGINS)
     .split(',')
     .map((o) => o.trim())
@@ -26,12 +20,12 @@ export function setCors(req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Idempotency-Key');
 }
 
-export function formatUsdFromCents(cents) {
+function formatUsdFromCents(cents) {
   const dollars = (Number(cents) || 0) / 100;
   return dollars.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 }
 
-export function escapeHtml(value) {
+function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -39,7 +33,7 @@ export function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
-export function buildServicesHtml(services) {
+function buildServicesHtml(services) {
   if (!Array.isArray(services) || services.length === 0) {
     return '<tr><td colspan="3" style="padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;">No line items</td></tr>';
   }
@@ -58,7 +52,7 @@ export function buildServicesHtml(services) {
     .join('');
 }
 
-export function buildServicesText(services) {
+function buildServicesText(services) {
   return services
     .map((service) => {
       const qty = Math.max(1, Number(service.quantity) || 1);
@@ -70,36 +64,16 @@ export function buildServicesText(services) {
     .join('\n');
 }
 
-export function getServiceCatalog() {
-  if (catalogCache) return catalogCache;
-  const candidates = [
-    join(process.cwd(), 'data', 'services-catalog.json'),
-    join(__dirname, '../../data', 'services-catalog.json'),
-  ];
-  for (const filePath of candidates) {
-    try {
-      catalogCache = JSON.parse(readFileSync(filePath, 'utf8'));
-      return catalogCache;
-    } catch {
-      /* try next path */
-    }
-  }
-  throw new Error('Service catalog not found');
+function getServiceCatalog() {
+  return serviceCatalog;
 }
 
-export function validateServicesPayload(services) {
+function validateServicesPayload(services) {
   if (!Array.isArray(services) || services.length === 0) {
     return { ok: false, error: 'At least one service is required.' };
   }
 
-  let catalog;
-  try {
-    catalog = getServiceCatalog();
-  } catch (err) {
-    console.error(err);
-    return { ok: false, error: 'Service catalog unavailable.' };
-  }
-
+  const catalog = getServiceCatalog();
   let computedTotal = 0;
   const normalized = [];
 
@@ -151,7 +125,7 @@ export function validateServicesPayload(services) {
   return { ok: true, computedTotal, services: normalized };
 }
 
-export async function sendEmailJs(templateId, templateParams) {
+async function sendEmailJs(templateId, templateParams) {
   const serviceId = process.env.EMAILJS_SERVICE_ID;
   const publicKey = process.env.EMAILJS_PUBLIC_KEY;
   const privateKey = process.env.EMAILJS_PRIVATE_KEY;
@@ -186,7 +160,7 @@ export async function sendEmailJs(templateId, templateParams) {
   return { ok: true };
 }
 
-export function buildAdminMailto(customerName, customerEmail, invoiceNumber) {
+function buildAdminMailto(customerName, customerEmail, invoiceNumber) {
   const subject = encodeURIComponent(`Re: Cochran Films package ${invoiceNumber}`);
   const body = encodeURIComponent(
     `Hi ${customerName},\n\nThank you for your service package request (${invoiceNumber}).\n\n`
@@ -194,7 +168,6 @@ export function buildAdminMailto(customerName, customerEmail, invoiceNumber) {
   return `mailto:${customerEmail}?subject=${subject}&body=${body}`;
 }
 
-/** In-process dedupe only (no KV). Sufficient for low volume; keys reset on cold starts. */
 const memoryDedupe = new Set();
 const DEDUPE_TTL_MS = 14 * 24 * 60 * 60 * 1000;
 const memoryDedupeExpiry = new Map();
@@ -213,7 +186,7 @@ function pruneExpiredDedupeKeys() {
   }
 }
 
-export async function claimDedupeKey(key) {
+async function claimDedupeKey(key) {
   const fullKey = normalizeDedupeKey(key);
   pruneExpiredDedupeKeys();
   if (memoryDedupe.has(fullKey)) return false;
@@ -222,16 +195,31 @@ export async function claimDedupeKey(key) {
   return true;
 }
 
-export async function releaseDedupeKey(key) {
+async function releaseDedupeKey(key) {
   const fullKey = normalizeDedupeKey(key);
   memoryDedupe.delete(fullKey);
   memoryDedupeExpiry.delete(fullKey);
 }
 
-export async function readRawBody(req) {
+async function readRawBody(req) {
   const chunks = [];
   for await (const chunk of req) {
     chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
   }
   return Buffer.concat(chunks);
 }
+
+module.exports = {
+  PACKAGE_SOURCE,
+  DEFAULT_ALLOWED_ORIGINS,
+  setCors,
+  formatUsdFromCents,
+  buildServicesHtml,
+  buildServicesText,
+  validateServicesPayload,
+  sendEmailJs,
+  buildAdminMailto,
+  claimDedupeKey,
+  releaseDedupeKey,
+  readRawBody,
+};

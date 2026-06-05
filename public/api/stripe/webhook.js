@@ -1,18 +1,12 @@
-import Stripe from 'stripe';
-import {
+const Stripe = require('stripe');
+const {
   PACKAGE_SOURCE,
   buildServicesHtml,
   claimDedupeKey,
   formatUsdFromCents,
   readRawBody,
   sendEmailJs,
-} from './stripe-package-shared.js';
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+} = require('./stripe-package-shared');
 
 function formatDateFromUnix(unixSeconds) {
   const d = unixSeconds ? new Date(unixSeconds * 1000) : new Date();

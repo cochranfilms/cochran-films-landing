@@ -1,5 +1,5 @@
-import Stripe from 'stripe';
-import {
+const Stripe = require('stripe');
+const {
   PACKAGE_SOURCE,
   buildAdminMailto,
   buildServicesHtml,
@@ -9,7 +9,7 @@ import {
   sendEmailJs,
   setCors,
   validateServicesPayload,
-} from './stripe-package-shared.js';
+} = require('./stripe-package-shared');
 
 const DEFAULT_DAYS_UNTIL_DUE = 30;
 
@@ -68,9 +68,9 @@ export default async function handler(req, res) {
     let stripe;
     try {
       stripe = new Stripe(stripeSecret);
-    const daysUntilDue = Number(process.env.STRIPE_INVOICE_DAYS_UNTIL_DUE) || DEFAULT_DAYS_UNTIL_DUE;
+      const daysUntilDue = Number(process.env.STRIPE_INVOICE_DAYS_UNTIL_DUE) || DEFAULT_DAYS_UNTIL_DUE;
 
-    const existingCustomers = await stripe.customers.list({
+      const existingCustomers = await stripe.customers.list({
       email: customer.email.trim().toLowerCase(),
       limit: 1,
     });
