@@ -390,7 +390,7 @@
       z-index: 2;
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 0 0 34px;
+      padding: 0;
       text-align: center;
     }
 
@@ -4267,6 +4267,7 @@
     .top-banner { display: none !important; }
     body.resume-page .page {
       padding-top: clamp(1.25rem, 3vw, 2rem);
+      padding-bottom: 0;
       width: min(1180px, calc(100% - 40px));
     }
 
@@ -5575,36 +5576,79 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <footer class="footer" aria-label="Cochran Films resume footer">
-      <div class="footer-brand">
-        <img class="footer-mark" src="CF_Logo_White2025.png" alt="Cochran Films logo" onerror="this.src='Logo.png'">
-        <div class="footer-kicker">Available for brand partnerships, campaigns, and production systems</div>
-        <h2 class="footer-title">Built for brands that need strategy, polish, and production that performs.</h2>
-        <p class="footer-copy">
-          Cochran Films partners with founders, agencies, nonprofits, civic leaders, and creative teams to produce media, education, and digital systems that make every brand moment feel intentional.
-        </p>
-        <div class="footer-note">Cody Cochran · Atlanta, GA · 2026</div>
-      </div>
-      <div class="footer-action-panel">
-        <a class="footer-cta" href="/pricing">
-          Build Your Service Package <i class="fa-solid fa-file-invoice-dollar"></i>
-        </a>
-        <a class="footer-cta footer-cta-secondary" href="https://coursecreatoracademy.org/" target="_blank" rel="noopener">
-          Start a Brand Conversation <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-        <div class="footer-links">
-          <a class="footer-link" href="https://cochranfilms.com/">Cochran Films Home</a>
-          <a class="footer-link" href="/pricing">Service Package Builder</a>
-          <a class="footer-link" href="https://cochranfilms.studio" target="_blank" rel="noopener">Cochran Films</a>
-          <a class="footer-link" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">Course Creator Academy</a>
-          <a class="footer-link" href="https://www.creatorcollective.media" target="_blank" rel="noopener">Creator Collective</a>
-          <a class="footer-link" href="https://djsneedluv2.com" target="_blank" rel="noopener">DJs Need Luv 2</a>
-          <a class="footer-link" href="https://www.bizzicloud.io" target="_blank" rel="noopener">Bizzi Cloud</a>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-shell">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <a href="/" aria-label="Cochran Films home">
+              <picture><source srcset="Logo.webp" type="image/webp"><img src="Logo.png" alt="Cochran Films — cinematic production and full-stack creative agency" width="300" height="68" loading="lazy" decoding="async"></picture>
+            </a>
+          </div>
+          <p class="footer-tagline">Atlanta's full-stack creative agency — cinematic production, modern engineering, and creator-ready systems built as one stack.</p>
+          <div class="footer-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Atlanta, Georgia · Serving Metro Atlanta &amp; Nationwide</div>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+            </a>
+            <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on YouTube">
+              <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
+            </a>
+            <a href="https://github.com/cochranfilms" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on GitHub">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="/services">Video Production</a></li>
+            <li><a href="/services">Photography</a></li>
+            <li><a href="/portfolio#portfolio-realestate">Real Estate Media</a></li>
+            <li><a href="/services">Web Development</a></li>
+            <li><a href="/portfolio#portfolio-web">Platforms &amp; SaaS</a></li>
+            <li><a href="/pricing">Build a Package</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:info@cochranfilms.com">info@cochranfilms.com</a></li>
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+14704202169">(470) 420-2169</a></li>
+            <li><i class="fa-solid fa-globe" aria-hidden="true"></i><a href="https://cochranfilms.studio" target="_blank" rel="noopener noreferrer">cochranfilms.studio</a></li>
+            <li><i class="fa-solid fa-file-lines" aria-hidden="true"></i><a href="/resume">Cody Cochran Resume</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-  </main>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Cochran Films LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/">Home</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="https://collaborate.cochranfilms.com/">Creator Portal</a>
+          <a href="/resume">Resume</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <div class="mayor-modal" id="mayor-modal" role="dialog" aria-modal="true" aria-labelledby="mayor-modal-title" hidden>
     <div class="mayor-modal-panel">
