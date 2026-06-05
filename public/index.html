@@ -7140,6 +7140,37 @@
       z-index: 1000;
     }
 
+    .service-item.add-blocked {
+      opacity: 0.42;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .service-item.add-blocked.in-package {
+      opacity: 0.88;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .package-dropzone.retainer-locked .dropzone-add-more {
+      display: none !important;
+    }
+
+    .package-retainer-lock-hint {
+      margin: 0 0 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 178, 0, 0.35);
+      background: rgba(255, 178, 0, 0.08);
+      color: #fde68a;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .package-retainer-lock-hint.is-hidden {
+      display: none;
+    }
+
     .service-item-header {
       display: flex;
       align-items: center;
@@ -9486,7 +9517,10 @@
             <div class="builder-header-row">
               <div>
                 <h3>Your Package &amp; Invoice</h3>
-                <p>Services you add appear here with live pricing—when you&apos;re ready, create your invoice below.</p>
+                <p id="packageBuilderHint">Services you add appear here with live pricing—when you&apos;re ready, create your invoice below.</p>
+                <p class="package-retainer-lock-hint is-hidden" id="packageRetainerLockHint" role="status">
+                  Retainer checkout is locked to this package only. Clear your package or refresh the page to start a different invoice or retainer.
+                </p>
               </div>
               <div class="package-count-badge" id="packageServiceCount" aria-live="polite" title="Services in your package">
                 <span class="package-count-label">Items</span>
@@ -11222,8 +11256,8 @@
           const item = select.closest('.service-item');
           if (item) updateHourlyCardPriceDisplay(item, serviceId);
           if (selectedServicesList.some((s) => s.id === serviceId)) {
-            addServiceToPackage(serviceId);
-            showNotification('Hours updated in your package', 'info');
+            const updated = addServiceToPackage(serviceId);
+            if (updated) showNotification('Hours updated in your package', 'info');
           }
         });
         serviceItemsEl.addEventListener('click', (e) => {
@@ -11345,6 +11379,10 @@
         }
         const serviceItem = e.target.closest('.service-item');
         const serviceId = serviceItem.dataset.service;
+        if (getServiceAddBlockReason(serviceId)) {
+          e.preventDefault();
+          return;
+        }
         console.log('Drag started for service:', serviceId);
         serviceItem.classList.add('dragging');
         isDragging = true;
@@ -11399,9 +11437,11 @@
         
         if (serviceId) {
           console.log('Adding service directly to package:', serviceId);
-          addServiceToPackage(serviceId, { hours });
-          const label = serviceData[serviceId]?.name || 'Service';
-          showNotification(`${label} added — keep building your package!`, 'success');
+          const added = addServiceToPackage(serviceId, { hours });
+          if (added) {
+            const label = serviceData[serviceId]?.name || 'Service';
+            showNotification(`${label} added — keep building your package!`, 'success');
+          }
         } else {
           console.log('No service ID found in drop data');
         }
@@ -11456,10 +11496,24 @@
       }
       
       function syncCatalogSelectedState() {
+        const retainerLocked = isRetainerOnlyPackage(selectedServicesList);
+        const hasNonRetainer =
+          selectedServicesList.length > 0 && selectedServicesList.some((service) => service.category !== 'retainer');
+
         document.querySelectorAll('.service-item[data-service]').forEach((item) => {
-          const inPackage = selectedServicesList.some((service) => service.id === item.dataset.service);
+          const serviceId = item.dataset.service;
+          const inPackage = selectedServicesList.some((service) => service.id === serviceId);
+          const isRetainerItem = serviceData[serviceId]?.category === 'retainer';
+          const blocked =
+            Boolean(getServiceAddBlockReason(serviceId)) ||
+            (retainerLocked && inPackage) ||
+            (hasNonRetainer && isRetainerItem);
+
           item.classList.toggle('in-package', inPackage);
+          item.classList.toggle('add-blocked', blocked);
           item.setAttribute('aria-pressed', inPackage ? 'true' : 'false');
+          item.setAttribute('aria-disabled', blocked ? 'true' : 'false');
+          item.draggable = blocked ? 'false' : 'true';
         });
       }
 
@@ -11481,6 +11535,32 @@
         );
       }
 
+      function packageHasRetainer(services = selectedServicesList) {
+        return services.some((service) => service.category === 'retainer');
+      }
+
+      function getServiceAddBlockReason(serviceId) {
+        const service = serviceData[serviceId];
+        if (!service) return 'Unknown service.';
+
+        const isRetainer = service.category === 'retainer';
+        const inPackage = selectedServicesList.some((s) => s.id === serviceId);
+        const hasRetainer = packageHasRetainer();
+
+        if (hasRetainer) {
+          if (inPackage) {
+            return 'This retainer is already in your checkout.';
+          }
+          return 'Retainer checkouts are limited to one package. Clear your package or refresh the page to start another invoice.';
+        }
+
+        if (selectedServicesList.length > 0 && isRetainer) {
+          return 'Monthly retainers must be checked out alone. Clear your package first, then select your retainer.';
+        }
+
+        return null;
+      }
+
       function updateGenerateInvoiceButtonLabel() {
         if (!generateInvoiceBtn) return;
         const isRetainer = isRetainerOnlyPackage(selectedServicesList);
@@ -11491,8 +11571,12 @@
 
       function updatePackageDisplay() {
         const count = selectedServicesList.length;
+        const retainerLocked = isRetainerOnlyPackage(selectedServicesList);
+        const packageBuilderHint = document.getElementById('packageBuilderHint');
+        const packageRetainerLockHint = document.getElementById('packageRetainerLockHint');
 
         if (packageDropzone) {
+          packageDropzone.classList.toggle('retainer-locked', retainerLocked);
           packageDropzone.classList.toggle('has-items', count > 0);
           packageDropzone.setAttribute(
             'aria-label',
@@ -11516,6 +11600,8 @@
             generateInvoiceBtn.setAttribute('aria-disabled', 'true');
             updateGenerateInvoiceButtonLabel();
           }
+          if (packageBuilderHint) packageBuilderHint.hidden = false;
+          if (packageRetainerLockHint) packageRetainerLockHint.classList.add('is-hidden');
           dropzoneEmpty?.classList.remove('is-hidden');
           dropzoneAddMore?.classList.add('is-hidden');
           if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'true');
@@ -11527,8 +11613,17 @@
         }
 
         dropzoneEmpty?.classList.add('is-hidden');
-        dropzoneAddMore?.classList.remove('is-hidden');
-        if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'false');
+        if (retainerLocked) {
+          dropzoneAddMore?.classList.add('is-hidden');
+          if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'true');
+          if (packageBuilderHint) packageBuilderHint.hidden = true;
+          if (packageRetainerLockHint) packageRetainerLockHint.classList.remove('is-hidden');
+        } else {
+          dropzoneAddMore?.classList.remove('is-hidden');
+          if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'false');
+          if (packageBuilderHint) packageBuilderHint.hidden = false;
+          if (packageRetainerLockHint) packageRetainerLockHint.classList.add('is-hidden');
+        }
 
         if (selectedServices) {
           selectedServices.style.display = 'flex';
@@ -11573,7 +11668,13 @@
       
       function addServiceToPackage(serviceId, options = {}) {
         const service = serviceData[serviceId];
-        if (!service) return;
+        if (!service) return false;
+
+        const blockReason = getServiceAddBlockReason(serviceId);
+        if (blockReason) {
+          showNotification(blockReason, 'error');
+          return false;
+        }
 
         const isHourly = Boolean(service.hourly);
         const hours = isHourly
@@ -11612,6 +11713,7 @@
         updatePackageDisplay();
         updateQuoteSummary();
         savePackageDraft();
+        return true;
       }
       
       function removeServiceFromPackage(serviceId) {
@@ -12161,9 +12263,11 @@
           e.preventDefault();
           e.stopPropagation();
           console.log('Calling addServiceToPackage for:', serviceId);
-          addServiceToPackage(serviceId);
-          const label = serviceData[serviceId]?.name || 'Service';
-          showNotification(`${label} added to your package`, 'success');
+          const added = addServiceToPackage(serviceId);
+          if (added) {
+            const label = serviceData[serviceId]?.name || 'Service';
+            showNotification(`${label} added to your package`, 'success');
+          }
         } else {
           console.log('No service ID found on element');
         }
