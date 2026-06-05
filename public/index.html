@@ -6396,6 +6396,38 @@
       color: var(--text-muted);
     }
 
+    .catalog-search-status {
+      margin: 0.55rem 0 0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--brand-gold);
+      letter-spacing: 0.02em;
+    }
+
+    .catalog-search-empty {
+      grid-column: 1 / -1;
+      margin: 1.5rem 0;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      border: 1px dashed rgba(255, 178, 0, 0.28);
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.22);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .catalog-search-empty strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-categories.is-searching .category-tab:not(.active) {
+      opacity: 0.55;
+    }
+
     .service-item::after {
       content: "Add to package";
       position: absolute;
@@ -6947,8 +6979,6 @@
     }
 
     .service-item {
-      background: rgba(2, 6, 23, 0.55);
-      border: 1px solid rgba(99, 102, 241, 0.18);
       border-radius: 16px;
       padding: 1rem;
       cursor: pointer;
@@ -6959,6 +6989,37 @@
       flex-direction: column;
       height: 100%;
       min-height: 220px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .service-item[data-category="website"] {
+      background: linear-gradient(152deg, #1e2f52 0%, #121c34 52%, #0f172a 100%);
+      border: 1px solid rgba(96, 165, 250, 0.32);
+    }
+
+    .service-item[data-category="photography"] {
+      background: linear-gradient(152deg, #3d2e1a 0%, #261c10 52%, #1f160c 100%);
+      border: 1px solid rgba(255, 178, 0, 0.34);
+    }
+
+    .service-item[data-category="videography"] {
+      background: linear-gradient(152deg, #2a2248 0%, #1a1530 52%, #151028 100%);
+      border: 1px solid rgba(167, 139, 250, 0.3);
+    }
+
+    .service-item[data-category="branding"] {
+      background: linear-gradient(152deg, #3a1f42 0%, #241428 52%, #1c1020 100%);
+      border: 1px solid rgba(244, 114, 182, 0.28);
+    }
+
+    .service-item[data-category="printing"] {
+      background: linear-gradient(152deg, #1a3530 0%, #102420 52%, #0d1e1a 100%);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .service-item[data-category="retainer"] {
+      background: linear-gradient(152deg, #3d2e14 0%, #261c0c 52%, #1f170a 100%);
+      border: 1px solid rgba(251, 191, 36, 0.34);
     }
 
     .service-item::before {
@@ -7021,9 +7082,32 @@
 
     .service-item:hover {
       transform: translateY(-3px);
-      background: rgba(15, 23, 42, 0.78);
-      border-color: rgba(255, 178, 0, 0.28);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+      border-color: rgba(255, 178, 0, 0.42);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .service-item[data-category="website"]:hover {
+      background: linear-gradient(152deg, #243a62 0%, #162444 52%, #121e38 100%);
+    }
+
+    .service-item[data-category="photography"]:hover {
+      background: linear-gradient(152deg, #4d3820 0%, #302410 52%, #281c0e 100%);
+    }
+
+    .service-item[data-category="videography"]:hover {
+      background: linear-gradient(152deg, #342a58 0%, #221c3c 52%, #1a1630 100%);
+    }
+
+    .service-item[data-category="branding"]:hover {
+      background: linear-gradient(152deg, #4a2854 0%, #2e1834 52%, #24142a 100%);
+    }
+
+    .service-item[data-category="printing"]:hover {
+      background: linear-gradient(152deg, #224840 0%, #163028 52%, #122820 100%);
+    }
+
+    .service-item[data-category="retainer"]:hover {
+      background: linear-gradient(152deg, #4d3a18 0%, #30240e 52%, #281e0c 100%);
     }
 
     .service-item:hover::before,
@@ -7054,7 +7138,7 @@
 
     .service-item-title,
     .service-info h4 {
-      color: var(--text-primary);
+      color: #f8fafc;
       font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
       font-weight: 700;
@@ -7098,7 +7182,7 @@
     .service-features li {
       position: relative;
       padding-left: 0.85rem;
-      color: var(--text-secondary);
+      color: rgba(226, 232, 240, 0.9);
       font-size: 0.74rem;
       line-height: 1.45;
     }
@@ -7193,17 +7277,53 @@
     .service-icon {
       width: 46px;
       height: 46px;
-      background: linear-gradient(145deg, rgba(255, 178, 0, 0.22), rgba(255, 178, 0, 0.08));
-      border: 1px solid rgba(255, 178, 0, 0.28);
+      background: rgba(0, 0, 0, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--brand-gold);
+      color: #ffffff;
       font-size: 1.15rem;
-      box-shadow: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
       flex-shrink: 0;
       transition: var(--transition-fast);
+    }
+
+    .service-item[data-category="website"] .service-icon {
+      background: linear-gradient(145deg, rgba(59, 130, 246, 0.45), rgba(29, 78, 216, 0.22));
+      color: #bfdbfe;
+      border-color: rgba(147, 197, 253, 0.35);
+    }
+
+    .service-item[data-category="photography"] .service-icon {
+      background: linear-gradient(145deg, rgba(255, 178, 0, 0.42), rgba(217, 119, 6, 0.22));
+      color: #fde68a;
+      border-color: rgba(255, 178, 0, 0.4);
+    }
+
+    .service-item[data-category="videography"] .service-icon {
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.42), rgba(109, 40, 217, 0.22));
+      color: #ddd6fe;
+      border-color: rgba(167, 139, 250, 0.38);
+    }
+
+    .service-item[data-category="branding"] .service-icon {
+      background: linear-gradient(145deg, rgba(236, 72, 153, 0.38), rgba(190, 24, 93, 0.2));
+      color: #fbcfe8;
+      border-color: rgba(244, 114, 182, 0.35);
+    }
+
+    .service-item[data-category="printing"] .service-icon {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.38), rgba(5, 150, 105, 0.2));
+      color: #a7f3d0;
+      border-color: rgba(52, 211, 153, 0.35);
+    }
+
+    .service-item[data-category="retainer"] .service-icon {
+      background: linear-gradient(145deg, rgba(245, 158, 11, 0.42), rgba(180, 83, 9, 0.22));
+      color: #fde68a;
+      border-color: rgba(251, 191, 36, 0.38);
     }
 
     .service-icon i {
@@ -8768,11 +8888,12 @@
             <p class="catalog-tip"><i class="fas fa-hand-pointer" aria-hidden="true"></i> No account needed to build your invoice</p>
             <label class="catalog-search-wrap" for="catalogSearch">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input type="search" id="catalogSearch" class="catalog-search" placeholder="Search services…" autocomplete="off" aria-label="Search service catalog">
+              <input type="search" id="catalogSearch" class="catalog-search" placeholder="Search all services — photo, video, wedding, podcast…" autocomplete="off" aria-label="Search service catalog">
             </label>
+            <p class="catalog-search-status" id="catalogSearchStatus" hidden></p>
           </div>
           
-          <div class="service-categories">
+          <div class="service-categories" id="serviceCategories">
             <button class="category-tab active" data-category="website">Websites</button>
             <button class="category-tab" data-category="photography">Photography</button>
             <button class="category-tab" data-category="videography">Video</button>
@@ -8782,6 +8903,10 @@
           </div>
           
           <div class="service-items" id="serviceItems">
+            <div class="catalog-search-empty" id="catalogSearchEmpty" hidden>
+              <strong>No matching services</strong>
+              Try broader terms like <em>photo</em>, <em>video</em>, <em>wedding</em>, <em>podcast</em>, <em>print</em>, or <em>website</em>.
+            </div>
             <!-- Website Category -->
             <div class="service-section-header" data-category="website">Website Development Packages</div>
 
@@ -10858,6 +10983,68 @@
         return { serviceId: raw, hours: null };
       }
 
+      const CATEGORY_SEARCH_ALIASES = {
+        website: ['website', 'websites', 'web', 'site', 'sites', 'landing', 'homepage', 'page', 'pages', 'develop', 'development', 'seo', 'blog', 'ecommerce'],
+        photography: ['photography', 'photographer', 'photo', 'photos', 'shoot', 'camera', 'gallery', 'coverage', 'portrait', 'wedding', 'event photos', 'digital photos'],
+        videography: ['video', 'videography', 'videos', 'film', 'filming', 'filmmaker', 'event', 'events', 'podcast', 'podcasts', 'commercial', 'commercials', 'production', 'recap', 'live', 'edit', 'editing', 'raw files', 'hourly', 'camera', 'broadcast'],
+        branding: ['brand', 'branding', 'logo', 'identity', 'strategy', 'social', 'ignite', 'collaborate', 'transform', 'crm'],
+        printing: ['print', 'printing', 'booth', 'prints', '4x6', '5x7', 'snap', 'station', 'media roll', 'backdrop', 'sleeves', 'onsite', 'on-site'],
+        retainer: ['retainer', 'monthly', 'subscription', 'content', 'package', 'packages', 'fast frame', 'cinematic', 'masterpiece', 'spotlight'],
+      };
+
+      const CATEGORY_DISPLAY_NAMES = {
+        website: 'websites web development',
+        photography: 'photography photos',
+        videography: 'video videography film',
+        branding: 'branding brand',
+        printing: 'printing print booth',
+        retainer: 'retainer monthly content',
+      };
+
+      function normalizeSearchText(value) {
+        return String(value ?? '')
+          .toLowerCase()
+          .normalize('NFKD')
+          .replace(/[\u2013\u2014]/g, '-')
+          .replace(/[^a-z0-9$×x.@+\s-]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function buildServiceSearchBlob(serviceId, data, description, features) {
+        const category = data.category || '';
+        const aliases = CATEGORY_SEARCH_ALIASES[category] || [];
+        return normalizeSearchText([
+          serviceId.replace(/-/g, ' '),
+          data.name,
+          data.duration,
+          category,
+          CATEGORY_DISPLAY_NAMES[category] || '',
+          ...aliases,
+          description,
+          ...(features || []),
+          data.hourly ? 'hourly rate per hour' : '',
+          data.price != null ? `$${data.price}` : '',
+          data.hourlyRate != null ? `$${data.hourlyRate} hr hour` : '',
+        ].join(' '));
+      }
+
+      function getSearchTokens(query) {
+        const normalized = normalizeSearchText(query);
+        if (!normalized) return [];
+        return normalized.split(' ').filter(Boolean);
+      }
+
+      function tokenMatchesHaystack(token, haystack) {
+        if (!token) return true;
+        if (haystack.includes(token)) return true;
+        if (token.length >= 3) {
+          const words = haystack.split(' ');
+          if (words.some((word) => word.startsWith(token))) return true;
+        }
+        return false;
+      }
+
       function formatServiceCatalogCards() {
         document.querySelectorAll('.service-item[data-service]').forEach((item) => {
           if (item.dataset.formatted === 'true') return;
@@ -10925,6 +11112,7 @@
           }
 
           info.remove();
+          item.dataset.searchText = buildServiceSearchBlob(key, data, description, features);
           item.dataset.formatted = 'true';
         });
       }
@@ -10954,42 +11142,76 @@
       
       function serviceMatchesSearch(item) {
         if (!catalogSearchQuery) return true;
-        const q = catalogSearchQuery.toLowerCase();
-        const id = item.dataset.service || '';
-        const def = serviceData[id];
-        const haystack = [
-          item.textContent,
-          def?.name,
-          def?.duration,
-          def?.category,
-        ]
-          .filter(Boolean)
-          .join(' ')
-          .toLowerCase();
-        return haystack.includes(q);
+        const haystack = item.dataset.searchText || normalizeSearchText(item.textContent);
+        const tokens = getSearchTokens(catalogSearchQuery);
+        if (tokens.length === 0) return true;
+        return tokens.every((token) => tokenMatchesHaystack(token, haystack));
       }
 
       function filterServicesByCategory(category) {
-        const allItems = document.querySelectorAll('.service-item, .service-section-header');
+        const isSearchActive = catalogSearchQuery.length > 0;
+        const effectiveCategory = isSearchActive ? 'all' : category;
+        const serviceNodes = document.querySelectorAll('.service-item');
+        const sectionHeaders = document.querySelectorAll('.service-section-header');
+        const categoriesEl = document.getElementById('serviceCategories');
+        const statusEl = document.getElementById('catalogSearchStatus');
+        const emptyEl = document.getElementById('catalogSearchEmpty');
 
-        allItems.forEach((item) => {
+        let visibleCount = 0;
+        const visibleCategories = new Set();
+
+        serviceNodes.forEach((item) => {
           const itemCategory = item.dataset.category;
-          const categoryMatch = category === 'all' || itemCategory === category;
-          const isServiceItem = item.classList.contains('service-item');
-          const searchMatch = !isServiceItem || serviceMatchesSearch(item);
+          const categoryMatch = effectiveCategory === 'all' || itemCategory === effectiveCategory;
+          const searchMatch = serviceMatchesSearch(item);
           const shouldShow = categoryMatch && searchMatch;
 
-          item.style.display = shouldShow ? 'block' : 'none';
-          item.style.visibility = shouldShow ? 'visible' : 'hidden';
-          item.style.opacity = shouldShow ? '1' : '0';
+          item.style.display = shouldShow ? '' : 'none';
           item.classList.toggle('hidden', !shouldShow);
+          if (shouldShow) {
+            visibleCount += 1;
+            visibleCategories.add(itemCategory);
+          }
         });
+
+        sectionHeaders.forEach((header) => {
+          const headerCategory = header.dataset.category;
+          const shouldShow = isSearchActive
+            ? visibleCategories.has(headerCategory)
+            : effectiveCategory === 'all' || headerCategory === effectiveCategory;
+          header.style.display = shouldShow ? '' : 'none';
+          header.classList.toggle('hidden', !shouldShow);
+        });
+
+        if (categoriesEl) {
+          categoriesEl.classList.toggle('is-searching', isSearchActive);
+        }
+
+        if (statusEl) {
+          if (isSearchActive) {
+            statusEl.hidden = false;
+            statusEl.textContent = visibleCount
+              ? `${visibleCount} service${visibleCount === 1 ? '' : 's'} found across all categories`
+              : 'No matches — try photo, video, wedding, podcast, print, or website';
+          } else {
+            statusEl.hidden = true;
+            statusEl.textContent = '';
+          }
+        }
+
+        if (emptyEl) {
+          emptyEl.hidden = !isSearchActive || visibleCount > 0;
+        }
 
         setTimeout(() => initializeServiceListeners(), 10);
       }
 
       if (catalogSearch) {
         catalogSearch.addEventListener('input', () => {
+          catalogSearchQuery = catalogSearch.value.trim();
+          filterServicesByCategory(currentCategory);
+        });
+        catalogSearch.addEventListener('search', () => {
           catalogSearchQuery = catalogSearch.value.trim();
           filterServicesByCategory(currentCategory);
         });
@@ -11000,6 +11222,10 @@
           e.preventDefault();
           const category = tab.dataset.category;
           currentCategory = category;
+          if (catalogSearch && catalogSearchQuery) {
+            catalogSearch.value = '';
+            catalogSearchQuery = '';
+          }
           categoryTabs.forEach((t) => t.classList.remove('active'));
           tab.classList.add('active');
           filterServicesByCategory(category);
