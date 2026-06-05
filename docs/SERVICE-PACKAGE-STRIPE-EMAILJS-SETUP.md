@@ -115,3 +115,64 @@ Example POST (include service `id` from catalog):
 ```
 
 Send header `X-Idempotency-Key: CF-TEST-001` to avoid duplicate submissions.
+
+---
+
+## Retainer packages — monthly invoices on the same date
+
+The Service Package Builder today creates **one-time** Stripe invoices (`collection_method: send_invoice`). Retainers (Fast Frame, Cinematic Spotlight, Masterpiece Collection) need **Stripe Subscriptions** so Stripe generates a new invoice on the same calendar day each month.
+
+### Recommended Stripe model
+
+| Catalog item | Billing model | Stripe approach |
+|--------------|---------------|-----------------|
+| Fast Frame (1 Month) | True monthly retainer | Subscription, interval `month`, cancel after 1 month or ongoing |
+| Cinematic Spotlight (2 Months) | 2-month commitment | Subscription `month` × 2, then cancel, **or** one invoice + manual renewal |
+| Masterpiece Collection (3 Months) | 3-month commitment | Subscription `month` × 3, then cancel, **or** one invoice + manual renewal |
+
+For **same date each month**, use a Subscription with:
+
+- `collection_method: 'send_invoice'` (EmailJS still owns the branded first touch; Stripe emails should stay off)
+- `days_until_due` (e.g. 7)
+- `billing_cycle_anchor` = Unix timestamp of the anchor day (e.g. day client signs)
+- `proration_behavior: 'none'` on create (optional)
+- `cancel_at` or `cancel_at_period_end` when the package is a fixed term (2 or 3 months)
+
+### Dashboard setup (one-time)
+
+1. **Products →** create products for each retainer (Fast Frame, Cinematic Spotlight, Masterpiece Collection).
+2. **Prices →** add recurring prices (`monthly`, amount = catalog price).
+3. Copy each **Price ID** (`price_...`) for env or catalog metadata.
+4. **Webhook →** add events (in addition to invoice events):
+   - `customer.subscription.created`
+   - `customer.subscription.updated`
+   - `customer.subscription.deleted`
+   - `invoice.finalized` (subscription renewal invoices)
+
+### Code changes needed (not built yet)
+
+1. Add to `services-catalog.json` per retainer:
+   ```json
+   "fast-frame-monthly": {
+     "name": "Fast Frame (1 Month)",
+     "price": 2500,
+     "category": "retainer",
+     "billing": { "type": "subscription", "interval": "month", "intervalCount": 1, "stripePriceId": "price_xxx" }
+   }
+   ```
+2. In `create-invoice.js`, if cart contains only retainer subscription items → `stripe.subscriptions.create(...)` instead of a one-off invoice.
+3. Store `subscription_id` in invoice/subscription metadata (`invoice_number`, `source`).
+4. Extend `webhook.js` to send EmailJS on **subscription renewal** `invoice.finalized` (not only first package create).
+5. UI copy on retainer cards: “Billed monthly on the same date” + optional **billing start date** in the invoice modal.
+
+### Manual workaround (no code)
+
+Until subscriptions are implemented: create the first invoice in the builder, then in Stripe Dashboard → **Subscriptions → Create** using the same customer, monthly price, and **billing cycle anchor** set to the paid date. Cancel after the committed term (1/2/3 months).
+
+### Env vars (when subscriptions ship)
+
+| Variable | Purpose |
+|----------|---------|
+| `STRIPE_PRICE_FAST_FRAME` | Monthly price ID |
+| `STRIPE_PRICE_CINEMATIC_SPOTLIGHT` | Monthly price ID |
+| `STRIPE_PRICE_MASTERPIECE` | Monthly price ID |

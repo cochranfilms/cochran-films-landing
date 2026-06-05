@@ -7160,7 +7160,24 @@
       flex: 1;
       min-height: 2.5em;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .service-title-main {
+      display: block;
+      line-height: 1.2;
+    }
+
+    .service-title-duration {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(248, 250, 252, 0.72);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
     }
 
     .service-item-body {
@@ -11090,6 +11107,23 @@
         return false;
       }
 
+      function applyServiceCardTitle(titleEl, title) {
+        const match = String(title || '').match(/^(.+?)\s*(\(\d+\s*Months?\))$/i);
+        if (!match) {
+          titleEl.textContent = title;
+          return;
+        }
+        titleEl.replaceChildren();
+        const main = document.createElement('span');
+        main.className = 'service-title-main';
+        main.textContent = match[1].trim();
+        const duration = document.createElement('span');
+        duration.className = 'service-title-duration';
+        duration.textContent = match[2];
+        titleEl.appendChild(main);
+        titleEl.appendChild(duration);
+      }
+
       function formatServiceCatalogCards() {
         document.querySelectorAll('.service-item[data-service]').forEach((item) => {
           if (item.dataset.formatted === 'true') return;
@@ -11114,7 +11148,7 @@
 
           const titleEl = document.createElement('h4');
           titleEl.className = 'service-item-title';
-          titleEl.textContent = title;
+          applyServiceCardTitle(titleEl, title);
           header.appendChild(titleEl);
 
           let body = item.querySelector('.service-item-body');
