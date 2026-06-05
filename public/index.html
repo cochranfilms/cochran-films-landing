@@ -7099,8 +7099,8 @@
     .service-item[data-subcategory="white-label"] {
       background: linear-gradient(152deg, #163a47 0%, #0f2830 52%, #0c1f26 100%);
       border: 1px solid rgba(45, 212, 191, 0.34);
-      min-height: 300px;
-      padding: 1.1rem 1.05rem 1rem;
+      min-height: 340px;
+      padding: 1.1rem 1.05rem 1.05rem;
     }
 
     .service-item[data-subcategory="white-label"]:hover {
@@ -7182,32 +7182,30 @@
     }
 
     .service-item[data-subcategory="white-label"] .service-item-body {
-      min-height: 108px;
+      flex: 1 1 auto;
+      min-height: 0;
       gap: 0.45rem;
+      margin-bottom: 0.35rem;
     }
 
-    .service-item[data-subcategory="white-label"] .service-price {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.2rem;
-      padding-top: 0.85rem;
+    .service-item[data-subcategory="white-label"] .service-features {
+      flex: 0 1 auto;
+      padding-bottom: 0.15rem;
     }
 
     .service-item[data-subcategory="white-label"] .service-price .price-amount {
-      font-size: 1.28rem;
+      font-size: 1.32rem;
       line-height: 1.1;
       letter-spacing: -0.02em;
     }
 
-    .service-item[data-subcategory="white-label"] .service-price .price-sub {
+    .service-item[data-subcategory="white-label"] .service-price .price-monthly {
       display: block;
-      margin-top: 0;
-      font-size: 0.66rem;
-      font-weight: 600;
-      color: rgba(148, 163, 184, 0.92);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      margin-top: 0.15rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #5eead4;
+      letter-spacing: 0.01em;
     }
 
     .service-section-header.hidden {
@@ -7368,7 +7366,7 @@
       padding: 0;
       display: grid;
       gap: 0.35rem;
-      flex: 1 1 auto;
+      flex: 0 1 auto;
     }
 
     .service-features li {
@@ -7399,12 +7397,33 @@
       color: var(--brand-gold);
       font-weight: 800;
       font-size: 1.08rem;
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
       margin-top: auto;
       flex-shrink: 0;
-      padding-top: 0.75rem;
+      padding: 0.9rem 0.35rem 0.15rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       letter-spacing: -0.01em;
+      gap: 0.12rem;
+    }
+
+    .service-price .price-amount {
+      display: block;
+      line-height: 1.1;
+    }
+
+    .service-price .price-sub {
+      display: block;
+      font-size: 0.66rem;
+      font-weight: 600;
+      color: rgba(148, 163, 184, 0.92);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 1.2;
     }
 
     .service-item--hourly {
@@ -7436,7 +7455,9 @@
     .service-item-footer .service-price {
       margin-top: 0;
       border-top: none;
-      padding-top: 0.55rem;
+      padding: 0.55rem 0.35rem 0.1rem;
+      align-items: center;
+      text-align: center;
     }
 
     .service-hours-row {
@@ -11228,9 +11249,9 @@
         if (!priceEl) return;
         const total = data.hourlyRate * hours;
         if (hours === 1) {
-          priceEl.innerHTML = `$${data.hourlyRate}<span class="price-sub">/hr</span>`;
+          priceEl.innerHTML = `<span class="price-amount">$${data.hourlyRate}</span><span class="price-sub">/hr</span>`;
         } else {
-          priceEl.innerHTML = `$${total.toLocaleString()}<span class="price-sub">${hours} hrs × $${data.hourlyRate}/hr</span>`;
+          priceEl.innerHTML = `<span class="price-amount">$${total.toLocaleString()}</span><span class="price-sub">${hours} hrs × $${data.hourlyRate}/hr</span>`;
         }
       }
 
@@ -11410,8 +11431,8 @@
           tagline.className = isWhiteLabel
             ? 'service-tagline service-tagline--white-label'
             : 'service-tagline';
-          if (isWhiteLabel && data.setupFee != null && data.monthlyFee != null) {
-            tagline.textContent = `$${Number(data.monthlyFee).toLocaleString()}/mo after setup`;
+          if (isWhiteLabel) {
+            tagline.textContent = data.duration || 'Agency partner · setup + monthly';
           } else {
             tagline.textContent = data.duration;
           }
@@ -11431,9 +11452,14 @@
             const setupAmount = Number(data.setupFee) || Number(data.price);
             const firstInvoice = Number(data.price) || setupAmount;
             if (isWhiteLabel) {
-              priceEl.innerHTML = `<span class="price-amount">$${setupAmount.toLocaleString()}</span><span class="price-sub">setup fee</span>`;
+              priceEl.innerHTML = `<span class="price-amount">$${setupAmount.toLocaleString()}</span><span class="price-sub">setup fee</span><span class="price-monthly">$${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
             } else {
-              priceEl.innerHTML = `$${firstInvoice.toLocaleString()}<span class="price-sub">first invoice</span><span class="price-sub">$${Number(data.setupFee).toLocaleString()} setup + $${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
+              priceEl.innerHTML = `<span class="price-amount">$${firstInvoice.toLocaleString()}</span><span class="price-sub">first invoice</span><span class="price-sub">$${Number(data.setupFee).toLocaleString()} setup + $${Number(data.monthlyFee).toLocaleString()}/mo</span>`;
+            }
+          } else if (priceEl && !data.hourly) {
+            const amount = Number(data.price);
+            if (!Number.isNaN(amount)) {
+              priceEl.innerHTML = `<span class="price-amount">$${amount.toLocaleString()}</span>`;
             }
           }
 
