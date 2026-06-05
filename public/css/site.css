@@ -26,6 +26,7 @@
       --nav-height: 80px;
       --section-gap: 44px;
       --section-pad-y: 32px;
+      --hero-banner-height: clamp(420px, 62vh, 680px);
     }
 
     * { box-sizing: border-box; }
@@ -240,7 +241,9 @@
       width: 100vw;
       margin: var(--nav-height) 0 0 50%;
       transform: translateX(-50%);
-      min-height: clamp(420px, 62vh, 680px);
+      height: var(--hero-banner-height);
+      min-height: var(--hero-banner-height);
+      max-height: var(--hero-banner-height);
       overflow: hidden;
       border-bottom: none;
       box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
@@ -277,7 +280,9 @@
     .hero-banner-content {
       position: relative;
       z-index: 1;
-      min-height: clamp(420px, 62vh, 680px);
+      height: 100%;
+      min-height: 0;
+      max-height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -5372,13 +5377,15 @@
         transform: none;
       }
 
+      :root {
+        --hero-banner-height: min(50vh, 360px);
+      }
+
       .hero-banner {
         margin-top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px)));
-        min-height: min(50vh, 360px);
       }
 
       .hero-banner-content {
-        min-height: min(50vh, 360px);
         padding: 22px 16px;
       }
 
@@ -6499,16 +6506,12 @@
     @media (max-width: 480px) {
       :root {
         --nav-height: 52px;
+        --hero-banner-height: min(46vh, 300px);
       }
 
       .nav-logo img {
         height: 28px;
         max-width: min(112px, 32vw);
-      }
-
-      .hero-banner,
-      .hero-banner-content {
-        min-height: min(46vh, 300px);
       }
 
       .hero-banner-content {
@@ -9734,7 +9737,11 @@
   font-size: clamp(28px, 5vw, 52px);
 }
 
-.page-opening-hero .hero-banner {
+.page-opening-hero .hero-banner,
+.hero-banner--page {
+  height: var(--hero-banner-height);
+  min-height: var(--hero-banner-height);
+  max-height: var(--hero-banner-height);
   margin-bottom: 0;
 }
 
