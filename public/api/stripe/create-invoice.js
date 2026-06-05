@@ -7,6 +7,7 @@ const {
   buildRetainerBillingNote,
   buildServicesHtml,
   buildServicesText,
+  ensureSubscriptionInvoiceReady,
   cacheInvoiceCreateResult,
   claimDedupeKey,
   formatCommitmentTerm,
@@ -267,37 +268,35 @@ async function createRetainerSubscription(stripe, {
 
   const subscription = await stripe.subscriptions.create(subscriptionParams);
 
-  let invoice = subscription.latest_invoice;
-  if (typeof invoice === 'string') {
-    invoice = await stripe.invoices.retrieve(invoice);
-  }
+  const invoiceMetadata = {
+    invoice_number: refNumber,
+    source: PACKAGE_SOURCE,
+    customer_name: customer.name.trim(),
+    customer_email: customer.email.trim(),
+    customer_phone: customer.phone?.trim() || 'Not provided',
+    services_list: servicesTextTruncated,
+    project_type: projectType?.trim() || '',
+    event_date: eventDate?.trim() || '',
+    subscription_id: subscription.id,
+    catalog_id: line.id,
+    subscription_name: catalog.name,
+    commitment_months: String(commitmentMonths),
+    billing_mode: 'subscription',
+  };
 
-  if (invoice?.id) {
-    await stripe.invoices.update(invoice.id, {
-      metadata: {
-        invoice_number: refNumber,
-        source: PACKAGE_SOURCE,
-        customer_name: customer.name.trim(),
-        customer_email: customer.email.trim(),
-        customer_phone: customer.phone?.trim() || 'Not provided',
-        services_list: servicesTextTruncated,
-        project_type: projectType?.trim() || '',
-        event_date: eventDate?.trim() || '',
-        subscription_id: subscription.id,
-        catalog_id: line.id,
-        subscription_name: catalog.name,
-        commitment_months: String(commitmentMonths),
-        billing_mode: 'subscription',
-      },
-    });
-    invoice = await stripe.invoices.retrieve(invoice.id);
-  }
+  const { invoice, error: invoiceError } = await ensureSubscriptionInvoiceReady(
+    stripe,
+    subscription,
+    invoiceMetadata
+  );
 
   const invoiceUrl = invoice?.hosted_invoice_url;
   if (!invoiceUrl) {
     return {
       error:
-        'Subscription was created but no payment link is available yet. Check Stripe Dashboard or your email shortly.',
+        invoiceError ||
+        'Subscription was created but no payment link is available. Check Stripe Dashboard → Invoices for a draft invoice.',
+      subscriptionId: subscription.id,
     };
   }
 

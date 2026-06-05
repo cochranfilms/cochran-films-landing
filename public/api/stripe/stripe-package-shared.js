@@ -176,6 +176,41 @@ function buildRetainerBillingNote(commitmentMonths) {
   return `Billed monthly on the same date each month for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
 }
 
+async function ensureSubscriptionInvoiceReady(stripe, subscription, metadata) {
+  let invoice = subscription.latest_invoice;
+  if (typeof invoice === 'string') {
+    invoice = await stripe.invoices.retrieve(invoice);
+  }
+
+  if (!invoice?.id) {
+    const listed = await stripe.invoices.list({
+      subscription: subscription.id,
+      limit: 1,
+    });
+    invoice = listed.data[0] || null;
+  }
+
+  if (!invoice?.id) {
+    return { invoice: null, error: 'No invoice was generated for this subscription.' };
+  }
+
+  if (metadata && Object.keys(metadata).length > 0) {
+    await stripe.invoices.update(invoice.id, { metadata });
+    invoice = await stripe.invoices.retrieve(invoice.id);
+  }
+
+  // send_invoice subscriptions stay in draft ~1h by default — finalize now for hosted_invoice_url
+  if (invoice.status === 'draft') {
+    invoice = await stripe.invoices.finalizeInvoice(invoice.id, { auto_advance: true });
+  }
+
+  if (!invoice.hosted_invoice_url) {
+    invoice = await stripe.invoices.retrieve(invoice.id);
+  }
+
+  return { invoice };
+}
+
 function validateServicesPayload(services) {
   if (!Array.isArray(services) || services.length === 0) {
     return { ok: false, error: 'At least one service is required.' };
@@ -347,6 +382,7 @@ module.exports = {
   buildServicesText,
   analyzePackageServices,
   buildRetainerBillingNote,
+  ensureSubscriptionInvoiceReady,
   parseBillingAnchorUnix,
   addMonthsUnix,
   validateServicesPayload,
