@@ -11473,6 +11473,22 @@
         }
       }
 
+      function isRetainerOnlyPackage(services) {
+        return (
+          Array.isArray(services) &&
+          services.length > 0 &&
+          services.every((service) => service.category === 'retainer')
+        );
+      }
+
+      function updateGenerateInvoiceButtonLabel() {
+        if (!generateInvoiceBtn) return;
+        const isRetainer = isRetainerOnlyPackage(selectedServicesList);
+        const iconClass = isRetainer ? 'fa-repeat' : 'fa-file-invoice-dollar';
+        const label = isRetainer ? 'Start My Retainer' : 'Create My Invoice';
+        generateInvoiceBtn.innerHTML = `<i class="fas ${iconClass}"></i> ${label}`;
+      }
+
       function updatePackageDisplay() {
         const count = selectedServicesList.length;
 
@@ -11498,6 +11514,7 @@
           if (generateInvoiceBtn) {
             generateInvoiceBtn.disabled = true;
             generateInvoiceBtn.setAttribute('aria-disabled', 'true');
+            updateGenerateInvoiceButtonLabel();
           }
           dropzoneEmpty?.classList.remove('is-hidden');
           dropzoneAddMore?.classList.add('is-hidden');
@@ -11540,6 +11557,7 @@
         if (generateInvoiceBtn) {
           generateInvoiceBtn.disabled = false;
           generateInvoiceBtn.setAttribute('aria-disabled', 'false');
+          updateGenerateInvoiceButtonLabel();
         }
         updatePackageCountBadge(count);
         syncCatalogSelectedState();
@@ -11651,14 +11669,6 @@
         updateQuoteSummary();
       }
       
-      function isRetainerOnlyPackage(services) {
-        return (
-          Array.isArray(services) &&
-          services.length > 0 &&
-          services.every((service) => service.category === 'retainer')
-        );
-      }
-
       function generateInvoice() {
         if (selectedServicesList.length === 0) {
           showNotification('Add at least one service from the catalog to create your invoice.', 'error');
