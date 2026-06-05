@@ -181,8 +181,9 @@ function buildRetainerBillingNote(commitmentMonths, billingStartLabel) {
 
 async function createRetainerFirstInvoice(stripe, {
   customerId,
-  priceId,
   catalogName,
+  lineDescription,
+  amountCents,
   refNumber,
   daysUntilDue,
   metadata,
@@ -196,12 +197,17 @@ async function createRetainerFirstInvoice(stripe, {
     description: `Cochran Films retainer — ${refNumber}`,
   });
 
+  const itemDescription = lineDescription
+    ? `${catalogName} — ${lineDescription}`
+    : `${catalogName} — first monthly period`;
+
   await stripe.invoiceItems.create({
     customer: customerId,
     invoice: draft.id,
-    price: priceId,
+    description: itemDescription,
     quantity: 1,
-    description: `${catalogName} — first monthly period`,
+    unit_amount: amountCents,
+    currency: 'usd',
   });
 
   let invoice = await stripe.invoices.finalizeInvoice(draft.id, { auto_advance: true });

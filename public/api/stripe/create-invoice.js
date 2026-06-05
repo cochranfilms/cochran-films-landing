@@ -292,8 +292,9 @@ async function createRetainerSubscription(stripe, {
     try {
       invoice = await createRetainerFirstInvoice(stripe, {
         customerId: stripeCustomer.id,
-        priceId,
         catalogName: catalog.name,
+        lineDescription: line.duration,
+        amountCents: Math.round(Number(line.price) * 100),
         refNumber,
         daysUntilDue: daysUntilFirstDue,
         metadata: invoiceMetadata,
