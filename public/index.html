@@ -10616,6 +10616,7 @@
 
     // Service Package Builder System
     const SPB_STORAGE_KEY = 'cf-spb-draft-v1';
+    let invoiceCreateInFlight = false;
 
     async function initializeServicePackageBuilder() {
       const serviceItems = document.querySelectorAll('.service-item');
@@ -11480,54 +11481,68 @@
       window.removeServiceFromPackage = removeServiceFromPackage;
       window.validateAndSendProject = validateAndSendProject;
       
+      async function postCreateInvoice(invoiceData) {
+        const response = await fetch('/api/stripe/create-invoice', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Idempotency-Key': invoiceData.invoiceNumber,
+          },
+          body: JSON.stringify({
+            customer: invoiceData.customer,
+            services: invoiceData.services,
+            invoiceNumber: invoiceData.invoiceNumber,
+            subtotal: invoiceData.subtotal,
+            total: invoiceData.total,
+            date: invoiceData.date,
+            projectType: invoiceData.projectType,
+            eventDate: invoiceData.eventDate,
+          }),
+        });
+
+        const raw = await response.text();
+        let result = {};
+        try {
+          result = raw ? JSON.parse(raw) : {};
+        } catch (parseError) {
+          throw new Error(
+            raw && raw.length < 300
+              ? raw
+              : `Server error (${response.status}). Check Vercel function logs.`
+          );
+        }
+
+        return { response, result };
+      }
+
       async function sendToEmailJS(invoiceData) {
+        if (invoiceCreateInFlight) return;
+
         const modal = document.querySelector('.modal-overlay.active');
-        const submitBtn = modal ? modal.querySelector('.btn-primary') : document.querySelector('.btn-primary');
+        const submitBtn = modal?.querySelector('.modal-submit-invoice');
         const originalText = submitBtn ? submitBtn.innerHTML : '';
-        
-        if (submitBtn?.disabled) return;
-        
+
+        invoiceCreateInFlight = true;
+
         if (submitBtn) {
           submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Invoice...';
           submitBtn.disabled = true;
         }
-        
+
         try {
-          const response = await fetch('/api/stripe/create-invoice', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'X-Idempotency-Key': invoiceData.invoiceNumber,
-            },
-            body: JSON.stringify({
-              customer: invoiceData.customer,
-              services: invoiceData.services,
-              invoiceNumber: invoiceData.invoiceNumber,
-              subtotal: invoiceData.subtotal,
-              total: invoiceData.total,
-              date: invoiceData.date,
-              projectType: invoiceData.projectType,
-              eventDate: invoiceData.eventDate,
-            })
-          });
-          
-          const raw = await response.text();
-          let result = {};
-          try {
-            result = raw ? JSON.parse(raw) : {};
-          } catch (parseError) {
-            throw new Error(
-              raw && raw.length < 300
-                ? raw
-                : `Server error (${response.status}). Check Vercel function logs.`
-            );
+          let { response, result } = await postCreateInvoice(invoiceData);
+
+          if (response.status === 409 && result.retryable) {
+            await new Promise((resolve) => setTimeout(resolve, 2500));
+            ({ response, result } = await postCreateInvoice(invoiceData));
           }
-          
+
           if (!response.ok) {
             throw new Error(result.error || `Unable to create invoice (${response.status}).`);
           }
-          
-          showSuccessModal(result.invoiceUrl, result.emailWarning, result.paymentDueDate);
+
+          const emailNotes = [result.emailWarning, result.adminEmailWarning].filter(Boolean).join(' ');
+          showSuccessModal(result.invoiceUrl, emailNotes || null, result.paymentDueDate);
           try {
             localStorage.removeItem(SPB_STORAGE_KEY);
           } catch (_) { /* ignore */ }
@@ -11539,6 +11554,8 @@
             submitBtn.innerHTML = originalText || '<i class="fas fa-file-invoice-dollar"></i> Create Invoice &amp; Email Me';
             submitBtn.disabled = false;
           }
+        } finally {
+          invoiceCreateInFlight = false;
         }
       }
       

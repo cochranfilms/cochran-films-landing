@@ -171,6 +171,7 @@ function buildAdminMailto(customerName, customerEmail, invoiceNumber) {
 const memoryDedupe = new Set();
 const DEDUPE_TTL_MS = 14 * 24 * 60 * 60 * 1000;
 const memoryDedupeExpiry = new Map();
+const invoiceCreateResults = new Map();
 
 function normalizeDedupeKey(key) {
   return key.startsWith('webhook:') || key.startsWith('invoice:') ? key : `dedupe:${key}`;
@@ -182,8 +183,21 @@ function pruneExpiredDedupeKeys() {
     if (expiresAt <= now) {
       memoryDedupe.delete(fullKey);
       memoryDedupeExpiry.delete(fullKey);
+      invoiceCreateResults.delete(fullKey);
     }
   }
+}
+
+function cacheInvoiceCreateResult(key, result) {
+  const fullKey = normalizeDedupeKey(key);
+  pruneExpiredDedupeKeys();
+  invoiceCreateResults.set(fullKey, result);
+}
+
+function getCachedInvoiceCreateResult(key) {
+  const fullKey = normalizeDedupeKey(key);
+  pruneExpiredDedupeKeys();
+  return invoiceCreateResults.get(fullKey) || null;
 }
 
 async function claimDedupeKey(key) {
@@ -199,6 +213,7 @@ async function releaseDedupeKey(key) {
   const fullKey = normalizeDedupeKey(key);
   memoryDedupe.delete(fullKey);
   memoryDedupeExpiry.delete(fullKey);
+  invoiceCreateResults.delete(fullKey);
 }
 
 async function readRawBody(req) {
@@ -221,5 +236,7 @@ module.exports = {
   buildAdminMailto,
   claimDedupeKey,
   releaseDedupeKey,
+  cacheInvoiceCreateResult,
+  getCachedInvoiceCreateResult,
   readRawBody,
 };

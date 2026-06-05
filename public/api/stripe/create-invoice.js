@@ -4,7 +4,9 @@ const {
   buildAdminMailto,
   buildServicesHtml,
   buildServicesText,
+  cacheInvoiceCreateResult,
   claimDedupeKey,
+  getCachedInvoiceCreateResult,
   releaseDedupeKey,
   sendEmailJs,
   setCors,
@@ -60,8 +62,13 @@ export default async function handler(req, res) {
     const dedupeKey = `invoice:create:${idempotencyKey}`;
     const claimed = await claimDedupeKey(dedupeKey);
     if (!claimed) {
+      const cached = getCachedInvoiceCreateResult(dedupeKey);
+      if (cached?.invoiceUrl) {
+        return res.status(200).json({ ...cached, duplicate: true });
+      }
       return res.status(409).json({
-        error: 'This invoice request was already submitted. Check your email for the payment link.',
+        error: 'This invoice request is already being processed. Please wait a moment and check your email.',
+        retryable: true,
       });
     }
 
@@ -185,12 +192,17 @@ export default async function handler(req, res) {
       emailWarning = 'Invoice created; branded summary email could not be sent.';
     }
 
+    let adminEmailWarning = null;
     const adminEmail = process.env.EMAILJS_ADMIN_EMAIL;
-    if (adminEmail) {
+    if (!adminEmail) {
+      console.warn('EMAILJS_ADMIN_EMAIL is not configured — admin notification skipped');
+      adminEmailWarning = 'Admin notification email is not configured on the server.';
+    } else {
       try {
-        await sendEmailJs(adminTemplateId, {
+        const adminResult = await sendEmailJs(adminTemplateId, {
           ...clientEmailParams,
           to_email: adminEmail,
+          reply_to: customer.email.trim(),
           email_heading: 'New Service Package Request',
           email_intro: `New package from ${customer.name.trim()} — payment pending.`,
           cta_label: `Reply to ${customer.name.trim()}`,
@@ -198,12 +210,16 @@ export default async function handler(req, res) {
           cta_subtext: 'Invoice created — payment pending',
           dashboard_hint: 'View in Stripe Dashboard → Invoices',
         });
+        if (adminResult?.skipped) {
+          adminEmailWarning = 'Admin notification could not be sent (EmailJS not fully configured).';
+        }
       } catch (adminError) {
         console.error('Admin EmailJS error:', adminError);
+        adminEmailWarning = 'Invoice created; admin notification email could not be sent.';
       }
     }
 
-      return res.status(200).json({
+      const successPayload = {
         success: true,
         invoiceId: finalized.id,
         invoiceNumber: refNumber,
@@ -212,7 +228,12 @@ export default async function handler(req, res) {
         total: invoiceTotal,
         paymentDueDate,
         emailWarning,
-      });
+        adminEmailWarning,
+      };
+
+      cacheInvoiceCreateResult(dedupeKey, successPayload);
+
+      return res.status(200).json(successPayload);
     } catch (innerError) {
       await releaseDedupeKey(dedupeKey);
       throw innerError;

@@ -1023,47 +1023,6 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .services-showcase-cta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: clamp(20px, 3vw, 32px);
-      flex-wrap: wrap;
-      margin-top: clamp(28px, 4vw, 40px);
-      padding: clamp(22px, 3vw, 28px) clamp(24px, 3.5vw, 32px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 178, 0, 0.28);
-      background:
-        linear-gradient(135deg, rgba(255, 178, 0, 0.08), rgba(99, 102, 241, 0.06)),
-        rgba(15, 23, 42, 0.72);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-
-    .services-showcase-cta-copy {
-      display: grid;
-      gap: 6px;
-      max-width: 560px;
-    }
-
-    .services-showcase-cta-copy strong {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(18px, 2vw, 22px);
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-    }
-
-    .services-showcase-cta-copy span {
-      color: var(--text-secondary);
-      font-size: clamp(15px, 1.5vw, 16px);
-      line-height: 1.6;
-    }
-
-    .services-showcase-cta .hero-cta {
-      flex-shrink: 0;
-      white-space: nowrap;
-    }
-
     .svc-reveal {
       opacity: 0;
       transform: translateY(22px);
@@ -1083,8 +1042,6 @@
     .services-showcase-section.is-visible .svc-reveal:nth-child(4) { transition-delay: 210ms; }
     .services-showcase-section.is-visible .svc-reveal:nth-child(5) { transition-delay: 280ms; }
     .services-showcase-section.is-visible .svc-reveal:nth-child(6) { transition-delay: 350ms; }
-    .services-showcase-section.is-visible .services-showcase-cta.svc-reveal { transition-delay: 420ms; }
-
     @media (prefers-reduced-motion: reduce) {
       .svc-reveal {
         opacity: 1;
@@ -4782,6 +4739,7 @@
       .marquee-services,
       .services-showcase-section,
       .service-builder-section,
+      .lp-creator-edu-section,
       .iheart-section,
       .real-estate-section {
         width: var(--mobile-bleed-width);
@@ -5006,6 +4964,7 @@
       .marquee-services,
       .services-showcase-section,
       .service-builder-section,
+      .lp-creator-edu-section,
       .iheart-section,
       .real-estate-section {
         width: var(--mobile-bleed-width);
@@ -5177,15 +5136,15 @@
         min-height: 0;
       }
 
-      .services-showcase-cta {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
+      .spb-hero {
+        grid-template-columns: 1fr;
+        align-items: start;
       }
 
-      .services-showcase-cta .hero-cta {
-        justify-content: center;
-        white-space: normal;
+      .spb-steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 0;
       }
 
       .lp-creator-edu-section .creator-title-line {
@@ -5697,6 +5656,389 @@
         width: 100%;
         justify-content: center;
       }
+
+      /* —— Mobile polish: all sections & cards (max-width 768px only) —— */
+      html,
+      body {
+        overflow-x: clip;
+        max-width: 100%;
+      }
+
+      .hero-body,
+      #about,
+      #portfolio,
+      .lp-portfolio-shell,
+      .service-builder-inner,
+      .services-showcase-inner {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      img,
+      video,
+      iframe,
+      picture,
+      svg {
+        max-width: 100%;
+      }
+
+      .lp-creator-edu-section {
+        padding: 28px 12px;
+        box-sizing: border-box;
+      }
+
+      .lp-creator-edu-section .creator-banner,
+      .lp-creator-edu-section .creator-banner-content {
+        min-height: min(360px, 70vw);
+        padding: 18px 14px;
+      }
+
+      .lp-creator-edu-section .creator-title {
+        font-size: clamp(20px, 6vw, 28px);
+      }
+
+      .lp-creator-edu-section .creator-copy {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .lp-creator-edu-section .lp-creator-stat {
+        padding: 14px 12px;
+      }
+
+      .lp-creator-edu-section .lp-creator-stat strong {
+        font-size: clamp(18px, 5vw, 22px);
+      }
+
+      .lp-creator-edu-section .lp-creator-stat span {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .lp-creator-edu-section .creator-platform-panel {
+        padding: 16px 14px;
+      }
+
+      .lp-creator-edu-section .creator-platform-grid {
+        gap: 10px;
+      }
+
+      .lp-creator-edu-section .creator-platform-item {
+        padding: 12px;
+      }
+
+      .lp-creator-edu-section .lp-creator-gallery {
+        gap: 14px;
+      }
+
+      .lp-creator-edu-section .lp-creator-card-body {
+        padding: 12px 14px;
+      }
+
+      .lp-creator-edu-section .lp-creator-footer-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .lp-creator-edu-section .lp-creator-footer-cta .hero-cta,
+      .lp-creator-edu-section .lp-creator-footer-cta .lp-portfolio-btn-secondary {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+      }
+
+      .lp-portfolio {
+        min-width: 0;
+      }
+
+      .lp-portfolio-shell {
+        gap: 20px;
+      }
+
+      .lp-portfolio-title {
+        font-size: clamp(22px, 6.2vw, 30px);
+        line-height: 1.15;
+      }
+
+      .lp-portfolio-feature {
+        min-width: 0;
+        border-radius: 16px;
+      }
+
+      .lp-portfolio-feature picture,
+      .lp-portfolio-feature img {
+        width: 100%;
+        display: block;
+      }
+
+      .lp-portfolio-feature-badge {
+        padding: 12px 14px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .lp-portfolio-stat {
+        padding: 14px 12px;
+        text-align: left;
+      }
+
+      .lp-portfolio-stat strong {
+        font-size: clamp(20px, 5.5vw, 26px);
+      }
+
+      .lp-portfolio-stat span {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .lp-video-card,
+      .lp-feature-card,
+      .lp-platform-card,
+      .lp-civic-card,
+      .lp-web-showcase-card {
+        min-width: 0;
+        padding: 14px 12px;
+        border-radius: 16px;
+      }
+
+      .lp-video-grid .lp-creator-video iframe,
+      .lp-video-card iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        min-height: 180px;
+      }
+
+      .kbl-preview,
+      .lp-web-showcase {
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .kbl-hero-frame {
+        max-height: min(200px, 48vw);
+      }
+
+      .hero-cta-section {
+        padding: 0 4px;
+      }
+
+      .hero-cta-section p {
+        font-size: 13px !important;
+        line-height: 1.55;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto !important;
+        max-width: 28rem;
+      }
+
+      #about .section-header {
+        padding: 0 2px;
+      }
+
+      #about .section-subtitle {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .spb-hero {
+        gap: 16px;
+        padding-bottom: 18px;
+      }
+
+      .spb-lede {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .spb-kicker {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+      }
+
+      .spb-steps {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+        gap: 8px;
+      }
+
+      .spb-steps li {
+        font-size: 0.78rem;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 8px;
+      }
+
+      .builder-header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .package-count-badge {
+        align-self: flex-start;
+      }
+
+      .catalog-header h3,
+      .builder-header h3 {
+        font-size: 1.12rem;
+      }
+
+      .catalog-header p,
+      .builder-header p {
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+
+      .catalog-tip {
+        font-size: 0.74rem;
+        line-height: 1.45;
+      }
+
+      .service-catalog,
+      .package-builder {
+        height: auto;
+      }
+
+      .service-items {
+        flex: 0 1 auto;
+        min-height: 0;
+      }
+
+      .package-dropzone {
+        flex: 0 1 auto;
+      }
+
+      .package-builder .quote-summary {
+        margin-top: 1rem;
+      }
+
+      .quote-summary {
+        padding: 1.15rem 1rem;
+      }
+
+      .quote-total {
+        font-size: clamp(26px, 7.5vw, 34px);
+        line-height: 1.1;
+        word-break: break-word;
+      }
+
+      .quote-item {
+        flex-wrap: wrap;
+        gap: 4px 8px;
+        font-size: 0.82rem;
+      }
+
+      .selected-service {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px;
+      }
+
+      .selected-service-details h5 {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: 1.35;
+      }
+
+      .service-item {
+        min-height: 0;
+      }
+
+      .service-item-title {
+        font-size: 0.95rem;
+        line-height: 1.3;
+      }
+
+      .service-item::after {
+        display: none;
+      }
+
+      .svc-tile-tags {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .svc-tile-tags li {
+        font-size: 11px;
+      }
+
+      .re-showcase-copy,
+      .re-promise-card,
+      .re-service-card {
+        padding: 14px 12px;
+        min-width: 0;
+      }
+
+      .re-deliverable {
+        padding: 12px;
+        min-width: 0;
+      }
+
+      .iheart-showcase-media {
+        min-width: 0;
+        border-radius: 14px;
+      }
+
+      .iheart-showcase-media img,
+      .iheart-showcase-media video {
+        width: 100%;
+        height: auto;
+      }
+
+      .notification {
+        max-width: calc(100vw - 32px) !important;
+        right: 16px !important;
+        left: auto !important;
+      }
+
+      .modal-overlay.active {
+        padding: 0;
+        align-items: flex-end;
+      }
+
+      .modal-overlay.active .modal-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        max-height: min(92vh, 92dvh);
+        border-radius: 18px 18px 0 0;
+      }
+
+      .invoice-create-modal.active {
+        align-items: center;
+        padding: 0.65rem;
+      }
+
+      .invoice-create-modal .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: min(94vh, 94dvh);
+        border-radius: 16px;
+      }
+
+      .invoice-create-modal__inner {
+        padding: 1.75rem 1.35rem 1.5rem;
+      }
+
+      .invoice-preview-collapsible summary {
+        font-size: 0.82rem;
+        padding: 0.75rem 0.85rem;
+      }
+
+      .contact-form-section .form-group input {
+        font-size: 16px;
+        min-height: 48px;
+      }
     }
 
     @media (max-width: 900px) {
@@ -5856,6 +6198,45 @@
         font-size: 0.72rem;
         padding: 10px 12px;
       }
+
+      .lp-creator-edu-section .creator-banner,
+      .lp-creator-edu-section .creator-banner-content {
+        min-height: min(320px, 85vw);
+      }
+
+      .lp-creator-edu-section .lp-creator-stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .spb-steps li {
+        font-size: 0.74rem;
+      }
+
+      .re-blueprint-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-social-proof-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .hero-social-proof-stat {
+        min-width: 0;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(99, 102, 241, 0.12);
+      }
+
+      .hero-social-proof-stat:last-child {
+        border-bottom: none;
+      }
+
+      .quote-total {
+        font-size: clamp(24px, 8vw, 32px);
+      }
     }
 
     /* Service Package Builder — full bleed */
@@ -5894,15 +6275,500 @@
       margin: 0 auto;
     }
 
-    .service-builder-section .section-header {
+    .service-builder-section .section-header,
+    .service-builder-section .spb-hero {
       margin-bottom: clamp(28px, 4vw, 40px);
+    }
+
+    .spb-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: clamp(24px, 4vw, 40px);
+      align-items: end;
+      padding-bottom: clamp(24px, 3vw, 32px);
+      border-bottom: 1px solid rgba(255, 178, 0, 0.18);
+    }
+
+    .spb-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 0.75rem;
+      padding: 0.4rem 0.85rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      background: rgba(255, 178, 0, 0.1);
+      border: 1px solid rgba(255, 178, 0, 0.35);
+      border-radius: 999px;
+    }
+
+    .spb-kicker i {
+      font-size: 0.85rem;
+    }
+
+    .spb-lede {
+      max-width: 62ch;
+      margin-top: 0.65rem;
+    }
+
+    .spb-steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: min(220px, 100%);
+    }
+
+    .spb-steps li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+
+    .spb-step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255, 178, 0, 0.22), rgba(99, 102, 241, 0.18));
+      border: 1px solid rgba(255, 178, 0, 0.35);
+      color: var(--brand-gold);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .catalog-tip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--brand-gold);
+      opacity: 0.9;
+    }
+
+    .catalog-tip i {
+      font-size: 0.75rem;
+    }
+
+    .catalog-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .catalog-search-wrap i {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .catalog-search {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .catalog-search::placeholder {
+      color: var(--text-muted);
+    }
+
+    .service-item::after {
+      content: "Add to package";
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 178, 0, 0.85);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .service-item.in-package::after {
+      content: "In package";
+      color: #6ee7b7;
+      opacity: 1;
+    }
+
+    .service-item:hover::after,
+    .service-item:focus-visible::after {
+      opacity: 1;
+    }
+
+    .quote-summary.is-empty .quote-total {
+      opacity: 0.45;
+    }
+
+    .quote-empty-hint {
+      margin: 0 0 0.75rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .quote-empty-hint[hidden] {
+      display: none;
+    }
+
+    .btn-generate-invoice:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+      filter: none;
+    }
+
+    .btn-generate-invoice:disabled:hover {
+      transform: none;
+      filter: none;
+      box-shadow: none;
+    }
+
+    .invoice-preview-collapsible {
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .invoice-preview-collapsible summary {
+      cursor: pointer;
+      padding: 0.85rem 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      list-style: none;
+    }
+
+    .invoice-preview-collapsible summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .invoice-preview-collapsible[open] summary {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .invoice-preview-collapsible .invoice-details {
+      padding: 0 1rem 1rem;
+    }
+
+    .modal-trust-line {
+      margin: 0 0 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Create invoice modal — centered, modern, scrollable */
+    .invoice-create-modal {
+      padding: 1.5rem;
+      align-items: center;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .invoice-create-modal .modal-content {
+      max-width: min(680px, 94vw);
+      width: 100%;
+      max-height: min(90vh, 90dvh);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(255, 178, 0, 0.22);
+      background: linear-gradient(168deg, rgba(22, 28, 42, 0.98) 0%, rgba(8, 11, 18, 0.99) 55%, rgba(12, 16, 26, 1) 100%);
+      box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    }
+
+    .invoice-create-modal__accent {
+      flex-shrink: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent 0%, var(--brand-gold) 35%, #ffd166 50%, var(--brand-gold) 65%, transparent 100%);
+    }
+
+    .invoice-create-modal__inner {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+      padding: 2.25rem 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-header {
+      margin-bottom: 1.75rem;
+    }
+
+    .invoice-create-modal .modal-icon {
+      width: 84px;
+      height: 84px;
+      font-size: 2rem;
+      margin-bottom: 1.35rem;
+      box-shadow:
+        0 0 0 4px rgba(255, 178, 0, 0.12),
+        var(--glow-gold);
+    }
+
+    .invoice-create-modal .modal-header h2 {
+      font-size: clamp(1.5rem, 2.8vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    .invoice-create-modal .modal-header p {
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+      line-height: 1.6;
+      max-width: 38ch;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .invoice-create-modal .contact-form-section {
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-align: center;
+    }
+
+    .invoice-create-modal .contact-form-section h3 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      margin: 0 0 0.65rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-trust-line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      margin: 0 auto 1.35rem;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 178, 0, 0.07);
+      border: 1px solid rgba(255, 178, 0, 0.18);
+      border-radius: 999px;
+      text-align: center;
+    }
+
+    .invoice-create-modal .modal-trust-line i {
+      color: var(--brand-gold);
+      font-size: 0.7rem;
+    }
+
+    .invoice-create-modal .contact-form-section .contact-form {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      text-align: center;
+    }
+
+    .invoice-create-modal .form-group {
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .invoice-create-modal .form-group label {
+      display: block;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.45rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .invoice-create-modal .form-group label span {
+      font-weight: 500;
+      opacity: 0.55;
+      font-size: 0.75rem;
+    }
+
+    .invoice-create-modal .form-group input {
+      text-align: center;
+      padding: 0.95rem 1.15rem;
+      min-height: 52px;
+      border-radius: 11px;
+      background: rgba(0, 0, 0, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .invoice-create-modal .form-group input::placeholder {
+      text-align: center;
+      opacity: 0.45;
+    }
+
+    .invoice-create-modal .form-group input:focus {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 178, 0, 0.55);
+      box-shadow: 0 0 0 3px rgba(255, 178, 0, 0.12);
+    }
+
+    .invoice-create-modal .form-group input[type="date"] {
+      color-scheme: dark;
+      padding-right: 2.75rem;
+    }
+
+    .invoice-create-modal .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(1.2);
+      opacity: 0.95;
+      cursor: pointer;
+    }
+
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit {
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible {
+      margin: 1.35rem 0 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible summary {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 0.9rem 1rem;
+    }
+
+    .invoice-create-modal .invoice-preview-collapsible .invoice-details {
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.35rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .invoice-create-modal .item-details h4,
+    .invoice-create-modal .item-details p {
+      text-align: center;
+    }
+
+    .invoice-create-modal .invoice-total .total-line {
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .invoice-create-modal .form-actions {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      padding-top: 0.35rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .invoice-create-modal .form-actions .btn-primary,
+    .invoice-create-modal .form-actions .btn-secondary {
+      width: 100%;
+      justify-content: center;
+      min-height: 52px;
+      border-radius: 11px;
+      font-size: 0.95rem;
+    }
+
+    .invoice-create-modal .form-actions .btn-primary {
+      order: -1;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .invoice-create-modal .modal-close {
+      z-index: 2;
+      top: 0.85rem;
+      right: 0.85rem;
+      width: 38px;
+      height: 38px;
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (min-width: 769px) {
+      .invoice-create-modal .modal-content {
+        max-width: min(720px, 92vw);
+        max-height: min(88vh, 88dvh);
+      }
+
+      .invoice-create-modal__inner {
+        padding: 2.5rem 3rem 2.25rem;
+      }
+    }
+
+    @media (min-width: 480px) {
+      .invoice-create-modal .form-actions {
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .invoice-create-modal .form-actions .btn-primary,
+      .invoice-create-modal .form-actions .btn-secondary {
+        flex: 1;
+        width: auto;
+      }
+
+      .invoice-create-modal .form-actions .btn-primary {
+        order: 1;
+      }
     }
 
     .service-builder-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.75fr);
       gap: clamp(20px, 3vw, 32px);
-      align-items: start;
+      align-items: stretch;
       width: 100%;
     }
 
@@ -5915,6 +6781,8 @@
       box-shadow: var(--shadow-md);
       display: flex;
       flex-direction: column;
+      height: 100%;
+      min-height: 0;
     }
 
     .catalog-header {
@@ -6009,10 +6877,13 @@
       gap: 14px;
       padding: 4px 6px 4px 0;
       box-sizing: border-box;
-      max-height: min(640px, 58vh);
+      flex: 1 1 auto;
+      min-height: 280px;
+      max-height: none;
       overflow-y: auto;
       width: 100%;
       align-items: stretch;
+      align-content: start;
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 178, 0, 0.35) rgba(255, 255, 255, 0.04);
     }
@@ -6036,7 +6907,7 @@
       border: 1px solid rgba(99, 102, 241, 0.18);
       border-radius: 16px;
       padding: 1rem;
-      cursor: grab;
+      cursor: pointer;
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
       position: relative;
       overflow: hidden;
@@ -6305,10 +7176,10 @@
       backdrop-filter: blur(20px);
       box-shadow: var(--shadow-md);
       height: 100%;
+      min-height: 0;
       display: flex;
       flex-direction: column;
-      position: sticky;
-      top: calc(var(--nav-height) + 16px);
+      position: static;
     }
 
     .builder-header {
@@ -6336,6 +7207,7 @@
     }
 
     .package-dropzone {
+      flex: 1 1 auto;
       min-height: 180px;
       border: 1.5px dashed rgba(99, 102, 241, 0.35);
       border-radius: 14px;
@@ -6445,32 +7317,45 @@
 
     .package-count-badge {
       flex-shrink: 0;
-      min-width: 2.5rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(255, 178, 0, 0.12);
-      border: 1px solid rgba(255, 178, 0, 0.28);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 8px;
+      background: rgba(2, 6, 23, 0.85);
+      border: 1px solid rgba(255, 178, 0, 0.32);
       color: var(--brand-gold);
       font-family: 'Poppins', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 800;
-      text-align: center;
-      line-height: 1.2;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      line-height: 1;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
     .package-count-badge.is-pop {
-      transform: scale(1.08);
-      box-shadow: 0 0 18px rgba(255, 178, 0, 0.35);
+      border-color: rgba(255, 178, 0, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(255, 178, 0, 0.2),
+        0 4px 14px rgba(255, 178, 0, 0.18);
     }
 
     .package-count-label {
-      display: block;
-      font-size: 0.58rem;
+      font-size: 0.62rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      opacity: 0.85;
+      color: rgba(226, 232, 240, 0.72);
+    }
+
+    .package-count-value {
+      font-size: 1.05rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--brand-gold);
+      min-width: 1.1rem;
+      text-align: center;
     }
 
     .selected-services {
@@ -6613,6 +7498,11 @@
       margin-top: 1.25rem;
       text-align: left;
       border-top: 3px solid var(--brand-gold);
+      flex-shrink: 0;
+    }
+
+    .package-builder .quote-summary {
+      margin-top: auto;
     }
 
     .quote-header {
@@ -7335,17 +8225,20 @@
       .service-builder-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        align-items: stretch;
       }
 
       .package-builder,
       .service-catalog {
         padding: 16px 14px;
         border-radius: 16px;
+        height: auto;
       }
 
       .package-dropzone {
         padding: 20px 14px;
         min-height: 120px;
+        flex: 0 1 auto;
       }
 
       .package-builder {
@@ -7353,41 +8246,68 @@
         top: auto;
       }
 
+      .package-builder .quote-summary {
+        margin-top: 1rem;
+      }
+
       /* Keep horizontal scroll category tabs — do not force 2-col grid on mobile */
 
       .category-tab {
         min-height: 44px;
         font-size: 0.78rem;
+        padding: 10px 14px;
       }
       
       .service-items {
         grid-template-columns: 1fr;
-        max-height: 420px;
+        max-height: min(52vh, 440px);
+        flex: 0 1 auto;
+      }
+
+      .service-item {
+        min-height: 0;
+        padding: 14px 12px;
+      }
+
+      .service-hours-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .service-hours-select {
+        min-height: 44px;
+        font-size: 16px;
       }
       
       .quote-actions {
         flex-direction: column;
+        gap: 10px;
       }
       
       .btn-generate-invoice,
       .btn-clear-package {
         width: 100%;
+        min-height: 48px;
       }
-      
-      .modal-content {
-        max-width: 95%;
-        margin: 1rem;
-        padding: 1.5rem;
+
+      .btn-clear-package {
+        justify-content: center;
       }
       
       .form-actions {
         flex-direction: column;
+        gap: 10px;
       }
       
       .btn-primary,
       .btn-secondary {
         width: 100%;
         justify-content: center;
+        min-height: 48px;
+      }
+
+      .success-modal-actions .btn-primary {
+        width: 100%;
       }
     }
   </style>
@@ -7776,32 +8696,36 @@
           </article>
         </div>
 
-        <div class="services-showcase-cta svc-reveal">
-          <div class="services-showcase-cta-copy">
-            <strong>Build your package in real time</strong>
-            <span>Mix services, see live pricing, and send a project request — no back-and-forth required.</span>
-          </div>
-          <a href="#serviceBuilder" class="hero-cta">
-            Open Package Builder <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
       </div>
     </section>
 
     <!-- Service Package Builder Section -->
     <section id="serviceBuilder" class="service-builder-section" aria-labelledby="service-builder-title">
       <div class="service-builder-inner">
-      <div class="section-header">
-        <h2 class="section-title" id="service-builder-title">Service Package Builder</h2>
-        <p class="section-subtitle">Build your perfect service package with our drag-and-drop builder. Select services, see real-time pricing, and generate instant project requests.</p>
-      </div>
+      <header class="spb-hero section-header">
+        <div class="spb-hero-main">
+          <p class="spb-kicker"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Book with Cochran Films</p>
+          <h2 class="section-title" id="service-builder-title">Service Package Builder</h2>
+          <p class="section-subtitle spb-lede">Create your own invoice in minutes—pick services, see live pricing, and we&apos;ll email you a Stripe payment link. This is the fastest way to book<br>production with Cochran Films.</p>
+        </div>
+        <ol class="spb-steps" aria-label="How it works">
+          <li><span class="spb-step-num" aria-hidden="true">1</span><span>Tap services to add</span></li>
+          <li><span class="spb-step-num" aria-hidden="true">2</span><span>Review your live total</span></li>
+          <li><span class="spb-step-num" aria-hidden="true">3</span><span>Create invoice &amp; pay</span></li>
+        </ol>
+      </header>
       
       <div class="service-builder-grid">
         <!-- Service Catalog -->
         <div class="service-catalog">
           <div class="catalog-header">
             <h3>Service Catalog</h3>
-            <p>Click or drag any card into your package — switch tabs to explore categories</p>
+            <p>Tap any card to add it instantly—drag is optional. Switch tabs to browse categories.</p>
+            <p class="catalog-tip"><i class="fas fa-hand-pointer" aria-hidden="true"></i> No account needed to build your invoice</p>
+            <label class="catalog-search-wrap" for="catalogSearch">
+              <i class="fas fa-search" aria-hidden="true"></i>
+              <input type="search" id="catalogSearch" class="catalog-search" placeholder="Search services…" autocomplete="off" aria-label="Search service catalog">
+            </label>
           </div>
           
           <div class="service-categories">
@@ -8324,12 +9248,12 @@
           <div class="builder-header">
             <div class="builder-header-row">
               <div>
-                <h3>Your Package</h3>
-                <p>Drag or click services from the catalog — keep adding until your quote feels complete</p>
+                <h3>Your Package &amp; Invoice</h3>
+                <p>Services you add appear here with live pricing—when you&apos;re ready, create your invoice below.</p>
               </div>
               <div class="package-count-badge" id="packageServiceCount" aria-live="polite" title="Services in your package">
                 <span class="package-count-label">Items</span>
-                0
+                <span class="package-count-value">0</span>
               </div>
             </div>
           </div>
@@ -8339,8 +9263,8 @@
               <div class="dropzone-icon" aria-hidden="true">
                 <i class="fas fa-plus"></i>
               </div>
-              <p>Drag services here to start building your package</p>
-              <small>Or click any service card in the catalog — mix and match freely</small>
+              <p>Tap a service in the catalog to start your package</p>
+              <small>Your total updates automatically—add as many services as you need</small>
             </div>
 
             <div class="dropzone-add-more is-hidden" id="dropzoneAddMore" aria-hidden="true">
@@ -8355,18 +9279,17 @@
             </div>
           </div>
           
-          <div class="quote-summary" id="quoteSummary" style="display: none;">
+          <div class="quote-summary is-empty" id="quoteSummary">
             <div class="quote-header">
-              <h4>Quote Summary</h4>
+              <h4>Your Invoice Total</h4>
             </div>
+            <p class="quote-empty-hint" id="quoteEmptyHint">Add at least one service from the catalog to unlock invoice creation.</p>
             <div class="quote-total" id="quoteTotal">$0</div>
-            <div class="quote-breakdown" id="quoteBreakdown">
-              <!-- Quote breakdown will be populated here -->
-            </div>
+            <div class="quote-breakdown" id="quoteBreakdown" hidden></div>
             <div class="quote-actions">
-              <button class="btn-generate-invoice" id="generateInvoice">
+              <button type="button" class="btn-generate-invoice" id="generateInvoice" disabled aria-disabled="true">
                 <i class="fas fa-file-invoice-dollar"></i>
-                Create Project Request
+                Create My Invoice
               </button>
               <button class="btn-clear-package" id="clearPackage">
                 <i class="fas fa-trash"></i>
@@ -9692,7 +10615,10 @@
     }
 
     // Service Package Builder System
-    function initializeServicePackageBuilder() {
+    const SPB_STORAGE_KEY = 'cf-spb-draft-v1';
+    let invoiceCreateInFlight = false;
+
+    async function initializeServicePackageBuilder() {
       const serviceItems = document.querySelectorAll('.service-item');
       const packageDropzone = document.getElementById('packageDropzone');
       const selectedServices = document.getElementById('selectedServices');
@@ -9700,23 +10626,19 @@
       const categoryTabs = document.querySelectorAll('.category-tab');
       const generateInvoiceBtn = document.getElementById('generateInvoice');
       const clearPackageBtn = document.getElementById('clearPackage');
+      const quoteEmptyHint = document.getElementById('quoteEmptyHint');
+      const catalogSearch = document.getElementById('catalogSearch');
       
       let selectedServicesList = [];
       let currentCategory = 'website';
       let lastAddedServiceId = null;
+      let catalogSearchQuery = '';
       
       const dropzoneEmpty = document.getElementById('dropzoneEmpty');
       const dropzoneAddMore = document.getElementById('dropzoneAddMore');
       const packageServiceCount = document.getElementById('packageServiceCount');
-      console.log('Initializing Service Package Builder...');
-      console.log('Found elements:', {
-        serviceItems: serviceItems.length,
-        packageDropzone: !!packageDropzone,
-        categoryTabs: categoryTabs.length
-      });
-      
-      // Service data — synced with 2026 pricing guide
-      const serviceData = {
+
+      const fallbackServiceData = {
         // Website Development Packages
         'starter-site': { name: 'Starter Site', price: 750, duration: '1-page scroll layout', icon: 'fas fa-laptop-code', category: 'website' },
         'business-pro-site': { name: 'Business Pro Site', price: 1250, duration: '3–5 fully designed pages', icon: 'fas fa-globe', category: 'website' },
@@ -9784,6 +10706,47 @@
         'print-extra-staff': { name: 'Extra Staff Member', price: 100, duration: 'From $100/hr', icon: 'fas fa-user-plus', category: 'printing' },
         'print-rush-setup': { name: 'Rush Setup / Breakdown', price: 50, duration: 'From $50–$100', icon: 'fas fa-truck-fast', category: 'printing' }
       };
+
+      let serviceData = { ...fallbackServiceData };
+      try {
+        const catalogRes = await fetch('/data/services-catalog.json', { cache: 'no-store' });
+        if (catalogRes.ok) {
+          const catalogJson = await catalogRes.json();
+          if (catalogJson && typeof catalogJson === 'object' && Object.keys(catalogJson).length > 0) {
+            serviceData = catalogJson;
+          }
+        }
+      } catch (_) {
+        /* use fallback catalog */
+      }
+
+      function savePackageDraft() {
+        try {
+          localStorage.setItem(SPB_STORAGE_KEY, JSON.stringify({
+            services: selectedServicesList,
+            savedAt: Date.now(),
+          }));
+        } catch (_) { /* storage unavailable */ }
+      }
+
+      function restorePackageDraft() {
+        try {
+          const raw = localStorage.getItem(SPB_STORAGE_KEY);
+          if (!raw) return;
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed?.services) || parsed.services.length === 0) return;
+          const maxAge = 7 * 24 * 60 * 60 * 1000;
+          if (Date.now() - (parsed.savedAt || 0) > maxAge) {
+            localStorage.removeItem(SPB_STORAGE_KEY);
+            return;
+          }
+          selectedServicesList = parsed.services.filter((s) => s?.id && serviceData[s.id]);
+          if (selectedServicesList.length > 0) {
+            updatePackageDisplay();
+            updateQuoteSummary();
+          }
+        } catch (_) { /* ignore corrupt draft */ }
+      }
 
       function parseServiceFeatures(rawText) {
         if (!rawText) return [];
@@ -9945,107 +10908,68 @@
         });
       }
       
-      // Function to filter services by category
-      function filterServicesByCategory(category) {
-        console.log('=== FILTERING BY CATEGORY ===');
-        console.log('Selected category:', category);
-        let visibleCount = 0;
-        let hiddenCount = 0;
-        
-        // Get all service items and section headers
-        const allItems = document.querySelectorAll('.service-item, .service-section-header');
-        console.log(`Found ${allItems.length} total items to filter`);
-        
-        allItems.forEach((item, index) => {
-          const itemCategory = item.dataset.category;
-          const itemService = item.dataset.service || 'header';
-          
-          // Show item only if it matches the selected category
-          const shouldShow = category === 'all' || itemCategory === category;
-          
-          console.log(`Item ${index}: ${itemService} (category: ${itemCategory}) - Should show: ${shouldShow}`);
-          
-          if (shouldShow) {
-            // Force show the item
-            item.style.display = 'block';
-            item.style.visibility = 'visible';
-            item.style.opacity = '1';
-            item.classList.remove('hidden');
-            
-            if (item.classList.contains('service-item')) {
-              visibleCount++;
-              console.log(`✅ SHOWING: ${item.dataset.service} (category: ${itemCategory})`);
-            } else {
-              console.log(`✅ SHOWING section header for category: ${itemCategory}`);
-            }
-          } else {
-            // Force hide the item
-            item.style.display = 'none';
-            item.style.visibility = 'hidden';
-            item.style.opacity = '0';
-            item.classList.add('hidden');
-            
-            if (item.classList.contains('service-item')) {
-              hiddenCount++;
-              console.log(`❌ HIDING: ${item.dataset.service} (category: ${itemCategory})`);
-            } else {
-              console.log(`❌ HIDING section header for category: ${itemCategory}`);
-            }
-          }
-        });
-        
-        console.log(`=== FILTERING COMPLETE ===`);
-        console.log(`Category: ${category}`);
-        console.log(`Visible services: ${visibleCount}`);
-        console.log(`Hidden services: ${hiddenCount}`);
-        console.log(`Total items processed: ${allItems.length}`);
-        
-        // Reinitialize listeners after filtering
-        setTimeout(() => {
-          initializeServiceListeners();
-        }, 10);
+      function serviceMatchesSearch(item) {
+        if (!catalogSearchQuery) return true;
+        const q = catalogSearchQuery.toLowerCase();
+        const id = item.dataset.service || '';
+        const def = serviceData[id];
+        const haystack = [
+          item.textContent,
+          def?.name,
+          def?.duration,
+          def?.category,
+        ]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
+        return haystack.includes(q);
       }
 
-      // Category tab functionality
-      categoryTabs.forEach(tab => {
-        console.log('Adding click listener to tab:', tab.dataset.category);
+      function filterServicesByCategory(category) {
+        const allItems = document.querySelectorAll('.service-item, .service-section-header');
+
+        allItems.forEach((item) => {
+          const itemCategory = item.dataset.category;
+          const categoryMatch = category === 'all' || itemCategory === category;
+          const isServiceItem = item.classList.contains('service-item');
+          const searchMatch = !isServiceItem || serviceMatchesSearch(item);
+          const shouldShow = categoryMatch && searchMatch;
+
+          item.style.display = shouldShow ? 'block' : 'none';
+          item.style.visibility = shouldShow ? 'visible' : 'hidden';
+          item.style.opacity = shouldShow ? '1' : '0';
+          item.classList.toggle('hidden', !shouldShow);
+        });
+
+        setTimeout(() => initializeServiceListeners(), 10);
+      }
+
+      if (catalogSearch) {
+        catalogSearch.addEventListener('input', () => {
+          catalogSearchQuery = catalogSearch.value.trim();
+          filterServicesByCategory(currentCategory);
+        });
+      }
+
+      categoryTabs.forEach((tab) => {
         tab.addEventListener('click', (e) => {
           e.preventDefault();
           const category = tab.dataset.category;
-          console.log('=== CATEGORY TAB CLICKED ===');
-          console.log('Category tab clicked:', category);
-          console.log('Tab element:', tab);
           currentCategory = category;
-          
-          // Update active tab
-          categoryTabs.forEach(t => t.classList.remove('active'));
+          categoryTabs.forEach((t) => t.classList.remove('active'));
           tab.classList.add('active');
-          console.log('Set active tab to:', category);
-          
-          // Filter services
-          console.log('Calling filterServicesByCategory with:', category);
           filterServicesByCategory(category);
         });
       });
-      
-      // Initialize with default category after a brief delay to ensure DOM is ready
+
       setTimeout(() => {
-        console.log('=== INITIALIZING CATEGORY FILTER ===');
-        console.log('Initial category:', currentCategory);
-        
-        // Make sure the correct tab is active
-        categoryTabs.forEach(t => t.classList.remove('active'));
+        categoryTabs.forEach((t) => t.classList.remove('active'));
         const activeTab = document.querySelector(`[data-category="${currentCategory}"]`);
         if (activeTab) {
           activeTab.classList.add('active');
-          console.log('Set initial active tab to:', currentCategory);
-        } else {
-          console.log('No active tab found for category:', currentCategory);
         }
-        
-        // Force initial filtering
-        console.log('Running initial category filter...');
         filterServicesByCategory(currentCategory);
+        restorePackageDraft();
       }, 200);
       
       // Drag and drop event handlers
@@ -10178,7 +11102,7 @@
 
       function updatePackageCountBadge(count) {
         if (!packageServiceCount) return;
-        packageServiceCount.innerHTML = `<span class="package-count-label">Items</span>${count}`;
+        packageServiceCount.innerHTML = `<span class="package-count-label">Items</span><span class="package-count-value">${count}</span>`;
         packageServiceCount.classList.remove('is-pop');
         void packageServiceCount.offsetWidth;
         if (count > 0) {
@@ -10204,13 +11128,21 @@
             selectedServices.style.display = 'none';
             selectedServices.innerHTML = '';
           }
-          if (quoteSummary) quoteSummary.style.display = 'none';
+          if (quoteSummary) quoteSummary.classList.add('is-empty');
+          if (quoteEmptyHint) quoteEmptyHint.hidden = false;
+          const breakdownEl = document.getElementById('quoteBreakdown');
+          if (breakdownEl) breakdownEl.hidden = true;
+          if (generateInvoiceBtn) {
+            generateInvoiceBtn.disabled = true;
+            generateInvoiceBtn.setAttribute('aria-disabled', 'true');
+          }
           dropzoneEmpty?.classList.remove('is-hidden');
           dropzoneAddMore?.classList.add('is-hidden');
           if (dropzoneAddMore) dropzoneAddMore.setAttribute('aria-hidden', 'true');
           updatePackageCountBadge(0);
           syncCatalogSelectedState();
           lastAddedServiceId = null;
+          updateQuoteSummary();
           return;
         }
 
@@ -10238,13 +11170,23 @@
           `).join('');
         }
 
-        if (quoteSummary) quoteSummary.style.display = 'block';
+        if (quoteSummary) quoteSummary.classList.remove('is-empty');
+        if (quoteEmptyHint) quoteEmptyHint.hidden = true;
+        const breakdownEl = document.getElementById('quoteBreakdown');
+        if (breakdownEl) breakdownEl.hidden = false;
+        if (generateInvoiceBtn) {
+          generateInvoiceBtn.disabled = false;
+          generateInvoiceBtn.setAttribute('aria-disabled', 'false');
+        }
         updatePackageCountBadge(count);
         syncCatalogSelectedState();
 
         requestAnimationFrame(() => {
           const newest = selectedServices?.querySelector('.selected-service.just-added');
           newest?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          if (count === 1 && window.matchMedia('(max-width: 900px)').matches) {
+            packageDropzone?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
         });
       }
       
@@ -10288,14 +11230,15 @@
         lastAddedServiceId = serviceId;
         updatePackageDisplay();
         updateQuoteSummary();
+        savePackageDraft();
       }
       
       function removeServiceFromPackage(serviceId) {
-        console.log('Removing service:', serviceId);
         selectedServicesList = selectedServicesList.filter(s => s.id !== serviceId);
         lastAddedServiceId = null;
         updatePackageDisplay();
         updateQuoteSummary();
+        savePackageDraft();
         showNotification('Service removed from package', 'info');
       }
       
@@ -10304,10 +11247,21 @@
       
       function updateQuoteSummary() {
         const total = selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0);
-        
-        document.getElementById('quoteTotal').textContent = `$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-        
+        const quoteTotalEl = document.getElementById('quoteTotal');
+        if (quoteTotalEl) {
+          quoteTotalEl.textContent = `$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        }
+
         const breakdown = document.getElementById('quoteBreakdown');
+        if (!breakdown) return;
+
+        if (selectedServicesList.length === 0) {
+          breakdown.innerHTML = '';
+          breakdown.hidden = true;
+          return;
+        }
+
+        breakdown.hidden = false;
         const lineItems = selectedServicesList.map((service) => `
           <div class="quote-item">
             <span class="quote-item-label">${service.name}${service.isHourly ? ` (${service.quantity} hrs)` : service.quantity > 1 ? ` × ${service.quantity}` : ''}</span>
@@ -10327,17 +11281,20 @@
       function clearPackage() {
         selectedServicesList = [];
         lastAddedServiceId = null;
+        try {
+          localStorage.removeItem(SPB_STORAGE_KEY);
+        } catch (_) { /* ignore */ }
         updatePackageDisplay();
         updateQuoteSummary();
       }
       
       function generateInvoice() {
         if (selectedServicesList.length === 0) {
-          showNotification('Please add services to your package first!', 'error');
+          showNotification('Add at least one service from the catalog to create your invoice.', 'error');
+          document.getElementById('serviceItems')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
-        
-        // Create project request data
+
         const invoiceData = {
           services: selectedServicesList,
           subtotal: selectedServicesList.reduce((sum, service) => sum + (service.price * service.quantity), 0),
@@ -10345,96 +11302,143 @@
           date: new Date().toISOString(),
           invoiceNumber: 'CF-' + Date.now()
         };
-        
-        // Show invoice modal
+
         showInvoiceModal(invoiceData);
       }
-      
+
+      function getBuilderPrefill() {
+        const first = document.getElementById('firstName')?.value?.trim() || '';
+        const last = document.getElementById('lastName')?.value?.trim() || '';
+        const name = [first, last].filter(Boolean).join(' ');
+        const email = document.getElementById('contactEmail')?.value?.trim() || '';
+        return { name, email };
+      }
+
       function showInvoiceModal(invoiceData) {
+        document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)').forEach((m) => m.remove());
+
+        const prefill = getBuilderPrefill();
+        const totalLabel = `$${invoiceData.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+
         const modal = document.createElement('div');
-        modal.className = 'modal-overlay active';
+        modal.className = 'modal-overlay active invoice-create-modal';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', 'invoice-modal-title');
         modal.innerHTML = `
-          <div class="modal-content">
-            <button class="modal-close" onclick="this.parentElement.parentElement.remove()">×</button>
+          <div class="modal-content invoice-create-modal__panel">
+            <div class="invoice-create-modal__accent" aria-hidden="true"></div>
+            <button type="button" class="modal-close" aria-label="Close">&times;</button>
+            <div class="invoice-create-modal__inner">
             <div class="modal-header">
               <div class="modal-icon">
-                <i class="fas fa-file-invoice"></i>
+                <i class="fas fa-file-invoice-dollar"></i>
               </div>
-              <h2>Project Request Ready</h2>
-              <p>Your project request has been prepared and is ready to be submitted</p>
+              <h2 id="invoice-modal-title">Create Your Cochran Films Invoice</h2>
+              <p>Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.</p>
             </div>
-            
-            <div class="invoice-details">
-              <div class="invoice-header">
-                <h3>Invoice #${invoiceData.invoiceNumber}</h3>
-                <p>Date: ${new Date(invoiceData.date).toLocaleDateString()}</p>
-              </div>
-              
-              <div class="invoice-items">
-                ${invoiceData.services.map(service => `
-                  <div class="invoice-item">
-                    <div class="item-details">
-                      <h4>${service.name}</h4>
-                      <p>${service.duration}</p>
-                    </div>
-                    <div class="item-price">
-                      <span>$${service.price.toFixed(2)}</span>
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
-              
-              <div class="invoice-total">
-                <div class="total-line">
-                  <span>Subtotal:</span>
-                  <span>$${invoiceData.subtotal.toFixed(2)}</span>
-                </div>
-                <div class="total-line total">
-                  <span>Total:</span>
-                  <span>$${invoiceData.total.toFixed(2)}</span>
-                </div>
-              </div>
-            </div>
-            
+
             <div class="contact-form-section">
-              <h3>Contact Information</h3>
-              <p>Please provide your contact details to send your project request</p>
-              
+              <h3>Your details</h3>
+              <p class="modal-trust-line"><i class="fas fa-lock" aria-hidden="true"></i> Secure checkout via Stripe · No spam</p>
+
               <div class="contact-form">
                 <div class="form-group">
                   <label for="customerName">Full Name *</label>
-                  <input type="text" id="customerName" required placeholder="Enter your full name">
+                  <input type="text" id="customerName" required autocomplete="name" placeholder="Your full name">
                 </div>
-                
+
                 <div class="form-group">
                   <label for="customerEmail">Email Address *</label>
-                  <input type="email" id="customerEmail" required placeholder="Enter your email address">
+                  <input type="email" id="customerEmail" required autocomplete="email" inputmode="email" placeholder="you@example.com">
                 </div>
-                
+
                 <div class="form-group">
-                  <label for="customerPhone">Phone Number *</label>
-                  <input type="tel" id="customerPhone" required placeholder="Enter your phone number">
+                  <label for="customerPhone">Phone <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <input type="tel" id="customerPhone" autocomplete="tel" placeholder="For scheduling follow-up">
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">Project type <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <input type="text" id="projectType" placeholder="e.g. Wedding, brand film, podcast">
+                </div>
+
+                <div class="form-group">
+                  <label for="eventDate">Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span></label>
+                  <input type="date" id="eventDate">
                 </div>
               </div>
             </div>
-            
+
+            <details class="invoice-preview-collapsible">
+              <summary>Package breakdown (${totalLabel})</summary>
+              <div class="invoice-details">
+                <div class="invoice-header">
+                  <h3>Invoice #${invoiceData.invoiceNumber}</h3>
+                  <p>Date: ${new Date(invoiceData.date).toLocaleDateString()}</p>
+                </div>
+                <div class="invoice-items">
+                  ${invoiceData.services.map(service => `
+                    <div class="invoice-item">
+                      <div class="item-details">
+                        <h4>${service.name}</h4>
+                        <p>${service.duration}</p>
+                      </div>
+                      <div class="item-price">
+                        <span>$${(service.price * (service.quantity || 1)).toFixed(2)}</span>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="invoice-total">
+                  <div class="total-line total">
+                    <span>Total:</span>
+                    <span>$${invoiceData.total.toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+
             <div class="form-actions">
-              <button class="btn-secondary" onclick="this.parentElement.parentElement.parentElement.remove()">
-                <i class="fas fa-times"></i>
-                Close
+              <button type="button" class="btn-primary modal-submit-invoice">
+                <i class="fas fa-file-invoice-dollar"></i>
+                Create Invoice &amp; Email Me
               </button>
-              <button class="btn-primary" onclick="validateAndSendProject(${JSON.stringify(invoiceData).replace(/"/g, '&quot;')})">
-                <i class="fas fa-paper-plane"></i>
-                Send Your Project
+              <button type="button" class="btn-secondary modal-cancel">
+                Cancel
               </button>
+            </div>
             </div>
           </div>
         `;
-        
+
         document.body.appendChild(modal);
+
+        const nameInput = modal.querySelector('#customerName');
+        const emailInput = modal.querySelector('#customerEmail');
+        if (prefill.name && nameInput) nameInput.value = prefill.name;
+        if (prefill.email && emailInput) emailInput.value = prefill.email;
+        (emailInput?.value ? emailInput : nameInput)?.focus();
+
+        const closeModal = () => modal.remove();
+        modal.querySelector('.modal-close')?.addEventListener('click', closeModal);
+        modal.querySelector('.modal-cancel')?.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+        const onEscape = (e) => {
+          if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', onEscape);
+          }
+        };
+        document.addEventListener('keydown', onEscape);
+
+        modal.querySelector('.modal-submit-invoice')?.addEventListener('click', () => {
+          validateAndSendProject(invoiceData);
+        });
       }
-      
-      // Validate contact information and send project
+
       function validateAndSendProject(invoiceData) {
         const customerName = document.getElementById('customerName').value.trim();
         const customerEmail = document.getElementById('customerEmail').value.trim();
@@ -10461,20 +11465,15 @@
           return;
         }
         
-        if (!customerPhone) {
-          showNotification('Please enter your phone number', 'error');
-          document.getElementById('customerPhone').focus();
-          return;
-        }
-        
         // Add customer information to invoice data
         invoiceData.customer = {
           name: customerName,
           email: customerEmail,
           phone: customerPhone
         };
-        
-        // Send the project with customer information
+        invoiceData.projectType = document.getElementById('projectType')?.value?.trim() || '';
+        invoiceData.eventDate = document.getElementById('eventDate')?.value?.trim() || '';
+
         sendToEmailJS(invoiceData);
       }
       
@@ -10482,63 +11481,86 @@
       window.removeServiceFromPackage = removeServiceFromPackage;
       window.validateAndSendProject = validateAndSendProject;
       
+      async function postCreateInvoice(invoiceData) {
+        const response = await fetch('/api/stripe/create-invoice', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Idempotency-Key': invoiceData.invoiceNumber,
+          },
+          body: JSON.stringify({
+            customer: invoiceData.customer,
+            services: invoiceData.services,
+            invoiceNumber: invoiceData.invoiceNumber,
+            subtotal: invoiceData.subtotal,
+            total: invoiceData.total,
+            date: invoiceData.date,
+            projectType: invoiceData.projectType,
+            eventDate: invoiceData.eventDate,
+          }),
+        });
+
+        const raw = await response.text();
+        let result = {};
+        try {
+          result = raw ? JSON.parse(raw) : {};
+        } catch (parseError) {
+          throw new Error(
+            raw && raw.length < 300
+              ? raw
+              : `Server error (${response.status}). Check Vercel function logs.`
+          );
+        }
+
+        return { response, result };
+      }
+
       async function sendToEmailJS(invoiceData) {
+        if (invoiceCreateInFlight) return;
+
         const modal = document.querySelector('.modal-overlay.active');
-        const submitBtn = modal ? modal.querySelector('.btn-primary') : document.querySelector('.btn-primary');
+        const submitBtn = modal?.querySelector('.modal-submit-invoice');
         const originalText = submitBtn ? submitBtn.innerHTML : '';
-        
-        if (submitBtn?.disabled) return;
-        
+
+        invoiceCreateInFlight = true;
+
         if (submitBtn) {
           submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Invoice...';
           submitBtn.disabled = true;
         }
-        
+
         try {
-          const response = await fetch('/api/stripe/create-invoice', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              customer: invoiceData.customer,
-              services: invoiceData.services,
-              invoiceNumber: invoiceData.invoiceNumber,
-              subtotal: invoiceData.subtotal,
-              total: invoiceData.total,
-              date: invoiceData.date
-            })
-          });
-          
-          const raw = await response.text();
-          let result = {};
-          try {
-            result = raw ? JSON.parse(raw) : {};
-          } catch (parseError) {
-            throw new Error(
-              raw && raw.length < 300
-                ? raw
-                : `Server error (${response.status}). Check Vercel function logs.`
-            );
+          let { response, result } = await postCreateInvoice(invoiceData);
+
+          if (response.status === 409 && result.retryable) {
+            await new Promise((resolve) => setTimeout(resolve, 2500));
+            ({ response, result } = await postCreateInvoice(invoiceData));
           }
-          
+
           if (!response.ok) {
             throw new Error(result.error || `Unable to create invoice (${response.status}).`);
           }
-          
-          console.log('Stripe invoice created:', result.invoiceId);
-          showSuccessModal(result.invoiceUrl, result.emailWarning);
+
+          const emailNotes = [result.emailWarning, result.adminEmailWarning].filter(Boolean).join(' ');
+          showSuccessModal(result.invoiceUrl, emailNotes || null, result.paymentDueDate);
+          try {
+            localStorage.removeItem(SPB_STORAGE_KEY);
+          } catch (_) { /* ignore */ }
           clearPackage();
         } catch (error) {
           console.error('Invoice submission error:', error);
           showNotification(error.message || 'Unable to create invoice. Please contact us directly.', 'error');
           if (submitBtn) {
-            submitBtn.innerHTML = originalText || '<i class="fas fa-paper-plane"></i> Send Your Project';
+            submitBtn.innerHTML = originalText || '<i class="fas fa-file-invoice-dollar"></i> Create Invoice &amp; Email Me';
             submitBtn.disabled = false;
           }
+        } finally {
+          invoiceCreateInFlight = false;
         }
       }
       
       // Show prominent success modal for project submission
-      function showSuccessModal(invoiceUrl, emailWarning) {
+      function showSuccessModal(invoiceUrl, emailWarning, paymentDueDate) {
         // Close any existing invoice/project modal first
         const existingModals = document.querySelectorAll('.modal-overlay:not(.success-modal-overlay)');
         existingModals.forEach(modal => modal.remove());
@@ -10552,6 +11574,12 @@
           : '';
         const emailNote = emailWarning
           ? `<p style="margin:12px 0 0;font-size:13px;color:var(--text-muted);">${emailWarning}</p>`
+          : '';
+        const dueNote = paymentDueDate
+          ? `<div class="success-detail-item"><i class="fas fa-calendar-check"></i><span>Payment due by ${paymentDueDate}</span></div>`
+          : '';
+        const copyBtnHtml = safeInvoiceUrl
+          ? `<button type="button" class="btn-secondary success-copy-link" style="margin-top:12px;"><i class="fas fa-link"></i> Copy payment link</button>`
           : '';
         
         const modal = document.createElement('div');
@@ -10569,6 +11597,7 @@
             <div class="success-modal-body">
               <div class="success-details">
                 ${invoiceLinkHtml}
+                ${dueNote}
                 <div class="success-detail-item">
                   <i class="fas fa-envelope"></i>
                   <span>Check your inbox for package details &amp; payment link</span>
@@ -10585,6 +11614,7 @@
             </div>
             
             <div class="success-modal-actions">
+              ${copyBtnHtml}
               <button class="btn-primary success-btn" onclick="handleAwesomeClick()">
                 <i class="fas fa-thumbs-up"></i>
                 Awesome, Thanks!
@@ -10594,6 +11624,18 @@
         `;
         
         document.body.appendChild(modal);
+
+        const copyBtn = modal.querySelector('.success-copy-link');
+        if (copyBtn && safeInvoiceUrl) {
+          copyBtn.addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(safeInvoiceUrl);
+              showNotification('Payment link copied', 'success');
+            } catch (_) {
+              showNotification('Could not copy — use the link above', 'info');
+            }
+          });
+        }
         
         // Auto-close after 8 seconds
         setTimeout(() => {
@@ -10668,11 +11710,13 @@
           console.log('Calling addServiceToPackage for:', serviceId);
           addServiceToPackage(serviceId);
           const label = serviceData[serviceId]?.name || 'Service';
-          showNotification(`${label} added — keep building your package!`, 'success');
+          showNotification(`${label} added to your package`, 'success');
         } else {
           console.log('No service ID found on element');
         }
       }
+
+      updateQuoteSummary();
       
       // Handle awesome button click with proper modal cleanup
       function handleAwesomeClick() {
@@ -10929,12 +11973,12 @@
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
-        initializeServicePackageBuilder();
+        initializeServicePackageBuilder().catch(() => {});
         initializeRealEstatePortfolio();
         initializeShowcaseReveal();
       });
     } else {
-      initializeServicePackageBuilder();
+      initializeServicePackageBuilder().catch(() => {});
       initializeRealEstatePortfolio();
       initializeShowcaseReveal();
     }
