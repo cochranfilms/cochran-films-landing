@@ -2,8 +2,8 @@
   Cochran Films — Service Package Invoice (EmailJS)
   Paste into EmailJS → Email Templates → Content (HTML)
 
-  Variables: {{to_email}}, {{reply_to}}, {{email_heading}}, {{customer_name}},
-  {{customer_email}}, {{customer_phone}}, {{invoice_number}}, {{project_date}},
+  Variables: {{to_email}}, {{reply_to}}, {{email_heading}}, {{email_intro}}, {{customer_name}},
+  {{customer_email}}, {{customer_phone}}, {{invoice_number}}, {{project_date}}, {{payment_due_date}},
   {{services_html}}, {{total_amount}}, {{invoice_url}}
 
   Settings:
@@ -68,7 +68,7 @@
                 </tr>
               </table>
               <p style="margin:22px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7;color:#4b5563;">
-                Thank you for choosing Cochran Films. Your custom service package is summarized below. When you are ready, use the button to open your secure invoice and complete payment.
+                {{email_intro}}
               </p>
             </td>
           </tr>

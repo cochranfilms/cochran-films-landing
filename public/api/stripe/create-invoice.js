@@ -181,6 +181,8 @@ export default async function handler(req, res) {
       project_date: projectDate,
       payment_due_date: paymentDueDate,
       email_heading: 'Your Project Package Is Ready',
+      email_intro:
+        'Thank you for choosing Cochran Films. Your custom service package is summarized below. When you are ready, use the button to open your secure invoice and complete payment.',
       reply_to: customer.email.trim(),
     };
 

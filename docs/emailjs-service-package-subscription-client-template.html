@@ -1,0 +1,51 @@
+<!--
+  Cochran Films — Client: Retainer Subscription Started (EmailJS)
+  Env: EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID
+
+  Subject: Your Cochran Films retainer — {{subscription_name}} · #{{invoice_number}}
+  To: {{to_email}}  Reply To: info@cochranfilms.com
+
+  Variables: to_email, reply_to, email_heading, email_intro, billing_note, customer_name,
+  customer_email, customer_phone, invoice_number, stripe_invoice_number, subscription_id,
+  subscription_name, commitment_term, next_billing_date, project_date, payment_due_date,
+  services_html ({{{services_html}}}), services_list, total_amount, invoice_url,
+  cta_label, cta_url, cta_subtext
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Retainer Subscription</title></head>
+<body style="margin:0;padding:0;background:#f3f4f6;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding:32px 16px;">
+    <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#fff;border:1px solid #e2e8f0;">
+      <tr><td bgcolor="#111827" style="padding:28px 32px;border-top:3px solid #FFB200;">
+        <p style="margin:0 0 8px;font:italic 13px Georgia,serif;color:#9ca3af;">Monthly retainer</p>
+        <h1 style="margin:0;font:bold 22px Arial,sans-serif;color:#fff;">{{email_heading}}</h1>
+        <p style="margin:14px 0 0;font:15px/1.6 Arial,sans-serif;color:#d1d5db;">{{email_intro}}</p>
+      </td></tr>
+      <tr><td style="padding:28px 32px;">
+        <table role="presentation" width="100%" style="margin:0 0 20px;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;"><tr><td style="padding:16px 18px;">
+          <p style="margin:0;font:14px/1.55 Arial,sans-serif;color:#92400e;">{{billing_note}}</p>
+        </td></tr></table>
+        <p style="margin:0 0 4px;font:bold 11px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Bill to</p>
+        <p style="margin:0;font:bold 20px Arial,sans-serif;color:#111827;">{{customer_name}}</p>
+        <p style="margin:8px 0 0;font:14px Arial,sans-serif;color:#6b7280;">{{customer_email}} · {{customer_phone}}</p>
+        <table role="presentation" width="100%" style="margin:24px 0;border:1px solid #e2e8f0;"><tr>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Ref #</p><p style="margin:0;font:bold 15px Arial,sans-serif;">{{invoice_number}}</p></td>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Retainer</p><p style="margin:0;font:bold 15px Arial,sans-serif;">{{subscription_name}}</p></td>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Term</p><p style="margin:0;font:bold 15px Arial,sans-serif;">{{commitment_term}}</p></td>
+        </tr></table>
+        <table role="presentation" width="100%" style="margin:0 0 16px;border:1px solid #e2e8f0;"><tr>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">This invoice</p><p style="margin:0;font:bold 16px Arial,sans-serif;">{{total_amount}}</p></td>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Due</p><p style="margin:0;font:bold 15px Arial,sans-serif;">{{payment_due_date}}</p></td>
+          <td style="padding:14px;"><p style="margin:0 0 4px;font:bold 10px Arial,sans-serif;color:#9ca3af;text-transform:uppercase;">Next billing</p><p style="margin:0;font:bold 15px Arial,sans-serif;">{{next_billing_date}}</p></td>
+        </tr></table>
+        <table role="presentation" width="100%" style="border:1px solid #e2e8f0;"><tbody>{{{services_html}}}</tbody></table>
+      </td></tr>
+      <tr><td align="center" style="padding:8px 32px 32px;">
+        <a href="{{invoice_url}}" style="display:inline-block;padding:14px 32px;background:#FFB200;color:#111827;font:bold 14px Arial,sans-serif;text-decoration:none;border-radius:6px;">{{cta_label}}</a>
+        <p style="margin:12px 0 0;font:12px Arial,sans-serif;color:#9ca3af;">{{cta_subtext}}</p>
+      </td></tr>
+    </table>
+  </td></tr></table>
+</body>
+</html>

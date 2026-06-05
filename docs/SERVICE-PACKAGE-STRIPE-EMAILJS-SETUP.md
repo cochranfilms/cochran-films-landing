@@ -138,12 +138,42 @@ For **same date each month**, use a Subscription with:
 - `proration_behavior: 'none'` on create (optional)
 - `cancel_at` or `cancel_at_period_end` when the package is a fixed term (2 or 3 months)
 
-### Dashboard setup (one-time)
+### Local Stripe product setup (script)
 
-1. **Products →** create products for each retainer (Fast Frame, Cinematic Spotlight, Masterpiece Collection).
-2. **Prices →** add recurring prices (`monthly`, amount = catalog price).
-3. Copy each **Price ID** (`price_...`) for env or catalog metadata.
-4. **Webhook →** add events (in addition to invoice events):
+There is **no committed `.env`** (gitignored). Use `.env.example` as the template:
+
+```bash
+cp .env.example .env
+# Edit .env — set STRIPE_SECRET_KEY=sk_test_... (use test mode first)
+npm run stripe:setup-retainers
+```
+
+The script creates (or reuses) three Products + monthly Prices, prints Price IDs, and appends them to `.env`:
+
+| Variable | Retainer |
+|----------|----------|
+| `STRIPE_PRICE_FAST_FRAME` | Fast Frame (1 Month) — $2,500/mo |
+| `STRIPE_PRICE_CINEMATIC_SPOTLIGHT` | Cinematic Spotlight (2 Months) — $4,800/mo |
+| `STRIPE_PRICE_MASTERPIECE` | Masterpiece Collection (3 Months) — $7,000/mo |
+
+Copy the same Price IDs into **Vercel** env when subscriptions go live.
+
+### EmailJS — retainer subscription templates
+
+Paste into EmailJS and set env vars:
+
+| Template | File | Env var |
+|----------|------|---------|
+| Client subscription started | `emailjs-service-package-subscription-client-template.html` | `EMAILJS_PACKAGE_SUBSCRIPTION_CLIENT_TEMPLATE_ID` |
+| Admin subscription started | `emailjs-service-package-subscription-admin-template.html` | `EMAILJS_PACKAGE_SUBSCRIPTION_ADMIN_TEMPLATE_ID` |
+
+Key variables: `subscription_name`, `subscription_id`, `commitment_term`, `next_billing_date`, `billing_note`, plus standard invoice fields.
+
+One-time package emails still use `EMAILJS_PACKAGE_TEMPLATE_ID` / `EMAILJS_PACKAGE_ADMIN_TEMPLATE_ID` (now with `{{email_intro}}` on the client template).
+
+### Dashboard setup (webhooks)
+
+1. **Webhook →** add events (in addition to invoice events):
    - `customer.subscription.created`
    - `customer.subscription.updated`
    - `customer.subscription.deleted`
