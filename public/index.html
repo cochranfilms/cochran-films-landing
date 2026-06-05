@@ -6651,6 +6651,21 @@
       box-shadow: 0 0 0 3px rgba(255, 178, 0, 0.12);
     }
 
+    .invoice-create-modal .form-group input[type="date"] {
+      color-scheme: dark;
+      padding-right: 2.75rem;
+    }
+
+    .invoice-create-modal .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(1.2);
+      opacity: 0.95;
+      cursor: pointer;
+    }
+
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit {
+      text-align: center;
+    }
+
     .invoice-create-modal .invoice-preview-collapsible {
       margin: 1.35rem 0 0;
       border: 1px solid rgba(255, 255, 255, 0.08);
