@@ -226,7 +226,13 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 0 0 12px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    #home.section.hero + #about.cf-about-section {
+      margin-top: 0;
+      padding-top: clamp(40px, 5vw, 64px);
     }
 
     .hero-banner {
@@ -1019,10 +1025,11 @@
     .cf-about-origin {
       position: relative;
       z-index: 1;
-      display: inline-flex;
+      display: flex;
+      width: fit-content;
       align-items: center;
       gap: 8px;
-      margin-top: 16px;
+      margin: 16px auto 0;
       padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid rgba(99, 102, 241, 0.28);
@@ -1039,10 +1046,12 @@
     .cf-about-story {
       display: grid;
       gap: clamp(18px, 3vw, 24px);
+      text-align: center;
     }
 
     .cf-about-lead {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 58ch;
       font-family: 'Poppins', sans-serif;
       font-size: clamp(18px, 2.4vw, 22px);
       font-weight: 600;
@@ -1052,10 +1061,12 @@
     }
 
     .cf-about-quote {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 62ch;
       padding: clamp(18px, 3vw, 24px) clamp(20px, 3vw, 28px);
       border-radius: 18px;
-      border-left: 4px solid var(--brand-gold);
+      border-left: none;
+      border-top: 4px solid var(--brand-gold);
       background:
         linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(15, 23, 42, 0.75)),
         radial-gradient(circle at 100% 0%, rgba(255, 178, 0, 0.08), transparent 50%);
@@ -1077,7 +1088,8 @@
     }
 
     .cf-about-body {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 58ch;
       color: var(--text-secondary);
       font-size: clamp(15px, 1.9vw, 17px);
       line-height: 1.75;
@@ -1086,6 +1098,7 @@
     .cf-about-principles {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       list-style: none;
       margin: 0;
@@ -1113,6 +1126,7 @@
     .cf-about-founder-actions {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
       margin-top: 4px;
     }
@@ -2239,23 +2253,11 @@
       z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
-      overflow: hidden;
-      border: 1px solid rgba(244, 114, 182, 0.28);
-      border-radius: 26px;
-      box-shadow: var(--shadow-lg);
-      padding: clamp(24px, 4vw, 40px);
-      background: rgba(15, 23, 42, 0.55);
-    }
-
-    .shawnta-portfolio-section--fullbleed .shawnta-portfolio-inner::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 14% 12%, rgba(244, 114, 182, 0.16), transparent 34%),
-        radial-gradient(circle at 88% 18%, rgba(255, 178, 0, 0.12), transparent 36%);
-      pointer-events: none;
-      z-index: 0;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: none;
     }
 
     .shawnta-portfolio-header {
@@ -2389,11 +2391,6 @@
     @media (max-width: 640px) {
       .shawnta-portfolio-section--fullbleed {
         padding: 32px 16px;
-      }
-
-      .shawnta-portfolio-section--fullbleed .shawnta-portfolio-inner {
-        padding: 20px 16px;
-        border-radius: 20px;
       }
 
       .shawnta-portfolio-section--fullbleed .sh-gallery {
@@ -6716,18 +6713,28 @@
 
     .spb-hero {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: clamp(24px, 4vw, 40px);
-      align-items: end;
+      grid-template-columns: 1fr;
+      gap: clamp(20px, 3vw, 28px);
+      justify-items: center;
+      text-align: center;
       padding-bottom: clamp(24px, 3vw, 32px);
       border-bottom: 1px solid rgba(255, 178, 0, 0.18);
+    }
+
+    .spb-hero-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
     }
 
     .spb-kicker {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      margin: 0 0 0.75rem;
+      margin: 0 auto 0.75rem;
       padding: 0.4rem 0.85rem;
       font-family: 'Poppins', sans-serif;
       font-size: 0.72rem;
@@ -6746,17 +6753,20 @@
 
     .spb-lede {
       max-width: 62ch;
-      margin-top: 0.65rem;
+      margin: 0.65rem auto 0;
     }
 
     .spb-steps {
       list-style: none;
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
-      min-width: min(220px, 100%);
+      min-width: 0;
+      max-width: 100%;
     }
 
     .spb-steps li {
@@ -10238,19 +10248,27 @@ body.resume-page section[id] {
 }
 
 .spb-cta-band-inner {
-  max-width: 1100px;
+  max-width: 760px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-  gap: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: clamp(24px, 4vw, 32px);
+}
+
+.spb-cta-band-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .spb-cta-band-kicker {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 12px;
+  margin: 0 auto 12px;
   color: var(--brand-gold);
   font-size: 11px;
   font-weight: 800;
@@ -10267,7 +10285,7 @@ body.resume-page section[id] {
 }
 
 .spb-cta-band-copy > p {
-  margin: 0 0 18px;
+  margin: 0 auto 18px;
   color: var(--text-secondary);
   font-size: clamp(15px, 2vw, 17px);
   line-height: 1.65;
@@ -10277,6 +10295,7 @@ body.resume-page section[id] {
 .spb-cta-band-steps {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -10313,7 +10332,9 @@ body.resume-page section[id] {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: stretch;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
 }
 
 .spb-cta-band-actions .hero-cta,
@@ -10325,6 +10346,9 @@ body.resume-page section[id] {
 .spb-cta-inline {
   margin-top: clamp(28px, 4vw, 40px);
   padding: clamp(24px, 4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   border-radius: 20px;
   border: 1px solid rgba(255, 178, 0, 0.24);
@@ -10467,10 +10491,6 @@ body.resume-page > footer.footer {
 }
 
 @media (max-width: 768px) {
-  .spb-cta-band-inner {
-    grid-template-columns: 1fr;
-  }
-
   .spb-cta-floating-link span {
     display: none;
   }
