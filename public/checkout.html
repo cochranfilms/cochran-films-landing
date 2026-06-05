@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   
   <!-- Primary Meta Tags -->
-  <title>Checkout | Cochran Films</title>
-  <meta name="title" content="Checkout | Cochran Films" />
-  <meta name="description" content="Complete your Cochran Films service package payment securely via Stripe." />
+  <title>Booking Confirmed | Cochran Films</title>
+  <meta name="title" content="Booking Confirmed | Cochran Films" />
+  <meta name="description" content="Your Cochran Films service package invoice has been created. Complete your secure Stripe payment to finalize your booking." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -232,7 +232,7 @@
 
   <link rel="stylesheet" href="/css/site.css" />
 </head>
-<body>
+<body class="page-checkout">
   <!-- AI Neural Network Background -->
   <div class="ai-background">
     <canvas id="neuralCanvas"></canvas>
@@ -282,12 +282,12 @@
       </div>
       <div class="hero-banner-overlay" aria-hidden="true"></div>
       <div class="hero-banner-content">
-        <div class="hero-banner-kicker">Secure Checkout</div>
-        <h1 class="hero-title">TRUSTED BY ATLANTA BRANDS &amp; BEYOND</h1>
-        <p class="hero-subtitle">Your payment is processed securely through Stripe. Explore more services or start your next project with Cochran Films anytime.</p>
+        <div class="hero-banner-kicker">Booking Confirmed</div>
+        <h1 class="hero-title">THANK YOU FOR BOOKING</h1>
+        <p class="hero-subtitle">Your custom package invoice is ready. Complete your secure Stripe payment below to lock in your project with Cochran Films.</p>
         <div class="hero-banner-actions">
-          <a href="/pricing" class="hero-cta"><i class="fas fa-plus" aria-hidden="true"></i> Build Another Package</a>
-          <a href="/portfolio" class="hero-banner-btn-secondary"><i class="fa-solid fa-images" aria-hidden="true"></i> View Our Portfolio</a>
+          <a href="#checkoutPayBtn" class="hero-cta"><i class="fas fa-lock" aria-hidden="true"></i> Complete Payment</a>
+          <a href="/contact" class="hero-banner-btn-secondary"><i class="fa-solid fa-message" aria-hidden="true"></i> Questions? Contact Us</a>
         </div>
       </div>
     </div>
@@ -317,27 +317,85 @@
   <main class="checkout-page" id="checkout">
     <div class="checkout-shell">
       <div id="checkoutContent" class="checkout-card" aria-live="polite">
-        <p class="checkout-kicker">Secure Checkout</p>
-        <h1 class="checkout-title">Complete Your Payment</h1>
-        <p class="checkout-lede">Your package summary and Stripe invoice link were also sent to your email. Pay instantly below or use the invoice link anytime.</p>
-        <div id="checkoutSummary" class="checkout-summary" hidden></div>
-        <div id="checkoutMeta" class="checkout-meta"></div>
-        <div class="checkout-actions">
-          <a id="checkoutPayBtn" class="btn-primary" href="#" rel="noopener noreferrer">
-            <i class="fas fa-lock" aria-hidden="true"></i> Pay Now Securely
-          </a>
-          <a id="checkoutInvoiceLink" class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Open Stripe Invoice
-          </a>
-          <a href="/pricing" class="btn-secondary">
-            <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Package Builder
-          </a>
+        <div class="checkout-success-badge" aria-hidden="true">
+          <div class="checkout-success-icon"><i class="fas fa-check"></i></div>
         </div>
+
+        <ol class="checkout-progress" aria-label="Booking progress">
+          <li class="checkout-progress-step is-complete">
+            <span class="checkout-progress-dot" aria-hidden="true"><i class="fas fa-check"></i></span>
+            <span class="checkout-progress-label">Package built</span>
+          </li>
+          <li class="checkout-progress-step is-complete">
+            <span class="checkout-progress-dot" aria-hidden="true"><i class="fas fa-check"></i></span>
+            <span class="checkout-progress-label">Invoice created</span>
+          </li>
+          <li class="checkout-progress-step is-current" aria-current="step">
+            <span class="checkout-progress-dot" aria-hidden="true">3</span>
+            <span class="checkout-progress-label">Complete payment</span>
+          </li>
+        </ol>
+
+        <header class="checkout-header">
+          <p class="checkout-kicker">Booking confirmed</p>
+          <h1 class="checkout-title">Your invoice has been created</h1>
+          <p class="checkout-lede">Your package summary and Stripe invoice link were also sent to your email. Pay instantly below or use the invoice link anytime.</p>
+          <p class="checkout-customer" id="checkoutCustomer" hidden></p>
+        </header>
+
+        <section class="checkout-package" aria-labelledby="checkout-package-heading">
+          <h2 id="checkout-package-heading" class="checkout-section-label"><i class="fas fa-box-open" aria-hidden="true"></i> Your package</h2>
+          <div id="checkoutSummary" class="checkout-summary" hidden></div>
+        </section>
+
+        <section class="checkout-details" aria-label="Invoice details">
+          <div id="checkoutMeta" class="checkout-meta"></div>
+        </section>
+
+        <section class="checkout-payment-panel" aria-labelledby="checkout-payment-heading">
+          <div class="checkout-payment-panel-head">
+            <span class="checkout-payment-step">Final step</span>
+            <h2 id="checkout-payment-heading">Complete your payment</h2>
+            <p class="checkout-payment-note">Secure checkout powered by Stripe. Pay now to officially book your project, or use the invoice link from your inbox before the due date.</p>
+          </div>
+          <div class="checkout-actions">
+            <a id="checkoutPayBtn" class="btn-primary checkout-pay-btn" href="#" rel="noopener noreferrer">
+              <i class="fas fa-lock" aria-hidden="true"></i> Pay Now Securely
+            </a>
+            <a id="checkoutInvoiceLink" class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Open Stripe Invoice
+            </a>
+            <a href="/pricing" class="btn-secondary checkout-back-link">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Package Builder
+            </a>
+          </div>
+          <ul class="checkout-trust" aria-label="Payment security">
+            <li><i class="fas fa-shield-halved" aria-hidden="true"></i> 256-bit SSL encryption</li>
+            <li><i class="fab fa-stripe" aria-hidden="true"></i> Powered by Stripe</li>
+            <li><i class="fas fa-envelope-circle-check" aria-hidden="true"></i> Receipt emailed instantly</li>
+          </ul>
+        </section>
+
+        <section class="checkout-next-steps" aria-labelledby="checkout-next-heading">
+          <h2 id="checkout-next-heading" class="checkout-section-label"><i class="fas fa-route" aria-hidden="true"></i> What happens next</h2>
+          <ol class="checkout-next-list" id="checkoutNextList">
+            <li><strong>Pay via Stripe</strong> — your booking is confirmed once payment is received.</li>
+            <li><strong>We reach out within 24 hours</strong> — our Atlanta team will connect to schedule kickoff and next steps.</li>
+            <li><strong>Production begins</strong> — we handle your scoped services as one full-stack creative partner.</li>
+          </ol>
+        </section>
       </div>
+
       <div id="checkoutEmpty" class="checkout-card checkout-empty" hidden>
+        <div class="checkout-success-badge checkout-success-badge--muted" aria-hidden="true">
+          <div class="checkout-success-icon"><i class="fas fa-file-invoice"></i></div>
+        </div>
         <h1 class="checkout-title">No checkout session found</h1>
         <p class="checkout-lede">Start by building a service package or open the payment link from your email.</p>
-        <p><a href="/pricing">Go to Service Package Builder</a> · <a href="/contact">Contact us</a></p>
+        <div class="checkout-actions">
+          <a href="/pricing" class="btn-primary"><i class="fas fa-rocket" aria-hidden="true"></i> Go to Package Builder</a>
+          <a href="/contact" class="btn-secondary"><i class="fa-solid fa-message" aria-hidden="true"></i> Contact us</a>
+        </div>
       </div>
     </div>
   </main>
