@@ -8655,13 +8655,45 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: flow-root;
 }
 
 .hero-banner--page .hero-title {
   font-size: clamp(28px, 5vw, 52px);
 }
 
+.page-opening-hero .hero-banner {
+  margin-bottom: 0;
+}
+
 .page-opening-hero .marquee-logos {
+  margin-top: 0;
+  margin-bottom: 0;
+  contain-intrinsic-size: auto;
+}
+
+/* Flush page content directly under logo marquee (home keeps in-hero marquee spacing) */
+.page-opening-hero + .wrapper > :first-child,
+.page-opening-hero + .book-section,
+.page-opening-hero + main.legal-page,
+.page-opening-hero + main.checkout-page {
+  margin-top: 0;
+}
+
+.page-opening-hero + .wrapper > .services-showcase-section,
+.page-opening-hero + .wrapper > .service-builder-section,
+.page-opening-hero + .wrapper > .section {
+  margin-top: 0;
+}
+
+.page-opening-hero + main.legal-page,
+.page-opening-hero + main.checkout-page {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.page-opening-hero + .resume-subnav {
   margin-top: 0;
 }
 
@@ -8848,4 +8880,49 @@ body.page-portfolio .lp-portfolio-hero {
   .legal-toc-title { width: 100%; margin-bottom: 0.35rem; }
   .legal-toc ul { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .legal-toc a { padding: 0.35rem 0.6rem; font-size: 0.8rem; }
+}
+
+/* Resume page — standard site nav + section sub-menu */
+body.resume-page .nav-container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: unset;
+  gap: 0;
+  height: var(--nav-height);
+  padding: 0 20px;
+}
+
+body.resume-page .nav-logo {
+  position: absolute;
+  left: 20px;
+}
+
+body.resume-page .nav-menu {
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+body.resume-page .mobile-menu-toggle {
+  position: absolute;
+  right: 20px;
+}
+
+body.resume-page .resume-hero,
+body.resume-page section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 58px);
+}
+
+@media (max-width: 768px) {
+  body.resume-page .nav-logo {
+    left: var(--mobile-gutter);
+  }
+
+  body.resume-page .mobile-menu-toggle {
+    right: var(--mobile-gutter);
+  }
+
+  body.resume-page .resume-subnav {
+    top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px)));
+  }
 }
