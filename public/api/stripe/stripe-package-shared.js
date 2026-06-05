@@ -171,9 +171,44 @@ function analyzePackageServices(normalizedServices) {
   };
 }
 
-function buildRetainerBillingNote(commitmentMonths) {
+function buildRetainerBillingNote(commitmentMonths, billingStartLabel) {
   const term = formatCommitmentTerm(commitmentMonths);
+  if (billingStartLabel) {
+    return `Your retainer begins ${billingStartLabel}. Pay your first invoice by that date; renewals bill monthly on the same date for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
+  }
   return `Billed monthly on the same date each month for your ${term} commitment. After that, your subscription ends automatically unless we renew together.`;
+}
+
+async function createRetainerFirstInvoice(stripe, {
+  customerId,
+  priceId,
+  catalogName,
+  refNumber,
+  daysUntilDue,
+  metadata,
+}) {
+  const draft = await stripe.invoices.create({
+    customer: customerId,
+    collection_method: 'send_invoice',
+    days_until_due: daysUntilDue,
+    auto_advance: false,
+    metadata,
+    description: `Cochran Films retainer — ${refNumber}`,
+  });
+
+  await stripe.invoiceItems.create({
+    customer: customerId,
+    invoice: draft.id,
+    price: priceId,
+    quantity: 1,
+    description: `${catalogName} — first monthly period`,
+  });
+
+  let invoice = await stripe.invoices.finalizeInvoice(draft.id, { auto_advance: true });
+  if (!invoice.hosted_invoice_url) {
+    invoice = await stripe.invoices.retrieve(invoice.id);
+  }
+  return invoice;
 }
 
 async function ensureSubscriptionInvoiceReady(stripe, subscription, metadata) {
@@ -382,6 +417,7 @@ module.exports = {
   buildServicesText,
   analyzePackageServices,
   buildRetainerBillingNote,
+  createRetainerFirstInvoice,
   ensureSubscriptionInvoiceReady,
   parseBillingAnchorUnix,
   addMonthsUnix,
