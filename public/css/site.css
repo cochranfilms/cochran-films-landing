@@ -1103,20 +1103,20 @@
     .cf-about-principles {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(10px, 1.5vw, 14px);
+      gap: clamp(6px, 1vw, 8px);
       list-style: none;
-      margin: clamp(4px, 1vw, 8px) auto 0;
-      padding: clamp(14px, 2vw, 18px);
-      max-width: min(560px, 100%);
+      margin: 0 auto;
+      padding: clamp(8px, 1.2vw, 11px);
+      max-width: min(420px, 92%);
       width: 100%;
-      border-radius: 20px;
+      border-radius: 14px;
       border: 1px solid rgba(99, 102, 241, 0.24);
       background:
         linear-gradient(160deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.72)),
         radial-gradient(circle at 50% 0%, rgba(255, 178, 0, 0.06), transparent 58%);
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        0 16px 40px rgba(0, 0, 0, 0.18);
+        0 10px 24px rgba(0, 0, 0, 0.14);
     }
 
     .cf-about-principles li {
@@ -1124,16 +1124,16 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 5px;
       min-height: 100%;
-      padding: clamp(14px, 2.2vw, 18px) clamp(10px, 1.5vw, 14px);
-      border-radius: 14px;
+      padding: clamp(7px, 1vw, 10px) clamp(6px, 1vw, 8px);
+      border-radius: 10px;
       border: 1px solid rgba(99, 102, 241, 0.14);
       background: rgba(15, 23, 42, 0.45);
       color: #e2e8f0;
-      font-size: clamp(0.78rem, 1.6vw, 0.86rem);
+      font-size: clamp(0.66rem, 1.1vw, 0.74rem);
       font-weight: 600;
-      line-height: 1.35;
+      line-height: 1.25;
       text-align: center;
       transition:
         border-color 0.25s ease,
@@ -1145,21 +1145,21 @@
     .cf-about-principles li:hover {
       border-color: rgba(255, 178, 0, 0.32);
       background: rgba(255, 178, 0, 0.06);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
     }
 
     .cf-about-principles li i {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
       background: linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(255, 178, 0, 0.14));
       border: 1px solid rgba(96, 165, 250, 0.28);
       color: var(--brand-gold);
-      font-size: 1rem;
+      font-size: 0.75rem;
       flex-shrink: 0;
     }
 
@@ -1168,7 +1168,39 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 4px;
+      margin-top: 0;
+    }
+
+    @media (min-width: 769px) {
+      .cf-about-hero {
+        align-items: stretch;
+        padding-bottom: 52px;
+      }
+
+      .cf-about-visual {
+        align-self: stretch;
+      }
+
+      .cf-about-origin {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        width: max-content;
+        max-width: calc(100% - 16px);
+      }
+
+      .cf-about-story {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(10px, 1.8vw, 16px);
+        min-height: 100%;
+      }
+
+      .cf-about-founder-actions {
+        margin-top: auto;
+      }
     }
 
     .cf-about-pillars {
