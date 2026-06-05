@@ -2401,6 +2401,18 @@
       }
     }
 
+    .lp-portfolio-shell > .shawnta-portfolio-section--fullbleed:has(+ .real-estate-section) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .lp-portfolio-shell > .shawnta-portfolio-section--fullbleed + .real-estate-section {
+      margin-top: calc(-1 * var(--lp-portfolio-gap, 32px));
+      padding-top: clamp(32px, 4vw, 48px);
+      border-top: none;
+    }
+
     /* Real Estate Portfolio — full-bleed (synced from resume) */
     .real-estate-section {
       position: relative;
@@ -5581,6 +5593,17 @@
       .real-estate-section {
         margin-top: 20px;
         margin-bottom: 20px;
+      }
+
+      .lp-portfolio-shell > .shawnta-portfolio-section--fullbleed:has(+ .real-estate-section) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .lp-portfolio-shell > .shawnta-portfolio-section--fullbleed + .real-estate-section {
+        margin-top: calc(-1 * var(--lp-portfolio-gap, 32px));
+        margin-bottom: 20px;
+        padding-top: 28px;
       }
 
       .iheart-header {
