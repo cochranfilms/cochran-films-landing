@@ -6651,15 +6651,51 @@
       box-shadow: 0 0 0 3px rgba(255, 178, 0, 0.12);
     }
 
+    .invoice-create-modal .invoice-date-field {
+      position: relative;
+      display: block;
+    }
+
+    .invoice-create-modal .invoice-date-field::after {
+      content: '';
+      position: absolute;
+      right: 1.15rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.35rem;
+      height: 1.35rem;
+      pointer-events: none;
+      background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+      opacity: 0.92;
+    }
+
     .invoice-create-modal .form-group input[type="date"] {
-      color-scheme: dark;
-      padding-right: 2.75rem;
+      color-scheme: light;
+      width: 100%;
+      padding-right: 3rem;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .invoice-create-modal .invoice-date-field input[type="date"] {
+      position: relative;
     }
 
     .invoice-create-modal .form-group input[type="date"]::-webkit-calendar-picker-indicator {
-      filter: invert(1) brightness(1.2);
-      opacity: 0.95;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0 0.15rem 0 0;
+      padding: 0;
+      opacity: 0;
       cursor: pointer;
+    }
+
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit,
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit-text,
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit-month-field,
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit-day-field,
+    .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit-year-field {
+      color: rgba(255, 255, 255, 0.95);
     }
 
     .invoice-create-modal .form-group input[type="date"]::-webkit-datetime-edit {
@@ -11365,7 +11401,9 @@
 
                 <div class="form-group">
                   <label for="eventDate">Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span></label>
-                  <input type="date" id="eventDate">
+                  <span class="invoice-date-field">
+                    <input type="date" id="eventDate" aria-label="Event or shoot date">
+                  </span>
                 </div>
               </div>
             </div>
