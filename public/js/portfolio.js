@@ -186,9 +186,62 @@ function initializeRealEstatePortfolio() {
       revealTargets.forEach((el) => observer.observe(el));
     }
 
+    function initializeShawntaGallery() {
+      const gallery = document.querySelector('#portfolio-shawnta .sh-gallery');
+      if (!gallery) return;
+
+      function alignShGalleryRows() {
+        const figures = Array.from(gallery.querySelectorAll('figure'));
+        const columns =
+          getComputedStyle(gallery).gridTemplateColumns.split(' ').filter(Boolean).length || 4;
+
+        for (let i = 0; i < figures.length; i += columns) {
+          const rowFigures = figures.slice(i, i + columns);
+          const imgs = rowFigures.map((figure) => figure.querySelector('img')).filter(Boolean);
+
+          imgs.forEach((img) => {
+            img.style.height = '';
+            img.style.maxHeight = '';
+          });
+
+          const heights = imgs.map((img) => img.getBoundingClientRect().height);
+          const maxHeight = Math.max(...heights, 0);
+          if (!maxHeight) continue;
+
+          imgs.forEach((img) => {
+            img.style.height = `${maxHeight}px`;
+            img.style.maxHeight = `${maxHeight}px`;
+            img.style.width = '100%';
+            img.style.objectFit = 'cover';
+            img.style.objectPosition = 'center center';
+          });
+        }
+      }
+
+      let alignFrame = 0;
+      function scheduleAlign() {
+        cancelAnimationFrame(alignFrame);
+        alignFrame = requestAnimationFrame(alignShGalleryRows);
+      }
+
+      gallery.querySelectorAll('img').forEach((img) => {
+        if (img.complete) {
+          scheduleAlign();
+        } else {
+          img.addEventListener('load', scheduleAlign, { once: true });
+        }
+      });
+      window.addEventListener('resize', scheduleAlign);
+      window.addEventListener('load', scheduleAlign);
+      scheduleAlign();
+    }
+
     function bootPageModules() {
       if (document.querySelector('.real-estate-section, #portfolio-realestate')) {
         initializeRealEstatePortfolio();
+      }
+      if (document.querySelector('#portfolio-shawnta')) {
+        initializeShawntaGallery();
       }
       initializeShowcaseReveal();
     }
