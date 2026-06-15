@@ -141,7 +141,14 @@
 
     // Contact form — EmailJS via server API
     const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) bookingForm.addEventListener('submit', async function(e) {
+    if (bookingForm) {
+      const setFormLoadedAt = () => {
+        const field = bookingForm.querySelector('input[name="formLoadedAt"]');
+        if (field) field.value = String(Date.now());
+      };
+      setFormLoadedAt();
+
+      bookingForm.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const form = this;
@@ -208,7 +215,9 @@
             lastName,
             email,
             service: data.service,
-            message: data.message
+            message: data.message,
+            companyWebsite: String(data.companyWebsite || '').trim(),
+            formLoadedAt: data.formLoadedAt
           })
         });
 
@@ -237,6 +246,7 @@
           variant: 'success'
         });
         form.reset();
+        setFormLoadedAt();
         console.log('Contact inquiry sent:', result.inquiryId);
       } catch (error) {
         console.error('Contact form error:', error);
@@ -258,6 +268,7 @@
         }
       }
     });
+    }
 
     // Navigation scroll effect
     window.addEventListener('scroll', () => {

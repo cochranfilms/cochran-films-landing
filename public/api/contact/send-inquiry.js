@@ -9,6 +9,86 @@ const SERVICE_LABELS = {
   other: 'Other',
 };
 
+const MIN_FORM_TIME_MS = 3000;
+const MAX_FORM_TIME_MS = 7 * 24 * 60 * 60 * 1000;
+const MIN_MESSAGE_LENGTH = 12;
+
+function logSpam(reason, details = {}) {
+  console.warn('[contact-spam]', reason, details);
+}
+
+function fakeInquiryId() {
+  return `CF-INQ-${Date.now()}`;
+}
+
+function looksLikeGibberish(text) {
+  const value = String(text || '').trim();
+  if (!value) return false;
+
+  const letters = value.replace(/[^a-zA-Z]/g, '');
+  if (letters.length < 5) return false;
+
+  const vowels = (letters.match(/[aeiouAEIOU]/g) || []).length;
+  const vowelRatio = vowels / letters.length;
+
+  if (letters.length >= 8 && vowelRatio < 0.15) return true;
+  if (letters.length >= 5 && vowels === 0) return true;
+
+  let caseTransitions = 0;
+  for (let i = 1; i < letters.length; i += 1) {
+    const prevUpper = letters[i - 1] === letters[i - 1].toUpperCase() && letters[i - 1] !== letters[i - 1].toLowerCase();
+    const currUpper = letters[i] === letters[i].toUpperCase() && letters[i] !== letters[i].toLowerCase();
+    if (prevUpper !== currUpper) caseTransitions += 1;
+  }
+
+  const transitionRatio = caseTransitions / Math.max(letters.length - 1, 1);
+  if (letters.length >= 12 && transitionRatio > 0.35 && vowelRatio < 0.35) return true;
+  if (value.length >= 12 && !/\s/.test(value) && vowelRatio < 0.32) return true;
+
+  return false;
+}
+
+function isSubmitTimingValid(formLoadedAt) {
+  const loaded = Number(formLoadedAt);
+  if (!Number.isFinite(loaded) || loaded <= 0) return false;
+  const elapsed = Date.now() - loaded;
+  return elapsed >= MIN_FORM_TIME_MS && elapsed <= MAX_FORM_TIME_MS;
+}
+
+function assessContactSpam({ companyWebsite, formLoadedAt, customerFirst, customerLast, customerName, message }) {
+  if (String(companyWebsite || '').trim()) {
+    return { silent: true, reason: 'honeypot' };
+  }
+
+  if (!isSubmitTimingValid(formLoadedAt)) {
+    return { silent: true, reason: 'timing' };
+  }
+
+  const nameFields = [customerFirst, customerLast, customerName].filter(Boolean);
+  if (nameFields.some((name) => looksLikeGibberish(name))) {
+    return { silent: true, reason: 'gibberish-name' };
+  }
+
+  const trimmedMessage = String(message || '').trim();
+  if (looksLikeGibberish(trimmedMessage)) {
+    return { silent: true, reason: 'gibberish-message' };
+  }
+
+  if (trimmedMessage.length < MIN_MESSAGE_LENGTH) {
+    return {
+      silent: false,
+      reason: 'short-message',
+      error: 'Please share a bit more detail about your project (at least a sentence or two).',
+    };
+  }
+
+  if (trimmedMessage.length >= 20 && !/\s/.test(trimmedMessage)) {
+    return { silent: true, reason: 'message-no-spaces' };
+  }
+
+  return null;
+}
+
 function setCors(req, res) {
   const allowed = (process.env.ALLOWED_ORIGINS || 'https://www.cochranfilms.com,https://cochranfilms.com,https://landing.cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000')
     .split(',')
@@ -98,13 +178,33 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, firstName, lastName, email, service, message } = req.body || {};
+    const { name, firstName, lastName, email, service, message, companyWebsite, formLoadedAt } = req.body || {};
 
     const customerFirst = String(firstName || '').trim();
     const customerLast = String(lastName || '').trim();
     const customerName =
       String(name || '').trim() ||
       [customerFirst, customerLast].filter(Boolean).join(' ');
+
+    const spamCheck = assessContactSpam({
+      companyWebsite,
+      formLoadedAt,
+      customerFirst,
+      customerLast,
+      customerName,
+      message,
+    });
+
+    if (spamCheck) {
+      logSpam(spamCheck.reason, {
+        email: email?.trim(),
+        customerName,
+      });
+      if (spamCheck.silent) {
+        return res.status(200).json({ success: true, inquiryId: fakeInquiryId() });
+      }
+      return res.status(400).json({ error: spamCheck.error });
+    }
 
     if (!customerName || !email?.trim() || !message?.trim()) {
       return res.status(400).json({ error: 'First name, last name, email, and project details are required.' });
