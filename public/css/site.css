@@ -13220,3 +13220,26 @@ body.page-portfolio .iheart-video-label::before {
   background: #1d1d1f !important;
   box-shadow: none !important;
 }
+
+/* Nav Book Services CTA — must stay visible (Pass 3 strips .nav-link backgrounds) */
+.nav-link.nav-cta,
+.nav-menu .nav-link.nav-cta {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  padding: 10px 16px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.nav-link.nav-cta:hover,
+.nav-link.nav-cta.active,
+.nav-menu .nav-link.nav-cta:hover,
+.nav-menu .nav-link.nav-cta.active {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  text-decoration: none !important;
+}
