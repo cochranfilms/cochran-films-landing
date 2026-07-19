@@ -19,7 +19,7 @@
   <meta name="geo.placename" content="Atlanta, Georgia" />
   <meta name="geo.position" content="33.7490;-84.3880" />
   <meta name="ICBM" content="33.7490, -84.3880" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://cochranfilms.com/resume" />
   <link rel="alternate" href="https://cochranfilms.com/resume" hreflang="x-default" />
   <link rel="alternate" href="https://cochranfilms.studio/resume" hreflang="en-US" />
@@ -319,23 +319,44 @@
 
   <style>
     :root {
-      --brand-indigo: #6366f1;
-      --brand-emerald: #10b981;
-      --brand-gold: #FFB200;
+      --brand-indigo: #1d1d1f;
+      --brand-emerald: #1d1d1f;
+      --brand-amber: #1d1d1f;
+      --brand-gold: #1d1d1f;
       --brand-blue: #0066CC;
-      --dark-900: #0f172a;
-      --dark-950: #020617;
-      --text-primary: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(15, 23, 42, 0.72);
-      --card-border: 1px solid rgba(99,102,241,0.22);
-      --backdrop: blur(16px);
+      --brand-red: #d70015;
+      --surface: #ffffff;
+      --surface-muted: #f5f5f7;
+      --surface-elevated: #ffffff;
+      --dark-900: #f5f5f7;
+      --dark-950: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-muted: #86868b;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-strong: rgba(0, 0, 0, 0.14);
+      --card-bg: #ffffff;
+      --card-border: 1px solid rgba(0, 0, 0, 0.08);
+      --backdrop: none;
       --radius-lg: 18px;
       --radius-md: 12px;
-      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
-      --glow-gold: 0 0 40px rgba(255,178,0,0.30);
+      --radius-sm: 10px;
+      --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.05);
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
+      --glow-indigo: none;
+      --glow-gold: none;
+      --transition: all 300ms cubic-bezier(.4,0,.2,1);
       --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
+      --nav-height: 72px;
+      --section-gap: 44px;
+      --section-pad-y: 32px;
+      --hero-banner-height: clamp(420px, 62vh, 680px);
+      --btn-primary-bg: #1d1d1f;
+      --btn-primary-text: #ffffff;
+      --btn-secondary-bg: #ffffff;
+      --btn-secondary-text: #1d1d1f;
+      --btn-secondary-border: rgba(0, 0, 0, 0.14);
     }
 
     * { box-sizing: border-box; }
@@ -344,22 +365,16 @@
     body {
       margin: 0;
       min-height: 100%;
-      background:
-        radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
-        radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
-        linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
+      background: #ffffff;
       color: var(--text-primary);
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, "Inter", sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
     }
 
     .ai-background {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none;
+      display: none;
     }
 
     #neuralCanvas {
@@ -368,18 +383,7 @@
       display: block;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      background-image:
-        linear-gradient(rgba(99,102,241,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99,102,241,0.08) 1px, transparent 1px);
-      background-size: 84px 84px;
-      mask-image: radial-gradient(circle at center, black 0%, transparent 76%);
-    }
+    body::before { display: none; }
 
     a { color: inherit; }
 
@@ -4330,6 +4334,29 @@
         padding: 12px 16px;
       }
       .resume-subnav-inner::-webkit-scrollbar { display: none; }
+    }
+
+    /* Professional Light Theme — resume inline */
+    .hero-card, .logo-strip, .content-card, .side-card, .portfolio-section {
+      backdrop-filter: none !important;
+      box-shadow: var(--shadow-sm) !important;
+    }
+    .resume-name-title span {
+      background: none !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+      color: var(--text-primary) !important;
+    }
+    .cta-primary {
+      background: #1d1d1f !important;
+      color: #ffffff !important;
+      border: 1px solid #1d1d1f !important;
+      box-shadow: none !important;
+    }
+    .cta-secondary {
+      background: #ffffff !important;
+      color: #1d1d1f !important;
+      border: 1px solid rgba(0, 0, 0, 0.14) !important;
+      box-shadow: none !important;
     }
   </style>
   <link rel="stylesheet" href="/css/site.css" />

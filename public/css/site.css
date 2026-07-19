@@ -1,56 +1,60 @@
     :root {
-      --brand-indigo: #6366f1;
-      --brand-emerald: #10b981;
-      --brand-amber: #f59e0b;
-      --brand-gold: #FFB200;
+      --brand-indigo: #1d1d1f;
+      --brand-emerald: #1d1d1f;
+      --brand-amber: #1d1d1f;
+      --brand-gold: #1d1d1f;
       --brand-blue: #0066CC;
-      --brand-red: #ef4444;
-      --dark-900: #0f172a;
-      --dark-950: #020617;
-      --text-primary: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(15, 23, 42, 0.7);
-      --card-border: 1px solid rgba(99,102,241,0.20);
-      --backdrop: blur(12px);
+      --brand-red: #d70015;
+      --surface: #ffffff;
+      --surface-muted: #f5f5f7;
+      --surface-elevated: #ffffff;
+      --dark-900: #f5f5f7;
+      --dark-950: #ffffff;
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-muted: #86868b;
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-strong: rgba(0, 0, 0, 0.14);
+      --card-bg: #ffffff;
+      --card-border: 1px solid rgba(0, 0, 0, 0.08);
+      --backdrop: none;
       --radius-lg: 18px;
       --radius-md: 12px;
       --radius-sm: 10px;
-      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
-      --shadow-md: 0 18px 40px rgba(0,0,0,0.35);
-      --shadow-sm: 0 10px 24px rgba(0,0,0,0.25);
-      --glow-indigo: 0 0 40px rgba(99,102,241,0.35);
-      --glow-gold: 0 0 40px rgba(255,178,0,0.35);
+      --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.05);
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
+      --glow-indigo: none;
+      --glow-gold: none;
       --transition: all 300ms cubic-bezier(.4,0,.2,1);
       --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
-      --nav-height: 80px;
+      --nav-height: 72px;
       --section-gap: 44px;
       --section-pad-y: 32px;
       --hero-banner-height: clamp(420px, 62vh, 680px);
+      --btn-primary-bg: #1d1d1f;
+      --btn-primary-text: #ffffff;
+      --btn-secondary-bg: #ffffff;
+      --btn-secondary-text: #1d1d1f;
+      --btn-secondary-border: rgba(0, 0, 0, 0.14);
     }
 
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       height: 100%;
-      background: radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
-                  radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
-                  linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
+      background: #ffffff;
       color: var(--text-primary);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, "Inter", sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     /* AI Background & Neural Network */
     .ai-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
+      display: none;
     }
 
     #neuralCanvas {
@@ -66,9 +70,10 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(99,102,241,0.2);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       transition: var(--transition);
     }
 
@@ -4180,23 +4185,29 @@
 
     .lp-portfolio-cta {
       text-align: center;
-      padding: clamp(24px, 4vw, 40px);
+      padding: clamp(28px, 4vw, 44px);
       margin-bottom: clamp(32px, 5vw, 56px);
       border-radius: 24px;
-      border: 1px solid rgba(255,178,0,0.28);
+      border: 1px solid rgba(255, 178, 0, 0.32);
       background:
-        linear-gradient(135deg, rgba(15,23,42,0.88), rgba(2,6,23,0.92)),
-        radial-gradient(circle at 50% 0%, rgba(255,178,0,0.12), transparent 55%);
+        radial-gradient(ellipse 90% 70% at 100% 0%, rgba(255, 178, 0, 0.14), transparent 52%),
+        radial-gradient(ellipse 80% 60% at 0% 100%, rgba(99, 102, 241, 0.08), transparent 48%),
+        linear-gradient(165deg, #ffffff 0%, #f8fafc 48%, #fffbeb 100%);
+      box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+      color: #0f172a;
     }
 
     .lp-portfolio-cta h3 {
       font-family: 'Poppins', sans-serif;
       font-size: clamp(24px, 4vw, 34px);
       margin: 0 0 12px;
+      color: #0f172a;
     }
 
     .lp-portfolio-cta p {
-      color: var(--text-secondary);
+      color: #475569;
       font-size: 16px;
       line-height: 1.65;
       max-width: 620px;
@@ -4214,17 +4225,18 @@
     .lp-resume-links a {
       font-size: 13px;
       font-weight: 700;
-      color: #fde68a;
+      color: #92400e;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255,178,0,0.24);
-      background: rgba(15,23,42,0.55);
+      border: 1px solid rgba(255, 178, 0, 0.34);
+      background: rgba(255, 255, 255, 0.88);
       transition: var(--transition-fast);
     }
 
     .lp-resume-links a:hover {
-      border-color: rgba(255,178,0,0.45);
+      border-color: rgba(255, 178, 0, 0.55);
+      background: #fff;
       transform: translateY(-1px);
     }
 
@@ -4956,6 +4968,341 @@
       margin-bottom: 0;
     }
 
+    .google-reviews-section {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 0 clamp(18px, 3vw, 34px) 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      background:
+        radial-gradient(900px 360px at 10% 0%, rgba(255, 178, 0, 0.12), transparent 62%),
+        radial-gradient(900px 420px at 92% 12%, rgba(99, 102, 241, 0.18), transparent 62%),
+        linear-gradient(180deg, rgba(2, 6, 23, 0.2), rgba(15, 23, 42, 0.72) 18%, rgba(2, 6, 23, 0.5));
+      border-top: 1px solid rgba(255, 178, 0, 0.12);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.18);
+    }
+
+    .google-reviews-shell {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: clamp(22px, 3vw, 34px) clamp(16px, 3vw, 40px);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(255, 178, 0, 0.2), transparent 32%),
+        radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.24), transparent 34%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.94), rgba(2, 6, 23, 0.82));
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 0;
+      border-right: 0;
+      box-shadow:
+        0 28px 76px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .google-reviews-shell::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      border-top: 1px solid rgba(255, 178, 0, 0.12);
+      border-bottom: 1px solid rgba(255, 178, 0, 0.12);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .google-reviews-head {
+      display: grid;
+      grid-template-columns: minmax(0, 920px) minmax(220px, 300px);
+      gap: clamp(18px, 4vw, 34px);
+      align-items: end;
+      justify-content: center;
+      width: min(100%, 1440px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: clamp(22px, 3vw, 30px);
+      text-align: left;
+    }
+
+    .google-reviews-head > div:first-child {
+      text-align: center;
+    }
+
+    .google-reviews-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--brand-gold);
+      background: rgba(255, 178, 0, 0.1);
+      border: 1px solid rgba(255, 178, 0, 0.28);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .google-reviews-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4.2vw, 46px);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      max-width: 740px;
+      margin: 0 auto;
+      text-align: center;
+      background: linear-gradient(135deg, #fff 0%, #dbeafe 45%, #fde68a 92%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .google-reviews-summary {
+      justify-self: end;
+      width: 100%;
+      border-radius: 22px;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .google-reviews-stars,
+    .google-review-stars {
+      color: var(--brand-gold);
+      letter-spacing: 0.08em;
+      text-shadow: 0 0 22px rgba(255, 178, 0, 0.4);
+      white-space: nowrap;
+    }
+
+    .google-reviews-summary strong {
+      display: block;
+      margin: 8px 0 5px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .google-reviews-summary span {
+      display: block;
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .google-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(12px, 1.4vw, 18px);
+      align-items: stretch;
+      grid-auto-rows: 1fr;
+      width: min(100%, 1440px);
+      margin: 0 auto;
+    }
+
+    .google-review-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      border-radius: 24px;
+      padding: clamp(18px, 1.8vw, 22px);
+      text-align: left;
+      background:
+        radial-gradient(circle at 90% 0%, rgba(255, 178, 0, 0.14), transparent 34%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.94));
+      border: 1px solid rgba(255, 178, 0, 0.24);
+      box-shadow:
+        0 22px 54px rgba(2, 6, 23, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .google-review-card::after {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -48px;
+      width: 130px;
+      height: 130px;
+      border-radius: 999px;
+      background: rgba(255, 178, 0, 0.18);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .google-review-card--featured {
+      background:
+        radial-gradient(circle at 88% 0%, rgba(255, 178, 0, 0.18), transparent 34%),
+        linear-gradient(160deg, #ffffff, #f8fafc 56%, #eef2ff);
+      border-color: rgba(255, 178, 0, 0.36);
+    }
+
+    .google-review-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 178, 0, 0.52);
+      box-shadow:
+        0 30px 68px rgba(2, 6, 23, 0.38),
+        0 0 44px rgba(255, 178, 0, 0.14);
+    }
+
+    .google-review-topline {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .google-review-topline > span:last-child {
+      color: #475569;
+    }
+
+    .google-review-card blockquote {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      margin: 0;
+      padding-top: 8px;
+      color: #0f172a;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: clamp(13px, 1vw, 14px);
+      font-weight: 650;
+      line-height: 1.64;
+      letter-spacing: -0.01em;
+    }
+
+    .google-review-card blockquote::before {
+      content: "“";
+      display: block;
+      height: 28px;
+      margin-bottom: 2px;
+      color: var(--brand-gold);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 0.72;
+      text-shadow: 0 8px 22px rgba(255, 178, 0, 0.22);
+    }
+
+    @media (min-width: 1101px) {
+      .google-review-card {
+        min-height: 390px;
+      }
+    }
+
+    .google-review-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    .google-review-footer strong,
+    .google-review-footer span {
+      display: block;
+    }
+
+    .google-review-footer strong {
+      color: #0f172a;
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+
+    .google-review-footer span {
+      color: #475569;
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+
+    .google-review-footer a,
+    .google-reviews-business-link,
+    .google-reviews-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: var(--transition-fast);
+    }
+
+    .google-review-footer a {
+      width: 100%;
+      color: #0a0a0a;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      border-radius: 999px;
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      box-shadow: 0 12px 24px rgba(255, 178, 0, 0.24);
+    }
+
+    .google-review-footer a:hover,
+    .google-reviews-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+    }
+
+    .google-reviews-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: min(100%, 1440px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: clamp(20px, 3vw, 28px);
+    }
+
+    .google-reviews-business-link {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .google-reviews-business-link:hover {
+      color: var(--brand-gold);
+      border-color: rgba(255, 178, 0, 0.28);
+      background: rgba(255, 178, 0, 0.08);
+    }
+
+    .google-reviews-cta {
+      color: #0a0a0a;
+      background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: var(--glow-gold);
+    }
+
     .hero-value-section {
       margin: clamp(28px, 4vw, 40px) auto;
       max-width: 1140px;
@@ -5184,7 +5531,21 @@
       opacity: 1;
     }
 
+    @media (max-width: 1100px) {
+      .google-reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 900px) {
+      .google-reviews-head {
+        grid-template-columns: 1fr;
+      }
+
+      .google-reviews-summary {
+        justify-self: stretch;
+      }
+
       .hero-value-props {
         grid-template-columns: 1fr;
         max-width: 420px;
@@ -5418,10 +5779,12 @@
 
       .hero-banner,
       .hero-social-proof,
+      .google-reviews-section,
       .marquee-logos,
       .marquee,
       .marquee-services,
       .mayor-highlight-section--fullbleed,
+      .spb-cta-band,
       .services-showcase-section,
       .service-builder-section,
       .lp-creator-edu-section,
@@ -5583,9 +5946,9 @@
         gap: 6px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        background: rgba(15, 23, 42, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
-        border-top: 1px solid rgba(99, 102, 241, 0.22);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
         z-index: 10001;
       }
 
@@ -5593,7 +5956,7 @@
       body.nav-open .nav-wrapper {
         z-index: 10050;
         backdrop-filter: none;
-        background: rgba(15, 23, 42, 0.98);
+        background: rgba(255, 255, 255, 0.98);
       }
 
       body.nav-open .wrapper,
@@ -5646,10 +6009,12 @@
       /* Full-bleed sections inside wrapper (book/footer handled at 1100px) */
       .hero-banner,
       .hero-social-proof,
+      .google-reviews-section,
       .marquee-logos,
       .marquee,
       .marquee-services,
       .mayor-highlight-section--fullbleed,
+      .spb-cta-band,
       .services-showcase-section,
       .service-builder-section,
       .lp-creator-edu-section,
@@ -5742,6 +6107,69 @@
 
       .logo-pill img {
         max-width: min(120px, 22vw);
+      }
+
+      .google-reviews-section {
+        margin-top: 20px;
+        margin-bottom: 28px;
+        padding: 0;
+      }
+
+      .google-reviews-shell {
+        border-radius: 0;
+        padding: 22px var(--mobile-gutter);
+      }
+
+      .google-reviews-head {
+        gap: 14px;
+        width: min(100%, 560px);
+        justify-items: center;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+
+      .google-reviews-grid {
+        grid-template-columns: 1fr;
+        width: min(100%, 520px);
+      }
+
+      .google-reviews-title {
+        font-size: clamp(24px, 7vw, 32px);
+        line-height: 1.08;
+        max-width: 12ch;
+      }
+
+      .google-reviews-summary {
+        justify-self: center;
+        max-width: 360px;
+        padding: 14px;
+        text-align: center;
+      }
+
+      .google-review-card {
+        padding: 18px 14px;
+        border-radius: 18px;
+      }
+
+      .google-review-card blockquote {
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      .google-review-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .google-review-footer a,
+      .google-reviews-business-link,
+      .google-reviews-cta {
+        width: 100%;
+      }
+
+      .google-reviews-actions {
+        align-items: stretch;
+        width: min(100%, 360px);
       }
 
       .hero-value-section {
@@ -10672,7 +11100,15 @@ body.resume-page section[id] {
   }
 }
 
-/* Service Package Builder — site-wide CTAs */
+/* Service Package Builder — site-wide CTAs (light standout theme) */
+.spb-cta-band,
+.spb-cta-inline,
+.lp-portfolio-cta {
+  --spb-cta-ink: #0f172a;
+  --spb-cta-muted: #475569;
+  --spb-cta-soft: #64748b;
+}
+
 .spb-cta-band {
   position: relative;
   width: 100vw;
@@ -10680,15 +11116,31 @@ body.resume-page section[id] {
   padding: clamp(40px, 6vw, 64px) clamp(20px, 4vw, 48px);
   overflow: hidden;
   isolation: isolate;
-  border-top: 1px solid rgba(255, 178, 0, 0.22);
-  border-bottom: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 178, 0, 0.28);
+  color: var(--spb-cta-ink);
   background:
-    radial-gradient(920px 420px at 6% 0%, rgba(255, 178, 0, 0.14), transparent 58%),
-    radial-gradient(780px 380px at 94% 20%, rgba(99, 102, 241, 0.16), transparent 55%),
-    linear-gradient(180deg, rgba(2, 6, 23, 0.98) 0%, rgba(15, 23, 42, 0.94) 50%, rgba(2, 6, 23, 0.98) 100%);
+    radial-gradient(ellipse 920px 420px at 6% 0%, rgba(255, 178, 0, 0.16), transparent 58%),
+    radial-gradient(ellipse 780px 380px at 94% 20%, rgba(99, 102, 241, 0.1), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 46%, #fffbeb 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.spb-cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 92%);
+  pointer-events: none;
 }
 
 .spb-cta-band-inner {
+  position: relative;
+  z-index: 1;
   max-width: 760px;
   margin: 0 auto;
   display: flex;
@@ -10710,7 +11162,7 @@ body.resume-page section[id] {
   align-items: center;
   gap: 8px;
   margin: 0 auto 12px;
-  color: var(--brand-gold);
+  color: #b45309;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -10722,12 +11174,12 @@ body.resume-page section[id] {
   font-size: clamp(26px, 4.5vw, 40px);
   line-height: 1.1;
   margin: 0 0 12px;
-  color: #fff;
+  color: var(--spb-cta-ink);
 }
 
 .spb-cta-band-copy > p {
   margin: 0 auto 18px;
-  color: var(--text-secondary);
+  color: var(--spb-cta-muted);
   font-size: clamp(15px, 2vw, 17px);
   line-height: 1.65;
   max-width: 56ch;
@@ -10749,11 +11201,12 @@ body.resume-page section[id] {
   gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(99, 102, 241, 0.28);
-  background: rgba(15, 23, 42, 0.55);
-  color: #cbd5e1;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--spb-cta-ink);
   font-size: 13px;
   font-weight: 600;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
 .spb-cta-band-steps li span {
@@ -10763,8 +11216,8 @@ body.resume-page section[id] {
   width: 22px;
   height: 22px;
   border-radius: 999px;
-  background: rgba(255, 178, 0, 0.15);
-  color: var(--brand-gold);
+  background: linear-gradient(135deg, var(--brand-gold), #ffd166);
+  color: #0a0a0a;
   font-size: 11px;
   font-weight: 800;
 }
@@ -10779,23 +11232,68 @@ body.resume-page section[id] {
 }
 
 .spb-cta-band-actions .hero-cta,
-.spb-cta-band-actions .hero-banner-btn-secondary {
+.spb-cta-band-actions .hero-banner-btn-secondary,
+.spb-cta-inline-actions .hero-cta,
+.spb-cta-inline-actions .hero-banner-btn-secondary,
+.lp-portfolio-cta .hero-cta,
+.lp-portfolio-cta .hero-banner-btn-secondary {
   justify-content: center;
+}
+
+.spb-cta-band-actions .hero-cta,
+.spb-cta-band-actions .hero-banner-btn-secondary {
   width: 100%;
 }
 
+.spb-cta-band .hero-banner-btn-secondary,
+.spb-cta-inline .hero-banner-btn-secondary,
+.lp-portfolio-cta .hero-banner-btn-secondary {
+  background: #fff;
+  color: var(--spb-cta-ink);
+  border-color: rgba(15, 23, 42, 0.14);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.spb-cta-band .hero-banner-btn-secondary:hover,
+.spb-cta-inline .hero-banner-btn-secondary:hover,
+.lp-portfolio-cta .hero-banner-btn-secondary:hover {
+  border-color: rgba(255, 178, 0, 0.55);
+  color: #92400e;
+  background: #fff;
+}
+
 .spb-cta-inline {
+  position: relative;
+  isolation: isolate;
   margin-top: clamp(28px, 4vw, 40px);
-  padding: clamp(24px, 4vw, 36px);
+  padding: clamp(28px, 4vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 178, 0, 0.24);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 178, 0, 0.32);
+  color: var(--spb-cta-ink);
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.92)),
-    radial-gradient(circle at 50% 0%, rgba(255, 178, 0, 0.1), transparent 55%);
+    radial-gradient(ellipse 90% 70% at 100% 0%, rgba(255, 178, 0, 0.14), transparent 52%),
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(99, 102, 241, 0.08), transparent 48%),
+    linear-gradient(165deg, #ffffff 0%, #f8fafc 48%, #fffbeb 100%);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.spb-cta-inline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, rgba(0, 0, 0, 0.4), transparent 78%);
+  pointer-events: none;
 }
 
 #about > .spb-cta-inline:last-child {
@@ -10803,17 +11301,35 @@ body.resume-page section[id] {
 }
 
 .spb-cta-inline h3 {
+  position: relative;
+  z-index: 1;
   font-family: 'Poppins', sans-serif;
   font-size: clamp(22px, 3.5vw, 30px);
   margin: 0 0 10px;
+  color: var(--spb-cta-ink);
 }
 
 .spb-cta-inline p {
+  position: relative;
+  z-index: 1;
   margin: 0 auto 18px;
   max-width: 52ch;
-  color: var(--text-secondary);
+  color: var(--spb-cta-muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.spb-cta-inline-actions,
+.spb-cta-inline-actions + p {
+  position: relative;
+  z-index: 1;
+}
+
+.spb-cta-inline-actions + p {
+  margin: 16px 0 0;
+  color: var(--spb-cta-soft);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .spb-cta-inline-actions {
@@ -10945,3 +11461,712 @@ body.resume-page > footer.footer {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Professional Light Theme — Cochran Films (Apple / editorial aesthetic)
+   ========================================================================== */
+
+.ai-background,
+#neuralCanvas {
+  display: none !important;
+}
+
+html,
+body {
+  background: #ffffff !important;
+  color: var(--text-primary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, "Inter", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  display: none !important;
+}
+
+/* Navigation */
+.nav-wrapper {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  border-color: transparent !important;
+}
+
+.nav-link:hover {
+  color: var(--text-primary) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: transparent !important;
+}
+
+.nav-link.active {
+  color: var(--text-primary) !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.nav-cta,
+.hero-cta,
+.spb-cta-band-actions .hero-cta,
+.cf-about-founder-actions .hero-cta,
+.footer-spb-cta,
+.checkout-btn-primary,
+.book-submit-btn,
+.service-builder-submit,
+.spb-cta-floating-link {
+  background: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text) !important;
+  border: 1px solid var(--btn-primary-bg) !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.nav-cta:hover,
+.hero-cta:hover,
+.spb-cta-band-actions .hero-cta:hover,
+.cf-about-founder-actions .hero-cta:hover,
+.footer-spb-cta:hover,
+.checkout-btn-primary:hover,
+.book-submit-btn:hover,
+.service-builder-submit:hover,
+.spb-cta-floating-link:hover {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.hero-banner-btn-secondary,
+.spb-cta-band-actions .hero-banner-btn-secondary,
+.spb-cta-band .hero-banner-btn-secondary,
+.spb-cta-inline .hero-banner-btn-secondary,
+.cf-about-founder-actions .hero-banner-btn-secondary {
+  background: var(--btn-secondary-bg) !important;
+  color: var(--btn-secondary-text) !important;
+  border: 1px solid var(--btn-secondary-border) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+.hero-banner-btn-secondary:hover,
+.spb-cta-band-actions .hero-banner-btn-secondary:hover,
+.spb-cta-band .hero-banner-btn-secondary:hover,
+.spb-cta-inline .hero-banner-btn-secondary:hover {
+  background: var(--surface-muted) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  transform: none !important;
+}
+
+.hero-banner .hero-banner-btn-secondary {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.hero-banner .hero-banner-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.hero-banner .hero-cta {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+  border-color: #ffffff !important;
+}
+
+.hero-banner .hero-cta:hover {
+  background: #f5f5f7 !important;
+}
+
+.mobile-menu-toggle {
+  color: var(--text-primary) !important;
+}
+
+/* Gradient text → solid typography */
+.section-title,
+.hero-title:not(.hero-banner .hero-title),
+.services-showcase-title,
+.services-showcase-kicker,
+.hero-value-title,
+.hero-value-kicker,
+.book-section-title,
+.book-kicker,
+.cf-about-kicker,
+.lp-portfolio-title span,
+.resume-name-title span,
+.page-title span,
+.checkout-card h1,
+.pricing-hero-title span,
+.services-page-title span,
+.portfolio-page-title span {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.hero-banner .hero-title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.hero-banner-kicker,
+.hero-banner .hero-banner-kicker {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.hero-banner-kicker::before,
+.hero-value-kicker::before,
+.services-showcase-kicker::before,
+.book-kicker::before {
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: none !important;
+}
+
+.hero-value-kicker::before,
+.services-showcase-kicker::before,
+.book-kicker::before,
+.cf-about-kicker::before {
+  background: var(--text-primary) !important;
+}
+
+.hero-value-kicker,
+.services-showcase-kicker,
+.book-kicker,
+.cf-about-kicker,
+.hero-value-tag {
+  background: var(--surface-muted) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+  box-shadow: none !important;
+}
+
+.cf-about-title {
+  color: var(--text-primary) !important;
+}
+
+.cf-about-title span {
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Full-bleed sections — plain white / light gray */
+.services-showcase-section,
+.cf-about-section,
+.book-section,
+.footer,
+.mayor-highlight-section--fullbleed,
+.google-reviews-section,
+.hero-social-proof,
+.pricing-shell-section,
+.services-catalog-section,
+.portfolio-filter-bar-wrap,
+.checkout-page,
+.legal-page,
+.page-hero-band {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.services-showcase-section::before,
+.cf-about-section::before,
+.book-section::before,
+.spb-cta-band::before {
+  display: none !important;
+}
+
+.hero-social-proof {
+  background: var(--surface-muted) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.hero-social-proof-value {
+  color: var(--text-primary) !important;
+}
+
+/* Cards & tiles */
+.svc-tile,
+.hero-value-card,
+.about-card,
+.lp-feature-card,
+.lp-platform-card,
+.lp-web-showcase,
+.lp-portfolio-hero,
+.book-section-grid,
+.content-card,
+.hero-card,
+.side-card,
+.portfolio-section,
+.checkout-card,
+.pricing-tier-card,
+.service-card,
+.google-review-card,
+.re-deliverable,
+.cf-about-pillar,
+.cf-about-closer,
+.cf-about-quote,
+.seo-context-card {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-sm) !important;
+  backdrop-filter: none !important;
+}
+
+.svc-tile::after,
+.hero-value-card::before,
+.hero-value-card::after,
+.hero-value-icon-wrap::after,
+.lp-portfolio-hero::after,
+.hero-card::after,
+.cf-about-visual-glow,
+.checkout-card::before {
+  display: none !important;
+}
+
+.svc-tile:hover,
+.hero-value-card:hover,
+.about-card:hover,
+.lp-web-showcase:hover,
+.lp-platform-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--border-strong) !important;
+}
+
+.svc-tile--photo,
+.svc-tile--web,
+.svc-tile--brand,
+.svc-tile--whitelabel,
+.svc-tile--workshops,
+.hero-value-card--production,
+.hero-value-card--dev,
+.hero-value-card--platform {
+  --svc-accent: #1d1d1f !important;
+  --svc-accent-soft: rgba(0, 0, 0, 0.04) !important;
+  --svc-accent-border: rgba(0, 0, 0, 0.1) !important;
+  --card-accent: #1d1d1f !important;
+  --card-glow: transparent !important;
+}
+
+.svc-tile-label,
+.svc-tile-icon,
+.hero-value-icon-wrap,
+.hero-value-tag,
+.about-icon {
+  color: var(--text-primary) !important;
+  background: var(--surface-muted) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+.hero-value-icon-wrap {
+  border: 1px solid var(--border-subtle) !important;
+}
+
+/* SPB CTA band — clean editorial block */
+.spb-cta-band,
+.spb-cta-inline {
+  background: var(--surface-muted) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
+  color: var(--text-primary) !important;
+}
+
+.spb-cta-band-kicker {
+  color: var(--text-secondary) !important;
+}
+
+.spb-cta-band-copy h2,
+.spb-cta-inline h3 {
+  color: var(--text-primary) !important;
+}
+
+.spb-cta-band-copy > p,
+.spb-cta-inline > p {
+  color: var(--text-secondary) !important;
+}
+
+.spb-cta-band-steps li {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+/* Footer */
+.footer-links a:hover {
+  color: var(--text-primary) !important;
+  transform: none !important;
+}
+
+.footer-location,
+.footer-contact-list i,
+.book-trust-list i,
+.about-icon {
+  color: var(--text-secondary) !important;
+}
+
+.social-link {
+  background: var(--surface-muted) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+.social-link:hover {
+  background: #ffffff !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* Forms */
+input,
+textarea,
+select,
+.book-form input,
+.book-form textarea,
+.book-form select,
+.checkout-form input,
+.checkout-form textarea,
+.service-builder-panel input,
+.service-builder-panel select,
+.service-builder-panel textarea {
+  background: #ffffff !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-strong) !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1d1d1f !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Modals & notices */
+.cf-notice-panel,
+.cf-notice-overlay .cf-notice-panel {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-lg) !important;
+  color: var(--text-primary) !important;
+}
+
+.cf-notice-icon {
+  background: var(--surface-muted) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+.cf-notice-btn {
+  background: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text) !important;
+  box-shadow: none !important;
+}
+
+/* Service builder / pricing */
+.service-builder-sidebar,
+.service-builder-main,
+.pricing-summary-card,
+.checkout-summary,
+.builder-category-nav,
+.builder-line-item {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+.builder-category-nav button.is-active,
+.pricing-tab.is-active,
+.portfolio-filter-btn.is-active {
+  background: var(--text-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--text-primary) !important;
+}
+
+.builder-category-nav button,
+.pricing-tab,
+.portfolio-filter-btn {
+  background: #ffffff !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+/* Floating SPB CTA */
+.spb-cta-floating {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.spb-cta-floating-dismiss {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.spb-cta-floating-dismiss:hover {
+  color: var(--text-primary) !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* Hero banner — keep cinematic photo, soften overlay */
+.hero-banner {
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.hero-banner-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(0, 0, 0, 0.55) 100%) !important;
+}
+
+.hero-banner .hero-subtitle {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Pills / tags */
+.marquee:not(.marquee-logos) .pill,
+.marquee-services .pill,
+.tag,
+.chip {
+  background: var(--surface-muted) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+  box-shadow: none !important;
+}
+
+/* Remove neon accent colors in deliverables */
+.re-deliverable strong {
+  color: var(--text-primary) !important;
+}
+
+/* Resume page shared chrome */
+body.resume-page .top-banner {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .eyebrow {
+  color: var(--text-secondary) !important;
+}
+
+body.resume-page .eyebrow::before {
+  background: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .hero-title {
+  color: var(--text-secondary) !important;
+}
+
+/* Resume page — override inline dark styles loaded before site.css */
+body.resume-page .resume-subnav {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .resume-subnav-link {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+}
+
+body.resume-page .resume-subnav-link:hover,
+body.resume-page .resume-subnav-link.is-active {
+  background: var(--surface-muted) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-strong) !important;
+}
+
+body.resume-page .hero-card,
+body.resume-page .content-card,
+body.resume-page .side-card,
+body.resume-page .portfolio-section,
+body.resume-page .logo-strip,
+body.resume-page .project-card,
+body.resume-page .showcase-panel,
+body.resume-page .experience-card,
+body.resume-page .skill-group,
+body.resume-page .cert-card,
+body.resume-page .timeline-item,
+body.resume-page .gallery-card {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-sm) !important;
+  backdrop-filter: none !important;
+}
+
+body.resume-page .hero-card::after,
+body.resume-page .project-card::before,
+body.resume-page .showcase-panel::after {
+  display: none !important;
+}
+
+body.resume-page .chip,
+body.resume-page .tag,
+body.resume-page .skill-pill,
+body.resume-page .meta-pill {
+  background: var(--surface-muted) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+}
+
+body.resume-page .section-label,
+body.resume-page .eyebrow,
+body.resume-page .card-kicker {
+  color: var(--text-secondary) !important;
+}
+
+body.resume-page .stat-value,
+body.resume-page .metric-value {
+  color: var(--text-primary) !important;
+}
+
+body.resume-page .cta-primary,
+body.resume-page .btn-primary {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  border-color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .cta-secondary,
+body.resume-page .btn-secondary {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+}
+
+/* Google Reviews */
+.google-reviews-shell,
+.google-reviews-section {
+  background: var(--surface-muted) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.google-reviews-shell::before,
+.google-review-card::after {
+  display: none !important;
+}
+
+.google-reviews-kicker,
+.google-reviews-title,
+.mayor-highlight-content .mayor-card-kicker {
+  color: var(--text-secondary) !important;
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.google-reviews-title {
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.google-reviews-cta,
+.google-reviews-business-link {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+.google-reviews-cta {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  border-color: #1d1d1f !important;
+}
+
+/* Mayor highlight — light editorial panel beside photo */
+.mayor-highlight-section--fullbleed {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.mayor-highlight-content {
+  background: var(--surface-muted) !important;
+  border-left: 1px solid var(--border-subtle) !important;
+}
+
+.mayor-highlight-content .mayor-card-kicker::before,
+.mayor-highlight-content .mayor-card-kicker::after {
+  background: var(--border-strong) !important;
+}
+
+.mayor-highlight-content .mayor-impact-icon {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+
+/* Service builder / pricing pages */
+.service-builder-section,
+.sbp-hero,
+.spb-hero,
+.page-hero-band {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.service-builder-section::before {
+  display: none !important;
+}
+
+.builder-step,
+.builder-summary-row,
+.checkout-line-item,
+.legal-page article,
+.privacy-section {
+  background: #ffffff !important;
+  border-color: var(--border-subtle) !important;
+}
+
+/* Typography weight — editorial, not heavy marketing */
+.section-title,
+.hero-value-title,
+.services-showcase-title,
+.book-section-title,
+.cf-about-title {
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+}
+
+h1, h2, h3, .hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* Mobile navigation drawer */
+@media (max-width: 768px) {
+  .nav-menu.show {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-top: 1px solid var(--border-subtle) !important;
+  }
+
+  body.nav-open .nav-wrapper {
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+}
+
