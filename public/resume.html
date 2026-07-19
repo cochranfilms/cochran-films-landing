@@ -1616,21 +1616,26 @@
     }
 
     .seo-context-list {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+      container-type: inline-size;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
       width: 100%;
     }
 
     .seo-context-list span {
+      flex: 1 1 0;
+      min-width: 0;
+      white-space: nowrap;
+      text-align: center;
       border: 1px solid rgba(255,178,0,0.20);
       border-radius: 12px;
       background: rgba(15,23,42,0.62);
       color: #e2e8f0;
-      font-size: 12px;
+      font-size: clamp(8px, 1.05cqi, 11px);
       font-weight: 850;
-      line-height: 1.35;
-      padding: 12px;
+      line-height: 1.2;
+      padding: 10px 6px;
     }
 
     .portfolio-section {
@@ -4072,7 +4077,12 @@
       }
 
       .seo-context-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        flex-wrap: wrap;
+      }
+
+      .seo-context-list span {
+        flex: 1 1 calc(50% - 4px);
+        font-size: 11px;
       }
 
       .creator-platform-grid {
@@ -4206,7 +4216,12 @@
       }
 
       .seo-context-list {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+
+      .seo-context-list span {
+        flex: 1 1 auto;
+        font-size: 12px;
       }
 
       .portfolio-feature,
@@ -4415,7 +4430,7 @@
       </div>
       <div class="hero-banner-overlay" aria-hidden="true"></div>
       <div class="hero-banner-content">
-        <div class="hero-banner-kicker">Cody Cochran · Resume 2026</div>
+        <div class="hero-banner-kicker">Atlanta · Cody Cochran Resume 2026</div>
         <h1 class="hero-title">LET&apos;S BUILD YOUR BRAND STORY</h1>
         <p class="hero-subtitle">Multimedia entrepreneur, film producer, and platform builder — Atlanta-based web &amp; media expert across production, education, and digital platforms.</p>
         <div class="hero-banner-actions">
@@ -5541,11 +5556,6 @@
                   </div>
                   <div class="brand-video-meta"><strong>DJ Set Highlights</strong><span>DJ POPO</span></div>
                 </article>
-              </div>
-
-              <div class="brand-social-row" aria-label="Scratch Master DJ POPO social links">
-                <a class="brand-social-card" href="https://www.instagram.com/djpopo01" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a class="brand-social-card" href="https://www.facebook.com/hperel88/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
               </div>
             </div>
           </section>
