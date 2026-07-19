@@ -12508,3 +12508,276 @@ strong,
 .spb-cta-floating-link {
   border-radius: var(--radius-md) !important;
 }
+
+/* ==========================================================================
+   Editorial Refinement Pass 3 — plain headings, readable reviews, outline CTAs
+   ========================================================================== */
+
+/* Headings are text only — never boxed */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-title,
+.hero-value-title,
+.services-showcase-title,
+.book-section-title,
+.cf-about-title,
+.google-reviews-title,
+.spb-cta-band-copy h2,
+.spb-cta-inline h3,
+.spb-guide-banner-head h2,
+.page-hero-band h1,
+.mayor-highlight-content .mayor-card-title,
+.footer-col-title,
+#service-builder-title,
+#spb-guide-title {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Kickers / eyebrow labels — plain text, no chip outline */
+.hero-banner-kicker,
+.hero-value-kicker,
+.services-showcase-kicker,
+.book-kicker,
+.cf-about-kicker,
+.google-reviews-kicker,
+.spb-cta-band-kicker,
+.spb-kicker,
+.spb-guide-kicker,
+.mayor-highlight-content .mayor-card-kicker,
+.eyebrow,
+.section-label,
+.card-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  color: #424245 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+.hero-banner-kicker,
+.hero-banner .hero-banner-kicker {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.hero-value-kicker::before,
+.services-showcase-kicker::before,
+.book-kicker::before,
+.cf-about-kicker::before,
+.google-reviews-kicker::before {
+  display: none !important;
+}
+
+/* Section wrappers — no box around headings + content */
+.google-reviews-shell,
+.google-reviews-head,
+.google-reviews-head > div:first-child,
+.spb-cta-band-inner,
+.spb-cta-band-copy,
+.spb-hero,
+.spb-hero-main,
+.section-header,
+.hero-value-head,
+.services-showcase-head,
+.book-section-info,
+.cf-about-header {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Nav links — plain text, no pill boxes */
+.nav-link,
+.nav-link.active,
+.nav-link:hover {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.nav-link.active {
+  text-decoration: underline !important;
+  text-underline-offset: 6px !important;
+}
+
+/* Google Reviews — clean sans typography */
+.google-reviews-section,
+.google-reviews-shell {
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.google-reviews-title {
+  background: none !important;
+  -webkit-text-fill-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.google-reviews-summary {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+.google-reviews-summary strong {
+  color: #1d1d1f !important;
+}
+
+.google-reviews-summary span,
+.google-reviews-stars,
+.google-review-stars {
+  color: #1d1d1f !important;
+  text-shadow: none !important;
+}
+
+.google-review-card {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+.google-review-card--featured {
+  background: transparent !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.google-review-card:hover {
+  transform: none !important;
+  border-color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+.google-review-card blockquote {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: #1d1d1f !important;
+  letter-spacing: -0.01em !important;
+}
+
+.google-review-card blockquote::before {
+  display: none !important;
+}
+
+.google-review-topline,
+.google-review-topline > span:last-child {
+  color: #424245 !important;
+  font-weight: 600 !important;
+}
+
+.google-review-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.google-review-footer strong {
+  color: #1d1d1f !important;
+}
+
+.google-review-footer span {
+  color: #424245 !important;
+  font-weight: 600 !important;
+}
+
+/* View on Google — outline button */
+.google-review-footer a {
+  width: 100% !important;
+  background: transparent !important;
+  color: #1d1d1f !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  padding: 10px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+.google-review-footer a:hover {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.google-reviews-business-link {
+  background: transparent !important;
+  color: #1d1d1f !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+.google-reviews-cta {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+.google-reviews-business-link:hover {
+  background: transparent !important;
+  color: #1d1d1f !important;
+}
+
+/* Prevent low-contrast copy on white surfaces */
+.google-reviews-section *,
+.spb-cta-band *,
+.service-builder-section .section-subtitle,
+.hero-value-section *,
+.cf-about-section p,
+.book-section-lede {
+  text-shadow: none !important;
+}
+
+.service-builder-section .section-subtitle,
+.section-subtitle,
+.hero-value-sub,
+.google-reviews-summary span,
+.google-review-footer span,
+.footer-tagline,
+.book-section-lede,
+.cf-about-deck {
+  color: #333336 !important;
+}
+
+/* SPB band — divider only, not a filled panel */
+.spb-cta-band {
+  background: #ffffff !important;
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.spb-cta-band-steps li {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+.spb-cta-inline {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
