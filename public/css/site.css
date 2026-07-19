@@ -13025,7 +13025,6 @@ body.page-portfolio .lp-creator-edu-section .creator-platform-panel,
 body.page-portfolio .lp-creator-edu-section .creator-platform-item,
 body.page-portfolio .lp-creator-edu-section .lp-creator-card,
 body.page-portfolio .iheart-aside,
-body.page-portfolio .iheart-pillar,
 body.page-portfolio .iheart-video-frame,
 body.page-portfolio .re-promise-card,
 body.page-portfolio .re-promise-card.turnaround,
@@ -13186,8 +13185,102 @@ body.page-portfolio .sp-story-divider {
   background: rgba(0, 0, 0, 0.1) !important;
 }
 
-body.page-portfolio .sp-story-panel a {
+body.page-portfolio .sp-story-panel p a {
   color: #1d1d1f !important;
+}
+
+body.page-portfolio .sp-story-panel a.hero-cta,
+body.page-portfolio .lp-web-actions a.hero-cta,
+body.page-portfolio .lp-portfolio-actions a.hero-cta,
+body.page-portfolio .iheart-footer-cta a.hero-cta,
+body.page-portfolio .lp-creator-footer-cta a.hero-cta {
+  color: #ffffff !important;
+  background: #1d1d1f !important;
+  border: 1px solid #1d1d1f !important;
+}
+
+body.page-portfolio .sp-story-panel a.hero-cta:hover,
+body.page-portfolio .lp-web-actions a.hero-cta:hover,
+body.page-portfolio .lp-portfolio-actions a.hero-cta:hover,
+body.page-portfolio .iheart-footer-cta a.hero-cta:hover,
+body.page-portfolio .lp-creator-footer-cta a.hero-cta:hover {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border-color: #000000 !important;
+}
+
+/* Site preview mockups — keep hero overlay readable on live photos */
+body.page-portfolio .cca-preview .sp-hero-headline,
+body.page-portfolio .cca-preview .sp-hero-sub,
+body.page-portfolio .cca-preview .sp-hero-login {
+  color: #ffffff !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+body.page-portfolio .cca-preview .sp-hero-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.52) 58%, rgba(0, 0, 0, 0.72) 100%) !important;
+}
+
+body.page-portfolio .sp-hero-meta {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: 0 !important;
+}
+
+body.page-portfolio .sp-hero-meta strong {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .sp-hero-meta span,
+body.page-portfolio .sp-hero-meta span a {
+  color: #333336 !important;
+}
+
+body.page-portfolio .sp-logo-wrap {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 12px 16px !important;
+}
+
+body.page-portfolio .sp-logo-wrap img {
+  filter: none !important;
+}
+
+/* CCA mockup — keep full headline + CTAs visible inside the frame */
+body.page-portfolio .cca-preview .sp-hero-overlay {
+  justify-content: center !important;
+  padding: 14px 12px 18px !important;
+  gap: 4px;
+}
+
+body.page-portfolio .cca-preview .sp-hero-headline {
+  font-size: clamp(12px, 1.65vw, 18px) !important;
+  line-height: 1.14 !important;
+  max-width: 94% !important;
+}
+
+body.page-portfolio .cca-preview .sp-hero-sub {
+  font-size: 10px !important;
+  line-height: 1.35 !important;
+  max-width: 94% !important;
+  margin-top: 2px !important;
+}
+
+body.page-portfolio .cca-preview .sp-hero-cta-row {
+  margin-top: 6px !important;
+  gap: 6px !important;
+}
+
+body.page-portfolio .cca-preview .sp-btn {
+  font-size: 10px !important;
+  padding: 7px 11px !important;
+}
+
+body.page-portfolio .cca-preview .sp-hero-login {
+  font-size: 9px !important;
+  margin-top: 4px !important;
 }
 
 body.page-portfolio .lp-portfolio-cta {
@@ -13209,7 +13302,24 @@ body.page-portfolio .lp-creator-edu-section .lp-creator-video iframe {
 }
 
 body.page-portfolio .iheart-pillar:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-right: 1px solid #1d1d1f !important;
+}
+
+body.page-portfolio .iheart-pillar {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  body.page-portfolio .iheart-pillar:not(:last-child) {
+    border-right: none !important;
+    border-bottom: 1px solid #1d1d1f !important;
+  }
+
+  body.page-portfolio .iheart-pillar:last-child {
+    border-bottom: none !important;
+  }
 }
 
 body.page-portfolio .iheart-video-label {
@@ -13242,4 +13352,928 @@ body.page-portfolio .iheart-video-label::before {
   color: #ffffff !important;
   border-color: #000000 !important;
   text-decoration: none !important;
+}
+
+/* ==========================================================================
+   Editorial Refinement Pass 6 — pricing builder + resume page plain theme
+   ========================================================================== */
+
+/* --- Pricing / Service Package Builder --- */
+
+body.page-pricing,
+body.page-pricing .wrapper {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+}
+
+/* Page opening heroes — plain white editorial (pricing + resume) */
+body.page-pricing .page-opening-hero .hero-banner,
+body.resume-page .page-opening-hero .hero-banner {
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  min-height: clamp(280px, 42vh, 420px) !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+body.page-pricing .hero-banner-overlay,
+body.resume-page .hero-banner-overlay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.72) 45%, rgba(255, 255, 255, 0.92) 100%) !important;
+}
+
+body.page-pricing .hero-banner .hero-title,
+body.resume-page .hero-banner .hero-title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .hero-banner-kicker,
+body.resume-page .hero-banner-kicker,
+body.page-pricing .hero-banner .hero-subtitle,
+body.resume-page .hero-banner .hero-subtitle {
+  color: #424245 !important;
+}
+
+body.page-pricing .hero-banner-kicker::before,
+body.resume-page .hero-banner-kicker::before {
+  background: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .hero-banner .hero-cta,
+body.resume-page .hero-banner .hero-cta {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+  border: 1px solid #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .hero-banner-btn-secondary,
+body.resume-page .hero-banner-btn-secondary {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .hero-banner-btn-secondary:hover,
+body.resume-page .hero-banner-btn-secondary:hover {
+  background: #f5f5f7 !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .page-opening-hero .marquee-logos,
+body.page-pricing .marquee-logos {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-pricing .service-builder-section,
+body.page-pricing .spb-guide-banner {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .service-builder-section::before,
+body.page-pricing .spb-guide-banner::before {
+  display: none !important;
+  content: none !important;
+}
+
+body.page-pricing .spb-kicker,
+body.page-pricing .spb-guide-kicker,
+body.page-pricing .service-section-header {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-left: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #424245 !important;
+}
+
+body.page-pricing .spb-guide-banner-head h2,
+body.page-pricing .service-builder-section .section-header h2 {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .spb-lede,
+body.page-pricing .spb-guide-lede,
+body.page-pricing .catalog-header p,
+body.page-pricing .builder-header p,
+body.page-pricing .spb-steps li,
+body.page-pricing .spb-guide-step p,
+body.page-pricing .dropzone-content p,
+body.page-pricing .selected-service-details p {
+  color: #333336 !important;
+}
+
+body.page-pricing .catalog-tip,
+body.page-pricing .catalog-tip i {
+  color: #424245 !important;
+}
+
+body.page-pricing .spb-step-num,
+body.page-pricing .spb-guide-step-icon,
+body.page-pricing .spb-guide-step-num {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .spb-guide-step h3,
+body.page-pricing .catalog-header h3,
+body.page-pricing .builder-header h3,
+body.page-pricing .service-section-header--sub {
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .service-builder-grid,
+body.page-pricing .spb-guide-step {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.page-pricing .service-catalog,
+body.page-pricing .package-builder {
+  background: transparent !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+body.page-pricing .catalog-header,
+body.page-pricing .builder-header {
+  margin-bottom: 0.85rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-pricing .catalog-header h3,
+body.page-pricing .builder-header h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 0.2rem !important;
+}
+
+body.page-pricing .catalog-header p,
+body.page-pricing .builder-header p {
+  font-size: 0.88rem !important;
+  line-height: 1.45 !important;
+}
+
+body.page-pricing .service-categories {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overscroll-behavior-x: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+  gap: 6px !important;
+  margin-bottom: 0.85rem !important;
+  padding: 4px 2px 6px !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 0 !important;
+  scrollbar-width: none !important;
+}
+
+body.page-pricing .service-categories::-webkit-scrollbar {
+  display: none !important;
+}
+
+body.page-pricing .category-tab {
+  flex: 0 0 auto !important;
+  min-height: 36px !important;
+  padding: 7px 12px !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #424245 !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .category-tab.active,
+body.page-pricing .category-tab[aria-selected="true"] {
+  background: #1d1d1f !important;
+  border-color: #1d1d1f !important;
+  color: #ffffff !important;
+}
+
+body.page-pricing .category-tab:hover:not(.active):not([aria-selected="true"]) {
+  background: #f5f5f7 !important;
+  color: #1d1d1f !important;
+}
+
+/* Compact service catalog — row cards, no nested scroll */
+body.page-pricing .service-items {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+body.page-pricing .service-item,
+body.page-pricing .service-item[data-category],
+body.page-pricing .service-item[data-subcategory="white-label"] {
+  display: grid !important;
+  grid-template-columns: 36px minmax(0, 1fr) auto !important;
+  grid-template-rows: auto !important;
+  align-items: center !important;
+  gap: 8px 10px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 10px 12px !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+body.page-pricing .service-item:hover,
+body.page-pricing .service-item[data-category]:hover {
+  background: #f5f5f7 !important;
+  background-image: none !important;
+  border-color: rgba(0, 0, 0, 0.22) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body.page-pricing .service-item::before,
+body.page-pricing .service-item::after {
+  display: none !important;
+  content: none !important;
+}
+
+body.page-pricing .service-item-header {
+  display: contents !important;
+  margin: 0 !important;
+}
+
+body.page-pricing .service-icon {
+  grid-column: 1 !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  font-size: 0.85rem !important;
+  border-radius: var(--radius-md) !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .service-item[data-category] .service-icon {
+  background: transparent !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .service-info {
+  grid-column: 2 !important;
+  min-width: 0 !important;
+}
+
+body.page-pricing .service-item-title,
+body.page-pricing .service-info h4 {
+  min-height: 0 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .service-title-duration {
+  font-size: 0.75rem !important;
+  color: #424245 !important;
+}
+
+body.page-pricing .service-info p,
+body.page-pricing .service-item-body,
+body.page-pricing .service-features,
+body.page-pricing .service-tagline {
+  display: none !important;
+}
+
+body.page-pricing .service-price {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  color: #1d1d1f !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+}
+
+body.page-pricing .service-price .price-amount {
+  font-size: 0.9rem !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .service-price .price-monthly {
+  color: #424245 !important;
+}
+
+body.page-pricing .service-item-badge {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #424245 !important;
+}
+
+body.page-pricing .package-dropzone {
+  min-height: 100px !important;
+  padding: 1rem !important;
+  border: 1px dashed rgba(0, 0, 0, 0.2) !important;
+  border-radius: var(--radius-md) !important;
+  background: transparent !important;
+}
+
+body.page-pricing .package-dropzone.drag-over {
+  border-color: #1d1d1f !important;
+  background: #f5f5f7 !important;
+}
+
+body.page-pricing .dropzone-content i,
+body.page-pricing .dropzone-content h4 {
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .selected-service,
+body.page-pricing .quote-summary {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+body.page-pricing .selected-service-icon {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .selected-service-details h5,
+body.page-pricing .quote-total,
+body.page-pricing .quote-item {
+  color: #1d1d1f !important;
+}
+
+body.page-pricing .remove-service,
+body.page-pricing .quote-item button {
+  color: #424245 !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+body.page-pricing .package-retainer-lock-hint {
+  background: #f5f5f7 !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #333336 !important;
+}
+
+body.page-pricing .spb-guide-steps {
+  gap: 12px !important;
+}
+
+@media (min-width: 769px) {
+  body.page-pricing .service-items {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  body.page-pricing .spb-guide-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-pricing .page-opening-hero .hero-banner,
+  body.resume-page .page-opening-hero .hero-banner {
+    min-height: clamp(220px, 36vh, 300px) !important;
+  }
+
+  body.page-pricing .hero-banner .hero-title {
+    font-size: clamp(22px, 6.5vw, 30px) !important;
+    line-height: 1.05 !important;
+  }
+
+  body.page-pricing .hero-banner .hero-subtitle {
+    font-size: 0.92rem !important;
+    line-height: 1.45 !important;
+  }
+
+  body.page-pricing .hero-banner-content {
+    padding: 20px 16px !important;
+    gap: 12px !important;
+  }
+
+  body.page-pricing .service-builder-section {
+    padding: 24px 12px !important;
+  }
+
+  body.page-pricing .service-builder-grid {
+    border-radius: var(--radius-md) !important;
+  }
+
+  body.page-pricing .service-catalog,
+  body.page-pricing .package-builder {
+    padding: 12px !important;
+  }
+
+  body.page-pricing .catalog-header h3,
+  body.page-pricing .builder-header h3 {
+    font-size: 1rem !important;
+  }
+
+  body.page-pricing .spb-guide-steps {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.page-pricing .spb-guide-step {
+    padding: 16px !important;
+  }
+
+  body.page-pricing .package-dropzone {
+    min-height: 88px !important;
+    padding: 0.85rem !important;
+  }
+
+  body.page-pricing .quote-summary {
+    padding: 0.85rem !important;
+  }
+
+  body.page-pricing .quote-total {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* --- Resume page — plain light theme (mirror portfolio pass) --- */
+
+body.resume-page,
+body.resume-page main.page {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+}
+
+body.resume-page .portfolio-section,
+body.resume-page .portfolio-section.iheart-section,
+body.resume-page .portfolio-section.kbl-section,
+body.resume-page .portfolio-section.real-estate-section,
+body.resume-page .portfolio-section.creator-portfolio,
+body.resume-page .shawnta-portfolio-section,
+body.resume-page .brand-showcase-section {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+  padding-top: clamp(28px, 4vw, 44px) !important;
+  padding-bottom: clamp(28px, 4vw, 44px) !important;
+}
+
+body.resume-page .portfolio-section::before,
+body.resume-page .portfolio-section::after,
+body.resume-page .shawnta-portfolio-section::before,
+body.resume-page .brand-showcase-section::before,
+body.resume-page .operator-feature-media::after,
+body.resume-page .mayor-card-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+body.resume-page .hero-card,
+body.resume-page .logo-strip,
+body.resume-page .content-card,
+body.resume-page .side-card,
+body.resume-page .operator-feature-card,
+body.resume-page .mayor-card,
+body.resume-page .campaign-card,
+body.resume-page .portfolio-stat,
+body.resume-page .portfolio-card,
+body.resume-page .portfolio-feature,
+body.resume-page .feature-badge,
+body.resume-page .iheart-logo-wrap,
+body.resume-page .iheart-video-panel,
+body.resume-page .iheart-story-panel,
+body.resume-page .kbl-hero-panel,
+body.resume-page .kbl-story-panel,
+body.resume-page .kbl-hours-card,
+body.resume-page .kbl-feature-card,
+body.resume-page .kbl-gallery figure,
+body.resume-page .re-promise-card,
+body.resume-page .re-video-panel,
+body.resume-page .re-blueprint-panel,
+body.resume-page .re-service-card,
+body.resume-page .re-slideshow,
+body.resume-page .re-deliverable,
+body.resume-page .creator-platform-panel,
+body.resume-page .creator-platform-item,
+body.resume-page .brand-showcase-card,
+body.resume-page .brand-video-card,
+body.resume-page .brand-social-card,
+body.resume-page .project-card,
+body.resume-page .showcase-panel,
+body.resume-page .experience-card,
+body.resume-page .skill-group,
+body.resume-page .cert-card,
+body.resume-page .timeline-item,
+body.resume-page .gallery-card,
+body.resume-page .seo-context-card {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.resume-page .hero-card::after,
+body.resume-page .project-card::before,
+body.resume-page .showcase-panel::after {
+  display: none !important;
+}
+
+body.resume-page .portfolio-kicker,
+body.resume-page .iheart-kicker,
+body.resume-page .kbl-kicker,
+body.resume-page .re-kicker,
+body.resume-page .re-blueprint-label,
+body.resume-page .creator-platform-label,
+body.resume-page .shawnta-portfolio-pill,
+body.resume-page .brand-pill,
+body.resume-page .eyebrow,
+body.resume-page .section-label,
+body.resume-page .card-kicker,
+body.resume-page .operator-feature-kicker,
+body.resume-page .mayor-card-kicker {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #424245 !important;
+}
+
+body.resume-page .eyebrow::before,
+body.resume-page .mayor-card-kicker::before,
+body.resume-page .mayor-card-kicker::after {
+  background: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .resume-name-title span,
+body.resume-page .portfolio-title span,
+body.resume-page .iheart-title span,
+body.resume-page .kbl-title span,
+body.resume-page .re-title span,
+body.resume-page .creator-title span,
+body.resume-page .shawnta-portfolio-title span,
+body.resume-page .brand-showcase-title span {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+}
+
+body.resume-page .hero-title {
+  color: #424245 !important;
+}
+
+body.resume-page .portfolio-title,
+body.resume-page .iheart-title,
+body.resume-page .kbl-title,
+body.resume-page .re-title,
+body.resume-page .creator-title,
+body.resume-page .shawnta-portfolio-title,
+body.resume-page .brand-showcase-title,
+body.resume-page .operator-feature-title,
+body.resume-page .mayor-card-title {
+  color: #1d1d1f !important;
+  text-shadow: none !important;
+}
+
+body.resume-page .summary,
+body.resume-page .portfolio-lede,
+body.resume-page .iheart-lede,
+body.resume-page .kbl-lede,
+body.resume-page .re-lede,
+body.resume-page .creator-copy,
+body.resume-page .shawnta-portfolio-lede,
+body.resume-page .brand-showcase-lede,
+body.resume-page .portfolio-card-copy,
+body.resume-page .operator-feature-copy p,
+body.resume-page .mayor-card-copy,
+body.resume-page .campaign-card-desc,
+body.resume-page .re-blueprint-copy,
+body.resume-page .brand-showcase-card p,
+body.resume-page .brand-showcase-card li,
+body.resume-page .kbl-story-panel p,
+body.resume-page .iheart-story-panel p {
+  color: #333336 !important;
+}
+
+body.resume-page .portfolio-stat strong,
+body.resume-page .re-promise-card strong,
+body.resume-page .kbl-feature-card strong,
+body.resume-page .re-deliverable strong,
+body.resume-page .re-service-card h3,
+body.resume-page .portfolio-card-title,
+body.resume-page .stat-value,
+body.resume-page .metric-value {
+  color: #1d1d1f !important;
+}
+
+body.resume-page .portfolio-stat span,
+body.resume-page .portfolio-card-meta,
+body.resume-page .iheart-episode-meta span,
+body.resume-page .re-gallery-count,
+body.resume-page .cert-issuer,
+body.resume-page .skill-category-name {
+  color: #424245 !important;
+}
+
+body.resume-page .portfolio-button,
+body.resume-page .cta-primary,
+body.resume-page .btn-primary,
+body.resume-page .kbl-btn-primary {
+  background: #1d1d1f !important;
+  background-image: none !important;
+  border: 1px solid #1d1d1f !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .portfolio-button.secondary,
+body.resume-page .cta-secondary,
+body.resume-page .btn-secondary,
+body.resume-page .kbl-btn-secondary {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .chip,
+body.resume-page .tag,
+body.resume-page .skill-pill,
+body.resume-page .meta-pill,
+body.resume-page .kbl-service-pill,
+body.resume-page .shawnta-deliverables span,
+body.resume-page .seo-context-list span,
+body.resume-page .operator-feature-points span,
+body.resume-page .mayor-impact-item {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #424245 !important;
+}
+
+body.resume-page .contact-card {
+  border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background: #f5f5f7 !important;
+}
+
+body.resume-page .contact-card::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.35) 55%, rgba(245, 245, 247, 0.92) 100%) !important;
+}
+
+body.resume-page .contact-card::after {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.resume-page .contact-list a,
+body.resume-page .contact-list span {
+  color: #1d1d1f !important;
+}
+
+body.resume-page .portfolio-video,
+body.resume-page .iheart-video-panel .portfolio-video {
+  background: #f5f5f7 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.resume-page .kbl-hero-overlay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(245, 245, 247, 0.55) 100%) !important;
+}
+
+body.resume-page .kbl-hero-headline,
+body.resume-page .kbl-hero-eyebrow,
+body.resume-page .kbl-hero-meta strong {
+  color: #1d1d1f !important;
+  text-shadow: none !important;
+}
+
+body.resume-page .kbl-hero-meta span,
+body.resume-page .kbl-hero-sub {
+  color: #333336 !important;
+}
+
+body.resume-page .kbl-btn-primary,
+body.resume-page .kbl-btn-secondary {
+  box-shadow: none !important;
+}
+
+body.resume-page .mayor-impact-icon,
+body.resume-page .kbl-feature-icon,
+body.resume-page .kbl-hours-item-icon,
+body.resume-page .re-promise-icon,
+body.resume-page .brand-check-icon {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .mayor-modal-panel {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.resume-page .mayor-modal {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+body.resume-page .top-banner {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.resume-page .creator-banner {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.resume-page .creator-banner::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.72) 52%, rgba(255, 255, 255, 0.94) 100%) !important;
+}
+
+body.resume-page .creator-banner-bg {
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 1 !important;
+}
+
+/* iHeart feature columns — dividers only, no card outlines */
+body.resume-page .iheart-feature-grid {
+  gap: 0 !important;
+  margin-top: clamp(24px, 3vw, 32px) !important;
+  padding-top: clamp(24px, 3vw, 32px) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.14) !important;
+}
+
+body.resume-page .iheart-feature-card {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  min-height: 0 !important;
+  padding: 0 clamp(16px, 2.5vw, 28px) !important;
+}
+
+body.resume-page .iheart-feature-card:first-child {
+  padding-left: 0 !important;
+}
+
+body.resume-page .iheart-feature-card:last-child {
+  padding-right: 0 !important;
+}
+
+body.resume-page .iheart-feature-card:not(:last-child) {
+  border-right: 1px solid #1d1d1f !important;
+}
+
+@media (max-width: 768px) {
+  body.resume-page .iheart-feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.resume-page .iheart-feature-card {
+    padding: 0 0 20px !important;
+    border-right: none !important;
+  }
+
+  body.resume-page .iheart-feature-card:not(:last-child) {
+    border-right: none !important;
+    border-bottom: 1px solid #1d1d1f !important;
+    margin-bottom: 20px !important;
+  }
+
+  body.resume-page .iheart-feature-card:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Contact page — contact chips one row + plain Send Message CTA
+   ========================================================================== */
+
+.book-contact-chips {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.book-contact-chip {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: normal !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  padding: 8px 6px !important;
+  gap: 6px !important;
+}
+
+.book-contact-chip i {
+  flex-shrink: 0 !important;
+}
+
+.book-section .form-submit,
+.contact-form .form-submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+.book-section .form-submit:hover,
+.contact-form .form-submit:hover {
+  background: #1d1d1f !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+@media (max-width: 768px) {
+  .book-contact-chips {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    flex-direction: row !important;
+  }
+
+  .book-contact-chip {
+    font-size: 10px !important;
+    padding: 8px 4px !important;
+  }
 }

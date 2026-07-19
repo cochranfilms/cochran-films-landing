@@ -19,7 +19,7 @@
   <meta name="geo.placename" content="Atlanta, Georgia" />
   <meta name="geo.position" content="33.7490;-84.3880" />
   <meta name="ICBM" content="33.7490, -84.3880" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://cochranfilms.com/resume" />
   <link rel="alternate" href="https://cochranfilms.com/resume" hreflang="x-default" />
   <link rel="alternate" href="https://cochranfilms.studio/resume" hreflang="en-US" />
@@ -319,44 +319,23 @@
 
   <style>
     :root {
-      --brand-indigo: #1d1d1f;
-      --brand-emerald: #1d1d1f;
-      --brand-amber: #1d1d1f;
-      --brand-gold: #1d1d1f;
+      --brand-indigo: #6366f1;
+      --brand-emerald: #10b981;
+      --brand-gold: #FFB200;
       --brand-blue: #0066CC;
-      --brand-red: #d70015;
-      --surface: #ffffff;
-      --surface-muted: #f5f5f7;
-      --surface-elevated: #ffffff;
-      --dark-900: #f5f5f7;
-      --dark-950: #ffffff;
-      --text-primary: #1d1d1f;
-      --text-secondary: #333336;
-      --text-muted: #424245;
-      --border-subtle: rgba(0, 0, 0, 0.08);
-      --border-strong: rgba(0, 0, 0, 0.14);
-      --card-bg: transparent;
-      --card-border: 1px solid rgba(0, 0, 0, 0.14);
-      --backdrop: none;
-      --radius-lg: 6px;
-      --radius-md: 4px;
-      --radius-sm: 2px;
-      --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
-      --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.05);
-      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
-      --glow-indigo: none;
-      --glow-gold: none;
-      --transition: all 300ms cubic-bezier(.4,0,.2,1);
+      --dark-900: #0f172a;
+      --dark-950: #020617;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --card-bg: rgba(15, 23, 42, 0.72);
+      --card-border: 1px solid rgba(99,102,241,0.22);
+      --backdrop: blur(16px);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-lg: 0 30px 80px rgba(0,0,0,0.45);
+      --glow-gold: 0 0 40px rgba(255,178,0,0.30);
       --transition-fast: all 180ms cubic-bezier(.4,0,.2,1);
-      --nav-height: 72px;
-      --section-gap: 44px;
-      --section-pad-y: 32px;
-      --hero-banner-height: clamp(420px, 62vh, 680px);
-      --btn-primary-bg: #1d1d1f;
-      --btn-primary-text: #ffffff;
-      --btn-secondary-bg: #ffffff;
-      --btn-secondary-text: #1d1d1f;
-      --btn-secondary-border: rgba(0, 0, 0, 0.14);
     }
 
     * { box-sizing: border-box; }
@@ -365,16 +344,22 @@
     body {
       margin: 0;
       min-height: 100%;
-      background: #ffffff;
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(99,102,241,0.08), transparent 60%),
+        radial-gradient(1000px 600px at 100% 20%, rgba(255,178,0,0.06), transparent 60%),
+        linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(2,6,23,0.8) 100%);
       color: var(--text-primary);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, "Inter", sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
     }
 
     .ai-background {
-      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
 
     #neuralCanvas {
@@ -383,7 +368,18 @@
       display: block;
     }
 
-    body::before { display: none; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.08) 1px, transparent 1px);
+      background-size: 84px 84px;
+      mask-image: radial-gradient(circle at center, black 0%, transparent 76%);
+    }
 
     a { color: inherit; }
 
@@ -394,7 +390,7 @@
       z-index: 2;
       width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 0;
+      padding: 0 0 34px;
       text-align: center;
     }
 
@@ -4271,7 +4267,6 @@
     .top-banner { display: none !important; }
     body.resume-page .page {
       padding-top: clamp(1.25rem, 3vw, 2rem);
-      padding-bottom: 0;
       width: min(1180px, calc(100% - 40px));
     }
 
@@ -4335,29 +4330,6 @@
       }
       .resume-subnav-inner::-webkit-scrollbar { display: none; }
     }
-
-    /* Professional Light Theme — resume inline */
-    .hero-card, .logo-strip, .content-card, .side-card, .portfolio-section {
-      backdrop-filter: none !important;
-      box-shadow: var(--shadow-sm) !important;
-    }
-    .resume-name-title span {
-      background: none !important;
-      -webkit-text-fill-color: var(--text-primary) !important;
-      color: var(--text-primary) !important;
-    }
-    .cta-primary {
-      background: #1d1d1f !important;
-      color: #ffffff !important;
-      border: 1px solid #1d1d1f !important;
-      box-shadow: none !important;
-    }
-    .cta-secondary {
-      background: #ffffff !important;
-      color: #1d1d1f !important;
-      border: 1px solid rgba(0, 0, 0, 0.14) !important;
-      box-shadow: none !important;
-    }
   </style>
   <link rel="stylesheet" href="/css/site.css" />
 </head>
@@ -4370,7 +4342,7 @@
   <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="/" class="nav-logo" aria-label="Cochran Films home">
-        <img loading="eager" src="/reference/logo.png" alt="Cochran Films" width="220" height="52" decoding="async">
+        <picture><source srcset="Logo.webp" type="image/webp"><img loading="eager" src="Logo.png" alt="Cochran Films" width="220" height="52" decoding="async"></picture>
       </a>
       
       <ul class="nav-menu" id="site-nav-menu">
@@ -5301,7 +5273,7 @@
     <section class="portfolio-section creator-portfolio" id="creator-collective" aria-labelledby="creator-collective-title">
       <div class="portfolio-inner">
         <div class="creator-banner">
-          <img class="creator-banner-bg" src="IMG_87072.png" alt="Creator Collective production team creating branded video content">
+          <img class="creator-banner-bg" src="Landing-Hero.jpeg" alt="Film clapperboard on set — Creator Collective production">
           <div class="creator-banner-content">
             <img class="creator-logo-inline" src="CC-Logo-White.png" alt="Creator Collective">
             <h2 class="creator-title" id="creator-collective-title">
@@ -5603,79 +5575,32 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer" aria-label="Cochran Films resume footer">
+      <div class="footer-brand">
+        <img class="footer-mark" src="CF_Logo_White2025.png" alt="Cochran Films logo" onerror="this.src='Logo.png'">
+        <div class="footer-kicker">Available for brand partnerships, campaigns, and production systems</div>
+        <h2 class="footer-title">Built for brands that need strategy, polish, and production that performs.</h2>
+        <p class="footer-copy">
+          Cochran Films partners with founders, agencies, nonprofits, civic leaders, and creative teams to produce media, education, and digital systems that make every brand moment feel intentional.
+        </p>
+        <div class="footer-note">Cody Cochran · Atlanta, GA · 2026</div>
+      </div>
+      <div class="footer-action-panel">
+        <a class="footer-cta" href="https://coursecreatoracademy.org/" target="_blank" rel="noopener">
+          Start a Brand Conversation <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <div class="footer-links">
+          <a class="footer-link" href="https://cochranfilms.com/">Cochran Films Home</a>
+          <a class="footer-link" href="https://cochranfilms.studio" target="_blank" rel="noopener">Cochran Films</a>
+          <a class="footer-link" href="https://coursecreatoracademy.org" target="_blank" rel="noopener">Course Creator Academy</a>
+          <a class="footer-link" href="https://www.creatorcollective.media" target="_blank" rel="noopener">Creator Collective</a>
+          <a class="footer-link" href="https://djsneedluv2.com" target="_blank" rel="noopener">DJs Need Luv 2</a>
+          <a class="footer-link" href="https://www.bizzicloud.io" target="_blank" rel="noopener">Bizzi Cloud</a>
+        </div>
+      </div>
+    </footer>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-shell">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="footer-logo">
-            <a href="/" aria-label="Cochran Films home">
-              <img src="/reference/logo.png" alt="Cochran Films — cinematic production and full-stack creative agency" width="300" height="68" loading="lazy" decoding="async">
-            </a>
-          </div>
-          <p class="footer-tagline">Atlanta's full-stack creative agency — cinematic production, modern engineering, and creator-ready systems built as one stack.</p>
-          <div class="footer-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Atlanta, Georgia · Serving Metro Atlanta &amp; Nationwide</div>
-          <div class="footer-social-row">
-            <a href="https://www.instagram.com/cochran.films" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on Instagram">
-              <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-            </a>
-            <a href="https://www.youtube.com/@cochranfilmsllc" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on YouTube">
-              <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
-            </a>
-            <a href="https://github.com/cochranfilms" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Cochran Films on GitHub">
-              <i class="fab fa-github" aria-hidden="true"></i> GitHub
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Explore</h3>
-          <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/resume">Resume</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Services</h3>
-          <ul class="footer-links">
-            <li><a href="/services">Video Production</a></li>
-            <li><a href="/services">Photography</a></li>
-            <li><a href="/portfolio#portfolio-realestate">Real Estate Media</a></li>
-            <li><a href="/services">Web Development</a></li>
-            <li><a href="/portfolio#portfolio-web">Platforms &amp; SaaS</a></li>
-            <li><a href="/pricing">Build a Package</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Contact</h3>
-          <ul class="footer-contact-list">
-            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:info@cochranfilms.com">info@cochranfilms.com</a></li>
-            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+14704202169">(470) 420-2169</a></li>
-            <li><i class="fa-solid fa-globe" aria-hidden="true"></i><a href="https://cochranfilms.studio" target="_blank" rel="noopener noreferrer">cochranfilms.studio</a></li>
-            <li><i class="fa-solid fa-file-lines" aria-hidden="true"></i><a href="/resume">Cody Cochran Resume</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 Cochran Films LLC. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="/">Home</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="https://collaborate.cochranfilms.com/">Creator Portal</a>
-          <a href="/resume">Resume</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <div class="mayor-modal" id="mayor-modal" role="dialog" aria-modal="true" aria-labelledby="mayor-modal-title" hidden>
     <div class="mayor-modal-panel">
@@ -6309,6 +6234,5 @@
       });
     }
   </script>
-  <script src="/js/spb-cta.js" defer></script>
 </body>
 </html>
