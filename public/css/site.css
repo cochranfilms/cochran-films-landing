@@ -12871,3 +12871,352 @@ section .google-reviews-kicker,
   color: #424245 !important;
   font-weight: 600 !important;
 }
+
+/* ==========================================================================
+   Editorial Refinement Pass 5 — portfolio page plain light theme
+   ========================================================================== */
+
+body.page-portfolio,
+body.page-portfolio .wrapper,
+body.page-portfolio .lp-portfolio,
+body.page-portfolio .lp-portfolio-shell {
+  background: #ffffff !important;
+  color: #1d1d1f !important;
+}
+
+/* Full-bleed portfolio bands — white, divider only */
+body.page-portfolio .lp-creator-edu-section,
+body.page-portfolio .iheart-section,
+body.page-portfolio .shawnta-portfolio-section--fullbleed,
+body.page-portfolio .real-estate-section {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-creator-edu-section::before,
+body.page-portfolio .iheart-section::before,
+body.page-portfolio .shawnta-portfolio-section--fullbleed::before,
+body.page-portfolio .real-estate-section::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hero + intro band */
+body.page-portfolio .lp-portfolio-hero {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-portfolio-hero::after {
+  display: none !important;
+}
+
+body.page-portfolio .lp-portfolio-kicker,
+body.page-portfolio .re-kicker,
+body.page-portfolio .iheart-kicker,
+body.page-portfolio .iheart-aside-kicker,
+body.page-portfolio .re-blueprint-label,
+body.page-portfolio .creator-platform-label,
+body.page-portfolio .sp-story-kicker {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #424245 !important;
+}
+
+body.page-portfolio .shawnta-portfolio-pill {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #424245 !important;
+}
+
+body.page-portfolio .sp-story-kicker::before {
+  display: none !important;
+}
+
+/* Headings — solid black, no gradient text */
+body.page-portfolio .lp-portfolio-title span,
+body.page-portfolio .re-title span,
+body.page-portfolio .iheart-title span,
+body.page-portfolio .shawnta-portfolio-title span,
+body.page-portfolio .lp-creator-edu-section .creator-title span {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .iheart-title,
+body.page-portfolio .re-title,
+body.page-portfolio .shawnta-portfolio-title,
+body.page-portfolio .lp-creator-edu-section .creator-title,
+body.page-portfolio .lp-block-title,
+body.page-portfolio .lp-video-title,
+body.page-portfolio .re-blueprint-title,
+body.page-portfolio .re-gallery-head h3,
+body.page-portfolio .sp-story-panel h4 {
+  color: #1d1d1f !important;
+  text-shadow: none !important;
+}
+
+body.page-portfolio .lp-block-title {
+  border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.page-portfolio .lp-block-title i,
+body.page-portfolio .lp-video-meta,
+body.page-portfolio .lp-creator-edu-section .lp-creator-card-meta,
+body.page-portfolio .re-blueprint-label,
+body.page-portfolio .re-gallery-count {
+  color: #424245 !important;
+}
+
+/* Body copy contrast */
+body.page-portfolio .lp-portfolio-lede,
+body.page-portfolio .lp-block-lede,
+body.page-portfolio .lp-video-copy,
+body.page-portfolio .re-lede,
+body.page-portfolio .iheart-lede,
+body.page-portfolio .iheart-aside p,
+body.page-portfolio .shawnta-portfolio-lede,
+body.page-portfolio .lp-creator-edu-section .creator-copy,
+body.page-portfolio .lp-creator-edu-section .creator-platform-copy,
+body.page-portfolio .lp-creator-edu-section .lp-creator-stat span,
+body.page-portfolio .lp-creator-edu-section .creator-platform-item span,
+body.page-portfolio .lp-creator-edu-section .lp-creator-card-copy,
+body.page-portfolio .iheart-pillar p,
+body.page-portfolio .re-promise-card span,
+body.page-portfolio .re-service-card p,
+body.page-portfolio .re-gallery-head p,
+body.page-portfolio .re-deliverable span,
+body.page-portfolio .re-blueprint-copy,
+body.page-portfolio .sp-story-panel p,
+body.page-portfolio .lp-portfolio-stat span,
+body.page-portfolio .lp-portfolio-feature-badge span,
+body.page-portfolio .lp-portfolio-cta p {
+  color: #333336 !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .creator-copy {
+  color: #333336 !important;
+}
+
+/* Outline cards — no dark fills */
+body.page-portfolio .lp-portfolio-stat,
+body.page-portfolio .lp-portfolio-nav a,
+body.page-portfolio .lp-video-card,
+body.page-portfolio .lp-civic-card,
+body.page-portfolio .lp-feature-card,
+body.page-portfolio .lp-creator-edu-section .lp-creator-stat,
+body.page-portfolio .lp-creator-edu-section .creator-platform-panel,
+body.page-portfolio .lp-creator-edu-section .creator-platform-item,
+body.page-portfolio .lp-creator-edu-section .lp-creator-card,
+body.page-portfolio .iheart-aside,
+body.page-portfolio .iheart-pillar,
+body.page-portfolio .iheart-video-frame,
+body.page-portfolio .re-promise-card,
+body.page-portfolio .re-promise-card.turnaround,
+body.page-portfolio .re-video-panel,
+body.page-portfolio .re-blueprint-panel,
+body.page-portfolio .re-service-card,
+body.page-portfolio .re-slideshow,
+body.page-portfolio .re-deliverable,
+body.page-portfolio .lp-web-showcase,
+body.page-portfolio .sp-story-panel,
+body.page-portfolio .lp-portfolio-cta,
+body.page-portfolio .lp-portfolio-feature-badge {
+  background: transparent !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.page-portfolio .lp-portfolio-stat strong,
+body.page-portfolio .re-promise-card strong,
+body.page-portfolio .lp-civic-stat,
+body.page-portfolio .lp-feature-card strong,
+body.page-portfolio .lp-creator-edu-section .lp-creator-stat strong,
+body.page-portfolio .iheart-pillar strong,
+body.page-portfolio .re-deliverable strong,
+body.page-portfolio .re-service-card h3 {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .re-promise-icon,
+body.page-portfolio .iheart-pillar-icon,
+body.page-portfolio .lp-creator-edu-section .lp-creator-stat-icon,
+body.page-portfolio .lp-feature-card i,
+body.page-portfolio .re-service-card i {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-portfolio-nav a {
+  color: #1d1d1f !important;
+  font-weight: 600 !important;
+}
+
+body.page-portfolio .lp-portfolio-nav a:hover,
+body.page-portfolio .lp-portfolio-stat:hover,
+body.page-portfolio .lp-video-card:hover,
+body.page-portfolio .lp-creator-edu-section .lp-creator-card:hover,
+body.page-portfolio .lp-web-showcase:hover {
+  border-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+body.page-portfolio .lp-portfolio-btn-secondary,
+body.page-portfolio .lp-web-actions .lp-portfolio-btn-secondary,
+body.page-portfolio .iheart-footer-cta .lp-portfolio-btn-secondary,
+body.page-portfolio .lp-creator-edu-section .lp-creator-footer-cta .lp-portfolio-btn-secondary {
+  background: transparent !important;
+  color: #1d1d1f !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-portfolio-btn-secondary:hover {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+}
+
+/* Creator banner — keep photo, light editorial overlay */
+body.page-portfolio .lp-creator-edu-section .creator-banner {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .creator-banner::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.72) 52%, rgba(255, 255, 255, 0.94) 100%) !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .creator-banner-bg {
+  opacity: 1 !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .creator-logo-inline {
+  filter: none !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .lp-creator-stat::before {
+  display: none !important;
+}
+
+/* Shawntà deliverable tags */
+body.page-portfolio .shawnta-deliverables span {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .shawnta-logo-badge {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+/* Real estate media UI */
+body.page-portfolio .re-slideshow-stage,
+body.page-portfolio .re-video-frame,
+body.page-portfolio .re-video-bg {
+  background: #f5f5f7 !important;
+}
+
+body.page-portfolio .re-slide-caption,
+body.page-portfolio .re-slideshow-nav {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  backdrop-filter: none !important;
+}
+
+body.page-portfolio .re-slideshow-meta,
+body.page-portfolio .re-slideshow-hint,
+body.page-portfolio .re-slideshow-counter,
+body.page-portfolio .re-video-meta strong,
+body.page-portfolio .re-video-tag,
+body.page-portfolio .re-video-badge {
+  color: #333336 !important;
+}
+
+body.page-portfolio .re-blueprint-thumb,
+body.page-portfolio .re-slideshow-thumb {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+}
+
+body.page-portfolio .re-blueprint-thumb.is-active,
+body.page-portfolio .re-slideshow-thumb.is-active {
+  border-color: #1d1d1f !important;
+}
+
+/* Web showcases — plain panel beside live mockups */
+body.page-portfolio .sp-story-panel::before,
+body.page-portfolio .sp-story-panel::after,
+body.page-portfolio .lp-web-showcase::after {
+  display: none !important;
+  content: none !important;
+}
+
+body.page-portfolio .sp-story-divider {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.page-portfolio .sp-story-panel a {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .lp-portfolio-cta {
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-portfolio .lp-portfolio-cta h3 {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .lp-video-frame {
+  background: #f5f5f7 !important;
+}
+
+body.page-portfolio .lp-creator-edu-section .lp-creator-video,
+body.page-portfolio .lp-creator-edu-section .lp-creator-video iframe {
+  background: #f5f5f7 !important;
+}
+
+body.page-portfolio .iheart-pillar:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-portfolio .iheart-video-label {
+  color: #424245 !important;
+}
+
+body.page-portfolio .iheart-video-label::before {
+  background: #1d1d1f !important;
+  box-shadow: none !important;
+}
