@@ -5637,7 +5637,7 @@
 
     .footer-col-title {
       margin: 0 0 14px;
-      color: var(--brand-gold);
+      color: var(--text-primary);
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
       font-weight: 800;
@@ -11976,6 +11976,18 @@ body.resume-page .eyebrow::before {
 
 body.resume-page .hero-title {
   color: var(--text-secondary) !important;
+}
+
+.hero-value-card h3,
+.hero-value-card p,
+.svc-tile p,
+.google-review-card blockquote,
+.google-review-card p {
+  color: var(--text-secondary) !important;
+}
+
+.hero-value-card h3 {
+  color: var(--text-primary) !important;
 }
 
 /* Resume page — override inline dark styles loaded before site.css */
