@@ -13539,9 +13539,16 @@ body.page-portfolio .sp-hero-meta span a {
 
 body.page-portfolio .sp-logo-wrap {
   background: transparent !important;
-  border: 1px solid rgba(0, 0, 0, 0.14) !important;
-  border-radius: var(--radius-md) !important;
+  border: none !important;
+  border-radius: 0 !important;
   padding: 12px 16px !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .lp-web-showcase:hover .sp-logo-wrap {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 body.page-portfolio .sp-logo-wrap img {
@@ -14575,9 +14582,33 @@ body.resume-page .contact-card::after {
   border-color: rgba(0, 0, 0, 0.08) !important;
 }
 
+body.resume-page .contact-list {
+  justify-items: start !important;
+  text-align: left !important;
+}
+
+body.resume-page .tags-row {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+body.resume-page .tags-row .tag {
+  width: 100% !important;
+}
+
 body.resume-page .contact-list a,
 body.resume-page .contact-list span {
   color: #1d1d1f !important;
+  justify-content: flex-start !important;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body.resume-page .tags-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 
 body.resume-page .portfolio-video,
@@ -14776,13 +14807,13 @@ body.resume-page .iheart-feature-card:not(:last-child) {
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: stretch !important;
-  gap: 1px !important;
+  gap: 0 !important;
   width: 100%;
   margin-top: auto !important;
   padding-top: 0 !important;
   overflow: hidden !important;
   border: none !important;
-  background: #1d1d1f !important;
+  background: transparent !important;
   box-shadow: none !important;
 }
 
@@ -14858,12 +14889,12 @@ body.resume-page .iheart-feature-card:not(:last-child) {
 @media (max-width: 768px) {
   .book-contact-chips {
     flex-wrap: wrap !important;
-    gap: 1px !important;
-    background: #1d1d1f !important;
+    gap: 0 !important;
+    background: transparent !important;
   }
 
   .book-contact-chip {
-    flex: 1 1 calc(33.333% - 1px) !important;
+    flex: 1 1 33.333% !important;
     font-size: 10px !important;
     padding: 10px 6px !important;
     border-right: none !important;
@@ -14921,23 +14952,76 @@ body.resume-page .mayor-card {
   min-height: 0 !important;
 }
 
+body.resume-page .skill-category {
+  margin-bottom: 22px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.resume-page .skill-category:last-of-type {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+body.resume-page .skill-category-name {
+  color: #424245 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 0 12px !important;
+}
+
 body.resume-page .skill-pills {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  align-items: stretch !important;
-  justify-content: center !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body.resume-page .skill-pill {
-  flex: 1 1 calc(50% - 10px) !important;
-  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
   min-width: 0 !important;
+  max-width: none !important;
+  min-height: 42px !important;
+  margin: 0 !important;
+  padding: 9px 8px !important;
+  box-sizing: border-box !important;
+  border-radius: var(--radius-md) !important;
+  text-align: center !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  hyphens: auto !important;
+  flex: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #424245 !important;
 }
 
-@media (min-width: 768px) {
-  body.resume-page .skill-pill {
-    flex: 1 1 calc(33.333% - 10px) !important;
+body.resume-page .skill-pill:hover {
+  transform: none !important;
+  border-color: rgba(0, 0, 0, 0.22) !important;
+  color: #1d1d1f !important;
+  background: #ffffff !important;
+}
+
+@media (min-width: 480px) and (max-width: 1099px) {
+  body.resume-page .skill-pills {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
 
@@ -14956,7 +15040,6 @@ body.resume-page .campaign-card-link,
 body.resume-page .platform-badge,
 body.resume-page .gpa-badge,
 body.resume-page .tag,
-body.resume-page .skill-pill,
 body.resume-page .mayor-card-footer,
 .book-contact-chip:hover,
 .footer-contact-list a:hover,
