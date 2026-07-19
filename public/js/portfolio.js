@@ -269,11 +269,6 @@ function applyLivePreviewData(preview, data) {
     login.textContent = data.loginText;
   }
 
-  const logo = preview.querySelector('[data-live-logo]');
-  if (logo && data.logoImage) {
-    logo.src = data.logoImage;
-  }
-
   preview.classList.add('is-live-synced');
 }
 

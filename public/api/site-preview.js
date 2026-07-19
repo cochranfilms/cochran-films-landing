@@ -72,19 +72,24 @@ function parseSitePreview(html, siteUrl) {
   const base = siteUrl.origin;
 
   let heroImage = null;
-  if (/\/Landing-Hero\.(?:jpe?g|webp|png)/i.test(html)) {
+  const landingHeroPattern = /(?:%2F|\/)Landing-Hero\.(?:jpe?g|webp|png)/i;
+  if (landingHeroPattern.test(html)) {
     heroImage = `${base}/Landing-Hero.jpeg`;
+  }
+
+  const nextImage = html.match(/\/_next\/image\?url=([^"&]+)/i)?.[1];
+  if (!heroImage && nextImage) {
+    const decoded = decodeURIComponent(nextImage.replace(/&amp;/g, '&'));
+    if (/Landing-Hero/i.test(decoded)) {
+      heroImage = `${base}/Landing-Hero.jpeg`;
+    } else {
+      heroImage = decoded.startsWith('http') ? decoded : new URL(decoded, base).href;
+    }
   }
 
   const ogImage = html.match(/property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1];
   if (!heroImage && ogImage) {
     heroImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, base).href;
-  }
-
-  const nextImage = html.match(/\/_next\/image\?url=([^"&]+)/i)?.[1];
-  if (!heroImage && nextImage) {
-    const decoded = decodeURIComponent(nextImage);
-    heroImage = decoded.startsWith('http') ? decoded : new URL(decoded, base).href;
   }
 
   const headlineBlock = html.match(/class=["']landing-hero-headline["'][^>]*>([\s\S]*?)<\/h1>/i);
@@ -102,11 +107,6 @@ function parseSitePreview(html, siteUrl) {
     html.match(/>\s*(Already a member\?[^<]{0,40})\s*</i)?.[1] || 'Already a member? Log in'
   );
 
-  let logoImage = null;
-  if (html.includes('/logo-hat.png')) {
-    logoImage = `${base}/logo-hat.png`;
-  }
-
   return {
     url: siteUrl.href,
     heroImage,
@@ -115,7 +115,6 @@ function parseSitePreview(html, siteUrl) {
     primaryCta,
     secondaryCta,
     loginText,
-    logoImage,
     fetchedAt: new Date().toISOString(),
   };
 }
