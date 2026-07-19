@@ -35,13 +35,13 @@
       --hero-banner-height: clamp(420px, 62vh, 680px);
       --hero-banner-overlay: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.74) 0%,
-        rgba(255, 255, 255, 0.58) 45%,
-        rgba(255, 255, 255, 0.8) 100%
+        rgba(15, 23, 42, 0.74) 0%,
+        rgba(15, 23, 42, 0.58) 45%,
+        rgba(15, 23, 42, 0.78) 100%
       );
       --hero-kicker-color: #f4b53f;
       --hero-subhead-color: #f4b53f;
-      --hero-headline-color: #1d1d1f;
+      --hero-headline-color: #ffffff;
       --hero-slot-kicker-mb: 18px;
       --hero-slot-title-mb: 18px;
       --hero-slot-actions-mt: 28px;
