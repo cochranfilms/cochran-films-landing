@@ -11,16 +11,16 @@
       --dark-900: #f5f5f7;
       --dark-950: #ffffff;
       --text-primary: #1d1d1f;
-      --text-secondary: #6e6e73;
-      --text-muted: #86868b;
+      --text-secondary: #333336;
+      --text-muted: #424245;
       --border-subtle: rgba(0, 0, 0, 0.08);
       --border-strong: rgba(0, 0, 0, 0.14);
       --card-bg: #ffffff;
       --card-border: 1px solid rgba(0, 0, 0, 0.08);
       --backdrop: none;
-      --radius-lg: 18px;
-      --radius-md: 12px;
-      --radius-sm: 10px;
+      --radius-lg: 6px;
+      --radius-md: 4px;
+      --radius-sm: 2px;
       --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
       --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.05);
       --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -12182,3 +12182,329 @@ h1, h2, h3, .hero-title {
   }
 }
 
+/* ==========================================================================
+   Editorial Refinement Pass 2 — sharper, outline-only, high-contrast text
+   ========================================================================== */
+
+:root {
+  --text-secondary: #333336;
+  --text-muted: #424245;
+  --radius-lg: 6px;
+  --radius-md: 4px;
+  --radius-sm: 2px;
+  --surface-muted: #ffffff;
+  --card-bg: transparent;
+  --card-border: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+/* Sharper corners site-wide */
+.hero-cta,
+.nav-cta,
+.nav-link,
+.hero-banner-btn-secondary,
+.hero-value-card,
+.svc-tile,
+.about-card,
+.google-review-card,
+.book-section-grid,
+.lp-feature-card,
+.lp-web-showcase,
+.lp-portfolio-hero,
+.checkout-card,
+.pricing-tier-card,
+.service-card,
+.cf-about-pillar,
+.builder-category-nav button,
+.pricing-tab,
+.portfolio-filter-btn,
+input,
+textarea,
+select,
+button,
+.social-link,
+.spb-cta-band-steps li,
+.book-contact-chip,
+.tag,
+.chip,
+.pill,
+[class*="-kicker"],
+[class*="-tag"],
+.hero-value-tag,
+.svc-tile-label,
+.resume-subnav-link,
+.spb-cta-floating {
+  border-radius: var(--radius-md) !important;
+}
+
+/* Outline-only content boxes — no filled card backgrounds */
+.svc-tile,
+.hero-value-card,
+.about-card,
+.lp-feature-card,
+.lp-platform-card,
+.lp-web-showcase,
+.lp-portfolio-hero,
+.book-section-grid,
+.book-section-info,
+.google-review-card,
+.cf-about-pillar,
+.cf-about-quote,
+.cf-about-closer,
+.re-deliverable,
+.checkout-card,
+.pricing-tier-card,
+.pricing-summary-card,
+.service-card,
+.service-builder-sidebar,
+.service-builder-main,
+.builder-line-item,
+.builder-step,
+.checkout-line-item,
+.legal-page article,
+.privacy-section,
+.hero-card,
+.content-card,
+.side-card,
+.portfolio-section,
+.project-card,
+.showcase-panel,
+.experience-card,
+.skill-group,
+.seo-context-card,
+.spb-cta-band,
+.spb-cta-inline,
+.hero-social-proof,
+.google-reviews-shell,
+.mayor-highlight-content,
+.svc-tile-icon,
+.hero-value-icon-wrap,
+.about-icon,
+.mayor-highlight-content .mayor-impact-icon,
+.spb-cta-band-steps li,
+.book-contact-chip,
+.chip,
+.tag,
+.skill-pill,
+.meta-pill,
+.resume-subnav-link,
+.builder-category-nav button:not(.is-active),
+.pricing-tab:not(.is-active),
+.portfolio-filter-btn:not(.is-active),
+.social-link,
+.nav-link,
+.nav-link.active,
+.nav-link:hover {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+}
+
+/* Active nav / filter states — outline emphasis, not fill */
+.nav-link.active,
+.nav-link:hover,
+.builder-category-nav button.is-active,
+.pricing-tab.is-active,
+.portfolio-filter-btn.is-active,
+body.resume-page .resume-subnav-link.is-active,
+body.resume-page .resume-subnav-link:hover {
+  background: transparent !important;
+  border-color: #1d1d1f !important;
+  color: #1d1d1f !important;
+}
+
+.builder-category-nav button.is-active,
+.pricing-tab.is-active,
+.portfolio-filter-btn.is-active {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
+}
+
+/* Primary actions stay filled; secondary stay outline */
+.hero-banner-btn-secondary,
+.spb-cta-band-actions .hero-banner-btn-secondary,
+.spb-cta-inline .hero-banner-btn-secondary,
+.cf-about-founder-actions .hero-banner-btn-secondary,
+.google-reviews-business-link,
+body.resume-page .cta-secondary,
+body.resume-page .btn-secondary {
+  background: transparent !important;
+  color: #1d1d1f !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero-banner .hero-banner-btn-secondary {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* High-contrast readable text on white */
+body,
+.wrapper,
+main,
+.section,
+.section-subtitle,
+.hero-value-sub,
+.hero-subtitle:not(.hero-banner .hero-subtitle),
+.book-section-lede,
+.cf-about-deck,
+.cf-about-body,
+.cf-about-lead,
+.lp-portfolio-lede,
+.google-reviews-summary,
+.footer-tagline,
+.footer-links a,
+.footer-contact-list li,
+.footer-contact-list a,
+.hero-value-card p,
+.hero-value-card h3,
+.svc-tile p,
+.svc-tile h3,
+.about-card p,
+.about-card h3,
+.google-review-card blockquote,
+.google-review-card p,
+.google-review-topline,
+.google-reviews-summary span,
+.book-trust-list li,
+.hero-social-proof-label,
+.spb-cta-inline > p,
+.spb-cta-band-copy > p,
+.mayor-highlight-content .mayor-card-copy,
+.mayor-highlight-content .mayor-impact-item span,
+.re-deliverable span,
+.lp-feature-card span,
+.lp-feature-card strong,
+.checkout-card p,
+.legal-page p,
+.legal-page li,
+.privacy-section p,
+.builder-line-item,
+label,
+small,
+.hero-cta-section p {
+  color: #333336 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-value-title,
+.services-showcase-title,
+.book-section-title,
+.cf-about-title,
+strong,
+.hero-social-proof-value,
+.footer-col-title,
+.google-reviews-title,
+.spb-cta-inline h3,
+.spb-cta-band-copy h2,
+.mayor-highlight-content .mayor-card-title,
+.mayor-highlight-content .mayor-impact-item strong,
+.hero-value-card h3,
+.svc-tile h3 {
+  color: #1d1d1f !important;
+}
+
+/* Legacy dark-theme light gray text overrides */
+.hero-value-card p,
+.google-review-topline > span:last-child,
+.google-reviews-summary span,
+[class*="card"] p,
+[class*="card"] span:not(.hero-value-tag):not(.svc-tile-label) {
+  color: #333336 !important;
+}
+
+/* Kickers / labels — outline chips, dark text */
+.hero-value-kicker,
+.hero-value-tag,
+.services-showcase-kicker,
+.book-kicker,
+.cf-about-kicker,
+.google-reviews-kicker,
+.spb-cta-band-kicker,
+.mayor-highlight-content .mayor-card-kicker,
+.svc-tile-label,
+.eyebrow,
+.section-label,
+.card-kicker {
+  color: #424245 !important;
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+.hero-value-kicker::before,
+.services-showcase-kicker::before,
+.book-kicker::before,
+.cf-about-kicker::before {
+  background: #1d1d1f !important;
+  box-shadow: none !important;
+}
+
+/* Icon containers — outline only */
+.svc-tile-icon,
+.hero-value-icon-wrap,
+.about-icon {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+}
+
+/* Footer / meta accents */
+.footer-location,
+.footer-contact-list i,
+.book-trust-list i,
+.hero-value-kicker,
+.spb-cta-band-kicker {
+  color: #424245 !important;
+}
+
+.footer-links a:hover {
+  color: #1d1d1f !important;
+}
+
+/* Full-bleed sections stay plain white */
+.services-showcase-section,
+.cf-about-section,
+.book-section,
+.footer,
+.mayor-highlight-section--fullbleed,
+.google-reviews-section,
+.hero-social-proof,
+.service-builder-section,
+.checkout-page,
+.legal-page {
+  background: #ffffff !important;
+}
+
+.mayor-highlight-content,
+.spb-cta-band,
+.spb-cta-inline {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Logo sizing for new horizontal mark */
+.nav-logo img {
+  height: clamp(36px, 4.5vw, 44px) !important;
+  width: auto !important;
+  max-width: min(240px, 42vw) !important;
+}
+
+.footer-logo img {
+  height: clamp(44px, 5vw, 56px) !important;
+  width: auto !important;
+}
+
+/* Floating CTA — outline shell */
+.spb-cta-floating {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+.spb-cta-floating-link {
+  border-radius: var(--radius-md) !important;
+}
