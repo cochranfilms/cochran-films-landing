@@ -12106,8 +12106,9 @@ body.resume-page .btn-secondary {
 }
 
 .google-reviews-cta {
-  background: #1d1d1f !important;
-  color: #ffffff !important;
+  background: transparent !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
   border-color: #1d1d1f !important;
 }
 
@@ -12415,19 +12416,9 @@ strong,
   color: #333336 !important;
 }
 
-/* Kickers / labels — outline chips, dark text */
-.hero-value-kicker,
+/* Tag labels only — section kickers stay plain text (see Pass 3/4) */
 .hero-value-tag,
-.services-showcase-kicker,
-.book-kicker,
-.cf-about-kicker,
-.google-reviews-kicker,
-.spb-cta-band-kicker,
-.mayor-highlight-content .mayor-card-kicker,
-.svc-tile-label,
-.eyebrow,
-.section-label,
-.card-kicker {
+.svc-tile-label {
   color: #424245 !important;
   background: transparent !important;
   border: 1px solid rgba(0, 0, 0, 0.14) !important;
@@ -12727,11 +12718,17 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .google-reviews-cta {
-  background: #1d1d1f !important;
-  color: #ffffff !important;
+  background: transparent !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
   border: 1px solid #1d1d1f !important;
   border-radius: var(--radius-md) !important;
   box-shadow: none !important;
+}
+
+.google-reviews-cta:hover {
+  background: #1d1d1f !important;
+  color: #ffffff !important;
 }
 
 .google-reviews-business-link:hover {
@@ -12780,4 +12777,97 @@ h1, h2, h3, h4, h5, h6,
   border: none !important;
   border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================================================
+   Editorial Refinement Pass 4 — force plain kickers + outline review CTAs
+   ========================================================================== */
+
+/* Section eyebrows / kickers — never boxed */
+section .google-reviews-kicker,
+.google-reviews-section .google-reviews-kicker,
+.spb-cta-band .spb-cta-band-kicker,
+.service-builder-section .spb-kicker,
+.hero-value-kicker,
+.services-showcase-kicker,
+.book-kicker,
+.cf-about-kicker,
+.mayor-highlight-content .mayor-card-kicker,
+.hero-banner-kicker,
+.eyebrow,
+.section-label,
+.card-kicker {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.hero-banner-kicker,
+.hero-banner .hero-banner-kicker {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Google Reviews — clean sans quote body, no decorative mark */
+.google-reviews-section .google-review-card blockquote,
+.google-reviews-section .google-review-card blockquote p {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.65 !important;
+  color: #1d1d1f !important;
+  letter-spacing: -0.01em !important;
+}
+
+.google-reviews-section .google-review-card blockquote::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* View on Google — black outline, black text */
+.google-reviews-section .google-review-footer a,
+.google-reviews-section .google-reviews-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
+  border: 1px solid #1d1d1f !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+.google-reviews-section .google-review-footer a:hover,
+.google-reviews-section .google-reviews-cta:hover {
+  background: #1d1d1f !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.google-reviews-section .google-reviews-business-link {
+  background: transparent !important;
+  background-image: none !important;
+  color: #1d1d1f !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  box-shadow: none !important;
+}
+
+/* Readable meta on review cards */
+.google-reviews-section .google-review-footer span,
+.google-reviews-section .google-review-topline > span:last-child {
+  color: #424245 !important;
+  font-weight: 600 !important;
 }
