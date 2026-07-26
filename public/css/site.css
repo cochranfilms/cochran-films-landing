@@ -2559,7 +2559,7 @@
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      border-radius: 20px;
+      border-radius: 0;
       overflow: hidden;
       border: 1px solid rgba(244, 114, 182, 0.34);
       background: rgba(2, 6, 23, 0.88);
@@ -13625,6 +13625,7 @@ body.page-portfolio .shawnta-logo-badge {
 body.page-portfolio .sh-video-frame {
   background: #f5f5f7 !important;
   border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
 }
 
