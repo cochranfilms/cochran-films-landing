@@ -35,7 +35,7 @@ function escapeHtml(value) {
 
 function buildServicesHtml(services) {
   if (!Array.isArray(services) || services.length === 0) {
-    return '<tr><td colspan="3" style="padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#6b7280;">No line items</td></tr>';
+    return '<tr><td colspan="3" style="padding:14px 16px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Helvetica,Arial,sans-serif;font-size:14px;color:#424245;">No line items</td></tr>';
   }
   return services
     .map((service) => {
@@ -44,9 +44,9 @@ function buildServicesHtml(services) {
       const lineTotal = unitPrice * qty;
       const qtyLabel = qty > 1 ? ` &times; ${qty}` : '';
       return `<tr>
-        <td width="42%" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;line-height:1.4;">${escapeHtml(service.name)}${qtyLabel}</td>
-        <td width="38%" bgcolor="#ffffff" style="padding:14px 12px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#6b7280;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.45;">${escapeHtml(service.duration || '')}</td>
-        <td width="20%" align="right" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid #e2e8f0;background-color:#ffffff;color:#111827;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;">$${lineTotal.toFixed(2)}</td>
+        <td width="42%" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid rgba(0,0,0,0.14);background-color:#ffffff;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;line-height:1.4;">${escapeHtml(service.name)}${qtyLabel}</td>
+        <td width="38%" bgcolor="#ffffff" style="padding:14px 12px;border-bottom:1px solid rgba(0,0,0,0.14);background-color:#ffffff;color:#424245;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.45;">${escapeHtml(service.duration || '')}</td>
+        <td width="20%" align="right" bgcolor="#ffffff" style="padding:14px 16px;border-bottom:1px solid rgba(0,0,0,0.14);background-color:#ffffff;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;">$${lineTotal.toFixed(2)}</td>
       </tr>`;
     })
     .join('');

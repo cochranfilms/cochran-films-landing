@@ -1,181 +1,117 @@
 <!--
-  Cochran Films — Contact / Project Inquiry (EmailJS)
+  Cochran Films: Contact / Project Inquiry (EmailJS)
   Paste into EmailJS → Email Templates → Content (HTML)
-  Match styling with docs/emailjs-service-package-invoice-template.html
 
-  Variables:
-  {{to_email}}, {{reply_to}}, {{email_heading}}, {{email_intro}},
-  {{customer_name}}, {{customer_first_name}}, {{customer_last_name}},
-  {{customer_email}}, {{service_interest}},
-  {{inquiry_id}}, {{submitted_date}}, {{project_details_html}}
+  Variables: {{to_email}}, {{reply_to}}, {{email_heading}}, {{email_intro}},
+  {{customer_name}}, {{customer_first_name}}, {{customer_last_name}}, {{customer_email}},
+  {{service_interest}}, {{inquiry_id}}, {{submitted_date}}, {{project_details_html}},
   {{cta_label}}, {{cta_url}}, {{cta_subtext}}
-  (Admin: Reply to name + mailto. Client: Explore Our Services + site URL.)
 
-  Settings:
-  - To Email: {{to_email}}
-  - From Name: Cochran Films
-  - Reply To: {{reply_to}}
-
-  Recommended subjects (set in EmailJS):
-  - Admin notification: New Cochran Films Inquiry — {{customer_name}} · {{service_interest}}
-  - Client auto-reply: We received your message — Cochran Films
--->
-<!DOCTYPE html>
+  Settings: To {{to_email}} · From Cochran Films · Reply To {{reply_to}}
+--><!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Cochran Films — Project Inquiry</title>
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>{{email_heading}}</title>
+  <style type="text/css">
+    body, table, td, p, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; display: block; }
+    a { color: #1d1d1f; }
+    @media only screen and (max-width: 620px) {
+      .shell { width: 100% !important; }
+      .pad { padding-left: 20px !important; padding-right: 20px !important; }
+      .pad-head { padding: 28px 20px 22px !important; }
+      .pad-body { padding: 28px 20px !important; }
+      .meta-col { display: block !important; width: 100% !important; max-width: 100% !important; padding: 0 0 10px 0 !important; }
+      .meta-gap { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; }
+      .headline { font-size: 22px !important; line-height: 1.25 !important; }
+      .amount { font-size: 28px !important; }
+      .cta-btn a { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+      .svc-table th, .svc-table td { font-size: 12px !important; padding: 10px 10px !important; }
+      .admin-row td { display: block !important; width: 100% !important; box-sizing: border-box !important; border-bottom: 1px solid rgba(0,0,0,0.14) !important; }
+    }
+  </style>
 </head>
 <body style="margin:0;padding:0;width:100%;background-color:#ffffff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
-
-  <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-    Cochran Films project inquiry from {{customer_name}} — {{service_interest}}
-  </div>
-
+<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">Cochran Films project inquiry from {{customer_name}}</div>
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;">
     <tr>
-      <td align="center" style="padding:40px 16px;">
-
-        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid #e2e8f0;">
-
-          <!-- Brand header -->
-          <tr>
-            <td bgcolor="#111827" style="background-color:#111827;padding:0;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" class="shell" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid rgba(0,0,0,0.14);">          <tr>
+            <td class="pad-head" style="padding:32px 28px 24px;border-bottom:1px solid rgba(0,0,0,0.14);">
+              <img src="https://www.cochranfilms.studio/reference/logo.png" alt="Cochran Films" width="200" style="width:100%;max-width:200px;height:auto;margin:0 0 22px;" />
+              <p style="margin:0 0 10px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Project inquiry</p>
+              <h1 class="headline" style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:26px;line-height:1.2;font-weight:600;color:#1d1d1f;letter-spacing:-0.02em;">{{email_heading}}</h1>
+            </td>
+          </tr>          <tr>
+            <td class="pad-body pad" style="padding:28px 28px 8px;">
+              
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.7;color:#333336;">{{email_intro}}</p>
+            </td>
+          </tr>
+          <tr><td class="pad-body pad" style="padding:16px 28px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">From</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:22px;font-weight:600;color:#1d1d1f;line-height:1.3;">{{customer_name}}</p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Email</p>
+              <p style="margin:0 0 20px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;"><a href="mailto:{{customer_email}}" style="color:#1d1d1f;text-decoration:underline;font-weight:600;">{{customer_email}}</a></p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr class="admin-row"><td class="meta-col" width="50%" valign="top" style="padding:0 8px 0 0;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid rgba(0,0,0,0.14);">
                 <tr>
-                  <td height="3" bgcolor="#FFB200" style="background-color:#FFB200;font-size:0;line-height:3px;">&nbsp;</td>
+                  <td style="padding:16px 18px;"><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Inquiry ID</p><p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#1d1d1f;line-height:1.35;">#{{inquiry_id}}</p></td>
                 </tr>
+              </table></td><td class="meta-gap" width="0" style="font-size:0;line-height:0;">&nbsp;</td><td class="meta-col" width="50%" valign="top" style="padding:0 0 0 8px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid rgba(0,0,0,0.14);">
                 <tr>
-                  <td align="center" style="padding:36px 32px 28px;">
-                    <img src="https://cochranfilms.com/CF_Logo_White2025.png" alt="Cochran Films" width="190" style="display:block;margin:0 auto 22px;border:0;max-width:190px;height:auto;" />
-                    <p style="margin:0 0 10px;font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic;color:#9ca3af;letter-spacing:0.02em;">
-                      Project inquiry
-                    </p>
-                    <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.35;font-weight:bold;color:#ffffff;">
-                      {{email_heading}}
-                    </h1>
+                  <td style="padding:16px 18px;"><p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Submitted</p><p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#1d1d1f;line-height:1.35;">{{submitted_date}}</p></td>
+                </tr>
+              </table></td></tr></table>
+            </td></tr>
+          <tr><td class="pad-body pad" style="padding:20px 28px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Service interest</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid rgba(0,0,0,0.14);">
+                <tr>
+                  <td style="padding:16px 18px;"><p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:17px;font-weight:600;color:#1d1d1f;">{{service_interest}}</p></td>
+                </tr>
+              </table>
+            </td></tr>
+          <tr><td class="pad-body pad" style="padding:16px 28px 24px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Project details</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid rgba(0,0,0,0.14);">
+                <tr>
+                  <td style="padding:16px 18px;"><p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.75;color:#333336;">{{{project_details_html}}}</p></td>
+                </tr>
+              </table>
+            </td></tr>          <tr>
+            <td class="pad cta-btn" align="center" style="padding:8px 28px 28px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                <tr>
+                  <td align="center" style="background-color:#1d1d1f;">
+                    <a href="{{cta_url}}" target="_blank" style="display:inline-block;padding:14px 28px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:13px;font-weight:600;color:#ffffff;text-decoration:none;letter-spacing:0.04em;">{{cta_label}}</a>
                   </td>
                 </tr>
               </table>
+              <p style="margin:14px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;line-height:1.5;color:#424245;">{{cta_subtext}}</p>
             </td>
-          </tr>
-
-          <!-- Intro -->
-          <tr>
-            <td bgcolor="#ffffff" style="background-color:#ffffff;padding:36px 40px 8px;">
-              <p style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7;color:#4b5563;">
-                {{email_intro}}
+          </tr>          <tr>
+            <td class="pad" align="center" style="padding:24px 28px 28px;border-top:1px solid rgba(0,0,0,0.14);">
+              <p style="margin:0 0 6px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;font-weight:600;color:#1d1d1f;">Cochran Films</p>
+              <p style="margin:0 0 12px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;line-height:1.55;color:#424245;">Full-stack media &amp; production · Atlanta, GA</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;line-height:1.6;">
+                <a href="https://www.cochranfilms.studio" target="_blank" style="color:#1d1d1f;text-decoration:underline;font-weight:600;">cochranfilms.studio</a>
               </p>
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td style="padding-bottom:16px;border-bottom:1px solid #e2e8f0;">
-                    <p style="margin:0 0 4px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:0.14em;text-transform:uppercase;color:#9ca3af;">From</p>
-                    <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;color:#111827;line-height:1.3;">{{customer_name}}</p>
-                    <p style="margin:10px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;">Email address</p>
-                    <p style="margin:6px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#4f46e5;">
-                      <a href="mailto:{{customer_email}}" style="color:#4f46e5;text-decoration:none;font-weight:bold;">{{customer_email}}</a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Meta -->
-          <tr>
-            <td bgcolor="#ffffff" style="background-color:#ffffff;padding:24px 40px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td width="50%" valign="top" style="padding-right:10px;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f9fafb" style="background-color:#f9fafb;border:1px solid #e2e8f0;">
-                      <tr>
-                        <td style="padding:16px 18px;">
-                          <p style="margin:0 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;">Inquiry ID</p>
-                          <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:#111827;">#{{inquiry_id}}</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                  <td width="4%">&nbsp;</td>
-                  <td width="46%" valign="top" style="padding-left:10px;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f9fafb" style="background-color:#f9fafb;border:1px solid #e2e8f0;">
-                      <tr>
-                        <td style="padding:16px 18px;">
-                          <p style="margin:0 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:0.12em;text-transform:uppercase;color:#9ca3af;">Submitted</p>
-                          <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:#111827;">{{submitted_date}}</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Service interest -->
-          <tr>
-            <td bgcolor="#ffffff" style="background-color:#ffffff;padding:8px 40px 8px;">
-              <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:0.14em;text-transform:uppercase;color:#6b7280;">Service interest</p>
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f9fafb" style="background-color:#f9fafb;border:1px solid #e2e8f0;">
-                <tr>
-                  <td style="padding:16px 18px;">
-                    <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:bold;color:#111827;">{{service_interest}}</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Project details -->
-          <tr>
-            <td bgcolor="#ffffff" style="background-color:#ffffff;padding:16px 40px 28px;">
-              <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;letter-spacing:0.14em;text-transform:uppercase;color:#6b7280;">Project details</p>
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;border:1px solid #e2e8f0;border-left:4px solid #FFB200;">
-                <tr>
-                  <td style="padding:18px 20px;">
-                    <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.75;color:#374151;">{{{project_details_html}}}</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- CTA -->
-          <tr>
-            <td align="center" bgcolor="#ffffff" style="background-color:#ffffff;padding:0 40px 32px;">
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
-                <tr>
-                  <td align="center" bgcolor="#111827" style="background-color:#111827;">
-                    <a href="{{cta_url}}" target="_blank" style="display:inline-block;padding:14px 32px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;">{{cta_label}}</a>
-                  </td>
-                </tr>
-              </table>
-              <p style="margin:16px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;">
-                {{cta_subtext}}
+              <p style="margin:14px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;line-height:1.6;color:#424245;">
+                <a href="tel:+14704202169" style="color:#424245;text-decoration:none;">(470) 420-2169</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:info@cochranfilms.com" style="color:#424245;text-decoration:underline;">info@cochranfilms.com</a>
               </p>
+              
             </td>
           </tr>
-
-          <!-- Footer -->
-          <tr>
-            <td align="center" bgcolor="#111827" style="background-color:#111827;padding:28px 40px;">
-              <p style="margin:0 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#ffffff;">Cochran Films</p>
-              <p style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;">Full-stack media &amp; production &middot; Atlanta, GA</p>
-              <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.6;">
-                <a href="https://www.cochranfilms.com" target="_blank" style="color:#FFB200;text-decoration:none;font-weight:bold;">cochranfilms.com</a>
-              </p>
-              <p style="margin:18px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6b7280;">
-                <a href="tel:+14704202169" style="color:#d1d5db;text-decoration:none;">(470) 420-2169</a>
-                &nbsp;&bull;&nbsp;
-                <a href="mailto:info@cochranfilms.com" style="color:#d1d5db;text-decoration:underline;">info@cochranfilms.com</a>
-              </p>
-            </td>
-          </tr>
-
         </table>
-
       </td>
     </tr>
   </table>
