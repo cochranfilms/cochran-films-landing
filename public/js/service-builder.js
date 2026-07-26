@@ -36,7 +36,7 @@
         'prime-exposure': { name: 'Prime Exposure', price: 600, duration: '2 hours coverage', icon: 'fas fa-camera-retro', category: 'photography' },
         'legacy-capture': { name: 'Legacy Capture', price: 900, duration: '3 hours coverage', icon: 'fas fa-award', category: 'photography' },
 
-        // Videography — Hourly & Add-ons
+        // Videography, Hourly & Add-ons
         'hourly-video': { name: 'General Hourly Rate', price: 250, hourly: true, hourlyRate: 250, maxHours: 16, duration: 'Per hour', icon: 'fas fa-clock', category: 'videography' },
         'raw-files': { name: 'Raw Files (Additional)', price: 300, duration: 'Full project files', icon: 'fas fa-file-video', category: 'videography' },
 
@@ -44,7 +44,7 @@
         'event-video-2hr': { name: '2 Hours + 60 Sec. Recap', price: 500, duration: '2 hours', icon: 'fas fa-video', category: 'videography' },
         'event-video-3hr': { name: '3 Hours + 60 Sec. Recap', price: 750, duration: '3 hours', icon: 'fas fa-film', category: 'videography' },
         'event-video-5hr': { name: '5 Hours + 60–90 Sec. Recap', price: 1250, duration: '5 hours', icon: 'fas fa-camera', category: 'videography' },
-        'event-video-8hr-no-edit': { name: '8 Hours — No Edits', price: 2000, duration: '8 hours', icon: 'fas fa-video-camera', category: 'videography' },
+        'event-video-8hr-no-edit': { name: '8 Hours, No Edits', price: 2000, duration: '8 hours', icon: 'fas fa-video-camera', category: 'videography' },
         'event-video-8hr-recap': { name: '8 Hours + 60 Sec. Recap', price: 2200, duration: '8 hours', icon: 'fas fa-film', category: 'videography' },
 
         // Live Production
@@ -75,12 +75,12 @@
         'collaborate-brand': { name: 'Collaborate', price: 1800, duration: 'Multi-page site + social setup', icon: 'fas fa-handshake', category: 'branding' },
         'transform-brand': { name: 'Transform', price: 3500, duration: 'E-commerce + automation', icon: 'fas fa-rocket', category: 'branding' },
 
-        // On-Site Printing — 4×6
+        // On-Site Printing, 4×6
         'quick-print-4x6': { name: 'Quick Print Booth (4×6)', price: 500, duration: 'Up to 100 prints', icon: 'fas fa-print', category: 'printing' },
         'signature-snap-4x6': { name: 'Signature Snap Station (4×6)', price: 800, duration: 'Up to 200 prints', icon: 'fas fa-images', category: 'printing' },
         'legacy-lab-4x6': { name: 'Legacy Lab Experience (4×6)', price: 1100, duration: 'Up to 350 prints', icon: 'fas fa-trophy', category: 'printing' },
 
-        // On-Site Printing — 5×7
+        // On-Site Printing, 5×7
         'quick-print-5x7': { name: 'Quick Print Booth (5×7)', price: 750, duration: 'Up to 75 prints', icon: 'fas fa-print', category: 'printing' },
         'signature-snap-5x7': { name: 'Signature Snap Station (5×7)', price: 1050, duration: 'Up to 175 prints', icon: 'fas fa-images', category: 'printing' },
         'legacy-lab-5x7': { name: 'Legacy Lab Experience (5×7)', price: 1400, duration: 'Up to 275 prints', icon: 'fas fa-trophy', category: 'printing' },
@@ -505,7 +505,7 @@
             statusEl.hidden = false;
             statusEl.textContent = visibleCount
               ? `${visibleCount} service${visibleCount === 1 ? '' : 's'} found across all categories`
-              : 'No matches — try photo, video, wedding, podcast, print, or website';
+              : 'No matches. Try photo, video, wedding, podcast, print, or website';
           } else {
             statusEl.hidden = true;
             statusEl.textContent = '';
@@ -626,7 +626,7 @@
           const added = addServiceToPackage(serviceId, { hours });
           if (added) {
             const label = serviceData[serviceId]?.name || 'Service';
-            showNotification(`${label} added — keep building your package!`, 'success');
+            showNotification(`${label} added. Keep building your package!`, 'success');
           }
         } else {
           console.log('No service ID found in drop data');
@@ -848,7 +848,7 @@
                   <i class="${service.icon}"></i>
                 </div>
                 <div class="selected-service-details">
-                  <h5>${service.name}${service.isHourly ? ` — ${service.quantity} hr${service.quantity !== 1 ? 's' : ''}` : service.quantity > 1 ? ` × ${service.quantity}` : ''}</h5>
+                  <h5>${service.name}${service.isHourly ? `, ${service.quantity} hr${service.quantity !== 1 ? 's' : ''}` : service.quantity > 1 ? ` × ${service.quantity}` : ''}</h5>
                   <p>${service.duration} · $${(service.price * service.quantity).toLocaleString()}${service.isHourly ? ' total' : service.quantity > 1 ? ' each' : ''}</p>
                 </div>
               </div>
@@ -1038,10 +1038,10 @@
             ? 'Start Your Monthly Retainer'
             : 'Create Your Cochran Films Invoice';
         const modalIntro = isWhiteLabelCheckout
-          ? 'Enter your details below. We&apos;ll email your plan summary and setup invoice—usually within a minute. After setup is paid, monthly renewals bill automatically on the same date each month.'
+          ? 'Enter your details below. We&apos;ll email your plan summary and setup invoice, usually within a minute. After setup is paid, monthly renewals bill automatically on the same date each month.'
           : isRetainerCheckout
-            ? 'Enter your details below. We&apos;ll email your retainer summary and first monthly invoice—usually within a minute. You&apos;ll be billed on the same date each month through your commitment term.'
-            : 'Enter your details below. We&apos;ll email your package summary and Stripe payment link—usually within a minute.';
+            ? 'Enter your details below. We&apos;ll email your retainer summary and first monthly invoice, usually within a minute. You&apos;ll be billed on the same date each month through your commitment term.'
+            : 'Enter your details below. We&apos;ll email your package summary and Stripe payment link, usually within a minute.';
         const eventDateLabel = isSubscriptionCheckout
           ? 'Billing start date <span style="font-weight:500;opacity:0.7">(optional)</span>'
           : 'Event / shoot date <span style="font-weight:500;opacity:0.7">(optional)</span>';
@@ -1432,7 +1432,7 @@
               await navigator.clipboard.writeText(safeInvoiceUrl);
               showNotification('Payment link copied', 'success');
             } catch (_) {
-              showNotification('Could not copy — use the link above', 'info');
+              showNotification('Could not copy. Use the link above', 'info');
             }
           });
         }

@@ -1,5 +1,5 @@
 /**
- * Service Package Builder CTAs — floating pill + pre-footer band + footer button.
+ * Service Package Builder CTAs, floating pill + pre-footer band + footer button.
  * Loaded on all marketing pages so users can always reach /pricing.
  */
 (function initSpbCtas() {
@@ -61,7 +61,7 @@
         <div class="spb-cta-band-copy">
           <p class="spb-cta-band-kicker"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Service Package Builder</p>
           <h2 id="cf-spb-cta-band-title">Build your custom package in minutes</h2>
-          <p>Pick services, see live pricing, and get a Stripe invoice emailed instantly — the fastest way to book production with Cochran Films.</p>
+          <p>Pick services, see live pricing, and get a Stripe invoice emailed instantly, the fastest way to book production with Cochran Films.</p>
           <ul class="spb-cta-band-steps" aria-label="How it works">
             <li><span>1</span> Select services</li>
             <li><span>2</span> Review live total</li>
