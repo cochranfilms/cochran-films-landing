@@ -28,8 +28,8 @@ const HEAD = `<head>
   <title>{{email_heading}}</title>
   <style type="text/css">
     body, table, td, p, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
-    img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; display: block; }
+    table, td { border-collapse: collapse; }
+    img { border: 0; outline: none; text-decoration: none; display: block; }
     a { color: ${TEXT}; }
     @media only screen and (max-width: 620px) {
       .shell { width: 100% !important; }
@@ -48,7 +48,7 @@ const HEAD = `<head>
 </head>`;
 
 function preheader(text) {
-  return `<div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${text}</div>`;
+  return `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;color:transparent;">${text}</div>`;
 }
 
 function shellStart(preheaderText) {
