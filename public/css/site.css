@@ -2544,6 +2544,125 @@
       }
     }
 
+    .sh-video-showcase {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: clamp(36px, 5vw, 52px) auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sh-video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(244, 114, 182, 0.34);
+      background: rgba(2, 6, 23, 0.88);
+      box-shadow:
+        0 28px 72px rgba(0, 0, 0, 0.42),
+        0 0 0 1px rgba(244, 114, 182, 0.08);
+    }
+
+    .sh-showcase-video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #020617;
+    }
+
+    .sh-video-meta {
+      max-width: 680px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sh-video-meta strong {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .sh-video-meta span {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .shawnta-platform-subsection {
+      position: relative;
+      z-index: 1;
+      margin-top: clamp(48px, 6vw, 72px);
+      padding-top: clamp(36px, 4.5vw, 52px);
+      border-top: 1px solid rgba(244, 114, 182, 0.22);
+    }
+
+    .shawnta-subsection-head {
+      max-width: 820px;
+      margin: 0 auto clamp(28px, 3.5vw, 40px);
+      text-align: center;
+    }
+
+    .shawnta-subsection-title {
+      color: var(--text-primary);
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.2vw, 34px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 18px 0 12px;
+    }
+
+    .shawnta-subsection-lede {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.72;
+      margin: 0 auto;
+      max-width: 720px;
+    }
+
+    .shawnta-platform-subsection .lp-web-showcase {
+      margin-top: 0;
+    }
+
+    .orient-feature-list {
+      list-style: none;
+      margin: 16px auto 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 36ch;
+      text-align: left;
+    }
+
+    .orient-feature-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .orient-feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sp-accent, #b8d430);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--sp-accent, #b8d430) 18%, transparent);
+    }
+
     .lp-portfolio-shell > .shawnta-portfolio-section--fullbleed:has(+ .real-estate-section) {
       margin-bottom: 0;
       padding-bottom: 0;
@@ -3529,6 +3648,83 @@
 
     .ccacademy-preview .sp-logo-wrap img {
       height: 52px;
+    }
+
+    .orient-preview {
+      --sp-accent: #b8d430;
+      --sp-accent-bright: #d4f055;
+      --sp-cream: #0a0a0a;
+      --sp-border: rgba(184, 212, 48, 0.28);
+      --sp-border-soft: rgba(184, 212, 48, 0.2);
+      --sp-border-frame: rgba(184, 212, 48, 0.22);
+      --sp-border-browser: rgba(184, 212, 48, 0.18);
+      --sp-dot-accent: rgba(184, 212, 48, 0.55);
+      --sp-panel-bg: rgba(10, 10, 10, 0.78);
+      --sp-panel-gradient: linear-gradient(135deg, rgba(12, 12, 12, 0.9), rgba(15, 23, 42, 0.74));
+      --sp-panel-glow: radial-gradient(circle at 100% 0%, rgba(184, 212, 48, 0.14), transparent 42%);
+      --sp-browser-bg: rgba(10, 10, 10, 0.96);
+      --sp-overlay:
+        linear-gradient(to right, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.42) 52%, rgba(0, 0, 0, 0.18) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 42%);
+      --sp-btn-primary-bg: linear-gradient(180deg, #d4f055 0%, #b8d430 100%);
+      --sp-btn-primary-color: #111;
+      --sp-btn-primary-shadow: 0 6px 18px rgba(184, 212, 48, 0.35);
+      --sp-link-color: var(--sp-accent-bright);
+      --sp-hero-justify: center;
+      --sp-hero-align: flex-start;
+      --sp-hero-text-align: left;
+      --sp-hero-media-position: center center;
+    }
+
+    .orient-preview .sp-hero-frame img {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .orient-preview .sp-hero-overlay {
+      max-width: 58%;
+      padding: 24px 22px;
+    }
+
+    .orient-preview .sp-hero-headline {
+      font-size: clamp(15px, 2.2vw, 24px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .orient-preview .sp-hero-sub {
+      font-size: 12px;
+      line-height: 1.45;
+      max-width: 100%;
+    }
+
+    .orient-preview .sp-hero-cta-row {
+      justify-content: flex-start;
+    }
+
+    .orient-preview .sp-btn {
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      padding: 9px 16px;
+    }
+
+    .orient-preview .sp-btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      color: #fff;
+      background: transparent;
+    }
+
+    .orient-preview .sp-logo-wrap img {
+      height: 56px;
+      width: auto;
     }
 
     .sp-hero-panel {
@@ -11755,8 +11951,8 @@ body::before {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  -webkit-text-fill-color: #1d1d1f !important;
-  color: #1d1d1f !important;
+  -webkit-text-fill-color: var(--hero-headline-color) !important;
+  color: var(--hero-headline-color) !important;
 }
 
 .hero-banner-kicker,
@@ -13424,6 +13620,72 @@ body.page-portfolio .shawnta-logo-badge {
   background: #ffffff !important;
   border: 1px solid rgba(0, 0, 0, 0.14) !important;
   box-shadow: none !important;
+}
+
+body.page-portfolio .sh-video-frame {
+  background: #f5f5f7 !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.page-portfolio .sh-video-meta strong {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .sh-video-meta span {
+  color: #333336 !important;
+}
+
+body.page-portfolio .shawnta-platform-subsection {
+  border-top-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.page-portfolio .shawnta-subsection-title {
+  color: #1d1d1f !important;
+}
+
+body.page-portfolio .shawnta-subsection-lede,
+body.page-portfolio .orient-feature-list li {
+  color: #333336 !important;
+}
+
+body.page-portfolio .orient-preview .sp-hero-headline,
+body.page-portfolio .orient-preview .sp-hero-sub,
+body.page-portfolio .orient-preview .sp-hero-eyebrow {
+  color: #ffffff !important;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+body.page-portfolio .orient-preview .sp-hero-overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.42) 62%, rgba(0, 0, 0, 0.12) 100%) !important;
+  max-width: 62% !important;
+  padding: 14px 12px 16px !important;
+}
+
+body.page-portfolio .orient-preview .sp-hero-headline {
+  font-size: clamp(11px, 1.55vw, 16px) !important;
+  line-height: 1.14 !important;
+}
+
+body.page-portfolio .orient-preview .sp-hero-sub {
+  font-size: 9px !important;
+  line-height: 1.35 !important;
+  margin-top: 4px !important;
+}
+
+body.page-portfolio .orient-preview .sp-hero-eyebrow {
+  font-size: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+body.page-portfolio .orient-preview .sp-hero-cta-row {
+  margin-top: 6px !important;
+  gap: 5px !important;
+}
+
+body.page-portfolio .orient-preview .sp-btn {
+  font-size: 8px !important;
+  padding: 6px 10px !important;
 }
 
 /* Real estate media UI */
