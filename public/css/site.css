@@ -15353,6 +15353,145 @@ body.page-systems .wrapper {
   background: #ffffff;
 }
 
+/* Systems mobile: kill 100vw overflow (white strip + sideways shift) + restore nav drawer */
+html:has(body.page-systems),
+body.page-systems {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body.page-systems .page-opening-hero,
+body.page-systems .systems-main,
+body.page-systems .systems-section,
+body.page-systems .systems-showcase,
+body.page-systems .footer,
+body.page-systems .spb-cta-band {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body.page-systems .hero-banner,
+body.page-systems .hero-banner--page {
+  width: 100%;
+  max-width: 100%;
+  margin: var(--nav-height) 0 0 0;
+  left: auto;
+  right: auto;
+  transform: none;
+}
+
+body.page-systems .nav-wrapper {
+  z-index: 10050;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+}
+
+body.page-systems .nav-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+  body.page-systems .nav-menu.show {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px))) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px var(--mobile-gutter, 16px) calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+    gap: 6px !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12) !important;
+    z-index: 10060 !important;
+  }
+
+  body.page-systems .nav-menu.show .nav-link {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    color: #1d1d1f !important;
+    -webkit-text-fill-color: #1d1d1f !important;
+    background: #f5f5f7 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+
+  body.page-systems .nav-menu.show .nav-link.active,
+  body.page-systems .nav-menu.show .nav-cta {
+    background: #1d1d1f !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: #1d1d1f !important;
+  }
+
+  body.page-systems.nav-open .page-opening-hero,
+  body.page-systems.nav-open .systems-main,
+  body.page-systems.nav-open .footer,
+  body.page-systems.nav-open .spb-cta-band,
+  body.page-systems.nav-open .hero-banner,
+  body.page-systems.nav-open .hero-banner-content,
+  body.page-systems.nav-open .hero-banner-media {
+    z-index: 0 !important;
+    pointer-events: none;
+  }
+
+  body.page-systems .mobile-menu-toggle {
+    display: flex !important;
+    z-index: 10070 !important;
+    color: #1d1d1f !important;
+  }
+
+  /* Static showcase images only — no overlays that double the hero text */
+  .systems-showcase .sys-live-frame.is-static {
+    aspect-ratio: 16 / 10;
+    min-height: 200px;
+    background: #101014;
+  }
+
+  .systems-showcase .sys-live-frame.is-static iframe {
+    display: none !important;
+  }
+
+  .systems-showcase .sys-live-static-img {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    pointer-events: none;
+  }
+
+  .systems-showcase .sys-live-frame.is-static .sys-live-fallback {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .systems-showcase .sys-live:hover .sys-live-browser {
+    transform: none;
+  }
+
+  .systems-showcase .sys-live-browser,
+  .systems-showcase .sys-live-frame,
+  .systems-showcase .sys-live-grid,
+  .systems-showcase .sys-live {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
 body.page-systems .systems-hero-overlay {
   background:
     linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.72) 55%, rgba(10, 10, 12, 0.88) 100%);

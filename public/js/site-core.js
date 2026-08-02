@@ -540,6 +540,8 @@
 
       function warmHiddenIframes() {
         if (document.body.classList.contains('page-systems')) return;
+        // Never warm heavy live iframes on mobile — they crash / thrash memory.
+        if (window.matchMedia('(max-width: 900px)').matches) return;
         if (document.getElementById('cf-systems-warm-pool')) return;
         if (navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''))) {
           return;

@@ -2,6 +2,11 @@
   const DESKTOP_W = 1440;
   const DESKTOP_H = 900;
   const CACHE_KEY = "cf-systems-live-warm-v1";
+  const MOBILE_MQ = "(max-width: 900px)";
+
+  function isMobilePreview() {
+    return window.matchMedia(MOBILE_MQ).matches;
+  }
 
   function scaleFrame(frame) {
     const iframe = frame.querySelector("iframe");
@@ -41,10 +46,50 @@
     if (src) rememberWarm(src);
   }
 
+  function clearMedia(frame) {
+    frame.querySelectorAll("iframe, img.sys-live-static-img").forEach(function (node) {
+      node.remove();
+    });
+    frame.classList.remove("is-loaded", "is-warm", "is-static");
+    frame.style.height = "";
+    delete frame.dataset.liveMounted;
+    delete frame.dataset.liveLoaded;
+    delete frame.dataset.staticMounted;
+  }
+
+  function mountStatic(frame) {
+    const src = frame.getAttribute("data-static-src");
+    if (!src) return false;
+    if (frame.dataset.staticMounted === "1") return true;
+
+    clearMedia(frame);
+
+    const img = document.createElement("img");
+    img.className = "sys-live-static-img";
+    img.src = src;
+    img.alt = frame.getAttribute("data-live-title") || "Platform preview";
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener(
+      "load",
+      function () {
+        frame.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+
+    frame.appendChild(img);
+    frame.classList.add("is-static", "is-loaded");
+    frame.dataset.staticMounted = "1";
+    return true;
+  }
+
   function mountIframe(frame) {
     if (frame.dataset.liveMounted === "1") return;
     const src = frame.getAttribute("data-live-src");
     if (!src) return;
+
+    clearMedia(frame);
 
     const title = frame.getAttribute("data-live-title") || "Live system preview";
     const iframe = document.createElement("iframe");
@@ -69,12 +114,24 @@
     scaleFrame(frame);
   }
 
+  function mountFrame(frame) {
+    // Mobile never mounts live iframes — they blow memory and cause horizontal overflow.
+    if (isMobilePreview()) {
+      if (!mountStatic(frame)) {
+        clearMedia(frame);
+      }
+      return;
+    }
+    mountIframe(frame);
+  }
+
   function init() {
     const frames = Array.prototype.slice.call(document.querySelectorAll(".sys-live-frame[data-live-src]"));
     if (!frames.length) return;
 
     if (typeof ResizeObserver !== "undefined") {
       const ro = new ResizeObserver(function (entries) {
+        if (isMobilePreview()) return;
         entries.forEach(function (entry) {
           scaleFrame(entry.target);
         });
@@ -86,14 +143,25 @@
       window.addEventListener(
         "resize",
         function () {
+          if (isMobilePreview()) return;
           frames.forEach(scaleFrame);
         },
         { passive: true }
       );
     }
 
-    // Mount every preview immediately so cards are live before users scroll.
-    frames.forEach(mountIframe);
+    frames.forEach(mountFrame);
+
+    var lastMobile = isMobilePreview();
+    window.matchMedia(MOBILE_MQ).addEventListener("change", function () {
+      var nowMobile = isMobilePreview();
+      if (nowMobile === lastMobile) return;
+      lastMobile = nowMobile;
+      frames.forEach(function (frame) {
+        clearMedia(frame);
+        mountFrame(frame);
+      });
+    });
   }
 
   if (document.readyState === "loading") {
