@@ -62,6 +62,21 @@
       cta.href = `/contact?${params.toString()}`;
     }
 
+    // Custom click handling avoids native focus-scroll jumps from visually hidden inputs.
+    root.addEventListener('click', (event) => {
+      const label = event.target.closest('label');
+      if (!label || !root.contains(label)) return;
+      const input = label.querySelector('input');
+      if (!input) return;
+      event.preventDefault();
+      if (input.type === 'radio') {
+        input.checked = true;
+      } else if (input.type === 'checkbox') {
+        input.checked = !input.checked;
+      }
+      render();
+    });
+
     root.addEventListener('change', render);
     render();
   }
