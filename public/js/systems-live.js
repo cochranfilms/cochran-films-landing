@@ -2,25 +2,6 @@
   const DESKTOP_W = 1440;
   const DESKTOP_H = 900;
 
-  // Homepages that currently send X-Frame-Options: DENY (cannot embed until those apps allow marketing parents).
-  const FRAME_RESTRICTED = {
-    "creatorcollective.media": true,
-    "bizzicloud.io": true,
-    "djsneedluv2.com": true,
-  };
-
-  function hostKey(src) {
-    try {
-      return new URL(src).hostname.replace(/^www\./, "").toLowerCase();
-    } catch (err) {
-      return "";
-    }
-  }
-
-  function isRestricted(src) {
-    return !!FRAME_RESTRICTED[hostKey(src)];
-  }
-
   function scaleFrame(frame) {
     const iframe = frame.querySelector("iframe");
     if (!iframe) return;
@@ -39,12 +20,6 @@
     if (frame.dataset.liveMounted === "1") return;
     const src = frame.getAttribute("data-live-src");
     if (!src) return;
-
-    if (isRestricted(src)) {
-      frame.dataset.liveMounted = "1";
-      frame.classList.add("is-restricted");
-      return;
-    }
 
     const title = frame.getAttribute("data-live-title") || "Live system preview";
     const iframe = document.createElement("iframe");
