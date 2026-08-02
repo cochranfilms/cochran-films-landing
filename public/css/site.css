@@ -15558,74 +15558,185 @@ body.page-systems .systems-showcase .systems-lede {
   font-size: clamp(1.18rem, 1.8vw, 1.35rem);
 }
 
-body.page-systems .sys-stage-grid {
+body.page-systems .sys-live-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 22px;
 }
 
-body.page-systems .sys-stage {
-  position: relative;
-  display: block;
+body.page-systems .sys-live {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+body.page-systems .sys-live--lead {
+  margin-bottom: 22px;
+  gap: 18px;
+}
+
+body.page-systems .sys-live-browser {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  min-height: 280px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   background: #141416;
-  text-decoration: none;
-  color: inherit;
-  isolation: isolate;
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.34);
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.45s ease;
 }
 
-body.page-systems .sys-stage--lead {
-  min-height: clamp(360px, 52vw, 520px);
-  margin-bottom: 16px;
+body.page-systems .sys-live:hover .sys-live-browser {
+  transform: translateY(-4px);
+  border-color: rgba(244, 181, 63, 0.42);
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
 }
 
-body.page-systems .sys-stage img {
-  position: absolute;
-  inset: 0;
+body.page-systems .sys-live-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #0f0f12;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+body.page-systems .sys-live-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+body.page-systems .sys-live-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(245, 245, 247, 0.22);
+}
+
+body.page-systems .sys-live-dots span:first-child {
+  background: #f4b53f;
+}
+
+body.page-systems .sys-live-url {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(245, 245, 247, 0.72);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.page-systems .sys-live-url::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  vertical-align: middle;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.55);
+}
+
+body.page-systems .sys-live-frame {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transform: scale(1.02);
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(244, 181, 63, 0.08), transparent 42%),
+    #101014;
 }
 
-body.page-systems .sys-stage-veil {
+body.page-systems .sys-live--lead .sys-live-frame {
+  aspect-ratio: 16 / 10;
+}
+
+body.page-systems .sys-live-fallback {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(8, 8, 10, 0.05) 0%, rgba(8, 8, 10, 0.12) 42%, rgba(8, 8, 10, 0.78) 100%);
   z-index: 1;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 8px;
+  padding: 28px;
+  text-decoration: none;
+  color: #f5f5f7;
+  background:
+    radial-gradient(500px 220px at 12% 20%, rgba(244, 181, 63, 0.16), transparent 60%),
+    linear-gradient(160deg, #17171b 0%, #0f0f12 100%);
 }
 
-body.page-systems .sys-stage-meta {
+body.page-systems .sys-live-fallback-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f4b53f;
+}
+
+body.page-systems .sys-live-fallback strong {
+  font-family: Poppins, sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.15;
+  color: #ffffff !important;
+}
+
+body.page-systems .sys-live-fallback span:last-child {
+  font-size: 0.95rem;
+  color: rgba(245, 245, 247, 0.72);
+}
+
+body.page-systems .sys-live-frame iframe {
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 2;
+  width: 1440px;
+  height: 900px;
+  border: 0;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: top left;
+  transform: scale(0.01);
+  transition: opacity 0.35s ease;
+}
+
+body.page-systems .sys-live-frame.is-loaded iframe {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.page-systems .sys-live-frame.is-loaded .sys-live-fallback {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.page-systems .sys-live-meta {
   display: grid;
   gap: 10px;
-  padding: 28px 26px;
+  padding: 0 2px 4px;
 }
 
-body.page-systems .sys-stage--lead .sys-stage-meta {
+body.page-systems .sys-live--lead .sys-live-meta {
   max-width: 46rem;
-  padding: 36px 34px;
   gap: 12px;
 }
 
-body.page-systems .sys-stage-topline {
+body.page-systems .sys-live-topline {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 14px;
   align-items: center;
 }
 
-body.page-systems .sys-stage-chip {
+body.page-systems .sys-live-chip {
   display: inline-flex;
   padding: 6px 10px;
   font-size: 11px;
@@ -15636,14 +15747,14 @@ body.page-systems .sys-stage-chip {
   background: #f4b53f;
 }
 
-body.page-systems .sys-stage-domain {
+body.page-systems .sys-live-domain {
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   color: rgba(245, 245, 247, 0.72) !important;
 }
 
-body.page-systems .sys-stage h3 {
+body.page-systems .sys-live-meta h3 {
   margin: 0;
   font-family: Poppins, sans-serif;
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
@@ -15652,44 +15763,39 @@ body.page-systems .sys-stage h3 {
   -webkit-text-fill-color: #ffffff !important;
 }
 
-body.page-systems .sys-stage--lead h3 {
+body.page-systems .sys-live--lead .sys-live-meta h3 {
   font-size: clamp(1.85rem, 3.4vw, 2.6rem);
 }
 
-body.page-systems .sys-stage p {
+body.page-systems .sys-live-meta p {
   margin: 0;
-  max-width: 42ch;
+  max-width: 46ch;
   font-size: 1.05rem;
   line-height: 1.55;
   color: rgba(245, 245, 247, 0.86) !important;
 }
 
-body.page-systems .sys-stage--lead p {
+body.page-systems .sys-live--lead .sys-live-meta p {
   font-size: 1.15rem;
   line-height: 1.6;
 }
 
-body.page-systems .sys-stage-cta {
+body.page-systems .sys-live-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: 2px;
+  width: fit-content;
   font-size: 0.98rem;
   font-weight: 700;
+  text-decoration: none;
   color: #f4b53f !important;
 }
 
-body.page-systems .sys-stage:hover,
-body.page-systems .sys-stage:focus-visible {
-  transform: translateY(-4px);
-  border-color: rgba(244, 181, 63, 0.45);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+body.page-systems .sys-live-cta:hover,
+body.page-systems .sys-live-cta:focus-visible {
+  color: #ffd27a !important;
   outline: none;
-}
-
-body.page-systems .sys-stage:hover img,
-body.page-systems .sys-stage:focus-visible img {
-  transform: scale(1.06);
 }
 
 body.page-systems .systems-wl-grid {
@@ -16223,16 +16329,12 @@ body.page-systems .sys-reveal.is-visible {
   body.page-systems .systems-pillars,
   body.page-systems .systems-ai-grid,
   body.page-systems .systems-wl-grid,
-  body.page-systems .sys-stage-grid,
+  body.page-systems .sys-live-grid,
   body.page-systems .systems-proof-grid,
   body.page-systems .systems-value-grid,
   body.page-systems .systems-scope-options,
   body.page-systems .systems-scope-checks {
     grid-template-columns: 1fr 1fr;
-  }
-
-  body.page-systems .sys-stage {
-    min-height: 260px;
   }
 }
 
@@ -16244,7 +16346,7 @@ body.page-systems .sys-reveal.is-visible {
   body.page-systems .systems-pillars,
   body.page-systems .systems-ai-grid,
   body.page-systems .systems-wl-grid,
-  body.page-systems .sys-stage-grid,
+  body.page-systems .sys-live-grid,
   body.page-systems .systems-proof-grid,
   body.page-systems .systems-value-grid,
   body.page-systems .systems-scope-options,
@@ -16253,13 +16355,7 @@ body.page-systems .sys-reveal.is-visible {
     grid-template-columns: 1fr;
   }
 
-  body.page-systems .sys-stage,
-  body.page-systems .sys-stage--lead {
-    min-height: 320px;
-  }
-
-  body.page-systems .sys-stage-meta,
-  body.page-systems .sys-stage--lead .sys-stage-meta {
-    padding: 22px 20px;
+  body.page-systems .sys-live--lead .sys-live-frame {
+    min-height: 280px;
   }
 }
