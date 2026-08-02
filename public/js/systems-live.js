@@ -1,6 +1,8 @@
 (function () {
   const DESKTOP_W = 1440;
   const DESKTOP_H = 900;
+  const STATIC_W = 1440;
+  const STATIC_H = 820;
   const CACHE_KEY = "cf-systems-live-warm-v1";
   const MOBILE_MQ = "(max-width: 900px)";
 
@@ -8,13 +10,32 @@
     return window.matchMedia(MOBILE_MQ).matches;
   }
 
-  function scaleFrame(frame) {
+  function scaleIframe(frame) {
     const iframe = frame.querySelector("iframe");
     if (!iframe) return;
     const width = frame.clientWidth || DESKTOP_W;
     const scale = Math.max(width / DESKTOP_W, 0.01);
     iframe.style.transform = "scale(" + scale + ")";
     frame.style.height = Math.round(DESKTOP_H * scale) + "px";
+  }
+
+  function scaleStatic(frame) {
+    const img = frame.querySelector("img.sys-live-static-img");
+    if (!img) return;
+    const width = frame.clientWidth || STATIC_W;
+    const scale = Math.max(width / STATIC_W, 0.01);
+    img.style.width = STATIC_W + "px";
+    img.style.height = STATIC_H + "px";
+    img.style.transform = "scale(" + scale + ")";
+    frame.style.height = Math.round(STATIC_H * scale) + "px";
+  }
+
+  function scaleFrame(frame) {
+    if (frame.classList.contains("is-static")) {
+      scaleStatic(frame);
+    } else {
+      scaleIframe(frame);
+    }
   }
 
   function rememberWarm(src) {
@@ -60,7 +81,10 @@
   function mountStatic(frame) {
     const src = frame.getAttribute("data-static-src");
     if (!src) return false;
-    if (frame.dataset.staticMounted === "1") return true;
+    if (frame.dataset.staticMounted === "1") {
+      scaleStatic(frame);
+      return true;
+    }
 
     clearMedia(frame);
 
@@ -70,10 +94,12 @@
     img.alt = frame.getAttribute("data-live-title") || "Platform preview";
     img.loading = "lazy";
     img.decoding = "async";
+    img.draggable = false;
     img.addEventListener(
       "load",
       function () {
         frame.classList.add("is-loaded");
+        scaleStatic(frame);
       },
       { once: true }
     );
@@ -81,6 +107,7 @@
     frame.appendChild(img);
     frame.classList.add("is-static", "is-loaded");
     frame.dataset.staticMounted = "1";
+    scaleStatic(frame);
     return true;
   }
 
@@ -111,7 +138,7 @@
     );
     frame.appendChild(iframe);
     frame.dataset.liveMounted = "1";
-    scaleFrame(frame);
+    scaleIframe(frame);
   }
 
   function mountFrame(frame) {
@@ -131,7 +158,6 @@
 
     if (typeof ResizeObserver !== "undefined") {
       const ro = new ResizeObserver(function (entries) {
-        if (isMobilePreview()) return;
         entries.forEach(function (entry) {
           scaleFrame(entry.target);
         });
@@ -143,7 +169,6 @@
       window.addEventListener(
         "resize",
         function () {
-          if (isMobilePreview()) return;
           frames.forEach(scaleFrame);
         },
         { passive: true }
