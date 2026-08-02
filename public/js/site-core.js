@@ -456,3 +456,136 @@
     } else {
       bootNeuralCanvas();
     }
+
+    // Warm live platform previews sitewide so /systems iframes paint instantly.
+    (function warmSystemsLivePreviews() {
+      const LIVE_URLS = [
+        'https://www.creatorcollective.media/',
+        'https://coursecreatoracademy.org/',
+        'https://www.bizzicloud.io/',
+        'https://djsneedluv2.com/',
+        'https://www.shawntahooks.com/',
+        'https://www.binblastco.com/',
+        'https://kutsbylee.com/'
+      ];
+      const ORIGINS = [
+        'https://www.creatorcollective.media',
+        'https://coursecreatoracademy.org',
+        'https://www.bizzicloud.io',
+        'https://djsneedluv2.com',
+        'https://www.shawntahooks.com',
+        'https://www.binblastco.com',
+        'https://kutsbylee.com'
+      ];
+      const CACHE_KEY = 'cf-systems-live-warm-v1';
+
+      function markWarm(src) {
+        try {
+          const raw = sessionStorage.getItem(CACHE_KEY);
+          const map = raw ? JSON.parse(raw) : {};
+          map[src] = Date.now();
+          sessionStorage.setItem(CACHE_KEY, JSON.stringify(map));
+        } catch (err) {
+          /* ignore */
+        }
+      }
+
+      function ensureHeadLinks() {
+        ORIGINS.forEach(function (origin) {
+          if (document.head.querySelector('link[data-cf-warm-origin="' + origin + '"]')) return;
+          const preconnect = document.createElement('link');
+          preconnect.rel = 'preconnect';
+          preconnect.href = origin;
+          preconnect.crossOrigin = 'anonymous';
+          preconnect.setAttribute('data-cf-warm-origin', origin);
+          document.head.appendChild(preconnect);
+
+          const dns = document.createElement('link');
+          dns.rel = 'dns-prefetch';
+          dns.href = origin;
+          document.head.appendChild(dns);
+        });
+
+        LIVE_URLS.forEach(function (url) {
+          if (document.head.querySelector('link[data-cf-warm-prefetch="' + url + '"]')) return;
+          const prefetch = document.createElement('link');
+          prefetch.rel = 'prefetch';
+          prefetch.href = url;
+          prefetch.as = 'document';
+          prefetch.setAttribute('data-cf-warm-prefetch', url);
+          document.head.appendChild(prefetch);
+        });
+      }
+
+      function injectSpeculationRules() {
+        if (!HTMLScriptElement.supports || !HTMLScriptElement.supports('speculationrules')) return;
+        if (document.getElementById('cf-systems-speculation')) return;
+        const script = document.createElement('script');
+        script.type = 'speculationrules';
+        script.id = 'cf-systems-speculation';
+        script.textContent = JSON.stringify({
+          prerender: [{
+            source: 'list',
+            urls: ['/systems'],
+            eagerness: 'moderate'
+          }],
+          prefetch: [{
+            source: 'list',
+            urls: LIVE_URLS,
+            eagerness: 'moderate'
+          }]
+        });
+        document.head.appendChild(script);
+      }
+
+      function warmHiddenIframes() {
+        if (document.body.classList.contains('page-systems')) return;
+        if (document.getElementById('cf-systems-warm-pool')) return;
+        if (navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''))) {
+          return;
+        }
+        const pool = document.createElement('div');
+        pool.id = 'cf-systems-warm-pool';
+        pool.setAttribute('aria-hidden', 'true');
+        pool.style.cssText = 'position:fixed;width:1px;height:1px;left:-9999px;top:0;overflow:hidden;opacity:0;pointer-events:none;';
+        LIVE_URLS.forEach(function (url) {
+          const iframe = document.createElement('iframe');
+          iframe.src = url;
+          iframe.title = 'Warming live preview';
+          iframe.loading = 'eager';
+          iframe.tabIndex = -1;
+          iframe.addEventListener('load', function () { markWarm(url); }, { once: true });
+          pool.appendChild(iframe);
+        });
+        document.body.appendChild(pool);
+      }
+
+      function bindSystemsNavWarm() {
+        document.querySelectorAll('a[href="/systems"], a[href="/systems.html"], a[href*="/systems#"]').forEach(function (link) {
+          const warm = function () { warmHiddenIframes(); };
+          link.addEventListener('pointerenter', warm, { once: true, passive: true });
+          link.addEventListener('focus', warm, { once: true });
+        });
+      }
+
+      function bootWarm() {
+        ensureHeadLinks();
+        injectSpeculationRules();
+        bindSystemsNavWarm();
+        const path = window.location.pathname.replace(/\.html$/, '') || '/';
+        const shouldIdleWarm = path === '/' || path === '/portfolio' || path === '/services';
+        if (!shouldIdleWarm) return;
+        const run = function () { warmHiddenIframes(); };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(run, { timeout: 2200 });
+        } else {
+          window.setTimeout(run, 1200);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootWarm);
+      } else {
+        bootWarm();
+      }
+    })();
