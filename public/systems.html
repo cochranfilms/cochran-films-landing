@@ -81,14 +81,12 @@
         "description": "Custom platforms, white-label ecosystems, booking systems, membership communities, and AI-assisted operations built for scalable revenue.",
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Systems Packages",
+          "name": "Systems Engagements",
           "itemListElement": [
-            { "@type": "Offer", "name": "Starter Site", "price": "750", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Business Pro Site", "price": "1250", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Brand Builder Site", "price": "2500", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "White-Label Launch System", "price": "2500", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "White-Label Growth System", "price": "4500", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "White-Label Domination System", "price": "8500", "priceCurrency": "USD" }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Launch System", "description": "White-label launch stack: funnel, booking, analytics, and agency handoff." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Growth System", "description": "Member areas, CRM pipeline, automations, and client portal infrastructure." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Domination System", "description": "SaaS-lite features, custom dashboards, APIs, and priority operating support." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "60/40 Gross-Profits Partnership", "description": "Zero-upfront system build with aligned gross-profits partnership. Terms apply." } }
           ]
         }
       },
@@ -155,8 +153,8 @@
         <h1 class="hero-title">THE STACK BEHIND REAL REVENUE</h1>
         <p class="hero-subtitle">Custom platforms, white-label ecosystems, and AI-ready operations — built so businesses scale without rebuilding every quarter.</p>
         <div class="hero-banner-actions">
-          <a href="#systems-pricing" class="hero-cta"><i class="fas fa-sliders" aria-hidden="true"></i> Explore Packages</a>
-          <a href="/contact?type=systems-partnership" class="hero-banner-btn-secondary"><i class="fas fa-handshake" aria-hidden="true"></i> Talk Systems</a>
+          <a href="/contact?type=systems-consult" class="hero-cta"><i class="fas fa-comments" aria-hidden="true"></i> Book a Systems Consult</a>
+          <a href="/contact?type=systems-partnership" class="hero-banner-btn-secondary"><i class="fas fa-handshake" aria-hidden="true"></i> Apply for Partnership</a>
         </div>
       </div>
     </div>
@@ -312,17 +310,47 @@
       </div>
     </section>
 
+    <section class="systems-section systems-value sys-reveal" id="systems-value" aria-labelledby="systems-value-title">
+      <div class="systems-shell">
+        <p class="systems-kicker">Value frame · Not a price list</p>
+        <h2 class="systems-title" id="systems-value-title">A system replaces expensive alternatives.</h2>
+        <p class="systems-lede">Executives do not buy infrastructure off a menu. They choose between hiring, buying enterprise software, or delaying growth. We frame the decision against what you would spend without us.</p>
+
+        <div class="systems-value-grid" role="list">
+          <article class="systems-value-card" role="listitem">
+            <span class="systems-value-label">Alternative A</span>
+            <h3>In-house senior engineer</h3>
+            <p class="systems-value-anchor">$110k–$150k+/yr</p>
+            <p>US SaaS developer salary averages about $110k. Fully loaded true cost pushes past $75/hr before overhead — before product, design, QA, or ops.</p>
+          </article>
+          <article class="systems-value-card" role="listitem">
+            <span class="systems-value-label">Alternative B</span>
+            <h3>Enterprise SaaS / custom build</h3>
+            <p class="systems-value-anchor">Six figures+</p>
+            <p>An in-house build typically runs 40–60% more than an equivalent agency engagement once you count time, tools, and the months of delay.</p>
+          </article>
+          <article class="systems-value-card systems-value-card--featured" role="listitem">
+            <span class="systems-value-label">Alternative C</span>
+            <h3>Do nothing</h3>
+            <p class="systems-value-anchor">$150k+ in lost leverage</p>
+            <p>Missed bookings, broken handoffs, and manual ops compound. The cost of delay is usually larger than the cost of the stack.</p>
+          </article>
+        </div>
+        <p class="systems-value-floor">Systems engagements start at <strong>$25k</strong>. Scoped after discovery — never from a slider.</p>
+      </div>
+    </section>
+
     <section class="systems-section systems-whitelabel sys-reveal" aria-labelledby="systems-wl-title">
       <div class="systems-shell">
-        <p class="systems-kicker">White-label &amp; partnerships</p>
-        <h2 class="systems-title" id="systems-wl-title">Ship under your brand. Scale without rebuilding.</h2>
-        <p class="systems-lede">Agency partners get production-grade systems with handoff kits, portals, and recurring infrastructure — ready to resell or deploy nationwide.</p>
+        <p class="systems-kicker">Engagement tiers · By outcome</p>
+        <h2 class="systems-title" id="systems-wl-title">Launch. Growth. Domination.</h2>
+        <p class="systems-lede">Named by what they unlock — not by a checkout total. Exact scope is set in consult.</p>
         <div class="systems-wl-grid">
           <article class="systems-wl-card">
             <h3>Launch</h3>
-            <p class="systems-wl-price">$2,500 <span>+ $199/mo</span></p>
+            <p class="systems-wl-outcome">Get to market with a brand-ready system that captures demand.</p>
             <ul>
-              <li>3-page white-label site + funnel</li>
+              <li>White-label site + conversion funnel</li>
               <li>Lead capture + calendar booking</li>
               <li>SEO foundations + analytics</li>
               <li>Agency handoff kit</li>
@@ -331,7 +359,7 @@
           <article class="systems-wl-card systems-wl-card--featured">
             <span class="systems-wl-badge">Most selected</span>
             <h3>Growth</h3>
-            <p class="systems-wl-price">$4,500 <span>+ $349/mo</span></p>
+            <p class="systems-wl-outcome">Turn traffic into retained users and a working sales pipeline.</p>
             <ul>
               <li>Everything in Launch</li>
               <li>CMS/blog + gated member area</li>
@@ -341,14 +369,86 @@
           </article>
           <article class="systems-wl-card">
             <h3>Domination</h3>
-            <p class="systems-wl-price">$8,500 <span>+ $699/mo</span></p>
+            <p class="systems-wl-outcome">Operate like a product company with SaaS-lite infrastructure.</p>
             <ul>
               <li>Everything in Growth</li>
-              <li>SaaS-lite + subscription billing</li>
+              <li>Subscription billing + entitlements</li>
               <li>Custom dashboards + APIs</li>
               <li>Priority SLA + quarterly strategy</li>
             </ul>
           </article>
+        </div>
+        <div class="systems-tier-actions">
+          <a href="/contact?type=systems-consult" class="hero-cta"><i class="fas fa-comments" aria-hidden="true"></i> Book a Systems Consult</a>
+          <a href="#partnership" class="hero-banner-btn-secondary"><i class="fas fa-handshake" aria-hidden="true"></i> Prefer zero upfront?</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="systems-section systems-scope-section sys-reveal" id="systems-scope" aria-labelledby="systems-scope-title">
+      <div class="systems-shell">
+        <p class="systems-kicker">Scope configurator</p>
+        <h2 class="systems-title" id="systems-scope-title">See what you are really choosing between.</h2>
+        <p class="systems-lede">Pick the path you would take without Cochran Films, then select the systems you need. Output is a recommendation and a consult — not a checkout price.</p>
+
+        <div class="systems-scope" id="systems-scope-tool">
+          <div class="systems-scope-block">
+            <h3>1. Without us, you would…</h3>
+            <div class="systems-scope-options" role="radiogroup" aria-label="Cost of alternative">
+              <label class="systems-scope-option">
+                <input type="radio" name="sys-alt" value="hire" checked>
+                <span>
+                  <strong>Hire in-house</strong>
+                  <em>Senior engineer + overhead</em>
+                </span>
+              </label>
+              <label class="systems-scope-option">
+                <input type="radio" name="sys-alt" value="enterprise">
+                <span>
+                  <strong>Buy / build enterprise</strong>
+                  <em>Six-figure software path</em>
+                </span>
+              </label>
+              <label class="systems-scope-option">
+                <input type="radio" name="sys-alt" value="nothing">
+                <span>
+                  <strong>Do nothing</strong>
+                  <em>Delay and lost leverage</em>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="systems-scope-block">
+            <h3>2. Systems you need</h3>
+            <div class="systems-scope-checks" role="group" aria-label="Systems needed">
+              <label><input type="checkbox" name="sys-need" value="membership" checked> Membership / community</label>
+              <label><input type="checkbox" name="sys-need" value="booking"> Booking / service ops</label>
+              <label><input type="checkbox" name="sys-need" value="marketplace"> Marketplace / gigs</label>
+              <label><input type="checkbox" name="sys-need" value="portal"> Client / staff portal</label>
+              <label><input type="checkbox" name="sys-need" value="whitelabel"> White-label partner stack</label>
+              <label><input type="checkbox" name="sys-need" value="ai"> AI / assessment engine</label>
+            </div>
+          </div>
+
+          <div class="systems-scope-result" aria-live="polite">
+            <p class="systems-scope-kicker">Your frame</p>
+            <h3 data-scope-frame>In-house path: $150k+ first-year leverage at stake</h3>
+            <p data-scope-blurb>A senior hire alone rarely ships the full stack. Factor salary, tools, ramp time, and the product gaps that still remain.</p>
+            <div class="systems-scope-rec">
+              <span>Recommended engagement</span>
+              <strong data-scope-tier>Growth</strong>
+            </div>
+            <div class="systems-scope-actions">
+              <a class="hero-cta" data-scope-cta href="/contact?type=systems-consult&amp;alt=hire&amp;needs=membership">
+                <i class="fas fa-comments" aria-hidden="true"></i> Book a Systems Consult
+              </a>
+              <a class="hero-banner-btn-secondary" href="#partnership">
+                <i class="fas fa-handshake" aria-hidden="true"></i> Explore 60/40 Partnership
+              </a>
+            </div>
+            <p class="systems-scope-secondary">Need a productized local site or booking system instead? <a href="/pricing">Open the Package Builder</a> — secondary path for smaller scopes.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -357,7 +457,7 @@
       <div class="systems-shell systems-partnership-shell">
         <p class="systems-kicker">60/40 Gross-Profits Partnership</p>
         <h2 class="systems-title" id="systems-partnership-title">Zero upfront. Full system. You keep ownership.</h2>
-        <p class="systems-lede">Capital-efficient infrastructure for executives who need a marketplace, membership, booking, or revenue platform — without writing the build check.</p>
+        <p class="systems-lede">Can&apos;t fund the build check today? The price objection is not solved with a lower number. It is solved with aligned incentives: we build, you grow, we share gross profits.</p>
 
         <div class="systems-split-banner" role="group" aria-label="Partnership split">
           <div class="systems-split-you">
@@ -386,60 +486,7 @@
 
         <div class="systems-partnership-actions">
           <a href="/contact?type=systems-partnership" class="hero-cta"><i class="fas fa-handshake" aria-hidden="true"></i> Apply for Partnership</a>
-          <a href="#systems-showcase" class="hero-banner-btn-secondary"><i class="fas fa-layer-group" aria-hidden="true"></i> See Live Platforms</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="systems-section systems-pricing-section sys-reveal" id="systems-pricing" aria-labelledby="systems-pricing-title">
-      <div class="systems-shell">
-        <p class="systems-kicker">Systems pricing bar</p>
-        <h2 class="systems-title" id="systems-pricing-title">Slide to scope your system.</h2>
-        <p class="systems-lede">Explore package tiers live, then continue into our Service Package Builder. Prefer no upfront? <a href="#partnership">Jump to the 60/40 partnership</a>.</p>
-
-        <div class="systems-pricing-bar" id="systems-pricing-bar">
-          <div class="spb-bar-head">
-            <div>
-              <p class="spb-bar-kicker">Selected system</p>
-              <h3 data-spb-label>Starter Site</h3>
-            </div>
-            <div class="spb-bar-price" data-spb-price>$750</div>
-          </div>
-          <p class="spb-bar-blurb" data-spb-blurb>1-page scroll system with contact path and foundational SEO.</p>
-
-          <div class="spb-track-wrap">
-            <div class="spb-track-fill" data-spb-fill aria-hidden="true"></div>
-            <input
-              id="systemsPriceSlider"
-              class="spb-range"
-              type="range"
-              min="0"
-              max="5"
-              step="1"
-              value="0"
-              aria-label="Systems package pricing"
-              aria-valuemin="0"
-              aria-valuemax="5"
-            />
-          </div>
-
-          <div class="spb-ticks" aria-hidden="true">
-            <span data-spb-tick="0">$750</span>
-            <span data-spb-tick="1">$1.25k</span>
-            <span data-spb-tick="2">$2.5k</span>
-            <span data-spb-tick="3">WL Launch</span>
-            <span data-spb-tick="4">WL Growth</span>
-            <span data-spb-tick="5">WL Dom</span>
-          </div>
-
-          <div class="spb-bar-actions">
-            <a class="hero-cta" data-spb-cta href="/pricing?category=website&amp;preselect=starter-site">
-              <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> Continue in Package Builder
-            </a>
-            <a class="hero-banner-btn-secondary" href="#partnership">
-              <i class="fas fa-handshake" aria-hidden="true"></i> Prefer zero upfront?
-            </a>
-          </div>
+          <a href="/contact?type=systems-consult" class="hero-banner-btn-secondary"><i class="fas fa-comments" aria-hidden="true"></i> Book a Systems Consult</a>
         </div>
       </div>
     </section>
@@ -462,11 +509,11 @@
     <section class="systems-section systems-close sys-reveal" aria-labelledby="systems-close-title">
       <div class="systems-shell systems-close-shell">
         <h2 class="systems-title" id="systems-close-title">Ready to install the stack?</h2>
-        <p class="systems-lede">Apply for a zero-upfront partnership, build a paid package, or explore how Course Creator Academy turns systems into cash flow.</p>
+        <p class="systems-lede">Book a systems consult for scoped infrastructure work, apply for a zero-upfront partnership, or explore how Course Creator Academy turns systems into cash flow.</p>
         <div class="systems-close-actions">
-          <a href="/contact?type=systems-partnership" class="hero-cta"><i class="fas fa-handshake" aria-hidden="true"></i> Apply for Partnership</a>
-          <a href="#systems-pricing" class="hero-banner-btn-secondary"><i class="fas fa-sliders" aria-hidden="true"></i> Build a Package</a>
-          <a href="https://coursecreatoracademy.org/" class="systems-text-link" target="_blank" rel="noopener noreferrer">Visit Course Creator Academy <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <a href="/contact?type=systems-consult" class="hero-cta"><i class="fas fa-comments" aria-hidden="true"></i> Book a Systems Consult</a>
+          <a href="/contact?type=systems-partnership" class="hero-banner-btn-secondary"><i class="fas fa-handshake" aria-hidden="true"></i> Apply for Partnership</a>
+          <a href="/pricing" class="systems-text-link">Productized sites &amp; booking packages <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -499,10 +546,11 @@
           <h3 class="footer-col-title">Systems</h3>
           <ul class="footer-links">
             <li><a href="/systems#systems-showcase">Live Platforms</a></li>
+            <li><a href="/systems#systems-value">Value Frame</a></li>
             <li><a href="/systems#partnership">60/40 Partnership</a></li>
-            <li><a href="/systems#systems-pricing">Pricing Bar</a></li>
+            <li><a href="/systems#systems-scope">Scope Configurator</a></li>
             <li><a href="/portfolio#portfolio-web">Web &amp; Platforms</a></li>
-            <li><a href="/pricing">Build a Package</a></li>
+            <li><a href="/pricing">Package Builder</a></li>
             <li><a href="https://coursecreatoracademy.org/" target="_blank" rel="noopener noreferrer">Course Creator Academy</a></li>
           </ul>
         </div>
@@ -528,7 +576,7 @@
   </footer>
 
   <script src="/js/site-core.js" defer></script>
-  <script src="/js/systems-pricing-bar.js" defer></script>
+  <script src="/js/systems-scope.js" defer></script>
   <script src="/js/spb-cta.js" defer></script>
   <script>
     (function () {

@@ -367,6 +367,7 @@
                   <label for="service" class="form-label">Service Interest</label>
                   <select id="service" name="service" class="form-input" required>
                     <option value="">Select a service</option>
+                    <option value="systems-consult">Systems Consult</option>
                     <option value="systems-partnership">Systems Partnership (60/40)</option>
                     <option value="web-development">Web Development / Systems</option>
                     <option value="white-label">White-Label Services</option>
@@ -482,8 +483,10 @@
           var select = document.getElementById('service');
           if (!select) return;
           var map = {
+            'systems-consult': 'systems-consult',
+            'consult': 'systems-consult',
             'systems-partnership': 'systems-partnership',
-            'systems': 'systems-partnership',
+            'systems': 'systems-consult',
             'partnership': 'systems-partnership',
             'white-label': 'white-label',
             'web-development': 'web-development'
@@ -493,8 +496,21 @@
             select.value = value;
           }
           var message = document.getElementById('message');
-          if (message && value === 'systems-partnership' && !message.value) {
-            message.placeholder = 'Tell us about the system you need, your market, timeline, and why a zero-upfront 60/40 gross-profits partnership is the right fit...';
+          if (message && !message.value) {
+            if (value === 'systems-partnership') {
+              message.placeholder = 'Tell us about the system you need, your market, timeline, and why a zero-upfront 60/40 gross-profits partnership is the right fit...';
+            } else if (value === 'systems-consult') {
+              var alt = params.get('alt') || '';
+              var needs = params.get('needs') || '';
+              var tier = params.get('tier') || '';
+              var bits = [];
+              if (tier) bits.push('Recommended tier from configurator: ' + tier);
+              if (alt) bits.push('Alternative considered: ' + alt);
+              if (needs) bits.push('Systems needed: ' + needs.replace(/,/g, ', '));
+              message.placeholder = bits.length
+                ? bits.join(' · ') + '. Add goals, timeline, and constraints...'
+                : 'Tell us about the system you need, outcomes you want, timeline, and constraints...';
+            }
           }
         } catch (_) { /* ignore */ }
       }
