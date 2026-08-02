@@ -249,10 +249,10 @@
         <li class="nav-item">
           <a href="/" class="nav-link">Home</a>
         </li>
-        <li class="nav-item">
-          <a href="/#about" class="nav-link">About</a>
+                <li class="nav-item">
+          <a href="/systems" class="nav-link">Systems</a>
         </li>
-        <li class="nav-item">
+<li class="nav-item">
           <a href="/services" class="nav-link">Services</a>
         </li>
         <li class="nav-item">
@@ -367,12 +367,13 @@
                   <label for="service" class="form-label">Service Interest</label>
                   <select id="service" name="service" class="form-input" required>
                     <option value="">Select a service</option>
+                    <option value="systems-partnership">Systems Partnership (60/40)</option>
+                    <option value="web-development">Web Development / Systems</option>
+                    <option value="white-label">White-Label Services</option>
                     <option value="video-production">Video Production</option>
                     <option value="photography">Photography</option>
                     <option value="real-estate-media">Real Estate Media</option>
-                    <option value="web-development">Web Development</option>
                     <option value="brand-development">Brand Development</option>
-                    <option value="white-label">White-Label Services</option>
                     <option value="strategy-session">Strategy Session</option>
                     <option value="other">Other</option>
                   </select>
@@ -425,7 +426,7 @@
           <h3 class="footer-col-title">Explore</h3>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/#about">About</a></li>
+            <li><a href="/systems">Systems</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/resume">Resume</a></li>
@@ -440,7 +441,9 @@
             <li><a href="/services">Photography</a></li>
             <li><a href="/portfolio#portfolio-realestate">Real Estate Media</a></li>
             <li><a href="/services">Web Development</a></li>
+            <li><a href="/systems">Systems</a></li>
             <li><a href="/portfolio#portfolio-web">Platforms &amp; SaaS</a></li>
+            <li><a href="https://coursecreatoracademy.org/" target="_blank" rel="noopener noreferrer">Course Creator Academy</a></li>
             <li><a href="/pricing">Build a Package</a></li>
           </ul>
         </div>
@@ -469,5 +472,38 @@
   </footer>
   <script src="/js/site-core.js" defer></script>
   <script src="/js/spb-cta.js" defer></script>
+  <script>
+    (function () {
+      function applyTypePrefill() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var type = (params.get('type') || '').trim();
+          if (!type) return;
+          var select = document.getElementById('service');
+          if (!select) return;
+          var map = {
+            'systems-partnership': 'systems-partnership',
+            'systems': 'systems-partnership',
+            'partnership': 'systems-partnership',
+            'white-label': 'white-label',
+            'web-development': 'web-development'
+          };
+          var value = map[type] || type;
+          if ([].some.call(select.options, function (opt) { return opt.value === value; })) {
+            select.value = value;
+          }
+          var message = document.getElementById('message');
+          if (message && value === 'systems-partnership' && !message.value) {
+            message.placeholder = 'Tell us about the system you need, your market, timeline, and why a zero-upfront 60/40 gross-profits partnership is the right fit...';
+          }
+        } catch (_) { /* ignore */ }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyTypePrefill);
+      } else {
+        applyTypePrefill();
+      }
+    })();
+  </script>
 </body>
 </html>

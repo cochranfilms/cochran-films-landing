@@ -32,6 +32,10 @@
       "destination": "/services.html"
     },
     {
+      "source": "/systems",
+      "destination": "/systems.html"
+    },
+    {
       "source": "/pricing",
       "destination": "/pricing.html"
     },

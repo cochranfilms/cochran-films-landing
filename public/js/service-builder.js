@@ -545,14 +545,59 @@
         });
       });
 
+      function applyUrlPackagePrefill() {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const categoryParam = (params.get('category') || '').trim().toLowerCase();
+          const preselectRaw = (params.get('preselect') || '').trim();
+          const allowedCategories = new Set(['website', 'photography', 'videography', 'branding', 'printing', 'retainer']);
+
+          if (categoryParam && allowedCategories.has(categoryParam)) {
+            currentCategory = categoryParam;
+          }
+
+          const ids = preselectRaw
+            ? preselectRaw.split(',').map((id) => id.trim()).filter(Boolean)
+            : [];
+
+          if (!ids.length) return false;
+
+          let addedAny = false;
+          ids.forEach((serviceId) => {
+            if (!serviceData[serviceId]) return;
+            if (!selectedServicesList.some((s) => s.id === serviceId)) {
+              const added = addServiceToPackage(serviceId);
+              if (added) addedAny = true;
+            }
+          });
+
+          if (addedAny || (categoryParam && allowedCategories.has(categoryParam))) {
+            try {
+              const cleanUrl = window.location.pathname + (window.location.hash || '');
+              window.history.replaceState({}, '', cleanUrl);
+            } catch (_) { /* ignore */ }
+          }
+
+          return addedAny;
+        } catch (_) {
+          return false;
+        }
+      }
+
       setTimeout(() => {
+        const prefilled = applyUrlPackagePrefill();
         categoryTabs.forEach((t) => t.classList.remove('active'));
         const activeTab = document.querySelector(`[data-category="${currentCategory}"]`);
         if (activeTab) {
           activeTab.classList.add('active');
         }
         filterServicesByCategory(currentCategory);
-        restorePackageDraft();
+        if (!prefilled) {
+          restorePackageDraft();
+        } else {
+          updatePackageDisplay();
+          updateQuoteSummary();
+        }
       }, 200);
       
       // Drag and drop event handlers
