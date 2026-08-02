@@ -1,0 +1,92 @@
+[
+  {
+    "page": "systems",
+    "file": "systems_a_servers.jpg",
+    "score": 9.4,
+    "why": "Premium data-center infrastructure; dark vignette = excellent text contrast; SEO for platforms/stack/white-label systems.",
+    "hero": "assets/heroes/systems-hero.jpg",
+    "og": "assets/og/systems-og.jpg",
+    "bytes_hero": 524529,
+    "bytes_og": 97862
+  },
+  {
+    "page": "home",
+    "file": "home_c_code.jpg",
+    "score": 8.8,
+    "why": "Dark code craft signals build/scale systems; high contrast for white headline; SEO for scalable systems agency.",
+    "hero": "assets/heroes/home-hero.jpg",
+    "og": "assets/og/home-og.jpg",
+    "bytes_hero": 186716,
+    "bytes_og": 67848
+  },
+  {
+    "page": "services",
+    "file": "services_c_camera.jpg",
+    "score": 9.2,
+    "why": "Cinematic projector/beam = premium media production; dark field for text; SEO for video/photo/web services.",
+    "hero": "assets/heroes/services-hero.jpg",
+    "og": "assets/og/services-og.jpg",
+    "bytes_hero": 436762,
+    "bytes_og": 68248
+  },
+  {
+    "page": "portfolio",
+    "file": "portfolio_a_reel.jpg",
+    "score": 8.9,
+    "why": "Film production set = portfolio proof; moody lighting; SEO for case studies and showcase work.",
+    "hero": "assets/heroes/portfolio-hero.jpg",
+    "og": "assets/og/portfolio-og.jpg",
+    "bytes_hero": 271790,
+    "bytes_og": 64202
+  },
+  {
+    "page": "pricing",
+    "file": "pricing_b_laptop.jpg",
+    "score": 8.6,
+    "why": "Business planning workspace matches package builder; can darken for text; SEO for pricing/packages.",
+    "hero": "assets/heroes/pricing-hero.jpg",
+    "og": "assets/og/pricing-og.jpg",
+    "bytes_hero": 294467,
+    "bytes_og": 67097
+  },
+  {
+    "page": "contact",
+    "file": "contact_a_meeting.jpg",
+    "score": 8.7,
+    "why": "Collaborative meeting = book/consult intent; premium office; SEO for contact/book project.",
+    "hero": "assets/heroes/contact-hero.jpg",
+    "og": "assets/og/contact-og.jpg",
+    "bytes_hero": 367145,
+    "bytes_og": 67259
+  },
+  {
+    "page": "resume",
+    "file": "resume_a_workspace.jpg",
+    "score": 8.5,
+    "why": "Focused builder workspace for Cody brand story; readable with overlay; SEO for resume/founder.",
+    "hero": "assets/heroes/resume-hero.jpg",
+    "og": "assets/og/resume-og.jpg",
+    "bytes_hero": 167755,
+    "bytes_og": 63007
+  },
+  {
+    "page": "checkout",
+    "file": "checkout_b_secure.jpg",
+    "score": 8.4,
+    "why": "Commerce/checkout context; darken for trust + readability; SEO for secure booking.",
+    "hero": "assets/heroes/checkout-hero.jpg",
+    "og": "assets/og/checkout-og.jpg",
+    "bytes_hero": 251066,
+    "bytes_og": 60586
+  },
+  {
+    "page": "privacy",
+    "file": "privacy_b_shield.jpg",
+    "score": 8.8,
+    "why": "Security/privacy metaphor; dark premium tech; SEO for privacy policy trust.",
+    "hero": "assets/heroes/privacy-hero.jpg",
+    "og": "assets/og/privacy-og.jpg",
+    "bytes_hero": 293181,
+    "bytes_og": 66699
+  }
+]
