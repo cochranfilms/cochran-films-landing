@@ -37,8 +37,9 @@
 
     function setMobileNavOpen(isOpen) {
       if (!navMenu || !mobileToggle) return;
-      navMenu.classList.toggle('show', isOpen);
+      // Stacking class first so the first paint is already above the hero
       document.body.classList.toggle('nav-open', isOpen);
+      navMenu.classList.toggle('show', isOpen);
       mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       const icon = mobileToggle.querySelector('i');
       if (icon) {

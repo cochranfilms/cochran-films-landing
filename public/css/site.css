@@ -15353,141 +15353,12 @@ body.page-systems .wrapper {
   background: #ffffff;
 }
 
-/* Systems mobile: kill 100vw overflow (white strip + sideways shift) + restore nav drawer */
-html:has(body.page-systems),
-body.page-systems {
-  max-width: 100%;
-  overflow-x: clip;
-}
-
-body.page-systems .page-opening-hero,
-body.page-systems .systems-main,
-body.page-systems .systems-section,
-body.page-systems .systems-showcase,
-body.page-systems .footer,
-body.page-systems .spb-cta-band {
-  max-width: 100%;
-  overflow-x: clip;
-}
-
-body.page-systems .hero-banner,
-body.page-systems .hero-banner--page {
-  width: 100%;
-  max-width: 100%;
-  margin: var(--nav-height) 0 0 0;
-  left: auto;
-  right: auto;
-  transform: none;
-}
-
-body.page-systems .nav-wrapper {
-  z-index: 10050;
-  width: 100%;
-  max-width: 100%;
-  left: 0;
-  right: 0;
-}
-
 body.page-systems .nav-container {
   width: 100%;
   max-width: 1200px;
 }
 
 @media (max-width: 900px) {
-  /*
-   * Mobile drawer fix:
-   * 1) overflow-x:clip on html/body traps fixed descendants and clips the menu
-   * 2) backdrop-filter:!important on .nav-wrapper makes fixed menu position
-   *    relative to the short header bar, so overflow gets clipped under the hero
-   */
-  html:has(body.page-systems.nav-open),
-  body.page-systems.nav-open {
-    overflow: hidden !important;
-    overflow-x: hidden !important;
-  }
-
-  body.page-systems.nav-open .nav-wrapper {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 10080 !important;
-    overflow: visible !important;
-    background: #ffffff !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-
-  body.page-systems.nav-open .nav-container {
-    z-index: 10090 !important;
-    background: #ffffff;
-    /* Avoid trapping the drawer inside the short header bar */
-    transform: none !important;
-    filter: none !important;
-    contain: none !important;
-  }
-
-  body.page-systems .nav-menu.show {
-    display: flex !important;
-    flex-direction: column !important;
-    /* fixed to viewport — not absolute inside .nav-container (only ~56px tall) */
-    position: fixed !important;
-    top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px))) !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 16px var(--mobile-gutter, 16px) calc(24px + env(safe-area-inset-bottom, 0px)) !important;
-    gap: 6px !important;
-    overflow-y: auto !important;
-    background: #ffffff !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: none !important;
-    z-index: 10085 !important;
-  }
-
-  body.page-systems .nav-menu.show .nav-link {
-    width: 100% !important;
-    justify-content: center !important;
-    min-height: 48px !important;
-    color: #1d1d1f !important;
-    -webkit-text-fill-color: #1d1d1f !important;
-    background: #f5f5f7 !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
-
-  body.page-systems .nav-menu.show .nav-link.active,
-  body.page-systems .nav-menu.show .nav-cta {
-    background: #1d1d1f !important;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-    border-color: #1d1d1f !important;
-  }
-
-  body.page-systems.nav-open .page-opening-hero,
-  body.page-systems.nav-open .systems-main,
-  body.page-systems.nav-open .footer,
-  body.page-systems.nav-open .spb-cta-band,
-  body.page-systems.nav-open .hero-banner,
-  body.page-systems.nav-open .hero-banner-content,
-  body.page-systems.nav-open .hero-banner-media {
-    z-index: 0 !important;
-    pointer-events: none;
-  }
-
-  body.page-systems .mobile-menu-toggle {
-    display: flex !important;
-    z-index: 10095 !important;
-    color: #1d1d1f !important;
-  }
-
   /* Static showcase images: one scaled desktop capture (never tiled/cover-repeated) */
   .systems-showcase .sys-live-frame.is-static,
   .systems-showcase .sys-live--lead .sys-live-frame.is-static {
@@ -16776,4 +16647,172 @@ body.page-systems .sys-reveal.is-visible {
 body.page-systems .systems-proof-card img[src*="Creator-Collective-Trans-2"] {
   max-height: 56px;
   width: auto;
+}
+
+/* ==========================================================================
+   Global mobile: kill white-strip overflow + optimistic nav drawer (all pages)
+   ========================================================================== */
+
+/*
+ * Non-home pages place .page-opening-hero outside .wrapper. The shared
+ * mobile-bleed (negative margins) then pushes heroes past the viewport and
+ * creates the right-edge white strip / left content shift. Home heroes stay
+ * inside .wrapper, so bleed remains correct there.
+ */
+@media (max-width: 1100px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .page-opening-hero,
+  main,
+  .systems-main,
+  .systems-section,
+  .systems-showcase,
+  .footer,
+  .spb-cta-band,
+  .book-section {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .page-opening-hero,
+  .page-opening-hero .hero-banner,
+  .page-opening-hero .hero-banner--page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .page-opening-hero .hero-banner,
+  .page-opening-hero .hero-banner--page {
+    margin-top: var(--nav-height) !important;
+  }
+
+  body.page-portfolio .systems-showcase,
+  .spb-guide-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-opening-hero .hero-banner,
+  .page-opening-hero .hero-banner--page {
+    margin-top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px))) !important;
+  }
+
+  /*
+   * Optimistic drawer on every page:
+   * Never use backdrop-filter on mobile — it makes position:fixed children
+   * resolve against the short header, so the menu paints under the hero for
+   * a frame (or stays clipped) until nav-open clears the filter.
+   */
+  .nav-wrapper {
+    z-index: 10080 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: none !important;
+  }
+
+  .nav-container {
+    z-index: 10090 !important;
+    background: #ffffff;
+    transform: none !important;
+    filter: none !important;
+    contain: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    z-index: 10095 !important;
+    color: #1d1d1f !important;
+  }
+
+  .nav-menu.show {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px))) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 16px var(--mobile-gutter, 16px) calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+    gap: 6px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    z-index: 10085 !important;
+  }
+
+  .nav-menu.show .nav-item {
+    width: 100%;
+  }
+
+  .nav-menu.show .nav-link {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    font-size: 16px;
+    padding: 14px 18px;
+    color: #1d1d1f !important;
+    -webkit-text-fill-color: #1d1d1f !important;
+    background: #f5f5f7 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .nav-menu.show .nav-link.active,
+  .nav-menu.show .nav-cta {
+    background: #1d1d1f !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-color: #1d1d1f !important;
+  }
+
+  body.nav-open {
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+  }
+
+  body.nav-open .page-opening-hero,
+  body.nav-open .hero-banner,
+  body.nav-open .hero-banner-content,
+  body.nav-open .hero-banner-media,
+  body.nav-open .wrapper,
+  body.nav-open main,
+  body.nav-open .systems-main,
+  body.nav-open .footer,
+  body.nav-open .book-section,
+  body.nav-open .spb-cta-band {
+    z-index: 0 !important;
+    pointer-events: none;
+  }
 }
