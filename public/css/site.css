@@ -15394,9 +15394,44 @@ body.page-systems .nav-container {
 }
 
 @media (max-width: 900px) {
+  /*
+   * Mobile drawer fix:
+   * 1) overflow-x:clip on html/body traps fixed descendants and clips the menu
+   * 2) backdrop-filter:!important on .nav-wrapper makes fixed menu position
+   *    relative to the short header bar, so overflow gets clipped under the hero
+   */
+  html:has(body.page-systems.nav-open),
+  body.page-systems.nav-open {
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+  }
+
+  body.page-systems.nav-open .nav-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 10080 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  body.page-systems.nav-open .nav-container {
+    z-index: 10090 !important;
+    background: #ffffff;
+    /* Avoid trapping the drawer inside the short header bar */
+    transform: none !important;
+    filter: none !important;
+    contain: none !important;
+  }
+
   body.page-systems .nav-menu.show {
     display: flex !important;
     flex-direction: column !important;
+    /* fixed to viewport — not absolute inside .nav-container (only ~56px tall) */
     position: fixed !important;
     top: calc(var(--nav-height) + max(10px, env(safe-area-inset-top, 0px))) !important;
     left: 0 !important;
@@ -15404,6 +15439,8 @@ body.page-systems .nav-container {
     bottom: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     margin: 0 !important;
     padding: 16px var(--mobile-gutter, 16px) calc(24px + env(safe-area-inset-bottom, 0px)) !important;
     gap: 6px !important;
@@ -15412,8 +15449,8 @@ body.page-systems .nav-container {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12) !important;
-    z-index: 10060 !important;
+    box-shadow: none !important;
+    z-index: 10085 !important;
   }
 
   body.page-systems .nav-menu.show .nav-link {
@@ -15447,14 +15484,16 @@ body.page-systems .nav-container {
 
   body.page-systems .mobile-menu-toggle {
     display: flex !important;
-    z-index: 10070 !important;
+    z-index: 10095 !important;
     color: #1d1d1f !important;
   }
 
   /* Static showcase images: one scaled desktop capture (never tiled/cover-repeated) */
-  .systems-showcase .sys-live-frame.is-static {
-    aspect-ratio: auto;
-    min-height: 0;
+  .systems-showcase .sys-live-frame.is-static,
+  .systems-showcase .sys-live--lead .sys-live-frame.is-static {
+    aspect-ratio: auto !important;
+    min-height: 0 !important;
+    height: auto;
     background: #101014;
     background-image: none !important;
     background-repeat: no-repeat !important;
@@ -15488,17 +15527,24 @@ body.page-systems .nav-container {
     pointer-events: none !important;
   }
 
-  .systems-showcase .sys-live:hover .sys-live-browser {
-    transform: none;
+  /* Keep card chrome visible; only clip the media frame itself */
+  .systems-showcase .sys-live-frame {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
   }
 
-  .systems-showcase .sys-live-browser,
-  .systems-showcase .sys-live-frame,
+  .systems-showcase .sys-live-browser {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
   .systems-showcase .sys-live-grid,
   .systems-showcase .sys-live {
     max-width: 100%;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
   }
 
   /* Systems hero CTAs: force centered stack on mobile */
@@ -15869,6 +15915,29 @@ body.page-portfolio .systems-showcase .systems-kicker {
   transform: translateY(-4px);
   border-color: rgba(244, 181, 63, 0.42);
   box-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+}
+
+/* Mobile tap/hover: no lift (parents were clipping outline). Border-only feedback. */
+@media (max-width: 900px) {
+  .systems-showcase .sys-live:hover .sys-live-browser,
+  .systems-showcase .sys-live:active .sys-live-browser,
+  .systems-showcase .sys-live:focus-within .sys-live-browser {
+    transform: none !important;
+  }
+
+  .systems-showcase .sys-live:hover .sys-live-browser,
+  .systems-showcase .sys-live:active .sys-live-browser,
+  .systems-showcase .sys-live:focus-within .sys-live-browser {
+    border-color: rgba(244, 181, 63, 0.55);
+    box-shadow:
+      0 0 0 1px rgba(244, 181, 63, 0.38),
+      0 18px 40px rgba(0, 0, 0, 0.38);
+  }
+
+  .systems-showcase .sys-live-grid,
+  .systems-showcase .sys-live {
+    overflow: visible;
+  }
 }
 
 .systems-showcase .sys-live-bar {
@@ -16635,8 +16704,11 @@ body.page-systems .sys-reveal.is-visible {
     grid-template-columns: 1fr;
   }
 
-  .systems-showcase .sys-live--lead .sys-live-frame {
-    min-height: 280px;
+  /* Lead card must match grid preview height on mobile (was forcing 280px empty gap) */
+  .systems-showcase .sys-live--lead .sys-live-frame,
+  .systems-showcase .sys-live--lead .sys-live-frame.is-static {
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
   }
 }
 
