@@ -126,6 +126,12 @@
     iframe.setAttribute("fetchpriority", "high");
     iframe.referrerPolicy = "no-referrer-when-downgrade";
     iframe.setAttribute("allow", "fullscreen; autoplay; encrypted-media");
+    // Block partner clickjacking guards (e.g. kutsbylee.com sets window.top.location)
+    // from navigating this page away. allow-top-navigation is intentionally omitted.
+    iframe.setAttribute(
+      "sandbox",
+      "allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+    );
     if (wasWarmed(src)) {
       frame.classList.add("is-warm");
     }
