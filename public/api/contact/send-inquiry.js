@@ -89,11 +89,21 @@ function assessContactSpam({ companyWebsite, formLoadedAt, customerFirst, custom
   return null;
 }
 
-function setCors(req, res) {
+function allowedOrigins() {
   const allowed = (process.env.ALLOWED_ORIGINS || 'https://www.cochranfilms.com,https://cochranfilms.com,https://landing.cochranfilms.com,http://localhost:3000,http://127.0.0.1:3000')
     .split(',')
     .map((o) => o.trim())
     .filter(Boolean);
+  if (process.env.VERCEL_ENV !== 'production') {
+    ['http://localhost:4008', 'http://127.0.0.1:4008'].forEach((origin) => {
+      if (!allowed.includes(origin)) allowed.push(origin);
+    });
+  }
+  return allowed;
+}
+
+function setCors(req, res) {
+  const allowed = allowedOrigins();
   const origin = req.headers.origin;
   if (origin && allowed.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
@@ -165,6 +175,8 @@ export default async function handler(req, res) {
   }
 
   const templateId = process.env.EMAILJS_CONTACT_TEMPLATE_ID;
+  const rosterAdminTemplateId = process.env.EMAILJS_ROSTER_ADMIN_TEMPLATE_ID;
+  const rosterClientTemplateId = process.env.EMAILJS_ROSTER_CLIENT_TEMPLATE_ID;
   const notifyEmail = process.env.EMAILJS_CONTACT_TO_EMAIL || process.env.EMAILJS_ADMIN_EMAIL;
 
   if (!templateId) {
@@ -178,7 +190,21 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, firstName, lastName, email, service, message, companyWebsite, formLoadedAt } = req.body || {};
+    const {
+      name,
+      firstName,
+      lastName,
+      email,
+      service,
+      message,
+      companyWebsite,
+      formLoadedAt,
+      source,
+      city,
+      role,
+      portfolioUrl,
+      availability,
+    } = req.body || {};
 
     const customerFirst = String(firstName || '').trim();
     const customerLast = String(lastName || '').trim();
@@ -186,13 +212,31 @@ export default async function handler(req, res) {
       String(name || '').trim() ||
       [customerFirst, customerLast].filter(Boolean).join(' ');
 
+    const isRoster = source === 'careers-roster';
+    const rosterRole = String(role || '').trim();
+    const rosterCity = String(city || '').trim();
+    const rosterPortfolio = String(portfolioUrl || '').trim();
+    const rosterAvailability = String(availability || '').trim();
+    const rosterRoles = ['Videographer', 'Editor', 'Photographer', 'Developer'];
+
+    let outboundMessage = String(message || '').trim();
+    if (isRoster) {
+      outboundMessage = [
+        'Crew roster request from the careers page.',
+        rosterCity ? `City: ${rosterCity}` : '',
+        rosterRole ? `Role: ${rosterRole}` : '',
+        rosterPortfolio ? `Portfolio: ${rosterPortfolio}` : '',
+        rosterAvailability ? `Availability: ${rosterAvailability}` : '',
+      ].filter(Boolean).join('\n');
+    }
+
     const spamCheck = assessContactSpam({
       companyWebsite,
       formLoadedAt,
       customerFirst,
       customerLast,
       customerName,
-      message,
+      message: outboundMessage,
     });
 
     if (spamCheck) {
@@ -206,7 +250,16 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: spamCheck.error });
     }
 
-    if (!customerName || !email?.trim() || !message?.trim()) {
+    if (isRoster) {
+      if (!rosterCity || !rosterRole || !rosterPortfolio || !rosterAvailability) {
+        return res.status(400).json({ error: 'City, role, portfolio, and availability are required.' });
+      }
+      if (!rosterRoles.includes(rosterRole)) {
+        return res.status(400).json({ error: 'Choose a role from the list.' });
+      }
+    }
+
+    if (!customerName || !email?.trim() || !outboundMessage) {
       return res.status(400).json({ error: 'First name, last name, email, and project details are required.' });
     }
 
@@ -223,9 +276,9 @@ export default async function handler(req, res) {
       hour: 'numeric',
       minute: '2-digit',
     });
-    const serviceLabel = resolveServiceLabel(service);
-    const projectDetailsHtml = formatMessageHtml(message.trim());
-    const projectDetailsText = message.trim();
+    const serviceLabel = isRoster ? rosterRole : resolveServiceLabel(service);
+    const projectDetailsHtml = formatMessageHtml(outboundMessage);
+    const projectDetailsText = outboundMessage;
 
     const baseParams = {
       customer_name: customerName,
@@ -241,12 +294,23 @@ export default async function handler(req, res) {
     };
 
     const replyMailto = `mailto:${encodeURIComponent(email.trim())}?subject=${encodeURIComponent(`Re: Cochran Films Inquiry ${inquiryId}`)}`;
+    const rosterParams = isRoster
+      ? {
+          roster_role: rosterRole,
+          roster_city: rosterCity,
+          roster_portfolio: rosterPortfolio,
+          roster_availability: rosterAvailability,
+        }
+      : {};
 
-    await sendEmail(templateId, {
+    await sendEmail(isRoster && rosterAdminTemplateId ? rosterAdminTemplateId : templateId, {
       ...baseParams,
+      ...rosterParams,
       to_email: notifyEmail,
-      email_heading: 'New Project Inquiry',
-      email_intro: 'A new message was submitted through the Cochran Films contact form.',
+      email_heading: isRoster ? 'Crew Roster Request' : 'New Project Inquiry',
+      email_intro: isRoster
+        ? 'A creator asked to join the Cochran Films freelance roster from the careers page.'
+        : 'A new message was submitted through the Cochran Films contact form.',
       cta_label: `Reply to ${customerName}`,
       cta_url: replyMailto,
       cta_subtext: 'Average response time: within 24 hours',
@@ -255,13 +319,17 @@ export default async function handler(req, res) {
     const sendClientCopy = process.env.EMAILJS_CONTACT_SEND_CLIENT_COPY !== 'false';
     if (sendClientCopy) {
       try {
-        await sendEmail(templateId, {
+        await sendEmail(isRoster && rosterClientTemplateId ? rosterClientTemplateId : templateId, {
           ...baseParams,
+          ...rosterParams,
           to_email: email.trim(),
-          email_heading: 'We Received Your Message',
-          email_intro: 'Thank you for contacting Cochran Films. We have your inquiry and will respond within 24 hours.',
-          cta_label: 'Explore Our Services',
-          cta_url: 'https://www.cochranfilms.com/#services',
+          ...(isRoster ? { reply_to: 'info@cochranfilms.com' } : {}),
+          email_heading: isRoster ? 'You Are on the Roster' : 'We Received Your Message',
+          email_intro: isRoster
+            ? 'We have your crew roster request. If a multiple camera job fits, we will write you at this address.'
+            : 'Thank you for contacting Cochran Films. We have your inquiry and will respond within 24 hours.',
+          cta_label: isRoster ? 'Read the Careers Guide' : 'Explore Our Services',
+          cta_url: isRoster ? 'https://www.cochranfilms.com/careers' : 'https://www.cochranfilms.com/#services',
           cta_subtext: 'Questions? Call (470) 420-2169 or email info@cochranfilms.com',
         });
       } catch (clientError) {

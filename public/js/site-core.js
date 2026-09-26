@@ -271,16 +271,6 @@
     });
     }
 
-    // Navigation scroll effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav-wrapper');
-      if (window.scrollY > 100) {
-        nav.style.background = 'rgba(15, 23, 42, 0.98)';
-      } else {
-        nav.style.background = 'rgba(15, 23, 42, 0.95)';
-      }
-    });
-
     // ========================================
     // AI NEURAL NETWORK BACKGROUND
     // ========================================

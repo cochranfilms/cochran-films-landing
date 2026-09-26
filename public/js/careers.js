@@ -323,8 +323,8 @@
         status.textContent = "You are on the list. We will write you at the email you gave.";
         form.reset();
         if (loaded) loaded.value = String(Date.now());
-      }).catch(function () {
-        status.textContent = "Unable to send. Email info@cochranfilms.com.";
+      }).catch(function (error) {
+        status.textContent = (error && error.message) || "Unable to send. Email info@cochranfilms.com.";
       });
     });
   }
