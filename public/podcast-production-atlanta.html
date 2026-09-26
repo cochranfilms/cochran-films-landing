@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/podcast-production-atlanta#webpage","url":"https://www.cochranfilms.com/podcast-production-atlanta","name":"Podcast Production in Atlanta | Cochran Films","description":"Atlanta podcast production from Cochran Films. Director of photography for iHeart Storytime with Legendary Jerry, including the T-Pain episode. 1 Hour Podcast + Edits (2 Cams) is $750.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/money/podcast-hero.jpg","width":1280,"height":720}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"Podcast Production","item":"https://www.cochranfilms.com/podcast-production-atlanta"}]},{"@type":"Service","name":"Podcast production in Atlanta","serviceType":"Podcast production in Atlanta","url":"https://www.cochranfilms.com/podcast-production-atlanta","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}],"offers":{"@type":"Offer","name":"1 Hour Podcast + Edits (2 Cams)","price":"750","priceCurrency":"USD","url":"https://www.cochranfilms.com/pricing"}},{"@type":"VideoObject","name":"Storytime with the Legendary Jerry: T-Pain interview (Episode 1)","thumbnailUrl":"https://i.ytimg.com/vi/uqSH6vU-G3c/hqdefault.jpg","embedUrl":"https://www.youtube.com/embed/uqSH6vU-G3c","description":"Episode 1 of Storytime with the Legendary Jerry, an in home interview with T-Pain produced for iHeart."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does a one hour podcast cost?","acceptedAnswer":{"@type":"Answer","text":"1 Hour Podcast + Edits (2 Cams) is $750. The catalog describes one hour of recording, full editing, and two cameras."}}]}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,22 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/money/podcast-hero.jpg')">
-    <div class="money-hero-media" role="img" aria-label="Frame from Storytime with the Legendary Jerry, the T-Pain episode"></div>
+  <section class="money-hero" style="--hero:url('/assets/money/podcast-hero.jpg'); --focus: center 40%">
+    <div class="money-hero-media">
+      <button class="money-facade" type="button" data-youtube="uqSH6vU-G3c" data-title="Storytime with the Legendary Jerry: T-Pain interview (Episode 1)" aria-label="Play Storytime with the Legendary Jerry: T-Pain interview (Episode 1)">
+        <img src="/assets/money/podcast-hero.jpg" alt="Frame from Storytime with the Legendary Jerry, the T-Pain episode" width="1280" height="720">
+        <span class="money-play">Play</span>
+      </button>
+    </div>
     <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>Podcast Production in Atlanta</h1>
-        <p class="money-lede">Two cameras, a lit room, and an edit that keeps the conversation intact. Cochran Films records podcasts in Atlanta and delivers the episode, not a pile of cards.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
-      </div>
-      <form class="money-form" id="inquiry-money-podcast-production-atlanta" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1 class="is-long">Podcast Production in Atlanta</h1>
+          <p class="money-lede">Two cameras, a lit room, and an edit that keeps the conversation intact. Cochran Films records podcasts in Atlanta and delivers the episode, not a pile of cards.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-money-podcast-production-atlanta" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-money-podcast-production-atlanta-shield">Company website</label>
             <input type="text" id="inquiry-money-podcast-production-atlanta-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,26 +81,96 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>Storytime with Legendary Jerry</h2><p>From August 2023 to April 2024, Cochran Films was director of photography in Atlanta for the iHeart podcast Storytime with Legendary Jerry. The show records conversations from the golden age of hip hop, hosted by Jerry Clark.</p><p>Episode 1 is an interview with T-Pain at his home. That episode is one of the conversations the studio helped record for iHeart and Jerry Clark.</p><p><a href="/work/iheart-storytime">Read the Storytime notes</a></p></section>
-<section class="money-section"><h2>Watch the episode</h2><div class="money-films"><figure class="money-film">
-        <div class="money-film-frame">
-          <button class="money-facade" type="button" data-youtube="uqSH6vU-G3c" data-title="Storytime with the Legendary Jerry: T-Pain interview (Episode 1)" aria-label="Play Storytime with the Legendary Jerry: T-Pain interview (Episode 1)">
-            <img src="https://i.ytimg.com/vi/uqSH6vU-G3c/hqdefault.jpg" alt="">
-            <span class="money-play">Play</span>
-          </button>
-        </div>
-        <figcaption>Storytime with the Legendary Jerry: T-Pain interview (Episode 1)</figcaption>
-      </figure></div></section>
-<section class="money-section"><h2>The published session</h2><p>1 Hour Podcast + Edits (2 Cams) is $750. The catalog lists one hour of recording, a full edit, and two cameras. A two hour version is also on the menu. <a href="/pricing">See pricing</a>.</p><p>We respond within 24 hours.</p></section>
-<section class="money-section"><h2>How a session is booked</h2><p>Send the date, the location, and how long the conversation runs. We confirm cameras, light, and the edit. You get the episode, not a folder of unlabeled clips.</p></section>
-<section class="money-section"><h2>More from the studio</h2><ul class="money-links"><li><a href="/videographer-atlanta">Videographer in Atlanta</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/pricing">Pricing</a></li></ul></section>
+
+  <div class="money-marquee is-solo" aria-label="iHeartRadio">
+    <span><img src="/assets/scrolling-banner/iHeartRadio.png" alt="iHeartRadio"></span>
+  </div>
+
+  <section class="money-line">
+    <div>
+      <p class="money-kicker">iHeart</p>
+      <h2>Storytime with Legendary Jerry</h2>
+    </div>
+    <div>
+      <p>From August 2023 to April 2024, Cochran Films was director of photography in Atlanta for the iHeart podcast Storytime with Legendary Jerry. The show records conversations from the golden age of hip hop, hosted by Jerry Clark.</p>
+      <p>Episode 1 is an interview with T-Pain at his home. That episode is one of the conversations the studio helped record for iHeart and Jerry Clark. The film plays from the opening frame.</p>
+      <a class="btn" href="/work/iheart-storytime">Read the Storytime notes</a>
+    </div>
+  </section>
+
+  <section class="money-prices">
+    <h2>The published session</h2>
+    <div class="money-price-row">
+      <div>
+        <p class="money-price">$750</p>
+        <p class="money-price-name">1 Hour Podcast + Edits (2 Cams)</p>
+        <p class="money-dim">One hour of recording, a full edit, and two cameras. A two hour version is also on the menu. <a href="/pricing">See pricing</a>.</p>
+      </div>
+      <div>
+        <p class="money-client">24 hours</p>
+        <p class="money-dim">We respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-steps">
+    <h2>How a session is booked</h2>
+    <ol>
+      <li><span>01</span><p>Send the date, the location, and how long the conversation runs.</p></li>
+      <li><span>02</span><p>We confirm cameras, light, and the edit.</p></li>
+      <li><span>03</span><p>You get the episode, not a folder of unlabeled clips.</p></li>
+    </ol>
+  </section>
+
+  <section class="money-films-head">
+    <h2>More from the studio</h2>
+  </section>
+  <div class="money-tiles">
+    <a class="money-tile" href="/videographer-atlanta">
+      <img src="/assets/money/atlanta-hero.jpg" alt="Frame from the Ceven Skin commercial">
+      <span>Videographer in Atlanta</span>
+    </a>
+    <a class="money-tile" href="/event-videography-atlanta">
+      <img src="/assets/money/event-hero.jpg" alt="Frame from the Russell Center Family Matters film">
+      <span>Event videography</span>
+    </a>
+    <a class="money-tile type" href="/pricing">
+      <small>The full catalog</small>
+      <span>Pricing</span>
+    </a>
+  </div>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Book the session</p>
+      <h2>Tell us the conversation.</h2>
+      <p>We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-podcast-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-podcast-close-shield">Company website</label>
+        <input type="text" id="inquiry-podcast-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="money-podcast-production-atlanta">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">

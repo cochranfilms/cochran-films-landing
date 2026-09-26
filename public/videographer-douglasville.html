@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/videographer-douglasville#webpage","url":"https://www.cochranfilms.com/videographer-douglasville","name":"Videographer in Douglasville | Cochran Films","description":"Cochran Films is a videographer in Douglasville, GA 30134, serving Atlanta. Local proof includes Back in FX, Rogue Society, and Kuts By Lee.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/kuts-by-lee/hero-banner.png","width":970,"height":545}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"Douglasville Videographer","item":"https://www.cochranfilms.com/videographer-douglasville"}]},{"@type":"Service","name":"Videographer in Douglasville","serviceType":"Videographer in Douglasville","url":"https://www.cochranfilms.com/videographer-douglasville","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Cochran Films based?","acceptedAnswer":{"@type":"Answer","text":"Cochran Films is in Douglasville, GA 30134, and serves Atlanta."}},{"@type":"Question","name":"What is the published hourly rate?","acceptedAnswer":{"@type":"Answer","text":"General Hourly Rate is $250 per hour for professional video production. See the pricing page for the rest of the menu."}}]}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,19 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/kuts-by-lee/hero-banner.png')">
-    <div class="money-hero-media" role="img" aria-label="Marketing site hero for Kuts By Lee, a Douglasville barber"></div>
+  <section class="money-hero" style="--hero:url('/assets/kuts-by-lee/hero-banner.png'); --focus: center 42%">
+    <div class="money-hero-media">
+      <img src="/assets/kuts-by-lee/hero-banner.png" alt="Marketing site hero for Kuts By Lee, a Douglasville barber" width="970" height="545">
+    </div>
     <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>Videographer in Douglasville, Serving Atlanta</h1>
-        <p class="money-lede">The studio is in Douglasville and the work reaches Atlanta. This page is the local record: clients, a short film, and a barber site built here.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
-      </div>
-      <form class="money-form" id="inquiry-money-videographer-douglasville" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1 class="is-long">Videographer in Douglasville, Serving Atlanta</h1>
+          <p class="money-lede">The studio is in Douglasville and the work reaches Atlanta. This page is the local record: clients, a short film, and a barber site built here.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-money-videographer-douglasville" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-money-videographer-douglasville-shield">Company website</label>
             <input type="text" id="inquiry-money-videographer-douglasville-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,26 +78,106 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>Work based in Douglasville</h2><ul>
-      <li><strong>Back in FX.</strong> Media director in Douglasville from January 2020 to December 2024. The work covered client production, the company website, quotes, and delivery.</li>
-      <li><strong>Rogue Society.</strong> A short documentary in Douglasville from August 2023 to September 2023. Camera, light, audio, and the edit for the clothing brand.</li>
-      <li><strong>Kuts By Lee.</strong> A marketing site for a licensed barber in Douglasville and Douglas County. The page carries service prices, a gallery, and booking.</li>
-    </ul></section>
-<section class="money-section"><h2>Marks on the studio banner</h2><p>City of Douglasville and DCPR appear as trusted marks. They are logos on the site. This page does not describe a city film.</p>
-      <div class="money-logos">
-        <img src="/assets/scrolling-banner/Douglasville.png" alt="City of Douglasville">
-        <img src="/assets/scrolling-banner/DCPR.png" alt="DCPR">
-      </div></section>
-<section class="money-section"><h2>Rate</h2><p>General Hourly Rate is $250 per hour. There is no separate Douglasville package on the menu. <a href="/pricing">See pricing</a>.</p><p>We respond within 24 hours.</p></section>
-<section class="money-section"><h2>What a client wrote</h2><blockquote class="money-quote"><p>I’ve worked with Cochran Films on several video projects, including content for online courses and promotional videos, and I’ve had a great experience every time. Quality is always professional. Coached me through script delivery, offering helpful feedback, and making sure everything feels natural on camera. The entire process was easy, and they always come prepared. Turnaround time has been quick, and the final product has consistently exceeded my expectations.</p><footer>Gepre Henderson, Educator, BOSS Learning Academy</footer></blockquote></section>
-<section class="money-section"><h2>More from the studio</h2><ul class="money-links"><li><a href="/videographer-atlanta">Videographer in Atlanta</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/resume">Resume</a></li></ul></section>
+
+  <section class="money-note">
+    <p class="money-kicker">On the banner</p>
+    <p>City of Douglasville and DCPR appear as trusted marks. They are logos on the site. This page does not describe a city film.</p>
+  </section>
+  <div class="money-marquee is-pair" aria-label="City of Douglasville and DCPR">
+    <span><img src="/assets/scrolling-banner/Douglasville.png" alt="City of Douglasville"></span>
+    <span><img src="/assets/scrolling-banner/DCPR.png" alt="DCPR"></span>
+  </div>
+
+  <section class="money-prices">
+    <h2>Work based in Douglasville</h2>
+    <div class="money-price-row cols-3">
+      <div>
+        <p class="money-client">Back in FX</p>
+        <p class="money-dim">Media director in Douglasville from January 2020 to December 2024. The work covered client production, the company website, quotes, and delivery.</p>
+      </div>
+      <div>
+        <p class="money-client">Rogue Society</p>
+        <p class="money-dim">A short documentary in Douglasville from August 2023 to September 2023. Camera, light, audio, and the edit for the clothing brand.</p>
+      </div>
+      <div>
+        <p class="money-client">Kuts By Lee</p>
+        <p class="money-dim">A marketing site for a licensed barber in Douglasville and Douglas County. The page carries service prices, a gallery, and booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-prices">
+    <h2>The published rate</h2>
+    <div class="money-price-row">
+      <div>
+        <p class="money-price">$250</p>
+        <p class="money-price-name">General Hourly Rate</p>
+        <p class="money-dim">Per hour. There is no separate Douglasville package on the menu. <a href="/pricing">See pricing</a>.</p>
+      </div>
+      <div>
+        <p class="money-client">24 hours</p>
+        <p class="money-dim">We respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-quote-band">
+    <p class="money-kicker">What a client wrote</p>
+    <blockquote class="money-quote">
+      <p>I’ve worked with Cochran Films on several video projects, including content for online courses and promotional videos, and I’ve had a great experience every time. Quality is always professional. Coached me through script delivery, offering helpful feedback, and making sure everything feels natural on camera. The entire process was easy, and they always come prepared. Turnaround time has been quick, and the final product has consistently exceeded my expectations.</p>
+      <footer>Gepre Henderson, Educator, BOSS Learning Academy</footer>
+    </blockquote>
+  </section>
+
+  <section class="money-films-head">
+    <h2>More from the studio</h2>
+  </section>
+  <div class="money-tiles">
+    <a class="money-tile" href="/videographer-atlanta">
+      <img src="/assets/money/atlanta-hero.jpg" alt="Frame from the Ceven Skin commercial">
+      <span>Videographer in Atlanta</span>
+    </a>
+    <a class="money-tile" href="/event-videography-atlanta">
+      <img src="/assets/money/event-hero.jpg" alt="Frame from the Russell Center Family Matters film">
+      <span>Event videography</span>
+    </a>
+    <a class="money-tile type" href="/resume">
+      <small>The longer record</small>
+      <span>Resume</span>
+    </a>
+  </div>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Book the date</p>
+      <h2>Tell us the job.</h2>
+      <p>Douglasville or Atlanta. We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-douglasville-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-douglasville-close-shield">Company website</label>
+        <input type="text" id="inquiry-douglasville-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="money-videographer-douglasville">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">

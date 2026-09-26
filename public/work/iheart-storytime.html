@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/work/iheart-storytime#webpage","url":"https://www.cochranfilms.com/work/iheart-storytime","name":"Storytime with Legendary Jerry | Cochran Films","description":"Director of photography for the iHeart podcast Storytime with Legendary Jerry from August 2023 to April 2024, including the T-Pain episode filmed at his home.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/money/podcast-hero.jpg","width":1280,"height":720}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"Storytime with Legendary Jerry","item":"https://www.cochranfilms.com/work/iheart-storytime"}]},{"@type":"Service","name":"Podcast production","serviceType":"Podcast production","url":"https://www.cochranfilms.com/work/iheart-storytime","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}]},{"@type":"VideoObject","name":"Storytime with the Legendary Jerry: T-Pain interview (Episode 1)","thumbnailUrl":"https://i.ytimg.com/vi/uqSH6vU-G3c/hqdefault.jpg","embedUrl":"https://www.youtube.com/embed/uqSH6vU-G3c","description":"Episode 1 of Storytime with the Legendary Jerry, an interview with T-Pain at his home."}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,22 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/money/podcast-hero.jpg')">
-    <div class="money-hero-media" role="img" aria-label="Frame from Storytime with the Legendary Jerry, the T-Pain episode"></div>
+  <section class="money-hero" style="--hero:url('/assets/money/podcast-hero.jpg'); --focus: center 40%">
+    <div class="money-hero-media">
+      <button class="money-facade" type="button" data-youtube="uqSH6vU-G3c" data-title="Storytime with the Legendary Jerry: T-Pain interview (Episode 1)" aria-label="Play Storytime with the Legendary Jerry: T-Pain interview (Episode 1)">
+        <img src="/assets/money/podcast-hero.jpg" alt="Frame from Storytime with the Legendary Jerry, the T-Pain episode" width="1280" height="720">
+        <span class="money-play">Play</span>
+      </button>
+    </div>
     <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>Storytime with Legendary Jerry</h1>
-        <p class="money-lede">An iHeart podcast hosted by Jerry Clark. Cochran Films was director of photography, including the episode with T-Pain at his home.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
-      </div>
-      <form class="money-form" id="inquiry-work-iheart-storytime" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1 class="is-long">Storytime with Legendary Jerry</h1>
+          <p class="money-lede">An iHeart podcast hosted by Jerry Clark. Cochran Films was director of photography, including the episode with T-Pain at his home.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-work-iheart-storytime" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-work-iheart-storytime-shield">Company website</label>
             <input type="text" id="inquiry-work-iheart-storytime-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,24 +81,64 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>The assignment</h2><p>From August 2023 to April 2024, Cochran Films was director of photography in Atlanta for Storytime with Legendary Jerry on iHeart. The episodes are long conversations with people from the golden age of hip hop.</p><p>Episode 1 features T-Pain, recorded at his home.</p></section>
-<section class="money-section"><h2>Watch episode 1</h2><div class="money-films"><figure class="money-film">
-        <div class="money-film-frame">
-          <button class="money-facade" type="button" data-youtube="uqSH6vU-G3c" data-title="Storytime with the Legendary Jerry: T-Pain interview (Episode 1)" aria-label="Play Storytime with the Legendary Jerry: T-Pain interview (Episode 1)">
-            <img src="https://i.ytimg.com/vi/uqSH6vU-G3c/hqdefault.jpg" alt="">
-            <span class="money-play">Play</span>
-          </button>
-        </div>
-        <figcaption>Storytime with the Legendary Jerry: T-Pain interview (Episode 1)</figcaption>
-      </figure></div></section>
-<section class="money-section"><h2>Book a session</h2><p>1 Hour Podcast + Edits (2 Cams) is $750. <a href="/podcast-production-atlanta">Podcast production in Atlanta</a>.</p></section>
+
+  <div class="money-marquee is-solo" aria-label="iHeartRadio">
+    <span><img src="/assets/scrolling-banner/iHeartRadio.png" alt="iHeartRadio"></span>
+  </div>
+
+  <section class="money-line">
+    <div>
+      <p class="money-kicker">August 2023 to April 2024</p>
+      <h2>The assignment</h2>
+    </div>
+    <div>
+      <p>Cochran Films was director of photography in Atlanta for Storytime with Legendary Jerry on iHeart. The episodes are long conversations with people from the golden age of hip hop.</p>
+      <p>Episode 1 features T-Pain, recorded at his home. The film plays from the opening frame.</p>
+    </div>
+  </section>
+
+  <section class="money-prices">
+    <h2>Book a session</h2>
+    <div class="money-price-row">
+      <div>
+        <p class="money-price">$750</p>
+        <p class="money-price-name">1 Hour Podcast + Edits (2 Cams)</p>
+        <p class="money-dim"><a href="/podcast-production-atlanta">Podcast production in Atlanta</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Book the session</p>
+      <h2>Tell us the conversation.</h2>
+      <p>We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-storytime-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-storytime-close-shield">Company website</label>
+        <input type="text" id="inquiry-storytime-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="work-iheart-storytime">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">

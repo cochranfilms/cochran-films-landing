@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/event-videography-atlanta#webpage","url":"https://www.cochranfilms.com/event-videography-atlanta","name":"Event Videography in Atlanta | Cochran Films","description":"Event videography in Atlanta from Cochran Films in Douglasville. Proof includes the Buckhead Networking Group Halloween Party 2024 and films for the Russell Center. 2 Hours + 60 Sec. Recap is $500.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/money/event-hero.jpg","width":1280,"height":720}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"Event Videography","item":"https://www.cochranfilms.com/event-videography-atlanta"}]},{"@type":"Service","name":"Event videography in Atlanta","serviceType":"Event videography in Atlanta","url":"https://www.cochranfilms.com/event-videography-atlanta","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}],"offers":{"@type":"Offer","name":"2 Hours + 60 Sec. Recap","price":"500","priceCurrency":"USD","url":"https://www.cochranfilms.com/pricing"}},{"@type":"VideoObject","name":"Russell Center Family Matters","thumbnailUrl":"https://i.ytimg.com/vi/cWOiRbn8BZc/hqdefault.jpg","embedUrl":"https://www.youtube.com/embed/cWOiRbn8BZc","description":"The Russell Center Family Matters film, a remake of the Family Matters intro."},{"@type":"VideoObject","name":"Live Interview Storytelling","thumbnailUrl":"https://i.ytimg.com/vi/o1q-o-Mb3hc/hqdefault.jpg","embedUrl":"https://www.youtube.com/embed/o1q-o-Mb3hc"},{"@type":"VideoObject","name":"Community Event Documentation","thumbnailUrl":"https://i.ytimg.com/vi/wygvyWjEAXU/hqdefault.jpg","embedUrl":"https://www.youtube.com/embed/wygvyWjEAXU"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does a short event recap cost?","acceptedAnswer":{"@type":"Answer","text":"2 Hours + 60 Sec. Recap is $500. General Hourly Rate is $250 per hour."}}]}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,22 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/money/event-hero.jpg')">
-    <div class="money-hero-media" role="img" aria-label="Frame from the Russell Center Family Matters film"></div>
+  <section class="money-hero" style="--hero:url('/assets/money/event-hero.jpg'); --focus: center">
+    <div class="money-hero-media">
+      <button class="money-facade" type="button" data-youtube="cWOiRbn8BZc" data-title="Russell Center Family Matters" aria-label="Play Russell Center Family Matters">
+        <img src="/assets/money/event-hero.jpg" alt="Frame from the Russell Center Family Matters film" width="1280" height="720">
+        <span class="money-play">Play</span>
+      </button>
+    </div>
     <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>Event Videography in Atlanta</h1>
-        <p class="money-lede">Coverage of the room, then a cut people can actually send. Cochran Films films Atlanta events and comes back with the recap, the interview, or the full piece.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
-      </div>
-      <form class="money-form" id="inquiry-money-event-videography-atlanta" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1>Event Videography in Atlanta</h1>
+          <p class="money-lede">Coverage of the room, then a cut people can actually send. Cochran Films films Atlanta events and comes back with the recap, the interview, or the full piece.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-money-event-videography-atlanta" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-money-event-videography-atlanta-shield">Company website</label>
             <input type="text" id="inquiry-money-event-videography-atlanta-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,51 +81,136 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>Events on the record</h2><ul>
-      <li><strong>Buckhead Networking Group.</strong> The studio filmed and edited the group's Halloween party in 2024.</li>
-      <li><strong>Russell Center Family Matters.</strong> The Russell Center remade the Family Matters intro. Cochran Films handled camera, color, and the edit.</li>
-      <li><strong>Live Interview Storytelling</strong> and <strong>Community Event Documentation</strong> are published films from the same event work.</li>
-    </ul></section>
-<section class="money-section"><h2>Watch</h2><div class="money-films">
-      <figure class="money-film">
-        <div class="money-film-frame">
-          <button class="money-facade" type="button" data-youtube="cWOiRbn8BZc" data-title="Russell Center Family Matters" aria-label="Play Russell Center Family Matters">
-            <img src="https://i.ytimg.com/vi/cWOiRbn8BZc/hqdefault.jpg" alt="">
-            <span class="money-play">Play</span>
-          </button>
-        </div>
-        <figcaption>Russell Center Family Matters</figcaption>
-      </figure>
-      <figure class="money-film">
-        <div class="money-film-frame">
-          <button class="money-facade" type="button" data-youtube="o1q-o-Mb3hc" data-title="Live Interview Storytelling" aria-label="Play Live Interview Storytelling">
-            <img src="https://i.ytimg.com/vi/o1q-o-Mb3hc/hqdefault.jpg" alt="">
-            <span class="money-play">Play</span>
-          </button>
-        </div>
-        <figcaption>Live Interview Storytelling</figcaption>
-      </figure>
-      <figure class="money-film">
-        <div class="money-film-frame">
-          <button class="money-facade" type="button" data-youtube="wygvyWjEAXU" data-title="Community Event Documentation" aria-label="Play Community Event Documentation">
-            <img src="https://i.ytimg.com/vi/wygvyWjEAXU/hqdefault.jpg" alt="">
-            <span class="money-play">Play</span>
-          </button>
-        </div>
-        <figcaption>Community Event Documentation</figcaption>
-      </figure>
-    </div></section>
-<section class="money-section"><h2>The published recap</h2><p>2 Hours + 60 Sec. Recap is $500. General Hourly Rate is $250 per hour. <a href="/pricing">See pricing</a>.</p><p>We respond within 24 hours.</p></section>
-<section class="money-section"><h2>How a date gets covered</h2><p>Send the date, the venue, and whether you need a short recap or a longer cut. We confirm the crew and the delivery. You leave with a film you can post.</p></section>
-<section class="money-section"><h2>What a client wrote</h2><blockquote class="money-quote"><p>I’ve worked with Cochran Films on several video projects, including content for online courses and promotional videos, and I’ve had a great experience every time. Quality is always professional. Coached me through script delivery, offering helpful feedback, and making sure everything feels natural on camera. The entire process was easy, and they always come prepared. Turnaround time has been quick, and the final product has consistently exceeded my expectations.</p><footer>Gepre Henderson, Educator, BOSS Learning Academy</footer></blockquote></section>
-<section class="money-section"><h2>More from the studio</h2><ul class="money-links"><li><a href="/event-photo-printing-atlanta">Event photo printing</a></li><li><a href="/videographer-atlanta">Videographer in Atlanta</a></li><li><a href="/work/rice-way-challenge">The RICE Way Challenge</a></li></ul></section>
+
+  <section class="money-stage">
+    <figure class="money-film">
+      <div class="money-film-frame">
+        <button class="money-facade" type="button" data-youtube="o1q-o-Mb3hc" data-title="Live Interview Storytelling" aria-label="Play Live Interview Storytelling">
+          <img src="/assets/money/event-interview.jpg" alt="">
+          <span class="money-play">Play</span>
+        </button>
+      </div>
+    </figure>
+    <div>
+      <p class="money-kicker">Interview</p>
+      <h2>Live Interview Storytelling</h2>
+      <p>A published film from the same event work.</p>
+    </div>
+  </section>
+
+  <section class="money-stage is-flip">
+    <div>
+      <p class="money-kicker">The room</p>
+      <h2>Community Event Documentation</h2>
+      <p>A published film from the same event work.</p>
+    </div>
+    <figure class="money-film">
+      <div class="money-film-frame">
+        <button class="money-facade" type="button" data-youtube="wygvyWjEAXU" data-title="Community Event Documentation" aria-label="Play Community Event Documentation">
+          <img src="/assets/money/event-community.jpg" alt="">
+          <span class="money-play">Play</span>
+        </button>
+      </div>
+    </figure>
+  </section>
+
+  <section class="money-line">
+    <div>
+      <p class="money-kicker">2024</p>
+      <h2>Buckhead Networking Group</h2>
+    </div>
+    <p>The studio filmed and edited the group's Halloween party in 2024.</p>
+  </section>
+
+  <section class="money-line">
+    <div>
+      <p class="money-kicker">Russell Center</p>
+      <h2>Family Matters</h2>
+    </div>
+    <p>The Russell Center remade the Family Matters intro. Cochran Films handled camera, color, and the edit. The film plays from the opening frame.</p>
+  </section>
+
+  <section class="money-prices">
+    <h2>The published recap</h2>
+    <div class="money-price-row">
+      <div>
+        <p class="money-price">$500</p>
+        <p class="money-price-name">2 Hours + 60 Sec. Recap</p>
+      </div>
+      <div>
+        <p class="money-price">$250</p>
+        <p class="money-price-name">General Hourly Rate</p>
+        <p class="money-dim">Per hour. <a href="/pricing">See pricing</a>. We respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-steps">
+    <h2>How a date gets covered</h2>
+    <ol>
+      <li><span>01</span><p>Send the date, the venue, and whether you need a short recap or a longer cut.</p></li>
+      <li><span>02</span><p>We confirm the crew and the delivery.</p></li>
+      <li><span>03</span><p>You leave with a film you can post.</p></li>
+    </ol>
+  </section>
+
+  <section class="money-quote-band">
+    <p class="money-kicker">What a client wrote</p>
+    <blockquote class="money-quote">
+      <p>I’ve worked with Cochran Films on several video projects, including content for online courses and promotional videos, and I’ve had a great experience every time. Quality is always professional. Coached me through script delivery, offering helpful feedback, and making sure everything feels natural on camera. The entire process was easy, and they always come prepared. Turnaround time has been quick, and the final product has consistently exceeded my expectations.</p>
+      <footer>Gepre Henderson, Educator, BOSS Learning Academy</footer>
+    </blockquote>
+  </section>
+
+  <section class="money-films-head">
+    <h2>More from the studio</h2>
+  </section>
+  <div class="money-tiles">
+    <a class="money-tile" href="/event-photo-printing-atlanta">
+      <img src="/Mayor.png" alt="Guests at the Mayor Andre Dickens Inaugural Ball">
+      <span>Event photo printing</span>
+    </a>
+    <a class="money-tile" href="/videographer-atlanta">
+      <img src="/assets/money/atlanta-hero.jpg" alt="Frame from the Ceven Skin commercial">
+      <span>Videographer in Atlanta</span>
+    </a>
+    <a class="money-tile type" href="/work/rice-way-challenge">
+      <small>The RICE Way Challenge</small>
+      <span>About $75,000 raised</span>
+    </a>
+  </div>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Hold the date</p>
+      <h2>Tell us the room.</h2>
+      <p>We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-event-video-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-event-video-close-shield">Company website</label>
+        <input type="text" id="inquiry-event-video-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="money-event-videography-atlanta">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">

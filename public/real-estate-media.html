@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/real-estate-media#webpage","url":"https://www.cochranfilms.com/real-estate-media","name":"Real Estate Media in Atlanta | Cochran Films","description":"Listing photo and video in Atlanta from Cochran Films in Douglasville. 6225 Waterton Way includes 16 assets and floor plan blueprints. Listing files are delivered within 24 hours.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/real-estate/exterior-01.jpg","width":1280,"height":720}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"Real Estate Media","item":"https://www.cochranfilms.com/real-estate-media"}]},{"@type":"Service","name":"Real estate media in Atlanta","serviceType":"Real estate media in Atlanta","url":"https://www.cochranfilms.com/real-estate-media","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}]},{"@type":"VideoObject","name":"6225 Waterton Way","description":"Property film for 6225 Waterton Way, delivered with 16 listing assets and floor plan blueprints.","thumbnailUrl":"https://www.cochranfilms.com/assets/real-estate/exterior-01.jpg","contentUrl":"https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there a published listing package price?","acceptedAnswer":{"@type":"Answer","text":"No listing package price is published. Photography Flash Start is $350 for one hour, unlimited digital photos, light editing, and an online gallery. The rest of the menu is on the pricing page."}},{"@type":"Question","name":"How fast are listing files delivered?","acceptedAnswer":{"@type":"Answer","text":"The portfolio states that listing photo and video assets are delivered within 24 hours."}}]}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,19 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/real-estate/exterior-01.jpg')">
-    <div class="money-hero-media" role="img" aria-label="Exterior of 6225 Waterton Way"></div>
+  <section class="money-hero" style="--hero:url('/assets/real-estate/exterior-01.jpg'); --focus: center">
+    <div class="money-hero-media">
+      <img src="/assets/real-estate/exterior-01.jpg" alt="Exterior of 6225 Waterton Way" width="1280" height="720">
+    </div>
     <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>Real Estate Photo and Video in Atlanta</h1>
-        <p class="money-lede">Listing photos, a property film, and floor plans from one crew. The published example is 6225 Waterton Way, with the files turned around so the listing can go up.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
-      </div>
-      <form class="money-form" id="inquiry-money-real-estate-media" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1 class="is-long">Real Estate Photo and Video in Atlanta</h1>
+          <p class="money-lede">Listing photos, a property film, and floor plans from one crew. The published example is 6225 Waterton Way, with the files turned around so the listing can go up.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-money-real-estate-media" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-money-real-estate-media-shield">Company website</label>
             <input type="text" id="inquiry-money-real-estate-media-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,22 +78,104 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>6225 Waterton Way</h2><p>The listing set for 6225 Waterton Way includes 16 photo assets, a property film, and floor plan blueprints for level one, level two, and an alternate view.</p>
-      <p><img src="/assets/real-estate/exterior-01.jpg" alt="Exterior of 6225 Waterton Way" width="1280" height="720"></p>
-      <p><a href="/portfolio#portfolio-realestate">Open the listing gallery</a></p>
-      <video controls playsinline preload="metadata" poster="/assets/real-estate/exterior-01.jpg" width="1280" height="720">
+
+  <section class="money-stage">
+    <figure>
+      <video controls playsinline preload="metadata" poster="/assets/real-estate/interior-01.jpg" width="1280" height="720">
         <source src="https://firebasestorage.googleapis.com/v0/b/cochran-films.firebasestorage.app/o/resume%2F6225-Waterton-Way.mp4?alt=media&token=eef15e81-5b85-48d1-9617-91272d8d56e7" type="video/mp4">
-      </video></section>
-<section class="money-section"><h2>Delivery and price</h2><p>Listing photo and video assets are delivered within 24 hours so the property can go to market.</p><p>No listing package price is published. Flash Start, the photography entry on the menu, is $350 for one hour, unlimited digital photos, light editing, and an online gallery. <a href="/pricing">See pricing</a> for the rest.</p><p>We respond within 24 hours.</p></section>
-<section class="money-section"><h2>What a client wrote</h2><blockquote class="money-quote"><p>Super friendly and great photos! Will be using them again for some family photos and grad pics!</p><footer>Rachel Timmons</footer></blockquote></section>
-<section class="money-section"><h2>More from the studio</h2><ul class="money-links"><li><a href="/videographer-atlanta">Videographer in Atlanta</a></li><li><a href="/contact">Contact</a></li></ul></section>
+      </video>
+    </figure>
+    <div>
+      <p class="money-kicker">The listing</p>
+      <h2>6225 Waterton Way</h2>
+      <p>The listing set for 6225 Waterton Way includes 16 photo assets, a property film, and floor plan blueprints for level one, level two, and an alternate view.</p>
+      <a class="btn" href="/portfolio#portfolio-realestate">Open the listing gallery</a>
+    </div>
+  </section>
+
+  <section class="money-stage is-flip">
+    <div>
+      <p class="money-kicker">The plans</p>
+      <h2>Floor plan blueprints</h2>
+      <p>The set covers level one, level two, and an alternate view.</p>
+    </div>
+    <figure>
+      <img class="is-plan" src="/assets/real-estate/blueprint-01.jpg" alt="Floor plan blueprint for 6225 Waterton Way" width="720" height="540">
+    </figure>
+  </section>
+
+  <section class="money-prices">
+    <h2>Delivery and price</h2>
+    <div class="money-price-row">
+      <div>
+        <p class="money-price">$350</p>
+        <p class="money-price-name">Photography Flash Start</p>
+        <p class="money-dim">One hour, unlimited digital photos, light editing, and an online gallery. No listing package price is published. <a href="/pricing">See pricing</a> for the rest.</p>
+      </div>
+      <div>
+        <p class="money-client">24 hours</p>
+        <p class="money-dim">Listing photo and video assets are delivered within 24 hours so the property can go to market. We respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-quote-band">
+    <p class="money-kicker">What a client wrote</p>
+    <blockquote class="money-quote">
+      <p>Super friendly and great photos! Will be using them again for some family photos and grad pics!</p>
+      <footer>Rachel Timmons</footer>
+    </blockquote>
+  </section>
+
+  <section class="money-films-head">
+    <h2>From the same listing</h2>
+  </section>
+  <div class="money-tiles">
+    <a class="money-tile" href="/portfolio#portfolio-realestate">
+      <img src="/assets/real-estate/exterior-02.jpg" alt="Exterior of 6225 Waterton Way">
+      <span>Another exterior</span>
+    </a>
+    <a class="money-tile" href="/portfolio#portfolio-realestate">
+      <img src="/assets/real-estate/interior-02.jpg" alt="Interior of 6225 Waterton Way">
+      <span>Interior</span>
+    </a>
+    <a class="money-tile" href="/portfolio#portfolio-realestate">
+      <img src="/assets/real-estate/interior-03.jpg" alt="Interior of 6225 Waterton Way">
+      <span>Interior</span>
+    </a>
+  </div>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Book the listing</p>
+      <h2>Tell us the address.</h2>
+      <p>We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-realestate-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-realestate-close-shield">Company website</label>
+        <input type="text" id="inquiry-realestate-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="money-real-estate-media">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">

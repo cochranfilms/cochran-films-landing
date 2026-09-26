@@ -29,10 +29,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav5">
-  <link rel="stylesheet" href="/css/money.css?v=20260925seo">
+  <link rel="stylesheet" href="/css/money.css?v=20260926f">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cochranfilms.com/#organization","name":"Cochran Films","legalName":"Cochran Films LLC","url":"https://www.cochranfilms.com/","telephone":"+1-470-420-2169","address":{"@type":"PostalAddress","addressLocality":"Douglasville","addressRegion":"GA","postalCode":"30134","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Douglasville"},{"@type":"City","name":"Atlanta"}]},{"@type":"WebPage","@id":"https://www.cochranfilms.com/work/rice-way-challenge#webpage","url":"https://www.cochranfilms.com/work/rice-way-challenge","name":"The RICE Way Challenge | Cochran Films","description":"Community storytelling for The RICE Way Challenge at the Russell Innovation Center for Entrepreneurs. About $75,000 raised toward a $100,000 goal for Black owned businesses.","inLanguage":"en-US","isPartOf":{"@id":"https://www.cochranfilms.com/#website"},"about":{"@id":"https://www.cochranfilms.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.cochranfilms.com/assets/careers/pipeline-handoff.jpg","width":1280,"height":720}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cochranfilms.com/"},{"@type":"ListItem","position":2,"name":"The RICE Way Challenge","item":"https://www.cochranfilms.com/work/rice-way-challenge"}]},{"@type":"Service","name":"Campaign storytelling","serviceType":"Campaign storytelling","url":"https://www.cochranfilms.com/work/rice-way-challenge","provider":{"@id":"https://www.cochranfilms.com/#organization"},"areaServed":[{"@type":"City","name":"Atlanta"},{"@type":"City","name":"Douglasville"}]}]}</script>
 </head>
-<body class="money-page">
+<body class="money-page money-show">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
   <div class="nav-container">
@@ -56,16 +56,22 @@
   </div>
 </nav>
 <main id="main">
-  <section class="money-hero" style="--hero:url('/assets/careers/pipeline-handoff.jpg')">
-    <div class="money-hero-media" role="img" aria-label="A videographer handing finished files to a client"></div>
-    <div class="money-stack">
-      <div class="money-copy">
-        <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
-        <h1>The RICE Way Challenge</h1>
-        <p class="money-lede">Storytelling for a fundraising campaign at the Russell Innovation Center for Entrepreneurs. The published result is the money raised, not a promise about the next campaign.</p>
-        <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+  <section class="money-hero">
+    <div class="money-hero-media is-type">
+      <div class="money-hero-type">
+        <span>The RICE Way Challenge</span>
+        <strong>About $75,000 raised toward $100,000</strong>
       </div>
-      <form class="money-form" id="inquiry-work-rice-way-challenge" data-money-form action="/api/contact/send-inquiry" method="post">
+    </div>
+    <div class="money-stack">
+      <div class="money-panel">
+        <div class="money-copy">
+          <p class="money-kicker">Douglasville, GA, serving Atlanta</p>
+          <h1>The RICE Way Challenge</h1>
+          <p class="money-lede">Storytelling for a fundraising campaign at the Russell Innovation Center for Entrepreneurs. The published result is the money raised, not a promise about the next campaign.</p>
+          <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+        </div>
+        <form class="money-form" id="inquiry-work-rice-way-challenge" data-money-form action="/api/contact/send-inquiry" method="post">
           <div class="cf-form-shield" aria-hidden="true">
             <label for="inquiry-work-rice-way-challenge-shield">Company website</label>
             <input type="text" id="inquiry-work-rice-way-challenge-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
@@ -75,15 +81,69 @@
           <label>Name <input name="name" type="text" autocomplete="name" required></label>
           <label>Email <input name="email" type="email" autocomplete="email" required></label>
           <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
-          <label>Event or project date <input name="eventDate" type="date" required></label>
-          <label>Message <textarea name="message" required></textarea></label>
+          <label>Date <input name="eventDate" type="date" required></label>
+          <label class="span-2">Message <textarea name="message" required></textarea></label>
           <button class="btn" type="submit">Send the inquiry</button>
           <p class="money-status" data-form-status role="status"></p>
         </form>
+      </div>
     </div>
   </section>
-  <section class="money-section"><h2>The published result</h2><p>The RICE Way Challenge is a community fundraiser for Black owned businesses, run with the Russell Innovation Center for Entrepreneurs in Atlanta. Cochran Films contributed to the promotional work.</p><p>The campaign raised about $75,000 toward a $100,000 goal.</p><p>A related cut, National Small Business Week, introduces RICE stakeholder Channing Baker of Evolve Contractors. Business March Madness is another film from entrepreneur programming at the center.</p><p><a href="https://thericeway.org/" rel="noopener noreferrer">The RICE Way</a></p></section>
-<section class="money-section"><h2>Book campaign coverage</h2><p><a href="/event-videography-atlanta">Event videography in Atlanta</a> lists the Russell Center films and the published recap price.</p></section>
+
+  <section class="money-line">
+    <div>
+      <p class="money-kicker">Russell Innovation Center</p>
+      <h2>The published result</h2>
+    </div>
+    <div>
+      <p>The RICE Way Challenge is a community fundraiser for Black owned businesses, run with the Russell Innovation Center for Entrepreneurs in Atlanta. Cochran Films contributed to the promotional work.</p>
+      <p>The campaign raised about $75,000 toward a $100,000 goal.</p>
+      <p>A related cut, National Small Business Week, introduces RICE stakeholder Channing Baker of Evolve Contractors. Business March Madness is another film from entrepreneur programming at the center.</p>
+      <a class="btn" href="https://thericeway.org/" rel="noopener noreferrer">The RICE Way</a>
+    </div>
+  </section>
+
+  <section class="money-films-head">
+    <h2>Book campaign coverage</h2>
+  </section>
+  <div class="money-tiles">
+    <a class="money-tile" href="/event-videography-atlanta">
+      <img src="/assets/money/event-hero.jpg" alt="Frame from the Russell Center Family Matters film">
+      <span>Event videography</span>
+    </a>
+    <a class="money-tile" href="/videographer-atlanta">
+      <img src="/assets/money/atlanta-hero.jpg" alt="Frame from the Ceven Skin commercial">
+      <span>Videographer in Atlanta</span>
+    </a>
+    <a class="money-tile type" href="/event-videography-atlanta">
+      <small>2 Hours + 60 Sec. Recap</small>
+      <span>$500</span>
+    </a>
+  </div>
+
+  <section class="money-close">
+    <div>
+      <p class="money-kicker">Book the date</p>
+      <h2>Tell us the campaign.</h2>
+      <p>We respond within 24 hours.</p>
+      <a class="btn" href="tel:+14704202169">Call (470) 420-2169</a>
+    </div>
+    <form class="money-form" id="inquiry-rice-close" data-money-form action="/api/contact/send-inquiry" method="post">
+      <div class="cf-form-shield" aria-hidden="true">
+        <label for="inquiry-rice-close-shield">Company website</label>
+        <input type="text" id="inquiry-rice-close-shield" name="companyWebsite" tabindex="-1" autocomplete="off" value="">
+        <input type="text" name="formLoadedAt" tabindex="-1" autocomplete="off" value="">
+      </div>
+      <input type="hidden" name="source" value="work-rice-way-challenge">
+      <label>Name <input name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" required></label>
+      <label>Date <input name="eventDate" type="date" required></label>
+      <label class="span-2">Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send the inquiry</button>
+      <p class="money-status" data-form-status role="status"></p>
+    </form>
+  </section>
 </main>
 <footer class="site-footer">
   <div class="footer-grid">
