@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creator Collective invoices</title>
+  <link rel="stylesheet" href="/assets/careers/cca/creator-invoices.css">
+  <link rel="stylesheet" href="/assets/careers/cca/community-join.css">
+  <link rel="stylesheet" href="/assets/careers/cca/creator-invoice-thanks.css">
+  <style>
+    html:has(.ci-thanks),
+    html:has(.ci-thanks) body {
+      background: #eef1f7;
+    }
+    html:has(.ci-thanks)::before,
+    html:has(.ci-thanks) body::before {
+      display: none;
+    }
+  </style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; background: #eef1f7; }
+    [data-panel][hidden] { display: none !important; }
+    .creator-invoices .ci-brand-surface__frame,
+    .creator-invoices .ci-brand-surface__frame .ci-paper {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .creator-invoices .ci-brand-surface__frame { overflow: hidden; }
+    .ci-toast {
+      position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+      background: #0b1020; color: #fff; padding: 10px 14px; font: 13px/1.4 Inter, system-ui, sans-serif;
+      z-index: 80; opacity: 0; pointer-events: none; transition: opacity 160ms ease;
+    }
+    .ci-toast.is-on { opacity: 1; }
+    .ci-paper-demo {
+      background: #fff;
+      border: 1px solid #e5e7ef;
+      padding: 28px;
+      color: #0b1020;
+      max-width: 720px;
+    }
+    .ci-paper-demo h3 { margin: 0 0 4px; font-size: 22px; }
+    .ci-paper-demo table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+    .ci-paper-demo th, .ci-paper-demo td { text-align: left; padding: 8px 0; border-bottom: 1px solid #e5e7ef; font-size: 14px; }
+    .ci-paper-demo .right { text-align: right; }
+  </style>
+</head>
+<body>
+<main class="creator-invoices" data-theme="light">
+  <aside class="ci-rail" aria-label="Invoice studio">
+    <nav class="ci-rail__nav">
+      <button class="ci-rail__item is-active" type="button" data-tab="history" aria-current="page" aria-label="Invoices · Sent, paid and analytics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2h9l3 3v17H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M9 10h6M9 14h4M9 18h5"/></svg><span class="ci-rail__tip">Invoices · Sent, paid &amp; analytics</span></button>
+      <button class="ci-rail__item" type="button" data-tab="create" aria-label="Create · New invoice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 11v6M9 14h6"/></svg><span class="ci-rail__tip">Create · New invoice</span></button>
+      <button class="ci-rail__item" type="button" data-tab="drafts" aria-label="Drafts · Saved invoices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z"/></svg><span class="ci-rail__tip">Drafts · Saved invoices</span></button>
+      <button class="ci-rail__item" type="button" data-tab="estimates" aria-label="Estimates · Quotes and accept"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></svg><span class="ci-rail__tip">Estimates · Quotes &amp; accept</span></button>
+      <button class="ci-rail__item" type="button" data-tab="contacts" aria-label="Contacts · Saved clients"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h14a2 2 0 0 1 2 2v14l-3-2-3 2-3-2-3 2-3-2V6a2 2 0 0 1 2-2z"/><circle cx="11" cy="10" r="2.2"/><path d="M7.5 15.5c.8-1.4 2-2.1 3.5-2.1s2.7.7 3.5 2.1"/></svg><span class="ci-rail__tip">Contacts · Saved clients</span></button>
+      <button class="ci-rail__item" type="button" data-tab="items" aria-label="Line items · Saved services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.6 12.4 12.4 20.6a2 2 0 0 1-2.8 0L3.4 14.4a2 2 0 0 1 0-2.8L11.6 3.4a2 2 0 0 1 2.8 0l6.2 6.2a2 2 0 0 1 0 2.8z"/><circle cx="8.5" cy="8.5" r="1.2" fill="currentColor" stroke="none"/></svg><span class="ci-rail__tip">Line items · Saved services</span></button>
+      <button class="ci-rail__item" type="button" data-tab="tax" aria-label="Tax · Sales tax rates"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><path d="M9 9.5c.5-1 1.4-1.5 2.5-1.5 1.4 0 2.5.8 2.5 2.1 0 2.4-5 1.8-5 4.4 0 1.2 1.1 2 2.5 2 1.1 0 2-.5 2.5-1.4M12 6.5v1M12 16.5v1"/></svg><span class="ci-rail__tip">Tax · Sales tax rates</span></button>
+      <button class="ci-rail__item" type="button" data-tab="branding" aria-label="Branding · Logo and defaults"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 21a9 9 0 0 0 9-9c0-4-5-10-9-10S3 8 3 12a9 9 0 0 0 9 9z"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="11.5" r="1.2" fill="currentColor" stroke="none"/></svg><span class="ci-rail__tip">Branding · Logo &amp; defaults</span></button>
+      <button class="ci-rail__item" type="button" data-tab="thankyou" aria-label="Thank you · After payment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 6L9 17l-5-5"/></svg><span class="ci-rail__tip">Thank you · After payment</span></button>
+    </nav>
+  </aside>
+
+  <div class="ci-main">
+    <div class="ci-toolbar">
+      <header class="ci-header">
+        <p class="ci-kicker ci-kicker--studio">Client billing studio</p>
+        <h1 class="ci-title">Invoices</h1>
+        <p class="ci-value-band">Send branded invoices, collect payment on a live pay link, and see what still needs to be paid — all from this studio.</p>
+      </header>
+      <div class="ci-toolbar__aside">
+        <span class="ci-chip ci-chip--paid">Stripe ready</span>
+        <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Stripe setup</button>
+      </div>
+    </div>
+
+    <div data-panel="history">
+      <section class="ci-aging" aria-label="Accounts receivable aging">
+        <div class="ci-aging__head">
+          <p class="ci-kicker">A/R aging</p>
+          <p class="ci-aging__note">Full-set outstanding · click a bucket to filter this list</p>
+        </div>
+        <div class="ci-aging__grid">
+          <button class="ci-aging__cell" type="button" data-bucket="current"><span class="ci-aging__l">Current</span><strong class="ci-money">$2,400</strong><span class="ci-aging__count">1</span></button>
+          <button class="ci-aging__cell" type="button" data-bucket="late"><span class="ci-aging__l">1-30 days</span><strong class="ci-money">$850</strong><span class="ci-aging__count">1</span></button>
+          <button class="ci-aging__cell" type="button" data-bucket="empty"><span class="ci-aging__l">31-60 days</span><strong class="ci-money">$0</strong><span class="ci-aging__count">0</span></button>
+          <button class="ci-aging__cell" type="button" data-bucket="empty"><span class="ci-aging__l">61-90 days</span><strong class="ci-money">$0</strong><span class="ci-aging__count">0</span></button>
+          <button class="ci-aging__cell" type="button" data-bucket="empty"><span class="ci-aging__l">90+ days</span><strong class="ci-money">$0</strong><span class="ci-aging__count">0</span></button>
+        </div>
+      </section>
+      <section class="ci-history">
+        <div class="ci-history__head">
+          <div class="ci-history__intro">
+            <h2>Your invoices</h2>
+            <p class="ci-history__lede">Every invoice keeps its pay link and PDF here. Open one to resend, record a payment, or share it with your client.</p>
+            <p class="ci-history__count" data-count>4 invoices</p>
+          </div>
+          <div class="ci-export">
+            <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Export invoices</button>
+            <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Export payments</button>
+            <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Export tax</button>
+          </div>
+        </div>
+        <div class="ci-history-list">
+          <div class="ci-history-row" data-age="current">
+            <div class="ci-history-row__main">
+              <div>
+                <div class="ci-history-row__meta"><span class="ci-chip ci-chip--warn">Open</span><span class="ci-history-row__id">INV-1042</span></div>
+                <h3 class="ci-history-row__title">Sunday highlight</h3>
+                <p class="ci-history-row__sub">Northside Church · Due May 12</p>
+                <p class="ci-history-row__email">Email: Sent</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$2,400</p><span>remaining</span></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--secondary ci-btn--sm" type="button">Copy pay link</button>
+              <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Download PDF</button>
+              <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Record payment</button>
+            </div>
+          </div>
+          <div class="ci-history-row" data-age="paid">
+            <div class="ci-history-row__main">
+              <div>
+                <div class="ci-history-row__meta"><span class="ci-chip ci-chip--paid">Paid</span><span class="ci-history-row__id">INV-1038</span></div>
+                <h3 class="ci-history-row__title">Listing film</h3>
+                <p class="ci-history-row__sub">Harbor Realty · Paid April 2</p>
+                <p class="ci-history-row__email">Email: Receipt sent</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$1,600</p><span>gross paid</span></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Download PDF</button>
+            </div>
+          </div>
+          <div class="ci-history-row" data-age="late">
+            <div class="ci-history-row__main">
+              <div>
+                <div class="ci-history-row__meta"><span class="ci-chip ci-chip--warn">Open</span><span class="ci-history-row__id">INV-1019</span></div>
+                <h3 class="ci-history-row__title">Ceremony stills</h3>
+                <p class="ci-history-row__sub">Harbor Realty · Due April 18</p>
+                <p class="ci-history-row__email">Email: Reminder sent</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$850</p><span>remaining</span></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--secondary ci-btn--sm" type="button">Copy pay link</button>
+              <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Send reminder</button>
+            </div>
+          </div>
+          <div class="ci-history-row" data-age="draft">
+            <div class="ci-history-row__main">
+              <div>
+                <div class="ci-history-row__meta"><span class="ci-chip">Draft</span><span class="ci-history-row__id">INV-1044</span></div>
+                <h3 class="ci-history-row__title">Room recap</h3>
+                <p class="ci-history-row__sub">The Lantern · Not sent</p>
+                <p class="ci-history-row__email">Email: Not sent</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$900</p><span>remaining</span></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--primary ci-btn--sm" type="button">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div data-panel="create" hidden>
+      <div class="ci-section-panel">
+        <div class="ci-editor">
+          <div class="ci-editor__workspace">
+            <div class="ci-paper-demo">
+              <p class="ci-kicker">Invoice</p>
+              <h3>Sunday highlight</h3>
+              <p>Due on receipt</p>
+              <p class="ci-paper__party-label">Bill to</p>
+              <p><strong>Northside Church</strong><br>hello@northside.example</p>
+              <table>
+                <thead><tr><th>Description</th><th class="right">Qty</th><th class="right">Amount</th></tr></thead>
+                <tbody>
+                  <tr><td>Shoot, grade, and delivery</td><td class="right">1</td><td class="right">$2,200</td></tr>
+                  <tr><td>Deposit already collected</td><td class="right">1</td><td class="right">−$550</td></tr>
+                </tbody>
+              </table>
+              <p class="right"><strong>Balance due $1,650</strong></p>
+              <p><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">+ Add line item</button></p>
+            </div>
+            <p style="margin-top:16px">
+              <button class="ci-btn ci-btn--secondary" type="button">Save draft</button>
+              <button class="ci-btn ci-btn--primary" type="button">Review and send</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-panel="drafts" hidden>
+      <section class="ci-manage-card">
+        <div class="ci-manage-card__head"><h2>Draft invoices</h2><p>Saved invoices that have not been sent.</p></div>
+        <div class="ci-history-list">
+          <div class="ci-history-row">
+            <div class="ci-history-row__main">
+              <div>
+                <h3 class="ci-history-row__title">Room recap</h3>
+                <p class="ci-history-row__sub">The Lantern · Form draft</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$900</p></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--primary ci-btn--sm" type="button">Continue</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div data-panel="estimates" hidden>
+      <section class="ci-manage-card">
+        <div class="ci-manage-card__head ci-manage-card__head--split">
+          <div>
+            <h2>Estimates</h2>
+            <p>A quote the client can accept. Accepting it can become the invoice.</p>
+          </div>
+          <button class="ci-btn ci-btn--primary ci-btn--sm" type="button">New estimate</button>
+        </div>
+        <div class="ci-history-list">
+          <div class="ci-history-row">
+            <div class="ci-history-row__main">
+              <div>
+                <div class="ci-history-row__meta"><span class="ci-chip ci-chip--warn">Sent</span><span class="ci-history-row__id">EST-220</span></div>
+                <h3 class="ci-history-row__title">Venue recap quote</h3>
+                <p class="ci-history-row__sub">The Lantern · Waiting on accept</p>
+              </div>
+              <div class="ci-history-row__amount"><p class="ci-money">$1,200</p></div>
+            </div>
+            <div class="ci-history-row__actions">
+              <button class="ci-btn ci-btn--secondary ci-btn--sm" type="button">Copy accept link</button>
+              <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Convert to invoice</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div data-panel="contacts" hidden>
+      <section class="ci-manage-card">
+        <div class="ci-manage-card__head ci-manage-card__head--split">
+          <div>
+            <h2>Saved contacts</h2>
+            <p>Clients you invoice often. Import accepts CSV only (columns: name, email, company, phone).</p>
+          </div>
+          <div class="ci-manage-card__actions">
+            <button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Import Contacts</button>
+            <button class="ci-btn ci-btn--primary ci-btn--sm" type="button">New contact</button>
+          </div>
+        </div>
+        <div class="ci-history-list">
+          <div class="ci-history-row"><div class="ci-history-row__main"><div><h3 class="ci-history-row__title">Northside Church</h3><p class="ci-history-row__email">hello@northside.example</p></div></div><div class="ci-history-row__actions"><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">View</button></div></div>
+          <div class="ci-history-row"><div class="ci-history-row__main"><div><h3 class="ci-history-row__title">Harbor Realty</h3><p class="ci-history-row__email">bookings@harbor.example</p></div></div><div class="ci-history-row__actions"><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">View</button></div></div>
+        </div>
+      </section>
+    </div>
+
+    <div data-panel="items" hidden>
+      <section class="ci-manage-card">
+        <div class="ci-manage-card__head ci-manage-card__head--split">
+          <div><h2>Saved line items</h2><p>Services you bill again. Add one straight onto a new invoice.</p></div>
+          <button class="ci-btn ci-btn--primary ci-btn--sm" type="button">New line item</button>
+        </div>
+        <div class="ci-history-list">
+          <div class="ci-history-row"><div class="ci-history-row__main"><div><h3 class="ci-history-row__title">Shoot day</h3><p class="ci-history-row__sub">$1,800</p></div></div><div class="ci-history-row__actions"><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Edit</button><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Add</button></div></div>
+          <div class="ci-history-row"><div class="ci-history-row__main"><div><h3 class="ci-history-row__title">Color grade</h3><p class="ci-history-row__sub">$400</p></div></div><div class="ci-history-row__actions"><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Edit</button><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Add</button></div></div>
+          <div class="ci-history-row"><div class="ci-history-row__main"><div><h3 class="ci-history-row__title">Deposit</h3><p class="ci-history-row__sub">25% to lock the date</p></div></div><div class="ci-history-row__actions"><button class="ci-btn ci-btn--ghost ci-btn--sm" type="button">Add</button></div></div>
+        </div>
+      </section>
+    </div>
+
+    <div data-panel="tax" hidden>
+      <section class="ci-manage-card">
+        <div class="ci-manage-card__head"><h2>Tax rates</h2><p>Manual exclusive sales tax rates on your Stripe account.</p></div>
+        <div class="ci-fields ci-fields--2">
+          <label class="ci-field">Rate name<input value="GA Sales Tax"></label>
+          <label class="ci-field">Percentage<input value="4"></label>
+        </div>
+        <p><button class="ci-btn ci-btn--primary" type="button">Save rate</button></p>
+      </section>
+    </div>
+
+    <div data-panel="branding" hidden>
+      <div class="ci-brand-studio">
+        <div class="ci-brand-studio__mobile-switch" role="tablist" aria-label="Branding surface">
+          <button type="button" role="tab" class="is-on" data-brand-surface="invoice" aria-selected="true">Invoice</button>
+          <button type="button" role="tab" data-brand-surface="checkout" aria-selected="false">Checkout</button>
+        </div>
+        <section class="ci-brand-palette" aria-label="Brand colors">
+          <h2 class="ci-brand-palette__title">Colors</h2>
+          <div class="ci-brand-palette__col">
+            <fieldset class="ci-brand-swatches" data-swatch-group="accent">
+              <legend>Brand color<em class="ci-brand-used">Invoice accent, Pay button, Stripe, and Thank you → Use branding color</em></legend>
+              <div class="ci-brand-swatches__row" role="list">
+                <button type="button" class="ci-brand-swatch is-selected" data-swatch="#1B00FF" aria-pressed="true" aria-label="CCA Blue"><span class="ci-brand-swatch__chip" style="background:#1B00FF"><span class="ci-brand-swatch__check"></span></span><span class="ci-brand-swatch__name">CCA Blue</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#0F172A" aria-label="Ink"><span class="ci-brand-swatch__chip" style="background:#0F172A"></span><span class="ci-brand-swatch__name">Ink</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#0B3D91" aria-label="Navy"><span class="ci-brand-swatch__chip" style="background:#0B3D91"></span><span class="ci-brand-swatch__name">Navy</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#0F766E" aria-label="Teal"><span class="ci-brand-swatch__chip" style="background:#0F766E"></span><span class="ci-brand-swatch__name">Teal</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#9A3412" aria-label="Rust"><span class="ci-brand-swatch__chip" style="background:#9A3412"></span><span class="ci-brand-swatch__name">Rust</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#6D28D9" aria-label="Violet"><span class="ci-brand-swatch__chip" style="background:#6D28D9"></span><span class="ci-brand-swatch__name">Violet</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#BE123C" aria-label="Rose"><span class="ci-brand-swatch__chip" style="background:#BE123C"></span><span class="ci-brand-swatch__name">Rose</span></button>
+              </div>
+            </fieldset>
+            <div class="ci-brand-hex">
+              <label><span>Brand hex</span><input type="text" data-hex="accent" value="#1B00FF" spellcheck="false" autocomplete="off"></label>
+              <button type="button" class="ci-btn ci-btn--primary" data-hex-apply="accent">Apply</button>
+            </div>
+          </div>
+          <div class="ci-brand-palette__col">
+            <fieldset class="ci-brand-swatches" data-swatch-group="wash">
+              <legend>Checkout page<em class="ci-brand-used">Public pay page wash — not Stripe, not invoice paper</em></legend>
+              <div class="ci-brand-swatches__row" role="list">
+                <button type="button" class="ci-brand-swatch is-selected" data-swatch="#eef1f7" aria-pressed="true" aria-label="Studio"><span class="ci-brand-swatch__chip" style="background:#eef1f7"><span class="ci-brand-swatch__check"></span></span><span class="ci-brand-swatch__name">Studio</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#ffffff" aria-label="Paper"><span class="ci-brand-swatch__chip" style="background:#ffffff"></span><span class="ci-brand-swatch__name">Paper</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#f8f5ef" aria-label="Warm"><span class="ci-brand-swatch__chip" style="background:#f8f5ef"></span><span class="ci-brand-swatch__name">Warm</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#e8eef8" aria-label="Slate"><span class="ci-brand-swatch__chip" style="background:#e8eef8"></span><span class="ci-brand-swatch__name">Slate</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#eef6f3" aria-label="Sage"><span class="ci-brand-swatch__chip" style="background:#eef6f3"></span><span class="ci-brand-swatch__name">Sage</span></button>
+                <button type="button" class="ci-brand-swatch" data-swatch="#f3eef8" aria-label="Lilac"><span class="ci-brand-swatch__chip" style="background:#f3eef8"></span><span class="ci-brand-swatch__name">Lilac</span></button>
+              </div>
+            </fieldset>
+            <div class="ci-brand-hex">
+              <label><span>Page hex</span><input type="text" data-hex="wash" value="#eef1f7" spellcheck="false" autocomplete="off"></label>
+              <button type="button" class="ci-btn ci-btn--primary" data-hex-apply="wash">Apply</button>
+            </div>
+          </div>
+        </section>
+        <div class="ci-brand-studio__layout">
+          <div class="ci-brand-surface is-mobile-on" data-brand-pane="invoice">
+            <p class="ci-brand-surface__label">Invoice</p>
+            <p class="ci-brand-used">One look for the invoice your client reads. Logo and brand color also sync to Stripe. PNG or JPG, at least 128×128, under 512 KB.</p>
+            <div class="ci-brand-surface__frame">
+              <div class="ci-paper ci-paper--live ci-paper--edit ci-paper--studio-edit" data-paper style="--ci-paper-accent:#1B00FF" aria-label="Invoice">
+                <button type="button" class="ci-paper__accent ci-paper__accent--edit" aria-label="Brand color"></button>
+                <div class="ci-paper__top">
+                  <div class="ci-paper__brand">
+                    <div class="ci-paper__logo-row">
+                      <button type="button" class="ci-paper__logo-btn"><img class="ci-paper__logo" src="/C_Logo.png" alt="Cochran Films"></button>
+                      <button type="button" class="ci-btn ci-btn--primary ci-paper__logo-change">Change logo</button>
+                    </div>
+                    <label class="ci-paper-field">Company name<input class="ci-paper-input ci-paper-input--title" value="Cochran Films"></label>
+                  </div>
+                  <div class="ci-paper__doc">
+                    <p class="ci-paper__doc-title">Invoice</p>
+                    <dl class="ci-paper__facts">
+                      <div class="ci-paper__fact"><dt>Number</dt><dd>INV-1042</dd></div>
+                      <div class="ci-paper__fact"><dt>Due</dt><dd><label class="ci-paper-field">Default payment terms<select class="ci-paper-input ci-paper-input--inline"><option>Net 7</option><option>Net 14</option><option selected>Net 30</option></select></label></dd></div>
+                      <div class="ci-paper__fact"><dt>Status</dt><dd>Open</dd></div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="ci-paper__live-grid ci-paper__live-grid--job">
+                  <div class="ci-paper__live-block">
+                    <p class="ci-paper__party-label">Bill to</p>
+                    <p class="ci-paper__live-name">Northside Church</p>
+                    <p class="ci-paper__live-detail">hello@northside.example</p>
+                  </div>
+                  <div class="ci-paper__live-block">
+                    <p class="ci-paper__party-label">From</p>
+                    <div class="ci-paper-party-fields">
+                      <label class="ci-paper-field">Your name<input class="ci-paper-input" value="Cody Cochran"></label>
+                      <label class="ci-paper-field">Business email<input class="ci-paper-input" value="info@cochranfilms.com"></label>
+                      <label class="ci-paper-field">Phone<input class="ci-paper-input" value="(470) 420-2169"></label>
+                      <label class="ci-paper-field">Business address<textarea class="ci-paper-input" rows="3">Atlanta and Douglasville, Georgia</textarea></label>
+                    </div>
+                  </div>
+                  <div class="ci-paper__live-block ci-paper__live-block--job">
+                    <p class="ci-paper__party-label">Project</p>
+                    <p class="ci-paper__live-title">Sunday highlight</p>
+                  </div>
+                </div>
+                <table class="ci-paper-table">
+                  <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+                  <tbody><tr><td>Shoot, grade, and delivery</td><td>1</td><td>$2,200.00</td><td>$2,200.00</td></tr></tbody>
+                </table>
+                <div class="ci-paper__foot">
+                  <div class="ci-paper-notes-edit">
+                    <label class="ci-paper__notes"><span>Default memo</span><textarea class="ci-paper-input" rows="3">Thank you for the booking. The balance is due on the date in the contract.</textarea></label>
+                    <label class="ci-paper__notes" style="margin-top:12px"><span>Default footer</span><textarea class="ci-paper-input" rows="3">Due on the date in the contract.</textarea></label>
+                  </div>
+                  <div class="ci-paper__totals">
+                    <p class="ci-paper__total-row ci-paper__total-row--soft"><span>Subtotal</span><span>$2,200.00</span></p>
+                    <p class="ci-paper__total-row"><span>Amount due</span><span>$2,200.00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <details class="ci-brand-defaults">
+              <summary>Defaults</summary>
+              <label class="ci-soft-tile is-on">
+                <input type="checkbox" checked>
+                <span class="ci-reminder-tile__check" aria-hidden="true"></span>
+                <span class="ci-soft-tile__text"><strong>Automatic payment reminders</strong><span>Open invoices. Due-date and overdue emails (3, 7, and 14 days).</span></span>
+              </label>
+              <label class="ci-field"><span>Business notes</span><textarea>Emails</textarea><em class="ci-brand-used">Emails</em></label>
+            </details>
+          </div>
+          <div class="ci-brand-surface ci-brand-surface--checkout" data-brand-pane="checkout">
+            <p class="ci-brand-surface__label">Checkout</p>
+            <p class="ci-brand-used">Cover above the invoice on the public pay page. Same 18/5 crop as the community join page. Not printed on the invoice.</p>
+            <div class="ci-brand-surface__wash" data-wash style="background:#eef1f7">
+              <div class="ci-brand-banner-overlay">
+                <img src="/assets/careers/hero-1.jpg" alt="Checkout banner" style="width:100%;aspect-ratio:18/5;object-fit:cover;display:block">
+                <button type="button" class="ci-btn ci-btn--primary">Change banner</button>
+              </div>
+              <div class="ci-brand-surface__frame">
+                <div class="ci-paper ci-paper--live ci-paper--echo" style="--ci-paper-accent:#1B00FF">
+                  <div class="ci-paper__accent" data-accent-bar></div>
+                  <div class="ci-paper__top">
+                    <div class="ci-paper__brand">
+                      <img class="ci-paper__logo" src="/C_Logo.png" alt="">
+                      <p class="ci-paper__company">Cochran Films</p>
+                      <p class="ci-paper__echo-lock">From Branding — switch to Invoice to edit identity.</p>
+                    </div>
+                    <div class="ci-paper__doc">
+                      <p class="ci-paper__doc-title">Invoice</p>
+                      <dl class="ci-paper__facts">
+                        <div class="ci-paper__fact"><dt>Number</dt><dd>INV-1042</dd></div>
+                        <div class="ci-paper__fact"><dt>Due</dt><dd>Net 30</dd></div>
+                        <div class="ci-paper__fact"><dt>Status</dt><dd>Open</dd></div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ci-brand-surface__pay" data-pay style="background:#1B00FF;color:#ffffff">Pay $2,200.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-panel="thankyou" hidden>
+      <div class="ci-thanks-studio">
+        <div class="ci-thanks-studio__layout">
+          <section class="ci-thanks-studio-tools" aria-label="Thank you appearance">
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Layout</h2>
+              <p>Align every block on the live thank-you page.</p>
+              <div class="ci-thanks-studio-tools__align" role="radiogroup" aria-label="Page alignment">
+                <label class="ci-thanks-studio-tools__align-opt is-on"><input class="ci-sr-only" type="radio" name="ci-thanks-align" value="left" checked data-align><span>Left</span></label>
+                <label class="ci-thanks-studio-tools__align-opt"><input class="ci-sr-only" type="radio" name="ci-thanks-align" value="center" data-align><span>Center</span></label>
+                <label class="ci-thanks-studio-tools__align-opt"><input class="ci-sr-only" type="radio" name="ci-thanks-align" value="right" data-align><span>Right</span></label>
+              </div>
+              <p>Video and photo layout on the live thank-you page.</p>
+              <div class="ci-thanks-studio-tools__align" role="radiogroup" aria-label="Video and photo layout">
+                <label class="ci-thanks-studio-tools__align-opt is-on"><input class="ci-sr-only" type="radio" name="ci-thanks-media" checked><span>Stacked</span></label>
+                <label class="ci-thanks-studio-tools__align-opt"><input class="ci-sr-only" type="radio" name="ci-thanks-media"><span>Side by side</span></label>
+              </div>
+              <div class="ci-thanks-studio-tools__align" role="radiogroup" aria-label="Show first">
+                <label class="ci-thanks-studio-tools__align-opt is-on"><input class="ci-sr-only" type="radio" name="ci-thanks-lead" checked><span>Video first</span></label>
+                <label class="ci-thanks-studio-tools__align-opt"><input class="ci-sr-only" type="radio" name="ci-thanks-lead"><span>Photo first</span></label>
+              </div>
+            </div>
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Page color</h2>
+              <p>The wash behind the whole thank-you page.</p>
+              <fieldset class="ci-brand-swatches" data-swatch-group="thanks-page">
+                <legend>Presets<em class="ci-brand-used">Background behind receipt, media, and attachments</em></legend>
+                <div class="ci-brand-swatches__row">
+                  <button type="button" class="ci-brand-swatch is-selected" data-swatch="#07080f" aria-label="Night"><span class="ci-brand-swatch__chip" style="background:#07080f"><span class="ci-brand-swatch__check"></span></span><span class="ci-brand-swatch__name">Night</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#111527" aria-label="Ink"><span class="ci-brand-swatch__chip" style="background:#111527"></span><span class="ci-brand-swatch__name">Ink</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#eef1f7" aria-label="Studio"><span class="ci-brand-swatch__chip" style="background:#eef1f7"></span><span class="ci-brand-swatch__name">Studio</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#ffffff" aria-label="Paper"><span class="ci-brand-swatch__chip" style="background:#ffffff"></span><span class="ci-brand-swatch__name">Paper</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#f3f6fb" aria-label="Mist"><span class="ci-brand-swatch__chip" style="background:#f3f6fb"></span><span class="ci-brand-swatch__name">Mist</span></button>
+                </div>
+              </fieldset>
+              <div class="ci-thanks-studio-tools__actions">
+                <button type="button" class="ci-btn ci-btn--ghost" data-thanks-brand>Use branding color</button>
+                <button type="button" class="ci-btn ci-btn--primary is-on">Match checkout page</button>
+              </div>
+            </div>
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Receipt &amp; attachments</h2>
+              <p>Fill for the receipt card and the attachments card.</p>
+              <fieldset class="ci-brand-swatches" data-swatch-group="thanks-card">
+                <legend>Presets<em class="ci-brand-used">Receipt summary and attachments card</em></legend>
+                <div class="ci-brand-swatches__row">
+                  <button type="button" class="ci-brand-swatch is-selected" data-swatch="#ffffff" aria-label="White"><span class="ci-brand-swatch__chip" style="background:#ffffff"><span class="ci-brand-swatch__check"></span></span><span class="ci-brand-swatch__name">White</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#f8fbff" aria-label="Frost"><span class="ci-brand-swatch__chip" style="background:#f8fbff"></span><span class="ci-brand-swatch__name">Frost</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#f3f6fb" aria-label="Mist"><span class="ci-brand-swatch__chip" style="background:#f3f6fb"></span><span class="ci-brand-swatch__name">Mist</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#eef1f7" aria-label="Studio"><span class="ci-brand-swatch__chip" style="background:#eef1f7"></span><span class="ci-brand-swatch__name">Studio</span></button>
+                  <button type="button" class="ci-brand-swatch" data-swatch="#111527" aria-label="Ink"><span class="ci-brand-swatch__chip" style="background:#111527"></span><span class="ci-brand-swatch__name">Ink</span></button>
+                </div>
+              </fieldset>
+              <div class="ci-thanks-studio-tools__actions">
+                <button type="button" class="ci-btn ci-btn--ghost">Use branding color</button>
+                <button type="button" class="ci-btn ci-btn--primary is-on">Use default card</button>
+              </div>
+            </div>
+          </section>
+          <section class="ci-thanks-studio-tools ci-thanks-studio-tools--content" aria-label="Button, video, and photo">
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Opens this link</h2>
+              <p>Custom button on the live thank-you page, beside Print receipt and View invoice.</p>
+              <label class="ci-field"><span>Button text</span><input value="Visit Cochran Films" data-cta-label></label>
+              <label class="ci-field"><span>Opens this link</span><input value="https://www.cochranfilms.com" data-cta-url></label>
+            </div>
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Video</h2>
+              <p>YouTube or an uploaded file on the live thank-you page.</p>
+              <label class="ci-field"><span>Source</span><select><option>None</option><option selected>YouTube</option><option>Uploaded video</option></select></label>
+              <label class="ci-field"><span>YouTube URL</span><input value="https://www.youtube.com/watch?v=wgXzEdZtyRM"></label>
+            </div>
+            <div class="ci-thanks-studio-tools__block">
+              <h2>Photo</h2>
+              <p>Still image on the live thank-you page, with the video layout above.</p>
+              <img src="/assets/careers/hero-3.jpg" alt="Thank you photo" style="width:100%;height:88px;object-fit:cover;display:block;margin-bottom:8px">
+              <div class="ci-brand-page-banner-actions">
+                <button type="button" class="ci-btn ci-btn--primary">Change photo</button>
+              </div>
+            </div>
+          </section>
+          <aside class="ci-thanks-studio__preview" aria-label="Thank you page editor">
+            <p class="ci-thanks-studio__preview-label">After payment</p>
+            <div class="ci-thanks-studio__preview-frame">
+              <div class="cj-page ci-thanks ci-thanks--preview ci-thanks--studio-edit" data-thanks-page data-theme="light" data-align="left" style="background:#eef1f7">
+                <div class="ci-thanks__banner-slot">
+                  <img src="/assets/careers/hero-2.jpg" alt="" style="width:100%;aspect-ratio:18/5;object-fit:cover;display:block">
+                  <div class="ci-thanks-edit-overlay"><button type="button" class="ci-btn ci-btn--primary">Change banner</button></div>
+                </div>
+                <div class="cj-offer cj-offer--hero">
+                  <div class="ci-thanks__identity cj-identity">
+                    <img class="ci-thanks__logo" src="/C_Logo.png" alt="">
+                    <p class="ci-thanks__wordmark">Cochran Films</p>
+                    <p class="ci-paper__echo-lock">From Branding</p>
+                  </div>
+                  <p class="cj-kicker">Payment confirmed</p>
+                  <label class="ci-thanks-edit-field"><span class="ci-sr-only">Headline</span><input class="ci-thanks-edit-input ci-thanks-edit-input--title" value="Thank you"></label>
+                  <label class="ci-thanks-edit-field"><span class="ci-sr-only">Message</span><textarea class="ci-thanks-edit-input" rows="4">Your payment was received. The files stay on the date we agreed.</textarea></label>
+                </div>
+                <div class="cj-offer">
+                  <div class="ci-thanks__summary ci-thanks__commerce" data-thanks-card style="background:#ffffff">
+                    <p class="ci-thanks__summary-kicker">Receipt</p>
+                    <dl>
+                      <div><dt>Invoice</dt><dd>CCI-1001</dd></div>
+                      <div><dt>Amount paid</dt><dd>$1,250.00</dd></div>
+                      <div><dt>Status</dt><dd>Paid</dd></div>
+                    </dl>
+                  </div>
+                  <div class="ci-thanks__actions">
+                    <div class="ci-thanks__commerce">
+                      <button type="button" class="ci-thanks__btn ci-thanks__btn--primary" data-thanks-cta style="background:#1B00FF">Print receipt</button>
+                      <span class="ci-thanks__btn ci-thanks__btn--ghost">View invoice</span>
+                    </div>
+                    <span class="ci-thanks__btn ci-thanks__btn--ghost" data-cta-preview>Visit Cochran Films</span>
+                  </div>
+                </div>
+                <div class="cj-offer cj-offer--media">
+                  <div class="ci-thanks__media ci-thanks__media--stack">
+                    <div class="ci-thanks__photo"><img src="/assets/careers/hero-3.jpg" alt="Thank you photo"></div>
+                  </div>
+                </div>
+                <div class="cj-offer cj-offer--foot">
+                  <p class="ci-thanks__contact"><span>info@cochranfilms.com</span> <span aria-hidden="true"> · </span> <span>(470) 420-2169</span></p>
+                  <p class="ci-thanks__powered">Powered by Creator Collective</p>
+                </div>
+              </div>
+            </div>
+            <p class="ci-brand-spine__caption">Live thank-you page. Logo and company name come from Branding.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="ci-toast" data-toast role="status"></p>
+</main>
+<script>
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-tab]"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll("[data-panel]"));
+  var toast = document.querySelector("[data-toast]");
+  var toastTimer = 0;
+  function say(text) {
+    if (!toast) return;
+    toast.textContent = text;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove("is-on"); }, 1600);
+  }
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var id = button.getAttribute("data-tab");
+      buttons.forEach(function (item) {
+        var on = item === button;
+        item.classList.toggle("is-active", on);
+        if (on) item.setAttribute("aria-current", "page");
+        else item.removeAttribute("aria-current");
+      });
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-panel") !== id;
+      });
+      var main = document.querySelector(".ci-main");
+      if (main) main.scrollTop = 0;
+      window.scrollTo(0, 0);
+    });
+  });
+  var rows = Array.prototype.slice.call(document.querySelectorAll(".ci-history-list [data-age]"));
+  var count = document.querySelector("[data-count]");
+  document.querySelectorAll("[data-bucket]").forEach(function (cell) {
+    cell.addEventListener("click", function () {
+      var already = cell.classList.contains("is-active");
+      document.querySelectorAll("[data-bucket]").forEach(function (item) {
+        item.classList.toggle("is-active", !already && item === cell);
+      });
+      var bucket = already ? "all" : cell.getAttribute("data-bucket");
+      var shown = 0;
+      rows.forEach(function (row) {
+        var age = row.getAttribute("data-age");
+        var show = bucket === "all" || age === bucket;
+        if (bucket === "empty") show = false;
+        row.hidden = !show;
+        if (show) shown += 1;
+      });
+      if (count) count.textContent = shown + (shown === 1 ? " invoice" : " invoices");
+    });
+  });
+  function markSwatch(button) {
+    var group = button.closest("[data-swatch-group]");
+    if (!group) return;
+    group.querySelectorAll(".ci-brand-swatch").forEach(function (item) {
+      var on = item === button;
+      item.classList.toggle("is-selected", on);
+      item.setAttribute("aria-pressed", on ? "true" : "false");
+      var chip = item.querySelector(".ci-brand-swatch__chip");
+      if (!chip) return;
+      var check = chip.querySelector(".ci-brand-swatch__check");
+      if (on && !check) {
+        check = document.createElement("span");
+        check.className = "ci-brand-swatch__check";
+        chip.appendChild(check);
+      }
+      if (!on && check) check.remove();
+    });
+    var hex = button.getAttribute("data-swatch");
+    var kind = group.getAttribute("data-swatch-group");
+    var field = document.querySelector("[data-hex=\"" + kind + "\"]");
+    if (field) field.value = hex;
+    if (kind === "accent") paintAccent(hex);
+    if (kind === "wash") {
+      var wash = document.querySelector("[data-wash]");
+      if (wash) wash.style.background = hex;
+    }
+    if (kind === "thanks-page") {
+      var page = document.querySelector("[data-thanks-page]");
+      if (page) page.style.background = hex;
+    }
+    if (kind === "thanks-card") {
+      var card = document.querySelector("[data-thanks-card]");
+      if (card) card.style.background = hex;
+    }
+  }
+  function paintAccent(hex) {
+    document.querySelectorAll("[data-paper], .ci-paper--echo").forEach(function (paper) {
+      paper.style.setProperty("--ci-paper-accent", hex);
+    });
+    var bar = document.querySelector("[data-accent-bar]");
+    if (bar) bar.style.background = hex;
+    var pay = document.querySelector("[data-pay]");
+    if (pay) pay.style.background = hex;
+    var accent = document.querySelector("[data-thanks-accent]");
+    if (accent) accent.style.background = hex;
+    var cta = document.querySelector("[data-thanks-cta]");
+    if (cta) cta.style.background = hex;
+  }
+  document.querySelectorAll("[data-swatch]").forEach(function (button) {
+    button.addEventListener("click", function () { markSwatch(button); });
+  });
+  document.querySelectorAll("[data-hex-apply]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var kind = button.getAttribute("data-hex-apply");
+      var field = document.querySelector("[data-hex=\"" + kind + "\"]");
+      var hex = field ? field.value.trim() : "";
+      if (!/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(hex)) {
+        say("Use a hex color like #1B00FF");
+        return;
+      }
+      if (kind === "accent") paintAccent(hex);
+      if (kind === "wash") {
+        var wash = document.querySelector("[data-wash]");
+        if (wash) wash.style.background = hex;
+      }
+      say("Color applied");
+    });
+  });
+  document.querySelectorAll("[data-brand-surface]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var id = button.getAttribute("data-brand-surface");
+      document.querySelectorAll("[data-brand-surface]").forEach(function (item) {
+        var on = item === button;
+        item.classList.toggle("is-on", on);
+        item.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      document.querySelectorAll("[data-brand-pane]").forEach(function (pane) {
+        pane.classList.toggle("is-mobile-on", pane.getAttribute("data-brand-pane") === id);
+      });
+    });
+  });
+  document.querySelectorAll("[data-align]").forEach(function (input) {
+    input.addEventListener("change", function () {
+      var page = document.querySelector("[data-thanks-page]");
+      if (page) page.setAttribute("data-align", input.value);
+      input.closest("[role=radiogroup]").querySelectorAll(".ci-thanks-studio-tools__align-opt").forEach(function (opt) {
+        opt.classList.toggle("is-on", opt.contains(input));
+      });
+    });
+  });
+  document.querySelectorAll(".ci-thanks-studio-tools__align-opt input:not([data-align])").forEach(function (input) {
+    input.addEventListener("change", function () {
+      input.closest("[role=radiogroup]").querySelectorAll(".ci-thanks-studio-tools__align-opt").forEach(function (opt) {
+        opt.classList.toggle("is-on", opt.contains(input));
+      });
+    });
+  });
+  var ctaLabel = document.querySelector("[data-cta-label]");
+  var ctaPreview = document.querySelector("[data-cta-preview]");
+  if (ctaLabel && ctaPreview) {
+    ctaLabel.addEventListener("input", function () {
+      ctaPreview.textContent = ctaLabel.value || "Button";
+    });
+  }
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button || button.hasAttribute("data-tab") || button.hasAttribute("data-bucket")) return;
+    if (button.hasAttribute("data-swatch") || button.hasAttribute("data-hex-apply") || button.hasAttribute("data-brand-surface")) return;
+    var label = button.textContent.replace(/\s+/g, " ").trim();
+    if (/copy/i.test(label)) {
+      var link = "https://pay.creatorcollective.media/inv/1042";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function () { say("Pay link copied"); }, function () { say(link); });
+      } else {
+        say(link);
+      }
+      return;
+    }
+    if (label === "+ Add line item") {
+      var table = button.closest(".ci-paper-demo");
+      var body = table && table.querySelector("tbody");
+      if (body) {
+        var row = document.createElement("tr");
+        row.innerHTML = "<td>Additional delivery</td><td class=\"right\">1</td><td class=\"right\">$180</td>";
+        body.appendChild(row);
+      }
+      say("Line item added");
+      return;
+    }
+    say(label);
+  });
+})();
+</script>
+</body>
+</html>

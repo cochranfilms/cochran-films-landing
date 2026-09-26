@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.cochranfilms.com/</loc>
     <lastmod>2026-08-02</lastmod>
@@ -41,6 +41,21 @@
     <lastmod>2026-08-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cochranfilms.com/careers</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/roster-crew.jpg</image:loc><image:title>Film crew inside a dim room</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/roadmap-path.jpg</image:loc><image:title>Camera, notebook, and laptop for a booked creator</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/pipeline-handoff.jpg</image:loc><image:title>Videographer handing files to a client</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/rate-desk.jpg</image:loc><image:title>Desk for a freelance videographer day rate</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/outreach-room.jpg</image:loc><image:title>Videographer filming a restaurant at night</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/kit-still.jpg</image:loc><image:title>Cinema camera, microphone, and light</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/kit-starter.jpg</image:loc><image:title>Starter kit for a freelance videographer</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/kit-working.jpg</image:loc><image:title>Working kit for a booked videographer</image:title></image:image>
+    <image:image><image:loc>https://www.cochranfilms.com/assets/careers/kit-studio.jpg</image:loc><image:title>Studio kit for a production crew</image:title></image:image>
   </url>
   <url>
     <loc>https://www.cochranfilms.com/resume</loc>

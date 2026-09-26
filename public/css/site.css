@@ -17186,11 +17186,11 @@ body.resume-page .logo-item img.cca-mark--on-dark {
   }
 }
 
-/* Dark site header, matching the journal. Book Services is a yellow rectangle. */
+/* Solid black site header on every page. Book Services is a yellow rectangle. */
 .nav-wrapper {
-  background: rgba(10, 10, 10, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  background: #000000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: none !important;
 }
@@ -17248,13 +17248,13 @@ body.resume-page .mobile-menu-toggle {
   .nav-wrapper,
   .nav-container,
   body.nav-open .nav-wrapper {
-    background: rgba(10, 10, 10, 0.98) !important;
+    background: #000000 !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
 
   .nav-menu.show {
-    background: rgba(10, 10, 10, 0.98) !important;
+    background: #000000 !important;
     border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
     top: var(--nav-height) !important;
     bottom: 0 !important;
@@ -17364,4 +17364,16 @@ body.resume-page .mobile-menu-toggle {
 .home-journal-text {
   color: #f5f5f5 !important;
   -webkit-text-fill-color: #f5f5f5 !important;
+}
+
+/* Full link row collides with the logo below this width. */
+@media (max-width: 1180px) {
+  .nav-menu:not(.show) { display: none !important; }
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #f5f5f5 !important;
+    z-index: 10095 !important;
+  }
 }

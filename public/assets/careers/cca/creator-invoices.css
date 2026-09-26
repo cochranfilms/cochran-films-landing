@@ -1,0 +1,6146 @@
+/*
+ * Creator invoices studio — dual theme, full-width.
+ * Light tokens are the default (matches migrate-first else light).
+ * Dark tokens mirror agency dark surfaces; invoice paper stays readable white.
+ */
+
+.creator-invoices {
+  --ci-brand: #0025cc;
+  --ci-brand-hover: #001fa8;
+  --ci-base: #eef1f7;
+  --ci-surface: #ffffff;
+  --ci-surface-2: #f3f5fa;
+  --ci-card: #ffffff;
+  --ci-line: #c5cde0;
+  --ci-line-soft: #d7ddec;
+  --ci-text: #0b1020;
+  --ci-text-2: #3f4860;
+  --ci-text-3: #5f6880;
+  --ci-ok: #047857;
+  --ci-ok-bg: #ecfdf5;
+  --ci-ok-border: #a7f3d0;
+  --ci-warn: #b45309;
+  --ci-warn-bg: #fffbeb;
+  --ci-warn-border: #fcd34d;
+  --ci-danger: #b91c1c;
+  --ci-danger-border: #fca5a5;
+  --ci-paper: #ffffff;
+  --ci-paper-ink: #0b1020;
+  --ci-paper-muted: #5f6880;
+  --ci-paper-line: #e5e7ef;
+  --ci-preview-canvas: #e8ecf4;
+  --ci-focus: color-mix(in srgb, var(--ci-brand) 22%, transparent);
+  --ci-rail-width: 68px;
+  /* Updated by JS so the fixed rail sits below site chrome */
+  --ci-chrome-offset: 0px;
+
+  color: var(--ci-text);
+  background: var(--ci-base);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Member shell owns the viewport; fill the scrollport instead of a second 100vh. */
+.member-app-shell .creator-invoices {
+  min-height: 100%;
+}
+
+.creator-invoices .ci-text-button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--ci-brand);
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
+}
+
+.creator-invoices[data-theme='dark'] {
+  --ci-brand: #3b5bfd;
+  --ci-brand-hover: #2f4ae0;
+  --ci-base: #07080f;
+  --ci-surface: #0b0d17;
+  --ci-surface-2: #111527;
+  --ci-card: #0e1120;
+  --ci-line: #1e2338;
+  --ci-line-soft: #2a3148;
+  /* Studio chrome titles and body stay white. Invoice paper keeps --ci-paper-*. */
+  --ci-text: #ffffff;
+  --ci-text-2: #ffffff;
+  --ci-text-3: #ffffff;
+  --ci-ok: #34d399;
+  --ci-ok-bg: rgba(16, 185, 129, 0.12);
+  --ci-ok-border: rgba(16, 185, 129, 0.35);
+  --ci-warn: #fbbf24;
+  --ci-warn-bg: rgba(251, 191, 36, 0.12);
+  --ci-warn-border: rgba(251, 191, 36, 0.35);
+  --ci-danger: #f87171;
+  --ci-danger-border: rgba(248, 113, 113, 0.4);
+  --ci-paper: #ffffff;
+  --ci-paper-ink: #0b1020;
+  --ci-paper-muted: #5f6880;
+  --ci-paper-line: #e5e7ef;
+  --ci-preview-canvas: #111527;
+  --ci-focus: color-mix(in srgb, var(--ci-brand) 28%, transparent);
+}
+
+/*
+  Dark theme: light-mode chrome used hardcoded #fff / #f7f8fc fills while --ci-text
+  flips to light ink → white-on-white buttons and reminder rows. Override those surfaces.
+*/
+.creator-invoices[data-theme='dark'] .ci-btn--ghost {
+  background: transparent;
+  color: var(--ci-text);
+  border-color: var(--ci-line-soft);
+}
+
+.creator-invoices[data-theme='dark'] .ci-btn--ghost:hover:not(:disabled) {
+  background: var(--ci-surface-2);
+  border-color: color-mix(in srgb, var(--ci-brand) 40%, var(--ci-line-soft));
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-btn--secondary {
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+  border-color: var(--ci-line-soft);
+}
+
+.creator-invoices[data-theme='dark'] .ci-btn--secondary:hover:not(:disabled) {
+  background: #1a2238;
+  border-color: color-mix(in srgb, var(--ci-brand) 35%, var(--ci-line-soft));
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-btn--danger {
+  background: transparent;
+  color: var(--ci-danger);
+  border-color: var(--ci-danger-border);
+}
+
+.creator-invoices[data-theme='dark'] .ci-btn--danger:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--ci-danger);
+}
+
+.creator-invoices[data-theme='dark'] .ci-stripe__hint,
+.creator-invoices[data-theme='dark'] .ci-stripe p {
+  color: var(--ci-text-2) !important;
+}
+
+.creator-invoices[data-theme='dark'] .ci-rail__item.is-active {
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile,
+.creator-invoices[data-theme='dark'] .ci-soft-tile {
+  background: var(--ci-surface-2);
+  border-color: var(--ci-line-soft);
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile:hover,
+.creator-invoices[data-theme='dark'] .ci-soft-tile:hover {
+  background: color-mix(in srgb, var(--ci-brand) 12%, var(--ci-surface-2));
+  border-color: color-mix(in srgb, var(--ci-brand) 32%, var(--ci-line-soft));
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile.is-on,
+.creator-invoices[data-theme='dark'] .ci-soft-tile.is-on {
+  background: color-mix(in srgb, var(--ci-brand) 18%, var(--ci-surface-2));
+  border-color: color-mix(in srgb, var(--ci-brand) 45%, var(--ci-line-soft));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ci-brand) 16%, transparent);
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile.is-on:hover {
+  background: color-mix(in srgb, var(--ci-brand) 22%, var(--ci-surface-2));
+}
+
+.creator-invoices[data-theme='dark'] .ci-history-row:hover {
+  background: color-mix(in srgb, var(--ci-brand) 14%, var(--ci-card));
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile__check {
+  background: var(--ci-surface);
+  border-color: var(--ci-line-soft);
+  box-shadow: none;
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-tile.is-on .ci-reminder-tile__check {
+  border-color: var(--ci-brand);
+  background: var(--ci-brand);
+}
+
+.creator-invoices[data-theme='dark'] .ci-reminder-schedule__icon {
+  background: color-mix(in srgb, var(--ci-brand) 18%, var(--ci-surface-2));
+  border-color: color-mix(in srgb, var(--ci-brand) 28%, var(--ci-line-soft));
+}
+
+.creator-invoices[data-theme='dark'] .ci-send-modal .ci-btn--ghost {
+  background: transparent;
+  border-color: var(--ci-line-soft);
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-send-modal .ci-btn--secondary {
+  background: var(--ci-surface-2);
+  border-color: var(--ci-line-soft);
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-field input::placeholder,
+.creator-invoices[data-theme='dark'] .ci-field textarea::placeholder,
+.creator-invoices[data-theme='dark'] .ci-brand-hex input::placeholder {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* ---------- Left icon rail (fixed; offset below site chrome) ---------- */
+.creator-invoices .ci-rail {
+  position: fixed;
+  top: var(--ci-chrome-offset, 0px);
+  left: 0;
+  bottom: 0;
+  width: var(--ci-rail-width);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 14px 0 12px;
+  gap: 2px;
+  background: var(--ci-surface);
+  border-right: 1px solid var(--ci-line);
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.creator-invoices .ci-rail__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 1;
+  min-height: 0;
+  overflow: visible;
+}
+
+.creator-invoices .ci-rail__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  color: var(--ci-text-3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 0;
+  transition: background 0.13s ease, color 0.13s ease;
+}
+
+.creator-invoices .ci-rail__item svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.creator-invoices .ci-rail__item:hover {
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-rail__item.is-active {
+  background: #d5dcf0;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-rail__item.is-active::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: var(--ci-brand);
+  border-radius: 0;
+  pointer-events: none;
+}
+
+/* Under-icon tip (member-rail pattern, light tokens, sharp) */
+/* Tip to the right of icons — left rail; under-icon centering clips past viewport */
+.creator-invoices .ci-rail__tip {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 4px 8px;
+  background: var(--ci-base);
+  color: var(--ci-text);
+  border: 1px solid var(--ci-line);
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 90;
+  box-shadow: 0 6px 16px -6px rgba(11, 16, 32, 0.28);
+  transition: none;
+}
+
+.creator-invoices .ci-rail__item:hover .ci-rail__tip,
+.creator-invoices .ci-rail__item:focus-visible .ci-rail__tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main content offset so nothing clips under the rail */
+.creator-invoices .ci-main {
+  margin-left: var(--ci-rail-width);
+  width: calc(100% - var(--ci-rail-width));
+  max-width: none;
+  min-width: 0;
+  padding: 24px 16px 80px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-main {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .creator-invoices .ci-main {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 32px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .creator-invoices .ci-main {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+/* Mobile horizontal strip — stays under the site header while the page scrolls */
+.ci-rail-strip-wrap {
+  --ci-brand: #0025cc;
+  --ci-surface: #ffffff;
+  --ci-surface-2: #f3f5fa;
+  --ci-line: #c5cde0;
+  --ci-text: #0b1020;
+  --ci-text-3: #5f6880;
+  display: none;
+  position: relative;
+  z-index: 35;
+  background: var(--ci-surface);
+  border-bottom: 1px solid var(--ci-line);
+}
+
+.ci-rail-strip-wrap[data-theme='dark'] {
+  --ci-brand: #3b5bfd;
+  --ci-surface: #0b0d17;
+  --ci-surface-2: #111527;
+  --ci-line: #1e2338;
+  --ci-text: #ffffff;
+  --ci-text-3: #ffffff;
+}
+
+.ci-rail-strip {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 10px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ci-rail-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.ci-rail-strip__item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 64px;
+  height: 56px;
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  color: var(--ci-text-3);
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.ci-rail-strip__item svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.ci-rail-strip__item:hover {
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+}
+
+.ci-rail-strip__item.is-active {
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+  position: relative;
+}
+
+.ci-rail-strip__item.is-active::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 3px;
+  background: var(--ci-brand);
+}
+
+.creator-invoices .ci-section-panel {
+  width: 100%;
+  min-width: 0;
+}
+
+.creator-invoices .ci-section-panel > .ci-panel,
+.creator-invoices .ci-section-panel > .ci-history,
+.creator-invoices .ci-section-panel > .ci-manage-card {
+  width: 100%;
+}
+
+.creator-invoices .ci-manage-card {
+  border: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+  padding: 20px 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-manage-card__head {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-manage-card__head--split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 16px;
+}
+
+.creator-invoices .ci-manage-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.creator-invoices .ci-manage-card__head h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-manage-card__head p {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  color: var(--ci-text-3);
+  line-height: 1.45;
+}
+
+/* Soft chrome primitives — scoped to invoice studio only; paper stays sharp */
+.creator-invoices .ci-soft-card {
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 12px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+  padding: 16px 14px 14px;
+}
+
+.creator-invoices .ci-soft-card__head {
+  margin: 0 0 14px;
+}
+
+.creator-invoices .ci-soft-card__title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.creator-invoices .ci-soft-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  color: var(--ci-brand);
+  background: color-mix(in srgb, var(--ci-brand) 9%, #fff);
+  border: 1px solid color-mix(in srgb, var(--ci-brand) 16%, var(--ci-line-soft));
+}
+
+.creator-invoices .ci-soft-card__head h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-soft-card__head p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ci-text-3);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-soft-tile {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 10px;
+  background: #f7f8fc;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.creator-invoices .ci-soft-tile:hover {
+  border-color: color-mix(in srgb, var(--ci-brand) 28%, var(--ci-line-soft));
+  background: color-mix(in srgb, var(--ci-brand) 4%, #fff);
+}
+
+.creator-invoices .ci-soft-tile.is-on {
+  border-color: color-mix(in srgb, var(--ci-brand) 34%, var(--ci-line-soft));
+  background: color-mix(in srgb, var(--ci-brand) 6%, #fff);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ci-brand) 12%, transparent);
+}
+
+.creator-invoices .ci-soft-tile input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.creator-invoices .ci-soft-tile .ci-reminder-tile__check {
+  margin-top: 2px;
+}
+
+.creator-invoices .ci-soft-tile__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.creator-invoices .ci-soft-tile__text strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-soft-tile__text span {
+  font-size: 12px;
+  color: var(--ci-text-3);
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-manage-form {
+  margin-bottom: 20px;
+}
+
+.creator-invoices .ci-manage-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 759px) {
+  .creator-invoices .ci-rail {
+    display: none;
+  }
+
+  .ci-rail-strip-wrap {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 40;
+  }
+
+  .member-app-shell .creator-invoices {
+    --ci-chrome-offset: calc(56px + env(safe-area-inset-top, 0px));
+  }
+
+  .creator-invoices .ci-main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Paper + compact controls stay sharp. Soft chrome uses .ci-soft-card / manage-card / etc. */
+.creator-invoices .ci-field input,
+.creator-invoices .ci-field textarea,
+.creator-invoices .ci-field select,
+.creator-invoices .ci-btn,
+.creator-invoices .ci-chip,
+.creator-invoices .ci-line-row,
+.creator-invoices .ci-preview-stage,
+.creator-invoices .ci-paper,
+.creator-invoices .ci-collapse,
+.creator-invoices .ci-logo-well,
+.creator-invoices .ci-upgrade,
+.creator-invoices .ci-loading,
+.creator-invoices .ci-toolbar,
+.creator-invoices .ci-rail,
+.creator-invoices .ci-rail__item,
+.creator-invoices .ci-rail__tip,
+.creator-invoices .ci-rail-strip__item {
+  border-radius: 0;
+}
+
+.creator-invoices .ci-money {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Header / toolbar ---------- */
+.creator-invoices .ci-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--ci-line);
+}
+
+.creator-invoices .ci-toolbar__aside {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+.creator-invoices .ci-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.creator-invoices .ci-kicker {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ci-brand);
+}
+
+.creator-invoices .ci-kicker--studio {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  line-height: 1.2;
+  color: var(--ci-brand);
+}
+
+.creator-invoices .ci-kicker--studio::after {
+  content: '';
+  display: block;
+  width: 2.4rem;
+  height: 2px;
+  margin: 10px auto 0;
+  background: currentColor;
+}
+
+.creator-invoices .ci-title {
+  margin: 0;
+  font-size: clamp(1.85rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-value-band {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  font-weight: 550;
+  color: var(--ci-text);
+  max-width: 36rem;
+}
+
+/* ---------- Stripe banner ---------- */
+.creator-invoices .ci-stripe {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  border: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+@media (min-width: 768px) {
+  .creator-invoices .ci-stripe {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.creator-invoices .ci-stripe--ok {
+  border-color: var(--ci-ok-border);
+  background: var(--ci-ok-bg);
+}
+
+.creator-invoices .ci-stripe--ok .ci-kicker {
+  color: var(--ci-ok);
+}
+
+.creator-invoices .ci-stripe--warn {
+  border-color: var(--ci-warn-border);
+  background: var(--ci-warn-bg);
+}
+
+.creator-invoices .ci-stripe--warn .ci-kicker {
+  color: var(--ci-warn);
+}
+
+.creator-invoices .ci-stripe h2 {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-stripe p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ci-text-2);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-stripe__hint {
+  color: var(--ci-text-3) !important;
+  font-size: 12px !important;
+}
+
+/* ---------- Metrics strip ---------- */
+.creator-invoices .ci-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 24px;
+  border: 1px solid transparent;
+  background: var(--ci-surface);
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices[data-theme='dark'] .ci-metrics {
+  border-color: var(--ci-line);
+  box-shadow: none;
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .creator-invoices .ci-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.creator-invoices .ci-metrics__cell {
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--ci-line);
+  border-right: none;
+  background: var(--ci-card);
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-metrics__cell {
+    border-right: 1px solid var(--ci-line);
+  }
+
+  .creator-invoices .ci-metrics__cell:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .creator-invoices .ci-metrics__cell {
+    border-bottom: none;
+    border-right: 1px solid var(--ci-line);
+  }
+
+  .creator-invoices .ci-metrics__cell:nth-child(2n) {
+    border-right: 1px solid var(--ci-line);
+  }
+
+  .creator-invoices .ci-metrics__cell:last-child {
+    border-right: none;
+  }
+}
+
+.creator-invoices .ci-metrics__l {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-metrics__v {
+  margin: 8px 0 0;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ci-text);
+}
+
+/* Subtle save confirmation — not a pill/badge toast */
+.creator-invoices .ci-save-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px -10px rgba(4, 120, 87, 0.35);
+  pointer-events: none;
+  animation: ci-save-toast-in 0.18s ease-out;
+}
+
+.creator-invoices.ci-modal-portal .ci-save-toast {
+  z-index: 4;
+  left: 50%;
+}
+
+.creator-invoices .ci-save-toast::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+@keyframes ci-save-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (min-width: 760px) {
+  .creator-invoices .ci-save-toast {
+    left: calc(50% + (var(--ci-rail-width) / 2));
+  }
+
+  .creator-invoices.ci-modal-portal .ci-save-toast {
+    left: 50%;
+  }
+}
+
+/* ---------- Create editor (centered card + contextual inserts) ---------- */
+.creator-invoices .ci-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto 28px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.creator-invoices .ci-editor__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.creator-invoices .ci-editor__main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.creator-invoices .ci-editor__aside {
+  min-width: 0;
+}
+
+@media (min-width: 1180px) {
+  .creator-invoices .ci-editor__workspace {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .creator-invoices .ci-editor__workspace {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 28px;
+  }
+}
+
+.creator-invoices .ci-editor__toolbar {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-card);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .creator-invoices .ci-editor__toolbar {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    align-items: end;
+  }
+}
+
+.creator-invoices .ci-editor__toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.creator-invoices .ci-editor__heading {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-editor__subhead {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-editor__toolbar:has(.ci-editor__heading) {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.creator-invoices .ci-estimate-guide__steps {
+  margin: 0 0 12px;
+  padding: 0 0 0 18px;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-estimate-guide__expiry {
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--ci-line-soft);
+  font-size: 13px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-estimate-guide__expiry strong {
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-paper__party-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.creator-invoices .ci-paper__party-head .ci-paper__party-label {
+  margin: 0;
+}
+
+.creator-invoices .ci-paper__party-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.creator-invoices .ci-insert__trigger--muted {
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-leave-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(11, 16, 32, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.creator-invoices .ci-leave-modal {
+  width: min(420px, 100%);
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  padding: 22px 22px 18px;
+  box-shadow: 0 24px 48px -24px rgba(11, 16, 32, 0.45);
+}
+
+.creator-invoices .ci-leave-modal h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-leave-modal p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-leave-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.creator-invoices .ci-paper-line-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: -8px 0 18px;
+}
+
+.creator-invoices .ci-paper-line-tools .ci-paper-add-line {
+  margin: 0;
+}
+
+.creator-invoices .ci-insert {
+  position: relative;
+  display: inline-flex;
+}
+
+.creator-invoices .ci-insert__trigger {
+  border: none;
+  background: transparent;
+  color: var(--ci-paper-accent, var(--ci-brand));
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.creator-invoices .ci-insert__trigger:hover,
+.creator-invoices .ci-insert.is-open .ci-insert__trigger {
+  text-decoration: underline;
+}
+
+.creator-invoices .ci-insert__panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  width: min(320px, 78vw);
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  box-shadow: 0 16px 36px -18px rgba(11, 16, 32, 0.35);
+  padding: 8px;
+}
+
+.creator-invoices .ci-paper-line-tools .ci-insert__panel {
+  left: auto;
+  right: 0;
+}
+
+.creator-invoices .ci-insert__search {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+  font-size: 13px;
+  padding: 8px 10px;
+  outline: none;
+  border-radius: 0;
+  margin-bottom: 6px;
+}
+
+.creator-invoices .ci-insert__search:focus {
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+.creator-invoices .ci-insert__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.creator-invoices .ci-insert__option {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--ci-text);
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-insert__option:hover {
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-insert__primary {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-insert__secondary {
+  font-size: 11px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-insert__empty {
+  padding: 12px 10px;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-action-bar__btns {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.creator-invoices .ci-action-bar__btns .ci-btn + .ci-btn {
+  margin-left: 0;
+}
+
+.creator-invoices .ci-preview-stage--edit {
+  max-width: none;
+}
+
+.creator-invoices .ci-paper--edit {
+  max-width: none;
+}
+
+.creator-invoices .ci-paper-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 2px 0;
+  outline: none;
+  resize: vertical;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-paper-input:hover,
+.creator-invoices .ci-paper-input:focus {
+  border-bottom-color: color-mix(in srgb, var(--ci-paper-accent, var(--ci-brand)) 55%, var(--ci-paper-line));
+  background: color-mix(in srgb, var(--ci-paper-accent, var(--ci-brand)) 4%, transparent);
+}
+
+.creator-invoices .ci-paper--studio-edit .ci-paper-input {
+  border-bottom-color: var(--ci-paper-line);
+}
+
+.creator-invoices .ci-paper-input::placeholder {
+  color: var(--ci-paper-muted);
+  opacity: 0.75;
+}
+
+.creator-invoices .ci-paper-input--title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper-input--desc {
+  display: block;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+  margin: 0 0 18px;
+  line-height: 1.45;
+  min-height: 2.6em;
+}
+
+.creator-invoices .ci-paper-input--inline {
+  width: auto;
+  min-width: 8.5rem;
+  display: inline-block;
+  font-weight: 650;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper-input--num {
+  text-align: right;
+  max-width: 6.5rem;
+  margin-left: auto;
+}
+
+.creator-invoices .ci-paper-party-fields {
+  display: grid;
+  gap: 4px;
+}
+
+.creator-invoices .ci-paper-save-contact {
+  margin-top: 8px;
+  justify-self: start;
+  border: none;
+  background: transparent;
+  color: var(--ci-paper-accent, var(--ci-brand));
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.creator-invoices .ci-paper-save-contact:hover {
+  text-decoration: underline;
+}
+
+.creator-invoices .ci-paper-table--edit th:last-child,
+.creator-invoices .ci-paper-table--edit td:last-child {
+  text-align: right;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.creator-invoices .ci-paper-line-actions {
+  display: inline-flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.creator-invoices .ci-paper-icon-btn {
+  border: none;
+  background: transparent;
+  color: var(--ci-paper-muted);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.creator-invoices .ci-paper-icon-btn:hover:not(:disabled) {
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper-icon-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.creator-invoices .ci-paper-add-line {
+  display: inline-block;
+  margin: -8px 0 18px;
+  border: none;
+  background: transparent;
+  color: var(--ci-paper-accent, var(--ci-brand));
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.creator-invoices .ci-paper-add-line:hover {
+  text-decoration: underline;
+}
+
+.creator-invoices .ci-paper-notes-edit .ci-paper-input {
+  margin-top: 4px;
+}
+
+.creator-invoices .ci-paper-field {
+  display: block;
+}
+
+.creator-invoices .ci-panel {
+  border: 1px solid var(--ci-line);
+  background: var(--ci-card);
+  padding: 22px;
+  box-shadow: 0 1px 0 rgba(11, 16, 32, 0.04);
+}
+
+@media (min-width: 1100px) {
+  .creator-invoices .ci-panel {
+    padding: 26px;
+  }
+}
+
+.creator-invoices .ci-panel__head {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-panel__head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-panel__head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ci-text-2);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.creator-invoices .ci-section__label {
+  margin: 0 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-fields {
+  display: grid;
+  gap: 12px;
+}
+
+.creator-invoices .ci-fields--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-fields--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.creator-invoices .ci-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.creator-invoices .ci-recipient-field {
+  position: relative;
+}
+
+.creator-invoices .ci-recipient-input {
+  position: relative;
+}
+
+.creator-invoices .ci-recipient-suggest {
+  position: absolute;
+  z-index: 8;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.14);
+}
+
+.creator-invoices .ci-recipient-suggest button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-recipient-suggest button:hover,
+.creator-invoices .ci-recipient-suggest button.is-active {
+  background: color-mix(in srgb, var(--ci-brand) 12%, transparent);
+}
+
+.creator-invoices .ci-recipient-suggest strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.creator-invoices .ci-recipient-suggest span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-field > span {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-field input,
+.creator-invoices .ci-field textarea,
+.creator-invoices .ci-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  padding: 11px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.creator-invoices .ci-field input::placeholder,
+.creator-invoices .ci-field textarea::placeholder {
+  color: #8b93a8;
+}
+
+.creator-invoices .ci-field input:hover,
+.creator-invoices .ci-field textarea:hover {
+  border-color: color-mix(in srgb, var(--ci-brand) 35%, var(--ci-line));
+}
+
+.creator-invoices .ci-field input:focus,
+.creator-invoices .ci-field textarea:focus {
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+  background: #fff;
+}
+
+.creator-invoices .ci-field input:disabled {
+  opacity: 0.7;
+  color: var(--ci-text-3);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-field textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.creator-invoices .ci-line-row {
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface-2);
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.creator-invoices .ci-line-row__meta {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 8px;
+}
+
+.creator-invoices .ci-line-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Buttons / chips ---------- */
+.creator-invoices .ci-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.creator-invoices .ci-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.creator-invoices .ci-btn--primary {
+  background: var(--ci-brand);
+  color: #ffffff;
+  border-color: var(--ci-brand);
+}
+
+.creator-invoices .ci-btn--primary:hover:not(:disabled) {
+  background: var(--ci-brand-hover);
+  border-color: var(--ci-brand-hover);
+  color: #ffffff;
+}
+
+.creator-invoices .ci-btn--secondary {
+  background: var(--ci-text);
+  color: #ffffff;
+  border-color: var(--ci-text);
+}
+
+.creator-invoices .ci-btn--secondary:hover:not(:disabled) {
+  background: #1a2238;
+  border-color: #1a2238;
+  color: #ffffff;
+}
+
+.creator-invoices .ci-btn--ghost {
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  border-color: var(--ci-line);
+}
+
+.creator-invoices .ci-btn--ghost:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--ci-brand) 40%, var(--ci-line));
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-btn--danger {
+  background: var(--ci-surface);
+  color: var(--ci-danger);
+  border-color: var(--ci-danger-border);
+}
+
+.creator-invoices .ci-btn--danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ci-danger) 10%, var(--ci-surface));
+  color: var(--ci-danger);
+}
+
+.creator-invoices .ci-btn--sm {
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+.creator-invoices .ci-btn--block {
+  width: 100%;
+}
+
+.creator-invoices .ci-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--ci-line);
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-text-2);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-chip--paid {
+  color: #065f46;
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+}
+
+.creator-invoices .ci-chip--open {
+  color: #1e3a8a;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.creator-invoices .ci-chip--overdue {
+  color: #9f1239;
+  border-color: #fda4af;
+  background: #fff1f2;
+}
+
+.creator-invoices .ci-chip--processing {
+  color: #854d0e;
+  border-color: #fde68a;
+  background: #fffbeb;
+}
+
+.creator-invoices .ci-chip--void {
+  color: var(--ci-text-2);
+  border-color: var(--ci-line);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-chip--uncollectible {
+  color: #991b1b;
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.creator-invoices .ci-chip--warn {
+  color: #92400e;
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
+
+/* ---------- Sticky create action (left column only) ---------- */
+.creator-invoices .ci-create-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.creator-invoices .ci-create-body {
+  flex: 1;
+}
+
+.creator-invoices .ci-action-bar {
+  position: static;
+  z-index: auto;
+  margin-top: 0;
+  padding: 14px 18px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 12px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-action-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.creator-invoices .ci-action-bar__total {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 750;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-action-bar__total span:first-child {
+  color: var(--ci-text-3);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+
+@media (max-width: 639px) {
+  .creator-invoices .ci-action-bar {
+    padding: 12px;
+  }
+
+  .creator-invoices .ci-action-bar__btns {
+    gap: 6px;
+  }
+
+  .creator-invoices .ci-action-bar__btns .ci-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 6px;
+    font-size: 11px;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+}
+
+/* ---------- Preview stage + paper ---------- */
+.creator-invoices .ci-preview-col {
+  min-width: 0;
+}
+
+@media (min-width: 1100px) {
+  .creator-invoices .ci-preview-col {
+    position: sticky;
+    top: 16px;
+    align-self: start;
+  }
+}
+
+.creator-invoices .ci-preview-stage {
+  border: 1px solid var(--ci-line);
+  background: var(--ci-preview-canvas);
+  padding: 16px;
+  box-shadow: 0 1px 0 rgba(11, 16, 32, 0.04);
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-preview-stage {
+    padding: 22px;
+  }
+}
+
+.creator-invoices .ci-preview-stage__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.creator-invoices .ci-preview-stage__label p {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-paper {
+  background: var(--ci-paper);
+  color: var(--ci-paper-ink);
+  border: 1px solid var(--ci-paper-line);
+  box-shadow:
+    0 1px 2px rgba(11, 16, 32, 0.04),
+    0 18px 40px rgba(11, 16, 32, 0.1);
+  padding: 22px 20px 20px;
+  min-height: 440px;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .creator-invoices .ci-paper {
+    padding: 30px 28px 26px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .creator-invoices .ci-editor .ci-paper {
+    padding: 36px 40px 32px;
+  }
+}
+
+.creator-invoices .ci-paper__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ci-paper-accent, var(--ci-brand));
+}
+
+.creator-invoices .ci-paper__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.creator-invoices .ci-paper__brand {
+  min-width: 0;
+  flex: 1;
+}
+
+.creator-invoices .ci-paper__logo {
+  display: block;
+  max-height: 48px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.creator-invoices .ci-paper__logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+}
+
+.creator-invoices .ci-paper__logo-row .ci-paper__logo,
+.creator-invoices .ci-paper__logo-row .ci-paper__logo-btn {
+  margin-bottom: 0;
+}
+
+.creator-invoices .ci-paper__logo-change {
+  flex-shrink: 0;
+  border-radius: 0;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.creator-invoices .ci-paper__company {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper__meta-line {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.creator-invoices .ci-paper__doc {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.creator-invoices .ci-paper__doc-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-paper-accent, var(--ci-brand));
+}
+
+.creator-invoices .ci-paper__doc-meta {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-paper__doc-meta strong {
+  color: var(--ci-paper-ink);
+  font-weight: 650;
+}
+
+.creator-invoices .ci-paper__parties {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+@media (min-width: 480px) {
+  .creator-invoices .ci-paper__parties {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.creator-invoices .ci-paper__party-label {
+  margin: 0 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-paper__party-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-paper-ink);
+  white-space: pre-line;
+}
+
+.creator-invoices .ci-paper__party-body--muted {
+  color: var(--ci-paper-muted);
+  font-style: italic;
+}
+
+.creator-invoices .ci-paper__title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper__desc {
+  margin: 0 0 18px;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-paper-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+
+.creator-invoices .ci-paper-table th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ci-paper-muted);
+  border-bottom: 1px solid var(--ci-paper-line);
+  padding: 0 0 8px;
+}
+
+.creator-invoices .ci-paper-table th:nth-child(2),
+.creator-invoices .ci-paper-table th:nth-child(3),
+.creator-invoices .ci-paper-table th:nth-child(4),
+.creator-invoices .ci-paper-table td:nth-child(2),
+.creator-invoices .ci-paper-table td:nth-child(3),
+.creator-invoices .ci-paper-table td:nth-child(4) {
+  text-align: right;
+}
+
+.creator-invoices .ci-paper-table td {
+  padding: 10px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--ci-paper-line);
+  color: var(--ci-paper-ink);
+  vertical-align: top;
+}
+
+.creator-invoices .ci-paper-table td:nth-child(2),
+.creator-invoices .ci-paper-table td:nth-child(3),
+.creator-invoices .ci-paper-table td:nth-child(4) {
+  font-variant-numeric: tabular-nums;
+}
+
+.creator-invoices .ci-paper-empty {
+  border: 1px dashed color-mix(in srgb, var(--ci-paper-muted) 35%, var(--ci-paper-line));
+  padding: 28px 14px;
+  text-align: center;
+  margin-bottom: 18px;
+  background: #f8f9fc;
+}
+
+.creator-invoices .ci-paper-empty__rule {
+  height: 1px;
+  width: 48%;
+  margin: 0 auto 12px;
+  background: color-mix(in srgb, var(--ci-paper-muted) 28%, transparent);
+}
+
+.creator-invoices .ci-paper-empty p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+  letter-spacing: 0.02em;
+}
+
+.creator-invoices .ci-paper__foot {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 480px) {
+  .creator-invoices .ci-paper__foot {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+  }
+}
+
+.creator-invoices .ci-paper__notes {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ci-paper-muted);
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.creator-invoices .ci-paper__notes strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ci-paper-muted);
+  font-weight: 700;
+}
+
+.creator-invoices .ci-paper__totals {
+  text-align: right;
+}
+
+.creator-invoices .ci-paper__total-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  align-items: baseline;
+  margin: 0;
+  font-size: 13px;
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-paper__total-row strong {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ci-paper-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Branding collapse ---------- */
+.creator-invoices .ci-collapse {
+  border: 1px solid var(--ci-line);
+  background: var(--ci-card);
+  margin-bottom: 20px;
+  box-shadow: 0 1px 0 rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-collapse__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  color: var(--ci-text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.creator-invoices .ci-collapse__toggle:hover {
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-collapse__toggle h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-collapse__toggle p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-collapse__chevron {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--ci-brand);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.creator-invoices .ci-collapse__body {
+  padding: 0 20px 20px;
+  border-top: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-warn-text {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--ci-warn);
+}
+
+.creator-invoices .ci-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.creator-invoices .ci-brand-studio {
+  --ci-preview-zoom: 1;
+  display: grid;
+  gap: 12px;
+}
+
+.creator-invoices .ci-brand-studio__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.creator-invoices .ci-brand-palette {
+  display: grid;
+  gap: 20px;
+  padding: 18px 20px 20px;
+  border: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-brand-palette__title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-palette__col {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .creator-invoices .ci-brand-palette {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .creator-invoices .ci-brand-palette__title {
+    grid-column: 1 / -1;
+  }
+}
+
+.creator-invoices .ci-brand-studio__form {
+  min-width: 0;
+  container-type: inline-size;
+  container-name: ci-brand-form;
+}
+
+@container ci-brand-form (max-width: 360px) {
+  .creator-invoices .ci-brand-studio__form .ci-fields--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creator-invoices .ci-brand-used {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ci-text-3);
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-brand-group {
+  display: grid;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-brand-group:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.creator-invoices .ci-brand-group__title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-dropzone {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  border: 1px dashed var(--ci-line);
+  background: var(--ci-surface-2);
+  color: var(--ci-text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-brand-dropzone.is-over {
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+.creator-invoices .ci-brand-dropzone__logo {
+  display: block;
+  max-height: 56px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.creator-invoices .ci-brand-dropzone__empty {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.creator-invoices .ci-brand-dropzone__meta {
+  font-size: 12px;
+  color: var(--ci-text-3);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-brand-swatches {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.creator-invoices .ci-brand-swatches legend {
+  padding: 0;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-swatches__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.creator-invoices .ci-brand-swatch {
+  appearance: none;
+  display: grid;
+  gap: 5px;
+  width: 68px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ci-text-2);
+  cursor: pointer;
+}
+
+.creator-invoices .ci-brand-swatch__chip {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 36px;
+  border: 1px solid var(--ci-line);
+}
+
+.creator-invoices .ci-brand-swatch.is-selected .ci-brand-swatch__chip {
+  box-shadow: 0 0 0 2px var(--ci-surface), 0 0 0 4px var(--ci-brand);
+}
+
+.creator-invoices .ci-brand-swatch__check {
+  position: absolute;
+  inset: auto 5px 5px auto;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  color: #fff;
+  filter: drop-shadow(0 0 1px #0b1020);
+}
+
+.creator-invoices .ci-brand-swatch__name {
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.creator-invoices .ci-brand-hex {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 12px;
+  align-items: end;
+}
+
+.creator-invoices .ci-brand-hex label {
+  display: grid;
+  gap: 5px;
+}
+
+.creator-invoices .ci-brand-hex label span {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-hex input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  padding: 11px 12px;
+  font-size: 14px;
+}
+
+.creator-invoices .ci-brand-hex__hint {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 12px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-studio-savebar {
+  position: static;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 12px auto;
+  padding: 6px 10px;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+}
+
+.creator-invoices .ci-studio-savebar__status {
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--ci-text-2);
+  white-space: nowrap;
+}
+
+.creator-invoices .ci-studio-savebar__btn {
+  flex: 0 0 auto;
+  min-width: 88px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.creator-invoices .ci-paper__accent--edit {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-paper__logo-btn {
+  appearance: none;
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ci-paper-muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-paper__logo-btn.is-empty {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--ci-paper-line);
+}
+
+.creator-invoices .ci-paper__echo-lock {
+  margin: 6px 0 0;
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-brand-defaults {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+}
+
+.creator-invoices .ci-brand-defaults summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-defaults .ci-soft-tile,
+.creator-invoices .ci-brand-defaults .ci-field {
+  margin-top: 12px;
+}
+
+.creator-invoices .ci-brand-banner-overlay {
+  display: grid;
+  gap: 8px;
+}
+
+.creator-invoices .ci-brand-banner-overlay.is-empty {
+  justify-items: start;
+  padding: 8px 0;
+}
+
+.ci-studio-popover-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  border: 0;
+  background: transparent;
+}
+
+.ci-studio-popover {
+  position: fixed;
+  z-index: 81;
+  width: min(360px, calc(100vw - 24px));
+  padding: 16px;
+  border: 1px solid var(--ci-line, #d8e0ef);
+  background: var(--ci-surface, #fff);
+  color: var(--ci-text, #0b1020);
+  box-shadow: 0 16px 40px rgba(11, 16, 32, 0.18);
+}
+
+.creator-invoices .ci-brand-studio__mobile-switch,
+.creator-invoices .ci-brand-pin {
+  display: none;
+}
+
+.creator-invoices .ci-brand-spine {
+  min-width: 0;
+}
+
+.creator-invoices .ci-brand-spine__scroll {
+  display: grid;
+  gap: 14px;
+  overflow: visible;
+}
+
+.creator-invoices .ci-brand-surface {
+  min-width: 0;
+  container-type: inline-size;
+  container-name: ci-brand-preview;
+}
+
+.creator-invoices .ci-brand-surface__label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-surface__frame {
+  overflow: visible;
+  background: var(--ci-preview-canvas);
+  border: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-brand-surface__frame.is-over {
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+.creator-invoices .ci-brand-surface__frame .ci-paper {
+  width: 100%;
+  zoom: 1;
+  transform: none;
+  min-height: 0;
+  padding: 16px 14px 14px;
+  color: var(--ci-paper-ink);
+  background: var(--ci-paper);
+  overflow-wrap: break-word;
+}
+
+.creator-invoices .ci-brand-surface__frame .ci-paper__doc {
+  min-width: 0;
+  flex: 0 1 auto;
+  max-width: 58%;
+}
+
+.creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__fact dd {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@supports not (zoom: 1) {
+  .creator-invoices .ci-brand-surface__frame .ci-paper {
+    width: 100%;
+    zoom: unset;
+  }
+}
+
+.creator-invoices .ci-brand-surface__frame .ci-paper__top,
+.creator-invoices .ci-brand-surface__frame .ci-paper__parties {
+  margin-bottom: 14px;
+}
+
+@container (max-width: 320px) {
+  .creator-invoices .ci-brand-surface__frame .ci-paper__parties {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creator-invoices .ci-brand-surface__wash {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-brand-surface__wash .ci-brand-surface__frame {
+  border: 0;
+}
+
+.creator-invoices .ci-brand-surface__page-banner {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.creator-invoices .ci-brand-page-banner-field {
+  margin-top: 18px;
+}
+
+.creator-invoices .ci-brand-page-banner-field .ci-brand-used {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.creator-invoices .ci-brand-page-banner-preview {
+  overflow: hidden;
+  border: 1px dashed var(--ci-line);
+  border-radius: 12px;
+  background: var(--ci-preview-canvas);
+}
+
+.creator-invoices .ci-brand-page-banner-preview.is-empty {
+  aspect-ratio: var(--ci-page-banner-aspect, 18 / 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ci-text-3);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.creator-invoices .ci-brand-page-banner-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 6px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.creator-invoices .ci-brand-page-banner-actions .ci-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 8px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+@container ci-brand-form (max-width: 360px) {
+  .creator-invoices .ci-brand-page-banner-actions {
+    gap: 4px;
+  }
+
+  .creator-invoices .ci-brand-page-banner-actions .ci-btn {
+    padding: 7px 4px;
+    font-size: 10px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.creator-invoices .ci-brand-page-banner-fade {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.creator-invoices .ci-brand-page-banner-fade > span {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-brand-page-banner-fade > span em {
+  font-style: normal;
+  color: var(--ci-text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.creator-invoices .ci-brand-page-banner-fade input[type='range'] {
+  width: 100%;
+  accent-color: var(--ci-brand, #1b00ff);
+}
+
+.creator-invoices .ci-brand-page-banner-help {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-brand-surface__pay {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.creator-invoices .ci-brand-surface.is-dimmed {
+  opacity: 0.72;
+}
+
+.creator-invoices .ci-brand-surface__note,
+.creator-invoices .ci-brand-spine__caption {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ci-text-3);
+}
+
+@media (max-width: 879px) {
+  .creator-invoices .ci-brand-studio {
+    --ci-preview-zoom: 1;
+  }
+
+  .creator-invoices .ci-brand-studio__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .creator-invoices .ci-brand-studio__mobile-switch {
+    display: flex;
+    position: static;
+    gap: 0;
+    border: 1px solid var(--ci-line);
+    background: var(--ci-surface);
+  }
+
+  .creator-invoices .ci-brand-studio__mobile-switch button {
+    flex: 1;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--ci-text-2);
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .creator-invoices .ci-brand-studio__mobile-switch button.is-on {
+    background: var(--ci-surface-2);
+    color: var(--ci-text);
+  }
+
+  .creator-invoices .ci-paper--studio-edit .ci-paper-input,
+  .ci-thanks--studio-edit .ci-thanks-edit-input {
+    font-size: 16px;
+  }
+
+  .creator-invoices .ci-brand-surface {
+    display: none;
+  }
+
+  .creator-invoices .ci-brand-surface.is-mobile-on {
+    display: block;
+  }
+}
+
+@media (min-width: 880px) and (max-width: 1199px) {
+  .creator-invoices .ci-brand-studio__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .creator-invoices .ci-brand-studio__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper {
+    padding: 18px 16px 16px;
+  }
+
+  .creator-invoices .ci-brand-surface__wash {
+    padding: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .creator-invoices .ci-brand-studio__layout {
+    gap: 28px;
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper {
+    padding: 22px 20px 18px;
+  }
+}
+
+/* ---------- History ---------- */
+.creator-invoices .ci-history {
+  border: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+  overflow: hidden;
+}
+
+.creator-invoices .ci-history__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--ci-line);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-history__intro {
+  min-width: min(100%, 16rem);
+  flex: 1;
+}
+
+.creator-invoices .ci-history__head h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-history__lede {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--ci-text);
+  max-width: 38rem;
+}
+
+.creator-invoices .ci-history__count {
+  margin: 12px 0 0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-history-empty {
+  margin: 18px;
+  padding: 40px 16px;
+  border: 1px dashed var(--ci-line);
+  text-align: center;
+  color: var(--ci-text-3);
+  font-size: 14px;
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-invoices .ci-history-row {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--ci-line-soft);
+  background: var(--ci-card);
+}
+
+.creator-invoices .ci-history-row:hover {
+  background: color-mix(in srgb, var(--ci-brand) 7%, var(--ci-card));
+}
+
+.creator-invoices .ci-history-row:last-child {
+  border-bottom: none;
+}
+
+.creator-invoices .ci-history-row__main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .creator-invoices .ci-history-row__main {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.creator-invoices .ci-history-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.creator-invoices .ci-history-row__id {
+  font-size: 12px;
+  color: var(--ci-text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.creator-invoices .ci-history-row__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-history-row__sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-history-row__email {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-history-row__amount {
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .creator-invoices .ci-history-row__amount {
+    text-align: right;
+    flex-shrink: 0;
+  }
+}
+
+.creator-invoices .ci-history-row__amount p {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-history-row__amount span {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--ci-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.creator-invoices .ci-history-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ---------- Gates ---------- */
+.creator-invoices.ci-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ci-text-2);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  min-height: 50vh;
+}
+
+.creator-invoices .ci-upgrade {
+  border: 1px solid var(--ci-line);
+  background: var(--ci-card);
+  padding: 32px 28px;
+  max-width: 520px;
+  margin: 64px auto;
+  box-shadow: 0 12px 32px rgba(11, 16, 32, 0.06);
+}
+
+.creator-invoices .ci-upgrade h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-upgrade p {
+  margin: 10px 0 0;
+  color: var(--ci-text-2);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.creator-invoices .ci-upgrade .ci-btn {
+  margin-top: 18px;
+}
+
+.creator-invoices .ci-paper__total-row--soft {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.creator-invoices .ci-paper__total-row--soft strong {
+  font-size: 0.95rem;
+  font-weight: 750;
+}
+
+.creator-invoices .ci-paper__estimate-note {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--ci-paper-muted);
+  letter-spacing: 0.02em;
+}
+
+.creator-invoices .ci-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.creator-invoices .ci-manage-empty {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices div.ci-manage-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.creator-invoices div.ci-manage-empty p {
+  margin: 0;
+}
+
+.creator-invoices .ci-manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4px;
+  border: none;
+}
+
+.creator-invoices .ci-manage-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 2px;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid var(--ci-line-soft);
+  border-radius: 0;
+  background: var(--ci-surface);
+  transition:
+    background 140ms ease,
+    border-color 140ms ease;
+}
+
+.creator-invoices .ci-manage-row:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.creator-invoices[data-theme='dark'] .ci-manage-card {
+  border-color: var(--ci-line);
+}
+
+.creator-invoices .ci-manage-row--link:hover {
+  border-color: color-mix(in srgb, var(--ci-brand) 28%, var(--ci-line-soft));
+  background: color-mix(in srgb, var(--ci-brand) 10%, var(--ci-surface-2));
+}
+
+.creator-invoices .ci-manage-row strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-manage-row p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  padding: 11px 12px;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-field select:focus {
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+/* ---------- Contact list search ---------- */
+.creator-invoices .ci-contact-search {
+  margin: 0 0 14px;
+}
+
+.creator-invoices .ci-contact-search input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-contact-search input:focus {
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+.creator-invoices .ci-manage-row--link {
+  cursor: pointer;
+}
+
+.creator-invoices .ci-manage-row__main {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.creator-invoices .ci-manage-row__main:focus-visible {
+  outline: 2px solid var(--ci-brand);
+  outline-offset: 2px;
+}
+
+/* ---------- Contact detail (Wave-like, CI theme) ---------- */
+.creator-invoices .ci-contact-top {
+  margin-bottom: 18px;
+}
+
+.creator-invoices .ci-contact-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ci-text-2);
+  text-decoration: none;
+}
+
+.creator-invoices .ci-contact-back:hover {
+  color: var(--ci-brand);
+}
+
+.creator-invoices .ci-contact-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 22px;
+  background: var(--ci-surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices[data-theme='dark'] .ci-contact-header {
+  border-color: var(--ci-line);
+  box-shadow: none;
+}
+
+.creator-invoices .ci-contact-header__identity {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.creator-invoices .ci-contact-avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5dcf0;
+  color: var(--ci-brand);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.creator-invoices .ci-contact-header__meta {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--ci-text-2);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-contact-header__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.creator-invoices .ci-contact-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 18px;
+  padding: 4px;
+  background: var(--ci-surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices[data-theme='dark'] .ci-contact-tabs {
+  border-color: var(--ci-line);
+  box-shadow: none;
+}
+
+.creator-invoices .ci-contact-tab {
+  border: none;
+  background: transparent;
+  color: var(--ci-text-2);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-contact-tab:hover {
+  color: var(--ci-text);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-contact-tab.is-active {
+  background: color-mix(in srgb, var(--ci-brand) 18%, var(--ci-surface-2));
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .creator-invoices .ci-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creator-invoices .ci-contact-panel {
+  background: var(--ci-surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+  padding: 20px 22px;
+  margin-bottom: 16px;
+}
+
+.creator-invoices[data-theme='dark'] .ci-contact-panel {
+  border-color: var(--ci-line);
+  box-shadow: none;
+}
+
+.creator-invoices .ci-contact-panel--muted {
+  background: var(--ci-surface);
+}
+
+.creator-invoices .ci-contact-archived {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+  color: var(--ci-text-2);
+  font-size: 14px;
+}
+
+.creator-invoices .ci-contact-panel__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.creator-invoices .ci-contact-panel__head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-contact-panel__head p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-contact-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 36px 20px;
+}
+
+.creator-invoices .ci-contact-empty--compact {
+  padding: 24px 12px;
+}
+
+.creator-invoices .ci-contact-empty__icon {
+  width: 64px;
+  height: 64px;
+  color: var(--ci-brand);
+  margin-bottom: 4px;
+}
+
+.creator-invoices .ci-contact-empty__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.creator-invoices .ci-contact-empty h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-contact-empty p {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-contact-details {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.creator-invoices .ci-contact-details dt {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-contact-details dd {
+  margin: 4px 0 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ci-text);
+  word-break: break-word;
+}
+
+.creator-invoices .ci-contact-edit {
+  margin-bottom: 16px;
+}
+
+.creator-invoices .ci-contact-error {
+  max-width: 420px;
+  margin: 48px auto;
+  padding: 28px;
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  text-align: center;
+}
+
+.creator-invoices .ci-contact-error h1 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.creator-invoices .ci-contact-error p {
+  margin: 0 0 18px;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-statement__summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+@media (max-width: 640px) {
+  .creator-invoices .ci-statement__summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creator-invoices .ci-statement__table-wrap {
+  overflow-x: auto;
+}
+
+.creator-invoices .ci-statement__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.creator-invoices .ci-statement__table th,
+.creator-invoices .ci-statement__table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--ci-line-soft);
+  vertical-align: top;
+}
+
+.creator-invoices .ci-statement__table th {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-statement__table td strong {
+  display: block;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-statement__table td span {
+  display: block;
+  margin-top: 2px;
+  color: var(--ci-text-2);
+  font-size: 12px;
+}
+
+.creator-invoices .ci-statement__footer {
+  margin: 16px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+@media print {
+  .creator-invoices .ci-rail,
+  .ci-rail-strip-wrap,
+  .creator-invoices .ci-contact-back,
+  .creator-invoices .ci-contact-header__actions,
+  .creator-invoices .ci-contact-tabs,
+  .creator-invoices .ci-metrics,
+  .creator-invoices .ci-contact-edit {
+    display: none !important;
+  }
+
+  .creator-invoices .ci-main {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .creator-invoices .ci-statement {
+    border: none;
+    padding: 0;
+  }
+
+  .creator-invoices.ci-print-root .ci-print-hide,
+  .ci-print-root .ci-print-hide {
+    display: none !important;
+  }
+
+  .creator-invoices.ci-print-root,
+  .ci-paper-print {
+    background: #fff !important;
+  }
+
+  .creator-invoices.ci-print-root .ci-paper,
+  .ci-paper-print .ci-paper,
+  .ci-paper-print {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+.creator-invoices .ci-aging {
+  margin: 0 0 20px;
+}
+
+.creator-invoices .ci-aging__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.creator-invoices .ci-aging__note,
+.creator-invoices .ci-history__cap,
+.creator-invoices .ci-metrics__hint {
+  margin: 4px 0 0;
+  color: var(--ci-text-3);
+  font-size: 12px;
+}
+
+.creator-invoices .ci-aging__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.creator-invoices .ci-aging__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 12px;
+  background: var(--ci-surface, #fff);
+  text-align: left;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-aging__cell.is-active {
+  border-color: var(--ci-accent, #1b00ff);
+  box-shadow: 0 0 0 1px var(--ci-accent, #1b00ff);
+}
+
+.creator-invoices .ci-aging__l,
+.creator-invoices .ci-aging__count {
+  color: var(--ci-text-3);
+  font-size: 12px;
+}
+
+.creator-invoices .ci-export {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Estimates studio */
+.creator-invoices .ci-estimate-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.creator-invoices .ci-history > .ci-estimate-filters {
+  margin: 0;
+  padding: 12px 20px 10px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-estimate-lines {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-estimate-lines__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.creator-invoices .ci-estimate-lines__head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.creator-invoices .ci-estimate-lines__head select {
+  max-width: 240px;
+}
+
+.creator-invoices .ci-estimate-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 88px 120px auto;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .creator-invoices .ci-estimate-line {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.creator-invoices .ci-estimate-activity {
+  margin-bottom: 18px;
+}
+
+.creator-invoices .ci-estimate-activity.ci-soft-card {
+  margin-bottom: 0;
+}
+
+.creator-invoices .ci-estimate-activity__head {
+  margin-bottom: 12px;
+}
+
+.creator-invoices .ci-estimate-activity__date {
+  margin: 2px 0 0;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-estimate-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.creator-invoices .ci-estimate-timeline__step {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  position: relative;
+  padding: 0 0 16px;
+}
+
+.creator-invoices .ci-estimate-timeline__step:last-child {
+  padding-bottom: 0;
+}
+
+.creator-invoices .ci-estimate-timeline__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+}
+
+.creator-invoices .ci-estimate-timeline__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--ci-line);
+  background: var(--ci-surface);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.creator-invoices .ci-estimate-timeline__step.is-done .ci-estimate-timeline__dot {
+  border-color: var(--ci-brand);
+  background: var(--ci-brand);
+}
+
+.creator-invoices .ci-estimate-timeline__connector {
+  width: 2px;
+  flex: 1;
+  min-height: 18px;
+  margin-top: 4px;
+  background: var(--ci-line-soft);
+}
+
+.creator-invoices .ci-estimate-timeline__step.is-done .ci-estimate-timeline__connector {
+  background: color-mix(in srgb, var(--ci-brand) 45%, var(--ci-line-soft));
+}
+
+.creator-invoices .ci-estimate-timeline__step:last-child .ci-estimate-timeline__connector {
+  display: none;
+}
+
+.creator-invoices .ci-estimate-timeline__label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-estimate-timeline__step:not(.is-done) .ci-estimate-timeline__label {
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-estimate-timeline__meta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-estimate-timeline__time {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ci-text);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.creator-invoices .ci-estimate-timeline__step:not(.is-done) .ci-estimate-timeline__time {
+  color: var(--ci-text-3);
+  font-weight: 600;
+}
+
+.creator-invoices .ci-success-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 16px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--ci-ok-border);
+  background: var(--ci-ok-bg);
+  border-radius: 0;
+}
+
+.creator-invoices .ci-success-banner--warn {
+  border-color: var(--ci-warn-border);
+  background: var(--ci-warn-bg);
+}
+
+.creator-invoices .ci-success-banner__body {
+  min-width: 0;
+  flex: 1;
+}
+
+.creator-invoices .ci-success-banner__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-success-banner__copy {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-text-2);
+}
+
+.creator-invoices .ci-success-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.creator-invoices .ci-success-banner__dismiss {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--ci-text-3);
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-success-banner__dismiss:hover {
+  color: var(--ci-text);
+}
+
+/* Public hosted estimate — tokens redeclared here (not inherited from .creator-invoices) */
+.public-estimate {
+  --ci-brand: #0025cc;
+  --ci-brand-hover: #001fa8;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, color-mix(in srgb, var(--ci-brand) 14%, transparent), transparent 60%),
+    linear-gradient(180deg, #f3f6fb 0%, #eef2f8 100%);
+  color: #101828;
+  font-family: Georgia, 'Times New Roman', serif;
+  padding: 32px 16px 56px;
+  box-sizing: border-box;
+}
+
+.public-estimate__shell {
+  width: min(720px, 100%);
+  margin: 0 auto;
+}
+
+.public-estimate__hero {
+  --pe-accent: #1b00ff;
+  padding: 28px 24px 24px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #070b18 0%, #121a35 52%, var(--pe-accent) 140%);
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.public-estimate__logo {
+  display: block;
+  width: 132px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.public-estimate__brand {
+  margin: 0 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c7d2fe;
+}
+
+.public-estimate__kicker {
+  margin: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8ea2ff;
+}
+
+.public-estimate__hero h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.public-estimate__amount {
+  margin: 14px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.public-estimate__muted {
+  margin: 10px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #98a2b3;
+}
+
+.public-estimate__hero .public-estimate__muted {
+  color: #dbe4ff;
+}
+
+.public-estimate__banner {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.public-estimate__banner--ok {
+  background: #ecfdf3;
+  color: #067647;
+  border: 1px solid #abefc6;
+}
+
+.public-estimate__banner--warn {
+  background: #fffaeb;
+  color: #b54708;
+  border: 1px solid #fedf89;
+}
+
+.public-estimate__card {
+  background: #fff;
+  border: 1px solid #d8e0ef;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.public-estimate__card--document {
+  padding: 0;
+  overflow: hidden;
+}
+
+/*
+ * Same frame the cropper uses. `--ci-page-banner-aspect` is 18 / 5 from
+ * INVOICE_PAGE_BANNER_ASPECT_CSS (community join cover). No min/max-height:
+ * those recrop the JPEG the creator already framed.
+ */
+.ci-page-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ci-page-banner-aspect, 18 / 5);
+  overflow: hidden;
+  background-color: #d8e0ef;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ci-page-banner__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-page-banner__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --_fade: var(--ci-page-banner-fade, 55);
+  --_page: var(--ci-page-banner-page, #eef1f7);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--_page) calc(var(--_fade) * 0.18%), transparent) 0%,
+    color-mix(in srgb, var(--_page) calc(var(--_fade) * 1%), transparent)
+      calc(100% - var(--_fade) * 0.72%),
+    color-mix(in srgb, var(--_page) min(100%, calc(var(--_fade) * 1.85%)), transparent) 100%
+  );
+}
+
+.public-estimate__card-body {
+  padding: 18px 18px 20px;
+}
+
+.public-estimate .ci-attach-card--plain {
+  margin-top: 18px;
+  padding: 16px 0 0;
+  border: 0;
+  border-top: 1px solid #eaecf0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.public-estimate__card--document .public-estimate__actions--compact {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #eaecf0;
+}
+
+.public-estimate .ci-paper--live {
+  box-shadow: none;
+}
+
+/* Live invoice: white page, full-bleed creator banner, no extra hero/card chrome. */
+.public-estimate--invoice {
+  background: var(--ci-checkout-page, #ffffff);
+  padding: 0 0 56px;
+  background-image: none;
+}
+
+.public-estimate--invoice .public-estimate__shell {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 36px 36px 0;
+}
+
+.public-estimate--invoice .ci-page-banner--bleed {
+  width: 100%;
+  border-radius: 0;
+  background-color: #f3f5fa;
+}
+
+.public-estimate--invoice .ci-page-banner--bleed .ci-page-banner__image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+}
+
+/*
+ * Public pay page type. Studio paper stays compact; clients read this on a
+ * full-width screen, so every field, title, and table cell is sized up.
+ */
+.public-estimate--invoice .ci-paper__logo {
+  max-height: 72px;
+  max-width: 240px;
+  margin-bottom: 14px;
+}
+
+.public-estimate--invoice .ci-paper__company {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.public-estimate--invoice .ci-paper__meta-line {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.public-estimate--invoice .ci-paper__doc-title {
+  font-size: 30px;
+}
+
+.public-estimate--invoice .ci-paper__doc-meta {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.public-estimate--invoice .ci-paper__party-label {
+  font-size: 12px;
+  margin-bottom: 8px;
+  letter-spacing: 0.16em;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__party-body,
+.public-estimate--invoice .ci-paper--live .ci-paper__live-name {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__live-detail {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__live-grid {
+  gap: 28px 48px;
+  margin: 8px 0 32px;
+  padding: 26px 0;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__facts {
+  margin-top: 14px;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__fact dt {
+  font-size: 11px;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__fact dd {
+  font-size: 16px;
+}
+
+.public-estimate--invoice .ci-paper__live-title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.public-estimate--invoice .ci-paper__live-desc {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 8px 0 0;
+  color: var(--ci-paper-ink);
+}
+
+@media (min-width: 860px) {
+  .public-estimate--invoice .ci-paper--live .ci-paper__live-block--job {
+    padding-left: 28px;
+  }
+}
+
+.public-estimate--invoice .ci-paper-table th {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+
+.public-estimate--invoice .ci-paper-table td {
+  font-size: 18px;
+  line-height: 1.45;
+  padding: 14px 0;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__notes span {
+  font-size: 13px;
+}
+
+.public-estimate--invoice .ci-paper--live .ci-paper__notes p {
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.public-estimate--invoice .ci-paper__total-row--soft {
+  font-size: 16px;
+}
+
+.public-estimate--invoice .ci-paper__total-row {
+  font-size: 18px;
+}
+
+.public-estimate--invoice .ci-paper__total-row:not(.ci-paper__total-row--soft) {
+  font-size: 22px;
+  font-weight: 750;
+  margin-top: 8px;
+}
+
+.public-estimate--invoice .public-estimate__accept {
+  font-size: 16px;
+  min-height: 52px;
+}
+
+.public-estimate--invoice .public-estimate__lines strong {
+  font-size: 18px;
+}
+
+.public-estimate--invoice .public-estimate__lines span {
+  font-size: 15px;
+}
+
+.public-estimate--invoice .ci-attach-row__name {
+  font-size: 16px;
+}
+
+.public-estimate--invoice .ci-attach-row__sub {
+  font-size: 14px;
+}
+
+.public-estimate--invoice .ci-kicker {
+  font-size: 13px;
+}
+
+.public-estimate--invoice .public-estimate__document {
+  min-width: 0;
+}
+
+.public-estimate--invoice .ci-paper--live {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  min-height: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.public-estimate--invoice .public-estimate__kicker {
+  color: var(--ci-brand);
+  font-size: 14px;
+}
+
+.public-estimate--invoice .public-estimate__actions--compact {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #eaecf0;
+  justify-content: center;
+}
+
+.public-estimate--invoice .public-estimate__payments {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #eaecf0;
+}
+
+.public-estimate--invoice .public-estimate__banner {
+  border-radius: 0;
+  margin: 0 0 18px;
+}
+
+@media (max-width: 640px) {
+  .public-estimate--invoice .public-estimate__shell {
+    padding: 24px 18px 0;
+  }
+
+  .public-estimate--invoice .ci-paper__company {
+    font-size: 20px;
+  }
+
+  .public-estimate--invoice .ci-paper__live-title {
+    font-size: 22px;
+  }
+
+  .public-estimate--invoice .ci-paper--live .ci-paper__live-grid {
+    padding: 20px 0;
+    margin-bottom: 22px;
+  }
+
+  .public-estimate--invoice .ci-paper__doc-title {
+    font-size: 24px;
+  }
+}
+
+.public-estimate__to {
+  margin: 0 0 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #475467;
+}
+
+.public-estimate__lines {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.public-estimate__lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #eaecf0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.public-estimate__lines strong {
+  display: block;
+}
+
+.public-estimate__lines span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #667085;
+}
+
+.public-estimate__payment {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.public-estimate__payment span {
+  margin-top: 0;
+}
+
+.public-estimate__totals {
+  margin: 8px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #d8e0ef;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.public-estimate__totals div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.public-estimate__totals dt {
+  margin: 0;
+  color: #475467;
+}
+
+.public-estimate__totals dd {
+  margin: 0;
+  font-weight: 800;
+}
+
+.public-estimate__totals-total {
+  font-size: 18px;
+}
+
+.public-estimate__memo,
+.public-estimate__footer {
+  margin: 16px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #475467;
+  line-height: 1.5;
+}
+
+.public-estimate__actions {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.public-estimate__actions--compact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+}
+
+/* Mirrors studio .ci-btn--primary: solid brand, white text, zero radius */
+.public-estimate .public-estimate__accept {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  min-height: 48px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  border: 1px solid var(--ci-brand);
+  border-radius: 0;
+  background: var(--ci-brand);
+  color: var(--ci-brand-label, #ffffff);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.public-estimate .public-estimate__accept:hover:not(:disabled) {
+  background: var(--ci-brand-hover);
+  border-color: var(--ci-brand-hover);
+  color: var(--ci-brand-label, #ffffff);
+}
+
+.public-estimate .public-estimate__accept:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.public-estimate .public-estimate__accept--compact {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex: 0 0 auto;
+}
+
+.public-estimate__support {
+  margin: 22px 0 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #667085;
+}
+
+.public-estimate__support a {
+  color: var(--ci-brand);
+  font-weight: 800;
+}
+
+.ci-public-pay-amount {
+  margin: 18px 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ci-public-pay-amount label {
+  display: block;
+}
+
+.ci-public-pay-amount label > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #667085;
+}
+
+.ci-public-pay-amount__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #d8e0ef;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0 14px;
+}
+
+.ci-public-pay-amount__row > span {
+  font-size: 22px;
+  font-weight: 750;
+  color: #101828;
+}
+
+.ci-public-pay-amount__row input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 750;
+  color: #101828;
+}
+
+.ci-public-pay-amount__row input:disabled {
+  color: #344054;
+}
+
+.ci-public-pay-amount__hint,
+.ci-public-pay-amount__error {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.ci-public-pay-amount__hint {
+  color: #667085;
+}
+
+.ci-public-pay-amount__error {
+  color: #b42318;
+}
+
+.ci-public-pay-amount__change {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ci-brand, #1b00ff);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ci-public-pay-amount__change:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.ci-public-pay {
+  position: relative;
+  min-height: 0;
+  margin: 0;
+}
+
+.ci-public-pay.is-ready {
+  min-height: 48px;
+  margin: 12px 0 4px;
+}
+
+.ci-public-pay__without-link {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  margin: 0;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #475467;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ci-public-pay__without-link:hover:not(:disabled) {
+  color: var(--ci-brand, #1B00FF);
+  text-decoration: underline;
+}
+
+.ci-public-pay__without-link:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.ci-public-pay-element {
+  min-height: 0;
+  margin: 0;
+}
+
+.ci-public-pay-element.is-ready {
+  min-height: 48px;
+  margin: 12px 0 4px;
+}
+
+/* Client phone viewport — iPhone 14 / common 390px width */
+@media (max-width: 390px) {
+  .public-estimate {
+    padding: 18px 12px 40px;
+  }
+
+  .public-estimate--invoice {
+    padding: 0 0 40px;
+  }
+
+  .public-estimate--invoice .public-estimate__shell {
+    padding: 18px 14px 0;
+  }
+
+  .public-estimate__hero {
+    padding: 22px 16px 20px;
+    border-radius: 16px;
+  }
+
+  .public-estimate__hero h1 {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  .public-estimate__amount {
+    font-size: 24px;
+  }
+
+  .public-estimate__logo {
+    width: 112px;
+    max-width: 48%;
+  }
+
+  .public-estimate__card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .public-estimate__card--document {
+    padding: 0;
+  }
+
+  .public-estimate__card-body {
+    padding: 14px 14px 16px;
+  }
+
+  .public-estimate__lines li {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .public-estimate .public-estimate__accept {
+    max-width: none;
+    width: 100%;
+    min-height: 52px;
+    font-size: 15px;
+  }
+
+  .public-estimate .public-estimate__accept--compact {
+    width: auto;
+    max-width: none;
+    min-height: 48px;
+  }
+
+  .public-estimate__actions .public-estimate__muted {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+}
+
+/* ---------- Live invoice detail (paper + action rail) ---------- */
+.creator-invoices .ci-live-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 20px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.creator-invoices .ci-live-layout__paper {
+  min-width: 0;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__top,
+.creator-invoices .ci-paper--edit .ci-paper__top {
+  margin-bottom: 4px;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__facts {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__fact {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 16px;
+  align-items: baseline;
+  justify-content: end;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__fact dt {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ci-paper-muted);
+}
+
+.creator-invoices .ci-paper--live .ci-paper__fact dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ci-paper-ink);
+  text-align: right;
+  line-height: 1.35;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__live-grid,
+.creator-invoices .ci-paper--edit .ci-paper__live-grid {
+  display: grid;
+  gap: 18px 28px;
+  margin: 4px 0 22px;
+  padding: 18px 0;
+  border-top: 1px solid var(--ci-paper-line);
+  border-bottom: 1px solid var(--ci-paper-line);
+}
+
+@media (min-width: 860px) {
+  .creator-invoices .ci-paper--live .ci-paper__live-grid,
+  .creator-invoices .ci-paper--edit .ci-paper__live-grid {
+    grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr);
+    align-items: start;
+  }
+
+  .creator-invoices .ci-paper--live .ci-paper__live-grid--job,
+  .creator-invoices .ci-paper--edit .ci-paper__live-grid--job {
+    grid-template-columns: minmax(160px, 0.9fr) minmax(160px, 0.9fr) minmax(220px, 1.35fr);
+  }
+}
+
+.creator-invoices .ci-paper--live .ci-paper__live-block--job,
+.creator-invoices .ci-paper--edit .ci-paper__live-block--job {
+  min-width: 0;
+}
+
+@media (min-width: 860px) {
+  .creator-invoices .ci-paper--live .ci-paper__live-block--job,
+  .creator-invoices .ci-paper--edit .ci-paper__live-block--job {
+    padding-left: 22px;
+    border-left: 2px solid var(--ci-paper-accent, var(--ci-brand));
+  }
+}
+
+@container ci-brand-preview (max-width: 640px) {
+  .creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__live-grid,
+  .creator-invoices .ci-brand-surface__frame .ci-paper--edit .ci-paper__live-grid,
+  .creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__live-grid--job,
+  .creator-invoices .ci-brand-surface__frame .ci-paper--edit .ci-paper__live-grid--job {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__live-block--job,
+  .creator-invoices .ci-brand-surface__frame .ci-paper--edit .ci-paper__live-block--job {
+    padding-left: 0;
+    border-left: 0;
+    margin-top: 2px;
+    padding-top: 14px;
+    border-top: 2px solid var(--ci-paper-accent, var(--ci-brand));
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper__top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper__doc {
+    text-align: left;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__fact {
+    justify-content: start;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+  }
+
+  .creator-invoices .ci-brand-surface__frame .ci-paper--live .ci-paper__fact dd {
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+.creator-invoices .ci-brand-surface__frame .ci-paper__live-detail,
+.creator-invoices .ci-brand-surface__frame .ci-paper__party-body,
+.creator-invoices .ci-brand-surface__frame .ci-paper__live-name,
+.creator-invoices .ci-brand-surface__frame .ci-paper__meta-line {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__party-body,
+.creator-invoices .ci-paper--live .ci-paper__live-name,
+.creator-invoices .ci-paper--edit .ci-paper__live-name {
+  white-space: pre-line;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper--live .ci-paper__live-detail,
+.creator-invoices .ci-paper--edit .ci-paper__live-detail {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-paper-ink);
+  white-space: pre-line;
+}
+
+.creator-invoices .ci-paper--edit .ci-paper__live-block--job .ci-paper-input--title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+.creator-invoices .ci-paper--edit .ci-paper__live-block--job .ci-paper-input--desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--ci-paper-ink);
+  min-height: 3.2em;
+}
+
+.creator-invoices .ci-paper__live-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper__live-desc {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ci-paper-ink);
+}
+
+.creator-invoices .ci-paper--live .ci-paper__notes span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ci-paper-muted);
+  margin-bottom: 4px;
+}
+
+.creator-invoices .ci-paper--live .ci-paper__notes p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-paper-ink);
+  white-space: pre-wrap;
+}
+
+.creator-invoices .ci-live-rail {
+  position: sticky;
+  top: calc(var(--ci-chrome-offset, 0px) + 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.creator-invoices .ci-live-rail__status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.creator-invoices .ci-live-rail__actions.ci-soft-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.creator-invoices .ci-live-rail__amount {
+  margin: 4px 0 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-live-rail__amount-label {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.creator-invoices .ci-live-rail__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.creator-invoices .ci-live-rail__actions .ci-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.creator-invoices .ci-live-rail__lock {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ci-warn);
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-live-rail__note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-reminder-schedule {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.creator-invoices .ci-reminder-schedule--create {
+  margin: 0;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 12px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-editor__aside .ci-reminder-schedule__head {
+  margin: 0 0 10px;
+}
+
+.creator-invoices .ci-editor__aside .ci-reminder-schedule__head h3 {
+  font-size: 14px;
+}
+
+.creator-invoices .ci-editor__aside .ci-reminder-schedule__head p {
+  font-size: 12px;
+}
+
+.creator-invoices .ci-editor__aside .ci-reminder-schedule__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.creator-invoices .ci-editor__aside .ci-reminder-tile {
+  min-height: 38px;
+  padding: 8px 10px;
+  gap: 8px;
+}
+
+.creator-invoices .ci-live-rail .ci-reminder-schedule {
+  margin-top: 4px;
+  padding: 16px 14px 14px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 12px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-paper-field--tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.creator-invoices .ci-paper-field--tax select {
+  max-width: 180px;
+}
+
+.creator-invoices .ci-reminder-schedule__title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.creator-invoices .ci-reminder-schedule__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  color: var(--ci-brand);
+  background: color-mix(in srgb, var(--ci-brand) 9%, #fff);
+  border: 1px solid color-mix(in srgb, var(--ci-brand) 16%, var(--ci-line-soft));
+}
+
+.creator-invoices .ci-reminder-schedule__head {
+  margin: 0 0 14px;
+}
+
+.creator-invoices .ci-reminder-schedule__head h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-reminder-schedule__head p {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ci-text-3);
+  line-height: 1.45;
+}
+
+.creator-invoices .ci-reminder-tiles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.creator-invoices .ci-reminder-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 10px;
+  background: #f7f8fc;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.creator-invoices .ci-reminder-tile:hover {
+  border-color: color-mix(in srgb, var(--ci-brand) 28%, var(--ci-line-soft));
+  background: #f3f5fb;
+}
+
+.creator-invoices .ci-reminder-tile:focus-within {
+  outline: 2px solid var(--ci-focus);
+  outline-offset: 2px;
+}
+
+.creator-invoices .ci-reminder-tile.is-on {
+  background: color-mix(in srgb, var(--ci-brand) 7%, #fff);
+  border-color: color-mix(in srgb, var(--ci-brand) 42%, #c5cde0);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ci-brand) 12%, transparent);
+}
+
+.creator-invoices .ci-reminder-tile.is-on:hover {
+  background: color-mix(in srgb, var(--ci-brand) 10%, #fff);
+}
+
+.creator-invoices .ci-reminder-tile--sent {
+  opacity: 0.92;
+  cursor: default;
+}
+
+.creator-invoices .ci-reminder-tile--sent:hover {
+  transform: none;
+}
+
+.creator-invoices .ci-reminder-tile input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.creator-invoices .ci-reminder-tile__check {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1.5px solid #9aa6c2;
+  background: #fff;
+  box-shadow: inset 0 1px 1px rgba(11, 16, 32, 0.04);
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.creator-invoices .ci-reminder-tile.is-on .ci-reminder-tile__check {
+  border-color: var(--ci-brand);
+  background: var(--ci-brand);
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.2 6.4 11l6.1-6.4' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 12px;
+}
+
+.creator-invoices .ci-reminder-tile__label {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-reminder-tile__sent {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ci-ok);
+  background: var(--ci-ok-bg);
+  border: 1px solid var(--ci-ok-border);
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.creator-invoices .ci-history-row--clickable {
+  cursor: pointer;
+}
+
+.creator-invoices .ci-history-row--clickable:focus-visible {
+  outline: 2px solid var(--ci-brand);
+  outline-offset: 2px;
+}
+
+/* ---------- Actions ⋯ menu ---------- */
+.creator-invoices .ci-actions-menu {
+  position: relative;
+  display: inline-flex;
+}
+
+.creator-invoices .ci-actions-menu__trigger {
+  min-width: 36px;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.creator-invoices .ci-actions-menu__list {
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: 50;
+  min-width: 200px;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+}
+
+.creator-invoices .ci-actions-menu__list--right {
+  right: 0;
+}
+
+.creator-invoices .ci-actions-menu__list--left {
+  left: 0;
+}
+
+.creator-invoices .ci-actions-menu__item {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ci-text);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.creator-invoices .ci-actions-menu__item:hover:not(:disabled) {
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-actions-menu__item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.creator-invoices .ci-actions-menu__item.is-danger {
+  color: var(--ci-danger);
+}
+
+/* ---------- Wave-layout record payment modal (CCA geometry) ---------- */
+/*
+ * Wave modals portal to document.body.
+ * Base .creator-invoices uses isolation:isolate — without a z-index on the
+ * portal root, site header (z-60) paints above the modal. ci-modal-portal
+ * lifts the whole stacking context above member chrome (~10060).
+ */
+.creator-invoices.ci-modal-portal {
+  position: fixed;
+  inset: 0;
+  z-index: 11000;
+  isolation: isolate;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.creator-invoices.ci-modal-portal .ci-wave-modal-backdrop {
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.creator-invoices .ci-wave-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 11000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(11, 16, 32, 0.45);
+  box-sizing: border-box;
+}
+
+.creator-invoices .ci-wave-modal {
+  width: min(440px, 100%);
+  max-height: min(92vh, 720px);
+  overflow: auto;
+  background: var(--ci-surface);
+  border: 1px solid var(--ci-line);
+  border-radius: 0;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.18);
+  pointer-events: auto;
+}
+
+.creator-invoices .ci-wave-modal__head {
+  padding: 20px 20px 8px;
+  border-bottom: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-wave-modal__head h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-wave-modal__head p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ci-text-3);
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-wave-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 20px;
+}
+
+.creator-invoices .ci-wave-modal__input,
+.creator-invoices .ci-wave-modal select.ci-wave-modal__input,
+.creator-invoices .ci-wave-modal textarea.ci-wave-modal__input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid var(--ci-line);
+  border-radius: 0;
+  background: #fff;
+  color: var(--ci-text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.creator-invoices .ci-wave-modal__input:focus {
+  outline: none;
+  border-color: var(--ci-brand);
+  box-shadow: 0 0 0 3px var(--ci-focus);
+}
+
+.creator-invoices .ci-wave-modal__textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.creator-invoices .ci-wave-modal__hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-wave-modal__hint--ok {
+  color: var(--ci-ok);
+  font-weight: 600;
+}
+
+.creator-invoices .ci-wave-modal__error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ci-danger);
+}
+
+.creator-invoices .ci-wave-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px 20px;
+  border-top: 1px solid var(--ci-line-soft);
+}
+
+.creator-invoices .ci-wave-modal__actions .ci-btn {
+  border-radius: 0;
+  min-height: 40px;
+}
+
+@media (max-width: 960px) {
+  .creator-invoices .ci-live-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-invoices .ci-live-rail {
+    position: static;
+    order: -1;
+  }
+}
+
+/* Mobile ~390px — modal + detail rail */
+@media (max-width: 390px) {
+  .creator-invoices .ci-live-rail {
+    padding: 14px 12px;
+  }
+
+  .creator-invoices .ci-live-rail__amount {
+    font-size: 24px;
+  }
+
+  .creator-invoices .ci-wave-modal-backdrop {
+    padding: 10px;
+    align-items: flex-end;
+  }
+
+  .creator-invoices .ci-wave-modal {
+    width: 100%;
+    max-height: 92vh;
+  }
+
+  .creator-invoices .ci-wave-modal__head,
+  .creator-invoices .ci-wave-modal__body,
+  .creator-invoices .ci-wave-modal__actions {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .creator-invoices .ci-wave-modal__actions {
+    flex-direction: column-reverse;
+  }
+
+  .creator-invoices .ci-wave-modal__actions .ci-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .creator-invoices .ci-history-row__actions {
+    flex-wrap: wrap;
+  }
+
+  .creator-invoices .ci-actions-menu__list {
+    min-width: 180px;
+  }
+
+  /* Keep left-aligned history menus under the ⋯ trigger (do not force right:0). */
+  .creator-invoices .ci-actions-menu__list--left {
+    left: 0;
+    right: auto;
+  }
+
+  .creator-invoices .ci-actions-menu__list--right {
+    right: 0;
+    left: auto;
+  }
+}
+
+/* ---------- Wave send modal ---------- */
+.creator-invoices .ci-send-modal {
+  width: min(1120px, 100%);
+  max-height: min(94vh, 900px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.creator-invoices .ci-send-modal__tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ci-line-soft);
+  padding: 0 20px;
+}
+
+.creator-invoices .ci-send-modal__tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3d4a63;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.creator-invoices .ci-send-modal__tab.is-active {
+  color: var(--ci-brand);
+  border-bottom-color: var(--ci-brand);
+}
+
+.creator-invoices .ci-send-modal__tab:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.creator-invoices .ci-send-modal__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  gap: 0;
+  flex: 1 1 auto;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.creator-invoices .ci-send-modal__form {
+  border-right: 1px solid var(--ci-line-soft);
+  overflow: auto;
+  min-height: 0;
+}
+
+.creator-invoices .ci-send-modal__preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: #e8edf7;
+  color: #101828;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.creator-invoices .ci-send-modal__mailhead {
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border: 1px solid #c5d0e4;
+  background: #fff;
+}
+
+.creator-invoices .ci-send-modal__mailhead p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #101828;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.creator-invoices .ci-send-modal__mailhead span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1b00ff;
+}
+
+.creator-invoices .ci-send-modal__preview-frame {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 360px;
+  height: 100%;
+  max-height: none;
+  border: 1px solid #c5d0e4;
+  background: #fff;
+}
+
+.creator-invoices .ci-send-modal__preview-fallback {
+  flex: 1 1 auto;
+  min-height: 220px;
+  padding: 18px 16px;
+  background: linear-gradient(160deg, #070b18 0%, #121a35 55%, #1b00ff 140%);
+  color: #e8eeff;
+}
+
+.creator-invoices .ci-send-modal__preview-kicker {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8ea2ff;
+}
+
+.creator-invoices .ci-send-modal__preview-amount {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.creator-invoices .ci-send-modal__preview-meta {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #c7d2fe;
+}
+
+.creator-invoices .ci-send-modal__preview-msg {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e8eeff;
+}
+
+.creator-invoices .ci-send-modal__preview-cta {
+  display: inline-block;
+  padding: 12px 16px;
+  background: #fff;
+  color: #1b00ff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.creator-invoices .ci-send-modal__preview-note {
+  margin: 0;
+  font-size: 11px;
+  color: #3d4a63;
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-send-modal__more {
+  gap: 10px;
+}
+
+.creator-invoices .ci-send-modal__option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--ci-line);
+  background: var(--ci-surface);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.creator-invoices .ci-send-modal__option strong {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-send-modal__option span {
+  font-size: 12px;
+  color: #3d4a63;
+  line-height: 1.4;
+}
+
+.creator-invoices .ci-send-modal__option:hover:not(:disabled):not(.is-disabled) {
+  border-color: var(--ci-brand);
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-send-modal__option:disabled,
+.creator-invoices .ci-send-modal__option.is-disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+.creator-invoices .ci-send-modal__option.is-disabled strong {
+  color: #3d4a63;
+}
+
+.creator-invoices .ci-send-modal__confirm {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(11, 16, 32, 0.42);
+}
+
+.creator-invoices .ci-send-modal__confirm-card {
+  width: min(380px, 100%);
+  padding: 20px 18px 16px;
+  background: #ffffff;
+  border: 1px solid var(--ci-line);
+  box-shadow: 0 18px 40px -20px rgba(11, 16, 32, 0.45);
+}
+
+.creator-invoices .ci-send-modal__confirm-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ci-text);
+  letter-spacing: -0.01em;
+}
+
+.creator-invoices .ci-send-modal__confirm-copy {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #3d4a63;
+}
+
+.creator-invoices .ci-send-modal__confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.creator-invoices .ci-send-modal.is-confirm-open .ci-wave-modal__actions {
+  display: none;
+}
+
+.creator-invoices .ci-send-modal .ci-btn--ghost {
+  border: 1px solid #98a2b3;
+  color: #1d2939;
+}
+
+.creator-invoices[data-theme='dark'] .ci-send-modal .ci-btn--ghost {
+  background: transparent;
+  border-color: var(--ci-line-soft);
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-send-modal .ci-btn--primary,
+.creator-invoices .ci-send-modal .ci-btn--secondary {
+  color: #fff;
+}
+
+.creator-invoices[data-theme='dark'] .ci-send-modal .ci-btn--secondary {
+  background: var(--ci-surface-2);
+  border-color: var(--ci-line-soft);
+  color: var(--ci-text);
+}
+
+@media (max-width: 720px) {
+  .creator-invoices .ci-send-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-invoices .ci-send-modal__form {
+    border-right: none;
+    border-bottom: 1px solid var(--ci-line-soft);
+  }
+
+  .creator-invoices .ci-send-modal__preview-frame {
+    min-height: 240px;
+    max-height: 320px;
+  }
+
+  .creator-invoices .ci-send-modal__grid {
+    overflow: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .creator-invoices .ci-wave-modal-backdrop {
+    padding: 8px;
+    align-items: flex-end;
+  }
+
+  .creator-invoices .ci-send-modal {
+    max-height: 94vh;
+  }
+
+  .creator-invoices .ci-send-modal__tabs {
+    padding: 0 10px;
+  }
+
+  .creator-invoices .ci-send-modal__tab {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+
+  .creator-invoices .ci-send-modal__confirm {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .creator-invoices .ci-send-modal__confirm-card {
+    width: 100%;
+    padding: 16px 14px 14px;
+  }
+
+  .creator-invoices .ci-send-modal__confirm-actions {
+    flex-direction: column-reverse;
+  }
+
+  .creator-invoices .ci-send-modal__confirm-actions .ci-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.creator-invoices .ci-attach-card {
+  margin-top: 16px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 16px;
+  background: var(--ci-surface);
+  box-shadow: 0 1px 2px rgba(11, 16, 32, 0.04);
+}
+
+.creator-invoices .ci-attach-card--plain,
+.public-estimate .ci-attach-card--plain {
+  margin-top: 18px;
+  padding: 16px 0 0;
+  border: 0;
+  border-top: 1px solid #eaecf0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.creator-invoices .ci-attach-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.creator-invoices .ci-attach-card__hint {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-attach-empty {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-attach-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.creator-invoices .ci-attach-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px 10px 8px 8px;
+  border: 1px solid var(--ci-line-soft);
+  border-radius: 14px;
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-attach-row__main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+
+.creator-invoices .ci-attach-row__main:disabled {
+  cursor: wait;
+}
+
+.creator-invoices .ci-attach-thumb {
+  width: 88px;
+  flex: 0 0 88px;
+  aspect-ratio: 8.5 / 11;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--ci-line-soft);
+  background: #111318;
+}
+
+.creator-invoices .ci-attach-thumb__img,
+.creator-invoices .ci-attach-thumb .ci-attach-thumb__pdf,
+.creator-invoices .ci-attach-thumb .mb-resources-hub__file-fallback,
+.creator-invoices .ci-attach-thumb .community-pdf-thumb--cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 8.5 / 11;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.creator-invoices .ci-attach-thumb__fallback,
+.creator-invoices .ci-attach-thumb .mb-resources-hub__file-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #c7d2fe;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.creator-invoices .ci-attach-thumb .community-pdf-thumb canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  object-position: top center;
+  background: #111318;
+}
+
+.creator-invoices .ci-attach-thumb .community-pdf-thumb__pulse {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1a1d24 0%, #2a2f3a 50%, #1a1d24 100%);
+  background-size: 200% 100%;
+  animation: ci-attach-shimmer 1.2s linear infinite;
+}
+
+@keyframes ci-attach-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.creator-invoices .ci-attach-row__meta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.creator-invoices .ci-attach-row__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--ci-text);
+}
+
+.creator-invoices .ci-attach-row__sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-attach-row__remove {
+  flex-shrink: 0;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ci-text-3);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-attach-row__remove:hover:not(:disabled) {
+  color: var(--ci-danger);
+}
+
+.ci-attach-download {
+  flex: 0 0 auto;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 1px solid var(--ci-brand, #1b00ff);
+  border-radius: 0;
+  background: var(--ci-brand, #1b00ff);
+  color: var(--ci-brand-label, #ffffff);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ci-attach-download:hover:not(:disabled) {
+  background: var(--ci-brand-hover, #1500cc);
+  border-color: var(--ci-brand-hover, #1500cc);
+  color: var(--ci-brand-label, #ffffff);
+}
+
+.ci-attach-download:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.public-estimate .ci-attach-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.public-estimate .ci-attach-thumb {
+  width: 88px;
+  flex: 0 0 88px;
+  aspect-ratio: 8.5 / 11;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111318;
+}
+
+.public-estimate .ci-attach-thumb img,
+.public-estimate .ci-attach-thumb__img,
+.public-estimate .ci-attach-thumb canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.creator-invoices .ci-attach-add {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--ci-brand);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ci-brand);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-attach-add input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.creator-invoices .ci-attach-add:hover {
+  background: color-mix(in srgb, var(--ci-brand) 8%, #fff);
+}
+
+.creator-invoices .ci-attach-add.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.creator-invoices[data-theme='dark'] .ci-attach-add {
+  background: transparent;
+  color: #c7d2fe;
+  border-color: color-mix(in srgb, var(--ci-brand) 55%, #fff);
+}
+
+.public-doc-unavailable {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px 64px;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #070b18 0%, #121a35 52%, #1b00ff 135%);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.public-doc-unavailable__card {
+  width: min(720px, 100%);
+  text-align: center;
+}
+
+.public-doc-unavailable__eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8ea2ff;
+}
+
+.public-doc-unavailable h1 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.public-doc-unavailable__body,
+.public-doc-unavailable__meta {
+  margin: 0 auto 18px;
+  max-width: 46rem;
+  color: #d7def2;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.public-doc-unavailable__meta {
+  color: #aeb8d6;
+  font-size: 13px;
+}
+
+.public-doc-unavailable__successors {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.public-doc-unavailable__row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.public-doc-unavailable__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  background: #1b00ff;
+  color: #fff;
+  border: 1px solid #1b00ff;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.public-doc-unavailable__cta:hover {
+  background: #1600cc;
+  border-color: #1600cc;
+  color: #fff;
+}
+
+@media (max-width: 620px) {
+  .public-doc-unavailable__row,
+  .public-doc-unavailable__successors {
+    flex-direction: column;
+  }
+
+  .public-doc-unavailable__cta {
+    width: 100%;
+  }
+}
+
+/* ---------- Studio sheet (catalog create / edit) ---------- */
+.creator-invoices.ci-modal-portal .ci-studio-sheet__backdrop {
+  pointer-events: auto;
+}
+
+.creator-invoices .ci-studio-sheet__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 16, 32, 0.28);
+}
+
+.creator-invoices .ci-studio-sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  box-shadow: -16px 0 48px rgba(11, 16, 32, 0.16);
+  outline: none;
+}
+
+.creator-invoices .ci-studio-sheet__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 22px 12px;
+}
+
+.creator-invoices .ci-studio-sheet__head h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.creator-invoices .ci-studio-sheet__head p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-studio-sheet__close {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--ci-text-2);
+  font-size: 28px;
+  line-height: 1;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.creator-invoices .ci-studio-sheet__body {
+  flex: 1;
+  overflow: auto;
+  padding: 8px 22px 20px;
+}
+
+.creator-invoices .ci-studio-sheet__body input,
+.creator-invoices .ci-studio-sheet__body textarea,
+.creator-invoices .ci-studio-sheet__body select {
+  font-size: 16px;
+}
+
+.creator-invoices .ci-studio-sheet__footer {
+  padding: 14px 22px calc(16px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--ci-line-soft);
+  background: var(--ci-surface);
+}
+
+.creator-invoices .ci-studio-sheet__footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.creator-invoices .ci-studio-sheet__discard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 12px;
+}
+
+.creator-invoices .ci-studio-sheet__discard p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.creator-invoices .ci-studio-sheet__note,
+.creator-invoices .ci-studio-sheet__error {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-text-3);
+}
+
+.creator-invoices .ci-studio-sheet__error {
+  color: var(--ci-danger);
+  font-weight: 650;
+}
+
+.creator-invoices .ci-studio-sheet__banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 12px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--ci-surface-2);
+}
+
+.creator-invoices .ci-studio-sheet__banner p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ci-text);
+}
+
+.creator-invoices[data-theme='dark'] .ci-wave-modal__input,
+.creator-invoices[data-theme='dark'] .ci-wave-modal select.ci-wave-modal__input,
+.creator-invoices[data-theme='dark'] .ci-wave-modal textarea.ci-wave-modal__input {
+  background: var(--ci-surface);
+  color: var(--ci-text);
+  border-color: var(--ci-line);
+}
+
+@media (max-width: 720px) {
+  .creator-invoices .ci-studio-sheet {
+    width: 100%;
+  }
+}

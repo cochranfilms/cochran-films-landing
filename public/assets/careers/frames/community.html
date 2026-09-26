@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" data-studio-immersive="true">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creator Collective community studio</title>
+  <link rel="stylesheet" href="/assets/careers/cca/community-manage.css">
+  <link rel="stylesheet" href="/assets/careers/cca/community-join.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #07080f; color: #eef1fb; font-family: Inter, system-ui, sans-serif; }
+    [data-panel][hidden],
+    [data-settings-panel][hidden],
+    [data-stage][hidden],
+    [data-preview-toggle][hidden] { display: none !important; }
+    .cm-manage { display: grid; gap: 28px; }
+    .cm-align-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .community-manage--studio .community-manage__stage-frame {
+      position: relative;
+      width: 100%;
+      min-height: 100%;
+      pointer-events: auto;
+      transform: none;
+    }
+    .cm-brand-preview { display: grid; gap: 8px; margin: 8px 0 12px; }
+    .cm-brand-preview img.banner { width: 100%; height: 92px; object-fit: cover; display: block; }
+    .cm-brand-preview img.mark { width: 72px; height: 72px; object-fit: cover; background: #111527; }
+    .cj-trailer__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .cm-photo-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+    .cm-photo-row img { width: 100%; height: 72px; object-fit: cover; display: block; }
+    .cm-demo-fields { display: grid; gap: 12px; max-width: 40rem; }
+    .cm-demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cm-join {
+      min-height: 100%; padding: 36px 28px; box-sizing: border-box;
+      background: #07080f; color: #fff;
+    }
+    .cm-join h2 { margin: 8px 0 0; font-size: 32px; letter-spacing: -0.04em; }
+    .cm-join ul { margin: 18px 0; padding-left: 1.1rem; }
+    .cm-join .cm-btn { margin-top: 8px; }
+    .cm-toast {
+      position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%);
+      background: #fff; color: #07080f; padding: 8px 12px; font-size: 13px; font-weight: 700;
+      z-index: 80; opacity: 0; pointer-events: none;
+    }
+    .cm-toast.is-on { opacity: 1; }
+    @media (max-width: 700px) { .cm-demo-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="community-manage community-manage--studio" data-theme="dark" data-studio>
+  <div class="community-manage__shell">
+    <div class="community-manage__main">
+      <div class="community-manage__inner">
+        <div class="community-manage__studio-top">
+          <header class="community-manage__header">
+            <p class="community-manage__eyebrow">Manage</p>
+            <h1 class="community-manage__title">Creator Collective</h1>
+            <p class="community-manage__subtitle" data-subtitle>Landing</p>
+          </header>
+          <div class="community-manage__chrome">
+            <div class="community-manage__chrome-left">
+              <button class="community-manage__exit" type="button">Exit</button>
+              <button class="community-manage__open" type="button">Open community</button>
+            </div>
+            <div class="community-manage__chrome-right">
+              <button class="community-manage__preview-chip" type="button" data-preview-toggle>Preview</button>
+              <button class="community-manage__ghost" type="button">Undo</button>
+              <button class="community-manage__ghost" type="button" data-action="save">Save</button>
+              <button class="community-manage__publish is-published" type="button" data-action="publish">Published</button>
+            </div>
+          </div>
+          <div class="community-manage__mobile-tabs">
+            <button class="community-manage__mobile-tab community-manage__mobile-tab--active" type="button" data-tab="landing" aria-current="page">Landing</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="settings">Settings</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="about">About</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="classroom">Classroom</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="resources">Resources</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="calendar">Calendar</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="members">Members</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="levels">Levels</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="shop">Shop</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="sales">Sales</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="analytics">Analytics</button>
+            <button class="community-manage__mobile-tab" type="button" data-tab="domain">Domain</button>
+          </div>
+        </div>
+
+        <div class="community-manage__workspace">
+          <div class="community-manage__details">
+        <div data-panel="landing">
+          <section class="cm-manage">
+            <header class="cm-panel-head">
+              <p class="community-manage__eyebrow">Public join page</p>
+              <h2 class="cm-panel-title">Landing</h2>
+            </header>
+            <section>
+              <header>
+                <p class="community-manage__eyebrow">Design</p>
+                <h3 class="cm-panel-title" style="font-size:18px">Page layout</h3>
+                <p class="cm-panel-sub">Moves every block on the join page — name, copy, videos, and photos.</p>
+              </header>
+              <div class="cm-align-row" role="radiogroup" aria-label="Page layout">
+                <label class="cm-align is-selected"><input class="sr-only" type="radio" name="cm-align" value="left" checked data-join-align><span>Left</span></label>
+                <label class="cm-align"><input class="sr-only" type="radio" name="cm-align" value="center" data-join-align><span>Center</span></label>
+                <label class="cm-align"><input class="sr-only" type="radio" name="cm-align" value="right" data-join-align><span>Right</span></label>
+              </div>
+              <label class="cm-field-label">Page background
+                <span class="cm-panel-sub" style="display:block;font-weight:400;margin-bottom:8px">Light title and body text will stay readable on this background.</span>
+                <div class="cm-bg-row">
+                  <button type="button" class="cm-bg-swatch" data-join-bg="#07080f" style="background:#07080f" aria-label="Use #07080f"></button>
+                  <button type="button" class="cm-bg-swatch" data-join-bg="#111527" style="background:#111527" aria-label="Use #111527"></button>
+                  <button type="button" class="cm-bg-swatch" data-join-bg="#eef1f7" style="background:#eef1f7" aria-label="Use #eef1f7"></button>
+                  <button type="button" class="cm-bg-swatch" data-join-bg="#ffffff" style="background:#ffffff" aria-label="Use #ffffff"></button>
+                  <button type="button" class="cm-bg-swatch" data-join-bg="#f3f6fb" style="background:#f3f6fb" aria-label="Use #f3f6fb"></button>
+                  <button type="button" class="cm-btn" data-join-bg="">Match visitor theme</button>
+                </div>
+              </label>
+              <div class="cm-brand-preview">
+                <img class="banner" src="/assets/careers/hero-4.jpg" alt="Join page banner">
+              </div>
+              <label class="cm-field-label">Banner fade 28%
+                <span class="cm-panel-sub" style="display:block;font-weight:400;margin-bottom:8px">How far the page color washes up the cover. Preview updates as you drag. Live visitors see this only after you Publish.</span>
+                <input class="cm-range" type="range" min="0" max="80" value="28" aria-label="Join banner fade">
+              </label>
+            </section>
+            <section>
+              <header>
+                <p class="community-manage__eyebrow">Content</p>
+                <h3 class="cm-panel-title" style="font-size:18px">Copy</h3>
+              </header>
+              <label class="cm-field-label">Name<input class="cm-field" data-join="name" value="Creator Collective"></label>
+              <label class="cm-field-label">Tagline<input class="cm-field" data-join="tagline" value="Build the business behind the camera"></label>
+              <label class="cm-field-label">About<textarea class="cm-field" data-join="about" rows="6">Weekly feedback, the roster, and the systems behind a booked month.</textarea></label>
+              <label class="cm-field-label">What you get (one per line)<textarea class="cm-field" data-join="perks" rows="5">Weekly calls
+The job board
+The files behind a working studio</textarea></label>
+              <div class="cm-field-label">List style
+                <span class="cm-panel-sub" style="display:block;font-weight:400;margin-bottom:8px">How these items appear on the join page.</span>
+                <div class="cm-align-row" role="radiogroup" aria-label="What you get list style">
+                  <label class="cm-align is-selected"><input class="sr-only" type="radio" name="cm-perks" value="check" checked><span>Checks</span></label>
+                  <label class="cm-align"><input class="sr-only" type="radio" name="cm-perks" value="dot"><span>Dots</span></label>
+                  <label class="cm-align"><input class="sr-only" type="radio" name="cm-perks" value="number"><span>Numbers</span></label>
+                </div>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h3 class="cm-panel-title" style="font-size:18px">Free videos</h3>
+                <p class="cm-panel-sub">Two slots. Any mix of YouTube, an uploaded video, or a free classroom lesson.</p>
+              </header>
+              <div class="cm-slot">
+                <label class="cm-field-label">Slot 1
+                  <select class="cm-field"><option>Empty</option><option selected>YouTube</option><option>Uploaded video</option><option>Free classroom lesson</option></select>
+                </label>
+                <label class="cm-field-label">YouTube URL or id<input class="cm-field" value="https://www.youtube.com/watch?v=wgXzEdZtyRM"></label>
+              </div>
+              <div class="cm-slot">
+                <label class="cm-field-label">Slot 2
+                  <select class="cm-field"><option selected>Empty</option><option>YouTube</option><option>Uploaded video</option><option>Free classroom lesson</option></select>
+                </label>
+              </div>
+              <button class="cm-btn" type="button">Mark a lesson as a free preview</button>
+            </section>
+            <section>
+              <header>
+                <h3 class="cm-panel-title" style="font-size:18px">Photos</h3>
+                <p class="cm-panel-sub">Stills on the join page, under the videos.</p>
+              </header>
+              <div class="cm-photo-row">
+                <img src="/assets/careers/hero-3.jpg" alt="">
+                <img src="/assets/real-estate/interior-01.jpg" alt="">
+                <img src="/assets/careers/hero-5.jpg" alt="">
+              </div>
+              <button class="cm-btn" type="button">Add photo</button>
+            </section>
+          </section>
+        </div>
+
+        <div data-panel="settings" hidden>
+          <header class="cm-panel-head">
+            <p class="community-manage__eyebrow">Community settings</p>
+            <h2 class="cm-panel-title">Settings</h2>
+            <p class="cm-panel-sub">Profile, brand, access, and membership. Paid access bills every month.</p>
+          </header>
+          <div class="cm-manage__tabs" role="tablist" aria-label="Settings groups">
+            <button class="cm-manage__tab is-active" type="button" data-settings="profile">Profile</button>
+            <button class="cm-manage__tab" type="button" data-settings="brand">Brand</button>
+            <button class="cm-manage__tab" type="button" data-settings="access">Access</button>
+            <button class="cm-manage__tab" type="button" data-settings="membership">Membership</button>
+          </div>
+          <div class="cm-demo-fields" data-settings-panel="profile">
+            <div class="cm-demo-grid">
+              <label class="cm-field-label">Name<input class="cm-field" value="Creator Collective"></label>
+              <label class="cm-field-label">Community handle<input class="cm-field" value="creator-collective"></label>
+            </div>
+            <label class="cm-field-label">Tagline<input class="cm-field" value="Build the business behind the camera"></label>
+            <label class="cm-field-label">Description<textarea class="cm-field" rows="3">A Creator Collective community.</textarea></label>
+            <button class="community-manage__publish" type="button">Save profile</button>
+          </div>
+          <div class="cm-demo-fields" data-settings-panel="brand" hidden>
+            <label class="cm-field-label">Accent<input class="cm-field" value="#1B00FF"></label>
+            <div class="cm-brand-preview">
+              <img class="banner" src="/assets/careers/hero-4.jpg" alt="Community banner">
+              <img class="mark" src="/cca%20white%20new%20logo.png" alt="Community mark">
+            </div>
+            <button class="community-manage__ghost" type="button">Replace avatar</button>
+            <button class="community-manage__ghost" type="button">Replace banner</button>
+          </div>
+          <div class="cm-demo-fields" data-settings-panel="access" hidden>
+            <div class="cm-demo-grid">
+              <label class="cm-field-label">Access type
+                <select class="cm-field">
+                  <option>Free community</option>
+                  <option selected>Paid community</option>
+                </select>
+              </label>
+              <label class="cm-field-label">Monthly price<input class="cm-field" value="29"></label>
+            </div>
+            <p class="cm-panel-sub">$10 minimum, $200 maximum. Monthly billing only. Creator Collective keeps 20% of each monthly subscription, capped at $4.</p>
+            <button class="community-manage__publish" type="button">Save access</button>
+          </div>
+          <div class="cm-demo-fields" data-settings-panel="membership" hidden>
+            <p class="cm-panel-sub">48 active subscriptions. New members join from the public page. Canceling a subscription stops the next charge.</p>
+            <table class="cm-sales__table">
+              <thead><tr><th>Member</th><th>Plan</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>A. Bennett</td><td>$29 / month</td><td>Active</td></tr>
+                <tr><td>M. Cole</td><td>$29 / month</td><td>Active</td></tr>
+                <tr><td>J. Park</td><td>$29 / month</td><td>Past due</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel="about" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">About</h2><p class="cm-panel-sub">The community page members read after they are inside.</p></header>
+          <div class="cm-demo-fields">
+            <label class="cm-field-label">About panel<textarea class="cm-field" rows="4">Weekly feedback, the roster, and the systems behind a booked month.</textarea></label>
+            <label class="cm-field-label">Highlight<input class="cm-field" value="Weekly feedback sessions"></label>
+            <button class="community-manage__ghost" type="button">Add highlight</button>
+          </div>
+        </div>
+
+        <div data-panel="classroom" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Classroom</h2><p class="cm-panel-sub">Courses and lessons.</p></header>
+          <div class="cm-demo-fields">
+            <p><strong>Getting booked</strong> · 6 lessons · Published</p>
+            <button class="community-manage__publish" type="button">New course</button>
+            <button class="community-manage__ghost" type="button">Add lesson</button>
+          </div>
+        </div>
+
+        <div data-panel="resources" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Resources</h2><p class="cm-panel-sub">The free library members can open without buying a course.</p></header>
+          <div class="cm-demo-fields">
+            <p>Rate floor worksheet · PDF</p>
+            <p>First client checklist · PDF</p>
+            <button class="community-manage__publish" type="button">Add resource</button>
+          </div>
+        </div>
+
+        <div data-panel="calendar" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Calendar</h2><p class="cm-panel-sub">Events on the community calendar.</p></header>
+          <div class="cm-demo-fields">
+            <label class="cm-field-label">Event name<input class="cm-field" value="Office hours"></label>
+            <label class="cm-field-label">When<input class="cm-field" value="Thursday, 7:00 PM"></label>
+            <button class="community-manage__publish" type="button">Publish event</button>
+          </div>
+        </div>
+
+        <div data-panel="members" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Members</h2><p class="cm-panel-sub">Roster and roles.</p></header>
+          <ul class="cm-roster">
+            <li class="cm-roster__row"><div class="cm-roster__identity"><span class="cm-roster__avatar cm-roster__avatar--fallback">A</span><div><p class="cm-roster__name">A. Bennett</p><p class="cm-roster__meta">Member · March 2026</p></div></div><div class="cm-roster__actions"><button class="cm-btn" type="button">Make moderator</button></div></li>
+            <li class="cm-roster__row"><div class="cm-roster__identity"><span class="cm-roster__avatar cm-roster__avatar--fallback">M</span><div><p class="cm-roster__name">M. Cole</p><p class="cm-roster__meta">Moderator · January 2026</p></div></div><div class="cm-roster__actions"><button class="cm-btn" type="button">Message</button></div></li>
+            <li class="cm-roster__row"><div class="cm-roster__identity"><span class="cm-roster__avatar cm-roster__avatar--fallback">S</span><div><p class="cm-roster__name">Studio</p><p class="cm-roster__meta">Owner · August 2024</p></div></div></li>
+          </ul>
+        </div>
+
+        <div data-panel="levels" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Levels</h2><p class="cm-panel-sub">Points and ranks.</p></header>
+          <div class="cm-demo-fields">
+            <p>New · 0 points</p>
+            <p>Regular · 50 points</p>
+            <p>Inner circle · 200 points</p>
+            <button class="community-manage__ghost" type="button">Add rank</button>
+          </div>
+        </div>
+
+        <div data-panel="shop" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Shop</h2><p class="cm-panel-sub">Products and catalog.</p></header>
+          <div class="cm-demo-fields">
+            <p><strong>Build It Yourself</strong> · Digital · Included with membership</p>
+            <p><strong>Location kit notes</strong> · Digital · $18</p>
+            <button class="community-manage__publish" type="button">New product</button>
+          </div>
+        </div>
+
+        <div data-panel="sales" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Sales</h2><p class="cm-panel-sub">Orders from the community shop. Refunds require admin approval.</p></header>
+          <table class="cm-sales__table">
+            <thead><tr><th>Date</th><th>Product</th><th>Buyer</th><th>Amount</th><th>Status</th><th>Type</th><th>Actions</th></tr></thead>
+            <tbody>
+              <tr><td>Sep 12</td><td>Location kit notes</td><td>A. Bennett</td><td>$18</td><td>Paid</td><td>Digital</td><td><button class="community-manage__ghost" type="button">Resend receipt</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div data-panel="analytics" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Analytics</h2><p class="cm-panel-sub">Membership revenue.</p></header>
+          <div class="cm-demo-grid">
+            <article><p class="cm-panel-sub">Active subscriptions</p><h2 class="cm-panel-title">48</h2></article>
+            <article><p class="cm-panel-sub">This month</p><h2 class="cm-panel-title">$1,392</h2></article>
+          </div>
+        </div>
+
+        <div data-panel="domain" hidden>
+          <header class="cm-panel-head"><h2 class="cm-panel-title">Domain</h2><p class="cm-panel-sub">Your own web address for the community.</p></header>
+          <div class="cm-demo-fields">
+            <label class="cm-field-label">Domain<input class="cm-field" value="community.cochranfilms.studio"></label>
+            <p class="cm-panel-sub">Status: Connected</p>
+          </div>
+        </div>
+          </div>
+          <section class="community-manage__stage" aria-label="Join page preview" data-stage>
+            <div class="community-manage__stage-toolbar">
+              <p class="community-manage__stage-kicker">Public join preview</p>
+              <div class="community-manage__device-toggle" role="group" aria-label="Preview size">
+                <button type="button" class="is-selected" data-device="desktop">Desktop</button>
+                <button type="button" data-device="phone">Phone</button>
+              </div>
+            </div>
+            <div class="community-manage__stage-viewport" data-device="desktop">
+              <div class="community-manage__stage-frame cj-page" data-join-page data-theme="dark" data-align="left" style="--cj-banner-fade:28">
+                <header class="cj-hero">
+                  <div class="cj-hero-banner"><img src="/assets/careers/hero-4.jpg" alt=""></div>
+                  <div class="cj-hero__scrim" aria-hidden="true"></div>
+                </header>
+                <div class="cj-offer cj-offer--hero">
+                  <div class="cj-identity">
+                    <div class="cj-identity__mark"><img src="/cca%20white%20new%20logo.png" alt=""></div>
+                    <p class="cj-kicker">Creator community</p>
+                    <h1 class="cj-title" data-join-preview="name">Creator Collective</h1>
+                    <div class="cj-byline">
+                      <div class="cj-byline__avatar"><img src="/C_Logo.png" alt=""></div>
+                      <p class="cj-byline__text">By <strong>Cody Cochran</strong></p>
+                    </div>
+                    <p class="cj-tagline" data-join-preview="tagline">Build the business behind the camera</p>
+                    <ul class="cj-stats">
+                      <li><strong>48</strong><span>Members</span></li>
+                      <li><strong>$29</strong><span>Each month</span></li>
+                      <li><strong>12</strong><span>Lessons</span></li>
+                    </ul>
+                    <button class="cj-cta" type="button">Join for $29 / month</button>
+                  </div>
+                </div>
+                <div class="cj-offer cj-offer--media">
+                  <div class="cj-trailer">
+                    <div class="cj-trailer__frame"><img src="/assets/careers/hero-2.jpg" alt="Community trailer still"></div>
+                  </div>
+                  <div class="cj-gallery cj-gallery--grid">
+                    <figure class="cj-gallery__item"><img src="/assets/careers/hero-3.jpg" alt=""></figure>
+                    <figure class="cj-gallery__item"><img src="/assets/real-estate/interior-01.jpg" alt=""></figure>
+                    <figure class="cj-gallery__item"><img src="/assets/careers/hero-5.jpg" alt=""></figure>
+                  </div>
+                </div>
+                <div class="cj-offer cj-offer--after">
+                  <div class="cj-below">
+                    <div class="cj-about-block">
+                      <p class="cj-section-title">About</p>
+                      <p class="cj-pull-quote">A room for creators who want the next client, not another tip thread.</p>
+                      <p data-join-preview="about">Weekly feedback, the roster, and the systems behind a booked month.</p>
+                    </div>
+                    <div>
+                      <p class="cj-section-title">What you get</p>
+                      <ul class="cj-perks" data-perk-style="check" data-join-preview="perks">
+                        <li>Weekly calls</li>
+                        <li>The job board</li>
+                        <li>The files behind a working studio</li>
+                      </ul>
+                    </div>
+                    <div class="cj-leader">
+                      <div class="cj-leader__avatar"><img src="/C_Logo.png" alt=""></div>
+                      <div>
+                        <p class="cj-leader__name">Cody Cochran</p>
+                        <p class="cj-leader__title">Founder, Cochran Films</p>
+                        <p class="cj-leader__bio">Production, the website, and the business around the camera. Atlanta and Douglasville.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="cm-toast" data-toast role="status"></p>
+<script>
+(function () {
+  var root = document.querySelector("[data-studio]");
+  var buttons = Array.prototype.slice.call(document.querySelectorAll(".community-manage__mobile-tab[data-tab]"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll("[data-panel]"));
+  var subtitle = document.querySelector("[data-subtitle]");
+  var stage = document.querySelector("[data-stage]");
+  var previewChip = document.querySelector("[data-preview-toggle]");
+  var viewport = document.querySelector(".community-manage__stage-viewport");
+  var toast = document.querySelector("[data-toast]");
+  var timer = 0;
+  var labels = {
+    landing: "Landing", settings: "Settings", about: "About", classroom: "Classroom",
+    resources: "Resources", calendar: "Calendar", members: "Members", levels: "Levels",
+    shop: "Shop", sales: "Sales", analytics: "Analytics", domain: "Domain"
+  };
+  function say(text) {
+    toast.textContent = text;
+    toast.classList.add("is-on");
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove("is-on"); }, 1400);
+  }
+  function show(id) {
+    var split = id === "landing" || id === "about";
+    buttons.forEach(function (item) {
+      var on = item.getAttribute("data-tab") === id;
+      item.classList.toggle("community-manage__mobile-tab--active", on);
+      if (on) item.setAttribute("aria-current", "page");
+      else item.removeAttribute("aria-current");
+    });
+    panels.forEach(function (panel) {
+      panel.hidden = panel.getAttribute("data-panel") !== id;
+    });
+    if (subtitle) subtitle.textContent = labels[id] || "";
+    root.classList.toggle("community-manage--full-view", !split);
+    if (stage) stage.hidden = !split;
+    if (previewChip) previewChip.hidden = !split;
+  }
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () { show(button.getAttribute("data-tab")); });
+  });
+  var settings = Array.prototype.slice.call(document.querySelectorAll("[data-settings]"));
+  var settingPanels = Array.prototype.slice.call(document.querySelectorAll("[data-settings-panel]"));
+  settings.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var id = button.getAttribute("data-settings");
+      settings.forEach(function (item) { item.classList.toggle("is-active", item === button); });
+      settingPanels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-settings-panel") !== id;
+      });
+    });
+  });
+  document.querySelectorAll("[data-device]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      document.querySelectorAll("[data-device]").forEach(function (item) {
+        item.classList.toggle("is-selected", item === button);
+      });
+      if (viewport) viewport.setAttribute("data-device", button.getAttribute("data-device"));
+    });
+  });
+  document.querySelectorAll("[data-join]").forEach(function (field) {
+    field.addEventListener("input", function () {
+      var key = field.getAttribute("data-join");
+      var target = document.querySelector('[data-join-preview="' + key + '"]');
+      if (!target) return;
+      if (key === "perks") {
+        target.innerHTML = field.value.split("\n").filter(Boolean).map(function (line) {
+          return "<li>" + line.replace(/[&<>]/g, function (ch) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch];
+          }) + "</li>";
+        }).join("");
+        return;
+      }
+      target.textContent = field.value;
+    });
+  });
+  document.querySelectorAll("[data-join-align]").forEach(function (input) {
+    input.addEventListener("change", function () {
+      var page = document.querySelector("[data-join-page]");
+      if (page) page.setAttribute("data-align", input.value);
+      input.closest("[role=radiogroup]").querySelectorAll(".cm-align").forEach(function (opt) {
+        opt.classList.toggle("is-selected", opt.contains(input));
+      });
+    });
+  });
+  document.querySelectorAll("[name=cm-perks]").forEach(function (input) {
+    input.addEventListener("change", function () {
+      var list = document.querySelector("[data-join-preview=perks]");
+      if (list) list.setAttribute("data-perk-style", input.value);
+      input.closest("[role=radiogroup]").querySelectorAll(".cm-align").forEach(function (opt) {
+        opt.classList.toggle("is-selected", opt.contains(input));
+      });
+    });
+  });
+  document.querySelectorAll("[data-join-bg]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var page = document.querySelector("[data-join-page]");
+      var hex = button.getAttribute("data-join-bg");
+      if (page) page.style.background = hex || "";
+    });
+  });
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest("button");
+    if (!button || button.hasAttribute("data-tab") || button.hasAttribute("data-settings") || button.hasAttribute("data-device")) return;
+    var action = button.getAttribute("data-action");
+    var label = button.textContent.replace(/\s+/g, " ").trim();
+    if (action === "publish") {
+      button.textContent = "Published";
+      button.classList.add("is-published");
+      say("Published");
+      return;
+    }
+    if (action === "save") {
+      say("Draft saved. Not live until you Publish");
+      return;
+    }
+    say(label);
+  });
+  show("landing");
+})();
+</script>
+</body>
+</html>

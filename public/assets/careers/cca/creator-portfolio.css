@@ -1,0 +1,1568 @@
+/**
+ * Public creator portfolio.
+ *
+ * This file owns the things Tailwind cannot express cleanly — the per-creator accent, the banner's
+ * gradient scrim, the section rhythm that makes the page read as one designed surface rather than a
+ * stack of cards, and every responsive step in the layout.
+ *
+ * `--cp-accent` is set inline on the root element from a fixed palette (see
+ * `PORTFOLIO_ACCENT_HEX`). The value never comes from free-form creator input, which is why it
+ * is safe to interpolate into a custom property at all.
+ *
+ * ------------------------------------------------------------------
+ * Why the breakpoints live here as container queries
+ *
+ * The Studio preview renders this component inside a pane a few hundred pixels wide. Viewport
+ * breakpoints cannot see that: on a laptop the viewport stays wide, so a 375px preview was handed
+ * the desktop layout and read as a broken page — the avatar, name, and socials crushed into one
+ * row until the display name wrapped a letter per line, a 16:5 banner squeezed to a sliver, and
+ * three-column grids inside a phone.
+ *
+ * Every breakpoint the page body needs is therefore a `@container cp` query against `.cp-canvas`,
+ * and every `vw` is a `cqi`. On the public page that canvas spans the viewport, so the container
+ * width *is* the viewport width and nothing about what a visitor sees changes. In the preview the
+ * same rules resolve against the device width being previewed, which is what makes the pane an
+ * honest picture of the page instead of an approximation of it.
+ *
+ * The nav is a sibling of `.cp-canvas`, not a child, so size containment cannot trap its sticky
+ * bar or the mobile sheet under the banner. Phone vs desktop chrome uses viewport media queries
+ * on the live page and `[data-preview-device]` inside the Studio frame.
+ *
+ * The thresholds match Tailwind's (640 / 768 / 1024) so this reads the same as the rest of the app.
+ *
+ * One consequence to know about: `container-type` applies layout containment, which makes
+ * `.cp-canvas` the containing block for `position: fixed` descendants. Anything overlaying the
+ * whole viewport from inside the canvas has to portal out to `document.body` — `ProjectDetailModal`
+ * and the project grid's video lightbox both do. The nav is a sibling of the canvas so its
+ * sticky bar and mobile sheet are not trapped.
+ * ------------------------------------------------------------------
+ */
+
+.cp-root {
+  position: relative;
+  --cp-accent: #d4af37;
+  --cp-accent-soft: color-mix(in srgb, var(--cp-accent) 18%, transparent);
+  --cp-accent-line: color-mix(in srgb, var(--cp-accent) 42%, transparent);
+  /* Page theme. Overridden from the DTO so a background pick never leaves ink on the old black. */
+  --cp-page: #08080a;
+  --cp-ink: #ffffff;
+  --cp-muted: #a1a1aa;
+  --cp-surface: rgba(15, 15, 17, 0.72);
+  --cp-border: rgba(255, 255, 255, 0.08);
+  /* Trusted By plate. Overridden per background so the strip never sits on the page colour.
+     Fallback matches midnight. Mix percentages live on `.cp-logo-band`. */
+  --cp-logo-band: #8a8f97;
+  --cp-nav-height: 3.5rem;
+  --cp-owner-bar-height: 0px;
+  color: var(--cp-ink);
+  padding-top: calc(var(--cp-nav-height) + var(--cp-owner-bar-height));
+  scroll-padding-top: calc(var(--cp-nav-height) + var(--cp-owner-bar-height) + 0.75rem);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, color-mix(in srgb, var(--cp-accent) 10%, transparent), transparent 70%),
+    var(--cp-page);
+}
+
+.cp-root:has(.cp-owner-bar) {
+  --cp-owner-bar-height: 2.85rem;
+}
+
+/*
+ * `html`/`body` use Tailwind `overflow-x-hidden`, which computes overflow-y to auto and
+ * makes `body` a scrollport the same height as the page. Sticky then never activates —
+ * the visitor scrolls the viewport, not that body box. `clip` stops horizontal bleed
+ * without creating that scrollport. Hash jumps still need padding on the real scroller.
+ */
+html.overflow-x-hidden:has(.cp-root):not(:has(.member-app-shell)),
+body.overflow-x-hidden:has(.cp-root):not(:has(.member-app-shell)) {
+  overflow-x: clip;
+}
+
+html:has(.cp-root):not(:has(.member-app-shell)) {
+  scroll-padding-top: calc(3.5rem + 0.75rem);
+}
+
+html:has(.cp-root):has(.cp-owner-bar):not(:has(.member-app-shell)) {
+  scroll-padding-top: calc(3.5rem + 2.85rem + 0.75rem);
+}
+
+/*
+ * Owns the container queries. Kept off `.cp-root` so the sticky header is not a fixed/sticky
+ * descendant of a size-containment box — that stacking context was painting the banner over
+ * the hamburger on phones.
+ */
+.cp-canvas {
+  container: cp / inline-size;
+}
+
+/* Consistent vertical rhythm between major sections. */
+.cp-section {
+  padding-block: clamp(2.5rem, 6cqi, 5rem);
+}
+
+.cp-section + .cp-section {
+  border-top: 1px solid var(--cp-border);
+}
+
+.cp-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cp-accent);
+}
+
+.cp-heading {
+  font-size: clamp(1.5rem, 3.5cqi, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cp-ink);
+}
+
+/* ------------------------------------------------------------------ *
+ * Page shell and hero identity block
+ *
+ * Was a run of Tailwind `sm:` utilities. Moved here so the phone layout is chosen by how wide the
+ * page actually is, not by how wide the browser window happens to be.
+ * ------------------------------------------------------------------ */
+
+.cp-shell {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/*
+ * Always below the hero — never over the photo. Fade amount is a creator setting, so type
+ * sitting on the banner would become unreadable at any fade they pick.
+ * Stacked by default: at phone widths the avatar, name, and social row cannot share a line
+ * without starving the name of the space it needs to set at all.
+ */
+.cp-identity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.cp-identity__text {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cp-identity__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.cp-copy {
+  color: color-mix(in srgb, var(--cp-ink) 82%, var(--cp-page));
+}
+
+.cp-copy-strong {
+  color: var(--cp-ink);
+}
+
+.cp-copy-muted {
+  color: var(--cp-muted);
+}
+
+.cp-hire {
+  background: var(--cp-ink);
+  color: var(--cp-page);
+}
+
+.cp-hire:hover {
+  background: color-mix(in srgb, var(--cp-ink) 88%, var(--cp-page));
+}
+
+.cp-avatar {
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid var(--cp-page);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--cp-ink) 12%, var(--cp-page));
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.cp-avatar__fallback {
+  color: var(--cp-ink);
+  background: color-mix(in srgb, var(--cp-ink) 14%, var(--cp-page));
+}
+
+.cp-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--cp-ink);
+  overflow-wrap: break-word;
+}
+
+.cp-tagline {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: color-mix(in srgb, var(--cp-ink) 82%, var(--cp-page));
+}
+
+.cp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--cp-muted);
+}
+
+.cp-bio {
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--cp-ink) 78%, var(--cp-page));
+  white-space: pre-wrap;
+}
+
+/* ------------------------------------------------------------------ *
+ * Card grids
+ *
+ * Three shapes, one set of rules. `--wide` is the evidence grids (projects, services) that earn a
+ * third column on a real desktop; `--pair` holds testimonials to two columns and waits longer for
+ * the second, since a quote needs more measure than a card; `--fields` is a form row.
+ * ------------------------------------------------------------------ */
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--cp-grid-gap, 1.25rem);
+}
+
+.cp-grid--pair,
+.cp-grid--fields {
+  --cp-grid-gap: 1rem;
+}
+
+@container cp (min-width: 640px) {
+  .cp-shell {
+    padding-inline: 1.5rem;
+  }
+
+  .cp-identity {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 1.75rem;
+  }
+
+  .cp-identity__actions {
+    padding-bottom: 0.25rem;
+  }
+
+  .cp-avatar {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .cp-name {
+    font-size: 1.875rem;
+  }
+
+  .cp-bio {
+    font-size: 1.125rem;
+  }
+
+  .cp-grid--wide,
+  .cp-grid--fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container cp (min-width: 768px) {
+  .cp-grid--pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container cp (min-width: 1024px) {
+  .cp-grid--wide {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Banner
+ *
+ * A capped aspect ratio rather than the old fixed pixel heights: at 550px the banner pushed the
+ * name, bio, and work below the fold on a laptop, which is the opposite of what a portfolio
+ * hero should do.
+ * ------------------------------------------------------------------ */
+
+/*
+ * The ratio comes from `--cp-banner-aspect`, set on `.cp-root` from the same constant the crop UI
+ * uses, so the live banner is exactly the frame the creator chose in the Studio. The literal here
+ * is only a fallback for a banner rendered outside `.cp-root`.
+ *
+ * No `max-height`: capping the height while declaring a ratio means the declared ratio quietly
+ * stops applying above ~1344px wide, and `object-fit: cover` starts re-cropping the very framing
+ * this is supposed to honor.
+ */
+.cp-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--cp-banner-aspect, 16 / 5);
+  min-height: 180px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #101014, #16161c 55%, #0b0b0e);
+}
+
+.cp-banner__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * Bottom fade into the page. `--cp-banner-fade` is 0–100 from the Studio slider
+ * (55 matches the original hardcoded stops). At 0 every mix is 0% so the photo
+ * stays unwashed; at 100 the page colour takes most of the frame.
+ */
+.cp-banner__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --_fade: var(--cp-banner-fade, 55);
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--cp-page) calc(var(--_fade) * 0.18%), transparent) 0%,
+    color-mix(in srgb, var(--cp-page) calc(var(--_fade) * 1%), transparent)
+      calc(100% - var(--_fade) * 0.72%),
+    color-mix(in srgb, var(--cp-page) min(100%, calc(var(--_fade) * 1.85%)), transparent) 100%
+  );
+}
+
+/*
+ * A deliberate exception to the shared ratio: 16:5 on a 375px-wide page is a 117px sliver. This
+ * trades a ~1.4x horizontal crop for a hero that reads as a hero on a phone, which is the cheaper
+ * side to give up — losing the edges of a wide shot is far less destructive than the vertical
+ * crop that cut off faces.
+ */
+@container cp (max-width: 640px) {
+  .cp-banner {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Availability
+ *
+ * A hallmarked plaque, not a SaaS "online" pill. Status never wraps. The note
+ * sits outside — stacked on a phone, divided by a hairline when the page is wide.
+ * Color comes from `--cp-accent` so the mark belongs to the page, not a stock green.
+ * ------------------------------------------------------------------ */
+
+.cp-availability {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-top: 0.95rem;
+  max-width: 100%;
+}
+
+.cp-availability__status {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.48rem 0.95rem 0.46rem 0.78rem;
+  border-radius: 2px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--cp-accent);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--cp-ink) 10%, transparent) 0%,
+      transparent 46%
+    ),
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--cp-accent) 18%, var(--cp-page)) 0%,
+      color-mix(in srgb, var(--cp-accent) 7%, var(--cp-page)) 100%
+    );
+  border: 1px solid color-mix(in srgb, var(--cp-accent) 46%, var(--cp-border));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--cp-ink) 16%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--cp-page) 40%, transparent);
+}
+
+.cp-availability__mark {
+  width: 0.32rem;
+  height: 0.32rem;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  background: var(--cp-accent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cp-accent) 30%, transparent);
+}
+
+.cp-availability__note {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: var(--cp-muted);
+  max-width: 28rem;
+}
+
+.cp-availability--limited .cp-availability__status {
+  color: color-mix(in srgb, var(--cp-accent) 74%, var(--cp-muted));
+  border-color: color-mix(in srgb, var(--cp-accent) 28%, var(--cp-border));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--cp-ink) 6%, transparent) 0%,
+      transparent 46%
+    ),
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--cp-accent) 10%, var(--cp-page)) 0%,
+      color-mix(in srgb, var(--cp-accent) 4%, var(--cp-page)) 100%
+    );
+}
+
+.cp-availability--limited .cp-availability__mark {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--cp-accent) 74%, var(--cp-muted));
+}
+
+.cp-availability--booked .cp-availability__status {
+  color: var(--cp-muted);
+  border-color: var(--cp-border);
+  background: color-mix(in srgb, var(--cp-ink) 4%, var(--cp-page));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--cp-ink) 7%, transparent);
+}
+
+.cp-availability--booked .cp-availability__mark {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid var(--cp-muted);
+  opacity: 0.7;
+}
+
+.cp-skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.85rem;
+}
+
+.cp-skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: color-mix(in srgb, var(--cp-ink) 46%, var(--cp-muted));
+  background: none;
+  box-shadow: none;
+}
+
+.cp-skill:not(:last-child)::after {
+  content: '·';
+  margin: 0 0.48rem;
+  color: color-mix(in srgb, var(--cp-ink) 26%, transparent);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.cp-skill--more {
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--cp-ink) 34%, transparent);
+}
+
+@container cp (min-width: 640px) {
+  .cp-availability {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.95rem;
+  }
+
+  .cp-availability__note {
+    position: relative;
+    padding-inline-start: 0.95rem;
+    max-width: 36rem;
+  }
+
+  .cp-availability__note::before {
+    content: '';
+    position: absolute;
+    inset-block: 0.2em;
+    inset-inline-start: 0;
+    width: 1px;
+    background: color-mix(in srgb, var(--cp-accent) 36%, var(--cp-border));
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Cards
+ * ------------------------------------------------------------------ */
+
+.cp-card {
+  border: 1px solid var(--cp-border);
+  border-radius: 1rem;
+  background: var(--cp-surface);
+  backdrop-filter: blur(12px);
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+/*
+ * Media frame. Images and videos are absolutely painted so they meet the rounded card edge —
+ * YouTube `hqdefault` is 4:3 with letterbox bars that almost exactly match a 16:9 crop, and a
+ * 1px rounding miss was leaving the black sliver at the top of most video cards.
+ */
+.cp-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.cp-card__thumb {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center;
+  transition: transform 500ms ease;
+}
+
+.cp-root iframe {
+  max-width: none;
+}
+
+/*
+ * YouTube `hqdefault` is 4:3 with letterbox bars. A 16:9 cover crop is almost exact;
+ * the extra zoom hides the 1px miss and the leftover bar when `height: auto` used to
+ * pin the image to the top of the frame.
+ */
+.cp-card__thumb--youtube {
+  transform: scale(1.34);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cp-card--hover:hover .cp-card__thumb:not(.cp-card__thumb--youtube) {
+    transform: scale(1.05);
+  }
+
+  .cp-card--hover:hover .cp-card__thumb--youtube {
+    transform: scale(1.4);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cp-card--hover:hover {
+    border-color: var(--cp-accent-line);
+    transform: translateY(-2px);
+  }
+}
+
+.cp-rate {
+  color: var(--cp-accent);
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------------------ *
+ * Contact form
+ * ------------------------------------------------------------------ */
+
+.cp-form {
+  padding: 1.5rem;
+}
+
+.cp-field {
+  background: color-mix(in srgb, var(--cp-page) 55%, transparent);
+  border: 1px solid var(--cp-border);
+  color: var(--cp-ink);
+}
+
+.cp-field::placeholder {
+  color: var(--cp-muted);
+}
+
+.cp-field:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--cp-ink) 28%, transparent);
+}
+
+/* Full width is the phone default: a thumb reaches a bar, not a button in a corner. */
+.cp-form__submit {
+  width: 100%;
+}
+
+@container cp (min-width: 640px) {
+  .cp-form {
+    padding: 2rem;
+  }
+
+  .cp-form__submit {
+    width: auto;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Service cards
+ *
+ * Deliberately heavier than `.cp-card`. Projects are evidence and should recede behind their
+ * own thumbnails; services are the offer, and they were reading as a bulleted list next to a
+ * grid of images. The accent rule, the tinted wash, and a price set at display size are what
+ * make the offer the loudest thing on the page after the hero.
+ *
+ * Kept as its own class rather than a `.cp-card` modifier so project cards are untouched.
+ * ------------------------------------------------------------------ */
+
+.cp-service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border: 1px solid var(--cp-border);
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(160deg, var(--cp-accent-soft) 0%, transparent 55%),
+    var(--cp-surface);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+/* The accent rule reads as a spine down the row and ties the cards to the creator's colour. */
+.cp-service::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cp-accent), transparent 85%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cp-service:hover {
+    border-color: var(--cp-accent-line);
+    transform: translateY(-3px);
+    box-shadow: 0 26px 50px -32px rgba(0, 0, 0, 0.95);
+  }
+}
+
+.cp-service__index {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--cp-accent);
+  opacity: 0.75;
+}
+
+.cp-service__name {
+  margin-top: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--cp-ink);
+}
+
+.cp-service__desc {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--cp-ink) 72%, var(--cp-page));
+}
+
+/* `margin-top:auto` keeps the price on the baseline across a row of uneven descriptions. */
+.cp-service__foot {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cp-service__price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.cp-service__price-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+}
+
+.cp-service__price-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* An outlined pill, not grey filler — "ask me" is a deliberate answer, not a missing value. */
+.cp-service__quote {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--cp-accent-line);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cp-accent);
+}
+
+.cp-service__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--cp-ink);
+  border-bottom: 1px solid var(--cp-accent-line);
+  padding-bottom: 2px;
+  transition: gap 200ms ease, border-color 200ms ease;
+}
+
+.cp-service__cta:hover {
+  gap: 0.625rem;
+  border-color: var(--cp-accent);
+}
+
+/* One service should look like a focused offer, not a card that lost its row. */
+.cp-service--solo {
+  padding: 2.25rem 2rem 2rem;
+}
+
+.cp-service--solo .cp-service__name {
+  font-size: 1.5rem;
+}
+
+.cp-service--solo .cp-service__desc {
+  max-width: 46ch;
+  font-size: 0.9375rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * Client logos — full colour, always.
+ *
+ * These are the creator's credentials. Desaturating them made the row read as decoration and
+ * quietly rewrote brands the creator does not own the right to restyle.
+ *
+ * Colour alone is not enough on a near-black page, and neither is a white plate: a creator's
+ * clients arrive as a mix of dark-on-transparent and white-on-transparent marks, so any
+ * background near either end of the range erases half of them. `--cp-logo-band` is therefore a
+ * mid tone chosen per page theme — dark enough that a white logo reads, light enough that a
+ * black one does, and far enough from `--cp-page` that the strip cannot disappear. The hex
+ * lives on the theme tokens; do not reuse one grey across light and dark pages.
+ * ------------------------------------------------------------------ */
+
+.cp-logo-band {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(1.25rem, 3.5cqi, 2.25rem) 0;
+  background: transparent;
+}
+
+/*
+ * Full-bleed plate that dies out into the page — horizontally at the canvas edges, and softly
+ * on the top and bottom so it never reads as a hard grey stripe. `100cqi` is the portfolio
+ * canvas (viewport on the live page, device frame in the Studio preview), so this does not
+ * use `100vw` and cannot grow a horizontal scrollbar.
+ */
+.cp-logo-band::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: 100cqi;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--cp-logo-band) 32%, transparent) 10%,
+    color-mix(in srgb, var(--cp-logo-band) 76%, transparent) 24%,
+    color-mix(in srgb, var(--cp-logo-band) 88%, transparent) 50%,
+    color-mix(in srgb, var(--cp-logo-band) 76%, transparent) 76%,
+    color-mix(in srgb, var(--cp-logo-band) 32%, transparent) 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    #000 22%,
+    #000 78%,
+    transparent 100%
+  );
+}
+
+.cp-logo-marquee {
+  overflow: hidden;
+  height: 2.75rem;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.cp-logo-scroll {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  animation: cp-logo-scroll 32s linear infinite;
+}
+
+.cp-logo-strip {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: clamp(1.75rem, 5cqi, 3.25rem);
+  padding-inline: clamp(0.85rem, 2.5cqi, 1.5rem);
+}
+
+.cp-root img.cp-logo {
+  display: block;
+  height: 1.85rem;
+  max-height: 1.85rem;
+  width: auto;
+  max-width: 7.25rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@container cp (max-width: 639px) {
+  .cp-logo-band {
+    padding-block: 0.65rem;
+  }
+
+  .cp-logo-marquee {
+    height: 1.85rem;
+  }
+
+  .cp-logo-strip {
+    gap: 1.1rem;
+    padding-inline: 0.55rem;
+  }
+
+  .cp-root img.cp-logo {
+    height: 1.1rem;
+    max-height: 1.1rem;
+    max-width: 4.25rem;
+  }
+
+  .cp-logo-scroll {
+    animation-duration: 22s;
+  }
+}
+
+/* Viewport copy of the phone sizes — wins even if the canvas query does not fire. */
+@media (max-width: 639px) {
+  .cp-logo-band {
+    padding-block: 0.65rem;
+  }
+
+  .cp-logo-marquee {
+    height: 1.85rem;
+  }
+
+  .cp-logo-strip {
+    gap: 1.1rem;
+    padding-inline: 0.55rem;
+  }
+
+  .cp-root img.cp-logo {
+    height: 1.1rem;
+    max-height: 1.1rem;
+    max-width: 4.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-logo-scroll {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    gap: 1.25rem;
+    padding-inline: 1rem;
+  }
+
+  .cp-logo-strip[aria-hidden='true'] {
+    display: none;
+  }
+}
+
+@keyframes cp-logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Reel
+ * ------------------------------------------------------------------ */
+
+.cp-reel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--cp-border);
+  background: #000;
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.9);
+}
+
+.cp-reel iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border: 0;
+}
+
+/* ------------------------------------------------------------------ *
+ * Owner bar — only rendered for the signed-in owner, pinned so the route
+ * back to the Studio is reachable from anywhere on the page.
+ * ------------------------------------------------------------------ */
+
+.cp-owner-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid var(--cp-accent-line);
+  background: color-mix(in srgb, var(--cp-accent) 12%, rgba(8, 8, 10, 0.92));
+  backdrop-filter: blur(12px);
+  font-size: 0.8125rem;
+}
+
+.cp-owner-bar__label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.cp-owner-bar__spacer {
+  flex: 1 1 auto;
+}
+
+.cp-owner-bar__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid var(--cp-border);
+  color: #fff;
+  transition: background-color 150ms ease;
+}
+
+.cp-owner-bar__action:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cp-owner-bar__action--primary {
+  background: var(--cp-accent);
+  border-color: transparent;
+  color: #0b0b0e;
+}
+
+.cp-owner-bar__action--primary:hover {
+  background: color-mix(in srgb, var(--cp-accent) 85%, #fff);
+}
+
+/* ------------------------------------------------------------------ *
+ * Page alignment
+ *
+ * One setting for titles, body, the header cluster, and the contact form.
+ * ------------------------------------------------------------------ */
+
+.cp-form-wrap {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.cp-root[data-align='center'] {
+  text-align: center;
+}
+
+.cp-root[data-align='right'] {
+  text-align: right;
+}
+
+.cp-root[data-align='center'] .cp-form-wrap {
+  margin-inline: auto;
+}
+
+.cp-root[data-align='right'] .cp-form-wrap {
+  margin-inline-start: auto;
+}
+
+.cp-root[data-align='center'] .cp-identity,
+.cp-root[data-align='center'] .cp-identity__text,
+.cp-root[data-align='center'] .cp-identity__actions,
+.cp-root[data-align='right'] .cp-identity,
+.cp-root[data-align='right'] .cp-identity__text {
+  align-items: center;
+}
+
+.cp-root[data-align='center'] .cp-identity__text,
+.cp-root[data-align='right'] .cp-identity__text {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cp-root[data-align='center'] .cp-name,
+.cp-root[data-align='center'] .cp-tagline,
+.cp-root[data-align='right'] .cp-name,
+.cp-root[data-align='right'] .cp-tagline {
+  max-width: 100%;
+}
+
+.cp-root[data-align='center'] .cp-meta,
+.cp-root[data-align='center'] .cp-availability {
+  justify-content: center;
+}
+
+.cp-root[data-align='center'] .cp-availability {
+  align-items: center;
+  text-align: center;
+}
+
+.cp-root[data-align='center'] .cp-identity__actions,
+.cp-root[data-align='right'] .cp-identity__actions {
+  justify-content: center;
+}
+
+.cp-root[data-align='center'] .cp-bio,
+.cp-root[data-align='right'] .cp-bio {
+  margin-inline: auto;
+}
+
+.cp-root[data-align='right'] .cp-bio {
+  margin-inline-end: 0;
+}
+
+.cp-root[data-align='right'] .cp-identity,
+.cp-root[data-align='right'] .cp-identity__text {
+  align-items: flex-end;
+}
+
+.cp-root[data-align='right'] .cp-identity__actions,
+.cp-root[data-align='right'] .cp-meta,
+.cp-root[data-align='right'] .cp-availability {
+  justify-content: flex-end;
+}
+
+.cp-root[data-align='right'] .cp-availability {
+  align-items: flex-end;
+  text-align: right;
+}
+
+@container cp (min-width: 640px) {
+  .cp-root[data-align='center'] .cp-identity,
+  .cp-root[data-align='right'] .cp-identity {
+    justify-content: space-between;
+  }
+}
+
+.cp-root[data-align='center'] .cp-form,
+.cp-root[data-align='right'] .cp-form {
+  text-align: inherit;
+}
+
+.cp-root[data-align='center'] .cp-form__submit {
+  margin-inline: auto;
+}
+
+.cp-root[data-align='right'] .cp-form__submit {
+  margin-inline-start: auto;
+}
+
+/* ------------------------------------------------------------------ *
+ * Site header
+ *
+ * Pinned to the viewport. `position: sticky` does not hold on the public page because
+ * `html`/`body` use `overflow-x-hidden` (see the clip override above). Phone already
+ * used `fixed` for that reason; desktop now matches so section links stay reachable.
+ * Studio preview and the member-shell scrollport stay `sticky` — `fixed` would pin to
+ * the dashboard window instead of the device frame / shell scroller.
+ * ------------------------------------------------------------------ */
+
+.cp-nav {
+  position: fixed;
+  top: var(--cp-owner-bar-height);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  /*
+   * The bar centres its own contents and ignores the page alignment setting entirely.
+   *
+   * Following it put the logo and the section links hard against one edge with the rest of the
+   * bar empty, which on a wide screen reads as a broken header rather than a deliberate choice —
+   * and `right` stranded the whole cluster in the corner. Alignment governs the content below,
+   * where it is a typographic decision; a site header is centred.
+   *
+   * Phone overrides this to `space-between` so the wordmark and the hamburger take opposite
+   * edges, which is the one case where splitting them is the expected shape.
+   */
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--cp-page) 94%, transparent);
+  border-bottom: 1px solid var(--cp-border);
+  backdrop-filter: blur(16px);
+}
+
+.cp-nav.is-open {
+  z-index: 200;
+}
+
+.cp-nav__brand {
+  min-width: 0;
+  max-width: 12rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--cp-ink);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cp-root img.cp-nav__logo {
+  display: block;
+  height: 1.75rem;
+  max-height: 1.75rem;
+  width: auto;
+  max-width: 9rem;
+  object-fit: contain;
+}
+
+.cp-nav__links {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: inherit;
+  gap: 0.4rem;
+}
+
+.cp-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--cp-accent);
+  border-radius: 0.125rem;
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--cp-ink);
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.cp-nav__link:hover {
+  background: color-mix(in srgb, var(--cp-accent) 14%, transparent);
+  color: var(--cp-ink);
+}
+
+.cp-nav__menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--cp-accent);
+  border-radius: 0.125rem;
+  background: transparent;
+  color: var(--cp-ink);
+}
+
+.cp-nav__sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  padding:
+    max(1.25rem, env(safe-area-inset-top))
+    max(1.25rem, env(safe-area-inset-right))
+    max(2rem, env(safe-area-inset-bottom))
+    max(1.25rem, env(safe-area-inset-left));
+  background: color-mix(in srgb, var(--cp-page) 96%, transparent);
+  backdrop-filter: blur(20px);
+}
+
+/* Studio: the preview page's scale transform is the containing block, so this stays on the device frame. */
+.portfolio-studio__preview-page .cp-nav__sheet {
+  z-index: 80;
+  padding: 1.25rem 1.25rem 2rem;
+}
+
+.cp-nav__sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.cp-nav__sheet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cp-nav__sheet-list a {
+  justify-content: flex-start;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+@media (max-width: 639px) {
+  .cp-root {
+    --cp-nav-height: 3.15rem;
+    padding-top: calc(var(--cp-nav-height) + var(--cp-owner-bar-height) + env(safe-area-inset-top, 0px));
+  }
+
+  .cp-nav {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+  }
+
+  .cp-nav {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .cp-nav__links {
+    display: none;
+  }
+
+  .cp-nav__menu {
+    display: inline-flex;
+    margin-inline-start: auto;
+    flex-shrink: 0;
+  }
+
+  .cp-root img.cp-nav__logo {
+    height: 1.35rem;
+    max-height: 1.35rem;
+    max-width: 7.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .cp-nav {
+    padding-inline: 1.5rem;
+  }
+
+  .cp-nav__links {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .cp-nav__menu,
+  .cp-nav__sheet {
+    display: none;
+  }
+}
+
+/* Studio + member shell: stay in the local scrollport, not the browser window. */
+.portfolio-studio__preview-page .cp-nav,
+.member-app-shell .cp-nav,
+.member-app-shell .cp-owner-bar {
+  position: sticky;
+  top: 0;
+  left: auto;
+  right: auto;
+  width: auto;
+}
+
+.portfolio-studio__preview-page .cp-root,
+.member-app-shell .cp-root {
+  padding-top: 0;
+}
+
+.member-app-shell .cp-root:has(.cp-owner-bar) .cp-nav {
+  top: var(--cp-owner-bar-height);
+}
+
+/* Studio phone frame is 390px inside a desktop viewport — media queries would hide the menu. */
+.portfolio-studio__preview-page[data-preview-device='phone'] .cp-nav {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.portfolio-studio__preview-page[data-preview-device='phone'] .cp-root {
+  padding-top: 0;
+}
+
+.portfolio-studio__preview-page[data-preview-device='phone'] .cp-nav__links {
+  display: none;
+}
+
+.portfolio-studio__preview-page[data-preview-device='phone'] .cp-nav__menu {
+  display: inline-flex;
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+/* Mirrors the desktop media query for the case it cannot cover: a creator working in the Studio on
+   a narrow window with the desktop preview selected. */
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-nav {
+  justify-content: center;
+  padding-inline: 1.5rem;
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-nav__links {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-nav__menu,
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-nav__sheet {
+  display: none;
+}
+
+.portfolio-studio__preview-page[data-preview-device='phone'] .cp-identity {
+  flex-direction: column;
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-identity {
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 1.75rem;
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-identity__actions {
+  padding-bottom: 0.25rem;
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-grid--wide,
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-grid--fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-studio__preview-page[data-preview-device='desktop'] .cp-grid--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ------------------------------------------------------------------ *
+ * Studio preview
+ *
+ * The public page is dark for everyone; there is no light variant. It used to have one because
+ * the page sat between a white site header and a light footer and read as a black island — that
+ * chrome is gone now, so the page is its own canvas and the remaps that fought for it are gone
+ * with it.
+ *
+ * The preview pane is the one exception that needs work, because it lives inside
+ * `.app-dashboard`, whose light theme remaps Tailwind colour utilities with `!important`. Left
+ * alone, a creator on a light dashboard would get dark ink painted onto this dark surface and the
+ * preview would be unreadable. So the portfolio's own values are re-asserted here at higher
+ * specificity.
+ *
+ * Only the utilities that the portfolio markup uses *and* the dashboard remaps are listed. Adding
+ * a new Tailwind colour utility to the portfolio components may mean adding it here too.
+ * ------------------------------------------------------------------ */
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root {
+  color: var(--cp-ink) !important;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, color-mix(in srgb, var(--cp-accent) 10%, transparent), transparent 70%),
+    var(--cp-page) !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-white,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-white {
+  color: var(--cp-ink) !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-200,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-200 {
+  color: #e5e5e5 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-300,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-300 {
+  color: #d4d4d4 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-400,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-400 {
+  color: #a3a3a3 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-500,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-500 {
+  color: #737373 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-600,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .text-neutral-600 {
+  color: #525252 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .bg-neutral-900,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .bg-neutral-900 {
+  background-color: #171717 !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .bg-white\/5,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-theme='light'] .portfolio-studio__preview-page .cp-root .border-white\/10,
+html[data-dashboard-theme='light'] .portfolio-studio__preview-page .cp-root .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/*
+ * `min-h-screen` on `.cp-root` has to mean the previewed device's viewport, not the dashboard's.
+ * `--cp-preview-height` is set by `StudioPreview` from the device being shown, so a short
+ * portfolio still fills the frame instead of floating in a black gutter.
+ */
+.portfolio-studio__preview-page,
+.portfolio-studio__preview-page .cp-root {
+  min-height: var(--cp-preview-height, 100%);
+}
+
+.cp-study__back {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cp-study__back:hover {
+  color: var(--cp-accent);
+}
+
+.cp-study__head {
+  padding-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.cp-section--follow-head {
+  padding-top: clamp(1.25rem, 3cqi, 2rem);
+  padding-bottom: clamp(2.5rem, 6cqi, 5rem);
+}
+
+.cp-study__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin: 1rem 0 0;
+}
+
+.cp-study__meta-item dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+}
+
+.cp-study__meta-item dd {
+  margin: 0.2rem 0 0;
+  font-weight: 600;
+}
+
+.cp-study__outcome {
+  margin-top: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.cp-study__credits {
+  margin-top: 1rem;
+  color: var(--cp-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.cp-study__media {
+  display: grid;
+  gap: 1rem;
+}
+
+.cp-study__frame {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  background: var(--cp-surface);
+}
+
+.cp-study__embed {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.cp-study__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 2rem;
+}
