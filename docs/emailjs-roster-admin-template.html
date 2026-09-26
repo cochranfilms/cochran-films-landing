@@ -1,0 +1,70 @@
+<!--
+  Cochran Films: Crew Roster — Admin (EmailJS)
+  Env: EMAILJS_ROSTER_ADMIN_TEMPLATE_ID
+  Settings: To {{to_email}} · From Cochran Films · Reply To {{reply_to}}
+  Subject: Cochran Films — {{email_heading}}
+--><!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{email_heading}}</title>
+</head>
+<body style="margin:0;padding:0;width:100%;background-color:#ffffff;">
+<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;color:transparent;">Crew roster request from {{customer_name}}</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid rgba(0,0,0,0.14);">
+          <tr>
+            <td style="padding:32px 28px 24px;border-bottom:1px solid rgba(0,0,0,0.14);">
+              <img src="https://www.cochranfilms.com/CF_Logo_Black2025.png" alt="Cochran Films" width="200" style="width:100%;max-width:200px;height:auto;margin:0 0 22px;" />
+              <p style="margin:0 0 10px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Crew roster</p>
+              <h1 style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:26px;line-height:1.2;font-weight:600;color:#1d1d1f;">{{email_heading}}</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px 28px 8px;">
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.7;color:#333336;">{{email_intro}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 28px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">From</p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:22px;font-weight:600;color:#1d1d1f;">{{customer_name}}</p>
+              <p style="margin:0 0 20px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;"><a href="mailto:{{customer_email}}" style="color:#1d1d1f;text-decoration:underline;font-weight:600;">{{customer_email}}</a></p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Role</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:17px;font-weight:600;color:#1d1d1f;">{{roster_role}}</p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">City</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:17px;font-weight:600;color:#1d1d1f;">{{roster_city}}</p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Portfolio</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;"><a href="{{roster_portfolio}}" style="color:#1d1d1f;text-decoration:underline;font-weight:600;">{{roster_portfolio}}</a></p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Availability</p>
+              <p style="margin:0 0 20px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#333336;">{{roster_availability}}</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:13px;color:#424245;">{{inquiry_id}} · {{submitted_date}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:8px 28px 28px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                <tr>
+                  <td align="center" style="background-color:#1d1d1f;">
+                    <a href="{{cta_url}}" style="display:inline-block;padding:14px 28px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:13px;font-weight:600;color:#ffffff;text-decoration:none;">{{cta_label}}</a>
+                  </td>
+                </tr>
+              </table>
+              <p style="margin:14px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#424245;">{{cta_subtext}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:24px 28px 28px;border-top:1px solid rgba(0,0,0,0.14);">
+              <p style="margin:0 0 6px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;font-weight:600;color:#1d1d1f;">Cochran Films</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#424245;">(470) 420-2169 · info@cochranfilms.com</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
