@@ -23,6 +23,15 @@
     },
     "api/site-preview.js": {
       "maxDuration": 15
+    },
+    "api/admin/board.js": {
+      "maxDuration": 30
+    },
+    "api/admin/invoices.js": {
+      "maxDuration": 30
+    },
+    "api/admin/subscriptions.js": {
+      "maxDuration": 30
     }
   },
   "rewrites": [
@@ -61,6 +70,10 @@
     {
       "source": "/checkout",
       "destination": "/checkout.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
     }
   ]
 }

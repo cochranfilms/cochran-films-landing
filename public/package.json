@@ -2,6 +2,7 @@
   "name": "cochran-films-landing-public",
   "private": true,
   "dependencies": {
+    "@vercel/blob": "^2.8.0",
     "stripe": "^17.7.0"
   }
 }

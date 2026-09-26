@@ -112,6 +112,7 @@ document.documentElement.classList.add("js");
           name: "Journal List",
           email: email,
           service: "other",
+          source: "journal",
           message: "Please add " + email + " to the Cochran Films journal list. They agreed to receive a note when a new essay is published and can unsubscribe by reply. Source: journal signup.",
           companyWebsite: honey ? honey.value : "",
           formLoadedAt: formLoadedAt

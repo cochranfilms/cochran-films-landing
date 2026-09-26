@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · Cochran Films</title>
+  <link rel="stylesheet" href="/css/admin-dashboard.css">
+  <link rel="stylesheet" href="/css/admin-board.css">
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('cf-admin-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.adminTheme = savedTheme;
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="admin-root" class="admin-dashboard" data-theme="dark">
+    <section id="login-view" class="admin-login">
+      <form id="login-form" class="admin-login__card">
+        <div class="admin-login__brand">
+          <img src="/CF_Logo_White2025.png" alt="Cochran Films" width="640" height="220">
+        </div>
+        <h1 class="admin-login__title">Sign in</h1>
+        <p class="admin-login__desc">Studio inquiries, service purchases, and subscriptions.</p>
+        <p id="login-error" class="admin-login__error" hidden></p>
+        <label class="admin-field">
+          <span>Email</span>
+          <input id="login-email" name="email" type="email" autocomplete="username" required>
+        </label>
+        <label class="admin-field">
+          <span>Password</span>
+          <div class="admin-password">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+            <button type="button" id="login-reveal">Show</button>
+          </div>
+        </label>
+        <button class="admin-btn admin-btn--primary admin-login__submit" type="submit">Sign in</button>
+      </form>
+    </section>
+
+    <div id="app-view" class="admin-dashboard__shell" hidden>
+      <aside class="admin-rail" aria-label="Admin sections">
+        <button type="button" class="admin-rail__avatar" id="account-button" aria-label="Account menu" aria-expanded="false">
+          <span class="admin-rail__avatar-face">CF</span>
+          <span class="admin-rail__tip">Account</span>
+        </button>
+        <button type="button" class="admin-rail__item" id="theme-toggle" aria-label="Switch to light mode">
+          <span class="admin-rail__tip" id="theme-tip">Light mode</span>
+        </button>
+        <a class="admin-rail__item admin-rail__home" href="https://www.cochranfilms.com" aria-label="View site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <span class="admin-rail__tip">View site</span>
+        </a>
+        <nav class="admin-rail__nav" id="rail-nav" aria-label="Admin tool sections"></nav>
+      </aside>
+      <div id="account-menu" class="admin-rail-account-menu" hidden role="menu">
+        <div class="admin-rail-account-menu__head">
+          <div class="admin-rail-account-menu__name">Cochran Films</div>
+          <div class="admin-rail-account-menu__handle" id="account-email">info@cochranfilms.com</div>
+        </div>
+        <button type="button" class="admin-rail-account-menu__item admin-rail-account-menu__item--danger" id="sign-out" role="menuitem">Sign out</button>
+      </div>
+      <div class="admin-dashboard__main">
+        <div class="admin-mobile-nav" id="mobile-nav"></div>
+        <div class="admin-dashboard__inner">
+          <header class="admin-header">
+            <div class="admin-header__titles">
+              <p class="admin-header__section" id="header-section">General</p>
+              <h1 class="admin-header__title" id="header-title">Overview</h1>
+              <p class="admin-header__desc" id="header-desc">What needs you right now</p>
+            </div>
+            <div class="admin-header__search">
+              <input id="tool-search" type="search" placeholder="Search admin tools..." aria-label="Search admin tools">
+              <div id="tool-results" class="admin-header__results" hidden></div>
+            </div>
+          </header>
+          <div id="admin-panel" class="admin-dashboard__panel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirm" class="admin-confirm" hidden>
+    <div class="admin-confirm__card" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+      <h2 id="confirm-title"></h2>
+      <p id="confirm-copy"></p>
+      <div class="admin-confirm__actions">
+        <button type="button" class="admin-btn" id="confirm-cancel">Back</button>
+        <button type="button" class="admin-btn admin-btn--danger" id="confirm-go">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/admin-dashboard.js"></script>
+</body>
+</html>

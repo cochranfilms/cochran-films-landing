@@ -213,6 +213,8 @@ export default async function handler(req, res) {
       [customerFirst, customerLast].filter(Boolean).join(' ');
 
     const isRoster = source === 'careers-roster';
+    const isJournal = source === 'journal' || /journal list/i.test(String(message || ''));
+    const recordSource = isRoster ? 'roster' : isJournal ? 'journal' : 'contact';
     const rosterRole = String(role || '').trim();
     const rosterCity = String(city || '').trim();
     const rosterPortfolio = String(portfolioUrl || '').trim();
@@ -339,6 +341,27 @@ export default async function handler(req, res) {
       } catch (clientError) {
         console.error('Client confirmation email failed:', clientError);
       }
+    }
+
+    try {
+      const { appendInquiry } = require('../admin/lib/store');
+      await appendInquiry({
+        id: inquiryId,
+        source: recordSource,
+        name: customerName,
+        email: email.trim(),
+        phone: '',
+        service: serviceLabel,
+        message: outboundMessage,
+        city: isRoster ? rosterCity : '',
+        role: isRoster ? rosterRole : '',
+        portfolio: isRoster ? rosterPortfolio : '',
+        availability: isRoster ? rosterAvailability : '',
+        status: 'new',
+        submittedAt: new Date().toISOString(),
+      });
+    } catch (storeError) {
+      console.error('Inquiry log failed:', storeError);
     }
 
     return res.status(200).json({ success: true, inquiryId });
