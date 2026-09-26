@@ -279,8 +279,13 @@
   function initRoster() {
     var form = document.querySelector("[data-roster-form]");
     if (!form) return;
+    var panel = form.closest(".cr-roster-panel");
+    var intro = panel ? panel.querySelector("[data-roster-intro]") : null;
+    var done = panel ? panel.querySelector("[data-roster-done]") : null;
     var loaded = form.querySelector('input[name="formLoadedAt"]');
     var status = form.querySelector("[data-roster-status]");
+    var button = form.querySelector('button[type="submit"]');
+    var buttonLabel = button ? button.textContent : "Join the roster";
     var lastSubmit = 0;
     if (loaded) loaded.value = String(Date.now());
     form.addEventListener("submit", function (event) {
@@ -291,13 +296,18 @@
         return;
       }
       var data = new FormData(form);
-      if (String(data.get("companyWebsite") || "").trim()) {
-        status.textContent = "Request received.";
-        form.reset();
+      if (String(data.get("cf_roster_trap") || "").trim()) {
+        if (intro) intro.hidden = true;
+        form.hidden = true;
+        if (done) done.hidden = false;
         return;
       }
       lastSubmit = now;
-      status.textContent = "Sending...";
+      status.textContent = "";
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Sending...";
+      }
       fetch("/api/contact/send-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -309,7 +319,7 @@
           portfolioUrl: String(data.get("portfolioUrl") || "").trim(),
           availability: String(data.get("availability") || "").trim(),
           source: "careers-roster",
-          companyWebsite: String(data.get("companyWebsite") || "").trim(),
+          companyWebsite: "",
           formLoadedAt: data.get("formLoadedAt")
         })
       }).then(function (response) {
@@ -320,10 +330,14 @@
         });
       }).then(function (result) {
         if (!result.ok) throw new Error((result.body && result.body.error) || "Unable to send. Email info@cochranfilms.com.");
-        status.textContent = "You are on the list. We will write you at the email you gave.";
-        form.reset();
-        if (loaded) loaded.value = String(Date.now());
+        if (intro) intro.hidden = true;
+        form.hidden = true;
+        if (done) done.hidden = false;
       }).catch(function (error) {
+        if (button) {
+          button.disabled = false;
+          button.textContent = buttonLabel;
+        }
         status.textContent = (error && error.message) || "Unable to send. Email info@cochranfilms.com.";
       });
     });

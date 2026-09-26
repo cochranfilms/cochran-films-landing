@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500;1,9..144,620&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/blog/assets/css/blog.css?v=20260925nav4">
-  <link rel="stylesheet" href="/css/careers.css?v=20260925af">
+  <link rel="stylesheet" href="/css/careers.css?v=20260925ah">
 </head>
 <body class="careers-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -193,7 +193,7 @@
         </div>
       </div>
       <div class="cr-roster-panel">
-        <div>
+        <div data-roster-intro>
           <h3 id="roster-form-title">Join the Cochran Films roster</h3>
           <p class="cr-note">Share your name, email, city, role, portfolio, and when you can work.</p>
         </div>
@@ -216,7 +216,7 @@
             </div>
             <label>Portfolio URL <input name="portfolioUrl" type="url" required placeholder="https://"></label>
             <label>Availability <input name="availability" required maxlength="200" placeholder="Weekends, weekdays, or both"></label>
-            <label class="hp">Company website <input name="companyWebsite" tabindex="-1" autocomplete="off"></label>
+            <label class="hp" aria-hidden="true">Leave this blank <input name="cf_roster_trap" tabindex="-1" autocomplete="off" readonly></label>
             <input type="hidden" name="formLoadedAt" value="">
             <button class="btn" type="submit">Join the roster</button>
             <p class="cr-status" data-roster-status role="status"></p>
@@ -226,6 +226,16 @@
               <li>Every open role still lives on <a data-track="creatorcollectiveBoard" data-campaign="studio-board" href="https://www.creatorcollective.media/opportunities">Creator Collective</a>.</li>
             </ul>
         </form>
+        <div class="cr-roster-done" data-roster-done hidden>
+          <p class="cr-kicker">You are on the list</p>
+          <h3>We have your reel.</h3>
+          <p>A note is on its way to the email you gave. If a job fits, that is where we write.</p>
+          <ul class="cr-after">
+            <li>We read the reel.</li>
+            <li>We book from this list when a job fits.</li>
+            <li>Every open role still lives on <a data-track="creatorcollectiveBoard" data-campaign="studio-done" href="https://www.creatorcollective.media/opportunities">Creator Collective</a>.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -933,6 +943,6 @@
 }
 </script>
 <script src="/js/site-core.js?v=20260925nav" defer></script>
-<script src="/js/careers.js?v=20260925j" defer></script>
+<script src="/js/careers.js?v=20260925k" defer></script>
 </body>
 </html>
