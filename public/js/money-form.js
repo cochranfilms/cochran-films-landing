@@ -38,6 +38,10 @@
       message += "\n" + note;
       var button = form.querySelector("button[type=submit]");
       if (button) button.disabled = true;
+      if (status) status.textContent = "Sending.";
+      var elapsed = now - Number(loaded && loaded.value || 0);
+      var wait = elapsed < 4000 ? 4000 - elapsed : 0;
+      window.setTimeout(function () {
       fetch("/api/contact/send-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -69,6 +73,7 @@
       }).finally(function () {
         if (button) button.disabled = false;
       });
+      }, wait);
     });
   });
 })();

@@ -207,6 +207,10 @@
       }
 
       try {
+        const loadedAt = Number(data.formLoadedAt) || Date.now();
+        const wait = Math.max(0, 4000 - (Date.now() - loadedAt));
+        if (wait) await new Promise((resolve) => setTimeout(resolve, wait));
+
         const response = await fetch('/api/contact/send-inquiry', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

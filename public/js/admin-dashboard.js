@@ -8,7 +8,7 @@
     {
       id: 'inbox',
       label: 'Inbox',
-      tools: [{ id: 'inquiries', label: 'Inquiries', description: 'Contact, roster, and journal' }]
+      tools: [{ id: 'inquiries', label: 'Inquiries', description: 'Booking pages, contact, roster, and journal' }]
     },
     {
       id: 'commerce',
@@ -95,6 +95,11 @@
     return node;
   }
 
+  function isBookingSource(source) {
+    source = String(source || '');
+    return source.indexOf('money-') === 0 || source.indexOf('work-') === 0;
+  }
+
   function labelFor(status) {
     var map = {
       new: 'New',
@@ -114,7 +119,16 @@
       incomplete: 'Incomplete',
       contact: 'Contact',
       roster: 'Roster',
-      journal: 'Journal'
+      journal: 'Journal',
+      'money-videographer-atlanta': 'Atlanta videographer',
+      'money-event-photo-printing-atlanta': 'Photo printing',
+      'money-videographer-douglasville': 'Douglasville',
+      'money-event-videography-atlanta': 'Event video',
+      'money-podcast-production-atlanta': 'Podcast',
+      'money-real-estate-media': 'Real estate',
+      'work-dickens-inaugural-ball': 'Dickens ball',
+      'work-iheart-storytime': 'Storytime',
+      'work-rice-way-challenge': 'RICE Way'
     };
     return map[status] || status;
   }
@@ -288,7 +302,8 @@
     var grid = document.createElement('div');
     grid.className = 'admin-metrics';
     [
-      [String(metrics.newInquiries), 'New inquiries', 'inquiries'],
+      [String(metrics.newInquiries), 'New inquiries', 'inquiries', 'all'],
+      [String(metrics.bookingInquiries || 0), 'Booking inquiries', 'inquiries', 'booking'],
       [String(metrics.unpaidInvoices), 'Unpaid invoices', 'purchases'],
       [metrics.paidThisMonthLabel, 'Paid this month', 'purchases'],
       [String(metrics.activeSubscriptions), 'Active subscriptions', 'subscriptions']
@@ -298,7 +313,10 @@
       button.className = 'admin-metric';
       button.appendChild(el('span', 'admin-metric__value', item[0]));
       button.appendChild(el('span', 'admin-metric__label', item[1]));
-      button.addEventListener('click', function () { selectTool(item[2]); });
+      button.addEventListener('click', function () {
+        if (item[2] === 'inquiries' && item[3]) state.filters.inquiries = item[3];
+        selectTool(item[2]);
+      });
       grid.appendChild(button);
     });
     panel.appendChild(grid);
@@ -375,6 +393,7 @@
     var rows = state.board.inquiries || [];
     var chips = [
       { id: 'all', label: 'All', count: rows.length },
+      { id: 'booking', label: 'Booking', count: rows.filter(function (row) { return isBookingSource(row.source); }).length },
       { id: 'contact', label: 'Contact', count: rows.filter(function (row) { return row.source === 'contact'; }).length },
       { id: 'roster', label: 'Roster', count: rows.filter(function (row) { return row.source === 'roster'; }).length },
       { id: 'journal', label: 'Journal', count: rows.filter(function (row) { return row.source === 'journal'; }).length },
@@ -384,7 +403,8 @@
     var filtered = rows.filter(function (row) {
       var chip = state.filters.inquiries;
       if (chip === 'new' && row.status !== 'new') return false;
-      if (chip !== 'all' && chip !== 'new' && row.source !== chip) return false;
+      if (chip === 'booking' && !isBookingSource(row.source)) return false;
+      if (chip !== 'all' && chip !== 'new' && chip !== 'booking' && row.source !== chip) return false;
       return matchesQuery([row.name, row.email, row.service, row.message, row.city, row.role]);
     });
     renderRows(filtered, inquiryRow, 'No inquiries in this view yet.');
@@ -398,7 +418,7 @@
     main.className = 'admin-row__main';
     var copy = document.createElement('div');
     copy.appendChild(el('div', 'admin-row__title', row.name || 'Inquiry'));
-    copy.appendChild(el('div', 'admin-row__meta', [row.email, row.service, when(row.submittedAt)].filter(Boolean).join(' · ')));
+    copy.appendChild(el('div', 'admin-row__meta', [row.email, row.phone, labelFor(row.source || 'contact'), when(row.submittedAt)].filter(Boolean).join(' · ')));
     var side = document.createElement('div');
     side.className = 'admin-row__side';
     side.appendChild(pill(row.source || 'contact'));
@@ -428,6 +448,8 @@
     list.className = 'admin-facts';
     [
       ['Email', row.email],
+      ['Phone', row.phone],
+      ['Date', row.eventDate],
       ['Service', row.service],
       ['City', row.city],
       ['Role', row.role],
@@ -736,6 +758,7 @@
     var cents = paid.reduce(function (sum, row) { return sum + (row.amountCents || 0); }, 0);
     board.metrics = {
       newInquiries: (board.inquiries || []).filter(function (row) { return row.status === 'new'; }).length,
+      bookingInquiries: (board.inquiries || []).filter(function (row) { return row.status === 'new' && isBookingSource(row.source); }).length,
       unpaidInvoices: (board.invoices || []).filter(needsInvoice).length,
       paidThisMonthCents: cents,
       paidThisMonthLabel: money(cents),

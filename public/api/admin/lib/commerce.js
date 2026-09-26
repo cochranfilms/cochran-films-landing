@@ -165,6 +165,28 @@ function sameMonth(iso, now) {
   return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
 }
 
+function sourceLabel(source) {
+  const labels = {
+    contact: 'Contact',
+    roster: 'Roster',
+    journal: 'Journal',
+    'money-videographer-atlanta': 'Atlanta videographer',
+    'money-event-photo-printing-atlanta': 'Photo printing',
+    'money-videographer-douglasville': 'Douglasville',
+    'money-event-videography-atlanta': 'Event video',
+    'money-podcast-production-atlanta': 'Podcast',
+    'money-real-estate-media': 'Real estate',
+    'work-dickens-inaugural-ball': 'Dickens ball',
+    'work-iheart-storytime': 'Storytime',
+    'work-rice-way-challenge': 'RICE Way',
+  };
+  return labels[source] || source || 'Contact';
+}
+
+function isBookingSource(source) {
+  return String(source || '').startsWith('money-') || String(source || '').startsWith('work-');
+}
+
 function buildBoard({ inquiries, invoices, subscriptions, storageConfigured, stripeConfigured }) {
   const now = new Date();
   const paidThisMonth = invoices.filter((row) => row.status === 'paid' && sameMonth(row.paidAt, now));
@@ -176,7 +198,7 @@ function buildBoard({ inquiries, invoices, subscriptions, storageConfigured, str
       id: row.id,
       tool: 'inquiries',
       title: row.name || 'New inquiry',
-      detail: row.source === 'roster' ? 'Roster' : row.source === 'journal' ? 'Journal' : 'Contact',
+      detail: sourceLabel(row.source || 'contact'),
       at: row.submittedAt,
     });
   });
@@ -210,6 +232,7 @@ function buildBoard({ inquiries, invoices, subscriptions, storageConfigured, str
     subscriptions: subscriptions.sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || ''))),
     metrics: {
       newInquiries: inquiries.filter((row) => row.status === 'new').length,
+      bookingInquiries: inquiries.filter((row) => row.status === 'new' && isBookingSource(row.source)).length,
       unpaidInvoices: invoices.filter((row) => ['open', 'overdue', 'uncollectible'].includes(row.status)).length,
       paidThisMonthCents: paidCents,
       paidThisMonthLabel: formatUsdFromCents(paidCents),
@@ -337,6 +360,7 @@ async function refundInvoice(stripe, invoice) {
 }
 
 module.exports = {
+  buildBoard,
   stripeClient,
   formatUsdFromCents,
   normalizeInvoice,

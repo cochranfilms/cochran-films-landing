@@ -308,6 +308,9 @@
         button.disabled = true;
         button.textContent = "Sending...";
       }
+      var loadedAt = Number(data.get("formLoadedAt")) || now;
+      var wait = Math.max(0, 4000 - (now - loadedAt));
+      window.setTimeout(function () {
       fetch("/api/contact/send-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -340,6 +343,7 @@
         }
         status.textContent = (error && error.message) || "Unable to send. Email info@cochranfilms.com.";
       });
+      }, wait);
     });
   }
 

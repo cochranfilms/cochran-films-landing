@@ -1,3 +1,5 @@
+import { appendInquiry } from '../admin/lib/store.js';
+
 const SERVICE_LABELS = {
   'video-production': 'Video Production',
   photography: 'Photography',
@@ -7,6 +9,15 @@ const SERVICE_LABELS = {
   'white-label': 'White-Label Services',
   'strategy-session': 'Strategy Session',
   other: 'Other',
+  'money-videographer-atlanta': 'Atlanta videographer',
+  'money-event-photo-printing-atlanta': 'Event photo printing',
+  'money-videographer-douglasville': 'Douglasville videographer',
+  'money-event-videography-atlanta': 'Event videography',
+  'money-podcast-production-atlanta': 'Podcast production',
+  'money-real-estate-media': 'Real estate media',
+  'work-dickens-inaugural-ball': 'Dickens inaugural ball',
+  'work-iheart-storytime': 'iHeart Storytime',
+  'work-rice-way-challenge': 'RICE Way Challenge',
 };
 
 const MIN_FORM_TIME_MS = 3000;
@@ -61,7 +72,11 @@ function assessContactSpam({ companyWebsite, formLoadedAt, customerFirst, custom
   }
 
   if (!isSubmitTimingValid(formLoadedAt)) {
-    return { silent: true, reason: 'timing' };
+    return {
+      silent: false,
+      reason: 'timing',
+      error: 'Please wait a moment, then send the form again.',
+    };
   }
 
   const nameFields = [customerFirst, customerLast, customerName].filter(Boolean);
@@ -360,14 +375,15 @@ export default async function handler(req, res) {
       }
     }
 
+    let stored = false;
     try {
-      const { appendInquiry } = require('../admin/lib/store');
-      await appendInquiry({
+      const saved = await appendInquiry({
         id: inquiryId,
         source: recordSource,
         name: customerName,
         email: email.trim(),
         phone,
+        eventDate,
         service: serviceLabel,
         message: outboundMessage,
         city: isRoster ? rosterCity : '',
@@ -377,11 +393,13 @@ export default async function handler(req, res) {
         status: 'new',
         submittedAt: new Date().toISOString(),
       });
+      stored = Boolean(saved && saved.stored);
+      if (!stored) console.error('Inquiry log skipped: storage is not connected.');
     } catch (storeError) {
       console.error('Inquiry log failed:', storeError);
     }
 
-    return res.status(200).json({ success: true, inquiryId });
+    return res.status(200).json({ success: true, inquiryId, stored });
   } catch (error) {
     console.error('Contact inquiry error:', error);
     return res.status(500).json({

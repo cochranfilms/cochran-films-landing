@@ -97,12 +97,10 @@ document.documentElement.classList.add("js");
         if (note) note.textContent = "Check the box so we know you want the notes.";
         return;
       }
-      if (Date.now() - formLoadedAt < 3000) {
-        if (note) note.textContent = "Give it a second, then send again.";
-        return;
-      }
       if (button) button.disabled = true;
-      if (note) note.textContent = "Sending…";
+      if (note) note.textContent = "Sending.";
+      var wait = Math.max(0, 4000 - (Date.now() - formLoadedAt));
+      window.setTimeout(function () {
       fetch("/api/contact/send-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -128,6 +126,7 @@ document.documentElement.classList.add("js");
       }).then(function () {
         if (button) button.disabled = false;
       });
+      }, wait);
     });
   }
   observe();
