@@ -341,28 +341,52 @@ body.money-show .money-stack {
 }
 
 body.money-show .money-hero {
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  padding: 88px 0 64px max(40px, calc((100% - 1180px) / 2));
+  box-sizing: border-box;
 }
 
 body.money-show .money-hero-media {
-  background-position: 68% center;
+  position: relative;
+  inset: auto;
+  order: 2;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  align-self: start;
+  margin-top: 8px;
+  background-position: var(--focus, center);
+}
+
+body.money-show .money-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, center);
+  display: block;
 }
 
 body.money-show .money-hero-media::after {
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.55) 42%, rgba(0, 0, 0, 0.12) 68%, rgba(0, 0, 0, 0.28) 100%);
+  z-index: 1;
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.4) 7%, rgba(0, 0, 0, 0) 20%);
 }
 
 body.money-show .money-stack {
   display: block;
-  padding: 108px 0 56px;
+  order: 1;
+  width: auto;
+  margin: 0;
+  padding: 0;
   min-height: 0;
 }
 
 body.money-show .money-panel {
-  width: min(520px, 100%);
+  width: auto;
 }
 
 body.money-show .money-copy h1 {
@@ -390,6 +414,8 @@ body.money-show .money-form {
   gap: 10px 12px;
   margin-top: 22px;
   position: relative;
+  background: transparent;
+  padding: 0;
 }
 
 body.money-show .money-form .span-2,
@@ -417,7 +443,7 @@ body.money-show .money-form label {
 
 body.money-show .money-form input,
 body.money-show .money-form textarea {
-  background: rgba(8, 8, 8, 0.78);
+  background: rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 178, 0, 0.45);
   padding: 11px 10px;
   text-transform: none;
@@ -440,30 +466,91 @@ body.money-show .money-stage,
 body.money-show .money-prices,
 body.money-show .money-steps,
 body.money-show .money-quote-band,
-body.money-show .money-close {
+body.money-show .money-close,
+body.money-show .money-strip {
   width: min(1180px, calc(100% - 80px));
   margin-left: auto;
   margin-right: auto;
+  padding: 56px 0;
+}
+
+body.money-show .money-quote-band,
+body.money-show .money-close {
   padding: 72px 0;
 }
 
+body.money-show .money-strip {
+  position: relative;
+  aspect-ratio: 2.7 / 1;
+  padding: 0;
+  margin-top: 56px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+body.money-show .money-strip img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.money-show .money-strip-copy {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 64px 28px 22px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 58%);
+}
+
+body.money-show .money-strip-copy .btn {
+  flex: none;
+  margin-bottom: 2px;
+}
+
+body.money-show .money-strip h2 {
+  font-size: clamp(1.7rem, 2.4vw, 2.35rem);
+  margin-bottom: 0.4rem;
+}
+
+body.money-show .money-strip p {
+  font-size: 0.98rem;
+  margin-bottom: 0.65rem;
+}
+
 body.money-show .money-marquee {
-  width: min(1180px, calc(100% - 80px));
-  margin: 0 auto;
-  padding: 28px 0 8px;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
-  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 18px max(40px, calc((100% - 1180px) / 2));
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: #f4f1ea;
 }
 
 body.money-show .money-marquee span {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 78px;
-  background: #f4f1ea;
-  padding: 10px 12px;
+  flex: 1 1 0;
+  min-height: 0;
+  height: 56px;
+  background: transparent;
+  padding: 0 8px;
 }
 
 body.money-show .money-marquee img {
@@ -495,15 +582,25 @@ body.money-show .money-stage .money-film {
   margin: 0;
 }
 
-body.money-show .money-stage img,
+body.money-show .money-stage > figure > img,
 body.money-show .money-stage .money-film-frame {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
+body.money-show .money-stage .money-facade img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
 body.money-show .money-stage h2,
+body.money-show .money-strip h2,
 body.money-show .money-line h2,
 body.money-show .money-prices h2,
 body.money-show .money-steps h2,
@@ -518,6 +615,7 @@ body.money-show .money-films-head h2 {
 }
 
 body.money-show .money-stage p,
+body.money-show .money-strip p,
 body.money-show .money-line p,
 body.money-show .money-steps p,
 body.money-show .money-close p {
@@ -548,6 +646,10 @@ body.money-show .money-price-row {
 body.money-show .money-price-row.cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
+}
+
+body.money-show .money-price-row.cols-4 .money-price {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
 }
 
 body.money-show .money-price {
@@ -600,15 +702,15 @@ body.money-show .money-steps li span {
 
 body.money-show .money-quote-band blockquote {
   margin: 0;
-  max-width: 18em;
+  max-width: 52rem;
 }
 
 body.money-show .money-quote-band blockquote p {
   font-family: Fraunces, Georgia, serif;
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.85rem, 3.2vw, 2.85rem);
-  line-height: 1.18;
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  line-height: 1.32;
   letter-spacing: -0.03em;
   color: #f4f1ea;
 }
@@ -652,7 +754,9 @@ body.money-show .money-tiles {
 body.money-show .money-tile {
   position: relative;
   display: block;
-  min-height: 320px;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  height: auto;
   overflow: hidden;
   color: #f4f1ea;
   background: #111;
@@ -696,8 +800,10 @@ body.money-show .money-tile span {
 body.money-show .money-tile.type {
   background: #ffb200;
   color: #000;
-  min-height: 320px;
-  padding: 22px 18px;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  height: auto;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -735,11 +841,62 @@ body.money-show .money-close .money-form {
   body.money-show .money-hero {
     display: block;
     min-height: 0;
-    align-items: stretch;
+    padding: 0;
   }
 
   body.money-show .money-hero-media {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin-top: 0;
+  }
+
+  body.money-show .money-hero-media::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  body.money-show .money-copy {
+    min-height: 0;
+    display: block;
+    background: #000;
+    justify-content: flex-start;
+    padding: 28px 20px 4px;
+  }
+
+  body.money-show .money-copy h1 {
+    font-size: clamp(2.35rem, 10vw, 3.15rem);
+  }
+
+  body.money-show .money-copy::before {
     display: none;
+  }
+
+  body.money-show .money-strip {
+    aspect-ratio: auto;
+    display: block;
+    margin: 0;
+    overflow: visible;
+  }
+
+  body.money-show .money-strip img {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  body.money-show .money-strip-copy {
+    position: static;
+    width: auto;
+    display: block;
+    padding: 22px 20px 0;
+    background: none;
+  }
+
+  body.money-show .money-strip-copy .btn {
+    margin-top: 4px;
   }
 
   body.money-show .money-stack,
@@ -754,7 +911,8 @@ body.money-show .money-close .money-form {
   body.money-show .money-marquee,
   body.money-show .money-films-head,
   body.money-show .money-films.wide,
-  body.money-show .money-tiles {
+  body.money-show .money-tiles,
+  body.money-show .money-strip {
     width: auto;
     margin-left: 0;
     margin-right: 0;
@@ -766,10 +924,6 @@ body.money-show .money-close .money-form {
 
   body.money-show .money-panel {
     width: auto;
-  }
-
-  body.money-show .money-copy {
-    min-height: calc(100svh - 56px);
   }
 
   body.money-show .money-form {
@@ -817,8 +971,14 @@ body.money-show .money-close .money-form {
     padding-top: 22px;
   }
 
-  body.money-show .money-tile,
-  body.money-show .money-tile.type {
-    min-height: 220px;
+  body.money-show .money-marquee {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 16px;
+    padding: 16px 20px;
+  }
+
+  body.money-show .money-marquee span {
+    height: 44px;
   }
 }
