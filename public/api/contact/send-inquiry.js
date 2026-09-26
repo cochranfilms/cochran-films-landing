@@ -328,7 +328,7 @@ export default async function handler(req, res) {
           email_intro: isRoster
             ? 'You are on the Cochran Films roster. Every open role, including work with the studio, is posted on Creator Collective. Create your account so the job board can notify you when a role is available.'
             : 'Thank you for contacting Cochran Films. We have your inquiry and will respond within 24 hours.',
-          cta_label: isRoster ? 'Create your free account' : 'Explore Our Services',
+          cta_label: isRoster ? 'Join Creator Collective' : 'Explore Our Services',
           cta_url: isRoster
             ? 'https://www.creatorcollective.media/signup?utm_source=cochranfilms&utm_medium=email&utm_campaign=roster-client'
             : 'https://www.cochranfilms.com/#services',
