@@ -34,6 +34,162 @@
       "maxDuration": 30
     }
   },
+  "redirects": [
+    {
+      "source": "/service-page/on-site-event-photo-printing",
+      "destination": "/event-photo-printing-atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/service-page/professional-event-photography",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service-page/custom-website-design",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/brand-building",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/book-online",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/resume",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/systems.html",
+      "destination": "/systems",
+      "permanent": true
+    },
+    {
+      "source": "/pricing.html",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/careers.html",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
+      "source": "/resume.html",
+      "destination": "/resume",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/checkout.html",
+      "destination": "/checkout",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/event-photo-printing-atlanta.html",
+      "destination": "/event-photo-printing-atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/videographer-douglasville.html",
+      "destination": "/videographer-douglasville",
+      "permanent": true
+    },
+    {
+      "source": "/podcast-production-atlanta.html",
+      "destination": "/podcast-production-atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/real-estate-media.html",
+      "destination": "/real-estate-media",
+      "permanent": true
+    },
+    {
+      "source": "/event-videography-atlanta.html",
+      "destination": "/event-videography-atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/videographer-atlanta.html",
+      "destination": "/videographer-atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/work/dickens-inaugural-ball.html",
+      "destination": "/work/dickens-inaugural-ball",
+      "permanent": true
+    },
+    {
+      "source": "/work/iheart-storytime.html",
+      "destination": "/work/iheart-storytime",
+      "permanent": true
+    },
+    {
+      "source": "/work/rice-way-challenge.html",
+      "destination": "/work/rice-way-challenge",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/careers/frames/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/checkout",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/admin",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/resume",
@@ -74,6 +230,46 @@
     {
       "source": "/admin",
       "destination": "/admin.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/event-photo-printing-atlanta",
+      "destination": "/event-photo-printing-atlanta.html"
+    },
+    {
+      "source": "/videographer-douglasville",
+      "destination": "/videographer-douglasville.html"
+    },
+    {
+      "source": "/podcast-production-atlanta",
+      "destination": "/podcast-production-atlanta.html"
+    },
+    {
+      "source": "/real-estate-media",
+      "destination": "/real-estate-media.html"
+    },
+    {
+      "source": "/event-videography-atlanta",
+      "destination": "/event-videography-atlanta.html"
+    },
+    {
+      "source": "/videographer-atlanta",
+      "destination": "/videographer-atlanta.html"
+    },
+    {
+      "source": "/work/dickens-inaugural-ball",
+      "destination": "/work/dickens-inaugural-ball.html"
+    },
+    {
+      "source": "/work/iheart-storytime",
+      "destination": "/work/iheart-storytime.html"
+    },
+    {
+      "source": "/work/rice-way-challenge",
+      "destination": "/work/rice-way-challenge.html"
     }
   ]
 }

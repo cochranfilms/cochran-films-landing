@@ -469,16 +469,33 @@
     var frame = root.querySelector("[data-cca-frame]");
     var title = root.querySelector("[data-cca-film]");
 
-    function render() {
-      frame.replaceChildren();
+    function mountPlayer(film) {
       var iframe = document.createElement("iframe");
-      iframe.src = "https://www.youtube.com/embed/" + films[index].id + "?rel=0&modestbranding=1&playsinline=1";
-      iframe.title = films[index].title;
+      iframe.src = "https://www.youtube.com/embed/" + film.id + "?rel=0&modestbranding=1&playsinline=1&autoplay=1";
+      iframe.title = film.title;
       iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
       iframe.setAttribute("allowfullscreen", "");
-      iframe.setAttribute("loading", "lazy");
-      frame.appendChild(iframe);
-      title.textContent = films[index].title;
+      frame.replaceChildren(iframe);
+    }
+
+    function render() {
+      var film = films[index];
+      frame.replaceChildren();
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cr-film-facade";
+      btn.setAttribute("aria-label", "Play " + film.title);
+      var img = document.createElement("img");
+      img.src = "https://i.ytimg.com/vi/" + film.id + "/hqdefault.jpg";
+      img.alt = "";
+      var play = document.createElement("span");
+      play.className = "cr-film-play";
+      play.textContent = "Play";
+      btn.appendChild(img);
+      btn.appendChild(play);
+      btn.addEventListener("click", function () { mountPlayer(film); });
+      frame.appendChild(btn);
+      title.textContent = film.title;
     }
 
     function step(delta) {

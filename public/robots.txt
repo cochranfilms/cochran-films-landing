@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /checkout
 
 Sitemap: https://www.cochranfilms.com/sitemap.xml

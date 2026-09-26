@@ -17392,3 +17392,7 @@ body.resume-page .mobile-menu-toggle {
     z-index: 10095 !important;
   }
 }
+
+#home .hero-cta {
+  border-radius: 0 !important;
+}

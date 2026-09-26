@@ -212,9 +212,19 @@ export default async function handler(req, res) {
       String(name || '').trim() ||
       [customerFirst, customerLast].filter(Boolean).join(' ');
 
-    const isRoster = source === 'careers-roster';
-    const isJournal = source === 'journal' || /journal list/i.test(String(message || ''));
-    const recordSource = isRoster ? 'roster' : isJournal ? 'journal' : 'contact';
+    const phone = String((req.body || {}).phone || '').trim();
+    const eventDate = String((req.body || {}).eventDate || (req.body || {}).date || '').trim();
+    const sourceSlug = String(source || '').trim();
+    const isRoster = sourceSlug === 'careers-roster';
+    const isJournal = sourceSlug === 'journal' || /journal list/i.test(String(message || ''));
+    const safeSlug = /^[a-z0-9-]{1,80}$/.test(sourceSlug) ? sourceSlug : '';
+    const recordSource = isRoster
+      ? 'roster'
+      : isJournal
+        ? 'journal'
+        : safeSlug && safeSlug !== 'contact'
+          ? safeSlug
+          : 'contact';
     const rosterRole = String(role || '').trim();
     const rosterCity = String(city || '').trim();
     const rosterPortfolio = String(portfolioUrl || '').trim();
@@ -230,6 +240,13 @@ export default async function handler(req, res) {
         rosterPortfolio ? `Portfolio: ${rosterPortfolio}` : '',
         rosterAvailability ? `Availability: ${rosterAvailability}` : '',
       ].filter(Boolean).join('\n');
+    } else if (!outboundMessage.startsWith('Source:')) {
+      const lead = [
+        safeSlug ? `Source: ${safeSlug}` : '',
+        phone ? `Phone: ${phone}` : '',
+        eventDate ? `Date: ${eventDate}` : '',
+      ].filter(Boolean);
+      if (lead.length) outboundMessage = `${lead.join('\n')}\n\n${outboundMessage}`;
     }
 
     const spamCheck = assessContactSpam({
@@ -350,7 +367,7 @@ export default async function handler(req, res) {
         source: recordSource,
         name: customerName,
         email: email.trim(),
-        phone: '',
+        phone,
         service: serviceLabel,
         message: outboundMessage,
         city: isRoster ? rosterCity : '',

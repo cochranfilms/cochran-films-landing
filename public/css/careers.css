@@ -533,6 +533,9 @@ html:has(body.careers-page) {
   min-height: 1.1em;
 }
 .tool-copy p { margin: 0; color: var(--cf-text-dim); }
+.cr-hire { margin: 1rem 0 0; }
+.cr-hire a { color: #ffb200; }
+.cr-byline { margin: 1.5rem auto 0; color: #a8a8a8; }
 .tool-copy .cr-kicker { margin: 0; }
 .tool-copy .btn {
   margin-top: auto;
@@ -675,6 +678,28 @@ html:has(body.careers-page) {
   overflow: hidden;
 }
 .cr-player-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.cr-film-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: #000;
+  cursor: pointer;
+}
+.cr-film-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cr-film-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffb200;
+  color: #000;
+  padding: 12px 22px;
+  font-weight: 700;
+  border-radius: 0;
+}
 .cr-player-row { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.8rem; }
 .cr-player-title { margin: 0; flex: 1; font-family: var(--cf-font-display); line-height: 1.25; }
 .cr-film-arrow {
