@@ -52,7 +52,7 @@
           eventDate: date,
           service: source,
           source: source,
-          companyWebsite: String(data.get("companyWebsite") || ""),
+          companyWebsite: String(data.get("cf_leave_blank") || ""),
           formLoadedAt: String(data.get("formLoadedAt") || ""),
           message: message
         })

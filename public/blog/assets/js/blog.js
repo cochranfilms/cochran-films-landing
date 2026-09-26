@@ -87,7 +87,7 @@ document.documentElement.classList.add("js");
       var email = input && input.value.trim();
       var note = form.querySelector("[data-newsletter-note]");
       var consent = form.querySelector('input[name="consent"]');
-      var honey = form.querySelector('input[name="companyWebsite"]');
+      var honey = form.querySelector('input[name="cf_leave_blank"]');
       var button = form.querySelector('button[type="submit"]');
       if (!email) {
         if (note) note.textContent = "Add an email address to join the list.";

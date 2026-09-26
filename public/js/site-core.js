@@ -221,7 +221,7 @@
             email,
             service: data.service,
             message: data.message,
-            companyWebsite: String(data.companyWebsite || '').trim(),
+            companyWebsite: String(data.cf_leave_blank || '').trim(),
             formLoadedAt: data.formLoadedAt
           })
         });

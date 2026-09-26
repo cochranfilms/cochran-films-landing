@@ -227,6 +227,7 @@ export default async function handler(req, res) {
       String(name || '').trim() ||
       [customerFirst, customerLast].filter(Boolean).join(' ');
 
+    const leaveBlank = String((req.body || {}).cf_leave_blank || '').trim();
     const phone = String((req.body || {}).phone || '').trim();
     const eventDate = String((req.body || {}).eventDate || (req.body || {}).date || '').trim();
     const sourceSlug = String(source || '').trim();
@@ -265,7 +266,7 @@ export default async function handler(req, res) {
     }
 
     const spamCheck = assessContactSpam({
-      companyWebsite,
+      companyWebsite: String(companyWebsite || leaveBlank || '').trim(),
       formLoadedAt,
       customerFirst,
       customerLast,
