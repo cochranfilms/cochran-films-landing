@@ -2,59 +2,199 @@
   Cochran Films: Crew Roster — Client (EmailJS)
   Env: EMAILJS_ROSTER_CLIENT_TEMPLATE_ID
   Settings: To {{to_email}} · From Cochran Films · Reply To {{reply_to}}
-  Subject: Cochran Films — {{email_heading}}
+  Subject: You are on the Cochran Films roster
+  Uses: {{customer_name}} {{roster_role}} {{roster_city}} {{roster_availability}}
+        {{roster_portfolio}} {{inquiry_id}} {{submitted_date}}
 --><!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{email_heading}}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>You are on the Cochran Films roster</title>
+  <style type="text/css">
+    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { border-collapse: collapse; mso-table-lspace: 0; mso-table-rspace: 0; }
+    img { border: 0; outline: none; text-decoration: none; display: block; }
+    a { color: #6b3e00; }
+    @media only screen and (max-width: 620px) {
+      .shell { width: 100% !important; }
+      .pad { padding-left: 20px !important; padding-right: 20px !important; }
+      .pad-hero { padding: 28px 20px 22px !important; }
+      .h1 { font-size: 28px !important; line-height: 1.15 !important; }
+      .h2 { font-size: 24px !important; line-height: 1.2 !important; }
+      .btn a { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+      .stack { display: block !important; width: 100% !important; }
+    }
+  </style>
 </head>
-<body style="margin:0;padding:0;width:100%;background-color:#ffffff;">
-<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;color:transparent;">You are on the Cochran Films crew roster</div>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="background-color:#ffffff;">
+<body style="margin:0;padding:0;width:100%;background-color:#efe8dc;">
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#efe8dc;">You are on the roster. Create a Creator Collective account and the job board will tell you when a role is posted.</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#efe8dc" style="background-color:#efe8dc;">
     <tr>
-      <td align="center" style="padding:32px 16px;">
-        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background-color:#ffffff;border:1px solid rgba(0,0,0,0.14);">
+      <td align="center" style="padding:28px 12px;">
+        <table role="presentation" class="shell" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#fffaf4" style="width:100%;max-width:600px;background-color:#fffaf4;">
+
           <tr>
-            <td style="padding:32px 28px 24px;border-bottom:1px solid rgba(0,0,0,0.14);">
-              <img src="https://www.cochranfilms.com/CF_Logo_Black2025.png" alt="Cochran Films" width="200" style="width:100%;max-width:200px;height:auto;margin:0 0 22px;" />
-              <p style="margin:0 0 10px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Crew roster</p>
-              <h1 style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:26px;line-height:1.2;font-weight:600;color:#1d1d1f;">{{email_heading}}</h1>
+            <td class="pad-hero" style="padding:36px 36px 8px;">
+              <img src="https://www.cochranfilms.com/CF_Logo_Black2025.png" alt="Cochran Films" width="168" style="width:168px;max-width:100%;height:auto;margin:0 0 28px;" />
+              <p style="margin:0 0 10px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#6b3e00;">Crew roster</p>
+              <h1 class="h1" style="margin:0 0 16px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:34px;line-height:1.12;font-weight:500;color:#14110e;">You are on the roster.</h1>
+              <p style="margin:0 0 14px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#241c16;">{{customer_name}}, we have you down as a {{roster_role}} in {{roster_city}}. You can work {{roster_availability}}. We will open the reel you sent.</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#241c16;">If a job with Cochran Films fits, we write this address. The open roles themselves are not kept in this inbox. Every one of them, including work with the studio, is posted on Creator Collective.</p>
             </td>
           </tr>
+
           <tr>
-            <td style="padding:28px 28px 8px;">
-              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.7;color:#333336;">{{email_intro}}</p>
-              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.7;color:#333336;">{{customer_name}}, we have you down as a {{roster_role}} in {{roster_city}}.</p>
+            <td style="padding:22px 36px 0;" class="pad">
+              <img src="https://www.cochranfilms.com/assets/careers/roster-crew.jpg" alt="A film crew with a cinema camera, a boom, and one warm light" width="528" style="width:100%;max-width:528px;height:auto;" />
             </td>
           </tr>
+
           <tr>
-            <td style="padding:16px 28px 8px;">
-              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Portfolio</p>
-              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;"><a href="{{roster_portfolio}}" style="color:#1d1d1f;text-decoration:underline;font-weight:600;">{{roster_portfolio}}</a></p>
-              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#424245;">Availability</p>
-              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#333336;">{{roster_availability}}</p>
+            <td class="pad" style="padding:28px 36px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6b3e00;">Your note</p>
+              <p style="margin:0 0 6px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#241c16;"><span style="color:#5e534a;">Reel</span><br /><a href="{{roster_portfolio}}" style="color:#14110e;font-weight:600;text-decoration:underline;word-break:break-all;">{{roster_portfolio}}</a></p>
             </td>
           </tr>
+
           <tr>
-            <td align="center" style="padding:8px 28px 28px;">
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+            <td style="padding:22px 20px 8px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#14110e" style="background-color:#14110e;">
                 <tr>
-                  <td align="center" style="background-color:#1d1d1f;">
-                    <a href="{{cta_url}}" style="display:inline-block;padding:14px 28px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:13px;font-weight:600;color:#ffffff;text-decoration:none;">{{cta_label}}</a>
+                  <td class="pad" style="padding:32px 28px 28px;">
+                    <p style="margin:0 0 10px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#e7c98a;">The next step</p>
+                    <h2 class="h2" style="margin:0 0 14px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:28px;line-height:1.18;font-weight:500;color:#fffaf4;">Get on the job board.</h2>
+                    <p style="margin:0 0 14px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#f6f1e8;">Creator Collective is where studios and creators post work. Cochran Films posts there too. The careers page you just used does not keep a second job list.</p>
+                    <p style="margin:0 0 22px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#f6f1e8;">Create your account. The board holds the open roles, and it notifies you when a new opportunity is available. You apply there. You do not wait on a second email to learn that a job exists.</p>
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="btn" style="width:100%;">
+                      <tr>
+                        <td align="center" bgcolor="#e7c98a" style="background-color:#e7c98a;">
+                          <a href="https://www.creatorcollective.media/signup?utm_source=cochranfilms&amp;utm_medium=email&amp;utm_campaign=roster-client" style="display:block;width:100%;box-sizing:border-box;padding:16px 28px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;font-weight:600;line-height:1.2;color:#14110e;text-decoration:none;text-align:center;">Create your free account</a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="margin:16px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;line-height:1.5;color:#f6f1e8;"><a href="https://www.creatorcollective.media/opportunities?utm_source=cochranfilms&amp;utm_medium=email&amp;utm_campaign=roster-board" style="color:#e7c98a;font-weight:600;text-decoration:underline;">Open the job board first</a></p>
                   </td>
                 </tr>
               </table>
-              <p style="margin:14px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#424245;">{{cta_subtext}}</p>
             </td>
           </tr>
+
           <tr>
-            <td align="center" style="padding:24px 28px 28px;border-top:1px solid rgba(0,0,0,0.14);">
-              <p style="margin:0 0 6px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;font-weight:600;color:#1d1d1f;">Cochran Films</p>
-              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;color:#424245;">(470) 420-2169 · info@cochranfilms.com</p>
+            <td class="pad" style="padding:28px 36px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6b3e00;">Inside the account</p>
+              <h2 class="h2" style="margin:0 0 8px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:26px;line-height:1.2;font-weight:500;color:#14110e;">What you can run once you join.</h2>
+              <p style="margin:0 0 18px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#5e534a;">The job board is the door. The same account is the business around a booked month.</p>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 14px;border-top:1px solid #e6d9c8;">
+                <tr>
+                  <td valign="top" width="36" style="padding:16px 12px 0 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:18px;line-height:1.2;color:#6b3e00;">01</td>
+                  <td valign="top" style="padding:14px 0 4px;">
+                    <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;line-height:1.4;color:#14110e;">The job board</p>
+                    <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#241c16;">Open roles from studios and creators, in one room. You are notified when a new opportunity is posted. Apply from the board. That includes any work with Cochran Films.</p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 14px;border-top:1px solid #e6d9c8;">
+                <tr>
+                  <td valign="top" width="36" style="padding:16px 12px 0 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:18px;line-height:1.2;color:#6b3e00;">02</td>
+                  <td valign="top" style="padding:14px 0 4px;">
+                    <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;line-height:1.4;color:#14110e;">Quote, contract, and deposit</p>
+                    <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#241c16;">Creator Collective writes the quote as an estimate the client can accept. Include prep, the grade, revisions, and delivery. Both sides sign in the same place. The deposit is collected there. Work starts when that money has moved. A date without a deposit is a maybe.</p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 14px;border-top:1px solid #e6d9c8;">
+                <tr>
+                  <td valign="top" width="36" style="padding:16px 12px 0 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:18px;line-height:1.2;color:#6b3e00;">03</td>
+                  <td valign="top" style="padding:14px 0 4px;">
+                    <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;line-height:1.4;color:#14110e;">Client billing</p>
+                    <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#241c16;">Invoices with aging, pay links, and PDFs. Drafts you can send. Saved contacts and line items, including a deposit. Tax, branding, and a thank you page after the client pays.</p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0;border-top:1px solid #e6d9c8;border-bottom:1px solid #e6d9c8;">
+                <tr>
+                  <td valign="top" width="36" style="padding:16px 12px 16px 0;font-family:Georgia, 'Times New Roman', Times, serif;font-size:18px;line-height:1.2;color:#6b3e00;">04</td>
+                  <td valign="top" style="padding:14px 0 16px;">
+                    <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;line-height:1.4;color:#14110e;">Your public page</p>
+                    <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;color:#241c16;">A page for the reel, the services, the testimonials, and the case studies. Availability, contact, and a link you can hand to a buyer who has never met you.</p>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
+
+          <tr>
+            <td style="padding:22px 20px 8px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#fffaf4" style="background-color:#fffaf4;border:1px solid #e6d9c8;">
+                <tr>
+                  <td class="pad" style="padding:28px;">
+                    <p style="margin:0 0 10px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6b3e00;">After the shoot</p>
+                    <h2 class="h2" style="margin:0 0 12px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:26px;line-height:1.2;font-weight:500;color:#14110e;">Hand the files off with Bizzi Cloud.</h2>
+                    <p style="margin:0 0 14px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#241c16;">The job is not done when you stop recording. It is done when the client can open the files. Name them. Keep the date you promised. Send a link they can open without texting you back and forth.</p>
+                    <p style="margin:0 0 20px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;line-height:1.65;color:#241c16;">Cochran Films uses Bizzi Cloud for that handoff. It is the file transfer for a delivery that feels finished, not a mystery folder.</p>
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="btn" style="width:100%;">
+                      <tr>
+                        <td align="center" bgcolor="#14110e" style="background-color:#14110e;">
+                          <a href="https://www.bizzicloud.io/?utm_source=cochranfilms&amp;utm_medium=email&amp;utm_campaign=roster-bizzi" style="display:block;width:100%;box-sizing:border-box;padding:16px 28px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;font-weight:600;line-height:1.2;color:#fffaf4;text-decoration:none;text-align:center;">See Bizzi Cloud</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad" style="padding:28px 36px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6b3e00;">Take this with you</p>
+              <h2 class="h2" style="margin:0 0 16px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:26px;line-height:1.2;font-weight:500;color:#14110e;">From the careers guide.</h2>
+
+              <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#14110e;">The reel we would book</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">Three pieces. Each one under a minute. Each one a job a stranger could hire: a church, a room, a dish, a listing, or a shop. Leave a start, a middle, and a finish. Cut the gear shots and the montage of everything you have ever filmed.</p>
+
+              <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#14110e;">The path that gets you booked</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">Pitch, quote, contract, deposit, shoot, deliver, review, rebook. Skip a step and the next client feels it. Price the finished job, not only the hours on set. Add your monthly business expenses to the income you need, set aside tax and savings, then divide by the days you can truly bill. That number is a floor, not a market price. Revenue is not profit.</p>
+
+              <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#14110e;">Where first clients already are</p>
+              <p style="margin:0 0 16px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">Churches, venues, restaurants, real estate, nonprofits, and barbershops. One offer for one kind of room. Say what done looks like.</p>
+
+              <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:16px;font-weight:600;color:#14110e;">The kit, in three stages</p>
+              <p style="margin:0 0 18px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">Starter is the camera you already trust, one lens, a mic, and one light you can set alone. Working is a cinema camera, a real light, audio, and batteries for a full day. Studio adds a second body, and air when the job needs it. Buy the tool that is failing a real job. Ignore the rest until then.</p>
+
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.7;color:#241c16;">
+                <a href="https://www.cochranfilms.com/careers" style="color:#6b3e00;font-weight:600;text-decoration:underline;">Read the careers guide</a><br />
+                <a href="https://www.cochranfilms.com/careers#rate-floor" style="color:#6b3e00;font-weight:600;text-decoration:underline;">Set your rate floor</a><br />
+                <a href="https://www.cochranfilms.com/careers#kit" style="color:#6b3e00;font-weight:600;text-decoration:underline;">See the kit</a><br />
+                <a href="https://www.cochranfilms.com/blog/posts/revenue-is-not-profit.html" style="color:#6b3e00;font-weight:600;text-decoration:underline;">Revenue is not profit</a>
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad" style="padding:22px 36px 8px;">
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#0f6b3c;">When you want the longer version</p>
+              <p style="margin:0 0 8px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">Backend Blueprint holds the scripts, the setup, and the Build It Yourself guide. The PDF is free after you join.</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.6;"><a href="https://community.cochranfilms.studio/" style="color:#0f6b3c;font-weight:600;text-decoration:underline;">Join Backend Blueprint free</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad" style="padding:26px 36px 32px;">
+              <p style="margin:0 0 14px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;line-height:1.65;color:#241c16;">We read the reel. We book from this list when a job fits. Your roster note is {{inquiry_id}}, sent {{submitted_date}}.</p>
+              <p style="margin:0 0 4px;font-family:Georgia, 'Times New Roman', Times, serif;font-size:18px;color:#14110e;">Cochran Films</p>
+              <p style="margin:0 0 4px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;line-height:1.6;color:#5e534a;">Atlanta and Douglasville, Georgia</p>
+              <p style="margin:0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:14px;line-height:1.7;color:#5e534a;"><a href="tel:+14704202169" style="color:#241c16;text-decoration:none;">470 420 2169</a><br /><a href="mailto:info@cochranfilms.com" style="color:#241c16;text-decoration:underline;">info@cochranfilms.com</a></p>
+              <p style="margin:16px 0 0;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:12px;line-height:1.5;color:#8a7d72;">Studio field notes. Not tax, legal, or financial advice.</p>
+            </td>
+          </tr>
+
         </table>
       </td>
     </tr>

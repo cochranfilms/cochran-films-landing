@@ -324,13 +324,17 @@ export default async function handler(req, res) {
           ...rosterParams,
           to_email: email.trim(),
           ...(isRoster ? { reply_to: 'info@cochranfilms.com' } : {}),
-          email_heading: isRoster ? 'You Are on the Roster' : 'We Received Your Message',
+          email_heading: isRoster ? 'You are on the roster' : 'We Received Your Message',
           email_intro: isRoster
-            ? 'We have your crew roster request. If a multiple camera job fits, we will write you at this address.'
+            ? 'You are on the Cochran Films roster. Every open role, including work with the studio, is posted on Creator Collective. Create your account so the job board can notify you when a role is available.'
             : 'Thank you for contacting Cochran Films. We have your inquiry and will respond within 24 hours.',
-          cta_label: isRoster ? 'Read the Careers Guide' : 'Explore Our Services',
-          cta_url: isRoster ? 'https://www.cochranfilms.com/careers' : 'https://www.cochranfilms.com/#services',
-          cta_subtext: 'Questions? Call (470) 420-2169 or email info@cochranfilms.com',
+          cta_label: isRoster ? 'Create your free account' : 'Explore Our Services',
+          cta_url: isRoster
+            ? 'https://www.creatorcollective.media/signup?utm_source=cochranfilms&utm_medium=email&utm_campaign=roster-client'
+            : 'https://www.cochranfilms.com/#services',
+          cta_subtext: isRoster
+            ? 'The live job board is on Creator Collective.'
+            : 'Questions? Call (470) 420-2169 or email info@cochranfilms.com',
         });
       } catch (clientError) {
         console.error('Client confirmation email failed:', clientError);
