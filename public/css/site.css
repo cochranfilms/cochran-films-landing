@@ -17201,7 +17201,13 @@ body.resume-page .logo-item img.cca-mark--on-dark {
   background: transparent !important;
   border-color: transparent !important;
   border-radius: 0 !important;
-  font-weight: 500 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 .nav-link:hover,
@@ -17221,10 +17227,11 @@ body.resume-page .logo-item img.cca-mark--on-dark {
   -webkit-text-fill-color: #000000 !important;
   border: 0 !important;
   border-radius: 0 !important;
-  padding: 0.7rem 1.05rem !important;
-  font-weight: 600 !important;
+  padding: 11px 17px !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
   box-shadow: none !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: 0 !important;
 }
 
 .nav-link.nav-cta:hover,
@@ -17315,7 +17322,15 @@ body.resume-page .mobile-menu-toggle {
 }
 .home-journal-copy p { margin: 0 0 0.9rem; color: #c8c8c8; max-width: 42rem; }
 .home-journal-meta { color: #9a9a9a; font-size: 0.92rem; }
-.home-journal-actions { display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; align-items: center; margin-top: 1.1rem; }
+.home-journal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.1rem;
+}
 .home-journal-btn {
   display: inline-flex;
   background: #FFB200;

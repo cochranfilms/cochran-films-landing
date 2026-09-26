@@ -524,14 +524,14 @@
     actions.appendChild(linkButton('Open in Stripe', row.dashboardUrl, false));
     if (['open', 'overdue', 'uncollectible'].indexOf(row.status) !== -1) {
       actions.appendChild(dangerButton('Void', row.id, function () {
-        confirmAction('Void invoice', 'Void the invoice for ' + row.customerName + ' (' + row.amountLabel + ')? They will not be able to pay this link.').then(function (ok) {
+        confirmAction('Void invoice', 'Void the invoice for ' + row.customerName + ' (' + row.amountLabel + ')? They will not be able to pay this link.', 'Void invoice').then(function (ok) {
           if (ok) invoiceAction(row, 'void');
         });
       }));
     }
     if (row.status === 'paid') {
       actions.appendChild(dangerButton('Refund', row.id, function () {
-        confirmAction('Refund payment', 'Refund ' + row.amountLabel + ' to ' + row.customerName + '? Stripe will return the card payment.').then(function (ok) {
+        confirmAction('Refund payment', 'Refund ' + row.amountLabel + ' to ' + row.customerName + '? Stripe will return the card payment.', 'Refund payment').then(function (ok) {
           if (ok) invoiceAction(row, 'refund');
         });
       }));
@@ -610,7 +610,7 @@
         var extra = row.commitmentEnd
           ? ' This retainer was set to run through ' + when(row.commitmentEnd) + '.'
           : ' This white-label plan is ongoing. Canceling stops future invoices.';
-        confirmAction('Cancel subscription', 'Cancel ' + row.customerName + '’s ' + row.packageName + ' now?' + extra).then(function (ok) {
+        confirmAction('Cancel subscription', 'Cancel ' + row.customerName + '’s ' + row.packageName + ' now?' + extra, 'Cancel subscription').then(function (ok) {
           if (ok) subscriptionAction(row, 'cancel_now');
         });
       }));
@@ -704,10 +704,12 @@
     return button;
   }
 
-  function confirmAction(title, copy) {
+  function confirmAction(title, copy, confirmLabel) {
     document.getElementById('confirm-title').textContent = title;
     document.getElementById('confirm-copy').textContent = copy;
+    document.getElementById('confirm-go').textContent = confirmLabel || 'Confirm';
     confirmEl.hidden = false;
+    document.getElementById('confirm-go').focus();
     return new Promise(function (resolve) { confirmResolve = resolve; });
   }
 
@@ -874,6 +876,12 @@
     });
     document.getElementById('confirm-cancel').addEventListener('click', function () { closeConfirm(false); });
     document.getElementById('confirm-go').addEventListener('click', function () { closeConfirm(true); });
+    confirmEl.addEventListener('click', function (event) {
+      if (event.target === confirmEl) closeConfirm(false);
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !confirmEl.hidden) closeConfirm(false);
+    });
     document.getElementById('tool-search').addEventListener('input', onToolSearch);
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {

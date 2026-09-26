@@ -250,40 +250,17 @@ function mountReticle() {
   reticle.setAttribute("aria-hidden", "true");
   document.body.appendChild(reticle);
   document.body.classList.add("has-reticle");
-  var x = 0;
-  var y = 0;
-  var cx = 0;
-  var cy = 0;
-  var live = false;
-  document.addEventListener("pointermove", function (e) {
-    var field = e.target.closest && e.target.closest("input, textarea, select");
-    if (field) {
-      reticle.classList.remove("is-on");
-      live = false;
-      return;
-    }
-    x = e.clientX;
-    y = e.clientY;
-    if (!live) {
-      cx = x;
-      cy = y;
-    }
-    live = true;
+  function place(e) {
+    reticle.style.transform = "translate3d(" + e.clientX + "px," + e.clientY + "px,0)";
     reticle.classList.add("is-on");
-    var tight = e.target.closest && e.target.closest(".post-card, .feature-poster, a, button");
+    document.body.classList.add("is-cursor");
+    var tight = e.target && e.target.closest && e.target.closest(".post-card, .feature-poster, a, button");
     reticle.classList.toggle("is-tight", !!tight);
-  });
-  document.addEventListener("pointerleave", function () {
-    live = false;
-    reticle.classList.remove("is-on");
-  });
-  function tick() {
-    if (live) {
-      cx += (x - cx) * 0.22;
-      cy += (y - cy) * 0.22;
-      reticle.style.transform = "translate3d(" + cx + "px," + cy + "px,0)";
-    }
-    requestAnimationFrame(tick);
   }
-  tick();
+  document.addEventListener("pointermove", place);
+  document.addEventListener("pointerdown", place);
+  document.addEventListener("pointerleave", function () {
+    reticle.classList.remove("is-on");
+    document.body.classList.remove("is-cursor");
+  });
 }

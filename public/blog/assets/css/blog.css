@@ -117,10 +117,13 @@ a:hover { color: var(--cf-white); }
   -webkit-text-fill-color: #f5f5f5;
   text-decoration: none;
   font-family: var(--nav-font);
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.15;
   letter-spacing: 0;
-  border: 1px solid transparent;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  border: 0;
   background: transparent;
 }
 .nav-link:hover,
@@ -138,9 +141,10 @@ a:hover { color: var(--cf-white); }
   -webkit-text-fill-color: #000000;
   border: 0;
   border-radius: 0;
-  padding: 0.7rem 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  padding: 11px 17px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0;
   box-shadow: none;
 }
 .nav-link.nav-cta:hover,
@@ -825,7 +829,7 @@ a:hover { color: var(--cf-white); }
   margin: -17px 0 0 -17px;
   border: 1px solid rgba(255, 178, 0, 0.92);
   border-radius: 50%;
-  z-index: 80;
+  z-index: 100000;
   pointer-events: none;
   opacity: 0;
   background:
@@ -843,11 +847,15 @@ a:hover { color: var(--cf-white); }
     linear-gradient(var(--cf-yellow), var(--cf-yellow)) center / 1px 5px no-repeat,
     linear-gradient(var(--cf-yellow), var(--cf-yellow)) center / 5px 1px no-repeat;
 }
-body.has-reticle,
-body.has-reticle a,
-body.has-reticle button { cursor: none; }
-body.has-reticle input,
-body.has-reticle textarea { cursor: text; }
+body.has-reticle.is-cursor,
+body.has-reticle.is-cursor * {
+  cursor: none !important;
+}
+body.has-reticle.is-cursor input,
+body.has-reticle.is-cursor textarea,
+body.has-reticle.is-cursor select {
+  cursor: text !important;
+}
 
 .js .reveal {
   opacity: 0;
