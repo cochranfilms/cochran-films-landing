@@ -309,16 +309,23 @@
     else renderSubscriptions();
   }
 
+  function errorText(data, fallback) {
+    var err = data && data.error;
+    if (typeof err === 'string' && err) return err;
+    if (err && typeof err.message === 'string' && err.message) return err.message;
+    return fallback;
+  }
+
   function loadJournal() {
     return fetch('/api/journal/desk', { headers: { Accept: 'application/json' } })
       .then(readJson)
       .then(function (result) {
-        if (!result.ok) throw new Error((result.data && result.data.error) || 'The journal desk could not load.');
+        if (!result.ok) throw new Error(errorText(result.data, 'The journal desk could not load.'));
         state.journal = result.data;
         if (state.tool === 'journal') render();
       })
       .catch(function (error) {
-        state.toast = error.message;
+        state.toast = error.message || 'The journal desk could not load.';
         if (state.tool === 'journal') render();
       });
   }
@@ -332,7 +339,7 @@
       body: JSON.stringify(Object.assign({ action: action }, body || {}))
     }).then(readJson).then(function (result) {
       state.busyId = null;
-      if (!result.ok) throw new Error((result.data && result.data.error) || 'That journal action did not finish.');
+      if (!result.ok) throw new Error(errorText(result.data, 'That journal action did not finish.'));
       state.journal = result.data;
       return result.data;
     }).catch(function (error) {
@@ -346,6 +353,10 @@
   function renderJournal() {
     var desk = state.journal;
     if (!desk) {
+      if (state.toast) {
+        panel.appendChild(el('div', 'admin-empty', state.toast));
+        return;
+      }
       panel.appendChild(el('div', 'admin-skeleton'));
       panel.appendChild(el('div', 'admin-skeleton'));
       return;

@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from 'node:crypto';
-import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
+import { get, put, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 
 const LIST_PATH = 'journal/subscribers.json';
 const SEND_PATH = 'journal/sends.json';
@@ -49,9 +49,19 @@ async function readStream(stream) {
   return Buffer.concat(chunks).toString('utf8');
 }
 
+function missingBlob(err) {
+  return err instanceof BlobNotFoundError || err?.name === 'BlobNotFoundError';
+}
+
 async function readDoc(path, fallback) {
   if (!configured()) return { configured: false, etag: null, doc: fallback() };
-  const result = await get(path, { access: 'private', useCache: false });
+  let result;
+  try {
+    result = await get(path, { access: 'private', useCache: false });
+  } catch (err) {
+    if (missingBlob(err)) return { configured: true, etag: null, doc: fallback() };
+    throw err;
+  }
   if (!result || result.statusCode === 304 || !result.stream) {
     return { configured: true, etag: null, doc: fallback() };
   }

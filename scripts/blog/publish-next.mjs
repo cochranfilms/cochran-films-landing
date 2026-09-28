@@ -427,5 +427,5 @@ const publicQueue = remaining.map((item) => ({
   category: item.category,
   coverAlt: item.coverAlt
 }));
-writeFileSync(join(root, "public/api/journal/lib/queue-public.mjs"), `export const queue = ${JSON.stringify(publicQueue, null, 2)};\n`);
+writeFileSync(join(root, "public/api/journal/lib/queue-public.js"), `export const queue = ${JSON.stringify(publicQueue, null, 2)};\n`);
 console.log(`SLUG=${post.slug}`);

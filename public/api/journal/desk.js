@@ -1,6 +1,5 @@
-import { createRequire } from 'node:module';
 import { assertIssueLive, latestIssue, sendJournalIssue } from './lib/issue.js';
-import { queue } from './lib/queue-public.mjs';
+import { queue } from './lib/queue-public.js';
 import {
   listIssueSends,
   listSubscribers,
@@ -12,9 +11,7 @@ import {
   upsertSubscriber,
   wasSent,
 } from './lib/subscribers.js';
-
-const require = createRequire(import.meta.url);
-const { requireAdmin, expectedEmail } = require('../admin/lib/session.js');
+import { expectedEmail, requireAdmin } from '../admin/lib/session.js';
 
 function fail(res, error) {
   const status = error.status || (error.code === 'STORE_UNCONFIGURED' ? 503 : 500);
