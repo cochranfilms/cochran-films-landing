@@ -1,31 +1,5 @@
 export const queue = [
   {
-    "slug": "sound-is-the-rebook",
-    "title": "Sound Is the Rebook",
-    "description": "Clients forgive a slightly soft frame before they forgive a ruined lav. Clean sound is why they hire the same crew again, and it is cheaper than another camera.",
-    "excerpt": "Clients will forgive a soft frame before they forgive a bad lav. Clean sound is the reason they book the same crew again.",
-    "category": "Video Production",
-    "tags": [
-      "sound",
-      "production",
-      "clients",
-      "rebooking"
-    ],
-    "coverAlt": "Lav microphone being placed on a speaker before a warm keynote",
-    "related": [
-      "sony-fx6-fx3-location-setup",
-      "corporate-event-videography-field-guide",
-      "podcast-production-atlanta-executive-guide"
-    ],
-    "ctaTitle": "Hear the room before you light it",
-    "ctaText": "A working kit starts with a mic you trust. The careers guide lays out the stages without a gear shopping list.",
-    "ctaHref": "https://www.cochranfilms.com/careers",
-    "ctaLabel": "See the kit notes",
-    "studioTitle": "Book a crew that treats sound as the picture",
-    "studioText": "Cochran Films plans the lav, the boom, and the room before the first frame, because the rebook lives in the audio.",
-    "body": "<p>Clients will forgive a slightly soft frame before they forgive a ruined lav. They may not say it that way. They say the video felt cheap, or they ask for another editor, or they simply hire someone else next time. Clean sound is the reason they book the same crew again.</p>\n<p>Picture is what they show their boss. Sound is what makes the boss stay through the sentence. A keynote with a humming HVAC and a clipping lapel does not get saved in the grade. It gets apologized for. Apologies do not rebook.</p>\n<h2>What to check before the doors open</h2>\n<p>Put the lav on the person who will actually speak, not on the person who is convenient. Listen in headphones, not in the room. Record a minute of the empty room so you know what the noise floor is. Have a second mic when the job cannot stop for a battery. The Sony notes in <a href=\"/blog/posts/sony-fx6-fx3-location-setup.html\">the FX6 and FX3 on location</a> are about the picture. This is the other half of that same day.</p>\n<p>Podcasts make the rule obvious, because there is nowhere to hide. A conference makes the rule expensive, because the recording is the only version of the talk that lasts. Either way, the person paying you hears the mistake before they see it.</p>\n<h2>Spend here before you spend on a body</h2>\n<p>A better microphone and a person who will listen fix more jobs than a newer camera. If the last complaint was \"we couldn't hear her,\" the next purchase is not a lens. It is a lav, a recorder, and the habit of checking both before the introduction.</p>\n<h2>A direct next step</h2>\n<p>Play the last talk you delivered with your eyes closed. If you wince, that is the note for the next scout. Write the sound plan next to the shot list. The rebook is already in that paragraph.</p>"
-  },
-  {
     "slug": "one-link-for-the-client",
     "title": "One Link for the Client",
     "description": "Four delivery links feel like four vendors. The client should get one branded place for the cut, the stills, and the note that says the job is finished.",

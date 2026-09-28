@@ -1,13 +1,5 @@
 export const queue = [
   {
-    "slug": "sound-is-the-rebook",
-    "title": "Sound Is the Rebook",
-    "description": "Clients forgive a slightly soft frame before they forgive a ruined lav. Clean sound is why they hire the same crew again, and it is cheaper than another camera.",
-    "excerpt": "Clients will forgive a soft frame before they forgive a bad lav. Clean sound is the reason they book the same crew again.",
-    "category": "Video Production",
-    "coverAlt": "Lav microphone being placed on a speaker before a warm keynote"
-  },
-  {
     "slug": "one-link-for-the-client",
     "title": "One Link for the Client",
     "description": "Four delivery links feel like four vendors. The client should get one branded place for the cut, the stills, and the note that says the job is finished.",
