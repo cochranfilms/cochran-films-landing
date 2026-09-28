@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -32,9 +34,20 @@ jobs:
         run: |
           git config user.name "Cochran Films Journal"
           git config user.email "info@cochranfilms.com"
-          git add -A
+          git add \
+            public/blog \
+            public/index.html \
+            public/sitemap.xml \
+            public/api/journal/lib/queue-public.js \
+            scripts/blog/queue.mjs
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
           git commit -m "Publish the next journal essay."
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
       - name: Wait until the essay is live
         if: steps.essay.outputs.slug != ''
         run: |
