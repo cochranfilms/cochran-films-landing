@@ -1,13 +1,5 @@
 export const queue = [
   {
-    "slug": "the-invoice-is-the-close",
-    "title": "The Invoice Is the Close",
-    "description": "The camera being packed is not the close. The job closes when the invoice is sent, the files are named, and the client knows exactly what they paid for.",
-    "excerpt": "A packed camera is not a closed job. The close is the invoice, the named files, and a client who knows what they paid for.",
-    "category": "Creator Business",
-    "coverAlt": "Producer reviewing an invoice beside a packed camera case in warm evening light"
-  },
-  {
     "slug": "name-the-folder-first",
     "title": "Name the Folder First",
     "description": "A shoot without a named folder becomes a pile of cards and texts. Name the project, the date, and the client before the camera comes out of the bag.",
