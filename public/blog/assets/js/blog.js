@@ -175,7 +175,7 @@ function mountListing(hero) {
 
 function loadStage() {
   if (prefersReducedMotion()) return Promise.resolve(null);
-  return import("/blog/assets/js/stage.js").catch(function () { return null; });
+  return import("/blog/assets/js/stage.js?v=20260928white").catch(function () { return null; });
 }
 
 function mountReading(postHero) {

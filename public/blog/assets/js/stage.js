@@ -105,7 +105,7 @@ export function mountViewfinder(canvas, hero) {
   const iris = new THREE.Group();
   const bladeGeo = bladeShape();
   const bladeMat = new THREE.MeshBasicMaterial({
-    color: 0x070707,
+    color: 0xffffff,
     side: THREE.DoubleSide,
     toneMapped: false
   });
