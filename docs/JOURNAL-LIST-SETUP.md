@@ -41,9 +41,7 @@ Source HTML is in `docs/emailjs-journal-issue-template.html` and `docs/emailjs-j
 
 ## Sending
 
-A new signup gets the two newest live essays. Publishing the next queued essay is manual until a test letter looks right.
-
-In GitHub, run the **Journal issue** workflow by hand. The Monday and Thursday schedule in `.github/workflows/journal-publish.yml` stays commented out until that test is accepted.
+A new signup gets the two newest live essays. The Monday and Thursday publisher is on. At 9:00am Eastern during daylight time it publishes the next finished essay in the queue and sends that issue to readers who have not received it. The admin Publish button does the same thing for one essay. The timer does not write a new essay. When the queue is empty, the run finishes without publishing or emailing.
 
 The same controls live in the studio admin at `/admin`, under Journal. From there you can see the queue, the reader list, add or remove a reader, copy the active addresses, send a test of the live issue, send that issue to readers who have not received it, and start the publisher.
 

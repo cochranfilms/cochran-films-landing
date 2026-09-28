@@ -1,12 +1,9 @@
 name: Journal issue
 
-# Monday and Thursday morning stay off until a test letter looks right.
-# After that, uncomment the schedule. 13:00 UTC is 9:00am Eastern during daylight time.
-# on:
-#   schedule:
-#     - cron: "0 13 * * 1,4"
-
+# 13:00 UTC is 9:00am Eastern during daylight time, and 8:00am Eastern after the clocks change.
 on:
+  schedule:
+    - cron: "0 13 * * 1,4"
   workflow_dispatch:
 
 permissions:
