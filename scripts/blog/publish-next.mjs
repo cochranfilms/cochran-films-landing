@@ -419,4 +419,13 @@ writeFileSync(join(root, "public/index.html"), home);
 
 const remaining = queue.slice(1);
 writeFileSync(join(root, "scripts/blog/queue.mjs"), `export const queue = ${JSON.stringify(remaining, null, 2)};\n`);
+const publicQueue = remaining.map((item) => ({
+  slug: item.slug,
+  title: item.title,
+  description: item.description,
+  excerpt: item.excerpt,
+  category: item.category,
+  coverAlt: item.coverAlt
+}));
+writeFileSync(join(root, "public/api/journal/lib/queue-public.mjs"), `export const queue = ${JSON.stringify(publicQueue, null, 2)};\n`);
 console.log(`SLUG=${post.slug}`);

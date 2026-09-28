@@ -17,6 +17,11 @@
         { id: 'purchases', label: 'Purchases', description: 'Service package invoices' },
         { id: 'subscriptions', label: 'Subscriptions', description: 'Retainers and white-label plans' }
       ]
+    },
+    {
+      id: 'journal',
+      label: 'Journal',
+      tools: [{ id: 'journal', label: 'Essays', description: 'The Monday and Thursday letter, the queue, and the reader list' }]
     }
   ];
 
@@ -24,6 +29,7 @@
     general: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>',
     inbox: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H5.17L4 17.17V4z"></path><path d="M8 8h8M8 12h5"></path></svg>',
     commerce: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>',
+    journal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>',
     sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>',
     moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"></path></svg>'
   };
@@ -40,7 +46,10 @@
     expanded: null,
     busyId: null,
     toast: '',
-    email: 'info@cochranfilms.com'
+    email: 'info@cochranfilms.com',
+    journal: null,
+    journalFilter: 'active',
+    journalQuery: ''
   };
 
   var root = document.getElementById('admin-root');
@@ -181,6 +190,7 @@
     if (id === 'general') return state.board.attention.length;
     if (id === 'inbox') return state.board.metrics.newInquiries;
     if (id === 'commerce') return state.board.metrics.unpaidInvoices;
+    if (id === 'journal' && state.journal) return state.journal.counts.active;
     return 0;
   }
 
@@ -267,6 +277,7 @@
     state.tool = id;
     state.openSection = null;
     state.expanded = expandId || null;
+    if (id === 'journal' && !state.journal) loadJournal();
     var url = new URL(window.location.href);
     url.searchParams.set('tool', id);
     history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
@@ -294,7 +305,245 @@
     if (state.tool === 'overview') renderOverview();
     else if (state.tool === 'inquiries') renderInquiries();
     else if (state.tool === 'purchases') renderPurchases();
+    else if (state.tool === 'journal') renderJournal();
     else renderSubscriptions();
+  }
+
+  function loadJournal() {
+    return fetch('/api/journal/desk', { headers: { Accept: 'application/json' } })
+      .then(readJson)
+      .then(function (result) {
+        if (!result.ok) throw new Error((result.data && result.data.error) || 'The journal desk could not load.');
+        state.journal = result.data;
+        if (state.tool === 'journal') render();
+      })
+      .catch(function (error) {
+        state.toast = error.message;
+        if (state.tool === 'journal') render();
+      });
+  }
+
+  function journalAction(action, body) {
+    state.busyId = action;
+    render();
+    return fetch('/api/journal/desk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.assign({ action: action }, body || {}))
+    }).then(readJson).then(function (result) {
+      state.busyId = null;
+      if (!result.ok) throw new Error((result.data && result.data.error) || 'That journal action did not finish.');
+      state.journal = result.data;
+      return result.data;
+    }).catch(function (error) {
+      state.busyId = null;
+      state.toast = error.message;
+      render();
+      throw error;
+    });
+  }
+
+  function renderJournal() {
+    var desk = state.journal;
+    if (!desk) {
+      panel.appendChild(el('div', 'admin-skeleton'));
+      panel.appendChild(el('div', 'admin-skeleton'));
+      return;
+    }
+    var counts = desk.counts || { active: 0, unsubscribed: 0, waiting: 0 };
+    var grid = document.createElement('div');
+    grid.className = 'admin-metrics';
+    [
+      [String(counts.active), 'Active readers'],
+      [String(counts.unsubscribed), 'Unsubscribed'],
+      [String(counts.waiting), 'Essays waiting'],
+      [desk.sends && desk.sends.length ? String(desk.sends[desk.sends.length - 1].sent) : '0', 'Sent on the last letter']
+    ].forEach(function (item) {
+      var card = el('div', 'admin-metric');
+      card.appendChild(el('span', 'admin-metric__value', item[0]));
+      card.appendChild(el('span', 'admin-metric__label', item[1]));
+      grid.appendChild(card);
+    });
+    panel.appendChild(grid);
+
+    if (!desk.configured) {
+      panel.appendChild(el('div', 'admin-banner admin-banner--warn', 'Reader storage is not connected. Add BLOB_READ_WRITE_TOKEN before anyone can join or receive a letter.'));
+    }
+    if (!desk.publishReady) {
+      panel.appendChild(el('div', 'admin-banner', 'Publishing the next essay from here needs JOURNAL_GITHUB_TOKEN on Vercel. You can still send the current letter.'));
+    }
+
+    var next = (desk.queue || [])[0];
+    panel.appendChild(el('p', 'admin-section-label', next ? 'Next essay' : 'Queue'));
+    var card = el('article', 'admin-row');
+    var main = el('div', 'admin-row__main admin-row__main--static');
+    var nextCopy = el('div', '');
+    nextCopy.appendChild(el('div', 'admin-row__title', next ? next.title : 'The queue is empty'));
+    nextCopy.appendChild(el('div', 'admin-row__meta', next ? next.category + ' · ' + next.description : 'Nothing is waiting. A scheduled run will send nothing until another essay is queued.'));
+    main.appendChild(nextCopy);
+    card.appendChild(main);
+    var actions = el('div', 'admin-actions admin-journal-actions');
+    actions.appendChild(actionButton('Send a test to me', 'test', function () {
+      journalAction('test').then(function (data) {
+        state.toast = data.test && data.test.already
+          ? 'You already have this issue. Nothing new was sent.'
+          : 'The current issue is on its way to ' + state.email + '.';
+        render();
+      }).catch(function () {});
+    }, true));
+    actions.appendChild(actionButton('Send this issue to the list', 'send', function () {
+      confirmAction('Send the current issue?', 'This emails every active reader who has not already received the live essay. It does not publish the next one.', 'Send the letter').then(function (ok) {
+        if (!ok) return;
+        journalAction('send').then(function (data) {
+          var delivery = data.delivery || {};
+          state.toast = 'Sent ' + delivery.sent + '. Skipped ' + delivery.skipped + '. Failed ' + delivery.failed + '.';
+          render();
+        }).catch(function () {});
+      });
+    }, false));
+    actions.appendChild(actionButton('Publish the next essay', 'publish', function () {
+      confirmAction('Publish the next essay?', 'This starts the publisher. It puts the next essay on the site and then sends that new issue to the list. It does not turn on the Monday and Thursday schedule.', 'Publish and send').then(function (ok) {
+        if (!ok) return;
+        journalAction('publish').then(function () {
+          state.toast = 'The publisher is running. The new essay and the letter follow once the site is live.';
+          render();
+        }).catch(function () {});
+      });
+    }, false));
+    card.appendChild(actions);
+    panel.appendChild(card);
+
+    if ((desk.queue || []).length > 1) {
+      panel.appendChild(el('p', 'admin-section-label', 'Still waiting'));
+      var waiting = el('div', 'admin-list');
+      desk.queue.slice(1).forEach(function (item, index) {
+        var row = el('article', 'admin-row');
+        var copy = el('div', 'admin-row__main admin-row__main--static');
+        var text = el('div', '');
+        text.appendChild(el('div', 'admin-row__title', (index + 2) + '. ' + item.title));
+        text.appendChild(el('div', 'admin-row__meta', item.category));
+        copy.appendChild(text);
+        row.appendChild(copy);
+        waiting.appendChild(row);
+      });
+      panel.appendChild(waiting);
+    }
+
+    var toolbar = el('div', 'admin-toolbar');
+    var add = document.createElement('form');
+    add.className = 'admin-toolbar__add';
+    var input = document.createElement('input');
+    input.type = 'email';
+    input.required = true;
+    input.placeholder = 'Add a reader';
+    input.setAttribute('aria-label', 'Reader email');
+    var welcome = document.createElement('label');
+    welcome.className = 'admin-check';
+    var welcomeBox = document.createElement('input');
+    welcomeBox.type = 'checkbox';
+    welcomeBox.checked = true;
+    welcome.appendChild(welcomeBox);
+    welcome.appendChild(document.createTextNode(' Send the current issue'));
+    var addButton = document.createElement('button');
+    addButton.type = 'submit';
+    addButton.className = 'admin-btn admin-btn--primary';
+    addButton.textContent = 'Add reader';
+    add.appendChild(input);
+    add.appendChild(welcome);
+    add.appendChild(addButton);
+    add.addEventListener('submit', function (event) {
+      event.preventDefault();
+      journalAction('add', { email: input.value, welcome: welcomeBox.checked }).then(function () {
+        state.toast = 'Reader saved.';
+        input.value = '';
+        render();
+      }).catch(function () {});
+    });
+    toolbar.appendChild(add);
+    toolbar.appendChild(actionButton('Copy the list', 'copy-list', function () {
+      var lines = (desk.subscribers || []).filter(function (row) { return row.status === 'active'; }).map(function (row) { return row.email; });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lines.join('\n')).then(function () {
+          state.toast = lines.length + ' active readers copied.';
+          render();
+        });
+      }
+    }, false));
+    panel.appendChild(toolbar);
+
+    panel.appendChild(el('p', 'admin-section-label', 'Readers'));
+    var readerBar = el('div', 'admin-toolbar');
+    [['active', 'Active'], ['unsubscribed', 'Unsubscribed'], ['all', 'All']].forEach(function (chip) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'admin-chip' + (state.journalFilter === chip[0] ? ' is-active' : '');
+      button.textContent = chip[1];
+      button.addEventListener('click', function () {
+        state.journalFilter = chip[0];
+        render();
+      });
+      readerBar.appendChild(button);
+    });
+    var search = document.createElement('input');
+    search.className = 'admin-search';
+    search.type = 'search';
+    search.placeholder = 'Search readers';
+    search.value = state.journalQuery;
+    search.setAttribute('aria-label', 'Search readers');
+    search.addEventListener('input', function () {
+      state.journalQuery = search.value;
+      render();
+      var again = panel.querySelectorAll('.admin-search');
+      var field = again[again.length - 1];
+      if (field) {
+        field.focus();
+        field.setSelectionRange(field.value.length, field.value.length);
+      }
+    });
+    readerBar.appendChild(search);
+    panel.appendChild(readerBar);
+
+    var query = state.journalQuery.trim().toLowerCase();
+    var people = (desk.subscribers || []).filter(function (row) {
+      if (state.journalFilter !== 'all' && row.status !== state.journalFilter) return false;
+      return !query || String(row.email).toLowerCase().indexOf(query) !== -1;
+    });
+    if (!people.length) {
+      panel.appendChild(el('div', 'admin-empty', 'No readers in this view.'));
+      return;
+    }
+    var list = el('div', 'admin-list');
+    people.forEach(function (row) {
+      var item = el('article', 'admin-row');
+      var copy = el('div', 'admin-row__main admin-row__main--static');
+      var text = el('div', '');
+      text.appendChild(el('div', 'admin-row__title', row.email));
+      text.appendChild(el('div', 'admin-row__meta', (row.status === 'active' ? 'Active' : 'Unsubscribed') + (row.lastIssue ? ' · last issue ' + row.lastIssue : '')));
+      copy.appendChild(text);
+      var side = el('div', 'admin-row__side');
+      if (row.status === 'active') {
+        side.appendChild(dangerButton('Remove', 'remove:' + row.email, function () {
+          confirmAction('Remove this reader?', 'They stop receiving the journal. This does not send the goodbye letter.', 'Remove').then(function (ok) {
+            if (!ok) return;
+            journalAction('remove', { email: row.email }).then(function () {
+              state.toast = 'Reader removed.';
+              render();
+            }).catch(function () {});
+          });
+        }));
+      } else {
+        side.appendChild(actionButton('Add back', 'add:' + row.email, function () {
+          journalAction('add', { email: row.email, welcome: false }).then(function () {
+            state.toast = 'Reader is active again.';
+            render();
+          }).catch(function () {});
+        }, false));
+      }
+      copy.appendChild(side);
+      item.appendChild(copy);
+      list.appendChild(item);
+    });
+    panel.appendChild(list);
   }
 
   function renderOverview() {
@@ -948,6 +1197,7 @@
         saveBoard();
         paintChrome();
         render();
+        if (state.tool === 'journal') loadJournal();
       })
       .catch(function (err) {
         state.loading = false;

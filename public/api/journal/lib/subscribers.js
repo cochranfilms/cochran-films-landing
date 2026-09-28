@@ -112,6 +112,26 @@ export async function listSubscribers() {
   return { configured: state.configured, items };
 }
 
+export function publicSubscriber(row) {
+  return {
+    email: row.email,
+    status: row.status,
+    consentedAt: row.consentedAt || '',
+    lastIssue: row.lastIssue || '',
+    unsubscribedAt: row.unsubscribedAt || '',
+  };
+}
+
+export async function listIssueSends() {
+  const state = await readDoc(SEND_PATH, emptySends);
+  const issues = state.doc.issues || {};
+  return Object.keys(issues).map((slug) => ({
+    slug,
+    sent: Array.isArray(issues[slug].sent) ? issues[slug].sent.length : 0,
+    failed: issues[slug].failed || 0,
+  }));
+}
+
 export async function upsertSubscriber(email) {
   const normalized = normalizeEmail(email);
   const token = unsubscribeToken(normalized);

@@ -21,6 +21,9 @@
     "api/journal/unsubscribe.js": {
       "maxDuration": 15
     },
+    "api/journal/desk.js": {
+      "maxDuration": 60
+    },
     "api/opportunities/preview.js": {
       "maxDuration": 10
     },

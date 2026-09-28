@@ -44,3 +44,13 @@ Source HTML is in `docs/emailjs-journal-issue-template.html` and `docs/emailjs-j
 A new signup gets the two newest live essays. Publishing the next queued essay is manual until a test letter looks right.
 
 In GitHub, run the **Journal issue** workflow by hand. The Monday and Thursday schedule in `.github/workflows/journal-publish.yml` stays commented out until that test is accepted.
+
+The same controls live in the studio admin at `/admin`, under Journal. From there you can see the queue, the reader list, add or remove a reader, copy the active addresses, send a test of the live issue, send that issue to readers who have not received it, and start the publisher.
+
+Publishing from the dashboard needs one more Vercel variable, a GitHub token that can dispatch workflows on this repo:
+
+```
+JOURNAL_GITHUB_TOKEN=
+```
+
+Without it, the dashboard can still send the current letter. It cannot write the next essay onto the site.
