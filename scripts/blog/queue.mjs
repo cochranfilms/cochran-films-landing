@@ -1,31 +1,5 @@
 export const queue = [
   {
-    "slug": "name-the-folder-first",
-    "title": "Name the Folder First",
-    "description": "A shoot without a named folder becomes a pile of cards and texts. Name the project, the date, and the client before the camera comes out of the bag.",
-    "excerpt": "Name the project folder before the camera comes out. A date and a client on the folder is how the job stays findable after the shoot.",
-    "category": "Systems and Automation",
-    "tags": [
-      "folders",
-      "delivery",
-      "workflow",
-      "Bizzi Cloud"
-    ],
-    "coverAlt": "Labeled project folders and a cinema camera on a studio worktable",
-    "related": [
-      "the-backend-is-the-business",
-      "cloud-delivery-client-footage",
-      "ai-files-still-need-a-home"
-    ],
-    "ctaTitle": "Give the job one folder",
-    "ctaText": "Bizzi Cloud is the project, the review, and the handoff, so the name you chose on set is the name the client opens.",
-    "ctaHref": "https://www.bizzicloud.io/",
-    "ctaLabel": "See Bizzi Cloud",
-    "studioTitle": "Deliver a folder a stranger can read",
-    "studioText": "Cochran Films names the job before the first frame, then hands the client a path that matches that name.",
-    "body": "<p>Name the project folder before the camera comes out of the bag. A date and a client on that folder is how the job stays findable after the adrenaline is gone. Cards labeled Monday, selects called final-final, and a text thread called \"pics\" are how a good shoot becomes a week of searching.</p>\n<p>The name is not busywork. It is the address of the job. When the editor, the client, and you all open the same words, nobody has to ask which link is current. When the names disagree, every version feels official and none of them are.</p>\n<h2>A name a stranger can read</h2>\n<p>Use the client, the date, and the job. \"Northside-2026-09-12-keynote\" beats \"shoot 3.\" Put selects, audio, grade, and delivery inside it as folders, not as a dump. If a person who was not in the room can tell what each folder holds, the name is finished.</p>\n<p><a href=\"https://www.bizzicloud.io/\">Bizzi Cloud</a> is built for that shape. The project, the subfolders, the review, and the branded transfer can share one name. Gallery Suite is on paid plans, so the stills do not need a second product with a second password. The essay on <a href=\"/blog/posts/cloud-delivery-client-footage.html\">moving client footage</a> is the delivery half of this habit.</p>\n<h2>Do it before you are tired</h2>\n<p>Naming at the end of a twelve-hour day produces the bad names. Naming in the morning, before the first battery, produces the names you can still trust on Thursday. Make the folder when the job is booked, not when the card is full. The deposit and the folder should land on the same day.</p>\n<h2>A direct next step</h2>\n<p>Look at the last three deliveries. If you cannot tell the client and the date from the folder name alone, rename the next one before you shoot. The camera work can be brilliant. The folder is how anyone gets to see it.</p>"
-  },
-  {
     "slug": "sound-is-the-rebook",
     "title": "Sound Is the Rebook",
     "description": "Clients forgive a slightly soft frame before they forgive a ruined lav. Clean sound is why they hire the same crew again, and it is cheaper than another camera.",

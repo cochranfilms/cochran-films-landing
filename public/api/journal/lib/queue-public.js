@@ -1,13 +1,5 @@
 export const queue = [
   {
-    "slug": "name-the-folder-first",
-    "title": "Name the Folder First",
-    "description": "A shoot without a named folder becomes a pile of cards and texts. Name the project, the date, and the client before the camera comes out of the bag.",
-    "excerpt": "Name the project folder before the camera comes out. A date and a client on the folder is how the job stays findable after the shoot.",
-    "category": "Systems and Automation",
-    "coverAlt": "Labeled project folders and a cinema camera on a studio worktable"
-  },
-  {
     "slug": "sound-is-the-rebook",
     "title": "Sound Is the Rebook",
     "description": "Clients forgive a slightly soft frame before they forgive a ruined lav. Clean sound is why they hire the same crew again, and it is cheaper than another camera.",
