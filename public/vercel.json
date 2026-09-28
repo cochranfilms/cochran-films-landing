@@ -16,6 +16,9 @@
       "maxDuration": 15
     },
     "api/contact/send-inquiry.js": {
+      "maxDuration": 20
+    },
+    "api/journal/unsubscribe.js": {
       "maxDuration": 15
     },
     "api/opportunities/preview.js": {

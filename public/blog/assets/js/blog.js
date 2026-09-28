@@ -111,7 +111,7 @@ document.documentElement.classList.add("js");
           email: email,
           service: "other",
           source: "journal",
-          message: "Please add " + email + " to the Cochran Films journal list. They agreed to receive a note when a new essay is published and can unsubscribe by reply. Source: journal signup.",
+          message: "Please add " + email + " to the Cochran Films journal list. They agreed to receive a note when a new essay is published and can unsubscribe from the link in the letter or by reply. Source: journal signup.",
           companyWebsite: honey ? honey.value : "",
           formLoadedAt: formLoadedAt
         })

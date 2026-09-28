@@ -1,4 +1,6 @@
 import { appendInquiry } from '../admin/lib/store.js';
+import { latestIssue, sendJournalIssue } from '../journal/lib/issue.js';
+import { markSent, upsertSubscriber, wasSent } from '../journal/lib/subscribers.js';
 
 const SERVICE_LABELS = {
   'video-production': 'Video Production',
@@ -301,6 +303,58 @@ export default async function handler(req, res) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.trim())) {
       return res.status(400).json({ error: 'Please enter a valid email address.' });
+    }
+
+    if (isJournal) {
+      const reader = email.trim();
+      let saved;
+      try {
+        saved = await upsertSubscriber(reader);
+      } catch (storeError) {
+        console.error('Journal list save failed');
+        return res.status(500).json({
+          error: 'We could not reach the list. Email info@cochranfilms.com and we will add you.',
+        });
+      }
+      try {
+        await sendEmail(templateId, {
+          ...{
+            customer_name: 'Journal reader',
+            customer_first_name: 'Journal',
+            customer_last_name: 'List',
+            customer_email: reader,
+            service_interest: 'Journal list',
+            project_details_html: 'A reader joined the Cochran Films journal list.',
+            project_details: 'A reader joined the Cochran Films journal list.',
+            inquiry_id: `CF-LIST-${Date.now()}`,
+            submitted_date: new Date().toLocaleDateString('en-US', {
+              year: 'numeric', month: 'long', day: 'numeric',
+            }),
+            reply_to: reader,
+          },
+          to_email: notifyEmail,
+          email_heading: 'New journal subscriber',
+          email_intro: 'Someone joined the Cochran Films journal list from the site.',
+          cta_label: 'Reply to the reader',
+          cta_url: `mailto:${encodeURIComponent(reader)}`,
+          cta_subtext: 'This is a list signup, not a project inquiry.',
+        });
+      } catch (adminError) {
+        console.error('Journal admin note failed');
+      }
+      if (saved.created || saved.reactivated) {
+        try {
+          const issue = await latestIssue();
+          const already = await wasSent(issue.slug, reader);
+          if (!already) {
+            await sendJournalIssue(reader, issue);
+            await markSent(issue.slug, reader);
+          }
+        } catch (welcomeError) {
+          console.error('Journal welcome failed');
+        }
+      }
+      return res.status(200).json({ success: true, stored: true });
     }
 
     const inquiryId = `CF-INQ-${Date.now()}`;

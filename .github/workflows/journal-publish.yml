@@ -1,0 +1,60 @@
+name: Journal issue
+
+# Monday and Thursday morning stay off until a test letter looks right.
+# After that, uncomment the schedule. 13:00 UTC is 9:00am Eastern during daylight time.
+# on:
+#   schedule:
+#     - cron: "0 13 * * 1,4"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+        working-directory: public
+      - id: essay
+        run: |
+          node scripts/blog/publish-next.mjs --publish | tee /tmp/journal-out.txt
+          slug=$(sed -n 's/^SLUG=//p' /tmp/journal-out.txt)
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+      - name: Push the essay
+        if: steps.essay.outputs.slug != ''
+        run: |
+          git config user.name "Cochran Films Journal"
+          git config user.email "info@cochranfilms.com"
+          git add -A
+          git commit -m "Publish the next journal essay."
+          git push
+      - name: Wait until the essay is live
+        if: steps.essay.outputs.slug != ''
+        run: |
+          url="https://www.cochranfilms.com/blog/posts/${{ steps.essay.outputs.slug }}.html"
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url" || true)
+            if [ "$code" = "200" ]; then
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "Essay did not return 200: $url"
+          exit 1
+      - name: Send the journal letter
+        if: steps.essay.outputs.slug != ''
+        run: node scripts/blog/send-journal.mjs
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+          EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          EMAILJS_PRIVATE_KEY: ${{ secrets.EMAILJS_PRIVATE_KEY }}
+          EMAILJS_JOURNAL_TEMPLATE_ID: ${{ secrets.EMAILJS_JOURNAL_TEMPLATE_ID }}
+          EMAILJS_JOURNAL_UNSUBSCRIBE_TEMPLATE_ID: ${{ secrets.EMAILJS_JOURNAL_UNSUBSCRIBE_TEMPLATE_ID }}

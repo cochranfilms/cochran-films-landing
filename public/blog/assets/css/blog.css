@@ -254,6 +254,81 @@ a:hover { color: var(--cf-white); }
   margin: 0 0 1.75rem;
 }
 
+.author-credit {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 1.55rem;
+  padding: 0.4rem 1rem 0.4rem 0.4rem;
+  text-decoration: none;
+  color: var(--cf-text);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.author-credit-photo {
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+  flex: none;
+  position: relative;
+  background: #111;
+}
+.author-credit-photo img {
+  position: absolute;
+  width: 152px;
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: -8px;
+  transform: translateX(calc(-50% - 6px));
+}
+.author-credit-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  line-height: 1.2;
+  min-width: 0;
+}
+.author-credit-kicker {
+  color: var(--cf-yellow);
+  font-family: var(--cf-font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.author-credit strong {
+  color: var(--cf-white);
+  font-family: var(--cf-font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.author-credit-role {
+  color: var(--cf-text-dim);
+  font-size: 0.84rem;
+}
+.author-credit-go {
+  margin-left: 1.25rem;
+  color: var(--cf-text-dim);
+  font-family: var(--cf-font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.author-credit:hover {
+  color: var(--cf-text);
+  border-color: rgba(255, 178, 0, 0.55);
+}
+.author-credit:hover strong,
+.author-credit:hover .author-credit-go {
+  color: var(--cf-yellow);
+}
+
 .principles {
   display: flex;
   flex-wrap: wrap;
@@ -975,6 +1050,16 @@ body.has-reticle.is-cursor select {
 @media (max-width: 640px) {
   .post-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 3.2rem; min-height: 0; }
+  .author-credit {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    column-gap: 0.85rem;
+    row-gap: 0.2rem;
+    align-items: center;
+  }
+  .author-credit-photo { grid-row: 1 / span 2; }
+  .author-credit-go { margin-left: 0; }
   .post-hero { min-height: 78vh; }
   .feature-poster { min-height: 64vh; }
   .vf-frame { inset: 0.65rem; }
