@@ -1,31 +1,5 @@
 export const queue = [
   {
-    "slug": "one-link-for-the-client",
-    "title": "One Link for the Client",
-    "description": "Four delivery links feel like four vendors. The client should get one branded place for the cut, the stills, and the note that says the job is finished.",
-    "excerpt": "Four delivery links feel like four vendors. One branded link tells the client the job is finished and they know where it lives.",
-    "category": "Systems and Automation",
-    "tags": [
-      "delivery",
-      "Bizzi Cloud",
-      "clients",
-      "galleries"
-    ],
-    "coverAlt": "Laptop on a walnut desk showing one branded delivery page at night",
-    "related": [
-      "one-cloud-for-the-whole-job",
-      "cloud-delivery-client-footage",
-      "ai-files-still-need-a-home"
-    ],
-    "ctaTitle": "Hand off from one workspace",
-    "ctaText": "Bizzi Cloud keeps storage, review, galleries, and branded transfers together, so the client is not collecting logins.",
-    "ctaHref": "https://www.bizzicloud.io/",
-    "ctaLabel": "See Bizzi Cloud",
-    "studioTitle": "Send a handoff that matches the film",
-    "studioText": "Cochran Films delivers through a path the client can open without a second thread of texts.",
-    "body": "<p>Four delivery links feel like four vendors. One branded link tells the client the job is finished and they know where it lives. A WeTransfer, a Drive folder, a gallery password in a text, and a cut in a chat is not a delivery. It is a scavenger hunt with your name on it.</p>\n<p>The client hired one studio. They should not have to remember which login holds the real cut. Every extra link is a chance they open last week's version, or forward the wrong one to their boss, or decide the work is still in progress because it arrived like a draft.</p>\n<h2>What belongs on that one link</h2>\n<p>The finished picture. The stills, if stills were in the scope. A line that says what they are looking at. A way to pay the balance if it is still open. Review comments if the cut is not locked yet, in the same place, not in email. When the cut is locked, the old review link should stop being the front door.</p>\n<p><a href=\"https://www.bizzicloud.io/\">Bizzi Cloud</a> is the workspace Cochran Films points people to for that handoff. Storage, review, galleries, and branded transfers sit on one plan. Gallery Suite is included on paid plans. The longer piece is <a href=\"/blog/posts/one-cloud-for-the-whole-job.html\">one cloud for the whole job</a>. This essay is only the rule: one link.</p>\n<h2>Name it like a front door</h2>\n<p>The link should say the client and the job, not a string of random characters you hope they will trust. Send it once, in the same note as the invoice when the invoice is due. If you send a second link later, say what changed. Silence plus a new URL reads like a mistake.</p>\n<h2>A direct next step</h2>\n<p>Count the links in your last delivery email. If there is more than one, the next job gets a single front door before you hit send. The film can be excellent. The link is how they experience it.</p>"
-  },
-  {
     "slug": "the-follow-up-is-the-next-job",
     "title": "The Follow-Up Is the Next Job",
     "description": "The note after delivery is how the next date gets booked. A short thank-you with one clear next step beats a new reel and a cold pitch to a stranger.",

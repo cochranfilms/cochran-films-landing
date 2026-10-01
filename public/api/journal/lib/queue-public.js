@@ -1,13 +1,5 @@
 export const queue = [
   {
-    "slug": "one-link-for-the-client",
-    "title": "One Link for the Client",
-    "description": "Four delivery links feel like four vendors. The client should get one branded place for the cut, the stills, and the note that says the job is finished.",
-    "excerpt": "Four delivery links feel like four vendors. One branded link tells the client the job is finished and they know where it lives.",
-    "category": "Systems and Automation",
-    "coverAlt": "Laptop on a walnut desk showing one branded delivery page at night"
-  },
-  {
     "slug": "the-follow-up-is-the-next-job",
     "title": "The Follow-Up Is the Next Job",
     "description": "The note after delivery is how the next date gets booked. A short thank-you with one clear next step beats a new reel and a cold pitch to a stranger.",
